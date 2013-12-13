@@ -1,0 +1,157 @@
+From MAILER-DAEMON Sat Aug 13 17:20:40 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QsLdI-0005Ns-8y
+	for mharc-axiom-math@gnu.org; Sat, 13 Aug 2011 17:20:40 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:60936)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <s.karrmann@web.de>) id 1QsLdG-0005Nd-DD
+	for axiom-math@nongnu.org; Sat, 13 Aug 2011 17:20:39 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <s.karrmann@web.de>) id 1QsLdF-0002z1-61
+	for axiom-math@nongnu.org; Sat, 13 Aug 2011 17:20:38 -0400
+Received: from fmmailgate02.web.de ([217.72.192.227]:56319)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <s.karrmann@web.de>) id 1QsLdE-0002yx-WD
+	for axiom-math@nongnu.org; Sat, 13 Aug 2011 17:20:37 -0400
+Received: from smtp04.web.de  ( [172.20.0.225])
+	by fmmailgate02.web.de (Postfix) with ESMTP id 945711A8B4E4A
+	for <axiom-math@nongnu.org>; Sat, 13 Aug 2011 23:20:34 +0200 (CEST)
+Received: from [84.163.148.182] (helo=[192.168.178.27])
+	by smtp04.web.de with asmtp (TLSv1:AES256-SHA:256) (WEB.DE 4.110 #2)
+	id 1QsLdC-0000uL-00
+	for axiom-math@nongnu.org; Sat, 13 Aug 2011 23:20:34 +0200
+From: Stefan Karrmann <s.karrmann@web.de>
+To: axiom-math <axiom-math@nongnu.org>
+Content-Type: text/plain; charset="UTF-8"
+Date: Sat, 13 Aug 2011 23:20:32 +0200
+Message-ID: <1313270432.21977.23.camel@hermes>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.32.2 
+Content-Transfer-Encoding: 7bit
+Sender: s.karrmann@web.de
+X-Sender: s.karrmann@web.de
+X-Provags-ID: V01U2FsdGVkX19DnbGr0fim8zaPIURMqwv5/+S7j4f+LNW6b6i3
+	fYuuno0xz8joWJzwHHrAs+lu5ZMMz6GvpriCzKliHJcLHx3qJ0 dNCtycu8k=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.4-2.6
+X-Received-From: 217.72.192.227
+Subject: [Axiom-math] numeric integration
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 Aug 2011 21:20:39 -0000
+
+Dear all,
+
+I'm not able to do numeric integrations. Even simple integrals give no
+results. Therefore I press Ctrl-C after minutes to howers.
+ 
+==== Begin ==============================
+$ axiom
+GCL (GNU Common Lisp)  2.6.7 CLtL1    Nov  8 2010 20:45:06
+Source License: LGPL(gcl,gmp), GPL(unexec,bfd,xgcl)
+Binary License:  GPL due to GPL'ed components: (XGCL READLINE UNEXEC)
+Modifications of this banner must retain notice of a compatible license
+Dedicated to the memory of W. Schelter
+
+Use (help) to get some basic information on how to use GCL.
+Temporary directory for compiler files set to /tmp/
+                        AXIOM Computer Algebra System 
+                       Version: Axiom (September 2010)
+               Timestamp: Monday November 8, 2010 at 22:03:37 
+-----------------------------------------------------------------------------
+   Issue )copyright to view copyright notices.
+   Issue )summary for a summary of useful system commands.
+   Issue )quit to leave AXIOM and return to shell.
+   Visit http://axiom-developer.org for more information
+-----------------------------------------------------------------------------
+ 
+(1) -> 
+(1) -> integrate(2*x,x=0..1)
+(1) -> 
+   (1)  1
+                    Type: Union(f1: OrderedCompletion Expression
+Integer,...)
+(2) -> integrate(2*x,0..1)$INTPACK
+ 2) -> 
+   >> System error:
+   Console interrupt.
+====  End  ==============================
+
+Using NAG is in no way better, e.g.:
+answer:=c05adf(3.0,4.0,1.0e-5,0.0,-1,sin(X)::ASP1(F))
+
+Any hints why this does not work as described in the axiom documentation
+(bookvol0, page 1019)? I've found nothing to numeric integration or
+INTPACK in archive of the mailing list.
+
+Thanks for any hints.
+
+-- 
+Kind regards,
+Stefan
+
+
+
+From MAILER-DAEMON Sat Aug 13 18:56:02 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QsN7a-0000fF-Nj
+	for mharc-axiom-math@gnu.org; Sat, 13 Aug 2011 18:56:02 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:43073)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1QsN7X-0000ey-SU
+	for axiom-math@nongnu.org; Sat, 13 Aug 2011 18:56:00 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1QsN7X-0000Ss-4e
+	for axiom-math@nongnu.org; Sat, 13 Aug 2011 18:55:59 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:50068
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1QsN7X-0000Sm-0q
+	for axiom-math@nongnu.org; Sat, 13 Aug 2011 18:55:59 -0400
+Received: from axiom-developer.org (lincoln.rosehosting.com [127.0.0.1])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id p7DMtv75027737;
+	Sat, 13 Aug 2011 17:55:57 -0500
+From: daly@axiom-developer.org
+Received: (from daly@localhost)
+	by axiom-developer.org (8.12.8/8.12.8/Submit) id p7DMtuOH027734;
+	Sat, 13 Aug 2011 17:55:56 -0500
+Date: Sat, 13 Aug 2011 17:55:56 -0500
+Message-Id: <201108132255.p7DMtuOH027734@axiom-developer.org>
+To: "Stefan Karmann" <s.karmann@web.de>
+X-detected-operating-system: by eggs.gnu.org: Linux 2.6? (barebone, rare!)
+X-Received-From: 209.135.140.38
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] numeric integration
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 Aug 2011 22:56:00 -0000
+
+Yes, numeric integration is broken in Axiom at the moment.
+
+NAG has a library that implemented a fair portion of the numeric
+mathematics in the commercial version of Axiom. I am in the process
+of recreating this functionality but it is not yet ready for release.
+The NAG API still exists but there is no code behind it in the release.
+
+Several new numeric functions have been added. More will be added in 
+the future. It all takes time.
+
+Tim Daly
+
+

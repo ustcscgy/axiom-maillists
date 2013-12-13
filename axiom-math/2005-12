@@ -1,0 +1,186 @@
+From MAILER-DAEMON Tue Dec 13 01:45:43 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Em3uw-0001wG-UA
+	for mharc-axiom-math@gnu.org; Tue, 13 Dec 2005 01:45:43 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Em3uv-0001vx-LO
+	for axiom-math@nongnu.org; Tue, 13 Dec 2005 01:45:41 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Em3uu-0001vP-1H
+	for axiom-math@nongnu.org; Tue, 13 Dec 2005 01:45:40 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Em3ut-0001vM-NH
+	for axiom-math@nongnu.org; Tue, 13 Dec 2005 01:45:39 -0500
+Received: from [63.240.76.166] (helo=sccimhc92.asp.att.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Em3wk-0004Us-HD
+	for axiom-math@nongnu.org; Tue, 13 Dec 2005 01:47:34 -0500
+Received: from [192.168.0.3]
+	(12-221-51-249.client.insightbb.com[12.221.51.249])
+	by sccimhc92.asp.att.net (sccimhc92) with SMTP
+	id <20051213064502i9200l00a9e>; Tue, 13 Dec 2005 06:45:03 +0000
+Date: Tue, 13 Dec 2005 00:45:44 -0600 (CST)
+From: Daniel Herring <dherring@uiuc.edu>
+X-X-Sender: nuntius@strider1.home.net
+To: axiom-math@nongnu.org
+Message-ID: <Pine.LNX.4.63.0512122353190.3552@strider1.home.net>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+Subject: [Axiom-math] Numeric ODE and DAE solvers
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 13 Dec 2005 06:45:42 -0000
+
+Hi all,
+
+I am interested in using Axiom for my work.  This involves (symbolically) 
+deriving the dynamic equations for robotic models, using these to design 
+control strategies, and then using simulations to evaluate control 
+performance.  These models are highly nonlinear with no closed-form 
+solutions.  A simple example might be a double-pendulum, only activated at 
+the center joint, balancing and impacting against rigid surfaces.
+
+In general, the models come from Euler-Lagrange equations, resulting in 
+differential algebraic equations of the form 
+A(x,x',t)*x''+B(x,t)*x'+C(x,t)==0, where x is a vector.  A is usually 
+invertible, and so these can be converted to ordinary differential 
+equation form.
+
+Currently, I use Mathematica to do everything, but I would like to move 
+away from it for several reasons -- cost and certain "won't fix" bugs 
+being two of them.  To handle impacts, I have been simulating until after 
+the impact occurs, interpolating the solution to find the exact impact 
+time, and then proceeding accordingly.
+
+Matlab, Scilab, and Octave are undesirable for this work, mainly because 
+of their reduced support for symbolic expressions.  However, the symbolic 
+packages such as Axiom don't seem to have numeric differential equation 
+solvers built in...  I'm hoping this is something I have just missed, but 
+the story seems to be ... NAG libraries ... $$.
+
+If this is something missing from Axiom, then how hard would it be to 
+remedy?  At first, I thought of interfacing directly to Scilab or Octave, 
+but a little investigation shows that these simply use the ODEPACK, LSODE, 
+and DASPK libraries.  All three libraries are written in Fortran.
+
+So here are my questions:
+- Is the best solution to interface Axiom directly with these Fortran 
+libraries?
+- If so, are there any comments as to which library is "the best" as far 
+as functionality, efficiency, and accuracy?
+- Would modifying the NAG library link be a good way to proceed?
+
+Thanks for your help,
+Daniel
+
+
+
+From MAILER-DAEMON Tue Dec 13 10:13:35 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EmBqQ-0007Ii-M8
+	for mharc-axiom-math@gnu.org; Tue, 13 Dec 2005 10:13:34 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EmBqM-0007Fy-Ig
+	for axiom-math@nongnu.org; Tue, 13 Dec 2005 10:13:30 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EmBqK-0007EO-Fu
+	for axiom-math@nongnu.org; Tue, 13 Dec 2005 10:13:28 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EmBqH-0007Df-QB
+	for axiom-math@nongnu.org; Tue, 13 Dec 2005 10:13:25 -0500
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34) id 1EmBsC-00028H-B5
+	for axiom-math@nongnu.org; Tue, 13 Dec 2005 10:15:24 -0500
+Received: from mua-3.zoominternet.net (mua-3.zoominternet.net [24.154.1.46])
+	by mx-7.zoominternet.net (8.12.11/8.12.11) with ESMTP id jBDFCarL016139;
+	Tue, 13 Dec 2005 10:12:42 -0500
+Received: from localhost.localdomain (acs-72-23-17-250.zoominternet.net
+	[72.23.17.250])
+	by mua-3.zoominternet.net (Postfix) with ESMTP id 190F97F403;
+	Tue, 13 Dec 2005 10:12:35 -0500 (EST)
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id jBDG2Ku13594;
+	Tue, 13 Dec 2005 11:02:20 -0500
+Date: Tue, 13 Dec 2005 11:02:20 -0500
+Message-Id: <200512131602.jBDG2Ku13594@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: dherring@uiuc.edu
+In-reply-to: <Pine.LNX.4.63.0512122353190.3552@strider1.home.net> (message
+	from Daniel Herring on Tue, 13 Dec 2005 00:45:44 -0600 (CST))
+Subject: Re: [Axiom-math] Numeric ODE and DAE solvers
+References: <Pine.LNX.4.63.0512122353190.3552@strider1.home.net>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 13 Dec 2005 15:13:32 -0000
+
+Daniel,
+
+Axiom still has the hooks for the NAG software but, as you pointed
+out, you'd have to buy the NAG software to use them.
+
+There is an effort underway to create a replacement library using
+open source versions but it is still in the early stages (BLAS).
+Virtually all of the numeric code is in FORTRAN. Replacing the
+libraries will not be easy and will take time. NAG has a high
+quality library with a lot of invested effort and it is unlikely
+to be equaled anytime soon. 
+
+> So here are my questions:
+> - Is the best solution to interface Axiom directly with these Fortran 
+> libraries?
+> - Would modifying the NAG library link be a good way to proceed?
+
+Well that's the current approach. There is code in Axiom to enable the
+lisp-fortran interface. The process is to start with the BLAS routines
+and work upward in functionality. This is probably a year's worth of work.
+There was a minor discussion of this effort just last month. Check the
+mailing list archive.
+
+Of course, given Axiom's literate slant we need to do more than just
+bolt the code to the system. There needs to be an explanation of the
+theory behind the code. People have written good, clear explanations
+of the theory and I've been asking permission to quote their work as
+part of the documentation.
+
+> - If so, are there any comments as to which library is "the best" as far 
+> as functionality, efficiency, and accuracy?
+
+That's too many paramaters to optimize. NAG, IBM's ESSL, and a few others
+are probably best along various scales but are not free.
+
+As an aside, robotics is dear to my heart as I'm a robotics person from
+way back (I used to work for Unimation and then IBM Research doing
+robotics research) so it would be nice to see Axiom used there.
+
+Tim
+
+
+
+
+
+
+
+

@@ -1,0 +1,2770 @@
+From MAILER-DAEMON Thu Jan 06 21:40:42 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Cmk3O-0003D6-CD
+	for mharc-axiom-math@gnu.org; Thu, 06 Jan 2005 21:40:42 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Cmk3M-0003Ci-4C
+	for axiom-math@nongnu.org; Thu, 06 Jan 2005 21:40:40 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Cmk3L-0003CW-O6
+	for axiom-math@nongnu.org; Thu, 06 Jan 2005 21:40:39 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1Cmk3L-0003CT-MB; Thu, 06 Jan 2005 21:40:39 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CmjrX-0002zF-Fu; Thu, 06 Jan 2005 21:28:27 -0500
+Received: from localhost.localdomain ([69.0.62.61])
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j072SME02331;
+	Thu, 6 Jan 2005 20:28:22 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j0738xM32315;
+	Thu, 6 Jan 2005 22:08:59 -0500
+Date: Thu, 6 Jan 2005 22:08:59 -0500
+Message-Id: <200501070308.j0738xM32315@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] mail outage
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 07 Jan 2005 02:40:40 -0000
+
+My outgoing mail has disappeared into the void for the last two days.
+There seems to be a problem at my ISP (idsi.net) but I'm not sure.
+
+If there are lost emails I have no way to know.
+
+I can also be reached as daly@axiom-developer.org 
+
+Hopefully the problem is fixed.
+
+Tim Daly
+daly@idsi.net
+daly@axiom-developer.org
+
+
+
+From MAILER-DAEMON Fri Jan 07 13:23:01 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CmylJ-00060k-F1
+	for mharc-axiom-math@gnu.org; Fri, 07 Jan 2005 13:23:01 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CmylH-00060H-CU
+	for axiom-math@nongnu.org; Fri, 07 Jan 2005 13:22:59 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CmylG-0005ze-6y
+	for axiom-math@nongnu.org; Fri, 07 Jan 2005 13:22:58 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1CmylG-0005zb-5D
+	for axiom-math@nongnu.org; Fri, 07 Jan 2005 13:22:58 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CmyZi-0004W5-C5
+	for axiom-math@nongnu.org; Fri, 07 Jan 2005 13:11:02 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id j07IADMw268976;
+	Fri, 7 Jan 2005 19:10:19 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16862.53274.264304.293819@seam101.local>
+Date: Fri, 7 Jan 2005 19:08:26 +0100
+To: Marcus Better <marcusb@math.su.se>
+In-Reply-To: <41DAAC79.8040300@math.su.se>
+References: <41DAAC79.8040300@math.su.se>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx7.univie.ac.at 4247; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Dynamically constructed return types
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 07 Jan 2005 18:22:59 -0000
+
+Dear Marcus,
+
+* PLEASE subscribe to axiom-math. It is pretty low volume and adresses exactly
+  the type of questions you tend to ask *
+
+Marcus Better writes:
+ > Hi all,
+ > 
+ > I got stuck trying to write a spad function that will take an argument of a
+ > certain type T, construct from this some other type S, and return an object
+ > of type S. 
+
+Indeed, it seems that this is a weak point of Axioms static typing
+philosophy...
+
+ > I am using the "Any" type to do this, but I have a problem extracting and
+ > using the type and object encapsulated in the Any object.
+
+Could you make this more precise? The best thing would be a nearly working
+example. I started to make your example below compile, due to lack of time I
+took a shortcut -- I hope I captured the essential. (I couldn't get taylorRep
+to work)
+
+)abbrev package FOO Foo
+Foo(K: CommutativeRing, ULS: UnivariateLaurentSeriesCategory K): 
+      Exports == Implementation where
+
+   Exports == with
+     f: ULS -> Any
+
+   Implementation == add
+     
+     SUP ==> SparseUnivariatePolynomial
+
+     f(x) ==
+       -- Compute some equation over K.
+       eq := monomial(1,2)$SUP(K) - coefficient(x, order x)::SUP(K)
+
+       -- Create an extension L of K.
+       L := SimpleAlgebraicExtension(K, SUP K, eq)
+
+       coerce(1::K::L)$AnyFunctions1(L)
+
+Could you now specify in which situation you want to call f and what you want
+to do with it? I guess it is a compiler issue?
+
+Martin
+
+
+
+
+From MAILER-DAEMON Fri Jan 07 14:00:10 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CmzLG-0004ze-Iv
+	for mharc-axiom-math@gnu.org; Fri, 07 Jan 2005 14:00:10 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CmzLE-0004y5-L5
+	for axiom-math@nongnu.org; Fri, 07 Jan 2005 14:00:08 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CmzLD-0004xS-MO
+	for axiom-math@nongnu.org; Fri, 07 Jan 2005 14:00:08 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1CmzLD-0004xG-86
+	for axiom-math@nongnu.org; Fri, 07 Jan 2005 14:00:07 -0500
+Received: from [204.101.242.225] (helo=lattice.dyns.cx)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1Cmz9W-0003MV-DK
+	for axiom-math@nongnu.org; Fri, 07 Jan 2005 13:48:02 -0500
+Received: from lattice.dyns.cx (localhost.localdomain [127.0.0.1])
+	by lattice.dyns.cx (8.13.2/8.13.2/Debian-1) with ESMTP id
+	j07IlvpQ017600; Fri, 7 Jan 2005 13:47:57 -0500
+Received: (from steve@localhost)
+	by lattice.dyns.cx (8.13.2/8.13.2/Debian-1) id j07Ilv1e017599;
+	Fri, 7 Jan 2005 13:47:57 -0500
+Date: Fri, 7 Jan 2005 13:47:57 -0500
+From: Stephen Wilson <wilsons@multiboard.com>
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Re: [Axiom-mail] Dynamically constructed return types
+Message-ID: <20050107184757.GA13943@lattice.dyns.cx>
+References: <41DAAC79.8040300@math.su.se>
+	<16862.53274.264304.293819@seam101.local>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <16862.53274.264304.293819@seam101.local>
+X-Operating-System: GNU/Linux 2.6.8
+User-Agent: Mutt/1.5.6+20040907i
+Cc: Marcus Better <marcusb@math.su.se>, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 07 Jan 2005 19:00:09 -0000
+
+
+Martin, Marcus,
+
+On Fri, Jan 07, 2005 at 07:08:26PM +0100, Martin Rubey wrote:
+> example. I started to make your example below compile, due to lack of time I
+> took a shortcut -- I hope I captured the essential. (I couldn't get taylorRep
+> to work)
+
+
+I took a stab at this as well, but a few other things pushed this
+issue onto the back-burner for now. Here is the modified package code
+I came up with to investigate the problem. Perhaps it can be of use to
+you. 
+
+======================================================================
+SUP ==> SparseUnivariatePolynomial
+UTS ==> UnivariateTaylorSeries
+SAE ==> SimpleAlgebraicExtension
+utsRep ==> Record(expon:I,ps:UTS)
+
+)abbrev package FOO Foo
+Foo(K: CommutativeRing, ULS: UnivariateLaurentSeriesCategory K): 
+  Exports == Implementation where
+
+    Exports == with
+      f: ULS -> Any
+    Implementation == add
+
+      taylorRep(x: ULS): UTS(K, variable x, center x) == 
+         (x pretend Record(expon:Integer, 
+                           ps:UTS(K,variable x, center x))).ps
+
+      f(x:ULS): Any ==
+        -- Compute some equation over K.
+        eq := monomial(1,2)$SUP(K) _
+              - monomial(first coefficients taylorRep x, 0)$SUP(K)
+
+        -- Create an extension L of K.
+        L := SimpleAlgebraicExtension(K, SUP K, eq)
+
+        -- Create and return a new Laurent series over L.
+        -- The 'zero' variable is necessary due to a compiler bug...
+        zero := 0::L
+        z := "z"::Symbol
+        TS := UnivariateTaylorSeries(L,z,zero)
+        LS := UnivariateLaurentSeries(L,z,zero)
+        y := map(#1::L, coefficients taylorRep x)$StreamFunctions2(K,L)
+        coerce(laurent(-2, series(y)$TS)$LS)$AnyFunctions1(LS)
+======================================================================
+
+btw, I dont feel this is a weakness in axioms static typing (its not
+really static since we can produce new types at runtime). In my mind,
+it is more a weakness w.r.t axioms ability express dependent
+signatures. If we could write things like:
+
+    SAE ==> SimpleAlgebraicExtension
+
+    f: (ULS, eq: SUP) -> SAE(K, SUP K, eq)
+
+Then we would could write this kind of function without the loss of
+type information.
+    
+    
+Sincerely,
+Steve
+
+
+
+From MAILER-DAEMON Fri Jan 07 14:14:07 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CmzYl-0001gE-GV
+	for mharc-axiom-math@gnu.org; Fri, 07 Jan 2005 14:14:07 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CmzYk-0001g9-8D
+	for axiom-math@nongnu.org; Fri, 07 Jan 2005 14:14:06 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CmzYj-0001fx-PZ
+	for axiom-math@nongnu.org; Fri, 07 Jan 2005 14:14:05 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1CmzYj-0001fu-ND
+	for axiom-math@nongnu.org; Fri, 07 Jan 2005 14:14:05 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CmzMr-0006K2-KE
+	for axiom-math@nongnu.org; Fri, 07 Jan 2005 14:01:50 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id j07J1RMw625898;
+	Fri, 7 Jan 2005 20:01:31 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16862.56348.154331.29115@seam101.local>
+Date: Fri, 7 Jan 2005 19:59:40 +0100
+To: Stephen Wilson <wilsons@multiboard.com>
+Subject: Re: [Axiom-math] Re: [Axiom-mail] Dynamically constructed return types
+In-Reply-To: <20050107184757.GA13943@lattice.dyns.cx>
+References: <41DAAC79.8040300@math.su.se>
+	<16862.53274.264304.293819@seam101.local>
+	<20050107184757.GA13943@lattice.dyns.cx>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4249; Body=4 Fuz1=4 Fuz2=4
+Cc: Marcus Better <marcusb@math.su.se>, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 07 Jan 2005 19:14:06 -0000
+
+Dear Marcus, Stephen,
+
+thanks for your code!
+
+Stephen Wilson writes:
+ 
+ > btw, I dont feel this is a weakness in axioms static typing (its not
+ > really static since we can produce new types at runtime). In my mind,
+ > it is more a weakness w.r.t axioms ability express dependent
+ > signatures. If we could write things like:
+ > 
+ >     SAE ==> SimpleAlgebraicExtension
+ > 
+ >     f: (ULS, eq: SUP) -> SAE(K, SUP K, eq)
+
+Well, that's exactly what I meant with "static typing". I have to go and look
+what Aldor does with respect to this...
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sat Jan 08 05:26:42 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CnDnt-0006lh-CE
+	for mharc-axiom-math@gnu.org; Sat, 08 Jan 2005 05:26:41 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CnDnm-0006kC-MC
+	for axiom-math@nongnu.org; Sat, 08 Jan 2005 05:26:34 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CnDnh-0006jI-Rn
+	for axiom-math@nongnu.org; Sat, 08 Jan 2005 05:26:30 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1CnDng-0006j5-N9
+	for axiom-math@nongnu.org; Sat, 08 Jan 2005 05:26:29 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CnDb6-0003R8-FJ
+	for axiom-math@nongnu.org; Sat, 08 Jan 2005 05:13:28 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id j08ACvMw301620;
+	Sat, 8 Jan 2005 11:13:01 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16863.45501.381832.970325@seam101.local>
+Date: Sat, 8 Jan 2005 11:11:09 +0100
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Re: [Axiom-mail] Dynamically constructed return types
+In-Reply-To: <16862.56348.154331.29115@seam101.local>
+References: <41DAAC79.8040300@math.su.se>
+	<16862.53274.264304.293819@seam101.local>
+	<20050107184757.GA13943@lattice.dyns.cx>
+	<16862.56348.154331.29115@seam101.local>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx7.univie.ac.at 4247; Body=4 Fuz1=4 Fuz2=4
+Cc: Marcus Better <marcusb@math.su.se>, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 08 Jan 2005 10:26:36 -0000
+
+Dear Marcus, Stephen, *
+
+one workaround might be to define your function as a domain or package. For
+example:
+
+)abbrev domain BAR Bar
+Bar(p:Integer): Exports == Implementation where
+  Exports == Join(FiniteFieldCategory,FiniteAlgebraicExtensionField($),_
+    ConvertibleTo(Integer))
+
+  Implementation == InnerPrimeField(nextPrime(p)$IntegerPrimesPackage(Integer)_ 
+                                    pretend PositiveInteger)
+
+
+Concerning Aldor, the appropriate section to read seems to be 7.4 of
+aldorug.pdf, pgs 77ff. I don't have the time right now to try it out, but it
+might work.
+
+
+
+
+From MAILER-DAEMON Mon Jan 10 07:43:39 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CnytX-0002Xl-Es
+	for mharc-axiom-math@gnu.org; Mon, 10 Jan 2005 07:43:39 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CnyoZ-0001af-SU
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 07:38:33 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CnyoG-0001OC-M9
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 07:38:13 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1CnyoF-0001N8-In
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 07:38:11 -0500
+Received: from [195.54.107.70] (helo=mxfep01.bredband.com)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Cnya1-0006dW-Rp
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 07:23:30 -0500
+Received: from kakmonster.int.dactylis.com ([83.226.4.115] [83.226.4.115])
+	by mxfep01.bredband.com with ESMTP id
+	<20050110122329.CHYE15609.mxfep01.bredband.com@kakmonster.int.dactylis.com>;
+	Mon, 10 Jan 2005 13:23:29 +0100
+Received: from [129.16.168.30] (dhcp168-30.math.chalmers.se [129.16.168.30])
+	(authenticated bits=0)
+	by kakmonster.int.dactylis.com (8.13.1/8.13.1) with ESMTP id
+	j0ACNN7b007584
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK);
+	Mon, 10 Jan 2005 13:23:28 +0100
+Message-ID: <41E273BB.4070502@math.su.se>
+Date: Mon, 10 Jan 2005 13:23:23 +0100
+From: Marcus Better <marcusb@math.su.se>
+User-Agent: Mozilla Thunderbird 0.9 (X11/20041124)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: Martin Rubey <martin.rubey@univie.ac.at>
+References: <41DAAC79.8040300@math.su.se>
+	<16862.53274.264304.293819@seam101.local>
+In-Reply-To: <16862.53274.264304.293819@seam101.local>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Greylist: Sender succeded SMTP AUTH authentication, not delayed by
+	milter-greylist-1.5.10 (kakmonster.int.dactylis.com
+	[192.168.1.2]); Mon, 10 Jan 2005 13:23:28 +0100 (CET)
+X-Scanned-By: MIMEDefang 2.48 on 192.168.1.2
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Dynamically constructed return types
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 10 Jan 2005 12:43:38 -0000
+
+> * PLEASE subscribe to axiom-math.
+
+Ok, ok, done that... :-)
+
+> Indeed, it seems that this is a weak point of Axioms static typing
+> philosophy...
+
+Yes, this would probably be easily done with true weak typing (as in 
+Smalltalk perhaps), but I wonder whether it should not be possible in 
+Axiom too.
+
+After all, when I call my function (returning Any) from the command line 
+interface, it correctly decapsulates the Any object, so that I can do 
+algebra on the returned value. I am trying to imitate some of this magic 
+in my spad program.
+
+> Could you make this more precise? The best thing would be a nearly working
+> example.
+
+I will try to provide one later, but for now I will try to explain using 
+your code.
+
+> Could you now specify in which situation you want to call f and what you want
+> to do with it?
+
+Ok, so f returns a value y of type L. Now the caller wants to do some 
+arithmetic with y, such as checking if it's zero or not.
+
+In my code, f would actually return a Laurent series over L. The caller 
+would then do some linear algebra on the coefficients of this series, 
+and eventually calculate the rank of some matrix over L.
+
+For this, the caller really only needs to know that the returned value 
+belongs to a domain having a certain category, CommutativeRing, or 
+Field, say. That should make it possible to do some matrix calculations 
+without knowing the exact type of the code. This sounds like it should 
+be simple enough?
+
+So, how can I declare the function f to return "CommutativeRing"?
+
+In usual statically typed languages like Java I would specify a return 
+type of Ring, which would be an "interface" definition (or abstract base 
+class in C++). Can I do the same thing in Axiom using categories?
+
+Marcus
+
+
+
+From MAILER-DAEMON Mon Jan 10 07:43:55 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Cnytn-0002ex-A2
+	for mharc-axiom-math@gnu.org; Mon, 10 Jan 2005 07:43:55 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Cnytg-0002d6-53
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 07:43:48 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CnyoY-0001VL-9N
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 07:38:30 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1CnyoN-0001N8-Vw
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 07:38:20 -0500
+Received: from [195.54.107.70] (helo=mxfep01.bredband.com)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CnyMH-0003y0-SK
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 07:09:18 -0500
+Received: from kakmonster.int.dactylis.com ([83.226.4.115] [83.226.4.115])
+	by mxfep01.bredband.com with ESMTP id
+	<20050110120915.CDTU15609.mxfep01.bredband.com@kakmonster.int.dactylis.com>;
+	Mon, 10 Jan 2005 13:09:15 +0100
+Received: from [129.16.168.30] (dhcp168-30.math.chalmers.se [129.16.168.30])
+	(authenticated bits=0)
+	by kakmonster.int.dactylis.com (8.13.1/8.13.1) with ESMTP id
+	j0AC9AAF007528
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK);
+	Mon, 10 Jan 2005 13:09:10 +0100
+Message-ID: <41E27066.3090700@math.su.se>
+Date: Mon, 10 Jan 2005 13:09:10 +0100
+From: Marcus Better <marcusb@math.su.se>
+User-Agent: Mozilla Thunderbird 0.9 (X11/20041124)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: Stephen Wilson <wilsons@multiboard.com>, axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Dynamically constructed return types
+References: <41DAAC79.8040300@math.su.se>
+	<16862.53274.264304.293819@seam101.local>
+	<20050107184757.GA13943@lattice.dyns.cx>
+In-Reply-To: <20050107184757.GA13943@lattice.dyns.cx>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Greylist: Sender succeded SMTP AUTH authentication, not delayed by
+	milter-greylist-1.5.10 (kakmonster.int.dactylis.com
+	[192.168.1.2]); Mon, 10 Jan 2005 13:09:11 +0100 (CET)
+X-Scanned-By: MIMEDefang 2.48 on 192.168.1.2
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 10 Jan 2005 12:43:48 -0000
+
+Stephen, Martin,
+
+thanks for your help on this. I realize that I need to formulate my 
+question more precisely, and I am trying to explain to myself what I am 
+really trying to do...
+
+> it is more a weakness w.r.t axioms ability express dependent
+> signatures. If we could write things like:
+> 
+>     SAE ==> SimpleAlgebraicExtension
+> 
+>     f: (ULS, eq: SUP) -> SAE(K, SUP K, eq)
+
+The situation here is somewhat more difficult since eq is not known to 
+the caller, but calculated inside the function f. So the signature could 
+not be written this way.
+
+Marcus
+
+
+
+From MAILER-DAEMON Mon Jan 10 12:37:45 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Co3U9-0005oD-1K
+	for mharc-axiom-math@gnu.org; Mon, 10 Jan 2005 12:37:45 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Co3U7-0005nQ-JA
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 12:37:43 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Co3U6-0005mz-N0
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 12:37:43 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Co3Sq-0005RV-Uz
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 12:36:24 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Co2q4-00070V-1C
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 11:56:20 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id j0AGtcMw313272;
+	Mon, 10 Jan 2005 17:55:42 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16866.45807.923424.595519@seam101.local>
+Date: Mon, 10 Jan 2005 17:53:03 +0100
+To: Martin Rubey <martin.rubey@univie.ac.at>
+In-Reply-To: <16866.31602.740577.281648@seam101.local>
+References: <41DAAC79.8040300@math.su.se>
+	<16862.53274.264304.293819@seam101.local>
+	<41E273BB.4070502@math.su.se>
+	<16866.31602.740577.281648@seam101.local>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4247; Body=4 Fuz1=4 Fuz2=4
+Cc: axiom-math@nongnu.org, Tim Daly <daly@rio.sci.ccny.cuny.edu>
+Subject: [Axiom-math] Re: [Axiom-mail] Dynamically constructed return types
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 10 Jan 2005 17:37:44 -0000
+
+I just realized that there was a comma in the CC list missing.
+
+Martin Rubey writes:
+ > Tim: I  get failures from your idsi adress, I guess...
+ > 
+ > Dear Marcus,
+ > 
+ > 
+ > I'm not quite sure whether you followed the thread of the same name. I'm not
+ > even sure whether all mails I sent were received, so I copy it here:
+ >  
+ > > I just tried it out, it works. Another reason to use Aldor as future
+ > > language. Tim: can you estimate how much of an effort it would be to get
+ > > Aldor at least as external compiler going? (Currently, one cannot use domains
+ > > compiled with the Aldor compiler within Axiom)
+ > > 
+ > > Here's the proof of concept, using the domain IntegerMod defined in
+ > > Aldorug.pdf:
+ > > 
+ > > FOO: with {f:(n:Integer)->IntegerMod(n) } == add {f(n:Integer):IntegerMod(n)
+ > > == coerce(10)$IntegerMod(n) }
+ > > 
+ > > Try it out:
+ > > 
+ > > lift(f(6)$FOO2)$IntegerMod(6)
+ > > 4 @ AldorInteger
+ > 
+ > So indeed, in Aldor you can do what you want to. In fact, the with part can
+ > contain any calculations, too. That is, you could even write
+ > 
+ >   with {f:(n:Integer)->IntegerMod(hairyfunction(n)) }
+ > 
+ > which would fit your case exactly, I suspect.
+ > 
+ > Unfortunately, compiling domains with Aldor and using them in Axiom does not
+ > work currently. It did, once. I managed with a lot of help from Mike Dewar,
+ > Stephen and Zork to compile functions, as described on
+ > 
+ > http://page.axiom-developer.org/zope/mathaction/AldorForAxiom
+ > 
+ > 
+ > So really, it is a problem of Axioms language, but only in the sense in that it
+ > is slightly behind Aldor... I think, it's about time to spend some money on
+ > this.
+ > 
+ > Marcus Better writes:
+ > 
+ >  > After all, when I call my function (returning Any) from the command line
+ >  > interface, it correctly decapsulates the Any object, so that I can do
+ >  > algebra on the returned value. I am trying to imitate some of this magic in
+ >  > my spad program.
+ > 
+ > Unfortunately, I did not manage myself. Sorry. I tried to get
+ > definingPolynomial working on your result, no success.
+ > 
+ >  > For this, the caller really only needs to know that the returned value
+ >  > belongs to a domain having a certain category, CommutativeRing, or Field,
+ >  > say. That should make it possible to do some matrix calculations without
+ >  > knowing the exact type of the code. This sounds like it should be simple
+ >  > enough?
+ > 
+ > Yes, but Axiom requires that you know the type...
+ > 
+ >  > So, how can I declare the function f to return "CommutativeRing"?
+ > 
+ > With every Category, there is also a Domain containing only the default
+ > operations, you get it by appending an (within spad: escaped) ampersand. For
+ > example, in algfunc.spad, you have the definition
+ > 
+ >     rootsOf(p:SparseUnivariatePolynomial $, y:Symbol) ==
+ >       (r := retractIfCan(p)@Union($,"failed")) case $ => rootsOf(r::$,y)
+ >       rootsOf(p, y)$AlgebraicallyClosedField_&($)
+ > 
+ > but this is only package calling: use the definition of rootsOf as given in
+ > AlgebraicallyClosedField. I don't think you can return something of type
+ > AlgebraicallyClosedField_&...
+ > 
+ >  > In usual statically typed languages like Java I would specify a return type
+ >  > of Ring, which would be an "interface" definition (or abstract base class in
+ >  > C++). Can I do the same thing in Axiom using categories?
+ > 
+ > I think that the concepts are very similar, but as I said, you cannot compute
+ > with categories...
+ > 
+ > Maybe you can use a type that contains all elements of
+ > SimpleAlgebraicExtension? 
+ > 
+ > Or, if you will stay within one such depending domain as you described, you
+ > might be able to split your package into two, such that the first package
+ > computes the equation and the second takes it as parameter. Note that the
+ > function signatures may depend on the *package* parameters (even in complicated
+ > ways)!
+ > 
+ > Martin
+ > 
+
+
+
+
+From MAILER-DAEMON Mon Jan 10 12:40:25 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Co3Wi-0006Sz-W7
+	for mharc-axiom-math@gnu.org; Mon, 10 Jan 2005 12:40:25 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Co3Wf-0006Rx-9I
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 12:40:21 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Co3We-0006Ra-Db
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 12:40:20 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Co3Sp-0005Sb-A8
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 12:36:23 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Co2xO-0000Uu-3e
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 12:03:54 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id j0AH3fMw292200;
+	Mon, 10 Jan 2005 18:03:44 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16866.46290.116598.264546@seam101.local>
+Date: Mon, 10 Jan 2005 18:01:06 +0100
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Dynamically constructed return types / Aldor
+In-Reply-To: <16865.7295.844793.705524@seam101.local>
+References: <41DAAC79.8040300@math.su.se>
+	<16862.53274.264304.293819@seam101.local>
+	<20050107184757.GA13943@lattice.dyns.cx>
+	<16862.56348.154331.29115@seam101.local>
+	<16863.45501.381832.970325@seam101.local>
+	<16865.7295.844793.705524@seam101.local>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4249; Body=3 Fuz1=3 Fuz2=3
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 10 Jan 2005 17:40:21 -0000
+
+A comma in the cc list was missing. Sorry.
+
+Martin Rubey writes:
+ > Dear Marcus, Stephen, Tim,
+ > 
+ > > Concerning Aldor, the appropriate section to read seems to be 7.4 of
+ > > aldorug.pdf, pgs 77ff. I don't have the time right now to try it out, but it
+ > > might work.
+ >  
+ > 
+ > I just tried it out, it works. Another reason to use Aldor as future
+ > language. Tim: can you estimate how much of an effort it would be to get Aldor
+ > at least as external compiler going? (Currently, one cannot use domains
+ > compiled with the Aldor compiler within Axiom)
+ > 
+ > Here's the proof of concept, using the domain IntegerMod defined in Aldorug.pdf:
+ > 
+ > FOO: with {f:(n:Integer)->IntegerMod(n) } == add {f(n:Integer):IntegerMod(n)
+ > == coerce(10)$IntegerMod(n) }
+ > 
+ > Try it out:
+ > 
+ > lift(f(6)$FOO2)$IntegerMod(6)
+ > 4 @ AldorInteger
+ > 
+ > Martin
+
+
+
+
+From MAILER-DAEMON Mon Jan 10 12:41:11 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Co3XT-0006fj-1A
+	for mharc-axiom-math@gnu.org; Mon, 10 Jan 2005 12:41:11 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Co3XQ-0006ex-3k
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 12:41:08 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Co3XO-0006eQ-Bm
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 12:41:06 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Co3Sq-0005Sb-DD
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 12:36:24 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Co2u8-00083H-Qd
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 12:00:33 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id j0AH0IMw322072;
+	Mon, 10 Jan 2005 18:00:20 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16866.46086.761005.418142@seam101.local>
+Date: Mon, 10 Jan 2005 17:57:42 +0100
+To: Marcus Better <marcusb@math.su.se>
+In-Reply-To: <41E2A4A5.5030509@math.su.se>
+References: <41DAAC79.8040300@math.su.se>
+	<16862.53274.264304.293819@seam101.local>
+	<41E273BB.4070502@math.su.se>
+	<16866.31632.599749.466603@seam101.local>
+	<41E2A4A5.5030509@math.su.se>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4249; Body=3 Fuz1=3 Fuz2=3
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Dynamically constructed return types
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 10 Jan 2005 17:41:09 -0000
+
+Dear Marcus,
+
+Marcus Better writes:
+ > Martin,
+ > 
+ > >   with {f:(n:Integer)->IntegerMod(hairyfunction(n)) }
+ > > 
+ > > which would fit your case exactly, I suspect.
+ > 
+ > That's impressive. I think however that it will be too complicated for me to
+ > start looking at Aldor at this point.
+
+Aldor is not that much of a problem: the languages are nearly identical. You
+can even use the "pile" syntax, used in spad. The following will probably look
+more familiar to you:
+
+#pile
+
+Foo(): Exports == Implementation where
+
+  Exports == with
+    
+    f:(n:Integer)->IntegerMod(n) 
+
+  Implementation == add
+
+    f(n:Integer):IntegerMod(n) == coerce(10)$IntegerMod(n)
+
+This is perfectly valid Aldor, too. (modulo typos)
+
+ > > With every Category, there is also a Domain containing only the default
+ > > operations, you get it by appending an (within spad: escaped) ampersand.
+ > 
+ > Interesting, I did not know that. So this is a kind of "abstract base
+ > class". It's a bit surprising that it cannot be used as such. 
+
+You can use it for package calling. I.e., if the function is implemented in the
+category -- as "default" implementation -- you can use it.
+
+ > > Maybe you can use a type that contains all elements of
+ > > SimpleAlgebraicExtension?
+ > 
+ > Perhaps I will just inline the functions, and do without function calls.
+ > This will be ugly since I will have to do without recursion, but it looks
+ > like the simplest solution.
+
+I don't understand, but this is probably due to my ignorance...
+
+Martin
+
+
+
+
+From MAILER-DAEMON Mon Jan 10 13:54:55 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Co4gp-0000Rd-95
+	for mharc-axiom-math@gnu.org; Mon, 10 Jan 2005 13:54:55 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Co4gm-0000QB-UW
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 13:54:53 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Co4bt-0007eB-40
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 13:49:54 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Co4br-0007Ug-Hr
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 13:49:47 -0500
+Received: from [195.54.107.70] (helo=mxfep01.bredband.com)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Co4AQ-0007nV-1f
+	for axiom-math@nongnu.org; Mon, 10 Jan 2005 13:21:26 -0500
+Received: from kakmonster.int.dactylis.com ([83.226.4.115] [83.226.4.115])
+	by mxfep01.bredband.com with ESMTP id
+	<20050110182125.GDBN15609.mxfep01.bredband.com@kakmonster.int.dactylis.com>;
+	Mon, 10 Jan 2005 19:21:25 +0100
+Received: from [83.227.75.193]
+	(c-c14be353.165-1-64736c11.cust.bredbandsbolaget.se [83.227.75.193])
+	(authenticated bits=0)
+	by kakmonster.int.dactylis.com (8.13.1/8.13.1) with ESMTP id
+	j0AILHhQ009293
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK);
+	Mon, 10 Jan 2005 19:21:20 +0100
+Message-ID: <41E2C79D.5000708@math.su.se>
+Date: Mon, 10 Jan 2005 19:21:17 +0100
+From: Marcus Better <marcusb@math.su.se>
+User-Agent: Mozilla Thunderbird 0.9 (X11/20041124)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: Martin Rubey <martin.rubey@univie.ac.at>
+References: <41DAAC79.8040300@math.su.se>	<16862.53274.264304.293819@seam101.local>	<41E273BB.4070502@math.su.se>	<16866.31632.599749.466603@seam101.local>	<41E2A4A5.5030509@math.su.se>
+	<16866.46086.761005.418142@seam101.local>
+In-Reply-To: <16866.46086.761005.418142@seam101.local>
+X-Enigmail-Version: 0.89.0.0
+X-Enigmail-Supports: pgp-inline, pgp-mime
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Greylist: Sender succeded SMTP AUTH authentication, not delayed by
+	milter-greylist-1.5.10 (kakmonster.int.dactylis.com
+	[192.168.1.2]); Mon, 10 Jan 2005 19:21:20 +0100 (CET)
+X-Scanned-By: MIMEDefang 2.48 on 192.168.1.2
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Dynamically constructed return types
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 10 Jan 2005 18:54:53 -0000
+
+Martin,
+
+> Aldor is not that much of a problem: the languages are nearly identical.
+
+Ok, I might give it a try then, once they fix their download page (the 
+link to the Linux binary is broken).
+
+>  > Perhaps I will just inline the functions, and do without function calls.
+
+To be precise: I unrolled the function calls, replacing them with the 
+function's code inlined. That means replacing recursive function calls 
+with iteration, which is uglier.
+
+Unfortunately it still won't compile, but I hope this is just a matter 
+of correct syntax. Here is the code, I would be grateful if someone can 
+give me a hint:
+
+-------------------------------------------------------------------
+)abbrev package LOCPARM LocalParam
+LocalParam: Exports == Implementation where
+   INT    ==> Integer
+   POSINT ==> PositiveInteger
+   NNI	 ==> NonNegativeInteger
+   UTS    ==> UnivariateTaylorSeries
+   ULS    ==> UnivariateLaurentSeries
+   SUP	 ==> SparseUnivariatePolynomial
+   ANY1   ==> AnyFunctions1
+
+   Exports ==> with
+
+     localParam: (POSINT, NNI) -> Any
+
+   Implementation ==> add
+
+     localParam(p, n) ==
+       K := Fraction Polynomial(PrimeField p)
+       -- The zero variable is used here due to a compiler bug
+       zero := 0::K
+       var := new()$Symbol
+       LS := ULS(K, var, zero)
+       x := monomial(1, -1)$LS
+       for i in 1..n repeat
+         a := new()$Symbol
+         b := new()$Symbol
+         rhs := a::LS*x + b::LS*x**3
+
+         f := coefficients taylorRep rhs
+         d := degree rhs
+         -- Reduce the pole to minimal possible order.
+         while negative? d and zero? (d rem p) repeat
+           eq := monomial(1,p)$SUP(K) - monomial(first f, 0)$SUP(K)
+           L := SimpleAlgebraicExtension(K, SUP K, eq)
+           f1 := map(#1::L, f)$StreamFunctions2(K,L)
+           -- subtract w^p-w from f1
+           f1.1 := 0
+           j := 1 + (d quo p) - d
+           f1.j := f1.j + (basis()$L).p
+           while (negative? d and zero? first f1) repeat
+             f1 := rest f1
+	    d := d+1
+	  f: Stream L := f1
+           K := L
+-------------------------------------------------------------
+
+Explanation: I have a ring K. I create another ring L which is a 
+SimpleAlgebraicExtension of K. I then want to replace K with L and 
+iterate. But Axiom won't allow the assignment K:=L.
+
+The while loop would have been replaced with a recursive function in my 
+original attempt, if Axiom had allowed it.
+
+(This code will also need a coercion of the return value to Any before 
+it compiles correctly, but never mind...)
+
+I get the following compiler error:
+------------------------------------------------
+        ....stuff removed here
+      (|exit| 1 | << | (LET K L) | >> |))
+****** level 3  ******
+$x:= (LET K L)
+$m:= NoValueMode
+$f:=
+((((|f| # # #) (|d| # #) (|f1| # #) (#:G1496 #) ...)))
+
+    >> Apparent user error:
+    Cannot coerce L
+       of mode (MonogenicAlgebra K (SparseUnivariatePolynomial K))
+       to mode (Join (QuotientFieldCategory (Polynomial (PrimeField p))) 
+(CATEGORY package (IF (has (Polynomial (PrimeField p)) 
+(IntegerNumberSystem)) (IF (has (Polynomial (PrimeField p)) (OpenMath)) 
+(ATTRIBUTE (OpenMath)) noBranch) noBranch) (IF (has (Polynomial 
+(PrimeField p)) (ATTRIBUTE canonical)) (IF (has (Polynomial (PrimeField 
+p)) (GcdDomain)) (IF (has (Polynomial (PrimeField p)) 
+(ATTRIBUTEcanonicalUnitNormal)) (ATTRIBUTE canonical) noBranch) 
+noBranch) noBranch)))
+------------------------------------------------
+
+Which is understandable. I suppose the variable K needs to be cleared 
+somehow.
+
+Marcus
+
+
+
+From MAILER-DAEMON Tue Jan 11 22:50:03 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CoZWC-0000ri-1f
+	for mharc-axiom-math@gnu.org; Tue, 11 Jan 2005 22:50:00 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CoZW3-0000mj-4A
+	for axiom-math@nongnu.org; Tue, 11 Jan 2005 22:49:51 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CoZW0-0000ky-HU
+	for axiom-math@nongnu.org; Tue, 11 Jan 2005 22:49:48 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1CoZW0-0000jP-97; Tue, 11 Jan 2005 22:49:48 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CoZHO-0002uD-Jb; Tue, 11 Jan 2005 22:34:42 -0500
+Received: from localhost.localdomain (146.179.252.64.snet.net [64.252.179.146])
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j0C3YZE03865;
+	Tue, 11 Jan 2005 21:34:35 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j0C4F6213359;
+	Tue, 11 Jan 2005 23:15:07 -0500
+Date: Tue, 11 Jan 2005 23:15:07 -0500
+Message-Id: <200501120415.j0C4F6213359@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] ISSAC 2005
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 12 Jan 2005 03:49:57 -0000
+
+
+FYI.....
+
+
+Bill,
+
+Notice that there is a Satelite Workshop on 
+"Internet Accessible Mathematical Computation"
+which sounds an awful lot like MathAction.
+
+
+Tim
+
+------- Start of forwarded message -------
+Date: Wed, 12 Jan 2005 10:20:23 +0800
+From: ISSAC 2005 <issac2005@mmrc.iss.ac.cn>
+Subject: ISSAC2005CFP
+
+                     ISSAC2005 Call for Papers
+                       Third Announcement
+
+   International Symposium on Symbolic and Algebraic Computation
+               July 24-27, 2005,  Beijing, China.
+               http://www.mmrc.iss.ac.cn/issac2005/
+
+*********************************************************************
+The deadline for submission of papers to ISSAC 2005 has been extended to
+January 21, 2005 (Midnight [24:00 EST]).
+
+Paper Submission Webpage: https://issac2005.risc.uni-linz.ac.at/
+*********************************************************************
+ISSAC2005 program consists of
+
+Contributed Talks
+Poster Presentations
+Software Exhibitions
+Invited Talks
+  Bruno Buchberger, RISC-Linz, Austria
+  Bruno Salvy, INRIA, France
+  Wen-Tsun Wu, Chinese Academy of Sciences, China
+Tutorials
+  Evelyne Hubert INRIA, Sophia Antipolis, France
+  Arnaud Tisserand INRIA, Lyon, France
+  Jan Verschelde University of Chicago, USA
+Satellite Workshops
+  Algebraic Methods in Cryptography
+  Internet Accessible Mathematical Computation
+  Symbolic-Numeric Computation
+
+Distinguished Paper Award and Distinguished Student Author Award
+will be selected.
+------- End of forwarded message -------
+
+
+
+From MAILER-DAEMON Wed Jan 12 09:40:07 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CojfL-0005xL-2E
+	for mharc-axiom-math@gnu.org; Wed, 12 Jan 2005 09:40:07 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CojRE-0003F1-1F
+	for axiom-math@nongnu.org; Wed, 12 Jan 2005 09:25:32 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CojQs-00034p-Hb
+	for axiom-math@nongnu.org; Wed, 12 Jan 2005 09:25:21 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1CojQr-00033z-RK
+	for axiom-math@nongnu.org; Wed, 12 Jan 2005 09:25:09 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CojD0-00036F-4E
+	for axiom-math@nongnu.org; Wed, 12 Jan 2005 09:10:50 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id j0CEAGMw238312;
+	Wed, 12 Jan 2005 15:10:28 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16869.12077.723286.836822@seam101.local>
+Date: Wed, 12 Jan 2005 15:07:41 +0100
+To: Marcus Better <marcusb@math.su.se>
+In-Reply-To: <41E2C79D.5000708@math.su.se>
+References: <41DAAC79.8040300@math.su.se>
+	<16862.53274.264304.293819@seam101.local>
+	<41E273BB.4070502@math.su.se>
+	<16866.31632.599749.466603@seam101.local>
+	<41E2A4A5.5030509@math.su.se>
+	<16866.46086.761005.418142@seam101.local>
+	<41E2C79D.5000708@math.su.se>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4249; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Dynamically constructed return types
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 12 Jan 2005 14:40:05 -0000
+
+Dear Marcus,
+
+Marcus Better writes:
+
+ > Unfortunately it still won't compile, but I hope this is just a matter of
+ > correct syntax. Here is the code, I would be grateful if someone can give me
+ > a hint:
+
+Advise: 
+
+* When I start programming a function, I always start with a nearly empty
+procedure body, which returns some arbitrary value (for example, 0) in the
+goal-domain. Then I add functionality bit by bit, such that it always
+compiles. Otherwise I experienced unintelligible compiler errors, which didn't
+make any sense.
+
+* never use tabs. If you do, please untabify before you send it per email!
+
+* unfortunately, I don't understand the code below too well. What would you want
+  to return, if there were no compiler problems?
+
+* I'm rather weak in Algebra. Could you do a very simple example for me, just
+  that I realize what the resulting domain would be? I understand that 
+
+K:=SAE(FRAC INT, UP(x,FRAC INT), x^2+1::UP(x,FRAC INT))
+
+  should be the domain of complex integers, shouldn't it? If I extend this
+  domain again,
+
+L:=SAE(K, UP(y, K), eq::UP(y, K))
+
+  what do I get? Isn't this again a SAE of FRAC INT, only with a different
+  defining polynomial? If this is correct, Axiom doesn't know this, does it?
+
+Martin
+
+
+
+
+
+
+From MAILER-DAEMON Wed Jan 12 11:19:05 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1ColD7-0001bm-BE
+	for mharc-axiom-math@gnu.org; Wed, 12 Jan 2005 11:19:05 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1ColD6-0001b5-0N
+	for axiom-math@nongnu.org; Wed, 12 Jan 2005 11:19:04 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1ColD5-0001ai-A3
+	for axiom-math@nongnu.org; Wed, 12 Jan 2005 11:19:03 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1CoksV-0003eo-1B
+	for axiom-math@nongnu.org; Wed, 12 Jan 2005 10:57:47 -0500
+Received: from [195.54.107.73] (helo=mxfep02.bredband.com)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CokC9-00081R-6S
+	for axiom-math@nongnu.org; Wed, 12 Jan 2005 10:14:01 -0500
+Received: from kakmonster.int.dactylis.com ([83.226.4.115] [83.226.4.115])
+	by mxfep02.bredband.com with ESMTP id
+	<20050112151356.YYWY24538.mxfep02.bredband.com@kakmonster.int.dactylis.com>;
+	Wed, 12 Jan 2005 16:13:56 +0100
+Received: from [129.16.168.30] (dhcp168-30.math.chalmers.se [129.16.168.30])
+	(authenticated bits=0)
+	by kakmonster.int.dactylis.com (8.13.1/8.13.1) with ESMTP id
+	j0CFDilp025837
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK);
+	Wed, 12 Jan 2005 16:13:51 +0100
+Message-ID: <41E53EA4.3020207@math.su.se>
+Date: Wed, 12 Jan 2005 16:13:40 +0100
+From: Marcus Better <marcusb@math.su.se>
+User-Agent: Mozilla Thunderbird 0.9 (X11/20041124)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: Martin Rubey <martin.rubey@univie.ac.at>
+References: <41DAAC79.8040300@math.su.se>	<16862.53274.264304.293819@seam101.local>	<41E273BB.4070502@math.su.se>	<16866.31632.599749.466603@seam101.local>	<41E2A4A5.5030509@math.su.se>	<16866.46086.761005.418142@seam101.local>	<41E2C79D.5000708@math.su.se>
+	<16869.12077.723286.836822@seam101.local>
+In-Reply-To: <16869.12077.723286.836822@seam101.local>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Greylist: Sender succeded SMTP AUTH authentication, not delayed by
+	milter-greylist-1.5.10 (kakmonster.int.dactylis.com
+	[192.168.1.2]); Wed, 12 Jan 2005 16:13:52 +0100 (CET)
+X-Scanned-By: MIMEDefang 2.48 on 192.168.1.2
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Dynamically constructed return types
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 12 Jan 2005 16:19:04 -0000
+
+Martin,
+
+> K:=SAE(FRAC INT, UP(x,FRAC INT), x^2+1::UP(x,FRAC INT))
+> 
+>   should be the domain of complex integers, 
+
+Well, it should be Q(i), the field of rational numbers extended with i.
+
+> If I extend this domain again,
+> 
+> L:=SAE(K, UP(y, K), eq::UP(y, K))
+> 
+>   what do I get?
+
+A finite extension of Q(i). Now it happens that this extension will have 
+a primitive element, i.e., it is generated over Q by _one_ element a, so 
+it is equal to Q(a). But this is only because the ground field Q is of 
+characteristic zero, so the extension is automatically separable. In 
+general the extension is not necessarily generated by one element.
+
+(In fact in my case the extension will certainly not be separable, as 
+you will see below.)
+
+ > Isn't this again a SAE of FRAC INT, only with a different
+>   defining polynomial?
+
+Yes, in the example above (but not in general).
+
+> If this is correct, Axiom doesn't know this, does it?
+
+No, I don't think it does, and I don't think it should either.
+
+I am trying to do the following, which is a common procedure when 
+dealing with Artin-Schreier extensions:
+
+1. Input is a Laurent series f with coefficients in a field K of 
+characteristic p>0. If f satisfies one of the following conditions:
+A.  f has no terms with negative order, or
+B.  the leading term of f is of order -m where m>0, and m is not 
+divisible by p,
+then stop and return f.
+
+2. Otherwise we can find a p-th root of the leading coefficient of f in 
+a suitable extension field L of K, and hence a monomial w such that f + 
+w^p - w has a pole of smaller order than f.
+
+3. Replace f by f+w^p-w and K by L, and go back to 1.
+
+So I am trying to do a sequence of field extensions of K.
+
+The result will be a Laurent series over one of these repeated 
+extensions, which I would like to return. But for now, I will be happy 
+if I can just get the code to run correctly and return some dummy value.
+
+The problem seems to be in step 3, where I try to reassign the domain 
+variable K. I am not sure how to do this. It seems to confuse Axiom.
+
+Here is a version which does compile, but with warnings. (Note that it 
+constructs a special series f, and the inner while loop is the algorithm 
+I described above):
+
+---------------------------------------------------
+)abbrev package LOCPARM LocalParam
+LocalParam: Exports == Implementation where
+   INT    ==> Integer
+   POSINT ==> PositiveInteger
+   NNI    ==> NonNegativeInteger
+   UTS    ==> UnivariateTaylorSeries
+   ULS    ==> UnivariateLaurentSeries
+   SUP    ==> SparseUnivariatePolynomial
+   ANY1   ==> AnyFunctions1
+
+   Exports ==> with
+
+     localParam: (POSINT, NNI) -> Any
+
+   Implementation ==> add
+
+     localParam(p, n) ==
+       K: CommutativeRing := Fraction Polynomial(PrimeField p)
+       zero := 0::K
+       var := new()$Symbol
+       LS := UnivariateLaurentSeries(K, var, zero)
+       x := monomial(1, -1)$LS
+       for i in 1..n repeat
+         a := new()$Symbol
+         b := new()$Symbol
+         rhs := a::K*x + b::K*x**3
+
+         f := coefficients taylorRep rhs
+         d := degree rhs
+         -- Reduce the pole to minimal possible order.
+         while negative? d and zero? (d rem p) repeat
+           eq := monomial(1,p)$SUP(K) - monomial(first f, 0)$SUP(K)
+           L: CommutativeRing := SimpleAlgebraicExtension(K, SUP K, eq)
+           f1 := map(#1::L, f)$StreamFunctions2(K,L)
+           -- subtract w^p-w from f1
+           f1.1 := 0
+           j := 1 + (d quo p) - d
+           f1.j := f1.j + (basis()$L).p
+           while (negative? d and zero? first f1) repeat
+             f1 := rest f1
+             d := d+1
+           f: Stream L := f1
+           K := L
+         return coerce(d)$ANY1(Integer)
+--------------------------------------------------------------------
+
+This gives the following compiler warning:
+---------------------------------------------
+    Warnings:
+       [1] localParam: domain valued variable K has been reassigned 
+within its scope
+---------------------------------------------
+
+Despite the warning, the code does run when called as localParam(2,1), 
+but I cannot make it return something more useful, such as the series 
+(or stream) f. All my attemps just lead to more compiler warnings and 
+"system errors" when I run the code.
+
+So my question is, is the code even legal in Axiom? Can I disregard the 
+compiler warning?
+
+Marcus
+
+
+
+From MAILER-DAEMON Wed Jan 12 15:33:12 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CopB1-0004Np-Un
+	for mharc-axiom-math@gnu.org; Wed, 12 Jan 2005 15:33:12 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CopAz-0004LP-EP
+	for axiom-math@nongnu.org; Wed, 12 Jan 2005 15:33:09 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CopAX-00049Z-K4
+	for axiom-math@nongnu.org; Wed, 12 Jan 2005 15:32:42 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1CopAL-0003sw-MA; Wed, 12 Jan 2005 15:32:30 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CoomE-0001gW-5z; Wed, 12 Jan 2005 15:07:34 -0500
+Received: from localhost.localdomain (146.179.252.64.snet.net [64.252.179.146])
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j0CK7UE13303;
+	Wed, 12 Jan 2005 14:07:30 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j0CKm0V14291;
+	Wed, 12 Jan 2005 15:48:00 -0500
+Date: Wed, 12 Jan 2005 15:48:00 -0500
+Message-Id: <200501122048.j0CKm0V14291@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] documenting changes
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 12 Jan 2005 20:33:10 -0000
+
+*,
+
+I'm in the process of trying to merge the axiom--windows--1 branch
+with the axiom--main--1 branch.
+
+There are dozens of files with changes and no documentation.
+It is painfully obvious that the message isn't getting out.
+
+The point of the free and open source Axiom is documented code.
+This project differs from all other projects in one main feature;
+every file in the system is a tex document. There are no C, lisp,
+boot, spad, Makefile, include files, etc. EVERYTHING is (or will be)
+a DOCUMENT. You're not writing C code, you're writing a document.
+
+The reason that Axiom is all documents is because *I* wrote portions
+of Axiom many years ago and commented nothing. Now I'm looking at my
+own code and, even though I tried to write dirt-simple, perfectly 
+clear code, I no longer understand the "why" of it. The end result
+is that Axiom is very hard to maintain and modify. As time permits
+I'm going back and writing the documentation for the existing code.
+
+If Axiom is going to be a living project we MUST change the way 
+Axiom developers write and modify code. How else is someone, 30
+years from now, supposed to understand and update your code?
+
+So if you make a change to the source DOCUMENT you really do need to
+write a paragraph that explains the need for the change and what was
+changed.
+
+If you don't write a paragraph to explain the change then I have to
+reverse-engineer your change, write the documentation, and hand-merge
+the results.
+
+As a result the axiom--windows--1 merge is going VERY slowly. There
+are undocumented changes to the algebra, to the interpreter, and to
+the library code.
+
+If you made changes to the axiom--windows--1 branch please revisit
+the changes and send me patches that contain documentation; not just
+comments, real words about why the change was needed. Write for the
+future maintainers.
+
+Believe me, I know that it is painful to have to write documentation.
+But without it Axiom will surely die. Please take the time.
+
+Tim
+
+
+
+
+
+
+
+From MAILER-DAEMON Thu Jan 13 10:10:29 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Cp6cG-0007Dn-St
+	for mharc-axiom-math@gnu.org; Thu, 13 Jan 2005 10:10:28 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Cp6cB-0007B3-GU
+	for axiom-math@nongnu.org; Thu, 13 Jan 2005 10:10:23 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Cp6c8-00079f-Ll
+	for axiom-math@nongnu.org; Thu, 13 Jan 2005 10:10:21 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Cp6c8-00079R-2x
+	for axiom-math@nongnu.org; Thu, 13 Jan 2005 10:10:20 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Cp6M9-0008EY-Mv
+	for axiom-math@nongnu.org; Thu, 13 Jan 2005 09:53:50 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id j0DErTMw423332;
+	Thu, 13 Jan 2005 15:53:32 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <16870.35533.548280.69572@seam101.local>
+Date: Thu, 13 Jan 2005 15:50:53 +0100
+To: Marcus Better <marcusb@math.su.se>
+In-Reply-To: <41E53EA4.3020207@math.su.se>
+References: <41DAAC79.8040300@math.su.se>
+	<16862.53274.264304.293819@seam101.local>
+	<41E273BB.4070502@math.su.se>
+	<16866.31632.599749.466603@seam101.local>
+	<41E2A4A5.5030509@math.su.se>
+	<16866.46086.761005.418142@seam101.local>
+	<41E2C79D.5000708@math.su.se>
+	<16869.12077.723286.836822@seam101.local>
+	<41E53EA4.3020207@math.su.se>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx7.univie.ac.at 4247; Body=3 Fuz1=3 Fuz2=3
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Dynamically constructed return types
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 13 Jan 2005 15:10:25 -0000
+
+Dear Marcus,
+
+I looked a little at your code. Some comments and a "patch":
+
+      localParam(p, n) =3D=3D
+        K: CommutativeRing :=3D Fraction Polynomial(PrimeField p)
+        zero :=3D 0::K
+        var :=3D new()$Symbol
+        LS :=3D UnivariateLaurentSeries(K, var, zero)
+        x :=3D monomial(1, -1)$LS
+        for i in 1..n repeat
+          a :=3D new()$Symbol
+          b :=3D new()$Symbol
+          rhs :=3D a::K*x + b::K*x**3
+--               ^^^^     ^^^^
+--               ||||     ||||
+-- I think that this is not what you intend: do you realy want that the=
+
+-- coefficients of rhs are polynomials?
+--
+          f: Stream K :=3D coefficients taylorRep rhs
+
+-- here you get [%a, 0, %b] ...=20
+-- I added the type to make things clearer
+
+          d :=3D degree rhs
+
+-- here you get -3
+
+          -- Reduce the pole to minimal possible order.
+          while negative? d and zero? (d rem p) repeat
+
+-- so this is going to be executed only if p equals 3
+
+            eq :=3D monomial(1,p)$SUP(K) - monomial(first f, 0)$SUP(K)
+            L: CommutativeRing :=3D SimpleAlgebraicExtension(K, SUP K, =
+eq)
+            f1 :=3D map(#1::L, f)$StreamFunctions2(K,L)
+            -- subtract w^p-w from f1
+            f1.1 :=3D 0
+            j :=3D 1 + (d quo p) - d
+            f1.j :=3D f1.j + (basis()$L).p
+            while (negative? d and zero? first f1) repeat
+              f1 :=3D rest f1
+              d :=3D d+1
+
+           K :=3D L
+           f: Stream(K) :=3D f1 pretend Stream K
+-- here's the "patch"         ^^^^^^^
+-- axiom cannot believe that f1 is really of type Stream K, so I tell i=
+t...
+-- maybe this screws things up completely, but it might work, too. I do=
+n't
+-- know. Needs testing.
+
+         res:Any :=3D coerce(first(f))$ANY1(K)
+
+         return res
+
+Thanks for your explanations, it is clearer now!
+
+Marcus Better writes:
+
+ > This gives the following compiler warning:
+ > ---------------------------------------------
+ >     Warnings:
+ >        [1] localParam: domain valued variable K has been reassigned=20=
+
+ > within its scope
+ > ---------------------------------------------
+
+It's a sensible warning, of course, but I don't know its relevance.  Ma=
+ybe this
+is related to the following -- from aldorug.pdf, page 77:
+
+Name constancy As a related but more fundamental concern, an expression=
+ in type
+               context must only contain names which are constant over =
+the
+               scope in which the type occurs, because, without this ru=
+le, it
+               would not be possible to associate well-defined types to=
+
+               expressions.
+
+               Consider the following incorrect function, which uses a =
+domain
+               called MachineIntegerMod (see AXIOMimodnSample for a def=
+inition)
+               which is parameterised by an Integer:
+
+                    f(n: Integer): () =3D=3D {
+                            local a, b: MachineIntegerMod(n);
+                            a :=3D coerce((3 * n + 1) quo 2);
+                            b :=3D coerce((5 * n + 1) quo 3);
+                            if n > 4 then    n :=3D n + 1;   -- ILLEGAL=
+!
+                            c :=3D a - b;
+                            stdout << "The result is " << c << newline
+                    }
+
+               The problem is that if n is updated, the type of a and b=
+ is no
+               longer valid and there is no reasonable interpretation f=
+or "-"
+               or "c".  The names appearing in an expression in type co=
+ntext
+               may be
+                   =B7 defined via "=3D=3D",
+                   =B7 imported via "import", or
+                   =B7 function parameters which are nowhere updated.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Fri Jan 14 12:30:35 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CpVHO-0001y3-Cc
+	for mharc-axiom-math@gnu.org; Fri, 14 Jan 2005 12:30:34 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CpVHC-0001rr-9O
+	for axiom-math@nongnu.org; Fri, 14 Jan 2005 12:30:23 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CpVH8-0001oA-2J
+	for axiom-math@nongnu.org; Fri, 14 Jan 2005 12:30:19 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1CpVH7-0001mK-Oq
+	for axiom-math@nongnu.org; Fri, 14 Jan 2005 12:30:17 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CpV47-0002GR-FU
+	for axiom-math@nongnu.org; Fri, 14 Jan 2005 12:16:51 -0500
+Received: from localhost.localdomain (146.179.252.64.snet.net [64.252.179.146])
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j0EHGmE11154
+	for <axiom-math@nongnu.org>; Fri, 14 Jan 2005 11:16:48 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j0EHvFK17195;
+	Fri, 14 Jan 2005 12:57:15 -0500
+Date: Fri, 14 Jan 2005 12:57:15 -0500
+Message-Id: <200501141757.j0EHvFK17195@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-math@nongnu.org
+Subject: [Axiom-math] Mega Conference
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 14 Jan 2005 17:30:31 -0000
+
+
+                      Third Announcement
+
+                           MEGA 2005
+
+             The Eight International Symposium on              
+           Effective Methods in Algebraic Geometry
+
+             Computing in and with algebraic geometry:
+         Theory, Algorithms, Implementations, Applications
+
+            Porto Conte, Alghero, Sardinia (Italy)
+                     May 27th -- June 1st
+		     
+                    http://mega.dm.unipi.it
+
+*************************************************************************
+THE DEADLINE FOR SUBMISSION OF PAPERS TO MEGA 2005 HAS BEEN EXTENDED TO
+JANUARY 22, 2005 (MIDNIGHT [24:00 GMT])
+
+Paper Submission Web page: http://mega.dm.unipi.it/submissions/index.html
+*************************************************************************
+
+Rough Schedule:
+
+26  Thursday   Arrival and registration.
+               A cold buffet will be available for late arrivals
+27  Friday     Registration (Morning) and Talks
+28  Saturday   Talks
+29  Sunday     Free
+30  Monday     Talks
+31  Tuesday    Talks
+ 1  Wednesday  Talks
+ 2  Thursday   Breakfast and departure
+ 
+
+MEGA 2005 program consists of:
+
+Contributed Talks
+Short Communications
+Software Exhibitions
+Invited Speakers:
+   E. Allman  (University of Southern Maine, USA)
+   P. Fitzpatrick  (University of Cork, Ireland)
+   H. Hauser  (Institut fur Mathematik, Innsbruck, Austria)
+   B. Poonen  (University of California, USA)
+   T. Theobald  (TUM, Germany and Yale University, USA)
+_______________________________________________
+Communaute mailing list
+Communaute@medicis.polytechnique.fr
+http://jules.medicis.polytechnique.fr/cgi-bin/mailman/listinfo/communaute
+
+
+
+From MAILER-DAEMON Fri Jan 14 16:28:11 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CpYzL-0001pr-7P
+	for mharc-axiom-math@gnu.org; Fri, 14 Jan 2005 16:28:11 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CpYyh-0001lU-Lw
+	for axiom-math@nongnu.org; Fri, 14 Jan 2005 16:27:31 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CpYyQ-0001cm-Vd
+	for axiom-math@nongnu.org; Fri, 14 Jan 2005 16:27:17 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1CpYyQ-0001at-MV; Fri, 14 Jan 2005 16:27:14 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CpYhx-0007nd-UH; Fri, 14 Jan 2005 16:10:14 -0500
+Received: from localhost.localdomain (146.179.252.64.snet.net [64.252.179.146])
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j0ELA9E12319;
+	Fri, 14 Jan 2005 15:10:09 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j0ELoaa17725;
+	Fri, 14 Jan 2005 16:50:36 -0500
+Date: Fri, 14 Jan 2005 16:50:36 -0500
+Message-Id: <200501142150.j0ELoaa17725@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Bertfried.Fauser@uni-konstanz.de, bill.page1@sympatico.ca
+In-reply-to: <001201c4fa77$7a242d60$6501a8c0@Asus> (bill.page1@sympatico.ca)
+References: <001201c4fa77$7a242d60$6501a8c0@Asus>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Re: Axiom book
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 14 Jan 2005 21:28:08 -0000
+
+Bertfried,
+
+There are now three distinct meanings for "the axiom book".
+
+Meaning 1: The printed version, although this is the least likely
+meaning at the moment.
+
+Meaning 2: the big book.pamphlet file which is distributed with
+the axiom system and is also in book--main--1. This is the latest
+version of the information in a single form.
+
+Meaning 3: there has been considerable discussion about actually
+publishing the axiom book (under meaning 2) at a site called 
+www.lulu.com which is an internet publisher.
+
+Several issues have arisen which are shaping the future direction(s?):
+
+We've discovered that lulu has certain constraints. There is a 700
+page limit. Since the main book is 1000+ pages this is a problem.
+the solution which we've adopted is to break the book into (originally
+3, now 4) parts: 
+  vol1 (tutorial), 
+  vol2 (programming),
+  vol3 (reference)
+  vol4 (developer guide)
+with possible follow-on volumes, such as one based on Littlewood's
+Skeleton Key of Mathematics book. I have yet to hear back about the
+copyright issue and I'll pursue that further.
+
+I've done some work to fragment the main book into 4 parts and a
+small amount of work on the first volume. But it became apparent 
+that the tutorial volume assumed that hyperdoc was available so 
+I've been bending the sails to get that to run. The February 2005
+monthly axiom release will have hyperdoc and graphics integrated
+(and the latest axiom--main--1 version already has this).
+
+As we get the various volumes into reasonable shape we will be in
+a position where people can actually order hard copies of the volumes.
+There has been talk of offering a CD with the tutorial volume. The
+big problem is that lulu.com requires a pre-order of 100 copies
+if this option is chosen.
+
+I also spent a few days and recovered the "end papers" from the 
+hardcopy book, encoded as "endpaper.pamphlet".
+
+On another path there is work going on (off list) with another 
+person to put together a linear algebra course using hyperdoc
+which might result in another small volume. 
+
+I'm hoping the littlewood book will also act as a seed for a
+volume which approaches the subject more from the mathematics
+than from the 'axiom' side. 
+
+I have a couple other books I'm also looking at, for example, in
+differential equations (Krantz, Steven "Differential Equations
+DeMYSTiFieD", McGraw-Hill, 2005, ISBN 0-07-144025-9). I have this in
+my local code swamp but have not yet added it to the book branch.
+
+Another path to be pursued is to contact and cooperate with
+www.math.niu.edu/~rusin/known-math/index/tour_alg.html
+to organize axiom discussions relative to published standards.
+This is also of interest for the CATS (Computer Algebra Test
+Suite) effort which I still have to upload to the arch server.
+
+Does anyone happen to know Dr. Rusin?
+
+To build the current version of the work do:
+
+tla get book--main--1
+cd book--main--1--patch*
+make
+
+
+As Bill mentioned, you should look at http://arch.axiom-developer.org
+and follow the instructions at the bottom of the page for getting a key
+generated. This will give you direct read-write access to the book.
+
+Tim
+
+
+
+
+
+
+From MAILER-DAEMON Tue Jan 18 20:58:25 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Cr56y-0004s4-NX
+	for mharc-axiom-math@gnu.org; Tue, 18 Jan 2005 20:58:21 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Cr56m-0004mi-RV
+	for axiom-math@nongnu.org; Tue, 18 Jan 2005 20:58:10 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Cr56f-0004i0-4m
+	for axiom-math@nongnu.org; Tue, 18 Jan 2005 20:58:01 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Cr56e-0004fL-SP; Tue, 18 Jan 2005 20:58:00 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1Cr4ma-0004Rr-Mm; Tue, 18 Jan 2005 20:37:16 -0500
+Received: from localhost.localdomain (69.0.60.191.adsl.snet.net [69.0.60.191])
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j0J1bBE04570;
+	Tue, 18 Jan 2005 19:37:11 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j0J2HYS03968;
+	Tue, 18 Jan 2005 21:17:34 -0500
+Date: Tue, 18 Jan 2005 21:17:34 -0500
+Message-Id: <200501190217.j0J2HYS03968@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] Sprint Day for Axiom End-User Conference on April 22,
+	2005
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 19 Jan 2005 01:58:14 -0000
+
+*,
+
+We continue planning a conference focusing on the end user of Axiom.
+It is intended to appeal to the various math and science programs at
+universities.
+
+The last announcement on this mailing list generated a request for a
+"sprint day", that is, a day when we can all get together and work on
+Axiom in the same room.
+
+The conference is on a Friday in New York City. Perhaps we can have
+the sprint day on thursday as that will leave your weekend free for
+sight-seeing if you've never been here.
+
+I'm trying to arrange for funding for the sprint day and it looks 
+like a strong possibility with a lot of dependent variables.
+
+If you have any interest in showing up for a day of programming on
+Axiom in the same room, or even to chat about and make a plan for
+future directions, now is the time to speak up.
+
+Tim
+
+
+
+From MAILER-DAEMON Wed Jan 19 13:32:15 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CrKco-0007F3-4V
+	for mharc-axiom-math@gnu.org; Wed, 19 Jan 2005 13:32:14 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CrKXZ-0006gO-Pb
+	for axiom-math@nongnu.org; Wed, 19 Jan 2005 13:26:51 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CrKXM-0006eh-8o
+	for axiom-math@nongnu.org; Wed, 19 Jan 2005 13:26:38 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1CrKXH-0006ZS-KF; Wed, 19 Jan 2005 13:26:34 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CrKCt-0003G3-GR; Wed, 19 Jan 2005 13:05:27 -0500
+Received: from localhost.localdomain (69.0.60.191.adsl.snet.net [69.0.60.191])
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j0JI5ME08052;
+	Wed, 19 Jan 2005 12:05:22 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j0JIjf205778;
+	Wed, 19 Jan 2005 13:45:41 -0500
+Date: Wed, 19 Jan 2005 13:45:41 -0500
+Message-Id: <200501191845.j0JIjf205778@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] axiom--main--1--patch-26
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 19 Jan 2005 18:32:03 -0000
+
+added Peter Broadbery's changes for Aldor connection
+
+20050119 pab src/interp/i-syscmd.boot remove TRUENAME call
+20050119 pab src/interp/ax.boot add makeAxExportForm function
+20050119 pab src/interp/ax.boot add additional forms to makeAxFile return
+20050119 pab src/interp/as.boot remove attributeAlist from opHash table
+
+tim
+
+
+
+From MAILER-DAEMON Wed Jan 19 14:30:00 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CrLWh-0002L5-Pp
+	for mharc-axiom-math@gnu.org; Wed, 19 Jan 2005 14:30:00 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CrLWe-0002IQ-Dl
+	for axiom-math@nongnu.org; Wed, 19 Jan 2005 14:29:56 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CrLWc-0002Go-1f
+	for axiom-math@nongnu.org; Wed, 19 Jan 2005 14:29:54 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1CrLWZ-0002DP-PS; Wed, 19 Jan 2005 14:29:51 -0500
+Received: from [209.226.175.54] (helo=tomts10-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CrLKE-00005S-MU; Wed, 19 Jan 2005 14:17:06 -0500
+Received: from Asus ([216.208.193.24]) by tomts10-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20050119191703.HBWK19622.tomts10-srv.bellnexxia.net@Asus>;
+	Wed, 19 Jan 2005 14:17:03 -0500
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <daly@axiom-developer.org>
+Subject: RE: [Axiom-math] Sprint Day for Axiom End-User Conference on April 22,
+	2005
+Date: Wed, 19 Jan 2005 14:17:21 -0500
+Message-ID: <005a01c4fe5b$83d4d8e0$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+In-Reply-To: <200501190217.j0J2HYS03968@localhost.localdomain>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+Importance: Normal
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 19 Jan 2005 19:29:58 -0000
+
+On Tuesday, January 18, 2005 9:18 PM Tim Daly wrote:
+> ... 
+> The last announcement on this mailing list generated a request
+> for a "sprint day", that is, a day when we can all get together
+> and work on Axiom in the same room.
+> 
+> The conference is on a Friday in New York City. Perhaps we can
+> have the sprint day on thursday as that will leave your weekend
+> free for sight-seeing if you've never been here.
+
+Thursday sounds like a good choice to me.
+
+> 
+> I'm trying to arrange for funding for the sprint day and it
+> looks like a strong possibility with a lot of dependent
+> variables.
+> 
+> If you have any interest in showing up for a day of programming
+> on Axiom in the same room, or even to chat about and make a
+> plan for future directions, now is the time to speak up.
+> 
+
+Yes! Please, let's plan to do this.
+
+Regards,
+Bill Page.
+
+
+
+
+From MAILER-DAEMON Thu Jan 20 03:33:16 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CrXkh-0004G6-Ur
+	for mharc-axiom-math@gnu.org; Thu, 20 Jan 2005 03:33:16 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CrXkg-0004FM-Th
+	for axiom-math@nongnu.org; Thu, 20 Jan 2005 03:33:15 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CrXjM-0003kw-KQ
+	for axiom-math@nongnu.org; Thu, 20 Jan 2005 03:31:57 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1CrXjC-0003XI-GR; Thu, 20 Jan 2005 03:31:42 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CrXKf-0003ws-V1; Thu, 20 Jan 2005 03:06:22 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id j0K869XK301646;
+	Thu, 20 Jan 2005 09:06:13 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16879.29660.281829.348335@seam101.local>
+Date: Thu, 20 Jan 2005 10:03:24 +0100
+To: daly@axiom-developer.org
+In-Reply-To: <200501191845.j0JIjf205778@localhost.localdomain>
+References: <200501191845.j0JIjf205778@localhost.localdomain>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4247; Body=3 Fuz1=3 Fuz2=3
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-developer] axiom--main--1--patch-26
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 20 Jan 2005 08:33:15 -0000
+
+Wow, great that you integrated this!
+
+Martin
+
+root writes:
+ > added Peter Broadbery's changes for Aldor connection
+ > 
+ > 20050119 pab src/interp/i-syscmd.boot remove TRUENAME call
+ > 20050119 pab src/interp/ax.boot add makeAxExportForm function
+ > 20050119 pab src/interp/ax.boot add additional forms to makeAxFile return
+ > 20050119 pab src/interp/as.boot remove attributeAlist from opHash table
+ > 
+ > tim
+ > 
+ > 
+ > _______________________________________________
+ > Axiom-developer mailing list
+ > Axiom-developer@nongnu.org
+ > http://lists.nongnu.org/mailman/listinfo/axiom-developer
+
+
+
+
+From MAILER-DAEMON Thu Jan 20 15:35:27 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Crj1a-0000UK-I0
+	for mharc-axiom-math@gnu.org; Thu, 20 Jan 2005 15:35:26 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Crj1Y-0000SB-Dy
+	for axiom-math@nongnu.org; Thu, 20 Jan 2005 15:35:24 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Crj1W-0000RD-KA
+	for axiom-math@nongnu.org; Thu, 20 Jan 2005 15:35:23 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1CriwO-0006o9-3Q; Thu, 20 Jan 2005 15:30:04 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CriNv-0007qY-GL; Thu, 20 Jan 2005 14:54:27 -0500
+Received: from localhost.localdomain (69.0.60.191.adsl.snet.net [69.0.60.191])
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j0KJsOE28933;
+	Thu, 20 Jan 2005 13:54:24 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j0KKYiV08219;
+	Thu, 20 Jan 2005 15:34:44 -0500
+Date: Thu, 20 Jan 2005 15:34:44 -0500
+Message-Id: <200501202034.j0KKYiV08219@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] [kaufmann@cs.utexas.edu: TPHOLs 2005 2nd Call for
+	Papers]
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 20 Jan 2005 20:35:25 -0000
+
+fyi.....
+
+
+------- Start of forwarded message -------
+Date: Thu, 20 Jan 2005 09:42:19 -0600
+From: Matt Kaufmann <kaufmann@cs.utexas.edu>
+To: acl2@lists.cc.utexas.edu
+Subject: TPHOLs 2005 2nd Call for Papers
+
+
+            ********************************************
+            *               TPHOLs 2005                *
+            *                                          *
+            *  Theorem Proving in Higher Order Logics  *
+            *                                          *
+            *           2nd Call for Papers            *
+            ********************************************
+
+TPHOLs 2005
+Oxford, UK
+22-25 August 2005
+http://web.comlab.ox.ac.uk/TPHOLs2005/
+
+SECOND CALL FOR PAPERS
+
+TOPICS
+
+The program committee welcomes submissions on all aspects of theorem
+proving in higher order logics, on related topics in theorem proving
+and verification, and on relevant applications. The topics include,
+but are not limited to, the following:
+
+ * Specification and verification of hardware: microprocessors, memory
+   systems, buses, pipelines, etc; formal semantics of hardware design
+   languages; synthesis; formal design flows.
+
+ * Specification and verification of software: program verification,
+   refinement, and synthesis for functional, declarative and
+   imperative languages; formal semantics of programming languages;
+   proof carrying code.
+
+ * Industrial application of theorem provers.
+
+ * Formalization of mathematical theories.
+
+ * Advances in theorem prover technology: proof automation and
+   decision procedures, induction, combination of deductive and
+   algorithmic approaches, incorporation of theorem provers into
+   larger systems, combination of theorem provers with other provers
+   and tools.
+
+ * Other topics, including: security algorithms, properties, and
+   policies; specification and requirements analysis of systems; user
+   interfaces for theorem provers; development and extension of higher
+   order logics.
+
+ * Proof Pearls: concise and elegant presentations of interesting
+   examples.
+
+Relevant research involving interactive first-order systems, such as
+ACL2 and Mizar, is also welcome. All authors are reminded that their
+work should be presented in a way that users of other systems can
+understand.
+
+SUBMISSIONS
+
+Submissions are invited in the following categories: Mature Work and
+Emerging Trends.
+
+                          Mature Work               Emerging Trends
+Submission deadline       Friday 18 February 2005   Friday 27 May 2005
+Acceptance notification   Friday 15 April 2005      Friday 13 June 2005
+Camera-ready copy due     Friday 13 May 2005        Friday 15 July 2005
+
+Submissions under Mature Work will be fully refereed, and the accepted
+papers will be published in a volume of Springer's Lecture Notes in
+Computer Science series, which will be available at the conference.
+Authors of accepted papers are expected to present their work at the
+conference.
+
+Submissions under Emerging Trends will not be formally refereed, but
+their content and relevance will be reviewed. Those submissions
+accepted will be published in a University of Oxford technical report,
+which will be available at the conference. Authors of accepted papers
+are expected to present a brief outline of their work at the
+conference and to prepare a poster for display at the conference
+venue. Unless otherwise requested, submissions rejected under Mature
+Work will also be considered for inclusion under Emerging Trends.
+
+Papers should be no more than 16 pages in length and should be written
+using LaTeX2e and the LNCS style file. Instructions on how to submit
+papers will be made available on the conference web site. For all
+enquiries concerning the conference, please use the email address
+tphols2005@comlab.ox.ac.uk
+
+PROGRAM COMMITTEE
+
+Mark Aagaard (Waterloo)
+Clark Barrett (NYU)
+David Basin (ETH Zurich)
+Yves Bertot (INRIA)
+Ching-Tsun Chou (Intel)
+Thierry Coquand (Chalmers)
+Amy Felty (Ottawa)
+Jean-Christophe Filliatre (Paris Sud)
+Jacques Fleuriot (Edinburgh)
+Jim Grundy (Intel)
+Elsa Gunter (UIUC)
+John Harrison (Intel)
+Jason Hickey (Caltech)
+Peter Homeier (US DoD)
+Joe Hurd (Oxford) (PC Chair)
+Paul Jackson (Edinburgh)
+Thomas Kropf (Tubingen & Bosch)
+Pete Manolios (Georgia Tech)
+John Matthews (Galois)
+Cesar Munoz (National Institute of Aerospace)
+Tobias Nipkow (Muenchen)
+Sam Owre (SRI)
+Christine Paulin-Mohring (Paris Sud)
+Lawrence Paulson (Cambridge)
+Frank Pfenning (CMU)
+Konrad Slind (Utah)
+Sofiene Tahar (Concordia)
+Burkhart Wolff (ETH Zurich)
+- ------- End of forwarded message -------
+------- End of forwarded message -------
+
+
+
+From MAILER-DAEMON Thu Jan 20 16:02:28 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CrjRk-0008Mr-9o
+	for mharc-axiom-math@gnu.org; Thu, 20 Jan 2005 16:02:28 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CrjRh-0008LY-CX
+	for axiom-math@nongnu.org; Thu, 20 Jan 2005 16:02:25 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CrjNR-0007NF-KX
+	for axiom-math@nongnu.org; Thu, 20 Jan 2005 15:58:02 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1CrjNN-0007AG-Hm; Thu, 20 Jan 2005 15:57:57 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1Crio1-0001yM-Ai; Thu, 20 Jan 2005 15:21:25 -0500
+Received: from localhost.localdomain (69.0.60.191.adsl.snet.net [69.0.60.191])
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j0KKLKE16255;
+	Thu, 20 Jan 2005 14:21:20 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j0KL1dE08230;
+	Thu, 20 Jan 2005 16:01:39 -0500
+Date: Thu, 20 Jan 2005 16:01:39 -0500
+Message-Id: <200501202101.j0KL1dE08230@localhost.localdomain>
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca
+In-reply-to: <001501c4ff11$ae4aa170$6501a8c0@Asus> (bill.page1@sympatico.ca)
+References: <001501c4ff11$ae4aa170$6501a8c0@Asus>
+Cc: jasonjgw@pacific.net.au, axiom-developer@nongnu.org, smustudent1@yahoo.com,
+	daly@axiom-developer.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-developer] Graphics and Axiom (was Re:
+	touchgraph, hypertex, hypergraph)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 20 Jan 2005 21:02:25 -0000
+
+The sprint day on April 21 and the Axiom conference on April 22
+at City College of New York will be days when we can discuss the
+future directions of Axiom and even lay out a plan of sorts.
+Bring your wish list and a burning need to program.
+
+Tim
+
+
+
+From MAILER-DAEMON Fri Jan 21 15:37:51 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Cs5XT-0001Fd-MY
+	for mharc-axiom-math@gnu.org; Fri, 21 Jan 2005 15:37:51 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Cs5XK-0001Ct-DM
+	for axiom-math@nongnu.org; Fri, 21 Jan 2005 15:37:43 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Cs5SI-00082i-6e
+	for axiom-math@nongnu.org; Fri, 21 Jan 2005 15:32:30 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Cs5S1-0007qc-RO; Fri, 21 Jan 2005 15:32:13 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1Cs57i-0003gb-6c; Fri, 21 Jan 2005 15:11:14 -0500
+Received: from localhost.localdomain (69.0.60.191.adsl.snet.net [69.0.60.191])
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j0LKB6E28960;
+	Fri, 21 Jan 2005 14:11:06 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j0LKpPA12664;
+	Fri, 21 Jan 2005 15:51:25 -0500
+Date: Fri, 21 Jan 2005 15:51:25 -0500
+Message-Id: <200501212051.j0LKpPA12664@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org, axiom-mail@nongnu.org
+Cc: 
+Subject: [Axiom-math] Axiom Conference]
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 21 Jan 2005 20:37:44 -0000
+
+
+------- Start of forwarded message -------
+
+
+From: "Gilbert Baumslag" <gilbert@sci.ccny.cuny.edu>
+Subject: Axiom Conference
+Date: Fri, 21 Jan 2005 11:15:14 -0500
+
+
+Axiom Conference Announcement
+_____________________________
+
+When:    April 22, 2005
+Where:   The City College of New York
+Contact: Bernice Ravitz <bernice@rio.sci.ccny.cuny.edu>
+
+There will be a Conference on Axiom on April 22, 2005 at the City
+College of New York. The focus of the conference will be to
+demonstrate the power and scope of Axiom to a general scientific
+audience. The conference is being hosted by CAISS, the Center for
+Algorithmic and Interactive Scientific Software. Timothy Daly, a
+senior research scientist at CAISS and a Research Associate in the
+Computer Science Department of CCNY has been heavily involved in the
+development of AXIOM over many years.
+
+Axiom, developed by IBM and released as open source software by NAG,
+has now been rebuilt by many developers into its original form
+together with a new version for Windows. Preceding the conference, on
+April 21st, will be a "sprint" day devoted to defining future
+directions and a marathon programming session in the CAISS Open
+Software Lab. Everyone is encouraged to participate. Help will be
+available for new developers.
+
+The Acting Dean of Engineering, Joe Barba and the Dean of Science,
+Maria Tamargo, are sponsoring the conference, which is also supported
+by the National Science Foundation. Further funding has been made
+available by the Chancellor of the City University of New York, Dr.
+Matthew Goldstein and the Provost of the City College of New York,
+Zeev Dagan, for both travel and accommodation for some participants
+and attendees of one or other or both events.
+
+Details of the talks on April 22nd and the get-together on April 21st
+will be posted on the CAISS web-site, www.caissny.org in the next few
+weeks.
+
+Anyone interested in attending should email
+Bernice Ravitz <bernice@rio.sci.ccny.cuny.edu>.
+
+The conference is being organized by Gilbert Baumslag, Timothy Daly,
+Gretchen Ostheimer, William Sit and Douglas Troeger.  
+------- End of forwarded message -------
+
+
+
+From MAILER-DAEMON Sun Jan 30 08:05:49 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CvEfy-00007N-LN
+	for mharc-axiom-math@gnu.org; Sun, 30 Jan 2005 07:59:39 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CvEfk-0008T1-QR
+	for axiom-math@nongnu.org; Sun, 30 Jan 2005 07:59:25 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CvEfe-0008Ni-6v
+	for axiom-math@nongnu.org; Sun, 30 Jan 2005 07:59:18 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1CvEfd-0008NN-Uy; Sun, 30 Jan 2005 07:59:18 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CvEQV-0004YE-Hn; Sun, 30 Jan 2005 07:43:39 -0500
+Received: from localhost.localdomain (69.0.60.191.adsl.snet.net [69.0.60.191])
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j0UChUE16224;
+	Sun, 30 Jan 2005 06:43:30 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j0UDNXo11118;
+	Sun, 30 Jan 2005 08:23:33 -0500
+Date: Sun, 30 Jan 2005 08:23:33 -0500
+Message-Id: <200501301323.j0UDNXo11118@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-mail@nongnu.org, axiom-math@nongnu.org
+Cc: gilbert@sci.ccny.cuny.edu
+Subject: [Axiom-math] February 2005 release
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 30 Jan 2005 12:59:34 -0000
+
+The February 2005 release of Axiom has been posted to:
+
+ savannah.nongnu.org/projects/axiom
+ sourceforge.net/projects/axiom
+ arch.axiom-developer.org as axiom--main--1--patch-29
+
+This is the first "feature complete" release of Axiom. It includes
+all of the algebra we have available, working graphics, and a working
+hyperdoc browser. Once you build the system you can test it by typing:
+
+axiom
+
+when the hyperdoc browser starts choose
+
+  Basic Commands -> Draw -> A function of two variables -> Continue -> Do It
+
+and a graph will appear. Click anywhere on the graph to get the control panel.
+
+A Source tarball and binaries for several platforms are being compiled
+and will be uploaded as they become available.
+
+Please report any bugs at:
+
+http://page.axiom-developer.org/zope/mathaction/FrontPage/IssueTracker
+
+This is a wiki page and you can modify it from your browser to add bugs.
+Please be sure to note the 'Version' listed on the banner when Axiom 
+starts so we can track which version has the bug.
+
+Questions should be sent to the axiom-developer@nongnu.org mailing list.
+
+The February 2005 release is known to build on RedHat and Fedora systems
+including Fedora 3. Be sure to use the ./configure script.
+
+The Solaris 9 merger is still in process and may not yet build correctly
+from these sources. A working version of Axiom has been built for Solaris 9
+which includes both graphics and hyperdoc. The ./configure script should
+properly recognize the solaris system.
+
+The Windows merger is still in process and may not yet build correctly
+from these sources. A working version of the algebra but not the graphics
+and hyperdoc exists. Efforts are underway to make portable versions of
+the graphics and hyperdoc but that will take a while. See
+http://page.axiom-developer.org/zope/mathaction/AxiomDownload
+
+The MAC OSX port is being worked on. There is no further news.
+
+The March 2005 release is now open for changes.
+Immediate items of work are:
+  finish and test Solaris 9 changes
+  finish and merge Windows changes
+  finish and merge the "fixed-point" changes to the algebra
+  automate patch file handling in hyperdoc
+  create beta version of MAC OSX
+  first steps toward hypertex in common lisp
+  create pre-print version of volume 1 (tutorial) of book
+  continue bug collection from axiom-developer mailing list to IssueTracker
+
+=======================================================================
+The --patch-29 change is a simple typo.
+
+This release changed the following files:
+
+CHANGELOG 
+FAQ 
+Makefile 
+Makefile.pamphlet 
+README 
+configure 
+lsp/Makefile.pamphlet 
+lsp/ccl/src/axbase/cclwhereis2.lsp 
+lsp/ccl/src/cslbase/curses.h.pamphlet 
+src/Makefile.pamphlet 
+src/algebra/Makefile.pamphlet 
+src/algebra/algfunc.spad.pamphlet 
+src/algebra/combfunc.spad.pamphlet 
+src/algebra/float.spad.pamphlet 
+src/algebra/sttaylor.spad.pamphlet
+src/algebra/tex.spad.pamphlet
+src/algebra/trigcat.spad.pamphlet 
+src/booklets/Makefile.pamphlet 
+src/boot/Makefile.pamphlet 
+src/clef/Makefile.pamphlet 
+src/clef/edible.c.pamphlet 
+src/doc/Makefile.pamphlet 
+src/etc/Makefile.pamphlet 
+src/etc/axiom 
+src/graph/Gdraws/Makefile.pamphlet 
+src/graph/Makefile.pamphlet 
+src/graph/view2D/Makefile.pamphlet 
+src/graph/view3D/Makefile.pamphlet 
+src/graph/viewAlone/Makefile.pamphlet 
+src/graph/viewman/Makefile.pamphlet 
+src/input/Makefile.pamphlet 
+src/interp/Makefile.pamphlet
+src/interp/as.boot.pamphlet 
+src/interp/ax.boot.pamphlet 
+src/interp/debugsys.lisp.pamphlet 
+src/interp/i-syscmd.boot.pamphlet 
+src/interp/setq.lisp.pamphlet 
+src/interp/util.lisp.pamphlet 
+src/lib/Makefile.pamphlet 
+src/lib/XDither.c.pamphlet 
+src/lib/XShade.c.pamphlet 
+src/lib/XSpadFill.c.pamphlet
+src/lib/bsdsignal.c.pamphlet 
+src/scripts/Makefile.pamphlet 
+src/share/Makefile.pamphlet 
+src/sman/Makefile.pamphlet 
+src/sman/sman.c.pamphlet 
+src/hyper/*
+zips/gcl-2.6.5.cmpnew.gcl_cmpmain.lsp.patch axiom/zips
+zips/gcl-2.6.5.h.386-linux.h.patch axiom/zips
+zips/gcl-2.6.5w.cmpnew.gcl_cmpcall.lsp.patch axiom/zips
+zips/gcl-2.6.5w.cmpnew.gcl_cmpflet.lsp.patch axiom/zips
+zips/gcl-2.6.5w.h.gmp_wrappers.h.patch axiom/zips
+zips/gcl-2.6.5w.h.linux.defs.patch axiom/zips
+zips/gcl-2.6.5w.h.mingw.defs.patch axiom/zips
+zips/gcl-2.6.5w.o.alloc.c.patch axiom/zips
+zips/gcl-2.6.5w.o.mingfile.c.patch axiom/zips
+zips/gcl-2.6.5w.o.unixfsys.c.patch axiom/zips
+zips/gcl-2.6.5w.unixport.init_gcl.lsp.in.patch axiom/zips
+zips/gcl-2.6.5w.unixport.makefile.patch axiom/zips
+
+
+
+
+
+From MAILER-DAEMON Mon Jan 31 16:59:08 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CvjZa-0007St-V9
+	for mharc-axiom-math@gnu.org; Mon, 31 Jan 2005 16:59:07 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CvjZI-0007NU-2N
+	for axiom-math@nongnu.org; Mon, 31 Jan 2005 16:58:48 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CvjZD-0007Ld-OD
+	for axiom-math@nongnu.org; Mon, 31 Jan 2005 16:58:44 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1CvjYy-0007D4-Ep; Mon, 31 Jan 2005 16:58:28 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CvjHo-0007Iw-Ja; Mon, 31 Jan 2005 16:40:44 -0500
+Received: from localhost.localdomain (2.179.252.64.snet.net [64.252.179.2]
+	(may be forged))
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j0VLeeE02685;
+	Mon, 31 Jan 2005 15:40:40 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j0VMKTq12317;
+	Mon, 31 Jan 2005 17:20:29 -0500
+Date: Mon, 31 Jan 2005 17:20:29 -0500
+Message-Id: <200501312220.j0VMKTq12317@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org, axiom-mail@nongnu.org
+Cc: 
+Subject: [Axiom-math] Feb 2005 release
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 31 Jan 2005 21:58:50 -0000
+
+A bug was found in the build system for the files I uploaded yesterday.
+This bug has been fixed and a patch has been applied at all of the CVS
+sites.
+
+Summary: hypertex pages included a CVS directory
+Keywords: daly hypertex cvs
+
+20050131 tpd --patch-30
+20050131 tpd src/hyper/Makefile handle CVS directory
+20050130 tpd src/interp/setq.lisp add Vladimir Bondarenko to credits
+20050130 tpd README add Vladimir Bondarenko to credits
+
+
+
+
+

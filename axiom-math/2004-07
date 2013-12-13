@@ -1,0 +1,1101 @@
+From MAILER-DAEMON Mon Jul 05 09:11:21 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BhTFh-0005jJ-FP
+	for mharc-axiom-math@gnu.org; Mon, 05 Jul 2004 09:11:21 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BhTFf-0005iE-ID
+	for axiom-math@nongnu.org; Mon, 05 Jul 2004 09:11:19 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BhTFe-0005hd-RR
+	for axiom-math@nongnu.org; Mon, 05 Jul 2004 09:11:19 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BhTFe-0005hV-Mu
+	for axiom-math@nongnu.org; Mon, 05 Jul 2004 09:11:18 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BhTDc-0002Rn-Mr
+	for axiom-math@nongnu.org; Mon, 05 Jul 2004 09:09:13 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i65CZpMN1044072;
+	Mon, 5 Jul 2004 14:36:20 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Message-ID: <16617.26287.915410.382135@gargle.gargle.HOWL>
+Date: Mon, 5 Jul 2004 14:33:19 +0000
+To: daly@idsi.net, axiom-math@nongnu.org
+In-Reply-To: <200407031956.i63JuIR03370@localhost.localdomain>
+References: <ADEEIKPBIEHIINPOFGAOGEJACLAA.g.vanuxem@wanadoo.fr>
+	<200407031956.i63JuIR03370@localhost.localdomain>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mail 4249; Body=4 Fuz1=4 Fuz2=4
+Content-Transfer-Encoding: 7bit
+Cc: axiom-developer@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-developer] RE: PATCH:
+	src/algebra/Makefile.pamphlet
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 05 Jul 2004 13:11:19 -0000
+
+I'm forwarding this to math because I think some of the issues belong there.
+
+Dear Tim,
+
+Hm, in fact, I thought that it was a little to earlz to release rinterp.spad to
+the world, since I expect it to change. I also noticed that you included the
+version which does *not* parallel pinterp.spad... in fact, I think that there
+should be one package pinterp.spad which includes all sorts of interpolation
+algorithms, and a common interface should be worked out, i.e., what kind of
+arguments does it take, what's the type of the result and so on. I don't want
+to have a bad setup which is difficult to change once its included in the
+"official" release because somebody might be using it already.
+
+Here are the questions involved:
+
+1* RINTERP has the following interface:
+
+PolynomialInterpolation(xx, F): Cat == Body   where
+    xx: Symbol
+    F:  Field
+    UP  ==> UnivariatePolynomial
+    SUP ==> SparseUnivariatePolynomial
+ 
+    Cat ==> with
+        interpolate: (UP(xx,F), List F, List F) -> UP(xx,F)
+                ++ interpolate(u,lf,lg) \undocumented
+        interpolate: (List F, List F)           -> SUP F
+                ++ interpolate(lf,lg) \undocumented
+
+What I do not understand is: although the constructor takes an argument xx,
+this argument is *not* used by the exported functions. For example, you have to
+say interpolate(x,[1,2,3],[1,4,9])$PINTERP(x,FRAC INT) to get a UP in x. In
+fact, this function does nothing more than the second version, followed by an
+elt. To be honest, I would remove it.
+
+2* Furthermore, when the xdata contain duplicates, interpolate exits with
+  catdef: division by zero, which is correct. However, since it seems
+  impossible to catch an error programmatically, it might be sensible to return
+  "failed" instead.
+
+3* RationalInterpolation is a tiny bit more subtle, since it may happen that
+  some points are "unattainable", i.e., not interpolated correctly, and it may
+  even happen that the interpolating function is undefined at certain points
+  (because the denominator vanishes).  It might be the case that it is more
+  effective to test this during the interpolation and to return a list of these
+  points, but I'm not sure about it (as above)
+
+4* rationalinterpolation currently returns a FRAC POLY F, which is not good. I
+  did this, because I was unable how to convert a SUP into a POLY at the time,
+  and I needed a POLY. This should definitely be changed.
+
+5* What's the proper modeline of Hermite-interpolation (giving derivatives on
+  some points) ?
+
+When we have discussed (or I have reached a conclusion regarding) at least
+points 3 and 4 its OK for me to include rinterp (or an extension of pinterp,
+what I would prefer) into the official release.
+
+Martin
+
+PS: Tim, why did you convert pmatrix into array in the pamphlet file?
+
+root writes:
+ > Grigory,
+ > 
+ > re: RINTERP. fixed. thanks. 
+ > 
+ > Martin,
+ > 
+ > Do you have a simple test case for RINTERP?
+ > 
+ > Tim
+
+
+
+
+From MAILER-DAEMON Mon Jul 05 13:27:43 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BhXFn-0005OO-0V
+	for mharc-axiom-math@gnu.org; Mon, 05 Jul 2004 13:27:43 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BhXFm-0005OE-01
+	for axiom-math@nongnu.org; Mon, 05 Jul 2004 13:27:42 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BhXFk-0005Nn-63
+	for axiom-math@nongnu.org; Mon, 05 Jul 2004 13:27:41 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BhXFk-0005Nk-2x
+	for axiom-math@nongnu.org; Mon, 05 Jul 2004 13:27:40 -0400
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BhXDZ-0004DS-0D
+	for axiom-math@nongnu.org; Mon, 05 Jul 2004 13:25:25 -0400
+Received: from localhost.localdomain (230.183.252.64.snet.net [64.252.183.230])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i65HPNUK018234; Mon, 5 Jul 2004 13:25:23 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i65IAoL12310;
+	Mon, 5 Jul 2004 14:10:50 -0400
+Date: Mon, 5 Jul 2004 14:10:50 -0400
+Message-Id: <200407051810.i65IAoL12310@localhost.localdomain>
+From: root <daly@idsi.net>
+To: martin.rubey@univie.ac.at
+In-reply-to: <16617.26287.915410.382135@gargle.gargle.HOWL> (message from
+	Martin Rubey on Mon, 5 Jul 2004 14:33:19 +0000)
+References: <ADEEIKPBIEHIINPOFGAOGEJACLAA.g.vanuxem@wanadoo.fr>
+	<200407031956.i63JuIR03370@localhost.localdomain>
+	<16617.26287.915410.382135@gargle.gargle.HOWL>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-developer] RE: PATCH:
+	src/algebra/Makefile.pamphlet
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 05 Jul 2004 17:27:42 -0000
+
+Martin,
+
+Oops, you did ask me to wait before release. Sorry about that.
+The RINTERP domain is not exposed so unless someone takes explicit
+steps to expose it nothing will be available anyway.
+
+I'll look at the rest of your message later. I'm off to a wake.
+
+t
+
+
+
+From MAILER-DAEMON Wed Jul 28 12:10:27 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Bpr0d-0005W8-A1
+	for mharc-axiom-math@gnu.org; Wed, 28 Jul 2004 12:10:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bpr0b-0005Vq-Ki
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 12:10:25 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bpr0a-0005VW-NP
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 12:10:25 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bpr0a-0005VT-KG
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 12:10:24 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BpqxO-0007Vp-1S
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 12:07:06 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i6SG6InG587312
+	for <axiom-math@nongnu.org>; Wed, 28 Jul 2004 18:06:39 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16647.60024.128002.836762@gargle.gargle.HOWL>
+Date: Wed, 28 Jul 2004 18:03:36 +0000
+To: axiom-math@nongnu.org
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: imap 4249; Body=1 Fuz1=1 Fuz2=1
+Subject: [Axiom-math] multivariate resultants
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Jul 2004 16:10:25 -0000
+
+Dear all,
+
+is there anybody out there interested in implementing multivariate resultants?
+Ioannis Emiris has good algorithms, implemented in C and maple ("multires"). He
+also pointed me to an algorithm by A. Khetan, which would actually be the one
+best suited for my needs, it works however only for three polynomials and may
+be thus of less interest to the Axiom project. I'd need such a thing for my
+guessing package... :-)
+
+However, I'm lacking time and expertise, so maybe somebody could help me
+out. Axiom would certainly benefit a great deal!
+
+I can give pointers to the apropriate papers, implementations, and the like.
+
+Martin
+
+PS: a different, maybe easier route would be to call his C code from within
+axiom, but I have no idea how to do this. Ioannis Emeris provided such code for
+maple.
+
+
+
+
+From MAILER-DAEMON Wed Jul 28 12:16:31 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Bpr6V-0006oE-Mp
+	for mharc-axiom-math@gnu.org; Wed, 28 Jul 2004 12:16:31 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bpr6U-0006o4-FG
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 12:16:30 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bpr6T-0006ns-Kd
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 12:16:30 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bpr6T-0006np-Ia
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 12:16:29 -0400
+Received: from [134.74.86.20] (helo=groups.sci.ccny.cuny.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Bpr2y-0000kf-RJ
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 12:12:53 -0400
+Received: from rio.sci.ccny.cuny.edu (rio.sci.ccny.cuny.edu [134.74.120.4])
+	by groups.sci.ccny.cuny.edu (8.11.0/8.11.2) with ESMTP id i6SGBov05929; 
+	Wed, 28 Jul 2004 12:11:50 -0400
+Received: (from daly@localhost)
+	by rio.sci.ccny.cuny.edu (8.11.0/8.11.0) id i6SFDEK03979;
+	Wed, 28 Jul 2004 11:13:14 -0400
+Date: Wed, 28 Jul 2004 11:13:14 -0400
+Message-Id: <200407281513.i6SFDEK03979@rio.sci.ccny.cuny.edu>
+From: Tim Daly  <daly@rio.sci.ccny.cuny.edu>
+To: martin.rubey@univie.ac.at
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] multivariate resultants
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Jul 2004 16:16:30 -0000
+
+can you post the pointers to the papers?
+
+Tim
+
+
+
+From MAILER-DAEMON Wed Jul 28 12:25:42 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BprFN-0008WA-R5
+	for mharc-axiom-math@gnu.org; Wed, 28 Jul 2004 12:25:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BprFM-0008VZ-8h
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 12:25:40 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BprFI-0008VG-25
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 12:25:39 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BprFH-0008VB-Py
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 12:25:35 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BprBw-0003H9-Lr
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 12:22:08 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i6SGLihO1190380;
+	Wed, 28 Jul 2004 18:21:57 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Message-ID: <16647.60949.811942.7999@gargle.gargle.HOWL>
+Date: Wed, 28 Jul 2004 18:19:01 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+To: axiom-math@nongnu.org
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: imap 4249; Body=2 Fuz1=2 Fuz2=2
+Cc: Emiris Ioannis <emiris@di.uoa.gr>
+Subject: [Axiom-math] multivariate resultants
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Jul 2004 16:25:40 -0000
+
+Dear all,
+
+is there anybody out there interested in implementing multivariate resultants?
+Ioannis Emiris has good algorithms, 
+
+http://www-sop.inria.fr/galaad/logiciels/emiris/soft_alg.html
+
+implemented in C (incres) and maple ("multires"). There also is a library 
+
+http://www-sop.inria.fr/galaad/logiciels/synaps/
+
+which contains an implementation of one of his algorithms. Finally, he pointed
+me to an algorithm by A. Khetan, which would actually be the one best suited
+for my needs, it works however only for three polynomials and may be thus of
+less interest to the Axiom project. I'd need such a thing for my guessing
+package... :-)
+
+However, I'm lacking time and expertise, so maybe somebody could help me
+out. Axiom would certainly benefit a great deal!
+
+Martin
+
+PS: a different, maybe easier route would be to call his C code from within
+axiom, but I have no idea how to do this.
+
+
+
+
+From MAILER-DAEMON Wed Jul 28 14:16:02 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BpsyA-0000vi-HZ
+	for mharc-axiom-math@gnu.org; Wed, 28 Jul 2004 14:16:02 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bpsy9-0000vG-3i
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 14:16:01 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bpsy8-0000v4-Gw
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 14:16:00 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bpsy8-0000uu-CE
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 14:16:00 -0400
+Received: from [134.74.86.20] (helo=groups.sci.ccny.cuny.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Bpstz-0002jE-Ak
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 14:11:43 -0400
+Received: from rio.sci.ccny.cuny.edu (rio.sci.ccny.cuny.edu [134.74.120.4])
+	by groups.sci.ccny.cuny.edu (8.11.0/8.11.2) with ESMTP id i6SIArv06011; 
+	Wed, 28 Jul 2004 14:10:53 -0400
+Received: (from daly@localhost)
+	by rio.sci.ccny.cuny.edu (8.11.0/8.11.0) id i6SHCGn16582;
+	Wed, 28 Jul 2004 13:12:16 -0400
+Date: Wed, 28 Jul 2004 13:12:16 -0400
+Message-Id: <200407281712.i6SHCGn16582@rio.sci.ccny.cuny.edu>
+From: Tim Daly  <daly@rio.sci.ccny.cuny.edu>
+To: martin.rubey@univie.ac.at
+Cc: emiris@di.uoa.gr, axiom-math@nongnu.org, khetan@math.umass.edu
+Subject: [Axiom-math] multivariate resultants
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Jul 2004 18:16:01 -0000
+
+I've been skimming Khetan's PhD thesis (formulas for resultants).
+In it he shows how to find the resultants for 2 and 3 dimensions.
+It appears there is a clever rewrite using a change of variables
+which I don't quite understand. However, once that is done the
+formulas seem rather straightforward to compute. I'm going to
+try a few 2D trivial examples by hand and see what I get. It's
+not quite what you want but it's a start.
+
+Tim
+
+===================================================================
+
+I believe he was talking about
+
+Efficient Incremental Algorithms for the Sparse Resultant and the Mixed Volume,
+with J. Canny, JSC'95 (ps.gz, pdf). Prelim. conference version: Practical
+Method for the Sparse Resultant, with J. Canny, ACM ISSAC'93 (ps.gz, pdf).
+
+A Subdivision-Based Algorithm for the Sparse Resultant, with J.F. Canny,
+J.ACM'00 (ps.gz, pdf). Initial AAECC conference version: An Efficient Algorithm
+for the Sparse Mixed Resultant, with J. Canny (ps.gz, pdf).
+ 
+Improved computation of determinants and resultants, with V. Pan: CASC (ps.gz),
+full version (ps.gz).
+
+which are all available online from
+
+http://cgi.di.uoa.gr/~emiris/publis.html
+
+
+
+The algorithm of Khetan is described in
+
+The resultant of an unmixed bivariate system Journal of Symbolic Computation
+36, 425-442 PS , PDF
+
+available online from
+
+http://www.math.umass.edu/~khetan/papers.html
+
+It seems to me that this one is less work, but I don't really know.
+
+Martin
+
+
+
+From MAILER-DAEMON Wed Jul 28 21:23:35 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Bpzdv-0003Ja-KO
+	for mharc-axiom-math@gnu.org; Wed, 28 Jul 2004 21:23:35 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bpzdu-0003JV-Qg
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 21:23:34 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bpzdu-0003JJ-8w
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 21:23:34 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bpzdu-0003JG-3r
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 21:23:34 -0400
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BpzaZ-0004js-VK
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 21:20:08 -0400
+Received: from localhost.localdomain (61.117.252.64.snet.net [64.252.117.61])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i6T1K0lM219316; Wed, 28 Jul 2004 21:20:01 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i6T251i03192;
+	Wed, 28 Jul 2004 22:05:01 -0400
+Date: Wed, 28 Jul 2004 22:05:01 -0400
+Message-Id: <200407290205.i6T251i03192@localhost.localdomain>
+From: root <daly@idsi.net>
+To: khetan@math.umass.edu
+In-reply-to: <Pine.GSO.4.56.0407282002080.9673@sine.math.umass.edu> (message
+	from Amit Khetan on Wed, 28 Jul 2004 20:04:31 -0400 (EDT))
+References: <200407281712.i6SHCGn16582@rio.sci.ccny.cuny.edu>
+	<Pine.GSO.4.56.0407282002080.9673@sine.math.umass.edu>
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: multivariate resultants
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 29 Jul 2004 01:23:35 -0000
+
+Amit,
+
+Many thanks. It'll help quite a bit.
+
+Tim
+
+
+
+From MAILER-DAEMON Wed Jul 28 23:12:38 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Bq1LS-0000IB-Ja
+	for mharc-axiom-math@gnu.org; Wed, 28 Jul 2004 23:12:38 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bq1LR-0000I3-37
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 23:12:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bq1LQ-0000Hl-56
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 23:12:36 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bq1LQ-0000Hb-2M
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 23:12:36 -0400
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Bq1I6-0002Fd-8Z
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 23:09:10 -0400
+Received: from localhost.localdomain (61.117.252.64.snet.net [64.252.117.61])
+	by pimout1-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i6T394Di045468; Wed, 28 Jul 2004 23:09:04 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i6T3s4503227;
+	Wed, 28 Jul 2004 23:54:04 -0400
+Date: Wed, 28 Jul 2004 23:54:04 -0400
+Message-Id: <200407290354.i6T3s4503227@localhost.localdomain>
+From: root <daly@idsi.net>
+To: khetan@math.umass.edu
+In-reply-to: <Pine.GSO.4.56.0407282002080.9673@sine.math.umass.edu> (message
+	from Amit Khetan on Wed, 28 Jul 2004 20:04:31 -0400 (EDT))
+References: <200407281712.i6SHCGn16582@rio.sci.ccny.cuny.edu>
+	<Pine.GSO.4.56.0407282002080.9673@sine.math.umass.edu>
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: multivariate resultants
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 29 Jul 2004 03:12:37 -0000
+
+I've downloaded your biresjsc03.pdf which appears to be the paper
+referenced in the code.
+
+
+
+From MAILER-DAEMON Thu Jul 29 08:04:47 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Bq9eQ-0005mE-Qj
+	for mharc-axiom-math@gnu.org; Thu, 29 Jul 2004 08:04:46 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BpySr-0005PK-ET
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 20:08:05 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BpySp-0005P8-Ly
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 20:08:05 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BpySp-0005P5-Jf
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 20:08:03 -0400
+Received: from [128.119.47.21] (helo=thales.math.umass.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BpyPd-0003Tx-2m
+	for axiom-math@nongnu.org; Wed, 28 Jul 2004 20:04:45 -0400
+Received: from sine (sine [128.119.47.17])
+	by thales.math.umass.edu (8.12.9/8.12.9) with ESMTP id i6T04VL3020264; 
+	Wed, 28 Jul 2004 20:04:31 -0400 (EDT)
+Date: Wed, 28 Jul 2004 20:04:31 -0400 (EDT)
+From: Amit Khetan <khetan@math.umass.edu>
+To: daly@idsi.net
+In-Reply-To: <200407281712.i6SHCGn16582@rio.sci.ccny.cuny.edu>
+Message-ID: <Pine.GSO.4.56.0407282002080.9673@sine.math.umass.edu>
+References: <200407281712.i6SHCGn16582@rio.sci.ccny.cuny.edu>
+MIME-Version: 1.0
+Content-Type: MULTIPART/MIXED; BOUNDARY="-559023410-851401618-1091059471=:9673"
+X-Scanned-By: MIMEDefang 2.33 (www . roaringpenguin . com / mimedefang)
+Received-SPF: none (thales: domain of khetan@math.umass.edu does not designate
+	permitted sender hosts)
+X-Mailman-Approved-At: Thu, 29 Jul 2004 08:04:44 -0400
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: multivariate resultants
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 29 Jul 2004 00:08:05 -0000
+
+  This message is in MIME format.  The first part should be readable text,
+  while the remaining parts are likely unreadable without MIME-aware tools.
+  Send mail to mime@docserver.cac.washington.edu for more info.
+
+---559023410-851401618-1091059471=:9673
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+
+Hi Tim,
+
+I do have a MAPLE 7 implementation of my bivariate resultant
+code. I have included it in my email. Let me know if you have
+any troubles with it. I would also be happy to answer any other
+questions about the algorithm you might have.
+
+By the way what are the applications of resultants you are interested
+in?
+
+Amit
+
+On Wed, 28 Jul 2004, Tim Daly wrote:
+
+> I've been skimming Khetan's PhD thesis (formulas for resultants).
+> In it he shows how to find the resultants for 2 and 3 dimensions.
+> It appears there is a clever rewrite using a change of variables
+> which I don't quite understand. However, once that is done the
+> formulas seem rather straightforward to compute. I'm going to
+> try a few 2D trivial examples by hand and see what I get. It's
+> not quite what you want but it's a start.
+>
+> Tim
+>
+> ===================================================================
+>
+> I believe he was talking about
+>
+> Efficient Incremental Algorithms for the Sparse Resultant and the Mixed Volume,
+> with J. Canny, JSC'95 (ps.gz, pdf). Prelim. conference version: Practical
+> Method for the Sparse Resultant, with J. Canny, ACM ISSAC'93 (ps.gz, pdf).
+>
+> A Subdivision-Based Algorithm for the Sparse Resultant, with J.F. Canny,
+> J.ACM'00 (ps.gz, pdf). Initial AAECC conference version: An Efficient Algorithm
+> for the Sparse Mixed Resultant, with J. Canny (ps.gz, pdf).
+>
+> Improved computation of determinants and resultants, with V. Pan: CASC (ps.gz),
+> full version (ps.gz).
+>
+> which are all available online from
+>
+> http://cgi.di.uoa.gr/~emiris/publis.html
+>
+>
+>
+> The algorithm of Khetan is described in
+>
+> The resultant of an unmixed bivariate system Journal of Symbolic Computation
+> 36, 425-442 PS , PDF
+>
+> available online from
+>
+> http://www.math.umass.edu/~khetan/papers.html
+>
+> It seems to me that this one is less work, but I don't really know.
+>
+> Martin
+>
+---559023410-851401618-1091059471=:9673
+Content-Type: TEXT/PLAIN; charset=US-ASCII; name="bires.mpl"
+Content-Transfer-Encoding: BASE64
+Content-ID: <Pine.GSO.4.56.0407282004310.9673@sine.math.umass.edu>
+Content-Description: 
+Content-Disposition: attachment; filename="bires.mpl"
+
+IyBNYXBsZSBWSUkgY29kZSBmb3IgYml2YXJpYXRlIHNwYXJzZSByZXN1bHRh
+bnRzDQoNCiMgQXV0aG9yOiBBbWl0IEtoZXRhbiwgVW5pdmVyc2l0eSBvZiBN
+YXNzYWNodXNldHRzIGF0IEFtaGVyc3QNCiMga2hldGFuQG1hdGgudW1hc3Mu
+ZWR1LCBodHRwOi8vd3d3Lm1hdGgudW1hc3MuZWR1L35raGV0YW4NCg0KIyBD
+cmVhdGVkOiAzLzIwMDINCiMgTGFzdCB1cGRhdGU6IDEwLzIwMDMNCg0KIyBN
+YWluIGZ1bmN0aW9uIGNhbGw6DQojIGJpcmVzKFtwb2x5MSwgcG9seTIsIHBv
+bHkzXSwgdmFyMSwgdmFyMikNCiMgIA0KIyBSRVRVUk5TIHVubWl4ZWQgc3Bh
+cnNlIHJlc3VsdGFudCBtYXRyaXggb24gdGhlIHVuaW9uIG9mIHRoZSBzdXBw
+b3J0cw0KDQoNCiMgUmVmZXJlbmNlOg0KIyBBbWl0IEtoZXRhbiwgIlRoZSBy
+ZXN1bHRhbnQgb2YgYW4gdW5taXhlZCBiaXZhcmlhdGUgc3lzdGVtIiwgDQoj
+IEpvdXJuYWwgb2YgU3ltYm9saWMgQ29tcHV0YXRpb24gMzYgKDIwMDMpIDQy
+NS00NDINCg0Kd2l0aChsaW5hbGcpOw0Kd2l0aChnZW9tZXRyeSk7DQoNCiMj
+IyMjIyMjIyMjIyMjIyMgdXRpbGl0aWVzICMjIyMjIyMjIyMjIyMjIyMjIyMj
+IyMjIyMjIyMjIyMjIyMjIyMjIyMjDQoNCg0Kc3VwcF9tYXQgOj0gcHJvYyAo
+c3VwcDo6bGlzdCwgdmFyczo6bGlzdCkNCg0KI0lOUFVUOiBsaXN0IG9mIG1v
+bm9taWFscw0KI09VVFBVVDogbWF0cml4IG9mIGV4cG9uZW50IHZlY3RvcnMg
+b2Ygc3VwcG9ydA0KDQogIGxvY2FsIG0sIHYsIG5tb25zLCBudmFycywgc3Vw
+cG1hdDsNCiAgDQogIG5tb25zIDo9IG5vcHMoc3VwcCk7DQogIG52YXJzIDo9
+IG5vcHModmFycyk7DQogIG52YXJzIDo9IG5vcHMgKHZhcnMpOw0KICBzdXBw
+bWF0IDo9IG1hdHJpeChubW9ucywgbnZhcnMpOw0KICBmb3IgbSBmcm9tIDEg
+dG8gbm1vbnMgZG8NCiAgICBmb3IgdiBmcm9tIDEgdG8gbnZhcnMgZG8gc3Vw
+cG1hdFttLHZdIDo9IGRlZ3JlZSAoc3VwcFttXSwgdmFyc1t2XSk7IG9kOw0K
+ICBvZDsJDQogIGV2YWxtIChzdXBwbWF0KTsNCg0KZW5kOiAjIHN1cHBfbWF0
+DQoNCg0KY29udmh1bGwgOj0gcHJvYyhzdXBwbWF0LCBubW9ucykNCg0KI0lO
+UFVUOiBzdXBwb3J0IG1hdHJpeA0KI09VVFBVVDogbGlzdCBvZiB2ZXJ0aWNl
+cyBpbiBjb252ZXggaHVsbCBpbiBjb3VudGVyY2xvY2t3aXNlIG9yZGVyDQoN
+CmxvY2FsIHB0cywgbSwgaHVsbCwgdmVydGxpc3QsIHY7DQoNCmZvciBtIGZy
+b20gMSB0byBubW9ucyBkbw0KICAgcHRzW21dIDo9IHBvaW50KHB8fG0sIGNv
+bnZlcnQocm93KHN1cHBtYXQsIG0pLCBsaXN0KSk7DQpvZDsNCmh1bGwgOj0g
+Y29udmV4aHVsbChjb252ZXJ0KHB0cywgbGlzdCkpOw0KDQpmb3IgdiBmcm9t
+IDEgdG8gbm9wcyhodWxsKSBkbw0KICAgdmVydGxpc3Rbdl0gOj0gY29vcmRp
+bmF0ZXMoaHVsbFt2XSk7DQpvZDsNCg0KZXZhbChjb252ZXJ0KHZlcnRsaXN0
+LCBsaXN0KSk7DQplbmQ6DQoNCg0KDQpnZXRwb2ludHMgOj0gcHJvYyhodWxs
+OjpsaXN0KQ0KDQojIFRoZSAicG9seWdvbiBmaWxsIGFsZ29yaXRobSIgZm9y
+IGNvbXB1dGluZyBsYXR0aWNlIHBvaW50cyBpbiBhIGNvbnZleA0KIyBwb2x5
+Z29uDQoNCiNJTlBVVDogbGlzdCBvZiB2ZXJ0aWNlcyBpbiBjb3VudGVyY2xv
+Y2t3aXNlIG9yZGVyDQojT1VUUFVUOiBsaXN0IG9mIGFsbCBsYXR0aWNlIHBv
+aW50cyBpbiBwb2x5Z29uDQoNCiNSRVRVUk5TIHR3byBsaXN0czogKHBvaW50
+cywgaW50ZXJpb3Jwb2ludHMpOw0KDQpsb2NhbCBudmVydCwgbWlueSwgbWlu
+aW5kZXgsIG1heHksIG1heGluZGV4LCB2LCBsZWZ0LCBsZWZ0c3RhcnQsDQpy
+aWdodHN0YXJ0LCBsZWZ0ZW5kLCByaWdodGVuZCwgbGVmdHgsIHJpZ2h0eCwg
+cHRzLCBpbnRwdHMsIG51bXB0cywNCm51bWludHB0cywgcmlnaHQsIHksIHgs
+IG5leHRsZWZ0LCBuZXh0cmlnaHQsIGxlZnRzbG9wZSwgcmlnaHRzbG9wZTsN
+Cg0KbnZlcnQgOj0gbm9wcyhodWxsKTsgbWlueSA6PSAzMjc2NzsgbWF4eSA6
+PSAtMzI3Njc7DQpmb3IgdiBmcm9tIDEgdG8gbnZlcnQgZG8NCiAgIGlmICgo
+aHVsbFt2XSlbMl0gPCBtaW55KSB0aGVuDQogICAgICAgbWlueSA6PSAoaHVs
+bFt2XSlbMl07DQogICBtaW5pbmRleCA6PSB2Ow0KICAgZmk7DQogICBpZiAo
+KGh1bGxbdl0pWzJdID4gbWF4eSkgdGhlbg0KICAgICBtYXh5IDo9IChodWxs
+W3ZdKVsyXTsNCiAgICAgbWF4aW5kZXggOj0gdjsNCiAgIGZpOw0Kb2Q7DQoN
+Cg0KaWYgIG1pbmluZGV4ID0gMSB0aGVuDQogIGlmIChodWxsW252ZXJ0XSlb
+Ml0gPSBtaW55IHRoZW4NCiAgICAgIGxlZnRzdGFydCA6PSBudmVydDsNCiAg
+ICAgIHJpZ2h0c3RhcnQgOj0gbWluaW5kZXg7DQogIGVsc2UNCiAgICAgIGlm
+IChodWxsW21pbmluZGV4KzFdKVsyXSA9IG1pbnkgdGhlbg0KICAgICAgICAg
+IGxlZnRzdGFydCA6PSBtaW5pbmRleDsNCiAgICAgICAgICByaWdodHN0YXJ0
+IDo9IG1pbmluZGV4KzE7DQogICAgICBlbHNlDQogICAgICAJbGVmdHN0YXJ0
+IDo9IG1pbmluZGV4Ow0KICAgICAgCXJpZ2h0c3RhcnQgOj0gbWluaW5kZXg7
+DQogICAgICBmaTsNCiAgZmk7DQplbHNlDQogIGlmIChtaW5pbmRleCA9IG52
+ZXJ0KSB0aGVuDQogICAgIGxlZnRzdGFydCA6PSBtaW5pbmRleDsNCiAgICAg
+cmlnaHRzdGFydCA6PSBtaW5pbmRleDsNCiAgZWxzZQkNCglpZiAoaHVsbFtt
+aW5pbmRleCsxXSlbMl0gPSBtaW55IHRoZW4NCiAgICAgIAkJbGVmdHN0YXJ0
+IDo9IG1pbmluZGV4OwkNCiAgICAgIAkJcmlnaHRzdGFydCA6PSBtaW5pbmRl
+eCsxOw0KCWVsc2UNCgkJbGVmdHN0YXJ0IDo9IG1pbmluZGV4Ow0KICAgICAg
+CQlyaWdodHN0YXJ0IDo9IG1pbmluZGV4Ow0KCWZpOw0KICBmaTsNCmZpOw0K
+DQp2IDo9IHJpZ2h0c3RhcnQ7DQoNCndoaWxlIChodWxsW3ZdWzJdIDwgbWF4
+eSkgZG8NCiAgdiA6PSB2ICsgMTsNCiAgaWYgdiA+IG52ZXJ0IHRoZW4gdiA6
+PSB2IC0gbnZlcnQ7IGZpOw0Kb2Q7DQoNCnJpZ2h0ZW5kIDo9IHY7DQoNCmlm
+ICh2IDwgbnZlcnQpIHRoZW4NCiAgIGlmICgoaHVsbFt2KzFdKVsyXSA9IG1h
+eHkpIHRoZW4NCiAgICAgIGxlZnRlbmQgOj0gdisxOw0KICAgZWxzZQ0KICAg
+ICAgbGVmdGVuZCA6PSB2Ow0KICAgZmk7DQplbHNlDQogICBpZiAoKGh1bGxb
+MV0pWzJdID0gbWF4eSkgdGhlbg0KICAgICAgbGVmdGVuZCA6PSAxOw0KICAg
+ZWxzZQ0KICAgICAgbGVmdGVuZCA6PSB2Ow0KICAgZmk7DQpmaTsNCg0KDQp2
+IDo9IGxlZnRzdGFydDsNCg0KbGVmdCA6PSBsZWZ0c3RhcnQ7DQpuZXh0bGVm
+dCA6PSBsZWZ0IC0gMTsNCmlmIChuZXh0bGVmdCA9IDApIHRoZW4gbmV4dGxl
+ZnQgOj0gbnZlcnQ7IGZpOw0KcmlnaHQgOj0gcmlnaHRzdGFydDsNCm5leHRy
+aWdodCA6PSByaWdodCArIDE7DQppZiAobmV4dHJpZ2h0ID4gbnZlcnQpIHRo
+ZW4gbmV4dHJpZ2h0IDo9IDE7IGZpOw0KDQpsZWZ0c2xvcGUgOj0gKGh1bGxb
+bmV4dGxlZnRdWzFdIC0gaHVsbFtsZWZ0XVsxXSkvKGh1bGxbbmV4dGxlZnRd
+WzJdIC0gaHVsbFtsZWZ0XVsyXSk7IA0KcmlnaHRzbG9wZSA6PSAoaHVsbFtu
+ZXh0cmlnaHRdWzFdIC1odWxsW3JpZ2h0XVsxXSkvKGh1bGxbbmV4dHJpZ2h0
+XVsyXSAtIGh1bGxbcmlnaHRdWzJdKTsNCg0KbnVtcHRzIDo9IDA7DQpudW1p
+bnRwdHMgOj0gMDsNCmxlZnR4IDo9IGh1bGxbbGVmdHN0YXJ0XVsxXTsNCnJp
+Z2h0eCA6PSBodWxsW3JpZ2h0c3RhcnRdWzFdOw0KZm9yIHkgZnJvbSBtaW55
+IHRvIG1heHkgZG8NCiAgZm9yIHggZnJvbSBjZWlsKGxlZnR4KSB0byBmbG9v
+cihyaWdodHgpIGRvDQogICAgICBudW1wdHMgOj0gbnVtcHRzICsgMTsNCiAg
+ICAgIHB0c1tudW1wdHNdIDo9IFt4LCB5XTsNCiAgICAgIA0KICAgICAgaWYg
+KCh4ID4gbGVmdHgpIGFuZCAoeCA8IHJpZ2h0eCkgYW5kICh5ID4gbWlueSkg
+YW5kICh5IDwgbWF4eSkpIHRoZW4NCgkgIG51bWludHB0cyA6PSBudW1pbnRw
+dHMgKyAxOw0KICAgICAgICAgIGludHB0c1tudW1pbnRwdHNdIDo9IFt4LCB5
+XTsNCiAgICAgIGZpOw0KICBvZDsNCiAgaWYgKHkgPCBtYXh5KSB0aGVuDQog
+IAlpZiAoeSA9IGh1bGxbbmV4dGxlZnRdWzJdKSB0aGVuDQogIAkgICBsZWZ0
+IDo9IG5leHRsZWZ0Ow0KICAgICAJICAgbmV4dGxlZnQgOj0gbGVmdCAtIDE7
+DQogICAgICAgICAgIGlmICAobmV4dGxlZnQgPSAwKSB0aGVuIG5leHRsZWZ0
+IDo9IG52ZXJ0OyBmaTsNCiAgICAgCSAgIGxlZnRzbG9wZSA6PSAoaHVsbFtu
+ZXh0bGVmdF1bMV0gLSBodWxsW2xlZnRdWzFdKS8oaHVsbFtuZXh0bGVmdF1b
+Ml0gLSBodWxsW2xlZnRdWzJdKTsNCiAgCWZpOw0KIAlpZiAoeSA9IGh1bGxb
+bmV4dHJpZ2h0XVsyXSkgdGhlbg0KICAgIAkgICByaWdodCA6PSBuZXh0cmln
+aHQ7DQogICAgCSAgIG5leHRyaWdodCA6PSByaWdodCArIDE7DQogICAgICAg
+ICAgIGlmICAobmV4dHJpZ2h0ID4gbnZlcnQpIHRoZW4gbmV4dHJpZ2h0IDo9
+IDE7IGZpOw0KICAgICAgICAgICByaWdodHNsb3BlIDo9IChodWxsW25leHRy
+aWdodF1bMV0gLSBodWxsW3JpZ2h0XVsxXSkvKGh1bGxbbmV4dHJpZ2h0XVsy
+XSAtIGh1bGxbcmlnaHRdWzJdKTsNCiAgICAgICAgZmk7DQogICAgICAgIGxl
+ZnR4IDo9IGxlZnR4ICsgbGVmdHNsb3BlOw0KICAgICAgICByaWdodHggOj0g
+cmlnaHR4ICsgcmlnaHRzbG9wZTsNCiAgZmk7ICAgICAgICAgICAgDQpvZDsN
+CmlmIChudW1pbnRwdHMgPSAwKSB0aGVuDQogICBpbnRwdHMgOj0gW107IGZp
+Ow0KcmV0dXJuW2NvbnZlcnQocHRzLCBsaXN0KSwgY29udmVydChpbnRwdHMs
+IGxpc3QpXTsNCg0KZW5kOg0KDQoNCmdldF9mYW4gOj0gcHJvYyhodWxsOjps
+aXN0KQ0KDQojIENvbXB1dGVzIHRoZSBub3JtYWwgZmFuIG9mIGEgcG9seWdv
+biBhbmQgY29ycmVzcG9uZGluZyBsaW5lYXIgZnVuY3Rpb25hbA0KDQojIElO
+UFVUOiBMaXN0IG9mIHZlcnRpY2VzIGluIGNvdW50ZXJjbG9ja3dpc2Ugb3Jk
+ZXINCiMgT1VUUFVUOltbZmFuWzFdLCAuLi4sIGZhbltzXV0sIFthWzFdLCAu
+Li4sIGFbc11dXSANCiMgICAgICAgIHdoZXJlIGZhbltpXSBkb3QgW3gseV0g
+Pj0gLWFbaV0gYXJlIHRoZSBkZWZpbmluZyBpbmVxdWFsaXRpZXMgDQoNCg0K
+bG9jYWwgbnZlcnQsIGZhbiwgYSwgaSwgdiwgbiwgZDsNCg0KbnZlcnQgOj0g
+bm9wcyhodWxsKTsNCmZhbiA6PSBhcnJheSgxLi5udmVydCk7DQphIDo9IGFy
+cmF5KDEuLm52ZXJ0KTsNCmZvciBpIGZyb20gMSB0byBudmVydC0xIGRvDQog
+ICAgIHYgOj0gKGh1bGxbaV0taHVsbFtpKzFdKTsNCiAgICAgbiA6PSB2WzJd
+Ow0KICAgICBkIDo9IC12WzFdOw0KICAgICBuIDo9IG4vZ2NkKG4sZCk7DQog
+ICAgIGQgOj0gZC9nY2QodlsyXSxkKTsNCiAgICAgZmFuW2ldIDo9IFtuLGRd
+Ow0KICAgICBhW2ldIDo9IC1kb3Rwcm9kKHZlY3RvcihodWxsW2ldKSwgdmVj
+dG9yKGZhbltpXSkpOw0KICAgb2Q7DQogICB2IDo9IChodWxsW252ZXJ0XS1o
+dWxsWzFdKTsNCiAgIG4gOj0gdlsyXTsgDQogICBkIDo9IC12WzFdOw0KICAg
+biA6PSBuL2djZChuLGQpOw0KICAgZCA6PSBkL2djZCh2WzJdLGQpOw0KICAg
+ZmFuW252ZXJ0XSA6PSBbbixkXTsNCiAgIGFbbnZlcnRdIDo9IC1kb3Rwcm9k
+KHZlY3RvcihodWxsW252ZXJ0XSksIFZlY3RvcihmYW5bbnZlcnRdKSk7DQog
+ICByZXR1cm4oY29udmVydChldmFsKGZhbiksIGxpc3QpLCBjb252ZXJ0KGV2
+YWwoYSksIGxpc3QpKTsNCmVuZDoNCg0KZ2V0X2hvbW9nIDo9IHByb2MocHQs
+IGZhbiwgYSkNCg0KI0NvbXB1dGVzIHRoZSAiaG9tb2dlbm91cyBjb29yZGlu
+YXRlcyIgKGVkZ2UgbGF0dGljZSBkaXN0YW5jZXMpIG9mIHBvaW50DQojd2l0
+aCByZXNwZWN0IHRvIGEgcG9seWdvbg0KDQojSU5QVVQ6IFRoZSBwb2ludCwg
+dGhlIG5vcm1hbCBmYW4sIGFuZCB0aGUgbGluZWFyIGZ1bmN0aW9uYWwNCiNP
+VVRQVVQ6IFRoZSBsaXN0IFs8cHQsIGZhblsxXT4gKyBhWzFdLCAuLi4sIDxw
+dCwgZmFuW3NdPiArIGFbc11dDQoNCmxvY2FsIHYxOw0KDQp2MSA6PSBtYXAo
+di0+ZG90cHJvZChwdCwgdmVjdG9yKHYpKSwgZmFuKTsNCnYxIDo9IHYxICsg
+YTsNCg0KcmV0dXJuKGNvbnZlcnQodjEsIGxpc3QpKTsNCmVuZDogDQoNCmFk
+ZF9zdXBwb3J0cyA6PSBwcm9jKHN1cHAxLCBzdXBwMikNCg0KIyBQb2ludHdp
+c2Ugc3VtIG9mIHR3byBzdXBwb3J0cw0KDQpsb2NhbCBzaXplMSwgc2l6ZTIs
+IGksIGosIFM7DQoNCnNpemUxIDo9IG5vcHMoc3VwcDEpOw0Kc2l6ZTIgOj0g
+bm9wcyhzdXBwMik7DQpTIDo9IHt9Ow0KZm9yIGkgZnJvbSAxIHRvIHNpemUx
+IGRvDQogICAgZm9yIGogZnJvbSAxIHRvIHNpemUyIGRvDQogICAgICAgIFMg
+Oj0gUyB1bmlvbiB7c3VwcDFbaV0gKyBzdXBwMltqXX07DQogICAgb2Q7DQpv
+ZDsNCnJldHVybiBjb252ZXJ0KFMsIGxpc3QpOw0KDQplbmQ6DQoNCmdldF9p
+bnRlcmlvciA6PSBwcm9jKHB0cykNCg0KIyBJTlBVVDogQSBsaXN0IG9mIHBv
+aW50cyBpbiBob21vZ2VuZW91cyBjb29yZGluYXRlcw0KIyBPVVRQVVQ6IFRo
+ZSBzdWJsaXN0IG9mIGludGVyaW9yIHBvaW50cyAoYWxsIGNvb3JkaW5hdGVz
+IGF0IGxlYXN0IG9uZSkNCg0KbG9jYWwgbnVtcHRzLCBzaXplLCBpbnRlcmlv
+ciwgaSwgbmV3cHQsIGQ7DQoNCmludGVyaW9yIDo9IFtdOw0KbnVtcHRzIDo9
+IG5vcHMocHRzKTsNCmlmIChudW1wdHMgPSAwKSB0aGVuDQogIHJldHVybiBp
+bnRlcmlvcg0KZWxzZQ0KICAgc2l6ZSA6PSBub3BzKHB0c1sxXSk7DQogICBm
+b3IgaSBmcm9tIDEgdG8gc2l6ZSBkbw0KICAgICBkW2ldIDo9IDE7DQogICBv
+ZDsNCiAgIGQgOj0gY29udmVydChkLCBsaXN0KTsNCiAgIGZvciBpIGZyb20g
+MSB0byBudW1wdHMgZG8NCiAgICAgaWYgKHZlcmlmeShwdHNbaV0sIGQsICds
+aXN0JygnZ3JlYXRlcl9lcXVhbCcpKSkgdGhlbg0KICAgICAgICBpbnRlcmlv
+ciA6PSBbb3AoaW50ZXJpb3IpLCBwdHNbaV0gLSBkXTsNCiAgICAgZmk7DQog
+ICBvZDsNCiAgIHJldHVybiBpbnRlcmlvcjsNCmZpOw0KZW5kOg0KDQojIyMj
+IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMj
+IyMjIyMjIyMjIyMjIyMjIyMjDQojIyMgIE1haW4gUHJvY2VkdXJlIAkJCQkJ
+CSMjIw0KIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMj
+IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw0KDQoNCmJpcmVzIDo9IHBy
+b2MoZiwgcywgdCkNCg0KI0lOUFVUOiBhIGxpc3Qgb2YgMyBwb2x5bm9taWFs
+cyBhbmQgdHdvIHZhcmlhYmxlcw0KI09VVFBVVDogcmVzdWx0YW50IG1hdHJp
+eA0KDQpsb2NhbCBmMG1vbnMsIGYxbW9ucywgZjJtb25zLCBzdXBwc2V0LCBz
+dXBwLCBDLCBpLCBqLCBzdXBwcHRzLA0Kc3VwcG1hdCwgbm1vbnMsIGh1bGws
+RiwgZmFuLCBhLCBQLCBwdHMsIGludHB0cywgcXB0cywgaW50YSwgaW50cXB0
+cywNCnR3b3FwdHMsIGludDJxcHRzLCBtYXhhbmcsIGFuZywgZXRhXzEsIGV0
+YV8yLCBNLCBSXzEsIFJfMiwgUl8zLCBjLCBCLA0KZSwgbSwgbiwgYWxwaGEs
+IHcxLCB3LCBmbGFnLCB2MSwgdix1LCB1MSwgYmV0YSwgZywgc2l6ZSwgcm93
+cywgY29sczsgICAgICAgICAgIDsNCg0KIyBpbnB1dDoNCiMgeCA9IGYwLCB5
+ID0gZjIsIHogPSBmMyAzIHBvbHlub21pYWxzIGluIHR3byB2YXJpYWJsZXMg
+cyx0DQoNCiMgQ29tcHV0ZSBtb25vbWlhbCBzdXBwb3J0cw0KDQoNCmNvZWZm
+cyhjb2xsZWN0KGV4cGFuZChmWzFdKSwgW3MsdF0sIGRpc3RyaWJ1dGVkKSwg
+W3MsIHRdLCAnZjBtb25zJyk7DQpjb2VmZnMoY29sbGVjdChleHBhbmQoZlsy
+XSksIFtzLHRdLCBkaXN0cmlidXRlZCksIFtzLCB0XSwgJ2YxbW9ucycpOw0K
+Y29lZmZzKGNvbGxlY3QoZXhwYW5kKGZbM10pLCBbcyx0XSwgZGlzdHJpYnV0
+ZWQpLCBbcywgdF0sICdmMm1vbnMnKTsNCnN1cHBzZXQgOj0gYHVuaW9uYCh7
+ZjBtb25zfSwge2YxbW9uc30sICB7ZjJtb25zfSk7DQpzdXBwIDo9IGNvbnZl
+cnQoc29ydChzdXBwc2V0KSwgbGlzdCk7DQoNCiMgR2V0IGNvZWZmaWNpZW50
+IG1hdHJpeA0KDQpDIDo9IG1hdHJpeCgzLCBub3BzKHN1cHApKTsNCmZvciBp
+IGZyb20gMSB0byAzIGRvDQogICBmb3IgaiBmcm9tIDEgdG8gbm9wcyhzdXBw
+KSBkbw0KICAgICAgIENbaSwgal0gOj0gY29lZnRheWwoZltpXSwgW3MsdF09
+WzAsMF0sIFtkZWdyZWUoc3VwcFtqXSwgcyksIGRlZ3JlZShzdXBwW2pdLCB0
+KV0pOw0KICAgb2Q7DQpvZDsNCg0KDQojIENvbXB1dGUgY29udmV4IGh1bGwg
+b2Ygc3VwcG9ydCBhbmQgbGF0dGljZSBwb2ludHMvaW50ZXJpb3IgbGF0dGlj
+ZSBwb2ludHMNCg0Kc3VwcHB0cyA6PSBbXTsNCnN1cHBtYXQgOj0gc3VwcF9t
+YXQoc3VwcCwgW3MsdF0pOw0Kbm1vbnMgOj0gbm9wcyhzdXBwKTsNCmZvciBp
+IGZyb20gMSB0byBubW9ucyBkbyBzdXBwcHRzIDo9IFtvcChzdXBwcHRzKSwg
+cm93KHN1cHBtYXQsIGkpXTsNCm9kOw0KaHVsbCA6PSBjb252aHVsbChzdXBw
+bWF0LCBubW9ucyk7DQpGIDo9IGdldF9mYW4oaHVsbCk7DQpmYW4gOj0gRlsx
+XTsNCmEgOj0gRlsyXTsNClAgOj0gZ2V0cG9pbnRzKGh1bGwpOw0KcHRzIDo9
+IFBbMV07DQppbnRwdHMgOj0gUFsyXTsNCg0KIyBDb252ZXJ0IGFsbCB0byBo
+b21vZ2VuZW91cyBjb29yZGluYXRlcw0KDQpxcHRzIDo9IG1hcChtLT5nZXRf
+aG9tb2cobSwgZmFuLCBhKSwgcHRzKTsNCmludGEgOj0gbWFwKHgtPngtMSwg
+YSk7DQppbnRxcHRzIDo9IG1hcChtLT5nZXRfaG9tb2cobSwgZmFuLCBpbnRh
+KSwgaW50cHRzKTsNCnR3b3FwdHMgOj0gYWRkX3N1cHBvcnRzKHFwdHMsIHFw
+dHMpOw0KaW50MnFwdHMgOj0gZ2V0X2ludGVyaW9yKHR3b3FwdHMpOw0Kc3Vw
+cHB0cyA6PSBtYXAobS0+Z2V0X2hvbW9nKG0sIGZhbiwgYSksIHN1cHBwdHMp
+Ow0KDQojIFBhcnRpdGlvbiB0aGUgZmFuDQoNCm1heGFuZyA6PSAwOw0KICAg
+Zm9yIGkgZnJvbSAxIHRvIG5vcHMoZmFuKS0xIGRvDQoJYW5nIDo9IGFuZ2xl
+KGZhbltpXSwgZmFuW2krMV0pOw0KCWlmIChldmFsZihhbmcpID4gZXZhbGYo
+bWF4YW5nKSkgdGhlbg0KCSAgIG1heGFuZyA6PSBhbmc7DQoJICAgZXRhXzEg
+Oj0gaTsNCgkgICBldGFfMiA6PSBpKzE7DQoJZmk7DQogICAgb2Q7DQogICAg
+YW5nIDo9IGFuZ2xlKGZhbltub3BzKGZhbildLCBmYW5bMV0pOw0KICAgIGlm
+IChldmFsZihhbmcpID4gZXZhbGYobWF4YW5nKSkgdGhlbg0KICAgICAgIG1h
+eGFuZyA6PSBhbmc7DQogICAgICAgZXRhXzEgOj0gbm9wcyhmYW4pOw0KICAg
+ICAgIGV0YV8yIDo9IDE7DQogICAgZmk7DQoJDQoNCiAgIE0gOj0gaW52ZXJz
+ZShtYXRyaXgoW2ZhbltldGFfMV0sIGZhbltldGFfMl1dKSk7DQogICBSXzEg
+Oj0ge307DQogICBSXzIgOj0ge307DQogICBSXzMgOj0ge307DQogIA0KICAg
+Zm9yIGkgZnJvbSAxIHRvIG5vcHMoZmFuKSBkbw0KICAgICAgIGMgOj0gbXVs
+dGlwbHkodmVjdG9yKGZhbltpXSksIE0pOw0KICAgICAgIGlmIChjWzFdID49
+IDAgYW5kIGNbMl0gPD0gMCkgdGhlbg0KCSAgUl8xIDo9IFJfMSB1bmlvbiB7
+aX0NCgllbHNlDQoJICBpZiAoY1syXSA+PSAwKSB0aGVuDQoJICAgICBSXzIg
+Oj0gUl8yIHVuaW9uIHtpfTsNCgkgIGVsc2UNCgkgICAgIFJfMyA6PSBSXzMg
+dW5pb24ge2l9Ow0KCSAgZmk7DQoJZmk7DQogICBvZDsNCiAgaWYgKFJfMyA9
+IHt9KSB0aGVuIFJfMyA6PSB7MH0gZmk7DQoNCiMgRmlsbCBpbiBTeWx2ZXN0
+ZXIgcm93cyBhbmQgY29sdW1ucw0KDQogIEIgOj0gbWF0cml4KG5vcHMoaW50
+MnFwdHMpICsgMywgbm9wcyhxcHRzKSArIDMqbm9wcyhpbnRxcHRzKSwgMCk7
+DQogIGUgOj0gdmVjdG9yKG5vcHMoZmFuKSwgMSk7DQogIGUgOj0gY29udmVy
+dChlLCBsaXN0KTsNCiAgZm9yIGkgZnJvbSAxIHRvIG5tb25zIGRvDQogICAg
+IG0gOj0gc3VwcHB0c1tpXTsNCiAgICAgbWVtYmVyKG0sIHFwdHMsICdjbCcp
+Ow0KICAgICBmb3IgaiBmcm9tIDEgdG8gMyBkbwkNCiAgICAgICAgQltub3Bz
+KGludDJxcHRzKSArIGosIGNsXSA6PSBDW2osaV07DQogICAgICAgIGZvciBu
+IGluIGludHFwdHMgZG8NCiAgICAgICAgICAgIG1lbWJlcihuK20sIGludDJx
+cHRzLCAncncnKTsNCiAgICAgICAgICAgIG1lbWJlcihuLCBpbnRxcHRzLCAn
+Y2wxJyk7DQogICAgICAgICAgICBCW3J3LCBub3BzKHFwdHMpICsgKGotMSkq
+bm9wcyhpbnRxcHRzKSArIGNsMV0gOj0gQ1tqLGldOw0KICAgICAgICBvZDsN
+CiAgICAgb2Q7DQogIG9kOyANCg0KIyBGaWxsIGluIEJlem91dCBtYXRyaXgg
+YnkgZmluZGluZyBhbGwgdHJpcGxlcyAodyx2LHUpIHNhdGlzZnlpbmcgY29u
+ZGl0aW9ucw0KDQogIGZvciBhbHBoYSBpbiBxcHRzIGRvDQogICAgbWVtYmVy
+KGFscGhhLCBxcHRzLCAnY2wnKTsNCiAgICBmb3IgdzEgZnJvbSAxIHRvIG5t
+b25zIGRvDQogICAgICAgIHcgOj0gc3VwcHB0c1t3MV07DQogICAgICAgIGZs
+YWcgOj0gZmFsc2U7DQoJZm9yIGkgaW4gUl8zIGRvDQoJaWYgKGkgPSAwKSB0
+aGVuDQoJICAgaWYgKCh3WzFdICsgd1syXSkgPj0gKGFscGhhWzFdICsgYWxw
+aGFbMl0pKSB0aGVuDQogICAgICAgICAgICAgIGZsYWcgOj0gdHJ1ZTsNCiAg
+ICAgICAgICAgICAgYnJlYWs7DQogICAgICAgICAgIGZpOw0KICAgICAgICBl
+bHNlDQogICAgICAgICAgIGlmICh3W2ldIDw9IGFscGhhW2ldKSB0aGVuDQog
+ICAgICAgICAgICAgICBmbGFnIDo9IHRydWU7DQoJICAgICAgIGJyZWFrOw0K
+CSAgIGZpOw0KICAgICAgICBmaTsNCglvZDsNCgkgICAgDQoJaWYgKGZsYWcp
+IHRoZW4gbmV4dDsgZmk7IA0KCSAgICBmb3IgaSBpbiBSXzIgZG8NCgkJaWYg
+KHdbaV0gPD0gYWxwaGFbaV0pIHRoZW4NCgkJICAgIGZsYWcgOj0gdHJ1ZTsN
+CgkJICAgIGJyZWFrOw0KCQlmaTsNCgkgICAgb2Q7DQoJICAgIGlmIChub3Qo
+ZmxhZykpIHRoZW4gbmV4dDsgZmk7DQoJDQogICAgICAgICAgICBmb3IgdjEg
+ZnJvbSAxIHRvIG5tb25zIGRvDQogCSAgICB2IDo9IHN1cHBwdHNbdjFdOw0K
+CSAgICBmbGFnIDo9IGZhbHNlOw0KCSAgICBpZiAodjEgPSB3MSkgdGhlbiBu
+ZXh0OyBmaTsNCgkgICAgYyA6PSB2ICsgdzsNCgkgICAgZm9yIGkgaW4gUl8y
+IGRvDQoJICAgICAgICBpZiAoY1tpXSA8PSBhbHBoYVtpXSkgdGhlbg0KCQkg
+ICBmbGFnIDo9IHRydWU7DQoJCSAgIGJyZWFrOw0KCQlmaTsNCgkgICAgb2Q7
+DQoJICAgIGlmIChmbGFnKSB0aGVuIG5leHQ7IGZpOw0KCSAgICBmb3IgaSBp
+biBSXzEgZG87DQoJCWlmIChjW2ldIDw9IGFscGhhW2ldKSB0aGVuIAkNCiAg
+CSAgICAgCSAgIGZsYWcgOj0gdHJ1ZTsNCgkJICAgYnJlYWs7DQoJCWZpOw0K
+CSAgICBvZDsNCglpZiAobm90KGZsYWcpKSB0aGVuIG5leHQ7IGZpOw0KICAg
+ICAgCWZvciB1MSBmcm9tIDEgdG8gbm1vbnMgZG8JDQogICAgICAgICAgICB1
+IDo9IHN1cHBwdHNbdTFdOw0KCSAgICBmbGFnIDo9IGZhbHNlOw0KICAgICAg
+ICAgICAgaWYgKCh1MT12MSkgb3IgKHUxPXcxKSkgdGhlbiBuZXh0OyBmaTsN
+CgkgICAgYyA6PSB1ICsgdiArIHc7DQoJICAgIGZvciBpIGluIFJfMSBkbzsN
+CgkJaWYgKGNbaV0gPD0gYWxwaGFbaV0pIHRoZW4NCgkJICAgZmxhZyA6PSB0
+cnVlOw0KCQkgICBicmVhazsNCgkJZmk7DQoJICAgIG9kOw0KCSAgICBpZiAo
+ZmxhZykgdGhlbiBuZXh0OyBmaTsNCgkgICAgYmV0YSA6PSBjIC0gYWxwaGEg
+LSBlOw0KCSAgICBtZW1iZXIoYmV0YSwgaW50MnFwdHMsICdydycpOw0KCSAg
+IA0KICAgICAgICAgICANCiAgICAgICAgICAgIGcgOj0gZGV0KHN1Ym1hdHJp
+eChDLCBbMSwyLDNdLCBbdTEsIHYxLCB3MV0pKTsNCgkgICAgCSAgICBCW3J3
+LGNsXSA6PSBCW3J3LGNsXSArIGc7DQogICAgICAgIG9kOw0KIG9kOw0Kb2Q7
+DQpvZDsNCg0Kc2l6ZSA6PSBub3BzKGludDJxcHRzKSArIDM7DQpyb3dzICA6
+PSBbXToNCmNvbHMgOj0gW106DQoNCmZvciBpIGZyb20gMSB0byBzaXplIGRv
+DQoNCmlmIChpIDw9IDMpIHRoZW4gcm93cyA6PSBbb3Aocm93cyksIGkrbm9w
+cyhpbnQycXB0cyldOiBlbHNlDQpyb3dzIDo9IFtvcChyb3dzKSwgaS0zXTog
+Zmk6DQppZiAoaSA8PSAzKm5vcHMoaW50cXB0cykpIHRoZW4gY29scyA6PSBb
+b3AoY29scyksIGkgKyBub3BzKHFwdHMpXTogZWxzZQ0KY29scyA6PSBbb3Ao
+Y29scyksIGkgLSAzKm5vcHMoaW50cXB0cyldOiBmaToNCm9kOg0KTSA6PSBz
+dWJtYXRyaXgoQiwgcm93cywgY29scyk6DQoNCnJldHVybihldmFsbShNKSk6
+DQogDQogIAkNCmVuZDoNCg==
+
+---559023410-851401618-1091059471=:9673--
+
+
+
+From MAILER-DAEMON Fri Jul 30 08:22:26 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BqWP4-0002E0-Nh
+	for mharc-axiom-math@gnu.org; Fri, 30 Jul 2004 08:22:26 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BqWP3-0002Dh-FT
+	for axiom-math@nongnu.org; Fri, 30 Jul 2004 08:22:25 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BqWP1-0002DV-50
+	for axiom-math@nongnu.org; Fri, 30 Jul 2004 08:22:25 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BqWP1-0002DS-2B
+	for axiom-math@nongnu.org; Fri, 30 Jul 2004 08:22:23 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BqWLB-0000lE-G5
+	for axiom-math@nongnu.org; Fri, 30 Jul 2004 08:18:25 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i6UCHW921169812;
+	Fri, 30 Jul 2004 14:17:46 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16650.22488.89384.484993@gargle.gargle.HOWL>
+Date: Fri, 30 Jul 2004 14:14:48 +0000
+To: Amit Khetan <khetan@math.umass.edu>, daly@idsi.net, axiom-math@nongnu.org
+In-Reply-To: <16650.20656.484109.155980@gargle.gargle.HOWL>
+References: <200407281712.i6SHCGn16582@rio.sci.ccny.cuny.edu>
+	<Pine.GSO.4.56.0407282002080.9673@sine.math.umass.edu>
+	<16650.20656.484109.155980@gargle.gargle.HOWL>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx7.univie.ac.at 4247; Body=3 Fuz1=3 Fuz2=3
+Cc: 
+Subject: [Axiom-math] Re: multivariate resultants
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 30 Jul 2004 12:22:25 -0000
+
+I sort of forgot to ask, is there an easy way to exclude the trivial solution
+(0,0) with your algorithm? (i.e, decide whether the system has a nontrivial
+common root?)
+
+Martin
+
+Martin Rubey writes:
+ > Dear Amit,
+ > 
+ > thanks a lot for the code and your support. In fact, it's me who would need
+ > multivariate resultants, and the application is as follows:
+ > 
+ > Suppose you have the first few numbers of a sequence and you want to guess a
+ > closed formula, what can you do?
+ > 
+ > Well, if you know for some reason, that the sequence is 
+ > 
+ > r(1), r(2), r(3),... 
+ > 
+ > for some rational function r(n) you are lucky, just use rational
+ > interpolation and you're done. Conversely, you can simply use rational
+ > interpolation on the numbers you have, and if the formula you get is of low
+ > total degree, i.e., deg numerator + deg denominator < number of numbers you
+ > supplied, you can bet that the formula is "correct".
+ > 
+ > The next step is to realise that you can guess formulas of the form
+ > 
+ > prod_{i_0=0}^n prod_{i_1=0}^{i_0} ... prod_{i_k=0}^{i_{k-1}} r(i_k) 
+ > 
+ > just as easily: Simply generate the sequence of successive quotients of your
+ > original sequence and recurse. This procedure is implemented in Christian
+ > Krattenthaler's program rate.m and used by Sloanes Online Encylopedia, for
+ > example.
+ > 
+ > A slight twist, which I "discovered" recently, is that you can also generate
+ > the sequence of successive differences and thus guess formulas of the form
+ > 
+ > sum_{i_0=0}^n prod_{i_1=0}^{i_0} ... sum_{i_k=0}^{i_{k-1}} r(i_k) 
+ > 
+ > with sum's and prod's appearing. So far, so good.
+ > 
+ > Now, what happens if the sequence does not stem from a rational function,
+ > but from a rational function times an "Abelian"-type term, like
+ > (a+b*n)^n*r(n), r(n) being rational, a and b some numbers?
+ > 
+ > Well, the solution is not so difficult: let's call the numbers you've got
+ > y1, y2, y3, ... y_(k+3). (i.e., we have the first k+3 terms available)
+ > 
+ > Do rational interpolation on the sequence
+ > 
+ > y1*(a+b)^-1, y2*(a+2*b)^-2, y3*(a+3*b)^-3, ... y_k*(a+k*b)^-k
+ > 
+ > and so on, where you keep a and b symbolic. What you get is a rational
+ > function p(n,a,b) in n, a and b.
+ > 
+ > To recover a and b, and test whether the solution is sound, we defined the
+ > three polynomials in a and b
+ > 
+ > p1=numer(y_(k+1)*(a+(k+1)*b)^(-k-1)-p(k+1,a,b))
+ > p2=numer(y_(k+2)*(a+(k+2)*b)^(-k-2)-p(k+2,a,b))
+ > p3=numer(y_(k+3)*(a+(k+3)*b)^(-k-3)-p(k+3,a,b))
+ > 
+ > and check whether they have a common root (a0,b0).
+ > 
+ > If these three polynomials have a common root, it is most likely, that the
+ > sequence was generated by p(n,a0,b0).
+ > 
+ > We have to be a little more careful, however: There may be the unwanted
+ > solution (a0,b0)=(0,0) which we would have to exclude, but I have not
+ > thought about this yet.
+ > 
+ > What I did up to now was the following: Take the resultant of p1 and p2 and
+ > p1 and p3 and then the gcd of the two resultants. However, this was far to
+ > slow, of course...
+ > 
+ > By the way, if you have a way of solving four equations in three unknows, we
+ > could even guess formulas of the form
+ > 
+ > (a+b*n+c*n^2)^n*r(n)...
+ > 
+ > You might wonder, what for? Well, such sequences do arise frequently in
+ > combinatorics and it's not so trivial to guess them by hand. For example,
+ > the number of alternating sign matrices is
+ > 
+ > (6) -> guess([1, 2, 7, 42, 429, 7436, 218348, 10850216],2,2)$G
+ > 
+ >                               p  - 1      2
+ >                      n - 1     8      27p   + 54p  + 24
+ >                      ++-++    ++-++      7       7
+ >    (6)  [[function= ( | |   2( | |    -----------------)),order= 0]]
+ >                       | |      | |        2
+ >                      p = 1    p = 1   16p   + 32p  + 12
+ >                       8        7         7       7
+ >               Type: List Record(function: Expression Integer,order: Integer)
+ > 
+ > 
+ > Thanks again,
+ > 
+ > Martin
+
+
+
+

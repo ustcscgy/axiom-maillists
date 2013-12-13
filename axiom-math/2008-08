@@ -1,0 +1,506 @@
+From MAILER-DAEMON Thu Aug 07 11:45:35 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KR7gF-0001kp-1B
+	for mharc-axiom-math@gnu.org; Thu, 07 Aug 2008 11:45:35 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KR7gD-0001hQ-4W
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 11:45:33 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KR7gC-0001fv-CU
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 11:45:32 -0400
+Received: from [199.232.76.173] (port=49463 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KR7gC-0001fd-0O
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 11:45:32 -0400
+Received: from fg-out-1718.google.com ([72.14.220.155]:30509)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1KR7gB-0002qC-A9
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 11:45:31 -0400
+Received: by fg-out-1718.google.com with SMTP id l26so283084fgb.8
+	for <axiom-math@nongnu.org>; Thu, 07 Aug 2008 08:45:28 -0700 (PDT)
+Received: by 10.86.95.20 with SMTP id s20mr1810479fgb.49.1218123928592;
+	Thu, 07 Aug 2008 08:45:28 -0700 (PDT)
+Received: by 10.86.91.2 with HTTP; Thu, 7 Aug 2008 08:45:28 -0700 (PDT)
+Message-ID: <fbcd16d40808070845i5877c7ddjb34b85df12ef4198@mail.gmail.com>
+Date: Thu, 7 Aug 2008 11:45:28 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: axiom-math@nongnu.org, aldor-l <aldor-l@aldor.org>, 
+	fricas-devel <fricas-devel@googlegroups.com>, 
+	open-axiom-devel <open-axiom-devel@lists.sourceforge.net>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: 
+Subject: [Axiom-math] Hopf Algebra = Group + Monad
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 07 Aug 2008 15:45:33 -0000
+
+Dear Axiom and Aldor users/developers;
+
+Here is an example of something that I would really like to work on in
+Axiom and/or Aldor:
+
+"Hopf Algebra = Group + Monad"
+
+http://sigfpe.blogspot.com/2008/08/hopf-algebra-group-monad.html
+
+by 'sigfpe' on the blog: "A Neighborhood of Infinity".
+
+This work is done using the programming language Haskell which
+although it does have a strong formal definition is not nearly as
+"categorical" as Axiom about the way it expressions mathematics. I
+hope that someday that people interested in this subject will be able
+to use Axiom and Aldor this way.
+
+In general I believe that computer algebra systems have not yet begun
+to catch up with recent developments in formal mathematics and in
+particular the ideas aboout co-algebra.
+
+The subject of co-algebra (and co-data) however has been a hot topic
+in programming language design and leads naturally semantics based on
+co-induction appropriate to "infinite" objects such as streams and
+generators. This leads back to the subject of exact real numbers and
+even p-adic numbers in computer algebra.
+
+For example it seems clear that support for concepts like "stream calculus"
+
+Elements of stream calculus (an extensive exercise in coinduction)
+by J. J.M.M. Rutten, 2001
+
+http://portal.acm.org/citation.cfm?id=869620
+
+could be easily added to the mathematical libraries implemented in
+strongly-typed computer algebra systems like Axiom and Aldor since
+they already support Stream and Generator data structures.
+
+The failure to treat co-algebraic properties on a par with algebraic
+properties is beginning to seem like a serious limitation for advanced
+applications of these systems especially since dual notions such as
+these arise naturally in the category theoretic treatment of almost
+any subject.
+
+Perhaps you know some other people working on this sort of thing? It
+would be very good to work together.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Aug 07 12:25:12 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KR8Ia-0007AQ-CR
+	for mharc-axiom-math@gnu.org; Thu, 07 Aug 2008 12:25:12 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KR8IY-00078N-7n
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 12:25:10 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KR8IW-00076a-GW
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 12:25:09 -0400
+Received: from [199.232.76.173] (port=46376 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KR8IW-00076R-B3
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 12:25:08 -0400
+Received: from nf-out-0910.google.com ([64.233.182.188]:36699)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1KR8IW-0007pT-4j
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 12:25:08 -0400
+Received: by nf-out-0910.google.com with SMTP id b2so201735nfb.12
+	for <axiom-math@nongnu.org>; Thu, 07 Aug 2008 09:25:07 -0700 (PDT)
+Received: by 10.210.59.14 with SMTP id h14mr4216311eba.104.1218126306102;
+	Thu, 07 Aug 2008 09:25:06 -0700 (PDT)
+Received: by 10.210.130.9 with HTTP; Thu, 7 Aug 2008 09:25:06 -0700 (PDT)
+Message-ID: <fbcd16d40808070925o3433e8bfu279654030ac84523@mail.gmail.com>
+Date: Thu, 7 Aug 2008 12:25:06 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "David Casperson" <casper@unbc.ca>
+In-Reply-To: <alpine.OSX.1.00.0808070906500.845@david-caspersons-computer.local>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <fbcd16d40808070845i5877c7ddjb34b85df12ef4198@mail.gmail.com>
+	<alpine.OSX.1.00.0808070906500.845@david-caspersons-computer.local>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: fricas-devel <fricas-devel@googlegroups.com>, axiom-math@nongnu.org,
+	open-axiom-devel <open-axiom-devel@lists.sourceforge.net>,
+	aldor-l <aldor-l@aldor.org>
+Subject: [Axiom-math] Re: [Aldor-l] Hopf Algebra = Group + Monad
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 07 Aug 2008 16:25:10 -0000
+
+On Thu, Aug 7, 2008 at 12:10 PM, David Casperson  wrote:
+> Hi Bill,
+>
+> you may want to look at the work of the Charity group at the U of C.
+>
+
+Thanks! I haven't looked at the Charity project for a while:
+
+http://pll.cpsc.ucalgary.ca/charity1/www/home.html
+
+but "Latest News" and "Download ..." suggests that there has not been
+much development since 2000. Is that accurate? Is there work
+continuing on this elsewhere?
+
+> Charity is a seriously category theoretical language that is explicitly
+> aware of co-objects.  It is formally weaker than most programming
+> languages in that any compiling program terminates.
+>
+
+In the context of co-algebra is seems a little strange to consider
+only programs that terminate.
+
+> It may be that a sub-language based on Charity like ideas is the correct
+> language in which to formulate a calculus of types for a language with
+> first class types like Aldor.
+
+That is a very interesting idea.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Sat Aug 09 12:21:27 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KRrC3-0008Uh-58
+	for mharc-axiom-math@gnu.org; Sat, 09 Aug 2008 12:21:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KR844-0000zg-0H
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 12:10:12 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KR841-0000x5-NP
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 12:10:11 -0400
+Received: from [199.232.76.173] (port=54346 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KR841-0000wh-BT
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 12:10:09 -0400
+Received: from defout.telus.net ([199.185.220.240]:62122)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <casper@unbc.ca>) id 1KR840-0005zK-WA
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 12:10:09 -0400
+Received: from priv-edtnaa04.telusplanet.net ([154.5.231.135])
+	by priv-edtnes28.telusplanet.net
+	(InterMail vM.7.08.02.02 201-2186-121-104-20070414) with ESMTP id
+	<20080807161007.QBSB7441.priv-edtnes28.telusplanet.net@priv-edtnaa04.telusplanet.net>;
+	Thu, 7 Aug 2008 10:10:07 -0600
+Received: from [10.0.1.2] (d154-5-231-135.bchsia.telus.net [154.5.231.135])
+	by priv-edtnaa04.telusplanet.net (BorderWare Security Platform) with
+	ESMTP id 8D6B1A113C22877A; Thu,  7 Aug 2008 10:10:05 -0600 (MDT)
+Date: Thu, 7 Aug 2008 09:10:08 -0700 (PDT)
+From: David Casperson <casper@unbc.ca>
+Sender: casper@david-caspersons-computer.local
+To: Bill Page <bill.page@newsynthesis.org>
+In-Reply-To: <fbcd16d40808070845i5877c7ddjb34b85df12ef4198@mail.gmail.com>
+Message-ID: <alpine.OSX.1.00.0808070906500.845@david-caspersons-computer.local>
+References: <fbcd16d40808070845i5877c7ddjb34b85df12ef4198@mail.gmail.com>
+User-Agent: Alpine 1.00 (OSX 882 2007-12-20)
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-detected-kernel: by monty-python.gnu.org: Solaris 10 (beta)
+X-Mailman-Approved-At: Sat, 09 Aug 2008 12:21:25 -0400
+Cc: fricas-devel <fricas-devel@googlegroups.com>, axiom-math@nongnu.org,
+	open-axiom-devel <open-axiom-devel@lists.sourceforge.net>,
+	aldor-l <aldor-l@aldor.org>
+Subject: [Axiom-math] Re: [Aldor-l] Hopf Algebra = Group + Monad
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: David Casperson <casper@unbc.ca>
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 07 Aug 2008 16:10:12 -0000
+
+Hi Bill,
+
+you may want to look at the work of the Charity group at the U of C.
+
+Charity is a seriously category theoretical language that is explicitly 
+aware of co-objects.  It is formally weaker than most programming 
+languages in that any compiling program terminates.
+
+It may be that a sub-language based on Charity like ideas is the correct 
+language in which to formulate a calculus of types for a language with 
+first class types like Aldor.
+
+David
+-- 
+Dr. David Casperson, Assistant Professor     |  casper@unbc.ca
+Department of Computer Science               |  (250)   960-6672 Fax 960-5544
+College of Science and Management            |  3333 University Way
+University of Northern British Columbia      |  Prince George, BC   V2N 4Z9
+                                              |  CANADA
+
+Bill Page, on 2008-08-07, you wrote:
+
+> Date: Thu, 7 Aug 2008 11:45:28 -0400
+> From: Bill Page <bill.page@newsynthesis.org>
+> To: axiom-math@nongnu.org, aldor-l <aldor-l@aldor.org>,
+>     fricas-devel <fricas-devel@googlegroups.com>,
+>     open-axiom-devel <open-axiom-devel@lists.sourceforge.net>
+> Subject: [Aldor-l] Hopf Algebra = Group + Monad
+> 
+> Dear Axiom and Aldor users/developers;
+>
+> Here is an example of something that I would really like to work on in
+> Axiom and/or Aldor:
+>
+> "Hopf Algebra = Group + Monad"
+>
+> http://sigfpe.blogspot.com/2008/08/hopf-algebra-group-monad.html
+>
+> by 'sigfpe' on the blog: "A Neighborhood of Infinity".
+>
+> This work is done using the programming language Haskell which
+> although it does have a strong formal definition is not nearly as
+> "categorical" as Axiom about the way it expressions mathematics. I
+> hope that someday that people interested in this subject will be able
+> to use Axiom and Aldor this way.
+>
+> In general I believe that computer algebra systems have not yet begun
+> to catch up with recent developments in formal mathematics and in
+> particular the ideas aboout co-algebra.
+>
+> The subject of co-algebra (and co-data) however has been a hot topic
+> in programming language design and leads naturally semantics based on
+> co-induction appropriate to "infinite" objects such as streams and
+> generators. This leads back to the subject of exact real numbers and
+> even p-adic numbers in computer algebra.
+>
+> For example it seems clear that support for concepts like "stream calculus"
+>
+> Elements of stream calculus (an extensive exercise in coinduction)
+> by J. J.M.M. Rutten, 2001
+>
+> http://portal.acm.org/citation.cfm?id=869620
+>
+> could be easily added to the mathematical libraries implemented in
+> strongly-typed computer algebra systems like Axiom and Aldor since
+> they already support Stream and Generator data structures.
+>
+> The failure to treat co-algebraic properties on a par with algebraic
+> properties is beginning to seem like a serious limitation for advanced
+> applications of these systems especially since dual notions such as
+> these arise naturally in the category theoretic treatment of almost
+> any subject.
+>
+> Perhaps you know some other people working on this sort of thing? It
+> would be very good to work together.
+>
+> Regards,
+> Bill Page.
+>
+> _______________________________________________
+> Aldor-l mailing list
+> Aldor-l@aldor.org
+> http://aldor.org/mailman/listinfo/aldor-l_aldor.org
+>
+
+
+
+From MAILER-DAEMON Sat Aug 09 12:21:27 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KRrC3-0008VN-J4
+	for mharc-axiom-math@gnu.org; Sat, 09 Aug 2008 12:21:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KRoHR-0005Ed-7X
+	for axiom-math@nongnu.org; Sat, 09 Aug 2008 09:14:49 -0400
+Received: from [199.232.76.173] (port=52517 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KRoHQ-0005Do-Lq
+	for axiom-math@nongnu.org; Sat, 09 Aug 2008 09:14:48 -0400
+Received: from sigma957.cis.mcmaster.ca ([130.113.64.83]:65389)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <carette@mcmaster.ca>) id 1KRoHQ-0007Tf-C3
+	for axiom-math@nongnu.org; Sat, 09 Aug 2008 09:14:48 -0400
+Received: from Gorash7.UTS.McMaster.CA (Gorash7.UTS.mcmaster.ca
+	[130.113.196.61])
+	by sigma957.cis.mcmaster.ca (8.13.7/8.13.7) with ESMTP id
+	m79DEERn009708; Sat, 9 Aug 2008 09:14:21 -0400 (EDT)
+Received: from cgpsrv2.cis.mcmaster.ca (univmail.CIS.McMaster.CA
+	[130.113.64.46])
+	by Gorash7.UTS.McMaster.CA (8.13.7/8.13.7) with ESMTP id m79DDoOk018362;
+	Sat, 9 Aug 2008 09:13:57 -0400
+Received: from [72.138.80.237] (account carette@univmail.cis.mcmaster.ca HELO
+	[192.168.1.102])
+	by cgpsrv2.cis.mcmaster.ca (CommuniGate Pro SMTP 4.3.12)
+	with ESMTPSA id 220407969; Sat, 09 Aug 2008 09:13:50 -0400
+Message-ID: <489D9803.1020407@mcmaster.ca>
+Date: Sat, 09 Aug 2008 09:13:39 -0400
+From: Jacques Carette <carette@mcmaster.ca>
+User-Agent: Thunderbird 2.0.0.16 (Windows/20080708)
+MIME-Version: 1.0
+To: Bill Page <bill.page@newsynthesis.org>
+References: <fbcd16d40808070845i5877c7ddjb34b85df12ef4198@mail.gmail.com>	<alpine.OSX.1.00.0808070906500.845@david-caspersons-computer.local>
+	<fbcd16d40808070925o3433e8bfu279654030ac84523@mail.gmail.com>
+In-Reply-To: <fbcd16d40808070925o3433e8bfu279654030ac84523@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-PMX-Version-Mac: 5.4.2.338381, Antispam-Engine: 2.6.0.325393,
+	Antispam-Data: 2008.8.9.125820
+X-PerlMx-Spam: Gauge=IIIIIII, Probability=7%, Report='BODY_SIZE_1000_LESS 0,
+	BODY_SIZE_400_499 0, BODY_SIZE_5000_LESS 0,
+	__BOUNCE_CHALLENGE_SUBJ 0, __CT 0, __CTE 0, __CT_TEXT_PLAIN 0,
+	__HAS_MSGID 0, __MIME_TEXT_ONLY 0, __MIME_VERSION 0,
+	__SANE_MSGID 0, __USER_AGENT 0'
+X-detected-kernel: by monty-python.gnu.org: Solaris 9
+X-Mailman-Approved-At: Sat, 09 Aug 2008 12:21:25 -0400
+Cc: fricas-devel <fricas-devel@googlegroups.com>, axiom-math@nongnu.org,
+	David Casperson <casper@unbc.ca>,
+	open-axiom-devel <open-axiom-devel@lists.sourceforge.net>,
+	aldor-l <aldor-l@aldor.org>
+Subject: [Axiom-math] Re: [Aldor-l] Hopf Algebra = Group + Monad
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 09 Aug 2008 13:14:49 -0000
+
+Bill Page wrote:
+> In the context of co-algebra is seems a little strange to consider
+> only programs that terminate.
+>   
+Indeed.  But in the context of co-algebras being able to only write 
+programs which are productive does make a lot of sense.  And in a lot of 
+recent research on process algebras and the like, productivity is a hot 
+topic.  And, as we know, that is the natural dual to termination.
+
+Jacques
+
+
+
+From MAILER-DAEMON Sat Aug 09 12:21:27 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KRrC3-0008Ut-AM
+	for mharc-axiom-math@gnu.org; Sat, 09 Aug 2008 12:21:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KR8Oy-0006Qr-Pv
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 12:31:48 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KR8Ow-0006QX-CC
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 12:31:47 -0400
+Received: from [199.232.76.173] (port=35938 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KR8Ow-0006QU-7V
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 12:31:46 -0400
+Received: from defout.telus.net ([199.185.220.240]:36125)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <casper@unbc.ca>) id 1KR8Ov-0000JU-QW
+	for axiom-math@nongnu.org; Thu, 07 Aug 2008 12:31:46 -0400
+Received: from priv-edtnaa05.telusplanet.net ([154.5.231.135])
+	by priv-edtnes28.telusplanet.net
+	(InterMail vM.7.08.02.02 201-2186-121-104-20070414) with ESMTP id
+	<20080807163144.RYWN7441.priv-edtnes28.telusplanet.net@priv-edtnaa05.telusplanet.net>;
+	Thu, 7 Aug 2008 10:31:44 -0600
+Received: from [10.0.1.2] (d154-5-231-135.bchsia.telus.net [154.5.231.135])
+	by priv-edtnaa05.telusplanet.net (BorderWare Security Platform) with
+	ESMTP id 3ACD1B3330059588; Thu,  7 Aug 2008 10:31:44 -0600 (MDT)
+Date: Thu, 7 Aug 2008 09:31:47 -0700 (PDT)
+From: David Casperson <casper@unbc.ca>
+Sender: casper@david-caspersons-computer.local
+To: Bill Page <bill.page@newsynthesis.org>
+In-Reply-To: <fbcd16d40808070925o3433e8bfu279654030ac84523@mail.gmail.com>
+Message-ID: <alpine.OSX.1.00.0808070927501.845@david-caspersons-computer.local>
+References: <fbcd16d40808070845i5877c7ddjb34b85df12ef4198@mail.gmail.com>
+	<alpine.OSX.1.00.0808070906500.845@david-caspersons-computer.local>
+	<fbcd16d40808070925o3433e8bfu279654030ac84523@mail.gmail.com>
+User-Agent: Alpine 1.00 (OSX 882 2007-12-20)
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-detected-kernel: by monty-python.gnu.org: Solaris 10 (beta)
+X-Mailman-Approved-At: Sat, 09 Aug 2008 12:21:25 -0400
+Cc: axiom-math@nongnu.org, aldor-l <aldor-l@aldor.org>
+Subject: [Axiom-math] Re: [Aldor-l] Hopf Algebra = Group + Monad
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: David Casperson <casper@unbc.ca>
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 07 Aug 2008 16:31:48 -0000
+
+Bill Page, on 2008-08-07, you wrote:
+
+> Date: Thu, 7 Aug 2008 12:25:06 -0400
+> Subject: Re: [Aldor-l] Hopf Algebra = Group + Monad
+> 
+> On Thu, Aug 7, 2008 at 12:10 PM, David Casperson  wrote:
+>> Hi Bill,
+>>
+>> you may want to look at the work of the Charity group at the U of C.
+>>
+>
+> Thanks! I haven't looked at the Charity project for a while:
+>
+> http://pll.cpsc.ucalgary.ca/charity1/www/home.html
+>
+> but "Latest News" and "Download ..." suggests that there has not been
+> much development since 2000. Is that accurate? Is there work
+> continuing on this elsewhere?
+
+I suspect that that is accurate.  It still has ideas that I
+haven't seen used elsewhere.
+
+
+>> Charity is a seriously category theoretical language that is explicitly
+>> aware of co-objects.  It is formally weaker than most programming
+>> languages in that any compiling program terminates.
+>>
+>
+> In the context of co-algebra is seems a little strange to consider
+> only programs that terminate.
+
+The Charity take on co-objects is stream like.  The object itself
+is infinite, but you can only elaborate a first, finite part.
+For instance you can express the Ackerman function as a co-object
+table, but the indices you elaborate to look up an element are
+finite and terminating.
+
+David
+-- 
+Dr. David Casperson, Assistant Professor     |  casper@unbc.ca
+Department of Computer Science               |  (250)   960-6672 Fax 960-5544
+College of Science and Management            |  3333 University Way
+University of Northern British Columbia      |  Prince George, BC   V2N 4Z9
+                                              |  CANADA
+
+
+
+

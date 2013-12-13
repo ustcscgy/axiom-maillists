@@ -1,0 +1,1666 @@
+From MAILER-DAEMON Sat Jun 12 15:50:43 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BZEWY-0005pm-VU
+	for mharc-axiom-math@gnu.org; Sat, 12 Jun 2004 15:50:43 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BZEWX-0005nB-2B
+	for axiom-math@nongnu.org; Sat, 12 Jun 2004 15:50:41 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BZEWW-0005mS-Ds
+	for axiom-math@nongnu.org; Sat, 12 Jun 2004 15:50:40 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BZEWW-0005mP-BE
+	for axiom-math@nongnu.org; Sat, 12 Jun 2004 15:50:40 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BZEUw-0002qf-VJ
+	for axiom-math@nongnu.org; Sat, 12 Jun 2004 15:49:03 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i5CJmkc61036456
+	for <axiom-math@nongnu.org>; Sat, 12 Jun 2004 21:48:53 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="/QfoRFpsxt"
+Content-Transfer-Encoding: 7bit
+Message-ID: <16587.31154.442950.44637@gargle.gargle.HOWL>
+Date: Sat, 12 Jun 2004 21:46:26 +0000
+To: axiom-math@nongnu.org
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: imap 4248; Body=1 Fuz1=1 Fuz2=1
+Subject: [Axiom-math] rational interpolation for axiom
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 12 Jun 2004 19:50:41 -0000
+
+
+--/QfoRFpsxt
+Content-Type: text/plain; charset=us-ascii
+Content-Description: message body text
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+well, here's my first try on distributing a pamphlet file. I hope it's
+useful. Comments welcome.
+
+To use it, (having installed axiom) do
+
+document rinterp.spad.pamphlet
+
+which should produce a dvi and a spad file.
+
+Martin
+
+
+--/QfoRFpsxt
+Content-Type: text/plain
+Content-Description: pamphlet
+Content-Disposition: inline;
+	filename="rinterp.spad.pamphlet"
+Content-Transfer-Encoding: 7bit
+
+\documentclass{article}
+\usepackage{axiom,amsmath,url}
+\begin{document}
+\title{rinterp.spad}
+\author{Martin Rubey}
+\maketitle
+\begin{abstract}
+Rational Interpolation
+\end{abstract}
+\section{Introduction}
+This file contains a crude na\"ive implementation of rational interpolation,
+where the coefficients of the rational function are in any given field.
+
+\section{Questions and Outlook}
+\begin{itemize}
+\item Maybe this file should be joined with pinterp.spad, where polynomial
+  Lagrange interpolation is implemented. I have a second version that parallels
+  the structure of pinterp.spad closely. 
+\item There are probably better ways to implement rational interpolation. Maybe
+  \url{http://www.cs.ucsb.edu/~omer/personal/abstracts/rational.html} contains
+  something useful, but I don't know.
+\item Comments welcome!
+\end{itemize}
+
+<<*>>=
+<<RINTERP Header>>
+<<RINTERP Exports>>
+<<RINTERP Implementation>>
+@
+
+\section{RationalInterpolation}
+
+<<RINTERP Header>>=
+)abbrev package RINTERP RationalInterpolation
+++ Description:
+++ This package exports rational interpolation algorithms
+RationalInterpolation(xx,F): Exports == Implementation  where
+    xx: Symbol
+    F: Field 
+@
+
+<<RINTERP Exports>>=
+    Exports == with
+        interpolate: (List F, List F, NonNegativeInteger, 
+                                NonNegativeInteger) -> Fraction Polynomial F
+@
+
+The implementation sets up a system of linear equations and solves it. 
+<<RINTERP Implementation>>=
+    Implementation == add
+        interpolate(xlist, ylist, m, k) ==
+@
+
+First we check whether we have the right number of points and values. Clearly
+the number of points and the number of values must be identical. Note that we
+want to determine the numerator and denominator polynomials only up to a
+factor. Thus, we want to determine $m+k+1$ coefficients, where $m$ is the degree
+of the polynomial in the numerator and $k$ is the degree of the polynomial in
+the denominator.
+
+In fact, we could also leave -- for example -- $k$ unspecified and determine it
+as $k=[[#xlist]]-m-1$: I don't know whether this would be better.
+<<RINTERP Implementation>>=
+            #xlist ^= #ylist =>
+                error "Different number of points and values."
+            #xlist ^= m+k+1 =>
+                error "wrong number of points"
+@
+
+The next step is to set up the matrix. Suppose that our numerator polynomial is
+$p(x)=a_0+a_1x+\dots+a_mx^m$ and that our denominator polynomial is
+$q(x)=b_0+b_1x+\dots+b_mx^m$. Then we have the following equations, writing $n$
+for $m+k+1$:
+
+\begin{align*}
+ p(x_1)-y_1q(x_1)&=a_0+a_1x_1+\dots +a_mx_1^m-y_1(b_0+b_1x_1+\dots +b_kx_1^k)=0\\
+ p(x_2)-y_2q(x_2)&=a_0+a_1x_2+\dots +a_mx_2^m-y_2(b_0+b_1x_2+\dots +b_kx_2^k)=0\\
+                 &\;\;\vdots\\                                                 
+ p(x_n)-y_nq(x_n)&=a_0+a_1x_n+\dots +a_mx_n^m-y_n(b_0+b_1x_n+\dots +b_kx_n^k)=0
+\end{align*}
+
+This can be written as
+$$
+\begin{pmatrix}
+  1&x_1&\dots&x_1^m&-y_1&-y_1x_1&\dots&-y_1x_1^k\\
+  1&x_2&\dots&x_2^m&-y_2&-y_2x_2&\dots&-y_2x_2^k\\
+\vdots\\
+  1&x_n&\dots&x_n^m&-y_n&-y_nx_n&\dots&-y_nx_2^k
+\end{pmatrix}
+\begin{pmatrix}
+  a_0\\a_1\\\vdots\\a_m\\b_0\\b_1\\\vdots\\b_k
+\end{pmatrix}=\mathbf 0
+$$
+We generate this matrix columnwise:
+<<RINTERP Implementation>>= 
+            tempvec: List F := [1 for i in 1..(m+k+1)]
+
+            collist: List List F := cons(tempvec, 
+                                         [(tempvec := [tempvec.i * xlist.i _
+                                                       for i in 1..(m+k+1)]) _
+                                          for j in 1..max(m,k)])
+
+            collist := append([collist.j for j in 1..(m+1)], _
+                              [[- collist.j.i * ylist.i for i in 1..(m+k+1)] _
+                               for j in 1..(k+1)])
+@
+Now we can solve the system:
+<<RINTERP Implementation>>=
+            res: List Vector F := nullSpace((transpose matrix collist) _
+                                            ::Matrix F)
+@
+
+Note that it may happen that the system has several solutions. In this case,
+some of the data points may not be interpolated correctly. However, the
+solution is often still useful, thus we do not signal an error.
+
+<<RINTERP Implementation>>=
+            if #res~=1 then output("Warning: unattainable points!" _
+                                   ::OutputForm)$OutputPackage
+@
+
+In this situation, all the solutions will be equivalent, thus we can always
+simply take the first one:
+
+<<RINTERP Implementation>>=
+            reslist: List List Polynomial F := _
+                      [[(res.1).(i+1)*(xx::Polynomial F)**i for i in 0..m], _
+                      [(res.1).(i+m+2)*(xx::Polynomial F)**i for i in 0..k]] 
+@
+Finally, we generate the rational function:
+<<RINTERP Implementation>>=
+            reduce((_+),reslist.1)/reduce((_+),reslist.2)
+@
+\eject
+\begin{thebibliography}{99}
+\bibitem{1} nothing
+\end{thebibliography}
+\end{document}
+
+--/QfoRFpsxt--
+
+
+
+
+From MAILER-DAEMON Sat Jun 12 17:13:17 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BZFoT-0000Qd-Ef
+	for mharc-axiom-math@gnu.org; Sat, 12 Jun 2004 17:13:17 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BZFoR-0000Q2-MX
+	for axiom-math@nongnu.org; Sat, 12 Jun 2004 17:13:15 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BZFoR-0000Po-5V
+	for axiom-math@nongnu.org; Sat, 12 Jun 2004 17:13:15 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BZFoR-0000Pe-1a
+	for axiom-math@nongnu.org; Sat, 12 Jun 2004 17:13:15 -0400
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BZFn7-0005ZA-8a
+	for axiom-math@nongnu.org; Sat, 12 Jun 2004 17:11:53 -0400
+Received: from localhost.localdomain (69.0.61.96.adsl.snet.net [69.0.61.96])
+	by pimout1-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i5CLBpsg057634; Sat, 12 Jun 2004 17:11:51 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i5CLvhA11877;
+	Sat, 12 Jun 2004 17:57:43 -0400
+Date: Sat, 12 Jun 2004 17:57:43 -0400
+Message-Id: <200406122157.i5CLvhA11877@localhost.localdomain>
+From: root <daly@idsi.net>
+To: martin.rubey@univie.ac.at
+In-reply-to: <16587.31154.442950.44637@gargle.gargle.HOWL> (message from
+	Martin Rubey on Sat, 12 Jun 2004 21:46:26 +0000)
+Subject: Re: [Axiom-math] rational interpolation for axiom
+References: <16587.31154.442950.44637@gargle.gargle.HOWL>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 12 Jun 2004 21:13:15 -0000
+
+Martin,
+
+Thanks greatly for the effort. I'm about to turn my attention to the
+system later this evening and all day tomorrow so it should be
+integrated shortly.
+
+Tim
+
+
+
+From MAILER-DAEMON Sun Jun 13 11:00:04 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BZWSp-0004I7-WB
+	for mharc-axiom-math@gnu.org; Sun, 13 Jun 2004 11:00:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BZWSn-0004Hm-Qj
+	for axiom-math@nongnu.org; Sun, 13 Jun 2004 11:00:01 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BZWSm-0004HY-5T
+	for axiom-math@nongnu.org; Sun, 13 Jun 2004 11:00:01 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BZWSm-0004HV-2Y
+	for axiom-math@nongnu.org; Sun, 13 Jun 2004 11:00:00 -0400
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BZWRs-00069Q-Jr
+	for axiom-math@nongnu.org; Sun, 13 Jun 2004 10:59:04 -0400
+Received: from localhost.localdomain (69.0.61.96.adsl.snet.net [69.0.61.96])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i5DEx2X2091388; Sun, 13 Jun 2004 10:59:02 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i5DFirq21312;
+	Sun, 13 Jun 2004 11:44:53 -0400
+Date: Sun, 13 Jun 2004 11:44:53 -0400
+Message-Id: <200406131544.i5DFirq21312@localhost.localdomain>
+From: root <daly@idsi.net>
+To: martin.rubey@univie.ac.at
+In-reply-to: <16587.31154.442950.44637@gargle.gargle.HOWL> (message from
+	Martin Rubey on Sat, 12 Jun 2004 21:46:26 +0000)
+Subject: Re: [Axiom-math] rational interpolation for axiom
+References: <16587.31154.442950.44637@gargle.gargle.HOWL>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 13 Jun 2004 15:00:02 -0000
+
+Martin,
+
+I've installed your rinterp.spad.pamphlet into the system.
+Do you have some test cases I can add to the input subdirectory?
+
+Ideally the test cases would explain what they were trying to test
+which, so far, none of the existing src/input pamphlet files do.
+
+Once I've tested it I'll upload it to the world.
+
+Tim
+
+
+
+From MAILER-DAEMON Mon Jun 14 08:07:35 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BZqFT-0007P6-Cw
+	for mharc-axiom-math@gnu.org; Mon, 14 Jun 2004 08:07:35 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BZqFS-0007Or-IU
+	for axiom-math@nongnu.org; Mon, 14 Jun 2004 08:07:34 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BZqFQ-0007O8-KG
+	for axiom-math@nongnu.org; Mon, 14 Jun 2004 08:07:34 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BZqFQ-0007O2-Ff
+	for axiom-math@nongnu.org; Mon, 14 Jun 2004 08:07:32 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BZqEG-0001kt-KF
+	for axiom-math@nongnu.org; Mon, 14 Jun 2004 08:06:28 -0400
+X-Spam-Flags: <.IPWHOIS-RFC-IGNORANT.@imap.univie.ac.at>[131.130.93.101:[131.130.93.101]]<univie.ac.at>
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i5EC5iN2899250;
+	Mon, 14 Jun 2004 14:05:56 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="VEYoUXiRcd"
+Content-Transfer-Encoding: 7bit
+Message-ID: <16589.45103.794568.865586@gargle.gargle.HOWL>
+Date: Mon, 14 Jun 2004 14:03:27 +0000
+To: daly@idsi.net, axiom-math <axiom-math@nongnu.org>
+Subject: Re: [Axiom-math] rational interpolation for axiom
+In-Reply-To: <200406131544.i5DFirq21312@localhost.localdomain>
+References: <16587.31154.442950.44637@gargle.gargle.HOWL>
+	<200406131544.i5DFirq21312@localhost.localdomain>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mail 4248; Body=2 Fuz1=2 Fuz2=2
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 14 Jun 2004 12:07:34 -0000
+
+
+--VEYoUXiRcd
+Content-Type: text/plain; charset=us-ascii
+Content-Description: message body text
+Content-Transfer-Encoding: 7bit
+
+root writes:
+ > Martin,
+ > 
+ > I've installed your rinterp.spad.pamphlet into the system.
+ > Do you have some test cases I can add to the input subdirectory?
+
+Not yet.
+ 
+ > Ideally the test cases would explain what they were trying to test
+ > which, so far, none of the existing src/input pamphlet files do.
+
+Yes. I have question, too: I'd like to include the test cases in the pamphlet
+file. In outher words, I'd like "document rinterp.pamphlet" to produce a third
+file, namely "rinterp.input". How can I do this automatically? I want that the
+documentation remains together.
+
+ > Once I've tested it I'll upload it to the world.
+
+Please wait a little. I want to write up a third kind of interpolation that I
+use frequently, namely Hermite interpolation. Furthermore, pinterp.spad is
+differently structured (interfacewise) and I'm not sure which is the best. To
+give you an impression, here is the second version.
+
+Martin
+
+--VEYoUXiRcd
+Content-Type: text/plain
+Content-Disposition: inline;
+	filename="rinterp.alternativ.spad.pamphlet"
+Content-Transfer-Encoding: 7bit
+
+\documentclass{article}
+\usepackage{axiom,amsmath,url}
+\begin{document}
+\title{rinterp.spad}
+\author{Martin Rubey}
+\maketitle
+\begin{abstract}
+Rational Interpolation
+\end{abstract}
+\section{Introduction}
+This file contains a crude na\"ive implementation of rational interpolation,
+where the coefficients of the rational function are in any given field.
+
+\section{Questions and Outlook}
+\begin{itemize}
+\item Maybe this file should be joined with pinterp.spad, where polynomial
+  Lagrange interpolation is implemented. This version parallels the structure of
+  pinterp.spad closely.
+\item There are probably better ways to implement rational interpolation. Maybe
+  \url{http://www.cs.ucsb.edu/~omer/personal/abstracts/rational.html} contains
+  something useful, but I don't know.
+\item Comments welcome!
+\end{itemize}
+
+<<*>>=
+<<RINTERP Header>>
+<<RINTERP Exports>>
+<<RINTERP Implementation>>
+@
+
+\section{RationalInterpolation}
+
+<<RINTERP Header>>=
+)abbrev package RINTERPA RationalInterpolationAlgorithms
+++ Description:
+++ This package exports rational interpolation algorithms
+RationalInterpolationAlgorithms(F, P): Cat == Body   where
+    F: Field 
+    P: UnivariatePolynomialCategory(F)
+@
+
+<<RINTERP Exports>>= 
+    Cat == with
+        RationalInterpolation: (List F, List F, NonNegativeInteger, 
+                                NonNegativeInteger) -> Fraction P
+@
+
+The implementation sets up a system of linear equations and solves it. 
+<<RINTERP Implementation>>=
+    Body == add
+        RationalInterpolation(xlist, ylist, m, k) ==
+@
+
+First we check whether we have the right number of points and values. Clearly
+the number of points and the number of values must be identical. Note that we
+want to determine the numerator and denominator polynomials only up to a
+factor. Thus, we want to determine $m+k+1$ coefficients, where $m$ is the degree
+of the polynomial in the numerator and $k$ is the degree of the polynomial in
+the denominator.
+
+In fact, we could also leave -- for example -- $k$ unspecified and determine it
+as $k=[[#xlist]]-m-1$: I don't know whether this would be better.
+<<RINTERP Implementation>>=
+            #xlist ^= #ylist =>
+                error "Different number of points and values."
+            #xlist ^= m+k+1 =>
+                error "wrong number of points"
+@
+
+The next step is to set up the matrix. Suppose that our numerator polynomial is
+$p(x)=a_0+a_1x+\dots+a_mx^m$ and that our denominator polynomial is
+$q(x)=b_0+b_1x+\dots+b_mx^m$. Then we have the following equations, writing $n$
+for $m+k+1$:
+
+\begin{align*}
+ p(x_1)-y_1q(x_1)&=a_0+a_1x_1+\dots +a_mx_1^m-y_1(b_0+b_1x_1+\dots +b_kx_1^k)=0\\
+ p(x_2)-y_2q(x_2)&=a_0+a_1x_2+\dots +a_mx_2^m-y_2(b_0+b_1x_2+\dots +b_kx_2^k)=0\\
+                 &\;\;\vdots\\                                                 
+ p(x_n)-y_nq(x_n)&=a_0+a_1x_n+\dots +a_mx_n^m-y_n(b_0+b_1x_n+\dots +b_kx_n^k)=0
+\end{align*}
+
+This can be written as
+$$
+\begin{pmatrix}
+  1&x_1&\dots&x_1^m&-y_1&-y_1x_1&\dots&-y_1x_1^k\\
+  1&x_2&\dots&x_2^m&-y_2&-y_2x_2&\dots&-y_2x_2^k\\
+\vdots\\
+  1&x_n&\dots&x_n^m&-y_n&-y_nx_n&\dots&-y_nx_2^k
+\end{pmatrix}
+\begin{pmatrix}
+  a_0\\a_1\\\vdots\\a_m\\b_0\\b_1\\\vdots\\b_k
+\end{pmatrix}=\mathbf 0
+$$
+We generate this matrix columnwise:
+<<RINTERP Implementation>>= 
+            tempvec: List F := [1 for i in 1..(m+k+1)]
+
+            collist: List List F := cons(tempvec, 
+                                         [(tempvec := [tempvec.i * xlist.i _
+                                                       for i in 1..(m+k+1)]) _
+                                          for j in 1..max(m,k)])
+
+            collist := append([collist.j for j in 1..(m+1)], _
+                              [[- collist.j.i * ylist.i for i in 1..(m+k+1)] _
+                               for j in 1..(k+1)])
+@
+Now we can solve the system:
+<<RINTERP Implementation>>=
+            res: List Vector F := nullSpace((transpose matrix collist) _
+                                            ::Matrix F)
+@
+
+Note that it may happen that the system has several solutions. In this case,
+some of the data points may not be interpolated correctly. However, the
+solution is often still useful, thus we do not signal an error.
+
+<<RINTERP Implementation>>=
+            if #res~=1 then output("Warning: unattainable points!" _
+                                   ::OutputForm)$OutputPackage
+@
+
+In this situation, all the solutions will be equivalent, thus we can always
+simply take the first one:
+
+<<RINTERP Implementation>>=
+            reslist: List List P := _
+                      [[monomial((res.1).(i+1),i) for i in 0..m], _
+                      [monomial((res.1).(i+m+2),i) for i in 0..k]] 
+@
+Finally, we generate the rational function:
+<<RINTERP Implementation>>=
+            reduce((_+),reslist.1)/reduce((_+),reslist.2)
+
+<<*>>=
+)abbrev package RINTERP RationalInterpolation
+++ Description:
+++ This package exports interpolation algorithms
+RationalInterpolation(xx, F): Cat == Body   where
+    xx: Symbol
+    F:  Field
+    UP  ==> UnivariatePolynomial
+    SUP ==> SparseUnivariatePolynomial
+ 
+    Cat == with
+        interpolate: (Fraction UP(xx,F), List F, List F, _
+                      NonNegativeInteger, NonNegativeInteger) _
+                     -> Fraction UP(xx,F)
+        interpolate: (List F, List F, NonNegativeInteger, NonNegativeInteger) _
+                     -> Fraction SUP F
+ 
+    Body == add
+        RIA ==> RationalInterpolationAlgorithms
+ 
+        interpolate(qx, lx, ly, m, k) ==
+            px := RationalInterpolation(lx, ly, m, k)$RIA(F, UP(xx, F))
+            elt(px, qx)
+ 
+        interpolate(lx, ly, m, k) ==
+            RationalInterpolation(lx, ly, m, k)$RIA(F, SUP F)
+@
+\eject
+\begin{thebibliography}{99}
+\bibitem{1} nothing
+\end{thebibliography}
+\end{document}
+--VEYoUXiRcd--
+
+
+
+
+From MAILER-DAEMON Mon Jun 14 08:29:30 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BZqaf-000888-9N
+	for mharc-axiom-math@gnu.org; Mon, 14 Jun 2004 08:29:29 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BZqac-00087I-Ne
+	for axiom-math@nongnu.org; Mon, 14 Jun 2004 08:29:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BZqaa-00086T-Ob
+	for axiom-math@nongnu.org; Mon, 14 Jun 2004 08:29:26 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BZqaa-00086N-K0
+	for axiom-math@nongnu.org; Mon, 14 Jun 2004 08:29:24 -0400
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BZqYy-0000Lo-S2
+	for axiom-math@nongnu.org; Mon, 14 Jun 2004 08:27:45 -0400
+Received: from localhost.localdomain (69.0.61.96.adsl.snet.net [69.0.61.96])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i5ECReX2083186; Mon, 14 Jun 2004 08:27:41 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i5EDDV824190;
+	Mon, 14 Jun 2004 09:13:31 -0400
+Date: Mon, 14 Jun 2004 09:13:31 -0400
+Message-Id: <200406141313.i5EDDV824190@localhost.localdomain>
+From: root <daly@idsi.net>
+To: martin.rubey@univie.ac.at
+In-reply-to: <16589.45103.794568.865586@gargle.gargle.HOWL> (message from
+	Martin Rubey on Mon, 14 Jun 2004 14:03:27 +0000)
+Subject: Re: [Axiom-math] rational interpolation for axiom
+References: <16587.31154.442950.44637@gargle.gargle.HOWL>
+	<200406131544.i5DFirq21312@localhost.localdomain>
+	<16589.45103.794568.865586@gargle.gargle.HOWL>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 14 Jun 2004 12:29:27 -0000
+
+Martin,
+
+Add the test cases under the chunk
+<<inputfile>>=
+
+and I'll work out the machinery necessary 
+to add it to the test suite.
+
+Tim
+
+
+
+From MAILER-DAEMON Thu Jun 17 08:09:56 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BaviO-0005Si-Fm
+	for mharc-axiom-math@gnu.org; Thu, 17 Jun 2004 08:09:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BaviM-0005R2-MT
+	for axiom-math@nongnu.org; Thu, 17 Jun 2004 08:09:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BaviJ-0005LR-Bc
+	for axiom-math@nongnu.org; Thu, 17 Jun 2004 08:09:54 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BaviJ-0005LK-8y
+	for axiom-math@nongnu.org; Thu, 17 Jun 2004 08:09:51 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Bavgj-0007z3-Nx
+	for axiom-math@nongnu.org; Thu, 17 Jun 2004 08:08:14 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i5HC7Z3s1163670;
+	Thu, 17 Jun 2004 14:07:36 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="Tr9tZBvneU"
+Content-Transfer-Encoding: 7bit
+Message-ID: <16593.42268.351680.423696@gargle.gargle.HOWL>
+Date: Thu, 17 Jun 2004 14:05:16 +0000
+To: axiom-math <axiom-math@nongnu.org>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4248; Body=10 Fuz1=10 Fuz2=10
+Subject: [Axiom-math] [ANN] guessing formulas for sequences
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 17 Jun 2004 12:09:54 -0000
+
+
+--Tr9tZBvneU
+Content-Type: text/plain; charset=us-ascii
+Content-Description: message body text
+Content-Transfer-Encoding: 7bit
+
+Stupid me, I forgot to attach the packages...
+
+
+--Tr9tZBvneU
+Content-Type: text/plain
+Content-Disposition: inline;
+	filename="rinterp.alternativ.spad.pamphlet"
+Content-Transfer-Encoding: 7bit
+
+%-*-Latex-*-
+\documentclass{article}
+\usepackage{axiom,amsmath,url}
+\begin{document}
+\title{rinterp.spad}
+\author{Martin Rubey}
+\maketitle
+\begin{abstract}
+Rational Interpolation
+\end{abstract}
+\section{Introduction}
+This file contains a crude na\"ive implementation of rational interpolation,
+where the coefficients of the rational function are in any given field.
+
+\section{Questions and Outlook}
+\begin{itemize}
+\item Maybe this file should be joined with pinterp.spad, where polynomial
+  Lagrange interpolation is implemented. This version parallels the structure of
+  pinterp.spad closely.
+\item There are probably better ways to implement rational interpolation. Maybe
+  \url{http://www.cs.ucsb.edu/~omer/personal/abstracts/rational.html} contains
+  something useful, but I don't know.
+\item For those who speak german,
+  \url{http://www.num.math.uni-goettingen.de/schaback/teaching/numath.ps}
+  contains quite a bit of information.
+\item The message: \lq\lq Warning: unattainable points!\rq\rq\ is a bit
+  misleading. There can be unattainable points even if the message does not
+  appear! I did not yet have time to fix this.
+\item Comments welcome!
+\end{itemize}
+
+<<*>>=
+<<RINTERP Header>>
+<<RINTERP Exports>>
+<<RINTERP Implementation>>
+@
+
+\section{RationalInterpolation}
+
+<<RINTERP Header>>=
+)abbrev package RINTERPA RationalInterpolationAlgorithms
+++ Description:
+++ This package exports rational interpolation algorithms
+RationalInterpolationAlgorithms(F, P): Cat == Body   where
+    F: Field 
+    P: UnivariatePolynomialCategory(F)
+@
+
+<<RINTERP Exports>>= 
+    Cat == with
+        RationalInterpolation: (List F, List F, NonNegativeInteger, 
+                                NonNegativeInteger) -> Fraction P
+@
+
+The implementation sets up a system of linear equations and solves it. 
+<<RINTERP Implementation>>=
+    Body == add
+        RationalInterpolation(xlist, ylist, m, k) ==
+@
+
+First we check whether we have the right number of points and values. Clearly
+the number of points and the number of values must be identical. Note that we
+want to determine the numerator and denominator polynomials only up to a
+factor. Thus, we want to determine $m+k+1$ coefficients, where $m$ is the degree
+of the polynomial in the numerator and $k$ is the degree of the polynomial in
+the denominator.
+
+In fact, we could also leave -- for example -- $k$ unspecified and determine it
+as $k=[[#xlist]]-m-1$: I don't know whether this would be better.
+<<RINTERP Implementation>>=
+            #xlist ^= #ylist =>
+                error "Different number of points and values."
+            #xlist ^= m+k+1 =>
+                error "wrong number of points"
+@
+
+The next step is to set up the matrix. Suppose that our numerator polynomial is
+$p(x)=a_0+a_1x+\dots+a_mx^m$ and that our denominator polynomial is
+$q(x)=b_0+b_1x+\dots+b_mx^m$. Then we have the following equations, writing $n$
+for $m+k+1$:
+
+\begin{align*}
+ p(x_1)-y_1q(x_1)&=a_0+a_1x_1+\dots +a_mx_1^m-y_1(b_0+b_1x_1+\dots +b_kx_1^k)=0\\
+ p(x_2)-y_2q(x_2)&=a_0+a_1x_2+\dots +a_mx_2^m-y_2(b_0+b_1x_2+\dots +b_kx_2^k)=0\\
+                 &\;\;\vdots\\                                                 
+ p(x_n)-y_nq(x_n)&=a_0+a_1x_n+\dots +a_mx_n^m-y_n(b_0+b_1x_n+\dots +b_kx_n^k)=0
+\end{align*}
+
+This can be written as
+$$
+\begin{pmatrix}
+  1&x_1&\dots&x_1^m&-y_1&-y_1x_1&\dots&-y_1x_1^k\\
+  1&x_2&\dots&x_2^m&-y_2&-y_2x_2&\dots&-y_2x_2^k\\
+\vdots\\
+  1&x_n&\dots&x_n^m&-y_n&-y_nx_n&\dots&-y_nx_2^k
+\end{pmatrix}
+\begin{pmatrix}
+  a_0\\a_1\\\vdots\\a_m\\b_0\\b_1\\\vdots\\b_k
+\end{pmatrix}=\mathbf 0
+$$
+We generate this matrix columnwise:
+<<RINTERP Implementation>>= 
+            tempvec: List F := [1 for i in 1..(m+k+1)]
+
+            collist: List List F := cons(tempvec, 
+                                         [(tempvec := [tempvec.i * xlist.i _
+                                                       for i in 1..(m+k+1)]) _
+                                          for j in 1..max(m,k)])
+
+            collist := append([collist.j for j in 1..(m+1)], _
+                              [[- collist.j.i * ylist.i for i in 1..(m+k+1)] _
+                               for j in 1..(k+1)])
+@
+Now we can solve the system:
+<<RINTERP Implementation>>=
+            res: List Vector F := nullSpace((transpose matrix collist) _
+                                            ::Matrix F)
+@
+
+Note that it may happen that the system has several solutions. In this case,
+some of the data points may not be interpolated correctly. However, the
+solution is often still useful, thus we do not signal an error.
+
+More importantly, note that there may be unattainable points even if the
+message does not appear, for example
+<<inputfile>>=
+interpolate([q,q^2,q^3],[0,x^1,x^2],0,2)$RINTERP(qn,FRAC POLY INT)
+@
+
+silently gives zero\dots
+
+<<RINTERP Implementation>>=
+            if #res~=1 then output("Warning: unattainable points!" _
+                                   ::OutputForm)$OutputPackage
+@
+
+In this situation, all the solutions will be equivalent, thus we can always
+simply take the first one:
+
+<<RINTERP Implementation>>=
+            reslist: List List P := _
+                      [[monomial((res.1).(i+1),i) for i in 0..m], _
+                      [monomial((res.1).(i+m+2),i) for i in 0..k]] 
+@
+Finally, we generate the rational function:
+<<RINTERP Implementation>>=
+            reduce((_+),reslist.1)/reduce((_+),reslist.2)
+
+<<*>>=
+)abbrev package RINTERP RationalInterpolation
+++ Description:
+++ This package exports interpolation algorithms
+RationalInterpolation(xx, F): Cat == Body   where
+    xx: Symbol
+    F:  Field
+    UP  ==> UnivariatePolynomial
+    SUP ==> SparseUnivariatePolynomial
+ 
+    Cat == with
+        interpolate: (Fraction UP(xx,F), List F, List F, _
+                      NonNegativeInteger, NonNegativeInteger) _
+                     -> Fraction UP(xx,F)
+        interpolate: (List F, List F, NonNegativeInteger, NonNegativeInteger) _
+                     -> Fraction SUP F
+ 
+    Body == add
+        RIA ==> RationalInterpolationAlgorithms
+ 
+        interpolate(qx, lx, ly, m, k) ==
+            px := RationalInterpolation(lx, ly, m, k)$RIA(F, UP(xx, F))
+            elt(px, qx)
+ 
+        interpolate(lx, ly, m, k) ==
+            RationalInterpolation(lx, ly, m, k)$RIA(F, SUP F)
+@
+\eject
+\begin{thebibliography}{99}
+\bibitem{1} nothing
+\end{thebibliography}
+\end{document}
+--Tr9tZBvneU
+Content-Type: text/plain
+Content-Disposition: inline;
+	filename="guess.spad.pamphlet"
+Content-Transfer-Encoding: 7bit
+
+%-*-Latex-*-
+\documentclass{article}
+\usepackage{axiom,amsmath,amssymb,url}
+\DeclareMathOperator{\op}{op}
+\newcommand{\axiom}{{\bf axiom}}
+\begin{document}
+\title{guess.spad}
+\author{Martin Rubey}
+\maketitle
+\begin{abstract}
+  Guessing formulas for sequences
+\end{abstract}
+\section{Introduction}
+This file contains a slightly improved implementation of Christian
+Krattenthalers Mathematica program [[rate.m]]. Given the first few terms of a
+sequence of numbers, the program guesses a closed form that might fit the
+sequence. 
+
+More precisely, the program guesses formulas of the form
+$${}^{(0)}\!\!\op_{i_0=0}^{n}{}^{(1)}\!\!\op_{i_1=0}^{i_0}\dots
+  {}^{(k)}\!\!\op_{i_k=0}^{i_{k-1}}r(i_k)$$
+
+where ${}^{(i)}\!\!\op$ is either $\prod$ or $\sum$ and $r(i)$ is a rational
+function in $i$.
+
+The basic idea is the following: assuming our sequence of numbers stems from a
+rational function, we can simply use rational interpolation to determine the
+formula. Otherwise, we transform the original sequence 
+$$
+x_1,x_2,\dots,x_{n-1},x_n
+$$
+in two different ways:
+
+\begin{itemize}
+\item we generate the sequence of successive quotients:
+  $$
+  x_2/x_1,x_3/x_2,\dots,x_n/x_{n-1}.
+  $$
+  If we are lucky, the original sequence was a product over a rational
+  function. In this case, the sequence of successive quotients is a rational
+  function and can be guessed using rational interpolation.
+\item we generate the sequence of successive differences:
+  $$
+  x_2-x_1,x_3-x_2,\dots,x_n-x_{n-1}.
+  $$
+  Similarly, if the original sequence was a sum over a rational function, the
+  sequence of successive differences is a rational function and can be guessed
+  using rational interpolation.
+\end{itemize}
+
+To determine whether a given sequence stems from a rational function, we can
+only use a heuristic: we interpolate using all but the last data point. If the
+interpolation function interpolates also this point, we accept it, otherwise we
+discard it.
+
+\section{The implementation}
+
+<<*>>=
+<<GUESS Header>>
+<<GUESS Exports>>
+<<GUESS Implementation>>
+
+<<GUESSINT>>
+@
+
+<<GUESS Header>>=
+)abbrev package GUESS Guess
+++ Description:
+++ This package implements guessing of sequences
+Guess(xx, F, basis, R, EXPRR, retract, coerce): Exports == Implementation where
+    xx: Symbol                                                        
+    F: Field                             -- zB.: FRAC POLY PF 5
+    R: Join(OrderedSet, IntegralDomain)  -- zB.: FRAC POLY INT
+    EXPRR: Join(ExpressionSpace, IntegralDomain, 
+                RetractableTo R, RetractableTo Symbol, 
+                RetractableTo Integer, CombinatorialOpsCategory) with
+              _/ : (%,%) -> %
+                                         -- zB.: EXPR INT
+    EXPRI ==> Expression Integer
+    basis: EXPRI -> EXPRR   -- zB.: i+->q^i
+    retract: R -> F                      -- zB.: i+->i
+    coerce: F -> EXPRR                   -- zB.: i+->i
+
+    SUPF ==> SparseUnivariatePolynomial F
+    FSUPF ==> Fraction SUPF
+
+@
+
+Unfortunately, we have to work around some difficulties arising from the design
+of \axiom. This is why the header looks a little complicated.
+
+In principle, all we need for our guessing game to work is an infinite field
+[[F]] and a mapping [[basis]] from the positive integers into the field, which
+will be used to generate the independent values for the rational interpolation.
+If the field is not infinite, there are not too many functions around, so there
+is no guessing game.
+
+However, \axiom\ does not accept expressions over arbitrary fields, it requires
+that the set of coefficients is an [[OrderedSet]]. For example, [[Expression
+PrimeField 5]] is not a valid type. So, we specify a second domain, [[R]],
+which is an [[OrderedSet]] which extends [[F]] to an [[OrderedSet]], a mapping
+[[retract]] from [[R]] to [[F]], which retracts an element from [[R]] to [[F]]
+and a mapping [[coerce]] which coerces an element of [[F]] to an element of
+[[EXPRR]]. Fortunately, \axiom 's interpreter is very clever, so we can specify
+these to functions simply as [[i+->i]]\dots
+
+Furthermore, the argument domain of [[Expression]] must not contain
+variables. For example, [[Expression Polynomial Integer]] is an invalid
+type. Unfortunately, there is currently no way in \axiom\ to obtain the domain
+of numbers of a given domain. Thus, [[Guess]] takes an argument [[EXPRR]], that
+specifies the expression domain, over which we will have our result.
+
+Finally, the modeline of summation and product are 
+[[(%, SegmentBinding %%)->%]], i.e., the variable of summation and product
+takes values in [[%]], rather than in [[Expression Integer]]. Thus we need
+that [[EXPRR]] is [[RetractableTo Integer]].
+
+<<GUESS Exports>>=
+    Exports == with
+      if not (F has Finite) then  
+        guess: List F -> List EXPRR
+@
+
+The exported function takes a list of elements of [[F]] and returns a list of
+expressions over [[R]] that seem to fit the data. For example,
+
+<<inputfile>>=
+guess([1,1+q,1+q+q^2])
+$GUESS(n,FRAC POLY INT,i+->q^i,FRAC POLY INT, i+->i)
+@
+
+returns
+
+[[      n 
+       q  - 1
+ (1)  [------]                                      
+        q - 1                                       
+             Type: List Expression Integer 
+]]
+
+Furthermore, if we type
+<<inputfile>>=
+guess([(i+q^i) for i in 0..3])
+$GUESS(n,FRAC POLY INT,i+->q^i,FRAC POLY INT, EXPR INT, i+->i, i+->i)
+@
+
+we obtain
+
+[[                       
+                         s
+          n - 1           4
+           --+   (q - 1)q   + q
+   (2)  [( >     --------------) + 1]
+           --+          q
+          s = 1
+            4
+                                      Type: List Expression Integer
+]]
+
+As a third example, we have
+<<inputfile>>=
+g:=guess([i+q^i for i in 1..4])
+   $GUESS(m, FRAC POLY PF 5, i+->q^i, FRAC POLY INT, EXPR INT, i+->i, i+->i)
+@
+
+which gives
+
+[[
+           m - 1          s
+            --+            4
+   (3)  [( >     (q + 4)q   + 1) + q + 1]
+            --+
+           s = 1
+            4
+                                         Type: List Expression Integer
+]]
+
+Since \axiom\ knows no expressions over finite fields, it is up to the user to
+interpret the result as such an expression.
+
+\section{Helper functions}
+
+<<GUESS Implementation>>=
+    Implementation == add
+      basis2: Integer -> F
+      basis2 i == retract(retract(basis(i::EXPRI))@R)
+
+@
+This is used only in [[guessCons]] to generate the list of independent values
+for the rational interpolation.
+
+<<GUESS Implementation>>=
+      guessCons: List F -> List FSUPF
+      guessCons(list) ==
+-- this function applies rationalInterpolation to the list of data points
+-- [(list.i,basis.i) for i in 1..#list-1]. The last data point is used to test
+-- for plausibility.
+
+        len := (#list-1)::PositiveInteger 
+        xlist := [basis2(i) for i in 1..len]
+        x:F := basis2(len+1)
+        ylist: List F := first(list,len)
+        y:F := last(list)
+        res: List FSUPF := []
+
+        for i in 0..(len-1) repeat
+          ri: FSUPF := interpolate(xlist, ylist, _
+               (len-1-i)::NonNegativeInteger, i)$RationalInterpolation(xx, F)
+
+@
+We try to interpolate with the numerator and denominator polynomials having all
+the possible degrees.
+
+<<GUESS Implementation>>=
+          de: F := elt(denom(ri), x)
+          if (de ~= 0) and (elt(numer(ri), x) = y*de) _
+             and not member?(ri, res) then
+            res := cons(ri,res)  
+@
+
+If the denominator vanishes for the last data point [[x]], this point is
+unattainable in the interpolation problem and we discard the result. Likewise,
+we discard the result if the last point [[x]] does not have the right value
+[[y]]. Finally we check whether the interpolating function [[ri]] is already in
+the result list [[res]], if not, we add it.
+
+<<GUESS Implementation>>=
+        res 
+
+@
+We are done and return the list of interpolating functions.
+
+<<GUESS Implementation>>=
+      polyexpr: SUPF -> EXPRR
+      polyexpr p == 
+        zero? p => 0
+        (coerce(leadingCoefficient p))::EXPRR * (xx::EXPRR)**degree p
+           + polyexpr reductum p
+
+@
+
+This is just a tiny helper function that coerces a 
+[[SparseUnivariatePolynomial F]] into an [[EXPRR]].
+
+<<GUESS Implementation>>=
+      expr: FSUPF -> EXPRR
+      expr p == 
+        (polyexpr numer p) / (polyexpr denom p)
+
+@
+This turns a [[Fraction SparseUnivariatePolynomial F]] into an [[EXPRR]].
+
+
+\section{The main procedure}
+<<GUESS Implementation>>=
+      if not (F has Finite) then  
+        guess(list) ==
+@
+Here comes the main procedure. We work recursively.
+
+<<GUESS Implementation>>=
+          res: List EXPRR := []
+          len:= #list :: PositiveInteger
+          if len > 1 then
+@
+If there is only one data point, we cannot do much, since we need at least a
+second point to test our hypothesism, so we return.
+
+<<GUESS Implementation>>=
+            tempres: List FSUPF := guessCons(list)
+
+            if not null(tempres) then 
+              res := [eval(expr(tempres.i), kernel(xx), basis(xx::EXPRI)) _
+                      for i in 1..#tempres]
+@
+If [[guessCons]] returns a result, we can add it to our list of results
+immediately.
+
+<<GUESS Implementation>>=
+            if not member?(0$F, list) then
+              prodList: List F := [(list.(i+1))/(list.i) for i in 1..(len-1)]
+              if not every?(one?, prodList) then
+                var: Symbol := subscript('p, [len::OutputForm])
+                prodGuess := 
+                    map(coerce(last(list) _
+                               / retract(retract(eval(#1, kernel(xx), _
+                                                      len::EXPRR))@R)) _
+                        * #1, _
+                        map(product(#1, equation(var, 1..xx::EXPRR-1)), _
+                            guess(prodList)$Guess(var, F, basis, _
+                                                  R, EXPRR, retract, coerce)))
+
+                res := append(prodGuess, res)
+
+@
+If the sequence does not contain any zeros, we can generate the list of
+successive quotients and recurse. The \lq\lq p\rq\rq\ in the subscript is for
+\lq\lq product\rq\rq.
+
+If [[guess]] returns something for the transformed sequence, note that this is
+correct only up to a factor, since it fits the sequence of successive
+quotients. In the very first version, we simply multiplied the result with the
+first value of the sequence. However, this can lead to very wrong results in
+special circumstances, that is, when the first point is an untainable point of
+the interpolating problem. Therefore we use the last data point. Since this is
+the point we tested against, it is certain to be correct. Note that even if
+there are unattainable points, the result of [[guess]] can be useful.
+Sometimes, for example, it is not clear how to define the first value of a
+sequence.
+
+<<GUESS Implementation>>=
+            sumList: List F := [(list.(i+1))-(list.i) for i in 1..(len-1)]
+
+            if not every?(#1=sumList.1, sumList) then
+              var: Symbol := subscript('s, [len::OutputForm])
+              sumGuess := 
+                  map(coerce(last(list) _
+                             - retract(retract(eval(#1, kernel(xx), _
+                                                    len::EXPRR))@R)) _
+                      + #1, _
+                      map(summation(#1, equation(var, 1..xx::EXPRR-1)), _
+                          guess(sumList)$Guess(var, F, basis, _
+                                               R, EXPRR, retract, coerce)))
+
+              res := append(sumGuess, res)
+
+@
+
+If the sequence of successive differences is constant, the original sequence is
+already a rational function. Thus we procede only otherwise.
+
+Again, if [[guess]] returns something for the transformed sequence, this is
+correct with respect to the original sequence only up to a additive term. Thus
+we have to do the same thing as in the former case.
+
+<<GUESS Implementation>>=
+          res
+@
+Done.
+
+To ease the use of the package, I provide some packages that cover the most
+common cases. Unfortunately, they do not seem to work right away. Lets see\dots
+
+<<GUESSINT>>=
+)abbrev package GUESSINT GuessInteger
+++ Description:
+++ This package exports guessing of integer sequences
+GuessInteger(xx, basis): Exports == Implementation where
+    xx: Symbol                                                        
+    F ==> Fraction Integer
+    R ==> Fraction Integer
+    EXPRR ==> Expression Integer
+    EXPRI ==> Expression Integer
+    basis: EXPRI -> EXPRR
+
+    Exports == with
+      guess: List F -> List EXPRR
+
+    Implementation == add
+      retract: R -> F
+      retract i == i::F
+
+      coerce: F -> EXPRR
+      coerce i == i::EXPRR
+
+      guess(list) == 
+        guess(list)$Guess(xx, F, basis, R, EXPRR, retract, coerce)
+@
+\end{document}
+
+--Tr9tZBvneU
+Content-Type: text/plain; charset=us-ascii
+Content-Description: message body text
+Content-Transfer-Encoding: 7bit
+
+
+Excuse me,
+
+Martin
+--Tr9tZBvneU--
+
+
+
+
+From MAILER-DAEMON Thu Jun 17 08:36:54 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Baw8U-00015y-9t
+	for mharc-axiom-math@gnu.org; Thu, 17 Jun 2004 08:36:54 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Baw8S-00015s-Mu
+	for axiom-math@nongnu.org; Thu, 17 Jun 2004 08:36:52 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Baw8R-00014j-5j
+	for axiom-math@nongnu.org; Thu, 17 Jun 2004 08:36:52 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Baw8Q-00014f-Vq
+	for axiom-math@nongnu.org; Thu, 17 Jun 2004 08:36:51 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Baw7B-0002dB-Jr
+	for axiom-math@nongnu.org; Thu, 17 Jun 2004 08:35:34 -0400
+X-Spam-Flags: <.IPWHOIS-RFC-IGNORANT.@imap.univie.ac.at>[131.130.93.101:[131.130.93.101]]<univie.ac.at>
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i5HC3jgt908262;
+	Thu, 17 Jun 2004 14:03:56 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16593.42038.425306.649307@gargle.gargle.HOWL>
+Date: Thu, 17 Jun 2004 14:01:26 +0000
+To: axiom-math <axiom-math@nongnu.org>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx7.univie.ac.at 4248; Body=10 Fuz1=10 Fuz2=10
+Subject: [Axiom-math] [ANN] guessing formulas for sequences
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 17 Jun 2004 12:36:52 -0000
+
+Finally I was able to compile my guessing package...
+
+Install: (I deleted less interesting messages from the system)
+
+[rubey@seam101 Axiom]$ cp ~/axiom/mnt/linux/src/algebra/combfunc.spad .
+
+[rubey@seam101 Axiom]$ patch combfunc.spad patches/sumprod.patch 
+patching file combfunc.spad
+
+[rubey@seam101 Axiom]$ patch combfunc.spad patches/combfout.patch 
+patching file combfunc.spad
+Hunk #1 succeeded at 233 (offset 3 lines).
+
+[rubey@seam101 Axiom]$ cp pamphlet/rinterp.alternativ.spad.pamphlet .
+
+[rubey@seam101 Axiom]$ document rinterp.alternativ.spad.pamphlet 
+This is TeX, Version 3.14159 (Web2C 7.4.5)
+--- lots of messages deleted ---
+
+[rubey@seam101 Axiom]$ cp pamphlet/guess.spad.pamphlet .
+
+[rubey@seam101 Axiom]$ document guess.spad.pamphlet 
+This is TeX, Version 3.14159 (Web2C 7.4.5)
+for some reason you will have to press enter twice to appease TeX
+--- lots of messages deleted ---
+
+--- if you want to, you can now read the documentation, with your favorite dvi
+    reader: 
+
+[rubey@seam101 Axiom]$ kdvi guess.spad.dvi &
+
+[rubey@seam101 Axiom]$ kdvi rinterp.alternativ.spad &
+
+[rubey@seam101 Axiom]$ axiom
+                        AXIOM Computer Algebra System 
+               Version of Wednesday June 9, 2004 at 15:38:25 
+-----------------------------------------------------------------------------
+   Issue )copyright to view copyright notices.
+   Issue )summary for a summary of useful system commands.
+   Issue )quit to leave AXIOM and return to shell.
+-----------------------------------------------------------------------------
+ 
+   Re-reading compress.daase   Re-reading interp.daase
+   Re-reading operation.daase
+   Re-reading category.daase
+   Re-reading browse.daase
+(1) -> )co combfunc.spad )co COMBF
+
+--- hundreds of messages deleted ---
+
+(1) -> )co rinterp.alternativ.spad
+
+--- some messages deleted ---
+
+(1) -> )co guess.spad
+
+--- some messages deleted ---
+
+(1) -> guess([(i+q^i) for i in 0..3])$GUESS(n,FRAC POLY INT,i+->q^i,FRAC POLY INT, EXPR INT, i+->i, i+->i)
+
+
+--- some messages deleted ---
+
+                         s
+          n - 1           4
+           --+   (q - 1)q   + q
+   (1)  [( >     --------------) + 1]
+           --+          q
+          s = 1
+           4
+                                                Type: List Expression Integer
+
+Can somebody explain the following error message???
+
+(2) -> guess([i for i in 0..3])$GUESSINT(n,i+->i)
+   Loading /home/rubey/martin/Axiom/GUESSINT.NRLIB/code for package 
+      GuessInteger 
+ 
+   >> System error:
+   The function NIL is undefined.
+
+protected-symbol-warn called with (NIL)
+(2) -> 
+
+
+Comments very welcome!
+
+Happy guessing,
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Jun 17 08:44:30 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BawFq-0005mf-5X
+	for mharc-axiom-math@gnu.org; Thu, 17 Jun 2004 08:44:30 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BawFo-0005lC-Lj
+	for axiom-math@nongnu.org; Thu, 17 Jun 2004 08:44:28 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BawFn-0005kq-3l
+	for axiom-math@nongnu.org; Thu, 17 Jun 2004 08:44:28 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BawFn-0005kn-01
+	for axiom-math@nongnu.org; Thu, 17 Jun 2004 08:44:27 -0400
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BawEJ-0002B3-Lo
+	for axiom-math@nongnu.org; Thu, 17 Jun 2004 08:42:55 -0400
+Received: from localhost.localdomain (18.180.252.64.snet.net [64.252.180.18])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i5HCgRPX249798; Thu, 17 Jun 2004 08:42:38 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i5HDRnN27410;
+	Thu, 17 Jun 2004 09:27:49 -0400
+Date: Thu, 17 Jun 2004 09:27:49 -0400
+Message-Id: <200406171327.i5HDRnN27410@localhost.localdomain>
+From: root <daly@idsi.net>
+To: martin.rubey@univie.ac.at
+In-reply-to: <16593.42038.425306.649307@gargle.gargle.HOWL> (message from
+	Martin Rubey on Thu, 17 Jun 2004 14:01:26 +0000)
+Subject: Re: [Axiom-math] [ANN] guessing formulas for sequences
+References: <16593.42038.425306.649307@gargle.gargle.HOWL>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 17 Jun 2004 12:44:29 -0000
+
+Martin,
+
+Excellent. I'll look at integrating the stuff you sent this evening.
+
+You can turn off the algebra loading messages with:
+
+)set output autoload off
+
+
+If you put this in a file in your home directory called
+
+.axiom.input
+
+it will be automatically read at axiom startup time.
+
+I have no idea what the functio NIL error is. 
+I'll see if it fails here and chase it. 
+
+Tim
+
+
+
+From MAILER-DAEMON Fri Jun 18 11:54:43 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BbLhT-0006At-QU
+	for mharc-axiom-math@gnu.org; Fri, 18 Jun 2004 11:54:43 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BbLhR-0006Aj-Su
+	for axiom-math@nongnu.org; Fri, 18 Jun 2004 11:54:42 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BbLhQ-0006AJ-Ma
+	for axiom-math@nongnu.org; Fri, 18 Jun 2004 11:54:41 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BbLhQ-0006AG-Jt
+	for axiom-math@nongnu.org; Fri, 18 Jun 2004 11:54:40 -0400
+Received: from [206.46.170.46] (helo=out014.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BbLfs-0004gu-Dh
+	for axiom-math@nongnu.org; Fri, 18 Jun 2004 11:53:04 -0400
+Received: from cunyvm.cuny.edu ([141.155.135.74]) by out014.verizon.net
+	(InterMail vM.5.01.06.06 201-253-122-130-106-20030910) with ESMTP
+	id <20040618155300.HMHM24784.out014.verizon.net@cunyvm.cuny.edu>
+	for <axiom-math@nongnu.org>; Fri, 18 Jun 2004 10:53:00 -0500
+Message-ID: <40D30FCB.7786026B@cunyvm.cuny.edu>
+Date: Fri, 18 Jun 2004 11:52:43 -0400
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Organization: City College of New York
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+X-Accept-Language: en,zh-CN,zh-TW,zh
+MIME-Version: 1.0
+To: "axiom-math@nongnu.org" <axiom-math@nongnu.org>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Authentication-Info: Submitted using SMTP AUTH at out014.verizon.net from
+	[141.155.135.74] at Fri, 18 Jun 2004 10:53:00 -0500
+Subject: [Axiom-math] [Fwd: Re: EXPR POLY INT]
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+Reply-To: wyscc@cunyvm.cuny.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 18 Jun 2004 15:54:42 -0000
+
+Martin Rubey wrote:
+>  > > (1) provide a possibility to get the "variable free" domain of a domain, i.e.,
+>  > >
+>  > > POLY INT, UP(x,POLY INT) both should yield INT
+>  >
+>  > Two comments:
+>  >
+>  > (1) Actually, there is a more general request for ages: that is, each
+>  > CONSTRUCTOR in Axiom should provide the means to return ALL the parameters. This
+>  > would have to be built like OutputForm form the bottom up because of nesting.
+>  > Lots of editing and a total rebuilt. Currently, when writing a constructor,
+>  > there is no way one can "descend" inside its parameters other than finding their
+>  > categorical property or attributes.
+> 
+> Hm, I don't quite understand why this would be more general? What I think what
+> is needed is a function that takes a domain as argument and has a domain as
+> value, which is related to the first domain in the sense that the resulting
+> domain is no longer RetractableTo Symbol.
+
+I disagree on this approach. First, mathematically, one can take a polynomial
+extension of any integral domain (and then its quotient ring) and the "new"
+variables should not be mixed up with elements of the integral domain. Second,
+not only will your approach require a mechanism to obtain the parameters of ANY
+constructor, but it will require further need to be able to RECONSTRUCT one.
+What would be your resulting domain for
+EXPR AN? (AN is AlgebraicNumber, which is the algebraic closure of the field of
+rational numbers. However, AN has EXPR INT as Rep which is NOT visible. At this
+time, I am not able to get an example like the one on POLY--UP interaction,
+because I do not follow the setup for AN (among lots of other things). So may be
+there is no such bad interaction (afterall, AN mathematically are just numbers!) 
+
+In any case, deciding the "field/domain of constants" in an Axiom domain
+requires more than just examining the towers. This is a difficult problem in
+differential Galois theory (for Picard Vessiot extensions): when does an
+extension contain no new constants? An example is the (differential field) F =
+Q(sin^2(x), sin(x)cos(x)), where Q is the field of rational numbers, x is
+transcendental and differentiation is D= d/dx. F can be constructed as a
+quadratic extension Q(y,z) of Q(y) where y is a transcendental and z^2 = y(1-y),
+Dy = 2z. In this construction, y would be retractable to a symbol and z may be a
+kernel. It takes some work to decide whether there are new constants other than
+those in Q (whether there are or aren't is not releveant to this discussion).
+Now think about EXPR F. How would you "simplify" this to using a general
+algorithm?
+
+>  > > (2) make the coercion to EXPR smarter and swallow all variables...
+>  > >
+>  > > I'm very unsure wether we should prefer (1) or (2), mainly because I still
+>  > > don't understand the philosophy behind EXPR.
+>  >
+>  > Since POLY UP(x,INT) behaves similar to EXPR POLY INT, the former may be an
+>  > easier target to "fix".
+> 
+> Yes. In fact, there is another possibility to consider. In (2) I suggested that
+> all the variables in EXPR POLY INT should belong to EXPR. In fact, this was an
+> accident. What I meant to say is
+> 
+>  (3) make the coercion to EXPR smarter and let its argument domain swallow as
+>      many variables as possible.
+> 
+> I think that this would be more sound. However, my feeling is that (1) is the
+> best way.
+
+See above comment on (1). (3) will not work with EXPR POLY interaction because
+both wants to include ALL of SYMBOL, but may work with EXPR DMP (but not DMP
+EXPR). (3) may be difficult for EXPR F (F as above). I still think separating
+the name spaces (like any good old compilers -- think C++) is a reasonable
+approach. So each constructor gets its own name space by using a prefix.
+(Mathematica does this via what it calls "Context"). Coercion may be done by
+switching prefix in addition to any data conversion (Rep conversion). However,
+there are probably many many implications for this line of thinking and I know
+very little about compilers. I wonder how Aldor handles this type of issues.
+
+> 
+>  > > Very briefly: I think we could
+>  > > characterize EXPR R by saying that it is the space of functions whose variables
+>  > > are allowed to take values in R or EXPR R. However, this is not quite complete:
+>  > > In which domain are the numbers appearing in the expression?
+>  > >
+>  > > For example
+>  > >
+>  > > (7) -> 2.0*x^2*log(2*x)
+>  > >
+>  > >              2
+>  > >    (7)  2.0 x log(2.0 x)
+>  > >                                                        Type: Expression Float
+>  > >
+>  > > which is good, I believe. (Note that the square stayed square, not power 2.0)
+>  >
+>  > But notice that the 2 in 2*x has to be coerced to Float even though Float has
+>  > RetractableTo INT.
+> 
+> Hm? The above was an (unfortunately trivial) example to show that not all
+> numbers in EXPR FLOAT are FLOAT, or, more generally, not all coefficients in
+> EXPR R are from R. In fact, it seems as though exactly the powers are
+> not. 
+
+Exponents are not coefficients and technically belongs to a different domain
+from the coefficient domain in Axiom. Check the parameters for
+PolynomialCategory. So sure, not all "numbers" in EXPR FLOAT are FLOAT: the
+exponents aren't.
+
+>More precisely, they cannot be:
+> 
+> (6) -> x^2.1
+> 
+>          2 10+-+
+>    (6)  x   \|x
+>                                                        Type: Expression Float
+> The following I'd consider as a bug:
+> 
+> (10) -> (x^%pi)::EXPR FLOAT
+> 
+>           3 6701487259+-+948881364
+>    (10)  x           \|x
+>                                                        Type: Expression Float
+
+I don't know what you mean by a bug here. I assume the answer is correct, but
+there should be parenthesis that may make the display better. Axiom converts any
+decimal number with fixed precision into a rational number and allows these as
+exponents.
+
+>  > > Are there domains with OrderedSet and IntegralDomain which are not
+>  > > RetractableTo Integer?
+> 
+>  > An integral domain of characteristic zero is always retractable to integer. On
+>  > the other hand, one of characteristic non-zero will contain a prime field which
+>  > is not an ordered set in Axiom (PrimeField has ContractableTo Integer and
+>  > RetractableTo(%), not RetractableTo Integer).
+> 
+> Yes, but could you give an example? This would be great!
+> 
+> Martin
+
+I thought my answer above meant there can be no such examples. Every domain in
+Axiom belonging to OrderedSet and IntegralDomain will belong to RetractableTo
+Integer.
+
+William
+-- 
+William Sit
+Department of Mathematics..............Email: wyscc@cunyvm.cuny.edu
+City College of New York..........................Tel: 212-650-5179
+Convent Ave at West 138th Street..................Fax: 212-862-0004
+New York, NY 10031............Axiom, A Scientific Computation Sytem
+USA..........................http://www.nongnu.org/axiom/index.html
+
+
+

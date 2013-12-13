@@ -1,0 +1,169 @@
+From MAILER-DAEMON Wed Sep 01 12:37:36 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C2Y76-0007Uh-3W
+	for mharc-axiom-math@gnu.org; Wed, 01 Sep 2004 12:37:36 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C2Y74-0007UN-Fw
+	for axiom-math@nongnu.org; Wed, 01 Sep 2004 12:37:34 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C2Y72-0007U4-My
+	for axiom-math@nongnu.org; Wed, 01 Sep 2004 12:37:34 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C2Y72-0007U1-Fs
+	for axiom-math@nongnu.org; Wed, 01 Sep 2004 12:37:32 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C2Y20-00066f-Uo
+	for axiom-math@nongnu.org; Wed, 01 Sep 2004 12:32:21 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i81GVwtb215032
+	for <axiom-math@nongnu.org>; Wed, 1 Sep 2004 18:32:02 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16694.5342.493598.519782@gargle.gargle.HOWL>
+Date: Wed, 1 Sep 2004 18:28:46 +0000
+To: axiom-math@nongnu.org
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4249; Body=1
+Subject: [Axiom-math] Howto simplify exponents
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 01 Sep 2004 16:37:34 -0000
+
+How can I make axiom to do 2^a*2^(2*a) -> 2^(3*a) ?
+
+Martin
+
+
+
+
+From MAILER-DAEMON Mon Sep 06 13:14:00 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C4N44-0002mB-OE
+	for mharc-axiom-math@gnu.org; Mon, 06 Sep 2004 13:14:00 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C4N43-0002lm-2Z
+	for axiom-math@nongnu.org; Mon, 06 Sep 2004 13:13:59 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C4N40-0002kg-24
+	for axiom-math@nongnu.org; Mon, 06 Sep 2004 13:13:58 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1C4N3z-0002kd-VL; Mon, 06 Sep 2004 13:13:56 -0400
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1C4My3-0001Ps-K2; Mon, 06 Sep 2004 13:07:47 -0400
+Received: from localhost.localdomain (69.0.60.186.adsl.snet.net [69.0.60.186])
+	by pimout1-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i86H7fH9152636; Mon, 6 Sep 2004 13:07:42 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i86Hpvj23095;
+	Mon, 6 Sep 2004 13:51:57 -0400
+Date: Mon, 6 Sep 2004 13:51:57 -0400
+Message-Id: <200409061751.i86Hpvj23095@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] A3L 2005 in Honor of Volker Weispfenning]
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 06 Sep 2004 17:13:59 -0000
+
+FYI...
+
+Date: Mon, 6 Sep 2004 16:45:51 +0200
+From: "Dr. Andreas Dolzmann" <dolzmann@algebra.fmi.uni-passau.de>
+Subject: A3L 2005 in Honor of Volker Weispfenning
+
+Dear Friends and Collegues,
+
+we would like to point you at a conference to be held in Passau,
+Germany, in April 2005:
+
+                  Algorithmic Algebra and Logic 2005
+   Conference in Honor of the 60th Birthday of Volker Weispfenning
+
+Please, find all relevant information at http://www.a3l.org/
+
+Andreas Dolzmann
+Andreas Seidl
+Thomas Sturm
+
+
+
+
+From MAILER-DAEMON Fri Sep 10 17:02:50 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C5sXi-0007HD-Ig
+	for mharc-axiom-math@gnu.org; Fri, 10 Sep 2004 17:02:50 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C5sXh-0007Gd-OC
+	for axiom-math@nongnu.org; Fri, 10 Sep 2004 17:02:49 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C5sXg-0007GL-4G
+	for axiom-math@nongnu.org; Fri, 10 Sep 2004 17:02:49 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1C5sXf-0007Fv-7X; Fri, 10 Sep 2004 17:02:47 -0400
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1C5sRy-0007ha-Uz; Fri, 10 Sep 2004 16:56:55 -0400
+Received: from localhost.localdomain (143.181.252.64.snet.net [64.252.181.143])
+	by pimout1-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i8AIkgH9097858; Fri, 10 Sep 2004 14:46:42 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i8AJUrN04206;
+	Fri, 10 Sep 2004 15:30:53 -0400
+Date: Fri, 10 Sep 2004 15:30:53 -0400
+Message-Id: <200409101930.i8AJUrN04206@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-math@nongnu.org, axiom-developer@nongnu.org
+Cc: 
+Subject: [Axiom-math] solving polynomial equations
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 10 Sep 2004 21:02:50 -0000
+
+General Solution for Polynomial Equations
+
+http://arxiv.org/pdf/math.CA/0408264
+
+the report is that a Dutch student found a formula to determine the
+roots of any polynomial equation. Although an exact solution has been
+proven impossible for higher orders, this is not the case for numerical
+solutions.
+
+Tim
+
+
+

@@ -1,0 +1,90 @@
+From MAILER-DAEMON Tue Jul 12 05:06:00 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DsGiB-0000B2-8K
+	for mharc-axiom-math@gnu.org; Tue, 12 Jul 2005 05:05:55 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DsGi3-00006Q-T8
+	for axiom-math@nongnu.org; Tue, 12 Jul 2005 05:05:48 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DsGi0-00004s-Kv
+	for axiom-math@nongnu.org; Tue, 12 Jul 2005 05:05:45 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DsGi0-0008WA-CY
+	for axiom-math@nongnu.org; Tue, 12 Jul 2005 05:05:44 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DsGmo-00025U-JO
+	for axiom-math@nongnu.org; Tue, 12 Jul 2005 05:10:42 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j6C8xpSd041174; 
+	Tue, 12 Jul 2005 11:00:02 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <17107.34351.826873.381057@seam101.local>
+Date: Tue, 12 Jul 2005 10:58:23 +0200
+To: Francois Maltey <fmaltey@nerim.fr>
+Subject: Re: [Axiom-math] where is the complex module function ?
+In-Reply-To: <87ekapi57i.fsf@nerim.fr>
+References: <87ekapi57i.fsf@nerim.fr>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4248; bulk Body=1 Fuz1=3 Fuz2=100015
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 12 Jul 2005 09:05:50 -0000
+
+Dear Fran=E7ois,
+
+could you please report this as an issue.
+
+For a RealNumberSystem R, abs$Complex R computes what you want. Otherwi=
+se,
+there is an operation norm(x)$Complex R, which computes x*conjugate(x).=
+
+
+I think that RealNumberSystem is too strong a requirement for abs, the
+corresponding code in gaussian.spad reads:
+
+       if R has RealNumberSystem then
+         abs(x:%):%        =3D=3D (sqrt norm x)::%
+
+It seems that the author of COMPLEX was particularly fond of RealNumber=
+System
+:-), see the bug in argument...
+
+Martin
+
+
+Francois Maltey writes:
+ > Hello
+ >=20
+ > I find the complex argument function :
+ >    argument (3+4*%i) computes atan (4/3).
+ >=20
+ > But where is the module or abs complex function :
+ >   how can I get 5 from the complex 3+4*%i ?
+ >=20
+ > Thanks a lot !
+ >=20
+ > Fran=E7ois=20
+ >=20
+ >=20
+ > _______________________________________________
+ > Axiom-math mailing list
+ > Axiom-math@nongnu.org
+ > http://lists.nongnu.org/mailman/listinfo/axiom-math
+ >=20
+
+
+
+

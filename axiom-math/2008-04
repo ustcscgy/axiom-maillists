@@ -1,0 +1,463 @@
+From MAILER-DAEMON Mon Apr 14 03:54:05 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1JlJVt-0002Hy-4I
+	for mharc-axiom-math@gnu.org; Mon, 14 Apr 2008 03:54:05 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1JlJVs-0002Gw-8I
+	for axiom-math@nongnu.org; Mon, 14 Apr 2008 03:54:04 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1JlJVq-0002Cf-6a
+	for axiom-math@nongnu.org; Mon, 14 Apr 2008 03:54:03 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1JlJVq-0002CU-13
+	for axiom-math@nongnu.org; Mon, 14 Apr 2008 03:54:02 -0400
+Received: from mx20.gnu.org ([199.232.41.8])
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA1:32)
+	(Exim 4.60) (envelope-from <fmaltey@nerim.fr>) id 1JlJVp-0004gh-D4
+	for axiom-math@nongnu.org; Mon, 14 Apr 2008 03:54:01 -0400
+Received: from smtp-101-monday.noc.nerim.net ([62.4.17.101]
+	helo=mallaury.nerim.net) by mx20.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <fmaltey@nerim.fr>) id 1JlJVn-0002Gl-Vh
+	for axiom-math@nongnu.org; Mon, 14 Apr 2008 03:54:00 -0400
+Received: from [192.168.0.9] (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.nerim.net (Postfix) with ESMTP id 6DE5E4FD25;
+	Mon, 14 Apr 2008 09:53:48 +0200 (CEST)
+Message-ID: <48030D91.30604@nerim.fr>
+Date: Mon, 14 Apr 2008 09:53:53 +0200
+From: Francois Maltey <fmaltey@nerim.fr>
+User-Agent: Thunderbird 2.0.0.12 (X11/20080227)
+MIME-Version: 1.0
+To: fricas-devel@googlegroups.com, open-axiom-devel@lists.sf.net, 
+	axiom-math@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-kernel: by mx20.gnu.org: FreeBSD 4.6-4.9
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: 
+Subject: [Axiom-math] A presentation of Axiom-s
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 14 Apr 2008 07:54:04 -0000
+
+Hello,
+
+I'll present Axiom to some mathematical teachers in undergraduate the 
+next month.
+
+
+So I'm writing/looking for slides for about 20 or 30 minutes. I discover 
+beamer.
+Do you know/see where I can find any ideas ?
+
+Many thanks !
+
+Francois
+
+
+
+From MAILER-DAEMON Mon Apr 14 04:17:54 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1JlJsv-00035U-Vv
+	for mharc-axiom-math@gnu.org; Mon, 14 Apr 2008 04:17:54 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1JlJsu-00034p-Jd
+	for axiom-math@nongnu.org; Mon, 14 Apr 2008 04:17:52 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1JlJst-000343-Mf
+	for axiom-math@nongnu.org; Mon, 14 Apr 2008 04:17:52 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1JlJst-000340-G4
+	for axiom-math@nongnu.org; Mon, 14 Apr 2008 04:17:51 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1JlJss-0007uv-U6
+	for axiom-math@nongnu.org; Mon, 14 Apr 2008 04:17:51 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=univie.ac.at; s=rev1; h=Sender:To:Cc:Subject:References:From:
+	Date:In-Reply-To:Message-ID:MIME-Version:Content-Type:
+	Content-Transfer-Encoding; bh=9nErIHhQ+XGu0veDOHD0K9WLOWLMx+KtHf
+	gg2YGc1mc=; b=FedGfMPFISFs8u/5tA6b8wer1r91G1tFkZ1waUz9udQhjsN7DC
+	iV4Pdx2fW741prAnYozt4qoyv2PzpSyIy6oiRjcm7bbUfZgYIMvr5zB2THWNfhq7
+	iLf8t1GBrvfant5exp9c4/B/Pq3bsWi0zAsaX76vyurHFkGtRzJoexBpw=
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.69)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1JlJsl-0004f9-HX; Mon, 14 Apr 2008 10:17:43 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.69)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1JlJsl-0004mU-GA; Mon, 14 Apr 2008 10:17:43 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: fricas-devel@googlegroups.com
+References: <48030D91.30604@nerim.fr>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 14 Apr 2008 10:17:43 +0200
+In-Reply-To: <48030D91.30604@nerim.fr>
+Message-ID: <9qhce4rgt4.fsf@aquin.mat.univie.ac.at>
+Lines: 318
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-math@nongnu.org, open-axiom-devel@lists.sf.net
+Subject: [Axiom-math] Re: [fricas-devel] A presentation of Axiom-s
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 14 Apr 2008 08:17:52 -0000
+
+Francois Maltey <fmaltey@nerim.fr> writes:
+
+> Hello,
+>=20
+> I'll present Axiom to some mathematical teachers in undergraduate the=20
+> next month.
+
+Do you happen to know the topics they like?
+
+> So I'm writing/looking for slides for about 20 or 30 minutes. I discover=
+=20
+> beamer.
+> Do you know/see where I can find any ideas ?
+
+I used the following input file for a demonstration for students, using fri=
+cas
+though.  It runs well in gnu emacs, using my axiom mode, setting=20
+--text follows this line--
+Francois Maltey <fmaltey@nerim.fr> writes:
+
+> Hello,
+>=20
+> I'll present Axiom to some mathematical teachers in undergraduate the=20
+> next month.
+
+Do you happen to know the topics they like?
+
+> So I'm writing/looking for slides for about 20 or 30 minutes. I discover=
+=20
+> beamer.
+> Do you know/see where I can find any ideas ?
+
+I used the following input file for a demonstration for students, using fri=
+cas
+though.  It runs well in gnu emacs, using my axiom mode, setting font to
+courier 14.  (the huge amounts of space are used so that pressing space shi=
+fts
+the next example to the top line.)
+
+I would strongly advise you to give a presentation that actually uses axiom
+(life!).  It probably makes sense to point out some of the strengths of axi=
+om,
+in comparison with, say, Maple.  (mainly integration and Taylor series)
+
+Finally, it probably makes sense to show off some "fun stuff".  I used the
+guessing package for that purpose.  I attach some interesting sequences.  D=
+on't
+hesitate to ask for their meaning.
+
+Martin
+
+
+---------------------------------------------------------------------------=
+----
+
+)clear completely
+pause() =3D=3D systemCommand "sys echo -n _"(0) -> _"; read void"
+mma(cmds: List String): Void =3D=3D=20
+    cmd :=3D reduce((a,b) +-> a "\n" b, cmds)
+    systemCommand("sys echo -e '" cmd "' | math6")
+mma [""]
+pause()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--
+-- axiom im PC Labor starten:
+--
+--     boote Linux
+--     dr=C3=BCcke ALT-F2,=20
+--     tippe eaxiom und dr=C3=BCcke Enter
+--
+--     zwei Fenster sollten erscheinen:=20
+--         ein wei=C3=9Fes mit Titel HyperDoc
+--         eines mit Titel emacs21
+--
+--     tippe in das emacs21 Fenster 1+1 und dr=C3=BCcke Enter
+--
+-- mehr Info:
+--
+--     axiom-wiki.new-synthesis.org
+--     fricas-devel@googlegroups.com
+--     martin.rubey@univie.ac.at
+--
+--
+--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+pause()
+
+
+
+
+
+
+
+
+
+--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--		      Matrizen und Vektoren
+--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+pause()
+-- Wir wollen mit 2x2 Matrizen spielen:
+
+SM2 =3D=3D> SquareMatrix(2, Fraction Polynomial Integer)
+pause()
+-- erzeuge eine Matrix:
+
+M :=3D [[a, b], [c, d]]::SM2
+
+pause()
+-- wie werden Matrizen multipliziert?
+
+M*M
+
+M^2
+pause()
+-- in Mathematica mu=C3=9F man aufpassen:
+
+mma ["{{a,b}, {c, d}}*{{a,b}, {c, d}}//MatrixForm",  _
+     "{{a,b}, {c, d}}.{{a,b}, {c, d}}//MatrixForm" , _
+     "{{a,b}, {c, d}}^2//MatrixForm",                _
+     "MatrixPower[{{a,b}, {c, d}}, 2]//MatrixForm"]
+pause()
+-- wir k=C3=B6nnen mit Polynomen =C3=BCber quadratischen Matrizen spielen!
+-- Definieren wir zun=C3=A4chst ein Polynom:
+
+poly :=3D (x^2 - (a+d)*x + a*d - b*c)::UnivariatePolynomial(x, SM2)
+
+pause()
+-- jetzt k=C3=B6nnen wir auch eine Matrix einsetzen:
+
+poly M
+
+pause()
+-- in Mathematica mu=C3=9F man aufpassen:
+
+mma ["M :=3D {{a,b}, {c, d}}",   _
+     "poly :=3D x^2 - (a+d)*x + a*d - b*c",  _
+     "poly/.x->M"]
+pause()
+-- wenn die Determinante einer Matrix nicht 0 ist,=20
+-- kann man die Matrix invertieren:
+
+SM3 =3D=3D> SquareMatrix(3, Fraction Integer)
+M :=3D [[1, 2, 4],[1, 3, 9], [1, 4, 16]]::SM3
+determinant M
+pause()
+M^-1
+pause()
+
+
+
+
+
+
+--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--		 axiom kann sch=C3=B6ne Bilder malen
+--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+-- Legen wir eine Tangentialebene an eine Oberfl=C3=A4che!
+-- Dazu brauchen wir ein Hilfsmittel - die totale Ableitung:
+-- Das ist einfach der Vektor, in dem die Ableitungen nach den=20
+-- verschiedenen Variablen stehen:
+
+-- totale Ableitung
+
+totalD f =3D=3D vector [D(f, v) for v in variables f];
+
+-- Die Tangentialebene durch einen Punkt (x0, y0) in der Form=20
+-- f(x,y)=3D0 erhalten wir so: <Df(x0,y0),(x-x0, y-y0)> - f(x0,y0)
+
+TangentialEbene(f, punkt) =3D=3D=20
+      X: Vector Polynomial Integer :=3D vector variables f
+      X0 :=3D eval(X, punkt)
+
+      dot(eval(totalD f, punkt), X-X0) - eval(f, punkt)
+
+pause()
+-- Wir betrachten die Funktion (x,y) +-> x^2*y^3
+-- und wollen die Tangentialebene an den Punkt x=3D1, y=3D-1 legen:
+
+f :=3D x^2*y^3
+t :=3D TangentialEbene(f, [x=3D1, y=3D-1])
+
+pause()
+-- Und jetzt schauen wir, ob wir richtig gerechnet haben...
+
+color1(x,y,z)=3D=3D0; color2(x,y,z)=3D=3Dz; sp :=3D createThreeSpace();
+
+v1 :=3D draw(f, x=3D-2..2, y=3D-2..2, space=3D=3Dsp, colorFunction=3D=3Dcol=
+or1)
+v2 :=3D draw(t, x=3D0.5..1.5, y=3D-1.5..-0.5, _
+           space=3D=3Dsp, colorFunction=3D=3Dcolor2, style=3D=3D"solid")
+close v1;=20
+
+pause()
+
+
+
+
+
+
+--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--			  Taylorreihen
+--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+-- Axiom kann hervorragend mit Taylorreihen rechnen.  Wie in=20
+-- Mathematica kann man Taylorreihen mit dem Befehl 'series'=20
+-- erhalten.  ZB. k=C3=B6nnen wir den Sinus um 0 entwickeln:
+
+s :=3D series(sin x, x=3D0)
+
+pause()
+-- es ist ganz leicht, den Koeffizienten von x^99 zu erhalten:
+
+coefficient(s, 99)
+
+pause()
+-- in Mathematica mu=C3=9F man da sehr aufpassen:
+
+mma ["s =3D Series[Sin[x], {x, 0, 10}]", _
+     "Coefficient[s, x, 99]"]
+
+pause()
+-- Das beste ist aber: mit Taylorreihen kann man richtig rechnen!
+-- Fangen wir mit einer ganz einfachen Taylorreihe an -=20
+-- dem Monom x:
+
+r :=3D x::UnivariateTaylorSeries(Fraction Integer, x, 0)
+
+-- Was ist wohl der Sinus dieser Taylorreihe?
+pause()
+sin r
+pause()
+-- Und davon der Cosinus?
+pause()
+cos sin r
+
+pause()
+-- oder:
+
+(cos r)^2 + (sin r)^2
+
+pause()
+-- Integrieren und differenzieren kann man Taylorreihen nat=C3=BCrlich
+-- auch:
+
+D cos r
+
+integrate cos r
+
+---------------------------------------------------------------------------=
+----
+-- end of presentation
+---------------------------------------------------------------------------=
+----
+
+SSOLVE =3D=3D> EXPRSOL(INT, EXPR INT, UFPS EXPR INT, UFPS SUPEXPR EXPR INT)
+-- guessRat
+-- squares
+l1 :=3D [0,1,4,9];
+-- something with a pole
+l1a :=3D [3, 4, 7/2, 18/5, 11/3, 26/7];
+
+-- guessPade
+-- Fibonacci
+l2 :=3D [1,1,2,3,5];
+-- guessPRec
+-- Central binomial coefficients
+l3 :=3D [1,2,6,20,70,252,924];
+-- guessHolo
+-- coefficients of sin x
+l4 :=3D [0,1,0,-1/6,0,1/120];
+-- guessADE  (GFUN cannot do this)
+-- n^n/factorial n
+l5 :=3D [1,1,2,9/2,32/3,625/24,324/5];
+-- Bell numbers / n!
+l5a :=3D  [1, 1, 1, 5/6, 5/8, 13/30, 203/720, 877/5040, 23/224, _
+    1007/17280, 4639/145152, 22619/1330560, 4213597/479001600];
+-- guess a la Christian ou Robbins (GFUN cannot do this)
+-- guess(l6, [guessRat], [guessProduct])
+-- number of alternating sign matrices
+l6 :=3D [1,1,2,7,42,429,7436,218348];
+-- guess a la Christian extended (only this package can do this)
+-- guess(l7, [guessRat], [guessProduct, guessSum])
+-- sum_k k!
+l7 :=3D [0,1,3,9,33];
+-- guess an Abelian term (only this package can do this)
+-- guessExpRat l8
+-- n (n+2)^n
+l8 :=3D [0,3,32,375,5184];
+-- guess a binomial term
+-- guessBinRat l9
+-- Fusz-Catalan numbers
+l9 :=3D [1,1,k+1,(3*k*k+5*k+2)/2,(8*k**3+18*k*k+13*k+3)/3];
+-- guess q
+-- guessADE(q)(l10, maxPower=3D=3D2)
+-- Carlitz q-Catalan numbers
+l10 :=3D [1, 1, q+1, q**3+q*q+2*q+1, q**6+q**5+2*q**4+3*q**3+3*q*q+3*q+1, _
+        q**10+q**9+2*q**8+3*q**7+5*q**6+5*q**5+7*q**4+7*q**3+6*q*q+4*q+1];
+
+-- solve a strange differential equation:
+G :=3D operator 'G;
+eq :=3D D(G x, x)-exp(-G(-x));
+
+doit =3D=3D (s :=3D seriesSolve(eq, G, x, [log 2])$SSOLVE; entries complete=
+ first(rest coefficients(series(log(1+exp x), x=3D0)::UTS(EXPR INT, x, 0)),=
+ 40)::List FRAC INT)
+
+
+
+

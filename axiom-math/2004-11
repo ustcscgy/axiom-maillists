@@ -1,0 +1,729 @@
+From MAILER-DAEMON Fri Nov 12 09:44:49 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CScfR-00072b-8e
+	for mharc-axiom-math@gnu.org; Fri, 12 Nov 2004 09:44:49 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CScfP-000721-Oz
+	for axiom-math@nongnu.org; Fri, 12 Nov 2004 09:44:47 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CScfO-00071C-Uq
+	for axiom-math@nongnu.org; Fri, 12 Nov 2004 09:44:47 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CScfO-00070k-QU; Fri, 12 Nov 2004 09:44:46 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CScVl-0001Z8-Gx; Fri, 12 Nov 2004 09:34:49 -0500
+Received: from localhost.localdomain (164.119.252.64.snet.net [64.252.119.164])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iACEYgm9302614; Fri, 12 Nov 2004 09:34:43 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iACFGKZ26720;
+	Fri, 12 Nov 2004 10:16:20 -0500
+Date: Fri, 12 Nov 2004 10:16:20 -0500
+Message-Id: <200411121516.iACFGKZ26720@localhost.localdomain>
+From: root <daly@idsi.net>
+To: cfrangos@telkomsa.net
+In-reply-to: <E1CSb57-00051Z-Rc@lists.gnu.org> (cfrangos@telkomsa.net)
+References: <E1CSb57-00051Z-Rc@lists.gnu.org>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] (no subject)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Nov 2004 14:44:48 -0000
+
+I'm unaware of any issues related to GCC 2.95.3
+Axiom is mostly written in Common Lisp so if you get GCL to
+compile (the first steps of the Axiom build) it is likely that
+the complete system will build.
+
+I don't have SUSE running anywhere but I believe I could build
+a 2.95.3 copy of GCC.
+
+Since you have it already set up just try to build Axiom:
+
+cd /tmp
+cvs -z3 -d:ext:anoncvs@savannah.gnu.org:/cvsroot/axiom co axiom
+cd axiom
+export AXIOM=/tmp/axiom/mnt/linux
+export PATH=$AXIOM/bin:$PATH
+make
+
+when this build completes you should be able to type
+
+axiom
+
+and have a running system. If you do the build in an emacs shell buffer
+you can email the failure to "daly@idsi.net" and I can try to figure out
+what failed.
+
+Tim Daly
+
+
+
+From MAILER-DAEMON Sat Nov 13 09:58:27 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CSzMB-0001uT-BV
+	for mharc-axiom-math@gnu.org; Sat, 13 Nov 2004 09:58:27 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CSbHq-0001Yi-Hh
+	for axiom-math@nongnu.org; Fri, 12 Nov 2004 08:16:22 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CSbHp-0001Xt-Mk
+	for axiom-math@nongnu.org; Fri, 12 Nov 2004 08:16:21 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CSbHp-0001Xl-JQ
+	for axiom-math@nongnu.org; Fri, 12 Nov 2004 08:16:21 -0500
+Received: from [196.25.211.6] (helo=telkomsa.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CSb92-0003X9-TF
+	for axiom-math@nongnu.org; Fri, 12 Nov 2004 08:07:17 -0500
+Received: (qmail 7119 invoked from network); 12 Nov 2004 12:40:19 -0000
+Received: from cfrangos@telkomsa.net by ariel.telkomsa.net by uid 81 with
+	qmail-scanner-1.22 ( Clear:RC:1(155.239.189.129):. 
+	Processed in 0.378929 secs); 12 Nov 2004 12:40:19 -0000
+Received: from unknown (HELO wnmvihjd) ([155.239.189.129])
+	(envelope-sender <cfrangos@telkomsa.net>)
+	by O (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 12 Nov 2004 12:40:19 -0000
+From: "cf" <cfrangos@telkomsa.net>
+To: <axiom-mail@nongnu.org>,
+	<axiom-developer@nongnu.org>
+Date: Fri, 12 Nov 2004 11:17:30 +0200
+X-MSMail-Priority: Normal
+X-Priority: 3
+X-Mailer: Microsoft Internet Mail 4.70.1155
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Qmail-Scanner-Message-ID: <11002632196727098@ariel.telkomsa.net>
+Message-Id: <E1CSbHp-0001Xt-Mk@lists.gnu.org>
+X-Mailman-Approved-At: Sat, 13 Nov 2004 09:58:25 -0500
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] (no subject)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Nov 2004 13:16:22 -0000
+
+
+12 November 2004
+
+Hi there,
+
+I recently downloaded the Axiom tutorial and am very interested in
+trying out this program on my linux system. I have been using the
+Matlab extended symbolic toolbox for the last five years in the
+modelling and control of mechanical systems, and would like to compare
+with Axiom.
+
+I have a suse linux 7.2 installation with gcc version 2.95.3. Will the
+source code compile under this version of gcc ?? Alternatively, is it
+possible for somebody to do a static compilation of the source code and
+place these binaries on your website ??
+
+Yours sincerely,
+
+C. Frangos.
+
+------
+Constantine Frangos.
+Professor
+Dept. of Mathematics and Statistics
+Rand Afrikaans University
+P O Box 524
+Auckland Park 2006
+South Africa
+
+Tel: +27-11-489-2452
+Fax: +27-11-489-2832
+e-mail: cf@rau.ac.za (work)
+              cfrangos@telkomsa.net (home)
+
+
+
+
+
+From MAILER-DAEMON Mon Nov 15 08:14:38 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CTggo-0003Hy-Lp
+	for mharc-axiom-math@gnu.org; Mon, 15 Nov 2004 08:14:38 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CTggm-0003Fl-9R
+	for axiom-math@nongnu.org; Mon, 15 Nov 2004 08:14:36 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CTggl-0003FB-IO
+	for axiom-math@nongnu.org; Mon, 15 Nov 2004 08:14:35 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CTggl-0003F1-Do; Mon, 15 Nov 2004 08:14:35 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CTgXt-0002dO-1V; Mon, 15 Nov 2004 08:05:25 -0500
+Received: from localhost.localdomain (172.180.252.64.snet.net [64.252.180.172])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iAFD5Em9365252; Mon, 15 Nov 2004 08:05:18 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iAFDkm911607;
+	Mon, 15 Nov 2004 08:46:48 -0500
+Date: Mon, 15 Nov 2004 08:46:48 -0500
+Message-Id: <200411151346.iAFDkm911607@localhost.localdomain>
+From: root <daly@idsi.net>
+To: cfrangos@telkomsa.net
+In-reply-to: <E1CSbHp-0001Xt-Mk@lists.gnu.org> (cfrangos@telkomsa.net)
+Subject: Re: [Axiom-math] (no subject)
+References: <E1CSbHp-0001Xt-Mk@lists.gnu.org>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 15 Nov 2004 13:14:36 -0000
+
+Constantine,
+
+I tried to reply to your previous message but it bounced.
+You sent it from some random numeric username it seems.
+Anyway, I retried the instructions I sent you and they work here.
+
+In any case, I've put a recent tarball of Axiom at:
+http://axiom.axiom-developer.org/axiom-website/download.html
+
+Click on the link that reads:
+  "The source code tarball from November 15, 2004 is here"
+and store it somewhere (I'm assuming /tmp but you can put it anywhere
+if you replace the /tmp)
+
+Once you get it type:
+tar -zxf axiom.20041115.tgz
+cd axiom
+export AXIOM=/tmp/axiom/mnt/linux
+export PATH=$AXIOM/bin:$PATH
+make
+(wait until the build completes)
+axiom
+
+
+Tim
+
+
+
+
+
+From MAILER-DAEMON Sun Nov 21 17:41:48 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CW0Oy-0004kr-F0
+	for mharc-axiom-math@gnu.org; Sun, 21 Nov 2004 17:41:48 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CW0Ox-0004kc-0m
+	for axiom-math@nongnu.org; Sun, 21 Nov 2004 17:41:47 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CW0Ow-0004kM-I4
+	for axiom-math@nongnu.org; Sun, 21 Nov 2004 17:41:46 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CW0Ov-0004k5-Sc; Sun, 21 Nov 2004 17:41:45 -0500
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CW0Fa-0002Pc-OQ; Sun, 21 Nov 2004 17:32:06 -0500
+Received: from localhost.localdomain (29.27.252.64.snet.net [64.252.27.29])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iALMW1x7360802; Sun, 21 Nov 2004 17:32:05 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iALNDSl30749;
+	Sun, 21 Nov 2004 18:13:28 -0500
+Date: Sun, 21 Nov 2004 18:13:28 -0500
+Message-Id: <200411212313.iALNDSl30749@localhost.localdomain>
+From: root <daly@idsi.net>
+To: acl2@lists.cc.utexas.edu
+In-reply-to: <20041121065137.GA19604@bayes.joshpurinton.com> (message from
+	Josh Purinton on Sun, 21 Nov 2004 01:51:37 -0500)
+References: <20041121065137.GA19604@bayes.joshpurinton.com>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, acl2@lists.cc.utexas.edu
+Subject: [Axiom-math] Re: order of arguments of (choose k n) in
+	books/arithmetic/binomial.lisp
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 21 Nov 2004 22:41:47 -0000
+
+Josh
+
+> The 'choose' function in binomial.lisp is declared as:
+> 	(defun choose (k n) ...)
+> But in the binomial coefficient notation, n appears above k.  Also, it
+> is normally said aloud as "n choose k" and written as nCk.
+> 
+> The function would be easier to use if it took its parameters in the
+> standard order (n k).
+> 
+> -- 
+> Josh Purinton
+
+This seems reasonable. I need to do checking to find out if and where
+it is used. If it isn't used I will reverse them.
+
+Tim
+
+
+
+From MAILER-DAEMON Sun Nov 28 01:17:36 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CYINM-0005BT-91
+	for mharc-axiom-math@gnu.org; Sun, 28 Nov 2004 01:17:36 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CYINK-0005AK-Jv
+	for axiom-math@nongnu.org; Sun, 28 Nov 2004 01:17:34 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CYINJ-00059v-It
+	for axiom-math@nongnu.org; Sun, 28 Nov 2004 01:17:33 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CYINJ-00059s-FJ
+	for axiom-math@nongnu.org; Sun, 28 Nov 2004 01:17:33 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CYIDi-0003al-Ew
+	for axiom-math@nongnu.org; Sun, 28 Nov 2004 01:07:38 -0500
+Received: from localhost.localdomain (69.0.60.139.adsl.snet.net [69.0.60.139])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iAS67DL6382450; Sun, 28 Nov 2004 01:07:21 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iAS6mQl01332;
+	Sun, 28 Nov 2004 01:48:26 -0500
+Date: Sun, 28 Nov 2004 01:48:26 -0500
+Message-Id: <200411280648.iAS6mQl01332@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Bill.page1@sympatico.ca
+Cc: gilbert@sci.ccny.cuny.edu, axiom-math@nongnu.org, camm@enhanced.com,
+	bob@mcelrath.org, axiom-developer@nongnu.org
+Subject: [Axiom-math] publishing the axiom book
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 28 Nov 2004 06:17:34 -0000
+
+*,
+
+Since we've decided to make the book available using www.lulu.com's
+print-on-demand services I've been setting up a way we can work on it.
+
+The clear goal is to have a quality publication.
+
+We'd also like it to remain free-as-in-speech so we're working under
+the agreement that anything checked into the archive is your own work.
+You agree that the work is released under the Modified-BSD agreement
+on the copyright page. Note that this is a license so you actually
+retain the copyright but agree to allow free copy and distribution.
+(If there are discussions on this point please post them to the
+axiom-legal@nongnu.org list and do not copy the other lists).
+
+Changes to the book will be regulary pushed back into the axiom
+distribution. The two may diverge for a while but will be kept
+in sync as much as possible.
+
+Credit is free to share and, per policy, is given as generously
+as possible. If you contribute to the book you should add your
+name to the list of authors on the front page. Please make sure
+the front page formats properly.
+
+And, no, you won't make a dime on royalties. I'm one of the original
+authors and haven't seen money from it. So if you're thinking that
+this will be an income stream you're mistaken. The funds for this
+effort, if there are any, are intended to go to the Axiom Foundation
+(of which I'm not an official member but suspect I have an influence).
+The idea is to try to pay people to do subprojects from funds that
+the book generates. Visit
+  http://page.axiom-developer.org/zope/mathaction/AxiomFoundation
+
+
+It would be nice if we could figure out a way to get lulu.com to
+either create and ship CDs with the book or possibly just ship
+CDs we make for them. I don't see anything on their site about
+it but it's always fun to be the first, right?
+
+Cooperate. Don't check in the .tex or .dvi file. 
+Only the book.pamphlet and CHANGELOG file should be modified.
+Check the pages you've modified and the surrounding pages to see
+if you've broken anything.
+
+Check the whole book at least once before you send changes back.
+Minor changes in a page can ripple quite far, especially where
+graphics images are concerned. Breaking other people's careful
+work will not earn you bonus points :-)
+
+Note that we'd like the book to be self-contained so try to 
+keep everything in the book.pamphlet file. There are better ways
+of organizing this but we'll have to debate them before changing
+this procedure.
+
+There are various things that need to be cleaned up.
+
+In general you have to be very careful to edit axiom output so
+that it line breaks properly. There are numerous examples in
+the book :-) And don't cheat. Use real axiom output, modulo line
+breaking issues. You can get most of the way there by typing
+   )set output tex on
+to the axiom command prompt. Axiom will output the tex for the
+expression. 
+
+Working with axiom in an emacs shell buffer and the book.pamphlet in a
+second buffer is very effective. Also remember that if xdvi is
+visiting a file then it will automatically reflect changes to the .dvi
+file when it gets focus. Thus if you start xdvi in a separate process
+you can edit, make, visit xdvi and see the changes quickly.
+
+Chapter 8 needs the graphics work recreated. This involves first
+solving the problems of getting latex to put more than one image
+on a page and making the images appear on the pages where they
+belong.
+
+In order to run the graphics you will need the latest version of 
+axiom. I'll include instructions below.
+
+Chapter 9 could use further examples of domains and packages.
+If you add to or modify this chapter it would also be useful to
+send me a .input file with the commands so I can add them to the
+automated test cases.
+
+Given the size of chapter 9 we might consider splitting the book
+into two parts, one a users guide and one a reference manual. I
+leave that up for discussion and debate.
+
+Chapter 10 has drawing function output that need to be included.
+
+Chapter 15 needs revision.
+
+Chapter 16 (aka Chapter 1) should be Appendix 1, similarly with
+following chapters.
+
+Appendix A and following needs work. The information is there but
+I have to rewrite the latex commands.
+
+Appendix H has been moved up to the "ISBN" page where it traditionally
+appears.
+
+The diagrams on the inner covers of the original book should probably
+become a new chapter that explains these in more detail. 
+
+We really could use a chapter on developing Axiom code. Either
+an analysis of an existing domain or the construction of a new
+domain with appropriate advice would be excellent. This would be
+a chance to have your spiffy new domain both contributed and
+recognized.
+
+
+==============================================================
+Instructions
+==============================================================
+
+Visit http://axiom.axiom-developer.org and click on the 
+[ Developers ] link or:
+
+==============================================================
+Getting started with tla:
+==============================================================
+
+If you already have a tla command skip to the next section.
+
+To get a working tla you can get axiom from the anonymous CVS by:
+
+mkdir ~/bin                   <-- change ~/bin to someplace writable 
+                                  on your path. I have a bin in my homedir
+export CVS_RSH=ssh
+cvs -d:ext:anoncvs@savannah.gnu.org/cvsroot/axiom co axiom/zips/tla-1.1.tar.gz
+cd axiom/zips
+tar -zxf tla-1.1.tar.gz
+cd tla-1.1/src
+mkdir =build
+cd =build
+../configure --prefix ~/bin   
+make
+make install
+export PATH=~/bin:$PATH
+
+There are later versions of tla on the net but this is sufficient
+for you to get started.
+
+==============================================================
+Using tla to get any archive from axiom-developer.org
+==============================================================
+
+This will allow you to fetch the axiom tla archives
+
+If you already have set up your tla identity skip to the next section
+
+tla my-id "First Last <userid@place.com>"
+tla register-archive arch@axiom-developer.org--axiom http://axiom-developer.org/archive/axiom
+tla my-default-archive arch@axiom-developer.org--axiom
+
+
+==============================================================
+Using tla to get the book
+==============================================================
+
+tla get book--main--1
+
+==============================================================
+Making the book
+==============================================================
+
+cd book--main--1*
+make
+
+Note that there are two other commands for make
+  make clean    -- remove the cruft and leave book.dvi and noweb
+  make pristine -- remove everything but book.pamphlet changes
+
+==============================================================
+changing the book
+==============================================================
+
+To change the book you have two choices.
+If you do not have write permission to the book archive:
+
+cp book.pamphlet book.pamphlet.org
+while 
+ edit the book.pamphlet
+ make
+ xdvi book.dvi
+(until done)
+diff -Naur book.pamphlet.org book.pamphlet >book.patch
+mail the book.patch file to daly@idsi.net
+
+(Note that if you type:  'xdvi book.dvi &' then xdvi will
+ continue to run and every time you remake the book it will
+ automatically reflect the changes. This is very useful)
+
+==============================================================
+updating the book directly
+==============================================================
+
+You need write access. See http://axiom.axiom-developer.org,
+follow the [ Developers ] link, make a key and send me a note.
+
+==============================================================
+Graphics in Axiom
+==============================================================
+
+You need the latest version of Axiom from the Savannah CVS
+
+cd /tmp                     <-- or someplace where you want axiom
+export CVS_RSH=ssh
+cvs -z3 -d:ext:anoncvs@savannah.gnu.org/cvsroot/axiom co axiom
+cd axiom
+export AXIOM=/tmp/axiom/mnt/linux
+export PATH=$AXIOM/bin:$PATH
+make
+.... (get coffee)
+sman  (lots of warnings but the axiom interpreter should start)
+draw(sin(x), x=-10..10)
+draw(sin(x*y), x=-10..10, y=-10..10)
+
+The sman process will eventually be merged into the axiom command
+as soon as I finish up the graphics integration. The sman (superman)
+process is used to communicate between the axiom interpreter and the
+graphics process. If you just start axiom directly with the axiom
+command rather than the sman command the draw function won't do anything.
+
+
+             -- or --
+
+
+You need the latest version of Axiom from the arch website
+
+cd /tmp                     <-- or someplace where you want axiom
+tla get axiom--main--1 axiom
+cd axiom
+export AXIOM=/tmp/axiom/mnt/linux
+export PATH=$AXIOM/bin:$PATH
+make
+.... (get coffee)
+sman  (lots of warnings but the axiom interpreter should start)
+draw(sin(x), x=-10..10)
+draw(sin(x*y), x=-10..10, y=-10..10)
+
+The sman process will eventually be merged into the axiom command
+as soon as I finish up the graphics integration. The sman (superman)
+process is used to communicate between the axiom interpreter and the
+graphics process. If you just start axiom directly with the axiom
+command rather than the sman command the draw function won't do anything.
+
+Tim
+
+
+
+
+
+
+
+
+
+
+
+From MAILER-DAEMON Sun Nov 28 14:10:14 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CYUR4-0000CG-Cu
+	for mharc-axiom-math@gnu.org; Sun, 28 Nov 2004 14:10:14 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CYUR3-0000Bm-9i
+	for axiom-math@nongnu.org; Sun, 28 Nov 2004 14:10:13 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CYUR2-0000BM-9v
+	for axiom-math@nongnu.org; Sun, 28 Nov 2004 14:10:12 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CYUQz-00009h-9R; Sun, 28 Nov 2004 14:10:09 -0500
+Received: from [209.226.175.25] (helo=tomts5-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CYUHZ-0000eK-Ac; Sun, 28 Nov 2004 14:00:25 -0500
+Received: from Asus ([216.208.193.178]) by tomts5-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20041128190022.ZVTY2026.tomts5-srv.bellnexxia.net@Asus>;
+	Sun, 28 Nov 2004 14:00:22 -0500
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <daly@idsi.net>
+Date: Sun, 28 Nov 2004 14:00:32 -0500
+Message-ID: <000c01c4d57c$8c510f00$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+In-reply-to: <200411280648.iAS6mQl01332@localhost.localdomain>
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] RE: [Axiom-developer] publishing the axiom book
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 28 Nov 2004 19:10:13 -0000
+
+All,
+
+Tim, thanks very much for laying out the detailed plans for
+publishing the new Axiom book (books?). I hope we hear from
+several people willing to help. I will definitely be one of
+them.
+
+There is now a web page on MathAction to help document our
+decisions and plans for the publishing project: 
+
+http://page.axiom-developer.org/zope/mathaction/AxiomBook
+
+It is open for editing and comments to all. Comments and updates
+would be most appreciated!
+
+On Sunday, November 28, 2004 1:48 AM Tim Daly wrote:
+
+> ...
+> 
+> It would be nice if we could figure out a way to get lulu.com
+> to either create and ship CDs with the book or possibly just
+> ship CDs we make for them. I don't see anything on their site
+> about it but it's always fun to be the first, right?
+
+Apparently this is quite possible. When asked about his experience
+with Lulu, Robert Kiehn (an established Lulu author, see my
+previous email) recently wrote to me:
+
+> Lulu does not print over 700 pages.
+> You will need to divide the work into 2 volumes
+> The Printing cost paper back is about 4.50 base plus 2 cents
+> a page.
+> There are NO up front costs.
+> You add  on what ever royalty you want.  They get 20% - you
+> get 80 % of the royalty that you decide.
+> You can design the covers.
+> You keep all copyrights.  (meaning that you can quit Lulu
+> anytime) You do not have to buy copies from them, they construct
+> them on demand and bill the customer for shipping and costs and
+> royalties, and send you a check for your 80% of the royalties.
+> However, they are now offering hard back copies in print runs
+> of over 100.
+> You can also add a CD ROM to the fly leaf.
+> ***
+> I do not think you can get a better deal.
+> 
+
+So yes, we can add a copy of Axiom on CDrom to each book!
+
+> 
+> Given the size of chapter 9 we might consider splitting the
+> book into two parts, one a users guide and one a reference manual.
+> I leave that up for discussion and debate.
+>
+
+Yes! I am very much in favour of this idea. I think even the older
+Jenks and Sutor book was too large for most purposes. Perhaps we
+could go one step further and further divide the volumes into
+
+- Basic Axiom - a beginning user's guide
+- Advanced Axiom - user's guide
+- Axiom Reference - complete reference manual
+
+Besides the page limit that Robert Kiehn mentioned above, another
+good reason is "marketing". We could plan to keep the Basic Axiom
+book reasonable short and even lower in price, say < $25. The
+others could be priced a little higher. Making this division might
+also let us put something in print sooner.
+
+Regards,
+Bill Page.
+ 
+
+
+
+

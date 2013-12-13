@@ -1,0 +1,1258 @@
+From MAILER-DAEMON Thu May 11 12:22:28 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FeDvo-0002np-OP
+	for mharc-axiom-math@gnu.org; Thu, 11 May 2006 12:22:28 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FeDvn-0002nc-Pd
+	for axiom-math@nongnu.org; Thu, 11 May 2006 12:22:27 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FeDvk-0002nQ-BP
+	for axiom-math@nongnu.org; Thu, 11 May 2006 12:22:26 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FeDvk-0002nN-3Q
+	for axiom-math@nongnu.org; Thu, 11 May 2006 12:22:24 -0400
+Received: from [62.4.16.104] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FeDxH-0000lP-Qj
+	for axiom-math@nongnu.org; Thu, 11 May 2006 12:24:00 -0400
+Received: from localhost.localdomain (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id 0BC554104A;
+	Thu, 11 May 2006 18:22:21 +0200 (CEST)
+Received: from fmy by localhost.localdomain with local (Exim 4.61)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1FeDvg-0001hK-OY; Thu, 11 May 2006 18:22:20 +0200
+Sender: fmaltey@nerim.fr
+To: axiom-math@nongnu.org, fmaltey@nerim.fr
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 11 May 2006 18:22:20 +0200
+Message-ID: <87zmhobkg3.fsf@localhost.localdomain>
+Lines: 17
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: 
+Subject: [Axiom-math] Are Fraction and Complex domains.
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 11 May 2006 16:22:28 -0000
+
+Hello,
+
+What is the finest term ?
+
+Integer is a domain, 
+
+Can I say : " Complex Integer is a domain " ?
+       or   " Complex " is a domain with a parameter as Integer ?
+       or   " Complex " construct a domain, but isn't a domain ?
+       or   " Integer " is an abbreviation for Integer without parameter ?
+       
+
+The question is the same for Fraction, Polynomial, and so.
+
+Have a good day.
+
+Francois
+
+
+
+From MAILER-DAEMON Thu May 11 12:51:24 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FeENn-0006Wu-TV
+	for mharc-axiom-math@gnu.org; Thu, 11 May 2006 12:51:23 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FeENn-0006Wp-85
+	for axiom-math@nongnu.org; Thu, 11 May 2006 12:51:23 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FeENl-0006Wd-Qi
+	for axiom-math@nongnu.org; Thu, 11 May 2006 12:51:22 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FeENl-0006Wa-Km
+	for axiom-math@nongnu.org; Thu, 11 May 2006 12:51:21 -0400
+Received: from [62.4.16.104] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FeEPJ-0003ZZ-Iu
+	for axiom-math@nongnu.org; Thu, 11 May 2006 12:52:57 -0400
+Received: from uniton.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by kraid.nerim.net (Postfix) with ESMTP id A2D2640E27;
+	Thu, 11 May 2006 18:51:18 +0200 (CEST)
+Received: from uniton.integrable-solutions.net (localhost [127.0.0.1])
+	by uniton.integrable-solutions.net (8.12.10/8.12.10/SuSE Linux 0.7)
+	with ESMTP id k4BGlMtZ005792; Thu, 11 May 2006 18:47:22 +0200
+Received: (from gdr@localhost)
+	by uniton.integrable-solutions.net (8.12.10/8.12.10/Submit) id
+	k4BGlMfi005791; Thu, 11 May 2006 18:47:22 +0200
+X-Authentication-Warning: uniton.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: Francois Maltey <fmaltey@nerim.fr>
+Subject: Re: [Axiom-math] Are Fraction and Complex domains.
+References: <87zmhobkg3.fsf@localhost.localdomain>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <87zmhobkg3.fsf@localhost.localdomain>
+Organization: Integrable Solutions
+Date: 11 May 2006 18:47:22 +0200
+Message-ID: <m3fyjgtso5.fsf@uniton.integrable-solutions.net>
+Lines: 29
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 11 May 2006 16:51:23 -0000
+
+Francois Maltey <fmaltey@nerim.fr> writes:
+
+| Hello,
+| 
+| What is the finest term ?
+| 
+| Integer is a domain, 
+| 
+| Can I say : " Complex Integer is a domain " ?
+
+I think so.
+
+|        or   " Complex " is a domain with a parameter as Integer ?
+
+"Complex" is the name of a (type) function.  "Complex ?" is a mode.
+(Integer is a mode too, but that is less interesting.)
+
+|        or   " Complex " construct a domain, but isn't a domain ?
+
+I think so.
+
+|        or   " Integer " is an abbreviation for Integer without parameter ?
+
+from the functional perspective, Integer is a nullary (type) function;
+it is actually a type constant.
+
+HTH,
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu May 11 13:35:53 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FeF4r-00080V-E4
+	for mharc-axiom-math@gnu.org; Thu, 11 May 2006 13:35:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FeF4p-0007zx-Dv
+	for axiom-math@nongnu.org; Thu, 11 May 2006 13:35:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FeF4n-0007zN-KX
+	for axiom-math@nongnu.org; Thu, 11 May 2006 13:35:50 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FeF4n-0007zK-Hl
+	for axiom-math@nongnu.org; Thu, 11 May 2006 13:35:49 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1FeF6L-0007GR-Sd
+	for axiom-math@nongnu.org; Thu, 11 May 2006 13:37:26 -0400
+Received: from [192.168.138.29] (funklan.is4all.net [194.96.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k4BHZYHi012001
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Thu, 11 May 2006 19:35:34 +0200
+Message-ID: <44637605.8060405@hemmecke.de>
+Date: Thu, 11 May 2006 19:36:05 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.2 (X11/20060420)
+MIME-Version: 1.0
+To: Gabriel Dos Reis <gdr@integrable-solutions.net>
+Subject: Re: [Axiom-math] Are Fraction and Complex domains.
+References: <87zmhobkg3.fsf@localhost.localdomain>
+	<m3fyjgtso5.fsf@uniton.integrable-solutions.net>
+In-Reply-To: <m3fyjgtso5.fsf@uniton.integrable-solutions.net>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 11 May 2006 17:35:51 -0000
+
+On 05/11/2006 06:47 PM, Gabriel Dos Reis wrote:
+> Francois Maltey <fmaltey@nerim.fr> writes:
+> 
+> | Hello,
+> | 
+> | What is the finest term ?
+> | 
+> | Integer is a domain, 
+> | 
+> | Can I say : " Complex Integer is a domain " ?
+> 
+> I think so.
+
+So do I.
+
+> |        or   " Complex " is a domain with a parameter as Integer ?
+
+> "Complex" is the name of a (type) function.  "Complex ?" is a mode.
+> (Integer is a mode too, but that is less interesting.)
+
+I would call "Complex" a domain constructor.
+
+Can you teach me what a "mode" is? Is that some common term used in some 
+context?
+
+> |        or   " Complex " construct a domain, but isn't a domain ?
+> 
+> I think so.
+
+Hmmm, according to Section 7.8 in the pdf-version of the AldorUserGuide, 
+one must perhaps also call "Complex" a domain. But then I would prefer 
+to call it "parametrized domain".
+
+> |        or   " Integer " is an abbreviation for Integer without parameter ?
+
+> from the functional perspective, Integer is a nullary (type) function;
+> it is actually a type constant.
+
+ From a functional point of view you are certainly right, the only 
+problem is that Aldor is not functional. (I have no idea whether the 
+following could be done in SPAD, though.)
+
+BTW, I would rather say, Integer is a type constant. If Integer() is 
+defined and works in Axiom then please show me a definition of the 
+language that makes it clear that if one defines
+
+Integer: SomeIntegerCategory
+
+that also
+
+Integer: () -> SomeIntegerCategory
+
+To me, these two things clearly have a different type.
+
+Ralf
+
+----------------------------------------------------------
+aldor -grun -laldor aaa.as
+Dom:   1
+Dom(): 0
+
+--begin aaa.as --------------------------------------------
+#include "aldor"
+#include "aldorio"
+
+Cat: Category == Join(ArithmeticType, OutputType) with;
+Dom: Cat == Integer add;
+Dom(): Cat == Integer add {
+	Rep == Integer;
+	import from Rep;
+	1: % == per 0;
+}
+main(): () == {
+	import from Dom, Dom();
+	stdout << "Dom:   " << 1$Dom << newline;
+	stdout << "Dom(): " << 1$Dom() << newline;
+}
+main();
+--end aaa.as
+
+
+
+
+From MAILER-DAEMON Thu May 11 14:53:28 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FeGHv-00067i-U8
+	for mharc-axiom-math@gnu.org; Thu, 11 May 2006 14:53:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FeGHt-00066k-Cl
+	for axiom-math@nongnu.org; Thu, 11 May 2006 14:53:25 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FeGHs-00066G-S1
+	for axiom-math@nongnu.org; Thu, 11 May 2006 14:53:24 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FeGHs-00066C-HM
+	for axiom-math@nongnu.org; Thu, 11 May 2006 14:53:24 -0400
+Received: from [62.4.16.104] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FeGJR-00060f-LT
+	for axiom-math@nongnu.org; Thu, 11 May 2006 14:55:01 -0400
+Received: from uniton.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by kraid.nerim.net (Postfix) with ESMTP id ED3CF40F26;
+	Thu, 11 May 2006 20:53:21 +0200 (CEST)
+Received: from uniton.integrable-solutions.net (localhost [127.0.0.1])
+	by uniton.integrable-solutions.net (8.12.10/8.12.10/SuSE Linux 0.7)
+	with ESMTP id k4BInPtZ006242; Thu, 11 May 2006 20:49:25 +0200
+Received: (from gdr@localhost)
+	by uniton.integrable-solutions.net (8.12.10/8.12.10/Submit) id
+	k4BInPvg006241; Thu, 11 May 2006 20:49:25 +0200
+X-Authentication-Warning: uniton.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: Ralf Hemmecke <ralf@hemmecke.de>
+Subject: Re: [Axiom-math] Are Fraction and Complex domains.
+References: <87zmhobkg3.fsf@localhost.localdomain>
+	<m3fyjgtso5.fsf@uniton.integrable-solutions.net>
+	<44637605.8060405@hemmecke.de>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <44637605.8060405@hemmecke.de>
+Organization: Integrable Solutions
+Date: 11 May 2006 20:49:25 +0200
+Message-ID: <m3psiks8ga.fsf@uniton.integrable-solutions.net>
+Lines: 73
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 11 May 2006 18:53:25 -0000
+
+Ralf Hemmecke <ralf@hemmecke.de> writes:
+
+| Can you teach me what a "mode" is? Is that some common term used in
+| some context?
+
+A mode seems to be an Axiom-atic term.  The only places I've seen it
+used with that specific meaning is in Axiom literature -- see the
+B-natural paper, the Axiom book, scratchpad papers. 
+
+Algol uses the term "mode" for what we call "type."  At least my manual
+of Algorl 68-R says (page 1):
+    
+   Values are classified according to type, known in Algol 68 as their
+   /mode/. 
+
+| > |        or   " Complex " construct a domain, but isn't a domain ?
+| > I think so.
+| 
+| Hmmm, according to Section 7.8 in the pdf-version of the
+| AldorUserGuide, one must perhaps also call "Complex" a domain. But
+| then I would prefer to call it "parametrized domain".
+
+The Axiom book calls it a "domain constructor", just like Polynomial,
+etc.  See section 2.1.1, page 61.  For example:
+
+   To create the domain of "polynomials over the integers", AXIOM
+   applies the function Polynomial to the domain Integer.  A function
+   like Polynomial is called a /domain constructor/ or, more simply, a
+   /constructor/. 
+
+That terminology is consistent with anything else I've seen in the
+majority of programming language communitites.
+
+| > |        or   " Integer " is an abbreviation for Integer without parameter ?
+| 
+| > from the functional perspective, Integer is a nullary (type) function;
+| > it is actually a type constant.
+| 
+|  From a functional point of view you are certainly right, the only
+| problem is that Aldor is not functional.
+
+That should not matter; and if it does, it is a bug!  
+
+Do you really want a type system whose language is not functional?
+Notice, that I'm not saying the term language should be functional.
+I'm talking of the type (sub-)language.  How do you work with a type
+system system whose constructors do not evaluate the same arguments to
+the same value? 
+
+
+| (I have no idea whether the
+| following could be done in SPAD, though.)
+| 
+| BTW, I would rather say, Integer is a type constant. If Integer() is
+| defined and works in Axiom then please show me a definition of the
+| language that makes it clear that if one defines
+
+Please, first, show me how you meaningfully work with a type system
+where the type language is not functional.
+
+| Integer: SomeIntegerCategory
+| 
+| that also
+| 
+| Integer: () -> SomeIntegerCategory
+| 
+| To me, these two things clearly have a different type.
+
+The syntaxes are different; the question is whether the *semantics*
+should be different.  The answer must be "no", for a workable type
+system.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu May 11 18:27:24 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FeJcy-0006qP-Fr
+	for mharc-axiom-math@gnu.org; Thu, 11 May 2006 18:27:24 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FeJcw-0006qI-Tm
+	for axiom-math@nongnu.org; Thu, 11 May 2006 18:27:22 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FeJcv-0006q6-FU
+	for axiom-math@nongnu.org; Thu, 11 May 2006 18:27:21 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FeJcv-0006q3-AX
+	for axiom-math@nongnu.org; Thu, 11 May 2006 18:27:21 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FeJeW-0006iB-Fx
+	for axiom-math@nongnu.org; Thu, 11 May 2006 18:29:00 -0400
+Received: from localhost (localhost.drenet.dnd.ca [127.0.0.1])
+	by fw.drenet.dnd.ca (_) with ESMTP id 696B76D00A;
+	Thu, 11 May 2006 18:27:20 -0400 (EDT)
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca (unknown [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id 5E0726CFC8;
+	Thu, 11 May 2006 18:27:16 -0400 (EDT)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-math] Are Fraction and Complex domains.
+Date: Thu, 11 May 2006 18:27:15 -0400
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE35AC655@corporateex02.Corporate.drdc-rddc.gc.ca>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-math] Are Fraction and Complex domains.
+Thread-Index: AcZ1LDtEM0/QDNM9RV2+AbchtRTR5QAB/TyQ
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Gabriel Dos Reis" <gdr@integrable-solutions.net>
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 11 May 2006 22:27:23 -0000
+
+I think Francois Maltey's question is an excellent one!
+
+On Thursday, May 11, 2006 12:47 PM Gabriel Dos Reis answered:
+> ...=20
+> "Complex" is the name of a (type) function.
+>  "Complex ?" is a mode.
+> ...
+
+> Ralf Hemmecke asked:
+>=20
+> | Can you teach me what a "mode" is? Is that some common
+> | term used in some context?
+>
+=20
+On Thursday, May 11, 2006 2:49 PM Gabriel Dos Reis wrote:
+
+> A mode seems to be an Axiom-atic term.  The only places
+> I've seen it used with that specific meaning is in Axiom
+> literature -- see the B-natural paper, the Axiom book,
+> scratchpad papers.=20
+>=20
+> Algol uses the term "mode" for what we call "type."  At
+> least my manual of Algol 68-R says (page 1):
+>
+>    Values are classified according to type, known in
+>    Algol 68 as their /mode/.=20
+
+I like Gaby's first answer better than the 2nd. Specifically,
+in the Axiom interpreter "Complex ?" (literally including
+the ? ) is a called a "mode". This has nothing much to do
+with the use of the term "mode" in Algol.
+
+In Axiom a mode is a kind of "type pattern" or partially
+specified type. The interpreter uses this pattern in the
+way that it does type inherence. See especially Chapter 2
+of the Axiom Book:
+
+"2.2.4 Modes
+
+A mode is a type that possibly is a question mark (?) or
+contains one in an argument position. For example, the
+following are all modes.
+
+?
+Polynomial ?
+Matrix Polynomial ?
+SquareMatrix(3,?)
+Integer
+OneDimensionalArray(Float)
+
+As is evident from these examples, a mode is a type with
+a part that is not specified (indicated by a question
+mark). Only one "?" is allowed per mode and it must appear
+in the most deeply nested argument that is a type. Thus
+?(Integer), Matrix(? (Polynomial)), SquareMatrix(?, Integer)
+(it requires a numeric argument) and SquareMatrix(?, ?)
+are all invalid. The question mark must take the place
+of a domain, not data. This rules out, for example, the
+two SquareMatrix expressions."
+
+The type system of the Axiom interpreter is actually subtly
+more general than the type system in SPAD and Aldor. In the
+interpreter symbols are actually assigned modes (which may
+also be completely specified be types).
+
+For example the symbol 'm' is assigned the type 'Complex
+Integer'
+
+(1) -> m:Complex Integer
+      Type: Void
+
+and so the following is an invalid assignment:
+
+(2) -> m:=3D2.3
+
+   Cannot convert right-hand side of assignment
+   2.3
+      to an object of the type Complex Integer of the left-hand side.
+
+But the symbol 'm' is the mode "Complex ?"
+
+(2) -> n:Complex ?
+       Type: Void
+
+Now the assignment of a Float value makes sense because
+the interpreter can inference the actual type:
+
+(3) -> n:=3D2.3
+
+   (3)  2.3
+   Type: Complex Float
+
+The same mode "Complex ?" can also match other types:
+
+(4) -> n:=3D2
+
+   (4)  2
+   Type: Complex Integer
+
+(5) ->
+
+>=20
+> | > |  " Complex " construct a domain, but isn't a domain ?
+> | >
+> | > I think so.
+> |=20
+> | Hmmm, according to Section 7.8 in the pdf-version of the
+> | AldorUserGuide, one must perhaps also call "Complex" a domain.
+> | But then I would prefer to call it "parameterized domain".
+>=20
+> The Axiom book calls it a "domain constructor", just like Polynomial,
+> etc.  See section 2.1.1, page 61.
+
+The Aldor users' guide also uses the term "type constructor"
+e.g. in reference to 'List'. Since in Aldor domains are types
+the Axiom terminology makes sense. See section 5.6, page 42
+and section 7.2, page 75, and even in one place, page 230,
+the term "domain constructor".
+
+>=20
+> | > | or " Integer " is an abbreviation for Integer without
+> | > | parameter ?
+> |=20
+> | > from the functional perspective, Integer is a nullary=20
+> | > (type) function; it is actually a type constant.
+> |=20
+> | From a functional point of view you are certainly right,
+> | the only problem is that Aldor is not functional.
+>
+
+I what sense is Aldor's type system "not functional"?
+Do you mean in the sense that evaluating a type
+expression in Aldor might have some side-effect? E.g.
+
+   a:Funny(Integer)
+
+where 'Funny' is some type constructor. As far as I know,
+in both Aldor and SPAD this is not possible. Types in
+Aldor and SPAD are static - evaluated a compile time -
+not during run time.
+=20
+> That should not matter; and if it does, it is a bug! =20
+>=20
+> Do you really want a type system whose language is not
+> functional? Notice, that I'm not saying the term language
+> should be functional. I'm talking of the type (sub-)
+> language.  How do you work with a type system whose
+> constructors do not evaluate the same arguments to the
+> same value?=20
+>
+
+I think Ralf is wrong. Both SPAD and Aldor's type systems
+are functional (and static!) in this sense.
+=20
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu May 11 18:44:30 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FeJtW-0002Uf-FZ
+	for mharc-axiom-math@gnu.org; Thu, 11 May 2006 18:44:30 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FeJtV-0002U7-7a
+	for axiom-math@nongnu.org; Thu, 11 May 2006 18:44:29 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FeJtT-0002TU-GI
+	for axiom-math@nongnu.org; Thu, 11 May 2006 18:44:28 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FeJtT-0002TI-1c
+	for axiom-math@nongnu.org; Thu, 11 May 2006 18:44:27 -0400
+Received: from [62.4.16.104] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FeJv4-0007wc-EY
+	for axiom-math@nongnu.org; Thu, 11 May 2006 18:46:06 -0400
+Received: from uniton.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by kraid.nerim.net (Postfix) with ESMTP id 62E7940E23;
+	Fri, 12 May 2006 00:44:24 +0200 (CEST)
+Received: from uniton.integrable-solutions.net (localhost [127.0.0.1])
+	by uniton.integrable-solutions.net (8.12.10/8.12.10/SuSE Linux 0.7)
+	with ESMTP id k4BMeRtZ007275; Fri, 12 May 2006 00:40:27 +0200
+Received: (from gdr@localhost)
+	by uniton.integrable-solutions.net (8.12.10/8.12.10/Submit) id
+	k4BMeRUd007274; Fri, 12 May 2006 00:40:27 +0200
+X-Authentication-Warning: uniton.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: <bill.page1@synthesis.anikast.ca>
+Subject: Re: [Axiom-math] Are Fraction and Complex domains.
+References: <CAE9B164E720CE4D8727792DF8F28AE35AC655@corporateex02.Corporate.drdc-rddc.gc.ca>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <CAE9B164E720CE4D8727792DF8F28AE35AC655@corporateex02.Corporate.drdc-rddc.gc.ca>
+Organization: Integrable Solutions
+Date: 12 May 2006 00:40:27 +0200
+Message-ID: <m3hd3wgp7o.fsf@uniton.integrable-solutions.net>
+Lines: 34
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 11 May 2006 22:44:29 -0000
+
+"Page, Bill" <Bill.Page@drdc-rddc.gc.ca> writes:
+
+[...]
+
+| > Algol uses the term "mode" for what we call "type."  At
+| > least my manual of Algol 68-R says (page 1):
+| >
+| >    Values are classified according to type, known in
+| >    Algol 68 as their /mode/. 
+| 
+| I like Gaby's first answer better than the 2nd. Specifically,
+| in the Axiom interpreter "Complex ?" (literally including
+| the ? ) is a called a "mode". This has nothing much to do
+| with the use of the term "mode" in Algol.
+
+the second answer was for Ralf's question
+
+    Is that some common term used in some context?
+
+I thought by "some context", he meant "outside the Axiom world"; but
+upon reading your message, I realize that wasn't a good
+interpretation.  
+
+[...]
+
+| The Aldor users' guide also uses the term "type constructor"
+| e.g. in reference to 'List'. Since in Aldor domains are types
+| the Axiom terminology makes sense. See section 5.6, page 42
+| and section 7.2, page 75, and even in one place, page 230,
+| the term "domain constructor".
+
+Indeed.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Fri May 12 12:31:44 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FeaYJ-0007yl-Uw
+	for mharc-axiom-math@gnu.org; Fri, 12 May 2006 12:31:44 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FeaYI-0007xn-E3
+	for axiom-math@nongnu.org; Fri, 12 May 2006 12:31:42 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FeaYG-0007wo-Iq
+	for axiom-math@nongnu.org; Fri, 12 May 2006 12:31:41 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FeaYG-0007wl-Ab
+	for axiom-math@nongnu.org; Fri, 12 May 2006 12:31:40 -0400
+Received: from [192.167.219.15] (helo=avas.unife.it)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Feaa1-0006oN-OS
+	for axiom-math@nongnu.org; Fri, 12 May 2006 12:33:30 -0400
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by avas.unife.it (Postfix) with ESMTP id 0E33265971
+	for <axiom-math@nongnu.org>; Fri, 12 May 2006 18:31:38 +0200 (CEST)
+Received: from em243.mate.man (em243.mate.man [10.80.2.121])
+	by avas.unife.it (Postfix) with ESMTP id 3F74A65909
+	for <axiom-math@nongnu.org>; Fri, 12 May 2006 18:31:36 +0200 (CEST)
+Date: Fri, 12 May 2006 18:31:36 +0200 (CEST)
+From: "Fabio S." <f.stumbo@unife.it>
+X-X-Sender: stumbo@studio
+To: axiom-math@nongnu.org
+Message-ID: <Pine.LNX.4.62.0605121733010.29076@studio>
+Organization: =?ISO-8859-1?Q?Universit=E0_di_Ferrara?=
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-Virus-Scanned: Cineca AppOs 0.86 at avas.unife.it
+Subject: [Axiom-math] Writing packages
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: axiom-math@nongnu.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 May 2006 16:31:42 -0000
+
+
+Hi all,
+
+I am trying to start to write packages, but the package I wrote does not 
+compile. Yet I started from a function which compiles cleanly and works as 
+expected. I include at the end both the function and the package.
+
+Now some detail. To start, I have chosen to write a function which 
+computes the minimal polynomial of a matrix (if I am not wrong, there is 
+not such a function in the library, isn't it?)
+The function that I wrote seems to work and compiles. The algorithm I used 
+is quite dumb: if m is an nxn matrix, then it tries to solve the linear 
+systems
+
+m^i+x_1*m^(i-1)*...*x_i=0    for i=1,..,n
+
+The minimal i for which this system is solvable is the degree of the 
+minimal polynomial and the x_i are its coefficients.
+The fact that there must be a solution for i<=n follows from the 
+Hamilton-Cayley theorem, of course.
+
+As I said, the following function works and compiles. The following 
+package, on the other hand, doesn't compile. Yet I just add what is 
+necessary to convert the function into a package (I have read thoroughly 
+chapter 11 of the book and also I looked at other packages in the source 
+tree, in particular eigen.spad).
+
+Any help?
+
+BTW, I also have another question on this topic: if I compute the 
+characteristic polynomial of a matrix and then I evaluate the polynomial 
+at the matrix, I would expect to have the zero matrix as result. This 
+does not happens: try
+
+m:=matrix([[1,2],[3,4]])
+p:=characteristicPolynomial(m)
+p(m)
+
+Why?
+
+Thanks
+
+Fabio
+
+
+
+---------------------- This is the function
+
+R     ==> INT
+F     ==> Fraction R
+P     ==> Polynomial F
+M     ==> Matrix(F)
+NNI   ==> NonNegativeInteger
+
+
+
+minpoly: (M,Symbol) -> P
+minpoly(m,x) ==
+  dimm : NNI  := nrows m ++ dimension of m
+  dimm ~= ncols m => error "The matrix is not square"
+  minpol : P := 0
+  dimm = 1 => return(minpol : P := x - m(1,1))
+  powerm : Matrix INT  := new(dimm,dimm,0)               ++ powers of m
+  for i in 1..dimm repeat powerm(i,i) := 1               ++ firts power of m: m^0 = I
+  eqtns : List Vector F := [[] for i in 1..dimm*dimm]    ++ Matrix of coefficients
+  ++ for i in 1..dimm solve the linear system
+  ++ m^i+x_1*m^(i-1)*...*x_i=0
+  ++ or, equivalently,
+  ++ x_1*m^(i-1)*...*x_i=-m^i
+  for i in 1..dimm repeat
+   for j in 1..dimm*dimm repeat
+    ji := (j-1) quo dimm + 1
+    jj := (j-1) rem dimm + 1
+    eqtns(j) := append(eqtns(j),[powerm(ji,jj)])
+   powerm := powerm*m
+   sols : List F := []                                   ++ Vector of solutions
+   for j in 1..dimm repeat sols := append(sols,-1*row(powerm,j))
+   coeffs := solve(eqtns,sols)
+   if coeffs.particular case "failed" then iterate
+   ++ The first time the system has a solution, it means that
+   ++ we have a (monic) polynomial of least degree which is
+   ++ 0 on m : then leave the loop i and reconstruct the polynomial
+   ++ from the solution of the system.
+   break
+  for j in 1..i repeat
+   minpol := minpol+(coeffs.particular)(j)*x^((j-1)::NNI)
+  minpol := minpol+x^i
+
+
+-------------------  This is the package
+
+)abbrev package MMPOL MatrixMinimalPolynomialPackage
+MatrixMinimalPolynomialPackage(R) : Exports == Implementation where
+   R     :   IntegralDomain
+   F     ==> Fraction R
+   P     ==> Polynomial F
+   M     ==> Matrix(F)
+   NNI   ==> NonNegativeInteger
+
+
+   Exports == with
+
+    minpoly : (M,Symbol) -> P
+      ++ minimalPolynomial(m,var) returns the minimal polynomial
+      ++ of the matrix m using the symbol var as the main variabe.
+
+
+   Implementation == add
+
+    minpoly: (M,Symbol) -> P
+    minpoly(m,x) ==
+     dimm : NNI  := nrows m                                  ++ dimension of m
+     dimm ~= ncols m => error "The matrix is not square"
+     minpol : P := 0
+     dimm = 1 => return(minpol : P := x - m(1,1))
+     powerm : Matrix INT  := new(dimm,dimm,0)                ++ powers of m
+     for i in 1..dimm repeat powerm(i,i) := 1                ++ firt power of m: m^0 = I
+     eqtns : List Vector F := [[] for i in 1..dimm*dimm]     ++ Matrix of coefficients
+     ++ for i in 1..dimm solve the linear system
+     ++ m^i+x_1*m^(i-1)*...*x_i=0
+     ++ or, equivalently,
+     ++ x_1*m^(i-1)*...*x_i=-m^i
+     for i in 1..dimm repeat
+      for j in 1..dimm*dimm repeat
+       ji := (j-1) quo dimm + 1
+       jj := (j-1) rem dimm + 1
+       eqtns(j) := append(eqtns(j),[powerm(ji,jj)])
+      powerm := powerm*m
+      sols : List F := []                                    ++ Vector of solutions
+      for j in 1..dimm repeat sols := append(sols,-1*row(powerm,j))
+      coeffs := solve(eqtns,sols)
+      if coeffs.particular case "failed" then iterate
+      ++ The first time the system has a solution, it means that
+      ++ we have a (monic) polynomial of least degree which is
+      ++ 0 on m : then leave the loop i and reconstruct the polynomial
+      ++ from the solution of the system.
+      break
+     for j in 1..i repeat
+      minpol := minpol+(coeffs.particular)(j)*x^((j-1)::NNI)
+     minpol := minpol+x^i
+
+
+
+
+From MAILER-DAEMON Fri May 12 18:24:44 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Feg3v-0000aT-Vd
+	for mharc-axiom-math@gnu.org; Fri, 12 May 2006 18:24:44 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Feg3u-0000Zk-5B
+	for axiom-math@nongnu.org; Fri, 12 May 2006 18:24:42 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Feg3r-0000ZK-MH
+	for axiom-math@nongnu.org; Fri, 12 May 2006 18:24:40 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Feg3r-0000ZH-Hy
+	for axiom-math@nongnu.org; Fri, 12 May 2006 18:24:39 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1Feg5g-000780-Ja
+	for axiom-math@nongnu.org; Fri, 12 May 2006 18:26:32 -0400
+Received: from [192.168.138.29] (funklan.is4all.net [194.96.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k4CMOZHi027220
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO)
+	for <axiom-math@nongnu.org>; Sat, 13 May 2006 00:24:37 +0200
+Message-ID: <4464FF18.4030604@hemmecke.de>
+Date: Fri, 12 May 2006 23:33:12 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.2 (X11/20060420)
+MIME-Version: 1.0
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Writing packages
+References: <Pine.LNX.4.62.0605121733010.29076@studio>
+In-Reply-To: <Pine.LNX.4.62.0605121733010.29076@studio>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 May 2006 22:24:42 -0000
+
+> BTW, I also have another question on this topic: if I compute the 
+> characteristic polynomial of a matrix and then I evaluate the polynomial 
+> at the matrix, I would expect to have the zero matrix as result. This 
+> does not happens: try
+> 
+> m:=matrix([[1,2],[3,4]])
+> p:=characteristicPolynomial(m)
+> p(m)
+> 
+> Why?
+
+Because Axiom is not smart enough to figure out all the types for you.
+
+Does this make you happier?
+
+M := SquareMatrix(2,Integer)
+m:M:=matrix([[1,2],[3,4]])
+P:=SUP(M)
+p:P := characteristicPolynomial(m)::P
+x := first variables p
+eval(p, x, m)
+
+There is no function apply: (P, M) -> M. So how have to browse through 
+hyperdoc a bit. And not that the P given above is much more appropriate 
+than Polynomial Integer. Actually, SUP(Integer) should do, but then 
+there is no way to evaluate such a polynomial at a matrix.
+
+Ralf
+
+
+
+
+From MAILER-DAEMON Fri May 12 18:24:48 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Feg40-0000d4-64
+	for mharc-axiom-math@gnu.org; Fri, 12 May 2006 18:24:48 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Feg3y-0000c8-79
+	for axiom-math@nongnu.org; Fri, 12 May 2006 18:24:46 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Feg3x-0000bj-Ht
+	for axiom-math@nongnu.org; Fri, 12 May 2006 18:24:45 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Feg3x-0000bZ-9L
+	for axiom-math@nongnu.org; Fri, 12 May 2006 18:24:45 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1Feg5m-00078a-A6
+	for axiom-math@nongnu.org; Fri, 12 May 2006 18:26:38 -0400
+Received: from [192.168.138.29] (funklan.is4all.net [194.96.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k4CMOgHi027224
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO)
+	for <axiom-math@nongnu.org>; Sat, 13 May 2006 00:24:43 +0200
+Message-ID: <44650B34.7040300@hemmecke.de>
+Date: Sat, 13 May 2006 00:24:52 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.2 (X11/20060420)
+MIME-Version: 1.0
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Writing packages
+References: <Pine.LNX.4.62.0605121733010.29076@studio>
+In-Reply-To: <Pine.LNX.4.62.0605121733010.29076@studio>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 May 2006 22:24:46 -0000
+
+Hello Fabio,
+
+Let me be the bad guy... ;-)
+(And what I write here is not meant personal, but more sort of a general 
+remark.)
+
+If you start writing a package you should immediately stop thinking in 
+SPAD and use Aldor. And even more important you should neither write 
+.spad nor .as but .as.pamphlet. Anything else is considered "old" style 
+and will not survive the 30 year horizon.
+
+Yes, yes. Everyone knows that this is a pain at first. But after your 
+code starts getting more complex this pain becomes a relief. So how 
+complex must your code be till you think to switch to a literate 
+programming style? If you already start in a non-literate fashion, you 
+will find it harder to switch later. So why not start with LP from the 
+beginning???
+
+> ---------------------- This is the function
+> 
+> R     ==> INT
+> F     ==> Fraction R
+> P     ==> Polynomial F
+
+Use SparseUnivariatePolynomial.
+
+> M     ==> Matrix(F)
+
+Why don't you use SquareMatrix? Does a minimal polynomial make sense for 
+something non-square?
+
+> NNI   ==> NonNegativeInteger
+> 
+> 
+> 
+> minpoly: (M,Symbol) -> P
+> minpoly(m,x) ==
+>  dimm : NNI  := nrows m ++ dimension of m
+>  dimm ~= ncols m => error "The matrix is not square"
+>  minpol : P := 0
+>  dimm = 1 => return(minpol : P := x - m(1,1))
+>  powerm : Matrix INT  := new(dimm,dimm,0)               ++ powers of m
+>  for i in 1..dimm repeat powerm(i,i) := 1               ++ firts power 
+> of m: m^0 = I
+>  eqtns : List Vector F := [[] for i in 1..dimm*dimm]    ++ Matrix of 
+> coefficients
+>  ++ for i in 1..dimm solve the linear system
+>  ++ m^i+x_1*m^(i-1)*...*x_i=0
+>  ++ or, equivalently,
+>  ++ x_1*m^(i-1)*...*x_i=-m^i
+
+I am surprised that the compiler will know to which symbol that ++ 
+documentation is to be associated.
+
+>  for i in 1..dimm repeat
+>   for j in 1..dimm*dimm repeat
+>    ji := (j-1) quo dimm + 1
+>    jj := (j-1) rem dimm + 1
+>    eqtns(j) := append(eqtns(j),[powerm(ji,jj)])
+>   powerm := powerm*m
+>   sols : List F := []                                   ++ Vector of 
+> solutions
+>   for j in 1..dimm repeat sols := append(sols,-1*row(powerm,j))
+>   coeffs := solve(eqtns,sols)
+>   if coeffs.particular case "failed" then iterate
+>   ++ The first time the system has a solution, it means that
+>   ++ we have a (monic) polynomial of least degree which is
+>   ++ 0 on m : then leave the loop i and reconstruct the polynomial
+>   ++ from the solution of the system.
+>   break
+>  for j in 1..i repeat
+>   minpol := minpol+(coeffs.particular)(j)*x^((j-1)::NNI)
+>  minpol := minpol+x^i
+
+Anyway, you have not told that the function is in an .input file and the 
+domain in a .spad file. Now it should become quite clear to you that if 
+two programs (the interpreter for .input and the SPAD compiler for 
+.spad) handle your more or less identical code pieces, the semantics is 
+not the same. The reason is that the interpreter tries hard to figure 
+out what you could have meant. It is dangerous to rely on that guessing. 
+In fact, that is more or less quite similar to programming without 
+types. The spad compiler does not guess. So you have to be a bit more 
+careful to get the types right yourself, ie, you have to be very 
+explicit with coercing your objects to the right type.
+
+Please start to use Aldor, after a while you'll recognise that the error 
+messages help you to figure out which coerce you have to add. There is 
+no way around. If you want to use Axiom for programming, then you MUST 
+thing about the types of your objects. If you don't want to do this then 
+AXIOM is not for you. Or I better should say, ...then you are bound to 
+use .input files and never be able to write complex programs. It's 
+simply up to you whether you want to take the pain of thinking also 
+about the types. Believe me, after you are through the initial hard 
+part, you'll love types.
+
+Sorry, that I did not help you by pointing you exactly to the error. I 
+would have to browse through hyperdoc myself, since I am not overly 
+familiar with the Axiom library. But switching to Aldor would certainly 
+help you.
+
+Ralf
+
+
+
+
+From MAILER-DAEMON Sat May 13 17:58:46 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ff28M-0005Wh-Dx
+	for mharc-axiom-math@gnu.org; Sat, 13 May 2006 17:58:46 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ff28L-0005WT-Il
+	for axiom-math@nongnu.org; Sat, 13 May 2006 17:58:45 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ff28K-0005WB-0M
+	for axiom-math@nongnu.org; Sat, 13 May 2006 17:58:45 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ff28J-0005W6-Qg
+	for axiom-math@nongnu.org; Sat, 13 May 2006 17:58:43 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1Ff2AM-0004m6-Gg
+	for axiom-math@nongnu.org; Sat, 13 May 2006 18:00:50 -0400
+Received: from [192.168.138.29] (funklan.is4all.net [194.96.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k4DLwaHi012225
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Sat, 13 May 2006 23:58:37 +0200
+Message-ID: <44665688.8060103@hemmecke.de>
+Date: Sat, 13 May 2006 23:58:32 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.2 (X11/20060420)
+MIME-Version: 1.0
+To: "Fabio S." <f.stumbo@unife.it>, axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Writing packages
+References: <Pine.LNX.4.62.0605121733010.29076@studio>
+	<4464FF18.4030604@hemmecke.de>
+	<Pine.LNX.4.62.0605132158320.7251@localhost.localdomain>
+In-Reply-To: <Pine.LNX.4.62.0605132158320.7251@localhost.localdomain>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 May 2006 21:58:45 -0000
+
+On 05/13/2006 10:35 PM, Fabio S. wrote:
+>>>  BTW, I also have another question on this topic: if I compute the 
+>>>  characteristic polynomial of a matrix and then I evaluate the 
+>>> polynomial  at the matrix, I would expect to have the zero matrix as 
+>>> result. This does  not happens: try
+>>>
+>>>  m:=matrix([[1,2],[3,4]])
+>>>  p:=characteristicPolynomial(m)
+>>>  p(m)
+>>>
+>>>  Why?
+>>
+>> Because Axiom is not smart enough to figure out all the types for you.
+>>
+>> Does this make you happier?
+>>
+>> M := SquareMatrix(2,Integer)
+>> m:M:=matrix([[1,2],[3,4]])
+>> P:=SUP(M)
+>> p: P := characteristicPolynomial(m)::P
+>> x := first variables p
+>> eval(p, x, m)
+
+> I must say that this doesn't make me happier at all. I didn't expect 
+> that evaluating a polynomial at a matrix was such a terrible task for 
+> the type resolver in axiom: the result of characteristicPolynomial(m) is 
+> a polynomial with integer coefficient in one variable. I can't see the 
+> difficulty to convert it to UP SquareMatrix(2,Integer) (of course, just 
+> from a mathematical point of view).
+
+Well, as I said SUP(Integer) should have been enough. But now, what you 
+actually want is NOT a polynomial. You want a *function*
+
+charpol: SquareMatrix(2, Integer) -> SquareMatrix(2, Integer)
+
+and that is something different. I am sure you know the difference.
+
+The big trouble now is to convert the polynomial you get into a 
+polynomial function with the above type. I guess the interpreter would 
+have been able to find such a conversion if there were an implementation 
+of an evaluation of a polynomial at a *square* matrix (arbitrary 
+matrices would, of course, not work). However, my browsing through 
+hyperdoc was unsuccessful. So I guess the non-existence of such an 
+implementation makes the interpreter telling you about the problem.
+
+> Moreover, given the Hamilton-Cayley, it doesn't seem to me a very 
+> bizzarre idea to try to evaluate the char pol of a matrix at the matrix 
+> itself...
+
+No, of course, not. But as far as I can tell, that is not directly 
+implemented.
+
+> I would expect that this is the first example for every linear algebra 
+> student, so I would expect that the implementation of the function 
+> should take care of this possibility.
+
+I somehow have the impression that is one of the reasons why Axiom 
+failed commercially. Simple things must be expressed in a complicated 
+manner. I agree that Axiom is not (yet) perfect. Just help and provide a 
+implementation for such a function and make all the people who come 
+after you happier.
+
+Thank you
+
+Ralf
+
+
+

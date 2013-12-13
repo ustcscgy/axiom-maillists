@@ -1,0 +1,182 @@
+From MAILER-DAEMON Thu Jun 01 14:42:32 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Fls7s-0004Wy-Nx
+	for mharc-axiom-math@gnu.org; Thu, 01 Jun 2006 14:42:32 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Fls7q-0004Wl-P0
+	for axiom-math@nongnu.org; Thu, 01 Jun 2006 14:42:30 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Fls7p-0004WZ-BE
+	for axiom-math@nongnu.org; Thu, 01 Jun 2006 14:42:29 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Fls7p-0004WW-8e
+	for axiom-math@nongnu.org; Thu, 01 Jun 2006 14:42:29 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FlsE7-0003UH-Hq
+	for axiom-math@nongnu.org; Thu, 01 Jun 2006 14:48:59 -0400
+Received: from localhost (localhost.drenet.dnd.ca [127.0.0.1])
+	by fw.drenet.dnd.ca (_) with ESMTP id A56176D087;
+	Thu,  1 Jun 2006 14:42:27 -0400 (EDT)
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca (unknown [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id 7A7186D077;
+	Thu,  1 Jun 2006 14:42:24 -0400 (EDT)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Date: Thu, 1 Jun 2006 14:42:23 -0400
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE361A5F0@corporateex02.Corporate.drdc-rddc.gc.ca>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: computers clifford algebra and differential forms
+Thread-Index: AcaD0Lgu7ek9osxgRpy0ZEogzvHZ6QBw09pQAAOM2uAAAYf8IA==
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: <axiom-math@nongnu.org>
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: 
+Subject: [Axiom-math] FW: computers clifford algebra and differential forms
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 01 Jun 2006 18:42:30 -0000
+
+The following paper describes a system for manipulating and
+visualizing differential forms and Clifford multivectors
+(geometric algebra) in a symbolic manner on a computer system:
+
+http://citeseer.ist.psu.edu/chard00multivector.html
+
+http://sal-cnc.me.wisc.edu/publications/multivector/multivector-color.pd
+f
+
+A multivector data structure for differential forms and equations
+
+Jeffrey A. Chard,  Vadim Shapiro
+May 31, 2000
+
+Abstract
+
+We use tools from algebraic topology to show that a class of
+structural differential equations may be represented combinatorially
+and thus by a computer data structure. In particular, every
+differential k-form may be represented by a formal k-cochain over
+a cellular structure that we call a starplex, and exterior
+differentiation is equivalent to the coboundary operation on the
+corresponding k-cochain. Furthermore, there is a one to one
+correspondence between this model and the classical finite
+cellular model supported by the Generalized Stokes' Theorem, and
+translation between the two models can be completely automated.
+
+Our results point the way to a common combinatorial and data
+structure well-suited for a physical modeling computer algebra
+that unifies finite and infinitesimal, symbolic and numeric,
+geometric and physical descriptions of distributed phenomena.
+We illustrate the advantages of our approach by a prototype
+interactive physics editor that uses the computer algebra to
+automatically translate intuitive geometrical/physical
+descriptions of balance conditions created by the user into the
+corresponding symbolic differential and integral equations.
+
+----------
+
+Axiom already implements both Clifford algebra and differential
+forms (see DeRahmComplex) but not in this more modern integrated
+approach. I like the way this proposal presents both Clifford
+algebras (multivectors) and differential forms in one package
+and with one graphical user interface.
+
+I wonder if there is any interest here in a project to implement
+something like this in Axiom?
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Jun 01 14:48:13 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FlsDN-00075I-2a
+	for mharc-axiom-math@gnu.org; Thu, 01 Jun 2006 14:48:13 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FlsDL-00072k-DH
+	for axiom-math@nongnu.org; Thu, 01 Jun 2006 14:48:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FlsDJ-00072X-4r
+	for axiom-math@nongnu.org; Thu, 01 Jun 2006 14:48:10 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FlsDI-00072U-TO
+	for axiom-math@nongnu.org; Thu, 01 Jun 2006 14:48:08 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FlsJb-000492-At
+	for axiom-math@nongnu.org; Thu, 01 Jun 2006 14:54:39 -0400
+Received: from localhost (localhost.drenet.dnd.ca [127.0.0.1])
+	by fw.drenet.dnd.ca (_) with ESMTP id F2B506D0BC;
+	Thu,  1 Jun 2006 14:48:07 -0400 (EDT)
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca (unknown [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id 748476D0AD;
+	Thu,  1 Jun 2006 14:48:04 -0400 (EDT)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Date: Thu, 1 Jun 2006 14:48:03 -0400
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE361A5F3@corporateex02.Corporate.drdc-rddc.gc.ca>
+In-Reply-To: <CAE9B164E720CE4D8727792DF8F28AE361A5F0@corporateex02.Corporate.drdc-rddc.gc.ca>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: computers clifford algebra and differential forms
+Thread-Index: AcaD0Lgu7ek9osxgRpy0ZEogzvHZ6QBw09pQAAOM2uAAAYf8IAAA1KqA
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: <axiom-math@nongnu.org>
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: 
+Subject: [Axiom-math] RE: computers clifford algebra and differential forms
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 01 Jun 2006 18:48:11 -0000
+
+On Thursday, June 01, 2006 2:42 PM I wrote:
+>=20
+> The following paper describes a system for manipulating and
+> visualizing differential forms and Clifford multivectors
+> (geometric algebra) in a symbolic manner on a computer system:
+>=20
+
+Here's a better link:
+
+http://sal-cnc.me.wisc.edu/publications/multivector.html
+
+>=20
+> A multivector data structure for differential forms and equations
+>=20
+> Jeffrey A. Chard,  Vadim Shapiro
+> ...
+
+Regards,
+Bill Page.
+
+
+

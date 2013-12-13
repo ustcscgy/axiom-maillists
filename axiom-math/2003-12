@@ -1,0 +1,1674 @@
+From MAILER-DAEMON Mon Dec 08 13:01:01 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1ATPg2-0001WR-VW
+	for mharc-axiom-math@gnu.org; Mon, 08 Dec 2003 13:00:10 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1ATPfx-0001TJ-2U
+	for axiom-math@nongnu.org; Mon, 08 Dec 2003 13:00:05 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1ATPfP-0001GS-HX
+	for axiom-math@nongnu.org; Mon, 08 Dec 2003 13:00:03 -0500
+Received: from [209.226.175.93] (helo=tomts36-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1ATPfP-0001G4-2o
+	for axiom-math@nongnu.org; Mon, 08 Dec 2003 12:59:31 -0500
+Received: from Asus ([216.208.193.14]) by tomts36-srv.bellnexxia.net
+	(InterMail vM.5.01.06.05 201-253-122-130-105-20030824) with ESMTP
+	id <20031208165803.YLKD22549.tomts36-srv.bellnexxia.net@Asus>
+	for <axiom-math@nongnu.org>; Mon, 8 Dec 2003 11:58:03 -0500
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <axiom-math@nongnu.org>
+Date: Mon, 8 Dec 2003 11:57:17 -0500
+Message-ID: <000201c3bdac$5757c3e0$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+Subject: [Axiom-math] Bourbaki syndrome,
+	Axiom and OpenMath (was: [om] DefMP elements)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 08 Dec 2003 18:00:08 -0000
+
+Dear Axiom-math;
+
+We haven't had much discussion in axiom-math lately.
+This posting to the OpenMath caught my eye - especially
+the reference to Maple. Now I think at least some of
+the rational that is now going into the design of
+OpenMath was actually addressed in the design of Axiom
+many years ago.
+
+I think it would be great to resurrect the work that
+was done by the Numerical Algorithms group on the
+incorporation of OpenMath into Axiom. Are their any
+people subscribed to this list who have a similar
+interest?
+
+Regards,
+Bill Page.
+
+-----Original Message-----
+From: owner-om@openmath.org [mailto:owner-om@openmath.org]
+On Behalf Of Jacques Carette
+Sent: Monday, December 08, 2003 10:22 AM
+To: om@openmath.org
+Cc: 'Professor James Davenport'
+Subject: RE: [om] DefMP elements
+
+I find that Andreas Strotmann's email eloquently voices many
+concerns that are similar to mine.  Thanks!
+
+To elaborate on a few points:
+
+> Certainly.  I think we are now basically in agreement that
+> classifying definitions, given an intuitive naming, is a good
+> thing. However, we are not at all in agreement about whether
+> only allowing unique definitions in any given class of
+> definitions is a good thing.
+
+This is my position now too.
+
+> Followup on this one -- here's an example where your definition
+> would be wrong(!!!): It's in systems of ODEs, if I recall
+> correctly (it's been a long time, I admit), that you can find
+> the concept of (say) the sine of a square matrix, which makes
+> sense for two reasons: they're involved in solutions to ODEs
+> of the same kind that is solved by the real function sin, and
+> they can be calculated using the power series expansion of (say)
+> sine.
+> 
+> csc of a square matrix can also be defined (within limits) by
+> a suitable power series expansion, with suitable properties to
+> match.  However, this cannot be the same as the definition of
+> csc as a quotient as in your example, because csc of a square
+> matrix can exist for matrices that do not have an inverse (and
+> using the transpose instead of an inverse gives the wrong results,
+> I suspect).  Examples to try include ((1/2,1/2),(1/2,1/2)) and
+> ((0,1),(0,1)) (idem-potent matrices making it easier to calculate
+> the series).
+
+Thank you so much for this example - I think that will really
+help the discussion.
+
+The above points to a real (thorny) issue: many simple concepts
+(like sin) have many equivalent definitions, in the usual context.
+However these definitions do not uniformly generalize, and in
+fact give different concepts when generalized.  They all 'collapse'
+to something equivalent when specialized.  So it does not make
+sense to pick one definition over another, as the context matters
+too much.
+
+I call this the 'Bourbaki syndrome': trying to come up with
+universal, most-general definitions for any concept in
+mathematics. I think that the history of mathematics contains
+enough precedent to clearly how that this is futile.  It would
+be much wiser to embrace this fact right into the design of OM
+instead of trying to skirt around it.
+
+> I stand by my claim:  it is not reasonable to expect any single
+> definition of a mathematical concept to be universally applicable;
+> much less is it reasonable to expect any single definition to be
+> universally useful, be it ever so simple or efficiently computable.
+> A definition, I believe, cannot be anything except *a* definition:
+> one of many possible or useful ones that a concept can be reduced
+> to, given the right context.
+
+I completely agree with this claim.  My experience within Maple
+directly supports it too - many a difficulty is created because
+one piece of code uses one definition of a concept which later
+turns out to incorrectly generalize to a different context.
+
+On the specific recommendations:
+a) rename the different classifications of definitions so that
+they all contain the word "definition"
+b) the name "definition" by itself should name the most general
+class of definitions, not the most restrictive
+c) do not *require* (but *do* recommend!) that definitions be
+unique (or at least that different definitions not be trivially
+equivalent) -- within any class of definitions
+===========
+I definitely agree with those first 3.
+
+As to the fourth:
+d) use signatures in definitions: this might prevent a definition
+from being misapplied in an application that doesn't know any
+better. This may well be done in the simple way of using universal
+quantifiers and set memberships inside the defining FMPs, so that
+this may simply be added as a recommendation to CD writers.
+============
+Could you be more precise?  I believe I agree, but perhaps an
+example would help a lot.
+
+My understanding is you mean for the definition to explicitly
+mention the concepts it needs defined for it to be meaningful.
+So a complex definition of exp would need the notions of complex
+numbers, series, convergence over the complex, to exist.  This
+would be a nasty looking signature if expanded, but if it is
+expressed all in terms of CD references, it would probably be
+quite compact.
+
+On the other hand, aren't you saying that perhaps OMDoc should
+be that 'main' method of communication, and OpenMath serving OMDoc
+in the same way that XML serves OpenMath?
+
+Jacques
+
+--
+om@openmath.org  -  general discussion on OpenMath
+Post public announcements to om-announce@openmath.org
+Automatic list maintenance software at majordomo@openmath.org Mail
+om-owner@openmath.org for assistance with any problems
+
+
+
+
+From MAILER-DAEMON Tue Dec 09 16:17:48 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1ATomH-0008Hn-1C
+	for mharc-axiom-math@gnu.org; Tue, 09 Dec 2003 15:48:17 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1ATomA-0008GU-33
+	for axiom-math@nongnu.org; Tue, 09 Dec 2003 15:48:10 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1ATolc-00085P-62
+	for axiom-math@nongnu.org; Tue, 09 Dec 2003 15:48:07 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1AToZd-0004qZ-2M; Tue, 09 Dec 2003 15:35:13 -0500
+Received: from localhost.localdomain (15.181.252.64.snet.net [64.252.181.15])
+	by pimout2-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hB9JXknW087656; Tue, 9 Dec 2003 14:33:46 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hB9JWCh17311;
+	Tue, 9 Dec 2003 14:32:12 -0500
+Date: Tue, 9 Dec 2003 14:32:12 -0500
+Message-Id: <200312091932.hB9JWCh17311@localhost.localdomain>
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca
+In-reply-to: <000201c3bdac$5757c3e0$6501a8c0@Asus> (bill.page1@sympatico.ca)
+Subject: Re: [Axiom-math] Bourbaki syndrome,
+	Axiom and OpenMath (was: [om] DefMP elements)
+References: <000201c3bdac$5757c3e0$6501a8c0@Asus>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 09 Dec 2003 20:48:11 -0000
+
+Bill,
+
+The openmath library is in the zips subdirectory (OMCv1.4a.tgz) which
+I believe was the version that was used with Axiom.
+
+I spoke to Carlo Traverso who was involved with openmath (I've been
+away on a business trip to Italy to talk to Carlo). We'll clearly 
+have further disucssions on this subject.
+
+Tim
+
+
+
+From MAILER-DAEMON Thu Dec 11 14:17:44 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AUWJj-0004fd-3X
+	for mharc-axiom-math@gnu.org; Thu, 11 Dec 2003 14:17:43 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AUWJd-0004cL-QP
+	for axiom-math@nongnu.org; Thu, 11 Dec 2003 14:17:37 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AUWJ6-0004Km-0A
+	for axiom-math@nongnu.org; Thu, 11 Dec 2003 14:17:35 -0500
+Received: from [134.74.86.20] (helo=groups.sci.ccny.cuny.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1AUWHP-0003fl-Ge; Thu, 11 Dec 2003 14:15:19 -0500
+Received: from rio.sci.ccny.cuny.edu (rio.sci.ccny.cuny.edu [134.74.120.4])
+	by groups.sci.ccny.cuny.edu (8.11.0/8.11.2) with ESMTP id hBBIE2v26614; 
+	Thu, 11 Dec 2003 13:14:02 -0500
+Received: (from daly@localhost)
+	by rio.sci.ccny.cuny.edu (8.11.0/8.11.0) id hBBHUgm17236;
+	Thu, 11 Dec 2003 12:30:42 -0500
+Date: Thu, 11 Dec 2003 12:30:42 -0500
+Message-Id: <200312111730.hBBHUgm17236@rio.sci.ccny.cuny.edu>
+From: Tim Daly  <daly@rio.sci.ccny.cuny.edu>
+To: nic@uklinux.net
+In-reply-to: <1071163567.1203.138.camel@e082.office.niss.ac.uk> (message from
+	nic on Thu, 11 Dec 2003 17:26:07 +0000)
+References: <200312111503.hBBF3Ur07954@rio.sci.ccny.cuny.edu>
+	<1071163567.1203.138.camel@e082.office.niss.ac.uk>
+Cc: axiom@tenkan.org, axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Re: phd thesis
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 11 Dec 2003 19:17:39 -0000
+
+Nicolas,
+
+We've discussed setting up a "research" branch of axiom so we can
+experiment with new ideas without breaking the build for other users.
+I expect there will be several "research" branches because I know of
+others who want to experiment with axiom. Indeed, axiom's basic
+strength is that it is a very good platform for research.
+
+re: fedora core
+
+The build will almost work fine on Fedora (I'm also a fedora developer
+and have been campaigning against the change that breaks axiom). In
+order to get around the problem you need to become root and type:
+
+echo 0 >/proc/sys/kernel/exec-shield
+
+Once that is done you can correctly build Axiom as a regular user.
+In theory you can download Axiom by incanting:
+
+cd (yourpath)
+cvs -d:pserver:anoncvs@subversions.gnu.org:/projects/axiom login
+cvs -d:pserver:anoncvs@subversions.gnu.org:/projects/axiom co axiom
+cd axiom
+export AXIOM=(yourpath)/axiom/mnt/linux
+make
+
+When prompted for a password just hit enter.
+
+However, the gnu website is down due to an audit.
+
+
+I've uploaded a very late (possibly not the latest) version of
+Axiom to my own website. You can get it and build it by:
+
+cd (yourpath)
+visit axiom.tenken.org
+download the "20031211 sources"
+tar -zxf axiom.20031211.tgz
+cd axiom
+export AXIOM=(yourpath)/axiom/mnt/linux
+make
+
+re: solaris, etc
+
+>I also have access to Red Hat Enterprise Linux 2.1 and 3 boxen as well
+>as Solaris 8 if there's any porting help needed. I can also build
+>RPMs...
+
+The other boxen are interesting, particularly the solaris 8 version.
+I've tried to download solaris86 to do a build but that whole process
+failed and I'll have to try again. If you want to try a port you 
+should only need to modify the top level makefile but you'll almost
+certainly need my help with that.
+
+re: boot code, thesis, etc
+
+> Yes I hope so!
+>It's not very well written as I was more of a Mathematician than a coder
+>at the time and I couldn't get the final version to integrate into the
+>interpreter (although a previous, lost version had integrated
+>perfectly).
+
+not to worry. the code that lives in axiom was never expected to be
+released to public view. in fact a lot of the interpreter code is mine
+and it is both bad and undocumented. 
+
+>Yes. I'm  pro-open source (I prefer "Free" software, but open source is
+>a good compromise).
+
+umm, yeah, we've had endless discussions about this and all discussion
+is now "banned" from the axiom-developer mailing list. I've created an
+axiom-legal mailing list just for that purpose. I have email from 
+Stallman "blessing" the work as "ok". I had no choice about the
+modified BSD license so you'll have to flame Mike Dewar about it.
+
+(On the savannah.nongnu.org/projects/axiom website you can sign up
+to join the various mailing lists)
+
+>> 3) would you be willing to allow a modified version of your thesis to
+>>    be used in a "literate program" style to document that code?
+
+>Yes. Of course!
+
+I (hope, presume) your thesis is in latex. I'd hate to have to retype it.
+Literate programs are basically latex code with 2 additional "tags".
+You write a document:
+
+\documentclass{...
+\begin{document}
+\chapter{...
+.....
+
+Then you use a chunk definition tag which begins with '<<', contains
+any string, and ends with '>>='. Text starting after this tag is
+quoted, collected up, and put in a hash table. The chunk ends when
+it finds an '@' in column 1. Thus:
+
+\section
+lots of good comments
+<<any name>>=
+  your code goes here
+@
+\section
+
+Later you can reference the chunk by referencing the name thus:
+
+<<any name>>
+
+There is a "default" chunk name which will get expanded automatically
+called '<<*>>=' thus:
+
+<<*>>=
+<<first chunk>>
+<<next chunk>>
+<<any name>>
+@
+
+\end{document}
+
+So, suppose you save the pile above as a "literate program".
+I refer to them as "pamphlet" files. Lets say you save it as
+"foo.pamphlet". You now need 2 tools, one to extract the 
+.tex file (noweave) and one to extract the .lisp file (notangle) thus:
+
+noweave  foo.pamphlet >foo.tex
+notangle foo.pamphlet >foo.lisp (or .c or .boot, etc)
+
+Thus the pamphlet file contains both the code and the documentation.
+The idea is to take the boot code and your thesis, mix the two,
+write the intermediate explanations that go from the theory to
+the code chunks, and create a pamphlet file (or many pamphlet files)
+that document what the code does and why.
+
+You'll be unique as everyone eventually asks how axiom does
+coercion and there has never been a good answer to that question
+before.
+
+I'm willing to do all of the dog work on making the pamphlet files
+if you'll send me the code and the tex files. Once they are mixed
+I can build it into the build process and we can work together on
+improving the form and content of the pamphlets.
+
+Tim
+
+
+
+
+From MAILER-DAEMON Sun Dec 28 16:10:57 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AaiBd-0001e8-86
+	for mharc-axiom-math@gnu.org; Sun, 28 Dec 2003 16:10:57 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AaiBa-0001aD-2a
+	for axiom-math@nongnu.org; Sun, 28 Dec 2003 16:10:54 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AaiB3-000180-1t
+	for axiom-math@nongnu.org; Sun, 28 Dec 2003 16:10:52 -0500
+Received: from [207.115.63.103] (helo=pimout4-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AaiB2-00011B-OU
+	for axiom-math@nongnu.org; Sun, 28 Dec 2003 16:10:20 -0500
+Received: from localhost.localdomain (105.178.252.64.snet.net [64.252.178.105])
+	by pimout4-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hBSK8aL8170064; Sun, 28 Dec 2003 15:08:40 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hBSK66U21475;
+	Sun, 28 Dec 2003 15:06:06 -0500
+Date: Sun, 28 Dec 2003 15:06:06 -0500
+Message-Id: <200312282006.hBSK66U21475@localhost.localdomain>
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca
+Cc: gilbert@sci.ccny.cuny.edu, axiom-developer@nongnu.org,
+	axiom-math@nongnu.org
+Subject: [Axiom-math] documentation and the crystal 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 28 Dec 2003 21:10:54 -0000
+
+Bill,
+
+per our long-lost prior discussion i've been documenting axiom.
+the idea of documenting a system like axiom has several facets
+as i've come to discover. what it means to document axiom has
+a lot to do with why you are looking at the documentation. so
+in some way the documentation has to be structured into something
+like a large crystal egg with many facets. somehow we've got to
+design a documentation structure that will allow the same basic
+information to be used in dozens of different ways depending on
+why you're looking at it. consider that axiom needs documenting:
+
+of the internal structure of the system
+  the data structures
+  the logical layers (c, lisp, boot, spad)
+  the functional separation (compiler, interpreter, browser)
+  the system-dependent (sockets) vs independent (lisp)
+of the external structure
+  the interpreter
+  the compiler
+  the graphics
+  the hyperdoc
+  the openmath
+  the documentation
+of the algebra structure
+  the packages
+  the domains
+  the categories
+of the mathematical structure
+  the subjects covered
+  the theory underlying the subjects
+  categories
+of the computational mathematics structure
+  intermediate expression swell
+  simplification
+  math types vs computational types
+of the user structure (the book)
+  the commands for naviation
+  the commands for documentation
+  the available math functions
+of the programming language
+  the compiler syntax
+  the compiler semantics
+  sequencing, conditionals, looping, file i/o
+  domain construction
+  categorical tests/constraints
+of the testing structure
+  the mathematics underlying the tests (CATS, computer algebra test suite)
+  the actual tests
+  boundary conditions
+of the literature
+  published algorithms
+  published theory
+  thesis work
+of the program proofs
+  underlying theorems and lemmas
+  program proof books
+  
+i'm currently mucking around in the algebra structure. in particular
+i've catted all of the algebra together into one file and am "reducing"
+it to it's primitive structure. this alone is a daunting task as it
+starts out with about a quarter million lines which i've slowly reduced
+to about 100k lines so far. i'm doing a topological sort of the algebra
+to uncover the actual type hierarchy with the idea that it can be
+reduced to a lattice. as you recall this problem was done once before
+in order to get axiom to compile from scratch.
+
+getting down to this level of detail for documenting makes it clear
+that current systems of documenting are hopelessly weak. somehow we
+need to take advantage of the computer to leverage and reuse documentation
+in creative ways. if we don't we'll just drown in endless documents. ibm
+was famous for delivering shelves worth of documentation which was never
+used. barnes and noble has whole bookcases of documents on linux. that
+way lies madness.
+
+in fact, documentation is probably the wrong idea. we need somehow to
+be able to automatically generate information from some core that
+represents the axiom system itself. 
+
+so i'm thinking about a "crystal browser", that is, a browser where you
+can gaze into a crystal that surrounds axiom. each facet represents a
+generated view of the whole system. trivially we could have a facet
+that shows algebra source code. we could also have a facet that shows
+the type hierarchy, etc. so it is clear we can create automatic facets
+with just the existing code and programs that do structure analysis.
+
+more generally we could construct facets that walk into the pamphlets.
+one facet could walk the biblio references, another could extract the
+tex, a third could walk index terms to find all references to a single
+term (e.g. ideal). particularly interesting would be facets that walk
+the semantic structure of the system so you could pick out particular
+kinds of ideals or proofs using ideals, etc. certain facets could be
+used to impose order by certain metrics (like rainbows in real 
+crystals). such rainbow facets could show the type lattice ordered
+by layer (ala the structure in the src/algebra/makefile). yet more 
+generally is that "literate programs" need to have sufficient structure 
+to support the crystal.
+
+in particular, we need to look at some technology that will do some
+automated work for us. one that leaps to mind is a semantic network.
+new code would be automatically classified into the system based on
+several factors (some hand supplied, some derived from the code).
+
+the idea that it is "just documentation" and "just a browser" is 
+a weak notion but a good start. in general one would like to use
+facets to CONSTRUCT new algebra, new booklets, new proofs, etc.
+so both "documentation" and "browser" are the wrong words.
+
+in 30 year computational mathematicians will need to be able to
+deal with the complexity of all of the facets of documentation
+i mentioned above. we need to construct tools which help organize
+the system in ways that a mathematician can effectively use to do
+research work.
+
+the general "visual image" is of a large crystal which you can rotate.
+every facet gives a different view of the whole of the axiom system.
+thus, a "crystal" surrounding axiom.
+
+hope your christmas went well.
+
+t
+
+
+
+From MAILER-DAEMON Sun Dec 28 16:28:32 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AaiSd-0002HC-Sg
+	for mharc-axiom-math@gnu.org; Sun, 28 Dec 2003 16:28:31 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AaiSb-0002Eo-6J
+	for axiom-math@nongnu.org; Sun, 28 Dec 2003 16:28:29 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AaiS4-000232-5S
+	for axiom-math@nongnu.org; Sun, 28 Dec 2003 16:28:28 -0500
+Received: from [207.115.63.103] (helo=pimout4-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AaiS3-00022n-RZ
+	for axiom-math@nongnu.org; Sun, 28 Dec 2003 16:27:55 -0500
+Received: from localhost.localdomain (105.178.252.64.snet.net [64.252.178.105])
+	by pimout4-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hBSKQRL8115394; Sun, 28 Dec 2003 15:26:27 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hBSKNwx21487;
+	Sun, 28 Dec 2003 15:23:58 -0500
+Date: Sun, 28 Dec 2003 15:23:58 -0500
+Message-Id: <200312282023.hBSKNwx21487@localhost.localdomain>
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca
+Cc: gilbert@sci.ccny.cuny.edu, axiom-developer@nongnu.org,
+	axiom-math@nongnu.org
+Subject: [Axiom-math] documentation and the crystal 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 28 Dec 2003 21:28:30 -0000
+
+Bill,
+
+more top level speculation about the crystal leads to an interesting
+problem. right now we have the image of books and standard page
+navigation allows us to put "next", "previous", "index", etc on
+each page as navigation buttons.
+
+at the other extreme is the web where "forward" and "back" are all
+of the possible navigation choices.
+
+with a crystal one assumes that each facet is somehow "near" to the
+adjacent facets. since this is a virtual object the facets don't need
+to be all equally shaped (e.g. 6 sided). some facets could have many
+possible neighbors (where information views are rich) and some could
+have relatively few neighbors. the notion of "next" facet could be
+specified by an angle measure of some sort. "forward" and "back"
+become paths on the crystal surface. hyperlinking can move from any
+facet to any other. in particular, viewing a "corner" could show
+several facets at once (e.g. code, it's location in the lattice,
+and the documentation for that code) which are all joined at a
+virtual corner.
+
+more generally one could embed one crystal within another. so the
+inner crystal facet shows the type hierarchy and the outer crystal
+facet looks at code for a particular item in the hierarchy. this 
+is the 3-D notion of 1-D pipes, that is, information from one source
+is filtered thru a pipe and shown thru another source. (e.g. grep
+the algebra for "Category" and filter out only the lines that define
+the domain).
+
+the crystal is a virtual object which is really nothing more than
+a way to organize hundreds of functions to manipulate code. the
+crystal could be specified as a file containing its structure
+definition where each facet is just a series of pipe-connected 
+functions and a list of adjacent facets with navigation tags.
+it could be built on top of a standard browser.
+
+if done right the crystal should not be axiom specific, only the
+functions need to know the details of their data sources.
+
+t
+
+
+
+From MAILER-DAEMON Sun Dec 28 23:10:08 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AaojI-0006RE-Cg
+	for mharc-axiom-math@gnu.org; Sun, 28 Dec 2003 23:10:08 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AaojG-0006R5-Kr
+	for axiom-math@nongnu.org; Sun, 28 Dec 2003 23:10:06 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1Aaoij-0006L9-Sw
+	for axiom-math@nongnu.org; Sun, 28 Dec 2003 23:10:05 -0500
+Received: from [209.226.175.93] (helo=tomts36-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1AaoiC-00064c-Op; Sun, 28 Dec 2003 23:09:00 -0500
+Received: from Asus ([216.209.138.32]) by tomts36-srv.bellnexxia.net
+	(InterMail vM.5.01.06.05 201-253-122-130-105-20030824) with ESMTP
+	id <20031229030726.QLSZ11804.tomts36-srv.bellnexxia.net@Asus>;
+	Sun, 28 Dec 2003 22:07:26 -0500
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <daly@idsi.net>
+Date: Sun, 28 Dec 2003 22:06:41 -0500
+Message-ID: <000001c3cdb8$cb13b9d0$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+Importance: Normal
+In-Reply-To: <200312282006.hBSK66U21475@localhost.localdomain>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+Cc: gilbert@sci.ccny.cuny.edu, axiom-developer@nongnu.org,
+	axiom-math@nongnu.org
+Subject: [Axiom-math] RE: [Axiom-developer] documentation and the crystal 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 29 Dec 2003 04:10:07 -0000
+
+Tim,
+
+Well, I have often used the time between christmas and
+new years for thinking what I hope are radical and
+forward looking thoughts. It sounds to me like you share
+this tradition!
+
+We had a pleasant christmas but work stress and "holiday
+stress" combined to give Faye a serious case of pneumonia.
+She has been confined to bed for the last three days (but
+improving) so that has significantly dampened our enjoyment
+of the extraordinarily mild weather ... I trust that in
+your case things went a little better. :)
+
+I have also been thinking about Axiom documentation. I
+definitely agree that the book (or even the "IBM library")
+metaphor is not adequate for a system as complex as Axiom.
+I realize that you are probably writing in an online
+"brainstorming" style, but have to admit that your "crystal"
+metaphor also tends to leave me feeling a little cold.
+However, when you said "semantic network" this connected!
+
+There is a large and growing literature on the "semantic
+web".
+
+ http://www.w3.org/2001/sw/
+
+"Definition: The Semantic Web is the representation of
+data on the World Wide Web. It is a collaborative effort
+led by W3C with participation from a large number of
+researchers and industrial partners. It is based on the
+Resource Description Framework (RDF), which integrates a
+variety of applications using XML for syntax and URIs for
+naming."
+
+In fact, NAG (Mike Dewar) has been one of the leading
+organizations promoting the concept of mathematics in
+the context of the semantic web.
+
+  =
+http://monet.nag.co.uk/cocoon/openmath/meetings/eindhoven2003/index.html
+
+See especially Mike's presentation on Monet
+=20
+http://monet.nag.co.uk/cocoon/openmath/meetings/eindhoven2003/proceedings=
+/de
+war-monet.htm
+
+----------
+
+So rather than "crystal", I am inclined to think of
+the Axiom documentation (and programs) as a "web". In
+fact, the Axiom web could fundamentally reside on a
+web application server such as
+
+  http://www.zope.org
+
+Zope provides a high level object-oriented environment
+using tools that are not so different than Axiom itself
+(Python).
+
+  http://www.zope.org/WhatIsZope
+
+Using these tools together with some of the standards
+discussed by Mike Dewar, I could imagine configuring Axiom
+(and in the longer term, the network of Axiom developers)
+into a dynamic distributed active environment for
+mathematics ... [Ok, that's as far as I go with the hype.]
+
+But seriously, as strange as it might sound at first,
+what more suits the multidimensional network structure
+of Axiom itself better than the "web". And the further we
+look into your "thirty year" time horizon, the more sense
+this makes to me.
+
+Cheers,
+Bill Page.
+
+
+> -----Original Message-----
+> From:=20
+> axiom-developer-bounces+bill.page1=3Dsympatico.ca@nongnu.org=20
+> [mailto:axiom-developer-bounces+bill.page1=3Dsympatico.ca@nongnu
+> .org] On Behalf Of root
+> Sent: Sunday, December 28, 2003 3:06 PM
+> To: bill.page1@sympatico.ca
+> Cc: gilbert@sci.ccny.cuny.edu; axiom-developer@nongnu.org;=20
+> axiom-math@nongnu.org; daly@idsi.net
+> Subject: [Axiom-developer] documentation and the crystal=20
+>=20
+>=20
+> Bill,
+>=20
+> per our long-lost prior discussion i've been documenting=20
+> axiom. the idea of documenting a system like axiom has=20
+> several facets as i've come to discover. what it means to=20
+> document axiom has a lot to do with why you are looking at=20
+> the documentation. so in some way the documentation has to be=20
+> structured into something like a large crystal egg with many=20
+> facets. somehow we've got to design a documentation structure=20
+> that will allow the same basic information to be used in=20
+> dozens of different ways depending on why you're looking at=20
+> it. consider that axiom needs documenting:
+>=20
+> of the internal structure of the system
+>   the data structures
+>   the logical layers (c, lisp, boot, spad)
+>   the functional separation (compiler, interpreter, browser)
+>   the system-dependent (sockets) vs independent (lisp)
+> of the external structure
+>   the interpreter
+>   the compiler
+>   the graphics
+>   the hyperdoc
+>   the openmath
+>   the documentation
+> of the algebra structure
+>   the packages
+>   the domains
+>   the categories
+> of the mathematical structure
+>   the subjects covered
+>   the theory underlying the subjects
+>   categories
+> of the computational mathematics structure
+>   intermediate expression swell
+>   simplification
+>   math types vs computational types
+> of the user structure (the book)
+>   the commands for naviation
+>   the commands for documentation
+>   the available math functions
+> of the programming language
+>   the compiler syntax
+>   the compiler semantics
+>   sequencing, conditionals, looping, file i/o
+>   domain construction
+>   categorical tests/constraints
+> of the testing structure
+>   the mathematics underlying the tests (CATS, computer=20
+> algebra test suite)
+>   the actual tests
+>   boundary conditions
+> of the literature
+>   published algorithms
+>   published theory
+>   thesis work
+> of the program proofs
+>   underlying theorems and lemmas
+>   program proof books
+>  =20
+> i'm currently mucking around in the algebra structure. in=20
+> particular i've catted all of the algebra together into one=20
+> file and am "reducing" it to it's primitive structure. this=20
+> alone is a daunting task as it starts out with about a=20
+> quarter million lines which i've slowly reduced to about 100k=20
+> lines so far. i'm doing a topological sort of the algebra to=20
+> uncover the actual type hierarchy with the idea that it can=20
+> be reduced to a lattice. as you recall this problem was done=20
+> once before in order to get axiom to compile from scratch.
+>=20
+> getting down to this level of detail for documenting makes it=20
+> clear that current systems of documenting are hopelessly=20
+> weak. somehow we need to take advantage of the computer to=20
+> leverage and reuse documentation in creative ways. if we=20
+> don't we'll just drown in endless documents. ibm was famous=20
+> for delivering shelves worth of documentation which was never=20
+> used. barnes and noble has whole bookcases of documents on=20
+> linux. that way lies madness.
+>=20
+> in fact, documentation is probably the wrong idea. we need=20
+> somehow to be able to automatically generate information from=20
+> some core that represents the axiom system itself.=20
+>=20
+> so i'm thinking about a "crystal browser", that is, a browser=20
+> where you can gaze into a crystal that surrounds axiom. each=20
+> facet represents a generated view of the whole system.=20
+> trivially we could have a facet that shows algebra source=20
+> code. we could also have a facet that shows the type=20
+> hierarchy, etc. so it is clear we can create automatic facets=20
+> with just the existing code and programs that do structure analysis.
+>=20
+> more generally we could construct facets that walk into the=20
+> pamphlets. one facet could walk the biblio references,=20
+> another could extract the tex, a third could walk index terms=20
+> to find all references to a single term (e.g. ideal).=20
+> particularly interesting would be facets that walk the=20
+> semantic structure of the system so you could pick out=20
+> particular kinds of ideals or proofs using ideals, etc.=20
+> certain facets could be used to impose order by certain=20
+> metrics (like rainbows in real=20
+> crystals). such rainbow facets could show the type lattice=20
+> ordered by layer (ala the structure in the=20
+> src/algebra/makefile). yet more=20
+> generally is that "literate programs" need to have sufficient=20
+> structure=20
+> to support the crystal.
+>=20
+> in particular, we need to look at some technology that will=20
+> do some automated work for us. one that leaps to mind is a=20
+> semantic network. new code would be automatically classified=20
+> into the system based on several factors (some hand supplied,=20
+> some derived from the code).
+>=20
+> the idea that it is "just documentation" and "just a browser" is=20
+> a weak notion but a good start. in general one would like to=20
+> use facets to CONSTRUCT new algebra, new booklets, new=20
+> proofs, etc. so both "documentation" and "browser" are the=20
+> wrong words.
+>=20
+> in 30 year computational mathematicians will need to be able=20
+> to deal with the complexity of all of the facets of=20
+> documentation i mentioned above. we need to construct tools=20
+> which help organize the system in ways that a mathematician=20
+> can effectively use to do research work.
+>=20
+> the general "visual image" is of a large crystal which you=20
+> can rotate. every facet gives a different view of the whole=20
+> of the axiom system. thus, a "crystal" surrounding axiom.
+>=20
+> hope your christmas went well.
+>=20
+> t
+>=20
+>=20
+> _______________________________________________
+> Axiom-developer mailing list
+> Axiom-developer@nongnu.org=20
+> http://mail.nongnu.org/mailman/listinfo/axiom-> developer
+>=20
+
+
+
+
+From MAILER-DAEMON Mon Dec 29 10:17:22 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1Aaz8z-0001Rg-DX
+	for mharc-axiom-math@gnu.org; Mon, 29 Dec 2003 10:17:21 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Aaz8p-0001Po-Ou
+	for axiom-math@nongnu.org; Mon, 29 Dec 2003 10:17:11 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1Aaz8J-0001Bu-D2
+	for axiom-math@nongnu.org; Mon, 29 Dec 2003 10:17:10 -0500
+Received: from [193.252.22.23] (helo=mwinf0804.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1Aaz7l-0000NN-JS; Mon, 29 Dec 2003 10:16:05 -0500
+Received: from oops (ARennes-303-1-24-158.w81-53.abo.wanadoo.fr [81.53.40.158])
+	by mwinf0804.wanadoo.fr (SMTP Server) with ESMTP
+	id 551B51800059; Mon, 29 Dec 2003 15:14:37 +0100 (CET)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 1AayAG-0000Sh-00; Mon, 29 Dec 2003 15:14:36 +0100
+To: daly@idsi.net
+Subject: Re: [Axiom-math] documentation and the crystal
+References: <200312282023.hBSKNwx21487@localhost.localdomain>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Mon, 29 Dec 2003 15:14:36 +0100
+In-Reply-To: <200312282023.hBSKNwx21487@localhost.localdomain> (daly@idsi.net's
+	message of "Sun, 28 Dec 2003 15:23:58 -0500")
+Message-ID: <87k74fpv77.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: gilbert@sci.ccny.cuny.edu, axiom-developer@nongnu.org,
+	axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 29 Dec 2003 15:17:12 -0000
+
+Hello Tim and Bill,
+
+You are right, holidays are always a good period to dig into new ideas.
+
+I think I have the same approach as both of you, Tim and Bill. Regarding
+the Semantic Web, Bill, I think it is a interesting technology that we
+might look at and use as a reference. But for me, it is just a
+technology. We need to refine first our own ideas on what we want to not
+lose our 30 years goal. That's said, you are right that smart people
+have invested time in this technology and it would be stupid of us to
+not resuse the wheel.
+
+Tim, regarding your crystal approach, I particularly like it, at least
+for the several "facets" to look through one complex system. However, I
+would prefer to use a graph-like approach, which in my opinion is
+probably more related to the Knowledge Network you have spoken about.
+
+Usually, people have a top-down approach: they modelize a system
+abstractly (using more or less formal notations as UML or SDL) and then
+refine them through the actual code. But, in the case of Axiom, we need
+the reverse. We need to start from concrete objects (files, lines of
+source code) and add semantics to climb levels of abstraction. Of
+course, you follow different ladders, in the sense that understanding
+the compiler or the algebra would need different information and is
+structured differently, thus the different crystal facets of Tim.
+
+
+More concretely, I would propose the following approach:
+
+ 1. start from parsers for the src/ directory. Parse directory structure
+    and each file, categorize them (boot, lisp, spad, ...) and construct
+    basic abstractions (list of lisp and boot functions; list of spad
+    categories, domains and operators; ...)
+
+ 2. from information extracted in step 1, construct one or several
+    representation (knowledge graph for example) with the found
+    semantics (name and body of a function for example), probably using
+    a standard technology as W3C semantic web
+
+ 3. the "Axiom explorer" (Tim, Bill or I) is interested in a specific
+    "crystal facet" (e.g. the compiler). He builds another tool
+    (e.g. call-graph analyzer for lisp code) which in turn is used to
+    construct a new knowledge graph, concretized in additional
+    information in the W3C semantic web.
+
+ 4. Within the abstraction level build in step 4 (or 2), the "Axiom
+    explorer" adds its own knowldege (e.g. this set of functions is used
+    to parse Spad code, this other set is used for type analysis, ...)
+    to the semantic web.
+
+ 5. using previous abstraction levels and probably building a new tool,
+    the "Axiom explorer" iterates, climbing abstraction levels, until he
+    reaches his own goal.
+
+Repeat steps 1 to 5 with enough people to cover Axiom from A (Algebra)
+to Z (zerodim). 
+
+Ok. I might be a bit optimistic and what I have said might appear more
+than abstract, but this is the current state of might thoughts. :) 
+
+Even if you do not like above ideas, I think following "principles" are
+needed for a documentation system for Axiom (principles already
+formulated by Tim is his first email):
+
+ o separation principle: in engineering, people separate a complex issue
+   in _independant_ sub-issues to be able to understand them and solve
+   them independently. We probably need to deconstruct Axiom in
+   independent (or a least loosely connected) sub-systems to be able to
+   understand them (i.e. the different crystal facets of Tim);
+
+ o "build on giant shoulders" principle: we need a way to reuse
+   knowledge from other "crystal facets". For example, I would use Tim
+   knowledge of the internals of Axiom to understand how the compiler
+   compiles a given portion of the algebra;
+
+ o automation principle: Axiom is too big to add information manually on
+   each function, each object, etc. We need tools to annotate a set of
+   objects given a selection criteria (e.g. all operators in this Spad
+   domain). 
+
+New year wish: I'll try to write and "show you the code" for above
+ideas. :) My own todo for this subproject of Axiom would be:
+
+ - learn more about W3C Semantic Web (thank you Bill for the pointer)
+
+ - find or write tools to manipulate Semantic Web (it might be Emacs
+   with a proper mode or a more elaborated graphical tool)
+
+ - apply above approach, starting from directory structure in src/
+   directory of Axiom.
+
+ - from this first experiment, think about what would need to be
+   "standardized", like common dictionnary or vocabulary, etc. Beyond
+   usual technological issues, I think this point is one fo the harder
+   point. How to build a set of knowledge that will be still useful in
+   30 years from now?
+
+
+
+I wish you a pleasant new year.
+
+Yours,
+d.
+
+By the way, does anybody knows about a library to *draw* and manipulate
+arbitary graphs (in Common Lisp, C++, ML, ...) in a user interface? I
+know about DOT or VCG but they dot not match my needs: I would like to
+draw a graph, know when the user click on a graph node or edge and react
+accordingly. Does anybody know where I could find such an already made
+tool? Any knowledge of a browser for the W3C semantic web?
+
+-- 
+David MENTRE <david.mentre@wanadoo.fr> -- http://www.nongnu.org/axiom/
+
+
+
+From MAILER-DAEMON Tue Dec 30 11:47:23 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AbN1f-0007GL-CN
+	for mharc-axiom-math@gnu.org; Tue, 30 Dec 2003 11:47:23 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AbN1d-0007G6-5r
+	for axiom-math@nongnu.org; Tue, 30 Dec 2003 11:47:21 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AbN17-0007CJ-9O
+	for axiom-math@nongnu.org; Tue, 30 Dec 2003 11:47:20 -0500
+Received: from [134.34.143.6] (helo=spock.physik.uni-konstanz.de)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1AbN16-0007Be-DX; Tue, 30 Dec 2003 11:46:48 -0500
+Received: from clifford.physik.uni-konstanz.de (clifford [134.34.143.32])
+	by spock.physik.uni-konstanz.de (8.8.5/8.8.5) with ESMTP id QAA24718;
+	Tue, 30 Dec 2003 16:06:16 +0100 (MET)
+Received: from clifford.physik.uni-konstanz.de (localhost [127.0.0.1])
+	by clifford.physik.uni-konstanz.de (8.12.3/8.12.3/SuSE Linux 0.6) with
+	ESMTP id hBUI7QGm032519; Tue, 30 Dec 2003 19:07:26 +0100
+Received: from localhost (fauser@localhost)
+	by clifford.physik.uni-konstanz.de (8.12.3/8.12.3/Submit) with ESMTP id
+	hBUI7FRm032516; Tue, 30 Dec 2003 19:07:15 +0100
+Date: Tue, 30 Dec 2003 19:07:15 +0100 (CET)
+From: Bertfried Fauser <fauser@spock.physik.uni-konstanz.de>
+To: root <daly@idsi.net>
+In-Reply-To: <200312282006.hBSK66U21475@localhost.localdomain>
+Message-ID: <Pine.LNX.4.44.0312301850490.32463-100000@clifford.physik.uni-konstanz.de>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Cc: gilbert@sci.ccny.cuny.edu, axiom-developer@nongnu.org,
+	axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-developer] documentation and the crystal 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: Bertfried.Fauser@uni-konstanz.de
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 30 Dec 2003 16:47:21 -0000
+
+Dear Christmas holiday workers!
+
+beside wishing all the best for the new year, I would like to ask a few
+more questions about axiom documentation.
+
+a) To me its not even clear how to structurize mathematics. One cxan
+build mathematics on sets, hence the Bourbaki approch, or even better (in
+my eyes, but equivalent in formal strength) on the *function first*
+principle. What to choose for axiom? (In fact the set approch is build-in)
+
+b) I do not see how you can automatically assign semantics to data
+strutures etc. I think, one has at least to have a sort of *semantic
+typing* during the documentation of axiom (code). Hence every piece of
+documentation should come with a semantic type (or multiple such types)
+which finally allow to put a direction into the crystal looking glass.
+
+c) Algorithms should be plain and readable and not only be available in
+code form (if even this way)
+
+d) To me it would be much more natural to look at the documentation like a
+big database and ask SQL like questions. EG:
+
+> select from AXIOM algorithm where domain has commutative;
+
+or such. And then get a sort of (semantic? web?) document which allows to
+go deeper into an algorithm, eg, thet should be lionks to al faces of the
+crystal which make sense to look at.
+
+e) The system will not be more smart than its designers / users. I do not
+see how an automated method will derive anything beyong mere syntactical
+sorting. To be frak I have no idea how to reach the above needs.
+
+f) As a probably managable project, it would be of utmost importance for
+me (and other mathematically interested, who are stupid programers) to
+have just the functionality described above for teh algebra lattice. I had
+such an email with David Mentre, where some of the needs were discussed.
+
+g) I do not think that *graph* is the best thing to have. One would need a
+sort of *matroid*, ie. a mathematical sound structure which keeps trak of
+all sorts of *dependencies* (assuming that independent objects/data are
+unrelated) Matroids allow you to keep trak of a minimal set of relations
+between objects etc. (You may think of a combinatorial geometry, where the
+points/lines/... may or may not be related.
+	It might be foolish just to have nods and edges, but one hast to
+have an n-dimesnional structure of nodes, edges, faces, volumes, ... where
+the semantic meaning could be attached to the *dimensionality* of the
+object. This would allow to trace up and down iinto the complexity of teh
+system if eg. code has teh smallest dimensionality (say 1 dim), algorithms
+a hiher (say 3-dim (to let space for future enhancements)) and
+documentation of algorithms or a proof it works etc even higher such
+dimenionality. A *browser* would offer to display or hide the complexity
+away from a user or show it to him.
+	Say a novice user will be confused to see all details but needs
+quite practical help and may be even examples (like in the book)
+
+Sorry for not beeing as structures as you were, but I had no time to think
+over Christmas ;-))
+
+cheers
+BF.
+
+% |   | PD Dr Bertfried Fauser    Fachbereich Physik    Fach M 678  |
+%  \ /  Universit"at Konstanz     78457 Konstanz        Germany     |
+% (mul) Phone : +49 7531 693491   FAX : +49 7531 88-4864 or 4266 (comul)
+%   |   E-mail: Bertfried.Fauser@uni-konstanz.de                   / \
+%   |   URL   : http://clifford.physik.uni-konstanz.de/~fauser    |   |
+
+
+
+
+From MAILER-DAEMON Wed Dec 31 03:02:51 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AbbJa-00008g-Pu
+	for mharc-axiom-math@gnu.org; Wed, 31 Dec 2003 03:02:50 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AbbJY-00006g-O1
+	for axiom-math@nongnu.org; Wed, 31 Dec 2003 03:02:48 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AbbJ2-0008IM-RT
+	for axiom-math@nongnu.org; Wed, 31 Dec 2003 03:02:47 -0500
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1AbbJ2-0008HS-CU; Wed, 31 Dec 2003 03:02:16 -0500
+Received: from localhost.localdomain (74.179.252.64.snet.net [64.252.179.74])
+	by pimout1-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hBV70ltw104436; Wed, 31 Dec 2003 02:00:47 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hBV7r5802078;
+	Wed, 31 Dec 2003 02:53:05 -0500
+Date: Wed, 31 Dec 2003 02:53:05 -0500
+Message-Id: <200312310753.hBV7r5802078@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Bertfried.Fauser@uni-konstanz.de
+In-reply-to: <Pine.LNX.4.44.0312301850490.32463-100000@clifford.physik.uni-konstanz.de>
+	(message from Bertfried Fauser on Tue, 30 Dec 2003 19:07:15 +0100
+	(CET))
+References: <Pine.LNX.4.44.0312301850490.32463-100000@clifford.physik.uni-konstanz.de>
+Cc: gilbert@sci.ccny.cuny.edu, axiom-developer@nongnu.org,
+	axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-developer] documentation and the crystal
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 31 Dec 2003 08:02:49 -0000
+
+>a) To me its not even clear how to structurize mathematics. One cxan
+>build mathematics on sets, hence the Bourbaki approch, or even better (in
+>my eyes, but equivalent in formal strength) on the *function first*
+>principle. What to choose for axiom? (In fact the set approch is build-in)
+
+Well, I am assuming that we're only trying to structure "computational"
+mathematics. That is, we're only trying to figure out how to organize
+the pieces of mathematics we can compute. The NIST organization in the
+U.S. government did a similar organization of information for numerical
+mathematics years ago. Thus you can now find a specific index to classify
+a numeric routine that will do Runga-Kutta integration on a certain class
+of functions. A second index will find routines that do Simpson integration.
+
+Since we've limited the mathematics to computational forms we should be
+able to collect algorithms and classify them just as NIST has already done.
+Thus we would find different classifications for Clifford-algebra algorithms
+vs Hopf-algebra algorithms.
+
+>b) I do not see how you can automatically assign semantics to data
+>strutures etc. I think, one has at least to have a sort of *semantic
+>typing* during the documentation of axiom (code). Hence every piece of
+>documentation should come with a semantic type (or multiple such types)
+>which finally allow to put a direction into the crystal looking glass.
+
+Indeed assigning semantics is hard. Three approaches leap to mind.
+The first is by keyword assignment in pamphlet files. This is weak but
+easy (although time consuming). The second is to use the compiler to
+try to parse the mathematical expressions in the tex file and assign
+meaning (types) to the symbols.  This is hard but might be helped
+along if we use OpenMath representations of the mathematics. I'm not
+sure if OpenMath is strong enough to handle general mathematical
+expressions. The third is to use a chart-parser and semantic network
+software to try to read and classify the mathematics.
+
+I did an effort similar to the third case while at IBM. We built a 
+system called "Susan" which read english-language email, parsed it
+using a chart-parser, constructed a semantic "concept", classified it,
+and used the nearest-neighbor concepts to help direct further parsing.
+Eventually the whole email and it's paragraphs, sentences, and phrases
+became concepts. Once the email was classified (e.g. does it set up a
+meeting? does it require an answer? does it have a deadline? is it from
+someone important?) the email was assigned to a "basket". So email with
+a "deadline" went into a "tickle file" that would begin reminding you
+of the deadline several days in advance.
+
+We could build a Susan-like system that could handle some portion of
+the mathematics because we have the advantage of working in a limited
+domain. Since we know the domain we can prepopulate the semantic 
+network with concepts. These concepts can then be used to direct the
+chart-parser toward a correct parse of a sentence. This would be great
+fun but falls under the "real research" category and thus will never
+get funded :-)
+
+>c) Algorithms should be plain and readable and not only be available in
+>code form (if even this way)
+
+I absolutely agree. Indeed I would hope to see several versions of
+explanation for algorithms. My current "best practices" example is
+"Primes is in P" by Agarwal, et. al.
+(http://www.cse.iitk.ac.in/news/primality.pdf) They have the closest
+thing to a literate program that embodies the kind of information I
+hope to see. They show the theory, the pseudocode, the bounding
+conditions, the proof, a complexity analysis and references. I only
+wish they had reduced the pseudocode to real code and published the
+original tex. Other than that I feel they've "set the standard" for a
+good computational mathematics paper.
+
+>d) To me it would be much more natural to look at the documentation like a
+>big database and ask SQL like questions. EG:
+>
+>> select from AXIOM algorithm where domain has commutative;
+>
+>or such. And then get a sort of (semantic? web?) document which allows to
+>go deeper into an algorithm, eg, thet should be lionks to al faces of the
+>crystal which make sense to look at.
+
+I agree that a large database will eventually underlie the whole of the
+system. I'm not sure that a relational database is an entirely useful
+model. Yes, it is complete but it is a very awkward way to structure
+mathematical questions. A semantic network concept would allow you to
+"fill in" as much as you know about something (e.g. domain, commutative),
+"classify it", and then find all of the concepts that it dominates.
+Some of these concepts would be the domains you want.
+
+>e) The system will not be more smart than its designers / users. I do not
+>see how an automated method will derive anything beyong mere syntactical
+>sorting. To be frak I have no idea how to reach the above needs.
+
+We're not trying to make it smarter we're trying to make it useful.
+At the moment Axiom is just a huge pile that is nearly inert. It
+includes primitive query functions but little else. If you are going
+to use a large system (scale Axiom by 100x) you need to be able to
+move around it in much more fluid ways.  As a researcher you sometimes
+wander into a library and browse thru books that might be related to
+some half-formed idea. Crystal is an attempt to bring "wandering" into
+the computer age.
+
+Crystal should do at least 3 things. First, it should richly classify
+and cross-connect the various sources of information (source code, an
+algorithm, proofs of that algorithm, a complexity analysis, pointers
+to related algorithms, the domain of application of the algorithm,
+required inputs and their types, explanations of the theory behind the
+algorithm, published results using the algorithm, domains which use
+the algorithm, boundary test cases, examples of its use, etc. each
+of which could be a kind of facet).
+
+Second, Crystal should watch how you wander and work to taylor it's
+answers to your interests. If I am looking at information on
+cryptopgraphy and group theory I don't want to know anything about the
+weakly related concepts (e.g. the probabilities in threat
+matricies). I would like the system to remember what I've looked at
+(so I can find it again), to remember how I got there (so I can start
+from some point and go off in a different path), and to "suggest"
+(nearest neighbor) things that are related but I didn't know (or
+forgot) to look for. And I'd like a facet automatically created which
+is related to the interest and possibly other facets related to the
+details. After all, if I'm trying to write a paper I'm usually piling
+up a bunch of related things I need as background. Computers are good
+at keeping track of things and we need to organize the tracks.
+
+Third, it should be capable of finding things in the stream of
+computational mathematics literature that I would find "interesting".
+I'm assuming that computational mathematics will eventually be online
+and organized in some computer reachable way. Hopefully as literate
+programs. So Crystal ought to be able to constantly be looking thru
+all of the recently published papers for anything that fits my idea of
+interesting.  Trivially this involves a keyword search of papers that
+get published but could be much more complex. In this way I can build
+up a local library of references that make my Crystal searches more
+interesting. And since they are literate programs I'm also building
+up the mathematics for my areas of interest.
+
+We're capable of doing portions of the first idea with the current
+tools but it requires people who write code to make an effort to
+make their work more accessible to the machine. We don't even have
+a standard outline of what should be in a literate program paper yet.
+We need to build a few papers, build some technology to exploit the
+papers, rebuild the papers and the technology, etc. until we get to
+the point where we find the system useful.
+
+>f) As a probably managable project, it would be of utmost importance for
+>me (and other mathematically interested, who are stupid programers) to
+>have just the functionality described above for teh algebra lattice. I had
+>such an email with David Mentre, where some of the needs were discussed.
+
+In the very short term (6 months?) we're likely to have the algebra
+lattice available. David has discussed various ways of displaying such
+a beast (it has 1100+ nodes at the top level). I'm looking at ways of
+building a computational math classification based on test cases from
+several different computer algebra systems (CATS). The combination of
+the machine-built algebra lattice and the hand-built classification
+system should give us a simple prototype to play with. We need a
+simple browser tool. I looked at leo which is an open source literate
+browser but haven't decided how to leverage it yet. We need a backend
+(database/semantic network). If I can remember the insight from KROPS
+perhaps I can reproduce it.
+
+>g) I do not think that *graph* is the best thing to have. One would need a
+>sort of *matroid*, ie. a mathematical sound structure which keeps trak of
+>all sorts of *dependencies* (assuming that independent objects/data are
+>unrelated) Matroids allow you to keep trak of a minimal set of relations
+>between objects etc. (You may think of a combinatorial geometry, where the
+>points/lines/... may or may not be related.
+>	It might be foolish just to have nods and edges, but one hast to
+>have an n-dimesnional structure of nodes, edges, faces, volumes, ... where
+>the semantic meaning could be attached to the *dimensionality* of the
+>object. This would allow to trace up and down iinto the complexity of teh
+>system if eg. code has teh smallest dimensionality (say 1 dim), algorithms
+>a hiher (say 3-dim (to let space for future enhancements)) and
+>documentation of algorithms or a proof it works etc even higher such
+>dimenionality. A *browser* would offer to display or hide the complexity
+>away from a user or show it to him.
+
+I like the idea of dimensionality (faces, volumes). I don't believe I've
+ever seen such an idea applied to a semantic network before. In a semantic
+network "concepts" (data structures) tend to be very near each other
+(counting links) if they are "similar". Semantic networks tend to have
+"clusters" of concepts that express a particular "idea". These clusters
+form because an idea has many similar ways of being expressed so there
+are many links. Different "ideas" will have relatively fewer links 
+between them. The closest connection to dimensionality is probably that
+a "volume" can be a "open ball" formed around a cluster of concepts.
+If you measure the number of links that cross the boundary of the 
+volume and minimize that number you can count the number of "concepts"
+inside the "volume". Thus you can have "big ideas" (a really rich
+cluster of concepts) and "small ideas" (a small cluster).
+
+I'm unfamiliar with the matriod idea. What is it? An n-dimensional 
+spreadsheet? 
+
+>	Say a novice user will be confused to see all details but needs
+>quite practical help and may be even examples (like in the book)
+
+I expect novice users to spend most of their time in the examples facets
+so we should probably be sure they work :-)
+
+>Sorry for not beeing as structures as you were, but I had no time to think
+>over Christmas ;-))
+
+Every so often I try to look toward the 30 year horizon to decide if we're
+building for the future. I was too sick to type over christmas so I had a
+lot of time on my hands to think. Now that I'm back to typing I'm trying
+to "ground" the ideas in working code.
+
+Shortly we'll all have access to several terabytes of disk, a terabyte of
+storage, and a terahertz of cpu cycles connected to gigabyte bandwidth.
+You'll be able to put virtually every paper ever published on a local
+disk drive and search them in seconds. Imagine what will be possible
+in 30 years. Libraries are doomed, books will be electronic. Browsing
+will be incredibly painful if we don't get creative.
+
+t
+
+
+
+
+From MAILER-DAEMON Wed Dec 31 03:55:30 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1Abc8Y-0003Ul-ER
+	for mharc-axiom-math@gnu.org; Wed, 31 Dec 2003 03:55:30 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Abc8X-0003UZ-5f
+	for axiom-math@nongnu.org; Wed, 31 Dec 2003 03:55:29 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1Abc81-0003SK-PK
+	for axiom-math@nongnu.org; Wed, 31 Dec 2003 03:55:28 -0500
+Received: from [207.115.63.103] (helo=pimout4-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1Abc81-0003SD-FC; Wed, 31 Dec 2003 03:54:57 -0500
+Received: from localhost.localdomain (74.179.252.64.snet.net [64.252.179.74])
+	by pimout4-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hBV7rTL8044116; Wed, 31 Dec 2003 02:53:29 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hBV8jlI02137;
+	Wed, 31 Dec 2003 03:45:47 -0500
+Date: Wed, 31 Dec 2003 03:45:47 -0500
+Message-Id: <200312310845.hBV8jlI02137@localhost.localdomain>
+From: root <daly@idsi.net>
+To: david.mentre@wanadoo.fr
+Subject: Re: [Axiom-math] documentation and the crystal
+Cc: gilbert@sci.ccny.cuny.edu, axiom-developer@nongnu.org,
+	axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 31 Dec 2003 08:55:29 -0000
+
+
+>Usually, people have a top-down approach: they modelize a system
+>abstractly (using more or less formal notations as UML or SDL) and then
+>refine them through the actual code. But, in the case of Axiom, we need
+>the reverse. We need to start from concrete objects (files, lines of
+>source code) and add semantics to climb levels of abstraction. Of
+>course, you follow different ladders, in the sense that understanding
+>the compiler or the algebra would need different information and is
+>structured differently, thus the different crystal facets of Tim.
+>
+>
+>More concretely, I would propose the following approach:
+>
+> 1. start from parsers for the src/ directory. Parse directory structure
+>    and each file, categorize them (boot, lisp, spad, ...) and construct
+>    basic abstractions (list of lisp and boot functions; list of spad
+>    categories, domains and operators; ...)
+
+If you look at the int/algebra directory you'll see directories called
+NRLIBs (e.g. DHMATRIX.NRLIB) which contain several files. These files
+are output from the spad compiler. The databases are built from information
+in these files. We can enhance the spad compiler to include additional
+information in forms that can be written into databases or semantic
+networks or whatever we like. The current databases (*.daase) files are
+random access files. There is a C program called asq which knows how to
+read these databases and answer queries. (src/etc/asq.c)
+
+>
+> 2. from information extracted in step 1, construct one or several
+>    representation (knowledge graph for example) with the found
+>    semantics (name and body of a function for example), probably using
+>    a standard technology as W3C semantic web
+
+I'll have to look at Bill's references to see what technology they are
+using for the semantic web. There are several dozen ways of doing this
+and almost all of them are not "well-founded" in any mathematical sense.
+KREP is well founded. That is, when you build a semantic network one thing
+you want to do is put a concept into the network "in the appropriate place".
+Most of these systems have heuristics for doing this. KREP has a logically
+sound, well-defined predicate called subsumption for comparing two concepts
+and deciding if one subsumes the other. In KREP a new concept is put in
+the semantic network by starting at the top and using the subsumption
+predicate to push the concept down until it hits "the right place".
+
+Semantic networks based on "is-a" links, or "kind-of" links and other
+such random ideas are badly formed and suffer from a variety of logical
+failings.
+
+> 3. the "Axiom explorer" (Tim, Bill or I) is interested in a specific
+>    "crystal facet" (e.g. the compiler). He builds another tool
+>    (e.g. call-graph analyzer for lisp code) which in turn is used to
+>    construct a new knowledge graph, concretized in additional
+>    information in the W3C semantic web.
+>
+> 4. Within the abstraction level build in step 4 (or 2), the "Axiom
+>    explorer" adds its own knowldege (e.g. this set of functions is used
+>    to parse Spad code, this other set is used for type analysis, ...)
+>    to the semantic web.
+>
+> 5. using previous abstraction levels and probably building a new tool,
+>    the "Axiom explorer" iterates, climbing abstraction levels, until he
+>    reaches his own goal.
+>
+>Repeat steps 1 to 5 with enough people to cover Axiom from A (Algebra)
+>to Z (zerodim). 
+>
+>Ok. I might be a bit optimistic and what I have said might appear more
+>than abstract, but this is the current state of might thoughts. :) 
+>
+>Even if you do not like above ideas, I think following "principles" are
+>needed for a documentation system for Axiom (principles already
+>formulated by Tim is his first email):
+>
+> o separation principle: in engineering, people separate a complex issue
+>   in _independant_ sub-issues to be able to understand them and solve
+>   them independently. We probably need to deconstruct Axiom in
+>   independent (or a least loosely connected) sub-systems to be able to
+>   understand them (i.e. the different crystal facets of Tim);
+
+I stole this principle from the unix world. use simple tools (asq, makefile)
+and gang them together to make more complex tools. Thus I see asq-style
+programs triggered by clicking on a facet to answer a question. Some facets
+might be backed by things like texmacs, xdvi, or latex.
+
+>
+> o "build on giant shoulders" principle: we need a way to reuse
+>   knowledge from other "crystal facets". For example, I would use Tim
+>   knowledge of the internals of Axiom to understand how the compiler
+>   compiles a given portion of the algebra;
+
+5'8" hardly qualifies as a giant :-) 
+
+>
+> o automation principle: Axiom is too big to add information manually on
+>   each function, each object, etc. We need tools to annotate a set of
+>   objects given a selection criteria (e.g. all operators in this Spad
+>   domain). 
+
+I'd like to automate as much as possible but the automation curve
+gets steep in a hurry. At least for the algebra code we already have
+tools in place. If we can get to where we can draw a lattice in the
+next 6 months I should have the data (both hand and machine generated)
+for the algebra.
+
+>
+>New year wish: I'll try to write and "show you the code" for above
+>ideas. :) My own todo for this subproject of Axiom would be:
+>
+> - learn more about W3C Semantic Web (thank you Bill for the pointer)
+>
+> - find or write tools to manipulate Semantic Web (it might be Emacs
+>   with a proper mode or a more elaborated graphical tool)
+>
+> - apply above approach, starting from directory structure in src/
+>   directory of Axiom.
+>
+> - from this first experiment, think about what would need to be
+>   "standardized", like common dictionnary or vocabulary, etc. Beyond
+>   usual technological issues, I think this point is one fo the harder
+>   point. How to build a set of knowledge that will be still useful in
+>   30 years from now?
+
+>By the way, does anybody knows about a library to *draw* and manipulate
+>arbitary graphs (in Common Lisp, C++, ML, ...) in a user interface? I
+>know about DOT or VCG but they dot not match my needs: I would like to
+>draw a graph, know when the user click on a graph node or edge and react
+>accordingly. Does anybody know where I could find such an already made
+>tool? Any knowledge of a browser for the W3C semantic web?
+
+There used to be a tool that would allow you to move around in a graph.
+It was used to give a clever desktop. As you moved over portions of the
+desktop the things nearest the mouse pointer got larger and were centered.
+I can't remember what it was called but I thing M$ used a similar idea
+in XP with the toolbar.
+
+I'm going to try to get ahold of a tool that runs in common lisp and
+gives access to the gtk bindings. We can use it to prototype some basic
+functionality (like opening an empty window, drawing a graph in the window,
+embedding texmacs in the window, etc. The developer will be back on the
+5th and I'll look into it further at that time.
+
+Tim
+
+
+

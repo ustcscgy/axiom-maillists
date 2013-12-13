@@ -1,0 +1,611 @@
+From MAILER-DAEMON Fri Jun 10 13:56:51 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QV5ww-00010V-Vj
+	for mharc-axiom-math@gnu.org; Fri, 10 Jun 2011 13:56:51 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:33645)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <S.Karrmann@web.de>) id 1QV5wt-00010I-Dh
+	for axiom-math@nongnu.org; Fri, 10 Jun 2011 13:56:49 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <S.Karrmann@web.de>) id 1QV5wr-0001JG-N1
+	for axiom-math@nongnu.org; Fri, 10 Jun 2011 13:56:47 -0400
+Received: from fmmailgate03.web.de ([217.72.192.234]:60496)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <S.Karrmann@web.de>) id 1QV5wr-0001Is-A2
+	for axiom-math@nongnu.org; Fri, 10 Jun 2011 13:56:45 -0400
+Received: from smtp01.web.de  ( [172.20.0.243])
+	by fmmailgate03.web.de (Postfix) with ESMTP id 5A85819219B25;
+	Fri, 10 Jun 2011 19:56:25 +0200 (CEST)
+Received: from [82.113.121.198] (helo=[10.44.195.42])
+	by smtp01.web.de with asmtp (TLSv1:AES256-SHA:256) (WEB.DE 4.110 #2)
+	id 1QV5wW-0002qY-00; Fri, 10 Jun 2011 19:56:24 +0200
+From: Stefan Karrmann <S.Karrmann@web.de>
+To: William Sit <wyscc@sci.ccny.cuny.edu>
+In-Reply-To: <web-22718481@cgate.sci.ccny.cuny.edu>
+References: <1304188828.20602.11.camel@hermes>
+	<4DBFC908.3000705@hemmecke.de> <1304541468.5030.93.camel@hermes>
+	<web-22718481@cgate.sci.ccny.cuny.edu>
+Content-Type: text/plain; charset="UTF-8"
+Date: Fri, 10 Jun 2011 19:56:18 +0200
+Message-ID: <1307728578.5466.4.camel@johann>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.32.2 
+Content-Transfer-Encoding: 7bit
+Sender: S.Karrmann@web.de
+X-Sender: s.karrmann@web.de
+X-Provags-ID: V01U2FsdGVkX18aksAEB+K+nTUlZW5j85VBA76AwzBgMx9i9blc
+	dfV/AZXmXkg4hoG7hHrfrYSkUhn8j82gKnesn3T5cxJLNI9hZN 9LNXPXxAo=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.4-2.6
+X-Received-From: 217.72.192.234
+Cc: axiom-math <axiom-math@nongnu.org>
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 10 Jun 2011 17:56:49 -0000
+
+Dear all,
+
+we can help ourselves in some cases by:
+
+sign x == (abs x)/x
+H x == (1 + sign x)/2
+step (a,b,x) == (H(x-a)) * (H(b-x))
+
+The drawback is that we get a 'Division by zero'.
+
+Kind regards,
+Stefan
+
+Am Donnerstag, den 05.05.2011, 00:23 -0400 schrieb William Sit:
+> Dear Stefan:
+> 
+> You posed a legitimate problem: how should symbolic 
+> computation handle piecewise defined functions, and in 
+> particular, how to integrate such a function.
+> 
+> Maple and Mathematica both can handle piecewise functions. 
+> Look up "piecewise" from Maple Help. You can easily define 
+> a piecewise function, and differentiate or integrate it. 
+> Indeed, Maple says:
+> 
+> The piecewise function can be differentiated, integrated, 
+> simplified, plotted, and used in the following types of 
+> differential equations: constant coefficients and 
+> discontinuous perturbation function, general first-order 
+> linear, Riccati, and some other classes which are handled 
+> by integration or variation of parameter. See 
+> dsolve[piecewise] for more details. series, limit, abs, 
+> and signum can handle the piecewise function.
+> 
+> As example, the desired solution the problem of 
+> integrating f(x) from 0 to t, where f(x) is 2x if x < 10 
+> and 5x^2 otherwise, should be the function g(t), defined 
+> as t^2 if t < 10 and -4000/3 +(5 t^3)/3 otherwise. Maple 
+> does exactly that. In fact, I even tried to integrate 
+> f(f(x)) and f(f(x+1)) and Maple does it with no problems 
+> with all the cases covered.
+> 
+> Mathematica has a similar function called Piecewise to 
+> construct piecewise functions, and like Maple, Piecewise 
+> can be used in such functions as Integrate, Minimize, 
+> Reduce, DSolve and Simplify, as well as their numeric 
+> analogs.
+> 
+> This may be an uncovered domain in Axiom. A search for 
+> "piecewise" shows no hits. I think piecewise functions 
+> have to be separately handled, particularly in case 
+> analysis (possibly involving semi-algebraic sets and CAD) 
+> if there is any indefiniteness in the answer (like an 
+> indefinite integral). There is some evidence that if the 
+> user does not use the built-in "piecewise" or "Piecewise" 
+> function, but uses an if-then-else construction, neither 
+> Maple nor Mathematica can handle subsequent mathematical 
+> calculations. For example, the system would not do the 
+> case analysis, much less the "simplification" 
+> automatically, but would present the result as the 
+> integral of If[x < 10, 2 x, 5 x^2] (in Mathematica; I did 
+> not try Maple). Even when the case analysis is done, it 
+> would still not simplify or evaluate the integrals:
+> 
+> h[x_] := If[x < 10, Integrate[2 y, {y, 0, x}],
+>    Integrate[2 y, {y, 0, 10}] + Integrate[5 y^2, {y, 10, 
+> x}]]
+> 
+> when h[x] is called. It will evaluate on numerical inputs.
+> 
+> In our earlier discussions, we were "lured" into using 
+> "if-the-else" constructions and thus got the feeling that 
+> this is difficult to handle. The confusion is that we 
+> interpret "x < 10" as an binary relation, whereas it 
+> should be handled as a semi-algebraic set (in one 
+> dimension, this is just an interval)!
+> 
+> However, the algorithms seem to be there, and someone 
+> should implement them in Axiom if it is not already done 
+> but hidden in some obscure packages.
+> 
+> William
+> 
+> On Wed, 04 May 2011 22:37:48 +0200
+>   Stefan Karrmann <s.karrmann@web.de> wrote:
+> > Dear all,
+> > 
+> > thanks for your answers. They clears a lot.
+> > 
+> > I actually want to integrate test1 and solve an 
+> >differential equation
+> > with it.
+> > 
+> > E.g.
+> > test2 x == rho * test1 x
+> > y = operator 'y
+> > odeq := D(y x) = test2 x
+> > solve(odeq, y, x)
+> > 
+> > Obviously, the solution is "formally"
+> > 
+> > y_sol x == integrate(test2 x,x)
+> > 
+> > Kind regards,
+> > Stefan
+> > 
+> > Am Dienstag, den 03.05.2011, 11:21 +0200 schrieb Ralf 
+> >Hemmecke:
+> >> Dear Stefan,
+> >> 
+> >> as others already have pointed out, for Axiom, your 
+> >>question is not 
+> >> really well posed.
+> >> 
+> >> In Axiom
+> >> 
+> >>    if x<10 then 2*x else 5*x^2
+> >> 
+> >> is *not* an expression (as you might know it from other 
+> >>untyped CAS like 
+> >> Mathematica or Maple), but rather a programming language 
+> >>construct. In 
+> >> other words, if Axiom sees this, it is evaluated. So the 
+> >>result is 
+> >> either 2*x or 5*x^2 depending on the (boolean) outcome 
+> >>of the evaluation 
+> >> of x<10.
+> >> 
+> >> I think, Bill suggested to use something like InputForm. 
+> >>There it would 
+> >> be possible to represent an if-expression unevaluated.
+> >> 
+> >> But you should rather say what you actually want (it's 
+> >>not the same what 
+> >> you expect).
+> >> 
+> >> In order for us to suggest you a proper way to handle 
+> >>your use case, you 
+> >> should tell us why you want a piecewise function and 
+> >>(more important) 
+> >> what you later want to do with that function.
+> >> 
+> >> Until we have that information, everything would be just 
+> >>digging in the 
+> >> dark.
+> >> 
+> >> Ralf
+> >> 
+> >> On 04/30/2011 08:40 PM, Stefan Karrmann wrote:
+> >> > Dear all,
+> >> >
+> >> > I'm new to axiom and have a problem with piecewise 
+> >>functions.
+> >> >
+> >> > test1 (x | x<  10) == 2*x
+> >> > test1 (x | x >= 10) == 5*x^2
+> >> > [was typo: test1 (x | x<  10) == 5*x^2]
+> >> > test1
+> >> > ->
+> >> >     test1 (x | x<  10) == 2x
+> >> >     test1 (x | ^ x<  10) == 5x
+> >> > 
+> >>                                                    Type: 
+> >>FunctionCalled
+> >> > test1 y
+> >> > ->
+> >> >       2
+> >> >     5y
+> >> >
+> >> > I expected something like (if y<  10 then 2*y else 
+> >>5*y**2).
+> >> >
+> >> > How is it possible to pass a Variable to a piecewise 
+> >>function respecting
+> >> > the pieces?
+> >> >
+> >> > PS: Using a block and =>  or explicit if-then-else 
+> >>does not help.
+> > 
+> > 
+> > _______________________________________________
+> > Axiom-math mailing list
+> > Axiom-math@nongnu.org
+> > https://lists.nongnu.org/mailman/listinfo/axiom-math
+> 
+> William Sit, Professor Emeritus
+> Mathematics, City College of New York
+> Office: R6/291D Tel: 212-650-5179
+> Home Page: http://scisun.sci.ccny.cuny.edu/~wyscc/
+
+
+
+
+From MAILER-DAEMON Fri Jun 10 14:55:22 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QV6rZ-0001Bn-Jj
+	for mharc-axiom-math@gnu.org; Fri, 10 Jun 2011 14:55:21 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:45183)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QV6rW-0001BI-48
+	for axiom-math@nongnu.org; Fri, 10 Jun 2011 14:55:19 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QV6rU-0002vV-1H
+	for axiom-math@nongnu.org; Fri, 10 Jun 2011 14:55:17 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.160]:41843)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QV6rT-0002vC-C5
+	for axiom-math@nongnu.org; Fri, 10 Jun 2011 14:55:15 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1307732110; l=428;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:CC:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=3sl8GzzVGMC0K+RpmmNDW/w4PxQ=;
+	b=aQonqirF65920SPtBdWAp0YdEqF5vnQ7oUeBnrj2TPszZ6plrs2rrPD/2k4ai9ckeDV
+	YdbRzJizzBnUP/E+akBWbCiBR2I+an9JRC8+8nn8+sdWFCTTa5xpQ8lYEKNEYMOa2Kzfl
+	0DxzVjI+S5v1KJV7ylF5O6y9AYJnfcg2DTY=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSWk1ofrjzBmGkcLQ0E=
+X-RZG-CLASS-ID: mo00
+Received: from [10.0.0.2] (62-47-47-174.adsl.highway.telekom.at [62.47.47.174])
+	by post.strato.de (mrclete mo26) (RZmta 25.18)
+	with (DHE-RSA-AES128-SHA encrypted) ESMTPA id t01f49n5AHWvCJ ;
+	Fri, 10 Jun 2011 20:54:39 +0200 (MEST)
+Message-ID: <4DF2686E.7040000@hemmecke.de>
+Date: Fri, 10 Jun 2011 20:54:38 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.9.2.17) Gecko/20110414 Lightning/1.0b2 Thunderbird/3.1.10
+MIME-Version: 1.0
+To: Stefan Karrmann <S.Karrmann@web.de>
+References: <1304188828.20602.11.camel@hermes>	 <4DBFC908.3000705@hemmecke.de>
+	<1304541468.5030.93.camel@hermes>	
+	<web-22718481@cgate.sci.ccny.cuny.edu>
+	<1307728578.5466.4.camel@johann>
+In-Reply-To: <1307728578.5466.4.camel@johann>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-Received-From: 81.169.146.160
+Cc: axiom-math <axiom-math@nongnu.org>
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 10 Jun 2011 18:55:19 -0000
+
+On 06/10/2011 07:56 PM, Stefan Karrmann wrote:
+> Dear all,
+>
+> we can help ourselves in some cases by:
+>
+> sign x == (abs x)/x
+> H x == (1 + sign x)/2
+> step (a,b,x) == (H(x-a)) * (H(b-x))
+>
+> The drawback is that we get a 'Division by zero'.
+
+Show a short program that demonstrates this error message. Only then is 
+somebody able to help.
+
+Ralf
+
+PS: "sign" is already built-in. Try out
+
+)display op sign
+
+.
+
+
+From MAILER-DAEMON Tue Jun 14 02:35:40 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QWNDw-0006f9-Bi
+	for mharc-axiom-math@gnu.org; Tue, 14 Jun 2011 02:35:40 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:52263)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QWNDs-0006eY-G9
+	for axiom-math@nongnu.org; Tue, 14 Jun 2011 02:35:38 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QWNDq-0001gr-D5
+	for axiom-math@nongnu.org; Tue, 14 Jun 2011 02:35:36 -0400
+Received: from cgate.sci.ccny.cuny.edu ([134.74.34.100]:53192)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QWNDq-0001gU-1H
+	for axiom-math@nongnu.org; Tue, 14 Jun 2011 02:35:34 -0400
+Received: from [71.190.92.236] (account wyscc@sci.ccny.cuny.edu)
+	by cgate.sci.ccny.cuny.edu (CommuniGate Pro WebUser 4.2.10)
+	with HTTP id 22958481; Tue, 14 Jun 2011 02:26:20 -0400
+From: "William Sit" <wyscc@sci.ccny.cuny.edu>
+To: Stefan Karrmann <S.Karrmann@web.de>
+X-Mailer: CommuniGate Pro WebUser Interface v.4.2.10
+Date: Tue, 14 Jun 2011 02:26:20 -0400
+Message-ID: <web-22958481@cgate.sci.ccny.cuny.edu>
+In-Reply-To: <1307728578.5466.4.camel@johann>
+References: <1304188828.20602.11.camel@hermes> <4DBFC908.3000705@hemmecke.de>
+	<1304541468.5030.93.camel@hermes>
+	<web-22718481@cgate.sci.ccny.cuny.edu>
+	<1307728578.5466.4.camel@johann>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-Received-From: 134.74.34.100
+Cc: axiom-math <axiom-math@nongnu.org>
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 14 Jun 2011 06:35:38 -0000
+
+In Axiom, we can implement a characteristic function for a 
+given set, in the category of sets, which would avoid 
+division by zero.  This can take care of the provisos. If 
+I am not mistaken, the step(a,b,x) is the characteristic 
+function for the interval set [a,b], but the 
+implementation below, as pointed out, may cause division 
+by zero. We can use "if-then-else" to implement it 
+instead.
+
+William
+
+
+On Fri, 10 Jun 2011 19:56:18 +0200
+  Stefan Karrmann <S.Karrmann@web.de> wrote:
+> Dear all,
+> 
+> we can help ourselves in some cases by:
+> 
+> sign x == (abs x)/x
+> H x == (1 + sign x)/2
+> step (a,b,x) == (H(x-a)) * (H(b-x))
+> 
+> The drawback is that we get a 'Division by zero'.
+> 
+> Kind regards,
+> Stefan
+> 
+> Am Donnerstag, den 05.05.2011, 00:23 -0400 schrieb 
+>William Sit:
+>> Dear Stefan:
+>> 
+>> You posed a legitimate problem: how should symbolic 
+>> computation handle piecewise defined functions, and in 
+>> particular, how to integrate such a function.
+>> 
+>> Maple and Mathematica both can handle piecewise 
+>>functions. 
+>> Look up "piecewise" from Maple Help. You can easily 
+>>define 
+>> a piecewise function, and differentiate or integrate it. 
+>> Indeed, Maple says:
+>> 
+>> The piecewise function can be differentiated, 
+>>integrated, 
+>> simplified, plotted, and used in the following types of 
+>> differential equations: constant coefficients and 
+>> discontinuous perturbation function, general first-order 
+>> linear, Riccati, and some other classes which are 
+>>handled 
+>> by integration or variation of parameter. See 
+>> dsolve[piecewise] for more details. series, limit, abs, 
+>> and signum can handle the piecewise function.
+>> 
+>> As example, the desired solution the problem of 
+>> integrating f(x) from 0 to t, where f(x) is 2x if x < 10 
+>> and 5x^2 otherwise, should be the function g(t), defined 
+>> as t^2 if t < 10 and -4000/3 +(5 t^3)/3 otherwise. Maple 
+>> does exactly that. In fact, I even tried to integrate 
+>> f(f(x)) and f(f(x+1)) and Maple does it with no problems 
+>> with all the cases covered.
+>> 
+>> Mathematica has a similar function called Piecewise to 
+>> construct piecewise functions, and like Maple, Piecewise 
+>> can be used in such functions as Integrate, Minimize, 
+>> Reduce, DSolve and Simplify, as well as their numeric 
+>> analogs.
+>> 
+>> This may be an uncovered domain in Axiom. A search for 
+>> "piecewise" shows no hits. I think piecewise functions 
+>> have to be separately handled, particularly in case 
+>> analysis (possibly involving semi-algebraic sets and 
+>>CAD) 
+>> if there is any indefiniteness in the answer (like an 
+>> indefinite integral). There is some evidence that if the 
+>> user does not use the built-in "piecewise" or 
+>>"Piecewise" 
+>> function, but uses an if-then-else construction, neither 
+>> Maple nor Mathematica can handle subsequent mathematical 
+>> calculations. For example, the system would not do the 
+>> case analysis, much less the "simplification" 
+>> automatically, but would present the result as the 
+>> integral of If[x < 10, 2 x, 5 x^2] (in Mathematica; I 
+>>did 
+>> not try Maple). Even when the case analysis is done, it 
+>> would still not simplify or evaluate the integrals:
+>> 
+>> h[x_] := If[x < 10, Integrate[2 y, {y, 0, x}],
+>>    Integrate[2 y, {y, 0, 10}] + Integrate[5 y^2, {y, 10, 
+>> x}]]
+>> 
+>> when h[x] is called. It will evaluate on numerical 
+>>inputs.
+>> 
+>> In our earlier discussions, we were "lured" into using 
+>> "if-the-else" constructions and thus got the feeling 
+>>that 
+>> this is difficult to handle. The confusion is that we 
+>> interpret "x < 10" as an binary relation, whereas it 
+>> should be handled as a semi-algebraic set (in one 
+>> dimension, this is just an interval)!
+>> 
+>> However, the algorithms seem to be there, and someone 
+>> should implement them in Axiom if it is not already done 
+>> but hidden in some obscure packages.
+>> 
+>> William
+>> 
+>> On Wed, 04 May 2011 22:37:48 +0200
+>>   Stefan Karrmann <s.karrmann@web.de> wrote:
+>> > Dear all,
+>> > 
+>> > thanks for your answers. They clears a lot.
+>> > 
+>> > I actually want to integrate test1 and solve an 
+>> >differential equation
+>> > with it.
+>> > 
+>> > E.g.
+>> > test2 x == rho * test1 x
+>> > y = operator 'y
+>> > odeq := D(y x) = test2 x
+>> > solve(odeq, y, x)
+>> > 
+>> > Obviously, the solution is "formally"
+>> > 
+>> > y_sol x == integrate(test2 x,x)
+>> > 
+>> > Kind regards,
+>> > Stefan
+>> > 
+>> > Am Dienstag, den 03.05.2011, 11:21 +0200 schrieb Ralf 
+>> >Hemmecke:
+>> >> Dear Stefan,
+>> >> 
+>> >> as others already have pointed out, for Axiom, your 
+>> >>question is not 
+>> >> really well posed.
+>> >> 
+>> >> In Axiom
+>> >> 
+>> >>    if x<10 then 2*x else 5*x^2
+>> >> 
+>> >> is *not* an expression (as you might know it from 
+>>other 
+>> >>untyped CAS like 
+>> >> Mathematica or Maple), but rather a programming 
+>>language 
+>> >>construct. In 
+>> >> other words, if Axiom sees this, it is evaluated. So 
+>>the 
+>> >>result is 
+>> >> either 2*x or 5*x^2 depending on the (boolean) 
+>>outcome 
+>> >>of the evaluation 
+>> >> of x<10.
+>> >> 
+>> >> I think, Bill suggested to use something like 
+>>InputForm. 
+>> >>There it would 
+>> >> be possible to represent an if-expression 
+>>unevaluated.
+>> >> 
+>> >> But you should rather say what you actually want 
+>>(it's 
+>> >>not the same what 
+>> >> you expect).
+>> >> 
+>> >> In order for us to suggest you a proper way to handle 
+>> >>your use case, you 
+>> >> should tell us why you want a piecewise function and 
+>> >>(more important) 
+>> >> what you later want to do with that function.
+>> >> 
+>> >> Until we have that information, everything would be 
+>>just 
+>> >>digging in the 
+>> >> dark.
+>> >> 
+>> >> Ralf
+>> >> 
+>> >> On 04/30/2011 08:40 PM, Stefan Karrmann wrote:
+>> >> > Dear all,
+>> >> >
+>> >> > I'm new to axiom and have a problem with piecewise 
+>> >>functions.
+>> >> >
+>> >> > test1 (x | x<  10) == 2*x
+>> >> > test1 (x | x >= 10) == 5*x^2
+>> >> > [was typo: test1 (x | x<  10) == 5*x^2]
+>> >> > test1
+>> >> > ->
+>> >> >     test1 (x | x<  10) == 2x
+>> >> >     test1 (x | ^ x<  10) == 5x
+>> >> > 
+>> >> 
+>>                                                   Type: 
+>> >>FunctionCalled
+>> >> > test1 y
+>> >> > ->
+>> >> >       2
+>> >> >     5y
+>> >> >
+>> >> > I expected something like (if y<  10 then 2*y else 
+>> >>5*y**2).
+>> >> >
+>> >> > How is it possible to pass a Variable to a 
+>>piecewise 
+>> >>function respecting
+>> >> > the pieces?
+>> >> >
+>> >> > PS: Using a block and =>  or explicit if-then-else 
+>> >>does not help.
+>> > 
+>> > 
+>> > _______________________________________________
+>> > Axiom-math mailing list
+>> > Axiom-math@nongnu.org
+>> > https://lists.nongnu.org/mailman/listinfo/axiom-math
+>> 
+>> William Sit, Professor Emeritus
+>> Mathematics, City College of New York
+>> Office: R6/291D Tel: 212-650-5179
+>> Home Page: http://scisun.sci.ccny.cuny.edu/~wyscc/
+> 
+> 
+
+William Sit, Professor Emeritus
+Mathematics, City College of New York
+Office: R6/291D Tel: 212-650-5179
+Home Page: http://scisun.sci.ccny.cuny.edu/~wyscc/
+
+

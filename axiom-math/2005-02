@@ -1,0 +1,770 @@
+From MAILER-DAEMON Tue Feb 01 13:52:55 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Cw38x-0008K8-8p
+	for mharc-axiom-math@gnu.org; Tue, 01 Feb 2005 13:52:55 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CvJtQ-0006oG-0K
+	for axiom-math@nongnu.org; Sun, 30 Jan 2005 13:33:52 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CvJtO-0006nN-Nv
+	for axiom-math@nongnu.org; Sun, 30 Jan 2005 13:33:51 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1CvJpR-0005Ik-GV; Sun, 30 Jan 2005 13:29:45 -0500
+Received: from [134.74.38.100] (helo=cgate.sci.ccny.cuny.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CvJHV-0006Sf-CW; Sun, 30 Jan 2005 12:54:41 -0500
+Received: from [162.84.188.244] (account <gilbert@sci.ccny.cuny.edu>)
+	by cgate.sci.ccny.cuny.edu (CommuniGate Pro WebUser 4.0.5)
+	with HTTP id 4342976; Sun, 30 Jan 2005 12:54:39 -0500
+From: "Gilbert Baumslag" <gilbert@sci.ccny.cuny.edu>
+To: daly@axiom-developer.org,axiom-developer@nongnu.org,
+	axiom-mail@nongnu.org, axiom-math@nongnu.org
+X-Mailer: CommuniGate Pro Web Mailer v.4.0.5
+Date: Sun, 30 Jan 2005 12:54:39 -0500
+Message-ID: <web-4342976@cgate.sci.ccny.cuny.edu>
+In-Reply-To: <200501301323.j0UDNXo11118@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="ISO-8859-1"; format="flowed"
+Content-Transfer-Encoding: 8bit
+X-Mailman-Approved-At: Tue, 01 Feb 2005 13:52:53 -0500
+Cc: gilbert@sci.ccny.cuny.edu
+Subject: [Axiom-math] Re: February 2005 release
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 30 Jan 2005 18:33:52 -0000
+
+I looked in all three sites for the February release, but 
+it appears nowhere to my relatively unpracticed eye. Is 
+this release really where advertized below?
+
+Gilbert
+
+On Sun, 30 Jan 2005 08:23:33 -0500
+  root <daly@idsi.net> wrote:
+>The February 2005 release of Axiom has been posted to:
+>
+>  savannah.nongnu.org/projects/axiom
+>  sourceforge.net/projects/axiom
+>  arch.axiom-developer.org as axiom--main--1--patch-29
+>
+>This is the first "feature complete" release of Axiom. It 
+>includes
+>all of the algebra we have available, working graphics, 
+>and a working
+>hyperdoc browser. Once you build the system you can test 
+>it by typing:
+>
+>axiom
+>
+>when the hyperdoc browser starts choose
+>
+>   Basic Commands -> Draw -> A function of two variables 
+>-> Continue -> Do It
+>
+>and a graph will appear. Click anywhere on the graph to 
+>get the control panel.
+>
+>A Source tarball and binaries for several platforms are 
+>being compiled
+>and will be uploaded as they become available.
+>
+>Please report any bugs at:
+>
+>http://page.axiom-developer.org/zope/mathaction/FrontPage/IssueTracker
+>
+>This is a wiki page and you can modify it from your 
+>browser to add bugs.
+>Please be sure to note the 'Version' listed on the banner 
+>when Axiom 
+>starts so we can track which version has the bug.
+>
+>Questions should be sent to the 
+>axiom-developer@nongnu.org mailing list.
+>
+>The February 2005 release is known to build on RedHat and 
+>Fedora systems
+>including Fedora 3. Be sure to use the ./configure 
+>script.
+>
+>The Solaris 9 merger is still in process and may not yet 
+>build correctly
+>from these sources. A working version of Axiom has been 
+>built for Solaris 9
+>which includes both graphics and hyperdoc. The 
+>./configure script should
+>properly recognize the solaris system.
+>
+>The Windows merger is still in process and may not yet 
+>build correctly
+>from these sources. A working version of the algebra but 
+>not the graphics
+>and hyperdoc exists. Efforts are underway to make 
+>portable versions of
+>the graphics and hyperdoc but that will take a while. See
+>http://page.axiom-developer.org/zope/mathaction/AxiomDownload
+>
+>The MAC OSX port is being worked on. There is no further 
+>news.
+>
+>The March 2005 release is now open for changes.
+>Immediate items of work are:
+>   finish and test Solaris 9 changes
+>   finish and merge Windows changes
+>   finish and merge the "fixed-point" changes to the 
+>algebra
+>   automate patch file handling in hyperdoc
+>   create beta version of MAC OSX
+>   first steps toward hypertex in common lisp
+>   create pre-print version of volume 1 (tutorial) of 
+>book
+>   continue bug collection from axiom-developer mailing 
+>list to IssueTracker
+>
+>=======================================================================
+>The --patch-29 change is a simple typo.
+>
+>This release changed the following files:
+>
+>CHANGELOG 
+>FAQ 
+>Makefile 
+>Makefile.pamphlet 
+>README 
+>configure 
+>lsp/Makefile.pamphlet 
+>lsp/ccl/src/axbase/cclwhereis2.lsp 
+>lsp/ccl/src/cslbase/curses.h.pamphlet 
+>src/Makefile.pamphlet 
+>src/algebra/Makefile.pamphlet 
+>src/algebra/algfunc.spad.pamphlet 
+>src/algebra/combfunc.spad.pamphlet 
+>src/algebra/float.spad.pamphlet 
+>src/algebra/sttaylor.spad.pamphlet
+>src/algebra/tex.spad.pamphlet
+>src/algebra/trigcat.spad.pamphlet 
+>src/booklets/Makefile.pamphlet 
+>src/boot/Makefile.pamphlet 
+>src/clef/Makefile.pamphlet 
+>src/clef/edible.c.pamphlet 
+>src/doc/Makefile.pamphlet 
+>src/etc/Makefile.pamphlet 
+>src/etc/axiom 
+>src/graph/Gdraws/Makefile.pamphlet 
+>src/graph/Makefile.pamphlet 
+>src/graph/view2D/Makefile.pamphlet 
+>src/graph/view3D/Makefile.pamphlet 
+>src/graph/viewAlone/Makefile.pamphlet 
+>src/graph/viewman/Makefile.pamphlet 
+>src/input/Makefile.pamphlet 
+>src/interp/Makefile.pamphlet
+>src/interp/as.boot.pamphlet 
+>src/interp/ax.boot.pamphlet 
+>src/interp/debugsys.lisp.pamphlet 
+>src/interp/i-syscmd.boot.pamphlet 
+>src/interp/setq.lisp.pamphlet 
+>src/interp/util.lisp.pamphlet 
+>src/lib/Makefile.pamphlet 
+>src/lib/XDither.c.pamphlet 
+>src/lib/XShade.c.pamphlet 
+>src/lib/XSpadFill.c.pamphlet
+>src/lib/bsdsignal.c.pamphlet 
+>src/scripts/Makefile.pamphlet 
+>src/share/Makefile.pamphlet 
+>src/sman/Makefile.pamphlet 
+>src/sman/sman.c.pamphlet 
+>src/hyper/*
+>zips/gcl-2.6.5.cmpnew.gcl_cmpmain.lsp.patch axiom/zips
+>zips/gcl-2.6.5.h.386-linux.h.patch axiom/zips
+>zips/gcl-2.6.5w.cmpnew.gcl_cmpcall.lsp.patch axiom/zips
+>zips/gcl-2.6.5w.cmpnew.gcl_cmpflet.lsp.patch axiom/zips
+>zips/gcl-2.6.5w.h.gmp_wrappers.h.patch axiom/zips
+>zips/gcl-2.6.5w.h.linux.defs.patch axiom/zips
+>zips/gcl-2.6.5w.h.mingw.defs.patch axiom/zips
+>zips/gcl-2.6.5w.o.alloc.c.patch axiom/zips
+>zips/gcl-2.6.5w.o.mingfile.c.patch axiom/zips
+>zips/gcl-2.6.5w.o.unixfsys.c.patch axiom/zips
+>zips/gcl-2.6.5w.unixport.init_gcl.lsp.in.patch axiom/zips
+>zips/gcl-2.6.5w.unixport.makefile.patch axiom/zips
+>
+>
+
+gilbert@sci.ccny.cuny.edu
+
+
+
+From MAILER-DAEMON Wed Feb 02 11:15:33 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CwNAC-0007sJ-KI
+	for mharc-axiom-math@gnu.org; Wed, 02 Feb 2005 11:15:32 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CwNA6-0007qd-Hh
+	for axiom-math@nongnu.org; Wed, 02 Feb 2005 11:15:26 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CwNA2-0007pZ-B2
+	for axiom-math@nongnu.org; Wed, 02 Feb 2005 11:15:23 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1CwN9u-0007lQ-J2; Wed, 02 Feb 2005 11:15:14 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CwMut-0004ss-5n; Wed, 02 Feb 2005 10:59:43 -0500
+Received: from localhost.localdomain (46.183.252.64.snet.net [64.252.183.46]
+	(may be forged))
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j12FxeE29684;
+	Wed, 2 Feb 2005 09:59:40 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j12GdUi15443;
+	Wed, 2 Feb 2005 11:39:30 -0500
+Date: Wed, 2 Feb 2005 11:39:30 -0500
+Message-Id: <200502021639.j12GdUi15443@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org, axiom-mail@nongnu.org
+Cc: 
+Subject: [Axiom-math] [iajwa@ashland.edu: ECCAD'05: Call For Participation
+	and Posters]
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 02 Feb 2005 16:15:28 -0000
+
+fyi....
+
+
+------- Start of forwarded message -------
+Date: Wed, 02 Feb 2005 10:35:13 -0500
+From: "Iyad Ajwa" <iajwa@ashland.edu>
+Subject: ECCAD'05: Call For Participation and Posters
+
+
+Dear Colleagues,
+
+You are invited to participate in The 2005 East Coast Computer Algebra
+Day (ECCAD'2005) which will be held at Ashland University in Ashland,
+Ohio, USA on Saturday, March 12, 2005. The original CFP is given below.
+
+
+Please be reminded of the following:
+1. The deadline to submit a poster abstract is February 25, 2005. Two
+poster sessions will be held.
+2. The deadline to submit a request for travel support is March 1,
+2005. The conference will most likely be able to provide travel grants
+to graduate students and junior faculty through an NSF grant that has
+been submitted. Priority will be given to those who present posters.
+3. The deadline to register is March 1, 2005. Please register online as
+soon as possible using the link given below in the CFP. Your early
+registration is truly appreciated. It will help us prepare properly for
+the event.
+4. The conference has rooms reserved at local hotels. Please see below
+for codes to use to get the discounted rates and hotels contact
+information.
+5. Please consult with the CFP for additional important information.
+Thank you and I am looking forward to your participation.
+
+============================================
+                          ECCAD 2005
+The 12th Annual East Coast Computer Algebra Day
+            CALL  FOR  PARTICIPATION
+                
+============================================
+HOSTED BY: 
+The Department of Mathematics and Computer Science
+Ashland University
+Ashland, Ohio, USA
+
+DATE: March 12, 2005
+CONFERENCE WEBSITE:   http://www.ashland.edu/~eccad 
+CONFERNCE EMAIL:  eccad@ashland.edu 
+
+=========================================
+ECCAD, East Coast Computer Algebra Day, is an annual conference that
+provides opportunities to learn and share new developments and to
+present research results in the areas of symbolic and mathematical
+computation. 
+
+The 12th Annual East Coast Computer Algebra Day (ECCAD 2005) will be
+held on Saturday, March 12, 2005. It will be hosted by the Department of
+Mathematics and Computer Science at Ashland University in Ashland, Ohio,
+USA. 
+
+ECCAD 2005 will be in honor of Professor Bob Caviness's 65th birthday.
+Bob Caviness is a Professor Emeritus (with a joint appointment in
+Mathematical Sciences) and former Chair of the Department of Computer &
+Information Sciences at the University of Delaware. His research
+interests include the design and analysis of algebraic algorithms, in
+particular, algorithmic decision procedures for integration in finite
+terms and for computing closed form solutions of differential
+equations.More recently he has turned to web-based technologies. He has
+five Ph.D. and two M.S students. Professor Caviness has served in
+various editorial capacities for the following jourmals: ACM
+Transactions on Mathematical Software, ACM Computing Reviews,
+CONSTRAINTS, the online e-commerce journal ACM SIGecom Exchanges, and
+the Journal of Symbolic Computation. He served as Editor-in-Chief of the
+latter journal for the period 1995-2000. He has also lectured widely and
+served the profession in many other capacities. Happy Birthday, Bob! 
+
+THEMES:
+- - Algebraic Algorithms 
+- - Symbolic-Numeric Computation 
+- - Computer Algebra Systems 
+- - Mathematical Communication 
+- - Complexity of Algebraic Problems 
+- - Symbolic and Numerical Linear Algebra 
+- - Applications of Symbolic Computation 
+
+INVITED SPEAKERS:
+The following speakers have been confirmed. Titles and abstracts will
+be announced on the Conference Website at http://www.ashland.edu/~eccad
+once they become available.
+1. Professor Bruno Buchberger - Johannes Kepler University, Linz,
+Austria.
+2. Professor Erich Kaltofen - North Carolina State University, Raleigh,
+NC.
+3. Professor David Saunders - University of Delaware, Newark, DE.
+4. Professor Paul Wang - Kent State University, kent, OH.
+
+REGISTRATION:
+Online Registration is available on the Conference Website at
+http://www.ashland.edu/~eccad. 
+
+POSTER  SESSIONS:
+Two poster sessions will be held at the conference. Participants are
+invited to submit their posters by the submission deadline of February
+25, 2005. Poster abstracts received before the submission deadline will
+be included in The ECCAD'2005 Book of Abstracts which will be available
+at the conference.
+
+POSTER SUBMISSION:
+Poster abstracts may be up to 2 pages long. The submission deadline is
+February 25, 2005. To submit a poster, either use the Online
+Registration Form (available on the Conference Website at
+http://www.ashland.edu/~eccad) to provide the title and abstract of
+your poster, or send the title and abstract of your poster by email to
+eccad@ashland.edu 
+
+TRAVEL SUPPORT:
+Pending NSF support, the conference hopes to be able to provide limited
+travel support for some participants to attend ECCAD'2005.  Graduate
+students and junior faculty are particularly encouraged to apply.
+Support may cover only partially travel expenses and lodging for up to
+two nights.  There will be no stipends. Make sure the flight has a
+flight number of a US carrier. If you plan to attend and apply for
+support, please send your inquiry with an itemized estimate of your
+expenses to eccad@ashland.edu. Please note that if your application is
+approved and if funding is available, you will receive your
+reimbursement after the conference. All applications for support are due
+by March 1, 2005. Support is subject to successful funding. 
+
+ACCOMMODATIONS:
+Blocks of rooms have been reserved at two local hotels for participants
+of ECCAD'2005. Deatiled Information are posted on the Conference Website
+at http://www.ashland.edu/~eccad. 
+
+ADVISORY COUNCIL:
+- - Bruce Char - Drexel University, USA 
+- - Erich Kaltofen - North Carolina State University, USA 
+- - Ilias Kotsireas - Wilfrid Laurier University, CANADA 
+- - David Saunders - University of Delaware, USA 
+- - William Sit - The City College of the City University of New York,
+USA 
+- - Paul S. Wang - Kent State University, USA 
+- - Stephen Watt - University of Western Ontario, CANADA 
+
+ORGANIZER:
+Iyad A. Ajwa
+Department of Mathematics and Computer Science
+Ashland University
+Ashland, Ohio 44805, USA
++1 419.289.5798
+iajwa@ashland.edu
+
+SPONSORS:
+- - Ashland University
+- - College of Arts and Sciences
+- - Department of Mathematics and Computer Science
+- - National Science Foundation
+
+CONFERENCE CONTACT:
+Iyad A. Ajwa
+Department of Mathematics and Computer Science
+Ashland University
+Ashland, Ohio 44805
+USA
+Tel:     +1 419.289.5798
+FAX:  +1 419.289.5791
+iajwa@ashland.edu
+eccad@ashland.edu 
+
+OTHER INFORMATION:
+Previous ECCAD conference homepages can be consulted at:
+http://www.cis.udel.edu/~saunders/eccad/. 
+
+
+Iyad...
+
+***********************************************************
+Iyad A. Ajwa, Ph.D.
+Associate Professor
+Department of Mathematics and Computer Science
+Ashland University
+Ashland, OH 44805, USA
+Phone: +1 419.289.5798
+FAX:    +1 419.289.5791
+www.ashland.edu/~iajwa/
+***********************************************************
+------- End of forwarded message -------
+
+
+
+From MAILER-DAEMON Wed Feb 02 15:03:38 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CwQiw-00005W-Mz
+	for mharc-axiom-math@gnu.org; Wed, 02 Feb 2005 15:03:38 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CwQiu-0008W1-5a
+	for axiom-math@nongnu.org; Wed, 02 Feb 2005 15:03:36 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CwQch-0007wM-8R
+	for axiom-math@nongnu.org; Wed, 02 Feb 2005 14:57:15 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1CwQcd-0007mq-Gr
+	for axiom-math@nongnu.org; Wed, 02 Feb 2005 14:57:07 -0500
+Received: from [66.50.145.54] (helo=localhost.localdomain)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CwQ98-0001bx-Rk
+	for axiom-math@nongnu.org; Wed, 02 Feb 2005 14:26:39 -0500
+Received: from hpcf.upr.edu (localhost.localdomain [127.0.0.1])
+	by localhost.localdomain (Postfix) with ESMTP id 45A9884479
+	for <axiom-math@nongnu.org>; Wed,  2 Feb 2005 15:26:59 -0400 (AST)
+To: axiom-math@nongnu.org
+X-Mailer: MH-E 7.82; nmh 1.1; GNU Emacs 21.3.1
+Date: Wed, 02 Feb 2005 15:26:57 -0400
+From: Humberto Ortiz-Zuazaga <humberto@hpcf.upr.edu>
+Message-Id: <20050202192659.45A9884479@localhost.localdomain>
+Subject: [Axiom-math] Working with finite fields
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 02 Feb 2005 20:03:36 -0000
+
+I've got some code I'm converting from Macaulay2 to Axiom that deals
+with finite fields. I have a question regarding converting fields to
+other representations
+
+In maculay, I can set up a field with a particular quotient ring:
+
+-- Set up a 13 bit polynomial ring over Z_2
+
+i1 : A = ZZ/2[X]/(X^13+X^8+X^5+X^3+X^2+X+1)
+
+o1 = A
+
+o1 : QuotientRing
+
+-- Make the Galois Field, a is the root
+
+i2 : k = GF(A,Variable => a)
+
+o2 = k
+
+o2 : GaloisField
+
+-- This uses a representation like Axiom's FiniteFieldCyclicGroup
+
+i5 : a^5128
+
+      5128
+o5 = a
+
+o5 : k
+
+-- But I can look at the term like a polynomial also:
+
+i6 : lift(a^5128, ambient k)
+
+      11    10    9    5    4    2
+o6 = X   + X   + X  + X  + X  + X
+
+o6 : A
+
+I can do everything except the last step in Axiom:
+
+ GF2 := PF 2
+ m := monomial(1,1)$SUP(GF2)
+ f := m^13+m^8+m^5+m^3+m^2+m+1
+ GF8192 := FFCGP(GF2,f)
+ a := primitiveElement()$GF8192
+
+So now:
+
+(6) -> a**5128
+
+          5128
+   (6)  %A
+Type: FiniteFieldCyclicGroupExtensionByPolynomial(PrimeField 2,?**13+?**8+?**5+?**3+?*?+?+1)
+
+but I can't understand the output of )display op lift to figure out how
+to get the result I want. I'm building the February (patch-30) release
+on Ubuntu Warty as we speak, in the hope that Browse/Hypertex will make
+it easier to understand the available documentation.
+
+I do know I could use the FFPX constructor to get the large field in
+polynomial form, and then call discreteLogarithm to get the exponents. I
+guess my question is can I do the converse easily?
+
+-- 
+Humberto Ortiz Zuazaga
+Programmer Archaeologist
+University of Puerto Rico
+High Performance Computing facility
+http://www.hpcf.upr.edu/~humberto/
+
+
+
+From MAILER-DAEMON Wed Feb 09 11:43:48 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1CyuwN-0006Sy-E7
+	for mharc-axiom-math@gnu.org; Wed, 09 Feb 2005 11:43:47 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1CyuwG-0006Pk-Pj
+	for axiom-math@nongnu.org; Wed, 09 Feb 2005 11:43:43 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1CyuwC-0006NA-Cx
+	for axiom-math@nongnu.org; Wed, 09 Feb 2005 11:43:37 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1CyuwB-0006JG-93
+	for axiom-math@nongnu.org; Wed, 09 Feb 2005 11:43:35 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Cyue7-0006ZM-3n
+	for axiom-math@nongnu.org; Wed, 09 Feb 2005 11:24:55 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id j19GOc8v476258;
+	Wed, 9 Feb 2005 17:24:43 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16906.14478.985963.158698@seam101.local>
+Date: Wed, 9 Feb 2005 17:21:34 +0100
+To: Humberto Ortiz-Zuazaga <humberto@hpcf.upr.edu>
+Subject: Re: [Axiom-math] Working with finite fields
+In-Reply-To: <20050202192659.45A9884479@localhost.localdomain>
+References: <20050202192659.45A9884479@localhost.localdomain>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4248; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 09 Feb 2005 16:43:44 -0000
+
+Dear Humberto,
+
+I'm not quite sure whether this is what you were looking for or not, but maybe
+it helps:
+
+reduce(+,[coordinates(a^5128).i *q^(i-1) for i in 1..#coordinates (a^5128)])
+
+I hope HyperDoc works for you!
+
+Martin
+
+Humberto Ortiz-Zuazaga writes:
+ > I've got some code I'm converting from Macaulay2 to Axiom that deals
+ > with finite fields. I have a question regarding converting fields to
+ > other representations
+ > 
+ > In maculay, I can set up a field with a particular quotient ring:
+ > 
+ > -- Set up a 13 bit polynomial ring over Z_2
+ > 
+ > i1 : A = ZZ/2[X]/(X^13+X^8+X^5+X^3+X^2+X+1)
+ > 
+ > o1 = A
+ > 
+ > o1 : QuotientRing
+ > 
+ > -- Make the Galois Field, a is the root
+ > 
+ > i2 : k = GF(A,Variable => a)
+ > 
+ > o2 = k
+ > 
+ > o2 : GaloisField
+ > 
+ > -- This uses a representation like Axiom's FiniteFieldCyclicGroup
+ > 
+ > i5 : a^5128
+ > 
+ >       5128
+ > o5 = a
+ > 
+ > o5 : k
+ > 
+ > -- But I can look at the term like a polynomial also:
+ > 
+ > i6 : lift(a^5128, ambient k)
+ > 
+ >       11    10    9    5    4    2
+ > o6 = X   + X   + X  + X  + X  + X
+ > 
+ > o6 : A
+ > 
+ > I can do everything except the last step in Axiom:
+ > 
+ > 
+ >  m := monomial(1,1)$SUP(GF2)
+ >  f := m^13+m^8+m^5+m^3+m^2+m+1
+ >  GF8192 := FFCGP(GF2,f)
+ >  a := primitiveElement()$GF8192
+ > 
+ > So now:
+ > 
+ > (6) -> a**5128
+ > 
+ >           5128
+ >    (6)  %A
+ > Type: FiniteFieldCyclicGroupExtensionByPolynomial(PrimeField 2,?**13+?**8+?**5+?**3+?*?+?+1)
+ > 
+ > but I can't understand the output of )display op lift to figure out how
+ > to get the result I want. I'm building the February (patch-30) release
+ > on Ubuntu Warty as we speak, in the hope that Browse/Hypertex will make
+ > it easier to understand the available documentation.
+ > 
+ > I do know I could use the FFPX constructor to get the large field in
+ > polynomial form, and then call discreteLogarithm to get the exponents. I
+ > guess my question is can I do the converse easily?
+ > 
+ > -- 
+ > Humberto Ortiz Zuazaga
+ > Programmer Archaeologist
+ > University of Puerto Rico
+ > High Performance Computing facility
+ > http://www.hpcf.upr.edu/~humberto/
+ > 
+ > 
+ > _______________________________________________
+ > Axiom-math mailing list
+ > Axiom-math@nongnu.org
+ > http://lists.nongnu.org/mailman/listinfo/axiom-math
+
+
+
+
+From MAILER-DAEMON Sat Feb 12 17:54:45 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1D06A0-0006nW-Tj
+	for mharc-axiom-math@gnu.org; Sat, 12 Feb 2005 17:54:45 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1D069x-0006ll-M6
+	for axiom-math@nongnu.org; Sat, 12 Feb 2005 17:54:42 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1D069s-0006k9-QJ
+	for axiom-math@nongnu.org; Sat, 12 Feb 2005 17:54:39 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1D067v-00066N-KF
+	for axiom-math@nongnu.org; Sat, 12 Feb 2005 17:52:35 -0500
+Received: from [136.145.54.123] (helo=neverblows.hpcf.upr.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1D05gt-0003GD-6l
+	for axiom-math@nongnu.org; Sat, 12 Feb 2005 17:24:39 -0500
+Received: from hpcf.upr.edu (localhost.localdomain [127.0.0.1])
+	by neverblows.hpcf.upr.edu (Postfix) with ESMTP id 971C7B9C07F;
+	Sat, 12 Feb 2005 18:18:30 -0400 (VET)
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Working with finite fields 
+In-Reply-To: Your message of "Wed, 09 Feb 2005 17:21:34 +0100."
+	<16906.14478.985963.158698@seam101.local> 
+X-Mailer: MH-E 7.82; nmh 1.1; GNU Emacs 21.3.1
+MIME-Version: 1.0
+Content-Type: multipart/signed; boundary="=-=-=";
+	micalg=pgp-sha1; protocol="application/pgp-signature"
+Date: Sat, 12 Feb 2005 18:18:30 -0400
+From: Humberto Ortiz Zuazaga <humberto@hpcf.upr.edu>
+Message-Id: <20050212221830.971C7B9C07F@neverblows.hpcf.upr.edu>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 12 Feb 2005 22:54:43 -0000
+
+--=-=-=
+Content-Transfer-Encoding: quoted-printable
+
+Martin Rubey <martin.rubey@univie.ac.at> wrote:
+
+> I'm not quite sure whether this is what you were looking for or not,
+> but maybe it helps:
+>=20
+> reduce(+,[coordinates(a^5128).i *q^(i-1) for i in 1..#coordinates
+> (a^5128)])
+
+No, it has the wrong type. But I think I can do it looping over the
+coordinates as you do. Actually, what I wanted *was* the coordinates, I
+just didn't know I could get them :-).
+
+> I hope HyperDoc works for you!
+
+It does, linux/x86.
+
+=2D-=20
+Humberto Ortiz Zuazaga
+Programmer-Archaeologist
+High Performance Computing facility
+University of Puerto Rico
+http://www.hpcf.upr.edu/~humberto/
+
+--=-=-=
+Content-Type: application/pgp-signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQBCDoC2O8aX8Tqx8vgRAvn3AJsEt4T9gFjcq2Fw/lN7zmZ4fjBxSACfZMJd
+crx6bMEsX/D3rMabRZB3rb8=
+=qfWe
+-----END PGP SIGNATURE-----
+--=-=-=--
+
+
+

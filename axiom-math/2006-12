@@ -1,0 +1,788 @@
+From MAILER-DAEMON Mon Dec 04 12:33:18 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GrHgr-0007dK-Uj
+	for mharc-axiom-math@gnu.org; Mon, 04 Dec 2006 12:33:17 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GrHgq-0007cq-G8
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 12:33:16 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GrHgp-0007cF-Ok
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 12:33:15 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GrHgp-0007c6-JO
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 12:33:15 -0500
+Received: from [82.103.131.108] (helo=vega.linux2go.dk)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GrHgp-0004Dm-Gr
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 12:33:15 -0500
+Received: by vega.linux2go.dk (Postfix, from userid 1000)
+	id A5AB94C7E2; Mon,  4 Dec 2006 18:33:27 +0100 (CET)
+Date: Mon, 4 Dec 2006 18:33:27 +0100
+From: Soren Hansen <sh@warma.dk>
+To: axiom-math@nongnu.org
+Message-ID: <20061204173327.GB15766@vega.linux2go.dk>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="eJnRUKwClWJh1Khz"
+Content-Disposition: inline
+'From: Soren Hansen <sh@linux2go.dk>'
+User-Agent: Mutt/1.5.11
+Subject: [Axiom-math] Simple question
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 04 Dec 2006 17:33:16 -0000
+
+
+--eJnRUKwClWJh1Khz
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Hi!
+
+I'm a new Axiom user, so this is probably a very simple question, but it
+really puzzles me:
+
+(1) -> solve(x^10-1024, 1)
+
+   (1)  [x=3D - 2,x=3D 2]
+                         Type: List Equation Polynomial Fraction Integer
+
+
+(2) -> solve(2^x-1024, 1)
+   There are 20 exposed and 3 unexposed library operations named solve=20
+      having 2 argument(s) but none was determined to be applicable.=20
+      Use HyperDoc Browse, or issue
+                              )display op solve
+      to learn more about the available operations. Perhaps=20
+      package-calling the operation or using coercions on the arguments
+      will allow you to apply the operation.
+=20
+   Cannot find a definition or applicable library operation named solve
+      with argument type(s)=20
+                             Expression Integer
+                               PositiveInteger
+     =20
+      Perhaps you should use "@" to indicate the required return type,=20
+      or "$" to specify which version of the function you need.
+(2) ->=20
+
+
+First question: What is so different about those two expressions?
+Second question: How do I fix it?
+
+The problem I actually wanted to solve was:
+solve((250/x)^x-6000000000,1.e-5)
+
+=2E.which also doesn't work, but I expect that the answer to that will be
+clear to me when my second question from above is answered.
+
+--=20
+Cheers, S=F8ren.
+
+--eJnRUKwClWJh1Khz
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFFdFvnonjfXui9pOMRAg2tAJ9tyFfIKBifUo1PgIqWjkHthvWiRACgm/uG
+i8MHjyNWegVC23atoliDN1I=
+=Jep6
+-----END PGP SIGNATURE-----
+
+--eJnRUKwClWJh1Khz--
+
+
+
+From MAILER-DAEMON Mon Dec 04 13:16:07 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GrIMJ-0007TS-7Z
+	for mharc-axiom-math@gnu.org; Mon, 04 Dec 2006 13:16:07 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GrIMH-0007Sa-Ba
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 13:16:05 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GrIMF-0007S3-JZ
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 13:16:03 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GrIMF-0007S0-HJ
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 13:16:03 -0500
+Received: from [62.4.16.101] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GrIMF-0003T0-Ai
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 13:16:03 -0500
+Received: from localhost (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id B9EE440F56;
+	Mon,  4 Dec 2006 19:16:00 +0100 (CET)
+Received: from fmy by localhost with local (Exim 4.63)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1GrIMC-0002W6-GC; Mon, 04 Dec 2006 19:16:00 +0100
+To: Soren Hansen <sh@warma.dk>
+Subject: Re: [Axiom-math] Simple question
+References: <20061204173327.GB15766@vega.linux2go.dk>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 04 Dec 2006 19:16:00 +0100
+In-Reply-To: <20061204173327.GB15766@vega.linux2go.dk>
+Message-ID: <87fybvsf1b.fsf@nerim.fr>
+Lines: 49
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 04 Dec 2006 18:16:06 -0000
+
+Hello Soren, and Welcome !
+
+> I'm a new Axiom user, so this is probably a very simple question, but it
+> really puzzles me:
+> 
+> (1) -> solve(x^10-1024, 1)
+> 
+>    (1)  [x= - 2,x= 2]
+>                          Type: List Equation Polynomial Fraction Integer
+
+                                             solve operate over Polynomial
+
+Axiom isn't as the others CAS.
+If you used maple or others you must change (just a little) your mind.
+It's surprising at the beginning but some times after we appreciate 
+the typed language axiom. We must explain (to himself) what the want.
+
+> (2) -> solve(2^x-1024, 1)
+>    There are 20 exposed and 3 unexposed library operations named solve 
+>       having 2 argument(s) but none was determined to be applicable. 
+>       Use HyperDoc Browse, or issue
+>                               )display op solve
+>       to learn more about the available operations. Perhaps 
+>       package-calling the operation or using coercions on the arguments
+>       will allow you to apply the operation.
+>  
+>    Cannot find a definition or applicable library operation named solve
+>       with argument type(s) 
+>                              Expression Integer
+>                                PositiveInteger
+>       
+>       Perhaps you should use "@" to indicate the required return type, 
+>       or "$" to specify which version of the function you need.
+
+2^x isn't polynomial, it's a function with exp : 2^x = exp (x * log 2).
+
+Axiom is very typed so 2^x in of type Expression Integer and there is
+no solve over Expression Integer.
+
+And I don't believe there are methods for such equations, 
+even if my eyes see the x=10 solution.
+
+And Axiom don't have a lot of numerical methods.
+
+What do you want to do with Axiom.
+
+Have a nice day !
+
+Francois (in France)
+
+
+
+From MAILER-DAEMON Mon Dec 04 15:54:46 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GrKpq-0001t4-CL
+	for mharc-axiom-math@gnu.org; Mon, 04 Dec 2006 15:54:46 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GrKpo-0001s8-LP
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 15:54:44 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GrKpm-0001rr-Oh
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 15:54:44 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GrKpm-0001ri-K5
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 15:54:42 -0500
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1GrKpm-000377-As
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 15:54:42 -0500
+Received: from [192.168.138.17] (funklan.is4all.net [194.187.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	kB4KsdkG024680
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Mon, 4 Dec 2006 21:54:40 +0100
+Message-ID: <45748B25.2070906@hemmecke.de>
+Date: Mon, 04 Dec 2006 21:55:01 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.8 (X11/20061025)
+MIME-Version: 1.0
+To: Soren Hansen <sh@warma.dk>
+Subject: Re: [Axiom-math] Simple question
+References: <20061204173327.GB15766@vega.linux2go.dk>
+In-Reply-To: <20061204173327.GB15766@vega.linux2go.dk>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 04 Dec 2006 20:54:44 -0000
+
+> The problem I actually wanted to solve was:
+> solve((250/x)^x-6000000000,1.e-5)
+
+Sorry to say, but that is not a good problem description. Try to 
+formulate the problem without the "solve" function and specify clearly 
+what solutions you accept. For example, there is no solution to
+
+(250/x)^x = 6000000000
+
+if you require x to be a natural number. You probably don't want that, 
+but your problem description is too vague. If you leave the computer to 
+guess something for you then you should prepare that a possible "answer" 
+is not that what you expect.
+
+Ralf
+
+PS: Maple 9.5 says
+
+fsolve((250/x)^x-6000000000);
+226.3269985
+
+If that is of any help.
+
+
+
+From MAILER-DAEMON Mon Dec 04 16:36:12 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GrLTw-0000Q6-1S
+	for mharc-axiom-math@gnu.org; Mon, 04 Dec 2006 16:36:12 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GrLTu-0000PU-VM
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 16:36:10 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GrLTu-0000P8-4h
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 16:36:10 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GrLTu-0000P5-12
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 16:36:10 -0500
+Received: from [82.103.131.108] (helo=vega.linux2go.dk)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GrLTt-00040Y-W1
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 16:36:10 -0500
+Received: by vega.linux2go.dk (Postfix, from userid 1000)
+	id 196C24C7F4; Mon,  4 Dec 2006 22:36:22 +0100 (CET)
+Date: Mon, 4 Dec 2006 22:36:22 +0100
+From: 'Soren Hansen' <sh@warma.dk>
+To: Bill Page <bill.page1@synthesis.anikast.ca>
+Subject: Re: [Axiom-math] Simple question
+Message-ID: <20061204213621.GA4785@vega.linux2go.dk>
+References: <87fybvsf1b.fsf@nerim.fr> <024d01c717d9$24512bf0$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="wac7ysb48OaltWcw"
+Content-Disposition: inline
+In-Reply-To: <024d01c717d9$24512bf0$6900a8c0@asus>
+'From: Soren Hansen <sh@warma.dk>'
+User-Agent: Mutt/1.5.11
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 04 Dec 2006 21:36:11 -0000
+
+
+--wac7ysb48OaltWcw
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Mon, Dec 04, 2006 at 02:19:28PM -0500, Bill Page wrote:
+> > > (2) -> solve(2^x-1024, 1)
+> Note that there are forms of solve that take something of type
+> Expression Integer as the first argument.
+
+I've been staring at the output of ")di op solve", but cannot spot it.
+Does it say "Expression Integer" or does it perhaps say something else
+that an "Expression Integer" can be implicitly converted to? I assume
+Axiom sometimes does that kind of thing?
+
+> (3) -> solve((250/x)^x-6000000000)
+>=20
+>    (3)  []
+>                      Type: List Equation Expression Integer
+>=20
+> Unfortunately Axiom apparently cannot (yet) find an exact solution for
+> this one (requires LambertW).
+
+Yes, I spotted LambertW in the output from Maple when I asked it the
+same question. :-) I have however never heard of it before. Is it
+difficult to implement? I'm thinking it could be my first stab at
+implementing something new in Axiom. :-)
+
+--=20
+Cheers, S=F8ren Hansen.
+
+--wac7ysb48OaltWcw
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFFdJTVonjfXui9pOMRApWtAJsFIw5M+X3rLjtva2ufvcnzFFGaAQCfZilT
+hXrjB6GTT9CXmx2hbISkvVI=
+=SdWu
+-----END PGP SIGNATURE-----
+
+--wac7ysb48OaltWcw--
+
+
+
+From MAILER-DAEMON Mon Dec 04 16:44:45 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GrLcD-0007wV-K4
+	for mharc-axiom-math@gnu.org; Mon, 04 Dec 2006 16:44:45 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GrLcB-0007wO-T7
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 16:44:43 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GrLcB-0007vv-5o
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 16:44:43 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GrLcA-0007vo-Sn
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 16:44:43 -0500
+Received: from [82.103.131.108] (helo=vega.linux2go.dk)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GrLcA-0005gM-Ie
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 16:44:42 -0500
+Received: by vega.linux2go.dk (Postfix, from userid 1000)
+	id B9B6B4C812; Mon,  4 Dec 2006 22:44:54 +0100 (CET)
+Date: Mon, 4 Dec 2006 22:44:54 +0100
+From: Soren Hansen <sh@warma.dk>
+To: Ralf Hemmecke <ralf@hemmecke.de>
+Subject: Re: [Axiom-math] Simple question
+Message-ID: <20061204214454.GB4785@vega.linux2go.dk>
+References: <20061204173327.GB15766@vega.linux2go.dk>
+	<45748B25.2070906@hemmecke.de>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="Fba/0zbH8Xs+Fj9o"
+Content-Disposition: inline
+In-Reply-To: <45748B25.2070906@hemmecke.de>
+'From: Soren Hansen <sh@warma.dk>'
+User-Agent: Mutt/1.5.11
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 04 Dec 2006 21:44:44 -0000
+
+
+--Fba/0zbH8Xs+Fj9o
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Mon, Dec 04, 2006 at 09:55:01PM +0100, Ralf Hemmecke wrote:
+> >The problem I actually wanted to solve was:
+> >solve((250/x)^x-6000000000,1.e-5)
+=20
+> Sorry to say, but that is not a good problem description.
+
+I suppose I could have been more precise. I just expected the context to
+make up for my lack of detail. I wanted to solve (250/x)^x=3D6000000000 to
+to a precision of 10^-5. In my other example I managed to do that by
+giving solve an expression for which it found the values of x where the
+expression evaluated to zero. I - na=EFvely - thought a similar approach
+would be sensible.
+
+> Try to formulate the problem without the "solve" function and specify
+> clearly what solutions you accept. For example, there is no solution
+> to
+>=20
+> (250/x)^x =3D 6000000000
+>=20
+> if you require x to be a natural number.
+
+I was looking for an approximation with a set precision.
+
+> You probably don't want that, but your problem description is too
+> vague. If you leave the computer to guess something for you then you
+> should prepare that a possible "answer" is not that what you expect.
+
+> PS: Maple 9.5 says
+>=20
+> fsolve((250/x)^x-6000000000);
+> 226.3269985
+>=20
+> If that is of any help.
+
+Thanks, but I actually already found the answer using Maple. Maple's
+version of solve gave me two solutions, each using LambertW.  One
+evaluated to ~226 and the other ~6.=20
+
+I am merely trying to get the hang of Axiom in order to ditch Maple and
+this seemed like a simple starting point.
+
+--=20
+Cheers, S=F8ren Hansen.
+
+--Fba/0zbH8Xs+Fj9o
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFFdJbWonjfXui9pOMRAkjUAKCKeCSGMTk010vnfWB7WsqPQWVmigCghODq
+eNUV95G2kzg6ttCIGeVpUXI=
+=D791
+-----END PGP SIGNATURE-----
+
+--Fba/0zbH8Xs+Fj9o--
+
+
+
+From MAILER-DAEMON Mon Dec 04 16:48:42 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GrLg2-0001zO-M4
+	for mharc-axiom-math@gnu.org; Mon, 04 Dec 2006 16:48:42 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GrLg1-0001zB-KC
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 16:48:41 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GrLg0-0001yy-1p
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 16:48:41 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GrLfz-0001yv-PI
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 16:48:39 -0500
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1GrLfz-0006LA-K1
+	for axiom-math@nongnu.org; Mon, 04 Dec 2006 16:48:39 -0500
+Received: from [192.168.138.17] (funklan.is4all.net [194.187.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	kB4LmakG026731
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Mon, 4 Dec 2006 22:48:36 +0100
+Message-ID: <457497CA.8090808@hemmecke.de>
+Date: Mon, 04 Dec 2006 22:48:58 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.8 (X11/20061025)
+MIME-Version: 1.0
+To: "'Soren Hansen'" <sh@warma.dk>
+Subject: Re: [Axiom-math] Simple question
+References: <87fybvsf1b.fsf@nerim.fr> <024d01c717d9$24512bf0$6900a8c0@asus>
+	<20061204213621.GA4785@vega.linux2go.dk>
+In-Reply-To: <20061204213621.GA4785@vega.linux2go.dk>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 04 Dec 2006 21:48:41 -0000
+
+>> Unfortunately Axiom apparently cannot (yet) find an exact solution for
+>> this one (requires LambertW).
+> 
+> Yes, I spotted LambertW in the output from Maple when I asked it the
+> same question. :-) I have however never heard of it before. Is it
+> difficult to implement? I'm thinking it could be my first stab at
+> implementing something new in Axiom. :-)
+
+Hi Bill,
+
+the first time I saw LambertW was when Manuel Bronstein presented his 
+"Poor Man's Integrator". Since that is a very short Maple program (these 
+85 or so lines of code should be on his homepage) it would probably add 
+to the integration abilities of Axiom.
+
+Would be nice to see that in Axiom. ;-)
+
+Ralf
+
+
+
+From MAILER-DAEMON Tue Dec 05 12:55:52 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GreWF-0005rv-Kj
+	for mharc-axiom-math@gnu.org; Tue, 05 Dec 2006 12:55:51 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GreWC-0005oV-UC
+	for axiom-math@nongnu.org; Tue, 05 Dec 2006 12:55:48 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GreW8-0005hl-Ta
+	for axiom-math@nongnu.org; Tue, 05 Dec 2006 12:55:47 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GreW8-0005hE-In
+	for axiom-math@nongnu.org; Tue, 05 Dec 2006 12:55:44 -0500
+Received: from [82.103.131.108] (helo=vega.linux2go.dk)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GreW8-00007g-DQ
+	for axiom-math@nongnu.org; Tue, 05 Dec 2006 12:55:44 -0500
+Received: by vega.linux2go.dk (Postfix, from userid 1000)
+	id 8626E4C7FD; Tue,  5 Dec 2006 18:55:55 +0100 (CET)
+Date: Tue, 5 Dec 2006 18:55:55 +0100
+From: 'Soren Hansen' <sh@warma.dk>
+To: Bill Page <bill.page1@synthesis.anikast.ca>
+Subject: Re: [Axiom-math] Simple question
+Message-ID: <20061205175555.GH4785@vega.linux2go.dk>
+References: <20061204213621.GA4785@vega.linux2go.dk>
+	<009701c71893$d06ecd10$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="Rn7IEEq3VEzCw+ji"
+Content-Disposition: inline
+In-Reply-To: <009701c71893$d06ecd10$6900a8c0@asus>
+'From: Soren Hansen <sh@warma.dk>'
+User-Agent: Mutt/1.5.11
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 05 Dec 2006 17:55:49 -0000
+
+
+--Rn7IEEq3VEzCw+ji
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Tue, Dec 05, 2006 at 12:35:41PM -0500, Bill Page wrote:
+> You can find out by doing the following:
+>=20
+> (1) -> )set message bottom on
+
+Clever. This will come in handy. :-)
+
+> > Yes, I spotted LambertW in the output from Maple when I asked it the
+> > same question. :-) I have however never heard of it before.  Is it
+> > difficult to implement? I'm thinking it could be my first stab at
+> > implementing something new in Axiom. :-)
+> You might be interested in: Chapter 22: First encounters of an Aldor
+> novice by Robert Corless
+
+Yes, I already read it and converted it to spad. However, I'd like to
+have it extended to what Maple can do (chosing different branches and
+handling of complex numbers).
+
+> > Would be nice to see that in Axiom. ;-)
+> Yes indeed. I would be glad to work with anyone having that objective.
+
+I would be very interested in implementing both LambertW and whatever
+else is needed for the function to be used when solving equations of the
+w*exp(w) form. I'll probably need some help. I'll look into it in a few
+days. I've got project deadlines coming up real soon. :-)
+
+--=20
+Mange hilsner, S=F8ren Hansen.
+
+--Rn7IEEq3VEzCw+ji
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFFdbKronjfXui9pOMRAjE6AJ9dmMuldjYSNZXhBDY7O7UX8VQYuACgk6lz
+GLrwmIH7gkwSilmIWBVDKFM=
+=9W66
+-----END PGP SIGNATURE-----
+
+--Rn7IEEq3VEzCw+ji--
+
+
+
+From MAILER-DAEMON Thu Dec 07 08:33:38 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GsJNa-0001XD-AL
+	for mharc-axiom-math@gnu.org; Thu, 07 Dec 2006 08:33:38 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GsJNY-0001WT-RZ
+	for axiom-math@nongnu.org; Thu, 07 Dec 2006 08:33:36 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GsJNX-0001Vl-73
+	for axiom-math@nongnu.org; Thu, 07 Dec 2006 08:33:36 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GsJNX-0001Vb-2q
+	for axiom-math@nongnu.org; Thu, 07 Dec 2006 08:33:35 -0500
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GsJNW-0008GV-IJ
+	for axiom-math@nongnu.org; Thu, 07 Dec 2006 08:33:35 -0500
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GsJNV-0002Oh-0Y; Thu, 07 Dec 2006 14:33:33 +0100
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GsJNU-0006B7-Ud; Thu, 07 Dec 2006 14:33:33 +0100
+Sender: rubey@aquin.mat.univie.ac.at
+To: Francois Maltey <fmaltey@nerim.fr>
+References: <E1GryiJ-0004MA-00@hera.math.uni.wroc.pl>
+	<9qac21qa86.fsf@kratt3.mat.univie.ac.at> <87irgoewu7.fsf@nerim.fr>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 07 Dec 2006 14:33:30 +0100
+In-Reply-To: <87irgoewu7.fsf@nerim.fr>
+Message-ID: <9qy7pjx239.fsf_-_@aquin.mat.univie.ac.at>
+Lines: 10
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math <axiom-math@nongnu.org>
+Subject: [Axiom-math] Simplifying
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 07 Dec 2006 13:33:37 -0000
+
+Dear Francois,
+
+I just stumbled over the following article. It seems easy to read, maybe it
+provides you with some ideas...
+
+http://portal.acm.org/citation.cfm?id=806298
+
+If you don't have access, please drop me a mail.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Dec 07 09:01:46 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GsJon-00081i-Lu
+	for mharc-axiom-math@gnu.org; Thu, 07 Dec 2006 09:01:46 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GsJok-0007zO-VH
+	for axiom-math@nongnu.org; Thu, 07 Dec 2006 09:01:43 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GsJoj-0007xl-7D
+	for axiom-math@nongnu.org; Thu, 07 Dec 2006 09:01:42 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GsJoh-0007xY-T7
+	for axiom-math@nongnu.org; Thu, 07 Dec 2006 09:01:40 -0500
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GsJoh-0006E9-8Q
+	for axiom-math@nongnu.org; Thu, 07 Dec 2006 09:01:39 -0500
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GsJog-000776-45; Thu, 07 Dec 2006 15:01:38 +0100
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GsJof-00007G-Vu; Thu, 07 Dec 2006 15:01:38 +0100
+Sender: rubey@aquin.mat.univie.ac.at
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Simplifying
+References: <E1GryiJ-0004MA-00@hera.math.uni.wroc.pl>
+	<9qac21qa86.fsf@kratt3.mat.univie.ac.at> <87irgoewu7.fsf@nerim.fr>
+	<9qy7pjx239.fsf_-_@aquin.mat.univie.ac.at>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 07 Dec 2006 15:01:35 +0100
+In-Reply-To: <9qy7pjx239.fsf_-_@aquin.mat.univie.ac.at>
+Message-ID: <9q4ps7g5z4.fsf@aquin.mat.univie.ac.at>
+Lines: 9
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math <axiom-math@nongnu.org>
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 07 Dec 2006 14:01:43 -0000
+
+Here is a more recent article:
+
+http://portal.acm.org/citation.cfm?id=636429
+
+again:
+
+> If you don't have access, please drop me a mail.
+> 
+> Martin
+
+
+
+

@@ -1,0 +1,327 @@
+From MAILER-DAEMON Wed Oct 06 08:02:10 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CFAUh-0003kc-KO
+	for mharc-axiom-math@gnu.org; Wed, 06 Oct 2004 08:02:08 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CFAUb-0003iJ-Kz
+	for axiom-math@nongnu.org; Wed, 06 Oct 2004 08:02:01 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CFAUW-0003go-8W
+	for axiom-math@nongnu.org; Wed, 06 Oct 2004 08:01:57 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CFAUU-0003fK-K2
+	for axiom-math@nongnu.org; Wed, 06 Oct 2004 08:01:55 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CFANb-0004RJ-P9
+	for axiom-math@nongnu.org; Wed, 06 Oct 2004 07:54:48 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i96BsB5M280992
+	for <axiom-math@nongnu.org>; Wed, 6 Oct 2004 13:54:21 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16739.63538.97758.728534@gargle.gargle.HOWL>
+Date: Wed, 6 Oct 2004 13:50:42 +0000
+To: axiom-math@nongnu.org
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4249; Body=1 Fuz1=1 Fuz2=1
+Subject: [Axiom-math] solving recurrence relations
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 06 Oct 2004 12:02:04 -0000
+
+Hi,
+
+does anybody know how to solve recurrence relations in Axiom. In Maple I can
+say, for example
+
+rsolve(a(n)+n*a(n-1)=0,a(n));
+
+to obtain
+                           n
+                       (-1)  GAMMA(n + 1) a(0)
+
+thanks,
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Oct 06 18:14:38 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CFK3S-0006Q1-EQ
+	for mharc-axiom-math@gnu.org; Wed, 06 Oct 2004 18:14:38 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CFK3R-0006Ps-2D
+	for axiom-math@nongnu.org; Wed, 06 Oct 2004 18:14:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CFK3Q-0006Pg-Lk
+	for axiom-math@nongnu.org; Wed, 06 Oct 2004 18:14:36 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CFK3Q-0006Pd-I3
+	for axiom-math@nongnu.org; Wed, 06 Oct 2004 18:14:36 -0400
+Received: from [131.114.10.37] (helo=poisson.phc.unipi.it)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CFJwa-0005Zw-TA
+	for axiom-math@nongnu.org; Wed, 06 Oct 2004 18:07:33 -0400
+Received: by poisson.phc.unipi.it (Postfix, from userid 1007)
+	id CA3194741; Thu,  7 Oct 2004 00:07:30 +0200 (CEST)
+Date: Thu, 7 Oct 2004 00:07:30 +0200
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] solving recurrence relations
+Message-ID: <20041006220730.GA20411@poisson.phc.unipi.it>
+References: <16739.63538.97758.728534@gargle.gargle.HOWL>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="PNTmBPCT7hxwcZjr"
+Content-Disposition: inline
+In-Reply-To: <16739.63538.97758.728534@gargle.gargle.HOWL>
+User-Agent: Mutt/1.5.6+20040818i
+From: andrea@poisson.phc.unipi.it (Andrea Bedini)
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 06 Oct 2004 22:14:37 -0000
+
+
+--PNTmBPCT7hxwcZjr
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Wed, Oct 06, 2004 at 01:50:42PM +0000, Martin Rubey wrote:
+> does anybody know how to solve recurrence relations in Axiom. In Maple I =
+can
+> say, for example
+>=20
+> rsolve(a(n)+n*a(n-1)=3D0,a(n));
+>=20
+> to obtain
+>                            n
+>                        (-1)  GAMMA(n + 1) a(0)
+
+just declare it and use it. i think you have to supply the initial
+value a(0) :
+
+(1) -> a(0) =3D=3D 1
+                                                                   Type: Vo=
+id
+(2) -> a(n) =3D=3D - n * a(n-1)
+                                                                   Type: Vo=
+id
+(3) -> a(5)
+   Compiling function a with type Integer -> Integer
+   Compiling function a as a recurrence relation.
+
+   (3)  - 120
+                                                                Type: Integ=
+er
+(4) ->
+
+
+
+--=20
+Andrea Bedini <andrea@poisson.dm.unipi.it>
+
+--PNTmBPCT7hxwcZjr
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBZGyi72y9Ytn0eYgRAn4FAJ9huFZxL4k7mAuWw4dvOXxg+zfVVwCbBw1X
+JLje3jMuYHsXzQM5kLKbCDw=
+=bk2j
+-----END PGP SIGNATURE-----
+
+--PNTmBPCT7hxwcZjr--
+
+
+
+From MAILER-DAEMON Thu Oct 07 02:54:43 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CFSAl-0004Wn-Ij
+	for mharc-axiom-math@gnu.org; Thu, 07 Oct 2004 02:54:43 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CFSAk-0004Wb-60
+	for axiom-math@nongnu.org; Thu, 07 Oct 2004 02:54:42 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CFSAj-0004WP-Om
+	for axiom-math@nongnu.org; Thu, 07 Oct 2004 02:54:41 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CFSAj-0004WM-Lq
+	for axiom-math@nongnu.org; Thu, 07 Oct 2004 02:54:41 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CFS3e-00076S-Lb
+	for axiom-math@nongnu.org; Thu, 07 Oct 2004 02:47:23 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i976l7cM382316;
+	Thu, 7 Oct 2004 08:47:12 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16741.441.316897.61827@gargle.gargle.HOWL>
+Date: Thu, 7 Oct 2004 08:43:37 +0000
+To: andrea@poisson.phc.unipi.it (Andrea Bedini)
+Subject: Re: [Axiom-math] solving recurrence relations
+In-Reply-To: <20041006220730.GA20411@poisson.phc.unipi.it>
+References: <16739.63538.97758.728534@gargle.gargle.HOWL>
+	<20041006220730.GA20411@poisson.phc.unipi.it>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mail 4247; Body=3 Fuz1=3 Fuz2=3
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 07 Oct 2004 06:54:42 -0000
+
+Dear Andrea,
+
+Andrea Bedini writes:
+ > On Wed, Oct 06, 2004 at 01:50:42PM +0000, Martin Rubey wrote:
+ > > does anybody know how to solve recurrence relations in Axiom. In Maple I can
+ > > say, for example
+ > > 
+ > > rsolve(a(n)+n*a(n-1)=0,a(n));
+ > > 
+ > > to obtain
+ > >                            n
+ > >                        (-1)  GAMMA(n + 1) a(0)
+ > 
+ > just declare it and use it. i think you have to supply the initial
+ > value a(0) :
+
+Well, I need a symbolic solution...
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sun Oct 24 00:49:38 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CLaK2-0000qm-4l
+	for mharc-axiom-math@gnu.org; Sun, 24 Oct 2004 00:49:38 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CLaK0-0000qg-0D
+	for axiom-math@nongnu.org; Sun, 24 Oct 2004 00:49:36 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CLaJz-0000qU-JB
+	for axiom-math@nongnu.org; Sun, 24 Oct 2004 00:49:35 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CLaJz-0000qR-G7
+	for axiom-math@nongnu.org; Sun, 24 Oct 2004 00:49:35 -0400
+Received: from [140.247.60.120] (helo=bostoncoop.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CLaCD-0005B1-HD
+	for axiom-math@nongnu.org; Sun, 24 Oct 2004 00:41:33 -0400
+Received: from lotus (h000625d7f092.ne.client2.attbi.com [66.30.113.145])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by bostoncoop.net (Postfix) with ESMTP id 2C38AA0185;
+	Sun, 24 Oct 2004 00:41:27 -0400 (EDT)
+Received: by lotus (Postfix, from userid 1000)
+	id B10B5102C; Sun, 24 Oct 2004 00:41:23 -0400 (EDT)
+Date: Sun, 24 Oct 2004 00:41:23 -0400
+To: root <daly@idsi.net>
+Subject: Re: [Axiom-math] solving polynomial equations
+Message-ID: <20041024044123.GA6652@lotus.bostoncoop.net>
+References: <200409101930.i8AJUrN04206@localhost.localdomain>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="W/nzBZO5zC0uMSeA"
+Content-Disposition: inline
+In-Reply-To: <200409101930.i8AJUrN04206@localhost.localdomain>
+User-Agent: Mutt/1.5.6+20040907i
+From: dpt@lotus.bostoncoop.net (Dylan Thurston)
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: dpt@math.harvard.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 24 Oct 2004 04:49:36 -0000
+
+
+--W/nzBZO5zC0uMSeA
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Fri, Sep 10, 2004 at 03:30:53PM -0400, root wrote:
+> General Solution for Polynomial Equations
+>=20
+> http://arxiv.org/pdf/math.CA/0408264
+>=20
+> the report is that a Dutch student found a formula to determine the
+> roots of any polynomial equation. Although an exact solution has been
+> proven impossible for higher orders, this is not the case for numerical
+> solutions.
+
+Summary of the thread in sci.math:=20
+
+(a) The problem is badly stated; the correct statement is that there
+is no closed-form solution to the general quintic using radicals.
+This is not relevant for much of anything; for instance, there are
+perfectly satisfying closed-form solutions using elliptic functions,
+which are quite computable.
+
+(b) The technique in the paper is a very old technique for
+approximating solutions to polynomials, which doesn't work very well.
+
+Peace,
+	Dylan
+
+--W/nzBZO5zC0uMSeA
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBezJzVeybfhaa3tcRAoMDAJ4j3jqCtAqnV7d75Vkmu3aCD+KjmwCgk/iV
+50rVsRnWjPrp6P2sZlz3vg0=
+=DqW8
+-----END PGP SIGNATURE-----
+
+--W/nzBZO5zC0uMSeA--
+
+
+

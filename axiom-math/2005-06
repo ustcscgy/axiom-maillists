@@ -1,0 +1,4149 @@
+From MAILER-DAEMON Thu Jun 09 05:14:02 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DgJ6v-00060F-N8
+	for mharc-axiom-math@gnu.org; Thu, 09 Jun 2005 05:14:02 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DgJ6e-0005sU-7r
+	for axiom-math@nongnu.org; Thu, 09 Jun 2005 05:13:44 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DgJ6a-0005rK-Ng
+	for axiom-math@nongnu.org; Thu, 09 Jun 2005 05:13:41 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DgJ6a-0005oK-3v
+	for axiom-math@nongnu.org; Thu, 09 Jun 2005 05:13:40 -0400
+Received: from [206.46.252.48] (helo=vms048pub.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DgIzN-0005ax-Uu
+	for axiom-math@nongnu.org; Thu, 09 Jun 2005 05:06:14 -0400
+Received: from cunyvm.cuny.edu ([162.83.167.37])
+	by vms048.mailsrvcs.net (Sun Java System Messaging Server 6.2 HotFix
+	0.04 (built Dec 24 2004)) with ESMTPA id
+	<0IHT00CX87XWAO64@vms048.mailsrvcs.net> for
+	axiom-math@nongnu.org; Thu, 09 Jun 2005 04:05:57 -0500 (CDT)
+Date: Thu, 09 Jun 2005 05:06:03 -0400
+From: William Sit <wyscc@cunyvm.cuny.edu>
+To: "Rubey, Martin" <martin.rubey@univie.ac.at>, axiom-math@nongnu.org
+Message-id: <42A8067B.1F735200@cunyvm.cuny.edu>
+Organization: City College of New York
+MIME-version: 1.0
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+Content-type: text/plain; charset=us-ascii
+Content-transfer-encoding: 7bit
+X-Accept-Language: en,zh-CN,zh-TW,zh
+Cc: 
+Subject: [Axiom-math] guessing sequences
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: wyscc@cunyvm.cuny.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 09 Jun 2005 09:13:47 -0000
+
+Dear Martin:
+
+I try your functions with the sequences:
+
+A: 1, 9, 113, 1711, 28729, 514615
+
+B: 1, 9,  49,  271,  1613,  10013
+
+C: 1, 9, 113, 1719, 28981, 521103
+
+D: 1, 9,  49,  279,  1793,  12441
+
+
+but each of the functions returned an empty list. (The sequences seem not to be
+in Sloane library; they are not arbitrary and count the number of some binary
+trees; and the next term will take a few days to compute by brute force). Any
+help will be much appreciated. 
+
+William
+
+
+
+From MAILER-DAEMON Sat Jun 11 23:25:09 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DhJ5x-0000nb-F3
+	for mharc-axiom-math@gnu.org; Sat, 11 Jun 2005 23:25:09 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DhJ5v-0000mj-T6
+	for axiom-math@nongnu.org; Sat, 11 Jun 2005 23:25:07 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DhJ5t-0000lr-1K
+	for axiom-math@nongnu.org; Sat, 11 Jun 2005 23:25:05 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DhJ5s-0000lb-HQ
+	for axiom-math@nongnu.org; Sat, 11 Jun 2005 23:25:04 -0400
+Received: from [209.135.140.38] (helo=axiom-developer.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34) id 1DhJ5F-0001tu-ES
+	for axiom-math@nongnu.org; Sat, 11 Jun 2005 23:24:25 -0400
+Received: from axiom-developer.org (lincoln.rosehosting.com [127.0.0.1])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id j5C3NSwl006512;
+	Sat, 11 Jun 2005 22:23:28 -0500
+From: daly@axiom-developer.org
+Received: (from daly@localhost)
+	by axiom-developer.org (8.12.8/8.12.8/Submit) id j5C3NSnG006509;
+	Sat, 11 Jun 2005 22:23:28 -0500
+Date: Sat, 11 Jun 2005 22:23:28 -0500
+Message-Id: <200506120323.j5C3NSnG006509@axiom-developer.org>
+To: axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] Manuel Bronstein
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 12 Jun 2005 03:25:08 -0000
+
+Manuel Bronstein died this week of a heart attack at age 42.
+Manuel leaves behind Karola (his wife) and six children. 
+
+I just returned from a house-hunting trip in Pittsburgh 
+to hear this terrible news.
+
+I worked with him at IBM Research and have maintained contact
+with him since that time. In fact, he got me to volunteer for
+another ACM/ISSAC CD project just last week.
+
+Manuel was one of the fundamental people on the Axiom project.
+He's given us permission to use his PhD thesis as documentation
+for the integration routines. He has contributed quite a bit of
+effort behind the scenes through personal communication with me.
+
+Manuel was one of the key computational mathematicians of our time.
+He had a major impact on the organization and implementation of the
+Axiom library which will be a useful legacy for future generations.
+He should have had 40 more years enrich us all.
+
+More importantly, Manuel was a good person and a friend. We spent
+much time together talking about and flying airplanes. I have a
+set of pictures he sent me from his soaring trips in the Alps and
+fond memories of our flying trips along the Hudson River in NY.
+
+I'd like to figure out some way to mark his passing. At minimum
+I believe we should include his obituary in the ISSAC proceedings.
+If there are any other efforts or suggestions please contact me 
+so I can help.
+
+In sadness,
+Tim Daly
+
+
+
+
+From MAILER-DAEMON Fri Jun 17 09:46:50 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DjHBJ-0001ct-8Y
+	for mharc-axiom-math@gnu.org; Fri, 17 Jun 2005 09:46:49 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DjHB9-0001VX-Eb
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 09:46:41 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DjHB6-0001Tl-23
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 09:46:37 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DjHB5-0001SH-VJ
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 09:46:35 -0400
+Received: from [196.25.211.7] (helo=mail.telkomsa.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DjHA1-0004XF-LL
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 09:45:30 -0400
+Received: (qmail 5330 invoked from network); 17 Jun 2005 13:36:46 -0000
+Received: from 155.239.189.158 by desdemona.telkomsa.net (envelope-from
+	<cfrangos@telkomsa.net>, uid 81) with qmail-scanner-1.24 
+	(clamdscan: 0.80/557.  Clear:RC:1(155.239.189.158):. 
+	Processed in 0.492239 secs); 17 Jun 2005 13:36:46 -0000
+X-Qmail-Scanner-Mail-From: cfrangos@telkomsa.net via desdemona.telkomsa.net
+X-Qmail-Scanner: 1.24 (Clear:RC:1(155.239.189.158):. Processed in 0.492239
+	secs)
+Received: from unknown (HELO zeta) ([155.239.189.158])
+	(envelope-sender <cfrangos@telkomsa.net>)
+	by O (qmail-ldap-1.03) with SMTP
+	for <axiom-developer@nongnu.org>; 17 Jun 2005 13:36:45 -0000
+Content-Type: text/plain;
+  charset="us-ascii"
+From: C. Frangos <cfrangos@telkomsa.net>
+To: axiom-developer@nongnu.org
+Date: Fri, 17 Jun 2005 15:03:41 +0200
+X-Mailer: KMail [version 1.2]
+MIME-Version: 1.0
+Message-Id: <05061715034112.19698@zeta>
+Content-Transfer-Encoding: 8bit
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] (no subject)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: cfrangos@telkomsa.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 17 Jun 2005 13:46:45 -0000
+
+
+17 June 2005
+
+Some time ago, I managed to get axiom running under suse linux 7.2 (graphics 
+not working). Recently I downloaded the latest version and got it running 
+under suse linux 9.2 (with working graphics) on another machine.
+
+I am trying to convert some of my Matlab m-files to axiom. Any
+assistance with the following will be much appreciated:
+
+
+(1) Is there a short way of declaring all variables in an axiom 
+    function to be local ?
+
+    In Matlab this is automatically the case and global variables have
+    to be specifically declared. 
+
+    In axiom it seems that its the opposite, creating the possibility
+    of errors. Is this a design error in an otherwise very
+    advanced language ?
+
+(2) In Matlab I have a main function (in an m-file) calling another
+    function, which in turn calls another function etc. Its not clear
+    from the axiom book how to implement this. Does one have to use
+    )read fun1.input, )read fun2.input, ...etc, and then fun1(); ?
+
+    Any papers, reports or tutorials on the details of axiom programming
+    involving multiple functions defined in separate files, calling
+    each other, etc as described above would be helpful.
+
+(3) Is there a setting in axiom to avoid having to use underscore _,
+    to insert blank lines between program lines in files defining
+    functions ? This seems awkward and error prone.
+
+(4) I am using the Matlab symbolic toolbox (Maple engine). Its not
+    clear from the axiom book how to typecast a unit matrix (integer
+    or float) to type expression or variable in order to add it to
+    another matrix containing expressions in the variable/symbol x,
+    for example: A:= I + matrixins;
+
+(5) System commands like )read, etc don't seem to work within
+    functions ?
+
+(6) Is there an axiom equivalent to Matlab's pause command ?
+
+(7) I tried using a list to return  multiple variables from a
+    function. However, this turns out to be of type any. These variables 
+    can be displayed but not used in operations any further. This means
+    that you have to remember the types of each variable in the list.
+    Then, manually in the calling function extract and explicitly
+    typecast each variable in the returned list. Is there an easier
+    way of doing this ??
+
+(8) Does the current axiom distribution with working graphics have to
+    be recompiled on my older suse linux 7.2 machine (first one took 
+    about 12 hours) or can I somehow copy the directory of the latest
+    axiom via ethernet from  my newer suse linux 9.2 machine ?
+    
+Regards,
+
+C. Frangos.
+
+-- 
+Constantine Frangos.
+Professor
+Dept. of Mathematics and Statistics
+University of Johannesburg
+Auckland Park Kingsway Campus
+P O Box 524
+Auckland Park 2006
+South Africa
+
+Tel: +27-11-489-2452
+Fax: +27-11-489-2832
+e-mail: cf@rau.ac.za (work)
+        cfrangos@telkomsa.net (home)
+
+
+
+
+From MAILER-DAEMON Fri Jun 17 10:10:54 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DjHYZ-0008TV-Q0
+	for mharc-axiom-math@gnu.org; Fri, 17 Jun 2005 10:10:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DjHYS-0008RB-Jh
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 10:10:44 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DjHYO-0008PO-Uz
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 10:10:42 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DjHYO-0008O0-Ea
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 10:10:40 -0400
+Received: from [193.252.22.26] (helo=smtp5.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DjHXI-0006XM-Hh
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 10:09:33 -0400
+Received: from smtp5.wanadoo.fr (mwinf0508 [172.22.136.38])
+	by mwinf0510.wanadoo.fr (SMTP Server) with ESMTP id 3D574832
+	for <axiom-math@nongnu.org>; Fri, 17 Jun 2005 16:07:30 +0200 (CEST)
+Received: from me-wanadoo.net (unknown [127.0.0.1])
+	by mwinf0508.wanadoo.fr (SMTP Server) with ESMTP id 4C81E1C000EB
+	for <axiom-math@nongnu.org>; Fri, 17 Jun 2005 16:07:27 +0200 (CEST)
+Received: from ALille-251-1-40-115.w82-127.abo.wanadoo.fr
+	(ALille-251-1-40-115.w82-127.abo.wanadoo.fr [82.127.194.115])
+	by mwinf0508.wanadoo.fr (SMTP Server) with ESMTP id ABE551C00113;
+	Fri, 17 Jun 2005 16:07:26 +0200 (CEST)
+X-ME-UUID: 20050617140726704.ABE551C00113@mwinf0508.wanadoo.fr
+Subject: Re: [Axiom-math] (no subject)
+From: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+To: cfrangos@telkomsa.net
+In-Reply-To: <05061715034112.19698@zeta>
+References: <05061715034112.19698@zeta>
+Content-Type: text/plain; charset=iso-8859-15
+Date: Fri, 17 Jun 2005 16:07:52 +0200
+Message-Id: <1119017272.3682.6.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.0.4 
+Content-Transfer-Encoding: quoted-printable
+Cc: "axiom-developer@nongnu.org" <axiom-developer@nongnu.org>,
+	axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 17 Jun 2005 14:10:45 -0000
+
+ C.Frangos,
+
+Le vendredi 17 juin 2005 =E0 15:03 +0200, C.Frangos a =E9crit :
+> 17 June 2005
+>=20
+> Some time ago, I managed to get axiom running under suse linux 7.2 (gra=
+phics=20
+> not working). Recently I downloaded the latest version and got it runni=
+ng=20
+> under suse linux 9.2 (with working graphics) on another machine.
+>=20
+> I am trying to convert some of my Matlab m-files to axiom. Any
+> assistance with the following will be much appreciated:
+>=20
+>=20
+> (1) Is there a short way of declaring all variables in an axiom=20
+>     function to be local ?
+>=20
+>     In Matlab this is automatically the case and global variables have
+>     to be specifically declared.=20
+>=20
+>     In axiom it seems that its the opposite, creating the possibility
+>     of errors. Is this a design error in an otherwise very
+>     advanced language ?
+>=20
+> (2) In Matlab I have a main function (in an m-file) calling another
+>     function, which in turn calls another function etc. Its not clear
+>     from the axiom book how to implement this. Does one have to use
+>     )read fun1.input, )read fun2.input, ...etc, and then fun1(); ?
+>=20
+>     Any papers, reports or tutorials on the details of axiom programmin=
+g
+>     involving multiple functions defined in separate files, calling
+>     each other, etc as described above would be helpful.
+>=20
+> (3) Is there a setting in axiom to avoid having to use underscore _,
+>     to insert blank lines between program lines in files defining
+>     functions ? This seems awkward and error prone.
+>=20
+> (4) I am using the Matlab symbolic toolbox (Maple engine). Its not
+>     clear from the axiom book how to typecast a unit matrix (integer
+>     or float) to type expression or variable in order to add it to
+>     another matrix containing expressions in the variable/symbol x,
+>     for example: A:=3D I + matrixins;
+
+May be this can help,
+if it's not "mathematically correct", use data stucture operation,
+(TwoDimensionalArray), in other words, you have to coerce yourself
+matrix(INT) for example to Matrix(POLY INT))
+
+
+(205) -> a
+
+          +99  5  5  +
+          |          |
+   (205)  |9   5  1  |
+          |          |
+          +1   5  1  +
+
+(206) -> map(i+->i*x,a)
+
+          + 99x  5x  5x  +
+          |              |
+(206)     | 9x   5x   x  |
+          |              |
+          +  x  5x   x   +
+
+
+>=20
+> (5) System commands like )read, etc don't seem to work within
+>     functions ?
+>=20
+> (6) Is there an axiom equivalent to Matlab's pause command ?
+>=20
+> (7) I tried using a list to return  multiple variables from a
+>     function. However, this turns out to be of type any. These variable=
+s=20
+>     can be displayed but not used in operations any further. This means
+>     that you have to remember the types of each variable in the list.
+>     Then, manually in the calling function extract and explicitly
+>     typecast each variable in the returned list. Is there an easier
+>     way of doing this ??
+>=20
+> (8) Does the current axiom distribution with working graphics have to
+>     be recompiled on my older suse linux 7.2 machine (first one took=20
+>     about 12 hours) or can I somehow copy the directory of the latest
+>     axiom via ethernet from  my newer suse linux 9.2 machine ?
+>    =20
+> Regards,
+>=20
+> C. Frangos.
+>=20
+
+
+
+
+
+From MAILER-DAEMON Fri Jun 17 10:50:07 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DjIAY-0001aW-Ib
+	for mharc-axiom-math@gnu.org; Fri, 17 Jun 2005 10:50:06 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DjIAW-0001Zt-MM
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 10:50:05 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DjIAU-0001Ya-Dc
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 10:50:03 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DjI9h-0000mz-4x
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 10:49:13 -0400
+Received: from [193.252.22.28] (helo=smtp3.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DjI0S-0000fR-8O
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 10:39:40 -0400
+Received: from me-wanadoo.net (unknown [127.0.0.1])
+	by mwinf0308.wanadoo.fr (SMTP Server) with ESMTP id D34B72000043
+	for <axiom-math@nongnu.org>; Fri, 17 Jun 2005 16:37:37 +0200 (CEST)
+Received: from ALille-251-1-40-115.w82-127.abo.wanadoo.fr
+	(ALille-251-1-40-115.w82-127.abo.wanadoo.fr [82.127.194.115])
+	by mwinf0308.wanadoo.fr (SMTP Server) with ESMTP id 48FD12000084;
+	Fri, 17 Jun 2005 16:37:37 +0200 (CEST)
+X-ME-UUID: 20050617143737299.48FD12000084@mwinf0308.wanadoo.fr
+Subject: Re: [Axiom-developer] Re: [Axiom-math] (no subject)
+From: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+To: cfrangos@telkomsa.net
+In-Reply-To: <1119017272.3682.6.camel@localhost.localdomain>
+References: <05061715034112.19698@zeta>
+	<1119017272.3682.6.camel@localhost.localdomain>
+Content-Type: text/plain; charset=iso-8859-15
+Date: Fri, 17 Jun 2005 16:38:03 +0200
+Message-Id: <1119019083.3682.13.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.0.4 
+Content-Transfer-Encoding: quoted-printable
+Cc: "axiom-developer@nongnu.org" <axiom-developer@nongnu.org>,
+	axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 17 Jun 2005 14:50:05 -0000
+
+Hi,
+
+Le vendredi 17 juin 2005 =E0 16:07 +0200, Vanuxem Gr=E9gory a =E9crit :
+>  C.Frangos,
+>=20
+> Le vendredi 17 juin 2005 =E0 15:03 +0200, C.Frangos a =E9crit :
+> > 17 June 2005
+> >=20
+> > Some time ago, I managed to get axiom running under suse linux 7.2 (g=
+raphics=20
+> > not working). Recently I downloaded the latest version and got it run=
+ning=20
+> > under suse linux 9.2 (with working graphics) on another machine.
+> >=20
+> > I am trying to convert some of my Matlab m-files to axiom. Any
+> > assistance with the following will be much appreciated:
+> >=20
+> >=20
+> > (1) Is there a short way of declaring all variables in an axiom=20
+> >     function to be local ?
+> >=20
+> >     In Matlab this is automatically the case and global variables hav=
+e
+> >     to be specifically declared.=20
+> >=20
+> >     In axiom it seems that its the opposite, creating the possibility
+> >     of errors. Is this a design error in an otherwise very
+> >     advanced language ?
+> >=20
+> > (2) In Matlab I have a main function (in an m-file) calling another
+> >     function, which in turn calls another function etc. Its not clear
+> >     from the axiom book how to implement this. Does one have to use
+> >     )read fun1.input, )read fun2.input, ...etc, and then fun1(); ?
+> >=20
+> >     Any papers, reports or tutorials on the details of axiom programm=
+ing
+> >     involving multiple functions defined in separate files, calling
+> >     each other, etc as described above would be helpful.
+> >=20
+> > (3) Is there a setting in axiom to avoid having to use underscore _,
+> >     to insert blank lines between program lines in files defining
+> >     functions ? This seems awkward and error prone.
+> >=20
+> > (4) I am using the Matlab symbolic toolbox (Maple engine). Its not
+> >     clear from the axiom book how to typecast a unit matrix (integer
+> >     or float) to type expression or variable in order to add it to
+> >     another matrix containing expressions in the variable/symbol x,
+> >     for example: A:=3D I + matrixins;
+
+If matrixins is a variable,
+
+>=20
+> May be this can help,
+> if it's not "mathematically correct", use data stucture operation,
+> (TwoDimensionalArray), in other words, you have to coerce yourself
+> matrix(INT) for example to Matrix(POLY INT))
+>=20
+>=20
+> (205) -> a
+>=20
+>           +99  5  5  +
+>           |          |
+>    (205)  |9   5  1  |
+>           |          |
+>           +1   5  1  +
+>=20
+> (206) -> map(i+->i*x,a)
+>=20
+>           + 99x  5x  5x  +
+>           |              |
+> (206)     | 9x   5x   x  |
+>           |              |
+>           +  x  5x   x   +
+
+Sorry, typo error
+
+(206) -> map(i+->i+x,a)
+          + 99+x  5+x  5+x +
+          |                |
+(206)     | 9+x   5+x  1+x |
+          |                |
+          + 9+x   5+x  1+x +
+
+>=20
+> >=20
+> > (5) System commands like )read, etc don't seem to work within
+> >     functions ?
+> >=20
+> > (6) Is there an axiom equivalent to Matlab's pause command ?
+> >=20
+> > (7) I tried using a list to return  multiple variables from a
+> >     function. However, this turns out to be of type any. These variab=
+les=20
+> >     can be displayed but not used in operations any further. This mea=
+ns
+> >     that you have to remember the types of each variable in the list.
+> >     Then, manually in the calling function extract and explicitly
+> >     typecast each variable in the returned list. Is there an easier
+> >     way of doing this ??
+> >=20
+> > (8) Does the current axiom distribution with working graphics have to
+> >     be recompiled on my older suse linux 7.2 machine (first one took=20
+> >     about 12 hours) or can I somehow copy the directory of the latest
+> >     axiom via ethernet from  my newer suse linux 9.2 machine ?
+> >    =20
+> > Regards,
+> >=20
+> > C. Frangos.
+> >=20
+>=20
+>=20
+>=20
+>=20
+> _______________________________________________
+> Axiom-developer mailing list
+> Axiom-developer@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-developer
+>=20
+
+
+
+
+
+From MAILER-DAEMON Fri Jun 17 10:50:27 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DjIAt-0001kh-CA
+	for mharc-axiom-math@gnu.org; Fri, 17 Jun 2005 10:50:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DjIAr-0001iy-Fi
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 10:50:25 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DjIAq-0001iJ-Dg
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 10:50:24 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DjI9n-0000mz-0C; Fri, 17 Jun 2005 10:49:19 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DjHwZ-0000J4-DN; Fri, 17 Jun 2005 10:35:40 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j5HELTwH039811; 
+	Fri, 17 Jun 2005 16:21:30 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <17074.56349.217375.569920@seam101.local>
+Date: Fri, 17 Jun 2005 16:20:13 +0200
+To: cfrangos@telkomsa.net
+Subject: Re: [Axiom-math] (no subject)
+In-Reply-To: <05061715034112.19698@zeta>
+References: <05061715034112.19698@zeta>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4248; Body=3 Fuz1=3 Fuz2=3
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 17 Jun 2005 14:50:26 -0000
+
+C. Frangos writes:
+ > 
+ > 17 June 2005
+ > 
+ > Some time ago, I managed to get axiom running under suse linux 7.2 (graphics
+ > not working). Recently I downloaded the latest version and got it running
+ > under suse linux 9.2 (with working graphics) on another machine.
+
+great!
+
+ > I am trying to convert some of my Matlab m-files to axiom. 
+
+even better!
+
+ > Any assistance with the following will be much appreciated:
+
+let's try!
+
+ > (1) Is there a short way of declaring all variables in an axiom function to
+ >     be local ?
+
+
+If you compile your files, this is automatically the case. However, it seems
+that you want to use .input files, not .spad files?
+
+Thinking about it, it should be automatically the case in .input files,
+too. Could you send an example?
+
+ >     In Matlab this is automatically the case and global variables have
+ >     to be specifically declared. 
+
+Mostly the same in Axiom. See section 6.16 of the Axiom Book.
+ 
+ >     In axiom it seems that its the opposite, creating the possibility
+ >     of errors. Is this a design error in an otherwise very
+ >     advanced language ?
+ 
+ > (2) In Matlab I have a main function (in an m-file) calling another
+ >     function, which in turn calls another function etc. Its not clear
+ >     from the axiom book how to implement this. Does one have to use
+ >     )read fun1.input, )read fun2.input, ...etc, and then fun1(); ?
+
+No, functions can call each other within on input file.
+
+ >     Any papers, reports or tutorials on the details of axiom programming
+ >     involving multiple functions defined in separate files, calling
+ >     each other, etc as described above would be helpful.
+
+See below. I'll include my latest input file that deals with garch processes.
+ 
+ > (3) Is there a setting in axiom to avoid having to use underscore _,
+ >     to insert blank lines between program lines in files defining
+ >     functions ? This seems awkward and error prone.
+
+You don't have to do this usually. Only if you want to continue a line.
+
+
+ > (4) I am using the Matlab symbolic toolbox (Maple engine). Its not
+ >     clear from the axiom book how to typecast a unit matrix (integer
+ >     or float) to type expression or variable in order to add it to
+ >     another matrix containing expressions in the variable/symbol x,
+ >     for example: A:= I + matrixins;
+
+Don't do this. You want to use the + from MATRIX INT, for example.
+
+m1 := [[1,2],[3,4]]
+m2 := [[x,y],[u,v]]
+
+m1+m2 should add the two without complaining
+
+ > (5) System commands like )read, etc don't seem to work within
+ >     functions ?
+
+No.
+
+ > (6) Is there an axiom equivalent to Matlab's pause command ?
+
+Don't know.
+ 
+ > (7) I tried using a list to return multiple variables from a
+ > function. However, this turns out to be of type any. These variables can be
+ > displayed but not used in operations any further. This means that you have
+ > to remember the types of each variable in the list.  Then, manually in the
+ > calling function extract and explicitly typecast each variable in the
+ > returned list. Is there an easier way of doing this ??
+
+They shouldn't be converted to type ANY. Often it helps to declare your
+functions. See below.
+
+ > (8) Does the current axiom distribution with working graphics have to be
+ > recompiled on my older suse linux 7.2 machine (first one took about 12
+ > hours) or can I somehow copy the directory of the latest axiom via ethernet
+ > from my newer suse linux 9.2 machine ?
+
+Yes, that should work. (If the paths are the same...)
+
+Here comes a .input from my research.
+
+epsilon contains a garch process after you said
+
+)re garch.input
+
+from within axiom
+
+
+Hope this helps a little bit. I'll try to detail (2) coming monday.
+
+Martin
+
+-------------------------------------------------------------------------------
+
+
+-- n:=100; max:=1.2*Lik2(n,w,a,b,eps); draw((w:DoubleFloat,a:DoubleFloat):DoubleFloat +-> min(Lik2(n,w,a,b,eps),max),0..3,0..4)
+-- draw((w:DoubleFloat):DoubleFloat +-> Lik2(n,w,a,b,eps),0..0.5)
+-- draw([[i,eps.i]::Point Float for i in 1..1000])
+
+
+-- eta:=normal(0,1)$RFDIST
+
+eta:=uniform(-sqrt(3),sqrt(3))$RFDIST
+
+-- eta aus -1, 1, 3, 5 -> eps > w
+
+-- eta():INT == 2*(uniform(0..3)$RIDIST)()-1 
+
+w := 0.3356; a := 2; b := 0;
+
+-- without this line it's not a Garch process!
+)set fun cache 2 epsilon 
+ 
+epsilon(0) == 0;
+epsilon(t:INT):FLOAT == sigma(t)*eta();
+
+)set fun cache 2 sigma
+
+sigma(0) == 0;
+sigma(t:INT):FLOAT == 
+  sqrt(w+a*epsilon(t-1)^2 + b*sigma(t-1)^2)
+
+precision(20);
+eps := [epsilon(t) for t in 1..1000];
+
+)set fun cache 2 sigma2
+
+sigma2(0,w,a,b,eps) == 0;
+sigma2(t:INT,w:FLOAT,a:FLOAT,b:FLOAT,eps:LIST FLOAT):FLOAT == 
+  w + a*(eps.t)^2 + b*sigma2(t-1,w,a,b,eps)
+
+sigma2p(0,w,x,y,eps) == 0;
+sigma2p(t:INT,w:FLOAT,x:FLOAT,y:FLOAT,eps:LIST FLOAT):FLOAT == 
+  w*(1 + x*(eps.t)^2 + y*sigma2p(t-1,w,x,y,eps))
+
+Likp(n:INT,x:FLOAT,eps:LIST FLOAT):FLOAT ==
+  log(1/n*reduce(+,[(eps.(t+1))^2/(1+x*(eps.t)^2) for t in 1..n])) _ 
+   -1/n*reduce(+,[log(1/(1+x*(eps.t)^2)) for t in 1..n])+1
+
+lik(t:INT,w:FLOAT,a:FLOAT,b:FLOAT,eps:LIST FLOAT):Union(FLOAT, "fail") ==
+  s := sigma2(t,w,a,b,eps)
+  if s <= 0
+  then "fail"
+  else log(s)+(eps.(t+1))^2/s
+
+lik2(t:INT,w:FLOAT,a:FLOAT,b:FLOAT,eps:LIST FLOAT):FLOAT == 
+  (l := lik(t,w,a,b,eps)) case "fail" => 1000000.0
+  l
+
+lik3(t,w,a,eps) ==
+  s := w+a*eps.t^2
+  if s <= 0
+  then "fail"
+  else log(s)+(eps.(t+1))^2/s
+
+Lik(n:INT,w:FLOAT,a:FLOAT,b:FLOAT,eps:LIST FLOAT):Union(FLOAT, "fail") == 
+  ll := 0.0
+  for t in 1..n repeat
+    (l := lik(t,w,a,b,eps)) case "fail" => return "fail"
+    ll := ll + l::Float
+  ll/n
+
+Lik2(n:INT,w:FLOAT,a:FLOAT,b:FLOAT,eps:LIST FLOAT):FLOAT == 
+  (ll := Lik(n,w,a,b,eps)) case "fail" => 1000000.0
+  ll
+
+Lik3(n,w,a,eps) == 
+  1/n*reduce(+,[lik3(t,w,a,eps) for t in 1..n])
+
+minInd(l: List List Float): List List INT == 
+  m := l.(1,1)
+  ind := [[1,1]]
+  for i in 1..#l repeat
+    for j in 1..#l.i repeat
+      if l.i.j = m then 
+        ind := cons([i,j], ind)
+      if l.i.j < m then 
+        m := l.i.j
+        ind := [[i,j]]
+  ind
+
+minInd1(l: List Float): List INT == 
+  m := l.1
+  ind := [1]
+  for i in 1..#l repeat
+    if l.i = m then 
+      ind := cons(i, ind)
+    if l.i < m then 
+      m := l.i
+      ind := [i]
+  ind
+
+Likp2(n,x,eps) ==
+  log(1/n*reduce(+,[(eps.(t+1))^2/(1+x*(eps.t)^2) for t in 1..n])) _ 
+   -1/n*reduce(+,[log(1/(1+x*(eps.t)^2)) for t in 1..n])+1
+
+Likp2a(n,x,eps) == log(1/n*reduce(+,[(eps.(t+1))^2/(1+x*(eps.t)^2) for t in 1..n]))
+
+Likp2b(n,x,eps) == -1/n*reduce(+,[log(1/(1+x*(eps.t)^2)) for t in 1..n])+1
+
+LikpLim(n,eps) == LikpLima(n,eps) + LikpLimb(n,eps) + 1
+
+LikpLima(n,eps) == 
+  log(reduce(+,[eps.(i+1)^2/eps.i^2 for i in 1..n])/n)
+
+LikpLimb(n,eps) == 
+  log(reduce(*,[eps.i^2 for i in 1..n]))/n
+
+e:=[concat("e",i::String)::Symbol::EXPR INT for i in 1..20];
+
+f(2)==e.1^4*e.3^2+e.2^6
+f(n)==(n-1)*(reduce(*,[e.i for i in 1..n-1])^4*e.(n+1)^2+e.n^4*f(n-1)/(n-2))
+
+g(2)==e.2^2+e.3^2
+g(n)==g(n-1)*e.(n+1)^2+reduce(*,[e.i^2 for i in 1..n-2])*e.n^2*e.(n+1)^2
+
+-- n := 5; factor(reduce(+, select(e +-> leadingCoefficient (e) = n-1, monomials leadingCoefficient(numer(D(Likp2(n,x,[e1,e2,e3,e4,e5,e6]),x)::FRAC POLY INT::FRAC UP(x, POLY INT)))))::DMP([e1,e2,e3,e4,e5,e6], INT))-f(n)
+
+-- n := 5; factor(reduce(+, select(e +-> leadingCoefficient (e) = -1, monomials leadingCoefficient(numer(D(Likp2(n,x,[e1,e2,e3,e4,e5,e6]),x)::FRAC POLY INT::FRAC UP(x, POLY INT)))))::DMP([e1,e2,e3,e4,e5,e6], INT))
+
+
+
+-- n:=normal(0,1)$RFDIST
+-- 
+-- epsilon(w,a,b,0) == 0
+-- epsilon(w:FLOAT,a:FLOAT,b:FLOAT,t:INT):FLOAT == sigma(w,a,b,t)*rnormal()
+-- 
+-- sigma(w,a,b,0) == 0
+-- sigma(w:FLOAT,a:FLOAT,b:FLOAT,t:INT):FLOAT == sqrt(w+a*epsilon(w,a,b,t-1)^2+b*sigma(w,a,b,t-1)^2) 
+-- 
+-- sigma2(0,w,a,b,eps) == 0
+-- sigma2(t:INT,w:FLOAT,a:FLOAT,b:FLOAT,eps:LIST FLOAT):FLOAT == w+a*(eps.t)^2+b*sigma2(t-1,w,a,b,eps)^2
+-- 
+-- lik(t:INT,w:FLOAT,a:FLOAT,b:FLOAT,eps:LIST FLOAT):FLOAT == log(sigma2(t,w,a,b,eps))+(eps.(t+1))^2/sigma2(t,w,a,b,eps)
+-- Lik(n:INT,w:FLOAT,a:FLOAT,b:FLOAT,eps:LIST FLOAT):FLOAT == reduce(+,[lik(t,w,a,b,eps) for t in 1..n])/n
+-- 
+-- precision(10)
+-- eps := [epsilon(1,1/2,1/2,t) for t in 1..10]
+
+
+
+
+From MAILER-DAEMON Fri Jun 17 11:44:00 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DjJ0i-0001J4-B0
+	for mharc-axiom-math@gnu.org; Fri, 17 Jun 2005 11:44:00 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DjJ0f-0001IH-Q7
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 11:43:57 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DjJ0e-0001Hg-Ip
+	for axiom-math@nongnu.org; Fri, 17 Jun 2005 11:43:57 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DjJ0V-00016D-JT; Fri, 17 Jun 2005 11:43:47 -0400
+Received: from [209.226.175.110] (helo=tomts43-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DjIyt-0005im-0U; Fri, 17 Jun 2005 11:42:07 -0400
+Received: from asus ([216.208.193.105]) by tomts43-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20050617154002.PKTW2981.tomts43-srv.bellnexxia.net@asus>;
+	Fri, 17 Jun 2005 11:40:02 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <cfrangos@telkomsa.net>
+Date: Fri, 17 Jun 2005 11:37:40 -0400
+Message-ID: <001801c57352$84cb0fa0$6601a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.2627
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+In-Reply-To: <05061715034112.19698@zeta>
+Importance: Normal
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] RE: [Axiom-developer] (no subject)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 17 Jun 2005 15:43:58 -0000
+
+On June 17, 2005 9:04 AM C. Frangos wrote:
+
+> (1) Is there a short way of declaring all variables in an
+>    axiom function to be local ?
+>
+>    In Matlab this is automatically the case and global variables
+>    have to be specifically declared. 
+>
+>    In axiom it seems that its the opposite, creating the
+>    possibility of errors. Is this a design error in an
+>    otherwise very advanced language ?
+
+When you say "axiom function" I suppose you mean
+defining functions in the Axiom interpreter. The
+Axiom interpreter is really intended primarily for
+online interactive use.
+
+If you are converting a lot of Matlab code I think
+you would be much better advised to write Axiom
+library packages and/or new domains.
+
+> (2) In Matlab I have a main function (in an m-file) calling
+>   another function, which in turn calls another function etc.
+>   Its not clear from the axiom book how to implement this.
+>   Does one have to use )read fun1.input, )read fun2.input,
+> ...etc, and then fun1(); ?
+
+No. )read only instructions the interpret to get it's input
+from a file instead of from the console.
+
+Calling functions in Axiom is done the same way as
+in most other high level languages except that Axiom's
+programming language (library compiler) permits simple
+overloading of function names based on types. So for
+example a function named 'average' may do quite different
+things if is applied to matrix compared to a list etc.
+
+>   Any papers, reports or tutorials on the details of axiom
+>   programming involving multiple functions defined in separate
+>   files, calling each other, etc as described above would be
+>   helpful.
+
+I highly recommend reading the Chapter 11 Packages in the
+Axiom Book.
+
+> (3) Is there a setting in axiom to avoid having to use
+>     underscore _, to insert blank lines between program
+>     lines in files defining functions ? This seems awkward
+>     and error prone.
+
+This is an artifact of trying to use the Axiom interpreter
+environment for programming. _ is not required in .input
+files read by )read nor is is used in Axiom library
+programming.
+
+> (4) I am using the Matlab symbolic toolbox (Maple engine). Its
+>    not clear from the axiom book how to typecast a unit matrix
+>    (integer or float) to type expression or variable in order
+>    to add it to another matrix containing expressions in the
+>    variable/symbol x, for example: A:= I + matrixins;
+
+I am not sure what you mean, but this works for me for example
+
+  1> A:=matrix [[x,y],[z,w]]
+  2> A+1
+
+See
+
+http://page.axiom-developer.org/zope/mathaction/SandboxMatrix
+
+> (5) System commands like )read, etc don't seem to work within
+>    functions ?
+
+It is not clear to me why you want to do this.
+
+> (6) Is there an axiom equivalent to Matlab's pause command ?
+
+I don't think so. Probably a call to a simple lisp function
+could do this.
+
+> (7) I tried using a list to return  multiple variables from a
+>    function. However, this turns out to be of type any. These
+>    variables can be displayed but not used in operations any
+>    further. This means that you have to remember the types of
+>    each variable in the list. Then, manually in the calling
+>    function extract and explicitly typecast each variable in
+>    the returned list. Is there an easier way of doing this ??
+
+Axiom remembers the actual type. Try this
+
+  1> f() = [x,"x",1]
+  2> f().1 + 1
+  3> concat(f().2,"y")
+  4> f().3 + 1
+
+> (8) Does the current axiom distribution with working graphics
+>    have to be recompiled on my older suse linux 7.2 machine
+>   (first one took about 12 hours) or can I somehow copy the
+>   directory of the latest axiom via ethernet from  my newer
+>   suse linux 9.2 machine ?
+    
+You might have problems with incompatible versions of system
+librarys if you try to copy Axiom compiled on a newer
+version of suse to an older one. You might be able to just
+do
+
+  cvs update
+  ./configure
+  (set variables)
+  make
+
+on your old system. In principle this *might* not require
+a complete rebuild of Axiom.
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Sun Jun 19 12:35:33 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Dk2lf-0003zJ-4B
+	for mharc-axiom-math@gnu.org; Sun, 19 Jun 2005 12:35:31 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Dk2la-0003x6-VI
+	for axiom-math@nongnu.org; Sun, 19 Jun 2005 12:35:27 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Dk2la-0003wV-4e
+	for axiom-math@nongnu.org; Sun, 19 Jun 2005 12:35:26 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Dk2lZ-0003v4-Pf; Sun, 19 Jun 2005 12:35:26 -0400
+Received: from [209.135.140.38] (helo=axiom-developer.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34)
+	id 1Dk2eb-0005B6-6d; Sun, 19 Jun 2005 12:28:13 -0400
+Received: from axiom-developer.org (lincoln.rosehosting.com [127.0.0.1])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id j5JGPBwl006246;
+	Sun, 19 Jun 2005 11:25:11 -0500
+From: daly@axiom-developer.org
+Received: (from daly@localhost)
+	by axiom-developer.org (8.12.8/8.12.8/Submit) id j5JGP8MY006242;
+	Sun, 19 Jun 2005 11:25:08 -0500
+Date: Sun, 19 Jun 2005 11:25:08 -0500
+Message-Id: <200506191625.j5JGP8MY006242@axiom-developer.org>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] Manuel Bronstein
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 19 Jun 2005 16:35:29 -0000
+
+As I've mentioned on these mailing lists before, the Axiom 
+community lost another major contributor. Like Dick Jenks,
+Manuel Bronstein was one of the key developers of the original
+Axiom system. He was also active with me behind the scenes,
+has contributed his thesis work for documentatin purposes,
+and has done large pieces of software (SUMit and  as a
+supervisor for Niklaus Mannhart, PIit, plus an integrator
+for Maple).
+
+There have been several emails crossing my desk about Manuel
+but this one I want to share with you mostly out of concern
+for his family. Manuel leaves behind a wife and 6 children.
+
+Tim
+
+=============================================================
+
+Date: Sun, 19 Jun 2005 02:19:22 -0400
+From: Emil Volcheck <volcheck@acm.org>
+To: sigsam_officers@acm.org
+Subject: From Manuel's brother Yonah
+
+Hello, everyone,
+
+Manuel's brother Yonah relays some unfortunate news.  Manuel did not
+have life insurance, and his family needs financial help.  See below.
+
+I replied asking him to provide bank account information for people
+outside the US who might want to make transfers.  When I get that
+information, I'll send out a broader announcement.  I also asked if he
+needs help finding people to sort through Manuel's scientific papers.
+
+.....[snip].....
+
+FYI: the organization Yonah refers to is an orthodox Lubavitcher
+synagogue, Chabad of Greater South Bay,
+http://www.chabadpaloalto.com/  .
+
+Thanks,
+
+--Emil
+
+
+----- Forwarded message from manukarola@free.fr -----
+
+Date: Fri, 17 Jun 2005 14:46:13 +0200
+From: manukarola@free.fr
+To: Emil Volcheck <volcheck@acm.org>
+Cc: yab@ASTAV.net
+Subject: Re: Condolences
+
+Dear Mr. Volcheck,
+
+This is Yonah Alexandre Bronstein, Manuel's brother, helping Tamara with her
+emails. I came in to help bury Manu and help Tamara deal with the aftermath of
+his death.
+
+If you can forgive me for being practical, Manuel unfortunately passed away
+without life insurance (he was in between 2 contracts), and so now Tamara and
+her 6 kids face some financial difficulties as well.
+
+I have therefore organized a support fund for Manuel's family, based in
+California (where I live and will be able to help manage it). Those who want to
+help can send checks:
+.to the order of: CHABAD
+.mention: "MANUEL BRONSTEIN FAMILY FUND"
+.address:
+CHABAD
+3070 LOUIS ROAD
+PALO ALTO, CA 94303
+USA
+
+I'd be most grateful if you could diffuse that information as you feel is
+appropriate, through the ACM and other professional organizations who knew
+Manuel.
+
+Thank you very much,
+
+Yonah Alexandre Bronstein, Ph.D.
+yab@ASTAV.net
+1-650-799-0627
+
+
+.....[snip].....
+
+
+
+
+
+
+
+
+
+From MAILER-DAEMON Mon Jun 20 10:22:36 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DkNAa-00073Y-6z
+	for mharc-axiom-math@gnu.org; Mon, 20 Jun 2005 10:22:36 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DkNAS-0006zF-UZ
+	for axiom-math@nongnu.org; Mon, 20 Jun 2005 10:22:29 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DkNAP-0006xS-LB
+	for axiom-math@nongnu.org; Mon, 20 Jun 2005 10:22:25 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DkNAO-0006u5-AV; Mon, 20 Jun 2005 10:22:24 -0400
+Received: from [81.169.145.165] (helo=natsmtp00.rzone.de)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DkN2X-0006wV-HP; Mon, 20 Jun 2005 10:14:17 -0400
+Received: from [193.170.38.119] (woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by post.webmailer.de (8.13.1/8.13.1) with ESMTP id j5KEBTS5002705;
+	Mon, 20 Jun 2005 16:11:30 +0200 (MEST)
+Message-ID: <42B6CE9E.5020708@hemmecke.de>
+Date: Mon, 20 Jun 2005 16:11:42 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla Thunderbird 1.0 (X11/20041206)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] (no subject)
+References: <05061715034112.19698@zeta>
+	<17074.56349.217375.569920@seam101.local>
+In-Reply-To: <17074.56349.217375.569920@seam101.local>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, cfrangos@telkomsa.net
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Jun 2005 14:22:32 -0000
+
+>  > (7) I tried using a list to return multiple variables from a
+>  > function. However, this turns out to be of type any. These variables can be
+>  > displayed but not used in operations any further. This means that you have
+>  > to remember the types of each variable in the list.  Then, manually in the
+>  > calling function extract and explicitly typecast each variable in the
+>  > returned list. Is there an easier way of doing this ??
+
+I am somehow surprised that Axiom cannot work with multivalues.
+
+(1) -> foo(a: Integer, b: Integer): (String, Integer) == ("sum", a+b);
+
+    The constructor Tuple takes 1 argument and you have given  2  .
+(1) -> foo: (Integer, Integer) -> (String, Integer)
+
+    The constructor Tuple takes 1 argument and you have given  2  .
+
+In Aldor the following program works just fine.
+
+Ralf
+
+------------ multi.as -------------------------------------
+-- Run the program via
+-- aldor -grun -laldor multi.as
+-- and get the output
+--: We call the function foo
+--: foo(7, 11) = (Sum, 18)
+
+#include "aldor"
+#include "aldorio"
+
+import from Integer;
+foo(a: Integer, b: Integer): (String, Integer) == ("Sum", a+b);
+main(): () == {
+	stdout << "We call the function foo" << newline;
+	(s, c) := foo(7, 11);
+	stdout << "foo(7, 11) = (" << s << ", " << c << ")" << newline;
+}
+main();
+
+
+
+From MAILER-DAEMON Mon Jun 20 10:28:53 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DkNGe-00005v-TD
+	for mharc-axiom-math@gnu.org; Mon, 20 Jun 2005 10:28:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DkNGe-00005c-3B
+	for axiom-math@nongnu.org; Mon, 20 Jun 2005 10:28:52 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DkNGd-00005M-Jh
+	for axiom-math@nongnu.org; Mon, 20 Jun 2005 10:28:51 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DkNGb-0008WS-Aw; Mon, 20 Jun 2005 10:28:49 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DkNHl-0007y4-7p; Mon, 20 Jun 2005 10:30:01 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j5KEQh23043890; 
+	Mon, 20 Jun 2005 16:26:48 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <17078.53718.621142.178885@seam101.local>
+Date: Mon, 20 Jun 2005 16:25:26 +0200
+To: Ralf Hemmecke <ralf@hemmecke.de>
+Subject: Re: [Axiom-math] (no subject)
+In-Reply-To: <42B6CE9E.5020708@hemmecke.de>
+References: <05061715034112.19698@zeta>
+	<17074.56349.217375.569920@seam101.local>
+	<42B6CE9E.5020708@hemmecke.de>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4249; Body=5 Fuz1=5 Fuz2=5
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, cfrangos@telkomsa.net
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Jun 2005 14:28:52 -0000
+
+Ralf Hemmecke writes:
+
+ > >  > (7) I tried using a list to return multiple variables from a
+ > >  > function. However, this turns out to be of type any. These variables
+ > >  > can be displayed but not used in operations any further. This means
+ > >  > that you have to remember the types of each variable in the list.
+ > >  > Then, manually in the calling function extract and explicitly typecast
+ > >  > each variable in the returned list. Is there an easier way of doing
+ > >  > this ??
+ > 
+ > I am somehow surprised that Axiom cannot work with multivalues.
+ > 
+ > (1) -> foo(a: Integer, b: Integer): (String, Integer) == ("sum", a+b);
+ > 
+ >     The constructor Tuple takes 1 argument and you have given  2  .
+ > (1) -> foo: (Integer, Integer) -> (String, Integer)
+ > 
+ >     The constructor Tuple takes 1 argument and you have given  2  .
+ > 
+
+In axiom you need to use records:
+
+foo(a: Integer, b: Integer): Record(s: String, r:Integer) == ("sum", a+b);
+
+Martin
+
+(Although I'm completely convinced that Aldor is superiour)
+
+
+
+
+From MAILER-DAEMON Mon Jun 20 11:05:50 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DkNqI-0004Yb-Rd
+	for mharc-axiom-math@gnu.org; Mon, 20 Jun 2005 11:05:48 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DkNqC-0004VJ-3u
+	for axiom-math@nongnu.org; Mon, 20 Jun 2005 11:05:36 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DkNq6-0004QY-2C
+	for axiom-math@nongnu.org; Mon, 20 Jun 2005 11:05:31 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DkNq5-0004PY-SY; Mon, 20 Jun 2005 11:05:29 -0400
+Received: from [81.169.145.166] (helo=natnoddy.rzone.de)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DkNqz-0001sF-01; Mon, 20 Jun 2005 11:06:25 -0400
+Received: from [193.170.38.119] (woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by post.webmailer.de (8.13.1/8.13.1) with ESMTP id j5KF3c5M029538;
+	Mon, 20 Jun 2005 17:03:39 +0200 (MEST)
+Message-ID: <42B6DADD.8030703@hemmecke.de>
+Date: Mon, 20 Jun 2005 17:03:57 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla Thunderbird 1.0 (X11/20041206)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] (no subject)
+References: <05061715034112.19698@zeta>	<17074.56349.217375.569920@seam101.local>	<42B6CE9E.5020708@hemmecke.de>
+	<17078.53718.621142.178885@seam101.local>
+In-Reply-To: <17078.53718.621142.178885@seam101.local>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, cfrangos@telkomsa.net
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Jun 2005 15:05:38 -0000
+
+> In axiom you need to use records:
+> 
+> foo(a: Integer, b: Integer): Record(s: String, r:Integer) == ("sum", a+b);
+
+Oh, interesting. I would have thought that your line gives a syntax 
+error. At least according to the axiom book pp 141 (Section 2.4) one 
+should write
+
+foo(a:Integer,b:Integer):Record(s:String,r:Integer)==["sum",a+b];
+u := foo(7,11)
+u.s
+u.r
+
+The Axiom interpreter seems to be clever enough to correctly convert 
+("sum", a+b) into the record ["sum", a+b].
+
+For programming, however, I prefer the Aldor way where it gives on your 
+line above the following ...
+
+--- begin multi.as
+#include "aldor"
+#include "aldorio"
+import from Integer;
+foo(a:Integer,b:Integer):Record(s:String,s:Integer)==("Sum",a+b);
+--- end multi.as
+
+aldor -grun -laldor multi.as
+"multi.as", line 11:
+foo(a: Integer, b: Integer): Record(s: String, s: Integer) == ("Sum", a+b);
+...............................................................^
+[L11 C64] #1 (Error) Have determined 1 possible types for the expression.
+	Meaning 1: String, AldorInteger
+   The context requires an expression of type Record(s: String, s: 
+AldorInteger).
+
+Ralf
+
+
+
+From MAILER-DAEMON Mon Jun 20 20:00:24 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DkWBk-0007Ky-AV
+	for mharc-axiom-math@gnu.org; Mon, 20 Jun 2005 20:00:24 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DkWAf-00070r-Hy
+	for axiom-math@nongnu.org; Mon, 20 Jun 2005 19:59:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DkWAY-0006wx-77
+	for axiom-math@nongnu.org; Mon, 20 Jun 2005 19:59:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DkWAW-0006nv-MS; Mon, 20 Jun 2005 19:59:08 -0400
+Received: from [209.135.140.38] (helo=axiom-developer.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34)
+	id 1DkVqW-0002sl-5L; Mon, 20 Jun 2005 19:38:28 -0400
+Received: from axiom-developer.org (lincoln.rosehosting.com [127.0.0.1])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id j5KNZCwl028236;
+	Mon, 20 Jun 2005 18:35:12 -0500
+From: daly@axiom-developer.org
+Received: (from daly@localhost)
+	by axiom-developer.org (8.12.8/8.12.8/Submit) id j5KNZ8et028214;
+	Mon, 20 Jun 2005 18:35:08 -0500
+Date: Mon, 20 Jun 2005 18:35:08 -0500
+Message-Id: <200506202335.j5KNZ8et028214@axiom-developer.org>
+To: bill.page1@sympatico.ca, kai.kaminski@gmx.de, camm@enhanced.com,
+	martin.rubey@univie.ac.at
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org,
+	doyencd-developers@lists.sourceforge.net
+Subject: [Axiom-math] axiom, browsers, and crystal
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Jun 2005 00:00:23 -0000
+
+taking this discussion away from the short term summer of code 
+so we can think about the bigger issues.....
+
+in the long term (the 30 year horizon) it seems clear that some
+sort of browser-like capabilities are assumed. the limitations we
+have now seems to be things like:
+
+*  the syntax of the web page does not have a semantic model
+
+we're trying to build a research science platform, not a display GUI object.
+we'd like the GUI piece of the system to have a clean, programmable semantics
+so we can reason about user actions. we want to reflect user actions (say
+handwriting, gestures, clicks, eye-gazes) and system state (say branch cut
+crossings, solid model data structure stresses, hill climbing search progress,
+as subtle changes to the screen. 
+
+Think of a search space program that does hill climbing (or root finding, 
+or ...) that presents it's current state on the system. The user gaze
+shifts to various areas and the gaze tracking hardware gives us a vector
+for a direction to explore.
+
+*  the DOM model is hierarchical
+
+the DOM is a Document Object Model. it's basically a hierarchical data
+structure and it suffers from the same problems that databases used to
+suffer, that is, the hierarchy. Hierarchical databases ruled the day
+until new theory came around and the world went relational (I know most
+of you don't remember it but there was a HUGE fight about this. I attended
+a committee meeting about this at a database conference and the major
+objection was there would never be enough horsepower or memory to handle
+relational searches... beware the future).
+
+*  the DOM model is not really math-aware
+
+i'd envision the DOM being a surface-level representation of the actual
+data structures used. the DOM would be available in one of the facets
+of the crystal, possibly to support old browsers. there are much more
+useful and efficient data structures for representing problem spaces,
+state spaces, and system state.
+
+*  the browser cannot interact with the filesystem
+*  the browser pages cannot be drawn upon
+*  the browser pages are "paper-like"
+
+the browser is a dumb tool at the moment. we need to break out of the
+mold, pick a particular browser, and make our own version of it. our
+version can be modified to do read/write of the file system, handle
+socket connections, present tabbed pages or sub-areas as an active
+canvas so Axiom can write graphics or text to them in real time, present
+a section of the screen as command-line I/O, show axiom state in special
+tabs, allow the browser to start axiom, let it speak lisp, etc.
+
+in short, we need to stop struggling with the limits of current browser
+technology, take a standard browser and extend it to our purposes. in
+fact, i expect we could do what we do with GCL: package our own version
+from a tgz file and add patches to do what axiom needs.
+
+in the 30 year horizon we need something that is useful, impressive,
+and reasonably modern. today's tools just hint at what will be common.
+we need to listen to the hints, anticipate the needs, and get out in front.
+the term i've been using is a "crystal" which is an object with many facets
+that "floats" around a central problem description in its own representation.
+
+we need to think about the researcher's problem space in a much deeper
+form than current systems do (including Axiom). in the long term we want
+to be at the center of the tool set that researchers use to solve problems.
+
+research is long-term, detail-tedious, and takes a lot of work to build
+up a big picture. we want to be able to capture problem state, suggest
+relevant papers, perform proofs in the background, do speculative 
+computations for possible suggestions, pre-generate literate pamphlets
+with references and code, etc. we want to draw a wide range of tools
+together (math language, graphics, 3D models (organic, engineering, etc),
+full-text searches, collaborative tools, etc).
+
+
+related to the current suggestions i think we are limiting ourselves too
+much and creating too tight a straight-jacket by trying to work within
+the limits of current browsers and MMA-like worksheets.
+
+choose a browser, get the source, add it to axiom, and extend it in various
+ways so we can experiment with ideas. just making it possible for the browser
+to read/write the filesystem and present a "canvas" area to axiom puts us
+far ahead of the world. it's not ideal but it works.
+
+t
+
+
+
+
+
+From MAILER-DAEMON Mon Jun 20 23:01:12 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DkZ0g-0002y7-AA
+	for mharc-axiom-math@gnu.org; Mon, 20 Jun 2005 23:01:10 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DkZ0c-0002wI-RS
+	for axiom-math@nongnu.org; Mon, 20 Jun 2005 23:01:07 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DkZ0X-0002tZ-Il
+	for axiom-math@nongnu.org; Mon, 20 Jun 2005 23:01:04 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DkZ0Q-0002pn-VU; Mon, 20 Jun 2005 23:00:55 -0400
+Received: from [209.226.175.93] (helo=tomts36-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DkYy2-0003pA-4u; Mon, 20 Jun 2005 22:58:26 -0400
+Received: from asus ([216.209.110.150]) by tomts36-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20050621025527.FHGW16985.tomts36-srv.bellnexxia.net@asus>;
+	Mon, 20 Jun 2005 22:55:27 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <daly@axiom-developer.org>
+Date: Mon, 20 Jun 2005 22:52:58 -0400
+Message-ID: <004f01c5760c$58dd2420$6601a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.2627
+In-Reply-To: <200506202335.j5KNZ8et028214@axiom-developer.org>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+Importance: Normal
+Cc: kai.kaminski@gmx.de, axiom-developer@nongnu.org, axiom-math@nongnu.org,
+	doyencd-developers@lists.sourceforge.net
+Subject: [Axiom-math] RE: axiom, browsers, and crystal
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Jun 2005 03:01:08 -0000
+
+On June 20, 2005 7:35 PM Tim Daly wrote:
+
+> ...
+> some sort of browser-like capabilities are assumed.
+
+Yes, most certainly. As usual, I find I agree with many things
+you say below, but disagree strong on some specific points.
+
+> the limitations we have now seems to be things like:
+>
+> * the syntax of the web page does not have a semantic model
+>
+
+I think this is not accurate. I might agree if you said
+this differently. For example, I do think that the conventional
+document semantics of HTML is too limited for our purposes.
+Fortunately there is a lot of very active research going
+on right now concerning how extended HTML to be a much
+richer language or rather, a set of application-specific
+related languages such as MathML, SVG, RDF and many more.
+
+> we're trying to build a research science platform, not a
+> display GUI object. we'd like the GUI piece of the system to
+> have a clean, programmable semantics so we can reason about
+> user actions. we want to reflect user actions (say handwriting,
+> gestures, clicks, eye-gazes) and system state (say branch cut
+> crossings, solid model data structure stresses, hill climbing
+> search progress, as subtle changes to the screen.
+
+I don't think any of these requirements are significantly
+different than any other sophisticated web-based application
+being built today. In fact I think all of them have already
+been used to greater or lesser degree. The problem here, I think,
+is just that none of these "virtual reality type" of user
+interfaces have ever approached the degree of standardization
+that would make web franchising feasible. I mean: not enough
+people and projects have bought-in to any one such approach.
+
+> ...
+> *  the DOM model is hierarchical
+>
+> the DOM is a Document Object Model. it's basically a hierarchical
+> data structure and it suffers from the same problems that databases
+> used to suffer, that is, they are hierarchy.
+
+I hierarchical data structure is obviously appropriate if the object
+you wish to model is hierarchical. Right?
+
+> Hierarchical databases ruled the day until new theory came around
+> and the world went relational (I know most of you don't remember
+> it but there was a HUGE fight about this. I attended a committee
+> meeting about this at a database conference and the major objection
+> was there would never be enough horsepower or memory to handle
+> relational searches... beware the future).
+
+Actually, I was probably at that same meeting. :) Funny that
+you should mention this example, because I think that,
+in reverse, it actually demonstrates your point and also
+lets me make a point I want to make.
+
+The relational data model actually had *less* semantics than
+many of the data base systems that were in common use at that
+time - both hierarchical and network. In this respect it was
+rather like XML today compared to early HTML and SGML. The
+compromise was less semantics for greater generality and
+mathematical rigour. At the time no one knew how to deal in a
+general and rigorous way with data structures more complex
+than relations. The lack of semantics is what made people worry
+that implementing such general operations would require too
+much horsepower, and for a while this was true. It is still
+very hard for a purely relational system to match the
+performance of a hierarchical database for something that
+is naturally hierarchical, for example something like a book
+or document.
+
+But here we have examples of two strange principles at
+work: 1) less is more, i.e. that lack of semantics is
+a good thing if what you want to do is generalize and
+formalize something. And 2) worse is better. The fact that
+the relational model of data is now very widely accepted
+is a good thing in spite of the fact that it is worse at
+representing many important data objects.
+
+When we are thinking about a browser for the future
+Axiom, I think we need to keep these principles in mind.
+
+> ...
+> *  the browser cannot interact with the filesystem
+> *  the browser pages cannot be drawn upon
+> *  the browser pages are "paper-like"
+>
+> the browser is a dumb tool at the moment. we need to
+> break out of the mold, pick a particular browser, and make
+> our own version of it. our version can be modified to do
+> read/write of the file system, handle socket connections,
+> present tabbed pages or sub-areas as an active canvas so
+> Axiom can write graphics or text to them in real time,
+> present a section of the screen as command-line I/O, show
+> axiom state in special tabs, allow the browser to start
+> axiom, let it speak lisp, etc.
+
+Here is one place that I disagree strongly... :)
+
+If there is one lesson that is really clear to me about open
+source and the Internet in general, it is that doing really
+big things requires collaboration, not cooperation (cooperation
+in the sense of the verb to co-opt). By that I mean we have to
+learn to depend on and take advantage of the work of others
+(other projects) rather than attempt to acquire and control
+them.
+
+I think this is a really hard lesson for a traditional programmer
+to learn. I always used to hate learning to use someone else's
+subroutine library since they never seemed to "think the way
+I did". And often there were good reasons related to efficiency,
+correctness, and trust that justified this view. But for me
+open source, the Internet and very rapidly increasing and
+affordable computer power has completely changed my views
+about this.
+
+> in short, we need to stop struggling with the limits of
+> current browser technology, take a standard browser and
+> extend it to our purposes. in fact, i expect we could do
+> what we do with GCL: package our own version from a tgz file
+> and add patches to do what axiom needs.
+
+No, no, no!
+
+Other people much smarter and more dedicated than us are
+already doing almost everything of this sort that we need.
+What we need to do is exactly the opposite. We need to learn
+to incorporate and utilize the features and extensions of
+current and future generations of browser technology. Axiom's
+requirements (along with many other sophisticated browser
+based applications) can help to influence the evolution of
+browser technology but it should *not* attempt to co-opt and
+control it.
+
+This is a matter of design philosophy. Standards are a
+very important part of that philosophy. This is one of
+the reasons that worse (at least less than ideal) is often
+better in the long run.
+
+> in the 30 year horizon we need something that is useful,
+> impressive, and reasonably modern. today's tools just hint
+> at what will be common. we need to listen to the hints,
+> anticipate the needs, and get out in front.
+
+Again, I find myself wanting to label this as "inappropriate
+behaviour" for the Internet and open source. What you are
+describing fits quite well with the old corporate model
+was largely defined by IBM and then taken to the extreme
+by Microsoft, but not with where IBM is today and not with
+the open source movement.
+
+> we need to think about the researcher's problem space in
+> a much deeper form than current systems do (including Axiom).
+> in the long term we want to be at the center of the tool
+> set that researchers use to solve problems.
+
+To blend another metaphor (anyone remember Carlos Castaneda?)
+I think a much better attitude more or less in keeping with
+today's "extreme programming" is the "warrior's attitude".
+By design we should try to make Axiom flexible and adaptable
+and able to take advantage of new browser technology as it
+becomes available, even though today we don't know exactly
+what that might be. Again, *standards* are one of the best
+ways to try to achieve that.
+
+If we can do this I think we might have a good chance of
+being at least one of the players in the center of the tool
+set. I think proprietary systems will have a much harder
+time being and staying in this position.
+
+> research is long-term, detail-tedious, and takes a lot
+> of work to build up a big picture. we want to be able to
+> capture problem state, suggest relevant papers, perform
+> proofs in the background, do speculative computations for
+> possible suggestions, pre-generate literate pamphlets with
+> references and code, etc. we want to draw a wide range of
+> tools together (math language, graphics, 3D models
+> (organic, engineering, etc), full-text searches,
+> collaborative tools, etc).
+
+Yes about this I agree completely. And from my point of
+view this is almost exactly the same goal of much of the
+leading edge research and development on the web today.
+
+> related to the current suggestions i think we are limiting
+> ourselves too much and creating too tight a straight-jacket
+> by trying to work within the limits of current browsers and
+> MMA-like worksheets.
+
+I agree that we have to push those limits, but I think we
+are in a very good position to do that from within the
+environment of open source and advanced web application
+development in general.
+
+> choose a browser, get the source, add it to axiom, and
+> extend it in various ways so we can experiment with ideas.
+
+Again: no, no, no. :)
+
+> just making it possible for the browser to read/write the
+> filesystem and present a "canvas" area to axiom puts us
+> far ahead of the world. it's not ideal but it works.
+
+But here: yes, yes, yes!
+
+"it's not ideal but it works." is exactly how I want to
+characterize the choice of using standard web browsers
+on which to base the new (and future) Axiom user interface.
+
+-------
+
+Thanks for your message and thanks for opening this debate,
+Tim. Although we often both agree and disagree on many
+serious points, I am glad that we have been able to continue
+to work together on Axiom and I fully expect this arrangement
+to continue. So I know you wont and I don't want others
+to think these points of disagreement are a bad thing.
+I hope other people will feel free to share their opinions
+and reasoning.
+
+Cheers,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Tue Jun 21 00:04:04 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DkZzY-0004EY-Ij
+	for mharc-axiom-math@gnu.org; Tue, 21 Jun 2005 00:04:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DkZy8-0003vC-GT
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 00:02:39 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DkZxw-0003pH-TO
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 00:02:26 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DkZxo-0003je-6d; Tue, 21 Jun 2005 00:02:16 -0400
+Received: from [209.135.140.38] (helo=axiom-developer.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34)
+	id 1DkZmi-0006JO-IS; Mon, 20 Jun 2005 23:50:48 -0400
+Received: from axiom-developer.org (lincoln.rosehosting.com [127.0.0.1])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id j5L3lhwl022179;
+	Mon, 20 Jun 2005 22:47:43 -0500
+From: daly@axiom-developer.org
+Received: (from daly@localhost)
+	by axiom-developer.org (8.12.8/8.12.8/Submit) id j5L3lhjY022176;
+	Mon, 20 Jun 2005 22:47:43 -0500
+Date: Mon, 20 Jun 2005 22:47:43 -0500
+Message-Id: <200506210347.j5L3lhjY022176@axiom-developer.org>
+To: bill.page1@sympatico.ca
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org,
+	doyencd-developer@lists.sourceforge.net
+Subject: [Axiom-math] axiom, browsers, and crystal
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Jun 2005 04:04:00 -0000
+
+we're debating, not disagreeing. although you're clearly wrong :-)
+
+i agree standards are a *good thing*(TM) but standards come after practice,
+not before. when they come before practice they are generally large,
+expensive, and overbuilt (e.g. XML)
+
+i agree that browsers are a good thing. they are platform independent,
+use standards, and allow marvelous things to happen. or not. in particular
+they explicitly do not allow themselves to be used as a useful front-end
+for local programs.
+
+i agree that we don't want to re-invent the world and that we want to
+follow standard practice. However i disagree that we should work solely
+within standards.
+
+what i see us doing is using cheesey work-around languages like javascript
+and badly designed data structures like DOM. we're going to end up with
+  (a) a program that is "more of the same"
+  (b) is in a hard to maintain language that isn't very portable
+  (c) hamstrung by the standard-per-browser problem
+  (d) encoding our information in latex -> XML -> javascript hacks
+  (e) unable to "really communicate" with the user thru the browser
+  (f) bending the world to fit the doorway
+  (g) unable to start local programs, save state, really interact
+
+think about what we want. we want a portable front-end to axiom that
+we can extend in various ways to do truly cool NEW things. we want the
+end user of axiom (the spad programmer) to be able to make the front-end
+do truly cool NEW things. we want our documentation (pamphlets) to be magic
+drag-and-drop, clip and execute, inline moving graphics, managing multiple
+programs like axiom, our graphics, ACL2, and other tools. We want to be
+able to save state back into a representation that axiom and the front-end
+can both use.
+
+current browser technology won't allow us to "extend" it in various ways
+(such as making one of the tabs be an axiom shell session). it won't 
+read and write pamphlet files (inline latex, inline chunks). it won't
+allow drag-and-drop of pamphlets. it can't start or manage local programs.
+it can't handle giving up screen real estate as canvas areas. it can't
+write to the file system, etc.
+
+yes, you can do some of those tricks with acres of javascript, special
+certificates, plugins, cookies, and other hacks. but think of all of
+the code you have to write in javascript, html, xml, C, etc. it will
+only get MUCH worse as you try to write javascript to read the semantic
+network problem data structure and render the appropriate html. javascript
+is a horrible language and we have two great languages (spad and lisp).
+
+i'd agree with your approach if we could do something like graph the
+algebra hierarchy without a ton of java and a plugin or draw a graph
+on a tab from lisp. 
+
+i can almost envision the C code necessary to start axiom (or some other
+program) from the browser, hand it the screen area of a tabbed pane, and
+present an API from the browser code to draw. if it is 1000 lines i'd
+be astonished. all the cross-platform work is already done.
+
+use the browser, keep the standards. but extend the tool to do what you want.
+i don't change GCL, i simply extend it to be useful. 
+i don't change noweb. i simply add functionality i need.
+we won't change the browser, we just need to extend it to be useful.
+
+think of the browser as having solved the cross-platform problem and as
+a large library of useful code. now we want to make it sing and dance
+to our new ways of thinking. we still do what a browser does (we have
+the same base code) but we do so much more.
+
+t
+
+
+
+
+From MAILER-DAEMON Tue Jun 21 00:27:39 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DkaMK-0007R6-J7
+	for mharc-axiom-math@gnu.org; Tue, 21 Jun 2005 00:27:37 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DkaM7-0007NS-Nb
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 00:27:23 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DkaLx-0007Ip-Cs
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 00:27:15 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DkaLo-0007CE-2F; Tue, 21 Jun 2005 00:27:04 -0400
+Received: from [209.135.140.38] (helo=axiom-developer.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34)
+	id 1DkaF8-0007gI-C3; Tue, 21 Jun 2005 00:20:10 -0400
+Received: from axiom-developer.org (lincoln.rosehosting.com [127.0.0.1])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id j5L4H2wl028770;
+	Mon, 20 Jun 2005 23:17:02 -0500
+From: daly@axiom-developer.org
+Received: (from daly@localhost)
+	by axiom-developer.org (8.12.8/8.12.8/Submit) id j5L4H229028767;
+	Mon, 20 Jun 2005 23:17:02 -0500
+Date: Mon, 20 Jun 2005 23:17:02 -0500
+Message-Id: <200506210417.j5L4H229028767@axiom-developer.org>
+To: bob+axiom@mcelrath.org
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org,
+	doyencd-developer@lists.sourceforge.net
+Subject: [Axiom-math] axiom, browsers, and crystal
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Jun 2005 04:27:28 -0000
+
+i'm currently working on making the ISSAC Proceeding CD so i can't 
+check out your references at the moment but i will as soon as i can.
+
+i did want to respond to your comment that you didn't think discussion
+was useful and that we need running code....
+
+i think the focus on running code is great and i'm a great believer
+in "making it work" but in this case i'm trying to raise the discussion
+and our eyesight toward the 30 year horizon. 
+
+i am trying to avoid 1.2 million lines of javascript with browser
+dependent ifdefs. we already have that problem with C. instead of
+trying to work "on top" of the browser, which limits our abilities
+to the current available set, i'm trying to think of it as a large 
+library of code we can exploit in new ways. and the careful choice
+of a lisp available API would make the browser more useful as a
+front end and be less maintenance in the long run.
+
+we want to do everything the browser does (because people use them)
+but locally we want to do so much more. restricting ourselves to 
+require a network and vanilla browser code severely limits the possible
+creative choices.
+
+i want people to see axiom do things and get excited about doing more.
+so far there is very little i've seen "on the net" that gives me that feel.
+i want what i call the "knoppix" reaction.... klaus knopper modified a
+standard distribution, made it bootable, and as a result i'm now trying
+to build the doyen project. 
+
+anyway, we need to think about the 30 year horizon and what we want when
+get there. thus, the discussion.
+
+
+back to the grind...
+
+t
+
+
+
+From MAILER-DAEMON Tue Jun 21 04:07:24 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Dkdn1-00065c-Cq
+	for mharc-axiom-math@gnu.org; Tue, 21 Jun 2005 04:07:23 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Dkdmw-000645-G0
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 04:07:19 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Dkdms-000632-SY
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 04:07:16 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Dkdl4-0005WD-EW
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 04:05:22 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DkdcN-0002lE-LO
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 03:56:24 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j5L7la23072053; 
+	Tue, 21 Jun 2005 09:47:44 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <17079.50634.758866.757864@seam101.local>
+Date: Tue, 21 Jun 2005 09:46:18 +0200
+To: cfrangos@telkomsa.net
+Subject: Re: [Axiom-math] (no subject)
+In-Reply-To: <0506201838111H.19698@zeta>
+References: <05061715034112.19698@zeta> <05061813161515.19698@zeta>
+	<17078.40575.661520.600916@seam101.local>
+	<0506201838111H.19698@zeta>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4248; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Jun 2005 08:07:20 -0000
+
+I copy this to axiom-math, because others might be interested.
+
+C. Frangos writes:
+ > 
+ > Dear Martin,
+ > 
+ > I have modified your function test() in two ways (see below). Both 
+ > modifications result in errors.
+
+I give the reasons below.
+
+ > I have also attached an attempt at a simple package which does not compile.
+
+dito.
+ 
+ > I am using the basic syntax given in the axiom book for command line 
+ > programming, that is, semicolons at end of lines, brackets for function 
+ > definitions, brackets for blocks in if-then-else, for-repeat statements, 
+ > brackets for function calls, etc. I find this easier to remember and 
+ > consistent. I dont favour indentation.
+
+ > It seems that this syntax cannot be used in .input and .spad files. As you 
+ > mentioned axiom seems to be very indentation sensitive (first time I come 
+ > across this in a compuetr language).
+
+I don't like it either. Phyton does the same thing (probably got it from
+Axiom). However, the rules are very simple:
+
+One operation per line. No semicolon at the end.
+
+A couple of operations indented by the same amount constitute a "pile". In C
+and Aldor, they would be enclosed by { }.
+
+A pile is needed after
+
+*  ==, i.e. a function definition
+
+* for ... repeat
+* if ... then
+
+* else
+
+That's all, I think.
+
+ > If this is right then these undesirable features alone makes it difficult to 
+ > use axiom. The seemingly different syntax for command line programming versus 
+ > .input and .spad files is not explained anywhere in the axiom book as far as 
+ > I could see ???
+
+Well, both forms are allowed in .spad and .input files. (op1; op2; ...; opn) is
+simply a construct to fit n operations in a place where only one is allowed.
+
+ > (In axiom is there a read command ala C/C++ to allow the user to type in 
+ > something, etc ??)
+
+I'm afraid no. The approach is different. I'll help when we come to it.
+
+ > ------ File test.input
+ > 
+ > g: INT := 5
+ > 
+ > -- Your original code.
+ > --test():INT == 
+ > --  output(g)
+ > --  g := 6
+ > --  l: INT := 10
+ > --  output(l)
+ > --  l
+ > 
+ > 
+ > -- Code below compiles but identation causes error when you
+ > -- attempt to run test(); !!!! 
+
+correct. 
+
+ > test():INT == 
+ > 
+ >   output(g)
+ > 
+ >   g := 6
+ > 
+ >   l: INT := 10
+ > 
+ >    output(l)
+ > 
+ >    l
+
+You can see what )re test.input did to your function definition by typing
+
+test
+
+(without parenthesis) at the prompt:
+
+(16) -> test
+
+   (16)
+   test () ==
+     output(g)
+     g := 6
+     l : INT  :=
+       10
+          output(l)
+          l
+
+
+The following would work.
+
+test():INT == 
+ 
+  output(g)
+ 
+  g := 6
+ 
+  l: INT := 10
+ 
+  output(l)
+ 
+  l
+
+ > 
+ > -- Code below does not compile.
+ > --test():INT == (
+ > --  output(g);
+ > --  g := 6;
+ > --  l: INT := 10;
+ > --   output(l);
+ > --   return(l) )
+
+The basic rule in axiom is: one operation per line.
+The (operation-1; operation-2; ...; operation-n) construct constitutes one single operation (the
+result is the result of operation-n), therefore it has to go on one line. The
+following would work:
+
+test():INT == (_
+  output(g);_
+  g := 6;_
+  l: INT := 10;_
+   output(l);_
+   return(l) )
+
+-------------------------------------------------------------------------------
+
+Only two simple indentation mistakes in the following:
+
+
+ > -------File zmean.spad
+ > 
+ > F ==> Float
+ > 
+ > )abbrev package XZMEAN xzmean
+ > xzmean(): Exports == Implementation where
+ >     Exports == with
+ >       mean: List F -> F
+ >       stddev: List F -> F
+ >     Implementation == add
+ > 
+ >       mean l == 
+ >         n := #l
+ >         if n = 0 then error "The mean of an empty list is not defined"
+ >         reduce(_+, l)/n
+ > 
+ > -- The following code does not compile.
+ >       stddev l == 
+ >        n := #l
+ >        if n = 0 then 
+ >       ( error("The standard deviation of an empty list is not defined") )
+         ^^^ 
+
+should be 
+ >         ( error("The standard deviation of an empty list is not defined") )
+
+ >        m := mean l
+ >        s := 0.0
+ >         for i1 in 1..n repeat 
+          ^^^
+should be
+ >        for i1 in 1..n repeat      
+
+ >          ( s := s + (l(i1) - m)**2 )
+ >        s := sqrt(s/n)
+
+
+
+
+
+
+ 
+ > -- The following code also does not compile.
+ > --      stddev(l) == (
+ > --        n := #l;
+ > --      if n = 0 then 
+ > --        ( error("The standard deviation of an empty list is not defined") )
+ > --        m := mean(l);
+ > --        s := 0.0;
+ > --        for i1 in 1..n repeat
+ > --          (s := s + (l(i1) - m)**2)
+ > --        s := sqrt(s/n);
+ > --        return(s) )
+
+same reason as in the test.input example: (op1; op2;...;opn) is a single
+operation, therefore must go on a single line. Use _ ! Furthermore, you forgot
+two semicolons:
+
+      stddev(l) == (_
+        n := #l; _
+      if n = 0 then _
+        ( error("The standard deviation of an empty list is not defined") ); _
+        m := mean(l);_
+        s := 0.0;_
+        for i1 in 1..n repeat_
+          (s := s + (l(i1) - m)**2); _
+        s := sqrt(s/n);_
+        return(s) )
+
+
+
+
+From MAILER-DAEMON Tue Jun 21 07:03:34 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DkgXU-0005jO-Kq
+	for mharc-axiom-math@gnu.org; Tue, 21 Jun 2005 07:03:32 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DkgXE-0005f9-QR
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 07:03:17 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DkgX8-0005bu-V1
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 07:03:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DkgX8-0005Su-HI; Tue, 21 Jun 2005 07:03:10 -0400
+Received: from [195.54.107.70] (helo=mxfep01.bredband.com)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DkgR1-0006fl-RM; Tue, 21 Jun 2005 06:56:52 -0400
+Received: from kakmonster.int.dactylis.com ([213.114.232.12] [213.114.232.12])
+	by mxfep01.bredband.com with ESMTP id
+	<20050621105354.INID17064.mxfep01.bredband.com@kakmonster.int.dactylis.com>;
+	Tue, 21 Jun 2005 12:53:54 +0200
+Received: from [192.168.100.1] ([192.168.100.1]) (authenticated bits=0)
+	by kakmonster.int.dactylis.com (8.13.1/8.13.1) with ESMTP id
+	j5LAjlls008082
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK);
+	Tue, 21 Jun 2005 12:53:44 +0200
+Message-ID: <42B7EFD6.6050403@math.su.se>
+Date: Tue, 21 Jun 2005 12:45:42 +0200
+From: Marcus Better <marcusb@math.su.se>
+User-Agent: Debian Thunderbird 1.0.2 (X11/20050602)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-math] axiom, browsers, and crystal
+References: <200506210347.j5L3lhjY022176@axiom-developer.org>
+In-Reply-To: <200506210347.j5L3lhjY022176@axiom-developer.org>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Greylist: Sender succeded SMTP AUTH authentication, not delayed by
+	milter-greylist-1.5.10 (kakmonster.int.dactylis.com
+	[192.168.1.2]); Tue, 21 Jun 2005 12:53:45 +0200 (CEST)
+X-Scanned-By: MIMEDefang 2.48 on 192.168.1.2
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Jun 2005 11:03:20 -0000
+
+> current browser technology won't allow us to "extend" it in various ways
+> (such as making one of the tabs be an axiom shell session). it won't 
+> read and write pamphlet files (inline latex, inline chunks). it won't
+> allow drag-and-drop of pamphlets. it can't start or manage local programs.
+
+Couldn't this be done within a desktop system like KDE or Gnome? These
+desktops can be extended in various ways using IPC protocols and
+component architectures like DCOP. Admittedly it is not (yet) portable
+across desktop systems.
+
+-- 
+-----------------------------------------------------------------
+Marcus Better
+Department of Mathematics                      Tel. +46 8 164539
+Stockholm University                           Fax +46 8 6126717
+SE-106 91 Stockholm
+Sweden                                     http://www.math.su.se
+-----------------------------------------------------------------
+
+
+
+From MAILER-DAEMON Tue Jun 21 13:29:52 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DkmZM-0005OB-5A
+	for mharc-axiom-math@gnu.org; Tue, 21 Jun 2005 13:29:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DkZxy-0003qP-8D
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 00:02:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DkZxt-0003oY-Ow
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 00:02:22 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DkZxs-0003je-KH
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 00:02:20 -0400
+Received: from [68.142.201.186] (helo=web31706.mail.mud.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1DkZjv-0006Ce-Rm
+	for axiom-math@nongnu.org; Mon, 20 Jun 2005 23:47:56 -0400
+Received: (qmail 71386 invoked by uid 60001); 21 Jun 2005 03:38:23 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=Message-ID:Received:Date:From:Subject:To:Cc:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=CKPszR3atAWUq1qDzmaC1EthDHpXdsAZTuEyKfJ9uFlPXu7ugKj8G1nOlHPiB3gwiRnYoKcA+TMW5SfpCMyHp+br6QXz07LuNaXEWS8k6n0ksYRinmWO1+trSF9J0wwdYJDzBlrq+DsanLT/JHjCgbTEOA92BsaHRFB/e6RK+KI=
+	; 
+Message-ID: <20050621033823.71384.qmail@web31706.mail.mud.yahoo.com>
+Received: from [68.106.90.53] by web31706.mail.mud.yahoo.com via HTTP;
+	Mon, 20 Jun 2005 20:38:23 PDT
+Date: Mon, 20 Jun 2005 20:38:23 -0700 (PDT)
+From: C Y <smustudent1@yahoo.com>
+To: Bill Page <bill.page1@sympatico.ca>, daly@axiom-developer.org
+In-Reply-To: <004f01c5760c$58dd2420$6601a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-Mailman-Approved-At: Tue, 21 Jun 2005 13:29:50 -0400
+Cc: kai.kaminski@gmx.de, axiom-math@nongnu.org,
+	doyencd-developers@lists.sourceforge.net, axiom-developer@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-developer] RE: axiom, browsers, and crystal
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Jun 2005 04:02:34 -0000
+
+--- Bill Page <bill.page1@sympatico.ca> wrote:
+
+> On June 20, 2005 7:35 PM Tim Daly wrote:
+>
+> > we're trying to build a research science platform, not a
+> > display GUI object. we'd like the GUI piece of the system to
+> > have a clean, programmable semantics so we can reason about
+> > user actions. we want to reflect user actions (say handwriting,
+> > gestures, clicks, eye-gazes) and system state (say branch cut
+> > crossings, solid model data structure stresses, hill climbing
+> > search progress, as subtle changes to the screen.
+> 
+> I don't think any of these requirements are significantly
+> different than any other sophisticated web-based application
+> being built today. In fact I think all of them have already
+> been used to greater or lesser degree. The problem here, I think,
+> is just that none of these "virtual reality type" of user
+> interfaces have ever approached the degree of standardization
+> that would make web franchising feasible. I mean: not enough
+> people and projects have bought-in to any one such approach.
+ 
+If I may jump in, I'm not clear why there is so much focus on "web" if
+by that you mean "world wide web."  My approach to this sort of thing
+is to create the ability to visualize what you want to visualize, and
+then look to any advantages that might be obtainable from a "networked"
+approach.  A big selling point for me on an interface is that any
+"networked" or "web aware" parts are nice features, but NOT integral to
+the core functionality.  (Not strictly relevant, but an example would
+be the CUPS habit of using a custom web server and configuring one's
+printers in a web browser.  This has never felt "robust" to me.  It
+could be a bias of terminology - to me a "web browser" is something I
+use to go look up information on the internet, and therefore by
+definition not to be trusted for mission-critical work - I don't want
+to have to rely on the "network" working.  Too much openness to the net
+is also a security nightmare - I think this is something Maxima might
+have to look at some day due to our use of sockets and servers.)  I
+prefer to lean towards "stand alone with some helpful web features"
+rather than "web browser as GUI."  Maybe I'm just being a grumpy old
+stick in the mud.  I suppose a web browser being a GUI on a local
+machine could more properly be called a GUI implimentation platform,
+but I can't help the feeling of too many layers being piled on one
+another.
+
+[snip]
+
+> But here we have examples of two strange principles at
+> work: 1) less is more, i.e. that lack of semantics is
+> a good thing if what you want to do is generalize and
+> formalize something. And 2) worse is better. The fact that
+> the relational model of data is now very widely accepted
+> is a good thing in spite of the fact that it is worse at
+> representing many important data objects.
+
+<cringe>.  I have heard the worse is better argument, and I suppose it
+may be correct in the end, but I always had the feeling that if
+something really could be done right the first time (REALLY done, not
+just discussed) it would win out.  (TeX might arguably be an example of
+this.)  If I understand correctly worse is better is in essence a
+variation of the "first to market" idea, but Axiom (and Maxima for that
+matter) don't need to worry about this - Mathematica and Maple are
+already first, and have most all of the market share.  We don't have
+anything to lose by doing it "right" - doing it "right" puts us in a
+better position for the 30 year horizon and beyond.
+
+[snip]
+
+> If there is one lesson that is really clear to me about open
+> source and the Internet in general, it is that doing really
+> big things requires collaboration, not cooperation (cooperation
+> in the sense of the verb to co-opt). By that I mean we have to
+> learn to depend on and take advantage of the work of others
+> (other projects) rather than attempt to acquire and control
+> them.
+
+I suspect (perhaps Tim you agree with me) that there is very little
+software on the internet (or even in the commercial world) written to
+the standard to which Axiom wants to aspire.  I am assuming when I make
+this statement that Axiom would want to document with literate
+programming things like graphing algorithms, 3D techniques, data
+visualization routines, 2D mathematical display algorithms, etc. in the
+same fashion it has and is documenting the more strictly mathematical
+parts of the code base.  I am not aware of any formal work done on
+plotting algorithms or the formalization of the rules of 2D
+mathematical display.  Hopefully that is just me not knowing enough,
+and if such work does exist wouldn't Axiom want to incorporate it?  To
+me this is Axiom's true merit and uniqueness - the complete, total
+obsession with Doing It Right.
+ 
+> > in short, we need to stop struggling with the limits of
+> > current browser technology, take a standard browser and
+> > extend it to our purposes. in fact, i expect we could do
+> > what we do with GCL: package our own version from a tgz file
+> > and add patches to do what axiom needs.
+
+Again, I don't understand the focus on browsers.  As a rule what I
+think of as a "browser" is almost by definition insufficient for the
+general power you're proposing be added Tim.  What you're talking about
+would be almost a whole new class of application.  (A very, VERY
+powerful one, with networking features to be sure, but not what I tend
+to think of as a "browser" ~= "information viewer," not information
+editor.
+
+> This is a matter of design philosophy. Standards are a
+> very important part of that philosophy. This is one of
+> the reasons that worse (at least less than ideal) is often
+> better in the long run.
+
+In the computer version of "long run" I agree worse does tend to be
+better, but I think the TRUE long term (i.e. hundreds of years) will
+tend to favor code which, as much as possible, is written trying for
+the ideal.  Computers and computer software are very short lived by the
+standards of almost any other product of similar magnitude, and that is
+generally a sign of immaturity.  And after all, look at how long COBAL
+has hung around - it could be argued that the whole y2k issue was due
+to "worse is better" thinking.
+ 
+> > in the 30 year horizon we need something that is useful,
+> > impressive, and reasonably modern. today's tools just hint
+> > at what will be common. we need to listen to the hints,
+> > anticipate the needs, and get out in front.
+> 
+> Again, I find myself wanting to label this as "inappropriate
+> behaviour" for the Internet and open source. What you are
+> describing fits quite well with the old corporate model
+> was largely defined by IBM and then taken to the extreme
+> by Microsoft, but not with where IBM is today and not with
+> the open source movement.
+
+Eh?  I'm moderately confused.  I think Tim is saying that we should aim
+for what we would want in a tool, not so much thinking about what the
+limits of the current tools are.  That I would agree with - why
+shouldn't open source lead the way?
+
+> > we need to think about the researcher's problem space in
+> > a much deeper form than current systems do (including Axiom).
+> > in the long term we want to be at the center of the tool
+> > set that researchers use to solve problems.
+> 
+> To blend another metaphor (anyone remember Carlos Castaneda?)
+> I think a much better attitude more or less in keeping with
+> today's "extreme programming" is the "warrior's attitude".
+> By design we should try to make Axiom flexible and adaptable
+> and able to take advantage of new browser technology as it
+> becomes available, even though today we don't know exactly
+> what that might be. Again, *standards* are one of the best
+> ways to try to achieve that.
+
+Wouldn't a robust design be flexible and adaptable by definition? 
+Supporting standards is a good idea, but one shouldn't be afraid to
+move beyond them either - that's where new, better standards come from.
+
+> > related to the current suggestions i think we are limiting
+> > ourselves too much and creating too tight a straight-jacket
+> > by trying to work within the limits of current browsers and
+> > MMA-like worksheets.
+
+Um.  Not sure I agree with MMA-like worksheets being a limit - I prefer
+to think of them as a starting point.  They do some things that are
+very good (2D input and output) and some things I'm not so crazy about
+(their syntax I don't care for at all.)  But I tend to think of a
+"mathematical document" as a paper sized canvas which will accept
+arbitrary visualizations and representations, even if MMA doesn't have
+that level of flexibility.  Structure is needed in mathematical display
+in some form or fashion, and I would tend to think of anything that
+offers that (and can preferably be printed to hard copy) as a
+mathematical document.
+ 
+> I agree that we have to push those limits, but I think we
+> are in a very good position to do that from within the
+> environment of open source and advanced web application
+> development in general.
+
+Well, as usual, real products DO win out over vapor.  Someday I hope a
+powerful McCLIM based environment is no longer vapor, but that is for
+the future :-/.
+
+Cheers,
+CY
+
+
+		
+____________________________________________________ 
+Yahoo! Sports 
+Rekindle the Rivalries. Sign up for Fantasy Football 
+http://football.fantasysports.yahoo.com
+
+
+
+From MAILER-DAEMON Tue Jun 21 13:29:52 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DkmZM-0005OH-Bf
+	for mharc-axiom-math@gnu.org; Tue, 21 Jun 2005 13:29:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DkZy7-0003vW-FS
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 00:02:35 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DkZxx-0003pM-8I
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 00:02:25 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DkZxm-0003je-Dg; Tue, 21 Jun 2005 00:02:14 -0400
+Received: from [69.36.241.242] (helo=moya.mcelrath.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34)
+	id 1DkZuQ-0006Yh-Qa; Mon, 20 Jun 2005 23:58:47 -0400
+Received: from moya.mcelrath.org (mcelrath@localhost [127.0.0.1])
+	by moya.mcelrath.org (8.13.4/8.13.4/Debian-3) with ESMTP id
+	j5L3tiui015650
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NOT);
+	Mon, 20 Jun 2005 20:55:44 -0700
+Received: (from mcelrath@localhost)
+	by moya.mcelrath.org (8.13.4/8.13.4/Submit) id j5L3tiHv015647;
+	Mon, 20 Jun 2005 20:55:44 -0700
+X-Authentication-Warning: moya.mcelrath.org: mcelrath set sender to
+	bob+axiom@mcelrath.org using -f
+Date: Mon, 20 Jun 2005 20:55:44 -0700
+From: Bob McElrath <bob+axiom@mcelrath.org>
+To: daly@axiom-developer.org
+Message-ID: <20050621035543.GC13803@mcelrath.org>
+Mail-Followup-To: daly@axiom-developer.org, bill.page1@sympatico.ca,
+	kai.kaminski@gmx.de, camm@enhanced.com, martin.rubey@univie.ac.at,
+	axiom-developer@nongnu.org, axiom-math@nongnu.org,
+	doyencd-developers@lists.sourceforge.net
+References: <200506202335.j5KNZ8et028214@axiom-developer.org>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="5QAgd0e35j3NYeGe"
+Content-Disposition: inline
+In-Reply-To: <200506202335.j5KNZ8et028214@axiom-developer.org>
+User-Agent: Mutt/1.5.6+20040523i
+X-Virus-Scanned: ClamAV 0.85.1/947/Mon Jun 20 12:39:23 2005 on
+	moya.mcelrath.org
+X-Virus-Status: Clean
+X-Mailman-Approved-At: Tue, 21 Jun 2005 13:29:50 -0400
+Cc: doyencd-developers@lists.sourceforge.net, kai.kaminski@gmx.de,
+	axiom-math@nongnu.org, camm@enhanced.com, axiom-developer@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-developer] axiom, browsers, and crystal
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Jun 2005 04:02:40 -0000
+
+
+--5QAgd0e35j3NYeGe
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+daly@axiom-developer.org [daly@axiom-developer.org] wrote:
+> *  the DOM model is not really math-aware
+
+It doesn't have to be.  All it needs to have is nodes that contain
+expressions, figures, or input.  It is totally appropriate to
+encapsulate these.  The DOM is for the presentation end, not
+calculation.
+
+> *  the browser cannot interact with the filesystem
+
+This is not true.  (Did you try the save button on tiddlywiki?)  Mozilla
+will complain about security, but you can tell mozilla to allow it to do
+so.  Technically tiddly uses XUL for mozilla and ActiveX under IE.
+
+> *  the browser pages cannot be drawn upon
+
+You mean like this? http://chat.ma.la/draw.html
+
+> *  the browser pages are "paper-like"
+
+I think this is more a reflection of people's thought patterns than the
+ability of the technology.  Being able to address and modify the
+document in response to user requests is hardly "paper-like".
+
+In particular, I like the ability of DOM to address and modify MathML
+elements...
+
+> the browser is a dumb tool at the moment. we need to break out of the
+> mold, pick a particular browser, and make our own version of it.
+
+I don't think we should make our own version, but I think we should
+standardize on Mozilla, which is available under similar licenses to
+Axiom.
+
+> our version can be modified to do read/write of the file system, 
+
+Already available.
+
+> handle socket connections, 
+
+Already available (AJAX).
+
+> present tabbed pages or sub-areas as an active
+> canvas so Axiom can write graphics or text to them in real time, 
+
+Remember all interaction is by user request.  Never should the server
+need to spontaneously put something on the user's screen.
+
+> present a section of the screen as command-line I/O, 
+
+Demonstrated by Kai to be possible already.
+
+> show axiom state in special tabs, 
+
+If axiom binds to ports no localhost, one page could show internal state.
+
+> allow the browser to start axiom,
+
+Either make a startup script that starts axiom then the web browser, or
+possibly one of File.execute or Install.execute in the XPInstall object.
+
+> let it speak lisp, 
+
+I don't think this is necessary, except by interaction with axiom.
+
+> etc.
+
+I'm sorry, I meant to have a working demo before I brought this up
+again.  From my perspective, everything is possible, it's just a matter
+of finding time to paste it all together...
+
+I'm not sure this discussion is useful, what we need is code... ;)
+
+--
+Cheers,
+Bob McElrath [Univ. of California at Davis, Department of Physics]
+
+    "One of the best ways to get yourself a reputation as a dangerous citizen
+    these days is to go about repeating the very phrases which our founding
+    fathers used in the great struggle for independence." --Charles A. Beard
+
+--5QAgd0e35j3NYeGe
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFCt4+/jwioWRGe9K0RAl57AKC/l2u8b5XaR5Axnfrt3HNthYg9NACgoJFp
+tDu2L/vF0IlOuZcHAIF90WQ=
+=Cf7k
+-----END PGP SIGNATURE-----
+
+--5QAgd0e35j3NYeGe--
+
+
+
+From MAILER-DAEMON Tue Jun 21 13:29:52 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DkmZM-0005OV-LD
+	for mharc-axiom-math@gnu.org; Tue, 21 Jun 2005 13:29:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Dkav2-0004SW-Sn
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 01:03:29 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Dkauu-0004O1-Oq
+	for axiom-math@nongnu.org; Tue, 21 Jun 2005 01:03:21 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Dkaup-0004I7-Gv; Tue, 21 Jun 2005 01:03:15 -0400
+Received: from [69.36.241.242] (helo=moya.mcelrath.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34)
+	id 1Dkabk-0000XH-4k; Tue, 21 Jun 2005 00:43:32 -0400
+Received: from moya.mcelrath.org (mcelrath@localhost [127.0.0.1])
+	by moya.mcelrath.org (8.13.4/8.13.4/Debian-3) with ESMTP id
+	j5L4eaIq016015
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NOT);
+	Mon, 20 Jun 2005 21:40:36 -0700
+Received: (from mcelrath@localhost)
+	by moya.mcelrath.org (8.13.4/8.13.4/Submit) id j5L4eaIw016012;
+	Mon, 20 Jun 2005 21:40:36 -0700
+X-Authentication-Warning: moya.mcelrath.org: mcelrath set sender to
+	bob+axiom@mcelrath.org using -f
+Date: Mon, 20 Jun 2005 21:40:36 -0700
+From: Bob McElrath <bob+axiom@mcelrath.org>
+To: daly@axiom-developer.org
+Message-ID: <20050621044036.GD13803@mcelrath.org>
+Mail-Followup-To: daly@axiom-developer.org, axiom-math@nongnu.org,
+	axiom-developer@nongnu.org, doyencd-developer@lists.sourceforge.net
+References: <200506210417.j5L4H229028767@axiom-developer.org>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="4zI0WCX1RcnW9Hbu"
+Content-Disposition: inline
+In-Reply-To: <200506210417.j5L4H229028767@axiom-developer.org>
+User-Agent: Mutt/1.5.6+20040523i
+X-Virus-Scanned: ClamAV 0.85.1/947/Mon Jun 20 12:39:23 2005 on
+	moya.mcelrath.org
+X-Virus-Status: Clean
+X-Mailman-Approved-At: Tue, 21 Jun 2005 13:29:50 -0400
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org,
+	doyencd-developer@lists.sourceforge.net
+Subject: [Axiom-math] Re: axiom, browsers, and crystal
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Jun 2005 05:06:45 -0000
+
+
+--4zI0WCX1RcnW9Hbu
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+daly@axiom-developer.org [daly@axiom-developer.org] wrote:
+> i am trying to avoid 1.2 million lines of javascript with browser
+> dependent ifdefs. we already have that problem with C. instead of
+> trying to work "on top" of the browser, which limits our abilities
+> to the current available set, i'm trying to think of it as a large 
+> library of code we can exploit in new ways. and the careful choice
+> of a lisp available API would make the browser more useful as a
+> front end and be less maintenance in the long run.
+
+No browser-dependent code.  Pick a browser.  Sorry folks, no
+IE/Opera/Safari.  Mozilla is free and people who want to use Axiom will
+have to install it.
+
+> we want to do everything the browser does (because people use them)
+> but locally we want to do so much more. restricting ourselves to 
+> require a network and vanilla browser code severely limits the possible
+> creative choices.
+
+Not vanilla.  I don't want to have anything to do with browser detection
+or making it work in more than one browser.
+
+The ability to independently address parts of the document is very
+powerful.  In essence, the browser provides interaction with output math
+for us.  We can attach javascript to MathML and know which element the
+user clicked on after he clicked the "simplify" button.  We can have a
+"show integers" button that will turn the variable "i" red.  We can
+"hide output".  We can have mouse-overs indicate the domain of the
+object under the mouse cursor.
+
+All of the important user-interaction fundamentals are there.  The
+entire mozilla API is accessible from javascript.  Output rendering is
+there (jsMath or MathML).  Input editing is there.  Documentation in the
+form of hyperlinks and mouse-overs is there.
+
+It seems to me that the options are:
+1) Build the math into the browser
+2) Build the browser into the math
+
+If a new C++ application is created which embeds the necessary mozilla
+components, it will still require javascript ties to user interface
+elements.  One step at a time... ;)
+
+--
+Cheers,
+Bob McElrath [Univ. of California at Davis, Department of Physics]
+
+    "One of the best ways to get yourself a reputation as a dangerous citizen
+    these days is to go about repeating the very phrases which our founding
+    fathers used in the great struggle for independence." --Charles A. Beard
+
+--4zI0WCX1RcnW9Hbu
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFCt5pEjwioWRGe9K0RAqmiAJwOVZmU66PvXmWjKG0r7E187DDH6wCfXGe2
+EkCtslEudhErNkrazsi4mLA=
+=y9+m
+-----END PGP SIGNATURE-----
+
+--4zI0WCX1RcnW9Hbu--
+
+
+
+From MAILER-DAEMON Wed Jun 22 02:36:25 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DkyqR-0005ce-Jn
+	for mharc-axiom-math@gnu.org; Wed, 22 Jun 2005 02:36:20 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DkyqJ-0005b5-1J
+	for axiom-math@nongnu.org; Wed, 22 Jun 2005 02:36:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DkyqE-0005aI-K7
+	for axiom-math@nongnu.org; Wed, 22 Jun 2005 02:36:08 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Dkypy-0005WY-DZ; Wed, 22 Jun 2005 02:35:50 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1Dkyql-0003To-RA; Wed, 22 Jun 2005 02:36:40 -0400
+Received: from localhost (localhost.drenet.dnd.ca [127.0.0.1])
+	by fw.drenet.dnd.ca (_) with ESMTP id 5EEB266366;
+	Wed, 22 Jun 2005 02:33:32 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (unknown [131.136.1.77])
+	by fw.drenet.dnd.ca (_) with ESMTP id 661DC66361;
+	Wed, 22 Jun 2005 02:33:30 -0400 (EDT)
+Received: by CORPORATEEX with Internet Mail Service (5.5.2653.19)
+	id <M6GC227V>; Wed, 22 Jun 2005 02:33:05 -0400
+Message-ID: <2656EBA8AB726E47B6A06B6B9325126E07FB68@ea.Corporate.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "'daly@axiom-developer.org'" <daly@axiom-developer.org>
+Date: Wed, 22 Jun 2005 02:33:26 -0400
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org,
+	doyencd-developer@lists.sourceforge.net, bob+axiom@mcelrath.org
+Subject: [Axiom-math] RE: [Axiom-developer] axiom, browsers, and crystal
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 22 Jun 2005 06:36:14 -0000
+
+On Tuesday, June 21, 2005 12:17 AM Tim Daly wrote:
+
+> i am trying to avoid 1.2 million lines of javascript with browser
+> dependent ifdefs.  we already have that problem with C.
+
+I agree. For desktop use we can easily standardize on one browser.
+I recommend Mozilla's FireFox. Except for jsMath which is provided
+by another project, I don't expect a browser-based interface to
+Axiom to require more than a few hunderd lines of JavaScript.
+
+> instead of trying to work "on top" of the browser, which limits our
+> abilities to the current available set, i'm trying to think of it
+> as a large library of code we can exploit in new ways.
+
+Because of the DOM api and extensions, it is possible to work with
+the browser "as a large library of code" without having to get
+inside.
+
+> and the careful choice of a lisp available API would make the
+> browser more useful as a front end and be less maintenance in
+> the long run.
+
+As pointed out in another email, it is possible that a lisp API
+for the Mozilla browser will be implemented by other developers.
+If it exists we could in principle use it instead of JavaScript.
+I would expect it to be some time before it was a stable as the
+current JavaScript API.
+
+> we want to do everything the browser does (because people use
+> them) but locally we want to do so much more. restricting ourselves
+> to require a network and vanilla browser code severely limits the
+> possible creative choices.
+
+For desktop use no network is required.
+
+I would not characterize Mozilla as simply a "vanilla browser". It
+has a lot of provisions for plug-ins and extensions.
+
+For access to a Doyen-like server over the web, I think we may
+have to be more flexible with the choice of browser.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Wed Jun 22 03:30:39 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Dkzh0-0001NE-O8
+	for mharc-axiom-math@gnu.org; Wed, 22 Jun 2005 03:30:39 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Dkzgx-0001LX-87
+	for axiom-math@nongnu.org; Wed, 22 Jun 2005 03:30:35 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Dkzgi-0001HI-9L
+	for axiom-math@nongnu.org; Wed, 22 Jun 2005 03:30:30 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DkzgY-00015U-KH; Wed, 22 Jun 2005 03:30:10 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1Dkzbp-0007E3-LD; Wed, 22 Jun 2005 03:25:18 -0400
+Received: from localhost (localhost.drenet.dnd.ca [127.0.0.1])
+	by fw.drenet.dnd.ca (_) with ESMTP id 14BB966509;
+	Wed, 22 Jun 2005 03:22:10 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (unknown [131.136.1.77])
+	by fw.drenet.dnd.ca (_) with ESMTP id 67AF766521;
+	Wed, 22 Jun 2005 03:22:05 -0400 (EDT)
+Received: by CORPORATEEX with Internet Mail Service (5.5.2653.19)
+	id <M6GC228V>; Wed, 22 Jun 2005 03:21:40 -0400
+Message-ID: <2656EBA8AB726E47B6A06B6B9325126E07FB69@ea.Corporate.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "'daly@axiom-developer.org'" <daly@axiom-developer.org>
+Date: Wed, 22 Jun 2005 03:22:01 -0400
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org,
+	doyencd-developer@lists.sourceforge.net
+Subject: [Axiom-math] RE: axiom, browsers, and crystal
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 22 Jun 2005 07:30:36 -0000
+
+On Monday, June 20, 2005 11:48 PM Tim Daly wrote:
+
+> i agree standards are a *good thing*(TM) but standards come
+> after practice, not before.
+
+On the contrary, many standards have value even though they
+may never be put into practice. Standards (should) drive design.
+But standards are meant to be broken (and then fixed, again
+and again).
+
+> when they come before practice they are generally large,
+> expensive, and overbuilt (e.g. XML)
+
+In what sense do you think XML is expensive or overbuilt? The
+syntax of XML consists of just three production rules.
+
+  xml :== tag [ xml | value ] /tag
+  tag :== <name [att]>
+  att := name=value
+
+where [ ] means optional and | means alternative. The rest is just
+semantics and that gets complicated no matter what language you
+choose.
+
+> i agree that browsers are a good thing. they are platform
+> independent, use standards, and allow marvelous things to happen.
+> or not. in particular they explicitly do not allow themselves to
+> be used as a useful front-end for local programs.
+
+Have you used a Linux desktop lately? If you have, chances are you
+have probably already used a browser as a front-end for local
+programs and not even known it. Web browser front-ends are also
+becoming very popular for embedded applications like network routers,
+printer configuration. One of the most popular web browser front-ends
+
+http://www.webmin.com
+
+provides a complete system management interface for Linux servers.
+
+> ...
+
+think about what we want. we want a portable front-end to axiom
+that we can extend in various ways to do truly cool NEW things.
+
+Agreed.
+
+> we want the end user of axiom (the spad programmer) to be able
+> to make the front-end do truly cool NEW things.
+
+I am not sure that "spad programmer" is a good description of
+the Axiom end user since I expect many people will use Axiom
+without programming in spad. But I agree that the gui front-end
+needs to be easily accessible to the more ambitious Axiom
+programmer.
+
+> we want our documentation (pamphlets) to be magic drag-and-drop,
+> clip and execute, inline moving graphics, managing multiple
+> programs like axiom, our graphics, ACL2, and other tools.
+
+Agreed.
+
+> We want to be able to save state back into a representation
+> that axiom and the front-end can both use.
+
+I think the separation between the front-end state and axiom
+state is undesirable. State is something that Axiom should
+manage. The front-end just needs to be able to render that
+state accurately in a variety of visual/audio/tactile ways.
+
+> ...
+> yes, you can do some of those tricks with acres of javascript,
+> special certificates, plugins, cookies, and other hacks. but
+> think of all of the code you have to write in javascript, html,
+> xml, C, etc. it will only get MUCH worse as you try to write
+> javascript to read the semantic network problem data structure
+> and render the appropriate html.
+
+Tim, I really think you are just "fear mongering"! In fact most
+of the things you mention are already possible in a browser
+like Mozilla very little or no any additional JavaScript coding.
+JavaScript is mostly required just to provide the glue.
+
+> javascript is a horrible language and we have two great languages
+> (spad and lisp).
+
+I am not at all fond of Java in general. JavaScript is just a
+dialect of Java specialized for the browser API. I don't think
+that it is any worse than Java in general. And Java has been
+touted as a kind of "lisp for C programmers"... well, I wouldn't
+have exactly said that, but it can't be that bad given the effort
+spent on it's development and the amount of open source code that
+is available in java.
+
+> i'd agree with your approach if we could do something like graph
+> the algebra hierarchy without a ton of java and a plugin or draw 
+> a graph on a tab from lisp. 
+
+Well, as you know TouchGraph (a Java application integrated with
+the MathAction website) can already do a credible job of graphing
+and navigating a complex network.
+
+Kai has demonstrated that drawing a graph using SVG on a browser
+can be done with a few hundred lines of GCL lisp code.
+
+> ...
+
+Sigh. The debate wears thin ... :)
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Wed Jun 22 11:42:21 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Dl7Mr-0000DM-BU
+	for mharc-axiom-math@gnu.org; Wed, 22 Jun 2005 11:42:21 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Dl7Mp-0000CJ-6T
+	for axiom-math@nongnu.org; Wed, 22 Jun 2005 11:42:19 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Dl7Hp-0007Jq-LD
+	for axiom-math@nongnu.org; Wed, 22 Jun 2005 11:37:11 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Dl7HU-000738-6s; Wed, 22 Jun 2005 11:36:48 -0400
+Received: from [209.135.140.38] (helo=axiom-developer.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34)
+	id 1Dl70H-0002FD-Jb; Wed, 22 Jun 2005 11:19:01 -0400
+Received: from axiom-developer.org (lincoln.rosehosting.com [127.0.0.1])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id j5MFFbwl002915;
+	Wed, 22 Jun 2005 10:15:37 -0500
+From: daly@axiom-developer.org
+Received: (from daly@localhost)
+	by axiom-developer.org (8.12.8/8.12.8/Submit) id j5MFFa4S002912;
+	Wed, 22 Jun 2005 10:15:37 -0500
+Date: Wed, 22 Jun 2005 10:15:37 -0500
+Message-Id: <200506221515.j5MFFa4S002912@axiom-developer.org>
+To: bill.page1@sympatico.ca
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org,
+	doyencd-developer@lists.sourceforge.net
+Subject: [Axiom-math] fear mongering
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 22 Jun 2005 15:42:19 -0000
+
+
+> Tim, I really think you are just "fear mongering"! In fact most
+> of the things you mention are already possible in a browser
+> like Mozilla very little or no any additional Javascript coding.
+
+ok. perhaps i don't know enough about the subject and the recent
+advances in browsers so i'll go relearn some javascript in mozilla
+before continuing on this thread. i'll try to get axiom to start
+mozilla and draw a graph in a page (the graphics functionality)
+and see what works. 
+
+t
+
+
+
+
+
+From MAILER-DAEMON Thu Jun 23 12:06:43 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DlUDw-0004PJ-EM
+	for mharc-axiom-math@gnu.org; Thu, 23 Jun 2005 12:06:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DlUDr-0004Mh-1e
+	for axiom-math@nongnu.org; Thu, 23 Jun 2005 12:06:35 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DlUDh-0004IG-Sx
+	for axiom-math@nongnu.org; Thu, 23 Jun 2005 12:06:28 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DlUDh-0004HV-F4
+	for axiom-math@nongnu.org; Thu, 23 Jun 2005 12:06:25 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DlUBe-000689-O7
+	for axiom-math@nongnu.org; Thu, 23 Jun 2005 12:04:19 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j5NFwK3O061400
+	for <axiom-math@nongnu.org>; Thu, 23 Jun 2005 17:58:23 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <17082.56270.113934.459015@seam101.local>
+Date: Thu, 23 Jun 2005 17:57:02 +0200
+To: axiom-math@nongnu.org
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4249; Body=1 Fuz1=1 Fuz2=1
+Subject: [Axiom-math] Linear Combination of things
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 23 Jun 2005 16:06:36 -0000
+
+Is there a Domain or Category that supports linear combinations of elements of
+a given domain?
+
+Martin
+
+
+
+
+From MAILER-DAEMON Fri Jun 24 00:36:42 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Dlfvk-0004lZ-V6
+	for mharc-axiom-math@gnu.org; Fri, 24 Jun 2005 00:36:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Dlfr4-0003XU-Lv
+	for axiom-math@nongnu.org; Fri, 24 Jun 2005 00:31:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Dlfqw-0003TI-4W
+	for axiom-math@nongnu.org; Fri, 24 Jun 2005 00:31:43 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Dlfqw-0003Ba-1x
+	for axiom-math@nongnu.org; Fri, 24 Jun 2005 00:31:42 -0400
+Received: from [206.46.252.42] (helo=vms042pub.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DlfTy-0000tf-VD
+	for axiom-math@nongnu.org; Fri, 24 Jun 2005 00:07:59 -0400
+Received: from cunyvm.cuny.edu ([162.83.198.17])
+	by vms042.mailsrvcs.net (Sun Java System Messaging Server 6.2 HotFix
+	0.04 (built Dec 24 2004)) with ESMTPA id
+	<0IIK00BYYLZCPRIA@vms042.mailsrvcs.net> for
+	axiom-math@nongnu.org; Thu, 23 Jun 2005 23:04:25 -0500 (CDT)
+Date: Fri, 24 Jun 2005 00:04:31 -0400
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Subject: Re: [Axiom-math] Linear Combination of things
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Message-id: <42BB864F.F636A05D@cunyvm.cuny.edu>
+Organization: City College of New York
+MIME-version: 1.0
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+Content-type: text/plain; charset=us-ascii
+Content-transfer-encoding: 7bit
+X-Accept-Language: en,zh-CN,zh-TW,zh
+References: <17082.56270.113934.459015@seam101.local>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: wyscc@cunyvm.cuny.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 24 Jun 2005 04:36:38 -0000
+
+Martin Rubey wrote:
+> 
+> Is there a Domain or Category that supports linear combinations of elements of
+> a given domain?
+> 
+> Martin
+> 
+The Module(R), where R is a commutative ring, is a category for R-modules. Most
+algebraic domains are modules. However, Axiom does not seem to have vector
+spaces as a separate category, and modules generated by generators and relations
+(except FreeModule), which require quotient category. A related domain is
+ModuleOperator(R,M).
+
+William
+
+
+
+From MAILER-DAEMON Sun Jun 26 10:12:05 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DmXrg-0000n2-Od
+	for mharc-axiom-math@gnu.org; Sun, 26 Jun 2005 10:12:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DmXrf-0000kg-8G
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 10:12:03 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DmXrZ-0000ff-Km
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 10:12:00 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DmXrY-0000aA-5l
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 10:11:56 -0400
+Received: from [62.4.16.100] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DmXpC-0007KZ-Ur
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 10:09:31 -0400
+Received: from petoncle (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id AC49640E26
+	for <axiom-math@nongnu.org>; Sun, 26 Jun 2005 16:05:21 +0200 (CEST)
+Received: from fmy by petoncle with local (Exim 4.50) id 1DmXlB-00015q-EJ
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 16:05:21 +0200
+To: axiom-math@nongnu.org
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: Sun, 26 Jun 2005 16:05:21 +0200
+Message-ID: <87ekapi57i.fsf@nerim.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) XEmacs/21.5 (chestnut, linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Sender: fmaltey@nerim.fr
+Subject: [Axiom-math] where is the complex module function ?
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Jun 2005 14:12:03 -0000
+
+Hello
+
+I find the complex argument function :
+   argument (3+4*%i) computes atan (4/3).
+
+But where is the module or abs complex function :
+  how can I get 5 from the complex 3+4*%i ?
+
+Thanks a lot !
+
+Fran=E7ois=20
+
+
+
+From MAILER-DAEMON Sun Jun 26 10:26:50 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DmY5x-0004eR-KQ
+	for mharc-axiom-math@gnu.org; Sun, 26 Jun 2005 10:26:49 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DmY5S-0004IY-8G
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 10:26:21 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DmY5H-00049Q-Nx
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 10:26:11 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DmY5G-00044m-Ox
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 10:26:06 -0400
+Received: from [62.4.16.100] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DmXyL-00082B-L9
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 10:18:57 -0400
+Received: from petoncle (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id 09B2140E1E;
+	Sun, 26 Jun 2005 16:14:49 +0200 (CEST)
+Received: from fmy by petoncle with local (Exim 4.50)
+	id 1DmXuK-00016e-IC; Sun, 26 Jun 2005 16:14:48 +0200
+To: axiom-math@nongnu.org, fmaltey@nerim.fr
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: Sun, 26 Jun 2005 16:14:48 +0200
+Message-ID: <87psu9gq7b.fsf@nerim.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) XEmacs/21.5 (chestnut, linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: fmaltey@nerim.fr
+Cc: 
+Subject: [Axiom-math] Are sqrt(-1) and %i equal ?
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Jun 2005 14:26:24 -0000
+
+I play with complex numbers.
+
+Why there is the complex number sqrt(-1) ?
+
+Is sqrt(-1) equal to %i or not ?
+How can I coerce sqrt(-1) to %i.
+
+Have a good day.
+
+Francois
+
+
+
+From MAILER-DAEMON Sun Jun 26 11:00:49 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DmYcq-0005zV-FU
+	for mharc-axiom-math@gnu.org; Sun, 26 Jun 2005 11:00:48 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DmYcd-0005qh-Ef
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 11:00:36 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DmYcU-0005nB-M2
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 11:00:30 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DmYcU-0005gb-KW
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 11:00:26 -0400
+Received: from [193.252.22.22] (helo=smtp9.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DmYLI-0000rh-W2
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 10:42:41 -0400
+Received: from me-wanadoo.net (localhost [127.0.0.1])
+	by mwinf0901.wanadoo.fr (SMTP Server) with ESMTP id 63C252001438
+	for <axiom-math@nongnu.org>; Sun, 26 Jun 2005 16:38:23 +0200 (CEST)
+Received: from elipse (ALille-251-1-79-169.w82-127.abo.wanadoo.fr
+	[82.127.254.169])
+	by mwinf0901.wanadoo.fr (SMTP Server) with SMTP id D8A022001433;
+	Sun, 26 Jun 2005 16:38:20 +0200 (CEST)
+X-ME-UUID: 20050626143820887.D8A022001433@mwinf0901.wanadoo.fr
+From: =?us-ascii?Q?Vanuxem_Gregory?= <g.vanuxem@wanadoo.fr>
+To: "Francois Maltey" <fmaltey@nerim.fr>, <axiom-math@nongnu.org>
+Subject: RE: [Axiom-math] Are sqrt(-1) and %i equal ?
+Date: Sun, 26 Jun 2005 16:38:20 +0200
+Message-ID: <KHENICFPGDDCIMAIAFHNEEAFCCAA.g.vanuxem@wanadoo.fr>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook IMO, Build 9.0.6604 (9.0.2911.0)
+Importance: Normal
+In-Reply-To: <87psu9gq7b.fsf@nerim.fr>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2527
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Jun 2005 15:00:40 -0000
+
+Hi,
+
+sqrt comes from algebraic number as you know.
+But if you play with complex number, 
+you can use
+a:=complex(-1,0)
+-- here you 'play' with complex
+sqrt a
+
+> -----Message d'origine-----
+> De : axiom-math-bounces+g.vanuxem=wanadoo.fr@nongnu.org
+> [mailto:axiom-math-bounces+g.vanuxem=wanadoo.fr@nongnu.org]De la part de
+> Francois Maltey
+> Envoye : dimanche 26 juin 2005 16:15
+> A : axiom-math@nongnu.org; fmaltey@nerim.fr
+> Objet : [Axiom-math] Are sqrt(-1) and %i equal ?
+> 
+> 
+> I play with complex numbers.
+> 
+> Why there is the complex number sqrt(-1) ?
+> 
+> Is sqrt(-1) equal to %i or not ?
+> How can I coerce sqrt(-1) to %i.
+> 
+> Have a good day.
+> 
+> Francois
+> 
+> 
+> _______________________________________________
+> Axiom-math mailing list
+> Axiom-math@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-math
+> 
+
+
+
+
+From MAILER-DAEMON Sun Jun 26 11:00:51 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DmYcr-000601-GX
+	for mharc-axiom-math@gnu.org; Sun, 26 Jun 2005 11:00:49 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DmYch-0005sv-Ly
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 11:00:40 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DmYcX-0005mk-6N
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 11:00:38 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DmYcU-0005gb-69
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 11:00:26 -0400
+Received: from [193.252.22.22] (helo=smtp9.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DmYMP-0000tU-Rn
+	for axiom-math@nongnu.org; Sun, 26 Jun 2005 10:43:50 -0400
+Received: from me-wanadoo.net (localhost [127.0.0.1])
+	by mwinf0903.wanadoo.fr (SMTP Server) with ESMTP id 807CF1C00173
+	for <axiom-math@nongnu.org>; Sun, 26 Jun 2005 16:39:41 +0200 (CEST)
+Received: from elipse (ALille-251-1-79-169.w82-127.abo.wanadoo.fr
+	[82.127.254.169])
+	by mwinf0903.wanadoo.fr (SMTP Server) with SMTP id 005DA1C00168;
+	Sun, 26 Jun 2005 16:39:40 +0200 (CEST)
+X-ME-UUID: 20050626143941159.005DA1C00168@mwinf0903.wanadoo.fr
+From: =?us-ascii?Q?Vanuxem_Gregory?= <g.vanuxem@wanadoo.fr>
+To: "Francois Maltey" <fmaltey@nerim.fr>, <axiom-math@nongnu.org>
+Subject: RE: [Axiom-math] Are sqrt(-1) and %i equal ?
+Date: Sun, 26 Jun 2005 16:39:40 +0200
+Message-ID: <KHENICFPGDDCIMAIAFHNKEAFCCAA.g.vanuxem@wanadoo.fr>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook IMO, Build 9.0.6604 (9.0.2911.0)
+Importance: Normal
+In-Reply-To: <87psu9gq7b.fsf@nerim.fr>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2527
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Jun 2005 15:00:41 -0000
+
+Hi,
+
+anothezr response (coercion)
+
+sqrt(-1);
+%::EXPR COMPLEX INT
+
+Cheers
+
+Greg
+
+> -----Message d'origine-----
+> De : axiom-math-bounces+g.vanuxem=wanadoo.fr@nongnu.org
+> [mailto:axiom-math-bounces+g.vanuxem=wanadoo.fr@nongnu.org]De la part de
+> Francois Maltey
+> Envoye : dimanche 26 juin 2005 16:15
+> A : axiom-math@nongnu.org; fmaltey@nerim.fr
+> Objet : [Axiom-math] Are sqrt(-1) and %i equal ?
+> 
+> 
+> I play with complex numbers.
+> 
+> Why there is the complex number sqrt(-1) ?
+> 
+> Is sqrt(-1) equal to %i or not ?
+> How can I coerce sqrt(-1) to %i.
+> 
+> Have a good day.
+> 
+> Francois
+> 
+> 
+> _______________________________________________
+> Axiom-math mailing list
+> Axiom-math@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-math
+> 
+
+
+
+
+From MAILER-DAEMON Mon Jun 27 12:31:59 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DmwWd-0007C3-3X
+	for mharc-axiom-math@gnu.org; Mon, 27 Jun 2005 12:31:59 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DmwWZ-0007BC-FY
+	for axiom-math@nongnu.org; Mon, 27 Jun 2005 12:31:55 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DmwWW-00079q-Kk
+	for axiom-math@nongnu.org; Mon, 27 Jun 2005 12:31:54 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DmwWW-00079D-Ab
+	for axiom-math@nongnu.org; Mon, 27 Jun 2005 12:31:52 -0400
+Received: from [62.4.16.101] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DmwZK-00065A-BM
+	for axiom-math@nongnu.org; Mon, 27 Jun 2005 12:34:46 -0400
+Received: from petoncle (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id 64C7E40FA9;
+	Mon, 27 Jun 2005 18:30:21 +0200 (CEST)
+Received: from fmy by petoncle with local (Exim 4.50)
+	id 1DmwV2-0001D7-Vk; Mon, 27 Jun 2005 18:30:21 +0200
+To: axiom-math@nongnu.org, fmaltey@nerim.fr
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: Mon, 27 Jun 2005 18:30:20 +0200
+Message-ID: <87u0jj225f.fsf@nerim.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) XEmacs/21.5 (chestnut, linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: fmaltey@nerim.fr
+Cc: 
+Subject: [Axiom-math] lot of questions about functions.
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 27 Jun 2005 16:31:57 -0000
+
+Hello, 
+
+Is there a the difference between f := t -> 2*t + 1 and f(x)==2*x+1 ?
+
+How can I do f o f o f o ...o f = x -> f(f(f(f...f(x)))) ?
+   (I iterate 10 or 100 times)
+
+f := x +-> 3*x 
+g := x +-> 2*x+3  
+
+It seems impossible to add 2 anonymous functions. 
+I can compute f(x)+g(x) but I can't use (f+g)(x)
+
+Can I do (f o g) or can I only compute f(g(x)) = f g x. 
+
+With mupad (sqrt@@2)(16) and (ln@cos@sin)(PI) compute $2$ and $0$.
+
+
+
+
+From MAILER-DAEMON Tue Jun 28 04:08:13 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DnB8e-0006Qm-JG
+	for mharc-axiom-math@gnu.org; Tue, 28 Jun 2005 04:08:12 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DnB2z-0005eM-PN
+	for axiom-math@nongnu.org; Tue, 28 Jun 2005 04:02:24 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DnB2h-0005dP-7e
+	for axiom-math@nongnu.org; Tue, 28 Jun 2005 04:02:07 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DnB1t-0004pH-V9
+	for axiom-math@nongnu.org; Tue, 28 Jun 2005 04:01:14 -0400
+Received: from [81.169.145.166] (helo=natnoddy.rzone.de)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DnAlV-0001mb-Rd
+	for axiom-math@nongnu.org; Tue, 28 Jun 2005 03:44:18 -0400
+Received: from [193.170.38.119] (woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by post.webmailer.de (8.13.1/8.13.1) with ESMTP id j5S7dg3t014905;
+	Tue, 28 Jun 2005 09:39:43 +0200 (MEST)
+Message-ID: <42C0FEDE.6050704@hemmecke.de>
+Date: Tue, 28 Jun 2005 09:40:14 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla Thunderbird 1.0 (X11/20041206)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: Francois Maltey <fmaltey@nerim.fr>
+Subject: Re: [Axiom-math] lot of questions about functions.
+References: <87u0jj225f.fsf@nerim.fr>
+In-Reply-To: <87u0jj225f.fsf@nerim.fr>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 28 Jun 2005 08:08:10 -0000
+
+You might learn something from
+
+http://www.aldor.org/docs/HTML/chap23.html#4
+
+Best regards
+Ralf
+
+Francois Maltey wrote:
+> Hello, 
+> 
+> Is there a the difference between f := t -> 2*t + 1 and f(x)==2*x+1 ?
+> 
+> How can I do f o f o f o ...o f = x -> f(f(f(f...f(x)))) ?
+>    (I iterate 10 or 100 times)
+> 
+> f := x +-> 3*x 
+> g := x +-> 2*x+3  
+> 
+> It seems impossible to add 2 anonymous functions. 
+> I can compute f(x)+g(x) but I can't use (f+g)(x)
+> 
+> Can I do (f o g) or can I only compute f(g(x)) = f g x. 
+> 
+> With mupad (sqrt@@2)(16) and (ln@cos@sin)(PI) compute $2$ and $0$.
+
+
+
+From MAILER-DAEMON Tue Jun 28 10:02:32 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DnGfY-00070c-19
+	for mharc-axiom-math@gnu.org; Tue, 28 Jun 2005 10:02:32 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DnGfW-00070A-Gf
+	for axiom-math@nongnu.org; Tue, 28 Jun 2005 10:02:30 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DnGfU-0006zL-LL
+	for axiom-math@nongnu.org; Tue, 28 Jun 2005 10:02:29 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DnGfU-0006yp-4i
+	for axiom-math@nongnu.org; Tue, 28 Jun 2005 10:02:28 -0400
+Received: from [62.4.17.102] (helo=mallaury.noc.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DnGhg-0000M3-Fa
+	for axiom-math@nongnu.org; Tue, 28 Jun 2005 10:04:44 -0400
+Received: from petoncle (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.noc.nerim.net (Postfix) with ESMTP id 004D562D20;
+	Tue, 28 Jun 2005 16:00:06 +0200 (CEST)
+Received: from fmy by petoncle with local (Exim 4.50)
+	id 1DnGdD-0001GD-3B; Tue, 28 Jun 2005 16:00:07 +0200
+To: Francois Maltey <fmaltey@nerim.fr>,  axiom-math@nongnu.org
+Subject: Re: [Axiom-math] lot of questions about functions.
+References: <87u0jj225f.fsf@nerim.fr> <42C0FEDE.6050704@hemmecke.de>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: Tue, 28 Jun 2005 16:00:06 +0200
+In-Reply-To: <42C0FEDE.6050704@hemmecke.de> (Ralf Hemmecke's message of
+	"Tue, 28 Jun 2005 09:40:14 +0200")
+Message-ID: <87psu6oa3d.fsf@nerim.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) XEmacs/21.5 (chestnut, linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: fmaltey@nerim.fr
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 28 Jun 2005 14:02:30 -0000
+
+Hello Ralf,
+
+> You might learn something from
+> http://www.aldor.org/docs/HTML/chap23.html#4
+
+It seems it's the pretty method where we build a domain.
+
+I want to play with generic functions of type expression -> expression.
+
+I use (cos@@100)(1.0) with mupad 
+when I want u100, with u0=1 and u(n+1)=cos u(n)
+
+>> Hello, Is there a the difference between f := t -> 2*t + 1 and
+>> f(x)==2*x+1 ?
+>> How can I do f o f o f o ...o f = x -> f(f(f(f...f(x)))) ?
+>>    (I iterate 10 or 100 times)
+>> f := x +-> 3*x g := x +-> 2*x+3  It seems impossible to add 2
+>> anonymous functions. I can compute f(x)+g(x) but I can't use (f+g)(x)
+>> Can I do (f o g) or can I only compute f(g(x)) = f g x. With mupad
+>> (sqrt@@2)(16) and (ln@cos@sin)(PI) compute $2$ and $0$.
+
+Have a good day !
+
+Francois
+
+
+
+From MAILER-DAEMON Tue Jun 28 15:54:05 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DnM9j-0007bR-Uw
+	for mharc-axiom-math@gnu.org; Tue, 28 Jun 2005 15:54:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DnM9b-0007Uf-A3
+	for axiom-math@nongnu.org; Tue, 28 Jun 2005 15:53:56 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DnM9Q-0007Od-Iy
+	for axiom-math@nongnu.org; Tue, 28 Jun 2005 15:53:52 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DnM9O-0007Ml-OT
+	for axiom-math@nongnu.org; Tue, 28 Jun 2005 15:53:42 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DnMBb-0002s5-46
+	for axiom-math@nongnu.org; Tue, 28 Jun 2005 15:56:00 -0400
+Received: from localhost (localhost.drenet.dnd.ca [127.0.0.1])
+	by fw.drenet.dnd.ca (_) with ESMTP id C115B6E12A;
+	Tue, 28 Jun 2005 15:51:19 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (unknown [131.136.1.77])
+	by fw.drenet.dnd.ca (_) with ESMTP id C31B76E134;
+	Tue, 28 Jun 2005 15:51:16 -0400 (EDT)
+Received: by CORPORATEEX with Internet Mail Service (5.5.2653.19)
+	id <NXW0VHM0>; Tue, 28 Jun 2005 15:50:49 -0400
+Message-ID: <2656EBA8AB726E47B6A06B6B9325126E07FB7F@ea.Corporate.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: 'Francois Maltey' <fmaltey@nerim.fr>
+Subject: RE: [Axiom-math] lot of questions about functions.
+Date: Tue, 28 Jun 2005 15:51:15 -0400
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 28 Jun 2005 19:53:57 -0000
+
+Francois,
+
+On Tuesday, June 28, 2005 10:00 AM you wrote:
+
+> I want to play with generic functions of type
+> expression -> expression.
+
+I think you have the right idea but perhaps you do not realize
+just how rigorous Axiom is when it comes to defining and
+operating on functions. What Axiom does is quite simple but
+not simply explained. You may have to read several sections of
+the Axiom Book carefully several times - sometimes between the
+lines.
+
+E.g. 
+
+6.3 Introduction to Functions
+6.4 Declaring the Type of Functions
+6.6 Declared vs. Undeclared Functions
+6.7 Functions vs. Operations
+6.9 How Axiom Determines What Function to Use
+9.3 BasicOperator
+9.50 MakeFunction
+9.51 MappingPackage1
+10.10 Automatic Newton Iteration Formulas
+
+And here is some discussion of this on MathAction:
+
+http://page.axiom-developer.org/zope/mathaction/FunctionalMapping
+http://page.axiom-developer.org/zope/mathaction/114MapOnFunctionsCrash
+
+Sometimes even reading the library code helps. (See mappkg.spad.pamphlet)
+
+--------
+
+There are two important things to remember that might seem
+quite odd to someone who has used Mupad, Mathematica or Maple:
+
+1) The name cos is just a name, it is *not* a function.
+2) Functions in Axiom are objects of type "mapping", i.e. A -> B
+   (also called signature).
+
+In Axiom the same name can be used in more than one way (overloading).
+The Axiom interpreter has elaborate sometimes heuristic rules for
+trying to decide on what mapping to associate with a given name.
+Sometimes you have to give it a little help.
+
+> I use (cos@@100)(1.0) with mupad when I want u100, with u0=1 and
+> u(n+1)=cos u(n)
+
+This works in Axiom but you have to provide some additional
+information
+
+(1) -> cos:Expression Float -> Expression Float := x +-> cos(x)
+
+   (1)  theMap(Closure)
+                       Type: (Expression Float -> Expression Float)
+(2) -> (cos**100)(1.0)
+
+   (2)  0.7390851332 1516064351
+                       Type: Expression Float
+
+Another way is to specify explicitly the package to use for the
+function composition. E.g.
+
+(3) -> FuncExpr:=MappingPackage3(Expression Integer, _
+                                 Expression Integer, _
+                                 Expression Integer);
+                        Type: Domain
+
+(4) -> ((sin*exp)$FuncExpr)(x)
+
+               x
+   (4)  sin(%e )
+                        Type: Expression Integer
+
+(5) -> )show MappingPackage1
+
+(5) -> )show MappingPackage3
+
+>...
+> Is there a the difference between f := t -> 2*t + 1 and
+> f(x)==2*x+1 ?
+
+You mean
+
+(5) -> f := t +-> 2*t + 1
+
+   (5)  t +-> 2t + 1
+                        Type: AnonymousFunction
+
+(6) -> f(2)
+
+   (6)  5
+                        Type: PositiveInteger
+
+This defines an "anonymous" function. On page of The Book
+it says:
+
+"Every function in Axiom is identified by a name and type.
+(An exception is an "anonymous function" discussed in 6.17 on
+page 268.) The type of a function is always a mapping of the
+form Source -> Target where Source and Target are types. To enter
+a type from the keyboard, enter the arrow by using a hyphen "-"
+followed by a greater-than sign ">", e.g. Integer -> Integer."
+
+You must declare the type of the function before you can
+use it in functional composition:
+
+(7) -> (f::(Expression Integer->Expression Integer)**3)(3)
+
+   (7)  31
+                                                     Type: Expression
+Integer
+(8) -> f := (t:INT):INT +-> 2*t + 1
+
+   (8)  theMap(Closure)
+                                                   Type: (Integer ->
+Integer)
+(9) -> (f**3)(3)
+
+   (9)  31
+                                                        Type:
+PositiveInteger
+
+The different between an anonymous function and the following
+is subtle and as far as I can see only be significant if the
+function definition depended on free (global) variables.
+
+(10) -> f(x)==2*x+1
+                        Type: Void
+
+In this case f(x) is not (yet) a function. We only know it's
+functional form, not it's type. More over, the expression on
+the right hand side has not be evaluated (i.e. compiled).
+
+(11) -> f(2)
+   Compiling function f with type PositiveInteger -> PositiveInteger
+
+   (11)  5
+                        Type: PositiveInteger
+
+
+> How can I do f o f o f o ...o f = x -> f(f(f(f...f(x)))) ?
+>    (I iterate 10 or 100 times)
+
+See examples above.
+
+> f := x +-> 3*x
+> g := x +-> 2*x+3
+> It seems impossible to add 2 anonymous functions. I can
+> compute f(x)+g(x) but I can't use (f+g)(x)
+
+You mean that you would like to treat + as a functional operator?
+
+This one is harder. Trying to do this in the interpret seems
+to cause several different kinds of problems in the Axiom
+interpreter (such as recently reported by here Ralf Hemmecke).
+
+The proper way to do this is to compiled a new package for the
+Axiom library. I wrote a very simple example here:
+
+http://page.axiom-developer.org/zope/mathaction/SanboxFunctionalAddition
+
+It's only about 10 lines of SPAD code. Let me know if you have
+any questions about how it works.
+
+>> Can I do (f o g) or can I only compute f(g(x)) = f g x.
+
+Function composition works using symbol * show above.
+
+> With mupad (sqrt@@2)(16) and (ln@cos@sin)(PI) compute $2$ and $0$.
+
+This works in Axiom.
+
+(1) -> MEI:=MappingPackage1(EXPR INT)
+
+   (1)  MappingPackage1 Expression Integer
+                               Type: Domain
+(2) -> ((sqrt**2)$MEI)(16)
+
+   (2)  2
+                               Type: Expression Integer
+
+(3) -> MEI3:=MappingPackage3(EXPR INT,EXPR INT,EXPR INT)
+
+   (3)
+   MappingPackage3(Expression Integer,Expression Integer,Expression Integer)
+                               Type: Domain
+(4) -> ((log*cos*sin)$MEI3)(%pi)
+
+   (4)  0
+                               Type: Expression Integer
+
+----------
+
+Thanks for asking these questions!
+
+Regards,
+Bill Page.
+
+
+

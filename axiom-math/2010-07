@@ -1,0 +1,1967 @@
+From MAILER-DAEMON Fri Jul 16 05:43:38 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OZhSE-0001ww-0d
+	for mharc-axiom-math@gnu.org; Fri, 16 Jul 2010 05:43:38 -0400
+Received: from [140.186.70.92] (port=49666 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OZhSB-0001wK-Ck
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 05:43:36 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <vvskokov@gmail.com>) id 1OZhSA-0003qv-9H
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 05:43:35 -0400
+Received: from mail-wy0-f173.google.com ([74.125.82.173]:40297)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <vvskokov@gmail.com>) id 1OZhSA-0003qp-59
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 05:43:34 -0400
+Received: by wyb35 with SMTP id 35so1665438wyb.4
+	for <axiom-math@nongnu.org>; Fri, 16 Jul 2010 02:43:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:mime-version:received:from:date
+	:message-id:subject:to:content-type;
+	bh=g56xcftlTfWsoyLHtA4C1BSQSH9AwrjpJqEpIPUQyZE=;
+	b=revX37NAfvbbpi9bzp4w++TmsyU4XTvW9NMndZuwU9sbO86ISe0Z9eA0uksL+JKFy/
+	G9zIBD5nD/ELnZcomF0NI3lqxiGpGEXwpP6LQOTJDau01+2KZMttDE7CHbXO40DiIaw1
+	X48A48XOwOwzEsIiXXHzGD7gXvJb9g3h2EEu0=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=mime-version:from:date:message-id:subject:to:content-type;
+	b=czUXOsTBWPSAHnl3eopSvzWiTbGgVaFGpxyswgU7PTm35mJQrBACP9jmHbbT35whPm
+	dA+bLYKd5YZWf7HxXuJQ9T3Z7pcB3VCzBLJ3DI3zvHRlPsvMkvWnqVi0OM/Yzt7tWEkG
+	BPBb5G6FMFAq0fy5pBYdRLrOwah/mXXNJk0T8=
+Received: by 10.227.157.201 with SMTP id c9mr722315wbx.20.1279273413268; Fri, 
+	16 Jul 2010 02:43:33 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.179.147 with HTTP; Fri, 16 Jul 2010 02:43:13 -0700 (PDT)
+From: Vladimir Skokov <vvskokov@gmail.com>
+Date: Fri, 16 Jul 2010 11:43:13 +0200
+Message-ID: <AANLkTimyVnmzDkb80QnW7yuY5qPMa4JZbmjyJTpAGdAl@mail.gmail.com>
+To: axiom-math@nongnu.org
+Content-Type: multipart/alternative; boundary=00163646cfae5e55b7048b7e0dee
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+Subject: [Axiom-math] repeated series expansion
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 16 Jul 2010 09:43:36 -0000
+
+--00163646cfae5e55b7048b7e0dee
+Content-Type: text/plain; charset=ISO-8859-1
+
+Dear all,
+
+I have only started to learn axiom. Could you help me please?
+I have an expression, say sin(x+y). How could I perform expansion
+withe respect ot x and than to y?
+
+i.e.
+
+series(  series(  sin(x+y),x=0  ),y=0   )
+
+thank you in advance
+
+Yours, Vladimir
+
+--00163646cfae5e55b7048b7e0dee
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Dear all,=A0<div><br></div><div>I have only started to learn axiom. Could y=
+ou help me please?=A0</div><div>I have an expression, say sin(x+y). How cou=
+ld I perform expansion=A0</div><div>withe respect ot x and than to y?=A0</d=
+iv><div>
+
+<br></div><div>i.e.=A0</div><div><br></div><div>series( =A0series( =A0sin(x=
++y),x=3D0 =A0),y=3D0 =A0 )</div><div><br></div><div>thank you in advance=A0=
+<br>
+</div><div><br></div><div>Yours, Vladimir=A0</div>
+
+--00163646cfae5e55b7048b7e0dee--
+
+
+From MAILER-DAEMON Fri Jul 16 06:34:18 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OZiFG-0004yT-Qx
+	for mharc-axiom-math@gnu.org; Fri, 16 Jul 2010 06:34:18 -0400
+Received: from [140.186.70.92] (port=49441 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OZiF8-0004Ri-8V
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 06:34:16 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <ralf@hemmecke.de>) id 1OZi49-0001ej-O5
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 06:22:51 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.160]:57220)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <ralf@hemmecke.de>) id 1OZi49-0001eN-Db
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 06:22:49 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1279275767; l=5102;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=Kum+clRgsVRQlJiMNMgETTsTNCU=;
+	b=H8F5DIML6496ysREQuEu4ZCq2rhLCX2yxJtV5SsjIMTAyAvnWi5cS7+zfBfuTU3NEiB
+	ZtzMm+riv5tKvbl79+CDc5ZzHn786JN9gA8Fx3f8gyYsA1nr1yq+RvotVYGVZJhNXsSNT
+	3yVVDvgHedufUubrVeX0JbJJ5SMN9/46Tbk=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSJk0FxqVB+K06YOFo6aDQ==
+X-RZG-CLASS-ID: mo00
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (klopstock mo60) (RZmta 23.4)
+	with (DHE-RSA-AES128-SHA encrypted) ESMTP id x069f5m6G9xnjl ;
+	Fri, 16 Jul 2010 12:22:15 +0200 (MEST)
+Message-ID: <4C4032D6.9060606@hemmecke.de>
+Date: Fri, 16 Jul 2010 12:22:14 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.9.2.4) Gecko/20100608 Thunderbird/3.1
+MIME-Version: 1.0
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] repeated series expansion
+References: <AANLkTimyVnmzDkb80QnW7yuY5qPMa4JZbmjyJTpAGdAl@mail.gmail.com>
+In-Reply-To: <AANLkTimyVnmzDkb80QnW7yuY5qPMa4JZbmjyJTpAGdAl@mail.gmail.com>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 16 Jul 2010 10:34:16 -0000
+
+I guess, before somebody can give you any answer, you would have to 
+specify what expression do you want as an answer.
+
+> series(  series(  sin(x+y),x=0  ),y=0   )
+
+This doesn't work, but it looks as if you want to expand sin(x+y) into a 
+series in x with some "strange" coefficients.
+
+series(  sin(x+y),x=0)
+
+    (1)
+                         sin(y)  2   cos(y)  3   sin(y)  4   cos(y)  5
+      sin(y) + cos(y)x - ------ x  - ------ x  + ------ x  + ------ x
+                            2           6          24          120
+    +
+        sin(y)  6   cos(y)  7   sin(y)  8   cos(y)  9    sin(y)  10      11
+      - ------ x  - ------ x  + ------ x  + ------ x  - ------- x   + 
+O(x  )
+          720        5040        40320      362880      3628800 
+
+               Type: UnivariatePuiseuxSeries(Expression(Integer),x,0)
+
+and then want to expand each coefficient into a series in y.
+
+The result would then be a series in x whose coefficients are *series* 
+in y. Is that what you want?
+
+Then you would go this way...
+
+TY := UnivariateTaylorSeries(Fraction Integer,'y,0)
+TX := UnivariateTaylorSeries(TY,'x,0)
+sx := taylor(sin(x+y),x=0)
+coeffs := [taylor(t,y=0)::TY for t in coefficients sx]
+s := series(coeffs)$TX
+
+That looks a bit complicated, but can you have that in another CAS? 
+Series with coefficients being series themselves? And these are no 
+finite objects. You can ask the resulting series for any coefficient you 
+like.
+
+But I guess, you wanted something else.
+
+Ralf
+
+
+(1) -> TY := UnivariateTaylorSeries(Fraction Integer,'y,0)
+
+
+    (1)  UnivariateTaylorSeries(Fraction(Integer),y,0)
+ 
+Type: Type
+(2) -> (2) -> TX := UnivariateTaylorSeries(TY,'x,0)
+
+    (2)
+ 
+UnivariateTaylorSeries(UnivariateTaylorSeries(Fraction(Integer),y,0),x,0)
+ 
+Type: Type
+(3) -> sx := taylor(sin(x+y),x=0)
+
+    (3)
+                         sin(y)  2   cos(y)  3   sin(y)  4   cos(y)  5
+      sin(y) + cos(y)x - ------ x  - ------ x  + ------ x  + ------ x
+                            2           6          24          120
+    +
+        sin(y)  6   cos(y)  7   sin(y)  8   cos(y)  9    sin(y)  10      11
+      - ------ x  - ------ x  + ------ x  + ------ x  - ------- x   + O(x  )
+          720        5040        40320      362880      3628800
+                         Type: 
+UnivariateTaylorSeries(Expression(Integer),x,0)
+(4) -> coeffs := [taylor(t,y=0)::TY for t in coefficients sx]
+
+    (4)
+         1  3    1   5     1   7      1    9      11
+    [y - - y  + --- y  - ---- y  + ------ y  + O(y  ),
+         6      120      5040      362880
+         1  2    1  4    1   6     1    8      1     10      11
+     1 - - y  + -- y  - --- y  + ----- y  - ------- y   + O(y  ),
+         2      24      720      40320      3628800
+       1      1  3    1   5     1    7      1    9      11
+     - - y + -- y  - --- y  + ----- y  - ------ y  + O(y  ),
+       2     12      240      10080      725760
+       1    1  2    1   4     1   6      1    8       1     10      11
+     - - + -- y  - --- y  + ---- y  - ------ y  + -------- y   + O(y  ),
+       6   12      144      4320      241920      21772800
+      1      1   3     1   5      1    7      1     9      11
+     -- y - --- y  + ---- y  - ------ y  + ------- y  + O(y  ),
+     24     144      2880      120960      8709120
+      1     1   2     1   4     1    6      1     8       1      10      11
+     --- - --- y  + ---- y  - ----- y  + ------- y  - --------- y   + 
+O(y  ),
+     120   240      2880      86400      4838400      435456000
+        1        1   3     1    5      1     7       1      9      11
+     - --- y + ---- y  - ----- y  + ------- y  - --------- y  + O(y  ),
+       720     4320      86400      3628800      261273600
+
+            1      1    2      1    4      1     6       1      8
+        - ---- + ----- y  - ------ y  + ------- y  - --------- y
+          5040   10080      120960      3628800      203212800
+      +
+             1       10      11
+        ----------- y   + O(y  )
+        18289152000
+      ,
+       1          1    3      1     5       1      7        1       9 
+    11
+     ----- y - ------ y  + ------- y  - --------- y  + ----------- y  + 
+O(y  ),
+     40320     241920      4838400      203212800      14631321600
+
+           1        1    2      1     4       1      6        1       8
+        ------ - ------ y  + ------- y  - --------- y  + ----------- y
+        362880   725760      8709120      261273600      14631321600
+      +
+                1        10      11
+        - ------------- y   + O(y  )
+          1316818944000
+      ,
+     ...]
+                   Type: 
+Stream(UnivariateTaylorSeries(Fraction(Integer),y,0))
+(5) -> series(coeffs)$TX
+
+    (5)
+          1  3    1   5     1   7      1    9      11
+      y - - y  + --- y  - ---- y  + ------ y  + O(y  )
+          6      120      5040      362880
+    +
+           1  2    1  4    1   6     1    8      1     10      11
+      (1 - - y  + -- y  - --- y  + ----- y  - ------- y   + O(y  ))x
+           2      24      720      40320      3628800
+    +
+         1      1  3    1   5     1    7      1    9      11   2
+      (- - y + -- y  - --- y  + ----- y  - ------ y  + O(y  ))x
+         2     12      240      10080      725760
+    +
+         1    1  2    1   4     1   6      1    8       1     10      11   3
+      (- - + -- y  - --- y  + ---- y  - ------ y  + -------- y   + O(y  ))x
+         6   12      144      4320      241920      21772800
+    +
+        1      1   3     1   5      1    7      1     9      11   4
+      (-- y - --- y  + ---- y  - ------ y  + ------- y  + O(y  ))x
+       24     144      2880      120960      8709120
+    +
+        1     1   2     1   4     1    6      1     8       1      10 
+    11   5
+      (--- - --- y  + ---- y  - ----- y  + ------- y  - --------- y   + 
+O(y  ))x
+       120   240      2880      86400      4838400      435456000
+    +
+          1        1   3     1    5      1     7       1      9      11   6
+      (- --- y + ---- y  - ----- y  + ------- y  - --------- y  + O(y  ))x
+         720     4320      86400      3628800      261273600
+    +
+              1      1    2      1    4      1     6       1      8
+          - ---- + ----- y  - ------ y  + ------- y  - --------- y
+            5040   10080      120960      3628800      203212800
+        +
+               1       10      11
+          ----------- y   + O(y  )
+          18289152000
+     *
+         7
+        x
+    +
+              1          1    3      1     5       1      7        1       9
+            ----- y - ------ y  + ------- y  - --------- y  + ----------- y
+            40320     241920      4838400      203212800      14631321600
+          +
+               11
+            O(y  )
+     *
+         8
+        x
+    +
+             1        1    2      1     4       1      6        1       8
+          ------ - ------ y  + ------- y  - --------- y  + ----------- y
+          362880   725760      8709120      261273600      14631321600
+        +
+                  1        10      11
+          - ------------- y   + O(y  )
+            1316818944000
+     *
+         9
+        x
+    +
+               1            1     3       1      5        1       7
+          - ------- y + -------- y  - --------- y  + ----------- y
+            3628800     21772800      435456000      18289152000
+        +
+                  1        9      11
+          - ------------- y  + O(y  )
+            1316818944000
+     *
+         10
+        x
+    +
+         11
+      O(x  )
+Type: 
+UnivariateTaylorSeries(UnivariateTaylorSeries(Fraction(Integer),y,0),x,0)
+
+
+From MAILER-DAEMON Fri Jul 16 06:53:00 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OZiXM-0006Wa-Kn
+	for mharc-axiom-math@gnu.org; Fri, 16 Jul 2010 06:53:00 -0400
+Received: from [140.186.70.92] (port=37251 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OZiXI-0006TU-DM
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 06:52:58 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <vvskokov@gmail.com>) id 1OZiXG-00077S-8M
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 06:52:56 -0400
+Received: from mail-ew0-f45.google.com ([209.85.215.45]:52100)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <vvskokov@gmail.com>) id 1OZiXF-00077A-QL
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 06:52:54 -0400
+Received: by ewy5 with SMTP id 5so712855ewy.4
+	for <axiom-math@nongnu.org>; Fri, 16 Jul 2010 03:52:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:mime-version:received:in-reply-to
+	:references:from:date:message-id:subject:cc:content-type;
+	bh=jUgX0OsE8pidQAvmgkPaG61gfb55ABpzKLXwX5AN8z4=;
+	b=Rw6lAvJFRWEKTEEbMLhr22QINic+W6rN2yil1SwljU3dwcNqs7UnM8wLyk2l2qqj+v
+	eMscQ7NECfTw42Atdsch/UUChVBbgtRY1t84tsrAoS8C1TuzNeJnKODT9EA9+w9VftC/
+	753bzyooww4z4hMS/yKk4sckTIT1uYEpFtLj4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=mime-version:in-reply-to:references:from:date:message-id:subject:cc
+	:content-type;
+	b=yA/B8osRYLMFxT9Jux2FzyQfpHh26jj8iEqfW88PCvxQ8UAvUJcCU6CqoH5AV1r/GK
+	Bp+w7b8Cl4Vv1Ks13kdiGBdAuOb4iRlpZPnPyEbLdyDzukYSJes7hmWa9TDEAXkjl3MB
+	YEMATv2SKUNtTKkoau8UmwTsxwfsIFaBwXCxA=
+Received: by 10.216.165.201 with SMTP id e51mr650498wel.89.1279277572494; Fri, 
+	16 Jul 2010 03:52:52 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.179.147 with HTTP; Fri, 16 Jul 2010 03:52:31 -0700 (PDT)
+In-Reply-To: <4C4032D6.9060606@hemmecke.de>
+References: <AANLkTimyVnmzDkb80QnW7yuY5qPMa4JZbmjyJTpAGdAl@mail.gmail.com> 
+	<4C4032D6.9060606@hemmecke.de>
+From: Vladimir Skokov <vvskokov@gmail.com>
+Date: Fri, 16 Jul 2010 12:52:31 +0200
+Message-ID: <AANLkTin1ocV3nNFjICacIZerBimVe1VBYMeLK1M4EDsr@mail.gmail.com>
+Subject: Re: [Axiom-math] repeated series expansion
+Cc: axiom-math@nongnu.org
+Content-Type: multipart/alternative; boundary=0016364180a5471684048b7f05b3
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 16 Jul 2010 10:52:58 -0000
+
+--0016364180a5471684048b7f05b3
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+The problem is that my function contains logs, it is not just Taylor series=
+.
+
+For instance, I'd like to  expand f(x,y)log(x) + g(x,y) at x=3D0, y=3D0.
+So I expect to obtain
+ (expansion of f(x,y)) * log(x) + expansion of g(x,y)
+
+e.g. for one variable "series" does a good job
+series(sin(x)*log(x),x=3D0)
+(5) ->
+   (5)
+               log(x)  3   log(x)  5   log(x)  7   log(x)  9    log(x)   11
+     log(x)x - ------ x  + ------ x  - ------ x  + ------ x  - -------- x
+                  6          120        5040       362880      39916800
+   +
+        12
+     O(x  )
+                   Type: GeneralUnivariatePowerSeries(Expression
+Integer,x,0)
+
+However this is not Taylor series and therefore I cannot extract
+coefficients as you specified.
+Of course the example I have written is oversimplified. I do not know the
+structure of the function,
+it can contain sin(log(x)) for example.
+
+Mathematica allows repeated series expansion, however it fails with
+complicated expressions
+due to some memory limitation.
+
+
+On Fri, Jul 16, 2010 at 12:22 PM, Ralf Hemmecke <ralf@hemmecke.de> wrote:
+
+> I guess, before somebody can give you any answer, you would have to speci=
+fy
+> what expression do you want as an answer.
+>
+>
+>  series(  series(  sin(x+y),x=3D0  ),y=3D0   )
+>>
+>
+> This doesn't work, but it looks as if you want to expand sin(x+y) into a
+> series in x with some "strange" coefficients.
+>
+>
+> series(  sin(x+y),x=3D0)
+>
+>   (1)
+>                        sin(y)  2   cos(y)  3   sin(y)  4   cos(y)  5
+>     sin(y) + cos(y)x - ------ x  - ------ x  + ------ x  + ------ x
+>                           2           6          24          120
+>   +
+>       sin(y)  6   cos(y)  7   sin(y)  8   cos(y)  9    sin(y)  10      11
+>     - ------ x  - ------ x  + ------ x  + ------ x  - ------- x   + O(x  =
+)
+>         720        5040        40320      362880      3628800
+>              Type: UnivariatePuiseuxSeries(Expression(Integer),x,0)
+>
+> and then want to expand each coefficient into a series in y.
+>
+> The result would then be a series in x whose coefficients are *series* in
+> y. Is that what you want?
+>
+> Then you would go this way...
+>
+> TY :=3D UnivariateTaylorSeries(Fraction Integer,'y,0)
+> TX :=3D UnivariateTaylorSeries(TY,'x,0)
+> sx :=3D taylor(sin(x+y),x=3D0)
+> coeffs :=3D [taylor(t,y=3D0)::TY for t in coefficients sx]
+> s :=3D series(coeffs)$TX
+>
+> That looks a bit complicated, but can you have that in another CAS? Serie=
+s
+> with coefficients being series themselves? And these are no finite object=
+s.
+> You can ask the resulting series for any coefficient you like.
+>
+> But I guess, you wanted something else.
+>
+> Ralf
+>
+>
+> (1) -> TY :=3D UnivariateTaylorSeries(Fraction Integer,'y,0)
+>
+>
+>   (1)  UnivariateTaylorSeries(Fraction(Integer),y,0)
+>
+> Type: Type
+> (2) -> (2) -> TX :=3D UnivariateTaylorSeries(TY,'x,0)
+>
+>   (2)
+>
+> UnivariateTaylorSeries(UnivariateTaylorSeries(Fraction(Integer),y,0),x,0)
+>
+> Type: Type
+> (3) -> sx :=3D taylor(sin(x+y),x=3D0)
+>
+>   (3)
+>                        sin(y)  2   cos(y)  3   sin(y)  4   cos(y)  5
+>     sin(y) + cos(y)x - ------ x  - ------ x  + ------ x  + ------ x
+>                           2           6          24          120
+>   +
+>       sin(y)  6   cos(y)  7   sin(y)  8   cos(y)  9    sin(y)  10      11
+>     - ------ x  - ------ x  + ------ x  + ------ x  - ------- x   + O(x  =
+)
+>         720        5040        40320      362880      3628800
+>                        Type:
+> UnivariateTaylorSeries(Expression(Integer),x,0)
+> (4) -> coeffs :=3D [taylor(t,y=3D0)::TY for t in coefficients sx]
+>
+>   (4)
+>        1  3    1   5     1   7      1    9      11
+>   [y - - y  + --- y  - ---- y  + ------ y  + O(y  ),
+>        6      120      5040      362880
+>        1  2    1  4    1   6     1    8      1     10      11
+>    1 - - y  + -- y  - --- y  + ----- y  - ------- y   + O(y  ),
+>        2      24      720      40320      3628800
+>      1      1  3    1   5     1    7      1    9      11
+>    - - y + -- y  - --- y  + ----- y  - ------ y  + O(y  ),
+>      2     12      240      10080      725760
+>      1    1  2    1   4     1   6      1    8       1     10      11
+>    - - + -- y  - --- y  + ---- y  - ------ y  + -------- y   + O(y  ),
+>      6   12      144      4320      241920      21772800
+>     1      1   3     1   5      1    7      1     9      11
+>    -- y - --- y  + ---- y  - ------ y  + ------- y  + O(y  ),
+>    24     144      2880      120960      8709120
+>     1     1   2     1   4     1    6      1     8       1      10      11
+>    --- - --- y  + ---- y  - ----- y  + ------- y  - --------- y   + O(y  =
+),
+>    120   240      2880      86400      4838400      435456000
+>       1        1   3     1    5      1     7       1      9      11
+>    - --- y + ---- y  - ----- y  + ------- y  - --------- y  + O(y  ),
+>      720     4320      86400      3628800      261273600
+>
+>           1      1    2      1    4      1     6       1      8
+>       - ---- + ----- y  - ------ y  + ------- y  - --------- y
+>         5040   10080      120960      3628800      203212800
+>     +
+>            1       10      11
+>       ----------- y   + O(y  )
+>       18289152000
+>     ,
+>      1          1    3      1     5       1      7        1       9    11
+>    ----- y - ------ y  + ------- y  - --------- y  + ----------- y  + O(y
+>  ),
+>    40320     241920      4838400      203212800      14631321600
+>
+>          1        1    2      1     4       1      6        1       8
+>       ------ - ------ y  + ------- y  - --------- y  + ----------- y
+>       362880   725760      8709120      261273600      14631321600
+>     +
+>               1        10      11
+>       - ------------- y   + O(y  )
+>         1316818944000
+>     ,
+>    ...]
+>                  Type:
+> Stream(UnivariateTaylorSeries(Fraction(Integer),y,0))
+> (5) -> series(coeffs)$TX
+>
+>   (5)
+>         1  3    1   5     1   7      1    9      11
+>     y - - y  + --- y  - ---- y  + ------ y  + O(y  )
+>         6      120      5040      362880
+>   +
+>          1  2    1  4    1   6     1    8      1     10      11
+>     (1 - - y  + -- y  - --- y  + ----- y  - ------- y   + O(y  ))x
+>          2      24      720      40320      3628800
+>   +
+>        1      1  3    1   5     1    7      1    9      11   2
+>     (- - y + -- y  - --- y  + ----- y  - ------ y  + O(y  ))x
+>        2     12      240      10080      725760
+>   +
+>        1    1  2    1   4     1   6      1    8       1     10      11   =
+3
+>     (- - + -- y  - --- y  + ---- y  - ------ y  + -------- y   + O(y  ))x
+>        6   12      144      4320      241920      21772800
+>   +
+>       1      1   3     1   5      1    7      1     9      11   4
+>     (-- y - --- y  + ---- y  - ------ y  + ------- y  + O(y  ))x
+>      24     144      2880      120960      8709120
+>   +
+>       1     1   2     1   4     1    6      1     8       1      10    11
+> 5
+>     (--- - --- y  + ---- y  - ----- y  + ------- y  - --------- y   + O(y
+>  ))x
+>      120   240      2880      86400      4838400      435456000
+>   +
+>         1        1   3     1    5      1     7       1      9      11   6
+>     (- --- y + ---- y  - ----- y  + ------- y  - --------- y  + O(y  ))x
+>        720     4320      86400      3628800      261273600
+>   +
+>             1      1    2      1    4      1     6       1      8
+>         - ---- + ----- y  - ------ y  + ------- y  - --------- y
+>           5040   10080      120960      3628800      203212800
+>       +
+>              1       10      11
+>         ----------- y   + O(y  )
+>         18289152000
+>    *
+>        7
+>       x
+>   +
+>             1          1    3      1     5       1      7        1       =
+9
+>           ----- y - ------ y  + ------- y  - --------- y  + ----------- y
+>           40320     241920      4838400      203212800      14631321600
+>         +
+>              11
+>           O(y  )
+>    *
+>        8
+>       x
+>   +
+>            1        1    2      1     4       1      6        1       8
+>         ------ - ------ y  + ------- y  - --------- y  + ----------- y
+>         362880   725760      8709120      261273600      14631321600
+>       +
+>                 1        10      11
+>         - ------------- y   + O(y  )
+>           1316818944000
+>    *
+>        9
+>       x
+>   +
+>              1            1     3       1      5        1       7
+>         - ------- y + -------- y  - --------- y  + ----------- y
+>           3628800     21772800      435456000      18289152000
+>       +
+>                 1        9      11
+>         - ------------- y  + O(y  )
+>           1316818944000
+>    *
+>        10
+>       x
+>   +
+>        11
+>     O(x  )
+> Type:
+> UnivariateTaylorSeries(UnivariateTaylorSeries(Fraction(Integer),y,0),x,0)
+>
+> _______________________________________________
+> Axiom-math mailing list
+> Axiom-math@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-math
+>
+
+
+
+--=20
+
+_____________________________________________
+
+Dr. Vladimir Skokov
+
+Theory Division
+GSI Helmholtzzentrum f=FCr Schwerionenforschung GmbH
+Planckstra=DFe 1
+D-64291 Darmstadt
+------------------------------------------------------------------------
+email:   V.Skokov@GSI.de
+phone: +49 6159-71 2751
+fax  :    +49 6159-71 2990
+
+--0016364180a5471684048b7f05b3
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+The problem is that my function contains logs, it is not just Taylor series=
+.<div><br></div><div>For instance, I&#39;d like to =A0expand f(x,y)log(x) +=
+ g(x,y) at x=3D0, y=3D0.=A0</div><div>So I expect to obtain</div><div>=A0(e=
+xpansion of f(x,y)) * log(x) + expansion of g(x,y)</div>
+
+<div><br></div><div>e.g. for one variable &quot;series&quot; does a good jo=
+b</div><div><div>series(sin(x)*log(x),x=3D0)</div><div>(5) -&gt;=A0</div><d=
+iv>=A0=A0 (5)</div><div>=A0=A0 =A0 =A0 =A0 =A0 =A0 =A0 log(x) =A03 =A0 log(=
+x) =A05 =A0 log(x) =A07 =A0 log(x) =A09 =A0 =A0log(x) =A0 11</div>
+
+<div>=A0=A0 =A0 log(x)x - ------ x =A0+ ------ x =A0- ------ x =A0+ ------ =
+x =A0- -------- x</div><div>=A0=A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A06 =A0 =A0=
+ =A0 =A0 =A0120 =A0 =A0 =A0 =A05040 =A0 =A0 =A0 362880 =A0 =A0 =A039916800<=
+/div><div>=A0=A0 +=A0</div><div>=A0=A0 =A0 =A0 =A012</div><div>=A0=A0 =A0 O=
+(x =A0)</div>
+
+<div>=A0=A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 Type: GeneralUnivariatePowerSer=
+ies(Expression Integer,x,0)</div></div><div><br></div><div>However this is =
+not Taylor series and therefore I cannot extract coefficients as you specif=
+ied.=A0</div><div>
+
+Of course the example I have written is oversimplified. I do not know the s=
+tructure of the function,=A0</div><div>it can contain sin(log(x)) for examp=
+le.=A0</div><div><br></div><div>Mathematica allows repeated series expansio=
+n, however it fails with complicated expressions</div>
+
+<div>due to some memory limitation. =A0</div><div><br><br><div class=3D"gma=
+il_quote">On Fri, Jul 16, 2010 at 12:22 PM, Ralf Hemmecke <span dir=3D"ltr"=
+>&lt;<a href=3D"mailto:ralf@hemmecke.de">ralf@hemmecke.de</a>&gt;</span> wr=
+ote:<br>
+
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex;">I guess, before somebody can give you any a=
+nswer, you would have to specify what expression do you want as an answer.<=
+div class=3D"im">
+
+<br>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+series( =A0series( =A0sin(x+y),x=3D0 =A0),y=3D0 =A0 )<br>
+</blockquote>
+<br></div>
+This doesn&#39;t work, but it looks as if you want to expand sin(x+y) into =
+a series in x with some &quot;strange&quot; coefficients.<div class=3D"im">=
+<br>
+<br>
+series( =A0sin(x+y),x=3D0)<br>
+<br></div>
+ =A0 (1)<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0sin(y) =A02 =A0 cos(y) =A03=
+ =A0 sin(y) =A04 =A0 cos(y) =A05<br>
+ =A0 =A0 sin(y) + cos(y)x - ------ x =A0- ------ x =A0+ ------ x =A0+ -----=
+- x<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 2 =A0 =A0 =A0 =A0 =A0 =
+6 =A0 =A0 =A0 =A0 =A024 =A0 =A0 =A0 =A0 =A0120<br>
+ =A0 +<br>
+ =A0 =A0 =A0 sin(y) =A06 =A0 cos(y) =A07 =A0 sin(y) =A08 =A0 cos(y) =A09 =
+=A0 =A0sin(y) =A010 =A0 =A0 =A011<br>
+ =A0 =A0 - ------ x =A0- ------ x =A0+ ------ x =A0+ ------ x =A0- ------- =
+x =A0 + O(x =A0)<br>
+ =A0 =A0 =A0 =A0 720 =A0 =A0 =A0 =A05040 =A0 =A0 =A0 =A040320 =A0 =A0 =A036=
+2880 =A0 =A0 =A03628800 <br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0Type: UnivariatePuiseuxSeries(Expression(Intege=
+r),x,0)<br>
+<br>
+and then want to expand each coefficient into a series in y.<br>
+<br>
+The result would then be a series in x whose coefficients are *series* in y=
+. Is that what you want?<br>
+<br>
+Then you would go this way...<br>
+<br>
+TY :=3D UnivariateTaylorSeries(Fraction Integer,&#39;y,0)<br>
+TX :=3D UnivariateTaylorSeries(TY,&#39;x,0)<br>
+sx :=3D taylor(sin(x+y),x=3D0)<br>
+coeffs :=3D [taylor(t,y=3D0)::TY for t in coefficients sx]<br>
+s :=3D series(coeffs)$TX<br>
+<br>
+That looks a bit complicated, but can you have that in another CAS? Series =
+with coefficients being series themselves? And these are no finite objects.=
+ You can ask the resulting series for any coefficient you like.<br>
+<br>
+But I guess, you wanted something else.<br>
+<br>
+Ralf<br>
+<br>
+<br>
+(1) -&gt; TY :=3D UnivariateTaylorSeries(Fraction Integer,&#39;y,0)<br>
+<br>
+<br>
+ =A0 (1) =A0UnivariateTaylorSeries(Fraction(Integer),y,0)<br>
+<br>
+Type: Type<br>
+(2) -&gt; (2) -&gt; TX :=3D UnivariateTaylorSeries(TY,&#39;x,0)<br>
+<br>
+ =A0 (2)<br>
+<br>
+UnivariateTaylorSeries(UnivariateTaylorSeries(Fraction(Integer),y,0),x,0)<b=
+r>
+<br>
+Type: Type<br>
+(3) -&gt; sx :=3D taylor(sin(x+y),x=3D0)<br>
+<br>
+ =A0 (3)<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0sin(y) =A02 =A0 cos(y) =A03=
+ =A0 sin(y) =A04 =A0 cos(y) =A05<br>
+ =A0 =A0 sin(y) + cos(y)x - ------ x =A0- ------ x =A0+ ------ x =A0+ -----=
+- x<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 2 =A0 =A0 =A0 =A0 =A0 =
+6 =A0 =A0 =A0 =A0 =A024 =A0 =A0 =A0 =A0 =A0120<br>
+ =A0 +<br>
+ =A0 =A0 =A0 sin(y) =A06 =A0 cos(y) =A07 =A0 sin(y) =A08 =A0 cos(y) =A09 =
+=A0 =A0sin(y) =A010 =A0 =A0 =A011<br>
+ =A0 =A0 - ------ x =A0- ------ x =A0+ ------ x =A0+ ------ x =A0- ------- =
+x =A0 + O(x =A0)<br>
+ =A0 =A0 =A0 =A0 720 =A0 =A0 =A0 =A05040 =A0 =A0 =A0 =A040320 =A0 =A0 =A036=
+2880 =A0 =A0 =A03628800<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0Type: UnivariateTaylorSerie=
+s(Expression(Integer),x,0)<br>
+(4) -&gt; coeffs :=3D [taylor(t,y=3D0)::TY for t in coefficients sx]<br>
+<br>
+ =A0 (4)<br>
+ =A0 =A0 =A0 =A01 =A03 =A0 =A01 =A0 5 =A0 =A0 1 =A0 7 =A0 =A0 =A01 =A0 =A09=
+ =A0 =A0 =A011<br>
+ =A0 [y - - y =A0+ --- y =A0- ---- y =A0+ ------ y =A0+ O(y =A0),<br>
+ =A0 =A0 =A0 =A06 =A0 =A0 =A0120 =A0 =A0 =A05040 =A0 =A0 =A0362880<br>
+ =A0 =A0 =A0 =A01 =A02 =A0 =A01 =A04 =A0 =A01 =A0 6 =A0 =A0 1 =A0 =A08 =A0 =
+=A0 =A01 =A0 =A0 10 =A0 =A0 =A011<br>
+ =A0 =A01 - - y =A0+ -- y =A0- --- y =A0+ ----- y =A0- ------- y =A0 + O(y =
+=A0),<br>
+ =A0 =A0 =A0 =A02 =A0 =A0 =A024 =A0 =A0 =A0720 =A0 =A0 =A040320 =A0 =A0 =A0=
+3628800<br>
+ =A0 =A0 =A01 =A0 =A0 =A01 =A03 =A0 =A01 =A0 5 =A0 =A0 1 =A0 =A07 =A0 =A0 =
+=A01 =A0 =A09 =A0 =A0 =A011<br>
+ =A0 =A0- - y + -- y =A0- --- y =A0+ ----- y =A0- ------ y =A0+ O(y =A0),<b=
+r>
+ =A0 =A0 =A02 =A0 =A0 12 =A0 =A0 =A0240 =A0 =A0 =A010080 =A0 =A0 =A0725760<=
+br>
+ =A0 =A0 =A01 =A0 =A01 =A02 =A0 =A01 =A0 4 =A0 =A0 1 =A0 6 =A0 =A0 =A01 =A0=
+ =A08 =A0 =A0 =A0 1 =A0 =A0 10 =A0 =A0 =A011<br>
+ =A0 =A0- - + -- y =A0- --- y =A0+ ---- y =A0- ------ y =A0+ -------- y =A0=
+ + O(y =A0),<br>
+ =A0 =A0 =A06 =A0 12 =A0 =A0 =A0144 =A0 =A0 =A04320 =A0 =A0 =A0241920 =A0 =
+=A0 =A021772800<br>
+ =A0 =A0 1 =A0 =A0 =A01 =A0 3 =A0 =A0 1 =A0 5 =A0 =A0 =A01 =A0 =A07 =A0 =A0=
+ =A01 =A0 =A0 9 =A0 =A0 =A011<br>
+ =A0 =A0-- y - --- y =A0+ ---- y =A0- ------ y =A0+ ------- y =A0+ O(y =A0)=
+,<br>
+ =A0 =A024 =A0 =A0 144 =A0 =A0 =A02880 =A0 =A0 =A0120960 =A0 =A0 =A08709120=
+<br>
+ =A0 =A0 1 =A0 =A0 1 =A0 2 =A0 =A0 1 =A0 4 =A0 =A0 1 =A0 =A06 =A0 =A0 =A01 =
+=A0 =A0 8 =A0 =A0 =A0 1 =A0 =A0 =A010 =A0 =A0 =A011<br>
+ =A0 =A0--- - --- y =A0+ ---- y =A0- ----- y =A0+ ------- y =A0- --------- =
+y =A0 + O(y =A0),<br>
+ =A0 =A0120 =A0 240 =A0 =A0 =A02880 =A0 =A0 =A086400 =A0 =A0 =A04838400 =A0=
+ =A0 =A0435456000<br>
+ =A0 =A0 =A0 1 =A0 =A0 =A0 =A01 =A0 3 =A0 =A0 1 =A0 =A05 =A0 =A0 =A01 =A0 =
+=A0 7 =A0 =A0 =A0 1 =A0 =A0 =A09 =A0 =A0 =A011<br>
+ =A0 =A0- --- y + ---- y =A0- ----- y =A0+ ------- y =A0- --------- y =A0+ =
+O(y =A0),<br>
+ =A0 =A0 =A0720 =A0 =A0 4320 =A0 =A0 =A086400 =A0 =A0 =A03628800 =A0 =A0 =
+=A0261273600<br>
+<br>
+ =A0 =A0 =A0 =A0 =A0 1 =A0 =A0 =A01 =A0 =A02 =A0 =A0 =A01 =A0 =A04 =A0 =A0 =
+=A01 =A0 =A0 6 =A0 =A0 =A0 1 =A0 =A0 =A08<br>
+ =A0 =A0 =A0 - ---- + ----- y =A0- ------ y =A0+ ------- y =A0- --------- y=
+<br>
+ =A0 =A0 =A0 =A0 5040 =A0 10080 =A0 =A0 =A0120960 =A0 =A0 =A03628800 =A0 =
+=A0 =A0203212800<br>
+ =A0 =A0 +<br>
+ =A0 =A0 =A0 =A0 =A0 =A01 =A0 =A0 =A0 10 =A0 =A0 =A011<br>
+ =A0 =A0 =A0 ----------- y =A0 + O(y =A0)<br>
+ =A0 =A0 =A0 18289152000<br>
+ =A0 =A0 ,<br>
+ =A0 =A0 =A01 =A0 =A0 =A0 =A0 =A01 =A0 =A03 =A0 =A0 =A01 =A0 =A0 5 =A0 =A0 =
+=A0 1 =A0 =A0 =A07 =A0 =A0 =A0 =A01 =A0 =A0 =A0 9 =A0 =A011<br>
+ =A0 =A0----- y - ------ y =A0+ ------- y =A0- --------- y =A0+ -----------=
+ y =A0+ O(y =A0),<br>
+ =A0 =A040320 =A0 =A0 241920 =A0 =A0 =A04838400 =A0 =A0 =A0203212800 =A0 =
+=A0 =A014631321600<br>
+<br>
+ =A0 =A0 =A0 =A0 =A01 =A0 =A0 =A0 =A01 =A0 =A02 =A0 =A0 =A01 =A0 =A0 4 =A0 =
+=A0 =A0 1 =A0 =A0 =A06 =A0 =A0 =A0 =A01 =A0 =A0 =A0 8<br>
+ =A0 =A0 =A0 ------ - ------ y =A0+ ------- y =A0- --------- y =A0+ -------=
+---- y<br>
+ =A0 =A0 =A0 362880 =A0 725760 =A0 =A0 =A08709120 =A0 =A0 =A0261273600 =A0 =
+=A0 =A014631321600<br>
+ =A0 =A0 +<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 1 =A0 =A0 =A0 =A010 =A0 =A0 =A011<br>
+ =A0 =A0 =A0 - ------------- y =A0 + O(y =A0)<br>
+ =A0 =A0 =A0 =A0 1316818944000<br>
+ =A0 =A0 ,<br>
+ =A0 =A0...]<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0Type: Stream(UnivariateTaylorSeries(Fra=
+ction(Integer),y,0))<br>
+(5) -&gt; series(coeffs)$TX<br>
+<br>
+ =A0 (5)<br>
+ =A0 =A0 =A0 =A0 1 =A03 =A0 =A01 =A0 5 =A0 =A0 1 =A0 7 =A0 =A0 =A01 =A0 =A0=
+9 =A0 =A0 =A011<br>
+ =A0 =A0 y - - y =A0+ --- y =A0- ---- y =A0+ ------ y =A0+ O(y =A0)<br>
+ =A0 =A0 =A0 =A0 6 =A0 =A0 =A0120 =A0 =A0 =A05040 =A0 =A0 =A0362880<br>
+ =A0 +<br>
+ =A0 =A0 =A0 =A0 =A01 =A02 =A0 =A01 =A04 =A0 =A01 =A0 6 =A0 =A0 1 =A0 =A08 =
+=A0 =A0 =A01 =A0 =A0 10 =A0 =A0 =A011<br>
+ =A0 =A0 (1 - - y =A0+ -- y =A0- --- y =A0+ ----- y =A0- ------- y =A0 + O(=
+y =A0))x<br>
+ =A0 =A0 =A0 =A0 =A02 =A0 =A0 =A024 =A0 =A0 =A0720 =A0 =A0 =A040320 =A0 =A0=
+ =A03628800<br>
+ =A0 +<br>
+ =A0 =A0 =A0 =A01 =A0 =A0 =A01 =A03 =A0 =A01 =A0 5 =A0 =A0 1 =A0 =A07 =A0 =
+=A0 =A01 =A0 =A09 =A0 =A0 =A011 =A0 2<br>
+ =A0 =A0 (- - y + -- y =A0- --- y =A0+ ----- y =A0- ------ y =A0+ O(y =A0))=
+x<br>
+ =A0 =A0 =A0 =A02 =A0 =A0 12 =A0 =A0 =A0240 =A0 =A0 =A010080 =A0 =A0 =A0725=
+760<br>
+ =A0 +<br>
+ =A0 =A0 =A0 =A01 =A0 =A01 =A02 =A0 =A01 =A0 4 =A0 =A0 1 =A0 6 =A0 =A0 =A01=
+ =A0 =A08 =A0 =A0 =A0 1 =A0 =A0 10 =A0 =A0 =A011 =A0 3<br>
+ =A0 =A0 (- - + -- y =A0- --- y =A0+ ---- y =A0- ------ y =A0+ -------- y =
+=A0 + O(y =A0))x<br>
+ =A0 =A0 =A0 =A06 =A0 12 =A0 =A0 =A0144 =A0 =A0 =A04320 =A0 =A0 =A0241920 =
+=A0 =A0 =A021772800<br>
+ =A0 +<br>
+ =A0 =A0 =A0 1 =A0 =A0 =A01 =A0 3 =A0 =A0 1 =A0 5 =A0 =A0 =A01 =A0 =A07 =A0=
+ =A0 =A01 =A0 =A0 9 =A0 =A0 =A011 =A0 4<br>
+ =A0 =A0 (-- y - --- y =A0+ ---- y =A0- ------ y =A0+ ------- y =A0+ O(y =
+=A0))x<br>
+ =A0 =A0 =A024 =A0 =A0 144 =A0 =A0 =A02880 =A0 =A0 =A0120960 =A0 =A0 =A0870=
+9120<br>
+ =A0 +<br>
+ =A0 =A0 =A0 1 =A0 =A0 1 =A0 2 =A0 =A0 1 =A0 4 =A0 =A0 1 =A0 =A06 =A0 =A0 =
+=A01 =A0 =A0 8 =A0 =A0 =A0 1 =A0 =A0 =A010 =A0 =A011 =A0 5<br>
+ =A0 =A0 (--- - --- y =A0+ ---- y =A0- ----- y =A0+ ------- y =A0- --------=
+- y =A0 + O(y =A0))x<br>
+ =A0 =A0 =A0120 =A0 240 =A0 =A0 =A02880 =A0 =A0 =A086400 =A0 =A0 =A04838400=
+ =A0 =A0 =A0435456000<br>
+ =A0 +<br>
+ =A0 =A0 =A0 =A0 1 =A0 =A0 =A0 =A01 =A0 3 =A0 =A0 1 =A0 =A05 =A0 =A0 =A01 =
+=A0 =A0 7 =A0 =A0 =A0 1 =A0 =A0 =A09 =A0 =A0 =A011 =A0 6<br>
+ =A0 =A0 (- --- y + ---- y =A0- ----- y =A0+ ------- y =A0- --------- y =A0=
++ O(y =A0))x<br>
+ =A0 =A0 =A0 =A0720 =A0 =A0 4320 =A0 =A0 =A086400 =A0 =A0 =A03628800 =A0 =
+=A0 =A0261273600<br>
+ =A0 +<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 1 =A0 =A0 =A01 =A0 =A02 =A0 =A0 =A01 =A0 =A04 =A0 =
+=A0 =A01 =A0 =A0 6 =A0 =A0 =A0 1 =A0 =A0 =A08<br>
+ =A0 =A0 =A0 =A0 - ---- + ----- y =A0- ------ y =A0+ ------- y =A0- -------=
+-- y<br>
+ =A0 =A0 =A0 =A0 =A0 5040 =A0 10080 =A0 =A0 =A0120960 =A0 =A0 =A03628800 =
+=A0 =A0 =A0203212800<br>
+ =A0 =A0 =A0 +<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A01 =A0 =A0 =A0 10 =A0 =A0 =A011<br>
+ =A0 =A0 =A0 =A0 ----------- y =A0 + O(y =A0)<br>
+ =A0 =A0 =A0 =A0 18289152000<br>
+ =A0 =A0*<br>
+ =A0 =A0 =A0 =A07<br>
+ =A0 =A0 =A0 x<br>
+ =A0 +<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 1 =A0 =A0 =A0 =A0 =A01 =A0 =A03 =A0 =A0 =A01 =A0 =
+=A0 5 =A0 =A0 =A0 1 =A0 =A0 =A07 =A0 =A0 =A0 =A01 =A0 =A0 =A0 9<br>
+ =A0 =A0 =A0 =A0 =A0 ----- y - ------ y =A0+ ------- y =A0- --------- y =A0=
++ ----------- y<br>
+ =A0 =A0 =A0 =A0 =A0 40320 =A0 =A0 241920 =A0 =A0 =A04838400 =A0 =A0 =A0203=
+212800 =A0 =A0 =A014631321600<br>
+ =A0 =A0 =A0 =A0 +<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A011<br>
+ =A0 =A0 =A0 =A0 =A0 O(y =A0)<br>
+ =A0 =A0*<br>
+ =A0 =A0 =A0 =A08<br>
+ =A0 =A0 =A0 x<br>
+ =A0 +<br>
+ =A0 =A0 =A0 =A0 =A0 =A01 =A0 =A0 =A0 =A01 =A0 =A02 =A0 =A0 =A01 =A0 =A0 4 =
+=A0 =A0 =A0 1 =A0 =A0 =A06 =A0 =A0 =A0 =A01 =A0 =A0 =A0 8<br>
+ =A0 =A0 =A0 =A0 ------ - ------ y =A0+ ------- y =A0- --------- y =A0+ ---=
+-------- y<br>
+ =A0 =A0 =A0 =A0 362880 =A0 725760 =A0 =A0 =A08709120 =A0 =A0 =A0261273600 =
+=A0 =A0 =A014631321600<br>
+ =A0 =A0 =A0 +<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 1 =A0 =A0 =A0 =A010 =A0 =A0 =A011<br>
+ =A0 =A0 =A0 =A0 - ------------- y =A0 + O(y =A0)<br>
+ =A0 =A0 =A0 =A0 =A0 1316818944000<br>
+ =A0 =A0*<br>
+ =A0 =A0 =A0 =A09<br>
+ =A0 =A0 =A0 x<br>
+ =A0 +<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A01 =A0 =A0 =A0 =A0 =A0 =A01 =A0 =A0 3 =A0 =A0 =
+=A0 1 =A0 =A0 =A05 =A0 =A0 =A0 =A01 =A0 =A0 =A0 7<br>
+ =A0 =A0 =A0 =A0 - ------- y + -------- y =A0- --------- y =A0+ -----------=
+ y<br>
+ =A0 =A0 =A0 =A0 =A0 3628800 =A0 =A0 21772800 =A0 =A0 =A0435456000 =A0 =A0 =
+=A018289152000<br>
+ =A0 =A0 =A0 +<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 1 =A0 =A0 =A0 =A09 =A0 =A0 =A011<br>
+ =A0 =A0 =A0 =A0 - ------------- y =A0+ O(y =A0)<br>
+ =A0 =A0 =A0 =A0 =A0 1316818944000<br>
+ =A0 =A0*<br>
+ =A0 =A0 =A0 =A010<br>
+ =A0 =A0 =A0 x<br>
+ =A0 +<br>
+ =A0 =A0 =A0 =A011<br>
+ =A0 =A0 O(x =A0)<br>
+Type: UnivariateTaylorSeries(UnivariateTaylorSeries(Fraction(Integer),y,0),=
+x,0)<br>
+<br>
+_______________________________________________<br>
+Axiom-math mailing list<br>
+<a href=3D"mailto:Axiom-math@nongnu.org" target=3D"_blank">Axiom-math@nongn=
+u.org</a><br>
+<a href=3D"http://lists.nongnu.org/mailman/listinfo/axiom-math" target=3D"_=
+blank">http://lists.nongnu.org/mailman/listinfo/axiom-math</a><br>
+</blockquote></div><br><br clear=3D"all"><br>-- <br><br>___________________=
+__________________________<br><br>Dr. Vladimir Skokov<br><br>Theory Divisio=
+n<br>GSI Helmholtzzentrum f=FCr Schwerionenforschung GmbH<br>Planckstra=DFe=
+ 1<br>
+
+D-64291 Darmstadt<br>------------------------------------------------------=
+------------------<br>email:=A0=A0 V.Skokov@GSI.de<br>phone: +49 6159-71 27=
+51<br>fax=A0 :=A0 =A0 +49 6159-71 2990<br>
+</div>
+
+--0016364180a5471684048b7f05b3--
+
+
+From MAILER-DAEMON Fri Jul 16 08:09:05 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OZjiz-0001MW-A2
+	for mharc-axiom-math@gnu.org; Fri, 16 Jul 2010 08:09:05 -0400
+Received: from [140.186.70.92] (port=48058 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OZjiw-0001Lt-G0
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 08:09:04 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <ralf@hemmecke.de>) id 1OZjiu-0008Ci-6y
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 08:09:02 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.161]:64175)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <ralf@hemmecke.de>) id 1OZjiu-0008CB-1Y
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 08:09:00 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1279282138; l=3009;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=HHGGRhyzsR0vf8QuaT1i6jdxnbY=;
+	b=uUhU1y/Snjop2uQI6MOpfH0uGtsAJSOnW94aXIKo5EB19O1+lrLlA691TX98h3P2ddI
+	ywe+2a2FJMhQMHx9UDCMhNtygSbOc54CttxNOubhV4H9fhx6XlcFl8vP+VdmaXPvqphJs
+	YNKFf09eFLyfW08QnYRLfZWXsA/zVohdo3A=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSJk0FxqVB+K06YOFo6aDQ==
+X-RZG-CLASS-ID: mo00
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (jimi mo2) (RZmta 23.4)
+	with (DHE-RSA-AES256-SHA encrypted) ESMTP id Z01abfm6GAxddw ;
+	Fri, 16 Jul 2010 14:08:27 +0200 (MEST)
+Message-ID: <4C404BBA.2010600@hemmecke.de>
+Date: Fri, 16 Jul 2010 14:08:26 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.9.2.4) Gecko/20100608 Thunderbird/3.1
+MIME-Version: 1.0
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] repeated series expansion
+References: <AANLkTimyVnmzDkb80QnW7yuY5qPMa4JZbmjyJTpAGdAl@mail.gmail.com>
+	<4C4032D6.9060606@hemmecke.de>
+	<AANLkTin1ocV3nNFjICacIZerBimVe1VBYMeLK1M4EDsr@mail.gmail.com>
+In-Reply-To: <AANLkTin1ocV3nNFjICacIZerBimVe1VBYMeLK1M4EDsr@mail.gmail.com>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 16 Jul 2010 12:09:04 -0000
+
+On 07/16/2010 12:52 PM, Vladimir Skokov wrote:
+> The problem is that my function contains logs, it is not just Taylor series.
+
+> For instance, I'd like to  expand f(x,y)log(x) + g(x,y) at x=0, y=0.
+> So I expect to obtain
+>   (expansion of f(x,y)) * log(x) + expansion of g(x,y)
+
+Why don't people write exact specifications? The above is meaningless 
+unless you specify how your output should look like.
+
+Do you want to have a taylor series in x which has coefficients being 
+taylor series in y? Or do you want the same with roles of x and y 
+exchanged? Or do you want a *univariate* power series whose coefficients 
+are (homogeneous) polynomials in x and y with a degree corresponding to 
+the degree of the power in the taylor series?
+
+Specify exactly what you want otherwise nobody will be able to help you.
+I am not willing to guess your specification.
+
+> e.g. for one variable "series" does a good job
+> series(sin(x)*log(x),x=0)
+> (5) ->
+>     (5)
+>                 log(x)  3   log(x)  5   log(x)  7   log(x)  9    log(x)   11
+>       log(x)x - ------ x  + ------ x  - ------ x  + ------ x  - -------- x
+>                    6          120        5040       362880      39916800
+>     +
+>          12
+>       O(x  )
+>                     Type: GeneralUnivariatePowerSeries(Expression
+> Integer,x,0)
+
+> However this is not Taylor series and therefore I cannot extract
+> coefficients as you specified.
+
+????
+
+Look at the type. So we have
+
+(3) -> coefficient(s,1)
+
+    (3)  log(x)
+                                    Type: Expression(Integer)
+
+I agree, that this might not be what you expected, but that is the 
+problem with your input. You haven't exactly specified what you wanted.
+Believe it or not, Axiom considers "log(x)" as a separate variable.
+
+More natural would be something like
+
+U := UnivariateTaylorSeries(Fraction Integer, 'x, 1)
+x: U := x::U
+log(x)
+
+    (3)
+                1        2   1        3   1        4   1        5   1 
+      6
+      (x - 1) - - (x - 1)  + - (x - 1)  - - (x - 1)  + - (x - 1)  - - (x 
+- 1)
+                2            3            4            5            6
+    +
+      1        7   1        8   1        9    1        10            11
+      - (x - 1)  - - (x - 1)  + - (x - 1)  - -- (x - 1)   + O((x - 1)  )
+      7            8            9            10
+                           Type: 
+UnivariateTaylorSeries(Fraction(Integer),x,1)
+
+Now the error message
+
+
+(6) -> sin x
+
+    >> Error detected within library code:
+    "sincos: series expansion involves transcendental constants"
+
+
+should be clear. The result is simply not representable, by a series 
+with just rational coefficients.
+
+Try
+
+V := UnivariateTaylorSeries(Expression Integer, 'y, 1)
+y: V := y::V
+sin(y)
+sin(y)*log(y)
+
+instead.
+
+It all depends on what you want. AXIOM *is* different from other CAS.
+
+> Of course the example I have written is oversimplified. I do not know
+> the structure of the function, it can contain sin(log(x)) for example.
+
+But you know what you want as a result.
+
+> Mathematica allows repeated series expansion, however it fails with
+> complicated expressions due to some memory limitation.
+
+A Mathematica Series is a *truncated* series. Remove the initial terms 
+and all you are left with is an O(x^10) expression which will not 
+deliver any more coefficients. AXIOM's series really represent infinite 
+objects.
+
+Ralf
+
+
+From MAILER-DAEMON Fri Jul 16 10:10:44 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OZlch-0005KX-MD
+	for mharc-axiom-math@gnu.org; Fri, 16 Jul 2010 10:10:43 -0400
+Received: from [140.186.70.92] (port=50080 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OZlce-0005K7-IB
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 10:10:41 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <vvskokov@gmail.com>) id 1OZlcc-0002ZH-TJ
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 10:10:40 -0400
+Received: from mail-fx0-f45.google.com ([209.85.161.45]:46297)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <vvskokov@gmail.com>) id 1OZlcc-0002Z7-Iv
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 10:10:38 -0400
+Received: by fxm5 with SMTP id 5so1193741fxm.4
+	for <axiom-math@nongnu.org>; Fri, 16 Jul 2010 07:10:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:mime-version:received:in-reply-to
+	:references:from:date:message-id:subject:to:content-type;
+	bh=2j7X1yWL5s0PnCog1yUb6GBAvrYRuZpWbkXj8/NGqUg=;
+	b=Jly7FPM+alvlw21w/OuOSvY7LtbjFO/itFmK1dyyhFJbRlvj+bCsvlpqx3Dtq7uPR2
+	JYBBobCaNcGOdVifYL6i8vN20hzRb4STKix9ucEC5kDG9umBiek6590WcmsC2UhwT4U6
+	SXtVGLodnVkOw4Eo4SVKg71Isb8uPQT3rdNQ4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+	:content-type;
+	b=ZbotT9TDSD2MHViW+VotHPoxjMUgMdRT4T0gafWcrX+qTRD+955rnkVlTLg2a1xZbp
+	RL84CkQ3Oh0gsUBdLES/F8AIvgJ00AZo+/PqdNV6Z7tZu5/bUQGcbPFhasdud9QIupCV
+	oSAi4I5l6nkuivEdVHAzVX4NZU3mb8QwOTPmM=
+Received: by 10.216.232.90 with SMTP id m68mr881926weq.10.1279289437381; Fri, 
+	16 Jul 2010 07:10:37 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.179.147 with HTTP; Fri, 16 Jul 2010 07:10:17 -0700 (PDT)
+In-Reply-To: <4C404BBA.2010600@hemmecke.de>
+References: <AANLkTimyVnmzDkb80QnW7yuY5qPMa4JZbmjyJTpAGdAl@mail.gmail.com> 
+	<4C4032D6.9060606@hemmecke.de>
+	<AANLkTin1ocV3nNFjICacIZerBimVe1VBYMeLK1M4EDsr@mail.gmail.com> 
+	<4C404BBA.2010600@hemmecke.de>
+From: Vladimir Skokov <vvskokov@gmail.com>
+Date: Fri, 16 Jul 2010 16:10:17 +0200
+Message-ID: <AANLkTimPc6QO-x7Z035co-CCPszKrap2VXqWHQiPhVz8@mail.gmail.com>
+Subject: Re: [Axiom-math] repeated series expansion
+To: axiom-math@nongnu.org
+Content-Type: multipart/alternative; boundary=0015175cd7f27ae4e3048b81c815
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 16 Jul 2010 14:10:42 -0000
+
+--0015175cd7f27ae4e3048b81c815
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Dear Ralf,
+thank you for help! I have got program working.
+I am sorry for being annoying, but I only start using axiom.
+Thank you ;)
+
+On Fri, Jul 16, 2010 at 2:08 PM, Ralf Hemmecke <ralf@hemmecke.de> wrote:
+
+> On 07/16/2010 12:52 PM, Vladimir Skokov wrote:
+>
+>> The problem is that my function contains logs, it is not just Taylor
+>> series.
+>>
+>
+>  For instance, I'd like to  expand f(x,y)log(x) + g(x,y) at x=3D0, y=3D0.
+>> So I expect to obtain
+>>  (expansion of f(x,y)) * log(x) + expansion of g(x,y)
+>>
+>
+> Why don't people write exact specifications? The above is meaningless
+> unless you specify how your output should look like.
+>
+> Do you want to have a taylor series in x which has coefficients being
+> taylor series in y? Or do you want the same with roles of x and y exchang=
+ed?
+> Or do you want a *univariate* power series whose coefficients are
+> (homogeneous) polynomials in x and y with a degree corresponding to the
+> degree of the power in the taylor series?
+>
+> Specify exactly what you want otherwise nobody will be able to help you.
+> I am not willing to guess your specification.
+>
+>
+>  e.g. for one variable "series" does a good job
+>> series(sin(x)*log(x),x=3D0)
+>> (5) ->
+>>    (5)
+>>                log(x)  3   log(x)  5   log(x)  7   log(x)  9    log(x)
+>> 11
+>>      log(x)x - ------ x  + ------ x  - ------ x  + ------ x  - -------- =
+x
+>>                   6          120        5040       362880      39916800
+>>    +
+>>         12
+>>      O(x  )
+>>                    Type: GeneralUnivariatePowerSeries(Expression
+>> Integer,x,0)
+>>
+>
+>  However this is not Taylor series and therefore I cannot extract
+>> coefficients as you specified.
+>>
+>
+> ????
+>
+> Look at the type. So we have
+>
+> (3) -> coefficient(s,1)
+>
+>   (3)  log(x)
+>                                   Type: Expression(Integer)
+>
+> I agree, that this might not be what you expected, but that is the proble=
+m
+> with your input. You haven't exactly specified what you wanted.
+> Believe it or not, Axiom considers "log(x)" as a separate variable.
+>
+> More natural would be something like
+>
+> U :=3D UnivariateTaylorSeries(Fraction Integer, 'x, 1)
+> x: U :=3D x::U
+> log(x)
+>
+>   (3)
+>               1        2   1        3   1        4   1        5   1      =
+6
+>     (x - 1) - - (x - 1)  + - (x - 1)  - - (x - 1)  + - (x - 1)  - - (x - =
+1)
+>               2            3            4            5            6
+>   +
+>     1        7   1        8   1        9    1        10            11
+>     - (x - 1)  - - (x - 1)  + - (x - 1)  - -- (x - 1)   + O((x - 1)  )
+>     7            8            9            10
+>                          Type:
+> UnivariateTaylorSeries(Fraction(Integer),x,1)
+>
+> Now the error message
+>
+>
+> (6) -> sin x
+>
+>   >> Error detected within library code:
+>   "sincos: series expansion involves transcendental constants"
+>
+>
+> should be clear. The result is simply not representable, by a series with
+> just rational coefficients.
+>
+> Try
+>
+> V :=3D UnivariateTaylorSeries(Expression Integer, 'y, 1)
+> y: V :=3D y::V
+> sin(y)
+> sin(y)*log(y)
+>
+> instead.
+>
+> It all depends on what you want. AXIOM *is* different from other CAS.
+>
+>
+>  Of course the example I have written is oversimplified. I do not know
+>> the structure of the function, it can contain sin(log(x)) for example.
+>>
+>
+> But you know what you want as a result.
+>
+>
+>  Mathematica allows repeated series expansion, however it fails with
+>> complicated expressions due to some memory limitation.
+>>
+>
+> A Mathematica Series is a *truncated* series. Remove the initial terms an=
+d
+> all you are left with is an O(x^10) expression which will not deliver any
+> more coefficients. AXIOM's series really represent infinite objects.
+>
+> Ralf
+>
+>
+> _______________________________________________
+> Axiom-math mailing list
+> Axiom-math@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-math
+>
+
+
+
+--=20
+
+_____________________________________________
+
+Dr. Vladimir Skokov
+
+Theory Division
+GSI Helmholtzzentrum f=FCr Schwerionenforschung GmbH
+Planckstra=DFe 1
+D-64291 Darmstadt
+------------------------------------------------------------------------
+email:   V.Skokov@GSI.de
+phone: +49 6159-71 2751
+fax  :    +49 6159-71 2990
+
+--0015175cd7f27ae4e3048b81c815
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Dear=A0Ralf,=A0<div>thank you for help! I have got program working.=A0</div=
+><div>I am sorry for being=A0annoying, but I only start using axiom.=A0</di=
+v><div>Thank you ;) =A0<br><br><div class=3D"gmail_quote">On Fri, Jul 16, 2=
+010 at 2:08 PM, Ralf Hemmecke <span dir=3D"ltr">&lt;<a href=3D"mailto:ralf@=
+hemmecke.de">ralf@hemmecke.de</a>&gt;</span> wrote:<br>
+
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex;"><div class=3D"im">On 07/16/2010 12:52 PM, V=
+ladimir Skokov wrote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+The problem is that my function contains logs, it is not just Taylor series=
+.<br>
+</blockquote>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+For instance, I&#39;d like to =A0expand f(x,y)log(x) + g(x,y) at x=3D0, y=
+=3D0.<br>
+So I expect to obtain<br>
+ =A0(expansion of f(x,y)) * log(x) + expansion of g(x,y)<br>
+</blockquote>
+<br></div>
+Why don&#39;t people write exact specifications? The above is meaningless u=
+nless you specify how your output should look like.<br>
+<br>
+Do you want to have a taylor series in x which has coefficients being taylo=
+r series in y? Or do you want the same with roles of x and y exchanged? Or =
+do you want a *univariate* power series whose coefficients are (homogeneous=
+) polynomials in x and y with a degree corresponding to the degree of the p=
+ower in the taylor series?<br>
+
+
+<br>
+Specify exactly what you want otherwise nobody will be able to help you.<br=
+>
+I am not willing to guess your specification.<div class=3D"im"><br>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+e.g. for one variable &quot;series&quot; does a good job<br>
+series(sin(x)*log(x),x=3D0)<br>
+(5) -&gt;<br>
+ =A0 =A0(5)<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0log(x) =A03 =A0 log(x) =A05 =A0 log(x) =A07=
+ =A0 log(x) =A09 =A0 =A0log(x) =A0 11<br>
+ =A0 =A0 =A0log(x)x - ------ x =A0+ ------ x =A0- ------ x =A0+ ------ x =
+=A0- -------- x<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 6 =A0 =A0 =A0 =A0 =A0120 =A0 =A0 =A0 =
+=A05040 =A0 =A0 =A0 362880 =A0 =A0 =A039916800<br>
+ =A0 =A0+<br>
+ =A0 =A0 =A0 =A0 12<br>
+ =A0 =A0 =A0O(x =A0)<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0Type: GeneralUnivariatePowerSeries(=
+Expression<br>
+Integer,x,0)<br>
+</blockquote>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+However this is not Taylor series and therefore I cannot extract<br>
+coefficients as you specified.<br>
+</blockquote>
+<br></div>
+????<br>
+<br>
+Look at the type. So we have<br>
+<br>
+(3) -&gt; coefficient(s,1)<br>
+<br>
+ =A0 (3) =A0log(x)<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 Type: =
+Expression(Integer)<br>
+<br>
+I agree, that this might not be what you expected, but that is the problem =
+with your input. You haven&#39;t exactly specified what you wanted.<br>
+Believe it or not, Axiom considers &quot;log(x)&quot; as a separate variabl=
+e.<br>
+<br>
+More natural would be something like<br>
+<br>
+U :=3D UnivariateTaylorSeries(Fraction Integer, &#39;x, 1)<br>
+x: U :=3D x::U<br>
+log(x)<br>
+<br>
+ =A0 (3)<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 1 =A0 =A0 =A0 =A02 =A0 1 =A0 =A0 =A0 =A03 =A0 =
+1 =A0 =A0 =A0 =A04 =A0 1 =A0 =A0 =A0 =A05 =A0 1 =A0 =A0 =A06<br>
+ =A0 =A0 (x - 1) - - (x - 1) =A0+ - (x - 1) =A0- - (x - 1) =A0+ - (x - 1) =
+=A0- - (x - 1)<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 2 =A0 =A0 =A0 =A0 =A0 =A03 =A0 =A0 =A0 =A0 =A0=
+ =A04 =A0 =A0 =A0 =A0 =A0 =A05 =A0 =A0 =A0 =A0 =A0 =A06<br>
+ =A0 +<br>
+ =A0 =A0 1 =A0 =A0 =A0 =A07 =A0 1 =A0 =A0 =A0 =A08 =A0 1 =A0 =A0 =A0 =A09 =
+=A0 =A01 =A0 =A0 =A0 =A010 =A0 =A0 =A0 =A0 =A0 =A011<br>
+ =A0 =A0 - (x - 1) =A0- - (x - 1) =A0+ - (x - 1) =A0- -- (x - 1) =A0 + O((x=
+ - 1) =A0)<br>
+ =A0 =A0 7 =A0 =A0 =A0 =A0 =A0 =A08 =A0 =A0 =A0 =A0 =A0 =A09 =A0 =A0 =A0 =
+=A0 =A0 =A010<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0Type: UnivariateTaylorS=
+eries(Fraction(Integer),x,1)<br>
+<br>
+Now the error message<br>
+<br>
+<br>
+(6) -&gt; sin x<br>
+<br>
+ =A0 &gt;&gt; Error detected within library code:<br>
+ =A0 &quot;sincos: series expansion involves transcendental constants&quot;=
+<br>
+<br>
+<br>
+should be clear. The result is simply not representable, by a series with j=
+ust rational coefficients.<br>
+<br>
+Try<br>
+<br>
+V :=3D UnivariateTaylorSeries(Expression Integer, &#39;y, 1)<br>
+y: V :=3D y::V<br>
+sin(y)<br>
+sin(y)*log(y)<br>
+<br>
+instead.<br>
+<br>
+It all depends on what you want. AXIOM *is* different from other CAS.<div c=
+lass=3D"im"><br>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+Of course the example I have written is oversimplified. I do not know<br>
+the structure of the function, it can contain sin(log(x)) for example.<br>
+</blockquote>
+<br></div>
+But you know what you want as a result.<div class=3D"im"><br>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+Mathematica allows repeated series expansion, however it fails with<br>
+complicated expressions due to some memory limitation.<br>
+</blockquote>
+<br></div>
+A Mathematica Series is a *truncated* series. Remove the initial terms and =
+all you are left with is an O(x^10) expression which will not deliver any m=
+ore coefficients. AXIOM&#39;s series really represent infinite objects.<br>
+
+<font color=3D"#888888">
+<br>
+Ralf</font><div><div></div><div class=3D"h5"><br>
+<br>
+_______________________________________________<br>
+Axiom-math mailing list<br>
+<a href=3D"mailto:Axiom-math@nongnu.org" target=3D"_blank">Axiom-math@nongn=
+u.org</a><br>
+<a href=3D"http://lists.nongnu.org/mailman/listinfo/axiom-math" target=3D"_=
+blank">http://lists.nongnu.org/mailman/listinfo/axiom-math</a><br>
+</div></div></blockquote></div><br><br clear=3D"all"><br>-- <br><br>_______=
+______________________________________<br><br>Dr. Vladimir Skokov<br><br>Th=
+eory Division<br>GSI Helmholtzzentrum f=FCr Schwerionenforschung GmbH<br>Pl=
+anckstra=DFe 1<br>
+
+D-64291 Darmstadt<br>------------------------------------------------------=
+------------------<br>email:=A0=A0 V.Skokov@GSI.de<br>phone: +49 6159-71 27=
+51<br>fax=A0 :=A0 =A0 +49 6159-71 2990<br>
+</div>
+
+--0015175cd7f27ae4e3048b81c815--
+
+
+From MAILER-DAEMON Fri Jul 16 16:43:47 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OZrl5-00060V-92
+	for mharc-axiom-math@gnu.org; Fri, 16 Jul 2010 16:43:47 -0400
+Received: from [140.186.70.92] (port=38053 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OZrl2-00060N-BB
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 16:43:45 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1OZrl1-0006Qn-3J
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 16:43:43 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:40901)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1OZrl0-0006QI-Pf
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 16:43:43 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.4/8.14.4) with ESMTP id
+	o6GKhbmE004826; Fri, 16 Jul 2010 22:43:39 +0200
+To: Vladimir Skokov <vvskokov@gmail.com>
+Subject: Re: [Axiom-math] repeated series expansion
+References: <AANLkTimyVnmzDkb80QnW7yuY5qPMa4JZbmjyJTpAGdAl@mail.gmail.com>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Fri, 16 Jul 2010 22:43:37 +0200
+In-Reply-To: <AANLkTimyVnmzDkb80QnW7yuY5qPMa4JZbmjyJTpAGdAl@mail.gmail.com>
+	(Vladimir Skokov's message of "Fri\,
+	16 Jul 2010 11\:43\:13 +0200")
+Message-ID: <d91vb3kvie.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-PMX-Version: 5.5.9.395186, Antispam-Engine: 2.7.2.376379,
+	Antispam-Data: 2010.7.2.15115
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 16 Jul 2010 20:43:45 -0000
+
+Vladimir Skokov <vvskokov@gmail.com> writes:
+
+> Dear all,=C2=A0
+>
+> I have only started to learn axiom. Could you help me please?=C2=A0
+> I have an expression, say sin(x+y). How could I perform expansion=C2=A0
+> withe respect ot x and than to y?=C2=A0
+>
+> i.e.=C2=A0
+>
+> series( =C2=A0series( =C2=A0sin(x+y),x=3D0 =C2=A0),y=3D0 =C2=A0 )
+>
+> thank you in advance=C2=A0
+
+In axiom there is another option:
+
+(1) -> x :=3D 'X::TS FRAC INT; y :=3D 'Y::TS FRAC INT;
+
+                                        Type: TaylorSeries(Fraction(Integer=
+))
+(2) -> sin(x+y)
+
+                     1  3   1    2   1  2    1  3
+   (2)  (Y + X) + (- - Y  - - X Y  - - X Y - - X ) + O(5)
+                     6      2        2       6
+                                        Type: TaylorSeries(Fraction(Integer=
+))
+
+However, currently there is no domain for generalised multivariate
+Taylor series.  I don't know how difficult that would be, and I didn't
+think the maths through either.
+
+Martin
+
+
+From MAILER-DAEMON Fri Jul 16 16:52:49 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OZrtp-0000QG-Qi
+	for mharc-axiom-math@gnu.org; Fri, 16 Jul 2010 16:52:49 -0400
+Received: from [140.186.70.92] (port=37294 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OZrtg-000083-V6
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 16:52:47 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <ralf@hemmecke.de>) id 1OZrsi-0007S5-Tq
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 16:51:42 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.162]:37281)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <ralf@hemmecke.de>) id 1OZrsi-0007S0-NJ
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 16:51:40 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1279313499; l=660;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=KE48ic/aVVoGZT3CctZhhCTMKJM=;
+	b=mTfxMwHGw/+2kbs9h4b2SEpIXy1Lzpm+X5aybQ03zsMFQM6JgT9DdLqnyJfuejO4Hu/
+	lCaL99S2Ln77CavlBFclVoXl7m/3nuYeTCMtocRYbGMuB4FxEfjhHgD2GhbgCkYeP8xKH
+	800Wewg8qQoEBN5gHpoDnj0M6xp+/qXVPEk=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSWk1ofrjzdpGhePabo=
+X-RZG-CLASS-ID: mo00
+Received: from [10.0.0.1] (62-47-38-253.adsl.highway.telekom.at [62.47.38.253])
+	by post.strato.de (klopstock mo10) (RZmta 23.4)
+	with (DHE-RSA-AES128-SHA encrypted) ESMTP id 903c0cm6GK5Bpx ;
+	Fri, 16 Jul 2010 22:50:48 +0200 (MEST)
+Message-ID: <4C40C627.6050100@hemmecke.de>
+Date: Fri, 16 Jul 2010 22:50:47 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.9.2.4) Gecko/20100608 Thunderbird/3.1
+MIME-Version: 1.0
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] repeated series expansion
+References: <AANLkTimyVnmzDkb80QnW7yuY5qPMa4JZbmjyJTpAGdAl@mail.gmail.com>
+	<d91vb3kvie.fsf@ada0.ifam.uni-hannover.de>
+In-Reply-To: <d91vb3kvie.fsf@ada0.ifam.uni-hannover.de>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 16 Jul 2010 20:52:48 -0000
+
+> In axiom there is another option:
+>
+> (1) ->  x := 'X::TS FRAC INT; y := 'Y::TS FRAC INT;
+>
+>                                          Type: TaylorSeries(Fraction(Integer))
+> (2) ->  sin(x+y)
+>
+>                       1  3   1    2   1  2    1  3
+>     (2)  (Y + X) + (- - Y  - - X Y  - - X Y - - X ) + O(5)
+>                       6      2        2       6
+>                                          Type: TaylorSeries(Fraction(Integer))
+
+Thanks, Martin. That is exactly the representation with the 
+(homogeneous) polynomial coefficients I was talking about here...
+http://lists.nongnu.org/archive/html/axiom-math/2010-07/msg00003.html
+
+> However, currently there is no domain for generalised multivariate
+> Taylor series.
+
+Could you say, what you actually mean by "generalized multivariate TS"?
+
+Ralf
+
+
+From MAILER-DAEMON Fri Jul 16 17:47:42 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OZskw-0002bl-E2
+	for mharc-axiom-math@gnu.org; Fri, 16 Jul 2010 17:47:42 -0400
+Received: from [140.186.70.92] (port=39213 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OZsku-0002bg-Hd
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 17:47:41 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <raymond.rogers72@gmail.com>) id 1OZskq-0006oU-BB
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 17:47:40 -0400
+Received: from mail-pz0-f45.google.com ([209.85.210.45]:37482)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <raymond.rogers72@gmail.com>) id 1OZskq-0006oK-1S
+	for axiom-math@nongnu.org; Fri, 16 Jul 2010 17:47:36 -0400
+Received: by pzk10 with SMTP id 10so887176pzk.4
+	for <axiom-math@nongnu.org>; Fri, 16 Jul 2010 14:47:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from:reply-to
+	:organization:user-agent:mime-version:to:subject:references
+	:in-reply-to:x-enigmail-version:content-type;
+	bh=kjM/8Ya7MtTGIUlZHDwPs0sIj5eFP7jAVyG7UPeWHrU=;
+	b=o9l9LOK0m8DQs0DEesziCVyazsKPscg17mQNyoz7DrRLfUoL/pfZnzBa6NRc/Qn0oQ
+	Tg7MCZGaxl+nG1afguXjZK9WB9CfdvZb/bhWE43oUvnWH9GW9gjOdB+F6230Xbup9h7x
+	uc/mhGgfqMoSna57pchUkUjPjj7y6fBTvOLIY=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:reply-to:organization:user-agent:mime-version
+	:to:subject:references:in-reply-to:x-enigmail-version:content-type;
+	b=PPzMwOO+Yq8Qkc7uslAZ1XmXM7LidRl3TPoaN637Vd5RobimdCqJH39yCbFyiuBoAk
+	5DtPjVcZoUIQpeSarSygTA8fKIfEx3w/CoCvpoajaC0TUNCiQ4MNa/D9epSF1hZ9/1f6
+	9z+vnYotrFKen5+VgCEbXpMaMUw1Il6TavLKA=
+Received: by 10.114.121.13 with SMTP id t13mr2324517wac.212.1279316854335;
+	Fri, 16 Jul 2010 14:47:34 -0700 (PDT)
+Received: from [192.168.1.69] ([201.138.95.182])
+	by mx.google.com with ESMTPS id d39sm28376626wam.16.2010.07.16.14.47.32
+	(version=TLSv1/SSLv3 cipher=RC4-MD5);
+	Fri, 16 Jul 2010 14:47:33 -0700 (PDT)
+Message-ID: <4C40D371.606@gmail.com>
+Date: Fri, 16 Jul 2010 16:47:29 -0500
+From: Raymond Rogers <raymond.rogers72@gmail.com>
+Organization: A constant variable
+User-Agent: Thunderbird 2.0.0.24 (X11/20100411)
+MIME-Version: 1.0
+To: Axiom-math <axiom-math@nongnu.org>
+Subject: Re: [Axiom-math] repeated series expansion
+References: <AANLkTimyVnmzDkb80QnW7yuY5qPMa4JZbmjyJTpAGdAl@mail.gmail.com>
+	<d91vb3kvie.fsf@ada0.ifam.uni-hannover.de>
+In-Reply-To: <d91vb3kvie.fsf@ada0.ifam.uni-hannover.de>
+X-Enigmail-Version: 0.95.7
+Content-Type: multipart/alternative;
+	boundary="------------060700070804000303040308"
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: rrogers@plaidheron.com
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 16 Jul 2010 21:47:41 -0000
+
+This is a multi-part message in MIME format.
+--------------060700070804000303040308
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Martin Rubey wrote:
+> Vladimir Skokov <vvskokov@gmail.com> writes:
+>
+>   
+>> Dear all, 
+>>
+>> I have only started to learn axiom. Could you help me please? 
+>> I have an expression, say sin(x+y). How could I perform expansion 
+>> withe respect ot x and than to y? 
+>>
+>> i.e. 
+>>
+>> series(  series(  sin(x+y),x=0  ),y=0   )
+>>
+>> thank you in advance 
+>>     
+>
+> In axiom there is another option:
+>
+> (1) -> x := 'X::TS FRAC INT; y := 'Y::TS FRAC INT;
+>
+>                                         Type: TaylorSeries(Fraction(Integer))
+> (2) -> sin(x+y)
+>
+>                      1  3   1    2   1  2    1  3
+>    (2)  (Y + X) + (- - Y  - - X Y  - - X Y - - X ) + O(5)
+>                      6      2        2       6
+>                                         Type: TaylorSeries(Fraction(Integer))
+>
+> However, currently there is no domain for generalised multivariate
+> Taylor series.  I don't know how difficult that would be, and I didn't
+> think the maths through either.
+>
+>   
+That's interesting.  How does "MultivariateTaylorSeriesCategory()" from
+bookvol 10.2 page 1026  fall short?
+I have never used it; but it seemed relevant to the above.
+
+Ray
+
+--------------060700070804000303040308
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+  <title></title>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+Martin Rubey wrote:
+<blockquote cite="mid:d91vb3kvie.fsf@ada0.ifam.uni-hannover.de"
+ type="cite">
+  <pre wrap="">Vladimir Skokov <a class="moz-txt-link-rfc2396E" href="mailto:vvskokov@gmail.com">&lt;vvskokov@gmail.com&gt;</a> writes:
+
+  </pre>
+  <blockquote type="cite">
+    <pre wrap="">Dear all, 
+
+I have only started to learn axiom. Could you help me please? 
+I have an expression, say sin(x+y). How could I perform expansion 
+withe respect ot x and than to y? 
+
+i.e. 
+
+series(  series(  sin(x+y),x=0  ),y=0   )
+
+thank you in advance 
+    </pre>
+  </blockquote>
+  <pre wrap=""><!---->
+In axiom there is another option:
+
+(1) -&gt; x := 'X::TS FRAC INT; y := 'Y::TS FRAC INT;
+
+                                        Type: TaylorSeries(Fraction(Integer))
+(2) -&gt; sin(x+y)
+
+                     1  3   1    2   1  2    1  3
+   (2)  (Y + X) + (- - Y  - - X Y  - - X Y - - X ) + O(5)
+                     6      2        2       6
+                                        Type: TaylorSeries(Fraction(Integer))
+
+However, currently there is no domain for generalised multivariate
+Taylor series.  I don't know how difficult that would be, and I didn't
+think the maths through either.
+
+  </pre>
+</blockquote>
+That's interesting.  How does "MultivariateTaylorSeriesCategory()" from
+bookvol 10.2 page 1026  fall short?<br>
+I have never used it; but it seemed relevant to the above.<br>
+<br>
+Ray <br>
+</body>
+</html>
+
+--------------060700070804000303040308--
+
+
+From MAILER-DAEMON Sat Jul 17 01:00:50 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OZzW5-0006bk-W7
+	for mharc-axiom-math@gnu.org; Sat, 17 Jul 2010 01:00:50 -0400
+Received: from [140.186.70.92] (port=49876 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OZzW2-0006aE-OP
+	for axiom-math@nongnu.org; Sat, 17 Jul 2010 01:00:47 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <ralf@hemmecke.de>) id 1OZzW1-00055v-9l
+	for axiom-math@nongnu.org; Sat, 17 Jul 2010 01:00:46 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.161]:19304)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <ralf@hemmecke.de>) id 1OZzW0-00055i-Ub
+	for axiom-math@nongnu.org; Sat, 17 Jul 2010 01:00:45 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1279342842; l=828;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=KgFj/Tox5fIrHXmfEQl3komm7ns=;
+	b=LI4WsAJYFeoXmiE+v+sEs0fiJk5lcSS7I/+huY1wYFGnHU+a4TJr9kJYgStjBvwluMn
+	89GIBwdIGNJUJe4H5oB/Dg2L7+ZZUBcM6O2gL8R6TFFBStuPN5zYsuncuAX2I+j8zctQQ
+	ccxyC/2oz9RROQoRknOz05EQIQfLTP6nP0M=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSWk1ofrjzBpGpZEZUk=
+X-RZG-CLASS-ID: mo00
+Received: from [10.0.0.1] (62-47-48-196.adsl.highway.telekom.at [62.47.48.196])
+	by post.strato.de (mrclete mo5) (RZmta 23.4)
+	with (DHE-RSA-AES128-SHA encrypted) ESMTP id Y029f3m6H0CiNl ;
+	Sat, 17 Jul 2010 06:59:50 +0200 (MEST)
+Message-ID: <4C4138C5.3050602@hemmecke.de>
+Date: Sat, 17 Jul 2010 06:59:49 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.9.2.4) Gecko/20100608 Thunderbird/3.1
+MIME-Version: 1.0
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] repeated series expansion
+References: <AANLkTimyVnmzDkb80QnW7yuY5qPMa4JZbmjyJTpAGdAl@mail.gmail.com>	<d91vb3kvie.fsf@ada0.ifam.uni-hannover.de>
+	<4C40D371.606@gmail.com>
+In-Reply-To: <4C40D371.606@gmail.com>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 17 Jul 2010 05:00:47 -0000
+
+> That's interesting.  How does "MultivariateTaylorSeriesCategory()" from
+> bookvol 10.2 page 1026  fall short?
+
+It's a category, not a domain. And if you look into the source code then 
+we find even.
+
+TaylorSeries(Coef): Exports == Implementation where
+   Coef  : Ring
+   L   ==> List
+   NNI ==> NonNegativeInteger
+   SMP ==> Polynomial Coef
+   StS ==> Stream SMP
+
+   Exports ==> MultivariateTaylorSeriesCategory(Coef,Symbol) with
+     ...
+
+   Implementation ==> SparseMultivariateTaylorSeries(Coef,Symbol,SMP) add
+     Rep := StS -- Below we use the fact that Rep of PS is Stream SMP.
+     ...
+
+The domain SparseMultivariateTaylorSeries is relatively general. It 
+allows to specify the type of polynomials that serve as coefficients of 
+a (univariate) power series. That's a bit of an implementation detail, 
+but quite flexible.
+
+Ralf
+
+

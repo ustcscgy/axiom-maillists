@@ -1,0 +1,880 @@
+From MAILER-DAEMON Mon Apr 03 07:25:57 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FQNC1-0000NP-Ek
+	for mharc-axiom-math@gnu.org; Mon, 03 Apr 2006 07:25:57 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FQNBz-0000MB-O7
+	for axiom-math@nongnu.org; Mon, 03 Apr 2006 07:25:55 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FQNBy-0000Ly-P1
+	for axiom-math@nongnu.org; Mon, 03 Apr 2006 07:25:55 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FQNBy-0000Lv-M9
+	for axiom-math@nongnu.org; Mon, 03 Apr 2006 07:25:54 -0400
+Received: from [192.167.219.15] (helo=avas.unife.it)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FQNF1-0000T9-3O
+	for axiom-math@nongnu.org; Mon, 03 Apr 2006 07:29:03 -0400
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by avas.unife.it (Postfix) with ESMTP id 09439659AC;
+	Mon,  3 Apr 2006 13:25:52 +0200 (CEST)
+Received: from em243.mate.man (em243.mate.man [10.80.2.121])
+	by avas.unife.it (Postfix) with ESMTP id C0B376598E;
+	Mon,  3 Apr 2006 13:24:22 +0200 (CEST)
+Date: Mon, 3 Apr 2006 13:24:22 +0200 (CEST)
+From: Fabio Stumbo <f.stumbo@unife.it>
+X-X-Sender: stumbo@studio
+To: axiom-math@nongnu.org
+Subject: RE: [Axiom-math] How to make symbolic computations?
+In-Reply-To: <CAE9B164E720CE4D8727792DF8F28AE33DE01F@corporateex02.Corporate.drdc-rddc.gc.ca>
+Message-ID: <Pine.LNX.4.62.0604031245180.5844@studio>
+References: <CAE9B164E720CE4D8727792DF8F28AE33DE01F@corporateex02.Corporate.drdc-rddc.gc.ca>
+Organization: =?ISO-8859-1?Q?Universit=E0_di_Ferrara?=
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-Virus-Scanned: Cineca AppOs 0.86 at avas.unife.it
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Fabio Stumbo <f.stumbo@unife.it>
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 03 Apr 2006 11:25:55 -0000
+
+
+Hi all,
+I am back again to ask for some help on symbolic computation.
+The setting was:
+
+>> I would like to build the non-commutative algebra h=k[x,y] and
+>> then I would like to make computations in h using some predefined
+>> rules for x and y. As an example, take the three equations
+>>
+>> x*y*x=y*x*y
+>> x*x=a*x+b
+>> y*y=a*y+b
+>>
+>> where a and b are (generic, if possible) elements of k.
+>>
+>> Then, I would like to be able to reduce polynomials in x and
+>> y according to the previous rules. For example,
+>>
+>> (x+y)^2 (=x^2+x*y+y*x+y^2)
+>>
+>> should reduce to
+>>
+>> a*(x+y)+2*b+x*y+y*x
+>>
+>> and
+>>
+>> (x+y)^3
+>>
+>> (
+>> =(x+y)(x+y)^2
+>> =(x+y)(a(x+y)+2b+xy+yx)
+>> =axx+axy+ayx+ayy+2bx+2by+xxy+xyx+yxy+yyx
+>> =a^2x+ab+axy+ayx+a^2y+ab+2bx+2by+(ax+b)y+xyx+yxy+(ay+b)x
+>> =a^2x+ab+axy+ayx+a^2y+ab+2bx+2by+axy+by+xyx+yxy+ayx+bx
+>> =xyx+yxy+axy+axy+ayx+ayx+a^2x+2bx+bx+a^2y+2by+by+ab+ab
+>> )
+>>
+>> should reduce to
+>>
+>> 2*x*y*x+2*a*x*y+2*a*y*x+(a^2+3*b)*x+(a^2+3*b)*y+2*a*b
+>>
+>
+> Look at the example at:
+>
+> http://wiki.axiom-developer.org/SandBoxNoncommutativePolynomials
+>
+
+...
+
+
+
+I made many computations and I am quite satisfied with the results.
+I had no difficult to modify the functions defined on the wiki page to 
+change the settings (variable number, minimal polinomial). About this, I 
+have just a couple of simple questions:
+
+1) Is it possible to define the functions so that the number of variable 
+is itself a variable and the function generates "on the fly" the required 
+variables (all with the same minimal polinomial)? I am meaning the 
+following: instead of
+newpoly(t:H):H
+I would like to define
+newpoly(t:H,n:INT):H
+so that t is a polinomial in the variables x_1,...,x_n the relations are, 
+for example, x_i^2=ax_i+b for each i.
+So, we should generate the array of the variables, then an array with all 
+the relations and then we should try div for each relation in this last 
+array...
+
+I am asking this beacuse I had to make may examples changing the number of 
+variables and I had to rewrite the same file each time with minor 
+(and uniform) changes.
+
+2) Is it possible to get rid of all the declarations ::V in 
+p1:=(x::V+y::V)$H^2  ?
+
+I want to add a remark: as noted on the wiki, the reduction should be 
+carried over as many time as possible, so I use the auxiliary function
+
+reduce(p:H):H ==
+  p2 := newpoly(p)
+  p3 := newpoly(p2)
+  while p3 ~= p2 repeat
+   p2 := p3
+   p3 := newpoly(p2)
+  p3
+
+Now, if you try to reduce the successive powers of x+y, the functions 
+slows down very quicly and you can't go further than (x+y)^10 or little 
+more. In this particular case, it is much more efficient to do it 
+in the following way:
+
+power(q:H,n:INT):H ==
+   qq:H:=1
+   for i in 1..n repeat
+    qq:=reduce(qq*q)
+   qq
+
+This way, I have no difficulties in calculating (x+y)^100 or even much 
+more. Is there another way to obtain this same efficency?
+
+
+All of this is, anyway, simply a matter of making working better what 
+already is done.
+I also have another problem, more important to me.
+
+The above setting is:
+Q=FRAC INT
+K=Q(a,b)
+H=K[x,y]
+
+with relations
+
+xyx=yxy
+xx=ax+b
+yy=ay+b
+
+I would like to write the element
+s=1+x+y+xy+yx+xyx
+of H like a polinomial in u=x+y
+
+In mathematics, if I is the ideal
+I=(xyx-yxy,xx-ax-b,yy-ay-b) and L=H/I,
+then I would like to see if s belongs to the subring L[u].
+
+I guess that one way should be to use Groebner basis, but H is 
+noncommutative. Is there a noncommutative groebner basis package in axiom?
+
+In any case, it is not exactly this: I do not want to see if s belongs to 
+I, but I want to write it as a polynomial in u.
+
+Thank you and best regards
+
+Fabio
+
+
+
+From MAILER-DAEMON Tue Apr 04 04:37:52 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FQh2u-000488-L4
+	for mharc-axiom-math@gnu.org; Tue, 04 Apr 2006 04:37:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FQh2t-00047t-NG
+	for axiom-math@nongnu.org; Tue, 04 Apr 2006 04:37:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FQh2s-00047h-Ni
+	for axiom-math@nongnu.org; Tue, 04 Apr 2006 04:37:51 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FQh2s-00047Z-IA
+	for axiom-math@nongnu.org; Tue, 04 Apr 2006 04:37:50 -0400
+Received: from [192.167.219.15] (helo=avas.unife.it)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FQh66-0001X9-P4
+	for axiom-math@nongnu.org; Tue, 04 Apr 2006 04:41:11 -0400
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by avas.unife.it (Postfix) with ESMTP id 3138065937
+	for <axiom-math@nongnu.org>; Tue,  4 Apr 2006 10:37:44 +0200 (CEST)
+Received: from em243.mate.man (em243.mate.man [10.80.2.121])
+	by avas.unife.it (Postfix) with ESMTP id 8A7EA659B2
+	for <axiom-math@nongnu.org>; Tue,  4 Apr 2006 10:34:23 +0200 (CEST)
+Date: Tue, 4 Apr 2006 10:34:23 +0200 (CEST)
+From: Fabio Stumbo <f.stumbo@unife.it>
+X-X-Sender: stumbo@studio
+To: axiom-math@nongnu.org
+Message-ID: <Pine.LNX.4.62.0604041029030.13903@studio>
+Organization: =?ISO-8859-1?Q?Universit=E0_di_Ferrara?=
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-Virus-Scanned: Cineca AppOs 0.86 at avas.unife.it
+Subject: [Axiom-math] Again on symbolic computation
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Fabio Stumbo <f.stumbo@unife.it>
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 04 Apr 2006 08:37:51 -0000
+
+
+I said that symbolic computation was ok, but making more and more examples
+I found some problem.
+
+I refer to
+
+http://wiki.axiom-developer.org/SandBoxNoncommutativePolynomials
+
+with notations
+
+Q=FRAC INT
+K=Q(a,b)
+H=K[x,y]
+
+
+Now I use relations of degree 3 for x and y, namely:
+
+yxy=xyx
+x^3=ax^2+bx+c
+y^3=ax^2+by+c
+
+Accordingly, I modified the core function subs to
+
+subs(w:M):H ==
+   -- y*x*y=x*y*x
+   n:=div(w,(y::V*x::V*y::V)$M)$M
+   n case ok => monom(n.ok.lm,1)$H * (x::V*y::V*x::V)$H * monom(n.ok.rm,1)$H
+   -- x*x*x=a*x*x+b*x+c
+   n:=div(w,(x::V^3)$M)$M
+   n case ok => monom(n.ok.lm,1)$H * (a::K*(x::V)^2+b::K*x::V+c::K)$H * monom(n.ok.rm,1)$H
+   -- y*y*y=a*y*y+b*y+c
+   n:=div(w,(y::V^3)$M)$M
+   n case ok => monom(n.ok.lm,1)$H * (a::K*y::V*y::V+b::K*y::V+c::K)$H * monom(n.ok.rm,1)$H
+   -- no change
+   monom(w,1)$H
+
+and I use the auxilliary function
+
+reduce(p:H):H ==
+   p2 := newpoly(p)
+   p3 := newpoly(p2)
+   while p3 ~= p2 repeat
+    p2 := p3
+    p3 := newpoly(p2)
+   p3
+
+The problem is that not every monomial gets reduced to its "lowest degree"
+form. Take, for example,
+w=xxyxxyx
+
+you get
+
+reduce(w)=w
+
+and this happens because it doesn't contain any yxy,xxx,yyy. On the other
+hand, it DOES reduce:
+
+xxyxxyx
+     ---
+xxyxyxy
+   ---
+xxxyxxy
+
+and so now a x^3 appears, which can be reduced.
+
+Adding the relation for xyx=yxy doesn't help: you go in loop in many
+cases. So, how to handle this kind of problem?
+
+
+Thanks again
+
+Fabio
+
+PS: I tried to add this to the relative sandbox page, but I have not been 
+able: I added the "reduce" function, but it complains that H is not a 
+valid type. That is, it doesn't load automatically all the previous 
+definition. How do I get this?
+
+
+
+From MAILER-DAEMON Fri Apr 07 06:29:12 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FRoDI-0006ST-J5
+	for mharc-axiom-math@gnu.org; Fri, 07 Apr 2006 06:29:12 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FRoDH-0006S3-J9
+	for axiom-math@nongnu.org; Fri, 07 Apr 2006 06:29:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FRoDG-0006RS-DD
+	for axiom-math@nongnu.org; Fri, 07 Apr 2006 06:29:11 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FRoDG-0006RP-9T
+	for axiom-math@nongnu.org; Fri, 07 Apr 2006 06:29:10 -0400
+Received: from [192.167.219.15] (helo=avas.unife.it)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FRoHC-0004ZB-Ls
+	for axiom-math@nongnu.org; Fri, 07 Apr 2006 06:33:14 -0400
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by avas.unife.it (Postfix) with ESMTP id DDF9765983
+	for <axiom-math@nongnu.org>; Fri,  7 Apr 2006 12:29:06 +0200 (CEST)
+Received: from em243.mate.man (em243.mate.man [10.80.2.121])
+	by avas.unife.it (Postfix) with ESMTP id 285466597C
+	for <axiom-math@nongnu.org>; Fri,  7 Apr 2006 12:29:06 +0200 (CEST)
+Date: Fri, 7 Apr 2006 12:29:06 +0200 (CEST)
+From: "Fabio S." <f.stumbo@unife.it>
+X-X-Sender: stumbo@studio
+To: axiom-math@nongnu.org
+Message-ID: <Pine.LNX.4.62.0604071223190.13918@studio>
+Organization: =?ISO-8859-1?Q?Universit=E0_di_Ferrara?=
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-Virus-Scanned: Cineca AppOs 0.86 at avas.unife.it
+Subject: [Axiom-math] Minimal polynomial for a matrix?
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: axiom-math@nongnu.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 07 Apr 2006 10:29:11 -0000
+
+
+Is there a function to compute the minimal polynomial of a matrix? I 
+looked on all the docs I have and on the wiki, but I couldn't find any 
+such function.
+
+
+Thanks
+
+Fabio
+
+
+
+From MAILER-DAEMON Mon Apr 17 09:14:00 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FVTYG-0004OB-9h
+	for mharc-axiom-math@gnu.org; Mon, 17 Apr 2006 09:14:00 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FVTYF-0004Nb-2G
+	for axiom-math@nongnu.org; Mon, 17 Apr 2006 09:13:59 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FVTYE-0004N1-1c
+	for axiom-math@nongnu.org; Mon, 17 Apr 2006 09:13:58 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FVTYD-0004Mt-Qr
+	for axiom-math@nongnu.org; Mon, 17 Apr 2006 09:13:57 -0400
+Received: from [62.4.16.101] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FVTYs-0007qR-B1
+	for axiom-math@nongnu.org; Mon, 17 Apr 2006 09:14:38 -0400
+Received: from localhost.localdomain (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id 1C7D040E31;
+	Mon, 17 Apr 2006 15:13:55 +0200 (CEST)
+Received: from fmy by localhost.localdomain with local (Exim 4.60)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1FVTYA-0001n7-DD; Mon, 17 Apr 2006 15:13:54 +0200
+Sender: fmaltey@nerim.fr
+To: axiom-math@nongnu.org, fmaltey@nerim.fr
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 17 Apr 2006 15:13:54 +0200
+Message-ID: <8764l8wdil.fsf@localhost.localdomain>
+Lines: 11
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Cc: 
+Subject: [Axiom-math] I believe it's a bug.
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 17 Apr 2006 13:13:59 -0000
+
+Hello,=20
+
+try :
+
+real (%i::Expression Complex Integer)          -- 0, it's right
+real (%i::Expression Complex Fraction Integer) -- %i, I'm surprised
+real (%i::Expression Fraction Complex Integer) -- %i, I'm surprised
+
+Have a good day.
+
+Fran=C3=A7ois
+
+
+
+From MAILER-DAEMON Tue Apr 18 13:44:55 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FVuFz-00017X-De
+	for mharc-axiom-math@gnu.org; Tue, 18 Apr 2006 13:44:55 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FVuFx-00017J-Ik
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 13:44:53 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FVuFw-000170-NI
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 13:44:52 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FVuFw-00016x-Ir
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 13:44:52 -0400
+Received: from [62.4.17.102] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FVuGr-00088S-SM
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 13:45:50 -0400
+Received: from localhost.localdomain (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.nerim.net (Postfix) with ESMTP id 9EA2D4F3C6;
+	Tue, 18 Apr 2006 19:44:39 +0200 (CEST)
+Received: from fmy by localhost.localdomain with local (Exim 4.60)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1FVuFt-0001Wx-Ku; Tue, 18 Apr 2006 19:44:49 +0200
+Sender: fmaltey@nerim.fr
+To: Francois Maltey <fmaltey@nerim.fr>, axiom-math@nongnu.org
+References: <8764l8wdil.fsf@localhost.localdomain>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 18 Apr 2006 19:44:49 +0200
+In-Reply-To: <8764l8wdil.fsf@localhost.localdomain>
+Message-ID: <87bquyvkvi.fsf@localhost.localdomain>
+Lines: 13
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Cc: 
+Subject: [Axiom-math] Is there a cleaner way to convert an expression to
+	float ?
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 18 Apr 2006 17:44:53 -0000
+
+Hello,=20
+
+How can I convert an expression as sin (%pi/5) to a float ?
+
+I can use sin (%pi/5) + 0.0, but I find it's a dirty tick !
+
+(sin (%pi/5))::Float doesn't work.
+
+I refuse to go inside the formula and type : sin (%pi/5::Float).
+
+Is there an other ability ?
+
+Fran=C3=A7ois, from France.
+
+
+
+From MAILER-DAEMON Tue Apr 18 13:49:05 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FVuK1-0002T1-AL
+	for mharc-axiom-math@gnu.org; Tue, 18 Apr 2006 13:49:05 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FVuK0-0002Sw-OC
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 13:49:04 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FVuJz-0002SU-6w
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 13:49:04 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FVuJz-0002SM-2L
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 13:49:03 -0400
+Received: from [66.249.82.207] (helo=xproxy.gmail.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FVuKu-0000B6-EF
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 13:50:00 -0400
+Received: by xproxy.gmail.com with SMTP id t4so548327wxc
+	for <axiom-math@nongnu.org>; Tue, 18 Apr 2006 10:49:01 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=Rlp+WGLsg9NxI7ez1tdlfoRxqaI8SzbWU1gtmxOYVvhl9mohH9YF81B5UsOnXYaN+aK5TklErpOd8XU5JBrpHJqNuGdBT/Y468Vx3ihi1n3F/tAy6tF8rjkkXcDBH7E2NjouXCH/Qz/MreFiGYhzwvxwUN/CxfHxUTZUKh4GZSo=
+Received: by 10.70.128.1 with SMTP id a1mr1576230wxd;
+	Tue, 18 Apr 2006 10:49:01 -0700 (PDT)
+Received: by 10.70.76.11 with HTTP; Tue, 18 Apr 2006 10:49:00 -0700 (PDT)
+Message-ID: <ab2dc45b0604181049t67f81280n54c975c5e36a5e78@mail.gmail.com>
+Date: Tue, 18 Apr 2006 13:49:00 -0400
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Is there a cleaner way to convert an expression to
+	float ?
+In-Reply-To: <87bquyvkvi.fsf@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+References: <8764l8wdil.fsf@localhost.localdomain>
+	<87bquyvkvi.fsf@localhost.localdomain>
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 18 Apr 2006 17:49:05 -0000
+
+On 18 Apr 2006 19:44:49 +0200, Francois Maltey <fmaltey@nerim.fr> wrote:
+> Hello,
+>
+> How can I convert an expression as sin (%pi/5) to a float ?
+
+(1) -> numeric(sin(%pi/5))
+   (1)  0.5877852522 9247312917
+                                                                  Type: Flo=
+at
+
+Igor
+
+
+
+From MAILER-DAEMON Tue Apr 18 13:50:12 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FVuL6-0002p7-Ic
+	for mharc-axiom-math@gnu.org; Tue, 18 Apr 2006 13:50:12 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FVuL5-0002oc-F4
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 13:50:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FVuL3-0002mt-Vm
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 13:50:11 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FVuL3-0002mn-Oy
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 13:50:09 -0400
+Received: from [216.251.41.217] (helo=mails17.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1FVuLz-0000HO-12
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 13:51:07 -0400
+X-Authenticated-User: bill.page1.synthesis.anikast.ca
+Received: from asus (207-61-191-200.anikast.net [207.61.191.200])
+	(authenticated bits=0)
+	by mails17.megamailservers.com (8.13.6/8.13.1) with ESMTP id
+	k3IHnlah011806; Tue, 18 Apr 2006 13:50:03 -0400
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Francois Maltey'" <fmaltey@nerim.fr>
+Subject: RE: [Axiom-math] Is there a cleaner way to convert an expression
+	tofloat ?
+Date: Tue, 18 Apr 2006 13:49:41 -0400
+Message-ID: <012801c66310$7f8ef660$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+In-Reply-To: <87bquyvkvi.fsf@localhost.localdomain>
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2869
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 18 Apr 2006 17:50:11 -0000
+
+On April 18, 2006 1:45 PM Francois Maltey wrote:
+> 
+> How can I convert an expression as sin (%pi/5) to a float ?
+> 
+> I can use sin (%pi/5) + 0.0, but I find it's a dirty tick !
+> 
+> (sin (%pi/5))::Float doesn't work.
+> 
+> I refuse to go inside the formula and type : sin (%pi/5::Float).
+> 
+> Is there an other ability ?
+> 
+
+Since the error message is:
+
+"Cannot convert from type Expression Integer to Float"
+
+one might guess to use:
+
+  (sin (%pi/5))::Expression Float
+
+and that would be right although the result is 'Expression Float'.
+If you really want/need float you can write:
+
+  (sin (%pi/5))::Expression Float::Float
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Tue Apr 18 15:47:43 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FVwAp-0000JM-HM
+	for mharc-axiom-math@gnu.org; Tue, 18 Apr 2006 15:47:43 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FVwAn-0000J3-UW
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 15:47:41 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FVwAl-0000IX-Qk
+	for axiom-math@nongnu.org; Tue, 18 Apr 2006 15:47:41 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1FVwAl-0000IT-Nv; Tue, 18 Apr 2006 15:47:39 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52)
+	id 1FVwBh-0002vl-U4; Tue, 18 Apr 2006 15:48:38 -0400
+Received: from [192.168.138.29] (funklan.is4all.net [194.96.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k3IJlaRi002386
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Tue, 18 Apr 2006 21:47:37 +0200
+Message-ID: <4445427E.2070703@hemmecke.de>
+Date: Tue, 18 Apr 2006 21:48:14 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5 (X11/20051201)
+MIME-Version: 1.0
+To: axiom-dev <axiom-developer@nongnu.org>, axiom-mail@nongnu.org,
+	axiom-math@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: 
+Subject: [Axiom-math] Call for active participation
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 18 Apr 2006 19:47:42 -0000
+
+Hello friends of Axiom,
+
+I'd like to invite you to improve Axiom's website
+
+http://wiki.axiom-developer.org/
+
+There is already quite a lot of information available, but it is perhaps 
+not in a form that suits best the need of its users.
+
+As you all know anyone can edit these pages and can improve them. Yes, 
+also YOU can. But if you don't yet feel like editing pages in public, 
+simply reply to that mail and tell us all what you like and dislike there.
+(1) Which information should be more easily accessible?
+(2) Which information you are constantly missing?
+(3) Is the FrontPage good enough? Does it contain too much/too few 
+information?
+(4) What questions should be added to the FAQ page? (If you can manage, 
+immediately enter your question there. Simply press the _edit_ link in 
+the top right corner, enter your question and press SAVE.)
+(5) ...
+
+Please help. A better AXIOM depends on YOU.
+
+Hope to hear from you
+
+Ralf Hemmecke
+
+
+
+From MAILER-DAEMON Wed Apr 26 15:23:21 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FYpbc-0004v3-Rq
+	for mharc-axiom-math@gnu.org; Wed, 26 Apr 2006 15:23:20 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FYVIZ-0007HH-6S
+	for axiom-math@nongnu.org; Tue, 25 Apr 2006 17:42:19 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FYVIW-0007Ge-NJ
+	for axiom-math@nongnu.org; Tue, 25 Apr 2006 17:42:18 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FYVIW-0007GY-Fo
+	for axiom-math@nongnu.org; Tue, 25 Apr 2006 17:42:16 -0400
+Received: from [62.4.16.102] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FYVL4-0006nv-1C
+	for axiom-math@nongnu.org; Tue, 25 Apr 2006 17:44:54 -0400
+Received: from uniton.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by kraid.nerim.net (Postfix) with ESMTP id D34BC40E21
+	for <axiom-math@nongnu.org>; Tue, 25 Apr 2006 23:42:13 +0200 (CEST)
+Received: from uniton.integrable-solutions.net (localhost [127.0.0.1])
+	by uniton.integrable-solutions.net (8.12.10/8.12.10/SuSE Linux 0.7)
+	with ESMTP id k3PLdNtZ021383
+	for <axiom-math@nongnu.org>; Tue, 25 Apr 2006 23:39:23 +0200
+Received: (from gdr@localhost)
+	by uniton.integrable-solutions.net (8.12.10/8.12.10/Submit) id
+	k3PLdNgC021382; Tue, 25 Apr 2006 23:39:23 +0200
+X-Authentication-Warning: uniton.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: axiom-math@nongnu.org
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+Organization: Integrable Solutions
+Date: 25 Apr 2006 23:39:23 +0200
+Message-ID: <m3lktt1gj8.fsf@uniton.integrable-solutions.net>
+Lines: 10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Mailman-Approved-At: Wed, 26 Apr 2006 15:23:17 -0400
+Subject: [Axiom-math] Programming with categories
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 25 Apr 2006 21:42:19 -0000
+
+
+Hi,
+
+  While I was "spring cleaning" my computers, I found this
+
+    http://www.cs.man.ac.uk/~david/categories/book/book.pdf
+
+which I believe might be of reading interest to the Axiom community.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Wed Apr 26 15:55:11 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FYq6R-0007Pa-6W
+	for mharc-axiom-math@gnu.org; Wed, 26 Apr 2006 15:55:11 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FYq6P-0007PG-RT
+	for axiom-math@nongnu.org; Wed, 26 Apr 2006 15:55:09 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FYq6O-0007P4-J8
+	for axiom-math@nongnu.org; Wed, 26 Apr 2006 15:55:09 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FYq6O-0007P1-FU
+	for axiom-math@nongnu.org; Wed, 26 Apr 2006 15:55:08 -0400
+Received: from [216.251.41.211] (helo=mails11.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1FYq99-0006Vt-1c
+	for axiom-math@nongnu.org; Wed, 26 Apr 2006 15:57:59 -0400
+X-Authenticated-User: bill.page1.synthesis.anikast.ca
+Received: from asus (206-47-29-226.anikast.net [206.47.29.226])
+	(authenticated bits=0)
+	by mails11.megamailservers.com (8.13.6/8.13.1) with ESMTP id
+	k3QJsitS005984; Wed, 26 Apr 2006 15:55:01 -0400
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Gabriel Dos Reis'" <gdr@integrable-solutions.net>
+Subject: RE: [Axiom-math] Programming with categories
+Date: Wed, 26 Apr 2006 15:54:36 -0400
+Message-ID: <011e01c6696b$46b4d0b0$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2869
+In-reply-to: <m3lktt1gj8.fsf@uniton.integrable-solutions.net>
+Importance: Normal
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 26 Apr 2006 19:55:10 -0000
+
+Gaby,
+
+On April 25, 2006 5:39 PM you wrote:
+> 
+>   While I was "spring cleaning" my computers, I found this
+> 
+>     http://www.cs.man.ac.uk/~david/categories/book/book.pdf
+> 
+> which I believe might be of reading interest to the Axiom
+> community.
+> 
+
+Thank you very much for the reference! This book called:
+
+  Computational Category Theory
+
+was published by Prentice Hall in 1988.
+
+Yes indeed I do find this of very great interest and relavance
+to Axiom. This is *exactly* the kind of computational category
+theory that I would like to do with Axiom. This book provides
+a complete blueprint for doing exactly this although the
+programming language used by the authors David Rydeheard,
+University of Manchester
+
+http://www.cs.man.ac.uk/~david
+http://www.cs.man.ac.uk/fmethods/people/der/der.html
+
+and R.M. Burstall, University of Edinburgh, is in fact ML.
+
+The ML programs are available here:
+
+http://www.cs.man.ac.uk/~david/categories
+
+Regards,
+Bill Page.
+
+
+
+
+

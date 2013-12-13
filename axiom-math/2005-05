@@ -1,0 +1,540 @@
+From MAILER-DAEMON Thu May 19 23:49:05 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DYyVS-000875-5B
+	for mharc-axiom-math@gnu.org; Thu, 19 May 2005 23:49:05 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DYyVM-000815-1S
+	for axiom-math@nongnu.org; Thu, 19 May 2005 23:48:56 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DYyVE-0007uN-0G
+	for axiom-math@nongnu.org; Thu, 19 May 2005 23:48:49 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DYyVD-0007sk-GC; Thu, 19 May 2005 23:48:47 -0400
+Received: from [209.135.140.38] (helo=axiom-developer.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34)
+	id 1DYyah-0003j5-GA; Thu, 19 May 2005 23:54:27 -0400
+Received: from axiom-developer.org (lincoln.rosehosting.com [127.0.0.1])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id j4K3jZui001765;
+	Thu, 19 May 2005 22:45:36 -0500
+From: daly@axiom-developer.org
+Received: (from daly@localhost)
+	by axiom-developer.org (8.12.8/8.12.8/Submit) id j4K3jZJW001762;
+	Thu, 19 May 2005 22:45:35 -0500
+Date: Thu, 19 May 2005 22:45:35 -0500
+Message-Id: <200505200345.j4K3jZJW001762@axiom-developer.org>
+To: mpleszkoch@yahoo.com
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] provisos and indeterminates
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 20 May 2005 03:48:57 -0000
+
+The proviso work is all in paper form in a pile and now in a
+packed box. I'll see if I can guess which one it is but I'd
+rather not unpack the world until after the move. I really should
+keyboard this stuff. I did it before the net was all the rage and
+the paper is just rotting away now.
+
+  the proviso idea is fundamental to math but ignored or treated badly
+  by all computer algebra systems. provisos arise in things like:
+
+    1
+   ---   provided x != 0
+    x
+
+  it turns out that a deep investigation of the subject yields a
+  few insights. 
+
+  1) provisos have two different forms of mathematics
+     a) computing WITH provisios (e.g what is (1/x)*(1/y))
+     b) computing IN provisos (e.g. what is (provided a>0)*(provided a<0))
+
+  2) provisos contain general branching
+     it is possible to have a computation (such as the above)
+     break into parts (e.g. x<0, x=0, x>0) at every stage of
+     the computation. this necessitates general control structures
+     such as backtracking, stacking, early cutoff, etc. I have
+     identified 8 different possible forms.
+
+  3) most proviso forms can be reduced to intervals (an unpublished result)
+
+  4) provisos are a poorly studied area of math but vital for understanding
+     computational mathematics.
+
+As for the indeterminates (now called indefinites) this is a currently
+funded NSF project at CCNY. There are no papers available yet. The basic
+idea is to examine questions like:
+
+  if p and q are polynomials 
+  we know what the third term of p^3 * q^4 is 
+  but what is third term of p^n * q^m?
+
+  if M is a matrix and n is an indefinite integer
+  what is the general term for M_{i,j} in M^n
+
+  normally in a computer algebra system, 
+  given n+1
+  we presume n is of type 'variable' and 1 is of type 'integer'
+  we promote both n and 1 to type 'polynomial(integer)'
+  we choose '+' from polynomial(integer)
+  and the result is that n+1 is of type polynomial(integer).
+
+  but suppose 'n' is an "indefinite integer"
+  then we can construct n+1 where '+' comes from indefinite(integer)
+  and the result is that n+1 is of type indefinite(integer)
+  so we can use this new thing where integer is expected 
+  and construct things like polynomial(indefinite(integer))
+  
+  does the 'indefinite' type propagate? do we get
+  indefinite(polynomial(indefinite(integer)))?
+
+The two subjects are deeply related and very poorly studied.
+They are both fundamental to computational mathematics.
+
+Axiom is the perfect platform for doing this kind of research.
+It has a 'suchthat' type which was my first attempt at this
+but I've come to understand that the issue is more fundamental.
+
+Tim
+
+
+
+From MAILER-DAEMON Sun May 22 01:49:56 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DZjLY-0003Wz-3d
+	for mharc-axiom-math@gnu.org; Sun, 22 May 2005 01:49:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DZjLU-0003S8-A7
+	for axiom-math@nongnu.org; Sun, 22 May 2005 01:49:52 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DZjLQ-0003Os-FY
+	for axiom-math@nongnu.org; Sun, 22 May 2005 01:49:48 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DZjLQ-0003OM-5U; Sun, 22 May 2005 01:49:48 -0400
+Received: from [209.135.140.38] (helo=axiom-developer.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34)
+	id 1DZjSE-0005VM-7h; Sun, 22 May 2005 01:56:50 -0400
+Received: from axiom-developer.org (lincoln.rosehosting.com [127.0.0.1])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id j4M5lWwl022996;
+	Sun, 22 May 2005 00:47:32 -0500
+From: daly@axiom-developer.org
+Received: (from daly@localhost)
+	by axiom-developer.org (8.12.8/8.12.8/Submit) id j4M5lWSS022993;
+	Sun, 22 May 2005 00:47:32 -0500
+Date: Sun, 22 May 2005 00:47:32 -0500
+Message-Id: <200505220547.j4M5lWSS022993@axiom-developer.org>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] MATLAB programming wiki
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 22 May 2005 05:49:53 -0000
+
+MATLAB appears to have a wiki which sponsors programming contests:
+
+http://www.mathworks.com/contest/ants/home.html
+
+The most interesting property seems to be that they get better 
+algorithms if everyone collaborates on the wiki.
+
+Perhaps we should borrow this idea and highlight the algorithm
+of the month on the axiom wiki.
+
+t
+
+
+
+From MAILER-DAEMON Sun May 22 07:21:45 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DZoWf-0005Pw-D6
+	for mharc-axiom-math@gnu.org; Sun, 22 May 2005 07:21:45 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DZoWU-0005Jb-8x
+	for axiom-math@nongnu.org; Sun, 22 May 2005 07:21:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DZoWP-0005HR-QH
+	for axiom-math@nongnu.org; Sun, 22 May 2005 07:21:30 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DZoWP-0005HH-IC
+	for axiom-math@nongnu.org; Sun, 22 May 2005 07:21:29 -0400
+Received: from [62.4.16.100] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DZodE-0005fw-58
+	for axiom-math@nongnu.org; Sun, 22 May 2005 07:28:32 -0400
+Received: from petoncle (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id 5C9A440E20
+	for <axiom-math@nongnu.org>; Sun, 22 May 2005 13:19:19 +0200 (CEST)
+Received: from fmy by petoncle with local (Exim 4.50) id 1DZoUJ-000110-1a
+	for axiom-math@nongnu.org; Sun, 22 May 2005 13:19:19 +0200
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] provisos and indeterminates
+References: <200505200345.j4K3jZJW001762@axiom-developer.org>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: Sun, 22 May 2005 13:19:18 +0200
+In-Reply-To: <200505200345.j4K3jZJW001762@axiom-developer.org>
+	(daly@axiom-developer.org's
+	message of "Thu, 19 May 2005 22:45:35 -0500")
+Message-ID: <873bsf33ux.fsf@nerim.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) XEmacs/21.5 (chestnut, linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Sender: fmaltey@nerim.fr
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 22 May 2005 11:21:41 -0000
+
+daly@axiom-developer.org about provisio :
+
+>   the proviso idea is fundamental to math but ignored or treated badly
+>   by all computer algebra systems. provisos arise in things like:
+>
+>     1
+>    ---   provided x !=3D 0
+>     x
+
+Mupad does this :
+
+>> solve (a^2*x-a=3Dx+1, x)
+           / {  a + 1 }                                                \
+  piecewise| { ------ } if not a in {-1, 1}, C_ if a =3D -1, {} if a =3D 1 |
+           | {  2     }                                                |
+           \ { a  - 1 }                                                /
+
+limit (a*x*exp (a*x), x=3D+infinity) ; // is unevalued
+
+but this three commands are right :
+assume (a>0) ;  limit (a*x*exp (a*x), x=3D+infinity)
+assume (a=3D0) ;  limit (a*x*exp (a*x), x=3D+infinity)
+assume (a<0) ;  limit (a*x*exp (a*x), x=3D+infinity)
+
+I don't understand if this packages is in the debian-axiom,=20
+the 2005-02 version, will be in the next version, or isn't yet in=20
+one package ?
+
+I'm a first-year university teacher, I used mupad and I think I will use=20
+axiom because it's really a free program.=20
+
+The first question that one colleague ask to me when we speak about computer
+algebra is : can I do assume hypothesis with axiom ?
+
+Have a good day !
+
+Fran=E7ois
+
+
+
+
+From MAILER-DAEMON Sun May 22 10:57:51 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DZrtn-0008NJ-5S
+	for mharc-axiom-math@gnu.org; Sun, 22 May 2005 10:57:51 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DZrtk-0008LT-GR
+	for axiom-math@nongnu.org; Sun, 22 May 2005 10:57:48 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DZrth-0008Jt-Gn
+	for axiom-math@nongnu.org; Sun, 22 May 2005 10:57:45 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DZrtd-0008EQ-4r; Sun, 22 May 2005 10:57:41 -0400
+Received: from [209.226.175.97] (helo=tomts40-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DZrz0-0001Oj-7V; Sun, 22 May 2005 11:03:14 -0400
+Received: from asus ([209.226.189.77]) by tomts40-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20050522145358.DAMG27737.tomts40-srv.bellnexxia.net@asus>;
+	Sun, 22 May 2005 10:53:58 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <daly@axiom-developer.org>
+Date: Sun, 22 May 2005 10:52:38 -0400
+Message-ID: <000401c55edd$ebda1ad0$6601a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.2627
+In-Reply-To: <200505220547.j4M5lWSS022993@axiom-developer.org>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+Importance: Normal
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] RE: [Axiom-developer] MATLAB programming wiki
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 22 May 2005 14:57:49 -0000
+
+On May 22, 2005 1:48 AM Tim Daly wrote:
+
+> MATLAB appears to have a wiki which sponsors programming
+> contests:
+>
+> http://www.mathworks.com/contest/ants/home.html
+>
+> The most interesting property seems to be that they get better 
+> algorithms if everyone collaborates on the wiki.
+>
+> Perhaps we should borrow this idea and highlight the algorithm
+> of the month on the axiom wiki.
+
+I like this idea, but can we really make it fly? Certainly we
+can advertise the winners and make some nice looking web pages
+with photographs and all, but what can we offer as "prizes".
+This is one of the delemma's of free open source software.
+And that reminds me ...
+
+I have been wondering whether it might be worthwhile to arrange
+for some Axiom promotional "stuff":
+
+  1) Axiom t-shirts
+  2) Axiom hats
+  3) Axiom coffee mugs
+
+etc. like http://www.mozillastore.com
+
+There are several web.coms that offer this sort of product but
+typically the project only receives a small portion of the
+profit. Of course a small portion is a lot more than nothing,
+and given that donations to the Axiom Foundation have not
+progressed at all beyond those of the initial "dedicated few",
+I don't see any alternative when it comes to raising some funds
+to promote Axiom.
+
+Ideas? Opinions?
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Sat May 28 03:13:19 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DbvVU-0003on-Rh
+	for mharc-axiom-math@gnu.org; Sat, 28 May 2005 03:13:17 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DbvVI-0003n8-Mk
+	for axiom-math@nongnu.org; Sat, 28 May 2005 03:13:05 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DbvVG-0003mR-2D
+	for axiom-math@nongnu.org; Sat, 28 May 2005 03:13:03 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DbvVC-0003kc-Ai; Sat, 28 May 2005 03:12:59 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DbvOg-0001ts-Ln; Sat, 28 May 2005 03:06:14 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j4S74kKD078522; 
+	Sat, 28 May 2005 09:04:49 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <17048.6092.265112.545592@seam101.local>
+Date: Sat, 28 May 2005 09:03:40 +0200
+To: axiom-math@nongnu.org
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4249; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-developer@nongnu.org
+Subject: [Axiom-math] Drawing several functions in one plot
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 28 May 2005 07:13:07 -0000
+
+Dear all,
+
+I'd like to have axiom draw two functions in the same viewport, for example 
+
+x^2*y^3 and it's tangential plane in the point (1,-1).
+
+I tried merge and composite with no success. Any ideas? (best thing would be an
+example! 
+
+Martin
+
+
+
+
+From MAILER-DAEMON Mon May 30 09:56:45 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Dckl2-00052M-QD
+	for mharc-axiom-math@gnu.org; Mon, 30 May 2005 09:56:45 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Dckks-0004xp-5W
+	for axiom-math@nongnu.org; Mon, 30 May 2005 09:56:34 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Dckkm-0004uU-0j
+	for axiom-math@nongnu.org; Mon, 30 May 2005 09:56:31 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Dckka-0004jS-7b; Mon, 30 May 2005 09:56:16 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DckbQ-0005tr-LS; Mon, 30 May 2005 09:46:49 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j4UDiJjf058097; 
+	Mon, 30 May 2005 15:44:33 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <17051.6255.214264.745472@seam101.local>
+Date: Mon, 30 May 2005 15:43:11 +0200
+To: Martin Rubey <martin.rubey@univie.ac.at>
+In-Reply-To: <17048.51627.699960.655112@seam101.local>
+References: <200505281545.j4SFjkt2030322@axiom-developer.org>
+	<17048.51627.699960.655112@seam101.local>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4249; Body=4 Fuz1=4 Fuz2=4
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Re: multiple graphcs
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 30 May 2005 13:56:35 -0000
+
+I just realized: extensive documentation how to have multiple graphs in one
+viewport, no matter what its dimension, is in the axiom book, Section 7.2...
+
+Thanks again,
+
+Martin
+
+Martin Rubey writes:
+ > Thanks for the rapid response -- this works only for two dimensional graphs
+ > though?
+ > 
+ > Martin
+ > 
+ > daly@axiom-developer.org writes:
+ >  > You can have up to 9 graphs in one image. You can toggle the
+ >  > display (on-off) of the individual graphs in the graphics control
+ >  > panel.
+ >  > 
+ >  > You can also construct multi-graph images by displaying individual
+ >  > graphs each in their own window (say windowA and windowB). You can
+ >  > "pick" a graph from windowA and "drop" it into windowB using the
+ >  > control panels.
+ >  > 
+ >  > Tim
+ > 
+
+
+
+
+From MAILER-DAEMON Tue May 31 12:40:29 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Dd9n2-0004jo-TJ
+	for mharc-axiom-math@gnu.org; Tue, 31 May 2005 12:40:28 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Dd9mz-0004i7-9k
+	for axiom-math@nongnu.org; Tue, 31 May 2005 12:40:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Dd9mw-0004g0-FX
+	for axiom-math@nongnu.org; Tue, 31 May 2005 12:40:22 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Dd9mw-0004er-89
+	for axiom-math@nongnu.org; Tue, 31 May 2005 12:40:22 -0400
+Received: from [62.4.17.102] (helo=mallaury.noc.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Dd9kf-00008c-6F
+	for axiom-math@nongnu.org; Tue, 31 May 2005 12:38:01 -0400
+Received: from petoncle (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.noc.nerim.net (Postfix) with ESMTP id 5E56162D01
+	for <axiom-math@nongnu.org>; Tue, 31 May 2005 18:36:07 +0200 (CEST)
+Received: from fmy by petoncle with local (Exim 4.50) id 1Dd9ip-0001Lt-RN
+	for axiom-math@nongnu.org; Tue, 31 May 2005 18:36:07 +0200
+To: axiom-math@nongnu.org
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: Tue, 31 May 2005 18:36:07 +0200
+Message-ID: <87y89v9wug.fsf@nerim.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) XEmacs/21.5 (chestnut, linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Sender: fmaltey@nerim.fr
+Subject: [Axiom-math] expand (cos (2*x))
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 May 2005 16:40:27 -0000
+
+Hello,=20
+
+expand (cos (x+y)) is right.
+but how can I do expand (cos (2*x)) in cos(x)^2 - sin(x)^2 by example.
+
+And how can I get the source file of this expand ?
+
+Thanks a lot.
+
+Fran=E7ois
+
+
+

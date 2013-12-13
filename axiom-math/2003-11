@@ -1,0 +1,317 @@
+From MAILER-DAEMON Mon Nov 17 19:28:37 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1ALtjQ-0007xP-KC
+	for mharc-axiom-math@gnu.org; Mon, 17 Nov 2003 19:28:36 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1ALtjN-0007wf-5b
+	for axiom-math@nongnu.org; Mon, 17 Nov 2003 19:28:33 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1ALtiq-0007nD-Eb
+	for axiom-math@nongnu.org; Mon, 17 Nov 2003 19:28:31 -0500
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1ALtio-0007mh-Pr
+	for axiom-math@nongnu.org; Mon, 17 Nov 2003 19:27:58 -0500
+Received: from localhost.localdomain (254.182.252.64.snet.net [64.252.182.254])
+	by pimout3-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hAHNPx7q020146; Mon, 17 Nov 2003 18:25:59 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hAHNP0n27887;
+	Mon, 17 Nov 2003 18:25:00 -0500
+Date: Mon, 17 Nov 2003 18:25:00 -0500
+Message-Id: <200311172325.hAHNP0n27887@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Richard.Kreckel@ginac.de
+In-reply-to: <Pine.LNX.4.33.0311172324270.27081-100000@higgs.physik.uni-mainz.de>
+	(kreckel@ginac.de)
+References: <Pine.LNX.4.33.0311172324270.27081-100000@higgs.physik.uni-mainz.de>
+Cc: camm@enhanced.com, axiom-math@nongnu.org
+Subject: [Axiom-math] expand
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 18 Nov 2003 00:28:34 -0000
+
+Richy,
+
+> But, just tell me one thing, please.  Is this a bug or need I read the
+> book in order to understand?
+>
+> (1) -> expand((x+y+z)^2-x^2-y^2-z^2)
+>
+>  [Loading stuff, lines deleted]
+>
+>    (1)  (2y + 2x)z + 2x y
+>
+>                                             Type: Polynomial Integer
+> (2) -> expand(expand(expand((x+y+z)^2-x^2-y^2-z^2)))
+>
+>    (2)  (2y + 2x)z + 2x y
+>                                             Type: Polynomial Integer
+>
+>
+> Hmm, not if you use some really funny definition of "to expand".  I would
+> rather have expected something like 2x z + 2y z + 2x y.  ?!?
+
+
+(1) -> a:=(x+y+z)^2-x^2-y^2-z^2
+   (1)  (2y + 2x)z + 2x y
+                                                     Type: Polynomial Integer
+(2) -> c:DMP([x,y,z],FRAC(INT)):=a
+   (2)  2x y + 2x z + 2y z
+            Type: DistributedMultivariatePolynomial([x,y,z],Fraction Integer)
+
+The issue is the type chosen. The result (1) is a polynomial in z of the
+form a * z + b where a == (2y + 2x) and b == 2xy
+
+If you want x and y to also be variables you need the second form where
+you explicitly request that x, y, and z are variable.
+
+The display of an equation is intimately bound to its type.
+
+Tim
+
+
+
+
+
+From MAILER-DAEMON Thu Nov 20 00:50:36 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AMhhI-0004hl-Hs
+	for mharc-axiom-math@gnu.org; Thu, 20 Nov 2003 00:49:44 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AMa6n-00082x-B3
+	for axiom-math@nongnu.org; Wed, 19 Nov 2003 16:43:33 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AMa6G-0007tT-Ji
+	for axiom-math@nongnu.org; Wed, 19 Nov 2003 16:43:31 -0500
+Received: from [134.93.128.134] (helo=higgs.physik.uni-mainz.de)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1AMa6F-0007rC-8r
+	for axiom-math@nongnu.org; Wed, 19 Nov 2003 16:42:59 -0500
+Received: from higgs.physik.uni-mainz.de (kreckel@localhost [127.0.0.1])
+	by higgs.physik.uni-mainz.de (8.12.3/8.12.3/Debian-6.6) with ESMTP id
+	hAJKfGcH026761; Wed, 19 Nov 2003 21:41:16 +0100
+Received: from localhost (kreckel@localhost)
+	by higgs.physik.uni-mainz.de (8.12.3/8.12.3/Debian-6.6) with ESMTP id
+	hAJKfCN5026755; Wed, 19 Nov 2003 21:41:12 +0100
+X-Authentication-Warning: higgs.physik.uni-mainz.de: kreckel owned process
+	doing -bs
+Date: Wed, 19 Nov 2003 21:41:12 +0100 (CET)
+From: "Richard B. Kreckel" <kreckel@ginac.de>
+X-X-Sender: <kreckel@higgs.physik.uni-mainz.de>
+To: root <daly@idsi.net>
+In-Reply-To: <200311172325.hAHNP0n27887@localhost.localdomain>
+Message-ID: <Pine.LNX.4.33.0311192132150.26376-100000@higgs.physik.uni-mainz.de>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Mailman-Approved-At: Thu, 20 Nov 2003 00:49:35 -0500
+Cc: camm@enhanced.com, axiom-math@nongnu.org
+Subject: [Axiom-math] Re: expand
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: Richard.Kreckel@ginac.de
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 19 Nov 2003 21:43:35 -0000
+
+Dear Tim,
+
+On Mon, 17 Nov 2003, root wrote:
+[...]
+> (1) -> a:=(x+y+z)^2-x^2-y^2-z^2
+>    (1)  (2y + 2x)z + 2x y
+>                                                      Type: Polynomial Integer
+> (2) -> c:DMP([x,y,z],FRAC(INT)):=a
+>    (2)  2x y + 2x z + 2y z
+>             Type: DistributedMultivariatePolynomial([x,y,z],Fraction Integer)
+>
+> The issue is the type chosen. The result (1) is a polynomial in z of the
+> form a * z + b where a == (2y + 2x) and b == 2xy
+>
+> If you want x and y to also be variables you need the second form where
+> you explicitly request that x, y, and z are variable.
+>
+> The display of an equation is intimately bound to its type.
+
+Sorry, Tim, but how on earth does it occur to Axiom that the original
+polynomial was in z?  Why not in x?  Or y?  It simply says "Polynomial
+Integer"!  How does it deduce the type?  Where can I read about this?!?
+
+I know about the power of types and the pain of proper coercion and all
+that.  But this is not intuitive.  This is daunting.  Sorry.  How can it
+be improved?
+
+???
+   -richy.
+-- 
+Richard B. Kreckel
+<Richard.Kreckel@GiNaC.DE>
+<http://www.ginac.de/~kreckel/>
+
+
+
+
+From MAILER-DAEMON Thu Nov 20 06:26:17 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AMmwn-0002CF-A3
+	for mharc-axiom-math@gnu.org; Thu, 20 Nov 2003 06:26:05 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AMmwf-0002AR-7b
+	for axiom-math@nongnu.org; Thu, 20 Nov 2003 06:25:57 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AMmw5-00021H-9D
+	for axiom-math@nongnu.org; Thu, 20 Nov 2003 06:25:52 -0500
+Received: from [62.231.131.195] (helo=mail35.messagelabs.com)
+	by monty-python.gnu.org with smtp (Exim 4.24) id 1AMmw2-0001y7-0R
+	for axiom-math@nongnu.org; Thu, 20 Nov 2003 06:25:18 -0500
+X-VirusChecked: Checked
+X-Env-Sender: miked@nag.co.uk
+X-Msg-Ref: server-10.tower-35.messagelabs.com!1069323830!1884987
+X-StarScan-Version: 5.1.13; banners=nag.co.uk,-,-
+Received: (qmail 29897 invoked from network); 20 Nov 2003 10:23:50 -0000
+Received: from smtp-4.star.net.uk (212.125.75.73)
+	by server-10.tower-35.messagelabs.com with SMTP;
+	20 Nov 2003 10:23:50 -0000
+Received: (qmail 9500 invoked from network); 20 Nov 2003 10:23:48 -0000
+Received: from nagmx1.nag.co.uk (HELO nag.co.uk) (62.231.145.242)
+	by smtp-4.star.net.uk with SMTP; 20 Nov 2003 10:23:48 -0000
+Received: from brackley.nag.co.uk (brackley.nag.co.uk [192.156.217.21])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id KAA13430;
+	Thu, 20 Nov 2003 10:23:18 GMT
+Received: from nag.co.uk (IDENT:root@trowbridge.nag.co.uk [192.156.217.69])
+	by brackley.nag.co.uk (8.11.1/8.11.1) with ESMTP id hAKAMxv59793;
+	Thu, 20 Nov 2003 10:23:00 GMT (envelope-from miked@nag.co.uk)
+Received: (from miked@localhost) by nag.co.uk (8.9.3/8.9.3) id KAA27855;
+	Thu, 20 Nov 2003 10:23:02 GMT
+Date: Thu, 20 Nov 2003 10:23:02 +0000
+From: Mike Dewar <miked@nag.co.uk>
+To: Richard.Kreckel@ginac.de
+Subject: Re: [Axiom-math] Re: expand
+Message-ID: <20031120102302.C27792@nag.co.uk>
+References: <200311172325.hAHNP0n27887@localhost.localdomain>
+	<Pine.LNX.4.33.0311192132150.26376-100000@higgs.physik.uni-mainz.de>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Mailer: Mutt 1.0.1i
+In-Reply-To: <Pine.LNX.4.33.0311192132150.26376-100000@higgs.physik.uni-mainz.de>;
+	from kreckel@ginac.de on Wed, Nov 19, 2003 at 09:41:12PM +0100
+Cc: camm@enhanced.com, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 20 Nov 2003 11:26:03 -0000
+
+Hi Richy,
+
+I don't have Tim's new "literately programmed" Axiom, but the
+documentation for Polynomial in my (NAG) version says that "This type is
+the basic representation of sparse recursive multivariate polynomials
+whose variables are arbitrary symbols. The ordering is alphabetic
+determined by the Symbol type.".  In actual fact the Polynomial domain
+is just a wrapper for an instance of the SparseMultivariatePolynomial
+and is using the ordering defined on Symbol.  To be honest I always
+disliked having an ordering on Symbol because it means that you get
+behaviour like:
+(1) -> x < y
+
+   (1)  true
+                                                      Type: Boolean
+which is a source of confusion and occasional bugs in user code.  If you
+defined a new Symbol domain with a reverse lexicographic ordering you
+could construct an instance of SparseMultivariatePolynomial where your
+example would be represented as a polynomial in x.  It could be argued
+that this is more natural from a mathematical point of view, although I
+think Reduce's ordering: x > y > z > t > a > b > ... is probably better.
+
+Polynomial is one of those domains really only meant to be used in the
+interpreter - in compiled code you would almost always be more specific
+about the exact types.  It allows you to manipulate sets of polynomials
+in different variables without doing type coercion.
+
+I hope that this helps.
+
+Mike.
+
+
+On Wed, Nov 19, 2003 at 09:41:12PM +0100, Richard B. Kreckel wrote:
+> Dear Tim,
+> 
+> On Mon, 17 Nov 2003, root wrote:
+> [...]
+> > (1) -> a:=(x+y+z)^2-x^2-y^2-z^2
+> >    (1)  (2y + 2x)z + 2x y
+> >                                                      Type: Polynomial Integer
+> > (2) -> c:DMP([x,y,z],FRAC(INT)):=a
+> >    (2)  2x y + 2x z + 2y z
+> >             Type: DistributedMultivariatePolynomial([x,y,z],Fraction Integer)
+> >
+> > The issue is the type chosen. The result (1) is a polynomial in z of the
+> > form a * z + b where a == (2y + 2x) and b == 2xy
+> >
+> > If you want x and y to also be variables you need the second form where
+> > you explicitly request that x, y, and z are variable.
+> >
+> > The display of an equation is intimately bound to its type.
+> 
+> Sorry, Tim, but how on earth does it occur to Axiom that the original
+> polynomial was in z?  Why not in x?  Or y?  It simply says "Polynomial
+> Integer"!  How does it deduce the type?  Where can I read about this?!?
+> 
+> I know about the power of types and the pain of proper coercion and all
+> that.  But this is not intuitive.  This is daunting.  Sorry.  How can it
+> be improved?
+> 
+> ???
+>    -richy.
+> -- 
+> Richard B. Kreckel
+> <Richard.Kreckel@GiNaC.DE>
+> <http://www.ginac.de/~kreckel/>
+> 
+> 
+> 
+> _______________________________________________
+> Axiom-math mailing list
+> Axiom-math@nongnu.org
+> http://mail.nongnu.org/mailman/listinfo/axiom-math
+> 
+> ________________________________________________________________________
+> This e-mail has been scanned for all viruses by Star Internet. The
+> service is powered by MessageLabs. For more information on a proactive
+> anti-virus service working around the clock, around the globe, visit:
+> http://www.star.net.uk
+> ________________________________________________________________________
+
+________________________________________________________________________
+This e-mail has been scanned for all viruses by Star Internet. The
+service is powered by MessageLabs. For more information on a proactive
+anti-virus service working around the clock, around the globe, visit:
+http://www.star.net.uk
+________________________________________________________________________
+
+
+

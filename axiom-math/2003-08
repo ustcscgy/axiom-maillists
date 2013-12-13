@@ -1,0 +1,836 @@
+From MAILER-DAEMON Sat Aug 30 16:15:58 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19tC8X-00011u-1k
+	for mharc-axiom-math@gnu.org; Sat, 30 Aug 2003 16:15:53 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19tC1u-00012y-6R
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:09:02 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19tC1q-000108-3v
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:09:00 -0400
+Received: from [207.217.120.232] (helo=flamingo.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22) id 19tBuq-0006vh-PY
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:01:44 -0400
+Received: from dialup-67.75.101.79.dial1.stamford1.level3.net ([67.75.101.79]
+	helo=localhost.localdomain)
+	by flamingo.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19tBun-0002Q3-00
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 13:01:42 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7UK1dk13951;
+	Sat, 30 Aug 2003 16:01:39 -0400
+Date: Sat, 30 Aug 2003 16:01:39 -0400
+Message-Id: <200308302001.h7UK1dk13951@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-math@nongnu.org
+X-Mailman-Approved-At: Sat, 30 Aug 2003 16:15:44 -0400
+Subject: [Axiom-math] [daly@idsi.net: Re: [Axiom-developer] RE: dependency
+	visualization with VCG]
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Aug 2003 20:09:04 -0000
+
+------- Start of forwarded message -------
+X-Original-To: daly@idsi.net
+X-MessageWall-Score: 0 (mail-gw.bsdwebsolutions.com)
+X-MessageWall-Score: 0 (spam-filter-less.bsdwebsolutions.com)
+Date: Sat, 30 Aug 2003 10:12:11 -0400
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca
+Cc: daly@idsi.net, wyscc@cunyvm.cuny.edu, axiom-developer@nongnu.org
+In-reply-to: <1062230891.30698.100.camel@asus> (message from Bill Page on 30
+	Aug 2003 04:09:01 -0400)
+Subject: Re: [Axiom-developer] RE: dependency visualization with VCG
+Reply-To: daly@idsi.net
+X-UIDL: !6#!!UH`"!5H5"!mM-"!
+
+> In this respect the Axiom code is not strictly "imperative" but
+> rather it is a specification of a system that may or may not
+> have a solution. And if a solution exists, it may not be unique.
+> 
+> Bertfried Fauser has pointed out that there is good reason to
+> suppose that this sort of cyclical dependency is inherent in
+> the underlying mathematics that Axiom attempts to represent. I
+> think this has a rather large importance in the philosophy of
+> mathematics. But that is subject that is beyond the scope of
+> the current discussion
+
+I've added a new mailing list, axiom-math@nongnu.org, because
+such discussions of math theory and philosophy of Axiom's math
+are important and need a proper forum. It should be available
+today and I'll announce it to the lists once it exists. Once it
+exists lets move the discussion over there.
+
+Philosophically speaking, I'm beginning to think that computational
+mathematics (as opposed to pencil mathematics) will begin to uncover
+new "axioms" that further refine the mathematical theory. So, for
+instance, we might discover that the category division of RNG and RING
+exists because there is a logical requirement that has never been
+formally stated. The Axiom book contains an algebra hierarchy on the
+front flyleaf. Somebody needs to write the corresponding axioms that
+underlie each domain. It would be very interesting to see the RNG vs
+RING axioms.
+
+(On a side note: I once saw a Venn diagram that showed the relationship
+between groups, rings, integral domains, fields, etc. in a book. I'm
+unable to find that again. If anyone ever sees it please send me the
+name of the book. I want to use that diagram to explain the algebra
+hierarchy and I can't find it again.)
+
+
+> Tim is right that *any* viable selection (quite possiblity
+> sub-optimal) of "bootstrap" vertices together with a linear
+> ordering is sufficient to build a working version of Axiom -
+> and this is hard enough. But really we are not done when we
+> have just produced a runnable program. We really need to
+> complete the bootstrap cycles and compile each of the
+> previously choosen bootstrap spad files as well.             
+
+Actually, if you look at the <<order>> chunk in the makefile you'll
+see that a chunk exists after all of the levels. This chunk recompiles
+the bootstrap layer code using the compiler. 
+
+This should cover the case where the bootstrap lisp code is not
+semantically the same. This will not work in general as significant
+changes to the files containing the bootstrap code (e.g. deleting
+functions) will break everything.  However, the pamphlet files for the
+bootstrap code contain warnings that you have to regenerate and
+re-embed the lisp code if you change the algebra.
+
+>                                                  Then we will
+> compare the newly generated internal code (LISP) for each
+> bootstrap file to the bootstrap code with which that we
+> started. If there is a semantic difference between the orginal
+> and the new bootstrap code, then we need to repeat the build
+> process again, using the new bootstrap code. In principle we
+> have to iterate until we reach the desired fixed point for
+> all of the bootstrap vertices. Achieving this fixed point
+> means that our internal code for Axiom no longer depends on
+> the particular starting bootstrap code and it does not
+> depend on how many times we have repeated the iterations
+> after the fixed point is achieved.
+
+The recompile hack mentioned above will recover from "small" errors
+but does not cover the "fixed point" case you mention. However if
+the fixed point is not achieved within the one iteration within the
+makefile I'd consider the build badly broken.
+
+> But in preparing the algebra makefile for Axiom, I think we
+> should be even more ambitious. I think it is very desirable to
+> design a makefile script that directly incorporates the specific
+> dependencies and not just a viable linear ordering. The make
+
+I originally agreed with you on this and, if you look in the previous
+Makefile.pamphlet you'll see that the layer0 files were being added to
+each file they depended on. That is, if foo.spad depended on int.spad
+I wrote:
+
+foo.NRLIB: int.o foo.spad
+
+This is very fragile as modifications to the lattice had to be propagated
+into all of the rule stanzas. So the next "hack" was to generalize the
+dependence to the layer thus:
+
+foo.NRLIB: ${LAYER0} foo.spad
+
+Thus any change in the layer 0 files would cause foo to be rebuilt.
+This is more robust but causes a HUGE increase in the number of 
+recompiles. 
+
+Axiom's algebra is reasonably stable in the face of changes. I don't
+expect that people will be making many changes to the "standard library"
+that is shipped with Axiom. Code that IS changed or added will have to
+be reviewed. In particular the "standard library" code will have to 
+build from scratch anyway so changes that break the algebra will show
+up (well, mumble, mumble, mutter, mumble) in the build.
+
+> I hope I have not taken us too far afield in this discussion.
+
+It's very relevant discussion but perhaps not of interest to all of
+the developers. The lattice solution has caused me to "circle the coffee
+table" quite a few times as it was not clear how to solve the bootstrap
+problem. Discussions like this would have helped.
+
+There are still more problems that need this kind of discussion such as:
+
+generalization of simplification, 
+making simplification "domain controlled",
+adding provisos (e.g. saying 1/x provided x != 0), 
+proving the algorithms correct, 
+adding ACL2 or MetaPRL style computation to the standard library, 
+mathematically justifying the computational mathematics (e.g. why RNG and RING?)
+taxonomiically ordering the algebra by subject,
+...
+
+Indeed, each of these topics and more should eventually become Axiom Journal
+articles. Once we figure out the correct way to represent the lattice we
+should consider writing up a paper for submission to the Axiom Journal.
+Then we can argue over what the "rules" for submission are (e.g. what
+is required in a "literate paper", who reviews these things, how to
+get such a Journal recognized by ACM or Springer, etc).
+
+In any case, sometime this afternoon there will be an "axiom-math" 
+mailing list. I'll forward these mailings to it. Lets continue the 
+discussion there. I'm very interested in the result.
+
+Tim
+axiom@tenkan.org
+daly@idsi.net
+------- End of forwarded message -------
+
+
+
+From MAILER-DAEMON Sat Aug 30 16:16:00 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19tC8T-0000yv-Iy
+	for mharc-axiom-math@gnu.org; Sat, 30 Aug 2003 16:15:49 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19tBww-0007pL-FP
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:03:54 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19tBuW-0006oU-AH
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:01:25 -0400
+Received: from [207.217.120.22] (helo=hawk.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22) id 19tBuG-0006ha-QS
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:01:08 -0400
+Received: from dialup-67.75.101.79.dial1.stamford1.level3.net ([67.75.101.79]
+	helo=localhost.localdomain)
+	by hawk.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19tBuF-0001p8-00
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 13:01:07 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7UK14d13943;
+	Sat, 30 Aug 2003 16:01:04 -0400
+Date: Sat, 30 Aug 2003 16:01:04 -0400
+Message-Id: <200308302001.h7UK14d13943@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-math@nongnu.org
+X-Mailman-Approved-At: Sat, 30 Aug 2003 16:15:44 -0400
+Subject: [Axiom-math] [daly@idsi.net: Re: [Axiom-developer] RE: dependency
+	visualization with VCG]
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Aug 2003 20:03:55 -0000
+
+------- Start of forwarded message -------
+X-Original-To: daly@idsi.net
+X-MessageWall-Score: 0 (mail-gw.bsdwebsolutions.com)
+X-MessageWall-Score: 0 (spam-filter-less.bsdwebsolutions.com)
+Date: Sat, 30 Aug 2003 00:33:04 -0400
+From: root <daly@idsi.net>
+To: wyscc@cunyvm.cuny.edu
+Cc: daly@idsi.net, axiom-developer@nongnu.org, bill.page1@sympatico.ca
+Subject: Re: [Axiom-developer] RE: dependency visualization with VCG
+Reply-To: daly@idsi.net
+X-UIDL: +R3"!WMK"!VAV!!M7_!!
+
+Bill Sit,
+
+The linear order exists and is documented in the file 
+src/algebra/Lattice.pamphlet. The compiler will tell
+you all of the dependencies at compile time. The subtle
+part is to find the bootstrap set since, in the beginning,
+nothing will compile. That's part of what took so long.
+The other part is that computing the correct location in
+the lattice for all 1100 categories, domains, and packages
+was tedious and time consuming. But it's done.
+
+I believe the lattice can be further optimized but that's
+just an academic exercise. The reason the lattice has to
+exist in any form is that you need to compile from scratch.
+Once that happens the lattice is worthless.
+
+I'd like to see it graphed just so I can stare at the beast
+that ate 8 months of my life.
+
+Tim
+axiom@tenkan.org
+daly@idsi.net
+------- End of forwarded message -------
+
+
+
+From MAILER-DAEMON Sat Aug 30 16:16:22 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19tC8c-00017H-64
+	for mharc-axiom-math@gnu.org; Sat, 30 Aug 2003 16:15:58 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19tC4Y-0003do-C6
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:11:46 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19tC3q-0002bf-2e
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:11:07 -0400
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.22) id 19tC3V-0002Fz-3s
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:10:41 -0400
+Received: from [207.217.120.62] (helo=snipe.mail.pas.earthlink.net)
+	by mx20.gnu.org with esmtp (Exim 4.22) id 19tBuE-00067A-Mx
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:01:06 -0400
+Received: from dialup-67.75.101.79.dial1.stamford1.level3.net ([67.75.101.79]
+	helo=localhost.localdomain)
+	by snipe.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19tBu0-0006B9-00
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 13:00:53 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7UK0o713937;
+	Sat, 30 Aug 2003 16:00:50 -0400
+Date: Sat, 30 Aug 2003 16:00:50 -0400
+Message-Id: <200308302000.h7UK0o713937@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-math@nongnu.org
+X-Mailman-Approved-At: Sat, 30 Aug 2003 16:15:44 -0400
+Subject: [Axiom-math] [wyscc@cunyvm.cuny.edu: Re: [Axiom-developer] RE:
+	dependency visualization with VCG]
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Aug 2003 20:12:07 -0000
+
+------- Start of forwarded message -------
+X-Original-To: daly@idsi.net
+X-MessageWall-Score: 0 (mail-gw.bsdwebsolutions.com)
+X-MessageWall-Score: 0 (spam-filter-less.bsdwebsolutions.com)
+Date: Sat, 30 Aug 2003 00:17:05 -0400
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Reply-To: wyscc@cunyvm.cuny.edu
+Organization: City College of New York
+X-Accept-Language: zh,en
+To: daly@idsi.net
+Cc: bill.page1@sympatico.ca, axiom-developer@nongnu.org
+Subject: Re: [Axiom-developer] RE: dependency visualization with VCG
+Content-Type: text/plain; charset=us-ascii
+X-Authentication-Info: Submitted using SMTP AUTH at out003.verizon.net from [162.83.137.57] at Fri, 29 Aug 2003 23:17:05 -0500
+X-UIDL: XPb"!,hI"!p~#"!=CU!!
+
+Tim:
+
+As I understand this, the problem is to find a linear ordering (for
+compilation) on the set of Axiom "domains" (here in this paragraph,
+"domain" means either a category or domain constructor, or a package)
+such that if domain A precedes domain B in the linear order, then the
+compiling of A does not depend on B and only on what precedes A. You
+propose a heuristic method to generate this linear order using the
+idea of a kernel (set of bootstrap domains) and then the most
+frequently depended-on domain among the rest of the domains.
+
+To formulate the problem in terms of graph theory, a few
+clarifications are needed. Here (in first paragraph), the set V of
+vertices are the set of category constructors, domain constructors and
+packages. It is not at all clear one should just limit vertices to
+these three objects; it can also be argued that the set of vertices
+include the set of functions as defined in these three objects; but
+from your email, I'll assume the above is your intention.  For
+simplicity, let's refer to elements of V as a vertex rather than a
+domain so as not to cause confusion; and at the same time, if the
+meaning of vertex changes, the discussion below remains valid when
+suitably interpreted.
+
+First, let's specify precisely the binary relation "depend on", that
+is, the set E of directed edges (also called arcs). When we say there
+is a directed edge from vertex A to vertex B if B "depends on" A
+(note: a more intuitive term would be A "comes before" B, with the
+understanding that cycles are allowed), do we mean some function or
+reference (such as using the "with" clause) in B calls, with some
+appropriate set C of parameters for A, either the construction of A
+(if A is a category or domain constructor) and/or, in all cases, calls
+a function from A?  This seems to Bill Page's working definition.
+If so, by this definition, it should be true that
+B also "depends on" any vertex in the set C AND the vertices to which
+any member of C belongs (that is, a parameter in C need not be a
+vertex; for example, it could be an integer).
+
+I believe that Bill Page's algorithm may miss such a dependence as
+well as adding dependences that are not real dependences (of course,
+there is no harm in the latter case; but it may affect the solution to
+the graph-theoretic problem).  But I have to study this more to be
+sure.  Bill himself is aware of a number of problems.  In general, I
+do not agree with ONLY using the source file with text matching to
+decide dependencies (even though that may be a good first
+approximation).  One should rely on the compiler itself (assuming it
+has no bugs) to discover the dependencies.  But this creates a
+catch-22 situation.  An example of a function that the compiler will
+catch, but not easily caught by simple pattern matching from the spad
+source is something like a + b.  With all the notation embeded in a
+pamphlet file, signs like + or - appear everywhere in all sorts of
+context.  Even in pure spad files, one cannot easily decide the
+meaning of say the minus sign without understanding the context
+where it appears.  Observe that the appearance of a declaration for
+ELEMENTS in a domain, or DOMAIN in a category is enough to decide a
+dependence because operations, functions, or domain constructor must
+all involve operands or parameters that belong to domains or
+categories.  As far as the problem of is dependence among vertices in
+V, exactly which function demonstrates the dependence is not
+important.  Thus, it may be reasonable to revise the "depends on" to
+mean:  a vertex B depends on a vertex A if an element of A is declared
+in the code for B.  Here a category is considered as the set of
+domains belonging to the category; a domain is the mathematical set
+defined by the construction, and a package is the set of its exported
+AND private functions.
+
+At this point, this discussion is a digression but related to how the
+multi-digraph of the "depends on" relation is computed and the
+subsequent efficiency.  With that in mind, let me continue with the
+theoretical version.
+
+Once this multi-digraph G = (V, E) is defined, because of possible
+cycles (the word "loop" in digraph is reserved to mean
+"self-dependency" in our context, that is, a directed edge from a
+vertex to itself), it need not be anti-symmetric and so it is not a
+partial ordering. One needs to "break" the cycles. We can easily
+simplify the multi-digraph to just a di-graph (that is, we can
+eliminate multiple directed edges from A to B for all pairs of
+vertices (A, B).  (Bill Page used sorting to accomplish this).
+We may put weights on the parallel arcs to reflect some measure of
+dependency, so that we can choose the one with the least weight.
+
+Now let's ease up a bit and consider only undirected graphs. To break
+the cycles means finding a spanning forest (a forest is a disjoint
+union of trees). The depth-first search algorithm accomplishes this as
+well as decomposing the graph into its connected components.  If the
+graph is weighted, then we can even find minimum spanning forests by
+finding a minimum spanning tree for each component.  For example
+Kruskal's or Prim's algorithm will do that.  Here, a minimum spanning
+tree is one that minimizes the sum of all weights in the tree.
+
+Now the depth-first search algorithm can be modified for digraphs.
+The definitions for a few terms will be recalled.  A digraph is
+asymmetric if there is at most one arc between any two vertices.  A
+directed tree is an asymmetric digraph whose underlying graph (where
+arcs become edges) is a tree.  A directed tree that contains exactly
+one vertex with indegree 0 is called an out-tree.  A directed forest
+is a digraph each of whose components is a directed tree.  A theorem
+then states that an out-tree is a rooted-tree whose root is the unique
+vertex with indegree 0.  Using an adjacency list for vertices, the
+depth-first search produces a spanning directed forest each of whose
+components is an out-tree. It is easy to draw the graphs of out-trees and then
+to add in the remaining arcs of the digraph.
+
+Once we have the out-trees forming components of the digraph, it is an
+easy matter to embed each out-tree (as a relation on vertices) into
+a linear order (say list the vertices by the distances from the root,
+starting with the root (distance 0); vertices the same distances from
+the root may be listed in any order.)
+
+The bootstrap set of vertices are then the roots of the out-trees.
+Note that this bootstrap set may change if the digraph grows as Axiom
+adds more vertices. However, most of the original structure should
+remain unless a very fundamental domain or category is created.
+
+All the algorithms as well as concepts on digraphs may be found in:
+Gary Chartrand and Ortrud R. Oellermann, "Applied and Algorithmic
+Graph Theory", McGraw Hill, 1993, New York. The depth-first search for digraph
+is Algorithm 11.1 on pp. 317-318.
+
+William
+
+
+root wrote:
+> 
+> With respect to the notion of optimizing the domain we choose for
+> the bootstrap list:
+> 
+> Consider that we have, say 30 loops, each between 1 (some files
+> self-refer) and 20 long. If we write each loop as a list then the goal
+> is to choose domains out of the lists so we minimize the total number
+> of bootstrap domains. Clearly the best first choice is "the most
+> frequent" domain mentioned across all of the lists. We can then
+> eliminate all of those lists since we now have a bootstrap file. Next
+> we choose the most frequent domain from the remaining lists. This may
+> not be optimal but it would be a better algorithm than the one I used
+> which was to just choose any domain.
+> 
+> I'm sure there is a wonderful mathematical name for the bootstrap
+> list (e.g. the "kernel"?) but I haven't yet cast it into either
+> graph theory or any other theory yet.
+> 
+> Tim
+> axiom@tenkan.org
+> daly@idsi.net
+> 
+> _______________________________________________
+> Axiom-developer mailing list
+> Axiom-developer@nongnu.org
+> http://mail.nongnu.org/mailman/listinfo/axiom-developer
+
+- -- 
+William Sit
+Department of Mathematics..............Email: wyscc@cunyvm.cuny.edu
+City College of New York..........................Tel: 212-650-5179
+Convent Ave at West 138th Street..................Fax: 212-862-0004
+New York, NY 10031.....Asian Symposium on Computer Mathematics 2003
+USA..........................http://www.mmrc.iss.ac.cn/~ascm/ascm03
+------- End of forwarded message -------
+
+
+
+From MAILER-DAEMON Sat Aug 30 16:16:22 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19tC8Y-00013s-KU
+	for mharc-axiom-math@gnu.org; Sat, 30 Aug 2003 16:15:54 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19tC2g-0001Ve-3b
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:09:50 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19tC27-0001Ba-L0
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:09:17 -0400
+Received: from [207.217.120.120] (helo=albatross.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22) id 19tBub-0006qQ-DS
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:01:29 -0400
+Received: from dialup-67.75.101.79.dial1.stamford1.level3.net ([67.75.101.79]
+	helo=localhost.localdomain)
+	by albatross.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19tBuY-0007HU-00
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 13:01:27 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7UK1No13947;
+	Sat, 30 Aug 2003 16:01:23 -0400
+Date: Sat, 30 Aug 2003 16:01:23 -0400
+Message-Id: <200308302001.h7UK1No13947@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-math@nongnu.org
+X-Mailman-Approved-At: Sat, 30 Aug 2003 16:15:44 -0400
+Subject: [Axiom-math] [bill.page1@sympatico.ca: Re: [Axiom-developer] RE:
+	dependency visualization with VCG]
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Aug 2003 20:09:51 -0000
+
+------- Start of forwarded message -------
+X-Original-To: daly@idsi.net
+X-MessageWall-Score: 0 (mail-gw.bsdwebsolutions.com)
+X-MessageWall-Score: 0 (spam-filter-less.bsdwebsolutions.com)
+Subject: Re: [Axiom-developer] RE: dependency visualization with VCG
+From: Bill Page <bill.page1@sympatico.ca>
+To: daly@idsi.net
+Cc: wyscc@cunyvm.cuny.edu, axiom-developer@nongnu.org
+In-Reply-To: <200308300433.h7U4X4U13230@localhost.localdomain>
+Content-Type: text/plain
+Organization: 
+Date: 30 Aug 2003 04:09:01 -0400
+X-UIDL: K2p!!X=&#!mI`!!KU1"!
+
+Tim, William;
+
+I think an accurate algebra dependency di-graph has more than
+just a curiosity value.
+
+William, I think the analysis and formalism in your previous
+message is relevant, however the problem is somewhat simplier
+than you suggest. The vertices of the di-graph are just the
+*.spad files themselves. These are a subset of the files
+contained in the int/algebra and are derived (many to one)
+from the *.spad.pamphlet files in src/algebra. The directed
+edges between vertices represent pre-conditions for compilation.
+Specifically, an edge directed from vertex A to vertex B states
+that file B.spad contains some element (function) that is
+needed in the compilation of A.spad. (Of course the opposite
+convention for the orientation of the edges is also possible.)
+
+Although I admit that you do correctly point out that my
+current method of finding these dependencies is deficient in
+some respects. I agree with you and Tim that the most accurate
+way to obtain this dependency di-graph would be to analyze
+the output of the compilation process itself. Now that we
+have a full compilation of Axiom that runs to completion,
+this is easily achievable.
+
+It is one of the unusual properties of Axiom that the algebra
+dependency di-graph may contain cycles. This means that it
+is not possible to compile Axiom in the way that most complex
+computer systems are compiled. The presence of cycles means that
+no linear order of compilation exists. Instead, one must find a
+way to *solve* (satisfy) the set of cyclically dependent vertices,
+separately from those that follow in a linear manner. We call
+a cycle "satisfied" if all of the spad files in the cycle can
+be compiled in a self-consistent manner, that is, in such a
+way that all the dependencies in the cycle are satisfied.
+Operationally, this means that given such a solution for a
+cycle, we could repeatedly compile each spad file in turn going
+around the cycle with no change in the internal code that is
+produced. In other words, the solution is a "fixed-point" for
+the cycle.
+
+In this respect the Axiom code is not strictly "imperative" but
+rather it is a specification of a system that may or may not
+have a solution. And if a solution exists, it may not be unique.
+
+Bertfried Fauser has pointed out that there is good reason to
+suppose that this sort of cyclical dependency is inherent in
+the underlying mathematics that Axiom attempts to represent. I
+think this has a rather large importance in the philosophy of
+mathematics. But that is subject that is beyond the scope of
+the current discussion
+
+The solution algorthm that Tim has employed in the new open
+source version of Axiom starts with a choice of "bootstrap"
+vertices. The compiled code for these vertices is given "out
+of the blue", that is through some external process (in this
+case it is derived from the intermediate LISP code of a previous
+version of Axiom). The dependency di-graph is *cut* by
+temporarily ignoring all the outward directed edges of these
+vertices. The choice of bootstrap vertices is made in such
+a way as to produce an acyclic di-graph (lattice) that covers
+the orginal dependency di-graph.
+
+Tim is right that *any* viable selection (quite possiblity
+sub-optimal) of "bootstrap" vertices together with a linear
+ordering is sufficient to build a working version of Axiom -
+and this is hard enough. But really we are not done when we
+have just produced a runnable program. We really need to
+complete the bootstrap cycles and compile each of the
+previously choosen bootstrap spad files as well. Then we will
+compare the newly generated internal code (LISP) for each
+bootstrap file to the bootstrap code with which that we
+started. If there is a semantic difference between the orginal
+and the new bootstrap code, then we need to repeat the build
+process again, using the new bootstrap code. In principle we
+have to iterate until we reach the desired fixed point for
+all of the bootstrap vertices. Achieving this fixed point
+means that our internal code for Axiom no longer depends on
+the particular starting bootstrap code and it does not
+depend on how many times we have repeated the iterations
+after the fixed point is achieved.
+
+I say "in principle" because in actual fact, change in the
+bootstrap code with each iteration may not be that significant.
+On the other hand, it is not clear to me what are the pre-
+onditions on the initial bootstrap code might have to be in
+order to guarrantee the existence of a fixed point solution
+by iteration. It is also not clear that such a solution is
+necessarily unique. So perhaps it is not really possible to
+completely eliminate the dependence of Axiom on the initial
+choice of bootstrap code.
+
+But in preparing the algebra makefile for Axiom, I think we
+should be even more ambitious. I think it is very desirable to
+design a makefile script that directly incorporates the specific
+dependencies and not just a viable linear ordering. The make
+program is designed to perform a "lazy evaluation" on a lattice
+of such specific dependencies. If I make a change to coding in
+one spad file (by editing a spad.pamphlet file), I want the
+make program to use the information in the Makefile to re-compile
+only those spad files which are affected (both directly and
+indirectly) by my change. This would (usually) be a very short
+process compared to recompiling the whole set of well over
+1000 files.
+
+The second problem to which Tim has referred, namely attempting
+to find an optimal set of bootstrap files also deserves some
+attention. Presumably a smaller set of bootstrap files will
+converge to a fixed point more quickly that a larger set. And
+it is also desirable to have a smaller set in order to reduce
+the effort reguired to evaluate the correctness of the initial
+bootstrap code.
+
+I hope I have not taken us too far afield in this discussion.
+
+Cheers,
+Bill Page.
+
+
+On Sat, 2003-08-30 at 00:33, root wrote:
+> Bill Sit,
+> 
+> The linear order exists and is documented in the file 
+> src/algebra/Lattice.pamphlet. The compiler will tell
+> you all of the dependencies at compile time. The subtle
+> part is to find the bootstrap set since, in the beginning,
+> nothing will compile. That's part of what took so long.
+> The other part is that computing the correct location in
+> the lattice for all 1100 categories, domains, and packages
+> was tedious and time consuming. But it's done.
+> 
+> I believe the lattice can be further optimized but that's
+> just an academic exercise. The reason the lattice has to
+> exist in any form is that you need to compile from scratch.
+> Once that happens the lattice is worthless.
+> 
+> I'd like to see it graphed just so I can stare at the beast
+> that ate 8 months of my life.
+> 
+> Tim
+> axiom@tenkan.org
+> daly@idsi.net
+> 
+> 
+------- End of forwarded message -------
+
+
+
+From MAILER-DAEMON Sat Aug 30 16:16:59 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19tC8W-000110-86
+	for mharc-axiom-math@gnu.org; Sat, 30 Aug 2003 16:15:52 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19tC0y-0000Uk-Vl
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:08:05 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19tC0w-0000TT-JA
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:08:03 -0400
+Received: from [207.217.120.123] (helo=swan.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22) id 19tBv4-0006zv-8b
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 16:01:58 -0400
+Received: from dialup-67.75.101.79.dial1.stamford1.level3.net ([67.75.101.79]
+	helo=localhost.localdomain)
+	by swan.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19tBv0-00047T-00
+	for axiom-math@nongnu.org; Sat, 30 Aug 2003 13:01:55 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7UK1qh13955;
+	Sat, 30 Aug 2003 16:01:52 -0400
+Date: Sat, 30 Aug 2003 16:01:52 -0400
+Message-Id: <200308302001.h7UK1qh13955@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-math@nongnu.org
+X-Mailman-Approved-At: Sat, 30 Aug 2003 16:15:44 -0400
+Subject: [Axiom-math] [wyscc@cunyvm.cuny.edu: Re: [Axiom-developer] RE:
+	dependency visualization with VCG]
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Aug 2003 20:08:06 -0000
+
+------- Start of forwarded message -------
+X-Original-To: daly@idsi.net
+X-MessageWall-Score: 0 (mail-gw.bsdwebsolutions.com)
+X-MessageWall-Score: 0 (spam-filter-less.bsdwebsolutions.com)
+Date: Sat, 30 Aug 2003 11:21:22 -0400
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Reply-To: wyscc@cunyvm.cuny.edu
+Organization: City College of New York
+X-Accept-Language: zh,en
+To: daly@idsi.net
+Cc: axiom-developer@nongnu.org, bill.page1@sympatico.ca
+Subject: Re: [Axiom-developer] RE: dependency visualization with VCG
+Content-Type: text/plain; charset=us-ascii
+X-Authentication-Info: Submitted using SMTP AUTH at pop018.verizon.net from [162.83.137.57] at Sat, 30 Aug 2003 10:21:35 -0500
+X-UIDL: M]d"!<l~!!YXe"!W!h!!
+
+Tim and Bill:
+
+I just got Bill's comments, which I think agrees with my comments below (written
+before I read Bill's comments), and are also more practical than the abstract
+version I present. My original analysis was an attempt (I am no graph theory
+expert) to relate the practical to if you will a mathematical model using known
+algorithms from graph theory. This in no way diminishes the accomplishment Tim
+and other great hackers have achieved.
+
+William
+- ----------
+
+root wrote:
+> 
+> The linear order exists and is documented in the file
+> src/algebra/Lattice.pamphlet. The compiler will tell
+> you all of the dependencies at compile time. The subtle
+> part is to find the bootstrap set since, in the beginning,
+> nothing will compile. That's part of what took so long.
+> The other part is that computing the correct location in
+> the lattice for all 1100 categories, domains, and packages
+> was tedious and time consuming. 
+
+But this is a catch-22 situation. Your problem, however, is to be able to
+compile from scratch, even if in order to find the linear order, you have to do
+some "test" compiling (or rely on "information" from the NAG compilation -- this
+is NOT equivalent to relying on the "compiled object files"). One can use ANY
+means to obtain the dependency adjacent list on vertices, including manually
+analysing all spad sources, which you probably did.  From that, one can identify
+the bootstrap set (the set of roots of out-trees in the components of the
+digraphs). I think they are just those vertices with indegree 0. 
+
+
+> But it's done.
+
+> I believe the lattice can be further optimized but that's
+> just an academic exercise. The reason the lattice has to
+> exist in any form is that you need to compile from scratch.
+> Once that happens the lattice is worthless.
+
+I agree that the lattice can be, and should be, further optimized. It's not just
+an academic exercise. Further, I do not agree the lattice is worthless. I know
+that "it's done", but each time a full (or even partial) compilation is done, a
+more accurate (or up-to-date) dependency adjacent list is found that can feed
+the next compilation from scratch. Right now, you have a static library of spad
+sources. This is going to become dynamic as more spad sources are added.
+
+> I'd like to see it graphed just so I can stare at the beast
+> that ate 8 months of my life.
+
+Your initial great effort is much appreciated. It is part of the "collection of
+data" for the dependency digraph. However you did it, you did a fantastic job.
+What I was pointing out was that when Bill Page wrote the routine to graph the
+dependency digraph, it seems to me he started afresh from the spad sources to
+derive the dependency digraph. Isn't it true that you already have the digraph
+and you only need to display it visually? I am probably missing something
+subtle.
+
+Actually, I just note that the analysis I gave has a small mistake. That is,
+even though we obtain a directed forest of out-trees for the digraph, and a
+linear order extending each out-tree, it is not the case that the compilation of
+any vertex A just depend on what precedes it. (In other words, this property
+cannot be satisfied if there are cycles).
+
+There is a further extension of the depth-first search algorithm that computes
+what is called the condensation of a digraph. Roughly speaking, the condensation
+is an acyclic digraph whose vertices are the strong components of the digraph (a
+strong component is a maximally strongly connected sub-digraph where there is a
+directed path between any two vertices) and whose arcs reflect the arcs between
+strong components. 
+
+It seems the graph you want to see is the condensation and the strong components
+of the dependency digraph.
+
+William
+------- End of forwarded message -------
+
+
+

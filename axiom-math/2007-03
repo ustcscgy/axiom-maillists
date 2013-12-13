@@ -1,0 +1,828 @@
+From MAILER-DAEMON Tue Mar 20 10:52:42 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HTfha-0005Uq-HC
+	for mharc-axiom-math@gnu.org; Tue, 20 Mar 2007 10:52:42 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HTfhZ-0005Ty-0H
+	for axiom-math@nongnu.org; Tue, 20 Mar 2007 10:52:41 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HTfhW-0005Sh-4V
+	for axiom-math@nongnu.org; Tue, 20 Mar 2007 10:52:40 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1HTfhV-0005Sb-Vm; Tue, 20 Mar 2007 09:52:38 -0500
+Received: from mail261.megamailservers.com ([216.251.41.81])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <bill.page1@synthesis.anikast.ca>)
+	id 1HTffv-0007Y7-UG; Tue, 20 Mar 2007 10:51:00 -0400
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail261.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	l2KEoedT014129; Tue, 20 Mar 2007 10:50:54 -0400
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: <axiom-mail@nongnu.org>, <axiom-math@nongnu.org>,
+	"'axiom-dev'" <axiom-developer@nongnu.org>
+Date: Tue, 20 Mar 2007 10:50:34 -0400
+Message-ID: <003f01c76aff$22b6d280$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6822
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3028
+Importance: Normal
+Thread-Index: Acdq/xzrVXu0iUIAQ7aOeAls4+yGeg==
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: 
+Subject: [Axiom-math] Axiom Google Summer of Code Deadline
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 20 Mar 2007 14:52:41 -0000
+
+This year LispNYC is offering to support Google-funded Summer of Code
+projects for Axiom. For more information please see:
+
+http://lispnyc.org/soc.clp
+
+and
+
+http://wiki.axiom-developer.org/SummerOfCode2007
+
+Note: The deadline for student applications is March 24th!
+
+Apply now online here:
+
+http://groups.google.com/group/google-summer-of-code-announce/web/guide-t=
+o-t
+he-gsoc-web-app-for-student-applicants
+
+Do not hesitate if your interests do not exactly match the project
+proposals. All applications relevant to Lisp and Axiom will be
+considered. Successful applicants will earn up to $US 4,500 this
+summer.=20
+
+Regards,
+Bill Page.
+
+PS. Since the time is very short please advertise this offer
+within your department/organization as soon as possible.
+
+
+
+
+
+From MAILER-DAEMON Wed Mar 28 04:48:34 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HWTpZ-0007nU-Us
+	for mharc-axiom-math@gnu.org; Wed, 28 Mar 2007 04:48:34 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HWTpX-0007mF-RM
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 04:48:31 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HWTpV-0007jL-PA
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 04:48:30 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1HWTpV-0007jD-L1; Wed, 28 Mar 2007 03:48:29 -0500
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HWTn3-00064u-AT; Wed, 28 Mar 2007 04:45:57 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HWTn0-0001xa-Rx; Wed, 28 Mar 2007 10:45:54 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HWTn0-0000tn-Qv; Wed, 28 Mar 2007 10:45:54 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Gabriel Dos Reis <gdr@cs.tamu.edu>
+References: <200703280504.l2S54UM6007716@axiom-developer.org>
+	<87ejn96a17.fsf@soliton.cs.tamu.edu>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 28 Mar 2007 10:45:53 +0200
+In-Reply-To: <87ejn96a17.fsf@soliton.cs.tamu.edu>
+Message-ID: <9qvegliwn2.fsf_-_@aquin.mat.univie.ac.at>
+Lines: 49
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-developer] Examples for good types
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Mar 2007 08:48:32 -0000
+
+Dear all,
+
+Please reply only to axiom-math.
+
+I very recently discovered another example, which I find (personally) more
+convincing.
+
+Axiom has a (rather weak, but still) domain for symmetric functions. 
+The multiplication of two symmetric functions goes as follows:
+
+(7) -> powerSum 4 * powerSum 2 * powerSum 2 * powerSum 2
+
+            3
+   (7)  (4 2 )
+                                   Type: SymmetricPolynomial Fraction Integer
+
+(i.e., it is represented as an integer partition, where equal parts are, as
+customary, written as exponents.)
+
+Symmetric Functions like determinants a lot, especially in Axiom:
+
+m := matrix [[complete 1, complete 0],[complete 2, complete 1]]
+
+        +     (1)        [] +
+        |                   |
+   (2)  |1       1   2      |
+        |- (2) + - (1 )  (1)|
+        +2       2          +
+                            Type: Matrix SymmetricPolynomial Fraction Integer
+(3) -> determinant m
+
+          1       1   2
+   (3)  - - (2) + - (1 )
+          2       2
+                                   Type: SymmetricPolynomial Fraction Integer
+
+Note that Axiom uses the product in the ring of symmetric functions to compute
+the determinant. To check, by Jacobi-Trudi the result should coincide with the
+Schur function corresponding to the partition $(1,1)$:
+
+(4) -> SFunction [1,1]
+
+          1       1   2
+   (4)  - - (2) + - (1 )
+          2       2
+                                   Type: SymmetricPolynomial Fraction Integer
+
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Mar 28 06:52:06 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HWVl8-0004if-FJ
+	for mharc-axiom-math@gnu.org; Wed, 28 Mar 2007 06:52:06 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HWVl5-0004hz-Ev
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 06:52:03 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HWVl3-0004hk-67
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 06:52:01 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1HWVl2-0004hh-RV; Wed, 28 Mar 2007 05:52:00 -0500
+Received: from athena.risc.uni-linz.ac.at ([140.78.116.39])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA1:24) (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>)
+	id 1HWViZ-0005Uc-Mg; Wed, 28 Mar 2007 06:49:28 -0400
+Received: from [193.170.38.118] (hemmecke@woodpecker-wlan.risc.uni-linz.ac.at
+	[193.170.38.118]) (authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	l2SAnJvF007702
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Wed, 28 Mar 2007 12:49:19 +0200
+Message-ID: <460A486B.7060809@hemmecke.de>
+Date: Wed, 28 Mar 2007 12:50:19 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0b2 (X11/20070116)
+MIME-Version: 1.0
+To: Ondrej Certik <ondrej@certik.cz>
+References: <200703280504.l2S54UM6007716@axiom-developer.org>
+	<85b5c3130703280329t7c81ed73g85ef47289180e02e@mail.gmail.com>
+In-Reply-To: <85b5c3130703280329t7c81ed73g85ef47289180e02e@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-kernel: Linux 2.4-2.6
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, gdr@cs.tamu.edu
+Subject: [Axiom-math] Re: [Axiom-developer] CAS for the masses
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Mar 2007 10:52:05 -0000
+
+On 03/28/2007 12:29 PM, Ondrej Certik wrote:
+>> The usual example is:
+>>
+>>   (1/2)*x^2 + (1/3)*x + 3
+>>                             Type: Polynomial Fraction Integer
+>>
+>> %::Fraction(Polynomial(Integer))
+>>
+>>       2
+>>     3x  + 2x + 18
+>>     -------------
+>>           6
+>>                             Type: Fraction Polynomial Integer
+>>
+>>
+>> When you read a maths book most of the equations are actually just
+>> "icons". The real meaning of the equation is in the surrounding text
+>> and context. Axiom carries that surrounding information in the type
+>> whereas other systems focus on the "icons" and syntactic manipulations.
+> 
+> 
+> I have this question:
+> 
+> The above expressions can be assembled just from these 4 types (or
+> classes in SymPy): Add, Mul, Pow, Integer
+> 
+> what is the advantage to introduce more classes, like Polynomial
+> Fraction Integer or Fraction Polynomial Integer?
+> 
+> Because having the expression in the form of the 4 basic classes (Add,
+> Mul, Pow, Integer), everything else can be easily inferred from this.
+
+Even mathematically
+   Fraction Polynomial Integer    ---- QQ(Z[x,y,z,...])
+and
+   Polynomial Fraction Integer    ---- Q[x,y,z,...]
+are not the same.
+1/x lies in the first, but not in the second domain.
+(By QQ I mean the operator to form the field of fractions.)
+
+But there is something else with that example. Some people prefer the 
+first and some the second form. There is simply not THE simplest form.
+
+Suppose you have the equations
+
+3*x*p-1=0
+
+and you want to solve it for p.
+
+Clearly, the solution in QQ(Z[x]) is 1/(3*x).
+The solution in Q[x] is... *no solution*.
+
+Do you see that there is a difference.
+
+Ralf
+
+
+
+From MAILER-DAEMON Wed Mar 28 07:01:55 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HWVud-0005z2-NL
+	for mharc-axiom-math@gnu.org; Wed, 28 Mar 2007 07:01:55 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HWVuc-0005yg-PW
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 07:01:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HWVub-0005yH-81
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 07:01:54 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1HWVuZ-0005xv-HD; Wed, 28 Mar 2007 06:01:51 -0500
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HWVs6-0007K6-Dd; Wed, 28 Mar 2007 06:59:18 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HWVs4-0007Ci-1e; Wed, 28 Mar 2007 12:59:16 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HWVs4-0006sX-0V; Wed, 28 Mar 2007 12:59:16 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Ondrej Certik" <ondrej@certik.cz>
+References: <200703280504.l2S54UM6007716@axiom-developer.org>
+	<85b5c3130703280329t7c81ed73g85ef47289180e02e@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 28 Mar 2007 12:59:15 +0200
+In-Reply-To: <85b5c3130703280329t7c81ed73g85ef47289180e02e@mail.gmail.com>
+Message-ID: <9qvegl8who.fsf_-_@aquin.mat.univie.ac.at>
+Lines: 47
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-dev <axiom-developer@nongnu.org>, axiom-math@nongnu.org,
+	gdr@cs.tamu.edu
+Subject: [Axiom-math] Re: Advantage of Types and different representations
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Mar 2007 11:01:55 -0000
+
+Dear all,
+
+
+Please reply to axiom-math@nongnu.org.
+
+"Ondrej Certik" <ondrej@certik.cz> writes:
+
+> >       2
+> >     3x  + 2x + 18
+> >     -------------
+> >           6
+> >                             Type: Fraction Polynomial Integer
+
+> The above expressions can be assembled just from these 4 types (or classes in
+> SymPy): Add, Mul, Pow, Integer
+> 
+> what is the advantage to introduce more classes, like Polynomial Fraction
+> Integer or Fraction Polynomial Integer?
+
+You get a normal form for free, keeping a lot of flexibility. Apart from that,
+it is not correct that we introduce a class "Fraction Polynomial Integer". We
+introduce a function "Fraction", a function "Polynomial" and a function
+"Integer".
+
+A normal form for "expressions" composed with Add, Mul, Pow, Integer does not
+exist, if I am not mistaken. Using types, you can very easily restrict
+"attention" to classes where normal forms do exist.
+
+Maybe polynomials are a bad example, since they are so well known. I propose
+another example: Algebraic Differential Equations. Although they do not allow a
+normal form, it seems. But you can still test for zero.
+
+It would not take so much time to implement a domain that deals with such
+functions. And, I guess, in SymPy, you would not be able to distinguish an ADE
+from any other "expression", because in SymPy, I guess, objects are not typed.
+
+Another example, again: how would you multiply symmetric functions in SymPy? Or
+Maple or Mathematica, if you prefer.
+
+> Because having the expression in the form of the 4 basic classes (Add, Mul,
+> Pow, Integer), everything else can be easily inferred from this.
+
+I should add: it is indeed useful to have such a representation, too. (called:
+ExpressionTree). Many things are easier to do with ExpressionTrees. But even
+better is to have both, as we do in Axiom/Aldor.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Mar 28 07:50:57 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HWWg5-0001im-Fz
+	for mharc-axiom-math@gnu.org; Wed, 28 Mar 2007 07:50:57 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HWWg3-0001fW-GH
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 07:50:55 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HWWg1-0001cz-Qh
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 07:50:55 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HWWg1-0001ck-Ji
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 06:50:53 -0500
+Received: from spock.physik.uni-konstanz.de ([134.34.143.6])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <fauser@spock.physik.uni-konstanz.de>)
+	id 1HWWdY-0002pR-6K
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 07:48:20 -0400
+Received: from clifford.physik.uni-konstanz.de (clifford [134.34.143.32])
+	by spock.physik.uni-konstanz.de (8.8.5/8.8.5) with ESMTP id LAA06746
+	for <axiom-math@nongnu.org>; Wed, 28 Mar 2007 11:49:33 +0200 (MET DST)
+Received: from clifford.physik.uni-konstanz.de (localhost [127.0.0.1])
+	by clifford.physik.uni-konstanz.de (8.12.6/8.12.6/SuSE Linux 0.6) with
+	ESMTP id l2SBocxU031473
+	for <axiom-math@nongnu.org>; Wed, 28 Mar 2007 13:50:38 +0200
+Received: from localhost (fauser@localhost)
+	by clifford.physik.uni-konstanz.de (8.12.6/8.12.6/Submit) with ESMTP id
+	l2SBoc1S031470
+	for <axiom-math@nongnu.org>; Wed, 28 Mar 2007 13:50:38 +0200
+Date: Wed, 28 Mar 2007 13:50:38 +0200 (CEST)
+From: Bertfried Fauser <fauser@spock.physik.uni-konstanz.de>
+To: axiom-math@nongnu.org
+In-Reply-To: <9qvegl8who.fsf_-_@aquin.mat.univie.ac.at>
+Message-ID: <Pine.LNX.4.44.0703281344250.31431-100000@clifford.physik.uni-konstanz.de>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-detected-kernel: NeXTSTEP 3.3 (1)
+Subject: [Axiom-math] Re: [Axiom-developer] Re: Advantage of Types and
+ different representations
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Bertfried.Fauser@uni-konstanz.de
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Mar 2007 11:50:55 -0000
+
+On 28 Mar 2007, Martin Rubey wrote:
+Hi *;
+
+its amazing how these things cook up in a periodic manner, my guess is,
+that occassional users and newcommers are afraid of typed CAS and tend to
+use untyped (esy going, quick solution) CAS.
+
+> Another example, again: how would you multiply symmetric functions in SymPy? Or
+> Maple or Mathematica, if you prefer.
+
+If you try to implement this in maple, as I did, you really really develop
+desire to have a typed CAS at your finger tips, one of my motivations to
+use AXIOM on a more frequent basis. (I could provide ugly examples in
+maple where typing would prevent nonsense from being produced, ...) Even
+more discusting you need to produce in untyped languanges your types
+yourself, loosing tremendously working power for your actual subject.
+
+Question> How do you distinguish in SymPy a tensor A and B of say second
+and third rank? (I don't want to see a list of lists etc of the
+components though)
+
+Enjoy AXIOM :))
+Ciao
+BF.
+
+
+
+
+
+% PD Dr Bertfried Fauser
+%     Institution: Max Planck Institute for Math, Leipzig <http://www.mis.mpg.de>
+%   Privat Docent: University of Konstanz, Phys Dept <http://www.uni-konstanz.de>
+%  contact|->URL : http://clifford.physik.uni-konstanz.de/~fauser/
+%          Phone : Leipzig +49 341 9959 735  Konstanz +49 7531 693491
+
+
+
+
+From MAILER-DAEMON Wed Mar 28 08:08:22 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HWWww-0007zy-LC
+	for mharc-axiom-math@gnu.org; Wed, 28 Mar 2007 08:08:22 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HWWwu-0007zs-FR
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 08:08:20 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HWWwr-0007zg-V4
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 08:08:19 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HWWwr-0007zd-PZ
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 07:08:17 -0500
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1HWWuN-0006M8-U5
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 08:05:44 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HWWuM-00050F-Gf; Wed, 28 Mar 2007 14:05:42 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HWWuM-0001KI-FO; Wed, 28 Mar 2007 14:05:42 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Ondrej Certik" <ondrej@certik.cz>
+References: <200703280504.l2S54UM6007716@axiom-developer.org>
+	<85b5c3130703280329t7c81ed73g85ef47289180e02e@mail.gmail.com>
+	<9qvegl8who.fsf_-_@aquin.mat.univie.ac.at>
+	<85b5c3130703280433w29d8f46bn21534b8897181f82@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 28 Mar 2007 14:05:40 +0200
+In-Reply-To: <85b5c3130703280433w29d8f46bn21534b8897181f82@mail.gmail.com>
+Message-ID: <9qps6t60a3.fsf@aquin.mat.univie.ac.at>
+Lines: 119
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: Advantage of Types and different representations
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Mar 2007 12:08:20 -0000
+
+"Ondrej Certik" <ondrej@certik.cz> writes:
+
+> > You get a normal form for free, keeping a lot of flexibility. Apart from that,
+> > it is not correct that we introduce a class "Fraction Polynomial Integer". We
+> > introduce a function "Fraction", a function "Polynomial" and a function
+> > "Integer".
+> 
+> Ok, but a Fraction(a,b) is the same as Mul(a,Pow(b,-1)), and
+> Polynomial is the same as Add(Pow(x,2), Mul(2,x)) etc.
+
+Yes, but what you have is not a normal form:
+
+x^2 - 1 = (x+1)(x-1).
+
+> I am sorry, I have some questions regarding a terminology that you use. By
+> normal form, do you mean something like a canonical form?
+
+Something like, yes. But definitively not a hash. A normal form is a
+datastructure where equality of two objects implies equality of the
+corresponding datastructures.
+
+Somewhat weaker is the existence of a zero test: you can check algorithmically
+whether a given object is the zero object, or, equivalently, whether two
+objects are equal.
+
+For general expressions, one has neither.
+
+> By ADE, do you mean this:
+> 
+> http://mathworld.wolfram.com/Differential-AlgebraicEquation.html
+> 
+> ?
+
+Nearly, for me, F should be a (multivariate) polynomial.
+
+> OK, but if I wanted to work with ADE - more than just multiply them together,
+
+Ahem, how would you multiply them together? That's quite non-trivial, in
+fact. Mind you: the result should have as solution the product of the solutions
+of the given two equations!
+
+> I would need to introduce a new class ADE. The same is with polynomials, like
+> polynomial gcd is an algorithm, that only works for polynomials.
+
+Another point for Axiom: in axiom, you define the gcd once. Of course, you are
+free to define more efficient versions for certain domains, but you have a
+default version that works for any Eucledian Domain.
+
+> Currently, in SymPy, the input to gcd is just an expression tree and it
+> checks, if it is a polynomial (and computes gcd), otherwise raises an
+> exception.
+
+And in Axiom, you do not need to check.
+
+> How are you doing this in Axiom - are you converting from the expression tree
+> to introduce a type Polynomial, or do you work with the type Polynomial right
+> from the beginning?
+
+You can do, as you wish. Sometimes it is more convenient to work with
+expressions in the beginning, and coerce them to a polynomial later, sometimes
+(in fact, most of the time) it is better to do all computations in the ring of
+polynomials.
+ 
+> > Another example, again: how would you multiply symmetric functions in
+> > SymPy? Or Maple or Mathematica, if you prefer.
+> 
+> What particular property do you want to get?
+
+In Axiom you can say:
+
+x := powerSum 5
+y := powerSum 3
+
+x*y
+
+or 
+
+z := SFunction([5,3])
+
+x*y*z
+
+And, mind that "*" does not need to check in which domain the objects x, y and
+z live. It just knows. And thus I can also use the usual determinant. I gave
+the example onve already:
+
+Many CAS's can do what is given above. To show the advantages of generic
+programming using types, consider the following matrix of complete symmetric
+functions, written in the basis of power sum symmetric functions:
+
+m := matrix [[complete 1, complete 0],[complete 2, complete 1]]
+
+        +     (1)        [] +
+        |                   |
+   (2)  |1       1   2      |
+        |- (2) + - (1 )  (1)|
+        +2       2          +
+                            Type: Matrix SymmetricPolynomial Fraction Integer
+(3) -> determinant m
+
+          1       1   2
+   (3)  - - (2) + - (1 )
+          2       2
+                                   Type: SymmetricPolynomial Fraction Integer
+
+Note that Axiom uses the product in the ring of symmetric functions to compute
+the determinant. To check, by Jacobi-Trudi the result should coincide with the
+Schur function corresponding to the partition $(1,1)$:
+
+(4) -> SFunction [1,1]
+
+          1       1   2
+   (4)  - - (2) + - (1 )
+          2       2
+                                   Type: SymmetricPolynomial Fraction Integer
+
+
+
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Mar 28 09:01:05 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HWXlx-0007OM-Ar
+	for mharc-axiom-math@gnu.org; Wed, 28 Mar 2007 09:01:05 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HWXlv-0007NQ-Pf
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 09:01:03 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HWXlt-0007Ll-LL
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 09:01:03 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HWXlt-0007LQ-CK
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 08:01:01 -0500
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1HWXjP-0005jh-Iw
+	for axiom-math@nongnu.org; Wed, 28 Mar 2007 08:58:28 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HWXjN-0002bf-Qc; Wed, 28 Mar 2007 14:58:25 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HWXjN-0001tY-PT; Wed, 28 Mar 2007 14:58:25 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Ondrej Certik" <ondrej@certik.cz>
+References: <200703280504.l2S54UM6007716@axiom-developer.org>
+	<85b5c3130703280329t7c81ed73g85ef47289180e02e@mail.gmail.com>
+	<9qvegl8who.fsf_-_@aquin.mat.univie.ac.at>
+	<85b5c3130703280433w29d8f46bn21534b8897181f82@mail.gmail.com>
+	<9qps6t60a3.fsf@aquin.mat.univie.ac.at>
+	<85b5c3130703280533t68e3418g485503efc6bd58bd@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 28 Mar 2007 14:58:25 +0200
+In-Reply-To: <85b5c3130703280533t68e3418g485503efc6bd58bd@mail.gmail.com>
+Message-ID: <9qwt114j9q.fsf@aquin.mat.univie.ac.at>
+Lines: 85
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: Advantage of Types and different representations
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Mar 2007 13:01:04 -0000
+
+"Ondrej Certik" <ondrej@certik.cz> writes:
+
+> So how are you comparing x^2-1 and (x+1)(x-1) in Axiom? Is it the same, or
+> not?
+
+Of course it is. But the point is, you can choose the representation. If you
+know that your polynomials will have lots and lots of factors, and if you
+mainly multiply your polynomials, you will be better off to work in the domain
+Factored Polynomial Integer. Otherwise, you will probably prefer to work in
+Polynomial Integer.
+
+> In SymPy, every expression is converted to a canonical form and then assigned
+> a hash. Then we just need to compare the hashes, thus resulting in O(1)
+> operation.
+
+And how does the user tell the system which canonical form is suitable?
+
+> > Another point for Axiom: in axiom, you define the gcd once. Of course, you
+> > are free to define more efficient versions for certain domains, but you
+> > have a default version that works for any Eucledian Domain.
+> 
+> The same with SymPy, we also implement each algorithm exactly once. 
+
+Oh, I misinterpreted:
+
+> > > The same is with polynomials, like polynomial gcd is an algorithm, that
+> > > only works for polynomials.
+
+ALthough I do not see how your gcd algorithm will work with *any* Euclidian
+Domain... (Note that multiplication and addition do not necessarily have to be
+compatible with the usual multiplication and addition of, say, integers, I
+guess. Well, maybe they have to, I'm not sure right now.)
+
+> > > Currently, in SymPy, the input to gcd is just an expression tree and it
+> > > checks, if it is a polynomial (and computes gcd), otherwise raises an
+> > > exception.
+> >
+> > And in Axiom, you do not need to check.
+> 
+> Well, you need to check at some point, when converting from the expression
+> tree to the higher level rep. 
+
+But what if I don't start at all with an expression tree?
+
+> I probably know what you mean - in Aldor, you need to specify a type of each
+> variable in advance, but in Python, the type of the variable is inferred from
+> the right hand side.
+
+For Axiom, you have to distinguish between the extension language (say, for
+example, Aldor) and the interpreter. The interpreter tries hard to infer a
+sensible type for the things you type in.
+
+> > Note that Axiom uses the product in the ring of symmetric functions to compute
+> > the determinant. To check, by Jacobi-Trudi the result should coincide with the
+> > Schur function corresponding to the partition $(1,1)$:
+> >
+> > (4) -> SFunction [1,1]
+> >
+> >           1       1   2
+> >    (4)  - - (2) + - (1 )
+> >           2       2
+> >                                    Type: SymmetricPolynomial Fraction Integer
+> 
+> Maybe I am wrong, but it seems to me, that the advantage of doing it this way
+> in Axiom is that it allows you to implement each mathematical algorithm
+> exactly once, and possibly specifying a faster/better algorithm in special
+> cases. 
+
+That's one advantage, but certainly not the only one. I still do not know how
+to implement a non-standard multiplication (as, for example, for symmetric
+functions) in Mathematica, Maple, or Python.  Would it be possible to implement
+it in SymPy *without* modifying "Mul"? I.e., I want to write
+
+powerSum 3 * powerSum 5 
+
+and obtain the symmetric function correponding to the partition (3, 5). And, of
+course, I want to compute the determinant of a matrix of symmetric functions,
+also. Maybe more precisely, if you create a new class "P", how do you tell
+SymPy what
+
+Mul(P(3), P(5))
+
+means?
+
+Martin
+
+
+
+

@@ -1,0 +1,2640 @@
+From MAILER-DAEMON Mon May 02 10:18:31 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QGtxH-0004O2-9I
+	for mharc-axiom-math@gnu.org; Mon, 02 May 2011 10:18:31 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:56445)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <s.karrmann@web.de>) id 1QGF5l-0004yN-BD
+	for axiom-math@nongnu.org; Sat, 30 Apr 2011 14:40:34 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <s.karrmann@web.de>) id 1QGF5k-0001Ls-HS
+	for axiom-math@nongnu.org; Sat, 30 Apr 2011 14:40:33 -0400
+Received: from fmmailgate01.web.de ([217.72.192.221]:52172)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <s.karrmann@web.de>) id 1QGF5k-0001Lo-BY
+	for axiom-math@nongnu.org; Sat, 30 Apr 2011 14:40:32 -0400
+Received: from smtp04.web.de  ( [172.20.0.225])
+	by fmmailgate01.web.de (Postfix) with ESMTP id 3F9D718E047CD
+	for <axiom-math@nongnu.org>; Sat, 30 Apr 2011 20:40:30 +0200 (CEST)
+Received: from [95.112.58.98] (helo=[192.168.178.23])
+	by smtp04.web.de with asmtp (TLSv1:AES256-SHA:256) (WEB.DE 4.110 #2)
+	id 1QGF5i-0007f0-00
+	for axiom-math@nongnu.org; Sat, 30 Apr 2011 20:40:30 +0200
+From: Stefan Karrmann <s.karrmann@web.de>
+To: axiom-math@nongnu.org
+Content-Type: text/plain; charset="UTF-8"
+Date: Sat, 30 Apr 2011 20:40:28 +0200
+Message-ID: <1304188828.20602.11.camel@hermes>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.30.3 
+Content-Transfer-Encoding: 7bit
+Sender: s.karrmann@web.de
+X-Sender: s.karrmann@web.de
+X-Provags-ID: V01U2FsdGVkX1/DqOKDxvcc6iytr7JvlID/wdTjH1xDuRAcOHRI
+	NmRrERWHVq7cuIfaaIHPZSkL1AiEjFoBUycovnSn06hGml0wSk CuC2yjnrI=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.4-2.6
+X-Received-From: 217.72.192.221
+X-Mailman-Approved-At: Mon, 02 May 2011 10:18:30 -0400
+Subject: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Apr 2011 18:40:34 -0000
+
+Dear all,
+
+I'm new to axiom and have a problem with piecewise functions.
+
+test1 (x | x < 10) == 2*x
+test1 (x | x < 10) == 5*x^2
+test1
+-> 
+   test1 (x | x < 10) == 2x
+   test1 (x | ^ x < 10) == 5x
+                                                   Type: FunctionCalled
+test1 y
+->
+     2
+   5y
+
+I expected something like (if y < 10 then 2*y else 5*y**2).
+
+How is it possible to pass a Variable to a piecewise function respecting
+the pieces?
+
+PS: Using a block and => or explicit if-then-else does not help.
+
+-- 
+Kind regards,
+Stefan
+
+
+
+From MAILER-DAEMON Mon May 02 20:36:30 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QH3bK-0006AE-CV
+	for mharc-axiom-math@gnu.org; Mon, 02 May 2011 20:36:30 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:39729)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1QH3bI-00069y-5f
+	for axiom-math@nongnu.org; Mon, 02 May 2011 20:36:29 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1QH3bG-00038z-Ta
+	for axiom-math@nongnu.org; Mon, 02 May 2011 20:36:28 -0400
+Received: from mail-iy0-f173.google.com ([209.85.210.173]:54102)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1QH3bG-00038v-Le
+	for axiom-math@nongnu.org; Mon, 02 May 2011 20:36:26 -0400
+Received: by iym10 with SMTP id 10so6230933iym.4
+	for <axiom-math@nongnu.org>; Mon, 02 May 2011 17:36:24 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.42.131.2 with SMTP id x2mr11008256ics.259.1304382984634; Mon,
+	02 May 2011 17:36:24 -0700 (PDT)
+Received: by 10.43.131.66 with HTTP; Mon, 2 May 2011 17:36:24 -0700 (PDT)
+In-Reply-To: <1304188828.20602.11.camel@hermes>
+References: <1304188828.20602.11.camel@hermes>
+Date: Mon, 2 May 2011 20:36:24 -0400
+Message-ID: <BANLkTi=Smqu-0yrpEwBNM1ccw2x2+Lwhwg@mail.gmail.com>
+From: Bill Page <bill.page@newsynthesis.org>
+To: Stefan Karrmann <s.karrmann@web.de>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-Received-From: 209.85.210.173
+Cc: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 03 May 2011 00:36:29 -0000
+
+What you want is probably better called a "piecewise expression" - not
+a function in Axiom's sense. Unfortunately as far as I know piecewise
+expressions like "(if y < 10 then 2*y else 5*y**2)" are not
+implemented in any version of Axiom so they can not be returned as the
+result of a function application like "test1(y)".
+
+To explain the results that you get, it is important to know that in
+older versions of Axiom (in particular in the original Axiom open
+source project), the expression
+
+  y<10
+
+is evaluated as a comparison of polynomials in lexicographical order.
+As such "y<10" is "false". In other versions of Axiom to avoid such
+confusion lexicographical ordering is no longer expressed by the "<"
+function so the expression "y<10" is not evaluated at all. In FriCAS
+you would write: "smaller?(x,10)", in OpenAxiom it is written:
+"before?(10,x)". But like in the original Axiom, both of these
+functions are always fully evaluated as a boolean value, true or
+false.  They cannot be used like "unevaluated functions" or
+expressions.
+
+I hope that helps.
+
+Regards,
+Bill Page.
+
+
+On Sat, Apr 30, 2011 at 2:40 PM, Stefan Karrmann <s.karrmann@web.de> wrote:
+> Dear all,
+>
+> I'm new to axiom and have a problem with piecewise functions.
+>
+> test1 (x | x < 10) =3D=3D 2*x
+> test1 (x | x < 10) =3D=3D 5*x^2
+> test1
+> ->
+> =A0 test1 (x | x < 10) =3D=3D 2x
+> =A0 test1 (x | ^ x < 10) =3D=3D 5x
+> =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =
+=A0 =A0 =A0 =A0 =A0 =A0 =A0 Type: FunctionCalled
+> test1 y
+> ->
+> =A0 =A0 2
+> =A0 5y
+>
+> I expected something like (if y < 10 then 2*y else 5*y**2).
+>
+> How is it possible to pass a Variable to a piecewise function respecting
+> the pieces?
+>
+> PS: Using a block and =3D> or explicit if-then-else does not help.
+>
+> --
+> Kind regards,
+> Stefan
+>
+>
+> _______________________________________________
+> Axiom-math mailing list
+> Axiom-math@nongnu.org
+> https://lists.nongnu.org/mailman/listinfo/axiom-math
+>
+
+
+From MAILER-DAEMON Mon May 02 21:02:04 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QH404-0008Hv-8N
+	for mharc-axiom-math@gnu.org; Mon, 02 May 2011 21:02:04 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:55164)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QH400-00089y-Iu
+	for axiom-math@nongnu.org; Mon, 02 May 2011 21:02:03 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QH3zz-0007U7-N6
+	for axiom-math@nongnu.org; Mon, 02 May 2011 21:02:00 -0400
+Received: from cgate.sci.ccny.cuny.edu ([134.74.34.100]:57342)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QH3zz-0007Tk-L2
+	for axiom-math@nongnu.org; Mon, 02 May 2011 21:01:59 -0400
+Received: from [71.190.87.119] (account wyscc@sci.ccny.cuny.edu)
+	by cgate.sci.ccny.cuny.edu (CommuniGate Pro WebUser 4.2.10)
+	with HTTP id 22699882; Mon, 02 May 2011 21:07:39 -0400
+From: "William Sit" <wyscc@sci.ccny.cuny.edu>
+To: Stefan Karrmann <s.karrmann@web.de>,axiom-math@nongnu.org
+X-Mailer: CommuniGate Pro WebUser Interface v.4.2.10
+Date: Mon, 02 May 2011 21:07:39 -0400
+Message-ID: <web-22699882@cgate.sci.ccny.cuny.edu>
+In-Reply-To: <1304188828.20602.11.camel@hermes>
+References: <1304188828.20602.11.camel@hermes>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-Received-From: 134.74.34.100
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 03 May 2011 01:02:03 -0000
+
+Dear Stefan:
+
+When you input "x < 10" into a symbolic computation 
+program, the meaning is at first ambiguous. In the context 
+of a function such as test1, a meaning can be obtained by 
+assuming x is of the same type as 10 (or at least numeric) 
+and the usual ordering of numbers is used for the "<" 
+operation. However, if the input x is not numeric, such as 
+the symbol y you use, then it does not make sense to 
+compare a symbol y with a number, except in the context of 
+polynomials (y and 10 both treated as polynomials in y). 
+There, the usual ordering is an extension of a 
+term-ordering and y > 10, as polynomials, and that is why 
+you get 5y^2.  (BTW, you have a typo in your definition of 
+test1.)
+
+To implement what you expect for "test1 y" would require a 
+whole new setup, treating "y < 10" as an unevaluated 
+expression (hold the evaluation until more information is 
+known about y). But even if that is the setup, "test1 y" 
+could only return "test1 y", unless there is an 
+instruction from the user to "expand" the definition of 
+test1.
+
+So the answer to your question "How is it possible ..." 
+is, "It is not possible, in the context of piecewise 
+functions." because no matter what the system does, you 
+gain no new information other than what you inputted, 
+until you let the system know what y is, numerically.
+
+At a higher level of symbolic computation, it is possible 
+to simplify a boolean expression of inequalities (in 
+Axiom, as far as I know, there is no such domain yet; 
+Mathematica has a function called "Reduce" that does 
+simplifications involving inequalities and equations). 
+However, that would not be in the simple context of a 
+piecewise function.
+
+Tim Daly has done some experiments with a proviso domain 
+in Axiom. He may be able to tell you more.
+
+William
+
+
+On Sat, 30 Apr 2011 20:40:28 +0200
+  Stefan Karrmann <s.karrmann@web.de> wrote:
+> Dear all,
+> 
+> I'm new to axiom and have a problem with piecewise 
+>functions.
+> 
+> test1 (x | x < 10) == 2*x
+> test1 (x | x < 10) == 5*x^2
+> test1
+> -> 
+>   test1 (x | x < 10) == 2x
+>   test1 (x | ^ x < 10) == 5x
+>                                                   Type: 
+>FunctionCalled
+> test1 y
+> ->
+>     2
+>   5y
+> 
+> I expected something like (if y < 10 then 2*y else 
+>5*y**2).
+> 
+> How is it possible to pass a Variable to a piecewise 
+>function respecting
+> the pieces?
+> 
+> PS: Using a block and => or explicit if-then-else does 
+>not help.
+> 
+> -- 
+> Kind regards,
+> Stefan
+> 
+> 
+> _______________________________________________
+> Axiom-math mailing list
+> Axiom-math@nongnu.org
+> https://lists.nongnu.org/mailman/listinfo/axiom-math
+
+William Sit, Professor Emeritus
+Mathematics, City College of New York
+Office: R6/291D Tel: 212-650-5179
+Home Page: http://scisun.sci.ccny.cuny.edu/~wyscc/
+
+
+From MAILER-DAEMON Mon May 02 21:38:31 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QH4ZK-0004DT-VB
+	for mharc-axiom-math@gnu.org; Mon, 02 May 2011 21:38:30 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:36131)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QH4ZI-0004D5-E8
+	for axiom-math@nongnu.org; Mon, 02 May 2011 21:38:29 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QH4ZH-0005op-Cb
+	for axiom-math@nongnu.org; Mon, 02 May 2011 21:38:28 -0400
+Received: from cgate.sci.ccny.cuny.edu ([134.74.34.100]:57388)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QH4ZH-0005oi-3x
+	for axiom-math@nongnu.org; Mon, 02 May 2011 21:38:27 -0400
+Received: from [71.190.87.119] (account wyscc@sci.ccny.cuny.edu)
+	by cgate.sci.ccny.cuny.edu (CommuniGate Pro WebUser 4.2.10)
+	with HTTP id 22699974; Mon, 02 May 2011 21:43:54 -0400
+From: "William Sit" <wyscc@sci.ccny.cuny.edu>
+To: Stefan Karrmann <s.karrmann@web.de>,axiom-math@nongnu.org
+X-Mailer: CommuniGate Pro WebUser Interface v.4.2.10
+Date: Mon, 02 May 2011 21:43:54 -0400
+Message-ID: <web-22699974@cgate.sci.ccny.cuny.edu>
+In-Reply-To: <1304188828.20602.11.camel@hermes>
+References: <1304188828.20602.11.camel@hermes>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-Received-From: 134.74.34.100
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 03 May 2011 01:38:29 -0000
+
+PS: I just like to add that if a system provides 
+automatically an expansion of the definition of test1 in 
+"evaluating" "test1 y", then it is easy to see the system 
+can easily get "clogged" with unintelligible output, for 
+example, even in as simple an expression as "test1 test1 
+y" and no system can handle expansion of things like 
+"test1^n y" (iterating test1 n times, where n is also a 
+variable).
+
+(Mathematica provides a "notation" to hold the expression, 
+for example, Nest[test1,y,n]), in effect, creating a new 
+function through composition.)
+
+The problem in Axiom is, however, still due to the dual 
+(and automatically selected) meanings of "y < 10". If we 
+qualify the "<" operation by "<($Integer)", then Axiom 
+will refuse to evaluate "y <($Integer) 10" because y is 
+not known to be of type Integer. Axiom announces an error, 
+while Mathematica returns the input.
+
+William
+
+On Sat, 30 Apr 2011 20:40:28 +0200
+  Stefan Karrmann <s.karrmann@web.de> wrote:
+> Dear all,
+> 
+> I'm new to axiom and have a problem with piecewise 
+>functions.
+> 
+> test1 (x | x < 10) == 2*x
+> test1 (x | x < 10) == 5*x^2
+> test1
+> -> 
+>   test1 (x | x < 10) == 2x
+>   test1 (x | ^ x < 10) == 5x
+>                                                   Type: 
+>FunctionCalled
+> test1 y
+> ->
+>     2
+>   5y
+> 
+> I expected something like (if y < 10 then 2*y else 
+>5*y**2).
+> 
+> How is it possible to pass a Variable to a piecewise 
+>function respecting
+> the pieces?
+> 
+> PS: Using a block and => or explicit if-then-else does 
+>not help.
+> 
+> -- 
+> Kind regards,
+> Stefan
+> 
+> 
+> _______________________________________________
+> Axiom-math mailing list
+> Axiom-math@nongnu.org
+> https://lists.nongnu.org/mailman/listinfo/axiom-math
+
+William Sit, Professor Emeritus
+Mathematics, City College of New York
+Office: R6/291D Tel: 212-650-5179
+Home Page: http://scisun.sci.ccny.cuny.edu/~wyscc/
+
+
+From MAILER-DAEMON Mon May 02 23:57:39 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QH6jz-0005OV-Lg
+	for mharc-axiom-math@gnu.org; Mon, 02 May 2011 23:57:39 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:39123)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1QH6jx-0005OM-19
+	for axiom-math@nongnu.org; Mon, 02 May 2011 23:57:38 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1QH6jv-00023H-Jp
+	for axiom-math@nongnu.org; Mon, 02 May 2011 23:57:36 -0400
+Received: from mail-iy0-f173.google.com ([209.85.210.173]:49858)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1QH6jv-00023C-FK
+	for axiom-math@nongnu.org; Mon, 02 May 2011 23:57:35 -0400
+Received: by iym10 with SMTP id 10so6343648iym.4
+	for <axiom-math@nongnu.org>; Mon, 02 May 2011 20:57:34 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.42.131.2 with SMTP id x2mr11170687ics.259.1304395054700; Mon,
+	02 May 2011 20:57:34 -0700 (PDT)
+Received: by 10.43.131.66 with HTTP; Mon, 2 May 2011 20:57:34 -0700 (PDT)
+In-Reply-To: <web-22699882@cgate.sci.ccny.cuny.edu>
+References: <1304188828.20602.11.camel@hermes>
+	<web-22699882@cgate.sci.ccny.cuny.edu>
+Date: Mon, 2 May 2011 23:57:34 -0400
+Message-ID: <BANLkTinm6KMpoo4r-BwON2g5LF3oDK3A+Q@mail.gmail.com>
+From: Bill Page <bill.page@newsynthesis.org>
+To: William Sit <wyscc@sci.ccny.cuny.edu>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-Received-From: 209.85.210.173
+Cc: axiom-math@nongnu.org, Stefan Karrmann <s.karrmann@web.de>
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 03 May 2011 03:57:38 -0000
+
+William,
+
+On Mon, May 2, 2011 at 9:07 PM, you wrote to Stefan:
+> ...
+> So the answer to your question "How is it possible ..." is, "It is not
+> possible, in the context of piecewise functions." because no matter what
+> the system does, you gain no new information other than what you inputted=
+,
+> until you let the system know what y is, numerically.
+>
+
+I think we should be careful not to give the wrong impression about
+the capabilities of Axiom. It is not quite accurate to say that what
+Stefan wants to do is "impossible" in Axiom since Axiom does contain
+some rather sophisticated ways of representing symbolic expressions. I
+think it may be correct to claim that at the present time the Axiom
+library is fundamentally "algebraic" in orientation and not "symbolic"
+but the dividing line between these two views of computer algebra is
+not so clear cut.
+
+In particular, Axiom's InputForm domain represents "algebraically"
+everything that can be evaluated in Axiom in purely symbolic form.
+Normally this is only an intermediate representation which is
+immediately evaluated by Axiom.  But with the help of a simple symbol
+substitution routine like the following we can do a lot more in a
+purely symbolic manner.
+
+(1) -> sub(f:InputForm, x:Symbol, y:InputForm):InputForm =3D=3D ( _
+           atom? f =3D> (symbol? f =3D> (symbol f =3D x =3D> y;f);f); _
+             [sub(g,x,y) for g in destruct f]::InputForm)
+
+   Function declaration sub : (InputForm,Symbol,InputForm) -> InputForm
+      has been added to workspace.
+                                                                   Type: Vo=
+id
+
+(2) -> sub
+
+   (2)
+   sub (f,x,y) =3D=3D
+     if atom?(f)
+       then
+         if symbol?(f)
+           then
+             if symbol(f)=3D x
+               then y
+               else f
+           else f
+       else ([[sub(g,x,y) for g in destruct(f)]]) :: InputForm
+
+                                                    Type: FunctionCalled(su=
+b)
+
+The function 'sub' operates on symbolic "input form" f by replacing
+symbol x with input form y wherever x occurs. I think it should be
+fairly obvious how this recursive routine works except perhaps for
+'destruct' which breaks a top-level input form into a list of
+lower-level input forms. In this way the routine traverses the entire
+tree structure representing the given input form.
+
+Now the function that Stefan has in mind can be written in a fairly
+transparent manner.
+
+(3) -> ex:InputForm :=3D parse("if x<10 then 2*x else 5*x^2"); expr ex
+
+   (3)
+   if x < 10
+     then 2x
+            2
+     else 5x
+                                                             Type: OutputFo=
+rm
+
+The function 'parse' returns an unevaluated input form for the
+expression inside "...". The function 'expr' prints this in a readable
+manner. (InputForm is displayed in this form by default in OpenAxiom.)
+
+(4) -> test1(x0)=3D=3Dsub(ex, x,x0)
+                                                                   Type: Vo=
+id
+
+In the definition of 'test1' the function 'sub' replaces the symbol x
+with the input form of x0.  The result remains unevaluated.
+
+(5) -> expr test1(y)
+   Compiling function sub with type (InputForm,InputForm,InputForm) ->
+      InputForm
+   Compiling function test1 with type Variable(y) -> InputForm
+
+   (5)
+   if y < 10
+     then 2y
+            2
+     else 5y
+                                                             Type: OutputFo=
+rm
+
+But this need not always be the case.
+
+(6) -> interpret test1(3)
+   Compiling function test1 with type PositiveInteger -> InputForm
+
+   (6)  6
+                                                        Type: PositiveInteg=
+er
+(7) -> interpret test1(13)
+
+   (7)  845
+                                                        Type: PositiveInteg=
+er
+
+The function 'interpret' evaluates an input form. This is possible
+only because in the above two instances x is replaced with a numeric
+value. But in general the argument to test1 need not be numeric and we
+can keep the unevaluated symbolic form. For example we can write:
+
+(8) -> expr test1(x+1)
+   Compiling function test1 with type Polynomial(Integer) -> InputForm
+
+   (8)
+   if x + 1 < 10
+     then 2(x + 1)
+                  2
+     else 5(x + 1)
+                                                             Type: OutputFo=
+rm
+
+Perhaps this is not nearly as obvious as the way it might be done in
+Mathematica or Maple - especially for someone just beginning to use
+Axiom but I think it is equivalent to what is done in these other
+systems and it is fair to say that it is in keeping with the view in
+Axiom that everything is fundamentally algebraic.
+
+Regards,
+Bill Page.
+
+> ...
+
+> On Sat, 30 Apr 2011 20:40:28 +0200
+> =A0Stefan Karrmann <s.karrmann@web.de> wrote:
+>>
+>> Dear all,
+>>
+>> I'm new to axiom and have a problem with piecewise functions.
+>>
+>> test1 (x | x < 10) =3D=3D 2*x
+>> test1 (x | x < 10) =3D=3D 5*x^2
+>> test1
+>> -> =A0 test1 (x | x < 10) =3D=3D 2x
+>> =A0test1 (x | ^ x < 10) =3D=3D 5x
+>> =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =
+=A0 =A0 =A0 =A0 =A0 =A0 =A0Type: FunctionCalled
+>> test1 y
+>> ->
+>> =A0 =A02
+>> =A05y
+>>
+>> I expected something like (if y < 10 then 2*y else 5*y**2).
+>>
+>> How is it possible to pass a Variable to a piecewise function respecting
+>> the pieces?
+>>
+>> PS: Using a block and =3D> or explicit if-then-else does not help.
+>>
+>> --
+>> Kind regards,
+>> Stefan
+>>
+
+
+From MAILER-DAEMON Tue May 03 00:17:51 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QH73X-0006W0-0Z
+	for mharc-axiom-math@gnu.org; Tue, 03 May 2011 00:17:51 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:45343)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1QH73V-0006V6-1s
+	for axiom-math@nongnu.org; Tue, 03 May 2011 00:17:49 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1QH73U-00053x-4f
+	for axiom-math@nongnu.org; Tue, 03 May 2011 00:17:49 -0400
+Received: from mail-iw0-f173.google.com ([209.85.214.173]:42130)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1QH73U-00053r-03
+	for axiom-math@nongnu.org; Tue, 03 May 2011 00:17:48 -0400
+Received: by iwl42 with SMTP id 42so6362475iwl.4
+	for <axiom-math@nongnu.org>; Mon, 02 May 2011 21:17:47 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.42.46.80 with SMTP id j16mr8488604icf.393.1304396267309; Mon,
+	02 May 2011 21:17:47 -0700 (PDT)
+Received: by 10.43.131.66 with HTTP; Mon, 2 May 2011 21:17:47 -0700 (PDT)
+In-Reply-To: <BANLkTinm6KMpoo4r-BwON2g5LF3oDK3A+Q@mail.gmail.com>
+References: <1304188828.20602.11.camel@hermes>
+	<web-22699882@cgate.sci.ccny.cuny.edu>
+	<BANLkTinm6KMpoo4r-BwON2g5LF3oDK3A+Q@mail.gmail.com>
+Date: Tue, 3 May 2011 00:17:47 -0400
+Message-ID: <BANLkTimvi0oLD3=TE52vAcRJm2193sBAWA@mail.gmail.com>
+From: Bill Page <bill.page@newsynthesis.org>
+To: William Sit <wyscc@sci.ccny.cuny.edu>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-Received-From: 209.85.214.173
+Cc: axiom-math@nongnu.org, Stefan Karrmann <s.karrmann@web.de>
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 03 May 2011 04:17:49 -0000
+
+Oops, I forgot that 'parse' was never implemented in the InputForm
+domain in the original Axiom.  In this case use:
+
+ parse(s:String):InputForm =3D=3D ncParseFromString(s)$Lisp
+
+Regards,
+Bill Page.
+
+On Mon, May 2, 2011 at 11:57 PM, Bill Page <bill.page@newsynthesis.org> wro=
+te:
+>
+> Now the function that Stefan has in mind can be written in a fairly
+> transparent manner.
+>
+> (3) -> ex:InputForm :=3D parse("if x<10 then 2*x else 5*x^2"); expr ex
+>
+> =A0 (3)
+> =A0 if x < 10
+> =A0 =A0 then 2x
+> =A0 =A0 =A0 =A0 =A0 =A02
+> =A0 =A0 else 5x
+> =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =
+=A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 Type: OutputForm
+>
+> The function 'parse' returns an unevaluated input form for the
+> expression inside "...". The function 'expr' prints this in a readable
+> manner. (InputForm is displayed in this form by default in OpenAxiom.)
+>
+
+
+From MAILER-DAEMON Tue May 03 02:59:03 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QH9ZW-0005Gk-W4
+	for mharc-axiom-math@gnu.org; Tue, 03 May 2011 02:59:03 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:41532)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QH9ZT-0005GE-G4
+	for axiom-math@nongnu.org; Tue, 03 May 2011 02:59:00 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QH9ZS-0005Te-7P
+	for axiom-math@nongnu.org; Tue, 03 May 2011 02:58:59 -0400
+Received: from cgate.sci.ccny.cuny.edu ([134.74.34.100]:57752)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QH9ZS-0005TZ-3p
+	for axiom-math@nongnu.org; Tue, 03 May 2011 02:58:58 -0400
+Received: from [71.190.87.119] (account wyscc@sci.ccny.cuny.edu)
+	by cgate.sci.ccny.cuny.edu (CommuniGate Pro WebUser 4.2.10)
+	with HTTP id 22700885; Tue, 03 May 2011 03:04:34 -0400
+From: "William Sit" <wyscc@sci.ccny.cuny.edu>
+To: Bill Page <bill.page@newsynthesis.org>
+X-Mailer: CommuniGate Pro WebUser Interface v.4.2.10
+Date: Tue, 03 May 2011 03:04:34 -0400
+Message-ID: <web-22700885@cgate.sci.ccny.cuny.edu>
+In-Reply-To: <BANLkTinm6KMpoo4r-BwON2g5LF3oDK3A+Q@mail.gmail.com>
+References: <1304188828.20602.11.camel@hermes>
+	<web-22699882@cgate.sci.ccny.cuny.edu>
+	<BANLkTinm6KMpoo4r-BwON2g5LF3oDK3A+Q@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="ISO-8859-1"; format="flowed"
+Content-Transfer-Encoding: 8bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-Received-From: 134.74.34.100
+Cc: axiom-math@nongnu.org, Stefan Karrmann <s.karrmann@web.de>
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 03 May 2011 06:59:01 -0000
+
+Dear Bill:
+
+You are right. I should not have declare "It is not 
+possible" (even with a qualifier) since one can program 
+around the difficulties. However, what you did essentially 
+defines two different piecewise function, one for numeric 
+and one for symbolic, by using "interpret" and "expr". If 
+you use "interpret test1(y)" you would still get the wrong 
+answer,, and similarly, if you use "expr test1(3)", then 
+you would not have the result evaluated. Of course, you 
+can combine the two cases and again distinguish them by 
+testing if the input is a symbolic expression or numeric 
+(keeping it unevaluated in the first case, and evaluating 
+in the second).
+
+Your routine sub is, I believe, not full proof. If x were 
+modified inside f, would a static substitution of all 
+occurrences of x by y work? (isn't y bound and x is not?). 
+Or if there were a local variable x that temporarily hides 
+the scope of the outer x. By using f:InputForm, the dummy 
+argument for f is no longer a dummy; as a function, f is 
+independent of the literal used for its argument. Of 
+course, we can identify the argument of f in the sub 
+routine without passing it as an argument for sub.
+
+I am sure that in lisp, you can do anything. (Tim: would 
+you rise up to the challenge?) I believe Stefan's question 
+is whether it can be done "intuitively" (even though he 
+did not say so explicitly). Mathematica is able to provide 
+that, because neither the input nor the output is 
+restricted by its type. In Axiom, maybe we can do the same 
+with a Union like Union(Integer, InputForm).
+
+I did not test the above claims. Axiom may surprise me.
+
+William
+
+
+On Mon, 2 May 2011 23:57:34 -0400
+  Bill Page <bill.page@newsynthesis.org> wrote:
+> William,
+> 
+> On Mon, May 2, 2011 at 9:07 PM, you wrote to Stefan:
+>> ...
+>> So the answer to your question "How is it possible ..." 
+>>is, "It is not
+>> possible, in the context of piecewise functions." 
+>>because no matter what
+>> the system does, you gain no new information other than 
+>>what you inputted,
+>> until you let the system know what y is, numerically.
+>>
+> 
+> I think we should be careful not to give the wrong 
+>impression about
+> the capabilities of Axiom. It is not quite accurate to 
+>say that what
+> Stefan wants to do is "impossible" in Axiom since Axiom 
+>does contain
+> some rather sophisticated ways of representing symbolic 
+>expressions. I
+> think it may be correct to claim that at the present 
+>time the Axiom
+> library is fundamentally "algebraic" in orientation and 
+>not "symbolic"
+> but the dividing line between these two views of 
+>computer algebra is
+> not so clear cut.
+> 
+> In particular, Axiom's InputForm domain represents 
+>"algebraically"
+> everything that can be evaluated in Axiom in purely 
+>symbolic form.
+> Normally this is only an intermediate representation 
+>which is
+> immediately evaluated by Axiom.  But with the help of a 
+>simple symbol
+> substitution routine like the following we can do a lot 
+>more in a
+> purely symbolic manner.
+> 
+> (1) -> sub(f:InputForm, x:Symbol, y:InputForm):InputForm 
+>== ( _
+>           atom? f => (symbol? f => (symbol f = x => 
+>y;f);f); _
+>             [sub(g,x,y) for g in destruct f]::InputForm)
+> 
+>   Function declaration sub : 
+>(InputForm,Symbol,InputForm) -> InputForm
+>      has been added to workspace.
+>                                                           
+>        Type: Void
+> 
+> (2) -> sub
+> 
+>   (2)
+>   sub (f,x,y) ==
+>     if atom?(f)
+>       then
+>         if symbol?(f)
+>           then
+>             if symbol(f)= x
+>               then y
+>               else f
+>           else f
+>       else ([[sub(g,x,y) for g in destruct(f)]]) :: 
+>InputForm
+> 
+>                                                    Type: 
+>FunctionCalled(sub)
+> 
+> The function 'sub' operates on symbolic "input form" f 
+>by replacing
+> symbol x with input form y wherever x occurs. I think it 
+>should be
+> fairly obvious how this recursive routine works except 
+>perhaps for
+> 'destruct' which breaks a top-level input form into a 
+>list of
+> lower-level input forms. In this way the routine 
+>traverses the entire
+> tree structure representing the given input form.
+> 
+> Now the function that Stefan has in mind can be written 
+>in a fairly
+> transparent manner.
+> 
+> (3) -> ex:InputForm := parse("if x<10 then 2*x else 
+>5*x^2"); expr ex
+> 
+>   (3)
+>   if x < 10
+>     then 2x
+>            2
+>     else 5x
+>                                                           
+>  Type: OutputForm
+> 
+> The function 'parse' returns an unevaluated input form 
+>for the
+> expression inside "...". The function 'expr' prints this 
+>in a readable
+> manner. (InputForm is displayed in this form by default 
+>in OpenAxiom.)
+> 
+> (4) -> test1(x0)==sub(ex, x,x0)
+>                                                           
+>        Type: Void
+> 
+> In the definition of 'test1' the function 'sub' replaces 
+>the symbol x
+> with the input form of x0.  The result remains 
+>unevaluated.
+> 
+> (5) -> expr test1(y)
+>   Compiling function sub with type 
+>(InputForm,InputForm,InputForm) ->
+>      InputForm
+>   Compiling function test1 with type Variable(y) -> 
+>InputForm
+> 
+>   (5)
+>   if y < 10
+>     then 2y
+>            2
+>     else 5y
+>                                                           
+>  Type: OutputForm
+> 
+> But this need not always be the case.
+> 
+> (6) -> interpret test1(3)
+>   Compiling function test1 with type PositiveInteger -> 
+>InputForm
+> 
+>   (6)  6
+>                                                        Type: 
+>PositiveInteger
+> (7) -> interpret test1(13)
+> 
+>   (7)  845
+>                                                        Type: 
+>PositiveInteger
+> 
+> The function 'interpret' evaluates an input form. This 
+>is possible
+> only because in the above two instances x is replaced 
+>with a numeric
+> value. But in general the argument to test1 need not be 
+>numeric and we
+> can keep the unevaluated symbolic form. For example we 
+>can write:
+> 
+> (8) -> expr test1(x+1)
+>   Compiling function test1 with type Polynomial(Integer) 
+>-> InputForm
+> 
+>   (8)
+>   if x + 1 < 10
+>     then 2(x + 1)
+>                  2
+>     else 5(x + 1)
+>                                                           
+>  Type: OutputForm
+> 
+> Perhaps this is not nearly as obvious as the way it 
+>might be done in
+> Mathematica or Maple - especially for someone just 
+>beginning to use
+> Axiom but I think it is equivalent to what is done in 
+>these other
+> systems and it is fair to say that it is in keeping with 
+>the view in
+> Axiom that everything is fundamentally algebraic.
+> 
+> Regards,
+> Bill Page.
+> 
+>> ...
+> 
+>> On Sat, 30 Apr 2011 20:40:28 +0200
+>>  Stefan Karrmann <s.karrmann@web.de> wrote:
+>>>
+>>> Dear all,
+>>>
+>>> I'm new to axiom and have a problem with piecewise 
+>>>functions.
+>>>
+>>> test1 (x | x < 10) == 2*x
+>>> test1 (x | x < 10) == 5*x^2
+>>> test1
+>>> ->   test1 (x | x < 10) == 2x
+>>>  test1 (x | ^ x < 10) == 5x
+>>>                                                  Type: 
+>>>FunctionCalled
+>>> test1 y
+>>> ->
+>>>    2
+>>>  5y
+>>>
+>>> I expected something like (if y < 10 then 2*y else 
+>>>5*y**2).
+>>>
+>>> How is it possible to pass a Variable to a piecewise 
+>>>function respecting
+>>> the pieces?
+>>>
+>>> PS: Using a block and => or explicit if-then-else does 
+>>>not help.
+>>>
+>>> --
+>>> Kind regards,
+>>> Stefan
+>>>
+
+William Sit, Professor Emeritus
+Mathematics, City College of New York
+Office: R6/291D Tel: 212-650-5179
+Home Page: http://scisun.sci.ccny.cuny.edu/~wyscc/
+
+
+From MAILER-DAEMON Tue May 03 05:22:12 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QHBo4-0002ft-6m
+	for mharc-axiom-math@gnu.org; Tue, 03 May 2011 05:22:12 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:47609)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QHBo1-0002fX-Se
+	for axiom-math@nongnu.org; Tue, 03 May 2011 05:22:10 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QHBo0-0004AY-NL
+	for axiom-math@nongnu.org; Tue, 03 May 2011 05:22:09 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.161]:52547)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QHBo0-0004A2-DS
+	for axiom-math@nongnu.org; Tue, 03 May 2011 05:22:08 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1304414525; l=1502;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=BTMR50R3ua/rIp8E0yeOKxqyk3A=;
+	b=YOgk+Zhc8WevpLsajAxvz1fFsmN+CmE4ei9xMEuHe6jNLyIEV9699HFXYbE8XRT9kxd
+	KNFFrQJXAwvDyS0Yq7tt8CAj0r0eEfOCSRkM2mfY3qJzUdihdrGz6iBYUdRQ1JnMkbXOc
+	k0ntYKQE5OXDBWy7gSMOUgGlgqYF56PHiKk=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSJk0FxqVB+K06YOFo6aDQ==
+X-RZG-CLASS-ID: mo00
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (klopstock mo6) (RZmta 25.17)
+	with (DHE-RSA-AES128-SHA encrypted) ESMTPA id z06858n438vI6j ;
+	Tue, 3 May 2011 11:21:13 +0200 (MEST)
+Message-ID: <4DBFC908.3000705@hemmecke.de>
+Date: Tue, 03 May 2011 11:21:12 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.9.2.17) Gecko/20110414 Thunderbird/3.1.10
+MIME-Version: 1.0
+To: axiom-math@nongnu.org, s.karrmann@web.de
+References: <1304188828.20602.11.camel@hermes>
+In-Reply-To: <1304188828.20602.11.camel@hermes>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-Received-From: 81.169.146.161
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 03 May 2011 09:22:10 -0000
+
+Dear Stefan,
+
+as others already have pointed out, for Axiom, your question is not 
+really well posed.
+
+In Axiom
+
+   if x<10 then 2*x else 5*x^2
+
+is *not* an expression (as you might know it from other untyped CAS like 
+Mathematica or Maple), but rather a programming language construct. In 
+other words, if Axiom sees this, it is evaluated. So the result is 
+either 2*x or 5*x^2 depending on the (boolean) outcome of the evaluation 
+of x<10.
+
+I think, Bill suggested to use something like InputForm. There it would 
+be possible to represent an if-expression unevaluated.
+
+But you should rather say what you actually want (it's not the same what 
+you expect).
+
+In order for us to suggest you a proper way to handle your use case, you 
+should tell us why you want a piecewise function and (more important) 
+what you later want to do with that function.
+
+Until we have that information, everything would be just digging in the 
+dark.
+
+Ralf
+
+On 04/30/2011 08:40 PM, Stefan Karrmann wrote:
+> Dear all,
+>
+> I'm new to axiom and have a problem with piecewise functions.
+>
+> test1 (x | x<  10) == 2*x
+> test1 (x | x<  10) == 5*x^2
+> test1
+> ->
+>     test1 (x | x<  10) == 2x
+>     test1 (x | ^ x<  10) == 5x
+>                                                     Type: FunctionCalled
+> test1 y
+> ->
+>       2
+>     5y
+>
+> I expected something like (if y<  10 then 2*y else 5*y**2).
+>
+> How is it possible to pass a Variable to a piecewise function respecting
+> the pieces?
+>
+> PS: Using a block and =>  or explicit if-then-else does not help.
+>
+
+
+From MAILER-DAEMON Tue May 03 12:02:17 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QHI3F-0002ov-Ls
+	for mharc-axiom-math@gnu.org; Tue, 03 May 2011 12:02:17 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:40132)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QHI39-0002l5-Ue
+	for axiom-math@nongnu.org; Tue, 03 May 2011 12:02:16 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QHI37-0005xX-8x
+	for axiom-math@nongnu.org; Tue, 03 May 2011 12:02:11 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.161]:10324)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QHI36-0005xA-R0
+	for axiom-math@nongnu.org; Tue, 03 May 2011 12:02:09 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1304438526; l=2281;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=KReS2EsuBcmo3cXHg94OmSnnAEk=;
+	b=spA5oTWCfsnya/KVxVOd3QGU6Vwo/7In2572+T+aqdl++Cm/VaVeCUcuD821H9CJwLJ
+	v0cZbn9Vh0/tQyKEG0gBZYPN3+W1Qs1ewo/t4Nx3Isp2oLVQzyux9ulwgd6LJHvyll3fJ
+	1IHD7p2bm3NgOFnwbJMn6GWbSwHb0ykAOcc=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSJk0FxqVB+K06YOFo6aDQ==
+X-RZG-CLASS-ID: mo00
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (jimi mo51) (RZmta 25.17)
+	with (AES256-SHA encrypted) ESMTPA id a0059an43EvlPY ;
+	Tue, 3 May 2011 18:01:35 +0200 (MEST)
+Message-ID: <4DC026DE.3080302@hemmecke.de>
+Date: Tue, 03 May 2011 18:01:34 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.9.2.17) Gecko/20110414 Thunderbird/3.1.10
+MIME-Version: 1.0
+To: Raymond Rogers <raymond.rogers72@gmail.com>, axiom-math@nongnu.org
+References: <1304188828.20602.11.camel@hermes> <4DBFC908.3000705@hemmecke.de>
+	<4DC02112.9070102@gmail.com>
+In-Reply-To: <4DC02112.9070102@gmail.com>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-Received-From: 81.169.146.161
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 03 May 2011 16:02:16 -0000
+
+> But the question is not intrinsically a "programing construct".
+
+What does that mean?
+
+> With some (bulky) symbolic logic constructs one can express it in a
+> mathematical sense. That is: set membership and "exclusive or".
+
+You want to rewrite the if-statement into set membership and exclusive or?
+
+> I wouldn't have the slightest idea how to implement it in Axiom;
+> nonetheless questions like this have non programmatic expressions.
+
+I must admit I don't quite understand what exactly you want to do.
+Can you give a more explicit use case. Maybe something written in 
+another CAS which you want to turn into an AXIOM equivalent.
+
+> For instance Prolog has an explicit resolution syntax that is
+> reasonably obvious and supports embedding logic conditions on and
+> on. As I recall you can even extend it to second order logic.
+
+Good for Prolog, but Axiom is not Prolog. ;-)
+
+To give a few hints. As Bill already said, Axiom is more an algebraic 
+system rather than a symbolic one. Of course, since Axiom has a proper 
+programming language underneath, one can do everything, but the question 
+is, how much is already implemented.
+
+The first questions, when one programs with Axiom usually are:
+What is my "domain of computation"?
+(That is basically like with universal algebra. What is the carrier set 
+and what are the operations?)
+How are the elements of the carrier set represented in terms of already 
+existing (library) types?
+
+Now answer that questions for the "if-expression". It's a rather general 
+thing and can certainly be represented by something like a LISP 
+S-expression. But that's too general to fall into a reasonable algebra, 
+except (maybe) a boolean algebra.
+
+As William stated, "x<10" makes no sense in general. Or rather is is 
+just a sequence of symbols. It only makes sense if you can say what "<", 
+"x" and "10" actually are in this context. Or maybe it stands as an 
+abbreviation for "(lambda x).x<10". In fact, usually Axiom wants typed 
+expressions. Remember, everything in Axiom has a type. (It's only the 
+interpreter that makes your life as a user easier by accepting things 
+without explicit type information. --- I actually think, it makes it 
+harder to understand Axiom.)
+
+Again. What is your use case?
+
+Ralf
+
+
+From MAILER-DAEMON Tue May 03 13:33:00 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QHJT2-0003QL-PS
+	for mharc-axiom-math@gnu.org; Tue, 03 May 2011 13:33:00 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:32875)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1QHJT0-0003PT-EG
+	for axiom-math@nongnu.org; Tue, 03 May 2011 13:32:59 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1QHJSy-0007zT-Vg
+	for axiom-math@nongnu.org; Tue, 03 May 2011 13:32:58 -0400
+Received: from mail-iy0-f173.google.com ([209.85.210.173]:47662)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1QHJSy-0007zO-PI
+	for axiom-math@nongnu.org; Tue, 03 May 2011 13:32:56 -0400
+Received: by iym10 with SMTP id 10so288491iym.4
+	for <axiom-math@nongnu.org>; Tue, 03 May 2011 10:32:56 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.42.223.65 with SMTP id ij1mr150150icb.326.1304443975895; Tue,
+	03 May 2011 10:32:55 -0700 (PDT)
+Received: by 10.43.131.66 with HTTP; Tue, 3 May 2011 10:32:55 -0700 (PDT)
+In-Reply-To: <web-22700885@cgate.sci.ccny.cuny.edu>
+References: <1304188828.20602.11.camel@hermes>
+	<web-22699882@cgate.sci.ccny.cuny.edu>
+	<BANLkTinm6KMpoo4r-BwON2g5LF3oDK3A+Q@mail.gmail.com>
+	<web-22700885@cgate.sci.ccny.cuny.edu>
+Date: Tue, 3 May 2011 13:32:55 -0400
+Message-ID: <BANLkTikXcE1wAwh5QBpz+Pnmwrj_yKv4GQ@mail.gmail.com>
+From: Bill Page <bill.page@newsynthesis.org>
+To: William Sit <wyscc@sci.ccny.cuny.edu>
+Content-Type: text/plain; charset=ISO-8859-1
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-Received-From: 209.85.210.173
+Cc: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 03 May 2011 17:32:59 -0000
+
+William,
+
+As usual this thread is drifting away from the original question but I
+still think it is interesting from a more general point of view. It
+seems to me that InputForm is an often under-appreciated and
+under-used domain in Axiom.
+
+On Tue, May 3, 2011 at 3:04 AM, you wrote:
+> Dear Bill:
+>
+> You are right. I should not have declare "It is not possible" (even with a
+> qualifier) since one can program around the difficulties.
+
+True.  The question is: how much programming is required versus how
+much one can do "off-the-shelf". With any system that is designed to
+be extended like Axiom, this is always a moving target. As user
+requirements are identified and programming solutions found, these
+solutions should become candidates for inclusion in the standard
+library.
+
+> However, what you did essentially defines two different piecewise function, one
+> for numeric and one for symbolic, by using "interpret" and "expr".
+
+There is only one definition of 'test1'
+
+(3) -> ex:InputForm := parse("if x<10 then 2*x else 5*x^2");
+(4) -> test1(x0)==sub(ex, x,x0)
+
+In that sense there is only one "function". (I think this definition
+is more properly called a "mode".) This highlights a significant
+difference between function definitions in the Axiom interpreter
+versus the library compiler. Untyped modes will (usually but not
+necessarily) be instantiated into fully typed functions.  Warning
+messages like:
+
+  Compiling function test1 with type PositiveInteger -> InputForm
+
+are intend to inform the user that this "function" resulted in one of
+possibly several different fully typed compiled functions.
+
+> If you use "interpret test1(y)" you would still get the wrong answer, and
+
+Yes. It is the "wrong" answer in as much as it probably differs wildly
+from what a beginning user would expect. That is way other variants of
+Axiom choose to eliminate "<" to denote the default ordering of
+polynomials. In these other systems "interpret test1(y)" would not be
+evaluated since these is preferable over an apparently wrong result.
+
+> similarly, if you use "expr test1(3)", then you would not have the result
+> evaluated.
+
+That is true. 'expr' is only a matter of "pretty printing" and
+unevaluated expression (InputForm). 'interpret' on the other hand
+applies all of Axiom's built-in and library-dependent rules for
+evaluation.
+
+> Of course, you can combine the two cases and again distinguish them
+> by testing if the input is a symbolic expression or numeric (keeping it
+> unevaluated in the first case, and evaluating in the second).
+>
+
+I suppose you are suggesting a function that in Axiom parlance might
+be called "interpretIfCan". It is not obvious to me how one could
+"test if the input is a symbolic expression". In a deep sense
+everything in Axiom (in fact in any computer system) is "symbolic".
+>From the point of view of Axiom's run-time system (i.e. Lisp) some
+things are considered "atomic" such as symbols, integers, etc. But
+
+(5) -> sub(ex,x,3)
+   Compiling function sub with type (InputForm,Symbol,InputForm) ->
+      InputForm
+
+   (5)  (IF (< 3 10) (* 2 3) (* 5 (^ 3 2)))
+                                                              Type: InputForm
+
+is not atomic in this sense, yet it can be evaluated by 'interpret' to
+something which is:
+
+(6) -> interpret(sub(ex,x,3))::InputForm
+
+   (6)  6
+                                                              Type: InputForm
+
+It would certainly be possible in principle to implement a function such as:
+
+   evaluate: InputForm -> InputForm
+
+which attempts to 'interpret' its input and if possible returns the
+InputForm derived from the corresponding value, otherwise it would
+return the input unchanged.
+
+> Your routine sub is, I believe, not full proof. If x were modified inside f,
+> would a static substitution of all occurrences of x by y work? (isn't y
+> bound and x is not?). Or if there were a local variable x that temporarily
+> hides the scope of the outer x. By using f:InputForm, the dummy argument
+> for f is no longer a dummy; as a function, f is independent of the literal
+> used for its argument. Of course, we can identify the argument of f in the
+> sub routine without passing it as an argument for sub.
+>
+
+I think 'sub' does exactly and only what I claimed.
+
+(2) -> sub(f:InputForm, x:Symbol, y:InputForm):InputForm == ( _;f); _
+          atom? f => (symbol? f => (symbol f = x => y;f);f); _
+            [sub(g,x,y) for g in destruct f]::InputForm)
+
+It finds all occurrences of the symbol (passed as formal parameter x)
+in the InputForm (passed by parameter f). It inserts an InputForm
+(passed as parameter y) into f where x occurs in f. The result is
+still a value of type InputForm which may or may not be able to be
+evaluated by 'interpret'. Nothing is "bound" in f. Also there is no
+concept of "local variable" because the InputForm is not yet evaluated
+in any way. The declaration "f:InputForm" is just like any other
+similar declaration in an Axiom function. It says only that the value
+passed by formal parameter f must be of type InputForm. f is not a
+function, it just stands for some value of type InputForm.
+
+> I am sure that in lisp, you can do anything. (Tim: would you rise up to the
+> challenge?) I believe Stefan's question is whether it can be done
+> "intuitively" (even though he did not say so explicitly).
+
+As you can see InputForm is only slightly removed from Lisp. The
+underlying representation of InputForm is exactly a Lisp s-expression
+of a particular form.
+
+> Mathematica is able to provide that, because neither the input nor the output
+> is restricted by its type.
+
+I think that is not very accurate. It might be better to say that in
+Mathematica everything is of only one type: symbolic. In Axiom terms
+this would be like making everything an InputForm. This is not as
+"bad" or as "stupid" as it might sound. But it is not very "algebraic"
+in the sense in which I used the word earlier.
+
+> In Axiom, maybe we can do the same with a Union like
+> Union(Integer, InputForm).
+
+I am not sure how Union would help in this case.
+
+> ...
+
+Regards,
+Bill Page.
+
+
+From MAILER-DAEMON Tue May 03 16:26:00 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QHMAS-00080l-GQ
+	for mharc-axiom-math@gnu.org; Tue, 03 May 2011 16:26:00 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:50746)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QHMAP-000802-L0
+	for axiom-math@nongnu.org; Tue, 03 May 2011 16:25:58 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QHMAO-0006Oa-MD
+	for axiom-math@nongnu.org; Tue, 03 May 2011 16:25:57 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.161]:19077)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QHMAO-0006OU-9p
+	for axiom-math@nongnu.org; Tue, 03 May 2011 16:25:56 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1304454354; l=713;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=K0pRYl720tAqLDiuKgLwiYPHikA=;
+	b=u9J6AUVTQx0cioJjdNYdMkRF1Y6fB8T6cmJj9vabkgezzGMLxdKsVYImyQPIkz8qBrI
+	z6JbjW5D19gg9SaDKaVvidyYxma85BqMyAYZoh6xL5Ai6OAqXUK37raLiKpUlPsQH0+4p
+	/EEHYenrq1EjUUUqFwJSe7Yd9hFCPaHomcA=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSWk1ofrjzFmGkhR28Q=
+X-RZG-CLASS-ID: mo00
+Received: from [10.0.0.2] (62-47-57-208.adsl.highway.telekom.at [62.47.57.208])
+	by post.strato.de (cohen mo36) (RZmta 25.17)
+	with (AES256-SHA encrypted) ESMTPA id x06fcen43K9bNQ ;
+	Tue, 3 May 2011 22:25:03 +0200 (MEST)
+Message-ID: <4DC0649E.70600@hemmecke.de>
+Date: Tue, 03 May 2011 22:25:02 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.9.2.17) Gecko/20110414 Thunderbird/3.1.10
+MIME-Version: 1.0
+To: axiom-math@nongnu.org
+References: <1304188828.20602.11.camel@hermes>	<web-22699882@cgate.sci.ccny.cuny.edu>	<BANLkTinm6KMpoo4r-BwON2g5LF3oDK3A+Q@mail.gmail.com>	<web-22700885@cgate.sci.ccny.cuny.edu>
+	<BANLkTikXcE1wAwh5QBpz+Pnmwrj_yKv4GQ@mail.gmail.com>
+In-Reply-To: <BANLkTikXcE1wAwh5QBpz+Pnmwrj_yKv4GQ@mail.gmail.com>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-Received-From: 81.169.146.161
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 03 May 2011 20:25:58 -0000
+
+> It would certainly be possible in principle to implement a function such as:
+>
+>     evaluate: InputForm ->  InputForm
+>
+> which attempts to 'interpret' its input and if possible returns the
+> InputForm derived from the corresponding value, otherwise it would
+> return the input unchanged.
+
+Well, if one uses Axiom (which was designed to be *typed*) in order to 
+implement such an evaluate function, then one basically implements an 
+untyped CAS inside a typed CAS. Possible, but why would I want that?
+
+There might be some use cases for this, but personally, I am so happy 
+that Axiom is typed, that I find this making-Axiom-untyped  (or 
+one-typed, i.e. just InputForm) a bit counter-productive.
+
+Ralf
+
+
+From MAILER-DAEMON Wed May 04 14:02:58 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QHgPa-0000lg-8s
+	for mharc-axiom-math@gnu.org; Wed, 04 May 2011 14:02:58 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:48058)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QHgPY-0000kE-0D
+	for axiom-math@nongnu.org; Wed, 04 May 2011 14:02:56 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QHgPX-00081O-07
+	for axiom-math@nongnu.org; Wed, 04 May 2011 14:02:55 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.161]:12433)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1QHgPW-000818-BS
+	for axiom-math@nongnu.org; Wed, 04 May 2011 14:02:54 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1304532170; l=1644;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:CC:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=BzOI8l3ZDUHpFD7aHW4MVUf26RM=;
+	b=E2Tj2H1WxtMYR6UEld2BGm/1Kmvj8sG8FJpoHNGEg3GBMDeqi4BAqfiM2mJgYQUOYWN
+	l49y9msJ/32JoaV8994VsktSuXEYWwCTlKgL1xmldUhNQTGG7gS7Q3T07z/nftFnj2bg6
+	xzoatZ1kHYE96a3vflNSX0e/KWOP7UIMaiA=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSWk1ofrjzBmGkAKKg==
+X-RZG-CLASS-ID: mo00
+Received: from [10.0.0.4] (62-47-47-66.adsl.highway.telekom.at [62.47.47.66])
+	by post.strato.de (klopstock mo17) (RZmta 25.17)
+	with (DHE-RSA-AES128-SHA encrypted) ESMTPA id w059a3n44GCl1P ;
+	Wed, 4 May 2011 20:02:19 +0200 (MEST)
+Message-ID: <4DC194AA.6030603@hemmecke.de>
+Date: Wed, 04 May 2011 20:02:18 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.9.2.17) Gecko/20110414 Thunderbird/3.1.10
+MIME-Version: 1.0
+To: Raymond Rogers <raymond.rogers72@gmail.com>
+References: <1304188828.20602.11.camel@hermes> <4DBFC908.3000705@hemmecke.de>
+	<4DC02112.9070102@gmail.com> <4DC026DE.3080302@hemmecke.de>
+	<4DC1853B.9050506@gmail.com>
+In-Reply-To: <4DC1853B.9050506@gmail.com>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-Received-From: 81.169.146.161
+Cc: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 04 May 2011 18:02:57 -0000
+
+>> The first questions, when one programs with Axiom usually are:
+>> What is my "domain of computation"?
+>> (That is basically like with universal algebra. What is the carrier
+>> set and what are the operations?)
+>> How are the elements of the carrier set represented in terms of
+>> already existing (library) types?
+> Yes, I think it boils down to second-order logic; in this case a
+> category of unevaluated expressions. As above; stored in the tree and
+> then brought front and center and evaluated in the tree accessing
+> environment.
+
+As I said, it's no problem to implement that in Axiom. Actually, 
+InputForm is basically such a domain.
+
+> Going back to the original question. It seems the questioner expects to
+> fabricate a template and later to create instances of it with varying
+> variables.
+
+Although possible, that is a mindset that belongs to traditional 
+(typeless) CAS. I would rather ask the questioner to state the actual 
+problem instead of already giving a direction, i.e. using expression trees.
+
+> Sorry if I have taken the discussion drifting; I merely wanted to point
+> out the if/else can be a static data structure rather than in-line code.
+
+Well, of course, that's possible. In fact, expression trees is something 
+that almost all computer algebra systems rely upon. But Axiom is different.
+
+Take for example 1+1. What is this evaluated?
+Three out of infinitely many results.
+1) 2
+2) 0
+3) 1+1
+
+In Axiom (at least in SPAD) there would only be one possible result, 
+since the compiler checks types. If it is clear what 1 and + means, it's 
+also deterministic what the result is.
+
+Ralf
+
+
+From MAILER-DAEMON Wed May 04 16:37:57 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QHipZ-0006aT-As
+	for mharc-axiom-math@gnu.org; Wed, 04 May 2011 16:37:57 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:56895)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <s.karrmann@web.de>) id 1QHipW-0006Vj-QQ
+	for axiom-math@nongnu.org; Wed, 04 May 2011 16:37:55 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <s.karrmann@web.de>) id 1QHipV-0002nU-Vi
+	for axiom-math@nongnu.org; Wed, 04 May 2011 16:37:54 -0400
+Received: from fmmailgate03.web.de ([217.72.192.234]:41599)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <s.karrmann@web.de>) id 1QHipV-0002my-Kc
+	for axiom-math@nongnu.org; Wed, 04 May 2011 16:37:53 -0400
+Received: from smtp01.web.de  ( [172.20.0.243])
+	by fmmailgate03.web.de (Postfix) with ESMTP id 2DA6C18E02BBC;
+	Wed,  4 May 2011 22:37:51 +0200 (CEST)
+Received: from [95.112.42.178] (helo=[192.168.178.23])
+	by smtp01.web.de with asmtp (TLSv1:AES256-SHA:256) (WEB.DE 4.110 #2)
+	id 1QHipS-0006pf-00; Wed, 04 May 2011 22:37:51 +0200
+From: Stefan Karrmann <s.karrmann@web.de>
+To: Ralf Hemmecke <ralf@hemmecke.de>, axiom-math <axiom-math@nongnu.org>
+In-Reply-To: <4DBFC908.3000705@hemmecke.de>
+References: <1304188828.20602.11.camel@hermes> <4DBFC908.3000705@hemmecke.de>
+Content-Type: text/plain; charset="UTF-8"
+Date: Wed, 04 May 2011 22:37:48 +0200
+Message-ID: <1304541468.5030.93.camel@hermes>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.30.3 
+Content-Transfer-Encoding: 7bit
+Sender: s.karrmann@web.de
+X-Sender: s.karrmann@web.de
+X-Provags-ID: V01U2FsdGVkX1/z1ryJnQZh5wy9IweG1tOImOHBevamcmiRCgs0
+	r6oZpezGXmoVIfeDL2BGwuzHbZjBkrJkAfe5n9O5boB44weMe0 Gho3TxObM=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.4-2.6
+X-Received-From: 217.72.192.234
+Cc: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 04 May 2011 20:37:55 -0000
+
+Dear all,
+
+thanks for your answers. They clears a lot.
+
+I actually want to integrate test1 and solve an differential equation
+with it.
+
+E.g.
+test2 x == rho * test1 x
+y = operator 'y
+odeq := D(y x) = test2 x
+solve(odeq, y, x)
+
+Obviously, the solution is "formally"
+
+y_sol x == integrate(test2 x,x)
+
+Kind regards,
+Stefan
+
+Am Dienstag, den 03.05.2011, 11:21 +0200 schrieb Ralf Hemmecke:
+> Dear Stefan,
+> 
+> as others already have pointed out, for Axiom, your question is not 
+> really well posed.
+> 
+> In Axiom
+> 
+>    if x<10 then 2*x else 5*x^2
+> 
+> is *not* an expression (as you might know it from other untyped CAS like 
+> Mathematica or Maple), but rather a programming language construct. In 
+> other words, if Axiom sees this, it is evaluated. So the result is 
+> either 2*x or 5*x^2 depending on the (boolean) outcome of the evaluation 
+> of x<10.
+> 
+> I think, Bill suggested to use something like InputForm. There it would 
+> be possible to represent an if-expression unevaluated.
+> 
+> But you should rather say what you actually want (it's not the same what 
+> you expect).
+> 
+> In order for us to suggest you a proper way to handle your use case, you 
+> should tell us why you want a piecewise function and (more important) 
+> what you later want to do with that function.
+> 
+> Until we have that information, everything would be just digging in the 
+> dark.
+> 
+> Ralf
+> 
+> On 04/30/2011 08:40 PM, Stefan Karrmann wrote:
+> > Dear all,
+> >
+> > I'm new to axiom and have a problem with piecewise functions.
+> >
+> > test1 (x | x<  10) == 2*x
+> > test1 (x | x >= 10) == 5*x^2
+> > [was typo: test1 (x | x<  10) == 5*x^2]
+> > test1
+> > ->
+> >     test1 (x | x<  10) == 2x
+> >     test1 (x | ^ x<  10) == 5x
+> >                                                     Type: FunctionCalled
+> > test1 y
+> > ->
+> >       2
+> >     5y
+> >
+> > I expected something like (if y<  10 then 2*y else 5*y**2).
+> >
+> > How is it possible to pass a Variable to a piecewise function respecting
+> > the pieces?
+> >
+> > PS: Using a block and =>  or explicit if-then-else does not help.
+
+
+
+From MAILER-DAEMON Wed May 04 22:54:29 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QHohx-0004FU-RG
+	for mharc-axiom-math@gnu.org; Wed, 04 May 2011 22:54:29 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:41550)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QHohv-0004F0-SI
+	for axiom-math@nongnu.org; Wed, 04 May 2011 22:54:29 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QHohu-0004HR-3i
+	for axiom-math@nongnu.org; Wed, 04 May 2011 22:54:27 -0400
+Received: from mail.sci.ccny.cuny.edu ([134.74.38.100]:64365
+	helo=cgate.sci.ccny.cuny.edu) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QHoht-0004HK-UQ
+	for axiom-math@nongnu.org; Wed, 04 May 2011 22:54:25 -0400
+Received: from [71.190.87.119] (account wyscc@sci.ccny.cuny.edu)
+	by cgate.sci.ccny.cuny.edu (CommuniGate Pro WebUser 4.2.10)
+	with HTTP id 22718264; Wed, 04 May 2011 22:59:42 -0400
+From: "William Sit" <wyscc@sci.ccny.cuny.edu>
+To: Bill Page <bill.page@newsynthesis.org>
+X-Mailer: CommuniGate Pro WebUser Interface v.4.2.10
+Date: Wed, 04 May 2011 22:59:42 -0400
+Message-ID: <web-22718264@cgate.sci.ccny.cuny.edu>
+In-Reply-To: <BANLkTikXcE1wAwh5QBpz+Pnmwrj_yKv4GQ@mail.gmail.com>
+References: <1304188828.20602.11.camel@hermes>
+	<web-22699882@cgate.sci.ccny.cuny.edu>
+	<BANLkTinm6KMpoo4r-BwON2g5LF3oDK3A+Q@mail.gmail.com>
+	<web-22700885@cgate.sci.ccny.cuny.edu>
+	<BANLkTikXcE1wAwh5QBpz+Pnmwrj_yKv4GQ@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="ISO-8859-1"; format="flowed"
+Content-Transfer-Encoding: 8bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-Received-From: 134.74.38.100
+Cc: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 05 May 2011 02:54:29 -0000
+
+Dear Bill:
+
+Thanks for answer the questions. I agree that we are 
+drifting away from the original question -- which is a 
+constant curse on Axiom.
+
+Here is how I would combine "interpret test1(x0)" with 
+"expr test1(x0)". Note that for test2, the target domain 
+is Any (which is sort of a Union, and better than 
+InputForm). Note that the source domain varies as the 
+input argument of test2.
+
+(24) -> test2(x0)==(integer? x0 => interpret test1(x0); 
+expr test1(x0))
+    Compiled code for test2 has been cleared.
+    1 old definition(s) deleted for function or rule test2
+                                                            
+        Type: Void
+(25) -> test2(y)
+    Compiling function test2 with type Variable y -> Any
+
+    (25)
+    if y < 10
+      then 2y
+             2
+      else 5y
+                                                            
+  Type: OutputForm
+(26) -> test2(3)
+    Loading 
+j:/OpenAxiom/axiom014/mnt/windows/algebra/INTRET.o for
+       package IntegerRetractions
+    Compiling function test1 with type PositiveInteger -> 
+InputForm
+    Compiling function test2 with type PositiveInteger -> 
+Any
+
+    (26)  6
+                                                         Type: 
+PositiveInteger
+(27) -> test2(y+1)
+    Compiling function test1 with type Polynomial Integer 
+-> InputForm
+    Compiling function test2 with type Polynomial Integer 
+-> Any
+
+    (27)
+    if y + 1 < 10
+      then 2(y + 1)
+                   2
+      else 5(y + 1)
+
+And to illustrate the possible problems with a "global 
+substitution", I try a different definition for ex:
+
+(13) -> ex:InputForm := ncParseFromString("if x<10 then 
+x:=x+1 else x:=x-1")$Lisp; expr ex
+
+    (13)
+    if x < 10
+      then x := x + 1
+      else x := x - 1
+                                                            
+  Type: OutputForm
+(14) -> destruct ex
+
+    (14)  [IF,(< x 10),(LET x (+ x 1)),(LET x (- x 1))]
+                                                          Type: 
+List InputForm
+
+(18) -> test1(x0)==sub(ex,x,x0)
+                                                            
+        Type: Void
+(19) -> expr test1(y)
+    Compiling function sub with type 
+(InputForm,Symbol,InputForm) ->
+       InputForm
+    Compiling function test1 with type Variable y -> 
+InputForm
+
+    (19)
+    if y < 10
+      then y := y + 1
+      else y := y - 1
+                                                            
+  Type: OutputForm
+
+(20) -> interpret test1(3)
+    Compiling function test1 with type PositiveInteger -> 
+InputForm
+
+    3 is not valid on the left-hand side of an assignment 
+expression.
+(20) -> expr test1(x+1)
+    Compiling function test1 with type Polynomial Integer 
+-> InputForm
+
+    (20)
+    if x + 1 < 10
+      then x + 1 := x + 1 + 1
+      else x + 1 := x + 1 - 1
+                                                            
+  Type: OutputForm
+Even though the output of (20) is what you "expect", it 
+should have been flagged just like when x0 = 3. Why does 
+Axiom think it is okay to put x+1 on the left hand side of 
+an assign? (If the right hand side is more complicated, I 
+don't suppose we expect the system to actually solve for 
+x; and even if it does, it would not know which root to 
+take for say a quadratic.)
+
+The problem is not because I use an assignment, but 
+because an InputForm is supposedly free to do any 
+computation, including a conditional increment/decrement 
+on the input. Another problem, when dealing with the 
+original question, as amended, is there is no "integrate" 
+operation on InputForm.
+
+Here's an unexpected turn out (I should have parenthesized 
+the object of "if"): the system should have flagged an 
+input or syntax error if it actually interpreted the ; to 
+end the if-clause. Is NIL or the () regarded as an error 
+indication in Lisp or InputForm?
+
+                                                            
+   Type: InputForm
+(11) -> ex:InputForm := ncParseFromString("if x<10 then 
+x:=x+1;2*x else 5*x^2")$
+Lisp; expr ex
+
+    (11)  NIL
+                                                            
+  Type: OutputForm
+(12) -> flatten ex
+
+    (12)  ()
+                                                            
+   Type: InputForm
+
+William
+
+
+
+On Tue, 3 May 2011 13:32:55 -0400
+  Bill Page <bill.page@newsynthesis.org> wrote:
+> William,
+> 
+> As usual this thread is drifting away from the original 
+>question but I
+> still think it is interesting from a more general point 
+>of view. It
+> seems to me that InputForm is an often under-appreciated 
+>and
+> under-used domain in Axiom.
+> 
+> On Tue, May 3, 2011 at 3:04 AM, you wrote:
+>> Dear Bill:
+>>
+>> You are right. I should not have declare "It is not 
+>>possible" (even with a
+>> qualifier) since one can program around the 
+>>difficulties.
+> 
+> True.  The question is: how much programming is required 
+>versus how
+> much one can do "off-the-shelf". With any system that is 
+>designed to
+> be extended like Axiom, this is always a moving target. 
+>As user
+> requirements are identified and programming solutions 
+>found, these
+> solutions should become candidates for inclusion in the 
+>standard
+> library.
+> 
+>> However, what you did essentially defines two different 
+>>piecewise function, one
+>> for numeric and one for symbolic, by using "interpret" 
+>>and "expr".
+> 
+> There is only one definition of 'test1'
+> 
+> (3) -> ex:InputForm := parse("if x<10 then 2*x else 
+>5*x^2");
+> (4) -> test1(x0)==sub(ex, x,x0)
+> 
+> In that sense there is only one "function". (I think 
+>this definition
+> is more properly called a "mode".) This highlights a 
+>significant
+> difference between function definitions in the Axiom 
+>interpreter
+> versus the library compiler. Untyped modes will (usually 
+>but not
+> necessarily) be instantiated into fully typed functions. 
+> Warning
+> messages like:
+> 
+>  Compiling function test1 with type PositiveInteger -> 
+>InputForm
+> 
+> are intend to inform the user that this "function" 
+>resulted in one of
+> possibly several different fully typed compiled 
+>functions.
+> 
+>> If you use "interpret test1(y)" you would still get the 
+>>wrong answer, and
+> 
+> Yes. It is the "wrong" answer in as much as it probably 
+>differs wildly
+> from what a beginning user would expect. That is way 
+>other variants of
+> Axiom choose to eliminate "<" to denote the default 
+>ordering of
+> polynomials. In these other systems "interpret test1(y)" 
+>would not be
+> evaluated since these is preferable over an apparently 
+>wrong result.
+> 
+>> similarly, if you use "expr test1(3)", then you would 
+>>not have the result
+>> evaluated.
+> 
+> That is true. 'expr' is only a matter of "pretty 
+>printing" and
+> unevaluated expression (InputForm). 'interpret' on the 
+>other hand
+> applies all of Axiom's built-in and library-dependent 
+>rules for
+> evaluation.
+> 
+>> Of course, you can combine the two cases and again 
+>>distinguish them
+>> by testing if the input is a symbolic expression or 
+>>numeric (keeping it
+>> unevaluated in the first case, and evaluating in the 
+>>second).
+>>
+> 
+> I suppose you are suggesting a function that in Axiom 
+>parlance might
+> be called "interpretIfCan". It is not obvious to me how 
+>one could
+> "test if the input is a symbolic expression". In a deep 
+>sense
+> everything in Axiom (in fact in any computer system) is 
+>"symbolic".
+>From the point of view of Axiom's run-time system (i.e. 
+>Lisp) some
+> things are considered "atomic" such as symbols, 
+>integers, etc. But
+> 
+> (5) -> sub(ex,x,3)
+>   Compiling function sub with type 
+>(InputForm,Symbol,InputForm) ->
+>      InputForm
+> 
+>   (5)  (IF (< 3 10) (* 2 3) (* 5 (^ 3 2)))
+>                                                           
+>   Type: InputForm
+> 
+> is not atomic in this sense, yet it can be evaluated by 
+>'interpret' to
+> something which is:
+> 
+> (6) -> interpret(sub(ex,x,3))::InputForm
+> 
+>   (6)  6
+>                                                           
+>   Type: InputForm
+> 
+> It would certainly be possible in principle to implement 
+>a function such as:
+> 
+>   evaluate: InputForm -> InputForm
+> 
+> which attempts to 'interpret' its input and if possible 
+>returns the
+> InputForm derived from the corresponding value, 
+>otherwise it would
+> return the input unchanged.
+> 
+>> Your routine sub is, I believe, not full proof. If x 
+>>were modified inside f,
+>> would a static substitution of all occurrences of x by y 
+>>work? (isn't y
+>> bound and x is not?). Or if there were a local variable 
+>>x that temporarily
+>> hides the scope of the outer x. By using f:InputForm, 
+>>the dummy argument
+>> for f is no longer a dummy; as a function, f is 
+>>independent of the literal
+>> used for its argument. Of course, we can identify the 
+>>argument of f in the
+>> sub routine without passing it as an argument for sub.
+>>
+> 
+> I think 'sub' does exactly and only what I claimed.
+> 
+> (2) -> sub(f:InputForm, x:Symbol, y:InputForm):InputForm 
+>== ( _;f); _
+>          atom? f => (symbol? f => (symbol f = x => 
+>y;f);f); _
+>            [sub(g,x,y) for g in destruct f]::InputForm)
+> 
+> It finds all occurrences of the symbol (passed as formal 
+>parameter x)
+> in the InputForm (passed by parameter f). It inserts an 
+>InputForm
+> (passed as parameter y) into f where x occurs in f. The 
+>result is
+> still a value of type InputForm which may or may not be 
+>able to be
+> evaluated by 'interpret'. Nothing is "bound" in f. Also 
+>there is no
+> concept of "local variable" because the InputForm is not 
+>yet evaluated
+> in any way. The declaration "f:InputForm" is just like 
+>any other
+> similar declaration in an Axiom function. It says only 
+>that the value
+> passed by formal parameter f must be of type InputForm. 
+>f is not a
+> function, it just stands for some value of type 
+>InputForm.
+> 
+>> I am sure that in lisp, you can do anything. (Tim: would 
+>>you rise up to the
+>> challenge?) I believe Stefan's question is whether it 
+>>can be done
+>> "intuitively" (even though he did not say so 
+>>explicitly).
+> 
+> As you can see InputForm is only slightly removed from 
+>Lisp. The
+> underlying representation of InputForm is exactly a Lisp 
+>s-expression
+> of a particular form.
+> 
+>> Mathematica is able to provide that, because neither the 
+>>input nor the output
+>> is restricted by its type.
+> 
+> I think that is not very accurate. It might be better to 
+>say that in
+> Mathematica everything is of only one type: symbolic. In 
+>Axiom terms
+> this would be like making everything an InputForm. This 
+>is not as
+> "bad" or as "stupid" as it might sound. But it is not 
+>very "algebraic"
+> in the sense in which I used the word earlier.
+> 
+>> In Axiom, maybe we can do the same with a Union like
+>> Union(Integer, InputForm).
+> 
+> I am not sure how Union would help in this case.
+> 
+>> ...
+> 
+> Regards,
+> Bill Page.
+
+William Sit, Professor Emeritus
+Mathematics, City College of New York
+Office: R6/291D Tel: 212-650-5179
+Home Page: http://scisun.sci.ccny.cuny.edu/~wyscc/
+
+
+From MAILER-DAEMON Thu May 05 00:18:02 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QHq0o-0003cZ-Rd
+	for mharc-axiom-math@gnu.org; Thu, 05 May 2011 00:18:02 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:33951)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QHq0m-0003bG-Po
+	for axiom-math@nongnu.org; Thu, 05 May 2011 00:18:01 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QHq0l-0007nU-Bs
+	for axiom-math@nongnu.org; Thu, 05 May 2011 00:18:00 -0400
+Received: from cgate.sci.ccny.cuny.edu ([134.74.34.100]:64476)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <wyscc@sci.ccny.cuny.edu>) id 1QHq0l-0007nM-9a
+	for axiom-math@nongnu.org; Thu, 05 May 2011 00:17:59 -0400
+Received: from [71.190.87.119] (account wyscc@sci.ccny.cuny.edu)
+	by cgate.sci.ccny.cuny.edu (CommuniGate Pro WebUser 4.2.10)
+	with HTTP id 22718481; Thu, 05 May 2011 00:23:15 -0400
+From: "William Sit" <wyscc@sci.ccny.cuny.edu>
+To: Stefan Karrmann <s.karrmann@web.de>,Ralf Hemmecke <ralf@hemmecke.de>
+	, axiom-math <axiom-math@nongnu.org>
+X-Mailer: CommuniGate Pro WebUser Interface v.4.2.10
+Date: Thu, 05 May 2011 00:23:15 -0400
+Message-ID: <web-22718481@cgate.sci.ccny.cuny.edu>
+In-Reply-To: <1304541468.5030.93.camel@hermes>
+References: <1304188828.20602.11.camel@hermes> <4DBFC908.3000705@hemmecke.de>
+	<1304541468.5030.93.camel@hermes>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-Received-From: 134.74.34.100
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 05 May 2011 04:18:01 -0000
+
+Dear Stefan:
+
+You posed a legitimate problem: how should symbolic 
+computation handle piecewise defined functions, and in 
+particular, how to integrate such a function.
+
+Maple and Mathematica both can handle piecewise functions. 
+Look up "piecewise" from Maple Help. You can easily define 
+a piecewise function, and differentiate or integrate it. 
+Indeed, Maple says:
+
+The piecewise function can be differentiated, integrated, 
+simplified, plotted, and used in the following types of 
+differential equations: constant coefficients and 
+discontinuous perturbation function, general first-order 
+linear, Riccati, and some other classes which are handled 
+by integration or variation of parameter. See 
+dsolve[piecewise] for more details. series, limit, abs, 
+and signum can handle the piecewise function.
+
+As example, the desired solution the problem of 
+integrating f(x) from 0 to t, where f(x) is 2x if x < 10 
+and 5x^2 otherwise, should be the function g(t), defined 
+as t^2 if t < 10 and -4000/3 +(5 t^3)/3 otherwise. Maple 
+does exactly that. In fact, I even tried to integrate 
+f(f(x)) and f(f(x+1)) and Maple does it with no problems 
+with all the cases covered.
+
+Mathematica has a similar function called Piecewise to 
+construct piecewise functions, and like Maple, Piecewise 
+can be used in such functions as Integrate, Minimize, 
+Reduce, DSolve and Simplify, as well as their numeric 
+analogs.
+
+This may be an uncovered domain in Axiom. A search for 
+"piecewise" shows no hits. I think piecewise functions 
+have to be separately handled, particularly in case 
+analysis (possibly involving semi-algebraic sets and CAD) 
+if there is any indefiniteness in the answer (like an 
+indefinite integral). There is some evidence that if the 
+user does not use the built-in "piecewise" or "Piecewise" 
+function, but uses an if-then-else construction, neither 
+Maple nor Mathematica can handle subsequent mathematical 
+calculations. For example, the system would not do the 
+case analysis, much less the "simplification" 
+automatically, but would present the result as the 
+integral of If[x < 10, 2 x, 5 x^2] (in Mathematica; I did 
+not try Maple). Even when the case analysis is done, it 
+would still not simplify or evaluate the integrals:
+
+h[x_] := If[x < 10, Integrate[2 y, {y, 0, x}],
+   Integrate[2 y, {y, 0, 10}] + Integrate[5 y^2, {y, 10, 
+x}]]
+
+when h[x] is called. It will evaluate on numerical inputs.
+
+In our earlier discussions, we were "lured" into using 
+"if-the-else" constructions and thus got the feeling that 
+this is difficult to handle. The confusion is that we 
+interpret "x < 10" as an binary relation, whereas it 
+should be handled as a semi-algebraic set (in one 
+dimension, this is just an interval)!
+
+However, the algorithms seem to be there, and someone 
+should implement them in Axiom if it is not already done 
+but hidden in some obscure packages.
+
+William
+
+On Wed, 04 May 2011 22:37:48 +0200
+  Stefan Karrmann <s.karrmann@web.de> wrote:
+> Dear all,
+> 
+> thanks for your answers. They clears a lot.
+> 
+> I actually want to integrate test1 and solve an 
+>differential equation
+> with it.
+> 
+> E.g.
+> test2 x == rho * test1 x
+> y = operator 'y
+> odeq := D(y x) = test2 x
+> solve(odeq, y, x)
+> 
+> Obviously, the solution is "formally"
+> 
+> y_sol x == integrate(test2 x,x)
+> 
+> Kind regards,
+> Stefan
+> 
+> Am Dienstag, den 03.05.2011, 11:21 +0200 schrieb Ralf 
+>Hemmecke:
+>> Dear Stefan,
+>> 
+>> as others already have pointed out, for Axiom, your 
+>>question is not 
+>> really well posed.
+>> 
+>> In Axiom
+>> 
+>>    if x<10 then 2*x else 5*x^2
+>> 
+>> is *not* an expression (as you might know it from other 
+>>untyped CAS like 
+>> Mathematica or Maple), but rather a programming language 
+>>construct. In 
+>> other words, if Axiom sees this, it is evaluated. So the 
+>>result is 
+>> either 2*x or 5*x^2 depending on the (boolean) outcome 
+>>of the evaluation 
+>> of x<10.
+>> 
+>> I think, Bill suggested to use something like InputForm. 
+>>There it would 
+>> be possible to represent an if-expression unevaluated.
+>> 
+>> But you should rather say what you actually want (it's 
+>>not the same what 
+>> you expect).
+>> 
+>> In order for us to suggest you a proper way to handle 
+>>your use case, you 
+>> should tell us why you want a piecewise function and 
+>>(more important) 
+>> what you later want to do with that function.
+>> 
+>> Until we have that information, everything would be just 
+>>digging in the 
+>> dark.
+>> 
+>> Ralf
+>> 
+>> On 04/30/2011 08:40 PM, Stefan Karrmann wrote:
+>> > Dear all,
+>> >
+>> > I'm new to axiom and have a problem with piecewise 
+>>functions.
+>> >
+>> > test1 (x | x<  10) == 2*x
+>> > test1 (x | x >= 10) == 5*x^2
+>> > [was typo: test1 (x | x<  10) == 5*x^2]
+>> > test1
+>> > ->
+>> >     test1 (x | x<  10) == 2x
+>> >     test1 (x | ^ x<  10) == 5x
+>> > 
+>>                                                    Type: 
+>>FunctionCalled
+>> > test1 y
+>> > ->
+>> >       2
+>> >     5y
+>> >
+>> > I expected something like (if y<  10 then 2*y else 
+>>5*y**2).
+>> >
+>> > How is it possible to pass a Variable to a piecewise 
+>>function respecting
+>> > the pieces?
+>> >
+>> > PS: Using a block and =>  or explicit if-then-else 
+>>does not help.
+> 
+> 
+> _______________________________________________
+> Axiom-math mailing list
+> Axiom-math@nongnu.org
+> https://lists.nongnu.org/mailman/listinfo/axiom-math
+
+William Sit, Professor Emeritus
+Mathematics, City College of New York
+Office: R6/291D Tel: 212-650-5179
+Home Page: http://scisun.sci.ccny.cuny.edu/~wyscc/
+
+
+From MAILER-DAEMON Thu May 05 09:51:06 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QHyxO-0006eX-Ar
+	for mharc-axiom-math@gnu.org; Thu, 05 May 2011 09:51:06 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:37153)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raymond.rogers72@gmail.com>) id 1QHHem-0004Qd-Ca
+	for axiom-math@nongnu.org; Tue, 03 May 2011 11:37:01 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <raymond.rogers72@gmail.com>) id 1QHHel-0001RC-F4
+	for axiom-math@nongnu.org; Tue, 03 May 2011 11:37:00 -0400
+Received: from mail-pv0-f173.google.com ([74.125.83.173]:59850)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raymond.rogers72@gmail.com>) id 1QHHel-0001Qx-5m
+	for axiom-math@nongnu.org; Tue, 03 May 2011 11:36:59 -0400
+Received: by pvg3 with SMTP id 3so101971pvg.4
+	for <axiom-math@nongnu.org>; Tue, 03 May 2011 08:36:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:message-id:date:from:user-agent:mime-version:to
+	:cc:subject:references:in-reply-to:content-type
+	:content-transfer-encoding;
+	bh=sTlGSgQddfsH4V/mRrBC40zvI+1WDHCMie33pe6LSCE=;
+	b=sNG7ggc0sIFNzWKbF2vJIAOGCjBN7hUGSyGk3GjaaplTrd2bhxoo1eLrc6XMFNEgee
+	ARUQzhZ0Y32PWqqNprCxJHsHNL2+tTO33OhDRc4rkM/YuWsHkvWdwQYvZ6Pg+efn2hVH
+	w/2jN/GEs5vh/dBJlm4GHUYklkR/c4mnXy3x0=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:user-agent:mime-version:to:cc:subject
+	:references:in-reply-to:content-type:content-transfer-encoding;
+	b=VNy31Oz3Oqw6GkOyeVKR401GuVN2JZXf/aETHAtxsYts1q2mRzwXEwpWPN8fCBEPx2
+	kuFP5/UvVW5uuhAgElLV0VER2A/P2x4kUp+0Sz+fH+2w4O5tEvnIYgQqfjRfzPiv3jWc
+	V2qHSM73xdqPtP7XeUwNS9INCYkdGiYQERvg4=
+Received: by 10.142.231.11 with SMTP id d11mr1716wfh.35.1304437017312;
+	Tue, 03 May 2011 08:36:57 -0700 (PDT)
+Received: from [192.168.1.69] ([201.138.95.55])
+	by mx.google.com with ESMTPS id 25sm216587wfb.10.2011.05.03.08.36.54
+	(version=SSLv3 cipher=OTHER); Tue, 03 May 2011 08:36:55 -0700 (PDT)
+Message-ID: <4DC02112.9070102@gmail.com>
+Date: Tue, 03 May 2011 10:36:50 -0500
+From: Raymond Rogers <raymond.rogers72@gmail.com>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US;
+	rv:1.9.2.17) Gecko/20110414 Thunderbird/3.1.10
+MIME-Version: 1.0
+To: Ralf Hemmecke <ralf@hemmecke.de>
+References: <1304188828.20602.11.camel@hermes> <4DBFC908.3000705@hemmecke.de>
+In-Reply-To: <4DBFC908.3000705@hemmecke.de>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-Received-From: 74.125.83.173
+X-Mailman-Approved-At: Thu, 05 May 2011 09:51:05 -0400
+Cc: axiom-math@nongnu.org, s.karrmann@web.de
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 03 May 2011 15:37:01 -0000
+
+On 05/03/2011 04:21 AM, Ralf Hemmecke wrote:
+> Dear Stefan,
+>
+> as others already have pointed out, for Axiom, your question is not 
+> really well posed.
+>
+> In Axiom
+>
+>   if x<10 then 2*x else 5*x^2
+>
+> is *not* an expression (as you might know it from other untyped CAS 
+> like Mathematica or Maple), but rather a programming language 
+> construct. In other words, if Axiom sees this, it is evaluated. So the 
+> result is either 2*x or 5*x^2 depending on the (boolean) outcome of 
+> the evaluation of x<10.
+>
+> I think, Bill suggested to use something like InputForm. There it 
+> would be possible to represent an if-expression unevaluated.
+>
+> But you should rather say what you actually want (it's not the same 
+> what you expect).
+>
+> In order for us to suggest you a proper way to handle your use case, 
+> you should tell us why you want a piecewise function and (more 
+> important) what you later want to do with that function.
+>
+> Until we have that information, everything would be just digging in 
+> the dark.
+>
+> Ralf
+Ralf
+
+But the question is not intrinsically a "programing construct".  With 
+some (bulky) symbolic logic constructs one can express it in a 
+mathematical sense.
+That is: set membership and "exclusive or".  I wouldn't have the 
+slightest idea how to implement it in Axiom; nonetheless questions like 
+this have non programmatic expressions.  For instance Prolog has an 
+explicit resolution syntax that is reasonably obvious and supports 
+embedding logic conditions on and on.   As I recall you can even extend 
+it to second order logic.
+
+
+From MAILER-DAEMON Thu May 05 09:51:06 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QHyxO-0006ew-Dk
+	for mharc-axiom-math@gnu.org; Thu, 05 May 2011 09:51:06 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:35219)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raymond.rogers72@gmail.com>) id 1QHfNL-0008J7-SW
+	for axiom-math@nongnu.org; Wed, 04 May 2011 12:56:36 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <raymond.rogers72@gmail.com>) id 1QHfNK-0004B7-Uk
+	for axiom-math@nongnu.org; Wed, 04 May 2011 12:56:35 -0400
+Received: from mail-pw0-f45.google.com ([209.85.160.45]:41259)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raymond.rogers72@gmail.com>) id 1QHfNK-0004Ao-Pv
+	for axiom-math@nongnu.org; Wed, 04 May 2011 12:56:34 -0400
+Received: by pwi6 with SMTP id 6so737201pwi.4
+	for <axiom-math@nongnu.org>; Wed, 04 May 2011 09:56:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:message-id:date:from:user-agent:mime-version:to
+	:subject:references:in-reply-to:content-type
+	:content-transfer-encoding;
+	bh=RYe/j1oggNgxI9Lh+dGHB+zR8jOdBbnkxSSRuAoGZlA=;
+	b=wC0Mod0fg0dXOetxhIYdaJCAL38VMky+LJDrFcqwhmZ5ZaoY3YnQ4R+p04kPy8jOc9
+	rMYDb3HXbDzfSUe6xGrJRmjb+1aAYeR+NJN1sqhZoBQx5z1gq//zqsL+2q2K9l90Agyx
+	uJ+aVS2lGSS5ILtkXrXbU5xqSyp3ain96zlHw=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:user-agent:mime-version:to:subject:references
+	:in-reply-to:content-type:content-transfer-encoding;
+	b=Qjt/kI0Of92gbF48yFqssiUjVlxjUjs9YJljUOhYPp/ketqzkXY/ERIB6iFrpExcvr
+	+PtTqq6HWczdkQyLXSST5gAKUcb9ucK4b5oAJroz505Nvxl5mQbHMeFdYBWHt1IDYDZk
+	0yk89Oo7E/1oTgWkfnNYYCvUDJ/dm0EGiJKjk=
+Received: by 10.142.62.8 with SMTP id k8mr683279wfa.134.1304528192339;
+	Wed, 04 May 2011 09:56:32 -0700 (PDT)
+Received: from [192.168.1.69] ([201.138.102.216])
+	by mx.google.com with ESMTPS id p10sm1639468wfl.21.2011.05.04.09.56.28
+	(version=SSLv3 cipher=OTHER); Wed, 04 May 2011 09:56:31 -0700 (PDT)
+Message-ID: <4DC1853B.9050506@gmail.com>
+Date: Wed, 04 May 2011 11:56:27 -0500
+From: Raymond Rogers <raymond.rogers72@gmail.com>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US;
+	rv:1.9.2.17) Gecko/20110414 Thunderbird/3.1.10
+MIME-Version: 1.0
+To: Ralf Hemmecke <ralf@hemmecke.de>, axiom-math@nongnu.org
+References: <1304188828.20602.11.camel@hermes> <4DBFC908.3000705@hemmecke.de>
+	<4DC02112.9070102@gmail.com> <4DC026DE.3080302@hemmecke.de>
+In-Reply-To: <4DC026DE.3080302@hemmecke.de>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-Received-From: 209.85.160.45
+X-Mailman-Approved-At: Thu, 05 May 2011 09:51:05 -0400
+Subject: Re: [Axiom-math] if-expression and variables
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 04 May 2011 16:56:36 -0000
+
+On 05/03/2011 11:01 AM, Ralf Hemmecke wrote:
+>> But the question is not intrinsically a "programing construct".
+>
+> What does that mean?
+More or less I mean a tree structure where the nodes have evaluation 
+contents; say Boolean evaluations or calculations.  Then nodes may have 
+left/right (true/false) subbranches or terminate.   In the case of 
+"case" the subbranches could be most anything.  When the tree 
+terminates, reaches an end node,  then return  the terminating 
+evaluation/value (for debuging the option of returning the path might be 
+nice).  If a mid-level evaluation doesn't match a subsequent branch then 
+return failure; of course the lack of a subbranch would be taken as 
+matching anything.
+
+This isn't what I meant by "symbolic logic" but is equivalent and seems 
+perfectly clear without any evocation of "horn clauses" and such.
+>
+>> With some (bulky) symbolic logic constructs one can express it in a
+>> mathematical sense. That is: set membership and "exclusive or".
+>
+> You want to rewrite the if-statement into set membership and exclusive 
+> or?
+Yes I did; but upon reflection I am reluctant to go there.
+
+
+>
+> To give a few hints. As Bill already said, Axiom is more an algebraic 
+> system rather than a symbolic one. Of course, since Axiom has a proper 
+> programming language underneath, one can do everything, but the 
+> question is, how much is already implemented.
+>
+> The first questions, when one programs with Axiom usually are:
+> What is my "domain of computation"?
+> (That is basically like with universal algebra. What is the carrier 
+> set and what are the operations?)
+> How are the elements of the carrier set represented in terms of 
+> already existing (library) types?
+Yes, I think it boils down to second-order logic; in this case a 
+category of unevaluated expressions.   As above; stored in the tree and 
+then brought front and center and evaluated in the tree accessing 
+environment.
+
+Going back to the original question.  It seems the questioner expects to 
+fabricate a template and later to create instances of it with varying 
+variables.  I would think that keeping the old (hopefully private) 
+variables and then assigning incoming variables to the private variables 
+might eliminate having multiple copies laying around and perhaps the 
+need of a template at all.
+Probably doesn't cover all cases though.
+
+Sorry if I have taken the discussion drifting; I merely wanted to point 
+out the if/else can be a static data structure rather than in-line code.
+
+Ray
+
+
+
+

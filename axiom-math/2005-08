@@ -1,0 +1,1593 @@
+From MAILER-DAEMON Mon Aug 08 22:04:39 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E2JTq-0000Oe-E3
+	for mharc-axiom-math@gnu.org; Mon, 08 Aug 2005 22:04:38 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E2JTo-0000MP-5j
+	for axiom-math@nongnu.org; Mon, 08 Aug 2005 22:04:36 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E2JTm-0000LS-89
+	for axiom-math@nongnu.org; Mon, 08 Aug 2005 22:04:35 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1E2JTl-0000KX-BZ; Mon, 08 Aug 2005 22:04:33 -0400
+Received: from [209.135.140.38] (helo=axiom-developer.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34)
+	id 1E2JbD-0004Gf-TW; Mon, 08 Aug 2005 22:12:16 -0400
+Received: from axiom-developer.org (lincoln.rosehosting.com [127.0.0.1])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id j791vmwl024281;
+	Mon, 8 Aug 2005 20:57:48 -0500
+From: daly@axiom-developer.org
+Received: (from daly@localhost)
+	by axiom-developer.org (8.12.8/8.12.8/Submit) id j791vmVG024278;
+	Mon, 8 Aug 2005 20:57:48 -0500
+Date: Mon, 8 Aug 2005 20:57:48 -0500
+Message-Id: <200508090157.j791vmVG024278@axiom-developer.org>
+To: smustudent1@yahoo.com
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Ideas for "next generation" CAS
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 09 Aug 2005 02:04:37 -0000
+
+CY,
+
+re: published summary of thoughts.
+
+not really. it's an evolving idea. my current thinking on the subject
+revolves around the "30 year horizon" and the "petamachine question".
+
+in 30 years a researcher will have a machine with a Thz of cpu, a
+TByte of storage, a PetaByte of disk space, and a Thz of bandwidth
+(the so-called petamachine).  they'll have access to all previously
+published literature and real-time access to currently written
+materials flowing past on the connection, sort of a Napster version of
+science.  so what kind of software is needed to do research?
+
+clearly today's methods of building software cannot scale. if we
+project axiom into this future situation and scale it by a factor of
+100 we get 300 million lines of source, 110,000 domains, 1.1 million
+functions, etc. i believe that axiom can scale much better than any
+commercially available system because it is built on a better basis
+(category theory). unfortunately while the theory will scale the 
+current system will not.
+
+why? many reasons. and as we think of them (this is nowhere near a
+complete list of the things worth mentioning but time is short and
+this margin is narrow :-) ) we need to develop research efforts to
+attack these problems. even more unfortunately there is no support
+for research at such fundamental levels anymore. (but we can still
+do research without support)
+
+consider what axiom "suggests" in its current form. if you look at the
+inside cover of the axiom book or in src/doc/endpapers.pamphlet you'll
+see an organization of the mathematics and data structures. this
+raises several questions worth exploring.
+
+  (a) is there a good graph of the categorical structure of math?
+      (good w.r.t to the computational critera). we need a research
+      effort to develop a classification scheme and a graph.
+  (b) axiom creates categories which exist for computational reasons,
+      such as RNG, but which are not reflected in non-computational
+      math. we need to investigate the properties of RNG to either
+      eliminate it or develop its axiomatic basis.
+  (c) each of the categories, such as MONOID, have associated axioms.
+      we need to "decorate" the categories with these axiom to provide
+      a connection to the proof systems.
+  (d) we need to examine the complete matrix of all of the 
+      (category x category) and examine each function to ensure that
+      it exists in the most general form as well as specific versions.
+      this opens up whole research vistas of computational mathematics
+      looking for specific algorithms that are more efficient than the
+      general purpose case. given enough general vs specific examples
+      we could develop theory that defines the classes of optimization
+      and let the machine generate specific algorithms in real time.
+  (e) given categories decorated with their axioms and program-proof 
+      machinery we can look at the functions in each domain and begin
+      to construct proofs for these functions. i believe that we could
+      do this "in the small" with early categories (such as MONOID) 
+      using ACL2 (which is in lisp and can be loaded into an axiom 
+      image). only a lack of free time has stopped me from doing this.
+  (f) we can look at specific functions from a domain in a category and 
+      we can write the pre- and post-conditions. once we collect these
+      into a catalog then systems like THEOREMA (Buchberger) can 
+      search the catalog for algorithms that "logically cover" the
+      constraints. this would allow THEOREMA to dynamically discover
+      that the needed algorithm is actually "sort" or "log" and that
+      axiom provides it.
+
+PROGRAM PROOF
+
+when we extend the ideas above and worry about the software scaling
+issues it becomes clear that we need to research ways to develop
+scientific algorithms from first principles. that is, we need to have
+a way to specify a needed algorithm and let the machine derive a
+complete, correct, valid, and verified program, possibly using logic
+extended with programming constraints and technique libraries and
+extensions of ACL2 toward generative rather than proof techniques.
+
+in general this is too hard but within the axiom framework it might
+be possible. since each function lives within a domain within a 
+category and the domain and range of the function can be well specified
+it might be possible to develop a language for algorithm specification.
+i'd like to work on developing a set of group theory algorithms that
+were automatically generated from the axiom category, domain, and
+functional constraints. 
+
+proceeding in this way we can think of constructing a new axiom 
+library (and associated interpreter/compiler) that is provably
+correct. i feel that the current method of developing software must
+eventually give way to this kind of technique since it is vitally
+important that we can trust the correctness of the computational
+mathematics. 
+  
+
+LITERATE PROGRAMMING (Doyen)
+
+lets move to another level of research for computational math.
+currently papers are published that give algorithms in computational
+mathematics. however they do not publish the actual code with the
+paper. to me this is like publishing a theorem without showing the
+proof. we need to change this for several reasons. ideally we should
+be able to go to a conference, attend a talk, drag-and-drop the paper
+from a URL and have the running algorithm and associated documentation
+automatically added to our local copy of axiom.
+
+there are some efforts on this. i've started the Doyen project 
+(http://sourceforge.net/projects/doyencd)
+which will be a bootable CD where you will be able to do this 
+drag-and-drop kind of additions to science software. Carlo Traverso
+at the Univ. of Pisa is trying to start a "literate journal" that
+will include source code with published papers. the ACM has been
+publishing the ISSAC proceedings on CD for the past two years which
+includes software (but not yet literate programs).
+
+we are computational mathematicians and we need to publish our code.
+we need to develop review standards. we need to develop code proof
+requirements, termination proofs, complexity statements, code
+portability standards, etc. i have permission to use a few papers
+that have been published as examples of these "standards". these
+will be in axiom as soon as i get the actual programs able to be
+"dragged and dropped" onto the Doyen version of axiom.
+
+given the complexity of building, maintaining, and expanding
+a system as large as axiom we need to intimately combine the
+theory and the code into a literate form. otherwise the expertise
+that created the code will die off and we won't be able to maintain
+such systems in the future. the previous generation of researchers 
+have begun to retire or die and all of that expertise is lost.
+
+SCIENCE PLATFORM (Crystal)
+
+we currently do science in arbitrary piles (math, chemistry, physics,
+engineering, etc). computational science crosses all of those boundaries.
+we need to develop a science platform that can present the algorithms
+to the researcher "thru a facet" that makes them seem like special cases.
+for example, crystallography algorithms are mostly group theory. the
+group theory algorithms should be presented to the crystallographer in
+a language they understand even though the underlying algorithms are 
+the same as used elsewhere (say in particle physics). so there have to
+be ways to customize the display of the information to match the person
+who is doing the research. the "model" of the researcher and the "model"
+of the problem need to be integrated so the system can maintain the
+"intensional stance" (the way the system molds itself to the researcher
+and the current problem under study). this "stance" is actually a 
+layer between the problem (the semantic net) and the interaction
+(the crystal) mentioned below.
+
+consider that all of the published science could now be put on a single
+hard drive (except for copyright issues). each researcher could start
+with this copy. since the science platform is net-connected and new
+papers are being published constantly we need to develop technology 
+to keep the information in some common form. there are hints of ways
+to do this (see http://www.research.ibm.com/UIMA) but we need to 
+stretch the bounds further. the meaning of the terms in the paper
+need to be represented and extracted. the meaning of the paper needs
+to be represented and extracted. all of these various levels of meaning
+and their associations need to be represented. my current thinking is
+to extend latex with a new set of semantic markup tools ("semtex?")
+so that ideas, terms, definitions, etc can have explicit markup.
+
+there is a technology for knowledge representation (see
+http://lists.gnu.org/archives/html/axiom-developer/2003-12/msg00071.html)
+that uses a "semantic network" as the primary representation. i'd like
+to have a KROPS-like representation as the center of the problem.
+research needs to be done to extend the dual OPS5-KREP techniques.
+
+dragging these issues together we get the "crystal" idea. think of
+the "problem" that the researcher is working on as a semantic graph
+hanging in space. surround the graph with a crystal with many facets.
+each facet represents a view (actually, a view-controller in the 
+"model-view-controller" sense). one "facet" view might show an annotated
+bibliography related to the problem. another facet might show the literate
+program. another facet might be a graph of one of the functions in the
+problem. another faceet might be a 3D solid model of the topological
+space (math), or the bridge under construction (eng), or the molecule
+(biochem). changes done in one view are globally reflected since the
+semantic net is changed. changes cause automatic literature searches
+(we have cpu to spare) and the system can suggest related literature.
+based on feedback to the suggestions new literature is filtered (thus
+the "intensional stance" of the researcher for this problem is modeled).
+
+so developing a prototype of the crystal idea is a key research project,
+at least on my version of the 30 year horizon critical path.
+
+nobody has the political will to fund such long-term research so the
+only possible way to develop this technology is thru open
+source. axiom was funded for 23 years and is an amazing program. we
+need to spend much more time and effort to meet the needs of the
+researcher in 2035.  computational math, unlike any other software,
+generates timeless software. the integral of "sin(x)" will still be
+the same in 30 years.
+
+there is much more and i really ought to put together a talk about it
+at some point. perhaps once the doyen project works so i can demonstrate
+the ideas.
+
+we really should have a debate about what the future researcher needs
+and how use future computers to cope with the information explosion.
+
+if you want more comments or specific details of my local projects 
+(like DOYEN, or KROPS, or CATS) just post on this list.
+
+hope this is useful to you.
+
+t
+
+
+      
+     
+
+
+
+From MAILER-DAEMON Fri Aug 12 11:59:32 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E3bwR-0001Ue-QZ
+	for mharc-axiom-math@gnu.org; Fri, 12 Aug 2005 11:59:31 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E3bwP-0001Tl-Cf
+	for axiom-math@nongnu.org; Fri, 12 Aug 2005 11:59:29 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E3bwM-0001SZ-7v
+	for axiom-math@nongnu.org; Fri, 12 Aug 2005 11:59:27 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E3bvE-0000nw-Mq
+	for axiom-math@nongnu.org; Fri, 12 Aug 2005 11:58:16 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E3brC-0006fX-F6
+	for axiom-math@nongnu.org; Fri, 12 Aug 2005 11:54:07 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j7CFcCs3064611
+	for <axiom-math@nongnu.org>; Fri, 12 Aug 2005 17:38:20 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="3Naabbipmm"
+Content-Transfer-Encoding: 7bit
+Message-ID: <17148.49662.11435.696102@seam101.local>
+Date: Fri, 12 Aug 2005 17:36:30 +0200
+To: axiom-math@nongnu.org
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4249; Body=1 Fuz1=1
+Subject: [Axiom-math] Rational Interpolation
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Aug 2005 15:59:30 -0000
+
+
+--3Naabbipmm
+Content-Type: text/plain; charset=us-ascii
+Content-Description: message body text
+Content-Transfer-Encoding: 7bit
+
+Here comes a fast rational interpolation implementation.
+
+
+--3Naabbipmm
+Content-Type: application/octet-stream
+Content-Disposition: attachment;
+	filename="ratint.spad.pamphlet"
+Content-Transfer-Encoding: base64
+
+XGRvY3VtZW50Y2xhc3N7YXJ0aWNsZX0KXHVzZXBhY2thZ2V7YXhpb20sYW1zbWF0aH0KXGJlZ2lu
+e2RvY3VtZW50fQpcdGl0bGV7cmludGVycC5zcGFkfQpcYXV0aG9ye01hcnRpbiBSdWJleX0KXG1h
+a2V0aXRsZQpcYmVnaW57YWJzdHJhY3R9ClJhdGlvbmFsIEludGVycG9sYXRpb24KXGVuZHthYnN0
+cmFjdH0KXHNlY3Rpb257SW50cm9kdWN0aW9ufQpUaGlzIGZpbGUgY29udGFpbnMgYW4gaW1wbGVt
+ZW50YXRpb24gb2YgYSByYXRpb25hbCBpbnRlcnBvbGF0aW9uIGFsZ29yaXRobQpkZXNjcmliZWQg
+YnkgXCJPbWVyIEVcfmdlY2lvXH5nbHUgYW5kIFxje0N9ZXRpbiBLLiBLb1xje2N9ClxjaXRle0Vn
+ZWNpb2dsdUtvYzE5ODl9LCBhbmQgaW1wcm92ZWQgYnkgTHVjYSBHZW1pZ25hbmkgXGNpdGV7R2Vt
+aWduYW5pMTk5M30sCndoZXJlIHRoZSBjb2VmZmljaWVudHMgb2YgdGhlIHJhdGlvbmFsIGZ1bmN0
+aW9uIGFyZSBpbiBhbnkgZ2l2ZW4gZmllbGQuCgpUaGUgcmF0aW9uYWwgaW50ZXJwb2xhdGlvbiBw
+cm9ibGVtIGNvbnNpc3RzIG9mIGZpbmRpbmcgYSByYXRpb25hbCBmdW5jdGlvbgokcF9tKHgpL3Ff
+bih4KSQgb2YgbnVtZXJhdG9yIGRlZ3JlZSAkbSQgYW5kIGRlbm9taW5hdG9yIGRlZ3JlZSAkbiQg
+dGhhdCBhc3N1bWVzCnRoZSB2YWx1ZXMgJGZfMSxmXzIsXGRvdHMsZl9OJCBhdCB0aGUgZGlzdGlu
+Y3QgcG9pbnRzICR4XzEseF8yLFxkb3RzLHhfTiQsCndoZXJlICROPW0rbi0xJC4KClRoZSBpbXBs
+ZW1lbnRlZCBhbGdvcml0aG0gY29tcHV0ZXMgYWxsIHJhdGlvbmFsIGludGVycG9sYW50cyBpbiAk
+TyhuXjIpJCBmaWVsZApvcGVyYXRpb25zLiBGb3IgZXhhbXBsZQoKPDxpbnB1dGZpbGU+Pj0KaW50
+ZXJwb2xhdGUoWzEsMiwzXSwgWzEsMiwzXSkKQApyZXR1cm5zIGEgbGlzdCBvZiB0d28gcmF0aW9u
+YWwgZnVuY3Rpb25zLCBvbmUgd2l0aCBudW1lcmF0b3IgZGVncmVlIHplcm8gYW5kCmRlbm9taW5h
+dG9yIGRlZ3JlZSB0d28sIGFuZCBvbmUgYmVpbmcgcG9seW5vbWlhbCBvZiBkZWdyZWUgb25lLgoK
+VGhlIHByaW5jaXBhbCBpZGVhIHVuZGVybHlpbmcgdGhlIGFsZ29yaXRobSBpcyB0byBkZXRlcm1p
+bmUgdGhlIGRlbm9taW5hdG9yCnBvbHlub21pYWwgJHFfbih4KT1cc3VtX3tpPTB9Xm4gYl9pIHhe
+aSQsICRiX249MSQgb2YgZGVncmVlICRuJCBieSBzb2x2aW5nIHRoZQptYXRyaXggZXF1YXRpb24K
+JCQKXGJlZ2lue3BtYXRyaXh9CiAgaF8wICYgaF8xICYgaF8yICYgXGRvdHMgXFwKICBoXzEgJiBo
+XzIgJiBcZG90cyAgICAgICBcXAogIGhfMiAmIFxkb3RzICAgICAgICAgICAgIFxcCiAgXHZkb3Rz
+IFxcCiAgaF97bi0xfSAmIGhfbiAmIFxkb3RzICYgaF97Mm4tMn1cXApcZW5ke3BtYXRyaXh9Clxi
+ZWdpbntwbWF0cml4fQogIGJfMFxcYl8xXFwgXHZkb3RzXFwgXHZkb3RzXFwgYl97bi0xfQpcZW5k
+e3BtYXRyaXh9Cj0tClxiZWdpbntwbWF0cml4fQogIGhfblxcaF97bisxfVxcIFx2ZG90c1xcIFx2
+ZG90c1xcIGhfezJuLTF9ClxlbmR7cG1hdHJpeH0sCiQkCndoZXJlICRoX2o9XHN1bV97az0xfV5O
+IGNfayB4X2teaiQsICRjX2sgPSBcZnJhY3tmX2t9e3dfa30kIGFuZCAKJHdfaz1ccHJvZF97aj0x
+LCBqXG5lcSBrfV5OICh4X2steF9pKSQuCgpUaGlzIGluIHR1cm4gY2FuIGJlIGRvbmUgYnkgZ2Vu
+ZXJhdGluZyBhIHNlcXVlbmNlIG9mIG9ydGhvZ29uYWwgcG9seW5vbWlhbHMKd2l0aCByZXNwZWN0
+IHRvIHRoZSBpbm5lciBwcm9kdWN0CgpcYmVnaW57ZXF1YXRpb259CiAgXGxhYmVse2VxOklubmVy
+UHJvZHVjdH0KICBcbGFuZ2xlIHFfaih4KSwgcV9rKHgpXHJhbmdsZSAgPSBcc3VtX3tpPTF9Xk4g
+Y19pIHFfaih4X2kpcV9rKHhfaSkuICAKXGVuZHtlcXVhdGlvbn0KClN1Y2ggcG9seW5vbWlhbHMg
+c2F0aXNmeSB0aGUgdGhyZWUtdGVybSByZWN1cnJlbmNlIHJlbGF0aW9uClxiZWdpbntlcXVhdGlv
+bn0KICBcbGFiZWx7ZXE6VFRSfQogIHFfe2orMX0oeCkgPSAoeC1cYWxwaGFfailxX2ooeCkgLSBc
+YmV0YV9qIHFfe2otMX0oeCksCiAgXHF1YWQgcV97LTF9KHgpPTAscV8wKHgpPTEsICAKXGVuZHtl
+cXVhdGlvbn0KCndoZXJlICRcYWxwaGFfaiQgYW5kICRcYmV0YV9qJCBhcmUgY29uc3RhbnRzIGRl
+dGVybWluZWQgYnkKXGJlZ2lue2VxdWF0aW9ufQogIFxsYWJlbHtlcTpBbHBoYUJldGF9CiAgXGFs
+cGhhX2o9XGZyYWN7XGxhbmdsZSB4cV9qKHgpLHFfaih4KVxyYW5nbGUgfXtcbGFuZ2xlIHFfaih4
+KSxxX2ooeClccmFuZ2xlIH0sCiAgXGJldGFfaj1cZnJhY3tcbGFuZ2xlIHFfaih4KSxxX2ooeClc
+cmFuZ2xlIH17XGxhbmdsZSBxX3tqLTF9KHgpLHFfe2otMX0oeClccmFuZ2xlIH0uClxlbmR7ZXF1
+YXRpb259CgpPYnZpb3VzbHksIHRoaXMgd2lsbCBub3Qgd29yayB3aGVuICRcbGFuZ2xlIHFfaih4
+KSxxX2ooeClccmFuZ2xlJCB2YW5pc2hlcy4gVGhlCmNvbnRlbnQgb2YgR2VtaWduYW5pJ3MgYXJ0
+aWNsZSBcY2l0ZXtHZW1pZ25hbmkxOTkzfSBpcyB0byBkZXRlcm1pbmUgd2hlbgpleGFjdGx5IHRo
+aXMgaGFwcGVucyBhbmQgaG93IHRvIGNpcmN1bXZlbnQgaXQuIEluIGJyaWVmLCBpZiB3ZSBlbmNv
+dW50ZXIgdGhlCnNpdHVhdGlvbiB0aGF0ICRcbGFuZ2xlIHFfaih4KSxxX2ooeClccmFuZ2xlPTAk
+LCB3ZSBmaW5kICRcZGVsdGFfe2orMX0kIHN1Y2gKdGhhdCAkXGxhbmdsZSB4XmtxX2ooeCkscV9q
+KHgpXHJhbmdsZT0wJCBmb3IgJGs8XGRlbHRhX3tqKzF9LTEkIGJ1dCBkb2VzIG5vdAp2YW5pc2gg
+Zm9yICRrPVxkZWx0YV97aisxfS0xJC4KCkl0IGNhbiB0aGVuIGJlIHNob3duIHRoYXQgJFxsYW5n
+bGUgeF5rcV9qKHgpLHheaHFfaSh4KVxyYW5nbGU9MCQgaWYgJGpcbmVxIGkkCmFuZCAkazxcZGVs
+dGFfe2orMX0kLCAkaDxcZGVsdGFfe2krMX0kLCBhbmQgdGhlIHJlc3VsdGluZyBwb2x5bm9taWFs
+cyAkcV9pJCBhcmUKaW5kZWVkIHRoZSBkZW5vbWluYXRvciBwb2x5bm9taWFscyB3ZSBhcmUgbG9v
+a2luZyBmb3IuCgpUaGUgbnVtZXJhdG9yIHBvbHlub21pYWxzIGFyZSB0aGVuIGZvdW5kIGJ5IHJl
+cGVhdGluZyB0aGUgYWxnb3JpdGhtIHdpdGgKJGZfMSxmXzIsXGRvdHMsZl9OJCByZXBsYWNlZCBi
+eSAkMS9mXzEsMS9mXzIsXGRvdHMsMS9mX04kLiBJZiBzb21lICRmX2okCmhhcHBlbnMgdG8gYmUg
+emVybywgd2UgY2FuIGZhY3RvciBvdXQgdGhlIGNvcnJlc3BvbmRpbmcgdGVybSBiZWZvcmUKaW50
+ZXJwb2xhdGluZy4KClxzZWN0aW9ue0RldGFpbHMgb2YgdGhlIGltcGxlbWVudGF0aW9ufQoKSW4g
+dGhlIGZvbGxvd2luZywgd2UgZGVzY3JpYmUgdGhlIGltcGxlbWVudGF0aW9uIG9mIHRoZSBhbGdv
+cml0aG0gYXMgYW4gQXhpb20KcGFja2FnZS4KCjw8Kj4+PQo8PFJJTlRFUlAgSGVhZGVyPj4KPDxS
+SU5URVJQIEV4cG9ydHM+Pgo8PFJJTlRFUlAgSW1wbGVtZW50YXRpb24+PgpACgpcc3Vic2VjdGlv
+bntIZWFkZXJ9Cjw8UklOVEVSUCBIZWFkZXI+Pj0KKysgQXV0aG9yOiBNYXJ0aW4gUnViZXkKKysg
+RGF0ZSBDcmVhdGVkOiAxMi4gQXVnIDIwMDUKKysgRGVzY3JpcHRpb246CisrICAgY29tcHV0ZSBh
+bGwgcmF0aW9uYWwgaW50ZXJwb2xhbnRzLgorKyBLZXl3b3JkczogcmF0aW9uYWwgaW50ZXJwb2xh
+dGlvbi4KKWFiYnJldiBwYWNrYWdlIFJJTlRFUlAgUmF0aW9uYWxJbnRlcnBvbGF0aW9uClJhdGlv
+bmFsSW50ZXJwb2xhdGlvbihGOiBGaWVsZCk6IEV4cG9ydHMgPT0gSW1wbGVtZW50YXRpb24gd2hl
+cmUKCiAgU1VQID09PiBTcGFyc2VVbml2YXJpYXRlUG9seW5vbWlhbAoKQAoKVGhpcyBhbGdvcml0
+aG0gaXMgZGVzaWduZWQgdG8gd29yayBvdmVyIGEgZmllbGQuIE5hdHVyYWwgY2hvaWNlcyBhcmUg
+CltbRnJhY3Rpb24gSW50ZWdlcl1dIGFuZCBvdGhlciBmcmFjdGlvbiBmaWVsZHMsIG9yIFtbRmxv
+YXRdXS4gTm90ZSBob3dldmVyLCB0aGF0CnRoZSBhbGdvcml0aG0gaXMgcHJvYmFibHkgbnVtZXJp
+Y2FsbHkgdW5zdGFibGUuCgpDdXJyZW50bHkgd2Ugd29yayB3aXRoIFtbU3BhcnNlVW5pdmFyaWF0
+ZVBvbHlub21pYWxdXXMsIGJ1dCBvZiBjb3Vyc2UsIHRoaXMKY291bGQgZWFzaWx5IGJlIGNoYW5n
+ZWQgdG8gYW55IGRvbWFpbiBvZiBbW1VuaXZhcmlhdGVQb2x5bm9taWFsQ2F0ZWdvcnldXS4KClxz
+dWJzZWN0aW9ue0V4cG9ydGVkIGZ1bmN0aW9uc30KPDxSSU5URVJQIEV4cG9ydHM+Pj0KICBFeHBv
+cnRzID09PiB3aXRoCgogICAgaW50ZXJwb2xhdGU6IChMaXN0IEYsIExpc3QgRikgLT4gTGlzdCBG
+cmFjdGlvbiBTVVAgRgogICAgICArKyBpbnRlcnBvbGF0ZSh4LCBmKSwgd2hlcmUgeD1cc3BhZHtb
+eDEsLi4uLHhuXX0gYW5kIGY9XHNwYWR7W2YxLC4uLixmbl19IAogICAgICArKyBhcmUgbGlzdHMg
+b2YgdGhlIHNhbWUgbGVuZ3RoLCBhbGwgZWxlbWVudHMgb2YgeCBiZWluZyBkaXN0aW5jdCwKICAg
+ICAgKysgcmV0dXJucyBhIGxpc3Qgb2YgcmF0aW9uYWwgZnVuY3Rpb25zIHdob3NlIHZhbHVlcyBh
+dCBhbnkgcG9pbnQgeGkKICAgICAgKysgZXF1YWxzIGZpLCBleGNlcHQgZm9yIHVuYXR0YWluYWJs
+ZSBwb2ludHMuICAKICAgICAgKysgRXJyb3I6IGlmIHggYW5kIGYgYXJlIG5vdCBvZiB0aGUgc2Ft
+ZSBsZW5ndGguCgpACgpXZSBleHBvcnQgYSBzaW5nbGUgZnVuY3Rpb24sIHRoYXQgcmV0dXJucyBh
+IGxpc3Qgb2YgYWxsIHBvc3NpYmxlIGludGVycG9sYXRpbmcKZnVuY3Rpb25zLgoKXHN1YnNlY3Rp
+b257SW1wbGVtZW50YXRpb259Cgo8PFJJTlRFUlAgSW1wbGVtZW50YXRpb24+Pj0KICBJbXBsZW1l
+bnRhdGlvbiA9PT4gYWRkCgogICAgSW50ZXJwb2xhdGlvblJlc3VsdCA9PT4gUmVjb3JkKGZ1bjog
+U1VQIEYsIHZhbDogTGlzdCBGKQoKICAgIGludDogKEludGVnZXIsIExpc3QgRiwgTGlzdCBGKSAt
+PiBMaXN0IEludGVycG9sYXRpb25SZXN1bHQKICAgIGludChOLCB4LCBjKSA9PQpACgpUaGlzIGlz
+IHRoZSBtYWluIHJvdXRpbmUgd2hpY2ggd2lsbCBjb21wdXRlcyB0aGUgZGVub21pbmF0b3IgcG9s
+eW5vbWlhbHMgZm9yIGEKZ2l2ZW4gbGlzdCBvZiBwb2ludHMgYW5kIHZhbHVlcy4gRm9yIHJlYXNv
+bnMgb2Ygc2ltcGxpY2l0eSB0aGUgZnVuY3Rpb25zIHRha2VzCmFscmVhZHkgdGhlIHRyYW5zZm9y
+bWVkIHZhbHVlcyAkY19rID0gXGZyYWN7Zl9rfXt3X2t9JCBhcyBhcmd1bWVudC4KCjw8UklOVEVS
+UCBJbXBsZW1lbnRhdGlvbj4+PQogICAgICBxOiBMaXN0IEludGVycG9sYXRpb25SZXN1bHQgOj0g
+W1sxLCBbMSBmb3IgaSBpbiAxLi4jeF1dXSAKQCAKVGhpcyB2YXJpYWJsZSB3aWxsIGNvbnRhaW4g
+YSBsaXN0IG9mIHBhaXJzICQocV9uLCAocV9uKHhfMCksIHFfbih4XzEpLFxkb3RzLApxX24oeF9O
+KSkpJCBmb3IgJG5cZ2VxIDAkLCBpbiByZXZlcnNlIG9yZGVyLiBJdCBpcyBpbXBvcnRhbnQgZm9y
+IGVmZmljaWVuY3kKdGhhdCB3ZSBrZWVwIHRoZSB2YWx1ZXMgb2YgdGhlIHBvbHlub21pYWxzICRx
+X24kIGF0IHRoZSBpbnRlcnBvbGF0aW9uCnBvaW50cy4gQWNjb3JkaW5nIHRvIFxlcXJlZntlcTpU
+VFJ9LCB3ZSBpbml0aWFsaXplIHRoZSB2YXJpYWJsZSB3aXRoIHRoZSB2YWx1ZXMKY29ycmVzcG9u
+ZGluZyB0byAkcV8wJC4KCjw8UklOVEVSUCBJbXBsZW1lbnRhdGlvbj4+PQogICAgICBxcDogSW50
+ZXJwb2xhdGlvblJlc3VsdApAClRoaXMgdmFyaWFibGUgd2lsbCBhbHdheXMgY29udGFpbiB0aGUg
+cG9seW5vbWlhbCB0aGF0IHdhcwpjb25zdHJ1Y3RlZCBpbiB0aGUgaXRlcmF0aW9uIHN0ZXAgcHJl
+Y2VkaW5nIHRoZSBsYXN0IG9uZS4gSW4gR2VtaWduYW5pJ3MKICAgICAgYXJ0aWNsZSwgdGhpcyBw
+b2x5bm9taWFsIGlzIGRlbm90ZWQgJHFfe3ByIGp9JC4KCjw8UklOVEVSUCBJbXBsZW1lbnRhdGlv
+bj4+PQogICAgICBxajogSW50ZXJwb2xhdGlvblJlc3VsdApACmNvbnRhaW5zIHRoZSBwb2x5bm9t
+aWFsIHRoYXQgd2FzIGNvbnN0cnVjdGVkIGluIHRoZSBsYXN0IGl0ZXJhdGlvbiBzdGVwLgoKPDxS
+SU5URVJQIEltcGxlbWVudGF0aW9uPj49CiAgICAgIGFscGhhOiBGCiAgICAgIGJldGE6IEYKICAg
+ICAgdGhldGE6IEYKICAgICAgdGhldGFwOiBGCgogICAgICBqOiBJbnRlZ2VyIDo9IDAKICAgICAg
+d2hpbGUgaiA8IE4tMSByZXBlYXQKQApBZnRlciBkZWNsYXJpbmcgc29tZSB2YXJpYWJsZXMgdGhh
+dCB3ZSB3aWxsIG5lZWQgbGF0ZXIsIHdlIGNhbiBzdGFydCB3aXRoIHRoZQppdGVyYXRpb24uIENs
+ZWFybHksIGlmIHdlIGhhdmUgY29uc3RydWN0ZWQgJE4kIHBvbHlub21pYWxzLCB3ZSBhcmUgZG9u
+ZS4KCjw8UklOVEVSUCBJbXBsZW1lbnRhdGlvbj4+PQogICAgICAgIHFqIDo9IGZpcnN0IHEKCiAg
+ICAgICAgdGhldGFwIDo9IHRoZXRhCiAgICAgICAgcTJjOiBMaXN0IEYgOj0gbWFwKCMxKiMyKioy
+LCBjLCBxai52YWwpCiAgICAgICAgdGhldGE6IEYgOj0gcmVkdWNlKF8rLCBxMmMpCkAKQWZ0ZXIg
+c2F2aW5nIHRoZSB2YWx1ZSBvZiAkXHRoZXRhJCBjb21wdXRlZCBpbiB0aGUgcHJlY2VkaW5nIHN0
+ZXAgaW4KJFx0aGV0YV9wJCwgd2Ugc2V0ICRcdGhldGEkIGVxdWFsIHRvICRcbGFuZ2xlIHFfaih4
+KSwgcV9qKHgpXHJhbmdsZSAkLgoKPDxSSU5URVJQIEltcGxlbWVudGF0aW9uPj49CiAgICAgICAg
+aWYgdGhldGEgfj0gMCB0aGVuCiAgICAgICAgICBhbHBoYSA6PSByZWR1Y2UoXyssIG1hcCgjMSoj
+MiwgcTJjLCB4KSkvdGhldGEKCiAgICAgICAgICBpZiBqID0gMCB0aGVuIAogICAgICAgICAgICBx
+IDo9IGNvbnMoW3NoaWZ0TGVmdChxai5mdW4sIDEpIC0gYWxwaGEqcWouZnVuLCAKICAgICAgICAg
+ICAgICAgICAgICAgICBtYXAoKCMxLWFscGhhKSojMiwgeCwgcWoudmFsKV0sIHEpCiAgICAgICAg
+ICBlbHNlIAogICAgICAgICAgICBiZXRhIDo9IHRoZXRhIC8gdGhldGFwIAogICAgICAgICAgICBx
+IDo9IGNvbnMoW3NoaWZ0TGVmdChxai5mdW4sIDEpIC0gYWxwaGEqcWouZnVuIC0gYmV0YSpxcC5m
+dW4sIAogICAgICAgICAgICAgICAgICAgICAgIFsoeHZhbCAtIGFscGhhKSpxanZhbCAtIGJldGEq
+cXB2YWwgXyAKICAgICAgICAgICAgICAgICAgICAgICAgZm9yIHh2YWwgaW4geCBfCiAgICAgICAg
+ICAgICAgICAgICAgICAgIGZvciBxanZhbCBpbiBxai52YWwgXwogICAgICAgICAgICAgICAgICAg
+ICAgICBmb3IgcXB2YWwgaW4gcXAudmFsXV0sIF8KICAgICAgICAgICAgICAgICAgICAgIHEpCkAK
+SWYgJFx0aGV0YSQgaXMgbm90IHplcm8sIHdlIGNhbiBjb21wdXRlICRcYWxwaGEkIGFuZCAkXGJl
+dGEkIGFzIGluClxlcXJlZntlcTpBbHBoYUJldGF9IGFuZCBjYWxjdWxhdGUgJHFfe2orMX0kIGFj
+Y29yZGluZ2x5LiBOb3RlIHRoYXQgaW4KQWxnb3JpdGhtfjIgb2YgR2VtaWduYW5pJ3MgYXJ0aWNs
+ZSBcY2l0ZXtHZW1pZ25hbmkxOTkzfSAkXGJldGEkIGlzIGNvbXB1dGVkCmRpZmZlcmVudGx5IGFz
+CgpcYmVnaW57ZXF1YXRpb24qfQogIFxmcmFje1xsYW5nbGUgeHFfaih4KSwgcV97ai0xfSh4KVxy
+YW5nbGUgfXtcbGFuZ2xlIHFfe3ByKGopfSh4KSxxX3tqLTF9KHgpXHJhbmdsZSB9ClxlbmR7ZXF1
+YXRpb24qfQpIb3dldmVyLCBpdCBpcyBlYXN5IHRvIHNlZSB0aGF0IHRoZXNlIHR3byBleHByZXNz
+aW9ucyBhZ3JlZS4gIE5vdGUgdGhhdCB3ZSBoYXZlCiRcbGFuZ2xlIHhxX2ooeCksIHFfe2otMX0o
+eClccmFuZ2xlICA9IFxsYW5nbGUgcV9qKHgpLCB4cV97ai0xfSh4KVxyYW5nbGUgJC4gRGVwZW5k
+aW5nIG9uIHRoZSBsYXN0IHN0ZXAKdGhlcmUgYXJlIHR3byBwb3NzaWJpbGl0aWVzOgpcYmVnaW57
+aXRlbWl6ZX0KXGl0ZW0gJHFfaiQgd2FzIGNvbXB1dGVkIGFzICQoeC1cYWxwaGEpcV97ai0xfSh4
+KS1cYmV0YSBxX3twcihqLTEpfSh4KSQuCiAgCiAgVGh1cyB3ZSBoYXZlICR4cV97ai0xfSh4KT1x
+X2ooeCkrXGFscGhhIHFfe2otMX0oeCkrXGJldGEgcV97cHIoai0xKX0oeCkkLiAgQnkKICBQcm9w
+b3NpdGlvbn42IG9mIFxjaXRle0dlbWlnbmFuaTE5OTN9LCAkXGxhbmdsZSBxX2ooeCkscV97ai0x
+fSh4KVxyYW5nbGUgJD0wLAogIGFuZCBzbyBpcyAkXGxhbmdsZSBxX2ooeCkscV97cHIoai0xKX0o
+eClccmFuZ2xlICQuCiAgCiAgSW4gdGhpcyBjYXNlLCAkcV97cHIoail9PXFfe2otMX0kLCB0aHVz
+ICRcdGhldGFfcD1cbGFuZ2xlCiAgcV97ai0xfSh4KSxxX3tqLTF9KHgpXHJhbmdsZT1cbGFuZ2xl
+IHFfe3ByKGopfSh4KSxxX3tqLTF9KHgpXHJhbmdsZSQuCgpcaXRlbSAkcV9qJCB3YXMgY29tcHV0
+ZWQgYXMgJCh4XmstXHN1bV97aT0wfV57ay0xfVxhbHBoYV9peF5pKXFfe2ota30oeCktXGJldGEK
+ICBxX3twcihqLWspfSh4KSQuCiAgCiAgSGVyZSB3ZSBoYXZlCiAgJHhxX3tqLTF9KHgpPXhea3Ff
+e2ota309cV9qK1xzdW1fe2k9MH1ee2stMX1cYWxwaGFfaXheaXFfe2ota30oeCkrXGJldGEKICBx
+X3twcihqLWspfSh4KSQuIEFnYWluIGJ5IFByb3Bvc2l0aW9ufjYgb2YgXGNpdGV7R2VtaWduYW5p
+MTk5M30sICRcbGFuZ2xlCiAgcV9qKHgpLCB4XmlxX3tqLWt9KHgpXHJhbmdsZT0wJCBmb3IgJGk8
+ayQgYW5kICRcbGFuZ2xlCiAgcV9qKHgpLHFfe3ByKGotMSl9KHgpXHJhbmdsZT0wJC4KXGVuZHtp
+dGVtaXplfQoKPDxSSU5URVJQIEltcGxlbWVudGF0aW9uPj49CiAgICAgICAgICB0aGV0YXAgOj0g
+dGhldGEKICAgICAgICAgIHFwIDo9IHFqCiAgICAgICAgICBqIDo9IGorMQpACkZpbmFsbHksIHdl
+IHNhdmUgJFx0aGV0YSQgYW5kICRxX2okIGFuZCBpbmNyZW1lbnQgJGokLgoKPDxSSU5URVJQIElt
+cGxlbWVudGF0aW9uPj49CiAgICAgICAgZWxzZSAKICAgICAgICAgIGg6IE5vbk5lZ2F0aXZlSW50
+ZWdlciA6PSAxCiAgICAgICAgICB3aGlsZSAodGhldGEgPSAwKSBhbmQgKGoraCA8PSBOKSByZXBl
+YXQKICAgICAgICAgICAgdGhldGEgOj0gcmVkdWNlKF8rLCBtYXAoIzEqIzIqKmgsIHEyYywgeCkp
+CiAgICAgICAgICAgIGggOj0gaCsxCkAKSW4gY2FzZSAkXHRoZXRhJCBlcXVhbHMgemVybywgd2Ug
+aGF2ZSB0byBmaW5kIGEgbnVtYmVyICRoXGdlcSAyJCBzdWNoIHRoYXQKJFx0aGV0YTo9XGxhbmds
+ZSBxX2ooeCkseF57aC0xfXFfaih4KVxyYW5nbGVcbmVxMCQuIFdlIGNhbiB0aGVuIGNvbXB1dGUK
+JHFfe2orMX0kIGFzCiQkCih4XmgtXHN1bV97aT0wfV57aC0xfVxhbHBoYV9peF5pKXFfe2ota30o
+eCktXGJldGEgcV97cHIoai1oKX0oeCksCiQkCndoZXJlICRcYmV0YSQgYW5kIHRoZSAkXGFscGhh
+X2kkIGFyZSBhZ2FpbiBkZXRlcm1pbmVkIGJ5IHRoZSBvcnRvZ29uYWxpdHkKcmVsYXRpb24gZGVz
+Y3JpYmVkIGluIFByb3Bvc2l0aW9ufjYgb2YgXGNpdGV7R2VtaWduYW5pMTk5M306Cgo8PFJJTlRF
+UlAgSW1wbGVtZW50YXRpb24+Pj0KICAgICAgICAgIGlmIGoraCA8IE4gdGhlbgogICAgICAgICAg
+ICBiOiBMaXN0IEYgOj0gW3JlZHVjZShfKywgbWFwKCMxKiMyKippLCBxMmMsIHgpKSBmb3IgaSBp
+biBoLi4yKmgtMV0KCi0tICAgICAgICAgIDxxaixxaip4Xmk+LCBpID0gaC4uMipoLTEKCiAgICAg
+ICAgICAgIGE6IExpc3QgRiA6PSBbXQogICAgICAgICAgICBmb3IgaSBpbiAxLi5oIHJlcGVhdAog
+ICAgICAgICAgICAgIGEgOj0gY29ucygoYi5pLXJlZHVjZShfKywgbWFwKCMxKiMyLCBiLCBhKSwg
+MCkpL3RoZXRhLCBhKQoKICAgICAgICAgICAgYWxwaGFmdW46IFNVUCBGIDo9IHNoaWZ0TGVmdChx
+ai5mdW4sIGgpCiAgICAgICAgICAgIGZvciBpIGluIDAuLmgtMSByZXBlYXQKICAgICAgICAgICAg
+ICBhbHBoYWZ1biA6PSBhbHBoYWZ1biAtIGEuKGkrMSkqc2hpZnRMZWZ0KHFqLmZ1biwgaSkgCgog
+ICAgICAgICAgICBhbHBoYXZhbDogTGlzdCBGIDo9IG1hcCgoIzEqKmggCiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAtIHJlZHVjZShfKywgW2EuKGkrMSkqIzEqKmkgXwogICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZm9yIGkgaW4gMC4u
+aC0xXSkpIF8KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKiAjMiwgeCwgcWou
+dmFsKQoKICAgICAgICAgICAgaWYgaiA9IDAgdGhlbiAKICAgICAgICAgICAgICBxIDo9IGNvbnMo
+W2FscGhhZnVuLCBhbHBoYXZhbF0sIHEpCiAgICAgICAgICAgIGVsc2UgCgotLSA8eCoqaCBxKGop
+LCBxKGotMSk+ID0gdGhldGEKLS0gPHFwLCBxKGotMSk+ID0gdGhldGFwCiAgICAgICAgICAgICAg
+YmV0YSA6PSB0aGV0YSAvIHRoZXRhcAoKICAgICAgICAgICAgICBxIDo9IGNvbnMoW2FscGhhZnVu
+IC0gYmV0YSAqIHFwLmZ1biwKICAgICAgICAgICAgICAgICAgICAgICAgIG1hcCgjMSAtIGJldGEq
+IzIsIGFscGhhdmFsLCBxcC52YWwpXSwKICAgICAgICAgICAgICAgICAgICAgICAgcSkKCiAgICAg
+ICAgICAgIHRoZXRhcCA6PSB0aGV0YQogICAgICAgICAgICBxcCA6PSBxagoKICAgICAgICAgIGog
+Oj0gaitoCgogICAgICBxCgpACgpOb3cgaXQgaXMgYW4gZWFzeSBtYXR0ZXIgdG8gZmluZCB0aGUg
+aW50ZXJwb2xhdGluZyBmdW5jdGlvbi4gCgo8PFJJTlRFUlAgSW1wbGVtZW50YXRpb24+Pj0KICAg
+IGludGVycG9sYXRlKHgsIGYpID09CiAgICAgIE4gOj0gI3gKICAgICAgaWYgTiBePSAjZiB0aGVu
+IGVycm9yICJEaWZmZXJlbnQgbnVtYmVyIG9mIHBvaW50cyBhbmQgdmFsdWVzLiIKCiAgICAgIGYw
+OiBMaXN0IEYgOj0gW10KICAgICAgeDA6IExpc3QgRiA6PSBbXQogICAgICBmMTogTGlzdCBGIDo9
+IFtdCiAgICAgIHgxOiBMaXN0IEYgOj0gW10KICAgICAgZm9yIHZsIGluIGYgZm9yIHB0IGluIHgg
+cmVwZWF0CiAgICAgICAgaWYgdmwgPSAwIHRoZW4gCiAgICAgICAgICBmMCA6PSBjb25zKHZsLCBm
+MCkKICAgICAgICAgIHgwIDo9IGNvbnMocHQsIHgwKQogICAgICAgIGVsc2UgCiAgICAgICAgICBm
+MSA6PSBjb25zKHZsLCBmMSkKICAgICAgICAgIHgxIDo9IGNvbnMocHQsIHgxKQoKICAgICAgdzA6
+IExpc3QgRiA6PSBbcmVkdWNlKF8qLCBbeDF2YWwteDB2YWwgZm9yIHgwdmFsIGluIHgwXSwgMSkg
+Zm9yIHgxdmFsIGluIHgxXQogICAgICBmMSA6PSBtYXAoIzEvIzIsIGYxLCB3MCkKCiAgICAgIE4g
+Oj0gI3gxCiAgICAgIHcxOiBMaXN0IEYgOj0gW3JlZHVjZShfKiwgW3gxLmkteDEuaiBmb3IgaiBp
+biAxLi5OIHwgaiB+PSBpXSkgZm9yIGkgaW4gMS4uTl0KICAgICAgYzEgOj0gbWFwKCMxLyMyLCBm
+MSwgdzEpCgogICAgICBmMWludiA6PSBtYXAoMS8jMSwgZjEpICAKICAgICAgYzFpbnYgOj0gbWFw
+KCMxLyMyLCBmMWludiwgdzEpCgogICAgICBxOiBMaXN0IEludGVycG9sYXRpb25SZXN1bHQgOj0g
+aW50KE4sIHgxLCBjMSkgCiAgICAgIHA6IExpc3QgSW50ZXJwb2xhdGlvblJlc3VsdCA6PSByZXZl
+cnNlIGludChOLCB4MSwgYzFpbnYpOwoKICAgICAgdjogU1VQIEYgOj0gKGNyZWF0ZSgpJFNpbmds
+ZXRvbkFzT3JkZXJlZFNldCk6OlNVUChGKQogICAgICB3ejogU1VQIEYgOj0gMQogICAgICBmb3Ig
+eDB2YWwgaW4geDAgcmVwZWF0CiAgICAgICAgd3ogOj0gd3oqKHYteDB2YWw6OlNVUChGKSkKCiAg
+ICAgIFtkZW4udmFsLjEvbnVtLnZhbC4xKmYuMSp3eipudW0uZnVuL2Rlbi5mdW4gZm9yIG51bSBp
+biBwIGZvciBkZW4gaW4gcV0gICAgICAgCkAKClxiaWJsaW9ncmFwaHl7bWF0aH0gXGJpYmxpb2dy
+YXBoeXN0eWxle2Ftc3BsYWlufQpcZW5ke2RvY3VtZW50fQo=
+--3Naabbipmm
+Content-Type: text/plain; charset=us-ascii
+Content-Description: message body text
+Content-Transfer-Encoding: 7bit
+
+
+Martin
+--3Naabbipmm--
+
+
+
+
+From MAILER-DAEMON Sat Aug 13 10:27:39 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E3wz2-0004OR-IH
+	for mharc-axiom-math@gnu.org; Sat, 13 Aug 2005 10:27:36 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E3wyu-0004JN-EX
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 10:27:28 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E3wyo-0004EC-1m
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 10:27:24 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E3wyn-0004Dv-VZ
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 10:27:21 -0400
+Received: from [193.252.22.31] (helo=smtp11.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E3xA0-0002OB-E5
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 10:38:56 -0400
+Received: from me-wanadoo.net (unknown [127.0.0.1])
+	by mwinf1109.wanadoo.fr (SMTP Server) with ESMTP id EBB4F1C000A2
+	for <axiom-math@nongnu.org>; Sat, 13 Aug 2005 16:23:34 +0200 (CEST)
+Received: from ALille-251-1-47-98.w82-127.abo.wanadoo.fr
+	(ALille-251-1-47-98.w82-127.abo.wanadoo.fr [82.127.201.98])
+	by mwinf1109.wanadoo.fr (SMTP Server) with ESMTP id 9D5251C0009E;
+	Sat, 13 Aug 2005 16:23:34 +0200 (CEST)
+X-ME-UUID: 20050813142334644.9D5251C0009E@mwinf1109.wanadoo.fr
+Subject: Re: [Axiom-math] Rational Interpolation
+From: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+To: martin.rubey@univie.ac.at
+Content-Type: text/plain
+Date: Sat, 13 Aug 2005 16:24:00 +0200
+Message-Id: <1123943040.3797.8.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.2.3 
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 Aug 2005 14:27:34 -0000
+
+Hi,
+
+
+A small bugs:
+
+(41) -> interpolate([3],[7])
+ 41) ->
+   >> Error detected within library code:
+   reducing over an empty list needs the 3 argument form
+
+And can you give some samples please ?
+
+Cheers,
+
+
+Greg
+
+
+
+
+
+From MAILER-DAEMON Sat Aug 13 12:29:01 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E3ysX-00013q-C3
+	for mharc-axiom-math@gnu.org; Sat, 13 Aug 2005 12:29:01 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E3ysW-00013d-Ba
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 12:29:00 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E3ysU-00013P-D0
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 12:28:59 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E3yr9-0000e6-Oc
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 12:27:35 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E3yq8-0008SD-2d
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 12:26:32 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j7DGAgs3042386; 
+	Sat, 13 Aug 2005 18:10:48 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="ts5gYr/Uxk"
+Content-Transfer-Encoding: 7bit
+Message-ID: <17150.6939.219912.624481@seam101.local>
+Date: Sat, 13 Aug 2005 18:08:59 +0200
+To: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+Subject: Re: [Axiom-math] Rational Interpolation
+In-Reply-To: <1123943040.3797.8.camel@localhost.localdomain>
+References: <1123943040.3797.8.camel@localhost.localdomain>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4249; Body=3 Fuz1=3 Fuz2=3
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 Aug 2005 16:29:00 -0000
+
+
+--ts5gYr/Uxk
+Content-Type: text/plain; charset=us-ascii
+Content-Description: message body text
+Content-Transfer-Encoding: 7bit
+
+Merci :-)
+
+Another bug also fixed...
+
+
+--ts5gYr/Uxk
+Content-Type: application/octet-stream
+Content-Disposition: attachment;
+	filename="ratint.spad.pamphlet"
+Content-Transfer-Encoding: base64
+
+XGRvY3VtZW50Y2xhc3N7YXJ0aWNsZX0KXHVzZXBhY2thZ2V7YXhpb20sYW1zbWF0aH0KXGJlZ2lu
+e2RvY3VtZW50fQpcdGl0bGV7cmludGVycC5zcGFkfQpcYXV0aG9ye01hcnRpbiBSdWJleX0KXG1h
+a2V0aXRsZQpcYmVnaW57YWJzdHJhY3R9ClJhdGlvbmFsIEludGVycG9sYXRpb24KXGVuZHthYnN0
+cmFjdH0KXHNlY3Rpb257SW50cm9kdWN0aW9ufQpUaGlzIGZpbGUgY29udGFpbnMgYW4gaW1wbGVt
+ZW50YXRpb24gb2YgYSByYXRpb25hbCBpbnRlcnBvbGF0aW9uIGFsZ29yaXRobQpkZXNjcmliZWQg
+YnkgXCJPbWVyIEVcfmdlY2lvXH5nbHUgYW5kIFxje0N9ZXRpbiBLLiBLb1xje2N9ClxjaXRle0Vn
+ZWNpb2dsdUtvYzE5ODl9LCBhbmQgaW1wcm92ZWQgYnkgTHVjYSBHZW1pZ25hbmkgXGNpdGV7R2Vt
+aWduYW5pMTk5M30sCndoZXJlIHRoZSBjb2VmZmljaWVudHMgb2YgdGhlIHJhdGlvbmFsIGZ1bmN0
+aW9uIGFyZSBpbiBhbnkgZ2l2ZW4gZmllbGQuCgpUaGUgcmF0aW9uYWwgaW50ZXJwb2xhdGlvbiBw
+cm9ibGVtIGNvbnNpc3RzIG9mIGZpbmRpbmcgYSByYXRpb25hbCBmdW5jdGlvbgokcF9tKHgpL3Ff
+bih4KSQgb2YgbnVtZXJhdG9yIGRlZ3JlZSAkbSQgYW5kIGRlbm9taW5hdG9yIGRlZ3JlZSAkbiQg
+dGhhdCBhc3N1bWVzCnRoZSB2YWx1ZXMgJGZfMSxmXzIsXGRvdHMsZl9OJCBhdCB0aGUgZGlzdGlu
+Y3QgcG9pbnRzICR4XzEseF8yLFxkb3RzLHhfTiQsCndoZXJlICROPW0rbi0xJC4KClRoZSBpbXBs
+ZW1lbnRlZCBhbGdvcml0aG0gY29tcHV0ZXMgYWxsIHJhdGlvbmFsIGludGVycG9sYW50cyBpbiAk
+TyhuXjIpJCBmaWVsZApvcGVyYXRpb25zLiBGb3IgZXhhbXBsZQoKPDxpbnB1dGZpbGU+Pj0KaW50
+ZXJwb2xhdGUoWzEsMiwzXSwgWzEsMiwzXSkKQApyZXR1cm5zIGEgbGlzdCBvZiB0d28gcmF0aW9u
+YWwgZnVuY3Rpb25zLCBvbmUgd2l0aCBudW1lcmF0b3IgZGVncmVlIHplcm8gYW5kCmRlbm9taW5h
+dG9yIGRlZ3JlZSB0d28sIGFuZCBvbmUgYmVpbmcgcG9seW5vbWlhbCBvZiBkZWdyZWUgb25lLgoK
+VGhlIHByaW5jaXBhbCBpZGVhIHVuZGVybHlpbmcgdGhlIGFsZ29yaXRobSBpcyB0byBkZXRlcm1p
+bmUgdGhlIGRlbm9taW5hdG9yCnBvbHlub21pYWwgJHFfbih4KT1cc3VtX3tpPTB9Xm4gYl9pIHhe
+aSQsICRiX249MSQgb2YgZGVncmVlICRuJCBieSBzb2x2aW5nIHRoZQptYXRyaXggZXF1YXRpb24K
+JCQKXGJlZ2lue3BtYXRyaXh9CiAgaF8wICYgaF8xICYgaF8yICYgXGRvdHMgXFwKICBoXzEgJiBo
+XzIgJiBcZG90cyAgICAgICBcXAogIGhfMiAmIFxkb3RzICAgICAgICAgICAgIFxcCiAgXHZkb3Rz
+IFxcCiAgaF97bi0xfSAmIGhfbiAmIFxkb3RzICYgaF97Mm4tMn1cXApcZW5ke3BtYXRyaXh9Clxi
+ZWdpbntwbWF0cml4fQogIGJfMFxcYl8xXFwgXHZkb3RzXFwgXHZkb3RzXFwgYl97bi0xfQpcZW5k
+e3BtYXRyaXh9Cj0tClxiZWdpbntwbWF0cml4fQogIGhfblxcaF97bisxfVxcIFx2ZG90c1xcIFx2
+ZG90c1xcIGhfezJuLTF9ClxlbmR7cG1hdHJpeH0sCiQkCndoZXJlICRoX2o9XHN1bV97az0xfV5O
+IGNfayB4X2teaiQsICRjX2sgPSBcZnJhY3tmX2t9e3dfa30kIGFuZCAKJHdfaz1ccHJvZF97aj0x
+LCBqXG5lcSBrfV5OICh4X2steF9pKSQuCgpUaGlzIGluIHR1cm4gY2FuIGJlIGRvbmUgYnkgZ2Vu
+ZXJhdGluZyBhIHNlcXVlbmNlIG9mIG9ydGhvZ29uYWwgcG9seW5vbWlhbHMKd2l0aCByZXNwZWN0
+IHRvIHRoZSBpbm5lciBwcm9kdWN0CgpcYmVnaW57ZXF1YXRpb259CiAgXGxhYmVse2VxOklubmVy
+UHJvZHVjdH0KICBcbGFuZ2xlIHFfaih4KSwgcV9rKHgpXHJhbmdsZSAgPSBcc3VtX3tpPTF9Xk4g
+Y19pIHFfaih4X2kpcV9rKHhfaSkuICAKXGVuZHtlcXVhdGlvbn0KClN1Y2ggcG9seW5vbWlhbHMg
+c2F0aXNmeSB0aGUgdGhyZWUtdGVybSByZWN1cnJlbmNlIHJlbGF0aW9uClxiZWdpbntlcXVhdGlv
+bn0KICBcbGFiZWx7ZXE6VFRSfQogIHFfe2orMX0oeCkgPSAoeC1cYWxwaGFfailxX2ooeCkgLSBc
+YmV0YV9qIHFfe2otMX0oeCksCiAgXHF1YWQgcV97LTF9KHgpPTAscV8wKHgpPTEsICAKXGVuZHtl
+cXVhdGlvbn0KCndoZXJlICRcYWxwaGFfaiQgYW5kICRcYmV0YV9qJCBhcmUgY29uc3RhbnRzIGRl
+dGVybWluZWQgYnkKXGJlZ2lue2VxdWF0aW9ufQogIFxsYWJlbHtlcTpBbHBoYUJldGF9CiAgXGFs
+cGhhX2o9XGZyYWN7XGxhbmdsZSB4cV9qKHgpLHFfaih4KVxyYW5nbGUgfXtcbGFuZ2xlIHFfaih4
+KSxxX2ooeClccmFuZ2xlIH0sCiAgXGJldGFfaj1cZnJhY3tcbGFuZ2xlIHFfaih4KSxxX2ooeClc
+cmFuZ2xlIH17XGxhbmdsZSBxX3tqLTF9KHgpLHFfe2otMX0oeClccmFuZ2xlIH0uClxlbmR7ZXF1
+YXRpb259CgpPYnZpb3VzbHksIHRoaXMgd2lsbCBub3Qgd29yayB3aGVuICRcbGFuZ2xlIHFfaih4
+KSxxX2ooeClccmFuZ2xlJCB2YW5pc2hlcy4gVGhlCmNvbnRlbnQgb2YgR2VtaWduYW5pJ3MgYXJ0
+aWNsZSBcY2l0ZXtHZW1pZ25hbmkxOTkzfSBpcyB0byBkZXRlcm1pbmUgd2hlbgpleGFjdGx5IHRo
+aXMgaGFwcGVucyBhbmQgaG93IHRvIGNpcmN1bXZlbnQgaXQuIEluIGJyaWVmLCBpZiB3ZSBlbmNv
+dW50ZXIgdGhlCnNpdHVhdGlvbiB0aGF0ICRcbGFuZ2xlIHFfaih4KSxxX2ooeClccmFuZ2xlPTAk
+LCB3ZSBmaW5kICRcZGVsdGFfe2orMX0kIHN1Y2gKdGhhdCAkXGxhbmdsZSB4XmtxX2ooeCkscV9q
+KHgpXHJhbmdsZT0wJCBmb3IgJGs8XGRlbHRhX3tqKzF9LTEkIGJ1dCBkb2VzIG5vdAp2YW5pc2gg
+Zm9yICRrPVxkZWx0YV97aisxfS0xJC4KCkl0IGNhbiB0aGVuIGJlIHNob3duIHRoYXQgJFxsYW5n
+bGUgeF5rcV9qKHgpLHheaHFfaSh4KVxyYW5nbGU9MCQgaWYgJGpcbmVxIGkkCmFuZCAkazxcZGVs
+dGFfe2orMX0kLCAkaDxcZGVsdGFfe2krMX0kLCBhbmQgdGhlIHJlc3VsdGluZyBwb2x5bm9taWFs
+cyAkcV9pJCBhcmUKaW5kZWVkIHRoZSBkZW5vbWluYXRvciBwb2x5bm9taWFscyB3ZSBhcmUgbG9v
+a2luZyBmb3IuCgpUaGUgbnVtZXJhdG9yIHBvbHlub21pYWxzIGFyZSB0aGVuIGZvdW5kIGJ5IHJl
+cGVhdGluZyB0aGUgYWxnb3JpdGhtIHdpdGgKJGZfMSxmXzIsXGRvdHMsZl9OJCByZXBsYWNlZCBi
+eSAkMS9mXzEsMS9mXzIsXGRvdHMsMS9mX04kLiBJZiBzb21lICRmX2okCmhhcHBlbnMgdG8gYmUg
+emVybywgd2UgY2FuIGZhY3RvciBvdXQgdGhlIGNvcnJlc3BvbmRpbmcgdGVybSBiZWZvcmUKaW50
+ZXJwb2xhdGluZy4KClxzZWN0aW9ue0RldGFpbHMgb2YgdGhlIGltcGxlbWVudGF0aW9ufQoKSW4g
+dGhlIGZvbGxvd2luZywgd2UgZGVzY3JpYmUgdGhlIGltcGxlbWVudGF0aW9uIG9mIHRoZSBhbGdv
+cml0aG0gYXMgYW4gQXhpb20KcGFja2FnZS4KCjw8Kj4+PQo8PFJJTlRFUlAgSGVhZGVyPj4KPDxS
+SU5URVJQIEV4cG9ydHM+Pgo8PFJJTlRFUlAgSW1wbGVtZW50YXRpb24+PgpACgpcc3Vic2VjdGlv
+bntIZWFkZXJ9Cjw8UklOVEVSUCBIZWFkZXI+Pj0KKysgQXV0aG9yOiBNYXJ0aW4gUnViZXkKKysg
+RGF0ZSBDcmVhdGVkOiAxMi4gQXVnIDIwMDUKKysgRGF0ZSBMYXN0IFVwZGF0ZWQ6IDEzLiBBdWcg
+MjAwNQorKyBEZXNjcmlwdGlvbjoKKysgICBjb21wdXRlIGFsbCByYXRpb25hbCBpbnRlcnBvbGFu
+dHMuCisrIEtleXdvcmRzOiByYXRpb25hbCBpbnRlcnBvbGF0aW9uLgopYWJicmV2IHBhY2thZ2Ug
+UklOVEVSUCBSYXRpb25hbEludGVycG9sYXRpb24KUmF0aW9uYWxJbnRlcnBvbGF0aW9uKEY6IEZp
+ZWxkKTogRXhwb3J0cyA9PSBJbXBsZW1lbnRhdGlvbiB3aGVyZQoKICBTVVAgPT0+IFNwYXJzZVVu
+aXZhcmlhdGVQb2x5bm9taWFsCgpACgpUaGlzIGFsZ29yaXRobSBpcyBkZXNpZ25lZCB0byB3b3Jr
+IG92ZXIgYSBmaWVsZC4gTmF0dXJhbCBjaG9pY2VzIGFyZSAKW1tGcmFjdGlvbiBJbnRlZ2VyXV0g
+YW5kIG90aGVyIGZyYWN0aW9uIGZpZWxkcywgb3IgW1tGbG9hdF1dLiBOb3RlIGhvd2V2ZXIsIHRo
+YXQKdGhlIGFsZ29yaXRobSBpcyBwcm9iYWJseSBudW1lcmljYWxseSB1bnN0YWJsZS4KCkN1cnJl
+bnRseSB3ZSB3b3JrIHdpdGggW1tTcGFyc2VVbml2YXJpYXRlUG9seW5vbWlhbF1dcywgYnV0IG9m
+IGNvdXJzZSwgdGhpcwpjb3VsZCBlYXNpbHkgYmUgY2hhbmdlZCB0byBhbnkgZG9tYWluIG9mIFtb
+VW5pdmFyaWF0ZVBvbHlub21pYWxDYXRlZ29yeV1dLgoKXHN1YnNlY3Rpb257RXhwb3J0ZWQgZnVu
+Y3Rpb25zfQo8PFJJTlRFUlAgRXhwb3J0cz4+PQogIEV4cG9ydHMgPT0+IHdpdGgKCiAgICBpbnRl
+cnBvbGF0ZTogKExpc3QgRiwgTGlzdCBGKSAtPiBMaXN0IEZyYWN0aW9uIFNVUCBGCiAgICAgICsr
+IGludGVycG9sYXRlKHgsIGYpLCB3aGVyZSB4PVxzcGFke1t4MSwuLi4seG5dfSBhbmQgZj1cc3Bh
+ZHtbZjEsLi4uLGZuXX0gCiAgICAgICsrIGFyZSBsaXN0cyBvZiB0aGUgc2FtZSBsZW5ndGgsIGFs
+bCBlbGVtZW50cyBvZiB4IGJlaW5nIGRpc3RpbmN0LAogICAgICArKyByZXR1cm5zIGEgbGlzdCBv
+ZiByYXRpb25hbCBmdW5jdGlvbnMgd2hvc2UgdmFsdWVzIGF0IGFueSBwb2ludCB4aQogICAgICAr
+KyBlcXVhbHMgZmksIGV4Y2VwdCBmb3IgdW5hdHRhaW5hYmxlIHBvaW50cy4gIAogICAgICArKyBF
+cnJvcjogaWYgeCBhbmQgZiBhcmUgbm90IG9mIHRoZSBzYW1lIGxlbmd0aC4KCkAKCldlIGV4cG9y
+dCBhIHNpbmdsZSBmdW5jdGlvbiwgdGhhdCByZXR1cm5zIGEgbGlzdCBvZiBhbGwgcG9zc2libGUg
+aW50ZXJwb2xhdGluZwpmdW5jdGlvbnMuCgpcc3Vic2VjdGlvbntJbXBsZW1lbnRhdGlvbn0KCjw8
+UklOVEVSUCBJbXBsZW1lbnRhdGlvbj4+PQogIEltcGxlbWVudGF0aW9uID09PiBhZGQKCiAgICBJ
+bnRlcnBvbGF0aW9uUmVzdWx0ID09PiBSZWNvcmQoZnVuOiBTVVAgRiwgdmFsOiBMaXN0IEYpCgog
+ICAgaW50OiAoSW50ZWdlciwgTGlzdCBGLCBMaXN0IEYpIC0+IExpc3QgSW50ZXJwb2xhdGlvblJl
+c3VsdAogICAgaW50KE4sIHgsIGMpID09CkAKClRoaXMgaXMgdGhlIG1haW4gcm91dGluZSB3aGlj
+aCB3aWxsIGNvbXB1dGVzIHRoZSBkZW5vbWluYXRvciBwb2x5bm9taWFscyBmb3IgYQpnaXZlbiBs
+aXN0IG9mIHBvaW50cyBhbmQgdmFsdWVzLiBGb3IgcmVhc29ucyBvZiBzaW1wbGljaXR5IHRoZSBm
+dW5jdGlvbnMgdGFrZXMKYWxyZWFkeSB0aGUgdHJhbnNmb3JtZWQgdmFsdWVzICRjX2sgPSBcZnJh
+Y3tmX2t9e3dfa30kIGFzIGFyZ3VtZW50LgoKPDxSSU5URVJQIEltcGxlbWVudGF0aW9uPj49CiAg
+ICAgIHE6IExpc3QgSW50ZXJwb2xhdGlvblJlc3VsdCA6PSBbWzEsIFsxIGZvciBpIGluIDEuLiN4
+XV1dIApAIApUaGlzIHZhcmlhYmxlIHdpbGwgY29udGFpbiBhIGxpc3Qgb2YgcGFpcnMgJChxX24s
+IChxX24oeF8wKSwgcV9uKHhfMSksXGRvdHMsCnFfbih4X04pKSkkIGZvciAkblxnZXEgMCQsIGlu
+IHJldmVyc2Ugb3JkZXIuIEl0IGlzIGltcG9ydGFudCBmb3IgZWZmaWNpZW5jeQp0aGF0IHdlIGtl
+ZXAgdGhlIHZhbHVlcyBvZiB0aGUgcG9seW5vbWlhbHMgJHFfbiQgYXQgdGhlIGludGVycG9sYXRp
+b24KcG9pbnRzLiBBY2NvcmRpbmcgdG8gXGVxcmVme2VxOlRUUn0sIHdlIGluaXRpYWxpemUgdGhl
+IHZhcmlhYmxlIHdpdGggdGhlIHZhbHVlcwpjb3JyZXNwb25kaW5nIHRvICRxXzAkLgoKPDxSSU5U
+RVJQIEltcGxlbWVudGF0aW9uPj49CiAgICAgIHFwOiBJbnRlcnBvbGF0aW9uUmVzdWx0CkAKVGhp
+cyB2YXJpYWJsZSB3aWxsIGFsd2F5cyBjb250YWluIHRoZSBwb2x5bm9taWFsIHRoYXQgd2FzCmNv
+bnN0cnVjdGVkIGluIHRoZSBpdGVyYXRpb24gc3RlcCBwcmVjZWRpbmcgdGhlIGxhc3Qgb25lLiBJ
+biBHZW1pZ25hbmkncwogICAgICBhcnRpY2xlLCB0aGlzIHBvbHlub21pYWwgaXMgZGVub3RlZCAk
+cV97cHIgan0kLgoKPDxSSU5URVJQIEltcGxlbWVudGF0aW9uPj49CiAgICAgIHFqOiBJbnRlcnBv
+bGF0aW9uUmVzdWx0CkAKY29udGFpbnMgdGhlIHBvbHlub21pYWwgdGhhdCB3YXMgY29uc3RydWN0
+ZWQgaW4gdGhlIGxhc3QgaXRlcmF0aW9uIHN0ZXAuCgo8PFJJTlRFUlAgSW1wbGVtZW50YXRpb24+
+Pj0KICAgICAgYWxwaGE6IEYKICAgICAgYmV0YTogRgogICAgICB0aGV0YTogRgogICAgICB0aGV0
+YXA6IEYKCiAgICAgIGo6IEludGVnZXIgOj0gMAogICAgICB3aGlsZSBqIDwgTi0xIHJlcGVhdApA
+CkFmdGVyIGRlY2xhcmluZyBzb21lIHZhcmlhYmxlcyB0aGF0IHdlIHdpbGwgbmVlZCBsYXRlciwg
+d2UgY2FuIHN0YXJ0IHdpdGggdGhlCml0ZXJhdGlvbi4gQ2xlYXJseSwgaWYgd2UgaGF2ZSBjb25z
+dHJ1Y3RlZCAkTiQgcG9seW5vbWlhbHMsIHdlIGFyZSBkb25lLgoKPDxSSU5URVJQIEltcGxlbWVu
+dGF0aW9uPj49CiAgICAgICAgcWogOj0gZmlyc3QgcQoKICAgICAgICB0aGV0YXAgOj0gdGhldGEK
+ICAgICAgICBxMmM6IExpc3QgRiA6PSBtYXAoIzEqIzIqKjIsIGMsIHFqLnZhbCkKICAgICAgICB0
+aGV0YTogRiA6PSByZWR1Y2UoXyssIHEyYykKQApBZnRlciBzYXZpbmcgdGhlIHZhbHVlIG9mICRc
+dGhldGEkIGNvbXB1dGVkIGluIHRoZSBwcmVjZWRpbmcgc3RlcCBpbgokXHRoZXRhX3AkLCB3ZSBz
+ZXQgJFx0aGV0YSQgZXF1YWwgdG8gJFxsYW5nbGUgcV9qKHgpLCBxX2ooeClccmFuZ2xlICQuCgo8
+PFJJTlRFUlAgSW1wbGVtZW50YXRpb24+Pj0KICAgICAgICBpZiB0aGV0YSB+PSAwIHRoZW4KICAg
+ICAgICAgIGFscGhhIDo9IHJlZHVjZShfKywgbWFwKCMxKiMyLCBxMmMsIHgpKS90aGV0YQoKICAg
+ICAgICAgIGlmIGogPSAwIHRoZW4gCiAgICAgICAgICAgIHEgOj0gY29ucyhbc2hpZnRMZWZ0KHFq
+LmZ1biwgMSkgLSBhbHBoYSpxai5mdW4sIAogICAgICAgICAgICAgICAgICAgICAgIG1hcCgoIzEt
+YWxwaGEpKiMyLCB4LCBxai52YWwpXSwgcSkKICAgICAgICAgIGVsc2UgCiAgICAgICAgICAgIGJl
+dGEgOj0gdGhldGEgLyB0aGV0YXAgCiAgICAgICAgICAgIHEgOj0gY29ucyhbc2hpZnRMZWZ0KHFq
+LmZ1biwgMSkgLSBhbHBoYSpxai5mdW4gLSBiZXRhKnFwLmZ1biwgCiAgICAgICAgICAgICAgICAg
+ICAgICAgWyh4dmFsIC0gYWxwaGEpKnFqdmFsIC0gYmV0YSpxcHZhbCBfIAogICAgICAgICAgICAg
+ICAgICAgICAgICBmb3IgeHZhbCBpbiB4IF8KICAgICAgICAgICAgICAgICAgICAgICAgZm9yIHFq
+dmFsIGluIHFqLnZhbCBfCiAgICAgICAgICAgICAgICAgICAgICAgIGZvciBxcHZhbCBpbiBxcC52
+YWxdXSwgXwogICAgICAgICAgICAgICAgICAgICAgcSkKQApJZiAkXHRoZXRhJCBpcyBub3QgemVy
+bywgd2UgY2FuIGNvbXB1dGUgJFxhbHBoYSQgYW5kICRcYmV0YSQgYXMgaW4KXGVxcmVme2VxOkFs
+cGhhQmV0YX0gYW5kIGNhbGN1bGF0ZSAkcV97aisxfSQgYWNjb3JkaW5nbHkuIE5vdGUgdGhhdCBp
+bgpBbGdvcml0aG1+MiBvZiBHZW1pZ25hbmkncyBhcnRpY2xlIFxjaXRle0dlbWlnbmFuaTE5OTN9
+ICRcYmV0YSQgaXMgY29tcHV0ZWQKZGlmZmVyZW50bHkgYXMKClxiZWdpbntlcXVhdGlvbip9CiAg
+XGZyYWN7XGxhbmdsZSB4cV9qKHgpLCBxX3tqLTF9KHgpXHJhbmdsZSB9e1xsYW5nbGUgcV97cHIo
+ail9KHgpLHFfe2otMX0oeClccmFuZ2xlIH0KXGVuZHtlcXVhdGlvbip9Ckhvd2V2ZXIsIGl0IGlz
+IGVhc3kgdG8gc2VlIHRoYXQgdGhlc2UgdHdvIGV4cHJlc3Npb25zIGFncmVlLiAgTm90ZSB0aGF0
+IHdlIGhhdmUKJFxsYW5nbGUgeHFfaih4KSwgcV97ai0xfSh4KVxyYW5nbGUgID0gXGxhbmdsZSBx
+X2ooeCksIHhxX3tqLTF9KHgpXHJhbmdsZSAkLiBEZXBlbmRpbmcgb24gdGhlIGxhc3Qgc3RlcAp0
+aGVyZSBhcmUgdHdvIHBvc3NpYmlsaXRpZXM6ClxiZWdpbntpdGVtaXplfQpcaXRlbSAkcV9qJCB3
+YXMgY29tcHV0ZWQgYXMgJCh4LVxhbHBoYSlxX3tqLTF9KHgpLVxiZXRhIHFfe3ByKGotMSl9KHgp
+JC4KICAKICBUaHVzIHdlIGhhdmUgJHhxX3tqLTF9KHgpPXFfaih4KStcYWxwaGEgcV97ai0xfSh4
+KStcYmV0YSBxX3twcihqLTEpfSh4KSQuICBCeQogIFByb3Bvc2l0aW9ufjYgb2YgXGNpdGV7R2Vt
+aWduYW5pMTk5M30sICRcbGFuZ2xlIHFfaih4KSxxX3tqLTF9KHgpXHJhbmdsZSAkPTAsCiAgYW5k
+IHNvIGlzICRcbGFuZ2xlIHFfaih4KSxxX3twcihqLTEpfSh4KVxyYW5nbGUgJC4KICAKICBJbiB0
+aGlzIGNhc2UsICRxX3twcihqKX09cV97ai0xfSQsIHRodXMgJFx0aGV0YV9wPVxsYW5nbGUKICBx
+X3tqLTF9KHgpLHFfe2otMX0oeClccmFuZ2xlPVxsYW5nbGUgcV97cHIoail9KHgpLHFfe2otMX0o
+eClccmFuZ2xlJC4KClxpdGVtICRxX2okIHdhcyBjb21wdXRlZCBhcyAkKHheay1cc3VtX3tpPTB9
+XntrLTF9XGFscGhhX2l4XmkpcV97ai1rfSh4KS1cYmV0YQogIHFfe3ByKGotayl9KHgpJC4KICAK
+ICBIZXJlIHdlIGhhdmUKICAkeHFfe2otMX0oeCk9eF5rcV97ai1rfT1xX2orXHN1bV97aT0wfV57
+ay0xfVxhbHBoYV9peF5pcV97ai1rfSh4KStcYmV0YQogIHFfe3ByKGotayl9KHgpJC4gQWdhaW4g
+YnkgUHJvcG9zaXRpb25+NiBvZiBcY2l0ZXtHZW1pZ25hbmkxOTkzfSwgJFxsYW5nbGUKICBxX2oo
+eCksIHheaXFfe2ota30oeClccmFuZ2xlPTAkIGZvciAkaTxrJCBhbmQgJFxsYW5nbGUKICBxX2oo
+eCkscV97cHIoai0xKX0oeClccmFuZ2xlPTAkLgpcZW5ke2l0ZW1pemV9Cgo8PFJJTlRFUlAgSW1w
+bGVtZW50YXRpb24+Pj0KICAgICAgICAgIHRoZXRhcCA6PSB0aGV0YQogICAgICAgICAgcXAgOj0g
+cWoKICAgICAgICAgIGogOj0gaisxCkAKRmluYWxseSwgd2Ugc2F2ZSAkXHRoZXRhJCBhbmQgJHFf
+aiQgYW5kIGluY3JlbWVudCAkaiQuCgo8PFJJTlRFUlAgSW1wbGVtZW50YXRpb24+Pj0KICAgICAg
+ICBlbHNlIAogICAgICAgICAgaDogTm9uTmVnYXRpdmVJbnRlZ2VyIDo9IDEKICAgICAgICAgIHdo
+aWxlICh0aGV0YSA9IDApIGFuZCAoaitoIDw9IE4pIHJlcGVhdAogICAgICAgICAgICB0aGV0YSA6
+PSByZWR1Y2UoXyssIG1hcCgjMSojMioqaCwgcTJjLCB4KSkKICAgICAgICAgICAgaCA6PSBoKzEK
+QApJbiBjYXNlICRcdGhldGEkIGVxdWFscyB6ZXJvLCB3ZSBoYXZlIHRvIGZpbmQgYSBudW1iZXIg
+JGhcZ2VxIDIkIHN1Y2ggdGhhdAokXHRoZXRhOj1cbGFuZ2xlIHFfaih4KSx4XntoLTF9cV9qKHgp
+XHJhbmdsZVxuZXEwJC4gV2UgY2FuIHRoZW4gY29tcHV0ZQokcV97aisxfSQgYXMKJCQKKHheaC1c
+c3VtX3tpPTB9XntoLTF9XGFscGhhX2l4XmkpcV97ai1rfSh4KS1cYmV0YSBxX3twcihqLWgpfSh4
+KSwKJCQKd2hlcmUgJFxiZXRhJCBhbmQgdGhlICRcYWxwaGFfaSQgYXJlIGFnYWluIGRldGVybWlu
+ZWQgYnkgdGhlIG9ydG9nb25hbGl0eQpyZWxhdGlvbiBkZXNjcmliZWQgaW4gUHJvcG9zaXRpb25+
+NiBvZiBcY2l0ZXtHZW1pZ25hbmkxOTkzfToKCjw8UklOVEVSUCBJbXBsZW1lbnRhdGlvbj4+PQog
+ICAgICAgICAgaWYgaitoIDwgTiB0aGVuCiAgICAgICAgICAgIGI6IExpc3QgRiA6PSBbcmVkdWNl
+KF8rLCBtYXAoIzEqIzIqKmksIHEyYywgeCkpIGZvciBpIGluIGguLjIqaC0xXQoKLS0gICAgICAg
+ICAgPHFqLHFqKnheaT4sIGkgPSBoLi4yKmgtMQoKICAgICAgICAgICAgYTogTGlzdCBGIDo9IFtd
+CiAgICAgICAgICAgIGZvciBpIGluIDEuLmggcmVwZWF0CiAgICAgICAgICAgICAgYSA6PSBjb25z
+KChiLmktcmVkdWNlKF8rLCBtYXAoIzEqIzIsIGIsIGEpLCAwKSkvdGhldGEsIGEpCgogICAgICAg
+ICAgICBhbHBoYWZ1bjogU1VQIEYgOj0gc2hpZnRMZWZ0KHFqLmZ1biwgaCkKICAgICAgICAgICAg
+Zm9yIGkgaW4gMC4uaC0xIHJlcGVhdAogICAgICAgICAgICAgIGFscGhhZnVuIDo9IGFscGhhZnVu
+IC0gYS4oaSsxKSpzaGlmdExlZnQocWouZnVuLCBpKSAKCiAgICAgICAgICAgIGFscGhhdmFsOiBM
+aXN0IEYgOj0gbWFwKCgjMSoqaCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IC0gcmVkdWNlKF8rLCBbYS4oaSsxKSojMSoqaSBfCiAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICBmb3IgaSBpbiAwLi5oLTFdKSkgXwogICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAqICMyLCB4LCBxai52YWwpCgogICAgICAgICAgICBpZiBq
+ID0gMCB0aGVuIAogICAgICAgICAgICAgIHEgOj0gY29ucyhbYWxwaGFmdW4sIGFscGhhdmFsXSwg
+cSkKICAgICAgICAgICAgZWxzZSAKCi0tIDx4KipoIHEoaiksIHEoai0xKT4gPSB0aGV0YQotLSA8
+cXAsIHEoai0xKT4gPSB0aGV0YXAKICAgICAgICAgICAgICBiZXRhIDo9IHRoZXRhIC8gdGhldGFw
+CgogICAgICAgICAgICAgIHEgOj0gY29ucyhbYWxwaGFmdW4gLSBiZXRhICogcXAuZnVuLAogICAg
+ICAgICAgICAgICAgICAgICAgICAgbWFwKCMxIC0gYmV0YSojMiwgYWxwaGF2YWwsIHFwLnZhbCld
+LAogICAgICAgICAgICAgICAgICAgICAgICBxKQoKICAgICAgICAgICAgdGhldGFwIDo9IHRoZXRh
+CiAgICAgICAgICAgIHFwIDo9IHFqCgogICAgICAgICAgaiA6PSBqK2gKCiAgICAgIHEKCkAKCk5v
+dyBpdCBpcyBhbiBlYXN5IG1hdHRlciB0byBmaW5kIHRoZSBpbnRlcnBvbGF0aW5nIGZ1bmN0aW9u
+LiAKCjw8UklOVEVSUCBJbXBsZW1lbnRhdGlvbj4+PQogICAgaW50ZXJwb2xhdGUoeCwgZikgPT0K
+ICAgICAgTiA6PSAjeAogICAgICBpZiBOIF49ICNmIHRoZW4gZXJyb3IgIkRpZmZlcmVudCBudW1i
+ZXIgb2YgcG9pbnRzIGFuZCB2YWx1ZXMuIgoKICAgICAgZjA6IExpc3QgRiA6PSBbXQogICAgICB4
+MDogTGlzdCBGIDo9IFtdCiAgICAgIGYxOiBMaXN0IEYgOj0gW10KICAgICAgeDE6IExpc3QgRiA6
+PSBbXQogICAgICBmb3IgdmwgaW4gZiBmb3IgcHQgaW4geCByZXBlYXQKICAgICAgICBpZiB2bCA9
+IDAgdGhlbiAKICAgICAgICAgIGYwIDo9IGNvbnModmwsIGYwKQogICAgICAgICAgeDAgOj0gY29u
+cyhwdCwgeDApCiAgICAgICAgZWxzZSAKICAgICAgICAgIGYxIDo9IGNvbnModmwsIGYxKQogICAg
+ICAgICAgeDEgOj0gY29ucyhwdCwgeDEpCgogICAgICB2OiBTVVAgRiA6PSAoY3JlYXRlKCkkU2lu
+Z2xldG9uQXNPcmRlcmVkU2V0KTo6U1VQKEYpCiAgICAgIHd6OiBTVVAgRiA6PSAxCiAgICAgIGZv
+ciB4MHZhbCBpbiB4MCByZXBlYXQKICAgICAgICB3eiA6PSB3eioodi14MHZhbDo6U1VQKEYpKQoK
+ICAgICAgTiA6PSAjeDEKICAgICAgaWYgTiA9IDAgdGhlbiBbd3o6OiBGcmFjdGlvbiBTVVAgRl0K
+ICAgICAgZWxzZQogICAgICAgIHcwOiBMaXN0IEYgOj0gW3JlZHVjZShfKiwgW3gxdmFsLXgwdmFs
+IGZvciB4MHZhbCBpbiB4MF0sIDEpIF8KICAgICAgICAgICAgICAgICAgICAgICBmb3IgeDF2YWwg
+aW4geDFdCiAgICAgICAgZjEgOj0gbWFwKCMxLyMyLCBmMSwgdzApCgogICAgICAgIHcxOiBMaXN0
+IEYgOj0gW3JlZHVjZShfKiwgW3gxLmkteDEuaiBmb3IgaiBpbiAxLi5OIHwgaiB+PSBpXSwgMSkg
+XwogICAgICAgICAgICAgICAgICAgICAgIGZvciBpIGluIDEuLk5dCiAgICAgICAgYzEgOj0gbWFw
+KCMxLyMyLCBmMSwgdzEpCgogICAgICAgIGYxaW52IDo9IG1hcCgxLyMxLCBmMSkgIAogICAgICAg
+IGMxaW52IDo9IG1hcCgjMS8jMiwgZjFpbnYsIHcxKQoKICAgICAgICBxOiBMaXN0IEludGVycG9s
+YXRpb25SZXN1bHQgOj0gaW50KE4sIHgxLCBjMSkgCiAgICAgICAgcDogTGlzdCBJbnRlcnBvbGF0
+aW9uUmVzdWx0IDo9IHJldmVyc2UgaW50KE4sIHgxLCBjMWludik7CgogICAgICAgIHJlc3VsdDog
+TGlzdCBGcmFjdGlvbiBTVVAgRiA6PSBbXQogICAgICAgIGZvciBudW0gaW4gcCBmb3IgZGVuIGlu
+IHEgcmVwZWF0CiAgICAgICAgICBmb3IgbnVtMCBpbiBudW0udmFsIGZvciBkZW4wIGluIGRlbi52
+YWwgZm9yIGZ1bjAgaW4gZjEgcmVwZWF0CiAgICAgICAgICAgIGlmIG51bTAgfj0gMCB0aGVuCiAg
+ICAgICAgICAgICAgcmVzdWx0IDo9IGNvbnMoZGVuMC9udW0wKmZ1bjAqd3oqbnVtLmZ1bi9kZW4u
+ZnVuLCByZXN1bHQpCiAgICAgICAgICAgICAgYnJlYWsKCiAgICAgICAgcmVzdWx0CkAKCiVcYmli
+bGlvZ3JhcGh5e21hdGh9IFxiaWJsaW9ncmFwaHlzdHlsZXthbXNwbGFpbn0KXGJlZ2lue3RoZWJp
+Ymxpb2dyYXBoeX17MX0KClxiaWJpdGVte0VnZWNpb2dsdUtvYzE5ODl9CntcIk99bWVyIEV7XHV7
+Z319ZWNpb3tcdXtnfX1sdSBhbmQge1xje0N9fWV0aW5+Sy4gS297XGN7Y319LCBcZW1waHtBIGZh
+c3QKICBhbGdvcml0aG0gZm9yIHJhdGlvbmFsIGludGVycG9sYXRpb24gdmlhIG9ydGhvZ29uYWwg
+cG9seW5vbWlhbHN9LCBNYXRoZW1hdGljcwogIG9mIENvbXB1dGF0aW9uIFx0ZXh0YmZ7NTN9ICgx
+OTg5KSwgbm8ufjE4NywgMjQ5LS0yNjQuIFxNUntNUjk3MjM2OQogICg5MGE6NjUwMTUpfQoKXGJp
+Yml0ZW17R2VtaWduYW5pMTk5M30KTHVjYSBHZW1pZ25hbmksIFxlbXBoe1JhdGlvbmFsIGludGVy
+cG9sYXRpb24gdmlhIG9ydGhvZ29uYWwgcG9seW5vbWlhbHN9LAogIENvbXB1dGVycyBcJiBNYXRo
+ZW1hdGljcyB3aXRoIEFwcGxpY2F0aW9ucy4gQW4gSW50ZXJuYXRpb25hbCBKb3VybmFsCiAgXHRl
+eHRiZnsyNn0gKDE5OTMpLCBuby5+NSwgMjctLTM0LiBcTVJ7TVIxMjI4Nzc4ICg5NGc6NjUwMTIp
+fQoKXGVuZHt0aGViaWJsaW9ncmFwaHl9CgpcZW5ke2RvY3VtZW50fQo=
+--ts5gYr/Uxk
+Content-Type: text/plain; charset=iso-8859-1
+Content-Description: message body text
+Content-Transfer-Encoding: quoted-printable
+
+
+
+What sort of samples do you need?
+
+Martin
+Vanuxem Gr=E9gory writes:
+ > Hi,
+ >=20
+ >=20
+ > A small bugs:
+ >=20
+ > (41) -> interpolate([3],[7])
+ >  41) ->
+ >    >> Error detected within library code:
+ >    reducing over an empty list needs the 3 argument form
+ >=20
+ > And can you give some samples please ?
+ >=20
+ > Cheers,
+ >=20
+ >=20
+ > Greg
+ >=20
+ >=20
+
+--ts5gYr/Uxk--
+
+
+
+
+From MAILER-DAEMON Sat Aug 13 12:32:54 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E3ywG-0002Eh-Lr
+	for mharc-axiom-math@gnu.org; Sat, 13 Aug 2005 12:32:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E3ywC-0002CP-LI
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 12:32:49 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E3ywA-0002BT-S8
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 12:32:47 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E3ywA-00028c-CG
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 12:32:46 -0400
+Received: from [193.252.22.26] (helo=smtp5.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E3z6t-0000i2-IT
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 12:43:51 -0400
+Received: from me-wanadoo.net (localhost [127.0.0.1])
+	by mwinf0509.wanadoo.fr (SMTP Server) with ESMTP id B49231C0028B
+	for <axiom-math@nongnu.org>; Sat, 13 Aug 2005 18:28:29 +0200 (CEST)
+Received: from ALille-251-1-2-28.w82-127.abo.wanadoo.fr
+	(ALille-251-1-2-28.w82-127.abo.wanadoo.fr [82.127.144.28])
+	by mwinf0509.wanadoo.fr (SMTP Server) with ESMTP id 5D5031C00287;
+	Sat, 13 Aug 2005 18:28:29 +0200 (CEST)
+X-ME-UUID: 20050813162829382.5D5031C00287@mwinf0509.wanadoo.fr
+Subject: Re: [Axiom-math] Rational Interpolation
+From: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+To: Martin Rubey <martin.rubey@univie.ac.at>
+In-Reply-To: <17150.6939.219912.624481@seam101.local>
+References: <1123943040.3797.8.camel@localhost.localdomain>
+	<17150.6939.219912.624481@seam101.local>
+Content-Type: text/plain; charset=ISO-8859-1
+Date: Sat, 13 Aug 2005 18:28:56 +0200
+Message-Id: <1123950536.3241.2.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.2.3 
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 Aug 2005 16:32:51 -0000
+
+Le samedi 13 ao=FBt 2005 =E0 18:08 +0200, Martin Rubey a =E9crit :
+> Merci :-)
+>=20
+> Another bug also fixed...
+>=20
+>=20
+> What sort of samples do you need?
+Same as MathAction.
+
+>=20
+> Martin
+> Vanuxem Gr=E9gory writes:
+>  > Hi,
+>  >=20
+>  >=20
+>  > A small bugs:
+>  >=20
+>  > (41) -> interpolate([3],[7])
+>  >  41) ->
+>  >    >> Error detected within library code:
+>  >    reducing over an empty list needs the 3 argument form
+>  >=20
+>  > And can you give some samples please ?
+>  >=20
+
+
+Cheers,
+
+Greg
+=20
+
+
+
+
+
+From MAILER-DAEMON Sat Aug 13 12:59:25 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E3zLw-0007nK-NK
+	for mharc-axiom-math@gnu.org; Sat, 13 Aug 2005 12:59:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E3zKf-0007bL-Tv
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 12:58:06 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E3zKP-0007U7-Ql
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 12:57:52 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E3zKP-0007Pr-8h
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 12:57:49 -0400
+Received: from [193.252.22.31] (helo=smtp11.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E3zF8-0001GJ-LE
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 12:52:22 -0400
+Received: from me-wanadoo.net (unknown [127.0.0.1])
+	by mwinf1102.wanadoo.fr (SMTP Server) with ESMTP id 2E92F1C00090
+	for <axiom-math@nongnu.org>; Sat, 13 Aug 2005 18:37:01 +0200 (CEST)
+Received: from ALille-251-1-2-28.w82-127.abo.wanadoo.fr
+	(ALille-251-1-2-28.w82-127.abo.wanadoo.fr [82.127.144.28])
+	by mwinf1102.wanadoo.fr (SMTP Server) with ESMTP id CB15F1C00081;
+	Sat, 13 Aug 2005 18:37:00 +0200 (CEST)
+X-ME-UUID: 20050813163700831.CB15F1C00081@mwinf1102.wanadoo.fr
+Subject: Re: [Axiom-math] Rational Interpolation
+From: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+To: Martin Rubey <martin.rubey@univie.ac.at>
+In-Reply-To: <17150.6939.219912.624481@seam101.local>
+References: <1123943040.3797.8.camel@localhost.localdomain>
+	<17150.6939.219912.624481@seam101.local>
+Content-Type: text/plain; charset=ISO-8859-1
+Date: Sat, 13 Aug 2005 18:37:27 +0200
+Message-Id: <1123951047.3241.5.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.2.3 
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 Aug 2005 16:59:22 -0000
+
+Hi,
+
+Le samedi 13 ao=FBt 2005 =E0 18:08 +0200, Martin Rubey a =E9crit :
+> Merci :-)
+>=20
+> Another bug also fixed...
+>=20
+>=20
+> What sort of samples do you need?
+
+Sorry, that works now :-)
+
+>=20
+> Martin
+> Vanuxem Gr=E9gory writes:
+>  > Hi,
+>  >=20
+>  >=20
+>  > A small bugs:
+>  >=20
+>  > (41) -> interpolate([3],[7])
+>  >  41) ->
+>  >    >> Error detected within library code:
+>  >    reducing over an empty list needs the 3 argument form
+>  >=20
+>  > And can you give some samples please ?
+>  >=20
+
+Cheers,
+
+Greg
+=20
+
+
+
+
+
+From MAILER-DAEMON Sat Aug 13 16:01:34 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E42CD-00016I-UV
+	for mharc-axiom-math@gnu.org; Sat, 13 Aug 2005 16:01:34 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E42AI-0008WF-8e
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 15:59:35 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E42AB-0008SQ-FL
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 15:59:27 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E42A3-00088f-4D
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 15:59:19 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E41vH-0001JB-JI
+	for axiom-math@nongnu.org; Sat, 13 Aug 2005 15:44:03 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j7DJSDs3067126; 
+	Sat, 13 Aug 2005 21:28:19 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="qiHp2ai0Qs"
+Content-Transfer-Encoding: 7bit
+Message-ID: <17150.18789.860921.792275@seam101.local>
+Date: Sat, 13 Aug 2005 21:26:29 +0200
+To: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+Subject: Re: [Axiom-math] Rational Interpolation
+In-Reply-To: <1123951047.3241.5.camel@localhost.localdomain>
+References: <1123943040.3797.8.camel@localhost.localdomain>
+	<17150.6939.219912.624481@seam101.local>
+	<1123951047.3241.5.camel@localhost.localdomain>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4249; Body=3 Fuz1=3 Fuz2=3
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 Aug 2005 20:01:32 -0000
+
+
+--qiHp2ai0Qs
+Content-Type: text/plain; charset=us-ascii
+Content-Description: message body text
+Content-Transfer-Encoding: 7bit
+
+In fact, I just implemented yet another algorithm, this time by Beckermann and
+Labahn. It seems that this one is even faster. In fact, a *lot* faster.
+
+If you are interested, here comes a preliminary version.
+
+
+--qiHp2ai0Qs
+Content-Type: application/octet-stream
+Content-Disposition: attachment;
+	filename="fffg.spad"
+Content-Transfer-Encoding: base64
+
+KWFiYnJldiBwYWNrYWdlIEZGRkcgRnJhY3Rpb25GcmVlRmFzdEdhdXNzaWFuCkZyYWN0aW9uRnJl
+ZUZhc3RHYXVzc2lhbihEKTogRXhwb3J0cyA9PSBJbXBsZW1lbnRhdGlvbiB3aGVyZQogIFNVUCA9
+PT4gU3BhcnNlVW5pdmFyaWF0ZVBvbHlub21pYWwKCiAgRDogSW50ZWdyYWxEb21haW4KICBWID09
+PiBTVVAgRAoKICBjRnVuY3Rpb24gPT0+IChOb25OZWdhdGl2ZUludGVnZXIsIFZlY3RvciBWLCBW
+ZWN0b3IgVikgLT4gRAoKICBFeHBvcnRzID09IHdpdGgKCiAgICBmZmZnOihNYXRyaXggRCwgY0Z1
+bmN0aW9uLCBWZWN0b3IgViwgTGlzdCBJbnRlZ2VyKSAtPiBMaXN0IE1hdHJpeCBWCiAKICBJbXBs
+ZW1lbnRhdGlvbiA9PT4gYWRkCgotLSAgICBjOiAoTm9uTmVnYXRpdmVJbnRlZ2VyLCBWZWN0b3Ig
+ViwgVmVjdG9yIFYpIC0+IEQKLS0gICAgYyhrLCBmLCBNKSA9PSAKLS0gICAgICBkIDo9IGRvdChm
+LCBNKQotLSAgICAgIGNvZWZmaWNpZW50KGQsIGspCi0tIGRhcyBpc3Qgc2VociBpbmVmZmljaWVu
+dCwgaWNoIGJyYXVjaGUgZWlnZW50bGljaCBqYSBudXIgZGVuIEtvZWZmaXppZW50ZW4KLS0gdm9u
+IHpeawoKCgogICAgZmZmZyhDLCBjLCBmLCBldGEpID09CiAgICAgIHo6IFYgOj0gY3JlYXRlKCkk
+U2luZ2xldG9uQXNPcmRlcmVkU2V0IDo6IFYKICAgICAgbTogTm9uTmVnYXRpdmVJbnRlZ2VyIDo9
+ICNmCiAgICAgIE06IExpc3QgTWF0cml4IFYgOj0gWzEkU3F1YXJlTWF0cml4KG0sIFYpIDo6IE1h
+dHJpeCBWXQogICAgICBkOiBMaXN0IEQgOj0gWzFdCiAgICAgIEs6IEludGVnZXIgOj0gI2V0YQog
+ICAgICBldGFrOiBWZWN0b3IgSW50ZWdlciA6PSB6ZXJvKG0pCiAgICAgIHI6IFZlY3RvciBEIDo9
+IHplcm8obSkKICAgICAgcDogVmVjdG9yIEQgOj0gemVybyhtKQogICAgICBNb2xkOiBNYXRyaXgg
+VgogICAgICBNbmV3OiBNYXRyaXggVgogICAgICBDb2w6IFZlY3RvciBWIDo9IHplcm8obSkKCiAg
+ICAgIGZvciBrIGluIDAuLkstMSByZXBlYXQKICAgICAgICBNb2xkIDo9IE0uZmlyc3QKICAgICAg
+ICBsYW1iZGEgOj0gZXRhLihrKzEpCgogICAgICAgIGZvciBsIGluIDEuLm0gcmVwZWF0CiAgICAg
+ICAgICByLmwgOj0gYyhrLCBmLCBjb2x1bW4oTW9sZCwgbCkpCiAgICAgICAgICBpZiBldGFrLmwg
+PiAwIHRoZW4KICAgICAgICAgICAgcC5sIDo9IGNvZWZmaWNpZW50KE1vbGQuKGwsbGFtYmRhKSwg
+XwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKGV0YWsubC0xKTo6Tm9uTmVnYXRpdmVJ
+bnRlZ2VyKQogICAgICAgICAgZWxzZSAKICAgICAgICAgICAgcC5sIDo9IDAKCiAgICAgICAgTW5l
+dyA6PSAwJFNxdWFyZU1hdHJpeChtLCBWKSA6OiBNYXRyaXggVgoKICAgICAgICBmb3IgbCBpbiAx
+Li5tIHwgbCB+PSBsYW1iZGEgcmVwZWF0CiAgICAgICAgICBzZXRDb2x1bW4hKE1uZXcsIGwsIG1h
+cCgoKCMxKnIubGFtYmRhLSMyKnIubCkgZXhxdW8gZC5maXJzdCk6OlYsIF8KICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIGNvbHVtbihNb2xkLCBsKSwgY29sdW1uKE1vbGQsIGxhbWJk
+YSkpKQoKICAgICAgICBDb2wgOj0gbWFwKCMxKnIubGFtYmRhLCAoei0oQy4oaysxLGsrMSkpOjpW
+KSpjb2x1bW4oTW9sZCwgbGFtYmRhKSkKCiAgICAgICAgZm9yIGwgaW4gMS4ubSB8IGwgfj0gbGFt
+YmRhIHJlcGVhdAogICAgICAgICAgQ29sIDo9IENvbCAtIG1hcCgjMSpwLmwsIGNvbHVtbihNbmV3
+LCBsKSkKCiAgICAgICAgc2V0Q29sdW1uIShNbmV3LCBsYW1iZGEsIG1hcCgoIzEgZXhxdW8gZC5m
+aXJzdCk6OlYsIENvbCkpCgogICAgICAgIE0gOj0gY29ucyhNbmV3LCBNKQogICAgICAgIGQgOj0g
+Y29ucyhyLmxhbWJkYSwgZCkKICAgICAgICBldGFrLmxhbWJkYSA6PSBldGFrLmxhbWJkYSArIDEK
+CiAgICAgIE0=
+--qiHp2ai0Qs
+Content-Type: text/plain; charset=us-ascii
+Content-Description: message body text
+Content-Transfer-Encoding: 7bit
+
+
+usage:
+
+x: List POLY INT := [i for i in 1..30]; _
+y: List POLY INT := [random(10) for i in 1..#x]; _
+C:SquareMatrix(#x, POLY INT) := diagonalMatrix x; _
+f:Vector SUP POLY INT := [-1, fun]; _
+c2:(NNI, Vector SUP POLY INT, Vector SUP POLY INT) -> POLY INT
+c2(k, f, M) == eval(dot(f,M)(x.(k+1)),fun=y.(k+1))
+
+r := fffg(C,c2,f,append([1 for i in 1..14],[2 for i in 15..#x]));
+
+computes a certain list of matrix, the interpolant of degree 14/15 then is
+
+r.1.(1,1)/r.1.(2,1)
+
+Another advantage is that this algorithm also computes other recurrence
+relations as needed in my guessing package :-)
+
+The corresponding article is available online: I implemented only the Algorithm
+from Table 1, the more general algorithm from Table 2 is not yet
+done. Furthermore, I did not optimize in any way. In particular, the
+representation of the elements of the vector space, the representation of the
+special multiplication rule and the computation of c_k are handled in a very
+unsatisfactory way. I'm very surprised that the algorithm is even in this
+setting so fast. Well, maybe I'm missing something. (Or maybe there is an
+efficiency bug in the implementation of Egecioglu-Koc-Gemignanis algorithm...)
+
+"Fraction-free Computation of Matrix Rational Interpolants and Matrix GCDs"
+
+http://math.univ-lille1.fr/~bbecker//ano/pub/1997/ano375.ps
+
+Other publications:
+
+http://math.univ-lille1.fr/~bbecker//bb_pub.html
+
+The following might also be useful:
+
+http://math.univ-lille1.fr/~bbecker//ano/pub/2002/ano445.ps
+
+If you feel like programming, how about implementing a domain for holonomic
+(= d-finite = P-recursive) functions?
+
+You might want to read 
+
+http://www.risc.uni-linz.ac.at/research/combinat/software/GeneratingFunctions/pub/mallinger96.pdf
+
+to this end.
+
+Martin
+
+
+--qiHp2ai0Qs--
+
+
+
+
+From MAILER-DAEMON Mon Aug 29 05:24:36 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E9fkQ-0004Jk-2u
+	for mharc-axiom-math@gnu.org; Mon, 29 Aug 2005 05:16:11 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E9fbb-0003nH-To
+	for axiom-math@nongnu.org; Mon, 29 Aug 2005 05:07:05 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E9fHy-00031f-Bl
+	for axiom-math@nongnu.org; Mon, 29 Aug 2005 04:46:47 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1E9fFj-0002jJ-75; Mon, 29 Aug 2005 04:44:27 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1E9f6z-0008Fr-Mr; Mon, 29 Aug 2005 04:35:26 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j7T8U4EU097001; 
+	Mon, 29 Aug 2005 10:30:06 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <17170.50973.133261.616524@seam101.local>
+Date: Mon, 29 Aug 2005 10:28:13 +0200
+To: =?ISO-8859-1?Q?Jens_Axel_S=F8gaard?= <jensaxel@soegaard.net>
+In-Reply-To: <43123731.7020106@soegaard.net>
+References: <43123731.7020106@soegaard.net>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4249; Body=1 Fuz1=1 Fuz2=1
+Cc: axiom-math@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Lexicographic order
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 29 Aug 2005 09:16:02 -0000
+
+Dear Jens,
+
+Although I'm not 100% sure what lexorder? ought to do exactly, you migh=
+t want
+to notice the following:
+
+the first matching type the interpreter finds for [x,y,z] is=20
+
+(13) -> [x,y,z]
+
+   (13)  [x,y,z]
+                                       Type: List OrderedVariableList [=
+x,y,z]
+
+which means that in sort([x,z,y]) you are using the order imposed by
+OrderedVariableList [x,y,z], which is z < y < x.
+
+So, although=20
+
+ >   > sort([x,y,z])
+ >   [z,y,x]
+ >=20
+ >   > sort([x,z,y])
+ >   [y,z,x]
+
+is surprising, it shouldn't be ;-) (<- please note the smiley !)
+
+If you say
+
+sort([x,z,y]::List Symbol), you will get the expected output.
+
+I'm not totally sure how you can find out what ordering a domain uses. =
+But very
+likely, if its name doesn't contain something like "Ordered", it is the=
+ usual
+lexicographic order.
+
+Hope this helps,
+
+Martin
+
+Jens Axel S=F8gaard writes:
+ > Hi all,
+ >=20
+ > Is there a smarter way than the following to write lexorder?(p,q) ?
+ >=20
+ > lexorder?(p,q) =3D=3D
+ >    if empty?(variables(p))
+ >    then return ~empty(variables(q))
+ >    else
+ >      vars :=3D members(difference( set(variables( secret1*p + secret=
+2*q)),
+ >                                  set([secret1, secret2])))
+ >      a :=3D members(degree( p::DMP(vars,?) ))
+ >      b :=3D members(degree( q::DMP(vars,?) ))
+ >      return negative?( first(a) - first(b) )
+ >=20
+ >=20
+ > My first attempt used:
+ >=20
+ >    vars :=3D sort(members(union(set(variables(p), variables(q)))))
+ >=20
+ > but was surprised to see
+ >=20
+ >   > sort([x,y,z])
+ >   [z,y,x]
+ >=20
+ >   > sort([x,z,y])
+ >   [y,z,x]
+ >=20
+ > and thus made up the secret-trick in order to avoid sort.
+ >=20
+ > --=20
+ > Jens Axel S=F8gaard
+ >=20
+ >=20
+ >=20
+ > _______________________________________________
+ > Axiom-mail mailing list
+ > Axiom-mail@nongnu.org
+ > http://lists.nongnu.org/mailman/listinfo/axiom-mail
+ >=20
+
+
+
+
+From MAILER-DAEMON Mon Aug 29 14:20:22 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E9oF3-0003YI-Mn
+	for mharc-axiom-math@gnu.org; Mon, 29 Aug 2005 14:20:21 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E9nnb-0004nK-LK
+	for axiom-math@nongnu.org; Mon, 29 Aug 2005 13:52:00 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E9nnV-0004kz-8b
+	for axiom-math@nongnu.org; Mon, 29 Aug 2005 13:51:56 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1E9nnQ-0004i0-5w; Mon, 29 Aug 2005 13:51:48 -0400
+Received: from [195.41.46.236] (helo=pfepb.post.tele.dk)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1E9nYw-0004vD-Uo; Mon, 29 Aug 2005 13:36:51 -0400
+Received: from [10.0.0.90] (0x503e5363.hrnxx2.adsl-dhcp.tele.dk [80.62.83.99])
+	by pfepb.post.tele.dk (Postfix) with ESMTP id 878B25EE094;
+	Mon, 29 Aug 2005 19:34:13 +0200 (CEST)
+Message-ID: <43134712.3030907@soegaard.net>
+Date: Mon, 29 Aug 2005 19:34:10 +0200
+From: =?ISO-8859-1?Q?Jens_Axel_S=F8gaard?= <jensaxel@soegaard.net>
+User-Agent: Mozilla Thunderbird 1.0.2 (Windows/20050317)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: Martin Rubey <martin.rubey@univie.ac.at>
+References: <43123731.7020106@soegaard.net>
+	<17170.50973.133261.616524@seam101.local>
+In-Reply-To: <17170.50973.133261.616524@seam101.local>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-Mailman-Approved-At: Mon, 29 Aug 2005 14:20:20 -0400
+Cc: axiom-math@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Lexicographic order
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 29 Aug 2005 17:52:04 -0000
+
+Hi Martin,
+
+ > Although I'm not 100% sure what lexorder? ought to do exactly, you
+ > might want to notice the following:
+ >
+ > the first matching type the interpreter finds for [x,y,z] is
+ >
+ > (13) -> [x,y,z]
+ >
+ >    (13)  [x,y,z]
+ >                                        Type: List OrderedVariableList=20
+[x,y,z]
+ >
+ > which means that in sort([x,z,y]) you are using the order imposed by
+ > OrderedVariableList [x,y,z], which is z < y < x.
+
+Ah!
+
+ > If you say
+ >
+ > sort([x,z,y]::List Symbol), you will get the expected output.
+
+That worked.
+
+ > I'm not totally sure how you can find out what ordering a domain uses.
+ > But very likely, if its name doesn't contain something like "Ordered",
+ > it is the usual lexicographic order.
+
+Part of my problem was that I had to polynomials, which might be belong
+to polynomial rings over different variables. I am probably not going
+to use lexorder?, I am just trying to get used to the Axiom way of
+doing things. Fortunately it feels very Lispy to me (if it weren't for=20
+the fact that tail recursion wasn't supported, I'd had said Schemy).
+
+Lexorder examines the difference of exponent vectors of the multivariate
+polynomials p and q. If the leftmost non-zero entry is positive, then p>q=
+.
+
+lexorder?(p,q) =3D=3D
+   if  empty?(variables(p))
+   then return ~empty?(variables(q))
+   else
+     vars :=3D sort(members(union(set(variables(p)),
+                                set(variables(q))))::List Symbol)
+     a :=3D vector(members(degree( p::DMP(vars,?) )))
+     b :=3D vector(members(degree( q::DMP(vars,?) )))
+     n :=3D select( x +-> ~zero?(x), members(a-b))
+     if empty?(n)
+     then return false
+     else return positive?(first(n))
+
+--=20
+Jens Axel S=F8gaard
+
+
+
+
+From MAILER-DAEMON Tue Aug 30 05:54:59 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EA2pW-0002qO-RP
+	for mharc-axiom-math@gnu.org; Tue, 30 Aug 2005 05:54:58 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EA2pS-0002oF-DI
+	for axiom-math@nongnu.org; Tue, 30 Aug 2005 05:54:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EA2pR-0002nv-Ai
+	for axiom-math@nongnu.org; Tue, 30 Aug 2005 05:54:53 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EA2pR-0002nW-8R
+	for axiom-math@nongnu.org; Tue, 30 Aug 2005 05:54:53 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1EA2nO-0000rk-8C
+	for axiom-math@nongnu.org; Tue, 30 Aug 2005 05:52:46 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j7U9mfa2038665; 
+	Tue, 30 Aug 2005 11:48:45 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <17172.11017.563852.556319@seam101.local>
+Date: Tue, 30 Aug 2005 11:46:49 +0200
+To: =?ISO-8859-1?Q?Jens_Axel_S=F8gaard?= <jensaxel@soegaard.net>
+In-Reply-To: <43134712.3030907@soegaard.net>
+References: <43123731.7020106@soegaard.net>
+	<17170.50973.133261.616524@seam101.local>
+	<43134712.3030907@soegaard.net>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4248; Body=1 Fuz1=1 Fuz2=1
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Lexicographic order
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 30 Aug 2005 09:54:56 -0000
+
+Dear Jens,
+
+Jens Axel S=F8gaard writes:
+
+ > Part of my problem was that I had to polynomials, which might be bel=
+ong
+ > to polynomial rings over different variables.  [...]
+
+ > Lexorder examines the difference of exponent vectors of the multivar=
+iate
+ > polynomials p and q. If the leftmost non-zero entry is positive, the=
+n p>q.
+ >=20
+ > lexorder?(p,q) =3D=3D
+ >    if  empty?(variables(p))
+ >    then return ~empty?(variables(q))
+ >    else
+ >      vars :=3D sort(members(union(set(variables(p)),
+ >                                 set(variables(q))))::List Symbol)
+ >      a :=3D vector(members(degree( p::DMP(vars,?) )))
+ >      b :=3D vector(members(degree( q::DMP(vars,?) )))
+ >      n :=3D select( x +-> ~zero?(x), members(a-b))
+ >      if empty?(n)
+ >      then return false
+ >      else return positive?(first(n))
+
+You probably get a better understanding if you declare your functions. =
+For
+example, instead of
+
+lexorder?(p,q) =3D=3D
+
+write
+
+lexorder?(p: POLY INT, q: POLY INT): Boolean =3D=3D
+
+This also helps the reader to get a fealing what your code is about.
+
+I do admit tht there is an unfortunate restriction about declared funct=
+ions: it
+is not possible to define "generic" declared functions in the interpret=
+er, you
+have to use packages for that. For example, if you want to have a funct=
+ion
+lexorder? that works for polynomials over an arbitrary ring, you have o=
+nly two
+choices: not declare your function at all, as you did it in the first p=
+lace, or
+write a package, i.e., a file with extension .spad containing
+
+)abbrev package TEST Test
+Test(R: Ring): with=20
+
+    lexorder?: (Polynomial R, Polynomial R) -> Boolean
+
+  =3D=3D add
+
+    lexorder?(p, q) =3D=3D code comes here
+=20
+Note that spad code is indentation sensitive and abbreviations like POL=
+Y for
+Polynomial are not allowed. If you prefer, aldor provides a non-indenta=
+tion
+sensitive syntax...
+
+Martin
+
+
+
+

@@ -1,0 +1,3725 @@
+From MAILER-DAEMON Mon Aug 07 05:25:56 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GA1My-0000vw-5w
+	for mharc-axiom-math@gnu.org; Mon, 07 Aug 2006 05:25:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GA1Mw-0000uS-L3
+	for axiom-math@nongnu.org; Mon, 07 Aug 2006 05:25:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GA1Mu-0000rp-Gq
+	for axiom-math@nongnu.org; Mon, 07 Aug 2006 05:25:54 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GA1Mu-0000rY-3w
+	for axiom-math@nongnu.org; Mon, 07 Aug 2006 05:25:52 -0400
+Received: from [134.34.143.6] (helo=spock.physik.uni-konstanz.de)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GA1R6-0005e0-Ji
+	for axiom-math@nongnu.org; Mon, 07 Aug 2006 05:30:13 -0400
+Received: from clifford.physik.uni-konstanz.de (clifford [134.34.143.32])
+	by spock.physik.uni-konstanz.de (8.8.5/8.8.5) with ESMTP id JAA14573
+	for <axiom-math@nongnu.org>; Mon, 7 Aug 2006 09:47:04 +0200 (MET DST)
+Received: from clifford.physik.uni-konstanz.de (localhost [127.0.0.1])
+	by clifford.physik.uni-konstanz.de (8.12.6/8.12.6/SuSE Linux 0.6) with
+	ESMTP id k779Q1wk018077
+	for <axiom-math@nongnu.org>; Mon, 7 Aug 2006 11:26:02 +0200
+Received: from localhost (fauser@localhost)
+	by clifford.physik.uni-konstanz.de (8.12.6/8.12.6/Submit) with ESMTP id
+	k779Q14G018074
+	for <axiom-math@nongnu.org>; Mon, 7 Aug 2006 11:26:01 +0200
+Date: Mon, 7 Aug 2006 11:26:01 +0200 (CEST)
+From: Bertfried Fauser <fauser@spock.physik.uni-konstanz.de>
+To: axiom-math@nongnu.org
+Message-ID: <Pine.LNX.4.44.0608071122160.18073-100000@clifford.physik.uni-konstanz.de>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Subject: [Axiom-math] Groebernbases
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Bertfried.Fauser@uni-konstanz.de
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 07 Aug 2006 09:25:54 -0000
+
+Dear All,
+
+I have experimented with the AXIOM Groebner bases package and was somehoe
+wondering how to define an ordering and how to define elimination orders.
+In the code I couldn't find any hint how to impose these conditions and
+groebner() takes as input only a list of polynomials, not an order
+function and not a list of to be kept or elimated variables?
+
+Any hint welcome....
+
+There is a tremendouly fast package for computing Groebner bases,
+http://www-calfor.lip6.fr/~jcf/ it is written in C and I wonder if AXIOM
+could use it via a sort of interface. Where to look how to write such an
+interface.
+
+ciao
+BF.
+
+% PD Dr Bertfried Fauser
+%     Institution: Max Planck Institute for Math, Leipzig <http://www.mis.mpg.de>
+%   Privat Docent: University of Konstanz, Phys Dept <http://www.uni-konstanz.de>
+%  contact|->URL : http://clifford.physik.uni-konstanz.de/~fauser/
+%          Phone : Leipzig +49 341 9959 735  Konstanz +49 7531 693491
+
+
+
+
+From MAILER-DAEMON Mon Aug 07 11:38:18 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GA7BK-00062C-1w
+	for mharc-axiom-math@gnu.org; Mon, 07 Aug 2006 11:38:18 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GA7BI-0005zp-2j
+	for axiom-math@nongnu.org; Mon, 07 Aug 2006 11:38:16 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GA7BG-0005xy-E7
+	for axiom-math@nongnu.org; Mon, 07 Aug 2006 11:38:15 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GA7BG-0005xc-40
+	for axiom-math@nongnu.org; Mon, 07 Aug 2006 11:38:14 -0400
+Received: from [216.251.41.178] (helo=mail58c2.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GA7FW-0000Oe-CS
+	for axiom-math@nongnu.org; Mon, 07 Aug 2006 11:42:38 -0400
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus (206-47-29-248.anikast.net [206.47.29.248])
+	by mail58c2.megamailservers.com (8.13.6/8.13.1) with ESMTP id
+	k77FbpTl023252; Mon, 7 Aug 2006 11:38:06 -0400
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: <Bertfried.Fauser@uni-konstanz.de>
+Subject: RE: [Axiom-math] Groebernbases
+Date: Mon, 7 Aug 2006 11:37:42 -0400
+Message-ID: <00d001c6ba37$74249540$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2869
+In-Reply-To: <Pine.LNX.4.44.0608071122160.18073-100000@clifford.physik.uni-konstanz.de>
+Importance: Normal
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 07 Aug 2006 15:38:16 -0000
+
+Bertfried,
+
+On August 7, 2006 5:26 AM you wrote:
+>=20
+> I have experimented with the AXIOM Groebner bases package and=20
+> was somehow wondering how to define an ordering and how to
+> define elimination orders. In the code I couldn't find any
+> hint how to impose these conditions and groebner() takes as
+> input only a list of polynomials, not an order function and
+> not a list of to be kept or elimated variables?
+>=20
+> Any hint welcome....
+
+Concerning defining orders, this might help
+
+http://wiki.axiom-developer.org/axiom--test--1/src/algebra/PgrobnerSpad
+
+There are several different packages for Groebner basis in Axiom.
+You can try browsing:
+
+http://wiki.axiom-developer.org/axiom--test--1/src/algebra/FrontPage/sear=
+chw
+iki?expr=3DGroebner
+
+>=20
+> There is a tremendouly fast package for computing Groebner bases,
+> http://www-calfor.lip6.fr/~jcf/ it is written in C and I wonder
+> if AXIOM could use it via a sort of interface. Where to look how
+> to write such an interface.
+>=20
+
+I looked at the above link but all I could find were the binary
+libraries with the Maple interface for both linux and windows -
+no source code. Without the source code it would be hard to
+integrate this with Axiom - maybe not impossible - but one would
+have to try to emulate Maple's external library interface.
+
+We have has some initial discussions about how to call external
+routines from Axiom via an Aldor wrapper. See:
+
+http://wiki.axiom-developer.org/SandBoxAldorForeign
+
+and also Gernot Hueber's recent posts to axiom-developer list
+
+http://lists.gnu.org/archive/html/axiom-developer/2006-08/msg00108.html
+http://lists.gnu.org/archive/html/axiom-developer/2006-08/msg00102.html
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Mon Aug 07 12:50:59 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GA8Jf-0002o1-Bh
+	for mharc-axiom-math@gnu.org; Mon, 07 Aug 2006 12:50:59 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GA8Jd-0002n5-Hu
+	for axiom-math@nongnu.org; Mon, 07 Aug 2006 12:50:57 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GA8Jb-0002lg-Kn
+	for axiom-math@nongnu.org; Mon, 07 Aug 2006 12:50:57 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GA8Jb-0002lZ-8s
+	for axiom-math@nongnu.org; Mon, 07 Aug 2006 12:50:55 -0400
+Received: from [134.74.38.100] (helo=cgate.sci.ccny.cuny.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GA8Ns-0007O2-3e
+	for axiom-math@nongnu.org; Mon, 07 Aug 2006 12:55:20 -0400
+Received: from [162.84.159.146] (account <wyscc@sci.ccny.cuny.edu>)
+	by cgate.sci.ccny.cuny.edu (CommuniGate Pro WebUser 4.0.5)
+	with HTTP id 8102148; Mon, 07 Aug 2006 12:50:54 -0400
+From: "William Sit" <wyscc@sci.ccny.cuny.edu>
+Subject: Re: [Axiom-math] Groebernbases
+To: Bertfried.Fauser@uni-konstanz.de,axiom-math@nongnu.org
+X-Mailer: CommuniGate Pro Web Mailer v.4.0.5
+Date: Mon, 07 Aug 2006 12:50:54 -0400
+Message-ID: <web-8102148@cgate.sci.ccny.cuny.edu>
+In-Reply-To: <Pine.LNX.4.44.0608071122160.18073-100000@clifford.physik.uni-konstanz.de>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="ISO-8859-1"; format="flowed"
+Content-Transfer-Encoding: 8bit
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 07 Aug 2006 16:50:58 -0000
+
+On Mon, 7 Aug 2006 11:26:01 +0200 (CEST)
+  Bertfried Fauser <fauser@spock.physik.uni-konstanz.de> 
+wrote:
+>Dear All,
+>
+>I have experimented with the AXIOM Groebner bases package 
+>and was somehoe
+>wondering how to define an ordering and how to define 
+>elimination orders.
+>In the code I couldn't find any hint how to impose these 
+>conditions and
+>groebner() takes as input only a list of polynomials, not 
+>an order
+>function and not a list of to be kept or elimated 
+>variables?
+>
+>Any hint welcome....
+
+There is a domain constructor GDMP (Generalized 
+Distributed Multivariate Polynomials) which has a 
+parameter which is any term-ordering you like. The 
+Groebner basis package then takes any polynomial ring 
+domain as parameter.
+
+Gianni's code Bill Page referenced earlier are good 
+examples of how to set things up. Special cases are DMP, 
+HDMP polynomial domains. 
+
+In Aldor you can call external functions written in C, but 
+I have not tried it myself.
+
+William
+
+William Sit, 
+City College of New York                  
+Office: R6/202C Tel: 212-650-5179, Fax: 212-862-0004
+Home Page: http://scisun.sci.ccny.cuny.edu/~wyscc/
+
+
+
+From MAILER-DAEMON Wed Aug 09 16:47:25 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GAuxZ-0003eP-Ql
+	for mharc-axiom-math@gnu.org; Wed, 09 Aug 2006 16:47:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GAuxY-0003dt-Ec
+	for axiom-math@nongnu.org; Wed, 09 Aug 2006 16:47:24 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GAuxW-0003dB-WC
+	for axiom-math@nongnu.org; Wed, 09 Aug 2006 16:47:24 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GAuxW-0003d5-Nv
+	for axiom-math@nongnu.org; Wed, 09 Aug 2006 16:47:22 -0400
+Received: from [66.249.82.232] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GAv2H-0000uD-OH
+	for axiom-math@nongnu.org; Wed, 09 Aug 2006 16:52:17 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so293767wxc
+	for <axiom-math@nongnu.org>; Wed, 09 Aug 2006 13:47:21 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=BzhZoctpVNxZgZwXtis65ppn3IsFx+koe20chCxNx1KzOy2JwszMEJXGf4hEjarz5MOhmM78nMoY4ovf6rrQrzsAtEgV6k7cVCuWOzaIZros1AQAGNmVmpIbj31gCpOqZHTRamMOJxMxLK05M/VISjs2hhAq+ahoH8K+kNf1GJs=
+Received: by 10.78.107.8 with SMTP id f8mr658685huc;
+	Wed, 09 Aug 2006 13:47:20 -0700 (PDT)
+Received: by 10.78.13.12 with HTTP; Wed, 9 Aug 2006 13:47:20 -0700 (PDT)
+Message-ID: <ab2dc45b0608091347ua766c5dl7c49622f878a99c5@mail.gmail.com>
+Date: Wed, 9 Aug 2006 16:47:20 -0400
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: axiom-math@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Subject: [Axiom-math] Simplification rules
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 09 Aug 2006 20:47:24 -0000
+
+I'm trying to construct a rule that simplifies expressions based on
+the identity g(a,b) = g(b,a), where I've defined g := operator 'g.
+Sadly, I'm failing miserably.
+
+The most brain dead approach is to define and use the rule
+
+-> symr := rule g(a,b) = g(b,a)
+-> symr g(x,y)
+
+Unfortunately, the last line produces an infinite loop because, even
+after the substitution, the rule still matches and so gets applied
+repeatedly.
+
+The standard solution is to make the rule match only g(b,a), where a
+and b are in some sense ordered and b > a. Then g(a,b) will no longer
+match once a <= b. For example, alphabetic ordering for the string
+representations of a and b would be nice, even if it only works when a
+and b are Symbols. I haven't been able to construct such a rule. The
+more or less obvious approach
+
+-> symr := g(b, (a | notOrdered?(a,b)) == g(b,a)
+
+does not seem to work. For some reason the function notOrdered? is not
+even called when the rule is applied. Why? Is there another way to
+construct this simplification rule that I'm not seeing?
+
+Thanks in advance.
+
+Igor
+
+
+
+From MAILER-DAEMON Thu Aug 10 09:04:27 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GBAD5-0003xX-6Y
+	for mharc-axiom-math@gnu.org; Thu, 10 Aug 2006 09:04:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GBAD3-0003x7-W0
+	for axiom-math@nongnu.org; Thu, 10 Aug 2006 09:04:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GBAD0-0003wL-Bw
+	for axiom-math@nongnu.org; Thu, 10 Aug 2006 09:04:25 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GBAD0-0003wI-8i
+	for axiom-math@nongnu.org; Thu, 10 Aug 2006 09:04:22 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GBAHu-0000D3-KA
+	for axiom-math@nongnu.org; Thu, 10 Aug 2006 09:09:26 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GBACy-0006QY-Fk; Thu, 10 Aug 2006 15:04:20 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GBACy-0003rL-Ei; Thu, 10 Aug 2006 15:04:20 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Igor Khavkine" <igor.kh@gmail.com>
+Subject: Re: [Axiom-math] Simplification rules
+References: <ab2dc45b0608091347ua766c5dl7c49622f878a99c5@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 10 Aug 2006 15:04:19 +0200
+In-Reply-To: <ab2dc45b0608091347ua766c5dl7c49622f878a99c5@mail.gmail.com>
+Message-ID: <9qwt9gspws.fsf@aquin.mat.univie.ac.at>
+Lines: 53
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 10 Aug 2006 13:04:26 -0000
+
+Dear Igor,
+
+"Igor Khavkine" <igor.kh@gmail.com> writes:
+
+> -> symr := g(b, (a | notOrdered?(a,b)) == g(b,a)
+
+there are some typos hidden in the line above. The operation "rule" is missing,
+"notOrdered?" is undefined, and you seem to be replacing g(b, a) by g(a, b)...
+
+Still:
+
+symr := rule g(b, (a | a < b)) == g(a, b)
+
+does not seem to work. After some experimenting, it occurred to me that the
+suchThat predicate "|" might refer only to a *single* variable. I.e., in
+
+(a | a < b)
+
+b seems to be taken to be a constant. Note however, that I did *not* verify
+this claim!
+
+Still, this idea leads to a workaround, by using hyperdoc and browsing
+RewriteRule. Try the following:
+
+g := operator 'g
+swap := rule g(b, a) == g(a, b)
+symr := suchThat(swap, [a,b], l +-> (output l; l.1 < l.2))
+
+Unfortunately, the condition seems to be evaluated once too often. I have no
+idea why:
+
+(14) -> symr g(x,y)
+   [y,x]
+   [y,x]
+
+   (14)  g(x,y)
+
+(15) -> symr g(y,x)
+   [x,y]
+   [y,x]
+   [y,x]
+
+   (15)  g(x,y)
+
+Maybe Axiom tries to apply a rule until the result doesn't change anymore...
+
+Hope this helps,
+
+Martin
+
+PS: if you are going to do more serious stuff with symmetric functions, please
+contact me once more. I'd expect that it would be wise to have an appropriate
+domain. Maybe something like that does already exist...
+
+
+
+
+From MAILER-DAEMON Thu Aug 10 10:50:47 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GBBrz-000226-67
+	for mharc-axiom-math@gnu.org; Thu, 10 Aug 2006 10:50:47 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GBBrx-0001zL-Ov
+	for axiom-math@nongnu.org; Thu, 10 Aug 2006 10:50:45 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GBBrw-0001vg-10
+	for axiom-math@nongnu.org; Thu, 10 Aug 2006 10:50:45 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GBBrv-0001vS-TH
+	for axiom-math@nongnu.org; Thu, 10 Aug 2006 10:50:43 -0400
+Received: from [64.233.182.189] (helo=nf-out-0910.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GBBwp-0001sX-PE
+	for axiom-math@nongnu.org; Thu, 10 Aug 2006 10:55:48 -0400
+Received: by nf-out-0910.google.com with SMTP id x37so567184nfc
+	for <axiom-math@nongnu.org>; Thu, 10 Aug 2006 07:50:31 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=DDtA3HgCGftVTelqJf298mRG09TCbVKcMBR2HenJCtW+S5dgf/jv0ks5svTuqStZUAa34yCx9qNPRLF+Unf/CSpGrx6QtiNuJhxzCLmGlGtZZW1tZaJx+bfWYBYlFFWqBPQzQyqJG4CzIx/LUkKarUw05sWA/dhmv+KSQDAXzPU=
+Received: by 10.78.140.17 with SMTP id n17mr1360316hud;
+	Thu, 10 Aug 2006 07:50:31 -0700 (PDT)
+Received: by 10.78.13.12 with HTTP; Thu, 10 Aug 2006 07:50:30 -0700 (PDT)
+Message-ID: <ab2dc45b0608100750h1553581u9edde7979394ca6b@mail.gmail.com>
+Date: Thu, 10 Aug 2006 10:50:30 -0400
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: "Martin Rubey" <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Simplification rules
+In-Reply-To: <9qwt9gspws.fsf@aquin.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <ab2dc45b0608091347ua766c5dl7c49622f878a99c5@mail.gmail.com>
+	<9qwt9gspws.fsf@aquin.mat.univie.ac.at>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 10 Aug 2006 14:50:46 -0000
+
+On 10 Aug 2006 15:04:19 +0200, Martin Rubey <martin.rubey@univie.ac.at> wrote:
+> Dear Igor,
+>
+> "Igor Khavkine" <igor.kh@gmail.com> writes:
+>
+> > -> symr := g(b, (a | notOrdered?(a,b)) == g(b,a)
+>
+> there are some typos hidden in the line above. The operation "rule" is missing,
+> "notOrdered?" is undefined, and you seem to be replacing g(b, a) by g(a, b)...
+
+Right, sorry about that. Must have been hasty.
+
+> Still:
+>
+> symr := rule g(b, (a | a < b)) == g(a, b)
+>
+> does not seem to work. After some experimenting, it occurred to me that the
+> suchThat predicate "|" might refer only to a *single* variable. I.e., in
+>
+> (a | a < b)
+>
+> b seems to be taken to be a constant. Note however, that I did *not* verify
+> this claim!
+
+That's what I suspected as well.
+
+> Still, this idea leads to a workaround, by using hyperdoc and browsing
+> RewriteRule. Try the following:
+>
+> g := operator 'g
+> swap := rule g(b, a) == g(a, b)
+> symr := suchThat(swap, [a,b], l +-> (output l; l.1 < l.2))
+
+Excellent! I've also noticed suchThat(), but apparently wasn't as good
+at deciphering its documentation.
+
+> Unfortunately, the condition seems to be evaluated once too often. I have no
+> idea why:
+>
+> (14) -> symr g(x,y)
+>    [y,x]
+>    [y,x]
+>
+>    (14)  g(x,y)
+>
+> (15) -> symr g(y,x)
+>    [x,y]
+>    [y,x]
+>    [y,x]
+>
+>    (15)  g(x,y)
+
+Even if the rule gets evaluated a few more times than necessary the
+example you provided seems to work. Thanks a lot!
+
+> Maybe Axiom tries to apply a rule until the result doesn't change anymore...
+
+That would explain infinite loops in simple minded rules like the
+first one I thought of.
+
+Igor
+
+
+
+From MAILER-DAEMON Thu Aug 10 14:02:08 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GBErA-0002iC-6B
+	for mharc-axiom-math@gnu.org; Thu, 10 Aug 2006 14:02:08 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GBEr8-0002ff-6i
+	for axiom-math@nongnu.org; Thu, 10 Aug 2006 14:02:06 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GBEr5-0002bO-Cv
+	for axiom-math@nongnu.org; Thu, 10 Aug 2006 14:02:05 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GBEr5-0002bC-5o
+	for axiom-math@nongnu.org; Thu, 10 Aug 2006 14:02:03 -0400
+Received: from [134.34.143.6] (helo=spock.physik.uni-konstanz.de)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GBEw2-00039m-43
+	for axiom-math@nongnu.org; Thu, 10 Aug 2006 14:07:10 -0400
+Received: from clifford.physik.uni-konstanz.de (clifford [134.34.143.32])
+	by spock.physik.uni-konstanz.de (8.8.5/8.8.5) with ESMTP id SAA12887;
+	Thu, 10 Aug 2006 18:22:47 +0200 (MET DST)
+Received: from clifford.physik.uni-konstanz.de (localhost [127.0.0.1])
+	by clifford.physik.uni-konstanz.de (8.12.6/8.12.6/SuSE Linux 0.6) with
+	ESMTP id k7AI1wwk007145; Thu, 10 Aug 2006 20:01:58 +0200
+Received: from localhost (fauser@localhost)
+	by clifford.physik.uni-konstanz.de (8.12.6/8.12.6/Submit) with ESMTP id
+	k7AI1w4c007142; Thu, 10 Aug 2006 20:01:58 +0200
+Date: Thu, 10 Aug 2006 20:01:58 +0200 (CEST)
+From: Bertfried Fauser <fauser@spock.physik.uni-konstanz.de>
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Simplification rules
+In-Reply-To: <9qwt9gspws.fsf@aquin.mat.univie.ac.at>
+Message-ID: <Pine.LNX.4.44.0608101954420.7117-100000@clifford.physik.uni-konstanz.de>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Bertfried.Fauser@uni-konstanz.de
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 10 Aug 2006 18:02:06 -0000
+
+On 10 Aug 2006, Martin Rubey wrote:
+
+Hi Martin,
+
+> PS: if you are going to do more serious stuff with symmetric functions, please
+> contact me once more. I'd expect that it would be wise to have an appropriate
+> domain. Maybe something like that does already exist...
+
+I am currently working on my SchurFkt package (for maple). I would be
+_very_ interested to transfere this package into AXIOM. However, I seem to
+need some help, since I do not find all teh domains etc needed. A good
+point would be to look first at MupadCombinat, since they have good data
+structures.
+I need compositions, partitions, multiset form of partitons, rimhook
+representation of partitions, and Yound tableaux. I know that AXIOM has
+some symmetric functiion abilities, but what is written in teh book and
+what I found in several spad algebra files is rather poor, eg no Murnaghan
+Nakayama rule implemented, no Littlewood Richardson implemented.
+
+I am on the way to implement an alternative way to compute the Littewood
+Richardsons using a Hopf algebra algorithm which might be faster than the
+recursive addition of boxed (hope so, no prove yet). For that reason I
+would need a domain s-poly which can distinguish teh main basies for
+symmetric functions (p,s,h,m,e,f) since algorithms need to know the
+representation.
+
+With rafal Ablamowicz, we were working on some Groebern issues, which also
+might habe implications for symmetric function and invariant theory.
+
+I am not sure how much time I hve next two month, but I am continually
+testing what AXIOM can do for me and what I can do for AXIOM. Would you be
+interested in a symmetric function category in AXIOM?
+
+ciao
+BF.
+
+% PD Dr Bertfried Fauser
+%     Institution: Max Planck Institute for Math, Leipzig <http://www.mis.mpg.de>
+%   Privat Docent: University of Konstanz, Phys Dept <http://www.uni-konstanz.de>
+%  contact|->URL : http://clifford.physik.uni-konstanz.de/~fauser/
+%          Phone : Leipzig +49 341 9959 735  Konstanz +49 7531 693491
+
+
+
+
+From MAILER-DAEMON Fri Aug 11 03:12:07 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GBRBf-0005et-At
+	for mharc-axiom-math@gnu.org; Fri, 11 Aug 2006 03:12:07 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GBRBd-0005el-UI
+	for axiom-math@nongnu.org; Fri, 11 Aug 2006 03:12:05 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GBRBc-0005dy-Aj
+	for axiom-math@nongnu.org; Fri, 11 Aug 2006 03:12:05 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GBRBc-0005dv-3P
+	for axiom-math@nongnu.org; Fri, 11 Aug 2006 03:12:04 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GBRGh-0002YI-6e
+	for axiom-math@nongnu.org; Fri, 11 Aug 2006 03:17:19 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GBRBY-0003cm-Dl; Fri, 11 Aug 2006 09:12:00 +0200
+Received: from login.mat.univie.ac.at ([131.130.16.250]
+	helo=login.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GBRBY-0002Kf-AN; Fri, 11 Aug 2006 09:12:00 +0200
+Sender: rubey@login.mat.univie.ac.at
+To: Bertfried.Fauser@uni-konstanz.de, Ralf HEMMECKE <ralf@hemmecke.de>
+Subject: Re: [Axiom-math] Simplification rules
+References: <Pine.LNX.4.44.0608101954420.7117-100000@clifford.physik.uni-konstanz.de>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 11 Aug 2006 09:11:57 +0200
+In-Reply-To: <Pine.LNX.4.44.0608101954420.7117-100000@clifford.physik.uni-konstanz.de>
+Message-ID: <9qr6znagqq.fsf@login.mat.univie.ac.at>
+Lines: 25
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 11 Aug 2006 07:12:06 -0000
+
+Dear Bertfried, Igor, Ralf,
+
+> I am currently working on my SchurFkt package (for maple). I would be
+> _very_ interested to transfere this package into AXIOM. However, I seem to
+> need some help, since I do not find all teh domains etc needed. A good
+> point would be to look first at MupadCombinat, since they have good data
+> structures.
+
+An important part of MuPad Combinat is already "in design". I.e., we have
+various very promising approaches to the theory of species - or, in MuPad
+Combinat - Flajolet speech: "Combinatorial Classes".
+
+ 
+> I am not sure how much time I hve next two month, but I am continually
+> testing what AXIOM can do for me and what I can do for AXIOM. Would you be
+> interested in a symmetric function category in AXIOM?
+
+DEFINITELY. In fact, I'm just working my way through Lascoux CBMS book - so
+far, I have done the first two exercises :-)
+
+Thinking about it, maybe the next workshop could be on symmetric functions. I
+guess, we could attract quite a few interesting researchers that way. If we
+want to go fast, maybe even February would be possible.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Fri Aug 11 03:30:43 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GBRTf-00075K-Eu
+	for mharc-axiom-math@gnu.org; Fri, 11 Aug 2006 03:30:43 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GBRTd-00073c-H9
+	for axiom-math@nongnu.org; Fri, 11 Aug 2006 03:30:41 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GBRTb-00071q-7g
+	for axiom-math@nongnu.org; Fri, 11 Aug 2006 03:30:40 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GBRTa-00071E-E6
+	for axiom-math@nongnu.org; Fri, 11 Aug 2006 03:30:38 -0400
+Received: from [134.34.143.6] (helo=spock.physik.uni-konstanz.de)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GBRYf-0003kZ-3Q
+	for axiom-math@nongnu.org; Fri, 11 Aug 2006 03:35:53 -0400
+Received: from clifford.physik.uni-konstanz.de (clifford [134.34.143.32])
+	by spock.physik.uni-konstanz.de (8.8.5/8.8.5) with ESMTP id HAA17524;
+	Fri, 11 Aug 2006 07:51:38 +0200 (MET DST)
+Received: from clifford.physik.uni-konstanz.de (localhost [127.0.0.1])
+	by clifford.physik.uni-konstanz.de (8.12.6/8.12.6/SuSE Linux 0.6) with
+	ESMTP id k7B7Upwk026944; Fri, 11 Aug 2006 09:30:52 +0200
+Received: from localhost (fauser@localhost)
+	by clifford.physik.uni-konstanz.de (8.12.6/8.12.6/Submit) with ESMTP id
+	k7B7Up9f026941; Fri, 11 Aug 2006 09:30:51 +0200
+Date: Fri, 11 Aug 2006 09:30:51 +0200 (CEST)
+From: Bertfried Fauser <fauser@spock.physik.uni-konstanz.de>
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Simplification rules
+In-Reply-To: <9qr6znagqq.fsf@login.mat.univie.ac.at>
+Message-ID: <Pine.LNX.4.44.0608110924260.26909-100000@clifford.physik.uni-konstanz.de>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Bertfried.Fauser@uni-konstanz.de
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 11 Aug 2006 07:30:42 -0000
+
+Dear Martin,
+
+I am _very_ interested in any combinatorics code already implemented in
+AXIOM, where could I get it?
+
+Regarding Lascoux, you think of implementing Lambda-ring issues in a CAS?
+I tried this but failed (due to my own inability). However, I think I have
+_new_ mathenatical results which will allow hopefully faster computations
+also. This could go directly into a Combinat pacpage.
+
+I had some discussions with people sing MuPad Combinat. My problem with
+their code ist (beside not having MuPad) that they have not (yet?)
+implemented key features for symmetric function theory, as Littewood
+generating functions used in group branchings and I have not seen seriuse
+coproducts (but I do not know the package very well)
+
+I am not sure if you know, but there will be a (in the beginning small,
+but now already big) conference on symmetric functions (math, not CAS) at
+the MPI MIS in Leipzig, see www.mis.mpg.de/conferences, if you are
+interested I would be lad to see you there.
+
+For the moment being, I will try to fix my maple code and then start to
+transfere it into AXIOM routines. Perhaps bundeling this into a
+category/domain can be done later. However, it would be good to have the
+same data structures as in Combinat, I'll look that up.
+
+ciao
+BF.
+
+
+% PD Dr Bertfried Fauser
+%     Institution: Max Planck Institute for Math, Leipzig <http://www.mis.mpg.de>
+%   Privat Docent: University of Konstanz, Phys Dept <http://www.uni-konstanz.de>
+%  contact|->URL : http://clifford.physik.uni-konstanz.de/~fauser/
+%          Phone : Leipzig +49 341 9959 735  Konstanz +49 7531 693491
+
+
+
+
+From MAILER-DAEMON Fri Aug 11 11:54:41 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GBZLM-0006v2-LP
+	for mharc-axiom-math@gnu.org; Fri, 11 Aug 2006 11:54:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GBZLK-0006rH-UH
+	for axiom-math@nongnu.org; Fri, 11 Aug 2006 11:54:38 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GBZLG-0006jL-IO
+	for axiom-math@nongnu.org; Fri, 11 Aug 2006 11:54:38 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GBZLG-0006ip-Cq
+	for axiom-math@nongnu.org; Fri, 11 Aug 2006 11:54:34 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GBZQQ-0007A9-58
+	for axiom-math@nongnu.org; Fri, 11 Aug 2006 11:59:54 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GBZLE-0000RW-1n; Fri, 11 Aug 2006 17:54:32 +0200
+Received: from login.mat.univie.ac.at ([131.130.16.250]
+	helo=login.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GBZLD-0000aM-Ui; Fri, 11 Aug 2006 17:54:31 +0200
+Sender: rubey@login.mat.univie.ac.at
+To: Bertfried.Fauser@uni-konstanz.de
+Subject: Re: [Axiom-math] Simplification rules
+References: <Pine.LNX.4.44.0608110924260.26909-100000@clifford.physik.uni-konstanz.de>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 11 Aug 2006 17:54:31 +0200
+In-Reply-To: <Pine.LNX.4.44.0608110924260.26909-100000@clifford.physik.uni-konstanz.de>
+Message-ID: <9qirkze094.fsf@login.mat.univie.ac.at>
+Lines: 49
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 11 Aug 2006 15:54:39 -0000
+
+Bertfried Fauser <fauser@spock.physik.uni-konstanz.de> writes:
+
+> Dear Martin,
+> 
+> I am _very_ interested in any combinatorics code already implemented in
+> AXIOM, where could I get it?
+
+You can have a look at http://wiki.axiom-developer.org/SandBoxCombinat
+
+
+(The innovative bit of code is that the final line of code
+
+TreeClass: CombinatorialClassCategory 
+  == UnionClass(Atom, CrossClass(TreeClass, TreeClass)) add;
+
+actually creates the DOMAIN TreeClass. Recursively!
+
+Note that we were - for a start - only interested in implementing
+species. Thus: no symmetric functions there.
+
+> Regarding Lascoux, you think of implementing Lambda-ring issues in a CAS?  I
+> tried this but failed (due to my own inability).
+
+Well, I know very little about Lascoux, but it seems that he has some good
+ideas about using the computer efficiently. I just want to learn about
+symmetric functions, and somehow I like his approach using "alphabets" (i.e.,
+lambda rings). But again, I don't know enough yet.
+
+> However, I think I have _new_ mathenatical results which will allow hopefully
+> faster computations also. This could go directly into a Combinat pacpage.
+
+Great!
+
+> I am not sure if you know, but there will be a (in the beginning small,
+> but now already big) conference on symmetric functions (math, not CAS) at
+> the MPI MIS in Leipzig, see www.mis.mpg.de/conferences, if you are
+> interested I would be lad to see you there.
+
+I didn't know, but anyway, I cannot come. In September my older daughter starts
+with school and I guess she'll need me a bit and I'm on at least one Conference
+already...
+
+> For the moment being, I will try to fix my maple code and then start to
+> transfere it into AXIOM routines. Perhaps bundeling this into a
+> category/domain can be done later. However, it would be good to have the same
+> data structures as in Combinat, I'll look that up.
+
+I'm not quite sure what sort of datastructures you have in mind
+here. Datastructures for what?
+
+
+
+
+From MAILER-DAEMON Wed Aug 16 15:35:37 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GDRAv-0002sz-7C
+	for mharc-axiom-math@gnu.org; Wed, 16 Aug 2006 15:35:37 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GDRAt-0002st-NY
+	for axiom-math@nongnu.org; Wed, 16 Aug 2006 15:35:35 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GDRAs-0002sd-CW
+	for axiom-math@nongnu.org; Wed, 16 Aug 2006 15:35:35 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GDRAs-0002sa-5d
+	for axiom-math@nongnu.org; Wed, 16 Aug 2006 15:35:34 -0400
+Received: from [66.249.82.237] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GDRHC-0006ud-9c
+	for axiom-math@nongnu.org; Wed, 16 Aug 2006 15:42:06 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so240184wxc
+	for <axiom-math@nongnu.org>; Wed, 16 Aug 2006 12:35:33 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:user-agent:x-accept-language:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
+	b=DrvauG/fG64BQOx6QNcVbKxnpTKKbG17vunes01uaWlySRSHjutfitCXzIapbFxVhSz1sStkg0q8YaryLwp/VP5atgXbz7WENLeRf+KwteQeLjJ9MeeffESEPn87llzEwLH2q9VsT8qNKx+6BShDlMo5eHZoM+mc1sLW802XkR8=
+Received: by 10.70.100.14 with SMTP id x14mr1391907wxb;
+	Wed, 16 Aug 2006 12:35:32 -0700 (PDT)
+Received: from ?192.168.0.100? ( [71.127.150.108])
+	by mx.gmail.com with ESMTP id h35sm1134754wxd.2006.08.16.12.35.31;
+	Wed, 16 Aug 2006 12:35:31 -0700 (PDT)
+Message-ID: <44E379E5.1000206@gmail.com>
+Date: Wed, 16 Aug 2006 16:02:45 -0400
+From: David Joyner <wdjoyner@gmail.com>
+User-Agent: Debian Thunderbird 1.0.7 (X11/20051019)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: axiom-math@nongnu.org
+References: <Pine.LNX.4.44.0608071122160.18073-100000@clifford.physik.uni-konstanz.de>
+In-Reply-To: <Pine.LNX.4.44.0608071122160.18073-100000@clifford.physik.uni-konstanz.de>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: William Stein <wstein@gmail.com>, David Joyner <wdj@usna.edu>
+Subject: [Axiom-math] SAGE Days 2
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 16 Aug 2006 19:35:36 -0000
+
+Hello,
+
+SAGE is a software system with a planned interface with Axiom.
+SAGE Days 2 will take place October 6-10, 2006.
+
+Come and work very hard to build, using the best open source tools
+available, what I hope will soon be the finest general purpose
+mathematics software available:
+
+     http://modular.math.washington.edu/sage/days2/
+
+- William Stein, David Joyner (organizers)
+
+
+
+
+From MAILER-DAEMON Sun Aug 20 17:11:54 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GEuaI-0007lP-Ar
+	for mharc-axiom-math@gnu.org; Sun, 20 Aug 2006 17:11:54 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GEuaH-0007k9-6c
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 17:11:53 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GEuaF-0007i6-Gb
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 17:11:52 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GEuaF-0007hp-7l
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 17:11:51 -0400
+Received: from [66.249.82.231] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GEuhU-0003vg-46
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 17:19:20 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so1343895wxc
+	for <axiom-math@nongnu.org>; Sun, 20 Aug 2006 14:11:50 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=JJIGgpVfo387dxWHjXX2P2cMDecRF7yKJklrgK5a33RC+e2pdh1LCDDKycDfI07WeLwdrLOruzXRgv5M33RHTJRiith/YLAYfpJNZKI6TraMx6jMmZ7LatTdxTkKuCqsogV7Sa/O0Rv5OQ4lxEO4twKrzgGWEraXcD5WVUko6HY=
+Received: by 10.70.90.18 with SMTP id n18mr8444715wxb;
+	Sun, 20 Aug 2006 14:11:50 -0700 (PDT)
+Received: by 10.70.70.10 with HTTP; Sun, 20 Aug 2006 14:11:47 -0700 (PDT)
+Message-ID: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+Date: Sun, 20 Aug 2006 17:11:47 -0400
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: axiom-math@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Subject: [Axiom-math] Curious behavior of Taylor series
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 20 Aug 2006 21:11:53 -0000
+
+Can someone explain the following behavior of Taylor series in Axiom?
+
+(113) -> y := taylor x
+   (113)  x
+                         Type: UnivariateTaylorSeries(Expression Integer,x,0)
+(114) -> x*y
+   (114)  x x
+                         Type: UnivariateTaylorSeries(Expression Integer,x,0)
+(115) -> coefficient(%,1)
+   (115)  x
+                                                     Type: Expression Integer
+
+The same behavior does not occur if the coefficient ring is changed to
+say the rationals:
+
+(118) -> y := (taylor x) :: UTS(FRAC INT,x,0)
+   (118)  x
+                           Type: UnivariateTaylorSeries(Fraction Integer,x,0)
+(119) -> x*y
+           2
+   (119)  x
+                           Type: UnivariateTaylorSeries(Fraction Integer,x,0)
+(120) -> coefficient(%,2)
+   (120)  1
+                                                       Type: Fraction Integer
+
+I've been trying to write a routine that takes some expression f(x,y),
+but possibly containing other symbolic constants, and then solves the
+implicit equation f(x,y)=0 for y as a Taylor series in x. The above
+behavior has proved to be an obstacle.
+
+Thanks.
+
+Igor
+
+
+
+From MAILER-DAEMON Sun Aug 20 17:45:45 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GEv72-0004ZV-Ue
+	for mharc-axiom-math@gnu.org; Sun, 20 Aug 2006 17:45:45 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GEv71-0004X9-2W
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 17:45:43 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GEv70-0004Wm-MT
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 17:45:42 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GEv70-0004We-Ft
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 17:45:42 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GEvEF-0008AD-BV
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 17:53:11 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GEv6w-0006Vf-M6; Sun, 20 Aug 2006 23:45:38 +0200
+Received: from login.mat.univie.ac.at ([131.130.16.250]
+	helo=login.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GEv6w-0007fJ-LD; Sun, 20 Aug 2006 23:45:38 +0200
+Sender: rubey@login.mat.univie.ac.at
+To: "Igor Khavkine" <igor.kh@gmail.com>
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 20 Aug 2006 23:45:38 +0200
+In-Reply-To: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+Message-ID: <9qejvbaxod.fsf@login.mat.univie.ac.at>
+Lines: 32
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 20 Aug 2006 21:45:43 -0000
+
+"Igor Khavkine" <igor.kh@gmail.com> writes:
+
+> Can someone explain the following behavior of Taylor series in Axiom?
+> 
+> (113) -> y := taylor x
+>    (113)  x
+>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+> (114) -> x*y
+>    (114)  x x
+>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+> (115) -> coefficient(%,1)
+>    (115)  x
+>                                                      Type: Expression Integer
+
+The reason is that Axiom cannot really know whether you meant x in (114) to be
+an element of the coefficient Ring EXPR INT, or to be a univariate Taylor
+series. In case of doubt, it usually chooses the wrong possibility :-)
+
+Thus, you should help Axiom by saying
+
+ monomial(1,1)$UTS(EXPR INT,x,0) * y
+
+> I've been trying to write a routine that takes some expression f(x,y), but
+> possibly containing other symbolic constants, and then solves the implicit
+> equation f(x,y)=0 for y as a Taylor series in x. The above behavior has
+> proved to be an obstacle.
+
+I think such a routine already exists - at least if f(x, y) involves only
+powers and derivatives of y. Look at seriesSolve. If you need more help or
+examples, ask again. If I'm wrong, tell me so :-)
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sun Aug 20 17:48:56 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GEvA8-00064o-B2
+	for mharc-axiom-math@gnu.org; Sun, 20 Aug 2006 17:48:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GEvA5-00061o-NY
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 17:48:53 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GEvA3-0005yU-0Y
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 17:48:53 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GEvA2-0005yR-Rj
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 17:48:50 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1GEvHH-0008Nm-O6
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 17:56:20 -0400
+Received: from [192.168.138.29] (funklan.is4all.net [194.96.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k7KLmlGP004724
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Sun, 20 Aug 2006 23:48:47 +0200
+Message-ID: <44E8D9C2.20100@hemmecke.de>
+Date: Sun, 20 Aug 2006 23:53:06 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.5 (X11/20060719)
+MIME-Version: 1.0
+To: Igor Khavkine <igor.kh@gmail.com>, axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+In-Reply-To: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 20 Aug 2006 21:48:54 -0000
+
+On 08/20/2006 11:11 PM, Igor Khavkine wrote:
+> Can someone explain the following behavior of Taylor series in Axiom?
+> 
+> (113) -> y := taylor x
+>   (113)  x
+>                          Type: UnivariateTaylorSeries(Expression 
+Integer,x,0)
+
+There are only two functions "taylor" in Axiom with one argument. I 
+assume that your x is a Symbol so the return type should be Any.
+
+"Any" basically says that you work without types, or rather Any boxes 
+the value together with its type. Its like an object knowing its type.
+
+> (114) -> x*y
+>   (114)  x x
+>                         Type: UnivariateTaylorSeries(Expression 
+> Integer,x,0)
+> (115) -> coefficient(%,1)
+>   (115)  x
+>                                                     Type: Expression 
+> Integer
+
+We have gone through that before. From the type
+
+UnivariateTaylorSeries(Expression Integer,x,0)
+
+you should read that it is actually R[[x]] where R is (basically) 
+allowing anything as an element. What you see above "x x" is the 
+following: The second x is from the powerseries. The first x is from the 
+coefficient ring. They are not the same.
+
+The problem is that Axiom allows to construct such confusing things.
+You should NEVER put yourself "Expression Integer" into the argument of 
+UnivariateTaylorSeries or UnivariatePolynomial. And if you see it, you 
+should be VERY careful.
+
+> The same behavior does not occur if the coefficient ring is changed to
+> say the rationals:
+
+> (118) -> y := (taylor x) :: UTS(FRAC INT,x,0)
+>   (118)  x
+>                           Type: UnivariateTaylorSeries(Fraction 
+> Integer,x,0)
+> (119) -> x*y
+>           2
+>   (119)  x
+>                           Type: UnivariateTaylorSeries(Fraction 
+> Integer,x,0)
+> (120) -> coefficient(%,2)
+>   (120)  1
+>                                                       Type: Fraction 
+> Integer
+
+And that is the way to go. You have to build
+UTS(R, x, 0) with an R that fits your purpose but does not allow the 
+symbol x.
+
+A quick workaround for your problem is probably to choose a name of the 
+variable of your Taylor series that does not appear anywhere else. Say, 
+for example,
+
+y := taylor(myNowhereElseOccurringSymbol);
+
+Ralf
+
+
+
+From MAILER-DAEMON Sun Aug 20 18:22:56 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GEvh2-00071T-IL
+	for mharc-axiom-math@gnu.org; Sun, 20 Aug 2006 18:22:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GEvh0-0006zr-LD
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 18:22:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GEvgy-0006zT-8j
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 18:22:53 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GEvgy-0006zQ-2r
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 18:22:52 -0400
+Received: from [66.249.82.232] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GEvoD-00037q-Lr
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 18:30:21 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so1361374wxc
+	for <axiom-math@nongnu.org>; Sun, 20 Aug 2006 15:22:51 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=V2EK/NRbSLY5YesgIwafUHu0G8F+lVHxC5Z42qYP1/uxDEQzR9O1gBhw+1KXd21JGEwV31C49EheDKnFu8P1mTi2pLEDItP9iKG2P9PeC3UbkC+ZEi7F6lLes+1OgbkAj9lqzgwtGXNuT3XkBUo3TPRwLJeW2Ge9C23t8ojtsQ0=
+Received: by 10.70.21.10 with SMTP id 10mr8561994wxu;
+	Sun, 20 Aug 2006 15:22:51 -0700 (PDT)
+Received: by 10.70.70.10 with HTTP; Sun, 20 Aug 2006 15:22:50 -0700 (PDT)
+Message-ID: <ab2dc45b0608201522w1f29a423qd227dd2709cafe80@mail.gmail.com>
+Date: Sun, 20 Aug 2006 18:22:50 -0400
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: "Martin Rubey" <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+In-Reply-To: <9qejvbaxod.fsf@login.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 20 Aug 2006 22:22:55 -0000
+
+On 20 Aug 2006 23:45:38 +0200, Martin Rubey <martin.rubey@univie.ac.at> wrote:
+> "Igor Khavkine" <igor.kh@gmail.com> writes:
+
+> > I've been trying to write a routine that takes some expression f(x,y), but
+> > possibly containing other symbolic constants, and then solves the implicit
+> > equation f(x,y)=0 for y as a Taylor series in x.
+>
+> I think such a routine already exists - at least if f(x, y) involves only
+> powers and derivatives of y. Look at seriesSolve. If you need more help or
+> examples, ask again. If I'm wrong, tell me so :-)
+
+Not that I could find. The only package that defines seriesSolve is
+ExpressionSpaceODESolver and it complains if you give it an "ODE"
+without derivatives.
+
+Igor
+
+
+
+From MAILER-DAEMON Sun Aug 20 21:39:13 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GEykz-0001oG-2b
+	for mharc-axiom-math@gnu.org; Sun, 20 Aug 2006 21:39:13 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GEykx-0001lI-F2
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 21:39:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GEykv-0001iZ-PB
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 21:39:11 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GEykv-0001iF-IV
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 21:39:09 -0400
+Received: from [24.116.0.227] (helo=S1.cableone.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GEysC-0006Du-PQ
+	for axiom-math@nongnu.org; Sun, 20 Aug 2006 21:46:41 -0400
+Received: from vh213602.truman.edu.truman.edu (unverified [24.116.128.227]) 
+	by S1.cableone.net (CableOne SMTP Service S1) with ESMTP id 71398719 
+	for multiple; Sun, 20 Aug 2006 18:38:59 -0700
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+From: Jay Belanger <belanger@truman.edu>
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+Date: Sun, 20 Aug 2006 20:38:58 -0500
+In-Reply-To: <9qejvbaxod.fsf@login.mat.univie.ac.at> (Martin Rubey's message
+	of "20 Aug 2006 23:45:38 +0200")
+Message-ID: <87irkm3m19.fsf@vh213602.truman.edu>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.0.50 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-NotAscii: charset=us-ascii
+X-IP-stats: Incoming Last 3, First 6, in=3, out=0, spam=0
+X-External-IP: 24.116.128.227
+X-Abuse-Info: Send abuse complaints to abuse@cableone.net
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: belanger@truman.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 01:39:11 -0000
+
+
+Martin Rubey <martin.rubey@univie.ac.at> writes:
+
+> "Igor Khavkine" <igor.kh@gmail.com> writes:
+>
+>> Can someone explain the following behavior of Taylor series in Axiom?
+>>
+>> (113) -> y := taylor x
+>>    (113)  x
+>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>> (114) -> x*y
+>>    (114)  x x
+>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>> (115) -> coefficient(%,1)
+>>    (115)  x
+>>                                                      Type: Expression Integer
+>
+> The reason is that Axiom cannot really know whether you meant x in (114) to be
+> an element of the coefficient Ring EXPR INT, or to be a univariate Taylor
+> series. In case of doubt, it usually chooses the wrong possibility :-)
+
+When multiplying two elements, shouldn't Axiom try to coerce them to
+be in the same structure?  (I realize it doesn't, particularly here,
+but wouldn't that be reasonable behavior?)
+
+Jay
+
+
+
+From MAILER-DAEMON Mon Aug 21 03:33:22 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GF4Hi-0005hi-Bn
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 03:33:22 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GF4Hg-0005em-CD
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 03:33:20 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GF4He-0005aU-4b
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 03:33:19 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GF4Hd-0005aH-Tv
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 03:33:17 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1GF4Oy-00033z-CX
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 03:40:52 -0400
+Received: from [193.170.38.119] (hemmecke@woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k7L7XEGP017812
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Mon, 21 Aug 2006 09:33:15 +0200
+Message-ID: <44E962CA.6080504@hemmecke.de>
+Date: Mon, 21 Aug 2006 09:37:46 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.5 (X11/20060719)
+MIME-Version: 1.0
+To: belanger@truman.edu
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+	<87irkm3m19.fsf@vh213602.truman.edu>
+In-Reply-To: <87irkm3m19.fsf@vh213602.truman.edu>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 07:33:20 -0000
+
+On 08/21/2006 03:38 AM, Jay Belanger wrote:
+> Martin Rubey <martin.rubey@univie.ac.at> writes:
+> 
+>> "Igor Khavkine" <igor.kh@gmail.com> writes:
+>>
+>>> Can someone explain the following behavior of Taylor series in Axiom?
+>>>
+>>> (113) -> y := taylor x
+>>>    (113)  x
+>>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>>> (114) -> x*y
+>>>    (114)  x x
+>>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>>> (115) -> coefficient(%,1)
+>>>    (115)  x
+>>>                                                      Type: Expression Integer
+>> The reason is that Axiom cannot really know whether you meant x in (114) to be
+>> an element of the coefficient Ring EXPR INT, or to be a univariate Taylor
+>> series. In case of doubt, it usually chooses the wrong possibility :-)
+> 
+> When multiplying two elements, shouldn't Axiom try to coerce them to
+> be in the same structure?  (I realize it doesn't, particularly here,
+> but wouldn't that be reasonable behavior?)
+
+But Axiom coerced the two x to the same domain!!! The first x is a 
+coefficient, and the second x is the variable from the Taylor series. So 
+you cannot complain.
+
+The only problem is that it is terribly confusing. Unfortunately, I 
+cannot even blame that the user did anything wrong since Axiom came up 
+with this strange type UnivariateTaylorSeries(Expression Integer,x,0).
+
+But I could blame the user for trying to do "x * y". Here you instruct 
+the compiler to guess since there is no function
+
+*: (Symbol, UTS(Expression Integer,x,0))->UTS(Expression Integer,x,0)
+
+so the interpreter has to do something with the x. It coerces it to 
+Expression(Integer). That is perfectly legal. But it is probably not 
+what you want. Once again. The result "x x" for "x*y" shows two DIFFERENT x.
+
+Ralf
+
+
+
+From MAILER-DAEMON Mon Aug 21 05:49:39 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GF6Pa-0006Pa-U3
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 05:49:38 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GF6PZ-0006OU-DX
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 05:49:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GF6PX-0006Mm-Lb
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 05:49:36 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GF6PX-0006Mc-BT
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 05:49:35 -0400
+Received: from [199.232.41.67] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA:32)
+	(Exim 4.52) id 1GF6Wt-0002mh-BY
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 05:57:11 -0400
+Received: from [66.249.82.227] (helo=wx-out-0506.google.com)
+	by mx20.gnu.org with esmtp (Exim 4.52) id 1GF6PW-0008P6-FI
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 05:49:34 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so1528024wxc
+	for <axiom-math@nongnu.org>; Mon, 21 Aug 2006 02:49:33 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=uumYAGmGWJSAomP2mkvJiw8aIDuHCvItwY3OMAZ/vq9J9WgiAMfbh18gxzlFlAxODszRgF1VXgc5rH+5o1Lgwjvgrpvgil5Nd04Gcl9Wxxt00S3hKhJ2/+D16MxGZsI4JhQDbmOmi19tJUB8i3pOWcVEUWcRUfDBRWagYE3tzo8=
+Received: by 10.70.38.12 with SMTP id l12mr9241446wxl;
+	Mon, 21 Aug 2006 02:49:33 -0700 (PDT)
+Received: by 10.70.70.10 with HTTP; Mon, 21 Aug 2006 02:49:33 -0700 (PDT)
+Message-ID: <ab2dc45b0608210249s751a2c9dne1bad2e2c917d979@mail.gmail.com>
+Date: Mon, 21 Aug 2006 05:49:33 -0400
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: "Martin Rubey" <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+In-Reply-To: <9qejvbaxod.fsf@login.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 09:49:37 -0000
+
+On 20 Aug 2006 23:45:38 +0200, Martin Rubey <martin.rubey@univie.ac.at> wrote:
+> "Igor Khavkine" <igor.kh@gmail.com> writes:
+>
+> > Can someone explain the following behavior of Taylor series in Axiom?
+> >
+> > (113) -> y := taylor x
+> >    (113)  x
+> >                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+> > (114) -> x*y
+> >    (114)  x x
+> >                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+> > (115) -> coefficient(%,1)
+> >    (115)  x
+> >                                                      Type: Expression Integer
+>
+> The reason is that Axiom cannot really know whether you meant x in (114) to be
+> an element of the coefficient Ring EXPR INT, or to be a univariate Taylor
+> series. In case of doubt, it usually chooses the wrong possibility :-)
+>
+> Thus, you should help Axiom by saying
+>
+>  monomial(1,1)$UTS(EXPR INT,x,0) * y
+
+OK, but the following definitely looks like a bug.
+
+(279) -> monx := monomial(1,1)$UTS(EXPR INT,x,0)
+   (279)  x
+                         Type: UnivariateTaylorSeries(Expression Integer,x,0)
+(281) -> sqrt(monx*monx)
+(281) ->
+   (281)  1
+                         Type: UnivariateTaylorSeries(Expression Integer,x,0)
+(282) -> serx := series x
+(282) ->
+   (282)  x
+                        Type: UnivariatePuiseuxSeries(Expression Integer,x,0)
+(283) -> sqrt(serx*serx)
+(283) ->
+   (283)  x
+                        Type: UnivariatePuiseuxSeries(Expression Integer,x,0)
+
+It looks like sqrt(), when applied to UTS, shifts the coefficients so
+that the leading term is always O(1). In the example above, it should
+be O(x). The UPXS domain doesn't seem to suffer from the same problem.
+
+Igor
+
+
+
+From MAILER-DAEMON Mon Aug 21 06:02:05 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GF6bd-00063y-Lr
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 06:02:05 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GF6bc-00062f-CV
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 06:02:04 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GF6bZ-00061E-Su
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 06:02:04 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GF6bZ-000619-15
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 06:02:01 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GF6iu-0006Ed-JT
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 06:09:37 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GF6bV-0007Ql-5n; Mon, 21 Aug 2006 12:01:57 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GF6bV-0004Yf-2X; Mon, 21 Aug 2006 12:01:57 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Igor Khavkine" <igor.kh@gmail.com>
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+	<ab2dc45b0608210249s751a2c9dne1bad2e2c917d979@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 21 Aug 2006 12:01:55 +0200
+In-Reply-To: <ab2dc45b0608210249s751a2c9dne1bad2e2c917d979@mail.gmail.com>
+Message-ID: <9qzmdy76gc.fsf@aquin.mat.univie.ac.at>
+Lines: 26
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 10:02:04 -0000
+
+"Igor Khavkine" <igor.kh@gmail.com> writes:
+
+> OK, but the following definitely looks like a bug.
+> 
+> (279) -> monx := monomial(1,1)$UTS(EXPR INT,x,0)
+>    (279)  x
+>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+> (281) -> sqrt(monx*monx)
+> (281) ->
+>    (281)  1
+>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+
+Yes, that's a bug. Please submit a report and fix it :-)
+
+you can see what's going on by saying 
+
+)tr UTS )ma
+
+However, it seems that sqrt is not defined in UTS itself. So you'll have to
+find out where it is defined and that trace that constructor.
+
+If you need more support, please ask for it.
+
+By the way, the bug even occurs if you work in UTS(FRAC INT, x, 0) :-(
+
+Martin
+
+
+
+
+From MAILER-DAEMON Mon Aug 21 12:27:48 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFCcu-0006rY-0w
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 12:27:48 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFCcs-0006qS-Ah
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 12:27:46 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFCcr-0006pW-Ob
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 12:27:45 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFCcr-0006pD-Gh
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 12:27:45 -0400
+Received: from [24.116.0.227] (helo=S1.cableone.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GFCkH-0001aQ-Bg
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 12:35:25 -0400
+Received: from vh213602.truman.edu.truman.edu (unverified [24.116.128.227]) 
+	by S1.cableone.net (CableOne SMTP Service S1) with ESMTP id 71456844 
+	for multiple; Mon, 21 Aug 2006 09:27:25 -0700
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+From: Jay Belanger <belanger@truman.edu>
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+	<87irkm3m19.fsf@vh213602.truman.edu> <44E962CA.6080504@hemmecke.de>
+Date: Mon, 21 Aug 2006 11:27:22 -0500
+In-Reply-To: <44E962CA.6080504@hemmecke.de> (Ralf Hemmecke's message of "Mon,
+	21 Aug 2006 09:37:46 +0200")
+Message-ID: <874pw6kqad.fsf@vh213602.truman.edu>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.0.50 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-NotAscii: charset=us-ascii
+X-IP-stats: Incoming Last 1, First 7, in=4, out=0, spam=0
+X-External-IP: 24.116.128.227
+X-Abuse-Info: Send abuse complaints to abuse@cableone.net
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: belanger@truman.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 16:27:46 -0000
+
+
+Ralf Hemmecke <ralf@hemmecke.de> writes:
+
+> On 08/21/2006 03:38 AM, Jay Belanger wrote:
+>> Martin Rubey <martin.rubey@univie.ac.at> writes:
+>>
+>>> "Igor Khavkine" <igor.kh@gmail.com> writes:
+>>>
+>>>> Can someone explain the following behavior of Taylor series in Axiom?
+>>>>
+>>>> (113) -> y := taylor x
+>>>>    (113)  x
+>>>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>>>> (114) -> x*y
+>>>>    (114)  x x
+>>>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>>>> (115) -> coefficient(%,1)
+>>>>    (115)  x
+>>>>                                                      Type: Expression Integer
+>>> The reason is that Axiom cannot really know whether you meant x in (114) to be
+>>> an element of the coefficient Ring EXPR INT, or to be a univariate Taylor
+>>> series. In case of doubt, it usually chooses the wrong possibility :-)
+>>
+>> When multiplying two elements, shouldn't Axiom try to coerce them to
+>> be in the same structure?  (I realize it doesn't, particularly here,
+>> but wouldn't that be reasonable behavior?)
+>
+> But Axiom coerced the two x to the same domain!!! 
+
+Not in any meaningful way.  What I think should have happened is
+something like
+
+
+(1) -> y := taylor x
+
+   (1)  x
+                         Type: UnivariateTaylorSeries(Expression Integer,x,0)
+(2) -> (x::UnivariateTaylorSeries(Expression Integer,x,0))*y
+
+         2
+   (2)  x
+                         Type: UnivariateTaylorSeries(Expression Integer,x,0)
+
+(without the cast having to be explicit).
+The only real experience I have with domains is in MuPAD, and this is
+roughly how MuPAD handles it.
+
+> The first x is a coefficient, and the second x is the variable from
+> the Taylor series. So you cannot complain.
+
+Oh, I can always complain.  The only question is whether or not my
+complaints are justified.
+
+> The only problem is that it is terribly confusing. Unfortunately, I
+> cannot even blame that the user did anything wrong since Axiom came up
+> with this strange type UnivariateTaylorSeries(Expression Integer,x,0).
+>
+> But I could blame the user for trying to do "x * y". Here you instruct
+> the compiler to guess since there is no function
+>
+> *: (Symbol, UTS(Expression Integer,x,0))->UTS(Expression Integer,x,0)
+>
+> so the interpreter has to do something with the x. It coerces it to
+> Expression(Integer). That is perfectly legal. 
+
+But not perfectly reasonable, I think.  And it isn't coercing x to be
+in the same domain as the other x, which is what I think should happen.
+
+Jay
+
+
+
+From MAILER-DAEMON Mon Aug 21 12:52:53 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFD1B-00024L-NL
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 12:52:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFD19-00023a-Vm
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 12:52:52 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFD17-00022y-AM
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 12:52:51 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFD17-00022u-5s
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 12:52:49 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1GFD8X-0003dh-3i
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 13:00:29 -0400
+Received: from [192.168.138.29] (funklan.is4all.net [194.96.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k7LGqkGP006223
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Mon, 21 Aug 2006 18:52:46 +0200
+Message-ID: <44E9E5ED.5060201@hemmecke.de>
+Date: Mon, 21 Aug 2006 18:57:17 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.5 (X11/20060719)
+MIME-Version: 1.0
+To: belanger@truman.edu
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>	<9qejvbaxod.fsf@login.mat.univie.ac.at>	<87irkm3m19.fsf@vh213602.truman.edu>
+	<44E962CA.6080504@hemmecke.de> <874pw6kqad.fsf@vh213602.truman.edu>
+In-Reply-To: <874pw6kqad.fsf@vh213602.truman.edu>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 16:52:52 -0000
+
+On 08/21/2006 06:27 PM, Jay Belanger wrote:
+> Ralf Hemmecke <ralf@hemmecke.de> writes:
+> 
+>> On 08/21/2006 03:38 AM, Jay Belanger wrote:
+>>> Martin Rubey <martin.rubey@univie.ac.at> writes:
+>>>
+>>>> "Igor Khavkine" <igor.kh@gmail.com> writes:
+>>>>
+>>>>> Can someone explain the following behavior of Taylor series in Axiom?
+>>>>>
+>>>>> (113) -> y := taylor x
+>>>>>    (113)  x
+>>>>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>>>>> (114) -> x*y
+>>>>>    (114)  x x
+>>>>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>>>>> (115) -> coefficient(%,1)
+>>>>>    (115)  x
+>>>>>                                                      Type: Expression Integer
+>>>> The reason is that Axiom cannot really know whether you meant x in (114) to be
+>>>> an element of the coefficient Ring EXPR INT, or to be a univariate Taylor
+>>>> series. In case of doubt, it usually chooses the wrong possibility :-)
+>>> When multiplying two elements, shouldn't Axiom try to coerce them to
+>>> be in the same structure?  (I realize it doesn't, particularly here,
+>>> but wouldn't that be reasonable behavior?)
+>> But Axiom coerced the two x to the same domain!!! 
+> 
+> Not in any meaningful way.
+
+Well, but how can you tell this to Axiom? It should be impossible to 
+construct the domain UnivariateTaylorSeries(Expression Integer,x,0).
+I guess the Axiom designers thought that returning that domain for 
+taylor x would be reasonable. I must say, I question that.
+UTS(Fraction Integer, x, 0) would have been sufficient and you wouldn't 
+have the trouble.
+
+> What I think should have happened is something like
+> 
+> 
+> (1) -> y := taylor x
+> 
+>    (1)  x
+>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+> (2) -> (x::UnivariateTaylorSeries(Expression Integer,x,0))*y
+> 
+>          2
+>    (2)  x
+>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+> 
+> (without the cast having to be explicit).
+
+Oh, interesting! Then the interpreter is to blame for chosing the wrong 
+coerce function.
+
+But see, x is a symbol which should be coerce into a Taylor series. The 
+interpreter has several choices. So assuming the ideal that the 
+interpreter should have no mathematical knowledge itself, it can only 
+take the available information from the library. But there are several 
+available ways to go from x to UTS(Expression Integer,x,0). So how can 
+the interpreter ever know that it does the wrong thing?
+
+>> The first x is a coefficient, and the second x is the variable from
+>> the Taylor series. So you cannot complain.
+
+> Oh, I can always complain.  The only question is whether or not my
+> complaints are justified.
+
+>> The only problem is that it is terribly confusing. Unfortunately, I
+>> cannot even blame that the user did anything wrong since Axiom came up
+>> with this strange type UnivariateTaylorSeries(Expression Integer,x,0).
+>>
+>> But I could blame the user for trying to do "x * y". Here you instruct
+>> the compiler to guess since there is no function
+>>
+>> *: (Symbol, UTS(Expression Integer,x,0))->UTS(Expression Integer,x,0)
+>>
+>> so the interpreter has to do something with the x. It coerces it to
+>> Expression(Integer). That is perfectly legal. 
+> 
+> But not perfectly reasonable, I think.
+
+A program like Axiom does not "reason". Is simply follows "stupid" 
+instructions.
+
+> And it isn't coercing x to be in the same domain as the other x, which
+ > is what I think should happen.
+
+Well, what should happen is, that Axiom users should not be confronted 
+with such terribly confusing stuff. First the user should learn that 
+Expression Integer is very very dangerous (as you can see) if used in 
+connection with a polynomial or powerseries domain.
+
+One cannot ban Expression(Integer) from Axiom since it is quite powerful 
+in general, but Expression(Integer) is also a bit like trying to avoid 
+types in a strongly typed system. To my taste, working with 
+Expression(Integer) is like working in Mma or Maple. So one shoudn't be 
+surprised.
+
+Ralf
+
+
+
+From MAILER-DAEMON Mon Aug 21 13:18:19 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFDPn-0005w4-If
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 13:18:19 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFDPm-0005vT-7C
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 13:18:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFDPk-0005ue-WD
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 13:18:17 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFDPk-0005uV-PJ
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 13:18:16 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GFDXB-00078b-1H
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 13:25:57 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GFDPi-0000i4-Ph; Mon, 21 Aug 2006 19:18:14 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GFDPi-0004zS-Oj; Mon, 21 Aug 2006 19:18:14 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Ralf Hemmecke <ralf@hemmecke.de>
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+	<87irkm3m19.fsf@vh213602.truman.edu> <44E962CA.6080504@hemmecke.de>
+	<874pw6kqad.fsf@vh213602.truman.edu> <44E9E5ED.5060201@hemmecke.de>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 21 Aug 2006 19:18:14 +0200
+In-Reply-To: <44E9E5ED.5060201@hemmecke.de>
+Message-ID: <9q4pw6rort.fsf@aquin.mat.univie.ac.at>
+Lines: 48
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 17:18:18 -0000
+
+Ralf Hemmecke <ralf@hemmecke.de> writes:
+
+> Well, but how can you tell this to Axiom? It should be impossible to construct
+> the domain UnivariateTaylorSeries(Expression Integer,x,0).
+> I guess the Axiom designers thought that returning that domain for taylor x
+> would be reasonable. I must say, I question that.
+> UTS(Fraction Integer, x, 0) would have been sufficient and you wouldn't have
+> the trouble.
+
+No, I disagree. As long as we don't have domains UnivariateExpression and
+MultivariateExpression that take variables as parameters, things like UTS(EXPR
+INT, x, 0) are necessary.
+
+Otherwise you cannot create series like
+
+(67) -> series(sin(y+x), x=0)
+
+   (67)
+                        sin(y)  2   cos(y)  3   sin(y)  4   cos(y)  5
+     sin(y) + cos(y)x - ------ x  - ------ x  + ------ x  + ------ x
+                           2           6          24          120
+   + 
+       sin(y)  6   cos(y)  7   sin(y)  8   cos(y)  9    sin(y)  10      11
+     - ------ x  - ------ x  + ------ x  + ------ x  - ------- x   + O(x  )
+         720        5040        40320      362880      3628800
+                        Type: UnivariatePuiseuxSeries(Expression Integer,x,0)
+
+I agree that taking EXPR INT as the default domain is a bad idea though.
+
+I think there is one important point for MMA, Maple and MuPAD to make: as long
+as the mathematics of a particular topic is unclear, good expression domains
+are useful and sometimes maybe even necessary. Of course, once the mathematics
+is well understood, for example, as is the case with DFinite functions (as is
+the case with sin(x+y), an appropriate domain should be created and used. But
+for the discovery, I believe that "insecure" domains are very useful. In my
+opinion, especially MuPAD got this very right.
+
+By the way, just today I was led to use the domain SUP SUP INT. (In code, of
+course)
+
+As soon as one realizes that different things may generate the same output
+(printed representation), most of the problems go away.
+
+I had very long discusssions with William Sit about that topic on this list,
+and I have to admit that I now agree with him :-)
+
+Martin
+
+
+
+
+
+From MAILER-DAEMON Mon Aug 21 15:13:07 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFFCt-0004xA-AX
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 15:13:07 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFFCr-0004v4-HX
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:13:05 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFFCp-0004su-U1
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:13:05 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFFCp-0004sX-Nu
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:13:03 -0400
+Received: from [66.249.82.234] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GFFKH-0002v6-DT
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:20:45 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so1681491wxc
+	for <axiom-math@nongnu.org>; Mon, 21 Aug 2006 12:13:03 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=VfSVyVGpwDvssUWcuQ9HXPwyYHUeSHCoHNLeBNIMuigtsGLIeQExD7CaaUsnJ2KdmPr66OrI98FuXFCfsImS9C2J1aNzm5r5K6qWAoVna0cc8kBQzDYNEn/yoZQE22MSgi1PT9sWVcpGo52xs8ugKNC+65yj+YC4kjOuRHNlUgM=
+Received: by 10.70.125.2 with SMTP id x2mr9878233wxc;
+	Mon, 21 Aug 2006 12:13:02 -0700 (PDT)
+Received: by 10.70.70.10 with HTTP; Mon, 21 Aug 2006 12:13:02 -0700 (PDT)
+Message-ID: <ab2dc45b0608211213r49d89a3pf01b06ed4fbc170e@mail.gmail.com>
+Date: Mon, 21 Aug 2006 15:13:02 -0400
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: "Martin Rubey" <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+In-Reply-To: <9qzmdy76gc.fsf@aquin.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+	<ab2dc45b0608210249s751a2c9dne1bad2e2c917d979@mail.gmail.com>
+	<9qzmdy76gc.fsf@aquin.mat.univie.ac.at>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 19:13:05 -0000
+
+On 21 Aug 2006 12:01:55 +0200, Martin Rubey <martin.rubey@univie.ac.at> wrote:
+> "Igor Khavkine" <igor.kh@gmail.com> writes:
+>
+> > OK, but the following definitely looks like a bug.
+> >
+> > (279) -> monx := monomial(1,1)$UTS(EXPR INT,x,0)
+> >    (279)  x
+> >                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+> > (281) -> sqrt(monx*monx)
+> > (281) ->
+> >    (281)  1
+> >                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>
+> Yes, that's a bug. Please submit a report and fix it :-)
+>
+> you can see what's going on by saying
+>
+> )tr UTS )ma
+>
+> However, it seems that sqrt is not defined in UTS itself. So you'll have to
+> find out where it is defined and that trace that constructor.
+>
+> If you need more support, please ask for it.
+
+I've filed a bug report (#312) and I have a tentative fix for it. But
+I'm having trouble testing it. I've copied the culprit file
+algebra/sttaylor.spad into my current working dir and modified it.
+Issuing the command )compile sttaylor compiled the file. However, the
+old definition of sqrt is still being invoked. How do I force the code
+from sttaylor.spad in my working directory to take priority?
+
+Thanks.
+
+Igor
+
+
+
+From MAILER-DAEMON Mon Aug 21 15:21:42 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFFLC-0000WZ-Ei
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 15:21:42 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFFLA-0000WM-Um
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:21:40 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFFL9-0000Vf-6b
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:21:40 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFFL9-0000VY-3f
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:21:39 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GFFSa-0003db-Gj
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:29:20 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GFFL7-0007S5-0m; Mon, 21 Aug 2006 21:21:37 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GFFL6-0007FC-TZ; Mon, 21 Aug 2006 21:21:36 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Igor Khavkine" <igor.kh@gmail.com>
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+	<ab2dc45b0608210249s751a2c9dne1bad2e2c917d979@mail.gmail.com>
+	<9qzmdy76gc.fsf@aquin.mat.univie.ac.at>
+	<ab2dc45b0608211213r49d89a3pf01b06ed4fbc170e@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 21 Aug 2006 21:21:36 +0200
+In-Reply-To: <ab2dc45b0608211213r49d89a3pf01b06ed4fbc170e@mail.gmail.com>
+Message-ID: <9qac5xnbcv.fsf@aquin.mat.univie.ac.at>
+Lines: 104
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 19:21:41 -0000
+
+"Igor Khavkine" <igor.kh@gmail.com> writes:
+
+> I've filed a bug report (#312) and I have a tentative fix for it. But I'm
+> having trouble testing it. I've copied the culprit file algebra/sttaylor.spad
+> into my current working dir and modified it.  Issuing the command )compile
+> sttaylor compiled the file. However, the old definition of sqrt is still
+> being invoked. How do I force the code from sttaylor.spad in my working
+> directory to take priority?
+
+That's very strange, usually, after compilation, the new definition replaces
+the old. You can also say 
+
+)lib CONSTRUCTORNAME
+
+to load it explicitely.
+
+Are you sure you modified the right operation? Using
+
+)tr STTAYLOR )ma
+
+I get the trace below. I suspect you modified powern?
+
+Maybe you could send me the modification, then I can look at it.
+
+BTW: Thanks a lot for looking at this!
+
+Martin
+
+
+(5) -> sqrt(monx*monx)
+1<enter StreamTaylorSeriesOperations.*,27 : 
+ arg1= [...]
+ arg2= [...]
+1>exit  StreamTaylorSeriesOperations.*,27 : 
+ [...]
+1<enter StreamTaylorSeriesOperations.powern,117 : 
+       1
+ arg1= -
+       2
+ arg2= [...]
+ 1<enter StreamTaylorSeriesOperations.*,26 : 
+  arg1= 0
+  arg2= [...]
+ 1>exit  StreamTaylorSeriesOperations.*,26 : 
+  []
+ 1<enter StreamTaylorSeriesOperations.*,27 : 
+  arg1= [...]
+  arg2= [...]
+ 1>exit  StreamTaylorSeriesOperations.*,27 : 
+  [...]
+ 1<enter StreamTaylorSeriesOperations.+,17 : 
+  arg1= []
+  arg2= [...]
+ 1>exit  StreamTaylorSeriesOperations.+,17 : 
+  [...]
+ 1<enter StreamTaylorSeriesOperations.*,26 : 
+  arg1= 1
+  arg2= [...]
+ 1>exit  StreamTaylorSeriesOperations.*,26 : 
+  [...]
+ 1<enter StreamTaylorSeriesOperations.*,27 : 
+  arg1= []
+  arg2= [...]
+ 1>exit  StreamTaylorSeriesOperations.*,27 : 
+  [...]
+ 1<enter StreamTaylorSeriesOperations.+,17 : 
+  arg1= [...]
+  arg2= [...]
+ 1>exit  StreamTaylorSeriesOperations.+,17 : 
+  [...]
+1>exit  StreamTaylorSeriesOperations.powern,117 : 
+ [...]
+
+1<enter StreamTaylorSeriesOperations.deriv,62 : 
+ arg1= [...]
+ 1<enter StreamTaylorSeriesOperations.int,59 : 
+  arg1= 1
+ 1>exit  StreamTaylorSeriesOperations.int,59 : 
+  [...]
+ 1<enter StreamTaylorSeriesOperations.mapmult,60 : 
+  arg1= [...]
+  arg2= []
+ 1>exit  StreamTaylorSeriesOperations.mapmult,60 : 
+  [...]
+1>exit  StreamTaylorSeriesOperations.deriv,62 : 
+ [...]
+1<enter StreamTaylorSeriesOperations.*,27 : 
+ arg1= [...]
+ arg2= [...]
+1>exit  StreamTaylorSeriesOperations.*,27 : 
+ [...]
+1<enter StreamTaylorSeriesOperations.*,27 : 
+ arg1= []
+ arg2= [...]
+1>exit  StreamTaylorSeriesOperations.*,27 : 
+ [...]
+1<enter StreamTaylorSeriesOperations.-,23 : 
+ arg1= [...]
+ arg2= [...]
+1>exit  StreamTaylorSeriesOperations.-,23 : 
+ [...]
+   (5)  1
+                         Type: UnivariateTaylorSeries(Expression Integer,x,0)
+(6) -> 
+
+
+
+
+From MAILER-DAEMON Mon Aug 21 15:43:20 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFFg8-0005fH-8U
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 15:43:20 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFFg6-0005ew-9C
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:43:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFFg3-0005eh-FE
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:43:17 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFFg3-0005ee-AX
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:43:15 -0400
+Received: from [24.116.0.229] (helo=S3.cableone.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GFFnU-0005gt-Ut
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:50:57 -0400
+Received: from vh213602.truman.edu.truman.edu (unverified [24.116.128.227]) 
+	by S3.cableone.net (CableOne SMTP Service S3) with ESMTP id 71505949 
+	for multiple; Mon, 21 Aug 2006 12:43:12 -0700
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+From: Jay Belanger <belanger@truman.edu>
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+	<87irkm3m19.fsf@vh213602.truman.edu> <44E962CA.6080504@hemmecke.de>
+	<874pw6kqad.fsf@vh213602.truman.edu> <44E9E5ED.5060201@hemmecke.de>
+Date: Mon, 21 Aug 2006 14:43:11 -0500
+In-Reply-To: <44E9E5ED.5060201@hemmecke.de> (Ralf Hemmecke's message of "Mon,
+	21 Aug 2006 18:57:17 +0200")
+Message-ID: <87veolswmo.fsf@vh213602.truman.edu>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.0.50 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-NotAscii: charset=us-ascii
+X-IP-stats: Incoming Last 2, First 5, in=2, out=0, spam=0
+X-External-IP: 24.116.128.227
+X-Abuse-Info: Send abuse complaints to abuse@cableone.net
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: belanger@truman.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 19:43:18 -0000
+
+
+Ralf Hemmecke <ralf@hemmecke.de> writes:
+
+> On 08/21/2006 06:27 PM, Jay Belanger wrote:
+>> Ralf Hemmecke <ralf@hemmecke.de> writes:
+>>
+>>> On 08/21/2006 03:38 AM, Jay Belanger wrote:
+>>>> Martin Rubey <martin.rubey@univie.ac.at> writes:
+>>>>
+>>>>> "Igor Khavkine" <igor.kh@gmail.com> writes:
+>>>>>
+>>>>>> Can someone explain the following behavior of Taylor series in Axiom?
+>>>>>>
+>>>>>> (113) -> y := taylor x
+>>>>>>    (113)  x
+>>>>>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>>>>>> (114) -> x*y
+>>>>>>    (114)  x x
+>>>>>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>>>>>> (115) -> coefficient(%,1)
+>>>>>>    (115)  x
+>>>>>>                                                      Type: Expression Integer
+>>>>> The reason is that Axiom cannot really know whether you meant x in (114) to be
+>>>>> an element of the coefficient Ring EXPR INT, or to be a univariate Taylor
+>>>>> series. In case of doubt, it usually chooses the wrong possibility :-)
+>>>> When multiplying two elements, shouldn't Axiom try to coerce them to
+>>>> be in the same structure?  (I realize it doesn't, particularly here,
+>>>> but wouldn't that be reasonable behavior?)
+>>> But Axiom coerced the two x to the same domain!!!
+
+Looking back, it didn't.  One of the x's is in Expression Integer, and
+the other is UTS.
+
+>> Not in any meaningful way.
+>
+> Well, but how can you tell this to Axiom?
+
+Axiom could try to coerce x to be the same type as y, or y to be the
+same type as x.  The latter would lose structure, and should fail.
+So x should be coerced to the same domain as y.
+
+> It should be impossible to construct the domain
+> UnivariateTaylorSeries(Expression Integer,x,0).  I guess the Axiom
+> designers thought that returning that domain for taylor x would be
+> reasonable. I must say, I question that.  UTS(Fraction Integer, x,
+> 0) would have been sufficient and you wouldn't have the trouble.
+
+Yes.  I obviously need to learn more to find out what's going on
+here. 
+
+> But see, x is a symbol which should be coerce into a Taylor
+> series. The interpreter has several choices. So assuming the ideal
+> that the interpreter should have no mathematical knowledge itself,
+> it can only take the available information from the library. But
+> there are several available ways to go from x to UTS(Expression
+> Integer,x,0). So how can the interpreter ever know that it does the
+> wrong thing?
+
+The problem is that it didn't even try to go from x to UTS; x ends up
+as an Expression Integer.  I think it should have tried coercing x
+before multiplying x and y.
+
+>> And it isn't coercing x to be in the same domain as the other x, which
+>> is what I think should happen.
+>
+> Well, what should happen is, that Axiom users should not be confronted
+> with such terribly confusing stuff. First the user should learn that
+> Expression Integer is very very dangerous (as you can see) if used in
+> connection with a polynomial or powerseries domain.
+
+It is dangerous to use Expression Integer as above, but I don't think
+it should be.  I think the commands at the beginning of this thread
+were reasonable and should work.
+
+Jay
+
+
+
+From MAILER-DAEMON Mon Aug 21 15:55:39 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFFs3-00032S-Mo
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 15:55:39 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFFs1-0002zG-UQ
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:55:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFFrx-0002oV-BN
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:55:37 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFFrx-0002oE-3q
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:55:33 -0400
+Received: from [66.249.82.224] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GFFzF-0006iE-Dh
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 16:03:06 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so1693064wxc
+	for <axiom-math@nongnu.org>; Mon, 21 Aug 2006 12:55:11 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:references;
+	b=OyKiOjpcSco+V9v0Jq0Drfz60fzgLX06fZ+kgbAofZp57l+39dOITVQtZSOddEJfFx4gHcDJrS6s+vbOUbCTsAXPRk2nV+Iu30kZxRR1pMyG7joKFo7LHOB9xw6YITrTuAquZG+Enaou2ZkAlCEsWPs7fdbG2bJP0sfSfRchPD4=
+Received: by 10.70.122.13 with SMTP id u13mr10206082wxc;
+	Mon, 21 Aug 2006 12:55:10 -0700 (PDT)
+Received: by 10.70.70.10 with HTTP; Mon, 21 Aug 2006 12:55:10 -0700 (PDT)
+Message-ID: <ab2dc45b0608211255r6d0255br845214c1666d2abd@mail.gmail.com>
+Date: Mon, 21 Aug 2006 15:55:10 -0400
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: "Martin Rubey" <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+In-Reply-To: <9qac5xnbcv.fsf@aquin.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_53933_23536400.1156190110079"
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+	<ab2dc45b0608210249s751a2c9dne1bad2e2c917d979@mail.gmail.com>
+	<9qzmdy76gc.fsf@aquin.mat.univie.ac.at>
+	<ab2dc45b0608211213r49d89a3pf01b06ed4fbc170e@mail.gmail.com>
+	<9qac5xnbcv.fsf@aquin.mat.univie.ac.at>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 19:55:38 -0000
+
+------=_Part_53933_23536400.1156190110079
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+On 21 Aug 2006 21:21:36 +0200, Martin Rubey <martin.rubey@univie.ac.at> wrote:
+> "Igor Khavkine" <igor.kh@gmail.com> writes:
+>
+> > I've filed a bug report (#312) and I have a tentative fix for it. But I'm
+> > having trouble testing it. I've copied the culprit file algebra/sttaylor.spad
+> > into my current working dir and modified it.  Issuing the command )compile
+> > sttaylor compiled the file. However, the old definition of sqrt is still
+> > being invoked. How do I force the code from sttaylor.spad in my working
+> > directory to take priority?
+>
+> That's very strange, usually, after compilation, the new definition replaces
+> the old. You can also say
+
+You're right, that's what was happening. But my initial modification
+was in the wrong place, so it wasn't being triggered. But I've found
+the right place for it and it seems to work.
+
+> I suspect you modified powern?
+>
+> Maybe you could send me the modification, then I can look at it.
+
+I'm attaching the patch. It's very small. The original author simply
+forgot to prepend the leading zeros before returning the power series.
+
+> BTW: Thanks a lot for looking at this!
+
+No problem.
+
+Igor
+
+------=_Part_53933_23536400.1156190110079
+Content-Type: text/plain; name=axiom-powern.diff; charset=ANSI_X3.4-1968
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_er59olm4
+Content-Disposition: attachment; filename="axiom-powern.diff"
+
+ZGlmZiAtdXIgYXhpb20tMjAwNTA5MDEvc3JjL2FsZ2VicmEvc3R0YXlsb3Iuc3BhZC5wYW1waGxl
+dCBheGlvbS0yMDA1MDkwMS5uZXcvc3JjL2FsZ2VicmEvc3R0YXlsb3Iuc3BhZC5wYW1waGxldAot
+LS0gYXhpb20tMjAwNTA5MDEvc3JjL2FsZ2VicmEvc3R0YXlsb3Iuc3BhZC5wYW1waGxldAkyMDA1
+LTAxLTMwIDA3OjAzOjEwLjAwMDAwMDAwMCAtMDUwMAorKysgYXhpb20tMjAwNTA5MDEubmV3L3Ny
+Yy9hbGdlYnJhL3N0dGF5bG9yLnNwYWQucGFtcGhsZXQJMjAwNi0wOC0yMSAxNTo0OToyNS4wMDAw
+MDAwMDAgLTA0MDAKQEAgLTQ0OCw2ICs0NDgsOSBAQAogCiAgICAgICAgICAgUkFUUE9XRVJTID0+
+IGNvKipybiAqIFlTKHBvd2Vycm4ocm4sKGludkNvIDo6IEEpICogeCwjMSkpCiAgICAgICAgICAg
+ZXJyb3IgIioqIHJhdGlvbmFsIHBvd2VyIG9mIGNvZWZmaWNpZW50IHVuZGVmaW5lZCIKKyAgICAg
+ICAgemVyb3ByZWYgOiBTVCBBIDo9IG5ldyhvcmQ6Okk6Ok5OSSwwOjpBKSRMQSA6OiBTVCBBCisg
+ICAgICAgIGNvbmNhdCh6ZXJvcHJlZiwgcG93ZXIpCisKIAogICAgIGlmIEEgaGFzIEZpZWxkIHRo
+ZW4KICAgICAgIG1hcGRpdih4LHkpID09IGRlbGF5Cg==
+------=_Part_53933_23536400.1156190110079--
+
+
+
+From MAILER-DAEMON Mon Aug 21 15:56:00 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFFsN-0003ce-Tt
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 15:55:59 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFFsM-0003aA-N5
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:55:58 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFFsI-0003Qm-GD
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:55:58 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFFsI-0003Qb-A1
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 15:55:54 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1GFFzh-0006ln-63
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 16:03:35 -0400
+Received: from [192.168.138.29] (funklan.is4all.net [194.96.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k7LJtfGP015501
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Mon, 21 Aug 2006 21:55:41 +0200
+Message-ID: <44EA10CD.2080707@hemmecke.de>
+Date: Mon, 21 Aug 2006 22:00:13 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.5 (X11/20060719)
+MIME-Version: 1.0
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>	<9qejvbaxod.fsf@login.mat.univie.ac.at>	<87irkm3m19.fsf@vh213602.truman.edu>
+	<44E962CA.6080504@hemmecke.de>	<874pw6kqad.fsf@vh213602.truman.edu>
+	<44E9E5ED.5060201@hemmecke.de>
+	<9q4pw6rort.fsf@aquin.mat.univie.ac.at>
+In-Reply-To: <9q4pw6rort.fsf@aquin.mat.univie.ac.at>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 19:55:59 -0000
+
+
+
+On 08/21/2006 07:18 PM, Martin Rubey wrote:
+> Ralf Hemmecke <ralf@hemmecke.de> writes:
+> 
+>> Well, but how can you tell this to Axiom? It should be impossible to construct
+>> the domain UnivariateTaylorSeries(Expression Integer,x,0).
+>> I guess the Axiom designers thought that returning that domain for taylor x
+>> would be reasonable. I must say, I question that.
+>> UTS(Fraction Integer, x, 0) would have been sufficient and you wouldn't have
+>> the trouble.
+> 
+> No, I disagree. As long as we don't have domains UnivariateExpression and
+> MultivariateExpression that take variables as parameters, things like UTS(EXPR
+> INT, x, 0) are necessary.
+> 
+> Otherwise you cannot create series like
+> 
+> (67) -> series(sin(y+x), x=0)
+> 
+>    (67)
+>                         sin(y)  2   cos(y)  3   sin(y)  4   cos(y)  5
+>      sin(y) + cos(y)x - ------ x  - ------ x  + ------ x  + ------ x
+>                            2           6          24          120
+>    + 
+>        sin(y)  6   cos(y)  7   sin(y)  8   cos(y)  9    sin(y)  10      11
+>      - ------ x  - ------ x  + ------ x  + ------ x  - ------- x   + O(x  )
+>          720        5040        40320      362880      3628800
+>                         Type: UnivariatePuiseuxSeries(Expression Integer,x,0)
+
+Looking at this thing I would say that if you take
+
+R = Q[s,c]       -- polynomial ring in two variables over rationals
+I = (s^2+c^2-1)R -- ideal in R
+A = R/I          -- factor structure
+S = A[[x]]       -- formal power series
+
+then S would be a perfect candidate for the result type of the above 
+expression. And there is no "Expression Integer".
+While constructing the result of "series", Axiom should try hard to get 
+a reasonable (in some sense minimal) type for the result.
+Note that you get "PositiveInteger if you just type 1 on the axiom 
+prompt. Would you be happy, if Axiom returned 1@Expression(Integer)?
+
+> I agree that taking EXPR INT as the default domain is a bad idea though.
+
+I think, we are on the same side anyway. ;-)
+
+> I think there is one important point for MMA, Maple and MuPAD to make: as long
+> as the mathematics of a particular topic is unclear, good expression domains
+> are useful and sometimes maybe even necessary.
+
+Good point and I agree wholeheatedly. But Axiom allows after 
+understanding the structure of things to encode even that structure 
+(into the type system). The latter is THE feature of Axiom and should 
+not be forgotten due to laziness.
+
+> By the way, just today I was led to use the domain SUP SUP INT. (In code, of
+> course)
+
+What is so special about that? It is just Z[x][y], only that the names 
+of x an y are not given. If you, however, think of a univariate 
+polynomial ring over a ring R as the collection of functions N -> R with 
+finite support, you don't even see the x or y.
+
+Ralf
+
+
+
+From MAILER-DAEMON Mon Aug 21 16:14:56 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFGAi-0003An-2E
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 16:14:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFGAg-00038Y-Lh
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 16:14:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFGAf-00035E-5D
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 16:14:54 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFGAe-000353-T1
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 16:14:52 -0400
+Received: from [66.249.82.235] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GFGI6-0008MJ-QO
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 16:22:34 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so1698671wxc
+	for <axiom-math@nongnu.org>; Mon, 21 Aug 2006 13:14:51 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=LYd1N0KKgMbKMbSTsoYCeHuRmaXJEOLdidgzy0BwOFievXhmHDOUFns7LGitu6LfjnaPY+YTJdXqSL1wO+PQ+Ch31GeMtQKlRUd++ebTWKCTiox5kfc9ujdhDt0kOq0BBY5O9iq2e9xIR5JWITxDDpPPHYfwAVf1Kp6z+EFpkgE=
+Received: by 10.70.15.15 with SMTP id 15mr10223355wxo;
+	Mon, 21 Aug 2006 13:14:51 -0700 (PDT)
+Received: by 10.70.70.10 with HTTP; Mon, 21 Aug 2006 13:14:51 -0700 (PDT)
+Message-ID: <ab2dc45b0608211314m60fd6774yc3f85095b9ad2e1c@mail.gmail.com>
+Date: Mon, 21 Aug 2006 16:14:51 -0400
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: "Ralf Hemmecke" <ralf@hemmecke.de>
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+In-Reply-To: <44EA10CD.2080707@hemmecke.de>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+	<87irkm3m19.fsf@vh213602.truman.edu> <44E962CA.6080504@hemmecke.de>
+	<874pw6kqad.fsf@vh213602.truman.edu> <44E9E5ED.5060201@hemmecke.de>
+	<9q4pw6rort.fsf@aquin.mat.univie.ac.at> <44EA10CD.2080707@hemmecke.de>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 20:14:54 -0000
+
+On 8/21/06, Ralf Hemmecke <ralf@hemmecke.de> wrote:
+> On 08/21/2006 07:18 PM, Martin Rubey wrote:
+
+> > (67) -> series(sin(y+x), x=0)
+> >
+> >    (67)
+> >                         sin(y)  2   cos(y)  3   sin(y)  4   cos(y)  5
+> >      sin(y) + cos(y)x - ------ x  - ------ x  + ------ x  + ------ x
+> >                            2           6          24          120
+> >    +
+> >        sin(y)  6   cos(y)  7   sin(y)  8   cos(y)  9    sin(y)  10      11
+> >      - ------ x  - ------ x  + ------ x  + ------ x  - ------- x   + O(x  )
+> >          720        5040        40320      362880      3628800
+> >                         Type: UnivariatePuiseuxSeries(Expression Integer,x,0)
+>
+> Looking at this thing I would say that if you take
+>
+> R = Q[s,c]       -- polynomial ring in two variables over rationals
+> I = (s^2+c^2-1)R -- ideal in R
+> A = R/I          -- factor structure
+> S = A[[x]]       -- formal power series
+>
+> then S would be a perfect candidate for the result type of the above
+> expression. And there is no "Expression Integer".
+> While constructing the result of "series", Axiom should try hard to get
+> a reasonable (in some sense minimal) type for the result.
+
+That is in deed a very nice way to characterize the coefficients of of
+this power series. But how exactly would you coax Axiom into producing
+a power series with coefficients of this type starting with sin(x+y)?
+It'd also be nice if the variables s and c printed as sin(y) and
+cos(y) and behaved the same under operations like, say, taking
+derivatives with respect to y.
+
+Igor
+
+
+
+From MAILER-DAEMON Mon Aug 21 16:16:37 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFGCK-0005lZ-V9
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 16:16:37 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFGCJ-0005lL-3U
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 16:16:35 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFGCH-0005l6-Md
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 16:16:33 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFGCH-0005l3-G3
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 16:16:33 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1GFGJj-00005r-92
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 16:24:15 -0400
+Received: from [192.168.138.29] (funklan.is4all.net [194.96.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k7LKGUGP015910
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Mon, 21 Aug 2006 22:16:31 +0200
+Message-ID: <44EA15AF.3070507@hemmecke.de>
+Date: Mon, 21 Aug 2006 22:21:03 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.5 (X11/20060719)
+MIME-Version: 1.0
+To: belanger@truman.edu
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>	<9qejvbaxod.fsf@login.mat.univie.ac.at>	<87irkm3m19.fsf@vh213602.truman.edu>
+	<44E962CA.6080504@hemmecke.de>	<874pw6kqad.fsf@vh213602.truman.edu>
+	<44E9E5ED.5060201@hemmecke.de> <87veolswmo.fsf@vh213602.truman.edu>
+In-Reply-To: <87veolswmo.fsf@vh213602.truman.edu>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 20:16:35 -0000
+
+>>>>>>> (113) -> y := taylor x
+>>>>>>>    (113)  x
+>>>>>>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>>>>>>> (114) -> x*y
+>>>>>>>    (114)  x x
+>>>>>>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>>>>>>> (115) -> coefficient(%,1)
+>>>>>>>    (115)  x
+
+>>>> But Axiom coerced the two x to the same domain!!!
+> 
+> Looking back, it didn't.  One of the x's is in Expression Integer, and
+> the other is UTS.
+
+In some sense you are rigth, BUT, for that to claim you would have to 
+know the internal representation of
+UnivariateTaylorSeries(Expression Integer,x,0).
+What if you are a poor Axiom user who doesn't have access to the source 
+code? How could you justify your statement. All you see is ONE type and 
+that is UnivariateTaylorSeries(Expression Integer,x,0) and nothing else.
+
+>> Well, but how can you tell this to Axiom?
+
+> Axiom could try to coerce x to be the same type as y, or y to be the
+> same type as x.  The latter would lose structure, and should fail.
+> So x should be coerced to the same domain as y.
+
+As I said, Axiom does exactly that. But it has (at least two) 
+incompatible ways to do it. Maybe someone familiar with tracing the 
+search of the interpreter for the right coerce function could explain 
+that better than me.
+
+>> But see, x is a symbol which should be coerce into a Taylor
+>> series. The interpreter has several choices. So assuming the ideal
+>> that the interpreter should have no mathematical knowledge itself,
+>> it can only take the available information from the library. But
+>> there are several available ways to go from x to UTS(Expression
+>> Integer,x,0). So how can the interpreter ever know that it does the
+>> wrong thing?
+> 
+> The problem is that it didn't even try to go from x to UTS; x ends up
+> as an Expression Integer.  I think it should have tried coercing x
+> before multiplying x and y.
+
+Let's abbreviate U := UnivariateTaylorSeries(Expression Integer,x,0) and
+E := Expression(Integer).
+
+That's what Axiom does. It tries to coerce to U, there is no such coerce 
+function. Then maybe after checking some other coerce functions that 
+fail, it finds a coercion to Expression(Integer), furthermore there is 
+function *: (E, U) -> U. So Axiom does a minimal thing: it interprets
+
+x*y as (x::E)*y
+
+note that the coercion to U would go like
+
+(x::E::U) * y
+
+and would then be more costly. You surely also consider that 
+unreasonable to go the long way if there is a shorter path. No?
+
+> It is dangerous to use Expression Integer as above, but I don't think
+> it should be.  I think the commands at the beginning of this thread
+> were reasonable and should work.
+
+You are talking to a computer not a human. Have mercy.
+
+Ralf
+
+
+
+From MAILER-DAEMON Mon Aug 21 17:07:09 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFGzE-0004D1-Uf
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 17:07:09 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFGzC-0004Ck-PW
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 17:07:06 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFGzA-0004AM-87
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 17:07:05 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFGzA-0004AD-2e
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 17:07:04 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1GFH6c-0006Ik-JU
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 17:14:46 -0400
+Received: from [192.168.138.29] (funklan.is4all.net [194.96.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k7LL6xGP016981
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Mon, 21 Aug 2006 23:07:00 +0200
+Message-ID: <44EA2183.8040905@hemmecke.de>
+Date: Mon, 21 Aug 2006 23:11:31 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.5 (X11/20060719)
+MIME-Version: 1.0
+To: Igor Khavkine <igor.kh@gmail.com>
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>	
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>	
+	<87irkm3m19.fsf@vh213602.truman.edu>
+	<44E962CA.6080504@hemmecke.de>	
+	<874pw6kqad.fsf@vh213602.truman.edu>
+	<44E9E5ED.5060201@hemmecke.de>	
+	<9q4pw6rort.fsf@aquin.mat.univie.ac.at>
+	<44EA10CD.2080707@hemmecke.de>
+	<ab2dc45b0608211314m60fd6774yc3f85095b9ad2e1c@mail.gmail.com>
+In-Reply-To: <ab2dc45b0608211314m60fd6774yc3f85095b9ad2e1c@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Aug 2006 21:07:07 -0000
+
+>> > (67) -> series(sin(y+x), x=0)
+>> >
+>> >    (67)
+>> >                         sin(y)  2   cos(y)  3   sin(y)  4   cos(y)  5
+>> >      sin(y) + cos(y)x - ------ x  - ------ x  + ------ x  + ------ x
+>> >                            2           6          24          120
+>> >    +
+>> >        sin(y)  6   cos(y)  7   sin(y)  8   cos(y)  9    sin(y)  
+>> 10      11
+>> >      - ------ x  - ------ x  + ------ x  + ------ x  - ------- x   + 
+>> O(x  )
+>> >          720        5040        40320      362880      3628800
+>> >                         Type: UnivariatePuiseuxSeries(Expression 
+>> Integer,x,0)
+>>
+>> Looking at this thing I would say that if you take
+>>
+>> R = Q[s,c]       -- polynomial ring in two variables over rationals
+>> I = (s^2+c^2-1)R -- ideal in R
+>> A = R/I          -- factor structure
+>> S = A[[x]]       -- formal power series
+>>
+>> then S would be a perfect candidate for the result type of the above
+>> expression. And there is no "Expression Integer".
+>> While constructing the result of "series", Axiom should try hard to get
+>> a reasonable (in some sense minimal) type for the result.
+> 
+> That is in deed a very nice way to characterize the coefficients of of
+> this power series. But how exactly would you coax Axiom into producing
+> a power series with coefficients of this type starting with sin(x+y)?
+
+I certainly could not, because all you have given me is the string of 7 
+letters "sin(x+y)". It is already a GUESS to interpret this as the 
+mathematical sine function applied to a sum of two indeterminates. So, 
+unless you give me the type of that thing, I cannot do anything without 
+guessing. And please, not Expression(Integer), because that basically 
+says nothing.
+
+And by the way, I would probably also fail if you give me a proper type, 
+since that stuff is not my main field and I have no algorithm for it.
+
+> It'd also be nice if the variables s and c printed as sin(y) and
+> cos(y) and behaved the same under operations like, say, taking
+> derivatives with respect to y.
+
+I somehow have the suspicion that you still think in terms of expressions.
+
+Suppose I take the rational numbers Q considered as a Ring.
+
+)abbrev domain Q Q
+Q: Ring == Fraction Integer add
+   foo(): Integer == 1
+
+Put these 3 lines into qqq.spad and say
+)co qqq.spad
+
+Now if you take
+
+a: Q := 1
+c: Q := a/a
+
+then... right! that gives an error because there is no operation
+
+/: (Q, Q) -> Q
+
+What I want to say is, that having a type of a thing imposes a certain 
+structure on that thing and also restricts on what you can to with it. 
+So although you know that Q (from above) is the set of rational numbers, 
+you cannot divide two elements of Q. Same for c an s from my example 
+above. They are just indeterminates. If you want something else, then 
+you have to make that obvious.
+
+OK, I would agree that for the enduser all this type stuff must be made 
+easier and more transparent. In some cases it probably even hinders the 
+exploration of the mathematics behind the stuff, but when it comes to 
+code your ideas into an algorithm then types are quite useful. Then you 
+should not "lie" anymore, but make it explicit what you actually mean.
+
+Ralf
+
+
+
+From MAILER-DAEMON Mon Aug 21 22:00:15 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFLYt-0002cK-FL
+	for mharc-axiom-math@gnu.org; Mon, 21 Aug 2006 22:00:15 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFLYr-0002bj-Ht
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 22:00:13 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFLYo-0002Xh-VM
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 22:00:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFLYo-0002XW-Q2
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 22:00:10 -0400
+Received: from [66.249.82.226] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GFLgK-0006O3-5S
+	for axiom-math@nongnu.org; Mon, 21 Aug 2006 22:07:56 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so1795123wxc
+	for <axiom-math@nongnu.org>; Mon, 21 Aug 2006 19:00:09 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:cc:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=AzxXiVFqqEMUMSkZc+z8SAwlF2dDb05dE7iy0sukMf9zKmwsx0UKqmz4t4OsXAPz40Iy0BAWSLw27BEd9ubIfYcAOEDYlhX93lv8uGSMz0QZgGTD0POR0s73RqNuPN3XkG2UJpT6crFIPa3BRnIJ1E6ZfK7lgLyGl/Lb0DsQEoY=
+Received: by 10.70.70.7 with SMTP id s7mr10684735wxa;
+	Mon, 21 Aug 2006 19:00:08 -0700 (PDT)
+Received: by 10.70.70.10 with HTTP; Mon, 21 Aug 2006 19:00:08 -0700 (PDT)
+Message-ID: <ab2dc45b0608211900w664862c3wac30b68d4752829@mail.gmail.com>
+Date: Mon, 21 Aug 2006 22:00:08 -0400
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: "Ralf Hemmecke" <ralf@hemmecke.de>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] The right type for the right job
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 22 Aug 2006 02:00:13 -0000
+
+On 8/21/06, Ralf Hemmecke <ralf@hemmecke.de> wrote:
+
+> >> Looking at this thing I would say that if you take
+> >>
+> >> R = Q[s,c]       -- polynomial ring in two variables over rationals
+> >> I = (s^2+c^2-1)R -- ideal in R
+> >> A = R/I          -- factor structure
+> >> S = A[[x]]       -- formal power series
+> >>
+> >> then S would be a perfect candidate for the result type of the above
+> >> expression. And there is no "Expression Integer".
+> >> While constructing the result of "series", Axiom should try hard to get
+> >> a reasonable (in some sense minimal) type for the result.
+
+The above is a very nice example of a domain for a restricted use,
+where only the algebraic relation s^2+c^2=1 is important in the
+coefficients of the power series we wish to work with.
+
+I have a very different purpose in mind, and I wonder if anyone can
+come up with the right type for it. Say I have a few symbols
+[x,y,z,...] and a binary operagor g. I'm only interested in
+polynomials or rational functions with, say, integer coefficients in
+the formal expressions g(x,x), g(x,y), g(y,z), etc. Is there a type
+that restricts to just this sort of expressions? Expression Integer
+can handle them, but it will also allow other symbols like a,b,c,...
+and different operators f(a), h(x,c), etc. None of the Polynomial or
+similar domains in Axiom can handle this situation because non-symbols
+like g(x,y).
+
+What's the solution?
+
+Igor
+
+
+
+From MAILER-DAEMON Tue Aug 22 01:50:22 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFP9a-0003ve-FX
+	for mharc-axiom-math@gnu.org; Tue, 22 Aug 2006 01:50:22 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFP9Y-0003tM-Ct
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 01:50:20 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFP9X-0003sc-Pf
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 01:50:20 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFP9X-0003sR-Mq
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 01:50:19 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GFPH5-0007kV-5z
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 01:58:07 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GFP9V-0002Bu-Qt; Tue, 22 Aug 2006 07:50:17 +0200
+Received: from login.mat.univie.ac.at ([131.130.16.250]
+	helo=login.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GFP9V-0002O4-Pj; Tue, 22 Aug 2006 07:50:17 +0200
+Sender: rubey@login.mat.univie.ac.at
+To: "Igor Khavkine" <igor.kh@gmail.com>
+Subject: Re: [Axiom-math] The right type for the right job
+References: <ab2dc45b0608211900w664862c3wac30b68d4752829@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 22 Aug 2006 07:50:15 +0200
+In-Reply-To: <ab2dc45b0608211900w664862c3wac30b68d4752829@mail.gmail.com>
+Message-ID: <9qejv91fqg.fsf@login.mat.univie.ac.at>
+Lines: 45
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 22 Aug 2006 05:50:20 -0000
+
+Dear Igor,
+
+"Igor Khavkine" <igor.kh@gmail.com> writes:
+
+> Say I have a few symbols [x,y,z,...] and a binary operagor g. I'm only
+> interested in polynomials or rational functions with, say, integer
+> coefficients in the formal expressions g(x,x), g(x,y), g(y,z), etc. Is there
+> a type that restricts to just this sort of expressions? Expression Integer
+> can handle them, but it will also allow other symbols like a,b,c,...  and
+> different operators f(a), h(x,c), etc. None of the Polynomial or similar
+> domains in Axiom can handle this situation because non-symbols like g(x,y).
+> 
+> What's the solution?
+
+One possible solution is to mimick the internals of the expression domain. It
+represents it's objects, i.e., the expressions, as rational functions with
+the domain of variables being "Kernel EXPR INT".
+
+So, let's start with polynomials. You first need a domain for the variables,
+and that's the part where you will need to do some programming: it has to be an
+OrderedSet, since SMP wants that. And it has to accomodate the symbols
+specified by you as well as constructions like g(x,y), g(y,z) etc.
+
+So you'll have something like
+
+)abb domain IVD IgorsVariableDomain
+IgorsVariableDomain: OrderedSet with
+  
+   makeAnElementOfThisDomain: DontKnowWhatGoesHere -> %
+
+ == add
+
+   makeAnElementOfThisDomain(s : DontKnowWhatGoesHere): % ==
+
+   <<implement also all the operations of OrderedSet>>
+
+
+
+The rational functions you then get for free, it is
+
+FRAC SMP(INT, IgorsVariableDomain)
+
+In fact, I suppose that this would be useful for the general public, too.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Aug 22 07:53:21 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFUoq-0003Ds-TY
+	for mharc-axiom-math@gnu.org; Tue, 22 Aug 2006 07:53:20 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFUoo-0003BR-UF
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 07:53:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFUok-00035R-TA
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 07:53:18 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFUok-00035G-IH
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 07:53:14 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1GFUwL-0003qA-Hr
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 08:01:05 -0400
+Received: from [193.170.38.119] (hemmecke@woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k7MBrAGP006954
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Tue, 22 Aug 2006 13:53:11 +0200
+Message-ID: <44EAF13E.4010105@hemmecke.de>
+Date: Tue, 22 Aug 2006 13:57:50 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.5 (X11/20060719)
+MIME-Version: 1.0
+To: Igor Khavkine <igor.kh@gmail.com>
+References: <ab2dc45b0608211900w664862c3wac30b68d4752829@mail.gmail.com>
+In-Reply-To: <ab2dc45b0608211900w664862c3wac30b68d4752829@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: The right type for the right job
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 22 Aug 2006 11:53:19 -0000
+
+Hi igor,
+
+[...]
+
+> The above is a very nice example of a domain for a restricted use,
+> where only the algebraic relation s^2+c^2=1 is important in the
+> coefficients of the power series we wish to work with.
+
+> I have a very different purpose in mind, and I wonder if anyone can
+> come up with the right type for it. Say I have a few symbols
+> [x,y,z,...] and a binary operagor g. I'm only interested in
+> polynomials or rational functions with, say, integer coefficients in
+> the formal expressions g(x,x), g(x,y), g(y,z), etc. Is there a type
+> that restricts to just this sort of expressions?
+
+Your coefficients are integers your variables are "formal expressions" 
+of the form "g(x,y)" where x and y are from a fixed (finite) set of 
+variables. That is VERY easy. Assume you have n variables in the set 
+V={x,y,...,z} then the set of "formal" expressions
+
+W = {g(x,x), g(x,y), ..., g(y, x), g(y,y), ..., g(z,z)}
+
+has exactly n^2 elements.
+
+If you form the rational function field
+
+Q(T_xx, T_xy, ..., T_yx, T_yy, ..., T_zz)
+
+you have exactly what you described above.
+
+BTW, I strongly believe that what you described is not what you want.
+Read my previous mail
+http://lists.nongnu.org/archive/html/axiom-math/2006-08/msg00029.html
+where I describe that / is not available for the rational numbers if you 
+just consider them to be a ring.
+
+That is the same here. What you get is a field of rational functions, 
+but you certainly see easily that you cannot express
+g(x, g(x,y)) in that ring. But, it is your fault. You did not give a 
+proper specification. If you want to talk to a computer you have to be 
+precise. You cannot expect that it guesses, that your specification 
+might not be the thing you want. Current computer systems are in general 
+not that advanced (yet).
+
+> None of the Polynomial or
+> similar domains in Axiom can handle this situation because non-symbols
+> like g(x,y).
+
+Have you ever tried to convert g(x,y) into a symbol?
+I cannot do it since you haven't given me the type of g(x,y). But if we 
+could say for a moment that we consider "g(x,y)" then I just type...
+
+"g(x,y)"::Symbol
+
+at the axiom prompt and get
+
+    (2)  g(x,y)
+                                           Type: Symbol
+
+So don't say, it's not a symbol.
+
+Ralf
+
+
+
+From MAILER-DAEMON Tue Aug 22 12:18:09 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFYx6-0005ed-VR
+	for mharc-axiom-math@gnu.org; Tue, 22 Aug 2006 12:18:09 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFYx5-0005df-IT
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 12:18:07 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFYx4-0005d8-JF
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 12:18:07 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFYx4-0005d1-8Q
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 12:18:06 -0400
+Received: from [150.243.160.94] (helo=uranium.truman.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GFZ4i-0001eZ-0J
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 12:26:00 -0400
+Received: from uranium.truman.edu (localhost.localdomain [127.0.0.1])
+	by localhost (Postfix) with SMTP id 7113157F5D
+	for <axiom-math@nongnu.org>; Tue, 22 Aug 2006 11:23:59 -0500 (CDT)
+Received: from vh213602.truman.edu.truman.edu (vh213602.truman.edu
+	[150.243.64.4])
+	by uranium.truman.edu (Postfix) with ESMTP id 5AFC657F66;
+	Tue, 22 Aug 2006 11:23:32 -0500 (CDT)
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+From: Jay Belanger <belanger@truman.edu>
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>
+	<9qejvbaxod.fsf@login.mat.univie.ac.at>
+	<87irkm3m19.fsf@vh213602.truman.edu> <44E962CA.6080504@hemmecke.de>
+	<874pw6kqad.fsf@vh213602.truman.edu> <44E9E5ED.5060201@hemmecke.de>
+	<87veolswmo.fsf@vh213602.truman.edu> <44EA15AF.3070507@hemmecke.de>
+Date: Tue, 22 Aug 2006 11:17:36 -0500
+In-Reply-To: <44EA15AF.3070507@hemmecke.de> (Ralf Hemmecke's message of "Mon,
+	21 Aug 2006 22:21:03 +0200")
+Message-ID: <874pw4hhi7.fsf@vh213602.truman.edu>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.0.50 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: belanger@truman.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 22 Aug 2006 16:18:07 -0000
+
+
+Ralf Hemmecke <ralf@hemmecke.de> writes:
+
+>>> (113) -> y := taylor x
+>>>    (113)  x
+>>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>>> (114) -> x*y
+>>>    (114)  x x
+>>>                          Type: UnivariateTaylorSeries(Expression Integer,x,0)
+>>> (115) -> coefficient(%,1)
+>>>    (115)  x
+>>>                                                      Type: Expression Integer
+...
+>>>>> But Axiom coerced the two x to the same domain!!!
+>>
+>> Looking back, it didn't.  One of the x's is in Expression Integer, and
+>> the other is UTS.
+>
+> In some sense you are rigth, BUT, for that to claim you would have to
+> know the internal representation of
+> UnivariateTaylorSeries(Expression Integer,x,0).
+> What if you are a poor Axiom user who doesn't have access to the source
+> code? How could you justify your statement. All you see is ONE type and
+> that is UnivariateTaylorSeries(Expression Integer,x,0) and nothing else.
+
+I was looking at the Type: part of the output in (113) and (115).
+
+>>> Well, but how can you tell this to Axiom?
+>
+>> Axiom could try to coerce x to be the same type as y, or y to be the
+>> same type as x.  The latter would lose structure, and should fail.
+>> So x should be coerced to the same domain as y.
+>
+> As I said, Axiom does exactly that. 
+
+Did you?  Well, I guess I need to be told several times before it
+sinks in.   Maybe if I learned to read, I could have saved up both
+some typing.  But thanks for your patience.
+
+>>> But see, x is a symbol which should be coerce into a Taylor
+>>> series. The interpreter has several choices. So assuming the ideal
+>>> that the interpreter should have no mathematical knowledge itself,
+>>> it can only take the available information from the library. But
+>>> there are several available ways to go from x to UTS(Expression
+>>> Integer,x,0). So how can the interpreter ever know that it does the
+>>> wrong thing?
+>>
+>> The problem is that it didn't even try to go from x to UTS; x ends up
+>> as an Expression Integer.  I think it should have tried coercing x
+>> before multiplying x and y.
+>
+> Let's abbreviate U := UnivariateTaylorSeries(Expression Integer,x,0) and
+> E := Expression(Integer).
+>
+> That's what Axiom does. It tries to coerce to U, there is no such coerce
+> function. 
+
+But x::U works just fine.
+
+> Then maybe after checking some other coerce functions that
+> fail, it finds a coercion to Expression(Integer), furthermore there is
+> function *: (E, U) -> U. So Axiom does a minimal thing: it interprets
+>
+> x*y as (x::E)*y
+>
+> note that the coercion to U would go like
+>
+> (x::E::U) * y
+
+So x::U is equivalent to x::E::U?
+
+> and would then be more costly. You surely also consider that
+> unreasonable to go the long way if there is a shorter path. No?
+
+I'm just wondering why it doesn't try x::U right off.  
+I'm getting the (probably wrong) impression that it looks at x::U,
+decides that that's too long, then goes for x::E.  I would think that
+deciding x::U is too long would be too long.
+
+Jay
+
+
+
+From MAILER-DAEMON Tue Aug 22 12:53:29 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GFZVJ-0001Li-N1
+	for mharc-axiom-math@gnu.org; Tue, 22 Aug 2006 12:53:29 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GFZVI-0001LU-SI
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 12:53:28 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GFZVG-0001KL-LG
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 12:53:27 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GFZVG-0001KI-Fr
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 12:53:26 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1GFZcu-0006FS-6p
+	for axiom-math@nongnu.org; Tue, 22 Aug 2006 13:01:20 -0400
+Received: from [193.170.38.119] (hemmecke@woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k7MGrNGP017829
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Tue, 22 Aug 2006 18:53:23 +0200
+Message-ID: <44EB379A.3020802@hemmecke.de>
+Date: Tue, 22 Aug 2006 18:58:02 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.5 (X11/20060719)
+MIME-Version: 1.0
+To: belanger@truman.edu
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+References: <ab2dc45b0608201411l464165f3yf6247772530b1d2f@mail.gmail.com>	<9qejvbaxod.fsf@login.mat.univie.ac.at>	<87irkm3m19.fsf@vh213602.truman.edu>
+	<44E962CA.6080504@hemmecke.de>	<874pw6kqad.fsf@vh213602.truman.edu>
+	<44E9E5ED.5060201@hemmecke.de>	<87veolswmo.fsf@vh213602.truman.edu>
+	<44EA15AF.3070507@hemmecke.de> <874pw4hhi7.fsf@vh213602.truman.edu>
+In-Reply-To: <874pw4hhi7.fsf@vh213602.truman.edu>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 22 Aug 2006 16:53:29 -0000
+
+>> Let's abbreviate U := UnivariateTaylorSeries(Expression Integer,x,0) and
+>> E := Expression(Integer).
+>>
+>> That's what Axiom does. It tries to coerce to U, there is no such coerce
+>> function. 
+> 
+> But x::U works just fine.
+
+Try the same thing in a .spad file and the compiler will complain. 
+(Better use a .as file and compile with Aldor. I cannot say much about 
+SPAD, since I don't know for sure.)
+
+x::U on a command line is given to the interpreter. The interpreter 
+tries to be smart and tries hard to find a way to achieve what it 
+believes you meant.
+
+>> Then maybe after checking some other coerce functions that
+>> fail, it finds a coercion to Expression(Integer), furthermore there is
+>> function *: (E, U) -> U. So Axiom does a minimal thing: it interprets
+
+>> x*y as (x::E)*y
+
+>> note that the coercion to U would go like
+
+>> (x::E::U) * y
+
+> So x::U is equivalent to x::E::U?
+
+I cannot say for sure. Some other Axiom gurus know how to ask axiom what 
+exact function call the interpreter actually finds. I don't. Keep 
+waiting or write to the axiom-developer mailing list. I am sure someone 
+is listening.
+
+>> and would then be more costly. You surely also consider that
+>> unreasonable to go the long way if there is a shorter path. No?
+
+> I'm just wondering why it doesn't try x::U right off.
+
+Maybe it does. But as I said. There is no function coerce: Symbol->U.
+So it fails and has to look for something else.
+
+> I'm getting the (probably wrong) impression that it looks at x::U,
+> decides that that's too long, then goes for x::E.  I would think that
+> deciding x::U is too long would be too long.
+
+Try to write an interpreter then you (maybe) appreciate what it 
+currently does and have some mercy with it. ;-)
+
+Ralf
+
+
+
+From MAILER-DAEMON Wed Aug 30 06:25:07 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GINFr-0005Yx-5w
+	for mharc-axiom-math@gnu.org; Wed, 30 Aug 2006 06:25:07 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GINFo-0005Wt-KD
+	for axiom-math@nongnu.org; Wed, 30 Aug 2006 06:25:04 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GINFn-0005W0-Vg
+	for axiom-math@nongnu.org; Wed, 30 Aug 2006 06:25:04 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GINFn-0005Vn-MB
+	for axiom-math@nongnu.org; Wed, 30 Aug 2006 06:25:03 -0400
+Received: from [134.74.38.100] (helo=cgate.sci.ccny.cuny.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GINPA-0003Ex-TW
+	for axiom-math@nongnu.org; Wed, 30 Aug 2006 06:34:45 -0400
+Received: from [162.84.139.22] (account <wyscc@sci.ccny.cuny.edu>)
+	by cgate.sci.ccny.cuny.edu (CommuniGate Pro WebUser 4.0.5)
+	with HTTP id 8253772; Wed, 30 Aug 2006 06:25:02 -0400
+From: "William Sit" <wyscc@sci.ccny.cuny.edu>
+Subject: Re: [Axiom-math] Curious behavior of Taylor series
+To: "Igor Khavkine" <igor.kh@gmail.com>,"Martin Rubey"
+	<martin.rubey@univie.ac.at>
+X-Mailer: CommuniGate Pro Web Mailer v.4.0.5
+Date: Wed, 30 Aug 2006 06:25:02 -0400
+Message-ID: <web-8253772@cgate.sci.ccny.cuny.edu>
+In-Reply-To: <ab2dc45b0608210249s751a2c9dne1bad2e2c917d979@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="ISO-8859-1"; format="flowed"
+Content-Transfer-Encoding: 8bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 30 Aug 2006 10:25:04 -0000
+
+
+"Igor Khavkine" <igor.kh@gmail.com> writes:
+
+>OK, but the following definitely looks like a bug.
+>
+>(279) -> monx := monomial(1,1)$UTS(EXPR INT,x,0)
+>   (279)  x
+>                         Type: 
+>UnivariateTaylorSeries(Expression Integer,x,0)
+>(281) -> sqrt(monx*monx)
+>(281) ->
+>   (281)  1
+>                         Type: 
+
+In the Windows version, I get the correct answer. So this 
+bug is newly introduced.
+                         AXIOM Computer Algebra System
+               Version of Tuesday November 30, 2004 at 
+21:11:14
+-----------------------------------------------------------------------------
+    Issue )copyright to view copyright notices.
+    Issue )summary for a summary of useful system 
+commands.
+    Issue )quit to leave AXIOM and return to shell.
+-----------------------------------------------------------------------------
+
+(1) -> )set mess auto off
+(1) -> monx := monomial(1,1)$UTS(EXPR INT,x,0)
+
+    (1)  x
+                          Type: 
+UnivariateTaylorSeries(Expression Integer,x,0)
+(2) -> sqrt(monx*monx)
+
+    (2)  x
+                          Type: 
+UnivariateTaylorSeries(Expression Integer,x,0)
+(3) -> x
+
+    (3)  x
+                                                            
+  Type: Variable x
+
+Note in particular (3), which illustrates that Axiom 
+treats undefined identifiers as symbols (or variables). 
+Even though x has been used in (1) and (2), it is still 
+undefined! The reason is the way UTS (or any univariate 
+domain) is constructed in Axiom: since it is univariate, 
+Axiom designers decided that it is not necessary to 
+associate the main variable to an identifier. The x that 
+appears in the output (and input) is external to the UTS 
+computing environment and a pure notation in I/O for the 
+convenience of the user. Internally, the main variable is 
+represented by a place holder (and denoted by the local 
+identifier ?). One reason for this set up is to allow 
+coefficient domains to include Symbol (that is, all 
+identifiers) and since ? is only a local identifier, it 
+will not get mixed up with anything in the coefficient 
+domain. This explains why in your example, x*y gives x*x 
+(which is really x*?). It is important to know that the 
+line
+
+y:=taylor x
+
+does NOT define x, only y. You cannot use x to mean the 
+main variable until you define it. So you can do this:
+
+(1) -> y:=taylor x
+
+    (1)  x
+                          Type: 
+UnivariateTaylorSeries(Expression Integer,x,0)
+(2) -> x:UTS(EXPR INT,x,0):='x
+
+    (2)  x
+                          Type: 
+UnivariateTaylorSeries(Expression Integer,x,0)
+(3) -> x*y
+
+          2
+    (3)  x
+                          Type: 
+UnivariateTaylorSeries(Expression Integer,x,0)
+
+
+
+William
+
+
+

@@ -1,0 +1,100 @@
+From MAILER-DAEMON Sun Apr 01 14:42:32 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HY50a-0004Jv-QC
+	for mharc-axiom-math@gnu.org; Sun, 01 Apr 2007 14:42:32 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HY50Z-0004FB-5U
+	for axiom-math@nongnu.org; Sun, 01 Apr 2007 14:42:31 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HY50X-0004A7-JO
+	for axiom-math@nongnu.org; Sun, 01 Apr 2007 14:42:30 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1HY50X-00049s-GN; Sun, 01 Apr 2007 14:42:29 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HY4xa-0001EY-99; Sun, 01 Apr 2007 14:39:26 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HY4xW-0000ra-EL; Sun, 01 Apr 2007 20:39:22 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HY4xT-0005hr-SX; Sun, 01 Apr 2007 20:39:22 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Francois Maltey <fmaltey@nerim.fr>
+References: <87lkhcav7b.fsf@nerim.fr>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 01 Apr 2007 20:39:19 +0200
+In-Reply-To: <87lkhcav7b.fsf@nerim.fr>
+Message-ID: <9qejn4q6qw.fsf@aquin.mat.univie.ac.at>
+Lines: 42
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-developer@nongnu.org, axiom-math <axiom-math@nongnu.org>
+Subject: [Axiom-math] Re: [Axiom-developer] evaluate a polynom for a matrix.
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 01 Apr 2007 18:42:31 -0000
+
+Please direct questions of this kind to axiom-math@nongnu.org.
+
+Francois Maltey <fmaltey@nerim.fr> writes:
+
+> Hello,
+> 
+> Let P in Ring[X] and M in SquareMatrix(Ring)
+> 
+> The mathematics evaluate P(M) 
+>    by sum (ak*M^k, k=0..deg P) in SquareMatrix(Ring)
+> where P = sum (ak*X^k, k=0..deg P)
+> 
+> How can I do this in axiom.
+
+-- work in SquareMatrix(n, FRAC POLY INT)
+
+n := 4;
+
+SM ==> SquareMatrix(n, FRAC POLY INT)
+
+--
+-- Create a generic matrix
+--
+
+M: SM := matrix [[a[i,j] for j in 1..n] for i in 1..n]
+
+-- Create an identity matrix
+
+I: SM := 1;
+
+-- Computes determinant (M - x*Id) where M is the previous generic matrix.
+-- note that characteristicPolynomial would do this for youm however, for some
+-- strange reason, it accepts an element of Matrix R instead of SquareMatrix R.
+
+P := determinant (M - x * I)
+
+-- Now evaluate P(M). We find the (0)_4 matrix.  Note that you can coerce only
+-- to a univariate polynomial, since matrix multiplication is not
+-- commutative...
+
+(P::UP(x, SM))(M)
+
+
+
+
+

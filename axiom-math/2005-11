@@ -1,0 +1,610 @@
+From MAILER-DAEMON Wed Nov 02 08:29:16 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EXIfz-0001ro-2h
+	for mharc-axiom-math@gnu.org; Wed, 02 Nov 2005 08:29:15 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EXIfv-0001pd-Py
+	for axiom-math@nongnu.org; Wed, 02 Nov 2005 08:29:12 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EXIfL-0001hp-D0
+	for axiom-math@nongnu.org; Wed, 02 Nov 2005 08:28:37 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EXIfJ-0001hS-F1
+	for axiom-math@nongnu.org; Wed, 02 Nov 2005 08:28:33 -0500
+Received: from [131.130.1.183] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1EXIfJ-00010q-Bo
+	for axiom-math@nongnu.org; Wed, 02 Nov 2005 08:28:33 -0500
+Received: from localhost.localdomain ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id jA2DQhNi070074
+	for <axiom-math@nongnu.org>; Wed, 2 Nov 2005 14:26:45 +0100 (CET)
+Sender: rubey@localhost.localdomain
+To: axiom-math <axiom-math@nongnu.org>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 02 Nov 2005 14:25:28 +0100
+Message-ID: <85hdavuqpj.fsf@localhost.localdomain>
+Lines: 5
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Subject: [Axiom-math] (max,+)-linear equation solver
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 02 Nov 2005 13:29:13 -0000
+
+Maybe it would be interesting to implement this...
+
+http://web.mat.bham.ac.uk/P.Butkovic/My papers/Two sided systems 2.pdf
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sun Nov 13 06:01:15 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EbFWU-0000A5-EZ
+	for mharc-axiom-math@gnu.org; Sun, 13 Nov 2005 05:55:47 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EbFTx-0008Nk-OC
+	for axiom-math@nongnu.org; Sun, 13 Nov 2005 05:53:12 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EbFTs-0008N4-R4
+	for axiom-math@nongnu.org; Sun, 13 Nov 2005 05:53:06 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EbFTo-0008Mq-DG
+	for axiom-math@nongnu.org; Sun, 13 Nov 2005 05:53:01 -0500
+Received: from [131.130.1.183] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1EbFTo-0003gY-6C
+	for axiom-math@nongnu.org; Sun, 13 Nov 2005 05:53:00 -0500
+Received: from localhost.localdomain ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id jADAqLNi020568
+	for <axiom-math@nongnu.org>; Sun, 13 Nov 2005 11:52:25 +0100 (CET)
+Sender: rubey@localhost.localdomain
+To: axiom-math <axiom-math@nongnu.org>
+References: <85slu1ka21.fsf@localhost.localdomain>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 13 Nov 2005 12:45:18 +0100
+In-Reply-To: <85slu1ka21.fsf@localhost.localdomain>
+Message-ID: <85mzk8g4a9.fsf@localhost.localdomain>
+Lines: 90
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Subject: [Axiom-math] Re: Help facility, Finite Fields in Axiom
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 13 Nov 2005 10:55:37 -0000
+
+Dear McAndrew,
+
+> G16:=Dom::GaloisField(2,4,x^4+x+1);
+> m1:=matrix(4,4,(i,j)->G16::random());
+> m2:=matrix(4,4,(i,j)->G16::random());
+> m1*m2;
+> 
+> and of course I can perform arithmetic in the field G16:
+> 
+> G16((x^3+x)/(x^3+x^2+1));
+> G16((x^2+1)^9);
+
+translates to
+
+G16 := FF(2,4) 
+-- FF is the abbreviation for FiniteField
+m1 := matrix([[random()$G16 for i in 1..4] for j in 1..4])
+m2 := matrix([[random()$G16 for i in 1..4] for j in 1..4])
+m1*m2
+
+x:=primitiveElement()$G16
+(x^3+x)/(x^3+x^2+1)
+(x^2+1)^9
+
+I don't really know how it would be possible to specify the generator. But it
+certainly can be done. 
+
+-------------------------------------------------------------------------------
+
+> I've been looking at Maxima lately, and have now started on axiom.  So
+> here are three very simple questions:
+> 
+> 1) What online help is available from the axiom prompt?  In every other
+> CAS I've tried (Maple, MuPAD, Maxima, plus numerical software such as
+> Matlab, scilab, octave), a command such as
+> 
+> ? sin
+> 
+> or
+> 
+> help sin
+> 
+> will bring up either information about the sine function, or a small
+> menu of related functions (arcsin etc.)
+> 
+> Such help is invaluable for my learning of a system.
+
+You really should use HyperDoc for this task. For your example:
+
+select "Browse" at the top level of HyperDoc
+
+enter "sin"
+
+select "Operations"
+
+select "Descriptions" to obtain descriptions of all operations called "sin"
+or
+       "Origins"      to obtain a list of domains, packages, categories where
+                      an operation called "sin" is defined. Chances are very
+                      high that you get related functions this way, too. In the
+                      running example, one of the hits is
+                      "TrigonometricFunctionCategory", as it should be.
+
+If HyperDoc does not help, I recommend you to ask on axiom-math@nongnu.org. I
+volunteer to answer your questions personally as fast as possible, since it is
+maybe my fault that you try to get along with Axiom :-)
+
+By the way, I forgot an important "help" facility I often use:
+
+)wh th foo
+
+spits out a list of all things containing foo in its name. So, you'd probably
+interested in typing
+
+)wh th finite
+
+(unfortunately, )wh th galois returns misleading entries...)
+
+
+Personally, I would not recommend using 
+
+)di op
+
+or 
+
+)sh
+
+to a novice user.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Nov 17 10:11:38 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EclQH-0008OX-VH
+	for mharc-axiom-math@gnu.org; Thu, 17 Nov 2005 10:11:38 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EcUhm-00028J-Gn
+	for axiom-math@nongnu.org; Wed, 16 Nov 2005 16:20:34 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EcUhj-000283-Rj
+	for axiom-math@nongnu.org; Wed, 16 Nov 2005 16:20:34 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EcUhj-000280-OC
+	for axiom-math@nongnu.org; Wed, 16 Nov 2005 16:20:31 -0500
+Received: from [192.167.219.15] (helo=avas.unife.it)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1EcUhj-0006XD-IX
+	for axiom-math@nongnu.org; Wed, 16 Nov 2005 16:20:31 -0500
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by avas.unife.it (Postfix) with ESMTP id DE8F66598C
+	for <axiom-math@nongnu.org>; Wed, 16 Nov 2005 22:20:27 +0100 (CET)
+Received: from dns.unife.it (dns.unife.it [192.167.219.2])
+	by avas.unife.it (Postfix) with ESMTP id 14FB665A7A
+	for <axiom-math@nongnu.org>; Wed, 16 Nov 2005 22:20:27 +0100 (CET)
+Received: from localhost.localdomain (localhost.localdomain [127.0.0.1])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by dns.unife.it (Postfix) with ESMTP id 00C9272FD5
+	for <axiom-math@nongnu.org>; Wed, 16 Nov 2005 22:20:27 +0100 (CET)
+Date: Wed, 16 Nov 2005 22:20:26 +0100 (CET)
+From: "Fabio S." <f.stumbo@unife.it>
+X-X-Sender: stf@dns.unife.it
+To: axiom-math@nongnu.org
+Message-ID: <Pine.LNX.4.64.0511162219370.16049@dns.unife.it>
+Organization: =?ISO-8859-1?Q?Universit=E0_di_Ferrara?=
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-Virus-Scanned: Cineca AppOs 0.86 at avas.unife.it
+X-Mailman-Approved-At: Thu, 17 Nov 2005 10:11:35 -0500
+Subject: [Axiom-math] Problem in compiling a function
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: axiom-math@nongnu.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 16 Nov 2005 21:20:34 -0000
+
+
+I am having a problem in compiling a function and I would like to know how
+to fix it. My function takes two arguments which are supposed to be a
+nonnegative integer n and a prime p. I want the number to be considered
+modulo p. So, to make a very short (even if meaningless) example of the
+error, define
+
+f: (NNI,NNI) -> NNI
+f(n,p) ==
+  x := n :: PF p
+  x*x
+  2
+
+This works, but only in interpreted mode. Is there a way to modify it in
+order to have it compiled?
+
+What about if I want the result to be in PF p?
+For example, to have x*x as result (after deleting the last line, of
+course), changing
+
+f: (NNI,NNI) -> NNI
+
+into
+
+f: (NNI,NNI) -> PF
+
+works, but yelds another warning when loading.
+
+Thanks a lot for your attention
+
+Fabio
+
+
+
+From MAILER-DAEMON Thu Nov 17 11:26:14 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EcmaU-0002Rl-FC
+	for mharc-axiom-math@gnu.org; Thu, 17 Nov 2005 11:26:14 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EcmaS-0002Pa-Hp
+	for axiom-math@nongnu.org; Thu, 17 Nov 2005 11:26:12 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EcmaR-0002OK-Ij
+	for axiom-math@nongnu.org; Thu, 17 Nov 2005 11:26:12 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EcmaR-0002OD-0p
+	for axiom-math@nongnu.org; Thu, 17 Nov 2005 11:26:11 -0500
+Received: from [131.130.1.183] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1EcmaQ-0003TV-TR
+	for axiom-math@nongnu.org; Thu, 17 Nov 2005 11:26:11 -0500
+Received: from localhost.localdomain ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id jAHGN0Ni082524
+	for <axiom-math@nongnu.org>; Thu, 17 Nov 2005 17:23:04 +0100 (CET)
+Sender: rubey@localhost.localdomain
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Problem in compiling a function
+References: <Pine.LNX.4.64.0511162219370.16049@dns.unife.it>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 17 Nov 2005 17:22:55 +0100
+In-Reply-To: <Pine.LNX.4.64.0511162219370.16049@dns.unife.it>
+Message-ID: <85lkzn4528.fsf@localhost.localdomain>
+Lines: 88
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 17 Nov 2005 16:26:12 -0000
+
+Dear Fabio,
+
+"Fabio S." <f.stumbo@unife.it> writes:
+
+> I am having a problem in compiling a function and I would like to know how
+> to fix it. My function takes two arguments which are supposed to be a
+> nonnegative integer n and a prime p. I want the number to be considered
+> modulo p. So, to make a very short (even if meaningless) example of the
+> error, define
+> 
+> f: (NNI,NNI) -> NNI
+> f(n,p) ==
+>   x := n :: PF p
+>   x*x
+>   2
+> 
+> This works, but only in interpreted mode. Is there a way to modify it in
+> order to have it compiled?
+
+The interpreter message is 
+
+(14) -> f(3,7)
+   Cannot compile the declaration for x because its (possible partial) 
+      type contains a local variable.
+   AXIOM will attempt to step through and interpret the code.
+   Compiling function f with type (NonNegativeInteger,
+      NonNegativeInteger) -> NonNegativeInteger 
+
+   (14)  2
+
+So apparantly, the code is compiled... (see the third message). Are you sure
+that it's not (is it too slow?)
+
+The spad compiler has no problem:
+
+)abbrev package TEST Test
+Test(): Exports == Implementation where
+    NNI ==> NonNegativeInteger
+
+    Exports == with
+      f: (NNI,NNI) -> NNI
+
+    Implementation == add
+
+      f(n,p)==
+        x := n :: PrimeField p
+        x*x
+        2
+
+compiles without warning and works, too. So, to your original question I have
+no answer, only a workaround. Sorry. 
+
+> What about if I want the result to be in PF p?  For example, to have x*x as
+> result (after deleting the last line, of course), changing
+> 
+> f: (NNI,NNI) -> NNI
+> 
+> into
+> 
+> f: (NNI,NNI) -> PF
+> 
+> works, but yelds another warning when loading.
+
+This cannot work, and the interpreter says so, too:
+
+   Although PrimeField is the name of a constructor, a full type must 
+      be specified in the context you have used it. Issue )show 
+      PrimeField for more information.
+
+In fact, this is (in my opinion) the main deficience of Axiom with respect to
+Aldor. Dependent types are not supported, i.e., signutures like
+
+f(p:NNI,n:NNI): PF p == something
+
+are not allowed. In Aldor, they are. William Sit wrote a very long argument how
+you can simulate dependent signatures in Axiom, but it will work only in the
+interpreter. So maybe it is of use to you. See
+
+http://page.axiom-developer.org/zope/mathaction/18AxiomDomainsAndAldorReturnTypes
+
+The easy workoround is: don't declare your function...
+
+Sorry about that,
+
+Martin
+
+PS: If you find somebody (maybe yourself) who would like to fix the
+interpreter, some money would be available.
+
+
+
+
+From MAILER-DAEMON Thu Nov 17 11:52:55 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ecn0J-0007DM-3Z
+	for mharc-axiom-math@gnu.org; Thu, 17 Nov 2005 11:52:55 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ecn0G-0007CX-Kj
+	for axiom-math@nongnu.org; Thu, 17 Nov 2005 11:52:52 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ecn0E-0007BY-V3
+	for axiom-math@nongnu.org; Thu, 17 Nov 2005 11:52:52 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ecn0E-0007BN-Hv
+	for axiom-math@nongnu.org; Thu, 17 Nov 2005 11:52:50 -0500
+Received: from [81.169.145.161] (helo=natfrord.rzone.de)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Ecn0E-0005km-Ho
+	for axiom-math@nongnu.org; Thu, 17 Nov 2005 11:52:50 -0500
+Received: from [193.170.38.119] (woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by post.webmailer.de (8.13.1/8.13.1) with ESMTP id jAHGql4s028052
+	for <axiom-math@nongnu.org>; Thu, 17 Nov 2005 17:52:48 +0100 (MET)
+Message-ID: <437CB58E.9070700@hemmecke.de>
+Date: Thu, 17 Nov 2005 17:53:34 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.4 (X11/20050908)
+MIME-Version: 1.0
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Problem in compiling a function
+References: <Pine.LNX.4.64.0511162219370.16049@dns.unife.it>
+	<85lkzn4528.fsf@localhost.localdomain>
+In-Reply-To: <85lkzn4528.fsf@localhost.localdomain>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 17 Nov 2005 16:52:53 -0000
+
+Dear Fabio,
+
+Maybe you specify your actual problem in a bit more detail. I guess, you 
+don't want to write just a function f(n,p). What is your context?
+
+Maybe you should completely work in PF(p).
+
+(1) -> n:PF(7) := 3
+    (1)  3
+                                                 Type: PrimeField 7
+(2) -> n*n
+
+    (2)  2
+                                                 Type: PrimeField 7
+
+Would this help?
+
+Perhaps someone on the list knows how the resulting 2 can be converted 
+back to NNI.
+
+Ralf
+
+
+
+From MAILER-DAEMON Mon Nov 21 03:54:22 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ee7RO-00079F-9J
+	for mharc-axiom-math@gnu.org; Mon, 21 Nov 2005 03:54:22 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ee7RL-000794-SE
+	for axiom-math@nongnu.org; Mon, 21 Nov 2005 03:54:20 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ee7RJ-00078S-Dc
+	for axiom-math@nongnu.org; Mon, 21 Nov 2005 03:54:19 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ee7RI-00078I-HY
+	for axiom-math@nongnu.org; Mon, 21 Nov 2005 03:54:16 -0500
+Received: from [192.167.219.15] (helo=avas.unife.it)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Ee7RH-0005fp-Ar
+	for axiom-math@nongnu.org; Mon, 21 Nov 2005 03:54:16 -0500
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by avas.unife.it (Postfix) with ESMTP id 9013565C4E
+	for <axiom-math@nongnu.org>; Mon, 21 Nov 2005 09:54:08 +0100 (CET)
+Received: from em243.mate.man (em243.mate.man [10.80.2.121])
+	by avas.unife.it (Postfix) with ESMTP id 1D35565C5C
+	for <axiom-math@nongnu.org>; Mon, 21 Nov 2005 09:54:06 +0100 (CET)
+Date: Mon, 21 Nov 2005 09:54:04 +0100 (CET)
+From: "Fabio S." <f.stumbo@unife.it>
+X-X-Sender: stumbo@studio
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Problem in compiling a function
+In-Reply-To: <85lkzn4528.fsf@localhost.localdomain>
+Message-ID: <Pine.LNX.4.62.0511210946180.11984@studio>
+References: <Pine.LNX.4.64.0511162219370.16049@dns.unife.it>
+	<85lkzn4528.fsf@localhost.localdomain>
+Organization: =?ISO-8859-1?Q?Universit=E0_di_Ferrara?=
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-Virus-Scanned: Cineca AppOs 0.86 at avas.unife.it
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: axiom-math@nongnu.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Nov 2005 08:54:20 -0000
+
+>> I am having a problem in compiling a function and I would like to know how
+>> to fix it. My function takes two arguments which are supposed to be a
+>> nonnegative integer n and a prime p. I want the number to be considered
+>> modulo p. So, to make a very short (even if meaningless) example of the
+>> error, define
+>>
+>> f: (NNI,NNI) -> NNI
+>> f(n,p) ==
+>>   x := n :: PF p
+>>   x*x
+>>   2
+>>
+>> This works, but only in interpreted mode. Is there a way to modify it in
+>> order to have it compiled?
+>
+> The interpreter message is
+>
+> (14) -> f(3,7)
+>   Cannot compile the declaration for x because its (possible partial)
+>      type contains a local variable.
+>   AXIOM will attempt to step through and interpret the code.
+>   Compiling function f with type (NonNegativeInteger,
+>      NonNegativeInteger) -> NonNegativeInteger
+>
+>   (14)  2
+>
+> So apparantly, the code is compiled... (see the third message). Are you sure
+> that it's not (is it too slow?)
+
+Well, no, I am not sure, since I didn't test it with something more 
+difficult.
+In any casy, I need this only for teaching purpose, so speed is not an 
+issue, in this case: I just wanted to know if there was something trivial 
+hidden somewhere in the over 1000 axiom manual pages which I was 
+missing...
+
+>> What about if I want the result to be in PF p?  For example, to have x*x as
+>> result (after deleting the last line, of course), changing
+>>
+>> f: (NNI,NNI) -> NNI
+>>
+>> into
+>>
+>> f: (NNI,NNI) -> PF
+>>
+>> works, but yelds another warning when loading.
+>
+> This cannot work, and the interpreter says so, too:
+>
+>   Although PrimeField is the name of a constructor, a full type must
+>      be specified in the context you have used it. Issue )show
+>      PrimeField for more information.
+>
+> In fact, this is (in my opinion) the main deficience of Axiom with respect to
+> Aldor. Dependent types are not supported, i.e., signutures like
+>
+> f(p:NNI,n:NNI): PF p == something
+>
+> are not allowed. In Aldor, they are. William Sit wrote a very long argument how
+> you can simulate dependent signatures in Axiom, but it will work only in the
+> interpreter. So maybe it is of use to you. See
+>
+> http://page.axiom-developer.org/zope/mathaction/18AxiomDomainsAndAldorReturnTypes
+>
+> The easy workoround is: don't declare your function...
+>
+> Sorry about that,
+>
+> Martin
+>
+> PS: If you find somebody (maybe yourself) who would like to fix the
+> interpreter, some money would be available.
+
+If I were able to do it...  :-((
+
+Thanks for your attention
+
+Fabio
+
+
+

@@ -1,0 +1,2890 @@
+From MAILER-DAEMON Sun Dec 05 14:09:26 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Cb1l8-00075k-Js
+	for mharc-axiom-math@gnu.org; Sun, 05 Dec 2004 14:09:26 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Cb1l6-00073m-Ng
+	for axiom-math@nongnu.org; Sun, 05 Dec 2004 14:09:24 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Cb1l5-00072w-JE
+	for axiom-math@nongnu.org; Sun, 05 Dec 2004 14:09:23 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1Cb1l3-00071W-Ct; Sun, 05 Dec 2004 14:09:21 -0500
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1Cb1bE-0004vP-TS; Sun, 05 Dec 2004 13:59:13 -0500
+Received: from localhost.localdomain (69.0.60.35.adsl.snet.net [69.0.60.35])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iB5Iwxmt401006; Sun, 5 Dec 2004 13:59:03 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iB5JeAC10509;
+	Sun, 5 Dec 2004 14:40:10 -0500
+Date: Sun, 5 Dec 2004 14:40:10 -0500
+Message-Id: <200412051940.iB5JeAC10509@localhost.localdomain>
+From: root <daly@idsi.net>
+To: cfrangos@telkomsa.net
+In-reply-to: <mailman.16658.1102273373.27203.axiom-math@nongnu.org>
+	(axiom-math-owner@nongnu.org)
+References: <mailman.16658.1102273373.27203.axiom-math@nongnu.org>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Re: Axiom-math post from cfrangos@telkomsa.net
+	requires approval
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 05 Dec 2004 19:09:25 -0000
+
+Constantine,
+ 
+I picked up a copy of matlab and one of the books. 
+I'll try installing it later this week and then I can
+help you with your translation problems. I'm not familiar
+with Matlab.
+
+Matlab seems, at first reading, to be somewhat primitive but
+perhaps I'm missing the point. In any case it clearly provides
+functionality that the student needs in some easy to use form.
+
+Perhaps we can learn some lessons from it and create a "matlab
+compatibility package" that covers the functions in ways that
+a matlab user can understand.
+
+Tim
+
+
+
+
+From MAILER-DAEMON Sun Dec 05 18:56:25 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Cb6Er-0007l9-Be
+	for mharc-axiom-math@gnu.org; Sun, 05 Dec 2004 18:56:25 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Cb1el-0005bu-KB
+	for axiom-math@nongnu.org; Sun, 05 Dec 2004 14:02:51 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Cb1ek-0005ba-W9
+	for axiom-math@nongnu.org; Sun, 05 Dec 2004 14:02:51 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Cb1ek-0005bP-Pk
+	for axiom-math@nongnu.org; Sun, 05 Dec 2004 14:02:50 -0500
+Received: from [196.25.211.5] (helo=mail.telkomsa.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Cb1Uv-0003rg-Je
+	for axiom-math@nongnu.org; Sun, 05 Dec 2004 13:52:42 -0500
+Received: (qmail 31559 invoked from network); 5 Dec 2004 18:52:37 -0000
+Received: from cfrangos@telkomsa.net by ophelia.telkomsa.net by uid 81 with
+	qmail-scanner-1.22 ( Clear:RC:1(155.239.189.41):. 
+	Processed in 0.814751 secs); 05 Dec 2004 18:52:37 -0000
+Received: from unknown (HELO wnmvihjd) ([155.239.189.41])
+	(envelope-sender <cfrangos@telkomsa.net>)
+	by O (qmail-ldap-1.03) with SMTP
+	for <martin.rubey@univie.ac.at>; 5 Dec 2004 18:52:36 -0000
+From: "cf" <cfrangos@telkomsa.net>
+To: <martin.rubey@univie.ac.at>,
+	<axiom-math@nongnu.org>
+Date: Sun, 5 Dec 2004 17:11:16 +0200
+X-MSMail-Priority: Normal
+X-Priority: 3
+X-Mailer: Microsoft Internet Mail 4.70.1155
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Qmail-Scanner-Message-ID: <110227275667231544@ophelia.telkomsa.net>
+Message-Id: <E1Cb1ek-0005ba-W9@lists.gnu.org>
+X-Mailman-Approved-At: Sun, 05 Dec 2004 18:56:24 -0500
+Cc: 
+Subject: [Axiom-math] (no subject)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 05 Dec 2004 19:02:52 -0000
+
+
+5 December 2004
+
+Dear Colleagues,
+ 
+     I have started slowly translating my Matlab programs to axiom, and
+     am experiencing some difficulties. The type system of axiom is
+     very advanced. However, its not clear to me at this stage
+     how to implement in axiom certain basic operations that I can
+     implement relatively easily in Matlab. I have written a test program
+     file test.input with some questions (as comments) and pasted this
+ below. 
+     You can  run this in axiom with: )read test.input;
+ 
+ 
+ 
+ --Test program file test.input for basic manipulations.
+ --qi, i=1,..,n=3 are the generalized co-ordinates (functions of time t),
+ --and pi = derivative of qi wrt to time t, i=1,..,n=3.
+ 
+ 
+ --In Matlab it is possible to "convert" strings to symbolic variables
+ --as follows: n=3; qt = sym(zeros(n,1)); pt = sym(zeros(n,1)); 
+ --for i=1:n, qt(i)=sym(['q',int2str(i),'(t)']); 
+ --pt(i) = sym(['p',int2str(i),'(t)']); end;
+ 
+-- IS THERE A WAY OF DOING THE ABOVE IN AXIOM ??? So far I could only
+--find  the following method.
+ 
+ q1:=operator 'q1
+ q2:=operator 'q2
+ q3:=operator 'q3
+ 
+ p1:=operator 'p1
+ p2:=operator 'p2
+ p3:=operator 'p3
+ 
+ gt := q1(t)*q1(t) + p1(t)*sin(q2(t)) + p2(t)*cos(q3(t)) + p3(t)
+ 
+ dgtdt:= D(gt,t)
+ 
+ 
+ dgtdt := (rule D(q1(t),t) == p1(t)) dgtdt;
+ dgtdt := (rule D(q2(t),t) == p2(t)) dgtdt;
+ dgtdt := (rule D(q3(t),t) == p3(t)) dgtdt
+ 
+ 
+ --I want to "supress the t" in the expression gt and
+ --obtain: g = q1*q1 + p1*sin(q2) + p2*cos(q3) + p3.
+ --Then take the derivative of g wrt the qi's, and pi's, i=1,..,n=3.
+ 
+ --In Matlab I do this as follows: 
+ --q = sym(zeros(n,1)); p = sym(zeros(n,1)); 
+ --for i=1:n, q(i)=sym(['q',int2str(i)]); p(i) = sym(['p',int2str(i)]);
+--end;
+ --g = subs(g,qt,q); g = subs(g,pt,p);
+ 
+ --IS THERE A WAY OF DOING THE ABOVE IN AXIOM ??? So far I could only find
+ --the following method. 
+ 
+ 
+ g := (rule (q1(t) == qw1; q2(t) == qw2; q3(t) == qw3; p1(t) == pw1; p2(t)
+== pw2; p3(t) == pw3))gt
+ 
+ dgdqw1 := D(g,qw1)
+ dgdqw2 := D(g,qw2)
+ dgdqw3 := D(g,qw3)
+ 
+ dgdpw1 := D(g,pw1)
+ dgdpw2 := D(g,pw2)
+ dgdpw3 := D(g,pw3)
+ 
+ --end of program.
+
+
+Thanks very much.
+
+Regards,
+
+C. Frangos.
+
+------
+Constantine Frangos.
+Professor
+Dept. of Mathematics and Statistics
+Rand Afrikaans University
+P O Box 524
+Auckland Park 2006
+South Africa
+
+Tel: +27-11-489-2452
+Fax: +27-11-489-2832
+e-mail: cf@rau.ac.za (work)
+              cfrangos@telkomsa.net (home)
+
+
+
+
+
+From MAILER-DAEMON Mon Dec 06 05:44:57 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CbGMR-00054k-SG
+	for mharc-axiom-math@gnu.org; Mon, 06 Dec 2004 05:44:56 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CbGMM-000548-IS
+	for axiom-math@nongnu.org; Mon, 06 Dec 2004 05:44:51 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CbGMK-00053Z-FQ
+	for axiom-math@nongnu.org; Mon, 06 Dec 2004 05:44:49 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CbGMJ-000537-S3
+	for axiom-math@nongnu.org; Mon, 06 Dec 2004 05:44:47 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CbGCB-0002fe-6O
+	for axiom-math@nongnu.org; Mon, 06 Dec 2004 05:34:19 -0500
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iB6AXu1B177110;
+	Mon, 6 Dec 2004 11:33:59 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16820.13623.595163.214277@gargle.gargle.HOWL>
+Date: Mon, 6 Dec 2004 11:32:23 +0100
+To: "cf" <cfrangos@telkomsa.net>
+In-Reply-To: <200412051853.iB5Iqoq3076527@mx1.univie.ac.at>
+References: <200412051853.iB5Iqoq3076527@mx1.univie.ac.at>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4249; Body=3 Fuz1=3 Fuz2=3
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 06 Dec 2004 10:44:53 -0000
+
+Dear Constantine Frangos,
+
+Only guessing...
+
+I think that it is correct to use "operator" for q_i and p_i. If you want to
+create them with a loop, you can say
+
+qs:=[operator subscript('q, [i::OutputForm]) for i in 1..3]
+ps:=[operator subscript('p, [i::OutputForm]) for i in 1..3]
+
+which you can access using qs.i and ps.i now. Unfortunately, there seems to be
+a bug that messes up the interpretation of (qs.1)(2*t). A workaround is to say
+
+eval((qs.1)(s),s=(2*t))
+
+To teach Axiom that x' = y, you can use
+
+x:=operator('x,1)
+y:=operator('y,1)
+derivative(x,(t+->y(t))::(EXPR INT->EXPR INT))$BasicOperatorFunctions1(EXPR INT)
+
+The second argument to operator telling Axiom the arity of the operator, is
+optional.
+
+Unfortunately, I can't get the obvious 
+
+[derivative(qs.i,(t+->(ps.i)(t))::(EXPR INT->EXPR INT))$BOP1(EXPR INT) 
+ for i in 1..3]
+
+to work. 
+
+Most unfortunately, I can't think right away of a way to tell Axiom to
+differentiate with respect to an operator. However, it seems to me that there
+is also some maths involved. Surely, you also want to be able to differentiate
+p1(2t) with respect to p1?
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Dec 08 05:07:04 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Cbyiu-0003c1-Lj
+	for mharc-axiom-math@gnu.org; Wed, 08 Dec 2004 05:07:04 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Cbyir-0003aN-K5
+	for axiom-math@nongnu.org; Wed, 08 Dec 2004 05:07:01 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Cbyio-0003Yt-L0
+	for axiom-math@nongnu.org; Wed, 08 Dec 2004 05:06:59 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Cbyio-0003YJ-8W
+	for axiom-math@nongnu.org; Wed, 08 Dec 2004 05:06:58 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CbyYw-0008Ov-NJ
+	for axiom-math@nongnu.org; Wed, 08 Dec 2004 04:56:47 -0500
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iB89uS1B234868;
+	Wed, 8 Dec 2004 10:56:30 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16822.53102.978329.786124@gargle.gargle.HOWL>
+Date: Wed, 8 Dec 2004 10:54:54 +0100
+To: "cf" <cfrangos@telkomsa.net>
+In-Reply-To: <200412071707.iB7H7dKH041371@mx1.univie.ac.at>
+References: <200412071707.iB7H7dKH041371@mx1.univie.ac.at>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4248; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] trigs and factor
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 08 Dec 2004 10:07:02 -0000
+
+(I'm forwarding this also to axiom-math, since I believe that it is of general
+interest. I hope I'm not disturbing privacy)
+
+Dear CF,
+
+> (1) One of my main interests in axiom is to investigate whether it can be
+> used to efficiently perform complicated symbolic computations and
+> SIMPLIFICATIONS of the resulting symbolic expressions. My present
+> applications involve expressions with mainly trigonometric terms, ie
+> sin(x)cos(y), sin^2(x)cos(z), etc. Please send me some of the built in axiom
+> simplification commands. I have printed part of the axiom manual but have
+> only been able to find the "factor" command so far.
+
+As far as I know, factor has no (or not much) effect on fields, and EXPR INT is
+one. In fact, this is a topic that should go on mathaction. To find out about
+various factorisation operations you can try
+
+)di op fact
+
+giving you all operations that contain "fact" in their names. After that you
+can inspect promising ones --- find out where they are defined with -- for
+example --
+
+grep "sqfrFactor.*==" *.spad
+
+in the algebra/src directory, and then: read the source. It is often very well
+documented.
+
+There are also various trig operations:
+
+)di op trig
+
+Sorry, I don't know much more at the moment. Maxima has a command "trigrat"
+that works well. Maybe Axiom needs some work here. It would be great if you
+document your findings on MathAction!
+
+> (2) I want to define functions, each in a separate .input file. I then want
+> (2) to
+>     write a main script file test.input, and run this in the backround under
+>     linux using the following command:
+> 
+> time nohup AXIOMsys < test.input > test.dat &
+> 
+>     The file test.input will call the above-mentioned functions. Each of the
+>     functions can also call each other. I am using this approach in Matlab
+>     extensively, but it is not clear how to do this in axiom (issues of
+>     declaration/definition of functions in separate files, etc).  Any advice
+>     would be much appreciated.
+
+I'm not sure what's the problem. Maybe you want a .input file containing
+
+)read funs1.input
+)read funs2.input
+...
+
+?
+
+If your operations are reusable, you might prefer "packages". These group
+together operations that work for any domain in a specified category. If you
+are interested, I'll expand.
+
+> (The axiom manual seems to cover at length interactive command line
+> programming while I am mainly interested in writing programs (in files) with
+> calls to functions, also defined in files, etc.)
+ 
+True.
+
+Good luck,
+
+Martin
+
+PS: what's your scientific domain?
+
+
+
+
+From MAILER-DAEMON Wed Dec 08 05:43:35 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CbzIF-0002w3-BX
+	for mharc-axiom-math@gnu.org; Wed, 08 Dec 2004 05:43:35 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CbzIC-0002vi-ME
+	for axiom-math@nongnu.org; Wed, 08 Dec 2004 05:43:32 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CbzIB-0002vL-RR
+	for axiom-math@nongnu.org; Wed, 08 Dec 2004 05:43:32 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CbzIB-0002vA-He
+	for axiom-math@nongnu.org; Wed, 08 Dec 2004 05:43:31 -0500
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Cbz8F-0006yV-5V
+	for axiom-math@nongnu.org; Wed, 08 Dec 2004 05:33:15 -0500
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id BC6B96444D3; Wed,  8 Dec 2004 05:33:14 -0500 (EST)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 83744-10; Wed,  8 Dec 2004 05:33:13 -0500 (EST)
+Received: from corporateex.drdc-rddc.gc.ca (unknown [131.136.1.77])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id 4F35F6444BD; Wed,  8 Dec 2004 05:33:13 -0500 (EST)
+Received: by CORPORATEEX with Internet Mail Service (5.5.2653.19)
+	id <YBNSG8H1>; Wed, 8 Dec 2004 05:28:35 -0500
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DCFA@CORPORATEEX>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: 'Martin Rubey' <martin.rubey@univie.ac.at>
+Subject: RE: [Axiom-math] trigs and factor
+Date: Wed, 8 Dec 2004 05:28:25 -0500 
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: axiom-math@nongnu.org, cf <cfrangos@telkomsa.net>
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 08 Dec 2004 10:43:33 -0000
+
+In answer to a previous question of a similar nature on the
+axiom-user list:
+
+http://article.gmane.org/gmane.comp.mathematics.axiom.general/16
+
+There are some simple example pdf and TeXmacs (tm) files here.
+
+http://www.linux-france.org/~dmentre/axiom/doc/axiom_texmacs.pkg/Examples%20
+v1.0.2/
+
+The tm files can be used directly with Axiom through the
+tm_axiom interface. See
+
+http://page.axiom-developer.org/zope/mathaction/TeXmacs
+
+On Wednesday, December 08, 2004 4:55 AM Martin Rubey wrote:
+> 
+> 
+> (I'm forwarding this also to axiom-math, since I believe
+> that it is of general interest. I hope I'm not disturbing
+> privacy)
+
+That is a peculiar presumption. Does anyone expect privacy
+on a public mailing list? :) I think it is perfectly ok
+to ask such questions here (and there).
+
+ WE NEED MORE QUESTIONS.
+
+> 
+> Dear CF,
+> 
+> > (1) One of my main interests in axiom is to investigate 
+> > whether it can be used to efficiently perform complicated
+> > symbolic computations and SIMPLIFICATIONS of the resulting
+> > symbolic expressions. My present applications involve
+> > expressions with mainly trigonometric terms, ie
+> > sin(x)cos(y), sin^2(x)cos(z), etc. Please send me some
+> > of the built in axiom simplification commands.
+> ...
+>
+> It would be great if you document your findings on MathAction!
+
+Yes, please ...
+
+
+
+
+From MAILER-DAEMON Thu Dec 09 06:48:58 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CcMn3-0001fM-Rm
+	for mharc-axiom-math@gnu.org; Thu, 09 Dec 2004 06:48:57 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CcMn1-0001ea-D7
+	for axiom-math@nongnu.org; Thu, 09 Dec 2004 06:48:55 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CcMmy-0001dm-H9
+	for axiom-math@nongnu.org; Thu, 09 Dec 2004 06:48:54 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CcMmy-0001di-Bl
+	for axiom-math@nongnu.org; Thu, 09 Dec 2004 06:48:52 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CcMcm-0006ZY-CZ
+	for axiom-math@nongnu.org; Thu, 09 Dec 2004 06:38:26 -0500
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iB9Bbn1B683320;
+	Thu, 9 Dec 2004 12:37:54 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16824.14511.421017.939256@gargle.gargle.HOWL>
+Date: Thu, 9 Dec 2004 12:36:15 +0100
+To: "cf" <cfrangos@telkomsa.net>
+In-Reply-To: <200412081212.iB8CCkTG028836@mx1.univie.ac.at>
+References: <200412081212.iB8CCkTG028836@mx1.univie.ac.at>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4248; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: trigs and factor
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 09 Dec 2004 11:48:55 -0000
+
+Dear Constantine,
+
+1. Please send your questions to axiom-math. I'll get them, don't worry.
+
+2.
+
+ > Please send me some examples of functions defined in separate files, etc.
+ > The documentation does not seem to be clear on this topic and some concrete
+ > examples would be very helpful.
+
+Hm. This depends what you want. If you want .input files, I'm of no help
+here. Only: .input files are simply interpreted, just as you would type your
+commands at the prompt.
+
+If you want .spad files, i.e., if you want to write packages, domains or
+categories, these are compiled, and indeed, the axiom book is a little short in
+this regard.
+
+It would be very helpful if you gave an example of what you want to
+achieve. Something like: I want a function, that given this and that produces
+this and that. Another function does this and the third one that.
+
+ > For example if you have a script calling several functions, which in turn
+ > call others, and so on, amounting in the end to dozens or hundreds (or more)
+ > functions. Then do you have to have the same number of reads in the original
+ > script file: 
+
+yes. I suppose you can also write
+
+)read fun1.input fun2.input,......but I didn't try.
+
+ > Is there no way that axiom can "search" for these files in the current
+ > directory and "read them in" automatically, in the same way that it reads in
+ > its own built in functions ?? This is what Matlab is doing.
+
+I don't think so.
+
+ > With regard to the above, please expand on the possibilities of using
+ > domains - some example files will be very helpful - thanks.
+
+ > > If your operations are reusable, you might prefer "packages". These group
+ > > together operations that work for any domain in a specified category. If >
+ > > you are interested, I'll expand.
+
+A package look as follows:
+
+)abbrev package TEST TestThisAndThat
+--- this tells the compiler that TEST is the abbrevation of TestThisAndThat
+--- (it is compulsory to give such an abbreviation)
+--- and that you are going to define a package (not a domain, not a category)
+
+TestThisAndThat(R:IntegralDomain): Exports == Implementation where
+--- here you tell the compiler, that the package is about integral domains.
+--- This "parametrization" is what makes packages interesting.
+
+
+    Exports == with
+      double: R -> R
+--- this is a function from R to R. Note that R may be *any* integral domain
+--- this is the "public" part
+
+    Implementation == add
+      double p == 2*p
+--- here we define the function. We have to make sure that we only use
+--- operations that are available for *any* integral domain
+--- this is the "private" part.
+
+Is this something you want to use?
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Dec 09 12:28:26 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CcS5Z-0005vM-SD
+	for mharc-axiom-math@gnu.org; Thu, 09 Dec 2004 12:28:25 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CcS5Y-0005vA-NK
+	for axiom-math@nongnu.org; Thu, 09 Dec 2004 12:28:24 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CcS5Y-0005uy-8w
+	for axiom-math@nongnu.org; Thu, 09 Dec 2004 12:28:24 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CcS5Y-0005uu-6J
+	for axiom-math@nongnu.org; Thu, 09 Dec 2004 12:28:24 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CcRun-0001Ll-Ke
+	for axiom-math@nongnu.org; Thu, 09 Dec 2004 12:17:17 -0500
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iB9HGv1B091834;
+	Thu, 9 Dec 2004 18:17:05 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16824.34859.544885.97495@gargle.gargle.HOWL>
+Date: Thu, 9 Dec 2004 18:15:23 +0100
+To: cfrangos <cfrangos@telkomsa.net>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4248; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] indexed operators
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 09 Dec 2004 17:28:24 -0000
+
+I worked out how to program the indexed operators stuff, see below. Also, I'd
+like to supplement something I called a bug before:
+
+Given
+
+qs:=[operator(subscript('q, [i::OutputForm])::Symbol) for i in 1..3]
+
+I said, that
+
+(qs.1(2*t) 
+
+does not work.
+
+(qs.1)(2*t::EXPR INT)
+
+does, however.
+
+Here is the promised code for indexed operators and setting their derivatives:
+
+)abbrev package TEST Test
+Test(): Exports == Implementation where
+    EI == Expression Integer
+
+    Exports == with
+      tst: () -> EI
+
+    Implementation == add
+      tst () ==
+        qs:=[operator(subscript('q, [i::OutputForm])::Symbol) for i in 1..3]
+        ps:=[operator(subscript('p, [i::OutputForm])::Symbol) for i in 1..3]
+        for i in 1..3 repeat
+          derivative((qs.i)::BasicOperator,(ps.i)(#1))$BasicOperatorFunctions1(EI)
+        
+        var:=t::Symbol::EI
+	D((qs.1)(2*var)+(qs.2)(var),t::Symbol)
+	
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sat Dec 11 17:28:51 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CdFjO-0003lO-Uu
+	for mharc-axiom-math@gnu.org; Sat, 11 Dec 2004 17:28:51 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CdFjN-0003kz-62
+	for axiom-math@nongnu.org; Sat, 11 Dec 2004 17:28:49 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CdFjM-0003kn-O7
+	for axiom-math@nongnu.org; Sat, 11 Dec 2004 17:28:48 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CdFjM-0003kk-J0; Sat, 11 Dec 2004 17:28:48 -0500
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CdFZA-0002JH-OF; Sat, 11 Dec 2004 17:18:16 -0500
+Received: from localhost.localdomain (19.26.252.64.snet.net [64.252.26.19])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iBBMICNb099820; Sat, 11 Dec 2004 17:18:16 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iBBMxFp21044;
+	Sat, 11 Dec 2004 17:59:15 -0500
+Date: Sat, 11 Dec 2004 17:59:15 -0500
+Message-Id: <200412112259.iBBMxFp21044@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] Axiom Conference
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 11 Dec 2004 22:28:49 -0000
+
+*,
+
+We are beginning to plan an Axiom conference for April 22, 2004.
+The conference is a one-day, four speaker affair with a target
+audience of the general scientific user. The idea is to highlight
+the uses and usefulness of Axiom in various scientific areas.
+
+At the momment this is still in the discussion stage and virtually
+nothing has been finalized, including the potential speaker list.
+The only known features are that it will occur on the given date
+and be hosted at City College of New York (my home campus).
+
+I'm giving everyone a chance for early input, including suggestions
+for speakers you'd like to hear, topics you'd like covered, and work
+you might like to present. We want to show engage the general 
+scientific community.
+
+Please send comments directly to daly@idsi.net rather than these lists.
+
+Tim Daly
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Sun Dec 12 12:47:52 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CdXp2-0002m8-1g
+	for mharc-axiom-math@gnu.org; Sun, 12 Dec 2004 12:47:52 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CdXoz-0002lb-Su
+	for axiom-math@nongnu.org; Sun, 12 Dec 2004 12:47:49 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CdXoz-0002lG-5v
+	for axiom-math@nongnu.org; Sun, 12 Dec 2004 12:47:49 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CdXoz-0002l6-1J
+	for axiom-math@nongnu.org; Sun, 12 Dec 2004 12:47:49 -0500
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CdXec-0004Ca-7Z
+	for axiom-math@nongnu.org; Sun, 12 Dec 2004 12:37:06 -0500
+Received: from localhost.localdomain (19.26.252.64.snet.net [64.252.26.19])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iBCHauNb223416; Sun, 12 Dec 2004 12:37:00 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iBCIHxW29208;
+	Sun, 12 Dec 2004 13:17:59 -0500
+Date: Sun, 12 Dec 2004 13:17:59 -0500
+Message-Id: <200412121817.iBCIHxW29208@localhost.localdomain>
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca, axiom-developer@nongnu.org, axiom-math@nongnu.org
+In-reply-to: <001a01c4e019$d3abea80$6501a8c0@Asus> (bill.page1@sympatico.ca)
+References: <001a01c4e019$d3abea80$6501a8c0@Asus>
+Cc: 
+Subject: [Axiom-math] Re: [Axiom-developer] Axiom Conference
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 12 Dec 2004 17:47:50 -0000
+
+Bill,
+
+I'm copying the developer mailing list because I think you
+have a good idea although I'm not sure how many might be interested.
+
+>My first reaction is that one day is too short unless you
+>intend this to be primarily a "local promotional affair".
+>I think many people would find the cost and inconvenience of
+>a trip for a one day meeting prohibitive except perhaps if
+>this is connected with some other related conference at the
+>same venue.
+
+Actually, the axiom conference will follow on the heels of a
+group theory conference which I'm also helping to organize.
+However these are currently disjoint audiences (until I get
+the group theory algebra moved into axiom).
+
+>I think that at least two days is a minimum. And I have some
+>suggestions about what to do on the 2nd day. I expect that
+>there may be a number of specific topics of interest to only
+>a sub-group of participants. So one thing that might be very
+>useful would be to schedule (perhaps in parallel) several
+>special interest sessions.
+
+I ran this by the CAISS Director (Gilbert Baumslag, my boss)
+and he thinks it is a good idea if there is sufficient interest.
+
+>Another thing that I would really like to try is called a
+>"sprint" by the developers of Plone. The idea of a sprint is
+>to get as many active developers together in one place and
+>with enough tools to solve as many known problems with the
+>software in as short a time as possible. This often means
+>working intensively sometimes late into the night - a mode
+>in which open source developers are well known to enjoy :)
+>This seems to have been very effective for Plone. The Plone
+>developers currently schedule at least two of these sprint
+>meetings per year, often just prior to a planned new release.
+>See
+>
+>http://plone.org/events/sprints/whatis/view
+
+The "sprint" is a very appealing idea. We have a lab with about 20
+machines over which I have complete control. It would be very
+productive (and from my point of view a huge amount of fun) to get a
+group of developers together. I know we manage to make progress now
+but it would be so much more productive to have many eyes on problems
+at the same location. Plus we could have a good discussion of future
+directions, additional algebra, etc.
+
+So is there any interest in either or both of these ideas
+(a two-day vs one-day conference, a 'sprint' meeting)?
+
+t
+
+
+
+From MAILER-DAEMON Mon Dec 13 10:05:18 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CdrlG-000241-1d
+	for mharc-axiom-math@gnu.org; Mon, 13 Dec 2004 10:05:18 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CdrlE-00023f-9t
+	for axiom-math@nongnu.org; Mon, 13 Dec 2004 10:05:16 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CdrlD-00023T-Rq
+	for axiom-math@nongnu.org; Mon, 13 Dec 2004 10:05:16 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CdrlD-00023Q-PW
+	for axiom-math@nongnu.org; Mon, 13 Dec 2004 10:05:15 -0500
+Received: from [196.25.211.7] (helo=mail.telkomsa.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CdrZE-0007li-2S
+	for axiom-math@nongnu.org; Mon, 13 Dec 2004 09:52:52 -0500
+Received: (qmail 1757 invoked from network); 13 Dec 2004 14:50:56 -0000
+Received: from 155.239.188.189 by desdemona.telkomsa.net (envelope-from
+	<cfrangos@telkomsa.net>, uid 81) with qmail-scanner-1.24 
+	(clamdscan: 0.80/557.  Clear:RC:1(155.239.188.189):. 
+	Processed in 0.292576 secs); 13 Dec 2004 14:50:56 -0000
+X-Qmail-Scanner-Mail-From: cfrangos@telkomsa.net via desdemona.telkomsa.net
+X-Qmail-Scanner: 1.24 (Clear:RC:1(155.239.188.189):. Processed in 0.292576
+	secs)
+Received: from unknown (HELO wnmvihjd) ([155.239.188.189])
+	(envelope-sender <cfrangos@telkomsa.net>)
+	by O (qmail-ldap-1.03) with SMTP
+	for <axiom-math@nongnu.org>; 13 Dec 2004 14:50:55 -0000
+From: "cf" <cfrangos@telkomsa.net>
+To: <axiom-math@nongnu.org>
+Date: Mon, 13 Dec 2004 13:11:58 +0200
+X-MSMail-Priority: Normal
+X-Priority: 3
+X-Mailer: Microsoft Internet Mail 4.70.1155
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Qmail-Scanner-Message-ID: <11029494566801667@desdemona.telkomsa.net>
+Message-Id: <E1CdrlD-00023T-Rq@lists.gnu.org>
+Subject: [Axiom-math] (no subject)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 13 Dec 2004 15:05:16 -0000
+
+
+12 November 2004
+
+Dear Colleagues,
+
+I have pasted below two files: expandsincos.input and testkinemat1.input. 
+
+Any assistance with the following will be appreciated:
+
+
+(1) I am trying to read expandsincos.input from within
+    testkinemat1.input but this gives an error. Not clear why ??
+
+(2) What worked is to execute from the command line:
+
+    )read expandsincos.input
+    )read testkinemat1.input
+
+    However, there does not seem to be much simplification.
+
+(3) I tried to write the script testkinemat1.input like a function
+    without input or output variables (see below) but this gave
+    errors. Not clear why ??
+
+(4) Any examples of how to write user functions calling other user
+    functions, etc would be much appreciated. Especially the case
+    where a function can return multiple variables eg. in matlab: 
+
+    [x1,x2,x3] = func1(y1,y2,y3);
+
+    In view of the errors in (1), (3) above, its not clear how the "reading
+in" of
+    .input files should be done. 
+
+(5) In axiom what is the instruction to "pause" after the execution of
+    a line, and continue after hitting enter ? eg in matlab: 
+    a = 1 
+    pause; 
+    b = 3 
+    pause;
+
+
+
+-- expandsincos.input
+-- Basic trigonometric expansion rules for axiom.
+--cos(2*x) == cos(x)**2 - sin(x)**2
+
+expandsincos := rule ( sin(x+y) == sin(x)*cos(y) + sin(y)*cos(x); cos(x+y)
+== cos(x)*cos(y) - sin(x)*sin(y); sin(2*x)  == 2*sin(x)*cos(x); cos(2*x) ==
+cos(x)*cos(x) - sin(x)*sin(x));
+
+
+
+
+--testkinemat1.input 
+
+--testkinemat1() ==_ 
+
+--)read expandsincos.input;
+
+Acon := matrix([[1, 0, Lo2*cos(phi)+Lo1*sin(phi), -sin(delta1)*a,0,0,0],_
+[0, 1, Lo2*sin(phi)-Lo1*cos(phi), a*cos(delta1), 0, 0, 0],_
+[0,1, Lo2*sin(phi)+Lo1*cos(phi), 0, a*cos(delta1), 0, 0],_
+[1, 0,-Lo2*cos(phi)+Lo1*sin(phi), 0, 0, -sin(delta2)*a, 0],_
+[0, 1,-Lo2*sin(phi)-Lo1*cos(phi), 0, 0, a*cos(delta2), 0],_
+[1, 0,-Lo2*cos(phi)-Lo1*sin(phi), 0, 0, 0, -sin(delta2)*a],_
+[0, 1, -Lo2*sin(phi)+Lo1*cos(phi), 0, 0, 0, a*cos(delta2)]])
+
+detAcon:=determinant(Acon)
+
+--detAcon:=factor(detAcon)
+
+detAcon:=expandsincos(detAcon)
+
+detAcon:=simplify(detAcon)
+
+
+
+
+Best regards,
+
+
+C. Frangos.
+
+
+
+------
+Constantine Frangos.
+Professor
+Dept. of Mathematics and Statistics
+Rand Afrikaans University
+P O Box 524
+Auckland Park 2006
+South Africa
+
+Tel: +27-11-489-2452
+Fax: +27-11-489-2832
+e-mail: cf@rau.ac.za (work)
+              cfrangos@telkomsa.net (home)
+
+
+
+
+
+From MAILER-DAEMON Mon Dec 13 13:59:23 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CdvPn-0004Sg-8k
+	for mharc-axiom-math@gnu.org; Mon, 13 Dec 2004 13:59:23 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CdvPl-0004Sb-UZ
+	for axiom-math@nongnu.org; Mon, 13 Dec 2004 13:59:22 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CdvPl-0004SP-Cm
+	for axiom-math@nongnu.org; Mon, 13 Dec 2004 13:59:21 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CdvPl-0004SM-8Y
+	for axiom-math@nongnu.org; Mon, 13 Dec 2004 13:59:21 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CdvFN-0001Ol-B0
+	for axiom-math@nongnu.org; Mon, 13 Dec 2004 13:48:37 -0500
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iBDImMso454946;
+	Mon, 13 Dec 2004 19:48:25 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16829.58261.787237.767717@gargle.gargle.HOWL>
+Date: Mon, 13 Dec 2004 19:46:45 +0100
+To: "cf" <cfrangos@telkomsa.net>
+Subject: Re: [Axiom-math] input files, functions
+In-Reply-To: <E1CdrlD-00023T-Rq@lists.gnu.org>
+References: <E1CdrlD-00023T-Rq@lists.gnu.org>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4247; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 13 Dec 2004 18:59:22 -0000
+
+Dear Constantine,
+
+I tried your files, but it seems to me that they do work, in fact.
+
+Given the two files
+
+--testkinemat1.input
+
+)read expandsincos.input
+
+Acon := matrix([[1, 0, Lo2*cos(phi)+Lo1*sin(phi), -sin(delta1)*a, 0, 0, 0],_
+                [0, 1, Lo2*sin(phi)-Lo1*cos(phi),  a*cos(delta1), 0, 0, 0],_
+                [0, 1, Lo2*sin(phi)+Lo1*cos(phi), 0,  a*cos(delta1), 0, 0],_
+                [1, 0,-Lo2*cos(phi)+Lo1*sin(phi), 0, 0, -sin(delta2)*a, 0],_
+                [0, 1,-Lo2*sin(phi)-Lo1*cos(phi), 0, 0,  a*cos(delta2), 0],_
+                [1, 0,-Lo2*cos(phi)-Lo1*sin(phi), 0, 0, 0, -sin(delta2)*a],_
+                [0, 1,-Lo2*sin(phi)+Lo1*cos(phi), 0, 0, 0, a*cos(delta2)]])
+
+detAcon:=determinant(Acon)
+
+--detAcon:=factor(detAcon)
+
+detAcon:=expandsincos(detAcon)
+
+detAcon:=simplify(detAcon)
+
+-- expandsincos.input
+-- Basic trigonometric expansion rules for axiom.
+-- cos(2*x) == cos(x)**2 - sin(x)**2
+
+expandsincos := rule (sin(x+y) == sin(x)*cos(y) + sin(y)*cos(x); _
+                      cos(x+y) == cos(x)*cos(y) - sin(x)*sin(y); _
+                      sin(2*x) == 2*sin(x)*cos(x); _
+                      cos(2*x) == cos(x)*cos(x) - sin(x)*sin(x)); 
+
+typing
+
+)read testkinemat1.input
+
+does what is expected. Note that there must not be a semicolon after the
+filename!
+ 
+ > (1) I am trying to read expandsincos.input from within
+ >     testkinemat1.input but this gives an error. Not clear why ??
+
+I suspect that the error was something like
+
+The file expandsincos.input; is needed but does not exist.
+
+ > (3) I tried to write the script testkinemat1.input like a function
+ >     without input or output variables (see below) but this gave
+ >     errors. Not clear why ??
+
+No! )read is a system command, not a "usual" operation. Sytem commands always
+start with a ")". I believe that the want to be quite on their own, one per
+line. 
+ 
+ > (4) Any examples of how to write user functions calling other user
+ >     functions, etc would be much appreciated. Especially the case
+ >     where a function can return multiple variables eg. in matlab: 
+ > 
+ >     [x1,x2,x3] = func1(y1,y2,y3);
+
+This just means that func1 is a function that returns a list. For example
+
+(9) -> f:=(a,b,c)+->[a,b,c,a+b+c]
+
+   Loading /home/martin/axiom/mnt/linux/algebra/ANON.o for domain 
+      AnonymousFunction 
+   (9)  (a,b,c) +-> [a,b,c,a + b + c]
+                                                      Type: AnonymousFunction
+(10) -> f(1,2,3)
+
+   (10)  [1,2,3,6]
+                                                   Type: List PositiveInteger
+
+
+ > (5) In axiom what is the instruction to "pause" after the execution of
+ >     a line, and continue after hitting enter ? eg in matlab: 
+ >     a = 1 
+ >     pause; 
+ >     b = 3 
+ >     pause;
+
+Sorry, I don't know. Quite possible that such a thing does not exist.
+
+All the best,
+
+Martin
+
+PS: do you use the Windows or Linux version?
+
+
+
+
+From MAILER-DAEMON Tue Dec 14 07:21:35 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CeBgM-0000kc-GU
+	for mharc-axiom-math@gnu.org; Tue, 14 Dec 2004 07:21:34 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CeBgJ-0000jA-Ry
+	for axiom-math@nongnu.org; Tue, 14 Dec 2004 07:21:31 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CeBgJ-0000ix-6I
+	for axiom-math@nongnu.org; Tue, 14 Dec 2004 07:21:31 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CeBgJ-0000iu-37
+	for axiom-math@nongnu.org; Tue, 14 Dec 2004 07:21:31 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CeBW8-0000lA-2Y
+	for axiom-math@nongnu.org; Tue, 14 Dec 2004 07:11:00 -0500
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iBECAZso394114;
+	Tue, 14 Dec 2004 13:10:38 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16830.55259.301979.770324@gargle.gargle.HOWL>
+Date: Tue, 14 Dec 2004 13:08:59 +0100
+To: "cf" <cfrangos@telkomsa.net>
+Subject: Re: [Axiom-math] input files, functions
+In-Reply-To: <200412141135.iBEBZb2g004003@mx1.univie.ac.at>
+References: <200412141135.iBEBZb2g004003@mx1.univie.ac.at>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4248; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 14 Dec 2004 12:21:32 -0000
+
+Dear Constantine,
+
+ > I am using the linux version of axiom but cannot do any graphics.
+
+OK, thats also what I use. I don't know the state of he art of graphics, in
+fact. It seems that it works on linux, but I didn't try it out.
+
+  
+ > I have texmacs, but do not have the "interface" file to work with axiom. Is
+ > it possible to run axiom from within texmacs and thus do graphics somehow ??
+
+I don't have texmacs, I use emacs. As far as I know, graphics doesn't have
+anything to do with texmacs. More information on using Axiom with TeXmacs:
+
+http://page.axiom-developer.org/zope/mathaction/TeXmacs
+
+As you are running linux, it might be that your installation is broken. The
+page above says, that it should work "out of the box". Maybe you installed
+TeXmacs before axiom?
+
+ > In the meantime I have downloaded the program maxima you mentioned in your
+ > previous email and printed the manual. However, its not at all clear how to
+ > write programs/scripts to do symbolic computations with matrices,
+ > simplifications, etc.
+
+I found that programming in the maxima language was a pain. However, maxima is
+wonderful, if you like programming in lisp. In this case, you can program in
+lisp and use all the available Maxima functions. Otherwise I wouldn't recommend
+it as a programming tool.
+
+ > If possible, please email me some example programs and how to run them with
+ > maxima, and any clear maxima tutorials if available - thanks very much.
+
+I don't have any, sorry. You'll have to ask the maxima people.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Dec 15 10:58:23 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CebXj-0001US-Cx
+	for mharc-axiom-math@gnu.org; Wed, 15 Dec 2004 10:58:23 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CebXg-0001Te-6t
+	for axiom-math@nongnu.org; Wed, 15 Dec 2004 10:58:20 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CebXe-0001SW-94
+	for axiom-math@nongnu.org; Wed, 15 Dec 2004 10:58:18 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CebXe-0001SD-13
+	for axiom-math@nongnu.org; Wed, 15 Dec 2004 10:58:18 -0500
+Received: from [196.25.211.6] (helo=mail.telkomsa.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CebNM-0001yg-V9
+	for axiom-math@nongnu.org; Wed, 15 Dec 2004 10:47:41 -0500
+Received: (qmail 22439 invoked from network); 15 Dec 2004 15:47:37 -0000
+Received: from 155.239.188.234 by ariel.telkomsa.net (envelope-from
+	<cfrangos@telkomsa.net>, uid 81) with qmail-scanner-1.24 
+	(clamdscan: 0.80/557.  Clear:RC:1(155.239.188.234):. 
+	Processed in 0.474286 secs); 15 Dec 2004 15:47:37 -0000
+X-Qmail-Scanner-Mail-From: cfrangos@telkomsa.net via ariel.telkomsa.net
+X-Qmail-Scanner: 1.24 (Clear:RC:1(155.239.188.234):. Processed in 0.474286
+	secs)
+Received: from unknown (HELO wnmvihjd) ([155.239.188.234])
+	(envelope-sender <cfrangos@telkomsa.net>)
+	by O (qmail-ldap-1.03) with SMTP
+	for <axiom-math@nongnu.org>; 15 Dec 2004 15:47:37 -0000
+From: "cf" <cfrangos@telkomsa.net>
+To: <axiom-math@nongnu.org>
+Date: Wed, 15 Dec 2004 14:10:06 +0200
+X-MSMail-Priority: Normal
+X-Priority: 3
+X-Mailer: Microsoft Internet Mail 4.70.1155
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Qmail-Scanner-Message-ID: <110312565768022406@ariel.telkomsa.net>
+Message-Id: <E1CebXe-0001SW-94@lists.gnu.org>
+Subject: [Axiom-math] (no subject)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 15 Dec 2004 15:58:20 -0000
+
+
+15 December 2004
+
+Dear Colleagues,
+
+Any assistance with the following would be appreciated:
+
+
+ (1) I tried to plot something but no plot window appeared:
+ 
+ (20) -> draw(cos(t),t=0..%pi);
+    Compiling function %E with type DoubleFloat -> DoubleFloat 
+    Graph data being transmitted to the viewport manager...
+    AXIOM2D data being transmitted to the viewport manager...
+ 
+                                                  Type:
+ TwoDimensionalViewport
+
+It was recommended to run sman but this is not an executable file on my
+system. 
+There is a file sman.H1, but this seems to be a C header file. Can
+something be modified ??
+
+
+
+(2)  I tried to write the script testkinemat1.input (pasted below) like a
+function
+    without input or output variables (see below) but this gave
+    errors. Not clear what must be done ??
+
+
+--testkinemat1.input 
+
+--testkinemat1() ==_ 
+
+Acon := matrix([[1, 0, Lo2*cos(phi)+Lo1*sin(phi), -sin(delta1)*a,0,0,0],_
+[0, 1, Lo2*sin(phi)-Lo1*cos(phi), a*cos(delta1), 0, 0, 0],_
+[0,1, Lo2*sin(phi)+Lo1*cos(phi), 0, a*cos(delta1), 0, 0],_
+[1, 0,-Lo2*cos(phi)+Lo1*sin(phi), 0, 0, -sin(delta2)*a, 0],_
+[0, 1,-Lo2*sin(phi)-Lo1*cos(phi), 0, 0, a*cos(delta2), 0],_
+[1, 0,-Lo2*cos(phi)-Lo1*sin(phi), 0, 0, 0, -sin(delta2)*a],_
+[0, 1, -Lo2*sin(phi)+Lo1*cos(phi), 0, 0, 0, a*cos(delta2)]])
+
+detAcon:=determinant(Acon)
+
+--detAcon:=factor(detAcon)
+
+detAcon:=simplify(detAcon)
+
+
+ 
+ Best regards,
+
+C. Frangos.
+
+------
+Constantine Frangos.
+Professor
+Dept. of Mathematics and Statistics
+Rand Afrikaans University
+P O Box 524
+Auckland Park 2006
+South Africa
+
+Tel: +27-11-489-2452
+Fax: +27-11-489-2832
+e-mail: cf@rau.ac.za (work)
+              cfrangos@telkomsa.net (home)
+
+
+
+
+
+From MAILER-DAEMON Wed Dec 15 11:20:17 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Cebsv-0002lB-Mj
+	for mharc-axiom-math@gnu.org; Wed, 15 Dec 2004 11:20:17 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Cebst-0002jU-RR
+	for axiom-math@nongnu.org; Wed, 15 Dec 2004 11:20:15 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Cebsr-0002hp-2x
+	for axiom-math@nongnu.org; Wed, 15 Dec 2004 11:20:14 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Cebsq-0002hm-W2
+	for axiom-math@nongnu.org; Wed, 15 Dec 2004 11:20:13 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Cebi4-0002tj-1W
+	for axiom-math@nongnu.org; Wed, 15 Dec 2004 11:09:04 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iBFG8jso447026;
+	Wed, 15 Dec 2004 17:08:49 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16832.24876.403219.737788@seam101.local>
+Date: Wed, 15 Dec 2004 17:07:08 +0100
+To: "cf" <cfrangos@telkomsa.net>
+Subject: Re: [Axiom-math] graphics, long function defs
+In-Reply-To: <E1CebXe-0001SW-94@lists.gnu.org>
+References: <E1CebXe-0001SW-94@lists.gnu.org>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4248; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 15 Dec 2004 16:20:16 -0000
+
+Dear Constantine,
+
+* it would help a lot if you'd provide descriptive subject lines.
+
+cf writes:
+ >  (1) I tried to plot something but no plot window appeared:
+ >  
+ >  (20) -> draw(cos(t),t=0..%pi);
+ >     Compiling function %E with type DoubleFloat -> DoubleFloat 
+ >     Graph data being transmitted to the viewport manager...
+ >     AXIOM2D data being transmitted to the viewport manager...
+ >  
+ >                                                   Type:
+ >  TwoDimensionalViewport
+ > 
+ > It was recommended to run sman but this is not an executable file on my
+ > system. 
+ > There is a file sman.H1, but this seems to be a C header file. Can
+ > something be modified ??
+
+Can't help here since I don't have graphics yet. Tomorrow, maybe. I think
+without sman it won't work...
+
+ > (2)  I tried to write the script testkinemat1.input (pasted below) like a
+ > function
+ >     without input or output variables (see below) but this gave
+ >     errors. Not clear what must be done ??
+
+It might be that a function definition in an input file needs line
+continuations on every line. Furthermore, a function definition in an input
+file (i.e., if it is interpreted, rather than compiled) looks like
+
+fun() == (statement1; statement2; statement3)
+
+statement3 is the result of the function. Hence:
+
+ fun x == x; 1+1
+
+will define a function (in fact, a so-called macro), that always returns x and
+then evaluate the expression 1+1, giving 2. In this case, fun(x) will return x!
+On the other hand,
+
+ fun x == (x; 1+1)
+
+will define a function that always returns 2.
+
+Applying this to your situation:
+
+testkinemat1() == (_
+_
+Acon := matrix([[1, 0, Lo2*cos(phi)+Lo1*sin(phi), -sin(delta1)*a,0,0,0],_
+[0, 1, Lo2*sin(phi)-Lo1*cos(phi), a*cos(delta1), 0, 0, 0],_
+[0,1, Lo2*sin(phi)+Lo1*cos(phi), 0, a*cos(delta1), 0, 0],_
+[1, 0,-Lo2*cos(phi)+Lo1*sin(phi), 0, 0, -sin(delta2)*a, 0],_
+[0, 1,-Lo2*sin(phi)-Lo1*cos(phi), 0, 0, a*cos(delta2), 0],_
+[1, 0,-Lo2*cos(phi)-Lo1*sin(phi), 0, 0, 0, -sin(delta2)*a],_
+[0, 1, -Lo2*sin(phi)+Lo1*cos(phi), 0, 0, 0, a*cos(delta2)]]);_
+_
+detAcon:=determinant(Acon);_
+_
+detAcon:=simplify(detAcon))
+
+It also seems, that such a macro definition doesn't like comments inbetween...
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Dec 15 13:11:23 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CedcR-0003fT-Dh
+	for mharc-axiom-math@gnu.org; Wed, 15 Dec 2004 13:11:23 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CedcO-0003c4-2e
+	for axiom-math@nongnu.org; Wed, 15 Dec 2004 13:11:20 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CedcJ-0003Zs-8W
+	for axiom-math@nongnu.org; Wed, 15 Dec 2004 13:11:18 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CedcI-0003ZB-TY
+	for axiom-math@nongnu.org; Wed, 15 Dec 2004 13:11:14 -0500
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CedRB-0000px-07
+	for axiom-math@nongnu.org; Wed, 15 Dec 2004 12:59:45 -0500
+Received: from localhost.localdomain (25.117.252.64.snet.net [64.252.117.25])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iBFHxVNb136702; Wed, 15 Dec 2004 12:59:35 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iBFIeVM01157;
+	Wed, 15 Dec 2004 13:40:31 -0500
+Date: Wed, 15 Dec 2004 13:40:31 -0500
+Message-Id: <200412151840.iBFIeVM01157@localhost.localdomain>
+From: root <daly@idsi.net>
+To: cfrangos@telkomsa.net
+In-reply-to: <E1CebXe-0001SW-94@lists.gnu.org> (cfrangos@telkomsa.net)
+Subject: Re: [Axiom-math] (no subject)
+References: <E1CebXe-0001SW-94@lists.gnu.org>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 15 Dec 2004 18:11:20 -0000
+
+Constantine,
+
+If you are on a linux system then you need to set the AXIOM and PATH
+shell variables. cd to the top level axiom directory and type:
+
+export AXIOM=`pwd`/mnt/linux
+export PATH=$AXIOM/bin:$PATH
+sman
+draw(sin(x),x=-10..10)
+draw(sin(x*y),x=-10..10,y=-10..10)
+
+If you are using the windows version the graphics does not yet work there.
+
+Tim
+
+
+
+From MAILER-DAEMON Fri Dec 17 10:04:00 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CfJeC-00045O-9A
+	for mharc-axiom-math@gnu.org; Fri, 17 Dec 2004 10:04:00 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CfJeB-00045J-K0
+	for axiom-math@nongnu.org; Fri, 17 Dec 2004 10:03:59 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CfJeB-000457-5z
+	for axiom-math@nongnu.org; Fri, 17 Dec 2004 10:03:59 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CfJeB-000454-1C
+	for axiom-math@nongnu.org; Fri, 17 Dec 2004 10:03:59 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CfJTT-0002Yw-3o
+	for axiom-math@nongnu.org; Fri, 17 Dec 2004 09:52:55 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iBHEqctb103238;
+	Fri, 17 Dec 2004 15:52:40 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16834.62036.605631.50844@seam101.local>
+Date: Fri, 17 Dec 2004 15:51:00 +0100
+To: "cf" <cfrangos@telkomsa.net>
+Subject: Re: [Axiom-math] graphics, long function defs
+In-Reply-To: <200412171331.iBHDVl92048056@mx3.univie.ac.at>
+References: <200412171331.iBHDVl92048056@mx3.univie.ac.at>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 17 Dec 2004 15:03:59 -0000
+
+cf writes:
+ > 
+ > Dear Martin,
+ > 
+ > I implemented the script as a function as you showed below. When I type:
+ > 
+ > )read testkinemat1.input
+ > testkinemat1
+ > 
+ > axiom simply displays the function definition without executing the
+ > statements
+
+which is the way it works:
+
+testkinemat1 returns the function
+
+testkinemat1() returns the result of the function.
+
+Only, if the function takes *exactly* one argument, you can leave away the
+parentheses.
+
+ > Also, if I remove the semicolon in a statement in the function, then the
+ > results are not displayed as expected. Not clear why.
+
+The semicolons do have a meaning:
+
+(a;b;c) 
+
+executes a, then b, then c and returns the result of executing c.
+
+(a b;c) 
+
+is nonsense.
+
+In interpreted code, there mustn't be a line break *within* a
+function. Therefore, a "line continuation character, namely "_" is provided, to
+make it possible to have long function definitions. When the interpreter sees
+"_", it "swallows" the following line break.
+
+Martin
+
+
+
+
+
+From MAILER-DAEMON Sun Dec 19 10:18:02 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Cg2or-0004yf-Ra
+	for mharc-axiom-math@gnu.org; Sun, 19 Dec 2004 10:18:02 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Cg2op-0004yB-VN
+	for axiom-math@nongnu.org; Sun, 19 Dec 2004 10:18:00 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Cg2oo-0004xX-M9
+	for axiom-math@nongnu.org; Sun, 19 Dec 2004 10:17:58 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Cg2oo-0004xR-Hn
+	for axiom-math@nongnu.org; Sun, 19 Dec 2004 10:17:58 -0500
+Received: from [151.189.20.156] (helo=postman.arcor.de)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1Cg2Zp-0002w1-Nn
+	for axiom-math@nongnu.org; Sun, 19 Dec 2004 10:02:30 -0500
+Received: from fthieme.net (dsl-084-056-218-158.arcor-ip.net [84.56.218.158])
+	(authenticated bits=0)
+	by postman.arcor.de (8.13.0.PreAlpha4/8.13.0.PreAlpha4) with ESMTP id
+	iBJF2RR1025276
+	(version=TLSv1/SSLv3 cipher=EDH-RSA-DES-CBC3-SHA bits=168 verify=NO)
+	for <axiom-math@nongnu.org>; Sun, 19 Dec 2004 16:02:28 +0100 (MET)
+Received: from [3ffe:400:280:3013:260:b3ff:fe66:a196] (helo=stars.fthieme.net)
+	by fthieme.net with esmtpsa (TLSv1:RC4-MD5:128) (Exim 4.43)
+	id 1Cg2Zm-00027c-0E
+	for axiom-math@nongnu.org; Sun, 19 Dec 2004 16:02:26 +0100
+From: Frank Thieme <frank@fthieme.net>
+To: axiom-math@nongnu.org
+Content-Type: text/plain
+Date: Sun, 19 Dec 2004 16:01:55 +0100
+Message-Id: <1103468515.4301.19.camel@stars.fthieme.net>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.0.3 
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-math] newbie type problem
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 19 Dec 2004 15:18:00 -0000
+
+Hi!
+
+I'm brand new to axiom, trying to solve my homework.
+
+We shall redefine differentiation via rules. I have a simple idea to
+solve this, and rules seem really simple, but I can't get a usefule
+starting function defined.
+
+My idea is to have a function abl(f,x) which simply does n*x^m ->
+n*m*x^(m-1). So I defined:
+
+apl(f,x) == coefficient(f,degree(f,x))*degree(f,x)*x^(degree(f,x)-1)
+
+the same thing works great with maxima (but I can't get any rules
+defined there). But axiom does some error messages when I try abl(x^5,x)
+but then the correct result is displayed 5x^4
+
+When I try abl(x,x) it does not work, abl(5,x) either...
+
+any hints?
+
+Bye...Frank
+
+
+
+
+From MAILER-DAEMON Mon Dec 20 05:42:21 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CgKzd-0007ne-BZ
+	for mharc-axiom-math@gnu.org; Mon, 20 Dec 2004 05:42:21 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CgKzG-0007hW-Ox
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 05:42:02 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CgKzE-0007gv-Qj
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 05:41:57 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CgKzE-0007gk-Ep
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 05:41:56 -0500
+Received: from [196.25.211.4] (helo=mail.telkomsa.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CgKjZ-0005RV-Rf
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 05:25:46 -0500
+Received: (qmail 26319 invoked from network); 20 Dec 2004 10:25:40 -0000
+Received: from 155.239.188.125 by portia.telkomsa.net (envelope-from
+	<cfrangos@telkomsa.net>, uid 81) with qmail-scanner-1.24 
+	(clamdscan: 0.80/557.  Clear:RC:1(155.239.188.125):. 
+	Processed in 0.35367 secs); 20 Dec 2004 10:25:40 -0000
+X-Qmail-Scanner-Mail-From: cfrangos@telkomsa.net via portia.telkomsa.net
+X-Qmail-Scanner: 1.24 (Clear:RC:1(155.239.188.125):. Processed in 0.35367 secs)
+Received: from unknown (HELO wnmvihjd) ([155.239.188.125])
+	(envelope-sender <cfrangos@telkomsa.net>)
+	by O (qmail-ldap-1.03) with SMTP
+	for <axiom-math@nongnu.org>; 20 Dec 2004 10:25:39 -0000
+From: "cf" <cfrangos@telkomsa.net>
+To: <axiom-math@nongnu.org>
+Date: Mon, 20 Dec 2004 08:43:11 +0200
+X-MSMail-Priority: Normal
+X-Priority: 3
+X-Mailer: Microsoft Internet Mail 4.70.1155
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Qmail-Scanner-Message-ID: <110353834068026297@portia.telkomsa.net>
+Message-Id: <E1CgKzE-0007gv-Qj@lists.gnu.org>
+Subject: [Axiom-math] (no subject)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Dec 2004 10:42:05 -0000
+
+
+20 December 2004
+
+Dear Colleagues,
+
+Any assistance with the following will be appreciated:
+
+(1) In a user defined function what is the instruction to display something
+like a symbolic
+     variable, etc., and then to pause (and continue after hitting enter)
+??
+
+    eg in matlab: 
+    a = 1 
+    pause; 
+    b = 3 
+    pause;
+
+(2) In axiom is there a built-in function to solve a set of nonlinear
+equations analytically (or if                           necessary
+numerically) wrt the user specified unknowns ??
+      
+    eg. in matlab
+    solve('x1*x2 + a*x2^2 = 10', ' x1 - x2 = 2', 'x1', 'x2');
+
+
+Regards,
+
+C. Frangos.
+ 
+------
+Constantine Frangos.
+Professor
+Dept. of Mathematics and Statistics
+Rand Afrikaans University
+P O Box 524
+Auckland Park 2006
+South Africa
+
+Tel: +27-11-489-2452
+Fax: +27-11-489-2832
+e-mail: cf@rau.ac.za (work)
+              cfrangos@telkomsa.net (home)
+
+
+
+
+
+From MAILER-DAEMON Mon Dec 20 05:59:19 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CgLG2-0004Td-TX
+	for mharc-axiom-math@gnu.org; Mon, 20 Dec 2004 05:59:19 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CgLG1-0004TA-9T
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 05:59:17 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CgLFz-0004Sf-N5
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 05:59:16 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CgLFx-0004SN-L1
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 05:59:14 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CgL4E-0006jV-0T
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 05:47:06 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iBKAkltb465734;
+	Mon, 20 Dec 2004 11:46:51 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16838.44339.930322.153866@seam101.local>
+Date: Mon, 20 Dec 2004 11:45:07 +0100
+To: Frank Thieme <frank@fthieme.net>
+Subject: Re: [Axiom-math] newbie type problem
+In-Reply-To: <1103468515.4301.19.camel@stars.fthieme.net>
+References: <1103468515.4301.19.camel@stars.fthieme.net>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Dec 2004 10:59:17 -0000
+
+Frank Thieme writes:
+
+ > I'm brand new to axiom, trying to solve my homework.
+
+Welcome!
+
+> My idea is to have a function abl(f,x) which simply does n*x^m ->
+> n*m*x^(m-1). So I defined:
+> 
+> apl(f,x) == coefficient(f,degree(f,x))*degree(f,x)*x^(degree(f,x)-1)
+> 
+> the same thing works great with maxima (but I can't get any rules defined
+> there). But axiom does some error messages when I try abl(x^5,x) but then the
+> correct result is displayed 5x^4
+> 
+> When I try abl(x,x) it does not work, abl(5,x) either...
+
+The reason, that abl(x,x) does not work is displayed by axiom:
+
+   There are 7 exposed and 5 unexposed library operations named 
+      coefficient having 2 argument(s) but none was determined to be 
+      applicable. Use HyperDoc Browse, or issue
+                           )display op coefficient
+      to learn more about the available operations. Perhaps 
+      package-calling the operation or using coercions on the arguments
+      will allow you to apply the operation.
+ 
+   Cannot find a definition or applicable library operation named 
+      coefficient with argument type(s) 
+                                 Variable x
+                               PositiveInteger
+      
+      Perhaps you should use "@" to indicate the required return type, 
+      or "$" to specify which version of the function you need.
+
+So, what does this mean? if you look at the output of 
+
+)di op coefficient
+
+axiom will respond with a (long) list of operations called
+"coefficient". Usually, you are only interested in the "exposed" operations,
+that is, those that are available "directly". (I could expand on this, but I
+think for the moment it should be enough)
+
+There are 11 exposed functions called coefficient :
+   [1] (D,D2) -> D1 from D
+            if D has AMR(D1,D2) and D2 has OAMON and D1 has RING
+   [2] (CliffordAlgebra(D3,D1,D4),List PositiveInteger) -> D1
+            from CliffordAlgebra(D3,D1,D4)
+            if D1 has FIELD and D3: PI and D4: QFORM(D3,D1)
+   [3] (D2,D) -> D1 from D
+            if D has FAMONC(D2,D1) and D2 has SETCAT and D1 has CABMON
+            
+   [4] (D,D2) -> D1 from D
+            if D has FMCAT(D1,D2) and D2 has SETCAT and D1 has RING
+   [5] (D,NonNegativeInteger) -> D1 from D if D has MLO D1 and D1 has 
+            RING
+   [6] (D,List D4,List NonNegativeInteger) -> D from D
+            if D has MTSCAT(D3,D4) and D3 has RING and D4 has ORDSET
+         
+   [7] (D,D1,NonNegativeInteger) -> D from D
+            if D has MTSCAT(D3,D1) and D3 has RING and D1 has ORDSET
+         
+   [8] (D,NonNegativeInteger) -> D1 from D
+            if D has OREPCAT D1 and D1 has RING
+   [9] (D,List D5,List NonNegativeInteger) -> D from D
+            if D has POLYCAT(D3,D4,D5) and D3 has RING and D4 has 
+            OAMONS and D5 has ORDSET
+   [10] (D,D1,NonNegativeInteger) -> D from D
+            if D has POLYCAT(D3,D4,D1) and D3 has RING and D4 has 
+            OAMONS and D1 has ORDSET
+   [11] (TaylorSeries D3,NonNegativeInteger) -> Polynomial D3
+            from TaylorSeries D3 if D3 has RING
+
+Note that they are all different, they take different numbers of arguments, and
+the types of those arguments are also different. For example, [11] takes a
+(univariate) TaylorSeries over a Ring as first, and a NonNegativeInteger as
+second argument.
+
+Your rule gave axiom a "Variable x" as first and a PositiveInteger as second
+argument. In the list above, there are seven operations with two arguments:
+[1],[2],[3],[4],[5],[8],and [11], but none of them applies.
+
+So, this is the low level reason. The "real", high level reason is: what would
+you expect as answer from
+
+coefficient(x*y,1) ?
+
+Surely, you should make your question more precise, by specifying the variable:
+
+coefficient(x*y,x,1).
+
+So, I'd write:
+
+abl(f,x) == coefficient(f,x,degree(f,x))*degree(f,x)*x^(degree(f,x)-1)
+
+or, perhaps better
+
+abl(f:POLY FRAC INT,x:Symbol):POLY FRAC INT ==
+  coefficient(f,x,degree(f,x))*degree(f,x)*x^(degree(f,x)-1)
+
+This makes sure that the first argument must be a polynomial, guarding against
+input like abl(sin(x),x). On the other hand, the second variant won't work with
+abl(2.0*x^2,x), whereas the first version does. The "correct" answer to this
+problem is to define a package (which has to be put into a file and compiled):
+
+)abbrev package ABL ableitung
+ableitung(R:Ring): Exports == Implementation where
+    Exports == with
+      abl: (Polynomial R, Symbol) -> Polynomial R
+
+    Implementation == add
+      abl(f,x) == 
+        d := degree(f,x)
+        if zero? d 
+        then 0
+        else coefficient(f,x,d)
+            *monomial(d::Polynomial R,x,(d-1)::NonNegativeInteger)
+
+There are several things to notice:
+
+* this definition works for any polynomial ring
+
+* we had to check whether the degree of f is zero, because otherwise d-1 might
+  be -1 and x^(-1) is not a polynomial anymore
+
+* we have to tell the compiler explicitely that d-1 is nonnegative by
+  (d-1)::NonNegativeInteger
+
+* we had to use the operation "monomial" from the domain "Polynomial R" because
+  the compiler is not smart enough to understand x^((d-1)::NonNegativeInteger)
+
+* we have to write d::Polynomial R, because d is an integer, and the ring R
+  could be anything. However, an integer can always be "coerced" into an
+  element of a ring. Alternatively, we could write d*1. (In this case, the
+  compiler would be smart enough to understand that 1 comes from the ring)
+
+Martin
+
+
+
+
+
+From MAILER-DAEMON Mon Dec 20 06:10:02 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CgLQO-0008Ak-Kq
+	for mharc-axiom-math@gnu.org; Mon, 20 Dec 2004 06:10:00 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CgLQM-000898-4F
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 06:09:58 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CgLQK-00087v-6J
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 06:09:56 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CgLQJ-00087K-Mb
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 06:09:55 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CgLFV-0003w8-Nk
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 05:58:46 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iBKAwXtb199292;
+	Mon, 20 Dec 2004 11:58:35 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16838.45046.400755.829564@seam101.local>
+Date: Mon, 20 Dec 2004 11:56:54 +0100
+To: "cf" <cfrangos@telkomsa.net>
+Subject: Re: [Axiom-math] (no subject)
+In-Reply-To: <E1CgKzE-0007gv-Qj@lists.gnu.org>
+References: <E1CgKzE-0007gv-Qj@lists.gnu.org>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4247; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Dec 2004 11:09:58 -0000
+
+solve([x*y + a*x^2 = 10, x-y = 2], [x,y])
+
+                           2
+   (5)  [[x= y + 2,(a + 1)y  + (4a + 2)y + 4a - 10= 0]]
+                         Type: List List Equation Fraction Polynomial Integer
+
+(However, these are really polynomial equations...)
+
+Martin
+
+
+cf writes:
+ > 
+ > 20 December 2004
+ > 
+ > Dear Colleagues,
+ > 
+ > Any assistance with the following will be appreciated:
+ > 
+ > (1) In a user defined function what is the instruction to display something
+ > like a symbolic
+ >      variable, etc., and then to pause (and continue after hitting enter)
+ > ??
+ > 
+ >     eg in matlab: 
+ >     a = 1 
+ >     pause; 
+ >     b = 3 
+ >     pause;
+ > 
+ > (2) In axiom is there a built-in function to solve a set of nonlinear
+ > equations analytically (or if                           necessary
+ > numerically) wrt the user specified unknowns ??
+ >       
+ >     eg. in matlab
+ >     solve('x1*x2 + a*x2^2 = 10', ' x1 - x2 = 2', 'x1', 'x2');
+ > 
+ > 
+ > Regards,
+ > 
+ > C. Frangos.
+ >  
+ > ------
+ > Constantine Frangos.
+ > Professor
+ > Dept. of Mathematics and Statistics
+ > Rand Afrikaans University
+ > P O Box 524
+ > Auckland Park 2006
+ > South Africa
+ > 
+ > Tel: +27-11-489-2452
+ > Fax: +27-11-489-2832
+ > e-mail: cf@rau.ac.za (work)
+ >               cfrangos@telkomsa.net (home)
+ > 
+ > 
+ > 
+ > 
+ > _______________________________________________
+ > Axiom-math mailing list
+ > Axiom-math@nongnu.org
+ > http://lists.nongnu.org/mailman/listinfo/axiom-math
+
+
+
+
+From MAILER-DAEMON Mon Dec 20 10:04:16 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CgP55-0006wt-Mk
+	for mharc-axiom-math@gnu.org; Mon, 20 Dec 2004 10:04:16 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CgP53-0006ux-GH
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 10:04:13 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CgP52-0006uU-W4
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 10:04:13 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CgP52-0006uN-RL
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 10:04:12 -0500
+Received: from [151.189.20.158] (helo=postman.arcor.de)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CgOuB-00043x-BY
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 09:52:59 -0500
+Received: from fthieme.net (dsl-082-082-254-165.arcor-ip.net [82.82.254.165])
+	(authenticated bits=0)
+	by postman.arcor.de (8.13.0.PreAlpha4/8.13.0.PreAlpha4) with ESMTP id
+	iBKEqtax009228
+	(version=TLSv1/SSLv3 cipher=EDH-RSA-DES-CBC3-SHA bits=168 verify=NO);
+	Mon, 20 Dec 2004 15:52:56 +0100 (MET)
+Received: from [3ffe:400:280:3013:260:b3ff:fe66:a196] (helo=stars.fthieme.net)
+	by fthieme.net with esmtpsa (TLSv1:RC4-MD5:128) (Exim 4.43)
+	id 1CgOu6-0000wu-Dn; Mon, 20 Dec 2004 15:52:54 +0100
+Subject: Re: [Axiom-math] newbie type problem
+From: Frank Thieme <frank@fthieme.net>
+To: Martin Rubey <martin.rubey@univie.ac.at>
+In-Reply-To: <16838.44339.930322.153866@seam101.local>
+References: <1103468515.4301.19.camel@stars.fthieme.net>
+	<16838.44339.930322.153866@seam101.local>
+Content-Type: text/plain
+Date: Mon, 20 Dec 2004 15:52:23 +0100
+Message-Id: <1103554343.7154.58.camel@stars.fthieme.net>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.0.3 
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Dec 2004 15:04:13 -0000
+
+Thanks for the long answer! I'm using cvs version of axiom of savannah
+if that matters. So I couldn't try out the package solution, yet...
+
+On Mon, 2004-12-20 at 11:45 +0100, Martin Rubey wrote:
+> or, perhaps better
+> 
+> abl(f:POLY FRAC INT,x:Symbol):POLY FRAC INT ==
+>   coefficient(f,x,degree(f,x))*degree(f,x)*x^(degree(f,x)-1)
+
+should be FRAC POLY INT instead of POLY FRAC INT - at least it works
+then...
+
+Now, the second question regarding that problem...
+
+We shall implement derivation rules via rules. First intention is:
+ablrules := rule abl(a+b,c) == abl(a,c) + abl(b,c)
+
+but axiom evaluates abl(a+b,c) to zero and makes a rule 0 ->
+abl()+abl(). Simple ...rule 'abl(... does not work because of wrong
+type... 
+
+Bye...Frank
+
+
+
+
+From MAILER-DAEMON Mon Dec 20 11:52:24 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CgQlk-00088G-3u
+	for mharc-axiom-math@gnu.org; Mon, 20 Dec 2004 11:52:24 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CgQli-000883-4w
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 11:52:22 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CgQlh-00087b-5N
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 11:52:21 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CgQlg-00087X-Pv
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 11:52:20 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CgQNV-0008BM-NS
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 11:27:22 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iBKGQqDl145098;
+	Mon, 20 Dec 2004 17:26:55 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16838.64744.708824.57404@seam101.local>
+Date: Mon, 20 Dec 2004 17:25:12 +0100
+To: Frank Thieme <frank@fthieme.net>
+Subject: Re: [Axiom-math] newbie type problem
+In-Reply-To: <1103554343.7154.58.camel@stars.fthieme.net>
+References: <1103468515.4301.19.camel@stars.fthieme.net>
+	<16838.44339.930322.153866@seam101.local>
+	<1103554343.7154.58.camel@stars.fthieme.net>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx7.univie.ac.at 4248; Body=3 Fuz1=3 Fuz2=3
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Dec 2004 16:52:22 -0000
+
+Frank Thieme writes:
+ > Thanks for the long answer! I'm using cvs version of axiom of savannah
+ > if that matters. So I couldn't try out the package solution, yet...
+
+Yes you can! put it into a file ("test.spad", for example) and say
+
+)co test.spad
+
+)sh ABL
+
+should show you the operations you defined in the package ABL.
+ 
+ > On Mon, 2004-12-20 at 11:45 +0100, Martin Rubey wrote:
+ > > or, perhaps better
+ > > 
+ > > abl(f:POLY FRAC INT,x:Symbol):POLY FRAC INT ==
+ > >   coefficient(f,x,degree(f,x))*degree(f,x)*x^(degree(f,x)-1)
+ > 
+ > should be FRAC POLY INT instead of POLY FRAC INT - at least it works then...
+
+Does this mean, with POLY FRAC INT it does not work? What does not work, please
+provide an example!
+
+ > We shall implement derivation rules via rules. First intention is:
+ > ablrules := rule abl(a+b,c) == abl(a,c) + abl(b,c)
+ > 
+ > but axiom evaluates abl(a+b,c) to zero and makes a rule 0 ->
+ > abl()+abl(). Simple ...rule 'abl(... does not work because of wrong
+ > type... 
+
+yes, and it should: a+b is constant in c...
+
+I'll think about it.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Mon Dec 20 12:22:08 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CgREV-0002lZ-Ln
+	for mharc-axiom-math@gnu.org; Mon, 20 Dec 2004 12:22:07 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CgRET-0002j3-1x
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 12:22:05 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CgRES-0002iV-1R
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 12:22:04 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CgRER-0002iS-Um
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 12:22:04 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CgQuw-00054R-Fq
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 12:01:54 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iBKH1bDl684376;
+	Mon, 20 Dec 2004 18:01:40 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16839.1294.620703.364463@seam101.local>
+Date: Mon, 20 Dec 2004 17:59:58 +0100
+To: Frank Thieme <frank@fthieme.net>
+Subject: Re: [Axiom-math] newbie type problem
+In-Reply-To: <1103554343.7154.58.camel@stars.fthieme.net>
+References: <1103468515.4301.19.camel@stars.fthieme.net>
+	<16838.44339.930322.153866@seam101.local>
+	<1103554343.7154.58.camel@stars.fthieme.net>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4248; Body=3 Fuz1=3 Fuz2=3
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Dec 2004 17:22:05 -0000
+
+Dear Frank,
+
+ > We shall implement derivation rules via rules. First intention is:
+ > ablrules := rule abl(a+b,c) == abl(a,c) + abl(b,c)
+ > 
+ > but axiom evaluates abl(a+b,c) to zero and makes a rule 0 ->
+ > abl()+abl(). Simple ...rule 'abl(... does not work because of wrong
+ > type... 
+
+You'd have to read the section "Rules and Pattern Matching" in the axiom
+book. The answer is:
+
+abl := operator 'abl
+
+ablplus := rule abl(a+b,c) == abl(a,c) + abl(b,c)
+
+There is also a possibility of "adorning" pattern variables -- see the same
+section. In your case, you want to have a rule that applies only to monomials,
+so it will be roughly
+
+ablmonomial := rule abl(m | monomial?(m)) == ...
+
+However, it is pretty obvious that rules should only be the quick and dirty
+approach...
+
+Hope this helps,
+
+Martin
+
+
+
+
+From MAILER-DAEMON Mon Dec 20 13:56:09 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CgShV-0008W5-Qt
+	for mharc-axiom-math@gnu.org; Mon, 20 Dec 2004 13:56:09 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CgShU-0008Vw-Lu
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 13:56:08 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CgShT-0008VV-TK
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 13:56:08 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CgShT-0008VS-R1
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 13:56:07 -0500
+Received: from [151.189.20.157] (helo=postman.arcor.de)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CgSMA-0001zY-Jo
+	for axiom-math@nongnu.org; Mon, 20 Dec 2004 13:34:06 -0500
+Received: from fthieme.net (dsl-082-082-254-165.arcor-ip.net [82.82.254.165])
+	(authenticated bits=0)
+	by postman.arcor.de (8.13.0.PreAlpha4/8.13.0.PreAlpha4) with ESMTP id
+	iBKIY4Ti020569
+	(version=TLSv1/SSLv3 cipher=EDH-RSA-DES-CBC3-SHA bits=168 verify=NO);
+	Mon, 20 Dec 2004 19:34:04 +0100 (MET)
+Received: from [3ffe:400:280:3013:260:b3ff:fe66:a196] (helo=stars.fthieme.net)
+	by fthieme.net with esmtpsa (TLSv1:RC4-MD5:128) (Exim 4.43)
+	id 1CgSM6-00023e-F2; Mon, 20 Dec 2004 19:34:03 +0100
+Subject: Re: [Axiom-math] newbie type problem
+From: Frank Thieme <frank@fthieme.net>
+To: Martin Rubey <martin.rubey@univie.ac.at>
+In-Reply-To: <16838.64744.708824.57404@seam101.local>
+References: <1103468515.4301.19.camel@stars.fthieme.net>
+	<16838.44339.930322.153866@seam101.local>
+	<1103554343.7154.58.camel@stars.fthieme.net>
+	<16838.64744.708824.57404@seam101.local>
+Content-Type: text/plain
+Date: Mon, 20 Dec 2004 19:33:29 +0100
+Message-Id: <1103567610.7157.65.camel@stars.fthieme.net>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.0.3 
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Dec 2004 18:56:09 -0000
+
+On Mon, 2004-12-20 at 17:25 +0100, Martin Rubey wrote:
+> Frank Thieme writes:
+>  > Thanks for the long answer! I'm using cvs version of axiom of savannah
+>  > if that matters. So I couldn't try out the package solution, yet...
+> 
+> Yes you can! put it into a file ("test.spad", for example) and say
+> 
+> )co test.spad
+> 
+> )sh ABL
+
+ah, I see. I tried to make a file "ableitung.as" as seen in some example
+and it won't find a useful compiler. Ok, that one works...
+
+>  > On Mon, 2004-12-20 at 11:45 +0100, Martin Rubey wrote:
+>  > > or, perhaps better
+>  > > 
+>  > > abl(f:POLY FRAC INT,x:Symbol):POLY FRAC INT ==
+>  > >   coefficient(f,x,degree(f,x))*degree(f,x)*x^(degree(f,x)-1)
+>  > 
+>  > should be FRAC POLY INT instead of POLY FRAC INT - at least it works then...
+> 
+> Does this mean, with POLY FRAC INT it does not work? What does not work, please
+> provide an example!
+
+(2) -> abl(x^5,x)
+   Conversion failed in the compiled user function abl .
+
+   Cannot convert from type Expression Integer to Polynomial Fraction
+      Integer for value
+     4
+   5x
+
+No problem at all with FRAC POLY INT.
+
+I'm not that deep in math to understand why... :/
+
+
+
+
+From MAILER-DAEMON Tue Dec 21 18:20:08 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CgtIQ-0000D6-RU
+	for mharc-axiom-math@gnu.org; Tue, 21 Dec 2004 18:20:04 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CgtIC-0000AJ-K6
+	for axiom-math@nongnu.org; Tue, 21 Dec 2004 18:19:49 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CgtI8-00007u-Df
+	for axiom-math@nongnu.org; Tue, 21 Dec 2004 18:19:44 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CgtI8-00007r-At
+	for axiom-math@nongnu.org; Tue, 21 Dec 2004 18:19:44 -0500
+Received: from [213.165.64.20] (helo=mail.gmx.net)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1Cgt2D-0001Sg-IL
+	for axiom-math@nongnu.org; Tue, 21 Dec 2004 18:03:17 -0500
+Received: (qmail 702 invoked by uid 0); 21 Dec 2004 23:03:10 -0000
+Received: from 130.225.2.159 by www38.gmx.net with HTTP;
+	Wed, 22 Dec 2004 00:03:11 +0100 (MET)
+Date: Wed, 22 Dec 2004 00:03:11 +0100 (MET)
+From: "Bjarke Roune" <bjarke100@gmx.net>
+To: axiom-math@nongnu.org
+MIME-Version: 1.0
+References: <20041221165322.14675gmx1@mx054.gmx.net>
+X-Priority: 3 (Normal)
+X-Authenticated: #13569844
+Message-ID: <714.1103670191@www38.gmx.net>
+X-Mailer: WWW-Mail 1.6 (Global Message Exchange)
+X-Flags: 0001
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-math] some questions from a newbie
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Dec 2004 23:19:50 -0000
+
+I'm running the CVS version from Savannah because the binary
+distributions did not work for me. I have a few questions listed
+below. Thanks to anyone who answers one of them.
+
+1. Is there some way to make a function that is parametric like a
+   package in a .input file?
+
+2. The "delete" button does not work. Instead of deleting the
+   character to the right of the current position, it inserts the text
+   "^[[3~". How do I fix this?
+
+3. When the compiler finds a compile-time error in my program, most of
+   the time it reports this by basically dumping debug information
+   about the internal state of the parser (like the program as a tree in
+   Lisp syntax and the parser variables x, m and f). It does not seem
+   to say which line the error is on. Is there some way to make the
+   compiler output more user friendly error messages?
+
+4. Most times when Axiom displays an error, it says
+     protected-symbol-warn called with (NIL)
+   at the end. What does this mean?
+
+5. I once got an error message that said
+ 
+     >> Error detected within library code:
+     catdef: division by zero
+
+   Is there some way to get a dump of the call-stack along with this?
+   Otherwise it is a bit hard to know where things went wrong...
+
+6. Why does this work fine
+
+     g(x : Integer) : Integer ==
+       d := [i for i in [1,5,3]]
+       x*x+1
+
+   when the following results in the
+   error "NoValueMode is an unknown mode"?
+
+     )abbrev package MYPACK MyPackage
+     MyPackage : T == C where
+      T== with
+        g: Integer -> Integer
+   
+      C== add
+        g(x : Integer) : Integer ==
+          d := [i for i in [1,5,3]]
+          x*x+1
+
+7. Axiom will accept the input
+
+)abbrev package MYPACK MyPackage
+MyPackage : T == C where
+ T== with
+   myFun: Integer -> Integer
+   myFun2: Integer -> Integer
+   
+ C== add
+   myFun(x : Integer) : Integer == x*x + 1
+
+just fine. If I try to call myFun2, it says
+
+Internal Error
+   The function myFun2 with signature hashcode is missing from domain 
+      MyPackage 
+
+How do I get Axiom to refuse to accept packages whose signature
+does not match their implementation?
+
+8. How do I get Axiom to quit bugging me about not having documented
+   functions in .spad files?
+
+9. How do I make the Axiom compiler less verbose? I only want error
+   messages and warnings.
+
+-- 
++++ Sparen Sie mit GMX DSL +++ http://www.gmx.net/de/go/dsl
+AKTION für Wechsler: DSL-Tarife ab 3,99 EUR/Monat + Startguthaben
+
+
+
+From MAILER-DAEMON Wed Dec 22 03:13:34 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Ch1cj-00008D-Pl
+	for mharc-axiom-math@gnu.org; Wed, 22 Dec 2004 03:13:33 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Ch1ci-00007v-33
+	for axiom-math@nongnu.org; Wed, 22 Dec 2004 03:13:32 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Ch1cf-00006t-Rn
+	for axiom-math@nongnu.org; Wed, 22 Dec 2004 03:13:30 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Ch1cf-00006a-Im
+	for axiom-math@nongnu.org; Wed, 22 Dec 2004 03:13:29 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Ch1S3-0001fh-Kp
+	for axiom-math@nongnu.org; Wed, 22 Dec 2004 03:02:32 -0500
+Received: from seam101.local ([131.130.96.153])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iBM82ADl081602;
+	Wed, 22 Dec 2004 09:02:17 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16841.10654.888195.520332@seam101.local>
+Date: Wed, 22 Dec 2004 09:00:30 +0100
+To: "Bjarke Roune" <bjarke100@gmx.net>
+Subject: Re: [Axiom-math] some questions from a newbie
+In-Reply-To: <714.1103670191@www38.gmx.net>
+References: <20041221165322.14675gmx1@mx054.gmx.net>
+	<714.1103670191@www38.gmx.net>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4249; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 22 Dec 2004 08:13:32 -0000
+
+Dear Bjarke,
+
+> I'm running the CVS version from Savannah because the binary distributions
+> did not work for me. I have a few questions listed below. Thanks to anyone
+> who answers one of them.
+ 
+> 1. Is there some way to make a function that is parametric like a package in
+>    a .input file?
+
+I'm afraid, no.
+ 
+> 2. The "delete" button does not work. Instead of deleting the character to
+>    the right of the current position, it inserts the text "^[[3~". How do I
+>    fix this?
+
+This is a problem with clef. I use emacs and shell mode, which is a lot more
+comfortable than clef. An alternative is to use TeXmacs, but I won't use it, so
+I can't help you there.
+
+> 3. When the compiler finds a compile-time error in my program, most of the
+>    time it reports this by basically dumping debug information about the
+>    internal state of the parser (like the program as a tree in Lisp syntax
+>    and the parser variables x, m and f). It does not seem to say which line
+>    the error is on. Is there some way to make the compiler output more user
+>    friendly error messages?
+
+I don't think so -- at least not easily --, but it is possible to learn to
+interpret them. I can offer help if you send me source and error message. As
+many know, I propose to switch to the alternative compiler Aldor, which could
+be used from within Axiom in past days. The syntax and semantics are very
+similar, in fact, nearly identical, but I think that the compiler itself is
+more mature.
+
+> 4. Most times when Axiom displays an error, it says
+>      protected-symbol-warn called with (NIL)
+>    at the end. What does this mean?
+
+This just means, that you hit an error. I don't know where it stems from. Tim
+Daly might know.
+ 
+> 5. I once got an error message that said
+> 
+>      >> Error detected within library code:
+>      catdef: division by zero
+> 
+>    Is there some way to get a dump of the call-stack along with this?
+>    Otherwise it is a bit hard to know where things went wrong...
+
+You can say
+
+)set message bottom on
+
+or, more briefly,
+
+)set me bo on
+
+then Axiom (might) tell you which function is concerned. There is quite a bit
+to know about debugging, I collected some bits and pieces on Mathaction:
+
+http://page.axiom-developer.org/zope/mathaction/DebuggingAxiom
+
+but clearly, there is a lot more to be found out.
+
+> 6. Why does this work fine
+> 
+>      g(x : Integer) : Integer ==
+>        d := [i for i in [1,5,3]]
+>        x*x+1
+> 
+>    when the following results in the
+>    error "NoValueMode is an unknown mode"?
+> 
+>      )abbrev package MYPACK MyPackage
+>      MyPackage : T == C where
+>       T== with
+>         g: Integer -> Integer
+> 
+>       C== add
+>         g(x : Integer) : Integer ==
+>           d := [i for i in [1,5,3]]
+>           x*x+1
+
+Here we go: Axiom says
+
+****** comp fails at level 4 with expression: ******
+error in function g 
+
+(SEQ (LET |d|
+       (COLLECT (IN |i| | << | (|construct| 1 5 3) | >> |) |i|))
+     (|exit| 1 (+ (* |x| |x|) 1)))
+****** level 4  ******
+$x:= (construct (One) 5 3)
+$m:= $EmptyMode
+$f:=
+((((|x| # #) (* # # #) (** # # #) (+ # #) ...)))
+ 
+   >> Apparent user error:
+   NoValueMode
+    is an unknown mode
+
+Axiom says that it hasn't found a mode (= roughly type) for x, where 
+x =  [1, 5, 3].
+
+So, let's help Axiom a bit:
+
+         g(x : Integer) : Integer ==
+           d := [i for i in [1,5,3]$(List Integer)]
+           x*x+1
+
+should work. NOTE: The compiler is bugged, the interpreter is bugged and the
+compiler-interpreter interaction is bugged. Hence: 
+
+* don't trust the error messages too much, take them as hints. After a while
+  you'll get a feeling what you really need to declare. (Since I think I've got
+  this feeling already, I offer you help)
+
+* you might like to consider the transcript of the axiom session where I fixed
+  your package definition. After I changed the definition of g and recompiled,
+  the compiler didn't complain anymore, but the results were, at the least
+  surprising. Restarting Axiom made the problem go away. I added it at the
+  bottom.
+
+> 7. Axiom will accept the input
+> 
+> )abbrev package MYPACK MyPackage
+> MyPackage : T == C where
+>  T== with
+>    myFun: Integer -> Integer
+>    myFun2: Integer -> Integer
+> 
+>  C== add
+>    myFun(x : Integer) : Integer == x*x + 1
+> 
+> just fine. If I try to call myFun2, it says
+> 
+> Internal Error
+>    The function myFun2 with signature hashcode is missing from domain
+>       MyPackage
+> 
+> How do I get Axiom to refuse to accept packages whose signature does not
+> match their implementation?
+
+I don't know. Consider, however, that for categories, it is a necessary feature
+to be able to declare operations which are not defined.
+> 
+> 8. How do I get Axiom to quit bugging me about not having documented
+>    functions in .spad files?
+
+That's a feature! :-) Ask Tim.
+> 
+> 9. How do I make the Axiom compiler less verbose? I only want error
+>    messages and warnings.
+
+The autoload messages (which make a lot of noise) can be switched off by saying
+
+)set me autoload off
+
+I didn't care for compiler noise, so I don't know about that one. You might
+however like to open a second axiom session for compiling, and, after a
+successful compile, say
+
+)lib MYPACK
+
+in the other.
+ 
+Hope this helps. I'm very happy that another one tries to use the axiom
+compiler! Maybe you'd even like to hack axiom to use the Aldor compiler again?
+So far it is possible to use it for simple function definitions, but domains
+compiled by Aldor cannot be used within Axiom anymore, sadly.
+
+Martin
+
+                        AXIOM Computer Algebra System 
+                Version of Sunday April 18, 2004 at 14:52:45 
+-----------------------------------------------------------------------------
+   Issue )copyright to view copyright notices.
+   Issue )summary for a summary of useful system commands.
+   Issue )quit to leave AXIOM and return to shell.
+-----------------------------------------------------------------------------
+ 
+   Re-reading compress.daase   Re-reading interp.daase
+   Re-reading operation.daase
+   Re-reading category.daase
+   Re-reading browse.daase
+(1) -> )set me autoload off
+(1) -> g(x : Integer) : Integer == d := [i for i in [1,5,3]] x*x+1
+   Function declaration g : Integer -> Integer has been added to 
+      workspace.
+                                                                   Type: Void
+(2) -> )co test.spad 
+   Compiling AXIOM source code from file /home/martin/test.spad using 
+      old system compiler.
+   MYPACK abbreviates package MyPackage 
+------------------------------------------------------------------------
+   initializing NRLIB MYPACK for MyPackage 
+   compiling into NRLIB MYPACK 
+   compiling exported g : Integer -> Integer
+Time: 0.06 SEC.
+
+(time taken in buildFunctor:  0)
+
+;;;     ***       |MyPackage| REDEFINED
+
+;;;     ***       |MyPackage| REDEFINED
+Time: 0 SEC.
+
+
+   Cumulative Statistics for Constructor MyPackage
+      Time: 0.06 seconds
+ 
+   finalizing NRLIB MYPACK 
+   Processing MyPackage for Browser database:
+--->-->MyPackage((g ((Integer) (Integer)))): Not documented!!!!
+--->-->MyPackage(constructor): Not documented!!!!
+--->-->MyPackage(): Missing Description
+Compiling /home/martin/./MYPACK.NRLIB/code.lsp.
+; (DEFUN |MYPACK;g;2I;1| ...) is being compiled.
+;; Warning: The variable $ is not used.
+End of Pass 1.  
+End of Pass 2.  
+OPTIMIZE levels: Safety=0 (No runtime error checking), Space=0, Speed=3
+Finished compiling /home/martin/./MYPACK.NRLIB/code.lsp.
+------------------------------------------------------------------------
+   MyPackage is now explicitly exposed in frame initial 
+   MyPackage will be automatically loaded when needed from 
+      /home/martin/MYPACK.NRLIB/code
+
+(2) -> g(4)
+   Compiling function g with type Integer -> Integer 
+ 
+   >> Error detected within library code:
+   index out of range
+
+protected-symbol-warn called with (NIL)
+(2) -> g(3)
+
+   (2)  10
+                                                        Type: PositiveInteger
+
+
+
+

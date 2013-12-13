@@ -1,0 +1,1658 @@
+From MAILER-DAEMON Thu Sep 11 14:30:26 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19xWAy-00024p-1J
+	for mharc-axiom-math@gnu.org; Thu, 11 Sep 2003 14:28:16 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19xWAq-00021m-9g
+	for axiom-math@nongnu.org; Thu, 11 Sep 2003 14:28:08 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19xWAh-0001yC-C1
+	for axiom-math@nongnu.org; Thu, 11 Sep 2003 14:28:00 -0400
+Received: from [134.74.86.20] (helo=groups.sci.ccny.cuny.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19xW6O-0000SZ-24; Thu, 11 Sep 2003 14:23:32 -0400
+Received: from rio.sci.ccny.cuny.edu (rio.sci.ccny.cuny.edu [134.74.120.4])
+	by groups.sci.ccny.cuny.edu (8.11.0/8.11.2) with ESMTP id h8BIMOv21010; 
+	Thu, 11 Sep 2003 14:22:24 -0400
+Received: (from daly@localhost)
+	by rio.sci.ccny.cuny.edu (8.11.0/8.11.0) id h8BHkx329132;
+	Thu, 11 Sep 2003 13:46:59 -0400
+Date: Thu, 11 Sep 2003 13:46:59 -0400
+Message-Id: <200309111746.h8BHkx329132@rio.sci.ccny.cuny.edu>
+From: Tim Daly  <daly@rio.sci.ccny.cuny.edu>
+To: Peter.Paule@risc.uni-linz.ac.at
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Axiom and Symbolic Summation
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 11 Sep 2003 18:28:15 -0000
+
+Dr Paule,
+
+I'm Tim Daly, lead developer of Axiom. Axiom has become available
+as open source and I'm looking at future directions of algorithm
+development. I understand from the article at:
+www.ercim.org/publication/Ercim_News/enw50/paule.html
+that Dr Schneider has a Ph.D. thesis on the subject. I'm interested
+in making these algorithms available in Axiom. Can you give me a
+recent email address for Dr. Schneider? Is his thesis available online?
+
+Many thanks,
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Thu Sep 11 14:45:57 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19xWQP-0005hm-V6
+	for mharc-axiom-math@gnu.org; Thu, 11 Sep 2003 14:44:13 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19xWPe-0005LP-5R
+	for axiom-math@nongnu.org; Thu, 11 Sep 2003 14:43:26 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19xWK2-0003xP-7n
+	for axiom-math@nongnu.org; Thu, 11 Sep 2003 14:37:39 -0400
+Received: from [134.74.86.20] (helo=groups.sci.ccny.cuny.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19xWFV-0002yk-1G; Thu, 11 Sep 2003 14:32:57 -0400
+Received: from rio.sci.ccny.cuny.edu (rio.sci.ccny.cuny.edu [134.74.120.4])
+	by groups.sci.ccny.cuny.edu (8.11.0/8.11.2) with ESMTP id h8BIW1v21016; 
+	Thu, 11 Sep 2003 14:32:01 -0400
+Received: (from daly@localhost)
+	by rio.sci.ccny.cuny.edu (8.11.0/8.11.0) id h8BHuf529825;
+	Thu, 11 Sep 2003 13:56:41 -0400
+Date: Thu, 11 Sep 2003 13:56:41 -0400
+Message-Id: <200309111756.h8BHuf529825@rio.sci.ccny.cuny.edu>
+From: Tim Daly  <daly@rio.sci.ccny.cuny.edu>
+To: Carsten.Schneider@risc.uni-linz.ac.at
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org,
+	Peter.Paule@risc.uni-linz.ac.at
+Subject: [Axiom-math] Axiom and Symbolic Summation
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 11 Sep 2003 18:44:12 -0000
+
+Dr Schneider,
+
+I'm Tim Daly, lead developer of Axiom. Axiom has become available
+as open source and I'm looking at future directions of algorithm
+development. I understand from the article at:
+www.ercim.org/publication/Ercim_News/enw50/paule.html
+that you have a Ph.D. thesis on the subject. I'm interested
+in making these algorithms available in Axiom. Is your thesis
+available online?
+
+Many thanks,
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Thu Sep 18 21:31:42 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 1A0A7Z-0007D1-QD
+	for mharc-axiom-math@gnu.org; Thu, 18 Sep 2003 21:31:41 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 1A0A7X-0007Cd-VK
+	for axiom-math@nongnu.org; Thu, 18 Sep 2003 21:31:39 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 1A0A7W-0007CP-BV
+	for axiom-math@nongnu.org; Thu, 18 Sep 2003 21:31:39 -0400
+Received: from [207.115.63.103] (helo=pimout4-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22) id 1A0A7W-0007CM-35
+	for axiom-math@nongnu.org; Thu, 18 Sep 2003 21:31:38 -0400
+Received: from localhost.localdomain (247.26.252.64.snet.net [64.252.26.247])
+	by pimout4-ext.prodigy.net (8.12.9/8.12.3) with ESMTP id
+	h8J1VZIO157910; Thu, 18 Sep 2003 21:31:35 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h8J1VYK31604;
+	Thu, 18 Sep 2003 21:31:34 -0400
+Date: Thu, 18 Sep 2003 21:31:34 -0400
+Message-Id: <200309190131.h8J1VYK31604@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-math@nongnu.org, axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Cc: fateman@cs.berkeley.edu, gilbert@sci.ccny.cuny.edu, kabdali@nsf.gov
+Subject: [Axiom-math] feedback
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: axiom@tenkan.org
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 19 Sep 2003 01:31:40 -0000
+
+*,
+
+MIT has a lot of courses online. In particular, it has a fair number
+of math and science courses online. (http://ocw.mit.edu)
+
+The discussion at work today (I'm at City College of NY) is a proposal
+to develop a common-format targeted front-end to Axiom which would
+match and support the MIT math and science online courses. Of course
+we don't have the man-power or expertise to develop such a large range
+of courses in-house. Nevertheless, I think the idea has a lot of merit
+for the education community and, in particular, the Axiom community.
+
+Clearly the MIT math courses are reasonable for implementation in
+Axiom (for example, Strang's Linear Algebra). And the Linear Algebra
+course is clearly the basis for the Mechanical Engineering
+course. Both of these are probably well addressed by the 3 Ms
+(Mathematica, Maple, Matlab).  I don't believe, however, that there is
+a coordinated body of code for the range of available courses in any
+of these systems although pieces exist for some of them.  Axiom is in
+a "come from behind" position at the moment.
+
+I believe that Axiom's new open source nature gives it a major
+advantage over the 3Ms since both professors and students can read,
+modify, and create new algebra which could be freely shared worldwide.
+Since we're trying to get Axiom shipped with all of the available
+operating systems (Linux, Windows, Macs, etc.) it will be available on
+all university and student desktops worldwide. This will give Axiom a
+common foothold in the education market.  A common front-end approach
+would lower the learning curve for students so less class time would
+be spent teaching students to use a computer algebra system.  A
+connection to the online courseware would make it very useful.  And it
+would give widely available tutorials for Axiom so everyone benefits.
+
+Is it reasonable for an amorphous, worldwide community to try to do
+coordinated development of software around a single MIT target? Would it
+be reasonable to convince, or hope to convince, MIT to host the same
+courses in multiple languages? Could we figure out a way to develop a
+grant/subgrant structure that would attract developers for particular
+courses? Is it possible that any granting organization would fund
+developers worldwide? Is it politically possible within Universities
+to expect that MIT's presentation of Linear Algebra would supercede
+locally developed courses? If not, is it reasonable to design the
+software to allow selective order of topic introduction? Can we design
+courseware that would handle, say, the top 10 selling Linear Algebra
+books? Will professors allow students to use Axiom on tests (my math
+professors would not let us bring calculators to class, including my
+Advanced Calculus class :-) ). Can we arrange the issues and try to
+address each of them in some coordinated fashion?
+
+It is clear that free and open source development can have as large
+an impact on education as Linux has had on the operating system area
+if we can build a community around the effort. One of the major issues
+is that building software gets little or no academic credit and even
+less grant funding. Perhaps a coordinated effort can change both of
+these mindsets.
+
+If you have a few minutes I'd like some feedback on this idea.
+Please reply on the axiom-math@nongnu.org mailing list.
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Thu Sep 18 22:35:02 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 1A0B6s-0004LB-1U
+	for mharc-axiom-math@gnu.org; Thu, 18 Sep 2003 22:35:02 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 1A0Ayn-0000gR-Vp
+	for axiom-math@nongnu.org; Thu, 18 Sep 2003 22:26:41 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 1A0Aym-0000gH-Eo
+	for axiom-math@nongnu.org; Thu, 18 Sep 2003 22:26:41 -0400
+Received: from [66.163.168.182] (helo=smtp803.mail.sc5.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.22) id 1A0Aym-0000gD-0K
+	for axiom-math@nongnu.org; Thu, 18 Sep 2003 22:26:40 -0400
+Received: from adsl-63-201-229-14.dsl.snfc21.pacbell.net (HELO
+	cs.berkeley.edu) (rfateman@sbcglobal.net@63.201.229.14 with plain)
+	by smtp-sbc-v1.mail.vip.sc5.yahoo.com with SMTP;
+	19 Sep 2003 02:26:38 -0000
+Message-ID: <3F6A6976.7090603@cs.berkeley.edu>
+Date: Thu, 18 Sep 2003 19:27:02 -0700
+From: Richard Fateman <fateman@cs.berkeley.edu>
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US;
+	rv:1.4) Gecko/20030624 Netscape/7.1 (ax)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+References: <200309190131.h8J1VYK31604@localhost.localdomain>
+In-Reply-To: <200309190131.h8J1VYK31604@localhost.localdomain>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Mailman-Approved-At: Thu, 18 Sep 2003 22:35:00 -0400
+Cc: gilbert@sci.ccny.cuny.edu, kabdali@nsf.gov, axiom-math@nongnu.org
+Subject: [Axiom-math] Re: feedback
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 19 Sep 2003 02:26:42 -0000
+
+The impact of computer algebra systems on education has been
+remarkably slight.  I don't know what it means to "implement"
+a course, but the few examples  (Freshman Calc lab, modern algebra)
+have not caught on, so far as I can tell.  Math professors
+have traditionally been hostile to technology. And the obvious
+technology... videotaping lectures ... has been around for a long
+time. Yet we still give live lectures.
+
+I will watch with interest to see if Axiom can change the situation!
+RJF
+
+
+root wrote:
+
+>*,
+>
+>MIT has a lot of courses online. In particular, it has a fair number
+>of math and science courses online. (http://ocw.mit.edu)
+>
+>The discussion at work today (I'm at City College of NY) is a proposal
+>to develop a common-format targeted front-end to Axiom which would
+>match and support the MIT math and science online courses. Of course
+>we don't have the man-power or expertise to develop such a large range
+>of courses in-house. Nevertheless, I think the idea has a lot of merit
+>for the education community and, in particular, the Axiom community.
+>
+>Clearly the MIT math courses are reasonable for implementation in
+>Axiom (for example, Strang's Linear Algebra). And the Linear Algebra
+>course is clearly the basis for the Mechanical Engineering
+>course. Both of these are probably well addressed by the 3 Ms
+>(Mathematica, Maple, Matlab).  I don't believe, however, that there is
+>a coordinated body of code for the range of available courses in any
+>of these systems although pieces exist for some of them.  Axiom is in
+>a "come from behind" position at the moment.
+>
+>I believe that Axiom's new open source nature gives it a major
+>advantage over the 3Ms since both professors and students can read,
+>modify, and create new algebra which could be freely shared worldwide.
+>Since we're trying to get Axiom shipped with all of the available
+>operating systems (Linux, Windows, Macs, etc.) it will be available on
+>all university and student desktops worldwide. This will give Axiom a
+>common foothold in the education market.  A common front-end approach
+>would lower the learning curve for students so less class time would
+>be spent teaching students to use a computer algebra system.  A
+>connection to the online courseware would make it very useful.  And it
+>would give widely available tutorials for Axiom so everyone benefits.
+>
+>Is it reasonable for an amorphous, worldwide community to try to do
+>coordinated development of software around a single MIT target? Would it
+>be reasonable to convince, or hope to convince, MIT to host the same
+>courses in multiple languages? Could we figure out a way to develop a
+>grant/subgrant structure that would attract developers for particular
+>courses? Is it possible that any granting organization would fund
+>developers worldwide? Is it politically possible within Universities
+>to expect that MIT's presentation of Linear Algebra would supercede
+>locally developed courses? If not, is it reasonable to design the
+>software to allow selective order of topic introduction? Can we design
+>courseware that would handle, say, the top 10 selling Linear Algebra
+>books? Will professors allow students to use Axiom on tests (my math
+>professors would not let us bring calculators to class, including my
+>Advanced Calculus class :-) ). Can we arrange the issues and try to
+>address each of them in some coordinated fashion?
+>
+>It is clear that free and open source development can have as large
+>an impact on education as Linux has had on the operating system area
+>if we can build a community around the effort. One of the major issues
+>is that building software gets little or no academic credit and even
+>less grant funding. Perhaps a coordinated effort can change both of
+>these mindsets.
+>
+>If you have a few minutes I'd like some feedback on this idea.
+>Please reply on the axiom-math@nongnu.org mailing list.
+>
+>Tim Daly
+>axiom@tenkan.org
+>daly@idsi.net
+>  
+>
+
+
+
+
+From MAILER-DAEMON Fri Sep 19 00:15:07 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 1A0Cfi-00085L-RD
+	for mharc-axiom-math@gnu.org; Fri, 19 Sep 2003 00:15:06 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 1A0Cfh-00085E-6q
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 00:15:05 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 1A0Cff-000852-Ka
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 00:15:04 -0400
+Received: from [207.115.63.103] (helo=pimout4-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22) id 1A0Cff-00084x-8n
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 00:15:03 -0400
+Received: from localhost.localdomain (247.26.252.64.snet.net [64.252.26.247])
+	by pimout4-ext.prodigy.net (8.12.9/8.12.3) with ESMTP id
+	h8J4EoIO158558; Fri, 19 Sep 2003 00:14:50 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h8J4EoA32603;
+	Fri, 19 Sep 2003 00:14:50 -0400
+Date: Fri, 19 Sep 2003 00:14:50 -0400
+Message-Id: <200309190414.h8J4EoA32603@localhost.localdomain>
+From: root <daly@idsi.net>
+To: keady@maths.uwa.edu.au
+In-reply-to: <Pine.LNX.4.44.0309191112590.1622-100000@erythrina.maths.uwa.edu.au>
+	(message from Grant Keady on Fri, 19 Sep 2003 11:53:59 +0800 (WST))
+References: <Pine.LNX.4.44.0309191112590.1622-100000@erythrina.maths.uwa.edu.au>
+Cc: keady@maths.uwa.edu.au, axiom@tenkan.org, C.J.Sangwin@bham.ac.uk,
+	axiom-math@nongnu.org, devin@maths.uwa.edu.au
+Subject: [Axiom-math] TechExplorer
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: axiom@tenkan.org
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 19 Sep 2003 04:15:05 -0000
+
+Grant,
+
+Thanks for the feedback. I'll look at the other project pages you mention
+and send Chris a note to see what he is up to.
+
+The choice of MIT as a focal point is that they have put their
+course work on the net in a systematic way. I'm hoping to leverage
+that to expand Axiom's "science" coverage. That's not to imply that
+non-MIT courses can't be a more useful starting point or are unwelcome
+as a point of focus. It is just that the MIT work is easily accessed
+and, apparently, freely shared. I wish they had set up a course in
+computer algebra. There are several people I can think of that I'd
+like to see teach such a course (Barry Trager leaps to mind).
+
+My understanding re: techexplorer is that IBM has sold it off to
+another company and that one of the Axiom authors (Sam Dooley)
+has gone to join the company. Unfortunately I don't know the name
+of the company and have no current address for Sam. I guess this
+is the reason that it was not released as part of Axiom. I have
+never seen the TechExplorer front end so I have no idea what it
+does. TechExplorer was supposed to be a browser plugin, I believe.
+
+I have three current ideas for a front-end. I'm the lead developer on
+a second large computer algebra system, called Magnus (a special
+purpose system in Infinite Group Theory). It has what we call a
+"zero-learning-curve" front end which we've discussed cloning for
+Axiom.
+
+The second front end is to leverage Joris's work on TeXmacs. I haven't
+spent that much time with it yet, unfortunately, so I'm not sure how
+well it will work for non-document interaction.
+
+The third front is an expansion of ADVI (Active DVI). This program
+uses features of standard .dvi files to allow active content (e.g.
+moving gifs, active windows with command prompts, etc) inside of
+standard TeX documents. Since Axiom uses TeX and dvi as part of
+the literate programming push this seems like an interesting direction.
+
+
+Tim
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+
+
+From MAILER-DAEMON Fri Sep 19 00:15:54 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 1A0CgU-0008CL-9F
+	for mharc-axiom-math@gnu.org; Fri, 19 Sep 2003 00:15:54 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 1A0CLS-00048d-9q
+	for axiom-math@nongnu.org; Thu, 18 Sep 2003 23:54:10 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 1A0CLP-00048J-Sw
+	for axiom-math@nongnu.org; Thu, 18 Sep 2003 23:54:09 -0400
+Received: from [130.95.128.56] (helo=asclepius.uwa.edu.au)
+	by monty-python.gnu.org with esmtp (Exim 4.22) id 1A0CLO-00047E-VC
+	for axiom-math@nongnu.org; Thu, 18 Sep 2003 23:54:07 -0400
+Received: from 127.0.0.1 (localhost [127.0.0.1])
+	by dummy.domain.name (Postfix) with SMTP id A14C03679B4
+	for <axiom-math@nongnu.org>; Fri, 19 Sep 2003 11:54:03 +0800 (WST)
+Received: from madvax.maths.uwa.edu.au (madvax.maths.uwa.edu.au [130.95.16.1])
+	by asclepius.uwa.edu.au (Postfix) with ESMTP id 8FC37367996
+	for <axiom-math@nongnu.org>; Fri, 19 Sep 2003 11:54:03 +0800 (WST)
+Received: from erythrina.maths.uwa.edu.au (erythrina.maths.uwa.edu.au
+	[130.95.16.193])
+	by madvax.maths.uwa.edu.au (8.12.0/8.12.0) with ESMTP id h8J3rxaQ413221;
+	Fri, 19 Sep 2003 11:54:00 +0800 (WST)
+Date: Fri, 19 Sep 2003 11:53:59 +0800 (WST)
+From: Grant Keady <keady@maths.uwa.edu.au>
+To: axiom@tenkan.org
+In-Reply-To: <200309190131.h8J1VYK31604@localhost.localdomain>
+Message-ID: <Pine.LNX.4.44.0309191112590.1622-100000@erythrina.maths.uwa.edu.au>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Mailman-Approved-At: Fri, 19 Sep 2003 00:15:52 -0400
+Cc: Grant Keady <keady@maths.uwa.edu.au>, axiom-math@nongnu.org,
+	aim-sangwin <C.J.Sangwin@bham.ac.uk>,
+	Devin Kilminster <devin@maths.uwa.edu.au>
+Subject: [Axiom-math] Re: [Axiom-mail] feedback - AXIOM and undergrad
+	teaching
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 19 Sep 2003 03:54:11 -0000
+
+
+Tim
+The MIT ocw material would seem a reasonable focus ...
+so I agree with you. You asked for feedback, so here goes.
+
+A colleague here at University of Western Australia has
+AXIOM running on his Debian linux machine, and I've checked it a bit.
+And yes, free open source CA obviously has implications for
+undergrad teaching, and a few of us in the UWA School of Maths
+will probably be putting together a short article (one page intro,
+and one page each for GAP, maxima and AXIOM) on open source CA
+for the local undergraduate maths magazine "AfterMath".
+
+There are other worthwhile education related projects.
+http://maths-physics.org.uk/aiminfo/
+http://aiminfo.net
+AiM is an open-source "Assessment in Mathematics" system,
+depending, however, in current version, totally on Maple.
+(It has, the notable advantage over many others in the genre
+of being easy to author for, and "it works", even if one
+can find style and design criticisms.)
+The page there reports under 22nd June 2003:
+Chris Sangwin at the University of Birmingham has received a grant to 
+rewrite AiM so that it can work with a choice of computer algebra systems, 
+including open-source systems.
+e-mail: C.J.Sangwin@bham.ac.uk
+(I have already told Chris that when he has made some progress,
+and if I agree with his designs - where currently I favour using JSP
+as well as Java servlets akin to those that are already used 
+(but will look at what is produced, and make my mind up then)-
+I would be interested in helping with a database of questions 
+implemented in AXIOM/Aldor.)
+
+Next point. No reason why MIT ocw has to be the only focus for
+teaching efforts. In 1996 I gave an
+"(Polynomial Algebra) Algorithms of Computer Algebra" course
+at Queen Mary College, London. (It had been done in REDUCE
+up to 1995, but for good reasons, had to be changed to Maple in
+96 and later. Fellow Australians at University of New South
+Wales were giving a similar course, and handed on their notes
+and question sets which I merged with the QMW materials.)
+I'm hoping in 2004 to get a 4th year undergrad to help do an AXIOM
+version as part of an undergrad honours project. Follow links
+at 
+http://www.maths.uwa.edu.au/~keady/Teaching/UWAteach/honsProj.html
+from which you will get to the LaTeX sources.
+If others want to help with AXIOM equivalents of the Maple, and
+perhaps tidying the documents, I would be happy.
+The UNSW documents were influenced by a proposed (Maple) book by
+Kalorkoti, so there would be legal preliminaries in any widespread
+distribution. Co-authorship with Kalorkoti, and UNSW and QMW people
+for bits they want. ...
+
+Though off-topic, I last looked at my QMW Algorithms
+documents in 1999, and, at the time was keen on TechExplorer.
+DOES TECHEXPLORER STILL EXIST IN FREE VERSION FOR linux
+Netscape or Mozilla? I've failed to find a page to download it
+from. (At UWA Maths we would have other uses for on-the-fly
+rendering of LaTeX to web-browser, and I'm not sure what we should
+use.) ANY ADVICE?
+
+Thanks for reviving AXIOM.
+Grant Keady
+
+On Thu, 18 Sep 2003, root wrote:
+
+> *,
+> 
+> MIT has a lot of courses online. In particular, it has a fair number
+> of math and science courses online. (http://ocw.mit.edu)
+> 
+> The discussion at work today (I'm at City College of NY) is a proposal
+> to develop a common-format targeted front-end to Axiom which would
+> match and support the MIT math and science online courses. Of course
+> we don't have the man-power or expertise to develop such a large range
+> of courses in-house. Nevertheless, I think the idea has a lot of merit
+> for the education community and, in particular, the Axiom community.
+> 
+> Clearly the MIT math courses are reasonable for implementation in
+> Axiom (for example, Strang's Linear Algebra). And the Linear Algebra
+> course is clearly the basis for the Mechanical Engineering
+> course. Both of these are probably well addressed by the 3 Ms
+> (Mathematica, Maple, Matlab).  I don't believe, however, that there is
+> a coordinated body of code for the range of available courses in any
+> of these systems although pieces exist for some of them.  Axiom is in
+> a "come from behind" position at the moment.
+> 
+> I believe that Axiom's new open source nature gives it a major
+> advantage over the 3Ms since both professors and students can read,
+> modify, and create new algebra which could be freely shared worldwide.
+> Since we're trying to get Axiom shipped with all of the available
+> operating systems (Linux, Windows, Macs, etc.) it will be available on
+> all university and student desktops worldwide. This will give Axiom a
+> common foothold in the education market.  A common front-end approach
+> would lower the learning curve for students so less class time would
+> be spent teaching students to use a computer algebra system.  A
+> connection to the online courseware would make it very useful.  And it
+> would give widely available tutorials for Axiom so everyone benefits.
+> 
+> Is it reasonable for an amorphous, worldwide community to try to do
+> coordinated development of software around a single MIT target? Would it
+> be reasonable to convince, or hope to convince, MIT to host the same
+> courses in multiple languages? Could we figure out a way to develop a
+> grant/subgrant structure that would attract developers for particular
+> courses? Is it possible that any granting organization would fund
+> developers worldwide? Is it politically possible within Universities
+> to expect that MIT's presentation of Linear Algebra would supercede
+> locally developed courses? If not, is it reasonable to design the
+> software to allow selective order of topic introduction? Can we design
+> courseware that would handle, say, the top 10 selling Linear Algebra
+> books? Will professors allow students to use Axiom on tests (my math
+> professors would not let us bring calculators to class, including my
+> Advanced Calculus class :-) ). Can we arrange the issues and try to
+> address each of them in some coordinated fashion?
+> 
+> It is clear that free and open source development can have as large
+> an impact on education as Linux has had on the operating system area
+> if we can build a community around the effort. One of the major issues
+> is that building software gets little or no academic credit and even
+> less grant funding. Perhaps a coordinated effort can change both of
+> these mindsets.
+> 
+> If you have a few minutes I'd like some feedback on this idea.
+> Please reply on the axiom-math@nongnu.org mailing list.
+> 
+> Tim Daly
+> axiom@tenkan.org
+> daly@idsi.net
+> 
+> 
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://mail.nongnu.org/mailman/listinfo/axiom-mail
+> 
+> 
+
+-- 
+Grant Keady,                           http://www.maths.uwa.edu.au/~keady
+School of Mathematics and Statistics,  e-mail:keady@maths.uwa.edu.au
+University of Western Australia.      fax   : (+ 61) (8) 9380 1028
+
+
+
+
+
+From MAILER-DAEMON Fri Sep 19 04:53:44 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 1A0H1M-0001h3-JS
+	for mharc-axiom-math@gnu.org; Fri, 19 Sep 2003 04:53:44 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 1A0H1J-0001fg-V2
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 04:53:41 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 1A0H1H-0001e2-DT
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 04:53:40 -0400
+Received: from [62.231.131.211] (helo=mail22.messagelabs.com)
+	by monty-python.gnu.org with smtp (Exim 4.22) id 1A0H1G-0001d5-RM
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 04:53:38 -0400
+X-VirusChecked: Checked
+X-Env-Sender: miked@nag.co.uk
+X-Msg-Ref: server-11.tower-22.messagelabs.com!1063961616!904782
+X-StarScan-Version: 5.0.7; banners=nag.co.uk,-,-
+Received: (qmail 7402 invoked from network); 19 Sep 2003 08:53:36 -0000
+Received: from smtp-6.star.net.uk (212.125.75.75)
+	by server-11.tower-22.messagelabs.com with SMTP;
+	19 Sep 2003 08:53:36 -0000
+Received: (qmail 27769 invoked from network); 19 Sep 2003 08:53:35 -0000
+Received: from nagmx1.nag.co.uk (HELO nag.co.uk) (62.231.145.242)
+	by smtp-6.star.net.uk with SMTP; 19 Sep 2003 08:53:35 -0000
+Received: from brackley.nag.co.uk (brackley.nag.co.uk [192.156.217.21])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id JAA21565;
+	Fri, 19 Sep 2003 09:53:28 +0100 (BST)
+Received: from nag.co.uk (IDENT:root@trowbridge.nag.co.uk [192.156.217.69])
+	by brackley.nag.co.uk (8.11.1/8.11.1) with ESMTP id h8J8tNY41241;
+	Fri, 19 Sep 2003 09:55:27 +0100 (BST) (envelope-from miked@nag.co.uk)
+Received: (from miked@localhost) by nag.co.uk (8.9.3/8.9.3) id JAA06527;
+	Fri, 19 Sep 2003 09:53:04 +0100
+Date: Fri, 19 Sep 2003 09:53:04 +0100
+From: Mike Dewar <miked@nag.co.uk>
+To: axiom@tenkan.org
+Message-ID: <20030919095304.A6517@nag.co.uk>
+References: <200309190131.h8J1VYK31604@localhost.localdomain>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Mailer: Mutt 1.0.1i
+In-Reply-To: <200309190131.h8J1VYK31604@localhost.localdomain>;
+	from daly@idsi.net on Thu, Sep 18, 2003 at 09:31:34PM -0400
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] feedback
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 19 Sep 2003 08:53:42 -0000
+
+Hi Tim,
+
+In addition to the pointers from Grant Keady you might want to check out
+the following:
+
+- Algebra Interactive! A first year undergraduate algebra course which
+  has been taught at Eindhoven for several years based on an interactive
+  book published by Springer and "powered" by Gap.  See
+  http://www.win.tue.nl/~ida/home.html .
+
+- Mika Seppala's work at Helsinki and Florida on multilingual calculus
+  courses http://web.math.fsu.edu/~seppala/HLS/ .
+
+- The MapleTA (TA=Teaching Assistant) product and resources
+  http://www.maplesoft.com/mapleta/ .
+
+You should also check out the "computer algebra in education" sessions
+that seem to be part of most ACA meetings.
+
+Cheers, Mike.
+
+On Thu, Sep 18, 2003 at 09:31:34PM -0400, Tim Daly wrote:
+> *,
+> 
+> MIT has a lot of courses online. In particular, it has a fair number
+> of math and science courses online. (http://ocw.mit.edu)
+> 
+> The discussion at work today (I'm at City College of NY) is a proposal
+> to develop a common-format targeted front-end to Axiom which would
+> match and support the MIT math and science online courses. Of course
+> we don't have the man-power or expertise to develop such a large range
+> of courses in-house. Nevertheless, I think the idea has a lot of merit
+> for the education community and, in particular, the Axiom community.
+> 
+> Clearly the MIT math courses are reasonable for implementation in
+> Axiom (for example, Strang's Linear Algebra). And the Linear Algebra
+> course is clearly the basis for the Mechanical Engineering
+> course. Both of these are probably well addressed by the 3 Ms
+> (Mathematica, Maple, Matlab).  I don't believe, however, that there is
+> a coordinated body of code for the range of available courses in any
+> of these systems although pieces exist for some of them.  Axiom is in
+> a "come from behind" position at the moment.
+> 
+> I believe that Axiom's new open source nature gives it a major
+> advantage over the 3Ms since both professors and students can read,
+> modify, and create new algebra which could be freely shared worldwide.
+> Since we're trying to get Axiom shipped with all of the available
+> operating systems (Linux, Windows, Macs, etc.) it will be available on
+> all university and student desktops worldwide. This will give Axiom a
+> common foothold in the education market.  A common front-end approach
+> would lower the learning curve for students so less class time would
+> be spent teaching students to use a computer algebra system.  A
+> connection to the online courseware would make it very useful.  And it
+> would give widely available tutorials for Axiom so everyone benefits.
+> 
+> Is it reasonable for an amorphous, worldwide community to try to do
+> coordinated development of software around a single MIT target? Would it
+> be reasonable to convince, or hope to convince, MIT to host the same
+> courses in multiple languages? Could we figure out a way to develop a
+> grant/subgrant structure that would attract developers for particular
+> courses? Is it possible that any granting organization would fund
+> developers worldwide? Is it politically possible within Universities
+> to expect that MIT's presentation of Linear Algebra would supercede
+> locally developed courses? If not, is it reasonable to design the
+> software to allow selective order of topic introduction? Can we design
+> courseware that would handle, say, the top 10 selling Linear Algebra
+> books? Will professors allow students to use Axiom on tests (my math
+> professors would not let us bring calculators to class, including my
+> Advanced Calculus class :-) ). Can we arrange the issues and try to
+> address each of them in some coordinated fashion?
+> 
+> It is clear that free and open source development can have as large
+> an impact on education as Linux has had on the operating system area
+> if we can build a community around the effort. One of the major issues
+> is that building software gets little or no academic credit and even
+> less grant funding. Perhaps a coordinated effort can change both of
+> these mindsets.
+> 
+> If you have a few minutes I'd like some feedback on this idea.
+> Please reply on the axiom-math@nongnu.org mailing list.
+> 
+> Tim Daly
+> axiom@tenkan.org
+> daly@idsi.net
+> 
+> 
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://mail.nongnu.org/mailman/listinfo/axiom-mail
+> 
+> ________________________________________________________________________
+> This e-mail has been scanned for all viruses by Star Internet. The
+> service is powered by MessageLabs. For more information on a proactive
+> anti-virus service working around the clock, around the globe, visit:
+> http://www.star.net.uk
+> ________________________________________________________________________
+
+________________________________________________________________________
+This e-mail has been scanned for all viruses by Star Internet. The
+service is powered by MessageLabs. For more information on a proactive
+anti-virus service working around the clock, around the globe, visit:
+http://www.star.net.uk
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Fri Sep 19 10:43:01 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 1A0MTN-0006Ih-2f
+	for mharc-axiom-math@gnu.org; Fri, 19 Sep 2003 10:43:01 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 1A0MTG-0006Gr-1U
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 10:42:54 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 1A0MTB-0006FP-1t
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 10:42:51 -0400
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 1A0MTA-0006Eb-79; Fri, 19 Sep 2003 10:42:48 -0400
+Received: from localhost.localdomain (253.115.252.64.snet.net [64.252.115.253])
+	by pimout3-ext.prodigy.net (8.12.9/8.12.3) with ESMTP id h8JEghEV172136;
+	Fri, 19 Sep 2003 10:42:43 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h8JEggK00740;
+	Fri, 19 Sep 2003 10:42:42 -0400
+Date: Fri, 19 Sep 2003 10:42:42 -0400
+Message-Id: <200309191442.h8JEggK00740@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Daniel AUGOT <Daniel.Augot@inria.fr>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-math] (no subject)
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 19 Sep 2003 14:42:54 -0000
+
+Subject: Axiom and the scientific commnunauty]
+Reply-to: daly@idsi.net
+--text follows this line--
+------- Start of forwarded message -------
+Daniel,
+
+Thanks for your note.
+
+I have had both face-to-face and direct email discussions that the
+issues you raise are real and need to be addressed. I'll try to give
+you my current thinking on the subject.
+
+>	Dear Axiom developpers,
+>
+>  I think there is an issue for the future life of Axiom, which involves
+>  researchers in computer algebra. From some email exchanges with
+>  friends, I do not feel that the revival of Axiom as free software will
+>  motivate them to go back to Axiom.
+
+I don't expect that Axiom will gain a great deal of use simply because
+it is free. I have collected about 100 free "computer algebra" systems
+which I distribute on my Rosetta CD collection. Free CA systems are
+"a dime a dozen" quite literally. Indeed many of these systems were
+built by researchers as part of their research work.
+
+My experience shows that most of these free systems start with the insight
+that math "types" and programming "types" are similar. Starting with this
+idea it becomes clear that you can build a nice, clean system from scratch.
+It takes about a semester to build up a full, general purpose, polynomial
+manipulation library in C++ and, indeed, you find that the math and computer
+types interact very well. Then the insight occurs that the library isn't
+useful to anyone but the researcher so the second semester of work involves
+writing a front-end interpreter on the library. Subsequent effort involves
+trying to convince others that this could be a very useful system given
+sufficient effort.
+
+This is very seductive since it looks like great progress. It has several 
+problems. 
+
+First, a local problem is that the research work that is "reduced to 
+practice" using a newly implemented system cannot be effectively used by
+others (e.g. library systems rarely do simplification and almost never
+document their algorithms).
+
+Second, a local problem is that reduction to practice, that is, "programming"
+is generally not "valorized". The research is recognized but the year or
+two spent building a working system is either ignored or considered to
+be of little worth during tenure discussions.
+
+Third, a global problem is that the algorithmic work, while free, is
+generally useless to others. Either the system is so specialized that
+it only does one thing well which makes it into a single-purpose, once-only
+use tool or it tries to be general purpose and has such a limited range of
+algorithms that it quickly reaches a point of frustration for the user.
+Thus the one great algorithm at the center of the system is buried and lost.
+
+Fourth is the "rule of 3". It takes 1 unit of work to get something for
+yourself. It takes 3x1 units of work to make is so your office neighbor
+can use it. It takes 3x3x1 units of work so you can use it "in the 
+department" and in courses. It takes 3x3x3x1 units of work to give it
+to the world for free without support. It takes 3x3x3x3x1 units of work 
+to make it into a commercial product with support, a hotline, lawyers, etc.
+Most "computer algebra" systems stop at the 3x1 level as there is no
+interesting new research work beyond the first unit and the 3x1 units
+are expended as a matter of trying to get the work out to the world.
+
+Building your research on top of Axiom or the 3Ms (Mathematica, Maple, 
+Matlab) immediately gives you the benefit of the 81 units of work already 
+done.
+
+Systems like the 3Ms get purchased because they are general purpose
+enough to do virtually anything and hold out the hope that research
+done with these systems will be picked up and made useful to others.
+However you tend to lose control of your work. If it is badly implemented
+in the 3M world and has your name attached to it you have little choice
+but to suffer the hit on your reputation. In a free system like Axiom
+your reputation is yours to make or break.
+
+Detailed discussions with researchers highlights another subtle fact.
+The 3Ms are built on weak theory ground. Practically speaking this has
+the effect of "limits of scale". You'll find that the more complex the
+package you build the more difficult these systems become, for reasons
+not related to your package. The difficulty is compounded if you need
+to use other "non-core" packages. In some sense, these systems are like
+Perl which is easy to use, fast to write, hard to scale to large projects,
+and impossible to maintain (yes, I know this is a religious debate).
+
+>
+>  In the French commnunauty, which I know a bit, because I was involved
+>  during my PHD thesis, 10 years ago, many people got very involved with
+>  Axiom. Many wrote domains, packages etc... for implementing the
+>  algorithms they were introducing in their research work.
+
+Axiom started out like any other home-grown system, called Scratchpad. 
+However it was started at a time that major funding was available 
+(computer algebra was considered to be a branch of artificial intelligence). 
+It was heavily funded by both the U.S. government and IBM Research for about 
+23 years. Many researchers came to visit, many people worked on the system, 
+many algorithms were created in a broad range of areas. This is the
+"dream realized" for the authors of the many free "library" systems.
+Fortunately Axiom started out as a "theory" system and not a "library".
+(See the footnote).
+
+IBM ran into financial trouble and sold Scratchpad (as Axiom) to raise cash.
+As a business decision this made sense but as a global decisions it was
+pointless. Scratchpad is a great system for doing research work and had
+the support and attention of about 400 researchers worldwide. If you're
+going to do real math research Scratchpad was definitely the place to work.
+It required at least a master's degree to learn but was easy to extend if
+you understood the underlying math. Your work could be integrated and used
+by the research community. As a "product" (Axiom) it had a very limited 
+market with cash-poor clients who could not support Axiom as a commercial 
+product. Axiom could never generate sufficient cash flow to cover the cost
+of a development team in the commercial, closed source world. And open-source
+generates no cash. So Axiom is the best place to do research and the worst
+place to make money.
+
+>
+>  But at his time, Axiom was a very closed software, and the French
+>  communauty was on its own, for documentation, help, contacting gurus,
+>  etc... Axiom also had its load of defaults~: a cumbersome system of
+>  categories, poor speed of code, compiler and interpreter bizareness,
+>  no way to use Unix pipes and redirection etc. Furthermore NAG did not
+>  show any clear sign about the future of Axiom. Even more, there was
+>  the promising A#/axiomxl/aldor project, with Basicmath, but it was
+>  immature, so the choice between Axiom and aldor was unclear.
+
+Scratchpad was "open source" before the term existed. People who asked me
+(while I was at IBM) could get a free copy of the source code. Axiom
+when it was released followed the standard commercial path of closed
+source software. This depends on a staff of people to maintain, which
+depends on a good cash flow, and clearly Axiom couldn't generate the
+cash flow. So Axiom was cut off from the customers who made it useful
+and could never survive in a closed source model.
+
+Scratchpad was ported onto AKCL, a compiled, hand-optimized version of
+common lisp specifically developed under contract. I worked closely
+with Bill Schelter on several detailed features like second-compile
+optimization of function calling, tail recursive optimizations, memory
+management, etc. to make Scratchpad perform well. When Axiom became a
+commercial product it was ported to run on CCL, a byte-code interpreted
+partial common lisp. This solved the portability problem (AKCL was 
+very hard to port as it compiles to optimized machine code) but 
+basically broke Scratchpad. Function calling and garbage collection
+optimizations disappeared. Axiom is now back to running on GCL, the
+open-source version of AKCL. Camm, the GCL lead developer, is on the
+Axiom maintainer list.
+
+As to contacting gurus we on the scratchpad team were told to "circle
+our chairs" until we came up with something other than computer algebra
+to work on (they even brought in an industrial psych. to "reprogram" us
+which I found to be a very painful experience both professionally and
+emotionally). NAG was in a very difficult situation guru-wise as they
+lost the help of the guys who wrote it.
+
+Aldor has great promise but people insist on trying to build the world
+"from scratch". It may be several years and several failed experiments
+before it becomes clear that the "library" approach is flawed. In the
+mean time Axiom and Aldor have committed to supporting cross-compiled
+compatibility.
+
+As to the other issues like "cumbersome categories", hey, it's now
+open-source and I'm open to ways of improving it. Scratchpad/Axiom
+evolved to the system it is now because hundreds of people worked on
+it and improved it. Someone needs to "unify" the Axiom type tree with
+the mathematics in a much more systematic way. This is about a whole
+Ph.D-thesis level of effort. The benefits of such thesis work would
+be enormous as it would clarify how to correctly build these systems.
+Axiom's types grew with knowledge of the theory but without benefit
+of the detailed analysis.
+
+>
+>  As a consequence many were confused and discouraged, and switched to
+>  other computer algebra systems, for instance Magma, which offers a
+>  large library and is very fast (although it does not offer the rich
+>  mechanism of Axiom for contructing domains and categories).
+
+Now Axiom is back as open source. That is a necessary condition but not
+sufficient. We need two things to survive. We need a community and we
+need a funding model. 
+
+>
+>  Consequently, I think there must be a thinking about the state of
+>  Axiom, and clear signs concerning its future, beyond the point of
+>  making it publicly available. Will the compiler will be fixed ? Will
+>  it be documented ? Will compiled code be faster ? Will researchers in
+>  computer algebra be able to incorporate easily their software ? Will
+>  they be able to redesign the system of categories ? Will it be
+>  possible to link against efficient C code ? etc, etc...
+
+For signs about its future visit savannah.nongnu.org/projects/axiom and
+click on the "homepage" link. There are long range plans to unify with
+theorem proving (ACL2 or MetaPRL), group theory (GAP and Magnus), 
+numerical work (Octave, etc). These are evolving as discussions proceed
+and the webpage has not kept pace. In addition there is the CATS (computer
+algebra test suite) effort to unify the test cases from the many systems
+and put them on a better mathematical footing.
+
+The documentation is in process. Virtually all of Axiom is now written
+in a literate programming style and examples of literate programs which
+combine a Ph.D thesis (Richard Paul's Robotics work) with a domain
+(DHMATRIX) exist in the distribution. More work needs to be done both
+on this domain and on recovering the research papers behind the other 
+domains. I've contacted several researchers and gotten their permission
+to use their research papers and integrate them into the documentation.
+This work continues but it is tedious because I need to find the research
+and secure the permissions.
+
+In addition I'm rewriting the Axiom book as we speak. The current work
+is rebuilding the book but the later steps involve much rewriting
+as well as exploiting the power of Active DVI. The online book will
+likely be the "next announcement" so documentation is being given a
+priority.
+
+Community can only occur if people feel there efforts will bring reward.
+In most cases, especially open source, this involves recognition. This
+is a particularly thorny problem as computer algebra systems tend to be
+the child of mathematicians. Math departments seems to feel that the
+reduction to practice of math theory is uninteresting. Until the cross
+breeding of the Computer Science and the Mathematics department yields
+a "Computational Mathematics" department I suspect the problem will
+continue. In the long run, of course, this has to occur as some of the
+mathematics can no longer be done without a computer and some of the
+mathematics only exists BECAUSE computers exist.
+
+Beyond University issues Axiom needs to build a wider community of
+users who are not researchers. This involves reaching out to the teaching
+community. It involves finding ways to make Axiom easier to use and reducing
+the learning curve. It involves developing a focusing agenda for coordinating
+and developing teaching materials for the sciences (see footnote2). The MIT
+suggestion is motivated by the question of who is the Axiom community and
+how to reach/motivate/support it.
+
+As to the funding issue I believe that this will also be a struggle. I've
+been mulling the idea of creating an Axiom company which would be chartered
+to work with schools to construct grant requests and administer grants for
+researchers. This is an outgrowth of the way Scratchpad worked during the
+IBM days. Researchers would come and spend time on site writing new domains,
+learning Axiom, and returning back to their schools. Unfortunately I'm not
+sufficiently skilled at grant writing to figure out how to make this work.
+The Axiom company wouldn't own anything and would only be a paper agency
+with a grant number and financial tracking.
+
+An alternative approach is to "side-effect" the grants. That is, encourage
+and support researchers who are applying for grants that involve Axiom
+(such as classroom development of courses) in their efforts. This is much
+harder as the researcher has to decide to make it part of the grant.
+
+Clearly I have no creative new ideas about how to get money. However
+if you take the "30 year view" of computer algebra it is clear that
+we need to build on the current systems rather than start from scratch.
+For one thing there is already 30 years of funding investment in Axiom
+which shows just how expensive it can be to develop a "real" system.
+For another it is clear that no-one is going to support another 30
+years of funding just to achieve the same level as Axiom has reached.
+
+So either we expend a great deal of energy creating small, special purpose
+library systems or we contribute to the larger systems like the 3Ms and
+Axiom. I would argue that Axiom is better designed to scale to higher
+mathematics and also better able to support the amplification of the
+teaching and research work because of the "open source" effect (that is,
+freely downloadable packages widely available with multiple authors 
+as with Linux).
+
+>
+>  May be the benefits of the free software will show up, but, after
+>  discussion with friends, it will not be enough for switching back to
+>  Axiom.
+
+I don't expect people to switch back to Axiom because it is free. I 
+hope they will switch back because it is better, both technically and
+socially, than the alternatives.
+
+In addition I believe that "Computational Mathematics" will eventually
+arrive as a discipline in its own right just as the Computer Science
+departments eventually arose. As an undergrad 35 years ago I had to 
+convince my math profs to create courses in "computer science" as it
+was "just a fad". We need to begin to collect the widespread
+research (enshrined in libraries and journals) and use it to document
+the algorithms. There needs to be a whole tower of computer algebra
+theory that can be taught as a field of research combining work in 
+math, computer science, complexity, types, simplification, etc.
+There needs to be support work for the sciences that need computer algebra.
+
+Switching to Axiom isn't really the point (pretend I never said that)
+but Axiom provides a kernel for the field of developing theory. In 30 years
+this will be perfectly obvious. Computer algebra both stimulates fields
+of research and provides answers that can't be arrived at by any non-computer
+means. 
+
+>
+>  Kind regards, and felicitations for the work done. I have been able to
+>  download and compile all Axiom, and I am very glad for that.
+
+Anyway, that's my current thinking on the subject.
+There is more to come as work on Axiom continues.
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+Footnote: My survey of the computer algebra field shows that systems can
+be classified in one of three ways.
+
+"Library systems" start out with the realization that math types and
+computer types are similar. A C++ (usually but not always) library
+gets created. An interpreter is grafted on top of the library. The
+focus of these systems is "speed". 
+
+"Engineering systems", like Mathematica, Maple, and Matlab, are systems
+that try to get "an answer". They seem to ignore math types and sometimes
+specialize in one general purpose programming type (e.g. lists). You can
+recognize these systems because operations like subtracting two equal
+matricies will yield the zero integer. They are general purpose, easy to
+use, and hard to scale (i.e. build on the work of other non-core packages).
+
+"Theory systems" like Axiom or Docon. These systems start with the math
+types and build up a language based on them. The programming representations
+are flexible. Subtracting two matricies yields the zero matrix. They are
+general purpose, hard to learn, but scale very cleanly.
+
+
+Footnote2: There is a game called Pontifex which simulates bridge building.
+It includes a construction set. Bridges are built and simulated loads (such
+as trains) are applied to the bridges. Learning occurs. See 
+(http://www.bridgebuilder-game.com)
+
+Axiom could be very useful when packaged with games of this type in a
+classroom setting. Consider a mechanical engineering course where you
+have software that can compute virtual work loads on beam members (which
+are basically delta-displacements). You could explain the theory, show
+how to compute loads of 2 and 3 dimensional lattices, how to apply them
+to bridges, how to predict bridge successes and failures, and use the
+game to build the simulated bridges. Game playing and mathematics in the
+same course. 
+
+You could do the same in other sciences such as biology. If you look
+at the forces involved in protein folding you could create models
+using Axiom, define the forces, and compute results. The challenge
+would be to create a game that accurately simulates the models. Perhaps 
+in chemistry you could model glue-binding forces for various types of 
+glues (like post-it notes) and construct things with glue. Game playing 
+is a fast growing (and profitable) field. We should bring games into the 
+classroom along with the theory.
+
+
+
+
+From MAILER-DAEMON Fri Sep 19 12:42:14 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 1A0OKk-0003be-H3
+	for mharc-axiom-math@gnu.org; Fri, 19 Sep 2003 12:42:14 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 1A0OKi-0003bA-6f
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 12:42:12 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 1A0OKf-0003aM-Sr
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 12:42:10 -0400
+Received: from [206.46.170.142] (helo=out004.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22) id 1A0OKf-0003aI-Gl
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 12:42:09 -0400
+Received: from cunyvm.cuny.edu ([141.155.135.240]) by out004.verizon.net
+	(InterMail vM.5.01.05.33 201-253-122-126-133-20030313) with ESMTP
+	id <20030919164208.YZJX25700.out004.verizon.net@cunyvm.cuny.edu>;
+	Fri, 19 Sep 2003 11:42:08 -0500
+Message-ID: <3F6B31E4.CF2051F0@cunyvm.cuny.edu>
+Date: Fri, 19 Sep 2003 12:42:12 -0400
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Organization: City College of New York
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+X-Accept-Language: zh,en
+MIME-Version: 1.0
+To: Grant Keady <keady@maths.uwa.edu.au>
+Subject: Re: [Axiom-math] Re: [Axiom-mail] feedback - AXIOM and
+	undergradteaching
+References: <Pine.LNX.4.44.0309191112590.1622-100000@erythrina.maths.uwa.edu.au>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Authentication-Info: Submitted using SMTP AUTH at out004.verizon.net from
+	[141.155.135.240] at Fri, 19 Sep 2003 11:42:07 -0500
+Cc: axiom@tenkan.org, aim-sangwin <C.J.Sangwin@bham.ac.uk>,
+	axiom-math@nongnu.org, Devin Kilminster <devin@maths.uwa.edu.au>
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: wyscc@cunyvm.cuny.edu
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 19 Sep 2003 16:42:12 -0000
+
+Grant Keady wrote:
+
+
+> Though off-topic, I last looked at my QMW Algorithms
+> documents in 1999, and, at the time was keen on TechExplorer.
+> DOES TECHEXPLORER STILL EXIST IN FREE VERSION FOR linux
+> Netscape or Mozilla? I've failed to find a page to download it
+> from. (At UWA Maths we would have other uses for on-the-fly
+> rendering of LaTeX to web-browser, and I'm not sure what we should
+> use.) ANY ADVICE?
+
+http://www.mathcad.com/download/te3233p1intro-lite.exe
+
+William
+--
+William Sit
+Department of Mathematics..............Email: wyscc@cunyvm.cuny.edu
+City College of New York..........................Tel: 212-650-5179
+Convent Ave at West 138th Street..................Fax: 212-862-0004
+New York, NY 10031.....Asian Symposium on Computer Mathematics 2003
+USA..........................http://www.mmrc.iss.ac.cn/~ascm/ascm03
+
+
+
+From MAILER-DAEMON Fri Sep 19 14:37:09 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 1A0Q7x-0006e4-1b
+	for mharc-axiom-math@gnu.org; Fri, 19 Sep 2003 14:37:09 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 1A0Q7t-0006dT-AO
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 14:37:05 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 1A0Q7n-0006cV-7l
+	for axiom-math@nongnu.org; Fri, 19 Sep 2003 14:36:59 -0400
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 1A0Q7i-0006bS-RR; Fri, 19 Sep 2003 14:36:54 -0400
+Received: from localhost.localdomain (253.115.252.64.snet.net [64.252.115.253])
+	by pimout2-ext.prodigy.net (8.12.9/8.12.3) with ESMTP id h8JIanhH159480;
+	Fri, 19 Sep 2003 14:36:50 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h8JIan000819;
+	Fri, 19 Sep 2003 14:36:49 -0400
+Date: Fri, 19 Sep 2003 14:36:49 -0400
+Message-Id: <200309191836.h8JIan000819@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Daniel.Augot@inria.fr
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-math] correction
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 19 Sep 2003 18:37:07 -0000
+
+*,
+
+A correction on the footnote in the last reply...
+I used the example of matrix subtraction and made the claim that
+engineering systems would give an integer zero as the result.
+This is not correct. The point of the incorrect example was 
+that type information is not carried in these system.
+Please ignore the example.
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Sat Sep 20 11:16:57 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 1A0jTk-0005GO-QL
+	for mharc-axiom-math@gnu.org; Sat, 20 Sep 2003 11:16:56 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 1A0jTi-0005Fd-98
+	for axiom-math@nongnu.org; Sat, 20 Sep 2003 11:16:54 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 1A0jTg-0005Eb-DH
+	for axiom-math@nongnu.org; Sat, 20 Sep 2003 11:16:53 -0400
+Received: from [206.46.170.172] (helo=pop015.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 1A0jTe-0005Dh-21; Sat, 20 Sep 2003 11:16:50 -0400
+Received: from cunyvm.cuny.edu ([141.155.135.240]) by pop015.verizon.net
+	(InterMail vM.5.01.05.33 201-253-122-126-133-20030313) with ESMTP
+	id <20030920151648.DFPJ12375.pop015.verizon.net@cunyvm.cuny.edu>;
+	Sat, 20 Sep 2003 10:16:48 -0500
+Message-ID: <3F6C6F62.F02E8DD@cunyvm.cuny.edu>
+Date: Sat, 20 Sep 2003 11:16:50 -0400
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Organization: City College of New York
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+X-Accept-Language: zh,en
+MIME-Version: 1.0
+To: daly@idsi.net
+Subject: Re: [Axiom-math] correction
+References: <200309191836.h8JIan000819@localhost.localdomain>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Authentication-Info: Submitted using SMTP AUTH at pop015.verizon.net from
+	[141.155.135.240] at Sat, 20 Sep 2003 10:16:48 -0500
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, axiom-mail@nongnu.org,
+	Daniel.Augot@inria.fr
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: wyscc@cunyvm.cuny.edu
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 20 Sep 2003 15:16:55 -0000
+
+root wrote:
+> 
+> *,
+> 
+> A correction on the footnote in the last reply...
+> I used the example of matrix subtraction and made the claim that
+> engineering systems would give an integer zero as the result.
+> This is not correct. The point of the incorrect example was
+> that type information is not carried in these system.
+> Please ignore the example.
+> 
+> Tim Daly
+> axiom@tenkan.org
+> daly@idsi.net
+> 
+
+ In the 3M's, the difference of two equal matrices is the zero matrix. However,
+a brief investigation seems to indicate that type information in Maple or
+Mathematica is carried only to a limited extent, and not as formally or robustly
+as in Axiom. Matlab has types (classes), apparently based on C++ or Java
+constructs.
+
+In Mathematica: Head[ ] does not always give types; and there are only a few
+specific routines to test types.
+
+In[1]:=
+a := x^2 + 1
+
+In[2]:=
+b := x^2
+
+In[3]:=
+c := a - b
+
+In[4]:=
+PolynomialQ[c]
+
+Out[4]=
+True
+
+In[5]:=
+IntegerQ[c]
+
+Out[5]=
+True
+
+In[6]:=
+Head[c]
+
+Out[6]=
+Integer
+
+Maple has a type function with two arguments to test the type of a variable, but
+only if you already know what type to test against. Similar to Mathematica, the
+difference of two similarly typed objects may have multiple other types and need
+not have the type of the operands.
+
+> a:=x^2+1;
+
+                                   2
+                             a := x  + 1
+
+> b:=x^2;
+
+                                     2
+                               b := x
+
+> c:=a-b;
+
+                                  1
+
+> type(c,integer);
+
+                                 true
+
+> type(c,polynom);
+
+                                 true
+
+> a:=1/2;
+                               a := 1/2
+
+> type(a,fraction);
+
+                                 true
+
+> b:=1/2;
+
+                               b := 1/2
+
+> c:=a-b;
+
+                                c := 0
+
+> type(c,fraction);
+
+                                false
+
+> type(c,integer);
+
+                                 true
+
+
+
+
+In Matlab, the type is called class and seems to be retained.
+>> sym x
+ 
+ans =
+ 
+x
+ 
+>> a = x^2 + 1
+ 
+a =
+ 
+x^2+1
+ 
+>> b = x^2+1
+
+ 
+b =
+ 
+x^2
+ 
+>> c = a-b
+ 
+c =
+ 
+1
+ 
+>> class(c)
+
+ans =
+
+sym
+
+
+
+
+William
+-- 
+William Sit
+Department of Mathematics..............Email: wyscc@cunyvm.cuny.edu
+City College of New York..........................Tel: 212-650-5179
+Convent Ave at West 138th Street..................Fax: 212-862-0004
+New York, NY 10031.....Asian Symposium on Computer Mathematics 2003
+USA..........................http://www.mmrc.iss.ac.cn/~ascm/ascm03
+
+
+
+From MAILER-DAEMON Sun Sep 28 16:38:14 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 1A3iJ4-0001iC-Hj
+	for mharc-axiom-math@gnu.org; Sun, 28 Sep 2003 16:38:14 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 1A3iJ2-0001hk-90
+	for axiom-math@nongnu.org; Sun, 28 Sep 2003 16:38:12 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 1A3iJ0-0001hP-Ry
+	for axiom-math@nongnu.org; Sun, 28 Sep 2003 16:38:11 -0400
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22) id 1A3iBx-0000I4-Nm
+	for axiom-math@nongnu.org; Sun, 28 Sep 2003 16:30:53 -0400
+Received: from localhost.localdomain (174.117.252.64.snet.net [64.252.117.174])
+	by pimout3-ext.prodigy.net (8.12.9/8.12.3) with ESMTP id h8SKUqjA181830
+	for <axiom-math@nongnu.org>; Sun, 28 Sep 2003 16:30:52 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h8SKUlT12795;
+	Sun, 28 Sep 2003 16:30:47 -0400
+Date: Sun, 28 Sep 2003 16:30:47 -0400
+Message-Id: <200309282030.h8SKUlT12795@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-math@nongnu.org
+Subject: [Axiom-math] symbolic summation
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 28 Sep 2003 20:38:12 -0000
+
+Is anyone aware of an implementation of symbolic summation in Axiom?
+
+Tim Daly
+axiom@tenkan.org
+
+
+
+From MAILER-DAEMON Tue Sep 30 11:32:58 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 1A4MUj-0003uj-1T
+	for mharc-axiom-math@gnu.org; Tue, 30 Sep 2003 11:32:57 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 1A4MUg-0003u5-9g
+	for axiom-math@nongnu.org; Tue, 30 Sep 2003 11:32:54 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 1A4MU8-0003pr-PN
+	for axiom-math@nongnu.org; Tue, 30 Sep 2003 11:32:51 -0400
+Received: from [134.74.86.20] (helo=groups.sci.ccny.cuny.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.22) id 1A4MU8-0003po-Cs
+	for axiom-math@nongnu.org; Tue, 30 Sep 2003 11:32:20 -0400
+Received: from rio.sci.ccny.cuny.edu (rio.sci.ccny.cuny.edu [134.74.120.4])
+	by groups.sci.ccny.cuny.edu (8.11.0/8.11.2) with ESMTP id h8UFVhv22713; 
+	Tue, 30 Sep 2003 11:31:43 -0400
+Received: (from daly@localhost)
+	by rio.sci.ccny.cuny.edu (8.11.0/8.11.0) id h8UEsg012325;
+	Tue, 30 Sep 2003 10:54:42 -0400
+Date: Tue, 30 Sep 2003 10:54:42 -0400
+Message-Id: <200309301454.h8UEsg012325@rio.sci.ccny.cuny.edu>
+From: Tim Daly  <daly@rio.sci.ccny.cuny.edu>
+To: bmt@us.ibm.com
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] basiri/faugere code
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 30 Sep 2003 15:32:55 -0000
+
+Barry,
+
+If you have an email for Faugere I can ask him for his groebner basis
+code. Or you're welcome to ask him. I'll try to figure out how to
+merge it. Since it used to work with Axiom it should be a simple job.
+There is, of course, no such thing as a simple job :-)
+
+t
+
+
+
+
+
+
+
+From MAILER-DAEMON Tue Sep 30 12:28:34 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 1A4NMY-00030E-7v
+	for mharc-axiom-math@gnu.org; Tue, 30 Sep 2003 12:28:34 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 1A4NMV-0002zo-Nd
+	for axiom-math@nongnu.org; Tue, 30 Sep 2003 12:28:31 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 1A4NLz-0002wW-05
+	for axiom-math@nongnu.org; Tue, 30 Sep 2003 12:28:30 -0400
+Received: from [134.74.86.20] (helo=groups.sci.ccny.cuny.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.22) id 1A4NLy-0002wP-HF
+	for axiom-math@nongnu.org; Tue, 30 Sep 2003 12:27:58 -0400
+Received: from rio.sci.ccny.cuny.edu (rio.sci.ccny.cuny.edu [134.74.120.4])
+	by groups.sci.ccny.cuny.edu (8.11.0/8.11.2) with ESMTP id h8UGRGv22731; 
+	Tue, 30 Sep 2003 12:27:16 -0400
+Received: (from daly@localhost)
+	by rio.sci.ccny.cuny.edu (8.11.0/8.11.0) id h8UFoFf16122;
+	Tue, 30 Sep 2003 11:50:15 -0400
+Date: Tue, 30 Sep 2003 11:50:15 -0400
+Message-Id: <200309301550.h8UFoFf16122@rio.sci.ccny.cuny.edu>
+From: Tim Daly  <daly@rio.sci.ccny.cuny.edu>
+To: qbkull@yahoo.com
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-math] Simon and Garfunkel tickets
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-math.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 30 Sep 2003 16:28:32 -0000
+
+sad to say I think they broke up a while ago. :-)
+buy dad a new cup. i hear he broke the old one :-)
+my monday went all to shit. boss went into the hospital with chest pains.
+my attempt to pay off the last three payments of my car loan ended up
+sending my loan to a collection agency and now I have to fight with them.
+but we irish never worry. remember that the light you see in the distance
+is the light at the back of the cave. beware the bear.
+
+love
+d, the sad, strange little man.
+
+
+
+
+
+
+
+

@@ -1,0 +1,756 @@
+From MAILER-DAEMON Tue May 13 15:51:09 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Jw0Wj-00082Y-F9
+	for mharc-axiom-math@gnu.org; Tue, 13 May 2008 15:51:09 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Jw0Wi-00081w-4M
+	for axiom-math@nongnu.org; Tue, 13 May 2008 15:51:08 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Jw0Wf-00081X-Rj
+	for axiom-math@nongnu.org; Tue, 13 May 2008 15:51:07 -0400
+Received: from [199.232.76.173] (port=38579 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Jw0Wf-00081U-OM
+	for axiom-math@nongnu.org; Tue, 13 May 2008 15:51:05 -0400
+Received: from wx-out-0506.google.com ([66.249.82.238]:51801)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <elzacho@gmail.com>) id 1Jw0Wf-0001ny-AP
+	for axiom-math@nongnu.org; Tue, 13 May 2008 15:51:05 -0400
+Received: by wx-out-0506.google.com with SMTP id h29so2408010wxd.4
+	for <axiom-math@nongnu.org>; Tue, 13 May 2008 12:51:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type;
+	bh=HD8i88HXDgDM7ygIJvS1ojpyVp368loUyj2A765uANo=;
+	b=EAVFMlPDipyJUsciQIJX11BnFUV/t68DnGYvNhddmA4zknQtlzwLLLsgLwHf5JnJ+7LU+G1xP3D5Y012ksjbHOdXjez6vAJnranyHt6XOtBSYB2tXGJoojASRe8UVP3WWXBFw6ozB7sk0d9PZK3huGgVwhMRCZtA0SnFdkC1j/8=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:to:subject:mime-version:content-type;
+	b=veLVWikBWyd//L/vVS4ETLVDTBGKGD8VrhyzNep1FiWLN7zOpDyLwGAonu/dDGlgKq5egFYwDbv6y+aoLk1HnonVjJJJteSa0+WA6yFxNSrjietLDdUMUL01a1mPHoIoGuUv6chLuYZDmqWGJPhhtNpIVF2e1k42nQ3yBgRl55I=
+Received: by 10.101.1.12 with SMTP id d12mr231296ani.31.1210708263712;
+	Tue, 13 May 2008 12:51:03 -0700 (PDT)
+Received: by 10.100.225.18 with HTTP; Tue, 13 May 2008 12:51:03 -0700 (PDT)
+Message-ID: <95f1acd0805131251x27e76f7bt72511ebdbc6a47b1@mail.gmail.com>
+Date: Tue, 13 May 2008 13:51:03 -0600
+From: Zach <elzacho@gmail.com>
+To: axiom-math@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_20727_28825475.1210708263604"
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Subject: [Axiom-math] Solving symbolic vector equations: How do I do this in
+	Axiom?
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 13 May 2008 19:51:08 -0000
+
+------=_Part_20727_28825475.1210708263604
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Please excuse me, I am really quite new to Axiom and much of abstract
+algebra terminology.  I hope this is the right place for these questions.
+If not, could someone point me in the right direction.  I am currently
+reading the Axiom tome, er.. book, but it is good to have a human to bounce
+ideas off of.
+
+Here is a really simple example, we have real number `a' and vectors `v1'
+and `v2'.  Given:
+
+a*v1=v2
+
+solve(a*v1=v2)
+==> [a = v2/v1]
+
+I would like to solve for a.  If I put this in, Axiom assumes v1 and v2 to
+be things that have a defined division (a field I guess).  But really we
+have no division by a vector (a ring, perhaps?), so what I would like is for
+axiom to solve this by
+
+a * v1 . v1 = v2 . v1
+a = (v2 . v1) / (v1 . v1)
+
+I assume that I do this by giving Axiom some type information, like
+specifying v1 and v2 as Vector (or Matrix) Fraction Integer or something.
+What is the best way of tackling these types of problems?
+
+Thanks,
+Zach
+
+------=_Part_20727_28825475.1210708263604
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Please excuse me, I am really quite new to Axiom and much of abstract algebra terminology.&nbsp; I hope this is the right place for these questions.&nbsp; If not, could someone point me in the right direction.&nbsp; I am currently reading the Axiom tome, er.. book, but it is good to have a human to bounce ideas off of.<br>
+<br>Here is a really simple example, we have real number `a&#39; and vectors `v1&#39; and `v2&#39;.&nbsp; Given:<br><br>a*v1=v2<br><br>solve(a*v1=v2)<br>==&gt; [a = v2/v1]<br><br>I would like to solve for a.&nbsp; If I put this in, Axiom assumes v1 and v2 to be things that have a defined division (a field I guess).&nbsp; But really we have no division by a vector (a ring, perhaps?), so what I would like is for axiom to solve this by<br>
+<br>a * v1 . v1 = v2 . v1<br>a = (v2 . v1) / (v1 . v1)<br><br>I assume that I do this by giving Axiom some type information, like specifying v1 and v2 as Vector (or Matrix) Fraction Integer or something.&nbsp; What is the best way of tackling these types of problems?<br>
+<br>Thanks,<br>Zach<br><br><br><br>
+
+------=_Part_20727_28825475.1210708263604--
+
+
+
+From MAILER-DAEMON Tue May 13 17:48:27 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Jw2ME-00080n-U9
+	for mharc-axiom-math@gnu.org; Tue, 13 May 2008 17:48:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Jw2MD-0007zy-5W
+	for axiom-math@nongnu.org; Tue, 13 May 2008 17:48:25 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Jw2MC-0007z2-5E
+	for axiom-math@nongnu.org; Tue, 13 May 2008 17:48:24 -0400
+Received: from [199.232.76.173] (port=56647 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Jw2MB-0007yo-UP
+	for axiom-math@nongnu.org; Tue, 13 May 2008 17:48:24 -0400
+Received: from fg-out-1718.google.com ([72.14.220.152]:40738)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1Jw2MB-0008S7-OH
+	for axiom-math@nongnu.org; Tue, 13 May 2008 17:48:23 -0400
+Received: by fg-out-1718.google.com with SMTP id l26so2371082fgb.8
+	for <axiom-math@nongnu.org>; Tue, 13 May 2008 14:48:21 -0700 (PDT)
+Received: by 10.86.89.4 with SMTP id m4mr510234fgb.53.1210715300858;
+	Tue, 13 May 2008 14:48:20 -0700 (PDT)
+Received: by 10.86.93.13 with HTTP; Tue, 13 May 2008 14:48:20 -0700 (PDT)
+Message-ID: <fbcd16d40805131448n557d86edi4e988472cfbb217b@mail.gmail.com>
+Date: Tue, 13 May 2008 17:48:20 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: Zach <elzacho@gmail.com>
+Subject: Re: [Axiom-math] Solving symbolic vector equations: How do I do this
+	in Axiom?
+In-Reply-To: <95f1acd0805131251x27e76f7bt72511ebdbc6a47b1@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <95f1acd0805131251x27e76f7bt72511ebdbc6a47b1@mail.gmail.com>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 13 May 2008 21:48:25 -0000
+
+On Tue, May 13, 2008 at 3:51 PM, Zach wrote:
+> Please excuse me, I am really quite new to Axiom and much of
+> abstract algebra terminology.
+
+Welcome.
+
+> I hope this is the right place for these questions.  If not,
+> could someone point me in the right direction.
+
+Yes, it is a good place to ask such questions.
+
+> I am currently reading the Axiom tome, er.. book, but it is good
+> to have a human to bounce ideas off of.
+
+Another useful place might be:
+
+http://axiom-wiki.newsynthesis.org
+
+>
+> Here is a really simple example, we have real number `a' and
+> vectors `v1' and `v2'.  Given:
+>
+> a*v1=v2
+>
+> solve(a*v1=v2)
+> ==> [a = v2/v1]
+>
+> I would like to solve for a.  If I put this in, Axiom assumes v1 and v2 to
+> be things that have a defined division (a field I guess).  But really we
+> have no division by a vector (a ring, perhaps?),
+
+You have the right general idea.
+
+> so what I would like is for axiom to solve this by
+>
+> a * v1 . v1 = v2 . v1
+> a = (v2 . v1) / (v1 . v1)
+>
+
+??? This is not a solution to the original equation!
+
+> I assume that I do this by giving Axiom some type information,
+> like specifying v1 and v2 as Vector (or Matrix) Fraction Integer
+> or something.
+
+Well no, not really. Currently Axiom has no domain for symbolic
+computations with vectors. Specifying
+
+  v1:Vector Fraction Integer
+
+does not allow symbolic computations with the symbol 'v1', instead it
+declares that the *type* of the variable 'v1' is 'Vector Fraction
+Integer'. From this declaration Axiom expects 'v1' to eventually be
+given a value, e.g.
+
+  v1::= [1/2, 1/3, 1/4]
+
+Axiom does have other domains like Polynomial which includes symbolic variables.
+
+> What is the best way of tackling these types of problems?
+>
+
+It would be possible (and quite interesting) to create a new domain in
+Axiom for symbolic vector calculations.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Tue May 13 18:32:55 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Jw33H-0008E6-Gr
+	for mharc-axiom-math@gnu.org; Tue, 13 May 2008 18:32:55 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Jw33G-0008Dz-GY
+	for axiom-math@nongnu.org; Tue, 13 May 2008 18:32:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Jw33F-0008Dn-7B
+	for axiom-math@nongnu.org; Tue, 13 May 2008 18:32:53 -0400
+Received: from [199.232.76.173] (port=56130 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Jw33F-0008Dk-0p
+	for axiom-math@nongnu.org; Tue, 13 May 2008 18:32:53 -0400
+Received: from rv-out-0708.google.com ([209.85.198.247]:54338)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <elzacho@gmail.com>) id 1Jw33E-0007MM-Sp
+	for axiom-math@nongnu.org; Tue, 13 May 2008 18:32:53 -0400
+Received: by rv-out-0708.google.com with SMTP id f25so2785268rvb.22
+	for <axiom-math@nongnu.org>; Tue, 13 May 2008 15:32:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:references;
+	bh=ppzOrl04hu//2dpbappgGOzraQPUe/oiQzDGlssfPKE=;
+	b=lM2jLEreiy1Dno4V43nyEOQpnGEF76VhUVT5I7o1uINg/E0YUVMosQOq9+9aCIbD3tocIrNHL8GPhI3IzoXhKF2QI92+IY284gIifhzCzcGeJGa4ORE3/ysR2zpnsI/IsSdZkW2YG448vbSVAiUQhp3M5c29XpruHyzn7saSxM4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:references;
+	b=fvAwusplnsRERtTZPa5q4fMFFT4W0PtD6EEdd+5iq7ef5YA/XA4UHWWgsBklSa35ZKGhJt+wDP0ePA+TRb1np3rBgFK8sfNVdC3GRw9i47uQQWkQNdLddmjfdYRdfvOM0RFMmZlc0iFqTGnjtcpLANcYIsG38ZgohagINUvGz+c=
+Received: by 10.140.166.21 with SMTP id o21mr106891rve.254.1210717971575;
+	Tue, 13 May 2008 15:32:51 -0700 (PDT)
+Received: by 10.141.204.1 with HTTP; Tue, 13 May 2008 15:32:51 -0700 (PDT)
+Message-ID: <95f1acd0805131532g758bafcev6d5191035cddbd80@mail.gmail.com>
+Date: Tue, 13 May 2008 16:32:51 -0600
+From: Zach <elzacho@gmail.com>
+To: "Bill Page" <bill.page@newsynthesis.org>
+Subject: Re: [Axiom-math] Solving symbolic vector equations: How do I do this
+	in Axiom?
+In-Reply-To: <fbcd16d40805131448n557d86edi4e988472cfbb217b@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3871_32573288.1210717971567"
+References: <95f1acd0805131251x27e76f7bt72511ebdbc6a47b1@mail.gmail.com>
+	<fbcd16d40805131448n557d86edi4e988472cfbb217b@mail.gmail.com>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 13 May 2008 22:32:54 -0000
+
+------=_Part_3871_32573288.1210717971567
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Bill,
+
+
+> > so what I would like is for axiom to solve this by
+> >
+> > a * v1 . v1 = v2 . v1
+> > a = (v2 . v1) / (v1 . v1)
+> >
+>
+> ??? This is not a solution to the original equation!
+
+
+Hmm, the problem is that this equation is in danger of having no solution.
+I guess there is an implicit assumption that this has a solution for some
+nonzero v2, meaning the vectors must be parallel.  My boss gave me a problem
+something like this and I am walking on shaky legs at the moment as I
+haven't tried to solve problems like these before.
+
+I guess the correct thing to do is notice that v1 and v2 must be parallel,
+and then deal with the magnitudes, a=|v2|/|v1|.  Once you accept this my
+solution works too, as with unit vector u in the direction of v1 and v2, v1
+= |v1| u and v2 = |v2| u, v1 . v2 = |v1| |v2| u . u = |v1| |v2| and v1 . v1
+= |v1|^2.  Right?  Please feel free to point out any misconceptions I am
+fostering.
+
+Anyway, I guess I chose too simple of an example.  But never mind that.
+(The original problem was to find tuples of reals (n1, n2, m1, m2) such that
+n1*a1 + n2*a2 = m1*b1 + m2*b2 (where a1, a2, b1, and b2 are 2D vectors).)
+
+> Well no, not really. Currently Axiom has no domain for symbolic
+> computations with vectors.
+
+I was afraid of that.  Over at Maxima they had no facility either.
+
+
+> > What is the best way of tackling these types of problems?
+> >
+>
+> It would be possible (and quite interesting) to create a new domain in
+> Axiom for symbolic vector calculations.
+>
+
+Hmm, okay.  So, it would be a good idea to understand how this is done in
+polynomial symbolic manipulation before approaching such a task?
+
+Thanks,
+Zach
+
+------=_Part_3871_32573288.1210717971567
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Bill,<br><br><div class="gmail_quote"><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;"><div class="Ih2E3d"><br>
+&gt; so what I would like is for axiom to solve this by<br>
+&gt;<br>
+&gt; a * v1 . v1 = v2 . v1<br>
+&gt; a = (v2 . v1) / (v1 . v1)<br>
+&gt;<br>
+<br>
+</div>??? This is not a solution to the original equation!</blockquote><div><br>Hmm, the problem is that this equation is in danger of having no solution.&nbsp; I guess there is an implicit assumption that this has a solution for some nonzero v2, meaning the vectors must be parallel.&nbsp; My boss gave me a problem something like this and I am walking on shaky legs at the moment as I haven&#39;t tried to solve problems like these before.<br>
+<br>I guess the correct thing to do is notice that v1 and v2 must be parallel, and then deal with the magnitudes, a=|v2|/|v1|.&nbsp; Once you accept this my solution works too, as with unit vector u in the direction of v1 and v2, v1 = |v1| u and v2 = |v2| u, v1 . v2 = |v1| |v2| u . u = |v1| |v2| and v1 . v1 = |v1|^2.&nbsp; Right?&nbsp; Please feel free to point out any misconceptions I am fostering.<br>
+<br>Anyway, I guess I chose too simple of an example.&nbsp; But never mind that.&nbsp; (The original problem was to find tuples of reals (n1, n2, m1, m2) such that n1*a1 + n2*a2 = m1*b1 + m2*b2 (where a1, a2, b1, and b2 are 2D vectors).)<br>
+<br>
+&gt; Well no, not really. Currently Axiom has no domain for symbolic<br>&gt; computations with vectors.<br><br>I was afraid of that.&nbsp; Over at Maxima they had no facility either.<br>
+<br></div><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;"><div class="Ih2E3d"><br>
+&gt; What is the best way of tackling these types of problems?<br>
+&gt;<br>
+<br>
+</div>It would be possible (and quite interesting) to create a new domain in<br>
+Axiom for symbolic vector calculations.<br>
+</blockquote><div><br>Hmm, okay.&nbsp; So, it would be a good idea to understand how this is done in polynomial symbolic manipulation before approaching such a task?<br><br>Thanks,<br>Zach<br><br><br></div></div>
+
+------=_Part_3871_32573288.1210717971567--
+
+
+
+From MAILER-DAEMON Tue May 13 20:31:13 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Jw4tk-0000kz-Ug
+	for mharc-axiom-math@gnu.org; Tue, 13 May 2008 20:31:12 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Jw4ti-0000kM-RG
+	for axiom-math@nongnu.org; Tue, 13 May 2008 20:31:10 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Jw4td-0000it-HA
+	for axiom-math@nongnu.org; Tue, 13 May 2008 20:31:09 -0400
+Received: from [199.232.76.173] (port=51752 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Jw4td-0000iq-Cj
+	for axiom-math@nongnu.org; Tue, 13 May 2008 20:31:05 -0400
+Received: from mail3.riotinto.com ([210.8.150.180]:3650)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <David.Billinghurst@riotinto.com>) id 1Jw4tc-0005Up-R8
+	for axiom-math@nongnu.org; Tue, 13 May 2008 20:31:05 -0400
+Received: from auperexbh1.corp.riotinto.org ([10.216.73.80]) by
+	mail3.riotinto.com with Microsoft SMTPSVC(6.0.3790.1830); 
+	Wed, 14 May 2008 07:34:58 +0800
+Received: from rtssbrex03.corp.riotinto.org ([10.207.9.107]) by
+	auperexbh1.corp.riotinto.org with Microsoft SMTPSVC(6.0.3790.3959); 
+	Wed, 14 May 2008 07:43:38 +0800
+Received: from calttsv025.cal.riotinto.org ([203.4.72.4]) by
+	rtssbrex03.corp.riotinto.org with Microsoft SMTPSVC(6.0.3790.3959); 
+	Wed, 14 May 2008 09:43:35 +1000
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1896
+Importance: normal
+Priority: normal
+content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-math] Solving symbolic vector equations: How do I do
+	thisin Axiom?
+Date: Wed, 14 May 2008 09:43:34 +1000
+Message-ID: <026DCC31AB859648A6F16C0E5CD2580D0147277A@calttsv025.cal.riotinto.org>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-math] Solving symbolic vector equations: How do I do
+	thisin Axiom?
+Thread-Index: Aci1SVEwaYaJPqR3RFOdlSZsHblQ4QACCFOg
+References: <95f1acd0805131251x27e76f7bt72511ebdbc6a47b1@mail.gmail.com><fbcd16d40805131448n557d86edi4e988472cfbb217b@mail.gmail.com>
+	<95f1acd0805131532g758bafcev6d5191035cddbd80@mail.gmail.com>
+From: "Billinghurst, David \(RTATECH\)" <David.Billinghurst@riotinto.com>
+To: "Zach" <elzacho@gmail.com>
+X-OriginalArrivalTime: 13 May 2008 23:43:35.0679 (UTC)
+	FILETIME=[291DC8F0:01C8B553]
+X-detected-kernel: by monty-python.gnu.org: Windows 2000 SP4, XP SP1+
+X-Greylist: delayed 2841 seconds by postgrey-1.27 at monty-python;
+	Tue, 13 May 2008 20:31:03 EDT
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 14 May 2008 00:31:11 -0000
+
+> From:  Zach
+>
+> (The original problem was to find tuples of reals (n1, n2, m1, m2)=20
+> such that n1*a1 + n2*a2 =3D m1*b1 + m2*b2 (where a1, a2, b1, and b2 =
+are
+2D vectors).)
+
+Firstly, the solution is not unique.  If (n1, n2, m1, m2) is a solution
+then=20
+so is (k*n1, k*n2, k*m1, k*m2).
+
+Now write this as a matrix equation, where a1 =3D (a1x, a1y) and so on
+
+[ a1x  a2x  -b1x  -b2x ] [ n1 ]    [ 0 ]
+[ a1y  a2y  -b1y  -b2y ] [ n2 ]  =3D [ 0 ]
+                         [ m1 ]
+                         [ m2 ]=20
+
+and solve as an underdetermined linear system. The nature of the
+solution will depend
+on the rank of the coefficient matrix.
+
+
+NOTICE
+This e-mail and any attachments are private and confidential and may =
+contain privileged information. If you are not an authorised recipient, =
+the copying or distribution of this e-mail and any attachments is =
+prohibited and you must not read, print or act in reliance on this =
+e-mail or attachments.
+This notice should not be removed.
+
+
+
+From MAILER-DAEMON Wed May 14 12:45:46 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1JwK6r-00042r-SL
+	for mharc-axiom-math@gnu.org; Wed, 14 May 2008 12:45:45 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1JwK6p-00041v-A4
+	for axiom-math@nongnu.org; Wed, 14 May 2008 12:45:43 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1JwK6n-000410-Qe
+	for axiom-math@nongnu.org; Wed, 14 May 2008 12:45:42 -0400
+Received: from [199.232.76.173] (port=60921 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1JwK6n-00040t-IR
+	for axiom-math@nongnu.org; Wed, 14 May 2008 12:45:41 -0400
+Received: from fk-out-0910.google.com ([209.85.128.186]:51546)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1JwK6n-000317-CJ
+	for axiom-math@nongnu.org; Wed, 14 May 2008 12:45:41 -0400
+Received: by fk-out-0910.google.com with SMTP id 18so2881605fks.2
+	for <axiom-math@nongnu.org>; Wed, 14 May 2008 09:45:40 -0700 (PDT)
+Received: by 10.125.134.4 with SMTP id l4mr593259mkn.46.1210783539823;
+	Wed, 14 May 2008 09:45:39 -0700 (PDT)
+Received: by 10.86.93.13 with HTTP; Wed, 14 May 2008 09:45:39 -0700 (PDT)
+Message-ID: <fbcd16d40805140945p5faf881bj8ff234418c803ebf@mail.gmail.com>
+Date: Wed, 14 May 2008 12:45:39 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: Zach <elzacho@gmail.com>
+Subject: Re: [Axiom-math] Solving symbolic vector equations: How do I do this
+	in Axiom?
+In-Reply-To: <95f1acd0805131532g758bafcev6d5191035cddbd80@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+References: <95f1acd0805131251x27e76f7bt72511ebdbc6a47b1@mail.gmail.com>
+	<fbcd16d40805131448n557d86edi4e988472cfbb217b@mail.gmail.com>
+	<95f1acd0805131532g758bafcev6d5191035cddbd80@mail.gmail.com>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: Axiom-Developer <axiom-developer@nongnu.org>, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 14 May 2008 16:45:43 -0000
+
+On Tue, May 13, 2008 at 6:32 PM, Zach wrote:
+>>
+>> > so what I would like is for axiom to solve this by
+>> >
+>> > a * v1 . v1 =3D v2 . v1
+>> > a =3D (v2 . v1) / (v1 . v1)
+>> >
+>>
+> Bill Page wrote:
+>> ??? This is not a solution to the original equation!
+>
+> Hmm, the problem is that this equation is in danger of having no solution=
+.
+> I guess there is an implicit assumption that this has a solution for some
+> nonzero v2, meaning the vectors must be parallel.  My boss gave me a
+> problem something like this and I am walking on shaky legs at the
+> moment as I haven't tried to solve problems like these before.
+
+Ok, I like this problem. Of course I agree that *if* this equation has
+a solution then what you wrote is the solution. The situation is not
+so different in a lot of other cases of symbolic "solutions".
+
+>
+> I guess the correct thing to do is notice that v1 and v2 must be parallel=
+,
+> and then deal with the magnitudes, a=3D|v2|/|v1|.  Once you accept this
+> my solution works too, as with unit vector u in the direction of v1 and
+> v2, v1 =3D |v1| u and v2 =3D |v2| u, v1 . v2 =3D |v1| |v2| u . u =3D |v1|=
+ |v2| and
+> v1 . v1 =3D |v1|^2.  Right?
+
+Right. Thanks for explaining your point of view.
+
+> Please feel free to point out any misconceptions I am fostering.
+
+Something similar has been discussed by Tim Daly and Gabriel Dos Reis
+in the thread "Provisos":
+
+http://lists.gnu.org/archive/html/axiom-developer/2008-05/msg00067.html
+
+>
+> Anyway, I guess I chose too simple of an example.
+
+No, it is a good example. I think your example is interesting because
+it illustrates a kind of proviso that is not naturally represented as
+an interval on some domain.
+
+> But never mind that. (The original problem was to find tuples of reals
+> (n1, n2, m1, m2) such that n1*a1 + n2*a2 =3D m1*b1 + m2*b2
+> (where a1, a2, b1, and b2 are 2D vectors).)
+>
+>> Well no, not really. Currently Axiom has no domain for symbolic
+>> computations with vectors.
+>
+> I was afraid of that.  Over at Maxima they had no facility either.
+>
+
+The only work of this kind that I know about is:
+
+Component-Free Vector Algebra in Aldor
+Songxin Liang, David J. Jeffrey and Stephen M. Watt
+Proc. Transgressive Computing 2006:
+
+An implementation of a component-free symbolic vector algebra in Aldor
+is presented. This package provides two powerful functions:
+simplification of vector expressions and the proof of vector
+identities. The implementation bene=AFts greatly from Aldor's strong
+typing, which allows several simplification problems that have
+defeated previous implementations to be solved.
+
+http://www.csd.uwo.ca/~watt/pub/reprints/2006-tc-vectalg.pdf
+
+>>
+>> > What is the best way of tackling these types of problems?
+>> >
+>>
+>> It would be possible (and quite interesting) to create a new domain in
+>> Axiom for symbolic vector calculations.
+>
+
+Aldor can be used as a library compiler for Axiom. I received a copy
+of the source code for this package from Songxin Liang. It is written
+for "stand alone" use, i.e. without Axiom. I have been intended to
+convert it for use within Axiom but have not had sufficient time.
+Perhaps you are interested? If so, please let me know.
+
+> Hmm, okay.  So, it would be a good idea to understand how this is done
+> in polynomial symbolic manipulation before approaching such a task?
+>
+
+Yes. Axiom has a fairly high learning curve but (of course!) I think
+it is worth the effort. If you continue with some activity in Axiom
+along these lines please feel free to discuss it here.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu May 22 00:37:34 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Jz2YY-0004cH-Ih
+	for mharc-axiom-math@gnu.org; Thu, 22 May 2008 00:37:34 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Jz2YX-0004bB-8J
+	for axiom-math@nongnu.org; Thu, 22 May 2008 00:37:33 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Jz2YW-0004aY-8v
+	for axiom-math@nongnu.org; Thu, 22 May 2008 00:37:32 -0400
+Received: from [199.232.76.173] (port=34880 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Jz2YW-0004aP-3F
+	for axiom-math@nongnu.org; Thu, 22 May 2008 00:37:32 -0400
+Received: from fg-out-1718.google.com ([72.14.220.154]:15073)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1Jz2YV-0002yy-JK
+	for axiom-math@nongnu.org; Thu, 22 May 2008 00:37:31 -0400
+Received: by fg-out-1718.google.com with SMTP id l26so2793957fgb.8
+	for <axiom-math@nongnu.org>; Wed, 21 May 2008 21:37:30 -0700 (PDT)
+Received: by 10.86.98.18 with SMTP id v18mr2785095fgb.33.1211431050497;
+	Wed, 21 May 2008 21:37:30 -0700 (PDT)
+Received: by 10.86.93.13 with HTTP; Wed, 21 May 2008 21:37:30 -0700 (PDT)
+Message-ID: <fbcd16d40805212137k5de95d7bge1e2755537e5f06e@mail.gmail.com>
+Date: Thu, 22 May 2008 00:37:30 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Ralf Hemmecke" <ralf@hemmecke.de>
+In-Reply-To: <fbcd16d40805180619p35925be4q2245105dafb3a8bb@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <E1JwOjX-0005C1-6l@hera.math.uni.wroc.pl>
+	<482BE445.2020308@hemmecke.de> <878wycwfbi.fsf@gauss.cs.tamu.edu>
+	<482C0584.6050700@hemmecke.de> <87fxski8gf.fsf@gauss.cs.tamu.edu>
+	<fbcd16d40805150937v20e5d6a5ge37d35e31e6b6602@mail.gmail.com>
+	<482C69E4.5010801@hemmecke.de>
+	<fbcd16d40805170959t55b7b67ate2ceafc2054ad794@mail.gmail.com>
+	<482F1BDB.9010503@hemmecke.de>
+	<fbcd16d40805180619p35925be4q2245105dafb3a8bb@mail.gmail.com>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: open-axiom-devel@lists.sourceforge.net, axiom-math@nongnu.org,
+	Gabriel Dos Reis <gdr@cs.tamu.edu>
+Subject: [Axiom-math] Re: Product & Sum
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 22 May 2008 04:37:33 -0000
+
+Ralf,
+
+I think I have had some insight into the idea of "lifting" operations
+in relation to Sum (analogous to Product) and my faith in the
+importance of categorical duality is restored. :-)
+
+It seems that in any mathematical category sufficiently complicated to
+include the semantics of Spad (Axiom) - probably something like a
+topos - the dual of a particular construction such as "lifting" in the
+case of 'Product' need not be so obvious as the relation between
+Limits and Colimits. In fact is seems clear to me now that the dual to
+"lifting" in the case of 'Product' is the concept of "sub-domain" in
+the case of 'Sum'! Just as products can automatically inherit
+operations from components in a "pair-wise" fashion, components of a
+sum can inherit operations from the sum. (The inheritance is in the
+opposite direction, of course. :-)
+
+For example, suppose we have
+
+  Sum(Z,PI) == NNI
+
+where Z ==> Zero, PI ==> PositiveInteger, NNI ==> NonNegativeInteger
+
+If we declare that 'PI has AbelianSemiGroup' then the fact that 'NNI
+has AbelianSemiGroup' entitles us to simply take the '+' from 'NNI' as
+'+' in 'PI'. Similarly, that 'NNI has Monoid' implies '*' comes from
+'NNI'.
+
+In fact this is how 'PI' is constructed in Axiom but unfortunately the
+SubDomain construction does not fully reflect this relationship to
+category theory:
+
+PositiveInteger: Join(AbelianSemiGroup,OrderedSet,Monoid)  ==
+  SubDomain(NonNegativeInteger,#1 > 0) add
+
+----------
+
+The function '#1 > 0' provides the 'case' construction on NNI that
+picks out the particular subdomain.
+
+Perhaps the language would be a little prettier if there was some
+construction dual to 'SubDomain' that performed the "lifting" for
+domains like Product:
+
+  Product(A:SetCategory, B:SetCategory): Lift(Monoid,A,B) with ...
+
+But given the nature of the Spad language, I do not think this can be
+made entirely automatic.
+
+Critical opinions invited ...
+
+For example, one might remark that such language features hardly seem
+worth the effort since right now the Axiom library contains only two
+instances of the use of 'SubDomain' and there may similarly be a
+rather limited number of cases where the kind of lifting that occurs
+in 'Product' is repeated in other domains. I am not currently
+convinced by this observation.
+
+Regards,
+Bill Page.
+
+On Sun, May 18, 2008 at 9:19 AM, Bill Page wrote:
+> http://axiom-wiki.newsynthesis.org/SandBoxLimitsAndColimits
+> On Sat, May 17, 2008 at 1:54 PM, Ralf Hemmecke wrote:
+>>> Of course using 'Product' in this manner is also applicable in
+>>> the compiler.
+>>
+>> Would that mean you want Product or Cross be more intelligent
+>> by lifting operations from their input domains?
+>>
+>
+> I am not so sure. After writing 'Sum' I am not so happy.
+>
+>>> It is easy in principle to implement the categorical dual of
+>>> 'Product' that we might call 'Sum'. See for example some
+>>> initial coding effort here:
+>>>
+>>> http://axiom-wiki.newsynthesis.org/SandBoxSum
+>>>
+>>> 'Sum' then is a type of 'Union' that lifts operations from it's
+>>> component domains in the manner as 'Product'.
+>>
+>
+> Although it is obviously the categorical dual, i.e. a co-limit as
+> implemented in
+>
+>  http://axiom-wiki.newsynthesis.org/SandBoxLimitsAndColimits
+>
+> it seems that unlike the case of 'Product', I do not understand
+> how (or when) I can properly "lift" operations to 'Sum'.
+>
+
+
+

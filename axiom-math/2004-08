@@ -1,0 +1,1876 @@
+From MAILER-DAEMON Sun Aug 01 08:27:27 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BrFR0-0007s9-SH
+	for mharc-axiom-math@gnu.org; Sun, 01 Aug 2004 08:27:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BrFQy-0007pw-OT
+	for axiom-math@nongnu.org; Sun, 01 Aug 2004 08:27:25 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BrFQw-0007nw-P1
+	for axiom-math@nongnu.org; Sun, 01 Aug 2004 08:27:24 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BrFQw-0007nb-8C
+	for axiom-math@nongnu.org; Sun, 01 Aug 2004 08:27:22 -0400
+Received: from [194.25.134.80] (helo=mailout01.sul.t-online.com)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BrFNI-0007jA-Lo
+	for axiom-math@nongnu.org; Sun, 01 Aug 2004 08:23:36 -0400
+Received: from fwd01.aul.t-online.de by mailout01.sul.t-online.com with smtp 
+	id 1BrFF9-0003Od-02; Sun, 01 Aug 2004 14:15:11 +0200
+Received: from apollo
+	(ES1LtUZOgejZU7jpf7fxSK7IvggNld0rQoS6WnHqdH91ysmsFhfkkP@[217.252.51.92])
+	by fwd01.sul.t-online.com
+	with esmtp id 1BrFEt-1KbXto0; Sun, 1 Aug 2004 14:14:55 +0200
+To: axiom-math@nongnu.org
+From: WZocher@t-online.de (Wolfgang Zocher)
+Date: 01 Aug 2004 14:12:34 +0200
+Message-ID: <87wu0j83bh.fsf@t-online.de>
+Lines: 22
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-ID: ES1LtUZOgejZU7jpf7fxSK7IvggNld0rQoS6WnHqdH91ysmsFhfkkP
+Subject: [Axiom-math] Algebra
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 01 Aug 2004 12:27:25 -0000
+
+Hello friends,
+
+I have a kind of philosophical problem concerning the notion of algebra
+vs. sigma-algebra in the context of AXIOM. An algebra on a set S is, roughly
+spoken, defined as a family of subsets stable under finitly many set
+operations.
+A sigma-algebra on S is, roughly spoken again, defined as a family of subsets
+stable under any countable collection of set operations.
+
+Aren't both of these definitions the same in the context of representation in
+AXIOM or any other CAS? Aren't sets in a CAS not countable in ANY case?
+
+This problem employs me during the last days and I can't find a satifying
+solution...
+
+Thanks for your attention,
+Wolfgang 
+-- 
+Wolfgang Zocher  http://www.wolfgang-zocher.privat.t-online.de/
+Registered Linux User #337888 using Debian GNU/Linux
+
+97.025% of statistics are wrong
+
+
+
+
+From MAILER-DAEMON Tue Aug 10 01:21:49 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BuP53-0008Tq-M6
+	for mharc-axiom-math@gnu.org; Tue, 10 Aug 2004 01:21:49 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BuP52-0008TO-3X
+	for axiom-math@nongnu.org; Tue, 10 Aug 2004 01:21:48 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BuP50-0008St-BU
+	for axiom-math@nongnu.org; Tue, 10 Aug 2004 01:21:47 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BuP50-0008Sq-8V
+	for axiom-math@nongnu.org; Tue, 10 Aug 2004 01:21:46 -0400
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BuP1B-00061N-Qx
+	for axiom-math@nongnu.org; Tue, 10 Aug 2004 01:17:49 -0400
+Received: from localhost.localdomain (234.178.252.64.snet.net [64.252.178.234])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i7A5HY3d234942; Tue, 10 Aug 2004 01:17:34 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i7A62Ka26379;
+	Tue, 10 Aug 2004 02:02:20 -0400
+Date: Tue, 10 Aug 2004 02:02:20 -0400
+Message-Id: <200408100602.i7A62Ka26379@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: Sean Cleary <cleary@sci.ccny.cuny.edu>,
+	Douglas Troeger <dtroeger@cssfs0.engr.ccny.cuny.edu>,
+	Gilbert Baumslag <gilbert@sci.ccny.cuny.edu>,
+	Richard Fateman <fateman@cs.berkeley.edu>,
+	Paul Graham <tryarc@paulgraham.com>
+Subject: [Axiom-math] musings on notation
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 10 Aug 2004 05:21:48 -0000
+
+I'm reading "Hackers & Painters" by Paul Graham and pondering some
+of his comments in relation to Axiom. 
+
+Chapter 11 is about "The Hundred-Year Language". I've been aiming
+Axiom at the "30 Year Horizon", which you've all heard from me before
+so it's obvious why Paul's notion appeals to me. 
+
+Paul makes the comment that programs are just notation and that we
+ought to give thought to the idea of "designing" the notation so that
+it says the things we want to say in an elegant way. In particular,
+Axiom's notation is much closer to mathematics than most other notations.
+
+Axiom, being basically mathematics, could use a large dose of this 
+advice. Historically math has made progress based on notations (e.g.
+0, dx/dy, matrices). At present the best we seem to strive for is to
+mimic standard math notation on output as closely as possible.
+
+However, I've been scratching at a more general idea that could be
+explored in Axiom. Axiom adds some ideas new, novel, and unique in
+mathematics which we have not recognized notationally. For example,
+the idea of "process", the idea of "functors", or "provisos".
+
+We have been limiting the idea of "process" to represent traditional
+mathematical functions. We tend to adopt the notation f(x)=
+
+However, one of the ideas we're pondering (indefinites) seems to me
+to need a new notation. It is clear that one way to think about an
+indefinite integer, for example, is as a loop. So, as Fateman pointed
+out, we might want to raise a matrix M to an indefinite power N. This
+could be expressed as 
+  (let (X=I) for i in 1..N do X=X*M)
+
+This is a procedural, semi-function, way of thinking about the solution.
+We do not yet have a decent notation for a process. Such a notation
+would be as valuable as the leap from summation to integration. It would
+allow the "30 year horizon computational mathematician" to write process
+objects, compute functions over processes as well as processes over
+functions (which we now do). 
+
+It might be time to consider a notation using distinct marks chosen
+from a non-mathematical alphabet (such as a pictographic language
+like chinese or japanese) to represent the new ideas.
+
+Notation is a way to encapsulate thought. I think Axiom needs to 
+pioneer a notation to encapsulate the ideas it presents (functors,
+for instance) cleanly so we use mathematics (operators, proofs, 
+state spaces, mappings) to think, compute, and communicate the ideas 
+clearly.
+
+Obviously I'm not the first to think of this issue so I'm musing in
+public with the hope of getting references. I'll collect what I
+can and set up a webpage devoted to the sources if there is enough
+of a response.
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+
+
+From MAILER-DAEMON Tue Aug 10 15:03:38 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BubuM-0000cI-LO
+	for mharc-axiom-math@gnu.org; Tue, 10 Aug 2004 15:03:38 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bubst-0007nR-6h
+	for axiom-math@nongnu.org; Tue, 10 Aug 2004 15:02:07 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bubsr-0007lO-PQ
+	for axiom-math@nongnu.org; Tue, 10 Aug 2004 15:02:06 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bubsr-0007lB-LT
+	for axiom-math@nongnu.org; Tue, 10 Aug 2004 15:02:05 -0400
+Received: from [216.136.172.17] (helo=web12210.mail.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1Bubp1-0002s3-IE
+	for axiom-math@nongnu.org; Tue, 10 Aug 2004 14:58:07 -0400
+Message-ID: <20040810185126.27434.qmail@web12210.mail.yahoo.com>
+Received: from [128.175.78.141] by web12210.mail.yahoo.com via HTTP;
+	Tue, 10 Aug 2004 11:51:26 PDT
+Date: Tue, 10 Aug 2004 11:51:26 -0700 (PDT)
+From: C Y <smustudent1@yahoo.com>
+To: daly@idsi.net, axiom-developer@nongnu.org, axiom-math@nongnu.org
+In-Reply-To: <200408100602.i7A62Ka26379@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Mailman-Approved-At: Tue, 10 Aug 2004 15:03:36 -0400
+Cc: Gilbert Baumslag <gilbert@sci.ccny.cuny.edu>,
+	Douglas Troeger <dtroeger@cssfs0.engr.ccny.cuny.edu>,
+	Sean Cleary <cleary@sci.ccny.cuny.edu>,
+	Richard Fateman <fateman@cs.berkeley.edu>,
+	Paul Graham <tryarc@paulgraham.com>
+Subject: [Axiom-math] Re: [Axiom-developer] musings on notation
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 10 Aug 2004 19:02:07 -0000
+
+
+--- root <daly@idsi.net> wrote:
+
+> Notation is a way to encapsulate thought. I think Axiom needs to 
+> pioneer a notation to encapsulate the ideas it presents (functors,
+> for instance) cleanly so we use mathematics (operators, proofs, 
+> state spaces, mappings) to think, compute, and communicate the ideas 
+> clearly.
+
+I don't have any profound insights as far as notation, but I would
+suggest a particular documentation approach to this type of work.
+
+Mathematical notation is implimented (or at least based on) standard
+mathematical ideas because they are intuitive to the normal mathematics
+user.  Unique notation, however useful or powerful it might be, will be
+rejected by all but a few unless two things happen:
+
+1)  The notation becomes a standard way of doing something useful in a
+computer algebra system
+2)  End users are compelled to learn the notation because they can't
+live without the extra expressiveness/features/etc. it provides.
+
+1) is wrapped up in 2), in my opinion.  And the only way to get a foot
+in the door with 2) is to a) document the new notation comprehensively,
+clearly, and usably and b) provide non-trivial useful examples where
+the new notation solves a problem where old notation would have had
+great difficulties.  We have to sell the new notation, not just develop
+it.  We have to make people want it.
+
+The tool that comes to mind as an effectively marketed tool is Sun's
+new system tool dtrace.  Their strategy was simple but very effective -
+they showed useful examples where subtle system problems were
+identified by dtrace quickly where no other system tools could have
+done it nearly as well.  I think any new notation Axiom is going to
+introduce will have to do the same - not just propose it and show it is
+elegant, but have cases of it effectively addressing real world (or at
+least math world) problems.  Show people that it is worth the time and
+pain to learn new concepts and tools.  Then, if people like the new
+abilities well enough, perhaps a standard can be created.
+
+I would also suggest this be the figure of merit for proposed new
+notation - not only that it be powerful in theory, but shown to be
+powerful in interesting examples.  Just my 2c.
+
+CY
+
+
+		
+__________________________________
+Do you Yahoo!?
+New and Improved Yahoo! Mail - Send 10MB messages!
+http://promotions.yahoo.com/new_mail 
+
+
+
+From MAILER-DAEMON Tue Aug 10 15:50:21 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BucdY-0000FB-NQ
+	for mharc-axiom-math@gnu.org; Tue, 10 Aug 2004 15:50:21 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BucdQ-0000Cx-0s
+	for axiom-math@nongnu.org; Tue, 10 Aug 2004 15:50:12 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BucdO-0000BO-0e
+	for axiom-math@nongnu.org; Tue, 10 Aug 2004 15:50:10 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1BucdH-00008E-Pf; Tue, 10 Aug 2004 15:50:03 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1BucZA-00056U-7X; Tue, 10 Aug 2004 15:45:48 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i7AJj2p8169596;
+	Tue, 10 Aug 2004 21:45:21 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16665.16691.648718.383225@gargle.gargle.HOWL>
+Date: Tue, 10 Aug 2004 21:42:11 +0000
+To: daly@idsi.net
+Subject: Re: [Axiom-math] musings on notation
+In-Reply-To: <200408100602.i7A62Ka26379@localhost.localdomain>
+References: <200408100602.i7A62Ka26379@localhost.localdomain>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4248; Body=3 Fuz1=3 Fuz2=3
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 10 Aug 2004 19:50:17 -0000
+
+root writes:
+...
+
+ > However, I've been scratching at a more general idea that could be
+ > explored in Axiom. Axiom adds some ideas new, novel, and unique in
+ > mathematics which we have not recognized notationally. For example,
+ > the idea of "process", the idea of "functors", or "provisos".
+ > 
+ > We have been limiting the idea of "process" to represent traditional
+ > mathematical functions. We tend to adopt the notation f(x)=
+ > 
+ > However, one of the ideas we're pondering (indefinites) seems to me
+ > to need a new notation. It is clear that one way to think about an
+ > indefinite integer, for example, is as a loop. So, as Fateman pointed
+ > out, we might want to raise a matrix M to an indefinite power N. This
+ > could be expressed as 
+ >   (let (X=I) for i in 1..N do X=X*M)
+ > 
+ > This is a procedural, semi-function, way of thinking about the solution.
+ > We do not yet have a decent notation for a process. Such a notation
+ > would be as valuable as the leap from summation to integration. It would
+ > allow the "30 year horizon computational mathematician" to write process
+ > objects, compute functions over processes as well as processes over
+ > functions (which we now do). 
+...
+
+Hm, what's wrong with the current notation "f(x)=" ? Axiom does allow you to
+define, for example
+
+^(x, n)==reduce(*, [x for i in 1..n])
+
+and use it as you would use any other function:
+
+matrix([[0,1],[1,0]]) ^ 2.
+
+What could be more decent?
+
+Yes, "Indefinite Integers" are missing, but we do have good notation (and
+representation for "procedural" functions)
+
+Do I miss something?
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Aug 11 00:51:43 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Bul5T-0005Hy-I5
+	for mharc-axiom-math@gnu.org; Wed, 11 Aug 2004 00:51:43 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bul5R-0005FC-DV
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 00:51:41 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bul5O-0005E1-W4
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 00:51:40 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bul5O-0005Cq-PQ
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 00:51:38 -0400
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Bul0j-0000eG-MZ
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 00:46:50 -0400
+Received: from localhost.localdomain (234.178.252.64.snet.net [64.252.178.234])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i7B4kdHL147068; Wed, 11 Aug 2004 00:46:39 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i7B5VNQ27094;
+	Wed, 11 Aug 2004 01:31:23 -0400
+Date: Wed, 11 Aug 2004 01:31:23 -0400
+Message-Id: <200408110531.i7B5VNQ27094@localhost.localdomain>
+From: root <daly@idsi.net>
+To: pg@archub.org
+In-reply-to: <20040811022429.83253.qmail@mail.archub.org> (message from Paul
+	Graham on 11 Aug 2004 02:24:29 -0000)
+References: <20040811022429.83253.qmail@mail.archub.org>
+Cc: axiom-developer@nongnu.org, C Y <smustudent1@yahoo.com>,
+	axiom-math@nongnu.org
+Subject: [Axiom-math] Re: musings on notation
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 11 Aug 2004 04:51:42 -0000
+
+Paul,
+
+Paul Graham wrote:
+>The thing to do would be to show how you can make some
+>existing e.g. Lisp program shorter by using functors.
+
+Actually Axiom and its programming language do make programs much
+shorter. It closely mirrors the mathematics and uses a unification
+of the idea of categories from math with the idea of type hierarchy
+from comp sci to get very expressive, short programs. Most functions
+are less than 10 lines long and on average are below that length. The
+resulting algorithms are extremely readable (provided you know the
+theory, of course).
+
+It's not the length of the program that I'm trying to optimize but
+the length of the thought process. Imagine having to say "take the
+limit of this function as x tends toward zero such that given any
+epsilon we can always find a delta... We don't do this. We just say
+integrate and we just write the \int symbol.
+
+The problem that needs to be attacked, however, is that there doesn't
+appear to be a notation that I could write by hand for a "thing" that
+has the properties of a program (including the notion of process) as
+well as the properties of a mathematical object. (Or the "thing" that
+has the properties of a closure as well as a mathematical object).
+
+
+
+Let me try an example. Consider the simple case of trying to raise a
+square matrix to an integer power:
+ 
+ P = 3
+ M:SquareMatrix(2) = matrix([[1,2],[3,4]])
+ M^P
+
+which we know how to do. 
+
+
+
+The harder case is to assume we don't know the actual value of P but
+we know its Category. So if an IndefiniteInteger which have the
+property of integers but we don't say which one. IndefiniteInteger is
+a type we understand so we can say:
+
+ P = IndefiniteInteger()
+ M = SquareMatrix(2)
+ M^P
+
+which implies that we have to compute a symbolic object (M^P) but know
+that P is of some well-defined type with certain properties but with
+unspecified value. We can't compute it's actual value until P takes on
+a particular integer value.
+
+
+
+The notational case is even harder. So I'd like to be able
+to say:
+
+ P = Program(foo)
+ M:SquareMatrix(2) = matrix([[1,2],[3,4]])
+ M^P
+
+but first I need to define categorical properties of the "Program"
+type. So it might be a functor of the form:
+
+ Program(C:Code) -> Integer()
+
+that is, a Program type is Categorically defined to accept things
+of type Code and is guaranteed to produce an Integer(). Notice
+what happened here. I'm trying to raise a square matrix to an
+unspecified power and all I can guarantee is that the operation
+WOULD be defined if I were to compute it. I want a name for this
+concept "the operation would be defined if we run it". 
+
+Now mathematically this is hard because we haven't defined the
+Category structure for Code. Do we require all Code functions to be
+total (a definite valid value for every input?). Do we require the
+Category of Stateless so that the function always returns the same
+result? If so, we could functionally compose Program types, define
+operators, and be able to compute:
+
+  Q = P*P
+
+where the '*' function is
+ 
+  *(Program,Program) -> Program
+
+However, Program objects could include the notion of "running" over
+time (unless you subscribe to Dijkstra's view). There is some previous
+work in this area in lisp (scheme has continuations, lisp has closure, 
+delay and force). I'd like to distinguish these "special property" 
+objects with a new mathematical notation so they become apparent.
+
+Thus, a polynomial that uses P above is not obviously "runnable" if
+we just create a program variable and use it in the polynomial:
+
+ p = Program(knarlyfunction)
+ poly = p^2 + 2*p + 1
+
+'poly' has a value that  now depends on {running, forcing, continuing} p.
+
+
+
+
+I'm suggesting that we need to have a "run, force, continue" notation
+similar to integration, with integration we normally write:
+
+ integrate(poly,p)
+
+to integrate poly with respect to p. With programs we could say
+
+ force(poly)
+
+where 'force' is a fancy looking kanji character on input and output.
+The reason for choosing a fancy character is to "lift" the idea of
+forcing functions into the notation so we can start defining the 
+difference between
+
+  force( integrate(poly,p) )
+
+and 
+
+  integrate( force(poly) , p)
+
+or even
+
+ force( force(poly) )
+
+where 'force' means "the operation would be defined if we run it".
+
+
+
+This raising the question of how this new notational idea composes with
+other notations. What does kanji-F (force) mean and what are its
+properties?
+ 
+
+
+
+Indeed, some mathematical problems lend themselves well to such a
+notation. Consider a function that, when integrated, returns multiple
+branches. This could be handled by continuations. So in the computatation
+
+                                | x<0 => sin(x)
+                                |
+  integrate(knarlyfunction,x) =>| x=0 => 0
+                                |
+                                | x>0 => cos(x)
+
+consider what could happen. Somewhere in the integration it 
+becomes apparent that, say, the result is discontinuous at 0.
+The code breaks the computation into 3 delayed branches (or
+continuations, or closures, or whatever) and returns these
+continuations unforced.
+
+  kanji-C1 = Program(knarlyfunction, proviso(x<0))
+  kanji-C2 = Program(knarlyfunction, proviso(x=0))
+  kanji-C3 = Program(knarlyfunction, proviso(x>0))
+
+so kanji-C1 is a closure objects that can return a result. 
+and then does 
+
+  force(kanji-C1)
+  force(kanji-C2)
+  force(kanji-C3)
+
+
+Consider what happens if we think about this notationally rather
+than computationally. We could state that 
+
+  integrate(knarlyfunction,x) => {kanji-C1, kanji-C2, kanji-C3}
+
+and leave the results as symbolic values rather than forcing them.
+Since we are building symbolic mathematical software this is a 
+ideally what we'd like to be able to do. Then we could evaluate
+a polynomial thus:
+
+  poly = x^2 + 2*x + 3
+  eval(poly, x==kanji-C1) 
+
+and get the result
+
+  kanji-C4
+
+and force(kanji-C4) => sin(x)&2 + 2*sin(x) + 3
+
+
+
+The overall thought is that if we have a notation that will allow
+us to write results using pencil-and-paper then we can begin to
+express what these things mean in a computational mathematics system.
+
+Currently we're using the ideas but we haven't reified them.
+
+
+
+
+CY had set me to thinking about this earlier today with his email:
+==================================================================
+
+
+> C Y Student wrote:
+> I don't have any profound insights as far as notation, but I would
+> suggest a particular documentation approach to this type of work.
+> 
+> Mathematical notation is implimented (or at least based on) standard
+> mathematical ideas because they are intuitive to the normal mathematics
+> user.  Unique notation, however useful or powerful it might be, will be
+> rejected by all but a few unless two things happen:
+> 
+> 1)  The notation becomes a standard way of doing something useful in a
+> computer algebra system
+> 2)  End users are compelled to learn the notation because they can't
+> live without the extra expressiveness/features/etc. it provides.
+> 
+> 1) is wrapped up in 2), in my opinion.  And the only way to get a foot
+> in the door with 2) is to a) document the new notation comprehensively,
+> clearly, and usably and b) provide non-trivial useful examples where
+> the new notation solves a problem where old notation would have had
+> great difficulties.  We have to sell the new notation, not just develop
+> it.  We have to make people want it.
+> 
+> The tool that comes to mind as an effectively marketed tool is Sun's
+> new system tool dtrace.  Their strategy was simple but very effective -
+> they showed useful examples where subtle system problems were
+> identified by dtrace quickly where no other system tools could have
+> done it nearly as well.  I think any new notation Axiom is going to
+> introduce will have to do the same - not just propose it and show it is
+> elegant, but have cases of it effectively addressing real world (or at
+> least math world) problems.  Show people that it is worth the time and
+> pain to learn new concepts and tools.  Then, if people like the new
+> abilities well enough, perhaps a standard can be created.
+> 
+> I would also suggest this be the figure of merit for proposed new
+> notation - not only that it be powerful in theory, but shown to be
+> powerful in interesting examples.  Just my 2c.
+
+
+
+From MAILER-DAEMON Wed Aug 11 07:02:21 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Buqs9-0006nJ-2m
+	for mharc-axiom-math@gnu.org; Wed, 11 Aug 2004 07:02:21 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Buqs7-0006mh-C5
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 07:02:19 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Buqs5-0006mL-JP
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 07:02:19 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1Buqs2-0006i0-Ep; Wed, 11 Aug 2004 07:02:15 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1Buqnw-0004qR-Ly; Wed, 11 Aug 2004 06:58:01 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i7BAvRd2085584;
+	Wed, 11 Aug 2004 12:57:45 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16666.5900.333666.348216@gargle.gargle.HOWL>
+Date: Wed, 11 Aug 2004 12:54:36 +0000
+To: daly@idsi.net
+In-Reply-To: <200408110531.i7B5VNQ27094@localhost.localdomain>
+References: <20040811022429.83253.qmail@mail.archub.org>
+	<200408110531.i7B5VNQ27094@localhost.localdomain>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mail 4249; Body=4 Fuz1=4 Fuz2=4
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, pg@archub.org
+Subject: [Axiom-math] Re: [Axiom-developer] Re: musings on notation
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 11 Aug 2004 11:02:19 -0000
+
+root writes:
+ > The problem that needs to be attacked, however, is that there doesn't
+ > appear to be a notation that I could write by hand for a "thing" that
+ > has the properties of a program (including the notion of process) as
+ > well as the properties of a mathematical object. (Or the "thing" that
+ > has the properties of a closure as well as a mathematical object).
+
+Sorry, but I still do not understand. In fact, I don't see the need for such a
+notation. I'd say that "programs" are just "mathematical objects"... After all,
+a polynomial for example, or better, the cosine is definitely a mathematical
+object, but it's also a "program".
+
+ > Let me try an example. Consider the simple case of trying to raise a
+ > square matrix to an integer power:
+ >  
+ >  P = 3
+ >  M:SquareMatrix(2) = matrix([[1,2],[3,4]])
+ >  M^P
+ > 
+ > which we know how to do. 
+
+OK.
+
+ > The harder case is to assume we don't know the actual value of P but
+ > we know its Category. So if an IndefiniteInteger which have the
+ > property of integers but we don't say which one. IndefiniteInteger is
+ > a type we understand so we can say:
+ > 
+ >  P = IndefiniteInteger()
+ >  M = SquareMatrix(2)
+ >  M^P
+
+Well, we do not yet have reached a conclusion what an IndefiniteInteger should
+be, do we? There is the possibility described by Davenport and Faure, and
+certainly there are others. In the above I also have trouble determining the
+type of M^P. I don't think you meant to have an exponentiation of domains? So
+it should probably read
+
+ P : IndefiniteInteger()
+ M : SquareMatrix(2) = matrix([[1,2],[3,4]])
+ M^P
+
+or
+
+ P : IndefiniteInteger()
+ M : IndefiniteSquareMatrix(2)
+ M^P
+
+or something like that. I'm not sure whether we want to modify the domain
+SquareMatrix to allow for exponentiation with an IndefiniteInteger, but on the
+other hand, why not? The result would be an IndefiniteSquareMatrix (or the zero
+matrix or the identity -- oops, bug report on the way), that's for sure...
+
+ > The notational case is even harder. So I'd like to be able
+ > to say:
+ > 
+ >  P = Program(foo)
+ >  M:SquareMatrix(2) = matrix([[1,2],[3,4]])
+ >  M^P
+
+What do you mean by that? Is M^P a program, that evaluates to a
+SquareMatrix(2)? I don't think that there is a notational problem here.
+I don't really know whether an operator that delays execution of a program
+would be useful. Its consequences for the type-system are -- I admit -- not
+easy to foresee. However, I have the feeling that we do not have the userbase
+yet to explore these fields. I have the feeling, that it disperses our "energy"
+a little, however.
+
+I think it would be good to continue the discussion on indefinite things, but
+one such topic is enough -- for me at least. One suggestion: could we have a
+wishlist on the savannah website? Maybe registered users could even vote for
+priorities there?
+
+All the best,
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Aug 11 08:24:01 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Bus9B-0005O0-Jq
+	for mharc-axiom-math@gnu.org; Wed, 11 Aug 2004 08:24:01 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bus99-0005NZ-Vb
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:24:00 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bus97-0005NF-Vt
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:23:59 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bus97-0005N5-TB
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:23:57 -0400
+Received: from [62.231.131.195] (helo=mail35.messagelabs.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1Bus5E-0002Hu-HP
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:19:56 -0400
+X-VirusChecked: Checked
+X-Env-Sender: miked@nag.co.uk
+X-Msg-Ref: server-4.tower-35.messagelabs.com!1092226794!12560714
+X-StarScan-Version: 5.2.10; banners=nag.co.uk,-,-
+X-Originating-IP: [212.125.75.71]
+Received: (qmail 21470 invoked from network); 11 Aug 2004 12:19:54 -0000
+Received: from smtp-2.star.net.uk (212.125.75.71)
+	by server-4.tower-35.messagelabs.com with SMTP;
+	11 Aug 2004 12:19:54 -0000
+Received: (qmail 12352 invoked from network); 11 Aug 2004 12:19:17 -0000
+Received: from unknown (HELO nag.co.uk) (62.231.145.242)
+	by smtp-2.star.net.uk with SMTP; 11 Aug 2004 12:19:17 -0000
+Received: from trowbridge.nag.co.uk (trowbridge.nag.co.uk [192.156.217.69])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id NAA02086;
+	Wed, 11 Aug 2004 13:19:44 +0100 (BST)
+Received: from trowbridge.nag.co.uk (localhost.localdomain [127.0.0.1])
+	by trowbridge.nag.co.uk (8.12.10/8.12.10) with ESMTP id i7BCJgC2020722; 
+	Wed, 11 Aug 2004 13:19:42 +0100
+Received: (from miked@localhost)
+	by trowbridge.nag.co.uk (8.12.10/8.12.10/Submit) id i7BCJgos020720;
+	Wed, 11 Aug 2004 13:19:42 +0100
+Date: Wed, 11 Aug 2004 13:19:42 +0100
+From: Mike Dewar <miked@nag.co.uk>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Re: [Axiom-developer] Re: musings on notation
+Message-ID: <20040811121942.GB20173@nag.co.uk>
+References: <20040811022429.83253.qmail@mail.archub.org>
+	<200408110531.i7B5VNQ27094@localhost.localdomain>
+	<16666.5900.333666.348216@gargle.gargle.HOWL>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-15
+Content-Disposition: inline
+In-Reply-To: <16666.5900.333666.348216@gargle.gargle.HOWL>
+User-Agent: Mutt/1.4.1i
+Cc: W Naylor <wn@cs.bath.ac.uk>
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 11 Aug 2004 12:24:00 -0000
+
+I don't know if Bill Naylor subscribes to this list, but his PhD (at
+Bath, supervised by James Davenport) involved using straight-line
+programs to represent polynomials in Axiom.  Just as with other
+mathematical objects you could do arithmetic with them, perform
+operations such as GCD computations etc., however their representation
+was as an explicit program.  These programs were represented in Axiom as
+instances of domains in the usual way - if I remember rightly the
+infrastructure he created was quite extensive.  I don't know if this
+work really addresses Tim's original thoughts about notation which
+started off this thread but it might be worth looking at or even
+reviving.  
+
+Mike.
+
+On Wed, Aug 11, 2004 at 12:54:36PM +0000, Martin Rubey wrote:
+> root writes:
+>  > The problem that needs to be attacked, however, is that there doesn't
+>  > appear to be a notation that I could write by hand for a "thing" that
+>  > has the properties of a program (including the notion of process) as
+>  > well as the properties of a mathematical object. (Or the "thing" that
+>  > has the properties of a closure as well as a mathematical object).
+> 
+> Sorry, but I still do not understand. In fact, I don't see the need for such a
+> notation. I'd say that "programs" are just "mathematical objects"... After all,
+> a polynomial for example, or better, the cosine is definitely a mathematical
+> object, but it's also a "program".
+> 
+>  > Let me try an example. Consider the simple case of trying to raise a
+>  > square matrix to an integer power:
+>  >  
+>  >  P = 3
+>  >  M:SquareMatrix(2) = matrix([[1,2],[3,4]])
+>  >  M^P
+>  > 
+>  > which we know how to do. 
+> 
+> OK.
+> 
+>  > The harder case is to assume we don't know the actual value of P but
+>  > we know its Category. So if an IndefiniteInteger which have the
+>  > property of integers but we don't say which one. IndefiniteInteger is
+>  > a type we understand so we can say:
+>  > 
+>  >  P = IndefiniteInteger()
+>  >  M = SquareMatrix(2)
+>  >  M^P
+> 
+> Well, we do not yet have reached a conclusion what an IndefiniteInteger should
+> be, do we? There is the possibility described by Davenport and Faure, and
+> certainly there are others. In the above I also have trouble determining the
+> type of M^P. I don't think you meant to have an exponentiation of domains? So
+> it should probably read
+> 
+>  P : IndefiniteInteger()
+>  M : SquareMatrix(2) = matrix([[1,2],[3,4]])
+>  M^P
+> 
+> or
+> 
+>  P : IndefiniteInteger()
+>  M : IndefiniteSquareMatrix(2)
+>  M^P
+> 
+> or something like that. I'm not sure whether we want to modify the domain
+> SquareMatrix to allow for exponentiation with an IndefiniteInteger, but on the
+> other hand, why not? The result would be an IndefiniteSquareMatrix (or the zero
+> matrix or the identity -- oops, bug report on the way), that's for sure...
+> 
+>  > The notational case is even harder. So I'd like to be able
+>  > to say:
+>  > 
+>  >  P = Program(foo)
+>  >  M:SquareMatrix(2) = matrix([[1,2],[3,4]])
+>  >  M^P
+> 
+> What do you mean by that? Is M^P a program, that evaluates to a
+> SquareMatrix(2)? I don't think that there is a notational problem here.
+> I don't really know whether an operator that delays execution of a program
+> would be useful. Its consequences for the type-system are -- I admit -- not
+> easy to foresee. However, I have the feeling that we do not have the userbase
+> yet to explore these fields. I have the feeling, that it disperses our "energy"
+> a little, however.
+> 
+> I think it would be good to continue the discussion on indefinite things, but
+> one such topic is enough -- for me at least. One suggestion: could we have a
+> wishlist on the savannah website? Maybe registered users could even vote for
+> priorities there?
+> 
+> All the best,
+> 
+> Martin
+> 
+> 
+> 
+> _______________________________________________
+> Axiom-math mailing list
+> Axiom-math@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-math
+> 
+> ________________________________________________________________________
+> This e-mail has been scanned for all viruses by Star Internet. The
+> service is powered by MessageLabs. For more information on a proactive
+> anti-virus service working around the clock, around the globe, visit:
+> http://www.star.net.uk
+> ________________________________________________________________________
+
+________________________________________________________________________
+This e-mail has been scanned for all viruses by Star Internet. The
+service is powered by MessageLabs. For more information on a proactive
+anti-virus service working around the clock, around the globe, visit:
+http://www.star.net.uk
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Wed Aug 11 08:32:48 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BusHg-0007uK-NK
+	for mharc-axiom-math@gnu.org; Wed, 11 Aug 2004 08:32:48 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BusHf-0007u4-V0
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:32:48 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BusHf-0007tl-CO
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:32:47 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BusHf-0007tU-83
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:32:47 -0400
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BusCm-0003Vl-FL
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:27:44 -0400
+Received: from localhost.localdomain (234.178.252.64.snet.net [64.252.178.234])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i7BCQv3d257834; Wed, 11 Aug 2004 08:26:57 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i7BDBgG27528;
+	Wed, 11 Aug 2004 09:11:42 -0400
+Date: Wed, 11 Aug 2004 09:11:42 -0400
+Message-Id: <200408111311.i7BDBgG27528@localhost.localdomain>
+From: root <daly@idsi.net>
+To: martin.rubey@univie.ac.at
+In-reply-to: <16666.5900.333666.348216@gargle.gargle.HOWL> (message from
+	Martin Rubey on Wed, 11 Aug 2004 12:54:36 +0000)
+References: <20040811022429.83253.qmail@mail.archub.org>
+	<200408110531.i7B5VNQ27094@localhost.localdomain>
+	<16666.5900.333666.348216@gargle.gargle.HOWL>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, pg@archub.org
+Subject: [Axiom-math] Re: [Axiom-developer] Re: musings on notation
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 11 Aug 2004 12:32:48 -0000
+
+Martin,
+ 
+> I think it would be good to continue the discussion on indefinite things, but
+> one such topic is enough -- for me at least. One suggestion: could we have a
+> wishlist on the savannah website? Maybe registered users could even vote for
+> priorities there?
+
+Such a wish list is a good idea. Rather than have it centrally maintained,
+however, why don't we try collaborating on it? Given Bill Page's wiki
+technology it is possible for you to create a wish list web page on the
+Axiom wiki site. Visit http://page.axiom-developer.org
+
+Btw, I've incorporated most of your changes. I'm documenting and testing
+them for potential breakage.
+
+Tim
+
+
+
+From MAILER-DAEMON Wed Aug 11 08:33:02 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BusHu-00080R-HS
+	for mharc-axiom-math@gnu.org; Wed, 11 Aug 2004 08:33:02 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BusHs-000809-N8
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:33:00 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BusHq-0007zM-H5
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:32:59 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BusHq-0007zG-8u
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:32:58 -0400
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BusDu-0003pJ-UJ
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:28:55 -0400
+Received: from localhost.localdomain (234.178.252.64.snet.net [64.252.178.234])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i7BCSMHL096656; Wed, 11 Aug 2004 08:28:22 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i7BDD8M27542;
+	Wed, 11 Aug 2004 09:13:08 -0400
+Date: Wed, 11 Aug 2004 09:13:08 -0400
+Message-Id: <200408111313.i7BDD8M27542@localhost.localdomain>
+From: root <daly@idsi.net>
+To: martin.rubey@univie.ac.at
+In-reply-to: <16666.5900.333666.348216@gargle.gargle.HOWL> (message from
+	Martin Rubey on Wed, 11 Aug 2004 12:54:36 +0000)
+References: <20040811022429.83253.qmail@mail.archub.org>
+	<200408110531.i7B5VNQ27094@localhost.localdomain>
+	<16666.5900.333666.348216@gargle.gargle.HOWL>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, pg@archub.org
+Subject: [Axiom-math] Re: [Axiom-developer] Re: musings on notation
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 11 Aug 2004 12:33:01 -0000
+
+Mark,
+
+Norggg... sorry that last was for Mark Murray. ...  Btw, I've incorporated
+most of your changes. I'm documenting and testing them for potential
+breakage.
+
+
+Tim
+
+
+
+From MAILER-DAEMON Wed Aug 11 08:39:04 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BusNk-0001ai-2K
+	for mharc-axiom-math@gnu.org; Wed, 11 Aug 2004 08:39:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BusNi-0001aH-9d
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:39:02 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BusNh-0001a1-PS
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 08:39:02 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1BusNg-0001Zk-1u; Wed, 11 Aug 2004 08:39:00 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1BusJo-0004ui-2P; Wed, 11 Aug 2004 08:35:00 -0400
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id 471C96445FE; Wed, 11 Aug 2004 08:34:59 -0400 (EDT)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 33233-09; Wed, 11 Aug 2004 08:34:58 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (corporateex.drdc-rddc.gc.ca
+	[131.136.1.77]) by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id E5B906445ED; Wed, 11 Aug 2004 08:34:57 -0400 (EDT)
+Received: by corporateex.drdc-rddc.gc.ca with Internet Mail Service
+	(5.5.2653.19) id <Q2LKWWQ0>; Wed, 11 Aug 2004 08:30:37 -0400
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DBDF@corporateex.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: axiom-developer@nongnu.org
+Subject: RE: [Axiom-math] Re: [Axiom-developer] Re: musings on notation
+Date: Wed, 11 Aug 2004 08:30:28 -0400
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="ISO-8859-15"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: axiom-math@nongnu.org, W Naylor <wn@cs.bath.ac.uk>
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 11 Aug 2004 12:39:02 -0000
+
+Tim, Mike, et al.
+
+Here is Bill Naylor's web site:
+
+  http://www.scl.csd.uwo.ca/~bill/
+
+I think it would be very interesting to resurrect these
+ideas on "Straight Line Programs"!
+
+Regards,
+Bill Page.
+
+> -----Original Message-----
+> From: Mike Dewar [mailto:miked@nag.co.uk]
+> Sent: Wednesday, August 11, 2004 8:20 AM
+> To: axiom-developer@nongnu.org; axiom-math@nongnu.org
+> Cc: W Naylor
+> Subject: Re: [Axiom-math] Re: [Axiom-developer] Re: musings 
+> on notation
+> 
+> 
+> I don't know if Bill Naylor subscribes to this list, but his PhD (at
+> Bath, supervised by James Davenport) involved using straight-line
+> programs to represent polynomials in Axiom.  Just as with other
+> mathematical objects you could do arithmetic with them, perform
+> operations such as GCD computations etc., however their representation
+> was as an explicit program.  These programs were represented 
+> in Axiom as instances of domains in the usual way - if I remember
+> rightly the infrastructure he created was quite extensive.  I don't
+> know if this work really addresses Tim's original thoughts about
+> notation which started off this thread but it might be worth looking
+> at or even reviving.  
+> 
+> Mike.
+
+
+
+From MAILER-DAEMON Wed Aug 11 09:52:00 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1ButWK-000571-FN
+	for mharc-axiom-math@gnu.org; Wed, 11 Aug 2004 09:52:00 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1ButWJ-00056s-68
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 09:51:59 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1ButWI-00056g-K8
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 09:51:58 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1ButWI-00056d-Hq
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 09:51:58 -0400
+Received: from [62.231.131.195] (helo=mail35.messagelabs.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1ButSL-0000A1-K3
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 09:47:53 -0400
+X-VirusChecked: Checked
+X-Env-Sender: miked@nag.co.uk
+X-Msg-Ref: server-16.tower-35.messagelabs.com!1092232072!12642401
+X-StarScan-Version: 5.2.10; banners=nag.co.uk,-,-
+X-Originating-IP: [212.125.75.71]
+Received: (qmail 19759 invoked from network); 11 Aug 2004 13:47:52 -0000
+Received: from smtp-2.star.net.uk (212.125.75.71)
+	by server-16.tower-35.messagelabs.com with SMTP;
+	11 Aug 2004 13:47:52 -0000
+Received: (qmail 5895 invoked from network); 11 Aug 2004 13:47:16 -0000
+Received: from unknown (HELO nag.co.uk) (62.231.145.242)
+	by smtp-2.star.net.uk with SMTP; 11 Aug 2004 13:47:16 -0000
+Received: from trowbridge.nag.co.uk (trowbridge.nag.co.uk [192.156.217.69])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id OAA03713;
+	Wed, 11 Aug 2004 14:47:41 +0100 (BST)
+Received: from trowbridge.nag.co.uk (localhost.localdomain [127.0.0.1])
+	by trowbridge.nag.co.uk (8.12.10/8.12.10) with ESMTP id i7BDlbC2020953; 
+	Wed, 11 Aug 2004 14:47:37 +0100
+Received: (from miked@localhost)
+	by trowbridge.nag.co.uk (8.12.10/8.12.10/Submit) id i7BDlXBm020951;
+	Wed, 11 Aug 2004 14:47:33 +0100
+Date: Wed, 11 Aug 2004 14:47:32 +0100
+From: Mike Dewar <miked@nag.co.uk>
+To: "Bill Page (E-mail)" <bill.page1@sympatico.ca>
+Subject: Re: [Axiom-math] Re: [Axiom-developer] Re: musings on notation
+Message-ID: <20040811134732.GC20173@nag.co.uk>
+References: <68207C39878CC54695B4E7A1D58E098124DBDF@corporateex.drdc-rddc.gc.ca>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-15
+Content-Disposition: inline
+In-Reply-To: <68207C39878CC54695B4E7A1D58E098124DBDF@corporateex.drdc-rddc.gc.ca>
+User-Agent: Mutt/1.4.1i
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org,
+	W Naylor <wn@cs.bath.ac.uk>
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 11 Aug 2004 13:51:59 -0000
+
+Actually Bill left ORCCA more than two years ago and after teaching in
+New Zealand is back at Bath working on Web Services.  His current home
+page is http://www.cs.bath.ac.uk/~wn which I see includes his PhD thesis
+and the accompanying software.
+
+Cheers, Mike.
+
+On Wed, Aug 11, 2004 at 08:30:28AM -0400, Page, Bill wrote:
+> Tim, Mike, et al.
+> 
+> Here is Bill Naylor's web site:
+> 
+>   http://www.scl.csd.uwo.ca/~bill/
+> 
+> I think it would be very interesting to resurrect these
+> ideas on "Straight Line Programs"!
+> 
+> Regards,
+> Bill Page.
+> 
+> > -----Original Message-----
+> > From: Mike Dewar [mailto:miked@nag.co.uk]
+> > Sent: Wednesday, August 11, 2004 8:20 AM
+> > To: axiom-developer@nongnu.org; axiom-math@nongnu.org
+> > Cc: W Naylor
+> > Subject: Re: [Axiom-math] Re: [Axiom-developer] Re: musings 
+> > on notation
+> > 
+> > 
+> > I don't know if Bill Naylor subscribes to this list, but his PhD (at
+> > Bath, supervised by James Davenport) involved using straight-line
+> > programs to represent polynomials in Axiom.  Just as with other
+> > mathematical objects you could do arithmetic with them, perform
+> > operations such as GCD computations etc., however their representation
+> > was as an explicit program.  These programs were represented 
+> > in Axiom as instances of domains in the usual way - if I remember
+> > rightly the infrastructure he created was quite extensive.  I don't
+> > know if this work really addresses Tim's original thoughts about
+> > notation which started off this thread but it might be worth looking
+> > at or even reviving.  
+> > 
+> > Mike.
+> 
+> 
+> _______________________________________________
+> Axiom-developer mailing list
+> Axiom-developer@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-developer
+> 
+> ________________________________________________________________________
+> This e-mail has been scanned for all viruses by Star Internet. The
+> service is powered by MessageLabs. For more information on a proactive
+> anti-virus service working around the clock, around the globe, visit:
+> http://www.star.net.uk
+> ________________________________________________________________________
+
+________________________________________________________________________
+This e-mail has been scanned for all viruses by Star Internet. The
+service is powered by MessageLabs. For more information on a proactive
+anti-virus service working around the clock, around the globe, visit:
+http://www.star.net.uk
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Thu Aug 12 10:33:21 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BvGdt-0001KA-1e
+	for mharc-axiom-math@gnu.org; Thu, 12 Aug 2004 10:33:21 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Butpm-0001W7-7m
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 10:12:06 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Butpl-0001Vc-2Z
+	for axiom-math@nongnu.org; Wed, 11 Aug 2004 10:12:05 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1Butpg-0001TS-Uo; Wed, 11 Aug 2004 10:12:00 -0400
+Received: from [138.38.108.3] (helo=air.cs.bath.ac.uk)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1Butln-00037o-4A; Wed, 11 Aug 2004 10:07:59 -0400
+Received: from fire.cs.bath.ac.uk ([138.38.108.1] helo=ralph.cs.bath.ac.uk)
+	by air.cs.bath.ac.uk with esmtp (Exim 4.30)
+	id 1Butlk-0001Iz-E9; Wed, 11 Aug 2004 15:07:56 +0100
+Date: Wed, 11 Aug 2004 15:07:56 +0100 (BST)
+From: W Naylor <wn@cs.bath.ac.uk>
+To: Mike Dewar <miked@nag.co.uk>
+Subject: Re: [Axiom-math] Re: [Axiom-developer] Re: musings on notation
+In-Reply-To: <20040811121942.GB20173@nag.co.uk>
+Message-ID: <Pine.LNX.4.44.0408111504480.28579-100000@ralph.cs.bath.ac.uk>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Spam-Score: 0.0 (/)
+X-Mailman-Approved-At: Thu, 12 Aug 2004 10:33:19 -0400
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 11 Aug 2004 14:12:06 -0000
+
+
+Well you can check out my thesis from my web site if you like:
+
+http://www.cs.bath.ac.uk/~wn/thesis.ps.gz
+
+there is also a tar file of some of the code I wrote as well (can't 
+remember if it works though!!),
+
+cheers,
+
+Bill
+
+On Wed, 11 Aug 2004, Mike Dewar wrote:
+
+> I don't know if Bill Naylor subscribes to this list, but his PhD (at
+> Bath, supervised by James Davenport) involved using straight-line
+> programs to represent polynomials in Axiom.  Just as with other
+> mathematical objects you could do arithmetic with them, perform
+> operations such as GCD computations etc., however their representation
+> was as an explicit program.  These programs were represented in Axiom as
+> instances of domains in the usual way - if I remember rightly the
+> infrastructure he created was quite extensive.  I don't know if this
+> work really addresses Tim's original thoughts about notation which
+> started off this thread but it might be worth looking at or even
+> reviving.  
+> 
+> Mike.
+> 
+> On Wed, Aug 11, 2004 at 12:54:36PM +0000, Martin Rubey wrote:
+> > root writes:
+> >  > The problem that needs to be attacked, however, is that there doesn't
+> >  > appear to be a notation that I could write by hand for a "thing" that
+> >  > has the properties of a program (including the notion of process) as
+> >  > well as the properties of a mathematical object. (Or the "thing" that
+> >  > has the properties of a closure as well as a mathematical object).
+> > 
+> > Sorry, but I still do not understand. In fact, I don't see the need for such a
+> > notation. I'd say that "programs" are just "mathematical objects"... After all,
+> > a polynomial for example, or better, the cosine is definitely a mathematical
+> > object, but it's also a "program".
+> > 
+> >  > Let me try an example. Consider the simple case of trying to raise a
+> >  > square matrix to an integer power:
+> >  >  
+> >  >  P = 3
+> >  >  M:SquareMatrix(2) = matrix([[1,2],[3,4]])
+> >  >  M^P
+> >  > 
+> >  > which we know how to do. 
+> > 
+> > OK.
+> > 
+> >  > The harder case is to assume we don't know the actual value of P but
+> >  > we know its Category. So if an IndefiniteInteger which have the
+> >  > property of integers but we don't say which one. IndefiniteInteger is
+> >  > a type we understand so we can say:
+> >  > 
+> >  >  P = IndefiniteInteger()
+> >  >  M = SquareMatrix(2)
+> >  >  M^P
+> > 
+> > Well, we do not yet have reached a conclusion what an IndefiniteInteger should
+> > be, do we? There is the possibility described by Davenport and Faure, and
+> > certainly there are others. In the above I also have trouble determining the
+> > type of M^P. I don't think you meant to have an exponentiation of domains? So
+> > it should probably read
+> > 
+> >  P : IndefiniteInteger()
+> >  M : SquareMatrix(2) = matrix([[1,2],[3,4]])
+> >  M^P
+> > 
+> > or
+> > 
+> >  P : IndefiniteInteger()
+> >  M : IndefiniteSquareMatrix(2)
+> >  M^P
+> > 
+> > or something like that. I'm not sure whether we want to modify the domain
+> > SquareMatrix to allow for exponentiation with an IndefiniteInteger, but on the
+> > other hand, why not? The result would be an IndefiniteSquareMatrix (or the zero
+> > matrix or the identity -- oops, bug report on the way), that's for sure...
+> > 
+> >  > The notational case is even harder. So I'd like to be able
+> >  > to say:
+> >  > 
+> >  >  P = Program(foo)
+> >  >  M:SquareMatrix(2) = matrix([[1,2],[3,4]])
+> >  >  M^P
+> > 
+> > What do you mean by that? Is M^P a program, that evaluates to a
+> > SquareMatrix(2)? I don't think that there is a notational problem here.
+> > I don't really know whether an operator that delays execution of a program
+> > would be useful. Its consequences for the type-system are -- I admit -- not
+> > easy to foresee. However, I have the feeling that we do not have the userbase
+> > yet to explore these fields. I have the feeling, that it disperses our "energy"
+> > a little, however.
+> > 
+> > I think it would be good to continue the discussion on indefinite things, but
+> > one such topic is enough -- for me at least. One suggestion: could we have a
+> > wishlist on the savannah website? Maybe registered users could even vote for
+> > priorities there?
+> > 
+> > All the best,
+> > 
+> > Martin
+> > 
+> > 
+> > 
+> > _______________________________________________
+> > Axiom-math mailing list
+> > Axiom-math@nongnu.org
+> > http://lists.nongnu.org/mailman/listinfo/axiom-math
+> > 
+> > ________________________________________________________________________
+> > This e-mail has been scanned for all viruses by Star Internet. The
+> > service is powered by MessageLabs. For more information on a proactive
+> > anti-virus service working around the clock, around the globe, visit:
+> > http://www.star.net.uk
+> > ________________________________________________________________________
+> 
+> ________________________________________________________________________
+> This e-mail has been scanned for all viruses by Star Internet. The
+> service is powered by MessageLabs. For more information on a proactive
+> anti-virus service working around the clock, around the globe, visit:
+> http://www.star.net.uk
+> ________________________________________________________________________
+> 
+> 
+> 
+
+
+
+
+From MAILER-DAEMON Thu Aug 12 11:21:23 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BvHON-0006ky-Ht
+	for mharc-axiom-math@gnu.org; Thu, 12 Aug 2004 11:21:23 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BvHOM-0006kt-2i
+	for axiom-math@nongnu.org; Thu, 12 Aug 2004 11:21:22 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BvHOJ-0006kh-78
+	for axiom-math@nongnu.org; Thu, 12 Aug 2004 11:21:21 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BvHOJ-0006ke-3K
+	for axiom-math@nongnu.org; Thu, 12 Aug 2004 11:21:19 -0400
+Received: from [200.234.203.3] (helo=hm03.locaweb.com.br)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1BvHK4-0007R1-TL
+	for axiom-math@nongnu.org; Thu, 12 Aug 2004 11:16:57 -0400
+Received: (qmail 46502 invoked by uid 0); 12 Aug 2004 14:19:26 -0000
+Received: from unknown (200.182.98.147)
+	by hm03.locaweb.com.br with QMTP; 12 Aug 2004 14:19:25 -0000
+Received: (qmail 746 invoked from network); 12 Aug 2004 14:01:13 -0000
+Received: from unknown (HELO eonl9byru76yj2)
+	(daniel.yokomiso@minddrome.com@201.1.57.182)
+	by hm47.locaweb.com.br with SMTP; 12 Aug 2004 14:01:14 -0000
+Message-ID: <006101c48076$53ce6cf0$59b8fea9@eonl9byru76yj2>
+From: "Daniel Yokomiso" <daniel.yokomiso@minddrome.com>
+To: <axiom-developer@nongnu.org>,
+	<axiom-math@nongnu.org>
+References: <20040811022429.83253.qmail@mail.archub.org>
+	<200408110531.i7B5VNQ27094@localhost.localdomain>
+Subject: Re: [Axiom-math] Re: musings on notation
+Date: Thu, 12 Aug 2004 11:00:55 -0300
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="Windows-1252"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2800.1437
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1441
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 12 Aug 2004 15:21:22 -0000
+
+
+----- Original Message ----- 
+From: "root" <daly@idsi.net>
+To: <pg@archub.org>
+Cc: <axiom-developer@nongnu.org>; "C Y" <smustudent1@yahoo.com>;
+<axiom-math@nongnu.org>
+Sent: Wednesday, August 11, 2004 2:31 AM
+Subject: [Axiom-math] Re: musings on notation
+
+[snip]
+
+> The notational case is even harder. So I'd like to be able
+> to say:
+>
+>  P = Program(foo)
+>  M:SquareMatrix(2) = matrix([[1,2],[3,4]])
+>  M^P
+>
+> but first I need to define categorical properties of the "Program"
+> type. So it might be a functor of the form:
+>
+>  Program(C:Code) -> Integer()
+>
+> that is, a Program type is Categorically defined to accept things
+> of type Code and is guaranteed to produce an Integer(). Notice
+> what happened here. I'm trying to raise a square matrix to an
+> unspecified power and all I can guarantee is that the operation
+> WOULD be defined if I were to compute it. I want a name for this
+> concept "the operation would be defined if we run it".
+>
+> Now mathematically this is hard because we haven't defined the
+> Category structure for Code. Do we require all Code functions to be
+> total (a definite valid value for every input?). Do we require the
+> Category of Stateless so that the function always returns the same
+> result? If so, we could functionally compose Program types, define
+> operators, and be able to compute:
+>
+>   Q = P*P
+>
+> where the '*' function is
+>
+>   *(Program,Program) -> Program
+
+
+[snip]
+
+This reminds me of Multi-Stage Programming, where we construct programs that
+should be executed later. The relevant papers are available in:
+http://www.cs.rice.edu/~taha/MSP/
+
+
+
+---
+Outgoing mail is certified Virus Free.
+Checked by AVG anti-virus system (http://www.grisoft.com).
+Version: 6.0.735 / Virus Database: 489 - Release Date: 6/8/2004
+
+
+
+
+From MAILER-DAEMON Thu Aug 12 14:51:11 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BvKfP-0001Nt-Nw
+	for mharc-axiom-math@gnu.org; Thu, 12 Aug 2004 14:51:11 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BvKfN-0001NW-Gv
+	for axiom-math@nongnu.org; Thu, 12 Aug 2004 14:51:09 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BvKfL-0001N8-Hn
+	for axiom-math@nongnu.org; Thu, 12 Aug 2004 14:51:08 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1BvKfL-0001My-EU; Thu, 12 Aug 2004 14:51:07 -0400
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1BvKbM-0006tj-Vv; Thu, 12 Aug 2004 14:47:01 -0400
+Received: from localhost.localdomain (234.178.252.64.snet.net [64.252.178.234])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i7CIkt3d239084; Thu, 12 Aug 2004 14:46:55 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i7CJVcw29041;
+	Thu, 12 Aug 2004 15:31:38 -0400
+Date: Thu, 12 Aug 2004 15:31:38 -0400
+Message-Id: <200408121931.i7CJVcw29041@localhost.localdomain>
+From: root <daly@idsi.net>
+To: wn@cs.bath.ac.uk
+In-reply-to: <Pine.LNX.4.44.0408111504480.28579-100000@ralph.cs.bath.ac.uk>
+	(message from W Naylor on Wed, 11 Aug 2004 15:07:56 +0100 (BST))
+Subject: Re: [Axiom-math] Re: [Axiom-developer] Re: musings on notation
+References: <Pine.LNX.4.44.0408111504480.28579-100000@ralph.cs.bath.ac.uk>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 12 Aug 2004 18:51:09 -0000
+
+Bill,
+
+I've been reading through your thesis and it's excellent. I've also
+downloaded the program sources which all appear to be in aldor.  I'd
+like your permission to bring the thesis work back to life on the
+current Axiom and use the thesis to explain the work as a literate
+program. I'll have to rewrite portions of the CCL and the Aldor
+sections to bring them in line with the current level. Also, Axiom now
+contains a "pamphlet" (basically tex with a few extras) structure
+which allows code to be embedded "inline" in the document as part of
+the explanation. This is useful for making code maintainable in future
+releases.
+
+I don't see any makefiles with the code. Is there an input file that
+was used to build these?
+
+Tim Daly
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Fri Aug 13 15:52:51 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Bvi6c-0007Hz-UU
+	for mharc-axiom-math@gnu.org; Fri, 13 Aug 2004 15:52:51 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BvZtt-0005GV-Hs
+	for axiom-math@nongnu.org; Fri, 13 Aug 2004 07:07:09 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BvZtm-0005Dv-9D
+	for axiom-math@nongnu.org; Fri, 13 Aug 2004 07:07:08 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1BvZtg-0005DJ-7N; Fri, 13 Aug 2004 07:06:56 -0400
+Received: from [138.38.108.3] (helo=air.cs.bath.ac.uk)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1BvZpI-0000zA-FS; Fri, 13 Aug 2004 07:02:25 -0400
+Received: from fire.cs.bath.ac.uk ([138.38.108.1] helo=ralph.cs.bath.ac.uk)
+	by air.cs.bath.ac.uk with esmtp (Exim 4.30)
+	id 1BvZpB-00007A-7Q; Fri, 13 Aug 2004 12:02:17 +0100
+Date: Fri, 13 Aug 2004 12:02:16 +0100 (BST)
+From: W Naylor <wn@cs.bath.ac.uk>
+To: root <daly@idsi.net>
+Subject: Re: [Axiom-math] Re: [Axiom-developer] Re: musings on notation
+In-Reply-To: <200408121931.i7CJVcw29041@localhost.localdomain>
+Message-ID: <Pine.LNX.4.44.0408131154070.28579-100000@ralph.cs.bath.ac.uk>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Spam-Score: 0.0 (/)
+X-Mailman-Approved-At: Fri, 13 Aug 2004 15:52:49 -0400
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 13 Aug 2004 11:07:10 -0000
+
+On Thu, 12 Aug 2004, root wrote:
+
+> Bill,
+> 
+> I've been reading through your thesis and it's excellent. I've also
+> downloaded the program sources which all appear to be in aldor.  I'd
+
+yes, they all include the file axiom.as, so that they have to be run under 
+the axiom environment. I wrote them in aldor because I believed that was 
+the way axiom would be heading.
+> like your permission to bring the thesis work back to life on the
+> current Axiom and use the thesis to explain the work as a literate
+
+sure, no problem.
+
+> program. I'll have to rewrite portions of the CCL and the Aldor
+> sections to bring them in line with the current level. Also, Axiom now
+> contains a "pamphlet" (basically tex with a few extras) structure
+> which allows code to be embedded "inline" in the document as part of
+> the explanation. This is useful for making code maintainable in future
+> releases.
+
+Is this anything todo with Manuel Bronsteins aldorlib?
+
+> 
+> I don't see any makefiles with the code. Is there an input file that
+> was used to build these?
+
+Unforunatly not, whenever I wrote a new bit of code, I just compiled it 
+from the command line!
+
+cheers,
+
+Bill
+> 
+> Tim Daly
+> daly@idsi.net
+> 
+> 
+> 
+
+
+
+
+From MAILER-DAEMON Sun Aug 22 05:24:56 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Byoat-0003PE-Oh
+	for mharc-axiom-math@gnu.org; Sun, 22 Aug 2004 05:24:55 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Byoar-0003Om-E1
+	for axiom-math@nongnu.org; Sun, 22 Aug 2004 05:24:53 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Byoap-0003Oa-KH
+	for axiom-math@nongnu.org; Sun, 22 Aug 2004 05:24:53 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1Byoao-0003OX-QA; Sun, 22 Aug 2004 05:24:51 -0400
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1ByoVw-0006AJ-Nv; Sun, 22 Aug 2004 05:19:48 -0400
+Received: from localhost.localdomain (234.178.252.64.snet.net [64.252.178.234])
+	by pimout1-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i7M9Jjhh166962; Sun, 22 Aug 2004 05:19:45 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i7MA4Id26725;
+	Sun, 22 Aug 2004 06:04:18 -0400
+Date: Sun, 22 Aug 2004 06:04:18 -0400
+Message-Id: <200408221004.i7MA4Id26725@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] gcl-2.6.5 upgrade
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 22 Aug 2004 09:24:54 -0000
+
+The CVS now has the build process for GCL-2.6.5.
+This fixes the sqrt(2.) bug.
+
+Tim
+
+
+
+From MAILER-DAEMON Mon Aug 23 16:07:02 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BzL5q-0003nt-4p
+	for mharc-axiom-math@gnu.org; Mon, 23 Aug 2004 16:07:02 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BzL5n-0003lh-35
+	for axiom-math@nongnu.org; Mon, 23 Aug 2004 16:06:59 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BzL5l-0003kS-Bz
+	for axiom-math@nongnu.org; Mon, 23 Aug 2004 16:06:58 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1BzL5l-0003kG-7F; Mon, 23 Aug 2004 16:06:57 -0400
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1BzL15-0000C7-S4; Mon, 23 Aug 2004 16:02:08 -0400
+Received: from localhost.localdomain (161.181.252.64.snet.net [64.252.181.161])
+	by pimout1-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i7NK26hh025782; Mon, 23 Aug 2004 16:02:06 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i7NKkbI27781;
+	Mon, 23 Aug 2004 16:46:37 -0400
+Date: Mon, 23 Aug 2004 16:46:37 -0400
+Message-Id: <200408232046.i7NKkbI27781@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] [florina.piroi@risc.uni-linz.ac.at: Postdoc Position
+	in Theorema]
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Aug 2004 20:07:00 -0000
+
+------- Start of forwarded message -------
+
+Date: Wed, 18 Aug 2004 12:31:11 +0200
+From: Theorema <florina.piroi@risc.uni-linz.ac.at>
+Subject: Postdoc Position in Theorema
+
+
+        [we apologize for multiple copies]
+
+Postdoc Position in the Frame of the Theorema Project
+======================================================
+
+The new Radon Institute for Computational and Applied Mathematics
+(RICAM) of the Austrian Academy of Science in Linz, Austria, offers a
+postdoc position in the frame of the Theorema Project.
+
+The Theorema Project aims at creating a system that supports the
+entire process of Mathematical Theory Exploration (inventing
+mathematical concepts, inventing and verifying propositions,
+inventing mathematical problems, inventing and verifying algorithms,
+building up and manipulating structured mathematical knowledge bases
+etc.). 
+
+Prerequisites:
+
+- - PhD in mathematics or computer science
+- - Expertise or, at least, interest in computational mathematics,
+computational logic, and software development.
+
+Applications (CV, publication list etc.) should be sent to the Theorema
+project leader:
+
+Professor Bruno Buchberger
+buchberger@risc.uni-linz.ac.at
+
+For information on Theorema see  http://www.theorema.org 
+
+
+
+

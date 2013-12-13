@@ -1,0 +1,341 @@
+From MAILER-DAEMON Sat Apr 02 20:36:31 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DHu2Q-0004Us-Uk
+	for mharc-axiom-math@gnu.org; Sat, 02 Apr 2005 20:36:31 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DHu2K-0004Ru-ON
+	for axiom-math@nongnu.org; Sat, 02 Apr 2005 20:36:24 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DHu29-0004LK-K4
+	for axiom-math@nongnu.org; Sat, 02 Apr 2005 20:36:15 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DHu29-0004KY-HL; Sat, 02 Apr 2005 20:36:13 -0500
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DHtz0-0004ZM-DI; Sat, 02 Apr 2005 20:32:58 -0500
+Received: from localhost.localdomain (49.177.252.64.snet.net [64.252.177.49]
+	(may be forged))
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j331WaR22001;
+	Sat, 2 Apr 2005 19:32:36 -0600
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j332AiM21324;
+	Sat, 2 Apr 2005 21:10:44 -0500
+Date: Sat, 2 Apr 2005 21:10:44 -0500
+Message-Id: <200504030210.j332AiM21324@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Cc: 
+Subject: [Axiom-math] April 2005 release
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 03 Apr 2005 01:36:26 -0000
+
+The April 2005 release of Axiom is up on the servers:
+
+http://page.axiom-developer.org/zope/mathaction/AxiomDownload (files)
+http://sourceforge.net/projects/axiom (CVS and files)
+http://savannah.nongnu.org/projecs/axiom (CVS)
+
+The current arch version is --patch-32 but is about to be open for
+changes for the May release. Explicitly ask for 
+  tla get axiom--main--1--patch-32
+if you want the April release code.
+
+The main changes are a move from GCL-2.6.5 to GCL-2.6.6,
+new documentation for some domains, and fixes to C compile
+time warnings.
+
+Significant time has been spent getting the Axiom conference organized.
+Hope to see some of you there. (http://www.caissny.org)
+There will be a sprint day before the actual conference where we will
+discuss future directions followed by cleanup work on open Issues.
+
+
+The CHANGELOG reads:
+
+20050320 tpd --patch-32
+20050320 tpd Makefile revert VERSION to 3.4
+20050320 tpd src/input/Makefile add ALGEBRA variable for documentation tests
+20050320 tpd src/algebra/numtheory.spad build test case for INTHEORY
+20050320 tpd src/algebra/Makefile add test case for INTHEORY
+20050320 tpd src/Makefile make int/input directory during algebra step
+20050320 tpd src/algebra/numtheory.spad document INTHEORY/chineseRemainder
+20050320 tpd src/algebra/numtheory.spad document INTHEORY/inverse
+20050318 tpd lsp/gcl-2.6.6/cmpnew/gcl_cmpflet.lsp redo tail-recursive patch
+20050318 tpd src/lib/cfuns-c.c in make_path_from_file, initialize pos
+20050318 tpd src/lib/wct.c coerce pwct->fsize to int in skim1Wct
+20050318 tpd src/lib/sockio-c.c initialize code to -1
+20050318 tpd src/lib/pixmap.c remove attr, xireturn unused variables
+20050318 tpd Makefile latex fixes
+20050318 tpd Makefile add <<GCLOPTS-LOCBFD>>
+20050318 tpd src/hyper/Makefile Issue #125 htadd bare fixed
+20050318 tpd --patch-31
+20050314 tpd gcl-2.6.6.h.linux.h.patch add run-process to GCL
+20050314 tpd zip/ccl.tgz added
+20050314 tpd src/algebra/Makefile reduce build noise
+20050314 tpd Makefile change VERSION to "Axiom 5.4 (April 2005)"
+20050314 tpd lsp/Makefile handle gcl-2.6.6
+20050314 tpd zips/gcl-2.6.6.tgz added
+20050213 tpd Makefile change the VERSION string to March 2005
+20050213 tpd src/interp/nocompil.lisp #+:ccl protected-symbol-warn msg
+20050213 tpd bug 89 Types in the full book fixed
+
+Tim
+
+
+
+From MAILER-DAEMON Sun Apr 03 11:41:38 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DI7EI-0003la-EC
+	for mharc-axiom-math@gnu.org; Sun, 03 Apr 2005 11:41:38 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DI7E6-0003gy-0o
+	for axiom-math@nongnu.org; Sun, 03 Apr 2005 11:41:27 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DI7E1-0003eM-5k
+	for axiom-math@nongnu.org; Sun, 03 Apr 2005 11:41:24 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DI7E0-0003dY-M4; Sun, 03 Apr 2005 11:41:20 -0400
+Received: from [216.114.78.229] (helo=tenkan.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DI7EI-0000D7-SK; Sun, 03 Apr 2005 11:41:39 -0400
+Received: from localhost.localdomain (49.177.252.64.snet.net [64.252.177.49]
+	(may be forged))
+	by tenkan.org (8.11.6/8.11.6) with ESMTP id j33FfBR07711;
+	Sun, 3 Apr 2005 10:41:11 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j33GJHH26412;
+	Sun, 3 Apr 2005 12:19:17 -0400
+Date: Sun, 3 Apr 2005 12:19:17 -0400
+Message-Id: <200504031619.j33GJHH26412@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: henry.lenzi@gmail.com
+In-reply-to: <8b4c81f0504030754248dec57@mail.gmail.com> (message from Henry
+	Lenzi on Sun, 3 Apr 2005 11:54:41 -0300)
+References: <8b4c81f0504021925df0ce8f@mail.gmail.com>
+	<200504031502.j33F2QI26339@localhost.localdomain>
+	<8b4c81f0504030754248dec57@mail.gmail.com>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Doyen project
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 03 Apr 2005 15:41:31 -0000
+
+Henry,
+
+>  I became interested in Axiom because of a post, by you, in a
+> mailing-list, in which you defended the proposition that the gap
+> between programming and writing mathematics in paper ought to be
+> merged, a "system for 30 years." Extremely interesting and visionary!
+>  By the way, may I suggest that you put that mail with your vision
+> somewhere in the Axiom site? I think this sets it apart from others
+...[snip]...
+
+Look at http://daly.axiom-developer.org/doyen
+
+The Doyen idea is very simple. When you present your paper at a science
+conference you give out a URL. Everyone in the audience has a Doyen "Live CD"
+that was given out with the conference materials. If they boot the "Live CD"
+(it doesn't touch their hard drive so it won't affect their machines)
+then they can "drag and drop" your literate paper (which includes the
+source code) onto their machine and run your results while you give
+your talk.
+
+The means that everyone in the audience has your program as well as
+your paper and can reproduce your results. Isn't that the definition
+of a science? And it works for every branch of science that uses a
+computer.
+
+The Doyen project is actually a generalization of the ideas for Axiom.
+It addresses the problem that we, as computational mathematicians, are
+not making our fundamental results (programs) available in sharable and
+archivable form. I've seen hundreds of presentations where reference is
+made to the software that supports results but I can't get or use the 
+software. 
+
+Tim
+
+
+
+
+
+From MAILER-DAEMON Mon Apr 04 11:26:43 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DITTP-0002C0-1P
+	for mharc-axiom-math@gnu.org; Mon, 04 Apr 2005 11:26:43 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DITNB-0008OS-Jn
+	for axiom-math@nongnu.org; Mon, 04 Apr 2005 11:20:17 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DITEf-0004pE-Pk
+	for axiom-math@nongnu.org; Mon, 04 Apr 2005 11:11:29 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DIStd-0004QJ-BW; Mon, 04 Apr 2005 10:49:45 -0400
+Received: from [209.226.175.188] (helo=tomts25-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1DIAlJ-0007ds-Jz; Sun, 03 Apr 2005 15:27:57 -0400
+Received: from [192.168.1.132] ([209.226.189.90]) by tomts25-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP id
+	<20050403192628.NTML27245.tomts25-srv.bellnexxia.net@[192.168.1.132]>;
+	Sun, 3 Apr 2005 15:26:28 -0400
+Message-ID: <4250416C.50000@sympatico.ca>
+Date: Sun, 03 Apr 2005 15:18:04 -0400
+From: Bill Page <bill.page1@sympatico.ca>
+User-Agent: Debian Thunderbird 1.0 (X11/20050116)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: daly@axiom-developer.org
+References: <8b4c81f0504021925df0ce8f@mail.gmail.com>	<200504031502.j33F2QI26339@localhost.localdomain>	<8b4c81f0504030754248dec57@mail.gmail.com>
+	<200504031619.j33GJHH26412@localhost.localdomain>
+In-Reply-To: <200504031619.j33GJHH26412@localhost.localdomain>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: henry.lenzi@gmail.com, axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-developer] Doyen project
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 04 Apr 2005 15:26:40 -0000
+
+Tim,
+
+You also have the Doyen page on MathAction
+
+  http://page.axiom-developer.org/zope/mathaction/Doyen
+
+should the contents of your new web page be merged with
+this or do you want to keep them separate?
+
+Regards,
+Bill Page.
+
+root wrote:
+
+>...[snip]...
+>
+>Look at http://daly.axiom-developer.org/doyen
+>
+>  
+>
+
+
+
+
+From MAILER-DAEMON Mon Apr 04 13:08:57 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DIV4K-00087S-Mf
+	for mharc-axiom-math@gnu.org; Mon, 04 Apr 2005 13:08:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DI7zh-0008FC-4v
+	for axiom-math@nongnu.org; Sun, 03 Apr 2005 12:30:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DI7zg-0008EW-8B
+	for axiom-math@nongnu.org; Sun, 03 Apr 2005 12:30:36 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1DI7yN-0007Vf-1j; Sun, 03 Apr 2005 12:29:15 -0400
+Received: from [194.242.157.42] (helo=storm.uk.FreeBSD.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34)
+	id 1DI7gd-0002Rn-DW; Sun, 03 Apr 2005 12:10:55 -0400
+Received: from storm.uk.FreeBSD.org (uucp@localhost [127.0.0.1])
+	by storm.uk.FreeBSD.org (8.13.3/8.13.3) with ESMTP id j33GABVL051826;
+	Sun, 3 Apr 2005 17:10:11 +0100 (BST) (envelope-from mark@grondar.org)
+Received: (from uucp@localhost)
+	by storm.uk.FreeBSD.org (8.13.3/8.12.11/Submit) with UUCP id
+	j33GAAxL051825; Sun, 3 Apr 2005 17:10:10 +0100 (BST)
+	(envelope-from mark@grondar.org)
+Received: from grondar.org (localhost [127.0.0.1])
+	by grovel.grondar.org (8.13.3/8.13.1) with ESMTP id j33G6LMp059399;
+	Sun, 3 Apr 2005 17:06:21 +0100 (BST) (envelope-from mark@grondar.org)
+Message-Id: <200504031606.j33G6LMp059399@grovel.grondar.org>
+X-Mailer: exmh version 2.7.2 01/07/2005 with nmh-1.0.4
+To: daly@axiom-developer.org
+From: Mark Murray <markm@FreeBSD.org>
+In-Reply-To: Your message of "Sun, 03 Apr 2005 12:19:17 EDT."
+	<200504031619.j33GJHH26412@localhost.localdomain> 
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Date: Sun, 03 Apr 2005 17:06:21 +0100
+Sender: mark@grondar.org
+X-Mailman-Approved-At: Mon, 04 Apr 2005 13:08:54 -0400
+Cc: henry.lenzi@gmail.com, axiom-developer@nongnu.org, axiom-math@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-developer] Doyen project 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 03 Apr 2005 16:30:37 -0000
+
+root writes:
+> The means that everyone in the audience has your program as well as
+> your paper and can reproduce your results. Isn't that the definition
+> of a science? And it works for every branch of science that uses a
+> computer.
+
+It also means that everyone in the audience is reproducing any errors.
+
+Isn't the essence of reproducing an experiment to start with the theory 
+and construct the experiment yourself, rather that pushing the "GO" 
+button in the original scientist's laboratory?
+
+> The Doyen project is actually a generalization of the ideas for Axiom.
+> It addresses the problem that we, as computational mathematicians, are
+> not making our fundamental results (programs) available in sharable and
+> archivable form. I've seen hundreds of presentations where reference is
+> made to the software that supports results but I can't get or use the 
+> software. 
+
+I partially agree with this, but access to the original software should 
+only really be for checking purposes.
+
+Of course, certain classes of research need to be less stringent on 
+this; theoretical compiler design would be an example.
+
+M
+--
+Mark Murray
+iumop ap!sdn w,I idlaH
+
+
+
+
+

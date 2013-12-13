@@ -1,0 +1,3259 @@
+From MAILER-DAEMON Wed Mar 01 05:09:40 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FEOH3-0007vf-5A
+	for mharc-axiom-math@gnu.org; Wed, 01 Mar 2006 05:09:37 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FEAak-0006hV-W0
+	for axiom-math@nongnu.org; Tue, 28 Feb 2006 14:33:05 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FEAab-0006ch-DI
+	for axiom-math@nongnu.org; Tue, 28 Feb 2006 14:32:56 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FEAaa-0006ba-Be
+	for axiom-math@nongnu.org; Tue, 28 Feb 2006 14:32:52 -0500
+Received: from [192.167.219.15] (helo=avas.unife.it)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FE3e2-0008J6-N6
+	for axiom-math@nongnu.org; Tue, 28 Feb 2006 07:07:59 -0500
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by avas.unife.it (Postfix) with ESMTP id 051AC65C4D
+	for <axiom-math@nongnu.org>; Tue, 28 Feb 2006 13:06:52 +0100 (CET)
+Received: from em243.mate.man (em243.mate.man [10.80.2.121])
+	by avas.unife.it (Postfix) with ESMTP id 40B9E65BBA
+	for <axiom-math@nongnu.org>; Tue, 28 Feb 2006 12:54:01 +0100 (CET)
+Date: Tue, 28 Feb 2006 12:54:01 +0100 (CET)
+From: "Fabio S." <f.stumbo@unife.it>
+X-X-Sender: stumbo@studio
+To: axiom-math@nongnu.org
+Message-ID: <Pine.LNX.4.62.0602281202210.13960@studio>
+Organization: =?ISO-8859-1?Q?Universit=E0_di_Ferrara?=
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-Virus-Scanned: Cineca AppOs 0.86 at avas.unife.it
+Subject: [Axiom-math] How to make symbolic computations?
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: axiom-math@nongnu.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 01 Mar 2006 10:09:33 -0000
+
+
+Hi,
+I am facing a problem that I can't solve and I can't find any help on the 
+book.
+
+The problem is the following: assume you have a field k (let's say k=Q, 
+but I would like to more general if possible) and take two variable x and 
+y which do not commute.
+
+I would like to build the non-commutative algebra h=k[x,y] and then I 
+would like to make computations in h using some predefined rules for x and 
+y. As an example, take the three equations
+
+x*y*x=y*x*y
+x*x=a*x+b
+y*y=a*y+b
+
+where a and b are (generic, if possible) elements of k.
+
+Then, I would like to be able to reduce polynomials in x and y according 
+to the previous rules. For example,
+
+(x+y)^2 (=x^2+x*y+y*x+y^2)
+
+should reduce to
+
+a*(x+y)+2*b+x*y+y*x
+
+and
+
+
+(x+y)^3
+
+(
+=(x+y)(x+y)^2
+=(x+y)(a(x+y)+2b+xy+yx)
+=axx+axy+ayx+ayy+2bx+2by+xxy+xyx+yxy+yyx
+=a^2x+ab+axy+ayx+a^2y+ab+2bx+2by+(ax+b)y+xyx+yxy+(ay+b)x
+=a^2x+ab+axy+ayx+a^2y+ab+2bx+2by+axy+by+xyx+yxy+ayx+bx
+=xyx+yxy+axy+axy+ayx+ayx+a^2x+2bx+bx+a^2y+2by+by+ab+ab
+)
+
+should reduce to
+
+2*x*y*x+2*a*x*y+2*a*y*x+(a^2+3*b)*x+(a^2+3*b)*y+2*a*b
+
+Is this possible? I think it should, but I couldn't find how... :-((
+
+Thanks for your help
+
+Fabio
+
+
+
+
+
+From MAILER-DAEMON Fri Mar 03 20:29:34 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FFLaP-00079G-Gi
+	for mharc-axiom-math@gnu.org; Fri, 03 Mar 2006 20:29:33 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FFLYh-00060O-Ro
+	for axiom-math@nongnu.org; Fri, 03 Mar 2006 20:27:47 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FFLYa-0005wO-Qz
+	for axiom-math@nongnu.org; Fri, 03 Mar 2006 20:27:44 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FFEYX-0006Ne-HS
+	for axiom-math@nongnu.org; Fri, 03 Mar 2006 12:59:09 -0500
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FF7Qx-0004Ot-L8
+	for axiom-math@nongnu.org; Fri, 03 Mar 2006 05:22:52 -0500
+Received: from localhost (localhost.drenet.dnd.ca [127.0.0.1])
+	by fw.drenet.dnd.ca (_) with ESMTP id E2FFB6657E
+	for <axiom-math@nongnu.org>; Fri,  3 Mar 2006 05:21:00 -0500 (EST)
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca
+	(corporateex02.corporate.drdc-rddc.gc.ca [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id 795CD66587
+	for <axiom-math@nongnu.org>; Fri,  3 Mar 2006 05:20:56 -0500 (EST)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-math] How to make symbolic computations?
+Date: Fri, 3 Mar 2006 05:20:54 -0500
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE33DE01F@corporateex02.Corporate.drdc-rddc.gc.ca>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-math] How to make symbolic computations?
+Thread-Index: AcY+RBc46etTFAPUR/25UMZOtns4LAAAQ4Nw
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: <axiom-math@nongnu.org>
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: mathaction@axiom-developer.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 04 Mar 2006 01:27:48 -0000
+
+On Tuesday, February 28, 2006 6:54 AM Fabio S. writes:
+> I am facing a problem that I can't solve and I can't find
+> any help on the book.
+>=20
+> The problem is the following: assume you have a field k=20
+> (let's say k=3DQ, but I would like to more general if possible)
+> and take two variable x and y which do not commute.
+
+I am interested in similar problems. There is are some domains
+in Axiom for doing computations with non-commuting variables
+developed by Michel Petitot. You can find some examples in the
+Axiom book under the title XPolynomial but unfortunately the
+explanations are a little terse. If you are up to it, you can
+also check for documentation in the source files:
+
+http://wiki.axiom-developer.org/axiom--test--1/src/input/XpolyInput
+http://wiki.axiom-developer.org/axiom--test--1/src/algebra/XpolySpad
+http://wiki.axiom-developer.org/axiom--test--1/src/input/LpolyInput
+http://wiki.axiom-developer.org/axiom--test--1/src/algebra/XLpolySpad
+
+>=20
+> I would like to build the non-commutative algebra h=3Dk[x,y] and
+> then I would like to make computations in h using some predefined=20
+> rules for x and y. As an example, take the three equations
+>=20
+> x*y*x=3Dy*x*y
+> x*x=3Da*x+b
+> y*y=3Da*y+b
+>=20
+> where a and b are (generic, if possible) elements of k.
+>=20
+> Then, I would like to be able to reduce polynomials in x and=20
+> y according to the previous rules. For example,
+>=20
+> (x+y)^2 (=3Dx^2+x*y+y*x+y^2)
+>=20
+> should reduce to
+>=20
+> a*(x+y)+2*b+x*y+y*x
+>=20
+> and
+>=20
+> (x+y)^3
+>=20
+> (
+> =3D(x+y)(x+y)^2
+> =3D(x+y)(a(x+y)+2b+xy+yx)
+> =3Daxx+axy+ayx+ayy+2bx+2by+xxy+xyx+yxy+yyx
+> =3Da^2x+ab+axy+ayx+a^2y+ab+2bx+2by+(ax+b)y+xyx+yxy+(ay+b)x
+> =3Da^2x+ab+axy+ayx+a^2y+ab+2bx+2by+axy+by+xyx+yxy+ayx+bx
+> =3Dxyx+yxy+axy+axy+ayx+ayx+a^2x+2bx+bx+a^2y+2by+by+ab+ab
+> )
+>=20
+> should reduce to
+>=20
+> 2*x*y*x+2*a*x*y+2*a*y*x+(a^2+3*b)*x+(a^2+3*b)*y+2*a*b
+>
+
+Look at the example at:
+
+http://wiki.axiom-developer.org/SandBoxNoncommutativePolynomials
+
+Please check the result for '(x+y)^3'. I get the same result
+for '(x+y)^2' but I get a slightly different answer then above.
+=20
+> Is this possible? I think it should, but I couldn't find
+> how... :-((
+>=20
+
+Yes, it is possible. I have been working on a related problem
+for a while and your email motivated me to complete the work.
+I am not too surprised that you did not immediately find the
+solution to your problem since the XPOLY documentation is
+minimal and there was a bug in the implementation of OFMONOID,
+the missing 'div' function, which is needed to solve your
+problem.
+
+Ideally it would be nice to implement full pattern matching
+in the XPOLY domains similar to what is possible with other
+polynomials and expressions in Axiom, but this would probably
+be a lot more work...
+
+I hope this example helps.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Sat Mar 04 05:46:02 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FFUGv-0002Hn-Jl
+	for mharc-axiom-math@gnu.org; Sat, 04 Mar 2006 05:46:01 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FFUGr-0002Fo-KC
+	for axiom-math@nongnu.org; Sat, 04 Mar 2006 05:45:58 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FFUGm-0002Cx-8Y
+	for axiom-math@nongnu.org; Sat, 04 Mar 2006 05:45:55 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FEAsE-0006qk-4i
+	for axiom-math@nongnu.org; Tue, 28 Feb 2006 14:51:06 -0500
+Received: from [216.251.41.209] (helo=mails09.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1FDmsY-0006d1-SM
+	for axiom-math@nongnu.org; Mon, 27 Feb 2006 13:13:51 -0500
+X-Authenticated-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.61.191.200]) (authenticated bits=0)
+	by mails09.megamailservers.com (8.13.1/8.13.1) with ESMTP id
+	k1RICZlc007911; Mon, 27 Feb 2006 13:12:51 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Francois Maltey'" <fmaltey@nerim.fr>
+Subject: RE: [Axiom-math] I can't get an unexposed function.
+Date: Mon, 27 Feb 2006 13:12:31 -0500
+Message-ID: <004301c63bc9$68957b50$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+In-Reply-To: <87y7zxdh0v.fsf@localhost.localdomain>
+Importance: Normal
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 04 Mar 2006 10:45:59 -0000
+
+Francois,
+
+On February 26, 2006 3:03 PM you wrote:
+> 
+> I try to use the operator iter, and axiom can't find the function.
+> What must I type ?
+> 
+> )d op iter
+>  
+> There is one unexposed function called iter :
+>    [1] ((D1 -> D1),NonNegativeInteger,D1) -> D1
+>             from MappingPackageInternalHacks1 D1 if D1 has SETCAT
+
+You have the right idea. Notice 'MappingPackageInternalHacks1 D1'
+above.
+
+> (89) -> 
+> iter ((x:Float):Float +-> cos x, 10, 1.0)::Float
+>
+
+In this example you want D1 to be Float.
+
+So what you need is an explicit "package call" like this:
+
+
+(1) -> iter ((x:Float):Float +-> cos x, 10,
+1.0)$MappingPackageInternalHacks1(Float)
+
+   (1)  0.7442373549 0055686343
+   Type: Float
+
+Or if you wish, you can explicitly "expose" this package:
+
+(2) -> )expose MappingPackageInternalHacks1
+   MappingPackageInternalHacks1 is now explicitly exposed in frame
+    initial
+
+(2) -> iter ((x:Float):Float +-> cos x, 10, 1.0)
+
+   (2)  0.7442373549 0055686343
+   Type: Float
+
+--------
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Sun Mar 05 21:27:48 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FG5Rs-0003Dm-KZ
+	for mharc-axiom-math@gnu.org; Sun, 05 Mar 2006 21:27:48 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FG5Rq-00032o-8m
+	for axiom-math@nongnu.org; Sun, 05 Mar 2006 21:27:46 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FG5Rm-0002nx-E5
+	for axiom-math@nongnu.org; Sun, 05 Mar 2006 21:27:45 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FG5Rm-0002mX-7j
+	for axiom-math@nongnu.org; Sun, 05 Mar 2006 21:27:42 -0500
+Received: from [216.251.41.211] (helo=mails11.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1FG5Tv-000620-2M
+	for axiom-math@nongnu.org; Sun, 05 Mar 2006 21:29:55 -0500
+X-Authenticated-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.61.191.200]) (authenticated bits=0)
+	by mails11.megamailservers.com (8.13.1/8.13.1) with ESMTP id
+	k262R67V027182; Sun, 5 Mar 2006 21:27:22 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Fabio S.'" <f.stumbo@unife.it>
+Subject: RE: [Axiom-math] How to make symbolic computations?
+Date: Sun, 5 Mar 2006 21:27:05 -0500
+Message-ID: <03ed01c640c5$7d326ef0$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+In-reply-to: <Pine.LNX.4.62.0603041847350.7627@localhost.localdomain>
+Importance: Normal
+Cc: axiom-math@nongnu.org, mathaction@axiom-developer.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 06 Mar 2006 02:27:46 -0000
+
+On March 4, 2006 2:17 PM Fabio Stumbo wrote:
+
+> ...
+> Bill Page wrote:
+> > I am interested in similar problems. There is are some domains
+> > in Axiom for doing computations with non-commuting variables
+> > developed by Michel Petitot. You can find some examples in the
+> > Axiom book under the title XPolynomial but unfortunately the
+> > explanations are a little terse.
+> ...
+> 
+> Yes, I had a look (before asking for help... ;-) at the XPOLY 
+> domain: I read its help on the axiom book and I also looked at
+> anything else that looked related to it, but I didn't look at
+> ofmonoid, even if I saw this domain was used in XPR, because
+> it has no reference in the book...
+
+There is so many interesting Axiom domains that are not mentioned
+in the book! :( I hope that some day we can change this.
+
+> Also looking for ofmonoid on the axiom site doesn't help: I 
+> tried it now and the only response I get are the two messages
+> you wrote after my mail. So, one question in this case arise:
+> how can one get help in such a case, but asking on the mailing
+> list?
+
+Asking on the email list is the correct approach.
+
+You can also search the Axiom algebra source code online at:
+
+http://wiki.axiom-developer.org/axiom--test--1/src/algebra
+
+Enter a search term in the box in the upper right corner and
+press 'Enter'. For example you will see that 'OFMONOID' is only
+used and defined in xpoly.spad. These files are supposed to be
+"literate programs" but unfortunately we still have very little
+useful documentation in these files. :( So the best you can do
+is try to read and understand the intention of the program code.
+After we understand it well, we hope to have time to write some
+of the missing documentation ... but it seems life is too short.
+
+> 
+> In any case, after I had a look at xpoly I was thinking of 
+> something like defining new rules to be applied to my
+> polynomials, but I couldn't do it. Your solution is, in fact,
+> much more correct from a mathematical point of view, as long
+> as my rules are of the type I am using, ie substituting a 
+> monomial with a smaller (in some sense) polynomial.
+> 
+> ...
+> >
+> > Look at the example at:
+> >
+> > http://wiki.axiom-developer.org/SandBoxNoncommutativePolynomials
+> >
+> 
+> I see that you added a remark, and it is right: rules are to 
+> be applied recursively as much as possible.
+>
+> ...
+>
+> > I hope this example helps.
+> 
+> It helps a lot!!!! Thank you very much. I will look at it carefully 
+> in the next days, when I will have more free time.
+> 
+> Yet, I still have some question,  (not computational):
+> 
+> - I guess that your suggestion implied not to use the ofmonoid
+> included in axiom, but the variant included in your example.
+
+Yes. The version in Axiom has a bug: the function "div" is exported
+but no implementation is given.
+
+> I then created a file ofmonoid.spad and (by trials and errors)
+> I got it compiled with )compile ofmonoid.
+
+Great!
+
+> Well, what should I do now to replace the old with the new? 
+> Is it enough to replace the old
+> /usr/local/axiom/mnt/linux/algebra/OFMONOID.o
+> with the newly created
+> /home/stumbo/OFMONOID.NRLIB/code.o
+> ?
+
+Maybe this will work (I did not try it yet), but I think it is
+not the recommended way. In fact, I think it is not yet clearly
+documented how to make such a local change to Axiom.
+
+Eventually we will submit a patch to xpoly.spad.pamphlet
+including this change to provide an implementation of "div" and
+also (I hope) some documentation. This will become part of the
+Axiom source distribution. At that time, a complete new version
+of the Axiom library can be built from source.
+
+But for your use now, after compiling the new 'ofmonoid.spad'
+file, in later Axiom sessions you should include the following
+command:
+
+)lib OFMONOID
+
+This will tell Axiom to load the new version of OFMONOID
+directly from /home/stumbo/OFMONOID.NRLIB instead of the
+old version of OFMONOID in /usr/local/axiom/mnt/linux/algebra/
+
+> 
+> - I see that in your reply in the Reply-To field your mail has
+> your address 'bill.page1@synthesis.anikast.ca' and not the
+> mailing list address, so I am writing directly to you. Is this 
+> that you meant or should I have written to the ml, or added a 
+> comment on the wiki?
+> 
+
+I am sorry that there is so much confusion about the email
+list. There are some technical problems which I hope are soon
+fixed.
+
+My usual practice is too use the "Reply to all" option in my
+email program. This will send a copy of your reply directly
+to the author and also one to the email list.
+
+Of course you can add a comment to the wiki and also (please!)
+make changes to the page by clicking 'edit' if you want to
+make improvements in the example or the explanation. Other
+people will benefit from your corrections and improvements.
+
+In the case of the web page
+
+http://wiki.axiom-developer.org/SandBoxNoncommutativePolynomials
+
+changes and comments made to this page will **not** be sent
+to and email list because the name begins with "SandBox".
+(SandBox means that this is only a kind of test and play.)
+Changes to other pages that do not have the word SandBox
+prefix will be sent as notices to the subscribers to
+axiom-developer email list.
+
+Usually I plan to make a page first with SandBox ... and then
+later remove the prefix when it becomes stable and correct.
+I think that right now there are many pages in the SandBox
+that can be made permanent, but I have not had time yet to do
+this - and no one else seems to have time or to be willing to
+make these kind of changes to the wiki. :)
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Mon Mar 13 05:38:01 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FIkR7-0004Cn-FF
+	for mharc-axiom-math@gnu.org; Mon, 13 Mar 2006 05:38:01 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FIkR5-0004CD-Ox
+	for axiom-math@nongnu.org; Mon, 13 Mar 2006 05:37:59 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FIkR5-0004Bv-5F
+	for axiom-math@nongnu.org; Mon, 13 Mar 2006 05:37:59 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FIkR4-0004Bp-Qn
+	for axiom-math@nongnu.org; Mon, 13 Mar 2006 05:37:58 -0500
+Received: from [62.4.17.101] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FIkV1-000330-Jr
+	for axiom-math@nongnu.org; Mon, 13 Mar 2006 05:42:03 -0500
+Received: from localhost.localdomain (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.nerim.net (Postfix) with ESMTP id 35B5F4F3C6;
+	Mon, 13 Mar 2006 11:37:50 +0100 (CET)
+Received: from fmy by localhost.localdomain with local (Exim 4.60)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1FIkR1-0001Yh-Kt; Mon, 13 Mar 2006 11:37:55 +0100
+Sender: fmaltey@nerim.fr
+To: axiom-math@nongnu.org, fmaltey@nerim.fr
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 13 Mar 2006 11:37:55 +0100
+Message-ID: <871wx6hbp8.fsf@localhost.localdomain>
+Lines: 12
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Cc: 
+Subject: [Axiom-math] numerical roots for polynom and eigenvalues for matrix
+	float
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 13 Mar 2006 10:38:00 -0000
+
+Hello,
+
+I continue to test my classical exercices with axiom.
+
+I can't play with eigenvalue / eigenvector for Matrix Float.
+
+I can compute det (M - x (1)_n),=20
+but I can't find root of a Polynomial Float, is it possible ?
+
+Have a good day !
+
+Fran=C3=A7ois.
+
+
+
+From MAILER-DAEMON Mon Mar 13 13:39:58 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FIrxV-0000K9-8N
+	for mharc-axiom-math@gnu.org; Mon, 13 Mar 2006 13:39:57 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FIrxT-0000Hr-0K
+	for axiom-math@nongnu.org; Mon, 13 Mar 2006 13:39:55 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FIrxP-0000FT-4u
+	for axiom-math@nongnu.org; Mon, 13 Mar 2006 13:39:52 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FIrxO-0000FL-Ut
+	for axiom-math@nongnu.org; Mon, 13 Mar 2006 13:39:51 -0500
+Received: from [193.252.22.26] (helo=smtp5.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FIs1Q-0006dl-Ax
+	for axiom-math@nongnu.org; Mon, 13 Mar 2006 13:44:00 -0500
+Received: from me-wanadoo.net (localhost [127.0.0.1])
+	by mwinf0504.wanadoo.fr (SMTP Server) with ESMTP id CBC701C00180
+	for <axiom-math@nongnu.org>; Mon, 13 Mar 2006 19:39:48 +0100 (CET)
+Received: from ALille-251-1-94-96.w83-204.abo.wanadoo.fr
+	(ALille-251-1-94-96.w83-204.abo.wanadoo.fr [83.204.91.96])
+	by mwinf0504.wanadoo.fr (SMTP Server) with ESMTP id 6A8B21C00191;
+	Mon, 13 Mar 2006 19:39:48 +0100 (CET)
+X-ME-UUID: 20060313183948436.6A8B21C00191@mwinf0504.wanadoo.fr
+Subject: Re: [Axiom-math] numerical roots for polynom and eigenvalues for
+	matrix float
+From: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+To: Francois Maltey <fmaltey@nerim.fr>
+In-Reply-To: <871wx6hbp8.fsf@localhost.localdomain>
+References: <871wx6hbp8.fsf@localhost.localdomain>
+Content-Type: text/plain; charset=ISO-8859-1
+Date: Mon, 13 Mar 2006 19:40:07 +0100
+Message-Id: <1142275207.5195.42.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.4.2.1 
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 13 Mar 2006 18:39:55 -0000
+
+Le lundi 13 mars 2006 =E0 11:37 +0100, Francois Maltey a =E9crit :=20
+> Hello,
+>=20
+> I continue to test my classical exercices with axiom.
+>=20
+> I can't play with eigenvalue / eigenvector for Matrix Float.
+
+It's not possible, you have to coerce your Matrix Float to Matrix
+Fraction Integer. The '::' operator will call rationalApproximation in
+the Float package (see src/algebra/float.spad.pamphlet). After you can
+obtain Float results. For example if A is a Float Matrix:
+
+complexEigenvectors(A::MATRIX FRAC INT,1.e-20) returns all (Complex
+Float) eigenvalues and eigenvectors.
+
+realEigenvectors(a::MATRIX FRAC INT,1.e-20) returns real (Float)
+eigenvalues and eigenvectors
+
+>=20
+> I can compute det (M - x (1)_n),=20
+> but I can't find root of a Polynomial Float, is it possible ?
+
+I assume you want the numerical roots (mail subject).
+It's possible to use the computationally expensive algorithm in the=20
+ComplexRootFindingPackage, so if pol is a polynomial Float:
+
+complexZeros(pol,1.e-15)$ComplexRootFindingPackage(FLOAT,UP(x, COMPLEX
+FLOAT))
+
+It's also possible if you coerce your Polynomial Float to FRAC POLY INT.
+To do so, you have to initially coerce it to POLY FRAC INT (it will
+call, as above, rationalApproximation) and after to FRAC POLY INT.
+This coercion involves a "commutation" coded in the interpreter (in
+src/interp,i-coerfn.boot.pamphlet) that coerces for example POLY FRAC
+INT to FRAC POLY INT or COMPLEX FRAC INT to FRAC COMPLEX INT.
+So
+
+qpol :=3D pol::POLY FRAC INT::FRAC POLY INT
+realRoots(qpol,1.e-20) returns real (Float) roots.
+and=20
+complexRoots(qpol,1.e-20) returns all the roots (Complex Float)
+
+
+
+In these examples the results are computed to precision eps=3D1.e-20. You
+can change its type (to rational, the result will be expressed as
+rational number) or its value, see src/algebra/numeigen.spad.pamphlet
+and src/algebra/numsolve.spad.pamphlet.
+
+Cheers,
+
+Greg
+
+PS: The attachement contains an axiom session (with ')set output length
+110) with all the examples above.
+
+> Have a good day !
+>=20
+> Fran=E7ois.
+>=20
+>=20
+> _______________________________________________
+> Axiom-math mailing list
+> Axiom-math@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-math
+>=20
+
+
+
+
+
+From MAILER-DAEMON Mon Mar 13 14:11:52 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FIsSN-0005w6-UF
+	for mharc-axiom-math@gnu.org; Mon, 13 Mar 2006 14:11:51 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FIsSM-0005ve-8b
+	for axiom-math@nongnu.org; Mon, 13 Mar 2006 14:11:50 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FIsSJ-0005vE-Vz
+	for axiom-math@nongnu.org; Mon, 13 Mar 2006 14:11:49 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FIsSJ-0005vB-Ob
+	for axiom-math@nongnu.org; Mon, 13 Mar 2006 14:11:47 -0500
+Received: from [193.252.22.23] (helo=smtp8.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FIsWL-00024X-Hh
+	for axiom-math@nongnu.org; Mon, 13 Mar 2006 14:15:57 -0500
+Received: from me-wanadoo.net (localhost [127.0.0.1])
+	by mwinf0808.wanadoo.fr (SMTP Server) with ESMTP id 7A8991C0026D
+	for <axiom-math@nongnu.org>; Mon, 13 Mar 2006 20:11:46 +0100 (CET)
+Received: from ALille-251-1-94-96.w83-204.abo.wanadoo.fr
+	(ALille-251-1-94-96.w83-204.abo.wanadoo.fr [83.204.91.96])
+	by mwinf0808.wanadoo.fr (SMTP Server) with ESMTP id DAA7A1C00252;
+	Mon, 13 Mar 2006 20:11:45 +0100 (CET)
+X-ME-UUID: 20060313191145895.DAA7A1C00252@mwinf0808.wanadoo.fr
+Subject: Re: [Axiom-math] numerical roots for polynom and eigenvalues for
+	matrix float
+From: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+To: Francois Maltey <fmaltey@nerim.fr>
+In-Reply-To: <871wx6hbp8.fsf@localhost.localdomain>
+References: <871wx6hbp8.fsf@localhost.localdomain>
+Content-Type: multipart/mixed; boundary="=-8wmb1BSpqjaR5GsmpG4y"
+Date: Mon, 13 Mar 2006 20:12:05 +0100
+Message-Id: <1142277125.5375.0.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.4.2.1 
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 13 Mar 2006 19:11:50 -0000
+
+
+--=-8wmb1BSpqjaR5GsmpG4y
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Sorry I forgot the attachement.
+
+Le lundi 13 mars 2006 =E0 11:37 +0100, Francois Maltey a =E9crit :
+> Hello,
+>=20
+> I continue to test my classical exercices with axiom.
+>=20
+> I can't play with eigenvalue / eigenvector for Matrix Float.
+>=20
+> I can compute det (M - x (1)_n),=20
+> but I can't find root of a Polynomial Float, is it possible ?
+>=20
+> Have a good day !
+>=20
+> Fran=E7ois.
+>=20
+>=20
+> _______________________________________________
+> Axiom-math mailing list
+> Axiom-math@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-math
+>=20
+
+--=-8wmb1BSpqjaR5GsmpG4y
+Content-Disposition: attachment; filename=numerical.xt
+Content-Type: text/plain; name=numerical.xt; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+-- see src/algebra/numeigen.spad.pamphlet for documentation
+
+(88) -> a:=matrix [[1.7,2.8,-3.5],[4.7,-2.3,4.9],[9.7,-5.2,6.3]]
+
+         +1.7   2.8   - 3.5+
+         |                 |
+   (88)  |4.7  - 2.3   4.9 |
+         |                 |
+         +9.7  - 5.2   6.3 +
+                                                                                            Type: Matrix Float
+(89) -> )what op genvectors
+
+Operations whose names satisfy the above pattern(s):
+
+complexEigenvectors        eigenvectors               generalizedEigenvectors    innerEigenvectors
+radicalEigenvectors        realEigenvectors
+
+      To get more information about an operation such as generalizedEigenvectors , issue the command
+      )display op generalizedEigenvectors
+(89) -> complexEigenvectors(a::MATRIX FRAC INT,1.e-20)
+
+   (89)
+   [
+     [outval= 1.6023593474 484895959 + 5.2929925254 201773538 %i, outmult= 1,
+                +- 0.1761475358 4004346541 + 0.3604260666 8596495651 %i+
+                |                                                      |
+      outvect= [| 0.5748095297 8905553647 - 0.3455499381 8583024532 %i |]]
+                |                                                      |
+                +                         1.0                          +
+     ,
+
+     [outval= 1.6023593474 484895959 - 5.2929925254 201773538 %i, outmult= 1,
+                +- 0.1761475358 4004346541 - 0.3604260666 8596495651 %i+
+                |                                                      |
+      outvect= [| 0.5748095297 8905553647 + 0.3455499381 8583024532 %i |]]
+                |                                                      |
+                +                         1.0                          +
+     ,
+                                                        +0.3277715241 0582423428+
+                                                        |                       |
+    [outval= 2.4952813051 03020808,outmult= 1,outvect= [|1.3430966305 237450509 |]]]
+                                                        |                       |
+                                                        +          1.0          +
+                  Type: List Record(outval: Complex Float,outmult: Integer,outvect: List Matrix Complex Float)
+(90) -> realEigenvectors(a::MATRIX FRAC INT,1.e-20)
+
+                                                              +0.3277715241 0582423428+
+                                                              |                       |
+   (90)  [[outval= 2.4952813051 03020808,outmult= 1,outvect= [|1.3430966305 237450509 |]]]
+                                                              |                       |
+                                                              +          1.0          +
+                                  Type: List Record(outval: Float,outmult: Integer,outvect: List Matrix Float)
+
+(91) -> )what op genvalues
+
+Operations whose names satisfy the above pattern(s):
+
+complexEigenvalues    eigenvalues           radicalEigenvalues    realEigenvalues
+
+      To get more information about an operation such as complexEigenvalues , issue the command )display
+      op complexEigenvalues
+
+(91) -> complexEigenvalues(a::MATRIX FRAC INT,1.e-20)
+
+   (91)
+   [2.4952813051 03020808, 1.6023593474 484895959 - 5.2929925254 201773538 %i,
+    1.6023593474 484895959 + 5.2929925254 201773538 %i]
+                                                                                      Type: List Complex Float
+(92) -> realEigenvalues(a::MATRIX FRAC INT,1.e-20)
+
+   (92)  [2.4952813051 03020808]
+                                                                                              Type: List Float
+
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+(81) -> pol:= 2.7*x^3+7.0*x^2+9
+
+              3        2
+   (81)  2.7 x  + 7.0 x  + 9.0
+                                                                                        Type: Polynomial Float
+(82) -> qpol := pol::POLY FRAC INT::FRAC POLY INT
+
+            3      2
+         27x  + 70x  + 90
+   (82)  ----------------
+                10
+                                                                             Type: Fraction Polynomial Integer
+(83) -> realRoots(qpol,1.e-20)
+
+   (83)  [- 2.9703850232 552105051]
+                                                                                              Type: List Float
+(84) -> complexRoots(qpol,1.e-20)
+
+   (84)
+   [- 2.9703850232 552105051, 0.1888962153 3130895627 - 1.0423565598 071182905 %i,
+    0.1888962153 3130895627 + 1.0423565598 071182905 %i]
+                                                                                      Type: List Complex Float
+-- computationally expensive algorithm
+(85) -> complexZeros(pol,1.e-15)$ComplexRootFindingPackage(FLOAT,UP(x, COMPLEX FLOAT))
+
+   (85)
+   [0.1888962153 3130895627 - 1.0423565598 071182905 %i, 0.1888962153 3130895627 + 1.0423565598 071182905 %i,
+    - 2.9703850232 552105051]
+                                                                                      Type: List Complex Float
+
+
+--=-8wmb1BSpqjaR5GsmpG4y--
+
+
+
+
+
+From MAILER-DAEMON Thu Mar 16 13:20:58 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FJx5l-0006bf-OJ
+	for mharc-axiom-math@gnu.org; Thu, 16 Mar 2006 13:20:57 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FJx5j-0006aV-Dt
+	for axiom-math@nongnu.org; Thu, 16 Mar 2006 13:20:55 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FJx5i-0006a4-OF
+	for axiom-math@nongnu.org; Thu, 16 Mar 2006 13:20:55 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FJx5i-0006a0-K3
+	for axiom-math@nongnu.org; Thu, 16 Mar 2006 13:20:54 -0500
+Received: from [62.4.17.104] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FJxAQ-0002cz-2Y
+	for axiom-math@nongnu.org; Thu, 16 Mar 2006 13:25:46 -0500
+Received: from localhost.localdomain (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.nerim.net (Postfix) with ESMTP id DFFA34F3A4;
+	Thu, 16 Mar 2006 19:20:40 +0100 (CET)
+Received: from fmy by localhost.localdomain with local (Exim 4.60)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1FJx5e-0001t4-EM; Thu, 16 Mar 2006 19:20:50 +0100
+Sender: fmaltey@nerim.fr
+To: axiom-math@nongnu.org, fmaltey@nerim.fr
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 16 Mar 2006 19:20:50 +0100
+Message-ID: <87veueqmil.fsf@localhost.localdomain>
+Lines: 19
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: 
+Subject: [Axiom-math] list of pair
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 16 Mar 2006 18:20:55 -0000
+
+Hello, 
+
+I try to create a cartesian product :
+
+ [[10,1],[10,2],[10,3],[10,4],[10,5],[10,6],
+  [20,1],[20,2],[20,3],[20,4],[20,5],[20,6],
+  [30,1],[30,2],[30,3],[30,4],[30,5],[30,6]]
+
+but I can't !
+
+[[10*i,j] for i in 1..3 for j in 1..6]  constructs [[10,1],[20,2],[30,3]]
+[([10*i,j] for i in 1..3) for j in 1..6] constructs a Tupple, not a list.
+[[[10*i,j] for i in 1..3] for j in 1..6] constructs a List List ...
+
+How can I do this ?
+
+Have a good day !
+
+Francois
+
+
+
+From MAILER-DAEMON Thu Mar 16 16:06:11 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FJzff-0000vx-6U
+	for mharc-axiom-math@gnu.org; Thu, 16 Mar 2006 16:06:11 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FJzfd-0000vi-20
+	for axiom-math@nongnu.org; Thu, 16 Mar 2006 16:06:09 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FJzfZ-0000vW-Jm
+	for axiom-math@nongnu.org; Thu, 16 Mar 2006 16:06:08 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FJzfZ-0000vT-HD
+	for axiom-math@nongnu.org; Thu, 16 Mar 2006 16:06:05 -0500
+Received: from [206.46.252.44] (helo=vms044pub.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FJzkI-0008Ed-IW
+	for axiom-math@nongnu.org; Thu, 16 Mar 2006 16:10:58 -0500
+Received: from cunyvm.cuny.edu ([162.83.130.115])
+	by vms044.mailsrvcs.net (Sun Java System Messaging Server 6.2-4.02
+	(built Sep
+	9 2005)) with ESMTPA id <0IW800DQDNY11NC1@vms044.mailsrvcs.net> for
+	axiom-math@nongnu.org; Thu, 16 Mar 2006 15:06:02 -0600 (CST)
+Date: Thu, 16 Mar 2006 16:06:15 -0500
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Subject: Re: [Axiom-math] list of pair
+To: Francois Maltey <fmaltey@nerim.fr>
+Message-id: <4419D347.87FE6DD1@cunyvm.cuny.edu>
+Organization: City College of New York
+MIME-version: 1.0
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+Content-type: text/plain; charset=big5
+Content-transfer-encoding: 7bit
+X-Accept-Language: en,zh-CN,zh-TW,zh
+References: <87veueqmil.fsf@localhost.localdomain>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: wyscc@cunyvm.cuny.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 16 Mar 2006 21:06:09 -0000
+
+
+
+
+Francois Maltey wrote:
+
+> I try to create a cartesian product :
+> 
+>  [[10,1],[10,2],[10,3],[10,4],[10,5],[10,6],
+>   [20,1],[20,2],[20,3],[20,4],[20,5],[20,6],
+>   [30,1],[30,2],[30,3],[30,4],[30,5],[30,6]]
+> 
+> but I can't !
+
+(1) -> concat [[makeprod(10*i,j)$Product(PI,PI) for i in 1..3] for j in 1..4]
+
+   (1)
+   [(10,1), (20,1), (30,1), (10,2), (20,2), (30,2), (10,3), (20,3), (30,3),
+    (10,4), (20,4), (30,4)]
+                          Type: List Product(PositiveInteger,PositiveInteger)
+
+Is this what you want? Note that Product uses tuple (a,b) whereas [a,b] is a
+List.
+
+William
+
+
+
+From MAILER-DAEMON Sat Mar 18 13:56:24 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FKgb9-0005pI-Vm
+	for mharc-axiom-math@gnu.org; Sat, 18 Mar 2006 13:56:24 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FKgb8-0005oy-Fk
+	for axiom-math@nongnu.org; Sat, 18 Mar 2006 13:56:22 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FKgb7-0005oj-Hl
+	for axiom-math@nongnu.org; Sat, 18 Mar 2006 13:56:22 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FKgb7-0005oc-DH
+	for axiom-math@nongnu.org; Sat, 18 Mar 2006 13:56:21 -0500
+Received: from [62.4.17.106] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FKggH-0000Vb-6i
+	for axiom-math@nongnu.org; Sat, 18 Mar 2006 14:01:41 -0500
+Received: from localhost.localdomain (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.nerim.net (Postfix) with ESMTP id 64F8E4F3AA;
+	Sat, 18 Mar 2006 19:56:08 +0100 (CET)
+Received: from fmy by localhost.localdomain with local (Exim 4.60)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1FKgb4-0001rd-Fm; Sat, 18 Mar 2006 19:56:18 +0100
+Sender: fmaltey@nerim.fr
+To: axiom-math@nongnu.org, fmaltey@nerim.fr
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 18 Mar 2006 19:56:18 +0100
+Message-ID: <87hd5vy431.fsf@localhost.localdomain>
+Lines: 18
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: 
+Subject: [Axiom-math] Can I decompose a domain ?
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 18 Mar 2006 18:56:22 -0000
+
+Hello,
+
+
+resFloat   : Expression Float := cos (4.0 * x) 
+resInteger : Expression Float := cos (4 * x) 
+resComplex : Expression Complex Integer := exp (3+4*%i)
+
+How can I get Float from resFloat ? Integer from resInteger, etc. 
+in a *.input file ?
+
+I want to make functions in *.input file before 
+test a change in a *.spad file.
+
+Or, if it's imposible what is the shortest way for creating a *.spad file ?
+
+Have a good day.
+
+Francois
+
+
+
+From MAILER-DAEMON Sun Mar 19 04:01:24 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FKtmu-0004Nk-Ex
+	for mharc-axiom-math@gnu.org; Sun, 19 Mar 2006 04:01:24 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FKtms-0004Nf-1D
+	for axiom-math@nongnu.org; Sun, 19 Mar 2006 04:01:22 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FKtmq-0004NT-NR
+	for axiom-math@nongnu.org; Sun, 19 Mar 2006 04:01:21 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FKtmq-0004NQ-Ii
+	for axiom-math@nongnu.org; Sun, 19 Mar 2006 04:01:20 -0500
+Received: from [206.46.252.48] (helo=vms048pub.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FKts8-0003YF-Jh
+	for axiom-math@nongnu.org; Sun, 19 Mar 2006 04:06:48 -0500
+Received: from cunyvm.cuny.edu ([162.83.130.115])
+	by vms048.mailsrvcs.net (Sun Java System Messaging Server 6.2-4.02
+	(built Sep
+	9 2005)) with ESMTPA id <0IWD00G53AE3Z4RA@vms048.mailsrvcs.net> for
+	axiom-math@nongnu.org; Sun, 19 Mar 2006 03:01:16 -0600 (CST)
+Date: Sun, 19 Mar 2006 04:01:32 -0500
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Subject: Re: [Axiom-math] Can I decompose a domain ?
+To: Francois Maltey <fmaltey@nerim.fr>
+Message-id: <441D1DEC.60EAC8A2@cunyvm.cuny.edu>
+Organization: City College of New York
+MIME-version: 1.0
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+Content-type: text/plain; charset=big5
+Content-transfer-encoding: 7bit
+X-Accept-Language: en,zh-CN,zh-TW,zh
+References: <87hd5vy431.fsf@localhost.localdomain>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: wyscc@cunyvm.cuny.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 19 Mar 2006 09:01:22 -0000
+
+
+
+Francois Maltey wrote:
+> 
+> Hello,
+> 
+> resFloat   : Expression Float := cos (4.0 * x)
+> resInteger : Expression Float := cos (4 * x)
+> resComplex : Expression Complex Integer := exp (3+4*%i)
+> 
+> How can I get Float from resFloat ? Integer from resInteger, etc.
+> in a *.input file ?
+
+I'm not sure what you are asking. Is the following what you want?
+
+(isTimes ((argument ((kernels resFloat).1)).1)).1::Float
+(isTimes ((argument ((kernels resInteger).1)).1)).1::Integer
+argument ((kernels resComplex).1).1::Complex Integer
+
+William
+
+
+
+From MAILER-DAEMON Mon Mar 20 11:44:28 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FLNUa-0006qN-49
+	for mharc-axiom-math@gnu.org; Mon, 20 Mar 2006 11:44:28 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FKvXm-0002yb-8t
+	for axiom-math@nongnu.org; Sun, 19 Mar 2006 05:53:54 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FKvXl-0002yP-DA
+	for axiom-math@nongnu.org; Sun, 19 Mar 2006 05:53:53 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FKvXl-0002yM-9J
+	for axiom-math@nongnu.org; Sun, 19 Mar 2006 05:53:53 -0500
+Received: from [62.4.16.100] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FKvd4-0001pP-GQ
+	for axiom-math@nongnu.org; Sun, 19 Mar 2006 05:59:22 -0500
+Received: from localhost.localdomain (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id 3A88540E26;
+	Sun, 19 Mar 2006 11:53:51 +0100 (CET)
+Received: from fmy by localhost.localdomain with local (Exim 4.60)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1FKvXi-0001bn-4q; Sun, 19 Mar 2006 11:53:50 +0100
+Sender: fmaltey@nerim.fr
+To: wyscc@cunyvm.cuny.edu
+Subject: Re: [Axiom-math] Can I decompose a domain ?
+References: <87hd5vy431.fsf@localhost.localdomain>
+	<441D1DEC.60EAC8A2@cunyvm.cuny.edu>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 19 Mar 2006 11:53:50 +0100
+In-Reply-To: <441D1DEC.60EAC8A2@cunyvm.cuny.edu>
+Message-ID: <87wteqpuwx.fsf@localhost.localdomain>
+Lines: 33
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 19 Mar 2006 10:53:54 -0000
+
+Hello William, and thanks a lot
+
+> > resFloat   : Expression Float := cos (4.0 * x)
+> > resInteger : Expression Float := cos (4 * x)
+> > resComplex : Expression Complex Integer := exp (3+4*%i)
+> > 
+> > How can I get Float from resFloat ? Integer from resInteger, etc.
+> > in a *.input file ?
+ 
+> Is the following what you want?
+
+No I don't try to get the sub-argument, but the type of the subargument.
+But I'm not sure I can get it.
+ 
+> (isTimes ((argument ((kernels resFloat).1)).1)).1::Float
+> (isTimes ((argument ((kernels resInteger).1)).1)).1::Integer
+> argument ((kernels resComplex).1).1::Complex Integer
+
+Imagine I know that a is an Expression...
+My function don't know if a is an Expression Float, or an Expression Integer...
+
+I want to do as below in an *.input file.
+
+Myfunction (a : Expression ...) : String ==
+  is a an Expression Integer => "Integer"             -- or an other calculus.
+  is a an Expression Franction Integer => "Rationnal" 
+  is a an Expression Complex ... => "Complex"   -- so I can use real and imag.
+  is a an Expression Float => "Float"
+  "A rare domain".
+
+Thanks a lot.
+
+Francois 
+
+
+
+From MAILER-DAEMON Mon Mar 20 19:52:54 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FLV7G-0004FD-GL
+	for mharc-axiom-math@gnu.org; Mon, 20 Mar 2006 19:52:54 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FLV7F-0004Cj-FU
+	for axiom-math@nongnu.org; Mon, 20 Mar 2006 19:52:53 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FLV7D-00047f-Kr
+	for axiom-math@nongnu.org; Mon, 20 Mar 2006 19:52:53 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FLV7D-00047R-HU
+	for axiom-math@nongnu.org; Mon, 20 Mar 2006 19:52:51 -0500
+Received: from [206.46.252.40] (helo=vms040pub.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FLV7C-0006se-FY
+	for axiom-math@nongnu.org; Mon, 20 Mar 2006 19:52:50 -0500
+Received: from cunyvm.cuny.edu ([162.83.130.115])
+	by vms040.mailsrvcs.net (Sun Java System Messaging Server 6.2-4.02
+	(built Sep
+	9 2005)) with ESMTPA id <0IWG00CV5D3Y1VM5@vms040.mailsrvcs.net> for
+	axiom-math@nongnu.org; Mon, 20 Mar 2006 18:52:47 -0600 (CST)
+Date: Mon, 20 Mar 2006 19:53:04 -0500
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Subject: Re: [Axiom-math] Can I decompose a domain ?
+To: Francois Maltey <fmaltey@nerim.fr>
+Message-id: <441F4E70.C95AD402@cunyvm.cuny.edu>
+Organization: City College of New York
+MIME-version: 1.0
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+Content-type: text/plain; charset=big5
+Content-transfer-encoding: 7bit
+X-Accept-Language: en,zh-CN,zh-TW,zh
+References: <87hd5vy431.fsf@localhost.localdomain>
+	<441D1DEC.60EAC8A2@cunyvm.cuny.edu>
+	<87wteqpuwx.fsf@localhost.localdomain>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: wyscc@cunyvm.cuny.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Mar 2006 00:52:53 -0000
+
+
+
+Francois Maltey wrote:
+> 
+> Hello William, and thanks a lot
+> 
+> > > resFloat   : Expression Float := cos (4.0 * x)
+> > > resInteger : Expression Float := cos (4 * x)
+> > > resComplex : Expression Complex Integer := exp (3+4*%i)
+> > >
+> > > How can I get Float from resFloat ? Integer from resInteger, etc.
+> > > in a *.input file ?
+> 
+> > Is the following what you want?
+> 
+> No I don't try to get the sub-argument, but the type of the subargument.
+> But I'm not sure I can get it.
+> 
+[...]
+
+> Imagine I know that a is an Expression...
+> My function don't know if a is an Expression Float, or an Expression Integer...
+> 
+> I want to do as below in an *.input file.
+> 
+> Myfunction (a : Expression ...) : String ==
+>   is a an Expression Integer => "Integer"             -- or an other calculus.
+>   is a an Expression Franction Integer => "Rationnal"
+>   is a an Expression Complex ... => "Complex"   -- so I can use real and imag.
+>   is a an Expression Float => "Float"
+>   "A rare domain".
+> 
+> Thanks a lot.
+> 
+> Francois
+
+
+This is a bit tricky, since any function in Axiom must have a specific domain as
+source. The Axiom domain ANY is a coverall. Here is a try:
+
+Myfunction(a:Any):String ==
+  aDom := unparse ((domainOf a)::InputForm)
+  substring?("Expression",aDom,1)=>delete(aDom, 1..11)
+  "A rare domain"
+
+To use the function, coerce the input to Any, such as:
+
+Myfunction(resInteger::Any)
+
+
+William
+
+
+
+From MAILER-DAEMON Mon Mar 20 21:43:19 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FLWq7-0007ky-HE
+	for mharc-axiom-math@gnu.org; Mon, 20 Mar 2006 21:43:19 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FLWq5-0007jB-UC
+	for axiom-math@nongnu.org; Mon, 20 Mar 2006 21:43:17 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FLWq4-0007gp-CX
+	for axiom-math@nongnu.org; Mon, 20 Mar 2006 21:43:17 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FLWq4-0007gf-83
+	for axiom-math@nongnu.org; Mon, 20 Mar 2006 21:43:16 -0500
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FLWq3-00072F-JB
+	for axiom-math@nongnu.org; Mon, 20 Mar 2006 21:43:15 -0500
+Received: from localhost (localhost.drenet.dnd.ca [127.0.0.1])
+	by fw.drenet.dnd.ca (_) with ESMTP id 0C6896A026;
+	Mon, 20 Mar 2006 21:43:09 -0500 (EST)
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca
+	(corporateex02.corporate.drdc-rddc.gc.ca [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id 3264969FF9;
+	Mon, 20 Mar 2006 21:43:06 -0500 (EST)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-math] Can I decompose a domain ?
+Date: Mon, 20 Mar 2006 21:43:00 -0500
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE3456A04@corporateex02.Corporate.drdc-rddc.gc.ca>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-math] Can I decompose a domain ?
+Thread-Index: AcZMgdFRnowHbpunQA29ls2ikZnH5AADm9fg
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Francois Maltey" <fmaltey@nerim.fr>
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Mar 2006 02:43:18 -0000
+
+On Monday, March 20, 2006 7:53 PM William Sit wrote:
+>=20
+> Francois Maltey wrote:
+> >=20
+> > Myfunction (a : Expression ...) : String =3D=3D
+> >   is a an Expression Integer =3D> "Integer"
+> >   -- or an other calculus.
+> >   is a an Expression Franction Integer =3D> "Rationnal"
+> >   is a an Expression Complex ... =3D> "Complex"
+> >   -- so I can use real and imag.
+> >   is a an Expression Float =3D> "Float"
+> >   "A rare domain".
+> >=20
+>=20
+> This is a bit tricky, since any function in Axiom must have
+> a specific domain as source. The Axiom domain ANY is a
+> coverall. Here is a try:
+>=20
+> Myfunction(a:Any):String =3D=3D
+>   aDom :=3D unparse ((domainOf a)::InputForm)
+>   substring?("Expression",aDom,1)=3D>delete(aDom, 1..11)
+>   "A rare domain"
+>=20
+> To use the function, coerce the input to Any, such as:
+>=20
+> Myfunction(resInteger::Any)
+>=20
+
+I thought this was an interesting question so I prepared a
+simple example based (more or less) on the idea of William Sit
+above:
+
+http://wiki.axiom-developer.org/SandBoxManipulatingDomains
+
+Instead of manipulating strings, I think it is better to
+work with S-expressions. This is both more efficient and
+more specific. For this purpose the ANY domain provides a
+function named 'dom' that is similar to 'domainOf'.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Fri Mar 24 19:19:51 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FMwVT-0005ej-Gk
+	for mharc-axiom-math@gnu.org; Fri, 24 Mar 2006 19:19:51 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FMvC3-0008AS-0j
+	for axiom-math@nongnu.org; Fri, 24 Mar 2006 17:55:43 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FMvC2-0008AG-5W
+	for axiom-math@nongnu.org; Fri, 24 Mar 2006 17:55:42 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FMvC2-0008AD-2U
+	for axiom-math@nongnu.org; Fri, 24 Mar 2006 17:55:42 -0500
+Received: from [66.249.82.203] (helo=xproxy.gmail.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FMvCw-0004Tq-S4
+	for axiom-math@nongnu.org; Fri, 24 Mar 2006 17:56:38 -0500
+Received: by xproxy.gmail.com with SMTP id r21so609011wxc
+	for <axiom-math@nongnu.org>; Fri, 24 Mar 2006 14:55:41 -0800 (PST)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=eCAxVuW8Vx3OVcxZr0xpMEHR1qKXu1rBN8hgGuQzkRIRJ2OGXipFOlb6zQsZfa6Q+g3SxnYVIlPo5V0vAndcNqnFcfvjUfCnv3Pr6Ko4dfvzurHa2Mw0pmd6R0ssSzgIIhbR4vEHvwLNpQup7W5MkMl2NOIMy9NT3jHGuRMkUvs=
+Received: by 10.70.122.1 with SMTP id u1mr597593wxc;
+	Fri, 24 Mar 2006 14:55:40 -0800 (PST)
+Received: by 10.70.75.7 with HTTP; Fri, 24 Mar 2006 14:55:40 -0800 (PST)
+Message-ID: <ab2dc45b0603241455p18ba357ey3fd919eb1e777023@mail.gmail.com>
+Date: Fri, 24 Mar 2006 17:55:40 -0500
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: axiom-math@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+X-Mailman-Approved-At: Fri, 24 Mar 2006 19:19:49 -0500
+Subject: [Axiom-math] Axiom's integration non-deterministic?
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 24 Mar 2006 22:55:43 -0000
+
+Start up Axiom, and type in the following integral
+
+  integrate(sqrt(1+x^(-2/3)),x)
+
+Then type in the same integral again. Maybe try the same integral a
+few more times. Do you get the same answer each time?
+
+I don't. I see the same behavior from axiom-20050901-4.1 (Debian sid)
+and axiom-20050201-1 (Debian sarge).
+
+I get two possible answers, one is (x^(3/2)+1)*sqrt(x^(3/2)+1) and the
+other one is a much more complicated radical expression. Ironically,
+the longer expression takes less time to compute. Differentiating both
+answers gets me back to the original integrand. Also, their curves
+coincide when plotted. It seems that each time the answer is correct.
+However, the shorter one is obviously more attractive because it looks
+simpler.
+
+Clearly, Axiom takes two different paths through the integration
+algorithm, even when give identical input. What is the cause of the
+branch? Is there a non-deterministic step somewhere in the algorithm?
+
+Incidentally, is there a canonical form for radical expressions in
+which the two forms of the answer can be compared and directly shown
+to be the same?
+
+Thanks in advance.
+
+Igor
+
+
+
+From MAILER-DAEMON Fri Mar 24 22:15:04 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FMzF1-0002bY-T0
+	for mharc-axiom-math@gnu.org; Fri, 24 Mar 2006 22:15:03 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FMzEz-0002bQ-54
+	for axiom-math@nongnu.org; Fri, 24 Mar 2006 22:15:01 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FMzEx-0002bC-Uo
+	for axiom-math@nongnu.org; Fri, 24 Mar 2006 22:15:00 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FMzEx-0002b8-5O
+	for axiom-math@nongnu.org; Fri, 24 Mar 2006 22:14:59 -0500
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FMzFu-0004RF-SV
+	for axiom-math@nongnu.org; Fri, 24 Mar 2006 22:15:58 -0500
+Received: from mua-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-7.zoominternet.net (8.12.11/8.12.11) with ESMTP id k2P3EsbL030801;
+	Fri, 24 Mar 2006 22:14:54 -0500
+Received: from localhost.localdomain
+	(dynamic-acs-72-23-17-240.zoominternet.net [72.23.17.240])
+	by mua-1.zoominternet.net (Postfix) with ESMTP id ADE3B7F412;
+	Fri, 24 Mar 2006 22:14:54 -0500 (EST)
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k2P41wg03525;
+	Fri, 24 Mar 2006 23:01:58 -0500
+Date: Fri, 24 Mar 2006 23:01:58 -0500
+Message-Id: <200603250401.k2P41wg03525@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: igor.kh@gmail.com
+In-reply-to: <ab2dc45b0603241455p18ba357ey3fd919eb1e777023@mail.gmail.com>
+	(igor.kh@gmail.com)
+Subject: Re: [Axiom-math] Axiom's integration non-deterministic?
+References: <ab2dc45b0603241455p18ba357ey3fd919eb1e777023@mail.gmail.com>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 25 Mar 2006 03:15:01 -0000
+
+fascinating.
+
+notice that the return types are different also.
+
+the short version is Union(Expression Integer,...)
+the long version is Expression Integer
+
+t
+
+
+
+From MAILER-DAEMON Sat Mar 25 20:16:09 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FNJrV-0002PI-Em
+	for mharc-axiom-math@gnu.org; Sat, 25 Mar 2006 20:16:09 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FNJrS-0002PD-Pd
+	for axiom-math@nongnu.org; Sat, 25 Mar 2006 20:16:06 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FNJrR-0002P1-3p
+	for axiom-math@nongnu.org; Sat, 25 Mar 2006 20:16:06 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FNJrQ-0002Oy-Vo
+	for axiom-math@nongnu.org; Sat, 25 Mar 2006 20:16:05 -0500
+Received: from [66.249.82.201] (helo=xproxy.gmail.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FNJsb-0007oh-AY
+	for axiom-math@nongnu.org; Sat, 25 Mar 2006 20:17:17 -0500
+Received: by xproxy.gmail.com with SMTP id t15so802895wxc
+	for <axiom-math@nongnu.org>; Sat, 25 Mar 2006 17:16:04 -0800 (PST)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=PVqjFOm3a4gPPd2gPoUbcwgYkTIp+J755Ea14TxjQ7slDceBgEgvMSF2vXhfv27R6cHFQWjQ/wLtUIWXgPSKP3oNtD5WMgBFRdi6/44vAlv6Q6uoDDq8hg6eutHNUUsAm3p6bRbYilJRNPTpiv49v0iDNj7HLePqtumFuK1s+Lw=
+Received: by 10.70.91.17 with SMTP id o17mr2331569wxb;
+	Sat, 25 Mar 2006 17:16:03 -0800 (PST)
+Received: by 10.70.73.2 with HTTP; Sat, 25 Mar 2006 17:16:03 -0800 (PST)
+Message-ID: <ab2dc45b0603251716t50e93061u95229d2c95f06ffc@mail.gmail.com>
+Date: Sat, 25 Mar 2006 20:16:03 -0500
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Axiom's integration non-deterministic?
+In-Reply-To: <CAE9B164E720CE4D8727792DF8F28AE3456F9D@corporateex02.Corporate.drdc-rddc.gc.ca>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+References: <CAE9B164E720CE4D8727792DF8F28AE3456F9D@corporateex02.Corporate.drdc-rddc.gc.ca>
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Mar 2006 01:16:07 -0000
+
+On 3/24/06, Page, Bill <Bill.Page@drdc-rddc.gc.ca> wrote:
+> On Friday, March 24, 2006 5:56 PM Igor Khavkine wrote:
+
+> > Clearly, Axiom takes two different paths through the integration
+> > algorithm, even when give identical input. What is the cause of
+> > the branch? Is there a non-deterministic step somewhere in the
+> > algorithm?
+>
+> I don't know the cause of this behaviour but I get the same effect
+> on the Windows version of Axiom.
+
+So there must be something strage going on in the integration code.
+I've been trying to trace the algorithm's execution to see what it
+does exactly in each case. Unfortunately, I'm having little luck. I
+played with a few variations of )trace command, but couldn't find the
+right one.
+
+I've identified the routine 'integrate' in the FSINT package. Knowing
+that, is there a way for me to step through its code line by line like
+in a usual debugger?
+
+Thanks.
+
+Igor
+
+
+
+From MAILER-DAEMON Sat Mar 25 21:13:33 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FNKl2-0007Pl-VX
+	for mharc-axiom-math@gnu.org; Sat, 25 Mar 2006 21:13:33 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FNKl0-0007Pc-Eo
+	for axiom-math@nongnu.org; Sat, 25 Mar 2006 21:13:30 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FNKkz-0007PQ-N9
+	for axiom-math@nongnu.org; Sat, 25 Mar 2006 21:13:29 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FNKkz-0007PM-HB
+	for axiom-math@nongnu.org; Sat, 25 Mar 2006 21:13:29 -0500
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FNKmA-0002iw-Bb
+	for axiom-math@nongnu.org; Sat, 25 Mar 2006 21:14:42 -0500
+Received: from mua-2.zoominternet.net (mua-2.zoominternet.net [24.154.1.45])
+	by mx-7.zoominternet.net (8.12.11/8.12.11) with ESMTP id k2Q2DPXV013957;
+	Sat, 25 Mar 2006 21:13:25 -0500
+Received: from localhost.localdomain
+	(dynamic-acs-72-23-17-240.zoominternet.net [72.23.17.240])
+	by mua-2.zoominternet.net (Postfix) with ESMTP id C6B2F7F406;
+	Sat, 25 Mar 2006 21:13:25 -0500 (EST)
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k2Q30Ve04201;
+	Sat, 25 Mar 2006 22:00:31 -0500
+Date: Sat, 25 Mar 2006 22:00:31 -0500
+Message-Id: <200603260300.k2Q30Ve04201@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: igor.kh@gmail.com
+In-reply-to: <ab2dc45b0603251716t50e93061u95229d2c95f06ffc@mail.gmail.com>
+	(igor.kh@gmail.com)
+Subject: Re: [Axiom-math] Axiom's integration non-deterministic?
+References: <CAE9B164E720CE4D8727792DF8F28AE3456F9D@corporateex02.Corporate.drdc-rddc.gc.ca>
+	<ab2dc45b0603251716t50e93061u95229d2c95f06ffc@mail.gmail.com>
+X-Spam-Score: 0.30 () [Tag at 15.00] FORGED_RCVD_HELO,UPPERCASE_25_50
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Mar 2006 02:13:30 -0000
+
+you can start axiom and type:
+
+)trace INTEF )math
+
+which will trace external functions but 
+
+the INTEF domain compiles into lisp.
+the lisp code lives in int/algebra/INTEF.NRLIB/code.lsp
+you can look at that file and it contains DEFUNs
+you can trace those functions. For example,
+
+in int/algebra/INTEF.NRLIB/code.lsp the function prim? is defined as:
+
+(DEFUN |INTEF;prim?| (|k| |x| $) 
+ (COND 
+  ((SPADCALL |k| (SPADCALL "log" (QREFELT $ 10)) (QREFELT $ 13))
+    (QUOTE T))
+   ((QUOTE T)
+     (SPADCALL (SPADCALL |k| (QREFELT $ 15)) "prim" (QREFELT $ 16))))) 
+
+)lisp (trace |INTEF;prim?|)
+
+which will give you the lisp level trace of the function.
+
+t
+
+
+
+
+From MAILER-DAEMON Sun Mar 26 05:45:16 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FNSkF-0001lP-Qs
+	for mharc-axiom-math@gnu.org; Sun, 26 Mar 2006 05:45:15 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FNSkE-0001lK-9l
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 05:45:14 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FNSkD-0001l8-8v
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 05:45:13 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FNSkD-0001l5-0E
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 05:45:13 -0500
+Received: from [206.46.252.40] (helo=vms040pub.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FNSlR-0005va-Rp
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 05:46:30 -0500
+Received: from cunyvm.cuny.edu ([162.83.213.39])
+	by vms040.mailsrvcs.net (Sun Java System Messaging Server 6.2-4.02
+	(built Sep
+	9 2005)) with ESMTPA id <0IWQ007YADVAUB44@vms040.mailsrvcs.net> for
+	axiom-math@nongnu.org; Sun, 26 Mar 2006 04:45:11 -0600 (CST)
+Date: Sun, 26 Mar 2006 05:45:13 -0500
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Subject: Re: [Axiom-math] Axiom's integration non-deterministic?
+To: Igor Khavkine <igor.kh@gmail.com>
+Message-id: <442670B9.D5BDA42C@cunyvm.cuny.edu>
+Organization: City College of New York
+MIME-version: 1.0
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+Content-type: text/plain; charset=big5
+Content-transfer-encoding: 7bit
+X-Accept-Language: en,zh-CN,zh-TW,zh
+References: <ab2dc45b0603241455p18ba357ey3fd919eb1e777023@mail.gmail.com>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: wyscc@cunyvm.cuny.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Mar 2006 10:45:14 -0000
+
+
+
+Igor Khavkine wrote:
+> 
+> Start up Axiom, and type in the following integral
+> 
+>   integrate(sqrt(1+x^(-2/3)),x)
+> 
+> Then type in the same integral again. Maybe try the same integral a
+> few more times. Do you get the same answer each time?
+> 
+> I don't. I see the same behavior from axiom-20050901-4.1 (Debian sid)
+> and axiom-20050201-1 (Debian sarge).
+> 
+> I get two possible answers, one is (x^(3/2)+1)*sqrt(x^(3/2)+1) and the
+> other one is a much more complicated radical expression. Ironically,
+> the longer expression takes less time to compute. Differentiating both
+> answers gets me back to the original integrand. Also, their curves
+> coincide when plotted. It seems that each time the answer is correct.
+> However, the shorter one is obviously more attractive because it looks
+> simpler.
+> 
+> Clearly, Axiom takes two different paths through the integration
+> algorithm, even when give identical input. What is the cause of the
+> branch? Is there a non-deterministic step somewhere in the algorithm?
+> 
+> Incidentally, is there a canonical form for radical expressions in
+> which the two forms of the answer can be compared and directly shown
+> to be the same?
+> 
+> Thanks in advance.
+> 
+> Igor
+
+I vaguely remembered that Axiom does caching. So the first time the command
+above is done, it gives an unsimplified answer and the second time it may be
+doing the simplification using the previous answer. Simplifying radical
+expresssion is expensive (I think it requires constructing towers of algebraic
+extensions). The two answers are identical (on my Windows version)
+
+                        AXIOM Computer Algebra System
+              Version of Tuesday November 30, 2004 at 21:11:14
+-----------------------------------------------------------------------------
+   Issue )copyright to view copyright notices.
+   Issue )summary for a summary of useful system commands.
+   Issue )quit to leave AXIOM and return to shell.
+-----------------------------------------------------------------------------
+
+(1) -> a:=integrate(sqrt(1+x^(-2/3)),x)
+
+                                +---------+
+            3+-+2    3+-+       |3+-+2         3+-+2     3+-+     2
+        (4x \|x   + 3\|x  + 7x)\|\|x   + 1  + 6\|x   + 9x\|x  + 4x  + 1
+   (1)  ---------------------------------------------------------------
+                                  +---------+
+                       3+-+2      |3+-+2         3+-+
+                     (4\|x   + 1)\|\|x   + 1  + 3\|x  + 4x
+                                          Type: Union(Expression Integer,...)
+(2) -> b:=integrate(sqrt(1+x^(-2/3)),x)
+
+                    +---------+
+         3+-+2      |3+-+2
+   (2)  (\|x   + 1)\|\|x   + 1
+                                          Type: Union(Expression Integer,...)
+(3) -> c:=integrate(sqrt(1+x^(-2/3)),x)
+
+                    +---------+
+         3+-+2      |3+-+2
+   (3)  (\|x   + 1)\|\|x   + 1
+                                          Type: Union(Expression Integer,...)
+(4) -> t:Boolean:=(a=b)
+
+   (4)  false
+                                                                Type: Boolean
+(5) -> a-b
+
+   (5)  0
+                                                     Type: Expression Integer
+(6) -> a-c
+
+   (6)  0
+                                                     Type: Expression Integer
+
+Two comments: (2) and (3) took longer than (1). (4) is not compatible with (5)
+or (6) (the reason may be because the domain is a Union, and equality there may
+be by data representation. In general, equality and zero testing are different.)
+
+William
+
+
+
+From MAILER-DAEMON Sun Mar 26 06:16:24 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FNTEO-00018g-H7
+	for mharc-axiom-math@gnu.org; Sun, 26 Mar 2006 06:16:24 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FNTEM-00018V-N8
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 06:16:22 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FNTEL-00018F-9d
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 06:16:22 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FNTEL-00018B-79
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 06:16:21 -0500
+Received: from [206.46.252.48] (helo=vms048pub.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FNTFa-0007IO-0p
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 06:17:38 -0500
+Received: from cunyvm.cuny.edu ([162.83.213.39])
+	by vms048.mailsrvcs.net (Sun Java System Messaging Server 6.2-4.02
+	(built Sep
+	9 2005)) with ESMTPA id <0IWQ002LRFB6NPM2@vms048.mailsrvcs.net> for
+	axiom-math@nongnu.org; Sun, 26 Mar 2006 05:16:19 -0600 (CST)
+Date: Sun, 26 Mar 2006 06:16:21 -0500
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Subject: Re: [Axiom-math] Axiom's integration non-deterministic?
+To: Igor Khavkine <igor.kh@gmail.com>
+Message-id: <44267805.55D3B444@cunyvm.cuny.edu>
+Organization: City College of New York
+MIME-version: 1.0
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+Content-type: text/plain; charset=big5
+Content-transfer-encoding: 7bit
+X-Accept-Language: en,zh-CN,zh-TW,zh
+References: <ab2dc45b0603241455p18ba357ey3fd919eb1e777023@mail.gmail.com>
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: wyscc@cunyvm.cuny.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Mar 2006 11:16:23 -0000
+
+Here is more detail, including loading and timing:
+
+                        AXIOM Computer Algebra System
+              Version of Tuesday November 30, 2004 at 21:11:14
+-----------------------------------------------------------------------------
+   Issue )copyright to view copyright notices.
+   Issue )summary for a summary of useful system commands.
+   Issue )quit to leave AXIOM and return to shell.
+-----------------------------------------------------------------------------
+
+(1) -> )set mess time on
+(1) -> a:=integrate(sqrt(1+x^(-2/3)),x)
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/EXPR.o for domain
+      Expression
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/KERNEL.o for
+      domain Kernel
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/BOP.o for domain
+      BasicOperator
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/SCACHE.o for
+      package SortedCache
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/VOID.o for domain
+      Void
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/UPMP.o for package
+      UnivariatePolynomialMultiplicationPackage
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/AN.o for domain
+      AlgebraicNumber
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/IAN.o for domain
+      InnerAlgebraicNumber
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/ACFS-.o for domain
+      AlgebraicallyClosedFunctionSpace&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FS-.o for domain
+      FunctionSpace&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/COMMONOP.o for
+      package CommonOperators
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/KDAGG-.o for
+      domain KeyedDictionary&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/DIAGG-.o for
+      domain Dictionary&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/BOP1.o for package
+      BasicOperatorFunctions1
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/ACF-.o for domain
+      AlgebraicallyClosedField&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/ES-.o for domain
+      ExpressionSpace&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FRETRCT-.o for
+      domain FullyRetractableTo&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/EVALAB-.o for
+      domain Evalable&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/TRANFUN-.o for
+      domain TranscendentalFunctionCategory&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/BASTYPE-.o for
+      domain BasicType&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/IEVALAB-.o for
+      domain InnerEvalable&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/TRIGCAT-.o for
+      domain TrigonometricFunctionCategory&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/ATRIG-.o for
+      domain ArcTrigonometricFunctionCategory&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/HYPCAT-.o for
+      domain HyperbolicFunctionCategory&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/ELEMFUN-.o for
+      domain ElementaryFunctionCategory&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/RADCAT-.o for
+      domain RadicalCategory&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/AF.o for package
+      AlgebraicFunction
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/POLYCATQ.o for
+      package PolynomialCategoryQuotientFunctions
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/POLYROOT.o for
+      package PolynomialRoots
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/PGCD.o for package
+      PolynomialGcdPackage
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FSAGG-.o for
+      domain FiniteSetAggregate&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FLASORT.o for
+      package FiniteLinearAggregateSort
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FSINT.o for
+      package FunctionSpaceIntegration
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/TRIGMNIP.o for
+      package TrigonometricManipulations
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/INTFACT.o for
+      package IntegerFactorizationPackage
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/IROOT.o for
+      package IntegerRoots
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FACTFUNC.o for
+      package FactoredFunctions
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/EF.o for package
+      ElementaryFunction
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/IDPOAMS.o for
+      domain IndexedDirectProductOrderedAbelianMonoidSup
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/IDPOAM.o for
+      domain IndexedDirectProductOrderedAbelianMonoid
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/SIGNEF.o for
+      package ElementaryFunctionSign
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/MULTSQFR.o for
+      package MultivariateSquareFree
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/UPSQFREE.o for
+      package UnivariatePolynomialSquareFree
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/HEUGCD.o for
+      package HeuGcd
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/INMODGCD.o for
+      package InnerModularGcd
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/EMR.o for domain
+      EuclideanModularRing
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/MDDFACT.o for
+      package ModularDistinctDegreeFactorizer
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/MODRING.o for
+      domain ModularRing
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/TOOLSIGN.o for
+      package ToolsForSign
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/EFSTRUC.o for
+      package ElementaryFunctionStructurePackage
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/POLYLIFT.o for
+      package PolynomialCategoryLifting
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/INTTOOLS.o for
+      package IntegrationTools
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/ALGMANIP.o for
+      package AlgebraicManipulations
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/LIST2MAP.o for
+      package ListToMap
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/INTEF.o for
+      package ElementaryIntegration
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FSPRMELT.o for
+      package FunctionSpacePrimitiveElement
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/PRIMELT.o for
+      package PrimitiveElement
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/PRS.o for package
+      PseudoRemainderSequence
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FACUTIL.o for
+      package FactoringUtilities
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/INTPAF.o for
+      package PureAlgebraicIntegration
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/INTG0.o for
+      package GenusZeroIntegration
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/UPCDEN.o for
+      package UnivariatePolynomialCommonDenominator
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/CDEN.o for package
+      CommonDenominator
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/INTRAT.o for
+      package RationalIntegration
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/INTTR.o for
+      package TranscendentalIntegration
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/INTHERTR.o for
+      package TranscendentalHermiteIntegration
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/MONOTOOL.o for
+      package MonomialExtensionTools
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/IR.o for domain
+      IntegrationResult
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/IR2.o for package
+      IntegrationResultFunctions2
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/IR2F.o for package
+      IntegrationResultToFunction
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/COMPLEX.o for
+      domain Complex
+
+                                +---------+
+            3+-+2    3+-+       |3+-+2         3+-+2     3+-+     2
+        (4x \|x   + 3\|x  + 7x)\|\|x   + 1  + 6\|x   + 9x\|x  + 4x  + 1
+   (1)  ---------------------------------------------------------------
+                                  +---------+
+                       3+-+2      |3+-+2         3+-+
+                     (4\|x   + 1)\|\|x   + 1  + 3\|x  + 4x
+                                          Type: Union(Expression Integer,...)
+               Time: 0.02 (IN) + 0.17 (EV) + 0.42 (OT) + 0.12 (GC) = 0.72 sec
+(2) ->
+(2) -> b:=integrate(sqrt(1+x^(-2/3)),x)
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/CHVAR.o for
+      package ChangeOfVariable
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/ALGFF.o for domain
+      AlgebraicFunctionField
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/MATRIX.o for
+      domain Matrix
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/IIARRAY2.o for
+      domain InnerIndexedTwoDimensionalArray
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/MATCAT-.o for
+      domain MatrixCategory&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/ARR2CAT-.o for
+      domain TwoDimensionalArrayCategory&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/INTALG.o for
+      package AlgebraicIntegrate
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/SAE.o for domain
+      SimpleAlgebraicExtension
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/INTHERAL.o for
+      package AlgebraicHermiteIntegration
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FFINTBAS.o for
+      package FunctionFieldIntegralBasis
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/MONOGEN-.o for
+      domain MonogenicAlgebra&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/MATLIN.o for
+      package MatrixLinearAlgebraFunctions
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/MHROWRED.o for
+      package ModularHermitianRowReduction
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/TRIMAT.o for
+      package TriangularMatrixOperations
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/IBATOOL.o for
+      package IntegralBasisTools
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/VECTCAT-.o for
+      domain VectorCategory&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FRAMALG-.o for
+      domain FramedAlgebra&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FFCAT-.o for
+      domain FunctionFieldCategory&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/MATCAT2.o for
+      package MatrixCategoryFunctions2
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/IMATLIN.o for
+      package InnerMatrixLinearAlgebraFunctions
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FINRALG-.o for
+      domain FiniteRankAlgebra&
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/MCDEN.o for
+      package MatrixCommonDenominator
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/LIST2.o for
+      package ListFunctions2
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/FLAGG2.o for
+      package FiniteLinearAggregateFunctions2
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/ICDEN.o for
+      package InnerCommonDenominator
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/VECTOR2.o for
+      package VectorFunctions2
+   Loading j:/OpenAxiom/axiom014/mnt/windows/algebra/LSMP.o for package
+      LinearSystemMatrixPackage
+
+                    +---------+
+         3+-+2      |3+-+2
+   (2)  (\|x   + 1)\|\|x   + 1
+                                          Type: Union(Expression Integer,...)
+               Time: 0.02 (IN) + 6.18 (EV) + 0.12 (OT) + 0.78 (GC) = 7.10 sec
+(3) ->
+(3) -> c:=integrate(sqrt(1+x^(-2/3)),x)
+
+                    +---------+
+         3+-+2      |3+-+2
+   (3)  (\|x   + 1)\|\|x   + 1
+                                          Type: Union(Expression Integer,...)
+                                       Time: 6.40 (EV) + 0.45 (GC) = 6.85 sec
+(4) -> a-b
+
+   (4)  0
+                                                     Type: Expression Integer
+                                                                  Time: 0 sec
+(5) -> interpret(a::InputForm) - interpret (b::InputForm)
+
+   (5)  0
+                                                     Type: Expression Integer
+                                       Time: 0.03 (EV) + 0.03 (OT) = 0.07 sec
+(6) -> t:Boolean:=(a::EXPR INT)=(b::EXPR INT)
+
+   (6)  false
+                                                                Type: Boolean
+                                                                  Time: 0 sec
+(7) -> d:=integrate(sqrt(1+y^(-2/3)),y)
+
+                    +---------+
+         3+-+2      |3+-+2
+   (7)  (\|y   + 1)\|\|y   + 1
+                                          Type: Union(Expression Integer,...)
+                           Time: 0.02 (IN) + 6.98 (EV) + 0.48 (GC) = 7.48 sec
+
+I am no longer sure why (3) took almost as long as (2) (in fact longer EV time),
+and why (7) took even longer EV time. However, the longer time compared to (1)
+is explained by the extra domains that are loaded. So the system behavior (or at
+least the integration algorithm) is affected by what domains are already loaded
+(that explains why (7) is comparable to (2) and (3), not (1)). (6) shows that
+equality in EXPR INT is not equivalent to zero testing of the difference. Note
+that the domain CHVAR was the first loaded in (2), which enabled simplification
+of radical expressions. So to answer Igor's question, we way try tracing what
+caused CHVAR to be loaded.
+
+William
+
+
+
+From MAILER-DAEMON Sun Mar 26 10:23:10 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FNX5B-0007fm-Va
+	for mharc-axiom-math@gnu.org; Sun, 26 Mar 2006 10:23:09 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FNX5A-0007ec-6p
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 10:23:08 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FNX58-0007cx-Ad
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 10:23:07 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FNX58-0007cn-4a
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 10:23:06 -0500
+Received: from [66.249.82.204] (helo=xproxy.gmail.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FNX6Q-0004q3-Fo
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 10:24:26 -0500
+Received: by xproxy.gmail.com with SMTP id t5so820961wxc
+	for <axiom-math@nongnu.org>; Sun, 26 Mar 2006 07:23:05 -0800 (PST)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=DVpIOfXn3Up7MRbPJHuto2f7gNX8JRr69Jnxdo+CBCrK7ldnGqxPuA8SRHfZEQA1dPeJu0ogXnP8RmvVxJizLzy/VQLAfj0tTyIvGVeVct6E4PPyDYskzbHMqrwHtT4JeYtd3DJE93rKqSRgJT1o/zw0Doi9wqgp8NIkBMZqoBc=
+Received: by 10.70.90.12 with SMTP id n12mr3514035wxb;
+	Sun, 26 Mar 2006 07:23:05 -0800 (PST)
+Received: by 10.70.73.2 with HTTP; Sun, 26 Mar 2006 07:23:05 -0800 (PST)
+Message-ID: <ab2dc45b0603260723l7991c82cs5dff49b739a3a28@mail.gmail.com>
+Date: Sun, 26 Mar 2006 10:23:05 -0500
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Axiom's integration non-deterministic?
+In-Reply-To: <442670B9.D5BDA42C@cunyvm.cuny.edu>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+References: <ab2dc45b0603241455p18ba357ey3fd919eb1e777023@mail.gmail.com>
+	<442670B9.D5BDA42C@cunyvm.cuny.edu>
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Mar 2006 15:23:08 -0000
+
+On 3/26/06, William Sit <wyscc@cunyvm.cuny.edu> wrote:
+
+> I vaguely remembered that Axiom does caching. So the first time the comma=
+nd
+> above is done, it gives an unsimplified answer and the second time it may=
+ be
+> doing the simplification using the previous answer. Simplifying radical
+> expresssion is expensive (I think it requires constructing towers of alge=
+braic
+> extensions). The two answers are identical (on my Windows version)
+
+The first time I tried this expression, it was the simplified answer
+that axiom spat out first, the more complicated answer second, which
+then alternated (but without any kind of regular pattern I could
+recognize). So it doesn't look like any kind of caching is
+responsible, at least in version axiom-20050201. In the 20050901
+version, the behavior seems closer to what William found.
+
+Strange in deed.
+
+Igor
+
+
+
+From MAILER-DAEMON Sun Mar 26 10:36:39 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FNXIF-0002Ua-5f
+	for mharc-axiom-math@gnu.org; Sun, 26 Mar 2006 10:36:39 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FNXID-0002UL-KR
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 10:36:37 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FNXIC-0002U9-Gj
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 10:36:37 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FNXIC-0002U6-DM
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 10:36:36 -0500
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FNXJV-0005Wo-0O
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 10:37:57 -0500
+Received: from mua-2.zoominternet.net (mua-2.zoominternet.net [24.154.1.45])
+	by mx-7.zoominternet.net (8.12.11/8.12.11) with ESMTP id k2QFaTKo027753;
+	Sun, 26 Mar 2006 10:36:29 -0500
+Received: from localhost.localdomain
+	(dynamic-acs-72-23-17-240.zoominternet.net [72.23.17.240])
+	by mua-2.zoominternet.net (Postfix) with ESMTP id 802FC7F407;
+	Sun, 26 Mar 2006 10:36:30 -0500 (EST)
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k2QGNaP11897;
+	Sun, 26 Mar 2006 11:23:36 -0500
+Date: Sun, 26 Mar 2006 11:23:36 -0500
+Message-Id: <200603261623.k2QGNaP11897@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: igor.kh@gmail.com
+In-reply-to: <ab2dc45b0603251716t50e93061u95229d2c95f06ffc@mail.gmail.com>
+	(igor.kh@gmail.com)
+Subject: Re: [Axiom-math] Axiom's integration non-deterministic?
+References: <CAE9B164E720CE4D8727792DF8F28AE3456F9D@corporateex02.Corporate.drdc-rddc.gc.ca>
+	<ab2dc45b0603251716t50e93061u95229d2c95f06ffc@mail.gmail.com>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Mar 2006 15:36:37 -0000
+
+Igor,
+
+This is a specific example of tracing applied to INTEF.
+The symbols used for the lisp trace commands came from 
+int/algebra/INTEF.NRLIB/code.lsp
+
+)trace INTEF )math
+)lisp (trace |INTEF;prim?|)
+)lisp (trace |INTEF;tanint|)
+)lisp (trace |INTEF;tanint!5|)
+)lisp (trace |INTEF;tanint!4|)
+)lisp (trace |INTEF;tanint!3|)
+)lisp (trace |INTEF;tanint!2|)
+)lisp (trace |INTEF;tanint!1|)
+)lisp (trace |INTEF;tanint!0|)
+)lisp (trace |INTEF;unknownint|)
+)lisp (trace |INTEF;droponex|)
+)lisp (trace |INTEF;unklimint|)
+)lisp (trace |INTEF;unkextint|)
+)lisp (trace |INTEF;isx?|)
+)lisp (trace |INTEF;alglfint|)
+)lisp (trace |INTEF;alglfint!0|)
+)lisp (trace |INTEF;alglfextint|)
+)lisp (trace |INTEF;alglflimint|)
+)lisp (trace |INTEF;alglflimint!0|)
+)lisp (trace |INTEF;lfintegrate;FSIr;11|)
+)lisp (trace |INTEF;lfintegrate;FSIr;12|)
+)lisp (trace |INTEF;lfintegrate;FSIr;13|)
+)lisp (trace |INTEF;lfintegrate;FSIr;14|)
+)lisp (trace |INTEF;lfintegrate0|)
+)lisp (trace |INTEF;lfintegrate0!0|)
+)lisp (trace |INTEF;addx|)
+)lisp (trace |INTEF;tryChangeVar|)
+)lisp (trace |INTEF;tryChangeVar!0|)
+)lisp (trace |INTEF;algexpint|)
+)lisp (trace |INTEF;algexpint!1|)
+)lisp (trace |INTEF;algexpint!0|)
+)lisp (trace |INTEF;algprimint|)
+)lisp (trace |INTEF;algprimint!1|)
+)lisp (trace |INTEF;algprimint!0|)
+)lisp (trace |INTEF;lfextendedint;FSFU;20|)
+)lisp (trace |INTEF;lfextendedint;FSFU;20!0|)
+)lisp (trace |INTEF;lflimitedint;FSLU;21|)
+)lisp (trace |INTEF;lflimitedint;FSLU;21!0|)
+)lisp (trace |INTEF;lfinfieldint;FSU;22|)
+)lisp (trace |INTEF;primextint|)
+)lisp (trace |INTEF;primextint!2|)
+)lisp (trace |INTEF;primextint!1|)
+)lisp (trace |INTEF;primextint!0|)
+)lisp (trace |INTEF;expextint|)
+)lisp (trace |INTEF;expextint!4|)
+)lisp (trace |INTEF;expextint!3|)
+)lisp (trace |INTEF;expextint!2|)
+)lisp (trace |INTEF;expextint!1|)
+)lisp (trace |INTEF;expextint!0|)
+)lisp (trace |INTEF;primint|)
+)lisp (trace |INTEF;primint!3|)
+)lisp (trace |INTEF;primint!2|)
+)lisp (trace |INTEF;primint!1|)
+)lisp (trace |INTEF;primint!0|)
+)lisp (trace |INTEF;lfextlimint;FSKLU;26|)
+)lisp (trace |INTEF;cfind|)
+)lisp (trace |INTEF;expint|)
+)lisp (trace |INTEF;expint!5|)
+)lisp (trace |INTEF;expint!4|)
+)lisp (trace |INTEF;expint!3|)
+)lisp (trace |INTEF;expint!2|)
+)lisp (trace |INTEF;expint!1|)
+)lisp (trace |INTEF;expint!0|)
+)lisp (trace |INTEF;primlimint|)
+)lisp (trace |INTEF;primlimint!2|)
+)lisp (trace |INTEF;primlimint!1|)
+)lisp (trace |INTEF;primlimint!0|)
+)lisp (trace |INTEF;explimint|)
+)lisp (trace |INTEF;explimint!4|)
+)lisp (trace |INTEF;explimint!3|)
+)lisp (trace |INTEF;explimint!2|)
+)lisp (trace |INTEF;explimint!1|)
+)lisp (trace |INTEF;explimint!0|)
+)lisp (trace |ElementaryIntegration|)
+)lisp (trace |ElementaryIntegration;|)
+
+
+t
+
+
+
+
+From MAILER-DAEMON Sun Mar 26 14:11:22 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FNae2-0003YN-Lr
+	for mharc-axiom-math@gnu.org; Sun, 26 Mar 2006 14:11:22 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FNae1-0003YH-8m
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 14:11:21 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FNady-0003Y4-Fc
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 14:11:20 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FNady-0003Y1-3f
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 14:11:18 -0500
+Received: from [206.46.252.42] (helo=vms042pub.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FNafI-0003Jk-9z
+	for axiom-math@nongnu.org; Sun, 26 Mar 2006 14:12:40 -0500
+Received: from cunyvm.cuny.edu ([162.83.213.39])
+	by vms042.mailsrvcs.net (Sun Java System Messaging Server 6.2-4.02
+	(built Sep
+	9 2005)) with ESMTPA id <0IWR009881ARGI90@vms042.mailsrvcs.net> for
+	axiom-math@nongnu.org; Sun, 26 Mar 2006 13:11:16 -0600 (CST)
+Date: Sun, 26 Mar 2006 14:11:19 -0500
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Subject: Re: [Axiom-math] Axiom's integration non-deterministic?
+To: Igor Khavkine <igor.kh@gmail.com>, axiom-math@nongnu.org
+Message-id: <4426E757.4194099F@cunyvm.cuny.edu>
+Organization: City College of New York
+MIME-version: 1.0
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+Content-type: text/plain; charset=big5
+Content-transfer-encoding: 7bit
+X-Accept-Language: en,zh-CN,zh-TW,zh
+References: <ab2dc45b0603241455p18ba357ey3fd919eb1e777023@mail.gmail.com>
+	<44267805.55D3B444@cunyvm.cuny.edu>
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: wyscc@cunyvm.cuny.edu
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Mar 2006 19:11:21 -0000
+
+More intrique. But I think I am getting close to the reason (which is NOT what I
+said before -- those were wrong guesses).  But, first, some more "strange"
+behavior that led me to the chase. Please bear with me.
+
+The integrate(sqrt(1+x^(-2/3)),x) command is run by selecting integrate from
+FSINT(INT, EXPR INT), which when applied to the given function, I believe is
+equivalent to:
+
+    integrate(f, x) ==
+      not real? f => complexIntegrate(f, x)
+      -- [... ] irrelevant for this example
+      rec := rischNormalize(realElementary(f, x), x)
+      g   := rootSimp(rec.func) -- same as g:=f for this example
+      --- [... ] more irrelevant code
+      i:IR
+      if (comp := goComplex?(rtg, tg, ltg)) then -- false for this example
+       --- [... ] irrelevant code
+       else i := lfintegrate(g, x) -- this is what should be executed
+      --- [... ] 
+      (u := rinteg(i, f, x, el and ht, comp)) case F => --- true, u := i
+        postSubst(u::F, rec.vals, rec.kers, comp, ltg, x)  --- output u
+      --- [... ] irrelevant code
+
+When the system first started, as we know:
+
+(1) -> a:=integrate(sqrt(1+x^(-2/3)),x)
+                                +---------+
+            3+-+2    3+-+       |3+-+2         3+-+2     3+-+     2
+        (4x \|x   + 3\|x  + 7x)\|\|x   + 1  + 6\|x   + 9x\|x  + 4x  + 1
+   (1)  ---------------------------------------------------------------
+                                  +---------+
+                       3+-+2      |3+-+2         3+-+
+                     (4\|x   + 1)\|\|x   + 1  + 3\|x  + 4x
+                                          Type: Union(Expression Integer,...)
+
+comparing this with (new session):
+
+(1) -> complexIntegrate(sqrt(1+x^(-2/3)),x)
+
+                                +---------+
+            3+-+2    3+-+       |3+-+2         3+-+2     3+-+     2
+        (4x \|x   + 3\|x  + 7x)\|\|x   + 1  + 6\|x   + 9x\|x  + 4x  + 1
+   (1)  ---------------------------------------------------------------
+                                  +---------+
+                       3+-+2      |3+-+2         3+-+
+                     (4\|x   + 1)\|\|x   + 1  + 3\|x  + 4x
+                                                     Type: Expression Integer
+(2) -> complexIntegrate(sqrt(1+x^(-2/3)),x)
+
+                    +---------+
+         3+-+2      |3+-+2
+   (2)  (\|x   + 1)\|\|x   + 1
+                                                     Type: Expression Integer
+
+On the other hand (new session):
+(1) -> real? sqrt(1+x^(-2/3))
+
+   (1)  true
+                                                                Type: Boolean
+
+so the first branch in 'integrate' should simply fall through! It is not clear
+whether 'true' is correct since sqrt(1+x^(-2/3)) can take on complex values. But
+that does not seem to be the reason either.
+
+The simplified integral can be done by (new session):
+
+(1) -> q:=sqrt(1+x^(-2/3));
+(2) -> p:=lfintegrate(q,x::Symbol)$ElementaryIntegration(INT, EXPR INT)
+
+                      +---------+
+                      |3+-+2
+           3+-+2      |\|x   + 1
+        (x \|x   + x) |---------
+                      |  3+-+2
+                     \|  \|x
+   (2)  -------------------------
+                  3+-+2
+                  \|x
+                                   Type: IntegrationResult Expression Integer
+(3) -> rootSimp p
+
+                    +---------+
+         3+-+2      |3+-+2
+   (3)  (\|x   + 1)\|\|x   + 1
+                                                     Type: Expression Integer
+(4) -> a:=integrate(sqrt(1+x^(-2/3)),x)
+                    +---------+
+         3+-+2      |3+-+2
+   (4)  (\|x   + 1)\|\|x   + 1
+                                          Type: Union(Expression Integer,...)
+
+Now (4) gave the simplifed answer (which by tracing integrate from FSINT(INT,
+EXPR INT), as far as I can tell, follows (1), (2).  So does
+complexIntegrate(sqrt(1+x^(-2/3)),x). In fact, even tracing complexIntegrate,
+which leads to internalIntegrate and internalIntegrate0 will lead back to
+lfintegrate for this integrand. It is no longer clear whether loading CHVAR has
+anything to do with the simplification. (I used ')set expose add constructor
+CHVAR' at the beginning and it does not seem to help.) More digging.
+
+Further investigation with )trace shows that the intermediate steps involve
+different integrands (calls to lfintegrate).
+
+                        AXIOM Computer Algebra System
+              Version of Tuesday November 30, 2004 at 21:11:14
+-----------------------------------------------------------------------------
+   Issue )copyright to view copyright notices.
+   Issue )summary for a summary of useful system commands.
+   Issue )quit to leave AXIOM and return to shell.
+-----------------------------------------------------------------------------
+
+(1) -> )set mess autoload off
+(1) -> )trace lfintegrate
+lfintegrate is not a function
+
+   Nothing is traced now.
+
+(1) -> )trace lfintegrate$INTEF(INT, EXPR INT)
+
+   AXIOM does not understand the use of $elt(INTEF INT (EXPR INT))
+      lfintegrate here.
+(1) -> )trace INTEF )math
+
+   Parameterized constructors traced:
+      INTEF
+(1) -> q:=sqrt(1+x^(-2/3))
+
+         +---------+
+         |3+-+2
+         |\|x   + 1
+   (1)   |---------
+         |  3+-+2
+        \|  \|x
+                                                     Type: Expression Integer
+(2) -> complexIntegrate(q,x)
+1<enter ElementaryIntegration.lfintegrate,58 :
+        +---------+
+        |3+-+2
+       \|\|x   + 1
+ arg1= ------------
+           3+-+
+           \|x
+ arg2= x
+ 2<enter ElementaryIntegration.lfintegrate,58 :
+            4      2
+        - %F  + 3%F  + 8x %F - 4
+  arg1= ------------------------
+           4      2
+         %F  - 3%F  - 8x %F + 2
+  arg2= x
+ 2>exit  ElementaryIntegration.lfintegrate,58 :
+     4        3
+  3%F  + 4x %F  + 1
+  -----------------
+            3
+         4%F
+1>exit  ElementaryIntegration.lfintegrate,58 :
+                         +---------+
+     3+-+2    3+-+       |3+-+2         3+-+2     3+-+     2
+ (4x \|x   + 3\|x  + 7x)\|\|x   + 1  + 6\|x   + 9x\|x  + 4x  + 1
+ ---------------------------------------------------------------
+                           +---------+
+                3+-+2      |3+-+2         3+-+
+              (4\|x   + 1)\|\|x   + 1  + 3\|x  + 4x
+
+                                +---------+
+            3+-+2    3+-+       |3+-+2         3+-+2     3+-+     2
+        (4x \|x   + 3\|x  + 7x)\|\|x   + 1  + 6\|x   + 9x\|x  + 4x  + 1
+   (2)  ---------------------------------------------------------------
+                                  +---------+
+                       3+-+2      |3+-+2         3+-+
+                     (4\|x   + 1)\|\|x   + 1  + 3\|x  + 4x
+                                                     Type: Expression Integer
+(3) -> complexIntegrate(q,x)
+1<enter ElementaryIntegration.lfintegrate,58 :
+        +---------+
+        |3+-+2
+       \|\|x   + 1
+ arg1= ------------
+           3+-+
+           \|x
+ arg2= x
+ 2<enter ElementaryIntegration.lfintegrate,58 :
+               5         4       3          2         2
+          - 3%O  - 32x %O  + 63%O  + 840x %O  + (4352x  - 486)%O - 4032x
+  arg1= -----------------------------------------------------------------
+           5         4        3           2           2
+        9%O  + 96x %O  - 189%O  - 2520x %O  + (- 3840x  + 972)%O + 12096x
+  arg2= x
+ 2>exit  ElementaryIntegration.lfintegrate,58 :
+              5            4          2           3             2
+      - 1455%O  - 15520x %O  + (49664x  + 27936)%O  + 407400x %O
+    +
+              2                       3           2
+      (769792x  - 164997)%O - 1390592x  + 3454976x  - 1882188x - 182196
+ /
+            2
+    1787904x  - 94284
+1>exit  ElementaryIntegration.lfintegrate,58 :
+                  +---------+
+     3+-+2        |3+-+2
+ (873\|x   + 873)\|\|x   + 1  + 1687
+ -----------------------------------
+                 873
+
+                    +---------+
+         3+-+2      |3+-+2
+   (3)  (\|x   + 1)\|\|x   + 1
+                                                     Type: Expression Integer
+(4) -> complexIntegrate(q,x)
+1<enter ElementaryIntegration.lfintegrate,58 :
+        +---------+
+        |3+-+2
+       \|\|x   + 1
+ arg1= ------------
+           3+-+
+           \|x
+ arg2= x
+ 2<enter ElementaryIntegration.lfintegrate,58 :
+              5          4         3            2            2
+         224%W  + 441x %W  - 2304%W  - 10360x %W  + (- 18081x  + 9728)%W + 19536
+x
+  arg1= ------------------------------------------------------------------------
+-
+             5          4         3            2            2
+        448%W  + 882x %W  - 4608%W  - 20720x %W  + (- 17640x  + 11264)%W + 39072
+x
+  arg2= x
+ 2>exit  ElementaryIntegration.lfintegrate,58 :
+              5             4              2             3               2
+      495840%W  + 976185x %W  + (- 1366659x  - 4495616)%W  - 22932600x %W
+    +
+                2                          3            2
+    (- 23623677x  + 14280192)%W + 17766567x  - 95304951x  + 35386448x + 42151936
+
+ /
+             2
+    19133226x  - 8462336
+1>exit  ElementaryIntegration.lfintegrate,58 :
+                    +---------+
+      3+-+2         |3+-+2
+ (2066\|x   + 2066)\|\|x   + 1  - 10291
+ --------------------------------------
+                  2066
+
+                    +---------+
+         3+-+2      |3+-+2
+   (4)  (\|x   + 1)\|\|x   + 1
+                                                     Type: Expression Integer
+(5) -> integrate(q,x)
+1<enter ElementaryIntegration.lfintegrate,58 :
+        +---------+
+        |3+-+2
+       \|\|x   + 1
+ arg1= ------------
+           3+-+
+           \|x
+ arg2= x
+ 2<enter ElementaryIntegration.lfintegrate,58 :
+                5          4        3           2         2
+          - 3%BE  - 32x %BE  + 63%BE  + 840x %BE  + (4352x  - 486)%BE - 4032x
+  arg1= ----------------------------------------------------------------------
+            5          4         3            2           2
+        9%BE  + 96x %BE  - 189%BE  - 2520x %BE  + (- 3840x  + 972)%BE + 12096x
+  arg2= x
+ 2>exit  ElementaryIntegration.lfintegrate,58 :
+               5             4          2            3              2
+      - 1455%BE  - 15520x %BE  + (49664x  + 27936)%BE  + 407400x %BE
+    +
+              2                        3           2
+      (769792x  - 164997)%BE - 1390592x  + 3454976x  - 1882188x - 182196
+ /
+            2
+    1787904x  - 94284
+1>exit  ElementaryIntegration.lfintegrate,58 :
+                  +---------+
+     3+-+2        |3+-+2
+ (873\|x   + 873)\|\|x   + 1  + 1687
+ -----------------------------------
+                 873
+
+                    +---------+
+         3+-+2      |3+-+2
+   (5)  (\|x   + 1)\|\|x   + 1
+                                          Type: Union(Expression Integer,...)
+
+So it seems that because the integrand is algebraic over Q(x), Axiom tries to
+find a primitive element of the algebraic extension which contains the
+integrand. But a primitive elment is not unique, and there might be some
+randomness in selecting this primitive element (which involving building a tower
+of algebraic extensions to successively remove the radicals appearing in the
+integrand, and so there could be some choice of order that is not deterministic
+or some factoring algorithm involved in getting to the minimal polynomials at
+each stage, with a different integral also at each stage). Tracing
+primitiveElement:
+
+)trace FSPRIMELT )math 
+
+in addition to 
+
+)trace INTEF )math
+
+in repeated calling 
+
+complexIntegrate(q,x) did show this to be observed (output omitted). I am
+running out of time right now to trace the primitiveElement algorithm, but I
+believe that is the reason (still could be wrong of course). Here are at least
+two such primitive elements, each with different result. It seems the ground
+field used here is Q (rational) or maybe C (complex field).
+
+1<enter FunctionSpacePrimitiveElement.primitiveElement,93 :
+       3+-+
+ arg1= \|x
+        +---------+
+        |3+-+2
+ arg2= \|\|x   + 1
+1>exit  FunctionSpacePrimitiveElement.primitiveElement,93 :
+             +---------+
+             |3+-+2        3+-+
+ [primelt= 3\|\|x   + 1  + \|x ,
+
+   pol1 = ... ,
+
+   pol2 = ... ,
+
+         6      4        3       2                2
+  prim= ?  - 27?  - 56x ?  + 243?  + 432x ? - 512x  - 729]
+
+and 
+
+ 1<enter FunctionSpacePrimitiveElement.primitiveElement,93 :
+        3+-+
+  arg1= \|x
+         +---------+
+         |3+-+2
+  arg2= \|\|x   + 1
+ 1>exit  FunctionSpacePrimitiveElement.primitiveElement,93 :
+                +---------+
+                |3+-+2        3+-+
+  [primelt= - 4\|\|x   + 1  + \|x ,
+
+   pol1 = ... ,
+
+   pol2 = ... ,
+          6      4        3       2                  2
+   prim= ?  - 48?  - 98x ?  + 768?  + 1440x ? - 3375x  - 4096]
+
+
+The other branch of integrate, using lfintegrate, also leads to computing
+primitive elements (but less complicated, and apparently CONSISTENT, because the
+ground field is Q(x)):
+
+(26) -> lfintegrate(q,x::Symbol)$ElementaryIntegration(INT, EXPR INT)
+1<enter ElementaryIntegration.lfintegrate,58 :
+        +---------+
+        |3+-+2
+        |\|x   + 1
+ arg1=  |---------
+        |  3+-+2
+       \|  \|x
+ arg2= x
+ 1<enter FunctionSpacePrimitiveElement.primitiveElement,93 :
+        3+-+
+  arg1= \|x
+         +---------+
+         |3+-+2
+         |\|x   + 1
+  arg2=  |---------
+         |  3+-+2
+        \|  \|x
+ 1>exit  FunctionSpacePrimitiveElement.primitiveElement,93 :
+             +---------+
+             |3+-+2                                                       2
+             |\|x   + 1           2                    6     4     2   - x  - 1
+  [primelt=  |--------- ,pol1= x ?  - x,pol2= ?,prim= ?  - 3?  + 3?  + --------]
+
+             |  3+-+2                                                      2
+            \|  \|x                                                       x
+ 2<enter ElementaryIntegration.lfintegrate,58 :
+  arg1= %CJ
+  arg2= x
+ 2>exit  ElementaryIntegration.lfintegrate,58 :
+       3
+  x %CJ
+1>exit  ElementaryIntegration.lfintegrate,58 :
+               +---------+
+               |3+-+2
+    3+-+2      |\|x   + 1
+ (x \|x   + x) |---------
+               |  3+-+2
+              \|  \|x
+ -------------------------
+           3+-+2
+           \|x
+
+                       +---------+
+                       |3+-+2
+            3+-+2      |\|x   + 1
+         (x \|x   + x) |---------
+                       |  3+-+2
+                      \|  \|x
+   (26)  -------------------------
+                   3+-+2
+                   \|x
+                                   Type: IntegrationResult Expression Integer
+
+Hope this give you sufficient leads to go on.
+
+
+William
+
+
+
+From MAILER-DAEMON Mon Mar 27 12:16:10 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FNvK5-0005Zy-BA
+	for mharc-axiom-math@gnu.org; Mon, 27 Mar 2006 12:16:09 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FLhG1-00056z-GI
+	for axiom-math@nongnu.org; Tue, 21 Mar 2006 08:50:45 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FLhFz-00053F-DP
+	for axiom-math@nongnu.org; Tue, 21 Mar 2006 08:50:45 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FLhFy-00052j-Th
+	for axiom-math@nongnu.org; Tue, 21 Mar 2006 08:50:43 -0500
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FLhG0-0004pu-KI
+	for axiom-math@nongnu.org; Tue, 21 Mar 2006 08:50:44 -0500
+Received: from localhost.localdomain ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id k2LDnJHb045428; 
+	Tue, 21 Mar 2006 14:49:24 +0100 (CET)
+Sender: rubey@localhost.localdomain
+To: Francois Maltey <fmaltey@nerim.fr>
+Subject: Re: [Axiom-math] Can I decompose a domain ?
+References: <87hd5vy431.fsf@localhost.localdomain>
+	<441D1DEC.60EAC8A2@cunyvm.cuny.edu>
+	<87wteqpuwx.fsf@localhost.localdomain>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 21 Mar 2006 14:52:44 +0100
+In-Reply-To: <87wteqpuwx.fsf@localhost.localdomain>
+Message-ID: <85veu7kiqb.fsf@localhost.localdomain>
+Lines: 91
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4249; Body=0 Fuz1=0 Fuz2=0
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Mar 2006 13:50:45 -0000
+
+Dear Francois,
+
+Francois Maltey <fmaltey@nerim.fr> writes:
+
+> Hello William, and thanks a lot
+> 
+> > > resFloat   : Expression Float := cos (4.0 * x)
+> > > resInteger : Expression Float := cos (4 * x)
+> > > resComplex : Expression Complex Integer := exp (3+4*%i)
+> > > 
+> > > How can I get Float from resFloat ? Integer from resInteger, etc.
+> > > in a *.input file ?
+>  
+> > Is the following what you want?
+> 
+> No I don't try to get the sub-argument, but the type of the subargument.
+> But I'm not sure I can get it.
+
+In general, I don't think that it's possible. However, I think in your
+situation, it is unnecessary.
+
+> > (isTimes ((argument ((kernels resFloat).1)).1)).1::Float
+> > (isTimes ((argument ((kernels resInteger).1)).1)).1::Integer
+> > argument ((kernels resComplex).1).1::Complex Integer
+> 
+> Imagine I know that a is an Expression...
+> My function don't know if a is an Expression Float, or an Expression
+> Integer...
+
+As far as I know, you are modifying TranscendentalManipulations(R, F) from
+manip.spad. The header reads
+
+)abbrev package TRMANIP TranscendentalManipulations
+TranscendentalManipulations(R, F): Exports == Implementation where
+  R : Join(OrderedSet, GcdDomain)
+  F : Join(FunctionSpace R, TranscendentalFunctionCategory)
+
+So, usually, TRMANIP will be called (secretly, by the interpreter) with the
+arguments
+
+INT, EXPR INT
+
+or
+
+Float, EXPR Float
+
+or
+
+FRAC INT, EXPR FRAC INT
+
+or something similar. So you can simply say
+
+  Myfunction(a : F) : String ==
+    if R is Integer then 
+      ...
+    else if R is Fraction Integer then
+      ...
+
+and so on.
+
+However, I believe that it is better to test for properties:
+
+   if R has CharacteristicZero then 
+     if F has ComplexCategory R then
+       ...
+     else
+
+and so on. In some cases you will also want to test whether a particular member
+of R is an integer. You then have to say
+
+   if (r := retractIfCan(a)@Union("failed", Integer)) case Integer then ...
+
+Warning: look up the correct syntax, and as far as I remember, it makes a
+difference whether you ask for Union("failed", Integer) or Union(Integer,
+"failed"), unfortunately.
+   
+
+In an .input file you can simulate this behaviour as follows: say, right at the
+beginning
+
+R => INT
+F => EXPR R
+
+to test your code for EXPR INT. If you have done this, modify it to say
+
+R => Float
+F => EXPR R
+
+to test your code for EXPR Float, and so on.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Mon Mar 27 12:41:39 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FNvil-0002BB-FY
+	for mharc-axiom-math@gnu.org; Mon, 27 Mar 2006 12:41:39 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FMwm5-0002sT-Mg
+	for axiom-math@nongnu.org; Fri, 24 Mar 2006 19:37:01 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FMwm3-0002sH-KM
+	for axiom-math@nongnu.org; Fri, 24 Mar 2006 19:37:00 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FMwm3-0002sB-8o
+	for axiom-math@nongnu.org; Fri, 24 Mar 2006 19:36:59 -0500
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FMwmz-0002Fj-3W
+	for axiom-math@nongnu.org; Fri, 24 Mar 2006 19:37:57 -0500
+Received: from localhost (localhost.drenet.dnd.ca [127.0.0.1])
+	by fw.drenet.dnd.ca (_) with ESMTP id BAED46DE02;
+	Fri, 24 Mar 2006 19:36:57 -0500 (EST)
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca
+	(corporateex02.corporate.drdc-rddc.gc.ca [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id 1DD3E6DDE4;
+	Fri, 24 Mar 2006 19:36:56 -0500 (EST)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-math] Axiom's integration non-deterministic?
+Date: Fri, 24 Mar 2006 19:36:56 -0500
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE3456F9D@corporateex02.Corporate.drdc-rddc.gc.ca>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-math] Axiom's integration non-deterministic?
+Thread-Index: AcZPodyvwl5c+x1fTl2zkJsrekfpHQAAJKGA
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Igor Khavkine" <igor.kh@gmail.com>
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 25 Mar 2006 00:37:02 -0000
+
+On Friday, March 24, 2006 5:56 PM Igor Khavkine wrote:
+> ...=20
+> Start up Axiom, and type in the following integral
+>=20
+>   integrate(sqrt(1+x^(-2/3)),x)
+>=20
+> Then type in the same integral again
+> ...=20
+> Clearly, Axiom takes two different paths through the integration
+> algorithm, even when give identical input. What is the cause of
+> the branch? Is there a non-deterministic step somewhere in the
+> algorithm?
+
+I don't know the cause of this behaviour but I get the same effect
+on the Windows version of Axiom.
+
+>=20
+> Incidentally, is there a canonical form for radical expressions
+> in which the two forms of the answer can be compared and directly
+> shown to be the same?
+>=20
+
+It's not based on a canonical form, but this seems to work:
+
+A1 :=3D integrate(sqrt(1+x^(-2/3)),x)
+A2 :=3D integrate(sqrt(1+x^(-2/3)),x)
+A1-A2
+
+Surprised? :)
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Mon Mar 27 12:54:13 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FNvuv-00086R-6U
+	for mharc-axiom-math@gnu.org; Mon, 27 Mar 2006 12:54:13 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FNvSx-0001ej-Rf
+	for axiom-math@nongnu.org; Mon, 27 Mar 2006 12:25:20 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FNvSv-0001dZ-Vb
+	for axiom-math@nongnu.org; Mon, 27 Mar 2006 12:25:19 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FNvSu-0001dO-Jm
+	for axiom-math@nongnu.org; Mon, 27 Mar 2006 12:25:17 -0500
+Received: from [66.249.82.201] (helo=xproxy.gmail.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FNvUS-0007wl-DM
+	for axiom-math@nongnu.org; Mon, 27 Mar 2006 12:26:52 -0500
+Received: by xproxy.gmail.com with SMTP id t4so981265wxc
+	for <axiom-math@nongnu.org>; Mon, 27 Mar 2006 09:25:15 -0800 (PST)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=LtofwnXEKIYGzo3uZpDgd+aRikP4M4O8IU+1s/Ciy3ygUeLMtgrHOb4Bu5PwTUo/q81PHbYhA6fuy8wxdWOIYywjGA7BOHYPvJYF4mDpWkn3zQ65DHcdmgO+15EN/iXZja+JDQ3tSiBD5z1OwnZoqVHygGEuJagYPeVpi60iDQ8=
+Received: by 10.70.72.5 with SMTP id u5mr767317wxa;
+	Mon, 27 Mar 2006 09:25:15 -0800 (PST)
+Received: by 10.70.73.2 with HTTP; Mon, 27 Mar 2006 09:25:15 -0800 (PST)
+Message-ID: <ab2dc45b0603270925g2df0f0abhf34e4f1610f55d32@mail.gmail.com>
+Date: Mon, 27 Mar 2006 12:25:15 -0500
+From: "Igor Khavkine" <igor.kh@gmail.com>
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] Axiom's integration non-deterministic?
+In-Reply-To: <4426E757.4194099F@cunyvm.cuny.edu>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+References: <ab2dc45b0603241455p18ba357ey3fd919eb1e777023@mail.gmail.com>
+	<44267805.55D3B444@cunyvm.cuny.edu>
+	<4426E757.4194099F@cunyvm.cuny.edu>
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 27 Mar 2006 17:25:20 -0000
+
+On 3/26/06, William Sit <wyscc@cunyvm.cuny.edu> wrote:
+
+> So it seems that because the integrand is algebraic over Q(x), Axiom
+> tries to find a primitive element of the algebraic extension which
+> contains the integrand. But a primitive elment is not unique, and
+> there might be some randomness in selecting this primitive element
+> (which involving building a tower of algebraic extensions to
+> successively remove the radicals appearing in the integrand, and so
+> there could be some choice of order that is not deterministic or some
+> factoring algorithm involved in getting to the minimal polynomials at
+> each stage, with a different integral also at each stage). Tracing
+> primitiveElement:
+>
+> )trace FSPRMELT )math
+
+If you also add
+
+)trace PRIMELT )math
+
+you'll see that that William is basically correct. The primitiveElement
+routing from PRIMELT gets called with a 4-argument signature and returns
+different answers with the same input. Looking at the source
+(algebra/primelt.spad.pamphlet) there is in deed a call to
+random()$Integer in that routine. If you run the following command a few
+times, it will return different results.
+
+primitiveElement(x^(1/3),sqrt(1+x^(2/3)))
+
+BTW, what exactly does this routine do? The documentation is rather
+terse and the only mention of "primitive element" in my copy of Geddes
+et al. doesn't seem relevant.
+
+So, I guess, the answer to my original question is Yes, Axiom's
+integration routine for algebraic functions is non-deterministic. That's
+not really a problem, since it seems to return the correct answer but in
+different forms. But I am surprized that there doesn't seem to be a
+canonical form for algebraic expressions. It may be that I was expecting
+too much. However, looking at the last chapter of Geddes et al., there
+is a discussion of a canonical form for algebraic functions as they are
+fed into the Risch integrator. It doesn't look like any of the
+"normalize" routines that I found in Axiom actually perform this trick.
+Is this step actually taken or bypassed in the integration code?
+
+Igor
+
+
+

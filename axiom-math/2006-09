@@ -1,0 +1,441 @@
+From MAILER-DAEMON Mon Sep 11 06:04:35 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GMieZ-0004SV-Cg
+	for mharc-axiom-math@gnu.org; Mon, 11 Sep 2006 06:04:35 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GMieY-0004Rz-Fn
+	for axiom-math@nongnu.org; Mon, 11 Sep 2006 06:04:34 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GMieX-0004R7-P3
+	for axiom-math@nongnu.org; Mon, 11 Sep 2006 06:04:34 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1GMieU-0004Ks-7Q; Mon, 11 Sep 2006 06:04:30 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52)
+	id 1GMifj-00026T-4e; Mon, 11 Sep 2006 06:05:47 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GMieQ-0005tx-1m; Mon, 11 Sep 2006 12:04:26 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GMieQ-0006gR-0m; Mon, 11 Sep 2006 12:04:26 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: axiom-math <axiom-math@nongnu.org>, axiom-dev <axiom-developer@nongnu.org>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 11 Sep 2006 12:04:25 +0200
+Message-ID: <9qpse2hg7q.fsf@aquin.mat.univie.ac.at>
+Lines: 36
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: 
+Subject: [Axiom-math] evaluator for functional equations / CHALLENGE!
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 11 Sep 2006 10:04:34 -0000
+
+Dear all!
+
+next week I'm going to present my guessing package at MathInfo 06. It works
+quite well meanwhile :-)
+
+Hower, there is one thing I don't really want to program - in fact, I won't -
+although it would be really really useful. Maybe somebody else can do it. I
+offer a price, ok?
+
+The challenge is as follows:
+
+I need an operation evalADE that takes a functional equation of the form
+
+f(x) = g(f(x), D(f(x),x), D(f(x),x,2),...),
+
+where g is any "nice" expression, some initial values, and an integer n.
+
+The result of the operation should be the n-th coefficient of the taylor
+expansion of f, if it exists.
+
+Even more important, suppose that the functional equation is of the form
+
+p(f(x), D(f(x),x), D(f(x),x,2), ...)
+
+where p is a polynomial. These f are called differentially algebraic.
+
+The algorithm does not need to be especially fast, but it would be nice to be a
+able to compute the first fifty to hundred coefficients in a reasonable time.
+
+Note that Axiom provides an operation seriesSolve, which provides a partial
+solution. However, it is very buggy and gives up even for certain algebraic
+equations.
+
+Price is negotiable.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Sep 12 03:14:29 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GN2TV-0004sJ-PC
+	for mharc-axiom-math@gnu.org; Tue, 12 Sep 2006 03:14:29 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GN2TT-0004r1-2f
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 03:14:27 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GN2TR-0004qN-Rw
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 03:14:26 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1GN2TP-0004pC-Pk; Tue, 12 Sep 2006 03:14:23 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52)
+	id 1GN2Uq-0005ec-Rp; Tue, 12 Sep 2006 03:15:53 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GN2TN-0007dV-WF; Tue, 12 Sep 2006 09:14:22 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GN2TN-0006kL-T4; Tue, 12 Sep 2006 09:14:21 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Martin Rubey <martin.rubey@univie.ac.at>
+References: <9qpse2hg7q.fsf@aquin.mat.univie.ac.at>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 12 Sep 2006 09:14:21 +0200
+In-Reply-To: <9qpse2hg7q.fsf@aquin.mat.univie.ac.at>
+Message-ID: <9qfyexlfoy.fsf@aquin.mat.univie.ac.at>
+Lines: 49
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-dev <axiom-developer@nongnu.org>, axiom-math <axiom-math@nongnu.org>
+Subject: [Axiom-math] Re: [Axiom-developer] evaluator for functional
+	equations / CHALLENGE!
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 12 Sep 2006 07:14:27 -0000
+
+A followup on my own post, containing some material for fast algorithms.
+
+Martin Rubey <martin.rubey@univie.ac.at> writes:
+
+
+> I need an operation evalADE that takes a functional equation of the form
+>=20
+> f(x) =3D g(f(x), D(f(x),x), D(f(x),x,2),...),
+>=20
+> where g is any "nice" expression, some initial values, and an integer n.
+>=20
+> The result of the operation should be the n-th coefficient of the taylor
+> expansion of f, if it exists.
+>=20
+> Even more important, suppose that the functional equation is of the form
+>=20
+> p(f(x), D(f(x),x), D(f(x),x,2), ...)
+>=20
+> where p is a polynomial. These f are called differentially algebraic.
+>=20
+> The algorithm does not need to be especially fast, but it would be nice t=
+o be a
+> able to compute the first fifty to hundred coefficients in a reasonable t=
+ime.
+>=20
+> Note that Axiom provides an operation seriesSolve, which provides a parti=
+al
+> solution. However, it is very buggy and gives up even for certain algebra=
+ic
+> equations.
+
+In the case of expansion around an ordinary point of f(x) satisfying a *lin=
+ear*
+differential equation, i.e.,
+
+a0(x) f(x) + a1(x) D(f(x),x) + a2(x) D(f(x),x,2) + ... + a_k(x) D(f(x),x,k)=
+ =3D 0
+
+with a_k(x0)<>0,
+
+a fast algorithm has been proposed by=20
+
+Alin Bostan, Fr=E9d=E9ric Chyzak, Fran=E7ois Ollivier, Bruno Salvy, =C9ric =
+Schost,
+Alexandre Sedoglavic
+
+available at http://arxiv.org/ps/cs/0604101
+
+There is a paper by Nedialkov and Pryce=20
+
+http://www.cas.mcmaster.ca/~nedialk/PAPERS/DAEs/taylcoeff_I/
+
+that proposes an algorithm for the general problem. Maybe that's the one we
+want...
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Sep 12 11:15:44 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GN9zD-0007qz-SB
+	for mharc-axiom-math@gnu.org; Tue, 12 Sep 2006 11:15:43 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GN9zD-0007pz-5j
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 11:15:43 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GN9zC-0007oX-9u
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 11:15:42 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GN9zC-0007oM-62
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 11:15:42 -0400
+Received: from [128.194.138.12] (helo=pine.cs.tamu.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GNA0i-000796-7e
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 11:17:16 -0400
+Received: from soliton.cs.tamu.edu (soliton.cs.tamu.edu [128.194.146.33])
+	by pine.cs.tamu.edu (8.12.9/8.12.9) with ESMTP id k8CFFeSt002364
+	for <axiom-math@nongnu.org>; Tue, 12 Sep 2006 10:15:40 -0500 (CDT)
+Received: by soliton.cs.tamu.edu (Postfix, from userid 1000)
+	id 601631A984; Tue, 12 Sep 2006 10:16:18 -0500 (CDT)
+Sender: gdr@soliton.cs.tamu.edu
+To: axiom-math@nongnu.org
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+Organization: Texas A&M University, Department of Computer Science
+Date: 12 Sep 2006 10:16:18 -0500
+Message-ID: <87d5a1unct.fsf@soliton.cs.tamu.edu>
+Lines: 51
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Subject: [Axiom-math] Gaussian Integers
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 12 Sep 2006 15:15:43 -0000
+
+
+Hi,
+
+  I thought Axiom had an algebra support for Gaussian Integers.  It
+seems my perception may be wrong...
+OK.  
+
+(6) -> unitNormal(3 + 4 * %i)
+   (6)  [unit= 1,canonical= 3 + 4%i,associate= 1]
+Type: Record(unit: Complex Integer,canonical: Complex Integer,associate: Complex Integer)
+
+(7) -> unitNormal(-3 + 4 * %i)
+(7) -> 
+   (7)  [unit= %i,canonical= 4 + 3%i,associate= - %i]
+Type: Record(unit: Complex Integer,canonical: Complex Integer,associate: Complex Integer)
+
+ Integer)
+(8) -> divide(459 + 9 * %i + 8 - 5 * %i)
+   There are no library operations named divide having 1 argument(s) 
+      though there are 2 exposed operation(s) and 2 unexposed 
+      operation(s) having a different number of arguments. Use HyperDoc
+      Browse, or issue
+                               )what op divide
+      to learn what operations contain " divide " in their names, or 
+      issue
+                             )display op divide
+      to learn more about the available operations.
+ 
+   Cannot find a definition or applicable library operation named 
+      divide with argument type(s) 
+                               Complex Integer
+      
+      Perhaps you should use "@" to indicate the required return type, 
+      or "$" to specify which version of the function you need.
+(8) -> factor(83 + 8 * %i)
+   Loading /usr/local/axiom/mnt/linux/algebra/GAUSSFAC.o for package 
+      GaussianFactorizationPackage 
+   Loading /usr/local/axiom/mnt/linux/algebra/MODRING.o for domain 
+      ModularRing 
+   Loading /usr/local/axiom/mnt/linux/algebra/INTFACT.o for package 
+      IntegerFactorizationPackage 
+   Loading /usr/local/axiom/mnt/linux/algebra/FR.o for domain Factored 
+
+   (8)  - %i(3 + 20%i)(4 + %i)
+                                               Type: Factored Complex Integer
+
+
+Any idea where the divide() for Gaussian Integers is hiding? (none of
+the four  divides seems to be applicable)
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Tue Sep 12 11:22:45 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GNA61-0004uB-Cu
+	for mharc-axiom-math@gnu.org; Tue, 12 Sep 2006 11:22:45 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GNA5z-0004t5-Cg
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 11:22:43 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GNA5x-0004sN-QJ
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 11:22:42 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GNA5x-0004s9-Aq
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 11:22:41 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GNA7T-0007fP-B4
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 11:24:15 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GNA5s-0001TS-1s; Tue, 12 Sep 2006 17:22:36 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GNA5r-0006AO-W9; Tue, 12 Sep 2006 17:22:36 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Gabriel Dos Reis <gdr@cs.tamu.edu>
+Subject: Re: [Axiom-math] Gaussian Integers
+References: <87d5a1unct.fsf@soliton.cs.tamu.edu>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 12 Sep 2006 17:22:35 +0200
+In-Reply-To: <87d5a1unct.fsf@soliton.cs.tamu.edu>
+Message-ID: <9qfyexw1ms.fsf@aquin.mat.univie.ac.at>
+Lines: 9
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 12 Sep 2006 15:22:43 -0000
+
+Gabriel Dos Reis <gdr@cs.tamu.edu> writes:
+
+> (8) -> divide(459 + 9 * %i + 8 - 5 * %i)
+
+divide takes two arguments. Try
+
+divide(459 + 9 * %i, 8 - 5 * %i)
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Sep 12 11:42:54 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GNAPV-00011C-UI
+	for mharc-axiom-math@gnu.org; Tue, 12 Sep 2006 11:42:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GNAPT-000109-TF
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 11:42:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GNAPR-0000yf-W4
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 11:42:51 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GNAPR-0000ya-RN
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 11:42:49 -0400
+Received: from [165.91.22.120] (helo=sr-2-int.cis.tamu.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GNAQx-0001dC-Ex
+	for axiom-math@nongnu.org; Tue, 12 Sep 2006 11:44:24 -0400
+Received: from localhost (localhost.tamu.edu [127.0.0.1])
+	by sr-2-int.cis.tamu.edu (Postfix) with ESMTP id DACA3122F7;
+	Tue, 12 Sep 2006 10:42:47 -0500 (CDT)
+Received: from hobbiton.cs.tamu.edu (hobbiton.cs.tamu.edu [128.194.138.66])
+	by sr-2-int.cis.tamu.edu (Postfix) with ESMTP id 5AB32122F6;
+	Tue, 12 Sep 2006 10:42:47 -0500 (CDT)
+Received: from sun (sun.cs.tamu.edu [128.194.138.51])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by hobbiton.cs.tamu.edu (Postfix) with ESMTP id 6226782B97;
+	Tue, 12 Sep 2006 10:42:46 -0500 (CDT)
+Date: Tue, 12 Sep 2006 10:42:46 -0500 (CDT)
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+Sender: gdr@sun.tamu.edu
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] Gaussian Integers
+In-Reply-To: <9qfyexw1ms.fsf@aquin.mat.univie.ac.at>
+Message-ID: <Pine.GSO.4.58.0609121041450.26763@sun>
+References: <87d5a1unct.fsf@soliton.cs.tamu.edu>
+	<9qfyexw1ms.fsf@aquin.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Virus-Scanned: amavisd-new at tamu.edu
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 12 Sep 2006 15:42:52 -0000
+
+On Tue, 12 Sep 2006, Martin Rubey wrote:
+
+| Gabriel Dos Reis <gdr@cs.tamu.edu> writes:
+|
+| > (8) -> divide(459 + 9 * %i + 8 - 5 * %i)
+|
+| divide takes two arguments.
+
+Doh!  I thought I wrote that comma.  I don't know whether I need more
+coffee or less coffee :-(
+
+| Try
+|
+| divide(459 + 9 * %i, 8 - 5 * %i)
+
+Just works perfectly!  Thanks!
+
+-- Gaby
+
+
+

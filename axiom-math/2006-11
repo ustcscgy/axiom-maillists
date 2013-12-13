@@ -1,0 +1,982 @@
+From MAILER-DAEMON Fri Nov 03 13:37:36 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gg3v6-0006kH-7B
+	for mharc-axiom-math@gnu.org; Fri, 03 Nov 2006 13:37:36 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gg3v4-0006jD-AW
+	for axiom-math@nongnu.org; Fri, 03 Nov 2006 13:37:34 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gg3v0-0006ho-By
+	for axiom-math@nongnu.org; Fri, 03 Nov 2006 13:37:33 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gg3v0-0006hl-4H
+	for axiom-math@nongnu.org; Fri, 03 Nov 2006 13:37:30 -0500
+Received: from [66.249.82.239] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gg3v0-00054b-3R
+	for axiom-math@nongnu.org; Fri, 03 Nov 2006 13:37:30 -0500
+Received: by wx-out-0506.google.com with SMTP id r21so645378wxc
+	for <axiom-math@nongnu.org>; Fri, 03 Nov 2006 10:37:27 -0800 (PST)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=PhOdz1eADTxPWBXXAYEzxttlec5GQC6UpUhV3cz/VCECNR/oH5NZ6hxaNhT1YkJrgEiU+6dGclRA4eGXHUb5X1m+Z1iYrm3ik3l9dsaeXbmEpIQvQCnEQ7R93OkWrPD/Y/byT7NrnJpejmz26nLpuqRiXEB2zNSzrR5KG5qqMgs=
+Received: by 10.70.129.2 with SMTP id b2mr218413wxd.1162579046490;
+	Fri, 03 Nov 2006 10:37:26 -0800 (PST)
+Received: by 10.70.18.18 with HTTP; Fri, 3 Nov 2006 10:37:26 -0800 (PST)
+Message-ID: <8cf963450611031037i7b133306n45d452206a990e17@mail.gmail.com>
+Date: Fri, 3 Nov 2006 13:37:26 -0500
+From: "David Joyner" <wdjoyner@gmail.com>
+To: axiom-math <axiom-math@nongnu.org>
+Subject: Re: [Axiom-math] evaluator for functional equations / CHALLENGE!
+In-Reply-To: <9qpse2hg7q.fsf@aquin.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+References: <9qpse2hg7q.fsf@aquin.mat.univie.ac.at>
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 03 Nov 2006 18:37:34 -0000
+
+Hello:
+
+Does anyone on this list know about the PAFF package for AXIOM
+written by Ga=E9tan Hach=E9? It does Brill-Noether computations, Riemann-Ro=
+ch
+computations, etc.
+
+- David Joyner
+
+
+
+From MAILER-DAEMON Fri Nov 03 13:39:17 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gg3wj-0007Fr-IG
+	for mharc-axiom-math@gnu.org; Fri, 03 Nov 2006 13:39:17 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gg3wi-0007FL-28
+	for axiom-math@nongnu.org; Fri, 03 Nov 2006 13:39:16 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gg3wd-0007E6-B4
+	for axiom-math@nongnu.org; Fri, 03 Nov 2006 13:39:15 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gg3wd-0007E3-5H
+	for axiom-math@nongnu.org; Fri, 03 Nov 2006 13:39:11 -0500
+Received: from [66.249.82.235] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gg3wd-0005QL-4r
+	for axiom-math@nongnu.org; Fri, 03 Nov 2006 13:39:11 -0500
+Received: by wx-out-0506.google.com with SMTP id r21so645959wxc
+	for <axiom-math@nongnu.org>; Fri, 03 Nov 2006 10:39:10 -0800 (PST)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:cc:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=uhAFHkz0vMfGXpIcplmwNiKblM3x9gZYCFn4VGVjEd71if2ZC/jTT3gJIhe1nMhaBLlFPNZ83DhUkfJUhRxnZlezfQP5TXC3HWvm2LAR8uVRY9y8Lmmoa8MCPQm8j3v676Jh/Xtx9GOxgBOtX5ISlIaZjjDtaCuasyYxvhrYBnY=
+Received: by 10.70.44.4 with SMTP id r4mr1019157wxr.1162579150269;
+	Fri, 03 Nov 2006 10:39:10 -0800 (PST)
+Received: by 10.70.18.18 with HTTP; Fri, 3 Nov 2006 10:39:10 -0800 (PST)
+Message-ID: <8cf963450611031039o59c4fe47yd6c0c2e7f723b272@mail.gmail.com>
+Date: Fri, 3 Nov 2006 13:39:10 -0500
+From: "David Joyner" <wdjoyner@gmail.com>
+To: axiom-math <axiom-math@nongnu.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+Cc: 
+Subject: [Axiom-math] PAFF package question
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 03 Nov 2006 18:39:16 -0000
+
+Resend - sorry, in the previous post I messed up the subject line.
+
+ Hello:
+
+ Does anyone on this list know about the PAFF package for AXIOM
+ written by Ga=E9tan Hach=E9? It does Brill-Noether computations, Riemann-R=
+och
+ computations, etc.
+
+ - David Joyner
+
+
+
+From MAILER-DAEMON Sat Nov 04 11:35:02 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GgOU2-0008S2-8I
+	for mharc-axiom-math@gnu.org; Sat, 04 Nov 2006 11:35:02 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GgOTz-0008Nc-Up
+	for axiom-math@nongnu.org; Sat, 04 Nov 2006 11:35:00 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GgOTx-0008He-00
+	for axiom-math@nongnu.org; Sat, 04 Nov 2006 11:34:58 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GgOTw-0008H4-N0
+	for axiom-math@nongnu.org; Sat, 04 Nov 2006 11:34:56 -0500
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GgOTw-0004KE-Fo
+	for axiom-math@nongnu.org; Sat, 04 Nov 2006 11:34:56 -0500
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GgOTq-0001ce-GB; Sat, 04 Nov 2006 17:34:50 +0100
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GgOTq-0004k1-Dl; Sat, 04 Nov 2006 17:34:50 +0100
+Sender: rubey@aquin.mat.univie.ac.at
+To: "David Joyner" <wdjoyner@gmail.com>
+Subject: Re: [Axiom-math] PAFF package question
+References: <8cf963450611031039o59c4fe47yd6c0c2e7f723b272@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 04 Nov 2006 17:34:49 +0100
+In-Reply-To: <8cf963450611031039o59c4fe47yd6c0c2e7f723b272@mail.gmail.com>
+Message-ID: <9q3b8zmaqe.fsf@aquin.mat.univie.ac.at>
+Lines: 13
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-math <axiom-math@nongnu.org>
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 04 Nov 2006 16:35:00 -0000
+
+"David Joyner" <wdjoyner@gmail.com> writes:
+
+> Resend - sorry, in the previous post I messed up the subject line.
+>=20
+>  Hello:
+>=20
+>  Does anyone on this list know about the PAFF package for AXIOM
+>  written by Ga=E9tan Hach=E9? It does Brill-Noether computations, Riemann=
+-Roch
+>  computations, etc.
+
+No, is it available?
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sat Nov 04 11:38:44 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GgOXc-0006PI-LR
+	for mharc-axiom-math@gnu.org; Sat, 04 Nov 2006 11:38:44 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GgOXb-0006Ol-3c
+	for axiom-math@nongnu.org; Sat, 04 Nov 2006 11:38:43 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GgOXZ-0006OJ-N1
+	for axiom-math@nongnu.org; Sat, 04 Nov 2006 11:38:42 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GgOXZ-0006OG-Iw
+	for axiom-math@nongnu.org; Sat, 04 Nov 2006 11:38:41 -0500
+Received: from [66.249.82.227] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GgOXZ-000531-Ly
+	for axiom-math@nongnu.org; Sat, 04 Nov 2006 11:38:41 -0500
+Received: by wx-out-0506.google.com with SMTP id r21so881969wxc
+	for <axiom-math@nongnu.org>; Sat, 04 Nov 2006 08:38:40 -0800 (PST)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
+	b=H7NfdlPH8LrvD47TMsDJF88zFgKtHHiBrNSlr2ufcAXb8dkx+a6BjyEwedzeqhgaegI1Z08+8LmybrgYVgb2IMH54rUBtpAUBFJ+VZKolIK1X7yNGD85Zr3geCYMztMOQLr7q/5MCrKeVgoryjgIFTfSN04KbPfD7LmWM+yOp5g=
+Received: by 10.70.131.19 with SMTP id e19mr745594wxd.1162658320262;
+	Sat, 04 Nov 2006 08:38:40 -0800 (PST)
+Received: from ?192.168.0.107? ( [71.245.164.51])
+	by mx.google.com with ESMTP id 26sm2427058wra.2006.11.04.08.38.39;
+	Sat, 04 Nov 2006 08:38:39 -0800 (PST)
+Message-ID: <454CCC2A.5080007@gmail.com>
+Date: Sat, 04 Nov 2006 12:21:46 -0500
+From: David Joyner <wdjoyner@gmail.com>
+User-Agent: Thunderbird 1.5.0.7 (X11/20060911)
+MIME-Version: 1.0
+To: axiom-math@nongnu.org
+Subject: Re: [Axiom-math] PAFF package question
+References: <8cf963450611031039o59c4fe47yd6c0c2e7f723b272@mail.gmail.com>
+	<9q3b8zmaqe.fsf@aquin.mat.univie.ac.at>
+In-Reply-To: <9q3b8zmaqe.fsf@aquin.mat.univie.ac.at>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+Cc: 
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 04 Nov 2006 16:38:43 -0000
+
+Martin Rubey wrote:
+> "David Joyner" <wdjoyner@gmail.com> writes:
+>
+>   
+>> Resend - sorry, in the previous post I messed up the subject line.
+>>
+>>  Hello:
+>>
+>>  Does anyone on this list know about the PAFF package for AXIOM
+>>  written by Gaétan Haché? It does Brill-Noether computations, Riemann-Roch
+>>  computations, etc.
+>>     
+>
+> No, is it available?
+>
+> Martin
+>
+>
+>   
+There is a web page for it
+http://www-rocq.inria.fr/codes/Gaetan.Hache/PAFF.html
+but I don't know enough about AXIOM to know if it actually works.
+I've been unable to contact the author.
+
+
+
+From MAILER-DAEMON Sun Nov 05 01:39:18 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ggbf4-0004U2-93
+	for mharc-axiom-math@gnu.org; Sun, 05 Nov 2006 01:39:18 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ggbf2-0004SS-4a
+	for axiom-math@nongnu.org; Sun, 05 Nov 2006 01:39:16 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ggbez-0004Ro-L9
+	for axiom-math@nongnu.org; Sun, 05 Nov 2006 01:39:14 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ggbez-0004Rl-Fn
+	for axiom-math@nongnu.org; Sun, 05 Nov 2006 01:39:13 -0500
+Received: from [216.251.41.109] (helo=mail289.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1Ggbez-0007h7-Ee
+	for axiom-math@nongnu.org; Sun, 05 Nov 2006 01:39:13 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail289.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	kA56cq63029437; Sun, 5 Nov 2006 01:39:06 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'David Joyner'" <wdjoyner@gmail.com>
+Subject: RE: [Axiom-math] PAFF package question
+Date: Sun, 5 Nov 2006 01:38:47 -0500
+Message-ID: <018701c700a5$141c20a0$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+In-Reply-To: <454CCC2A.5080007@gmail.com>
+Importance: Normal
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 05 Nov 2006 06:39:16 -0000
+
+On November 4, 2006 12:22 PM David Joyner wrote:
+>=20
+>  Does anyone on this list know about the PAFF package for AXIOM
+>  written by Ga=E9tan Hach=E9? It does Brill-Noether computations,
+>  Riemann-Roch computations, etc.
+>    =20
+>...  =20
+> There is a web page for it
+> http://www-rocq.inria.fr/codes/Gaetan.Hache/PAFF.html
+> but I don't know enough about AXIOM to know if it actually works.
+> I've been unable to contact the author.
+>=20
+
+David,
+
+Thanks for pointing this out.
+
+I don't know anything about the mathematics but, yes the package
+seems to work as documented by the author. See
+
+http://wiki.axiom-developer.org/SandBoxPAFF
+
+It's also in my /home directory on sage.math.washington.edu so you =
+should
+be able run it like this:
+
+  sage -axiom
+  (1) -> )cd /home/page/PAFF/examples
+  (1) -> )lib )dir ../spad
+  (1) -> )lib )dir ../spad
+  (1) -> )read example1
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Sun Nov 12 13:56:28 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GjKVI-0003jw-N5
+	for mharc-axiom-math@gnu.org; Sun, 12 Nov 2006 13:56:28 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GjKVG-0003hv-Kp
+	for axiom-math@nongnu.org; Sun, 12 Nov 2006 13:56:26 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GjKVD-0003hV-D4
+	for axiom-math@nongnu.org; Sun, 12 Nov 2006 13:56:25 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1GjKVD-0003hS-7z; Sun, 12 Nov 2006 13:56:23 -0500
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52)
+	id 1GjKVD-0004jL-6B; Sun, 12 Nov 2006 13:56:23 -0500
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GjKUy-0004qN-Kv; Sun, 12 Nov 2006 19:56:08 +0100
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GjKUy-0008IB-Jn; Sun, 12 Nov 2006 19:56:08 +0100
+Sender: rubey@aquin.mat.univie.ac.at
+To: ludovic.courtes@laas.fr (=?utf-8?b?THVkb3ZpYyBDb3VydMOocw==?=),
+	Renaud.Rioboo@lip6.fr
+References: <87veloiryx.fsf@laas.fr>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 12 Nov 2006 19:56:08 +0100
+In-Reply-To: <87veloiryx.fsf@laas.fr>
+Message-ID: <9q3b8oxznb.fsf@aquin.mat.univie.ac.at>
+Lines: 36
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-math <axiom-math@nongnu.org>, axiom-mail@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Solving inequalities
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 12 Nov 2006 18:56:26 -0000
+
+ludovic.courtes@laas.fr (Ludovic Court=C3=A8s) writes:
+
+> Hello,
+>=20
+> I'm trying to solve an inequality of the following form:
+>=20
+>   find all values of x such that f(x) > 1,
+>     where f(x) is an `Expression Integer'
+>=20
+> `solve' and `radicalSolve' are apparently not helpful here.  Any idea on
+> how to achieve this?
+
+For polynomial f this can be done using "cylindrical algebraic decompositio=
+ns"
+(CADs). Quite a bit of this is actually implemented by Renaud Rioboo, see
+AxiomContributions on MathAction. Unfortunately, some pieces are missing in
+order to solve inequalities.
+
+If you were able to fill the gaps, this would be really great. The algorith=
+m is
+described in Renaud Rioboos thesis. Maybe Renaud could give some instructio=
+ns
+on how to proceed from his packages. Another way to help would be to provide
+explanations for Renaud's stuff, although I guess for you it would make more
+sense to read up on CAD and provide the missing pieces to make it into a
+inequality solver. This would be a really nice thing to have for Axiom!!! M=
+aybe
+Renaud would be able to help you there?
+
+By the way: an implementation exists in Mathematica (it's called
+InequalitySolve there), and in fact, it was able to prove a theorem for me
+once.
+
+> Thanks, and sorry for bothering you,
+
+why exactly should you be sorry? If I wouldn't love to work on axiom/aldor,=
+ I
+wouldn't do it.
+
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Nov 16 03:51:08 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gkcxg-0005ks-Hw
+	for mharc-axiom-math@gnu.org; Thu, 16 Nov 2006 03:51:08 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gkcxe-0005kJ-Ik
+	for axiom-math@nongnu.org; Thu, 16 Nov 2006 03:51:06 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gkcxd-0005ig-24
+	for axiom-math@nongnu.org; Thu, 16 Nov 2006 03:51:06 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Gkcxc-0005iZ-VM; Thu, 16 Nov 2006 03:51:05 -0500
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52)
+	id 1Gkcxd-0005xq-2b; Thu, 16 Nov 2006 03:51:05 -0500
+Received: from [193.170.38.119] (hemmecke@woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	kAG8p0Mq023413
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Thu, 16 Nov 2006 09:51:00 +0100
+Message-ID: <455C26CA.9040803@hemmecke.de>
+Date: Thu, 16 Nov 2006 09:52:26 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.8 (X11/20061025)
+MIME-Version: 1.0
+To: =?ISO-8859-1?Q?Ludovic_Court=E8s?= <ludovic.courtes@laas.fr>
+References: <87veloiryx.fsf@laas.fr> <9q3b8oxznb.fsf@aquin.mat.univie.ac.at>
+	<87zmaryelz.fsf@laas.fr>
+In-Reply-To: <87zmaryelz.fsf@laas.fr>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-math@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Solving inequalities
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 16 Nov 2006 08:51:06 -0000
+
+>>> I'm trying to solve an inequality of the following form:
+>>>
+>>>   find all values of x such that f(x) > 1,
+>>>     where f(x) is an `Expression Integer'
+>>>
+>>> `solve' and `radicalSolve' are apparently not helpful here.  Any idea on
+>>> how to achieve this?
+>> For polynomial f this can be done using "cylindrical algebraic decompositions"
+>> (CADs). Quite a bit of this is actually implemented by Renaud Rioboo, see
+>> AxiomContributions on MathAction. Unfortunately, some pieces are missing in
+>> order to solve inequalities.
+>>
+>> If you were able to fill the gaps, this would be really great.
+> 
+> (Sorry for the late reply.)
+> 
+> Actually, I'm not a mathematician and I'm afraid I wouldn't be able to
+> contribute to it without attending tens of hours of classes on that
+> topic.  ;-)
+
+The problem is, as Martin has already pointed out, that your problem is 
+undecidable if you do not restrict f to a certain class of functions 
+(like for example polynomial functions). So nobody will be able to write 
+a general solver for your problem.
+
+Could you specify they type of functions more clearly, ie, replace 
+"Expression Integer" to some smaller class of functions?
+
+Ralf
+
+
+
+From MAILER-DAEMON Sun Nov 19 17:40:10 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GlvKb-000141-W8
+	for mharc-axiom-math@gnu.org; Sun, 19 Nov 2006 17:40:10 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GkdBN-0003Nz-3T
+	for axiom-math@nongnu.org; Thu, 16 Nov 2006 04:05:17 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GkdBK-0003NL-Or
+	for axiom-math@nongnu.org; Thu, 16 Nov 2006 04:05:16 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GkdBK-0003N8-FP
+	for axiom-math@nongnu.org; Thu, 16 Nov 2006 04:05:14 -0500
+Received: from [80.91.229.2] (helo=ciao.gmane.org)
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA:32)
+	(Exim 4.52) id 1GkdBK-00015i-7d
+	for axiom-math@nongnu.org; Thu, 16 Nov 2006 04:05:14 -0500
+Received: from root by ciao.gmane.org with local (Exim 4.43)
+	id 1GkdB8-0003wU-LN
+	for axiom-math@nongnu.org; Thu, 16 Nov 2006 10:05:02 +0100
+Received: from messiaen.laas.fr ([140.93.21.6])
+	by main.gmane.org with esmtp (Gmexim 0.1 (Debian))
+	id 1AlnuQ-0007hv-00
+	for <axiom-math@nongnu.org>; Thu, 16 Nov 2006 10:05:02 +0100
+Received: from ludovic.courtes by messiaen.laas.fr with local (Gmexim 0.1
+	(Debian)) id 1AlnuQ-0007hv-00
+	for <axiom-math@nongnu.org>; Thu, 16 Nov 2006 10:05:02 +0100
+X-Injected-Via-Gmane: http://gmane.org/
+To: axiom-math@nongnu.org
+From: ludovic.courtes@laas.fr (Ludovic =?iso-8859-1?Q?Court=E8s?=)
+Followup-To: gmane.comp.mathematics.axiom.user
+Date: Thu, 16 Nov 2006 10:00:06 +0100
+Organization: LAAS-CNRS
+Lines: 17
+Message-ID: <87lkmbwyuh.fsf@laas.fr>
+References: <87veloiryx.fsf@laas.fr> <9q3b8oxznb.fsf@aquin.mat.univie.ac.at>
+	<87zmaryelz.fsf@laas.fr> <455C26CA.9040803@hemmecke.de>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Complaints-To: usenet@sea.gmane.org
+X-Gmane-NNTP-Posting-Host: messiaen.laas.fr
+X-URL: http://www.laas.fr/~lcourtes/
+X-Revolutionary-Date: 26 Brumaire an 215 de la =?iso-8859-1?Q?R=E9volution?=
+X-PGP-Key-ID: 0xEB1F5364
+X-PGP-Key: http://www.laas.fr/~lcourtes/ludovic.asc
+X-PGP-Fingerprint: 821D 815D 902A 7EAB 5CEE  D120 7FBA 3D4F EB1F 5364
+X-OS: powerpc-unknown-linux-gnu
+User-Agent: Gnus/5.110006 (No Gnus v0.6) Emacs/21.4 (gnu/linux)
+Cancel-Lock: sha1:x2ftXjhnChwJdsC8fn3cpx787io=
+Sender: news <news@sea.gmane.org>
+X-Mailman-Approved-At: Sun, 19 Nov 2006 17:40:08 -0500
+Cc: axiom-mail@nongnu.org
+Subject: [Axiom-math] Re: [Axiom-mail] Solving inequalities
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 16 Nov 2006 09:05:17 -0000
+
+Hi,
+
+Ralf Hemmecke <ralf@hemmecke.de> writes:
+
+> The problem is, as Martin has already pointed out, that your problem
+> is undecidable if you do not restrict f to a certain class of
+> functions (like for example polynomial functions). So nobody will be
+> able to write a general solver for your problem.
+>
+> Could you specify they type of functions more clearly, ie, replace
+> "Expression Integer" to some smaller class of functions?
+
+Yes, I can restrict it to a `Fraction Polynomial Integer'.
+Does it help?
+
+Thanks,
+Ludovic.
+
+
+
+
+From MAILER-DAEMON Thu Nov 30 09:52:30 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GpnH3-0002rd-KU
+	for mharc-axiom-math@gnu.org; Thu, 30 Nov 2006 09:52:29 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GpnH1-0002ow-JW
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 09:52:27 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GpnGy-0002ms-DG
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 09:52:24 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GpnGx-0002ma-RO
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 09:52:24 -0500
+Received: from [62.4.16.104] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GpnGw-0004eB-FM
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 09:52:22 -0500
+Received: from localhost (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id 1D8C841356
+	for <axiom-math@nongnu.org>; Thu, 30 Nov 2006 15:52:19 +0100 (CET)
+Received: from fmy by localhost with local (Exim 4.63)
+	(envelope-from <fmaltey@nerim.fr>) id 1GpnGs-00027O-Uf
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 15:52:18 +0100
+To: axiom-math@nongnu.org
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 30 Nov 2006 15:52:18 +0100
+Message-ID: <87y7pt7zrx.fsf@nerim.fr>
+Lines: 30
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Subject: [Axiom-math] About rewrited expressions for power, log, exp and so.
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 30 Nov 2006 14:52:28 -0000
+
+Hello,
+
+I try to understand how axiom is sure in Expression domain.
+and what suppositions axiom does.
+
+It seems that axiom makes a lot of fuzzy simplifications.
+Of corse it's possible to delete such rules in elemntry.spad.
+
+But then how can I test if standard exemples of axiom continue to be right
+with a new elemntry.spad ?
+
+    sqrt (u^2)  ---> sqrt (u^2) I agree  sqrt ((-1)^2) = 1
+but (u^a)^(1/a) ---> u          not coherent with a=2
+
+    (u^a)^2     ---> u^(2a)     is right
+but (u^a)^b     ---> u^(ab)     I prefer (u^a)^b
+and (u^2)^a     ---> u^(2a) 
+
+    u^a*u^b     ---> u^a u^b    is right but u^(a+b) is also possible.
+
+The question is the same for asin (sin x), log (exp x), etc.
+For sin it's line 486 in elemntry.spad
+
+What rules might apply axiom for expressions ?
+Is there a reason that theses rules aren't usual mathematic rules ?
+What is the axiom policy ? What is your advice ?
+
+Have a nice day.
+
+Francois
+
+
+
+From MAILER-DAEMON Thu Nov 30 10:58:53 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GpoJI-0002af-Ad
+	for mharc-axiom-math@gnu.org; Thu, 30 Nov 2006 10:58:52 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GpoJG-0002ZC-2M
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 10:58:50 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GpoJA-0002WS-Q0
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 10:58:49 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GpoJA-0002WJ-Gp
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 10:58:44 -0500
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GpoJ9-0006Ry-E0
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 10:58:44 -0500
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GpoIv-0001vx-BR; Thu, 30 Nov 2006 16:58:29 +0100
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GpoIv-0004pV-9m; Thu, 30 Nov 2006 16:58:29 +0100
+Sender: rubey@aquin.mat.univie.ac.at
+To: Francois Maltey <fmaltey@nerim.fr>
+Subject: Re: [Axiom-math] About rewrited expressions for power, log,
+	exp and so.
+References: <87y7pt7zrx.fsf@nerim.fr>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 30 Nov 2006 16:58:26 +0100
+In-Reply-To: <87y7pt7zrx.fsf@nerim.fr>
+Message-ID: <9q7ixdgc4d.fsf@aquin.mat.univie.ac.at>
+Lines: 41
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 30 Nov 2006 15:58:50 -0000
+
+Francois Maltey <fmaltey@nerim.fr> writes:
+
+> Hello,
+> 
+> I try to understand how axiom is sure in Expression domain.
+> and what suppositions axiom does.
+> 
+> It seems that axiom makes a lot of fuzzy simplifications.
+
+yes.
+
+> But then how can I test if standard exemples of axiom continue to be right
+> with a new elemntry.spad ?
+
+Well, I'm still hoping for a unit testing package. But in fact, I wouldn't mind
+if some "standard example" stops working, but in exchange a dozen others start
+working.
+
+The "simplifier" in EXPR is nearly non-existent, and those bits that do exist
+are quite broken.
+
+>     sqrt (u^2)  ---> sqrt (u^2) I agree  sqrt ((-1)^2) = 1
+> but (u^a)^(1/a) ---> u          not coherent with a=2
+
+quite right. In fact, I believe I corrected this behaviour in "hackroot"
+once. I didn't realize that there were other places with that nonsense, too.
+
+> What rules might apply axiom for expressions ?  Is there a reason that theses
+> rules aren't usual mathematic rules ?  What is the axiom policy ? What is
+> your advice ?
+
+My advice is: look at MuPaD and see how things are done there. I think they got
+it right.
+
+Apart from that, implement many good computable domains.
+
+
+Great that you are working on this stuff.
+
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Nov 30 13:04:34 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GpqGw-0008Th-Qh
+	for mharc-axiom-math@gnu.org; Thu, 30 Nov 2006 13:04:34 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GpqGv-0008RP-KG
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 13:04:33 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GpqGt-0008Pk-VF
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 13:04:33 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GpqGt-0008PM-F7
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 13:04:31 -0500
+Received: from [62.4.16.104] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GpqGs-0001MQ-R6
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 13:04:31 -0500
+Received: from localhost (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id D0D104108C;
+	Thu, 30 Nov 2006 19:04:28 +0100 (CET)
+Received: from fmy by localhost with local (Exim 4.63)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1GpqGq-0001Et-QS; Thu, 30 Nov 2006 19:04:28 +0100
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-math] About rewrited expressions for power, log,
+	exp and so.
+References: <87y7pt7zrx.fsf@nerim.fr> <9q7ixdgc4d.fsf@aquin.mat.univie.ac.at>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 30 Nov 2006 19:04:28 +0100
+In-Reply-To: <9q7ixdgc4d.fsf@aquin.mat.univie.ac.at>
+Message-ID: <87fyc0bykz.fsf@nerim.fr>
+Lines: 49
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 30 Nov 2006 18:04:33 -0000
+
+Hello Martin,
+
+> > But then how can I test if standard exemples of axiom continue to be right
+> > with a new elemntry.spad ?
+> 
+> Well, I'm still hoping for a unit testing package. But in fact, I
+> wouldn't mind if some "standard example" stops working, but in
+> exchange a dozen others start working.
+
+So the first thing is to write a such list of exemples.
+I'll begin soon.
+
+> My advice is: look at MuPaD and see how things are done there. I
+> think they got it right.
+
+Mupad was the finest one for that.
+I have enumerate theses properties in my book about mupad.
+I'll take it again for testing and debugging axiom...
+
+And mupad had 2 features which aren't (yet) in axiom expressions :
+
+1/ The assume command : 
+assume (a>1) ; limit (a^x, x=%plusInfinity)            --> %plusInfinity 
+assume (a=1) ; limit (a^x, x=%plusInfinity)            --> 1
+assume (a<1 and -1<a) ; limit (a^x, x=%plusInfinity)   --> 0
+assume (a<-1) ; limit (a^x, x=%plusInfinity)           --> "failed"
+
+2/ the piecewise command :
+solve (a*(a-1)*x=a, x) 
+x = 1/(a-1)   if a in C \setminus {0, 1}
+x in C        if a=0
+x in emptyset if a=1
+
+> Apart from that, implement many good computable domains.
+
+You advise me to write a new domain, 
+not to correct (with a pamphlet file) the historic files ?
+
+What method do you advice ?
+
+I copy the efstruct.spad in a new directory, modify it, comment it,
+compile it and load it at the beginning of the session.
+
+I will complete my expand / rewrite / combine package 
+in order to be coherent too.
+
+Thanks for your interest.
+
+Francois
+
+
+
+From MAILER-DAEMON Thu Nov 30 14:27:52 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GprZY-0008RJ-OD
+	for mharc-axiom-math@gnu.org; Thu, 30 Nov 2006 14:27:52 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GprZX-0008RE-Kh
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 14:27:51 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GprZW-0008Q8-Md
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 14:27:51 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GprZW-0008Po-HH
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 14:27:50 -0500
+Received: from [62.4.17.104] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GprZW-0001bQ-FO
+	for axiom-math@nongnu.org; Thu, 30 Nov 2006 14:27:50 -0500
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by mallaury.nerim.net (Postfix) with ESMTP id 96E084F3C2;
+	Thu, 30 Nov 2006 20:26:59 +0100 (CET)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id kAUJLOwG020074; Thu, 30 Nov 2006 20:21:26 +0100
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	kAUJLOTL020073; Thu, 30 Nov 2006 20:21:24 +0100
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: Francois Maltey <fmaltey@nerim.fr>
+Subject: Re: [Axiom-math] About rewrited expressions for power, log,
+	exp and so.
+References: <87y7pt7zrx.fsf@nerim.fr> <9q7ixdgc4d.fsf@aquin.mat.univie.ac.at>
+	<87fyc0bykz.fsf@nerim.fr>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <87fyc0bykz.fsf@nerim.fr>
+Organization: Integrable Solutions
+Date: 30 Nov 2006 20:21:23 +0100
+Message-ID: <m3lklseo5o.fsf@zeus.integrable-solutions.net>
+Lines: 23
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-math@nongnu.org
+X-BeenThere: axiom-math@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-math.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-math>
+List-Post: <mailto:axiom-math@nongnu.org>
+List-Help: <mailto:axiom-math-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-math>,
+	<mailto:axiom-math-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 30 Nov 2006 19:27:51 -0000
+
+Francois Maltey <fmaltey@nerim.fr> writes:
+
+[...]
+
+| And mupad had 2 features which aren't (yet) in axiom expressions :
+| 
+| 1/ The assume command : 
+| assume (a>1) ; limit (a^x, x=%plusInfinity)            --> %plusInfinity 
+| assume (a=1) ; limit (a^x, x=%plusInfinity)            --> 1
+| assume (a<1 and -1<a) ; limit (a^x, x=%plusInfinity)   --> 0
+| assume (a<-1) ; limit (a^x, x=%plusInfinity)           --> "failed"
+
+maple has same.  This is what Tim refers to in general as "provisos".
+
+| 2/ the piecewise command :
+| solve (a*(a-1)*x=a, x) 
+| x = 1/(a-1)   if a in C \setminus {0, 1}
+| x in C        if a=0
+| x in emptyset if a=1
+
+this can be worked into Axiom, assuming we have provisos.
+
+-- Gaby
+
+
+
