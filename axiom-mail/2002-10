@@ -1,0 +1,122 @@
+From bill.page1@sympatico.ca Thu Oct 31 23:04:15 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 187T2d-0004yI-00
+	for axiom-mail@nongnu.org; Thu, 31 Oct 2002 23:04:15 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 187T2a-0004y6-00
+	for axiom-mail@nongnu.org; Thu, 31 Oct 2002 23:04:14 -0500
+Received: from tomts11.bellnexxia.net ([209.226.175.55] helo=tomts11-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 187T2a-0004y2-00
+	for axiom-mail@nongnu.org; Thu, 31 Oct 2002 23:04:12 -0500
+Received: from [209.226.175.20] by tomts11-srv.bellnexxia.net
+          (InterMail vM.5.01.04.19 201-253-122-122-119-20020516) with SMTP
+          id <20021101040409.UEUV23632.tomts11-srv.bellnexxia.net@[209.226.175.20]>
+          for <axiom-mail@nongnu.org>; Thu, 31 Oct 2002 23:04:09 -0500
+From: Bill Page <bill.page1@sympatico.ca>
+Organization: Daneliuk & Page
+To: <axiom-mail@nongnu.org>
+Date: Thu, 31 Oct 2002 23:04:09 -0500
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Message-Id: <20021101040409.UEUV23632.tomts11-srv.bellnexxia.net@[209.226.175.20]>
+Subject: [Axiom-mail] Status
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Tim Daly,
+
+Thank you very much for all your work to make AXIOM
+available in this manner. I very much look forward
+to becoming involved. Not that I am anxious, or anything
+<grin> but when is your best guess about when the
+source will be available for download?
+
+Best Wishes,
+Bill Page
+
+
+
+
+From daly@idsi.net Thu Oct 31 23:44:11 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 187TfH-0008Qv-00
+	for axiom-mail@nongnu.org; Thu, 31 Oct 2002 23:44:11 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 187TfE-0008Oe-00
+	for axiom-mail@nongnu.org; Thu, 31 Oct 2002 23:44:09 -0500
+Received: from gull.mail.pas.earthlink.net ([207.217.120.84])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 187TfE-0008OA-00; Thu, 31 Oct 2002 23:44:08 -0500
+Received: from dialup-63.215.237.110.dial1.stamford1.level3.net ([63.215.237.110] helo=localhost.localdomain)
+	by gull.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 187TfC-0006R8-00; Thu, 31 Oct 2002 20:44:06 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gA14NXU07468;
+	Thu, 31 Oct 2002 23:23:33 -0500
+Date: Thu, 31 Oct 2002 23:23:33 -0500
+Message-Id: <200211010423.gA14NXU07468@localhost.localdomain>
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca, axiom-developer@nongnu.org
+CC: axiom-mail@nongnu.org
+In-reply-to: 
+	<20021101040409.UEUV23632.tomts11-srv.bellnexxia.net@[209.226.175.20]>
+	(message from Bill Page on Thu, 31 Oct 2002 23:04:09 -0500)
+Subject: Re: [Axiom-mail] Status
+Reply-to: daly@idsi.net
+References: <20021101040409.UEUV23632.tomts11-srv.bellnexxia.net@[209.226.175.20]>
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Actually, I have no estimate. The key to the game is to get the lisp
+running as this is the only part of the system that is new to me.
+Axiom used to be hosted on AKCL, now GCL, and Camm and I have discussed
+rehosting it there. I expect it to run on both as they each have
+advantages. In any case, though, the game is to get it to run anywhere
+and I'm working on that at the moment. There really isn't any point
+to posting the sources as the build process is very complex and
+not documented (as yet. it will be). I've built the first version
+of the lisp and now am working on building the "image" file. 
+Unfortunately there isn't any obvious way to share this task.
+
+The new system build uses noweb (search for noweb Ramsey in google)
+which is a tool to support literate programming. If Axiom has any
+chance to survive it has got to be documented so anyone who is
+willing to put out the effort can learn how to build, modify and
+maintain it. I suggest you look at noweb and I can send you an
+example file or two to bring you up to speed on how I'm using it.
+
+Once the lisp build works locally I can upload the lisp portion
+of the system, you can try to build it, and we can work on 
+correcting the problems with the build.
+
+What is your background? Programmer? Mathematician? What area of
+Axiom strikes your interest?
+
+Tim
+
+
+

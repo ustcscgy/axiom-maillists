@@ -1,0 +1,439 @@
+From MAILER-DAEMON Wed Feb 12 19:01:38 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.10.13)
+	id 18j6oS-0000CP-00
+	for mharc-axiom-mail@gnu.org; Wed, 12 Feb 2003 19:01:12 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10.13)
+	id 18j6oK-00005l-00
+	for axiom-mail@nongnu.org; Wed, 12 Feb 2003 19:01:04 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10.13)
+	id 18j6ne-0008EK-00
+	for axiom-mail@nongnu.org; Wed, 12 Feb 2003 19:00:23 -0500
+Received: from scaup.mail.pas.earthlink.net ([207.217.120.49])
+	by monty-python.gnu.org with esmtp (Exim 4.10.13)
+	id 18j6mu-0007vP-00
+	for axiom-mail@nongnu.org; Wed, 12 Feb 2003 18:59:36 -0500
+Received: from dialup-65.58.188.50.dial1.stamford1.level3.net ([65.58.188.50]
+	helo=localhost.localdomain)
+	by scaup.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18j6mg-0001yy-00; Wed, 12 Feb 2003 15:59:23 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h1CNxJo11995;
+	Wed, 12 Feb 2003 18:59:19 -0500
+Date: Wed, 12 Feb 2003 18:59:19 -0500
+From: root <root@earthlink.net>
+Message-Id: <200302122359.h1CNxJo11995@localhost.localdomain>
+To: axiom-mail@nongnu.org, daly@idsi.net
+Subject: [Axiom-mail] lattice graph program
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1b5
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+X-List-Received-Date: Thu, 13 Feb 2003 00:01:10 -0000
+
+All,
+
+The Axiom type lattice is 20 layers deep (so far) and has roughly 800
+of the >1000 domains classified. It is actually a graph rather than a
+lattice as there are cycles (which have been flattened). We need to
+check the correctness of the lattice once the algebra compiles. Does
+anyone know of a program that can graph such a lattice?
+
+Tim Daly
+daly@idsi.net
+
+
+
+
+From MAILER-DAEMON Thu Feb 13 20:42:18 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.10.13)
+	id 18jUrp-0006sF-00
+	for mharc-axiom-mail@gnu.org; Thu, 13 Feb 2003 20:42:17 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10.13)
+	id 18jUrn-0006qU-00
+	for axiom-mail@nongnu.org; Thu, 13 Feb 2003 20:42:15 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10.13)
+	id 18jUrj-0006dn-00
+	for axiom-mail@nongnu.org; Thu, 13 Feb 2003 20:42:14 -0500
+Received: from gnudist.gnu.org ([199.232.41.7])
+	by monty-python.gnu.org with esmtp (Exim 4.10.13)
+	id 18jUrj-0006ce-00
+	for axiom-mail@nongnu.org; Thu, 13 Feb 2003 20:42:11 -0500
+Received: from falcon.mail.pas.earthlink.net ([207.217.120.74])
+	by gnudist.gnu.org with esmtp (Exim 4.10.13)
+	id 18jUri-0002DE-00
+	for axiom-mail@nongnu.org; Thu, 13 Feb 2003 20:42:10 -0500
+Received: from dialup-65.58.188.42.dial1.stamford1.level3.net ([65.58.188.42]
+	helo=localhost.localdomain)
+	by falcon.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18jUqX-0004TK-00; Thu, 13 Feb 2003 17:40:58 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h1E1epD14190;
+	Thu, 13 Feb 2003 20:40:51 -0500
+Date: Thu, 13 Feb 2003 20:40:51 -0500
+Message-Id: <200302140140.h1E1epD14190@localhost.localdomain>
+From: root <daly@idsi.net>
+To: marc.conrad@luton.ac.uk, axiom-mail@nongnu.org
+cc: daly@idsi.net
+Subject: [Axiom-mail] Re: Axiom information
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1b5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+X-List-Received-Date: Fri, 14 Feb 2003 01:42:16 -0000
+
+
+> Dear Tim 
+> I am planning to give a talk in York on object oriented mechanisms in 
+> computer algebra in the next couple of weeks. Main focus will be 
+> (of course) my own Java project ring.perisic.com, but I have to mention
+> Axiom as well. However I find the information on the "homepage" 
+> http://www.nongnu.org/axiom/ rather confusing. Is there any other
+> citable
+> documentation or information available/accesible describing the 
+> aims and objectives of Axiom etc. i.e. the things you would normally
+> expect on the homepage of a computer algebra system.
+> Best regards, 
+> Marc Conrad
+
+Well, the primary documentation on Axiom is the book by Richard Jenks
+and Robert Sutor "Axiom, The Scientific Computation System" 
+Springer-Verlag, 0-387-97855-0 1992
+
+The language used in Axiom is called Spad (a contraction of Scratchpad,
+the original name for Axiom). During the Scratchpad days we decided to
+rewrite the compiler (for the nth time, as both Axiom and its language
+have always been an ongoing, evolving research effort). The result was
+both the current internal spad compiler, that lives in the interpreter,
+and an external stand-alone compiler written in C. The external compiler
+accepts the spad language (modulo some constraints based on the fact
+that it (a) doesn't have the lisp runtime and (b) can link to non-lisp
+code). The external compiler went thru its own name evolution, called
+A-sharp (A#), AxiomXL, and now Aldor. Aldor programs will run in Axiom
+(assuming you don't use various non-axiom libraries, etc). Look at the
+site www.aldor.org for details. www.aldor.org/docs/HTML/chap21.html
+will bring you to a tutorial I wrote which shows how to create a
+simple stand-alone polynomial type in Aldor.
+
+The appropriate words you might want are at
+http://www.aldor.org/docs/HTML/chap1.html#1
+
+The {spad,aldor} language supports parameterized types (e.g. 
+Matrix(Polynomial(Fraction(Integer))) , that is, an object can
+be a Matrix of Polynomials with coefficients which are Fractions
+of Integers) which are most useful in mathematics. In fact, types
+carry all of the meaning of expressions. The expression 
+
+G82322 (1) -> x:=matrix([[2,2],[2,2]])
+
+        +2  2+
+   (1)  |    |
+        +2  2+
+
+                                                         Type: Matrix Integer
+creates a matrix of integers. Computing (x-x) should give you
+the zero matrix, not the integer 0, as you will get in some systems:
+
+G82322 (2) -> x-x
+
+        +0  0+
+   (2)  |    |
+        +0  0+
+                                                         Type: Matrix Integer
+
+
+Strictly speaking, Axiom is not really an object oriented system in 
+the sense of Smalltalk. In Smalltalk computing 2+3 means that you send the
+"object" 2 the message "+ 3". In Axiom, 2+3 is computed by deciding that
+"2" is of type PositiveInteger, 
+"3" is of type PositiveInteger
+"+" is a function that computes 
+"+(PositiveInteger, PositiveInteger) => PositiveInteger"
+and so it applies the function. 
+
+Axiom, unlike Java, matches not only the argument types but also the
+result type so the matching is much more explicit (that is, painful).
+
+I would tend to argue, although not with much religious fire,
+that Axiom is not an object oriented programming system or language.
+However, it is entirely possible to think of the spad programs as
+"classes" (in the java sense) with "methods" and a private data
+representation. The whole type hierarchy, including all of the
+dozens of data structures, can be thought of as an object-oriented
+type hierarchy. Whether you want to do this depends on your religion.
+I'm a hardcore lisper for most of my career and could care less :-)
+
+As to the homepage of Axiom, yes, it lacks everything at the moment.
+It will all be there eventually. I got a box of "system parts" from
+NAG with various things missing due to legal constraints. The build
+procedures and a general system cleanup are in progress and nearing
+completion. Soon....
+
+Hope this helps. If you have further questions, feel free to ask.
+
+Tim Daly
+daly@idsi.net
+
+
+
+
+From MAILER-DAEMON Fri Feb 14 06:09:12 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.10.13)
+	id 18jdiC-0000jQ-00
+	for mharc-axiom-mail@gnu.org; Fri, 14 Feb 2003 06:08:56 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10.13)
+	id 18jdhx-0000GL-00
+	for axiom-mail@nongnu.org; Fri, 14 Feb 2003 06:08:41 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10.13)
+	id 18jdhr-0008Sh-00
+	for axiom-mail@nongnu.org; Fri, 14 Feb 2003 06:08:37 -0500
+Received: from iona.labri.fr ([147.210.8.143])
+	by monty-python.gnu.org with esmtp (Exim 4.10.13)
+	id 18jdfR-0007Bf-00
+	for axiom-mail@nongnu.org; Fri, 14 Feb 2003 06:06:05 -0500
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by iona.labri.fr (Postfix) with ESMTP
+	id 806907DF0; Fri, 14 Feb 2003 12:05:57 +0100 (CET)
+Received: from invite02.labri.fr (invite02.labri.fr [147.210.9.236])
+	by iona.labri.fr (Postfix) with ESMTP
+	id E0EF87DEF; Fri, 14 Feb 2003 12:05:55 +0100 (CET)
+Date: Fri, 14 Feb 2003 12:11:08 +0100 (CET)
+From: Martin RUBEY <rubey@labri.fr>
+To: root <root@earthlink.net>
+Subject: Re: [Axiom-mail] lattice graph program
+In-Reply-To: <200302122359.h1CNxJo11995@localhost.localdomain>
+Message-ID: <Pine.LNX.4.44.0302141204320.4647-100000@invite02.labri.fr>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=ISO-8859-1
+Content-Transfer-Encoding: 8BIT
+X-Virus-Scanned: by AMaViS new-20020517
+X-Razor-id: ad921ba6b2e86dcc52a0116685a22bb9c5eb40dd
+cc: axiom-mail@nongnu.org
+cc: daly@idsi.net
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1b5
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+X-List-Received-Date: Fri, 14 Feb 2003 11:08:54 -0000
+
+is this what you have in mind?
+
+> I've been messing with XREF a little more, and using graphviz and xref
+> I made a chart which maps the risch.lisp functions, as well as the
+> RZMAC and RATMAC files.  I doubt it's useful for much but I thought I'd
+> upload it in case anyone is interested.  One that is definitely useless
+> is a joint mapping I did of all the rat*.lisp files.  It's way too
+> complex to be useful, but does give you an appreciation for just how
+> complex this program really is.  I uploaded the postscript files in
+> case anyone is curious:
+
+> http://maxima.sourceforge.net/risch.ps
+> http://maxima.sourceforge.net/rat_files_chart.ps
+
+> CY
+
+
+BTW: two questions:
+
+1. Is there an estimate when there will be a first axiom (alpha :-°) 
+release?
+
+2. Why is axiom NOT part of the gnu project? Wouldn't you at least ask 
+for something similar as (from aldor)
+
+If you distribute a modified form of either source or binary code (a) you
+must make the source form of these modification available to Aldor.org (b)
+you grant Aldor.org a royalty-free license to use, modify or redistribute
+your modifications without limitation, and (c) you represent that you are
+legally entitled to grant these rights and that you are not providing
+Aldor.org with any code that violates any law or breaches any contract.
+
+(if there was a choice, I would find it great if axiom would become gpl, 
+but presumably there are lots of legal issues I do not know about...)
+
+Martin
+
+On Wed, 12 Feb 2003, root wrote:
+
+> All,
+> 
+> The Axiom type lattice is 20 layers deep (so far) and has roughly 800
+> of the >1000 domains classified. It is actually a graph rather than a
+> lattice as there are cycles (which have been flattened). We need to
+> check the correctness of the lattice once the algebra compiles. Does
+> anyone know of a program that can graph such a lattice?
+> 
+> Tim Daly
+> daly@idsi.net
+> 
+> 
+> 
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://mail.nongnu.org/mailman/listinfo/axiom-mail
+> 
+
+
+
+
+From MAILER-DAEMON Fri Feb 14 09:16:49 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.10.13)
+	id 18jgdk-0005nD-00
+	for mharc-axiom-mail@gnu.org; Fri, 14 Feb 2003 09:16:32 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10.13)
+	id 18jgdZ-0005Tz-00
+	for axiom-mail@nongnu.org; Fri, 14 Feb 2003 09:16:21 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10.13)
+	id 18jgdD-0005Oe-00
+	for axiom-mail@nongnu.org; Fri, 14 Feb 2003 09:16:00 -0500
+Received: from gull.mail.pas.earthlink.net ([207.217.120.84])
+	by monty-python.gnu.org with esmtp (Exim 4.10.13)
+	id 18jgd5-0005Iy-00; Fri, 14 Feb 2003 09:15:51 -0500
+Received: from dialup-63.215.234.83.dial1.stamford1.level3.net
+	([63.215.234.83] helo=localhost.localdomain)
+	by gull.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18jgd2-0003kG-00; Fri, 14 Feb 2003 06:15:48 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h1EEFgF14905;
+	Fri, 14 Feb 2003 09:15:42 -0500
+Date: Fri, 14 Feb 2003 09:15:42 -0500
+Message-Id: <200302141415.h1EEFgF14905@localhost.localdomain>
+From: root <daly@idsi.net>
+To: rubey@labri.fr
+In-reply-to: <Pine.LNX.4.44.0302141204320.4647-100000@invite02.labri.fr>
+	(message from Martin RUBEY on Fri, 14 Feb 2003 12:11:08 +0100 (CET))
+Subject: Re: [Axiom-mail] lattice graph program
+References: <Pine.LNX.4.44.0302141204320.4647-100000@invite02.labri.fr>
+cc: axiom-mail@nongnu.org
+cc: daly@idsi.net
+cc: axiom-developer@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1b5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+X-List-Received-Date: Fri, 14 Feb 2003 14:16:30 -0000
+
+
+Martin Rubey wrote:
+> is this what you have in mind?
+
+> > I've been messing with XREF a little more, and using graphviz and xref
+> > I made a chart which maps the risch.lisp functions, as well as the
+> > RZMAC and RATMAC files.  I doubt it's useful for much but I thought I'd
+> > upload it in case anyone is interested.  One that is definitely useless
+> > is a joint mapping I did of all the rat*.lisp files.  It's way too
+> > complex to be useful, but does give you an appreciation for just how
+> > complex this program really is.  I uploaded the postscript files in
+> > case anyone is curious:
+> 
+> > http://maxima.sourceforge.net/risch.ps
+> > http://maxima.sourceforge.net/rat_files_chart.ps
+> 
+> > CY
+
+I don't know but I'll check into that. Thanks.
+
+
+> BTW: two questions:
+> 
+> 1. Is there an estimate when there will be a first axiom (alpha :-°) 
+> release?
+
+The first release that includes compiled algebra code will happen this
+weekend. I've finished the remaining domains and, except for a few
+that failed to compile, the whole interpreter/compiler/algebra code
+will be available to developers. Once some developers have
+successfully compiled it I'll turn my attention to releasing the same
+codebase on savannah. I've been working on a private CVS so I can make
+my initial mistakes there. Now that Axiom compiles algebra from
+scratch it is becoming usable. Of course, "usable" is questionable as
+it is nowhere near the version that NAG shipped. Much work needs to be
+done both to fix up the algebra layer, to build the rest of the code,
+to clean up the docs, etc. However, the algebra is the important part.
+
+I've done almost no checking of the code at any level except that it
+compiles and builds properly. There is a tremendous amount of work
+just to remaining to check the code so don't assume that this is a
+finished release in any sense.
+
+> 
+> 2. Why is axiom NOT part of the gnu project? Wouldn't you at least ask 
+> for something similar as (from aldor)
+
+The code was released under modified BSD. That makes it both free and
+open source in the technical sense. The GPL license was not chosen because
+of various issues. Some of the discussion about the license still exists
+at the original axiom site (www.earthlink.net/~jgg964/axiom.html).
+
+Aldor is under its own license. Contact www.aldor.org for details.
+The Aldor software is a separate effort of which, so far, I'm not a
+developer. 
+
+> 
+> If you distribute a modified form of either source or binary code (a) you
+> must make the source form of these modification available to Aldor.org (b)
+> you grant Aldor.org a royalty-free license to use, modify or redistribute
+> your modifications without limitation, and (c) you represent that you are
+> legally entitled to grant these rights and that you are not providing
+> Aldor.org with any code that violates any law or breaches any contract.
+
+I'm confused about the intent of the above parpagraph. Axiom source code
+is (or will be) freely available to everyone. It isn't usable in the
+current state as it is just a "box of parts". I'm automating the build
+process so anyone can build a working system. This involves many (8, so far)
+layers of code, some of it self-referencing and circular.
+
+As the build procedures begin to work I'm releasing the code. Aldor
+developers, as well as anyone else, are free to do anything with that
+code including NOT making their changes available (per mBSD). I expect
+to work closely with the Aldor group in the future. 
+
+> 
+> (if there was a choice, I would find it great if axiom would become gpl, 
+> but presumably there are lots of legal issues I do not know about...)
+> 
+> Martin
+> 
+
+Axiom code is 30 years worth of work by about 100 people and went thru
+two companies (IBM and NAG). Both have been extremely generous in open
+sourcing the code. The choice of modified BSD makes the code as free as
+it can be. 
+
+Tim Daly
+daly@idsi.net
+
+
+
+
+

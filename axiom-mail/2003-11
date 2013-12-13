@@ -1,0 +1,1284 @@
+From MAILER-DAEMON Sun Nov 09 12:16:28 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AItAq-0002hR-EY
+	for mharc-axiom-mail@gnu.org; Sun, 09 Nov 2003 12:16:28 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AItAo-0002gU-1s
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 12:16:26 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AItAH-0002cB-9n
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 12:16:24 -0500
+Received: from [193.249.56.60] (helo=Pitou.supernaze)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AIt8T-0002G4-Tn
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 12:14:02 -0500
+Received: from Pitou.supernaze (Pitou.supernaze [127.0.0.1])
+	by Pitou.supernaze (Postfix) with SMTP id 0C81B18AE
+	for <axiom-mail@nongnu.org>; Sun,  9 Nov 2003 11:30:56 +0100 (CET)
+Date: Sun, 9 Nov 2003 11:30:55 +0100
+From: Pierre Gnaedig <pierre.gnaedig@laposte.net>
+To: axiom-mail@nongnu.org
+Message-Id: <20031109113055.3dd8ee06.pierre.gnaedig@laposte.net>
+Organization: Tsss..
+X-Mailer: Sylpheed version 0.9.4claws (GTK+ 1.2.10; i386-unknown-freebsd4.4)
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-15
+Content-Transfer-Encoding: quoted-printable
+Subject: [Axiom-mail] Compiling Axiom on FreeBSD
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 09 Nov 2003 17:16:27 -0000
+
+Hello everybody,
+
+I wondered if someone succeeded compiling Axiom on FreeBSD?
+If true, what difficulties, issues was for it.
+
+Greetings,
+Pierre.
+
+--=20
+GA: pas assez convivial et surtout ce qui me gene le plus, c'est
+GA: que linux c'est trop un systeme de droite.
+HS: linux est en train d'etre r=E9cuper=E9 politiquement par DL
+   -+- Hans in Guide du linuxien pervers : "ST serait il un virus ?" -+-
+
+
+
+From MAILER-DAEMON Sun Nov 09 13:00:19 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AItrG-0006sS-Te
+	for mharc-axiom-mail@gnu.org; Sun, 09 Nov 2003 13:00:18 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AItrD-0006s4-N9
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 13:00:15 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AItqh-0006Ym-NA
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 13:00:14 -0500
+Received: from [207.115.63.103] (helo=pimout4-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AItqh-0006Yj-EQ
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 12:59:43 -0500
+Received: from localhost.localdomain (251.26.252.64.snet.net [64.252.26.251])
+	by pimout4-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hA9GwGIj141960; Sun, 9 Nov 2003 11:58:17 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hA9GvVH09193;
+	Sun, 9 Nov 2003 11:57:31 -0500
+Date: Sun, 9 Nov 2003 11:57:31 -0500
+Message-Id: <200311091657.hA9GvVH09193@localhost.localdomain>
+From: root <daly@idsi.net>
+To: pierre.gnaedig@laposte.net
+In-reply-to: <20031109113055.3dd8ee06.pierre.gnaedig@laposte.net> (message
+	from Pierre Gnaedig on Sun, 9 Nov 2003 11:30:55 +0100)
+Subject: Re: [Axiom-mail] Compiling Axiom on FreeBSD
+References: <20031109113055.3dd8ee06.pierre.gnaedig@laposte.net>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 09 Nov 2003 18:00:16 -0000
+
+I tried compiling Axiom on FreeBSD but the makefiles failed.
+I tried rewriting the makefiles but decided I don't really
+understand BSD at all. It was most frustrating as I want this
+to build on *BSD systems.
+
+Tim
+
+
+
+From MAILER-DAEMON Sun Nov 09 13:12:13 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AIu2n-0003sR-Gm
+	for mharc-axiom-mail@gnu.org; Sun, 09 Nov 2003 13:12:13 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AIu2k-0003s6-Ne
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 13:12:10 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AIu2D-0003k9-Ur
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 13:12:09 -0500
+Received: from [194.242.157.42] (helo=storm.FreeBSD.org.uk)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1AIu2D-0003jj-HH
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 13:11:37 -0500
+Received: from storm.FreeBSD.org.uk (Ugrondar@localhost [127.0.0.1])
+	by storm.FreeBSD.org.uk (8.12.9p2/8.12.9) with ESMTP id hA9HAAMK036624; 
+	Sun, 9 Nov 2003 17:10:10 GMT (envelope-from mark@grondar.org)
+Received: (from Ugrondar@localhost)
+	by storm.FreeBSD.org.uk (8.12.9p2/8.12.9/Submit) with UUCP id
+	hA9HAA7J036623; Sun, 9 Nov 2003 17:10:10 GMT
+	(envelope-from mark@grondar.org)
+X-Authentication-Warning: storm.FreeBSD.org.uk: Ugrondar set sender to
+	mark@grondar.org using -f
+Received: from grondar.org (localhost [127.0.0.1])
+	by grimreaper.grondar.org (8.12.10/8.12.10) with ESMTP id
+	hA9H4u4L000783; Sun, 9 Nov 2003 17:04:56 GMT
+	(envelope-from mark@grondar.org)
+From: Mark Murray <mark@grondar.org>
+Message-Id: <200311091704.hA9H4u4L000783@grimreaper.grondar.org>
+To: Pierre Gnaedig <pierre.gnaedig@laposte.net>
+Subject: Re: [Axiom-mail] Compiling Axiom on FreeBSD 
+In-Reply-To: Your message of "Sun, 09 Nov 2003 11:30:55 +0100."
+	<20031109113055.3dd8ee06.pierre.gnaedig@laposte.net> 
+Date: Sun, 09 Nov 2003 17:04:56 +0000
+Sender: mark@grondar.org
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 09 Nov 2003 18:12:11 -0000
+
+Pierre Gnaedig writes:
+> I wondered if someone succeeded compiling Axiom on FreeBSD?
+> If true, what difficulties, issues was for it.
+
+Yeah. I have it going.
+
+Right now, the build is very manual, so I'm reluctant to distribute
+it as I'm not keen to provide tech support for getting it to finish.
+
+I'm using a somewhat hacked GCL-HEAD/GCL-CURRENT. I hope to be able
+to distribute my work in the shortish term.
+
+M
+--
+Mark Murray
+iumop ap!sdn w,I idlaH
+
+
+
+From MAILER-DAEMON Sun Nov 09 13:21:22 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AIuBd-0005kH-SM
+	for mharc-axiom-mail@gnu.org; Sun, 09 Nov 2003 13:21:21 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AIuBc-0005jf-55
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 13:21:20 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AIuB5-0005WA-7z
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 13:21:19 -0500
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AIu93-00055k-5k
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 13:18:41 -0500
+Received: from localhost.localdomain (251.26.252.64.snet.net [64.252.26.251])
+	by pimout3-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hA9HGt7q024094; Sun, 9 Nov 2003 12:16:56 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hA9HGA109267;
+	Sun, 9 Nov 2003 12:16:10 -0500
+Date: Sun, 9 Nov 2003 12:16:10 -0500
+Message-Id: <200311091716.hA9HGA109267@localhost.localdomain>
+From: root <daly@idsi.net>
+To: mark@grondar.org
+In-reply-to: <200311091704.hA9H4u4L000783@grimreaper.grondar.org> (message
+	from Mark Murray on Sun, 09 Nov 2003 17:04:56 +0000)
+Subject: Re: [Axiom-mail] Compiling Axiom on FreeBSD
+References: <200311091704.hA9H4u4L000783@grimreaper.grondar.org>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 09 Nov 2003 18:21:20 -0000
+
+Mark,
+
+If you save a console (hopefully an emacs session?) from the build
+I'd find it most useful. It would give me clues about what you needed
+to do to build it. I could try the same things on the BSD system I
+can access. I'd be happy to support it if I could figure out how
+to build it in the first place.
+
+Tim
+
+
+
+From MAILER-DAEMON Sun Nov 09 15:07:23 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AIvq5-0002LM-Nl
+	for mharc-axiom-mail@gnu.org; Sun, 09 Nov 2003 15:07:13 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AIvq3-0002Ke-1f
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 15:07:11 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AIvpW-00027M-Oy
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 15:07:09 -0500
+Received: from [194.242.157.42] (helo=storm.FreeBSD.org.uk)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1AIvpW-000278-Ce
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 15:06:38 -0500
+Received: from storm.FreeBSD.org.uk (Ugrondar@localhost [127.0.0.1])
+	by storm.FreeBSD.org.uk (8.12.9p2/8.12.9) with ESMTP id hA9J57MK037518; 
+	Sun, 9 Nov 2003 19:05:07 GMT (envelope-from mark@grondar.org)
+Received: (from Ugrondar@localhost)
+	by storm.FreeBSD.org.uk (8.12.9p2/8.12.9/Submit) with UUCP id
+	hA9J57Qq037517; Sun, 9 Nov 2003 19:05:07 GMT
+	(envelope-from mark@grondar.org)
+X-Authentication-Warning: storm.FreeBSD.org.uk: Ugrondar set sender to
+	mark@grondar.org using -f
+Received: from grondar.org (localhost [127.0.0.1])
+	by grimreaper.grondar.org (8.12.10/8.12.10) with ESMTP id
+	hA9J1f4L001422; Sun, 9 Nov 2003 19:01:41 GMT
+	(envelope-from mark@grondar.org)
+From: Mark Murray <mark@grondar.org>
+Message-Id: <200311091901.hA9J1f4L001422@grimreaper.grondar.org>
+To: daly@idsi.net
+Subject: Re: [Axiom-mail] Compiling Axiom on FreeBSD 
+In-Reply-To: Your message of "Sun, 09 Nov 2003 11:57:31 EST."
+	<200311091657.hA9GvVH09193@localhost.localdomain> 
+Date: Sun, 09 Nov 2003 19:01:41 +0000
+Sender: mark@grondar.org
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 09 Nov 2003 20:07:11 -0000
+
+root writes:
+> I tried compiling Axiom on FreeBSD but the makefiles failed.
+> I tried rewriting the makefiles but decided I don't really
+> understand BSD at all. It was most frustrating as I want this
+> to build on *BSD systems.
+
+It almost works, but you have to use GNU make, installable as
+a port.
+
+You need to change all intances of 'make foo ...' into
+'${MAKE} foo ...' in your makefiles, including in noweb.
+
+After that, the errors given by "gmake GCLVERSION=...." are
+easyish to fix.
+
+M
+--
+Mark Murray
+iumop ap!sdn w,I idlaH
+
+
+
+From MAILER-DAEMON Sun Nov 09 15:12:12 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AIvut-0004jd-HF
+	for mharc-axiom-mail@gnu.org; Sun, 09 Nov 2003 15:12:11 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AIvur-0004jE-Jm
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 15:12:09 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AIvuL-0004cf-0Q
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 15:12:08 -0500
+Received: from [194.242.157.42] (helo=storm.FreeBSD.org.uk)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1AIvuI-0004cT-My
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 15:11:34 -0500
+Received: from storm.FreeBSD.org.uk (Ugrondar@localhost [127.0.0.1])
+	by storm.FreeBSD.org.uk (8.12.9p2/8.12.9) with ESMTP id hA9JA7MK037554; 
+	Sun, 9 Nov 2003 19:10:07 GMT (envelope-from mark@grondar.org)
+Received: (from Ugrondar@localhost)
+	by storm.FreeBSD.org.uk (8.12.9p2/8.12.9/Submit) with UUCP id
+	hA9JA7NW037553; Sun, 9 Nov 2003 19:10:07 GMT
+	(envelope-from mark@grondar.org)
+X-Authentication-Warning: storm.FreeBSD.org.uk: Ugrondar set sender to
+	mark@grondar.org using -f
+Received: from grondar.org (localhost [127.0.0.1])
+	by grimreaper.grondar.org (8.12.10/8.12.10) with ESMTP id
+	hA9J5M4L001450; Sun, 9 Nov 2003 19:05:22 GMT
+	(envelope-from mark@grondar.org)
+From: Mark Murray <mark@grondar.org>
+Message-Id: <200311091905.hA9J5M4L001450@grimreaper.grondar.org>
+To: daly@idsi.net
+Subject: Re: [Axiom-mail] Compiling Axiom on FreeBSD 
+In-Reply-To: Your message of "Sun, 09 Nov 2003 12:16:10 EST."
+	<200311091716.hA9HGA109267@localhost.localdomain> 
+Date: Sun, 09 Nov 2003 19:05:22 +0000
+Sender: mark@grondar.org
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 09 Nov 2003 20:12:10 -0000
+
+root writes:
+> Mark,
+> 
+> If you save a console (hopefully an emacs session?) from the build
+> I'd find it most useful. It would give me clues about what you needed
+> to do to build it. I could try the same things on the BSD system I
+> can access. I'd be happy to support it if I could figure out how
+> to build it in the first place.
+
+Can I send you my diffs? I'm using the CVS repository, so generating
+diffs is easy. The only separate diff is for noweb (any chance of untaring
+that and checking it in, if you are planning to fork it?)
+
+M
+--
+Mark Murray
+iumop ap!sdn w,I idlaH
+
+
+
+From MAILER-DAEMON Sun Nov 09 15:36:35 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AIwIV-0006zS-6E
+	for mharc-axiom-mail@gnu.org; Sun, 09 Nov 2003 15:36:35 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AIwIT-0006zM-3d
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 15:36:33 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AIwHw-0006tg-1H
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 15:36:31 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AIwHv-0006tZ-OA
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 15:35:59 -0500
+Received: from localhost.localdomain (251.26.252.64.snet.net [64.252.26.251])
+	by pimout2-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hA9JYKC7263650; Sun, 9 Nov 2003 14:34:20 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hA9JXYj09342;
+	Sun, 9 Nov 2003 14:33:34 -0500
+Date: Sun, 9 Nov 2003 14:33:34 -0500
+Message-Id: <200311091933.hA9JXYj09342@localhost.localdomain>
+From: root <daly@idsi.net>
+To: mark@grondar.org
+In-reply-to: <200311091905.hA9J5M4L001450@grimreaper.grondar.org> (message
+	from Mark Murray on Sun, 09 Nov 2003 19:05:22 +0000)
+Subject: Re: [Axiom-mail] Compiling Axiom on FreeBSD
+References: <200311091905.hA9J5M4L001450@grimreaper.grondar.org>
+Cc: daly@idsi.net, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 09 Nov 2003 20:36:33 -0000
+
+Mark,
+
+The diffs would be best, actually. Can you diff them using:
+  diff -Naur oldfile newfile >newfile.patch
+
+
+In general, I don't fork other packages. The scheme is to pick a
+particular version (normally the latest if it works) and put a
+tar-gzipped copy of the sources in the zips directory. Make untars,
+applies Axiom patches, configures, and makes the other packages.
+
+This gets around a lot of issues as it makes the original sources
+available, makes clear what Axiom needs to patch, and makes sure
+that the packages run on the current install since they are built
+from sources. 
+
+As I find things to patch I'll generally contact the maintainer of the
+packages and ask them to accept them. Some patches are so Axiom
+specific that it makes no sense and some are just not something the
+maintainers would ever want. So the Axiom versions are not forks in
+any traditional sense as we are trying hard to track the standard
+packaage builds and keep up to date. For example we just moved from
+GCL-2.5.2 to GCL-2.6.1 by replacing the tgz, removing accepted patches
+and porting Axiom specific patches.  It all went rather smoothly.
+
+For noweb I do the same thing. I'll apply your patches to noweb's
+makefiles before I execute them. You'll see the patches show up
+in the zips directory with names ending in .patch. These will be
+applied (and explained) in the top-level Makefile.
+
+Tim
+
+
+
+
+
+From MAILER-DAEMON Sun Nov 09 15:39:43 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AIwLX-0008Jv-CJ
+	for mharc-axiom-mail@gnu.org; Sun, 09 Nov 2003 15:39:43 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AIwLU-0008Gt-HB
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 15:39:40 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AIwKx-000841-7W
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 15:39:39 -0500
+Received: from [207.115.63.103] (helo=pimout4-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AIwKw-00083w-Vu
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 15:39:07 -0500
+Received: from localhost.localdomain (251.26.252.64.snet.net [64.252.26.251])
+	by pimout4-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hA9JbYIj151072; Sun, 9 Nov 2003 14:37:35 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hA9Jann09352;
+	Sun, 9 Nov 2003 14:36:49 -0500
+Date: Sun, 9 Nov 2003 14:36:49 -0500
+Message-Id: <200311091936.hA9Jann09352@localhost.localdomain>
+From: root <daly@idsi.net>
+To: mark@grondar.org
+In-reply-to: <200311091905.hA9J5M4L001450@grimreaper.grondar.org> (message
+	from Mark Murray on Sun, 09 Nov 2003 19:05:22 +0000)
+Subject: Re: [Axiom-mail] Compiling Axiom on FreeBSD
+References: <200311091905.hA9J5M4L001450@grimreaper.grondar.org>
+Cc: daly@idsi.net, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 09 Nov 2003 20:39:41 -0000
+
+Mark,
+
+We should probably move this discussion to axiom-developer@nongnu.org
+rather than axiom-mail@nongnu.org.
+
+Tim
+
+
+
+
+
+From MAILER-DAEMON Sun Nov 09 16:28:37 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AIx6q-0004Ro-JF
+	for mharc-axiom-mail@gnu.org; Sun, 09 Nov 2003 16:28:36 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AIx6o-0004NV-9x
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 16:28:34 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AIx6H-0003cf-5g
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 16:28:32 -0500
+Received: from [194.242.157.42] (helo=storm.FreeBSD.org.uk)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1AIx50-0002z4-AH
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 16:26:42 -0500
+Received: from storm.FreeBSD.org.uk (Ugrondar@localhost [127.0.0.1])
+	by storm.FreeBSD.org.uk (8.12.9p2/8.12.9) with ESMTP id hA9KPBMK038177; 
+	Sun, 9 Nov 2003 20:25:11 GMT (envelope-from mark@grondar.org)
+Received: (from Ugrondar@localhost)
+	by storm.FreeBSD.org.uk (8.12.9p2/8.12.9/Submit) with UUCP id
+	hA9KPBmX038176; Sun, 9 Nov 2003 20:25:11 GMT
+	(envelope-from mark@grondar.org)
+X-Authentication-Warning: storm.FreeBSD.org.uk: Ugrondar set sender to
+	mark@grondar.org using -f
+Received: from grondar.org (localhost [127.0.0.1])
+	by grimreaper.grondar.org (8.12.10/8.12.10) with ESMTP id
+	hA9KOA4L002168; Sun, 9 Nov 2003 20:24:10 GMT
+	(envelope-from mark@grondar.org)
+From: Mark Murray <mark@grondar.org>
+Message-Id: <200311092024.hA9KOA4L002168@grimreaper.grondar.org>
+To: daly@idsi.net
+Subject: Re: [Axiom-mail] Compiling Axiom on FreeBSD 
+In-Reply-To: Your message of "Sun, 09 Nov 2003 14:36:49 EST."
+	<200311091936.hA9Jann09352@localhost.localdomain> 
+Date: Sun, 09 Nov 2003 20:24:10 +0000
+Sender: mark@grondar.org
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 09 Nov 2003 21:28:35 -0000
+
+root writes:
+> Mark,
+> 
+> We should probably move this discussion to axiom-developer@nongnu.org
+> rather than axiom-mail@nongnu.org.
+
+Roger that!
+
+M
+--
+Mark Murray
+iumop ap!sdn w,I idlaH
+
+
+
+From MAILER-DAEMON Sun Nov 09 16:28:46 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AIx70-0004a6-Av
+	for mharc-axiom-mail@gnu.org; Sun, 09 Nov 2003 16:28:46 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AIx6y-0004Zc-0H
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 16:28:44 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AIx6R-0003ri-75
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 16:28:42 -0500
+Received: from [194.242.157.42] (helo=storm.FreeBSD.org.uk)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1AIx50-0002z2-AH
+	for axiom-mail@nongnu.org; Sun, 09 Nov 2003 16:26:42 -0500
+Received: from storm.FreeBSD.org.uk (Ugrondar@localhost [127.0.0.1])
+	by storm.FreeBSD.org.uk (8.12.9p2/8.12.9) with ESMTP id hA9KPAMK038172; 
+	Sun, 9 Nov 2003 20:25:10 GMT (envelope-from mark@grondar.org)
+Received: (from Ugrondar@localhost)
+	by storm.FreeBSD.org.uk (8.12.9p2/8.12.9/Submit) with UUCP id
+	hA9KPAP5038171; Sun, 9 Nov 2003 20:25:10 GMT
+	(envelope-from mark@grondar.org)
+X-Authentication-Warning: storm.FreeBSD.org.uk: Ugrondar set sender to
+	mark@grondar.org using -f
+Received: from grondar.org (localhost [127.0.0.1])
+	by grimreaper.grondar.org (8.12.10/8.12.10) with ESMTP id
+	hA9KNB4L002144; Sun, 9 Nov 2003 20:23:11 GMT
+	(envelope-from mark@grondar.org)
+From: Mark Murray <mark@grondar.org>
+Message-Id: <200311092023.hA9KNB4L002144@grimreaper.grondar.org>
+To: daly@idsi.net
+Subject: Re: [Axiom-mail] Compiling Axiom on FreeBSD 
+In-Reply-To: Your message of "Sun, 09 Nov 2003 14:33:34 EST."
+	<200311091933.hA9JXYj09342@localhost.localdomain> 
+Date: Sun, 09 Nov 2003 20:23:11 +0000
+Sender: mark@grondar.org
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 09 Nov 2003 21:28:44 -0000
+
+root writes:
+> Mark,
+> 
+> The diffs would be best, actually. Can you diff them using:
+>   diff -Naur oldfile newfile >newfile.patch
+
+Er, can I do a "cvs -q diff -udN > file.patch" instead? :-)
+
+> In general, I don't fork other packages. The scheme is to pick a
+> particular version (normally the latest if it works) and put a
+> tar-gzipped copy of the sources in the zips directory. Make untars,
+> applies Axiom patches, configures, and makes the other packages.
+
+(I thought we had this discussion before?) I seem to recall that
+you were planning to extend noweb?
+
+Having the package as a non-severable bolt-on-the-side makes the
+porting process much harder. FreeBSD already has a functional
+noweb port, and the noweb that comes with Axiom is broken, so we
+either need to patch noweb (done at the moment on the belief that
+it was going to be forked), or just cut off, which is much preferable.
+Would it be possube to make the cutting off option easier?
+
+Another example, the GCL that you have is completely non-functional
+for FreeBSD, without a rather large patch set. OTOH, FreeBSD has
+a perfectly functional port of GCL-2.5.3, and 2.6.1 and 2.7.* are
+on the way.
+
+In order to build for FreeBSD, I had to work quite hard to make the
+build happen, and I still haven't gotten it clean.
+
+> This gets around a lot of issues as it makes the original sources
+> available, makes clear what Axiom needs to patch, and makes sure
+> that the packages run on the current install since they are built
+> from sources. 
+
+I hear waht you are saying, in that it does make certain things easier
+to track, but it makes porting issues much more complicated.
+
+> As I find things to patch I'll generally contact the maintainer of the
+> packages and ask them to accept them. Some patches are so Axiom
+> specific that it makes no sense and some are just not something the
+> maintainers would ever want. So the Axiom versions are not forks in
+> any traditional sense as we are trying hard to track the standard
+> packaage builds and keep up to date. For example we just moved from
+> GCL-2.5.2 to GCL-2.6.1 by replacing the tgz, removing accepted patches
+> and porting Axiom specific patches.  It all went rather smoothly.
+
+The GCL issue broke me :-)
+
+> For noweb I do the same thing. I'll apply your patches to noweb's
+> makefiles before I execute them. You'll see the patches show up
+> in the zips directory with names ending in .patch. These will be
+> applied (and explained) in the top-level Makefile.
+
+If there is no plan to fork noweb, then it makes much more sense for
+me to force use of a local port (already live and well).
+
+M
+--
+Mark Murray
+iumop ap!sdn w,I idlaH
+
+
+
+From MAILER-DAEMON Sat Nov 15 21:14:38 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1ALCQw-0004GM-2g
+	for mharc-axiom-mail@gnu.org; Sat, 15 Nov 2003 21:14:38 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1ALCQt-0004Fd-4S
+	for axiom-mail@nongnu.org; Sat, 15 Nov 2003 21:14:35 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1ALCQN-0003x0-Cn
+	for axiom-mail@nongnu.org; Sat, 15 Nov 2003 21:14:34 -0500
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1ALCQN-0003wu-3h; Sat, 15 Nov 2003 21:14:03 -0500
+Received: from localhost.localdomain (55.114.252.64.snet.net [64.252.114.55])
+	by pimout1-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hAG1CbgJ045908; Sat, 15 Nov 2003 20:12:37 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hAG1BiN18335;
+	Sat, 15 Nov 2003 20:11:44 -0500
+Date: Sat, 15 Nov 2003 20:11:44 -0500
+Message-Id: <200311160111.hAG1BiN18335@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Cc: daly@idsi.net
+Subject: [Axiom-mail] Mailing list note
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 16 Nov 2003 02:14:35 -0000
+
+I maintained a mailing list of people who were interested in Axiom.
+The list was quite active before the source code was released but
+died waiting for something to happen. I promised that I'd send everyone
+on that list a note when Axiom became available. That was last year.
+
+Today I hand wrote notes to approximately 200 people. I tried to
+skip over people who were already subscribed to these lists but I'm
+not certain I was successful. To anyone already subscribed I'm sorry
+for telling you what you already know.
+
+Tim
+
+
+
+
+From MAILER-DAEMON Mon Nov 17 07:20:16 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1ALiKc-0004SF-Gk
+	for mharc-axiom-mail@gnu.org; Mon, 17 Nov 2003 07:18:14 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1ALiIr-000470-HE
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 07:16:25 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1ALiGk-0003QX-5E
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 07:14:45 -0500
+Received: from [62.4.17.101] (helo=mallaury.noc.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1ALiAH-0001is-Da
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 07:07:33 -0500
+Received: from ecritoire (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.noc.nerim.net (Postfix) with ESMTP
+	id 8FCAD62D84; Mon, 17 Nov 2003 12:06:06 +0100 (CET)
+Received: from fmy by ecritoire with local (Exim 3.35 #1 (Debian))
+	id 1ALhGx-0006re-00; Mon, 17 Nov 2003 12:10:23 +0100
+To: axiom-mail@nongnu.org, fmaltey@nerim.fr
+Subject: Re: [Axiom-mail] Mailing list note
+References: <200311160111.hAG1BiN18335@localhost.localdomain>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 17 Nov 2003 12:10:22 +0100
+In-Reply-To: <200311160111.hAG1BiN18335@localhost.localdomain>
+Message-ID: <87smknw8rl.fsf@nerim.fr>
+Lines: 45
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Sender: <fmaltey@nerim.fr>
+Content-Transfer-Encoding: quoted-printable
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 17 Nov 2003 12:18:12 -0000
+
+Tim writes:
+
+I try to update my last axiom version (beginning september) I do=20
+
+  cvs -d:pserver:anoncvs@subversions.gnu.org:/cvsroot/axiom login
+# The login command will prompt you for a password. Just hit return.
+  cvs -z3 -d:pserver:anoncvs@subversions.gnu.org:/cvsroot/axiom co axiom
+  cd /home/username/axiom
+  ./configure
+# I update $AXIOM and $PATH
+# export AXIOM=3D/home/fmy/axiom/mnt/linux
+# export PATH=3D$AXIOM/bin:$PATH
+  make
+# I get an error :
+
+0 SPAD=3D/home/fmy/axiom/mnt/linux SYS=3Dlinux SPD=3D/home/fmy/axiom
+LSP=3D/home/fmy/axiom/lsp GCLDIR=3D/home/fmy/axiom/lsp/gcl-2.6.1
+SRC=3D/home/fmy/axiom/src INT=3D/home/fmy/axiom/int
+OBJ=3D/home/fmy/axiom/obj MNT=3D/home/fmy/axiom/mnt
+ZIPS=3D/home/fmy/axiom/zips TMP=3D/home/fmy/axiom/obj/tmp
+SPADBIN=3D/home/fmy/axiom/mnt/linux/bin INC=3D/home/fmy/axiom/src/include
+CCLBASE=3D/home/fmy/axiom/obj/linux/ccl/ccllisp PART=3Dcprogs
+SUBPART=3Deverything NOISE=3D-o /home/fmy/axiom/obj/tmp/trace
+GCLVERSION=3Dgcl-2.6.1 TANGLE=3D/home/fmy/axiom/mnt/linux/bin/lib/notangl=
+e
+
+10 copying /home/fmy/axiom/src/scripts to /home/fmy/axiom/mnt/linux/bin
+1 making a linux system, PART=3Dcprogs SUBPART=3Deverything
+
+2 Environment SPAD=3D/home/fmy/axiom/mnt/linux SYS=3Dlinux
+SPD=3D/home/fmy/axiom LSP=3D/home/fmy/axiom/lsp
+GCLDIR=3D/home/fmy/axiom/lsp/gcl-2.6.1 SRC=3D/home/fmy/axiom/src
+INT=3D/home/fmy/axiom/int OBJ=3D/home/fmy/axiom/obj
+MNT=3D/home/fmy/axiom/mnt ZIPS=3D/home/fmy/axiom/zips
+TMP=3D/home/fmy/axiom/obj/tmp SPADBIN=3D/home/fmy/axiom/mnt/linux/bin
+INC=3D/home/fmy/axiom/src/include
+CCLBASE=3D/home/fmy/axiom/obj/linux/ccl/ccllisp PART=3Dcprogs
+SUBPART=3Deverything NOISE=3D-o /home/fmy/axiom/obj/tmp/trace
+GCLVERSION=3Dgcl-2.6.1 TANGLE=3D/home/fmy/axiom/mnt/linux/bin/lib/notangl=
+e
+
+/bin/sh: /home/fmy/axiom/mnt/linux/bin/lib/notangle: Aucun fichier ou
+r=E9pertoire de ce type make:=20
+*** [all] Erreur 127
+
+notangle doesn't exist !
+
+
+
+
+From MAILER-DAEMON Mon Nov 17 07:56:41 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1ALivp-0007tt-G5
+	for mharc-axiom-mail@gnu.org; Mon, 17 Nov 2003 07:56:41 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1ALivd-0007l7-Dg
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 07:56:29 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1ALiv1-0007M1-Mr
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 07:56:22 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1ALiuP-000731-23; Mon, 17 Nov 2003 07:55:13 -0500
+Received: from localhost.localdomain (55.114.252.64.snet.net [64.252.114.55])
+	by pimout2-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hAHBrfC7035536; Mon, 17 Nov 2003 06:53:41 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hAHBqlg27354;
+	Mon, 17 Nov 2003 06:52:47 -0500
+Date: Mon, 17 Nov 2003 06:52:47 -0500
+Message-Id: <200311171152.hAHBqlg27354@localhost.localdomain>
+From: root <daly@idsi.net>
+To: fmaltey@nerim.fr
+In-reply-to: <87smknw8rl.fsf@nerim.fr> (message from Francois Maltey on 17 Nov
+	2003 12:10:22 +0100)
+Subject: Re: [Axiom-mail] Mailing list note
+References: <200311160111.hAG1BiN18335@localhost.localdomain>
+	<87smknw8rl.fsf@nerim.fr>
+Cc: axiom-developer@nongnu.org, daly@idsi.net, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 17 Nov 2003 12:56:39 -0000
+
+If you installed the latest Axiom over a previous version you would
+have to do a 
+
+  make clean
+
+first. Axiom caches a large amount of work. In this case it looks like
+you have a cached version of noweb (which has changed in this release).
+Axiom sees the file /home/fmv/axiom/noweb which is a "marker file"
+that tells Axiom not to rebuild noweb. The make clean command removes
+this file.
+
+If you install over a previous version by just expanding the tar.gz
+file you'll still have the 'noweb' file. 
+
+Tim
+
+======================================================================
+
+I try to update my last axiom version (beginning september) I do 
+
+  cvs -d:pserver:anoncvs@subversions.gnu.org:/cvsroot/axiom login
+# The login command will prompt you for a password. Just hit return.
+  cvs -z3 -d:pserver:anoncvs@subversions.gnu.org:/cvsroot/axiom co axiom
+  cd /home/username/axiom
+  ./configure
+# I update $AXIOM and $PATH
+# export AXIOM=/home/fmy/axiom/mnt/linux
+# export PATH=$AXIOM/bin:$PATH
+  make
+# I get an error :
+
+0 SPAD=/home/fmy/axiom/mnt/linux SYS=linux SPD=/home/fmy/axiom
+LSP=/home/fmy/axiom/lsp GCLDIR=/home/fmy/axiom/lsp/gcl-2.6.1
+SRC=/home/fmy/axiom/src INT=/home/fmy/axiom/int
+OBJ=/home/fmy/axiom/obj MNT=/home/fmy/axiom/mnt
+ZIPS=/home/fmy/axiom/zips TMP=/home/fmy/axiom/obj/tmp
+SPADBIN=/home/fmy/axiom/mnt/linux/bin INC=/home/fmy/axiom/src/include
+CCLBASE=/home/fmy/axiom/obj/linux/ccl/ccllisp PART=cprogs
+SUBPART=everything NOISE=-o /home/fmy/axiom/obj/tmp/trace
+GCLVERSION=gcl-2.6.1 TANGLE=/home/fmy/axiom/mnt/linux/bin/lib/notangle
+
+10 copying /home/fmy/axiom/src/scripts to /home/fmy/axiom/mnt/linux/bin
+1 making a linux system, PART=cprogs SUBPART=everything
+
+2 Environment SPAD=/home/fmy/axiom/mnt/linux SYS=linux
+SPD=/home/fmy/axiom LSP=/home/fmy/axiom/lsp
+GCLDIR=/home/fmy/axiom/lsp/gcl-2.6.1 SRC=/home/fmy/axiom/src
+INT=/home/fmy/axiom/int OBJ=/home/fmy/axiom/obj
+MNT=/home/fmy/axiom/mnt ZIPS=/home/fmy/axiom/zips
+TMP=/home/fmy/axiom/obj/tmp SPADBIN=/home/fmy/axiom/mnt/linux/bin
+INC=/home/fmy/axiom/src/include
+CCLBASE=/home/fmy/axiom/obj/linux/ccl/ccllisp PART=cprogs
+SUBPART=everything NOISE=-o /home/fmy/axiom/obj/tmp/trace
+GCLVERSION=gcl-2.6.1 TANGLE=/home/fmy/axiom/mnt/linux/bin/lib/notangle
+
+/bin/sh: /home/fmy/axiom/mnt/linux/bin/lib/notangle: Aucun fichier ou
+répertoire de ce type make: 
+*** [all] Erreur 127
+
+notangle doesn't exist !
+
+
+
+From MAILER-DAEMON Mon Nov 17 09:41:33 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1ALkZJ-0001GD-2a
+	for mharc-axiom-mail@gnu.org; Mon, 17 Nov 2003 09:41:33 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1ALkZF-0001E5-DY
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 09:41:29 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1ALkYd-000100-Hy
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 09:41:22 -0500
+Received: from [62.4.17.101] (helo=mallaury.noc.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1ALkY3-0000k2-Nb; Mon, 17 Nov 2003 09:40:15 -0500
+Received: from ecritoire (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.noc.nerim.net (Postfix) with ESMTP
+	id 1683C62D02; Mon, 17 Nov 2003 14:38:49 +0100 (CET)
+Received: from fmy by ecritoire with local (Exim 3.35 #1 (Debian))
+	id 1ALjek-0003nK-00; Mon, 17 Nov 2003 14:43:06 +0100
+To: fmaltey@nerim.fr, axiom-mail@nongnu.org,
+	axiom-developer@nongnu.org
+Subject: Re: [Axiom-mail] Mailing list note
+References: <200311160111.hAG1BiN18335@localhost.localdomain>
+	<87smknw8rl.fsf@nerim.fr>
+	<200311171152.hAHBqlg27354@localhost.localdomain>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 17 Nov 2003 14:43:05 +0100
+In-Reply-To: <200311171152.hAHBqlg27354@localhost.localdomain>
+Message-ID: <874qx3nmae.fsf@nerim.fr>
+Lines: 30
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Sender: <fmaltey@nerim.fr>
+Content-Transfer-Encoding: quoted-printable
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 17 Nov 2003 14:41:31 -0000
+
+Tim explains :
+
+> If you installed the latest Axiom over a previous version you would
+> have to do a=20
+>=20
+>   make clean
+>=20
+> first. Axiom caches a large amount of work. In this case it looks like
+> you have a cached version of noweb (which has changed in this release).
+> Axiom sees the file /home/fmv/axiom/noweb which is a "marker file"
+> that tells Axiom not to rebuild noweb. The make clean command removes
+> this file.
+
+The make clean doesn't remove the file noweb.
+
+I must be root to start make.
+  The right on directories are too limited.
+
+Thanks for your help !
+
+And is it able to improve the interpret ?
+I like to have exactly the same syntax in interpret and when I read a fil=
+e ?
+And I like to use it in emacs. (I do so for mupad)
+
+You write that Axiom sources are in tex files with explain.
+What *.dvi file must I read if I want to understand the interpret ?
+
+Have a good day !
+
+Fran=E7ois
+
+
+
+From MAILER-DAEMON Mon Nov 17 17:01:58 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1ALrRW-0005vw-Iz
+	for mharc-axiom-mail@gnu.org; Mon, 17 Nov 2003 17:01:58 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1ALrRT-0005uw-Am
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 17:01:55 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1ALrQs-0005mr-Fr
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 17:01:49 -0500
+Received: from [193.252.22.30] (helo=mwinf0104.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1ALrOS-0005Dh-8g; Mon, 17 Nov 2003 16:58:48 -0500
+Received: from oops (ARennes-303-1-3-199.w217-128.abo.wanadoo.fr
+	[217.128.73.199]) by mwinf0104.wanadoo.fr (SMTP Server) with ESMTP
+	id 65C391BFFFC8; Mon, 17 Nov 2003 21:57:12 +0100 (CET)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 1ALqQp-0000UG-00; Mon, 17 Nov 2003 21:57:11 +0100
+To: Francois Maltey <fmaltey@nerim.fr>
+Subject: Re: [Axiom-developer] Re: [Axiom-mail] Mailing list note
+References: <200311160111.hAG1BiN18335@localhost.localdomain>
+	<87smknw8rl.fsf@nerim.fr>
+	<200311171152.hAHBqlg27354@localhost.localdomain>
+	<874qx3nmae.fsf@nerim.fr>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Mon, 17 Nov 2003 21:57:11 +0100
+In-Reply-To: <874qx3nmae.fsf@nerim.fr> (Francois Maltey's message of "17 Nov
+	2003 14:43:05 +0100")
+Message-ID: <878yme3e8o.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 17 Nov 2003 22:01:56 -0000
+
+Hello François,
+
+Francois Maltey <fmaltey@nerim.fr> writes:
+
+> The make clean doesn't remove the file noweb.
+>
+> I must be root to start make.
+>   The right on directories are too limited.
+
+You should not need to be root to compile Axiom, unless you have
+messed-up at one point when compiling Axiom under root account.
+
+If you want to update your Axiom local CVS copy, you'd better use
+command: 
+
+   cvs -z6 update -dC
+
+ -z6: compression
+ -d: create new directories
+ -C: delete files no longer in the repository
+
+I hope it will be easier with this command.
+
+> You write that Axiom sources are in tex files with explain.
+> What *.dvi file must I read if I want to understand the interpret ?
+
+I fear that having real documentation is really an intent right now. Tim
+has focused on documenting the building process and part of the
+interpreter when an issued was raised, but nothing systematic has been
+done yet.
+
+I _think_ you'll find part of the interpreter in src/interp/i-*.pamphlet
+files. Maybe the toplevel handling is in i-toplev.boot.pamphlet.
+
+I hope it helps a little,
+Yours,
+d.
+-- 
+David MENTRE <david.mentre@wanadoo.fr> -- http://www.nongnu.org/axiom/
+
+
+
+From MAILER-DAEMON Mon Nov 17 17:37:38 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1ALs00-0004to-Nc
+	for mharc-axiom-mail@gnu.org; Mon, 17 Nov 2003 17:37:36 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1ALrzq-0004jd-TV
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 17:37:26 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1ALrz9-0003h9-Om
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 17:37:02 -0500
+Received: from [193.252.22.25] (helo=mwinf0602.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1ALrxv-0001Mn-VX; Mon, 17 Nov 2003 17:35:28 -0500
+Received: from oops (ARennes-303-1-3-199.w217-128.abo.wanadoo.fr
+	[217.128.73.199]) by mwinf0602.wanadoo.fr (SMTP Server) with ESMTP
+	id 780805400221; Mon, 17 Nov 2003 22:34:01 +0100 (CET)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 1ALr0S-0000X2-00; Mon, 17 Nov 2003 22:34:00 +0100
+To: Francois Maltey <fmaltey@nerim.fr>
+Subject: Re: [Axiom-developer] Re: [Axiom-mail] Mailing list note
+References: <200311160111.hAG1BiN18335@localhost.localdomain>
+	<87smknw8rl.fsf@nerim.fr>
+	<200311171152.hAHBqlg27354@localhost.localdomain>
+	<874qx3nmae.fsf@nerim.fr> <878yme3e8o.fsf@wanadoo.fr>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Mon, 17 Nov 2003 22:34:00 +0100
+In-Reply-To: <878yme3e8o.fsf@wanadoo.fr> (David MENTRE's message of "Mon, 17
+	Nov 2003 21:57:11 +0100")
+Message-ID: <87isli1xyv.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 17 Nov 2003 22:37:30 -0000
+
+David MENTRE <david.mentre@wanadoo.fr> writes:
+
+> You should not need to be root to compile Axiom, unless you have
+> messed-up at one point when compiling Axiom under root account.
+
+I'm compiling Axiom under my local (david) account.
+
+> If you want to update your Axiom local CVS copy, you'd better use
+> command: 
+>
+>    cvs -z6 update -dC
+
+In axiom/ directory, where you'll find the first CVS/ directory.
+
+Yours,
+d.
+-- 
+David MENTRE <david.mentre@wanadoo.fr> -- http://www.nongnu.org/axiom/
+
+
+
+From MAILER-DAEMON Mon Nov 17 22:33:41 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1ALwcW-0005vG-TV
+	for mharc-axiom-mail@gnu.org; Mon, 17 Nov 2003 22:33:40 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1ALwcU-0005ud-KF
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 22:33:38 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1ALwby-0005nr-Kc
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 22:33:37 -0500
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1ALwby-0005nl-Bi
+	for axiom-mail@nongnu.org; Mon, 17 Nov 2003 22:33:06 -0500
+Received: from localhost.localdomain (254.182.252.64.snet.net [64.252.182.254])
+	by pimout1-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	hAI2UQgJ066268; Mon, 17 Nov 2003 21:30:26 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id hAI2TVD27959;
+	Mon, 17 Nov 2003 21:29:31 -0500
+Date: Mon, 17 Nov 2003 21:29:31 -0500
+Message-Id: <200311180229.hAI2TVD27959@localhost.localdomain>
+From: root <daly@idsi.net>
+To: ix@io.com
+In-reply-to: <20031118020810.GA26067@io.com> (message from Lupo LeBoucher on
+	Mon, 17 Nov 2003 20:08:10 -0600)
+References: <200311160033.hAG0Xe317657@localhost.localdomain>
+	<20031118020810.GA26067@io.com>
+Cc: daly@idsi.net, axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: Free and Open Source Axiom exists
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 18 Nov 2003 03:33:39 -0000
+
+Lupo,
+
+Literate programming is something of a stretch to start using.
+It's like object oriented programming used to be. It seems like a
+lot of work for nothing and horribly inefficient.
+
+If all else fails, when you build the system you will find all of
+the sources without the tex documentation in the axiom/int/* subdirectories.
+And, in the final system, the mnt/linux/src/algebra directory contains
+the spad files in their original form.
+
+The key problem that literate programming solves, as I point out in the
+README, is that it is not sufficient to just point someone at the code
+(especially algebra code) and say "read it". You need to have the associated
+research and theory.
+
+If you know TeX then the literate programming is a trivial extension.
+You make a Tex file, add inline code with a special tag, and save it 
+as a pamphlet file, thus:
+
+In file foo.pamphlet:
+
+\documentstyle                     <== make a tex document
+\begin{document}                   <== with all the usual stuff
+\section{foo}                      <== including anything tex likes
+This explains the following code   <== with your own text
+<<fooname>>=                       <== define "chunk" fooname
+  (defun foo () )                  <== with any code
+@                                  <== end it with an @ in column 1
+This explains more code            <== more tex
+<<barname>>=                       <== define chunk barname
+  <<fooname>>                      <== you can reference other chunks
+  (foo x)                          <== and write new code
+@                                  <== end it with an @
+<<*>>                              <== this is the thing "notangle" expands
+  <<barname>>                      <== barname will be expanded
+  <<fooname>>                      <== as will anything else in order
+@                                  <== end it with an @
+\end{document}                     <== and now you have a literate program
+
+
+noweave foo.pamphlet >foo.tex      <== extract a tex document, quoting code
+notangle foo.pamphlet >foo.lisp    <== extract only the <<*>> expansion
+
+It is really quite simple but it allows you to document your code with
+the full power of Tex, keeps the documentation and code together, and
+allows you to explain the code in logical order but expand it in compiler
+required order. Plus you can write readable math inline.
+
+Axiom is lightly documented so far. I've only had time to rewrite the
+system into this new style (notice there are no C, lisp, spad, or
+Makefile files). The Makefile.dvi files explain how the build process
+works. 
+
+If you look at dhmatrix.spad.pamphlet you'll see an example of the
+use of literate programming. The text comes, with permission, from
+Richard Paul's Ph.D. thesis. I wrote the embedded code. Run xdvi
+on dhmatrix.spad.dvi and see if you think the results are worth it.
+
+Tim
+
+
+
+
+
+
+

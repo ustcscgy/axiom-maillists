@@ -1,0 +1,1638 @@
+From MAILER-DAEMON Fri Mar 01 18:36:44 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UBZVM-00076P-M2
+	for mharc-axiom-mail@gnu.org; Fri, 01 Mar 2013 18:36:44 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:34600)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UBZVI-00075z-HR
+	for axiom-mail@nongnu.org; Fri, 01 Mar 2013 18:36:43 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UBZVF-0003ll-LQ
+	for axiom-mail@nongnu.org; Fri, 01 Mar 2013 18:36:40 -0500
+Received: from mail-qe0-f54.google.com ([209.85.128.54]:49639)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UBZVF-0003l3-Gi
+	for axiom-mail@nongnu.org; Fri, 01 Mar 2013 18:36:37 -0500
+Received: by mail-qe0-f54.google.com with SMTP id i11so1893459qej.27
+	for <axiom-mail@nongnu.org>; Fri, 01 Mar 2013 15:36:36 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:x-received:in-reply-to:references:date:message-id
+	:subject:from:to:content-type;
+	bh=/covxo8jidABlbS6an561HT6giMYvMQXGrBnNkTwOyg=;
+	b=bf9izxW+ZKeZj9EippjIUug7YN5Df/VM2Ob/ypBCzR4t2EJT38+7PrBeJjEwZpq1Nw
+	FyndC51gdITKhD3oPeqihPkq47Ub9idiyMFKKckl2nxKbPlM0nitRKtqUvcrEzAjD9YK
+	OGgXeuk6atKbExEFbIBYciFWciLYITgCauW9QScmoS+7NWFh40V031RIC7FPSdMcZvAl
+	vjTRCADpmE0IQq0dCV+kpuju1lErpIu6yUMbonbndREa1BdN7pZNr6Lt/drM4k/hXFCI
+	t+ne5sxc/M6i1UQXOK6hPBBKL107E+dGkq0Mz0O9jXR/tsLOvvhHMvmTE+d981g5woYR
+	H/1Q==
+MIME-Version: 1.0
+X-Received: by 10.49.128.37 with SMTP id nl5mr21506673qeb.59.1362180996329;
+	Fri, 01 Mar 2013 15:36:36 -0800 (PST)
+Received: by 10.49.84.135 with HTTP; Fri, 1 Mar 2013 15:36:36 -0800 (PST)
+In-Reply-To: <87y5e7hm5e.fsf@axiom-developer.org>
+References: <20130301012458.25900c4f@pega.pega>
+	<87y5e7hm5e.fsf@axiom-developer.org>
+Date: Fri, 1 Mar 2013 16:36:36 -0700
+Message-ID: <CABhj+Wz-kRpvKnNFNy0hu6xoDPLhjAmuEVo0NAguKyxZnmFxwA@mail.gmail.com>
+From: Mike Valenzuela <mickle.mouse@gmail.com>
+To: axiom-mail@nongnu.org
+Content-Type: multipart/alternative; boundary=047d7b676e6e68115704d6e57a1c
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x [fuzzy]
+X-Received-From: 209.85.128.54
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 01 Mar 2013 23:36:43 -0000
+
+--047d7b676e6e68115704d6e57a1c
+Content-Type: text/plain; charset=ISO-8859-1
+
+I just wanted to thank you all for taking this task seriously. I've been
+looking for some CAS that provided significant symbolic matrix
+manipulations, including matrix calculus. I found other tools that work
+with tensors and provide tensor calculus (Maxima CAS has 3 tensor
+packages), but second order tensors and matrices are not quite the same
+thing. Furthermore, the packages were so general that they lacked specific
+rules (derivatives of determinants, inverses, etc.) which worked fine on
+matrices.
+
+So once again, just saying thanks.
+
+
+
+On Thu, Feb 28, 2013 at 7:46 PM, u1204 <daly@axiom-developer.org> wrote:
+
+> Raoul,
+>
+> If you look at the matrixcookbook that Mike mentioned, the first 10
+> equations are:
+>
+>    (A*B)^-1      = B^-1 * A^-1
+>    (A*B*C...)^-1 = ...C^-1 * B^-1 * A^-1
+>    (A^T)^-1      = (A^-1)^T
+>    (A+B)^T       = A^T + B^T
+>    (A*B)^T       = B^T * A^T
+>    (A*B*C...)^T  = C^T * B^T *A^T
+>    (A^H)^-1      = (A^-1)^H
+>    (A+B)^H       = A^H + B^H
+>    (A*B)^H       = B^H * A^H
+>    (A*B*C...)^H  = ...C^H * B^H * A^H
+>
+> It seems like we could create a SymbolicMatrix algebra that could
+> perform these manipulations with uninterpreted matrix symbols
+> A, B, C with a special recognized symbol 'T'.
+>
+> These matrices could have actual values which, for certain operations
+> are ignored, so that
+>
+>        (A*B)^-1      = B^-1 * A^-1
+>
+> but for other operations would be evaluated as in:
+>
+>        eval(B^-1 * A^-1)
+>
+> giving the actual matrix result shown element by element.
+>
+> An additional enhancement would be to make a SymbolicMatrixCategory
+> so that there could be specific domains such as
+>
+>    GeneralSymbolicMatrix,
+>    SymmetricSymbolicMatrix,
+>    UpperTriangularSymbolicMatrix,
+>    DiagonalSymbolicMatrix,
+>
+> etc which could exploit certain matrix-level properties at the
+> symbolic level.
+>
+> This isn't exactly what Mike was originally asking but I think
+> that Axiom ought to be able to symbolically compute the equations
+> in the handbook.
+>
+> Tim Daly
+>
+>
+>
+
+--047d7b676e6e68115704d6e57a1c
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div>I just wanted to thank you all for taking this task seriously. I&#39;v=
+e been looking for some CAS that provided significant symbolic matrix manip=
+ulations, including matrix calculus. I found other tools that work with ten=
+sors and provide tensor calculus (Maxima CAS has 3 tensor packages), but se=
+cond order tensors and matrices are not quite the same thing. Furthermore, =
+the packages were so general that they lacked specific rules (derivatives o=
+f determinants, inverses, etc.) which worked fine on matrices.</div>
+<div><br></div><div>So once again, just saying thanks.</div><div><div><br><=
+/div><div><br></div><div><br><div class=3D"gmail_quote">On Thu, Feb 28, 201=
+3 at 7:46 PM, u1204 <span dir=3D"ltr">&lt;<a href=3D"mailto:daly@axiom-deve=
+loper.org" target=3D"_blank">daly@axiom-developer.org</a>&gt;</span> wrote:=
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">Raoul,<br>
+<br>
+If you look at the matrixcookbook that Mike mentioned, the first 10<br>
+equations are:<br>
+<br>
+=A0 =A0(A*B)^-1 =A0 =A0 =A0=3D B^-1 * A^-1<br>
+=A0 =A0(A*B*C...)^-1 =3D ...C^-1 * B^-1 * A^-1<br>
+=A0 =A0(A^T)^-1 =A0 =A0 =A0=3D (A^-1)^T<br>
+=A0 =A0(A+B)^T =A0 =A0 =A0 =3D A^T + B^T<br>
+=A0 =A0(A*B)^T =A0 =A0 =A0 =3D B^T * A^T<br>
+=A0 =A0(A*B*C...)^T =A0=3D C^T * B^T *A^T<br>
+=A0 =A0(A^H)^-1 =A0 =A0 =A0=3D (A^-1)^H<br>
+=A0 =A0(A+B)^H =A0 =A0 =A0 =3D A^H + B^H<br>
+=A0 =A0(A*B)^H =A0 =A0 =A0 =3D B^H * A^H<br>
+=A0 =A0(A*B*C...)^H =A0=3D ...C^H * B^H * A^H<br>
+<br>
+It seems like we could create a SymbolicMatrix algebra that could<br>
+perform these manipulations with uninterpreted matrix symbols<br>
+A, B, C with a special recognized symbol &#39;T&#39;.<br>
+<br>
+These matrices could have actual values which, for certain operations<br>
+are ignored, so that<br>
+<br>
+=A0 =A0 =A0 =A0(A*B)^-1 =A0 =A0 =A0=3D B^-1 * A^-1<br>
+<br>
+but for other operations would be evaluated as in:<br>
+<br>
+=A0 =A0 =A0 =A0eval(B^-1 * A^-1)<br>
+<br>
+giving the actual matrix result shown element by element.<br>
+<br>
+An additional enhancement would be to make a SymbolicMatrixCategory<br>
+so that there could be specific domains such as<br>
+<br>
+=A0 =A0GeneralSymbolicMatrix,<br>
+=A0 =A0SymmetricSymbolicMatrix,<br>
+=A0 =A0UpperTriangularSymbolicMatrix,<br>
+=A0 =A0DiagonalSymbolicMatrix,<br>
+<br>
+etc which could exploit certain matrix-level properties at the<br>
+symbolic level.<br>
+<br>
+This isn&#39;t exactly what Mike was originally asking but I think<br>
+that Axiom ought to be able to symbolically compute the equations<br>
+in the handbook.<br>
+<br>
+Tim Daly<br>
+<br>
+<br>
+</blockquote></div><br></div></div>
+
+--047d7b676e6e68115704d6e57a1c--
+
+
+From MAILER-DAEMON Mon Mar 04 18:43:30 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UCf2Y-0006Cp-9G
+	for mharc-axiom-mail@gnu.org; Mon, 04 Mar 2013 18:43:30 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:34490)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1UCf2W-0006CL-41
+	for axiom-mail@nongnu.org; Mon, 04 Mar 2013 18:43:29 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1UCf2U-0006Vv-Ig
+	for axiom-mail@nongnu.org; Mon, 04 Mar 2013 18:43:27 -0500
+Received: from zhbdzmsp-smta15.bluewin.ch ([195.186.99.132]:59668)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1UCf2U-0006Uu-Ad
+	for axiom-mail@nongnu.org; Mon, 04 Mar 2013 18:43:26 -0500
+Received: from [195.186.227.130] ([195.186.227.130:54136]
+	helo=zhhdzmsp-smta12.bluewin.ch)
+	by zhbdzmsp-smta15.bluewin.ch (envelope-from <raoulb@bluewin.ch>)
+	(ecelerity 2.2.3.47 r(39824M)) with ESMTP
+	id 3A/50-26473-A9135315; Mon, 04 Mar 2013 23:43:22 +0000
+Received: from pega.pega (178.198.4.232) by zhhdzmsp-smta12.bluewin.ch
+	(8.5.142) (authenticated as raoulb)
+	id 510085B0035E6DC5 for axiom-mail@nongnu.org;
+	Mon, 4 Mar 2013 23:43:22 +0000
+Date: Tue, 5 Mar 2013 00:43:21 +0100
+From: Raoul <raoulb@bluewin.ch>
+To: axiom-mail@nongnu.org
+Message-ID: <20130305004321.05ee8a26@pega.pega>
+In-Reply-To: <CABhj+Wz-kRpvKnNFNy0hu6xoDPLhjAmuEVo0NAguKyxZnmFxwA@mail.gmail.com>
+References: <20130301012458.25900c4f@pega.pega>
+	<87y5e7hm5e.fsf@axiom-developer.org>
+	<CABhj+Wz-kRpvKnNFNy0hu6xoDPLhjAmuEVo0NAguKyxZnmFxwA@mail.gmail.com>
+X-Mailer: Claws Mail 3.8.1 (GTK+ 2.24.10; i486-pc-linux-gnu)
+Mime-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Genre and OS details not
+	recognized.
+X-Received-From: 195.186.99.132
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 04 Mar 2013 23:43:29 -0000
+
+> I've been looking for some CAS that provided significant symbolic matrix
+> manipulations, including matrix calculus.
+
+Maybe you should look at SymPy. They have some (although limited)
+support for symbolic matrix expressions and computations.
+
+SymPy documentation:
+
+ http://docs.sympy.org/0.7.2/modules/matrices/expressions.html
+ http://docs.sympy.org/0.7.2/modules/matrices/immutablematrices.html
+
+And various Blog posts:
+
+ http://planet.sympy.org/
+ http://matthewrocklin.com/blog/
+
+Hope this helps.
+
+
+From MAILER-DAEMON Mon Mar 04 18:51:20 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UCfA8-0000C0-8C
+	for mharc-axiom-mail@gnu.org; Mon, 04 Mar 2013 18:51:20 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:36427)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1UCfA5-00008B-W2
+	for axiom-mail@nongnu.org; Mon, 04 Mar 2013 18:51:18 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1UCfA4-0000Zp-5Z
+	for axiom-mail@nongnu.org; Mon, 04 Mar 2013 18:51:17 -0500
+Received: from zhbdzmsp-smta17.bluewin.ch ([195.186.99.133]:45730)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1UCfA3-0000ZH-Vv
+	for axiom-mail@nongnu.org; Mon, 04 Mar 2013 18:51:16 -0500
+Received: from [195.186.227.130] ([195.186.227.130:57049]
+	helo=zhhdzmsp-smta12.bluewin.ch)
+	by zhbdzmsp-smta17.bluewin.ch (envelope-from <raoulb@bluewin.ch>)
+	(ecelerity 2.2.3.47 r(39824M)) with ESMTP
+	id 70/C0-20489-17335315; Mon, 04 Mar 2013 23:51:13 +0000
+Received: from pega.pega (178.198.4.232) by zhhdzmsp-smta12.bluewin.ch
+	(8.5.142) (authenticated as raoulb)
+	id 510085B0035E7E14; Mon, 4 Mar 2013 23:51:13 +0000
+Date: Tue, 5 Mar 2013 00:51:11 +0100
+From: Raoul <raoulb@bluewin.ch>
+To: u1204 <daly@axiom-developer.org>
+Message-ID: <20130305005111.48e3fc29@pega.pega>
+In-Reply-To: <871ubzj1wo.fsf@axiom-developer.org>
+References: <20130301012458.25900c4f@pega.pega>
+	<871ubzj1wo.fsf@axiom-developer.org>
+X-Mailer: Claws Mail 3.8.1 (GTK+ 2.24.10; i486-pc-linux-gnu)
+Mime-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Genre and OS details not
+	recognized.
+X-Received-From: 195.186.99.133
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 04 Mar 2013 23:51:18 -0000
+
+Tim,
+
+
+> I will look at your code. Thanks.
+
+Yes, please do so and ask about the details
+if necessary.
+
+One main technical difference that pops of my
+mind is probably the "this domain": "%" vs "$".
+
+The code misses about the last two combination
+type rules. And the combination of all rules
+into a common simplifier.
+
+I was more into symbolic summation recently.
+
+
+-- Raoul
+
+
+From MAILER-DAEMON Fri Mar 29 19:42:55 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1ULiwh-0004sC-LX
+	for mharc-axiom-mail@gnu.org; Fri, 29 Mar 2013 19:42:55 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:48103)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1ULiwc-0004s5-Er
+	for axiom-mail@nongnu.org; Fri, 29 Mar 2013 19:42:54 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1ULiwb-0006Mj-6q
+	for axiom-mail@nongnu.org; Fri, 29 Mar 2013 19:42:50 -0400
+Received: from zhhdzmsp-smta16.bluewin.ch ([195.186.227.132]:50392)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1ULiwb-0006M9-06
+	for axiom-mail@nongnu.org; Fri, 29 Mar 2013 19:42:49 -0400
+Received: from [195.186.99.131] ([195.186.99.131:55835]
+	helo=zhbdzmsp-smta13.bluewin.ch)
+	by zhhdzmsp-smta16.bluewin.ch (envelope-from <raoulb@bluewin.ch>)
+	(ecelerity 2.2.3.47 r(39824M)) with ESMTP
+	id E8/D1-25143-5F626515; Fri, 29 Mar 2013 23:42:46 +0000
+Received: from pega.pega (188.61.90.114) by zhbdzmsp-smta13.bluewin.ch
+	(8.5.142) (authenticated as raoulb)
+	id 5100862205C9FECD; Fri, 29 Mar 2013 23:42:45 +0000
+Date: Sat, 30 Mar 2013 00:42:44 +0100
+From: Raoul <raoulb@bluewin.ch>
+To: u1204 <daly@axiom-developer.org>, axiom-mail@nongnu.org
+Message-ID: <20130330004244.6aad8c47@pega.pega>
+In-Reply-To: <87y5e7hm5e.fsf@axiom-developer.org>
+References: <20130301012458.25900c4f@pega.pega>
+	<87y5e7hm5e.fsf@axiom-developer.org>
+X-Mailer: Claws Mail 3.8.1 (GTK+ 2.24.10; i486-pc-linux-gnu)
+Mime-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Genre and OS details not
+	recognized.
+X-Received-From: 195.186.227.132
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Mar 2013 23:42:54 -0000
+
+Dear Tim,
+
+
+> If you look at the matrixcookbook that Mike mentioned, the first 10
+> equations are:
+> 
+>    (A*B)^-1      = B^-1 * A^-1
+>    (A*B*C...)^-1 = ...C^-1 * B^-1 * A^-1
+>    (A^T)^-1      = (A^-1)^T
+>    (A+B)^T       = A^T + B^T
+>    (A*B)^T       = B^T * A^T
+>    (A*B*C...)^T  = C^T * B^T *A^T
+>    (A^H)^-1      = (A^-1)^H
+>    (A+B)^H       = A^H + B^H
+>    (A*B)^H       = B^H * A^H
+>    (A*B*C...)^H  = ...C^H * B^H * A^H
+
+Yes, I know this book very well. It would be indeed nice
+if Axiom could do such things in an abstract fashion.
+
+
+> It seems like we could create a SymbolicMatrix algebra that could
+> perform these manipulations with uninterpreted matrix symbols
+> A, B, C with a special recognized symbol 'T'.
+
+I think it would be possible, however I expect representation of
+abstract matrix algebra to be much more complicated than the
+vector algebra stuff. There are transposes, conjugates, inverses, 
+traces, determinants and much more. One would need to have a way
+to encode all these operation "unevaluated".
+
+
+> These matrices could have actual values which, for certain operations
+> are ignored, so that
+> 
+>        (A*B)^-1      = B^-1 * A^-1
+> 
+> but for other operations would be evaluated as in:
+> 
+>        eval(B^-1 * A^-1)
+> 
+> giving the actual matrix result shown element by element.
+
+Yes, of course this should play together with usual
+(dense or sparse) matrices nicely. Doesn't make the task
+easier though.
+
+And do we want define abstract matrices with or without shape information?
+
+
+> An additional enhancement would be to make a SymbolicMatrixCategory
+> so that there could be specific domains such as 
+> 
+>    GeneralSymbolicMatrix,
+>    SymmetricSymbolicMatrix, 
+>    UpperTriangularSymbolicMatrix,
+>    DiagonalSymbolicMatrix,
+> 
+> etc which could exploit certain matrix-level properties at the
+> symbolic level.
+
+Maybe someone should indeed try. I don't think I find the
+time to try this soon.
+
+
+It occurred to me that component-free geometric algebra
+might be easier to start with anyway.
+
+There is a nice book on the topic:
+
+  https://sites.google.com/site/grassmannalgebra/
+  https://sites.google.com/site/grassmannalgebra/thegrassmannalgebrabook
+
+which is accompanied by a Mathematica Package (that I never tried so far):
+
+  https://sites.google.com/site/grassmannalgebra/thegrassmannalgebrapackage
+
+The algebra in there is as far as I remember not done in an
+abstract way, but with explicit bases.
+
+
+-- Raoul
+
+
+From MAILER-DAEMON Fri Mar 29 20:31:51 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1ULji3-0006EM-RS
+	for mharc-axiom-mail@gnu.org; Fri, 29 Mar 2013 20:31:51 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:43415)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1ULjhz-0006D1-TB
+	for axiom-mail@nongnu.org; Fri, 29 Mar 2013 20:31:49 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1ULjhy-0001oh-AQ
+	for axiom-mail@nongnu.org; Fri, 29 Mar 2013 20:31:47 -0400
+Received: from mail-vc0-f178.google.com ([209.85.220.178]:49735)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <bill.page@newsynthesis.org>) id 1ULjhy-0001ny-2S
+	for axiom-mail@nongnu.org; Fri, 29 Mar 2013 20:31:46 -0400
+Received: by mail-vc0-f178.google.com with SMTP id hz11so906741vcb.37
+	for <axiom-mail@nongnu.org>; Fri, 29 Mar 2013 17:31:45 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=google.com; s=20120113;
+	h=mime-version:x-received:date:message-id:subject:from:to
+	:content-type:x-gm-message-state;
+	bh=Zzct94kAW82A+3YHH7I/tUiwjPmU1wzeP7KJ6N4NenU=;
+	b=IbyFhV15/WwqdeZZhUc3eQzCx0HbIjQj2xeq3RuK5icXZDGVSXEJhdAZ9Tn5Fg0Z44
+	Cs6lNBDJOa3pol08LOiU/iMu35kzzy3no4vP3yCkNsx/5JA2LjtQII+sgkdrrCK5KsfB
+	ZbuMyp5N5/3A294hNnUxU2OYjhGws7f2SuDB8qXiSJ10rLSI9uGNsLXwG5HMCB8SjaiP
+	6hy2Swk2AhR1pu4t2x47ztl6TLLkyUcbL9cp3cLv94YRPqIv2jhO2dy7oBnAVLsxcFlt
+	4eRiiSlUzQ4FSwygbW16qkuqEaBBz0QXCAyQJGM0TZMSh3ibphvTUnnhZyocSdXg2KER
+	Tjgw==
+MIME-Version: 1.0
+X-Received: by 10.52.20.177 with SMTP id o17mr2899149vde.17.1364603505026;
+	Fri, 29 Mar 2013 17:31:45 -0700 (PDT)
+Received: by 10.220.147.65 with HTTP; Fri, 29 Mar 2013 17:31:44 -0700 (PDT)
+Date: Fri, 29 Mar 2013 20:31:44 -0400
+Message-ID: <CAC6x94SuShzM=Ko8gdUvbq_YuGdoZgPRbg+U383aVReL8-3y2g@mail.gmail.com>
+From: Bill Page <bill.page@newsynthesis.org>
+To: Axiom-Mail <axiom-mail@nongnu.org>
+Content-Type: multipart/mixed; boundary=20cf307ca1e42d3e9c04d9198337
+X-Gm-Message-State: ALoCoQlj0aAXWi5APRBFiWrvMZ0r4eC1HFS7g/jdngTRVx1naSiLELj3ikwcVtsBdmLEj0uBz0WJ
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x [fuzzy]
+X-Received-From: 209.85.220.178
+Subject: Re: [Axiom-mail] A question about Axiom capabilities,
+ Fwd: [fricas-devel] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Mar 2013 00:31:49 -0000
+
+--20cf307ca1e42d3e9c04d9198337
+Content-Type: text/plain; charset=ISO-8859-1
+
+See:
+
+https://www.researchgate.net/publication/220915895_Rule-Based_Simplification_in_Vector-Product_Spaces
+
+There has been some work done on this subject in one of the Axiom forks:
+
+---------- Forwarded message ----------
+From: someone <somebody@bluewin.ch>
+Date: 27 October 2012 21:07
+Subject: Re: [fricas-devel] Abstract Vector Algebra
+To: fricas-devel@googlegroups.com
+
+
+> I started making a small package for component-free vector algebra. It
+> is based on the work "Rule-Based Simplification in Vector-Product
+> Spaces" written by Songxin Liang and David J. Jeffrey.
+
+I made some real progress with the code. In the most up to date
+version it can do many non-trivial problems. For example:
+
+(122) -> simplify( (va-vd)^(vb-vc) + (vb-vd)^(vc-va) + (vc-vd)^(va-vb)
+- 2*(va^vb + vb^vc + vc^va) )
+
+   (122)  00
+                                                 Type: VectorAlgebra(Integer)
+
+I attached the code as well as the examples and some other tests.
+You can find the most recent versions of all files in the github repo at:
+
+https://github.com/raoulb/fricas_code/blob/vectoralg/vecalg/
+
+--
+You received this message because you are subscribed to the Google
+Groups "FriCAS - computer algebra system" group.
+To post to this group, send email to fricas-devel@googlegroups.com.
+To unsubscribe from this group, send email to
+fricas-devel+unsubscribe@googlegroups.com.
+For more options, visit this group at
+http://groups.google.com/group/fricas-devel?hl=en.
+
+
+
+
+---------- Forwarded message ----------
+From: Raoul <raoulb@bluewin.ch>
+Date: 29 March 2013 19:42
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+To: u1204 <daly@axiom-developer.org>, axiom-mail@nongnu.org
+
+
+Dear Tim,
+
+
+> If you look at the matrixcookbook that Mike mentioned, the first 10
+> equations are:
+>
+>    (A*B)^-1      = B^-1 * A^-1
+>    (A*B*C...)^-1 = ...C^-1 * B^-1 * A^-1
+>    (A^T)^-1      = (A^-1)^T
+>    (A+B)^T       = A^T + B^T
+>    (A*B)^T       = B^T * A^T
+>    (A*B*C...)^T  = C^T * B^T *A^T
+>    (A^H)^-1      = (A^-1)^H
+>    (A+B)^H       = A^H + B^H
+>    (A*B)^H       = B^H * A^H
+>    (A*B*C...)^H  = ...C^H * B^H * A^H
+
+Yes, I know this book very well. It would be indeed nice
+if Axiom could do such things in an abstract fashion.
+
+
+> It seems like we could create a SymbolicMatrix algebra that could
+> perform these manipulations with uninterpreted matrix symbols
+> A, B, C with a special recognized symbol 'T'.
+
+I think it would be possible, however I expect representation of
+abstract matrix algebra to be much more complicated than the
+vector algebra stuff. There are transposes, conjugates, inverses,
+traces, determinants and much more. One would need to have a way
+to encode all these operation "unevaluated".
+
+
+> These matrices could have actual values which, for certain operations
+> are ignored, so that
+>
+>        (A*B)^-1      = B^-1 * A^-1
+>
+> but for other operations would be evaluated as in:
+>
+>        eval(B^-1 * A^-1)
+>
+> giving the actual matrix result shown element by element.
+
+Yes, of course this should play together with usual
+(dense or sparse) matrices nicely. Doesn't make the task
+easier though.
+
+And do we want define abstract matrices with or without shape information?
+
+
+> An additional enhancement would be to make a SymbolicMatrixCategory
+> so that there could be specific domains such as
+>
+>    GeneralSymbolicMatrix,
+>    SymmetricSymbolicMatrix,
+>    UpperTriangularSymbolicMatrix,
+>    DiagonalSymbolicMatrix,
+>
+> etc which could exploit certain matrix-level properties at the
+> symbolic level.
+
+Maybe someone should indeed try. I don't think I find the
+time to try this soon.
+
+
+It occurred to me that component-free geometric algebra
+might be easier to start with anyway.
+
+There is a nice book on the topic:
+
+  https://sites.google.com/site/grassmannalgebra/
+  https://sites.google.com/site/grassmannalgebra/thegrassmannalgebrabook
+
+which is accompanied by a Mathematica Package (that I never tried so far):
+
+  https://sites.google.com/site/grassmannalgebra/thegrassmannalgebrapackage
+
+The algebra in there is as far as I remember not done in an
+abstract way, but with explicit bases.
+
+
+-- Raoul
+
+_______________________________________________
+Axiom-mail mailing list
+Axiom-mail@nongnu.org
+https://lists.nongnu.org/mailman/listinfo/axiom-mail
+
+--20cf307ca1e42d3e9c04d9198337
+Content-Type: application/octet-stream; name="examples.input"
+Content-Disposition: attachment; filename="examples.input"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: bf1544c94f8dd048_0.1
+
+LS0gVGhpcyBmaWxlIHNob3dzIHNvbWUgcmVhbGx5IG5vbnRyaXZpYWwgZXhhbXBsZXMKLS0KLS0g
+U291cmNlOiAiQSBSdWxlLUJhc2VkIENvbXBvbmVudC1GcmVlIFZlY3RvciBBbGdlYnJhIFBhY2th
+Z2UiIGJ5IFNvbmd4aW4gTGlhbmcKLS0KLS0gSW5kaXZpZHVhbCBleGFtcGxlczoKLS0gSi4gQ3Vu
+bmluZ2hhbS4gIlZlY3RvcnMiLCBIZWluZW1hbm4gRWR1Y2F0aW9uYWwgQm9va3MgTHRkLCBMb25k
+b24sIDE5NjkKLS0gRS4gTS4gUGF0dGVyc29uLCAiU29sdmluZyBQcm9ibGVtcyBpbiBWZWN0b3Ig
+QWxnZWJyYSIsIE9saXZlciAmIEJveWQgTHRkLCBFZGluYnVyZ2gtTG9uZG9uLCAxOTY4Ci0tIEQu
+IFIuIFN0b3V0ZW15ZXIsICJTeW1ib2xpYyBjb21wdXRlciB2ZWN0b3IgYW5hbHlzaXMiLCBDb21w
+dXRlcnMgJiBNYXRoZW1hdGljcyB3aXRoIEFwcGxpY2F0aW9ucywgMTk3OQoKdmEgOj0gdmVjdG9y
+KGEpJFZBKElOVCkKdmIgOj0gdmVjdG9yKGIpJFZBKElOVCkKdmMgOj0gdmVjdG9yKGMpJFZBKElO
+VCkKdmQgOj0gdmVjdG9yKGQpJFZBKElOVCkKdmUgOj0gdmVjdG9yKGUpJFZBKElOVCkKdmYgOj0g
+dmVjdG9yKGYpJFZBKElOVCkKCgotLSBTdG91dGVteWVyCnggOj0gKCh2YV52YileKHZiXnZjKSkq
+KHZjXnZhKSAtICh2YSoodmJedmMpKSoodmEqKHZiXnZjKSkKemVybz8oeCkKeHMgOj0gc2ltcGxp
+ZnkoeCkKemVybz8oeHMpCmlzU2NhbGFyPyh4KQppc1NjYWxhcj8oeHMpCgoKeCA6PSAodmEtdmQp
+Xih2Yi12YykgKyAodmItdmQpXih2Yy12YSkgKyAodmMtdmQpXih2YS12YikgLSAyKih2YV52YiAr
+IHZiXnZjICsgdmNedmEpCnplcm8/KHgpCnhzIDo9IHNpbXBsaWZ5KHgpCnplcm8/KHhzKQppc1Zl
+Y3Rvcj8oeCkKaXNWZWN0b3I/KHhzKQoKCnggOj0gKHZiXnZjKV4odmFedmQpICsgKHZjXnZhKV4o
+dmJedmQpICsgKHZhXnZiKV4odmNedmQpICsgMipzM3AodmEsdmIsdmMpKnZkCnplcm8/KHgpCnhz
+IDo9IHNpbXBsaWZ5KHgpCnplcm8/KHhzKQotLSBzdGlsbCBub3QgemVyby4gQXQgdGhpcyBwb2lu
+dCB3ZSBuZWVkIHRoZSBwb3dlciBvZiBydWxlcwotLSBPZiBjb3Vyc2UgdGhpcyBzaG91bGQgYmUg
+aW5jbHVkZWQgaW50byBzaW1wbGlmeSBsYXRlci4KeHNzIDo9IGFwcGx5UnVsZSh4cywgInJ1bGUy
+OCIpCnplcm8/KHhzcykKeHNzcyA6PSBzaW1wbGlmeSh4c3MpCnplcm8/KHhzc3MpCmlzVmVjdG9y
+Pyh4KQppc1ZlY3Rvcj8oeHMpCmlzVmVjdG9yPyh4c3MpCmlzVmVjdG9yPyh4c3NzKQoKCi0tIEN1
+bm5pbmdoYW0KeCA6PSB2YV4odmJedmMpICsgdmJeKHZjXnZhKSArIHZjXih2YV52YikKemVybz8o
+eCkKeHMgOj0gc2ltcGxpZnkoeCkKemVybz8oeHMpCmlzVmVjdG9yPyh4KQppc1ZlY3Rvcj8oeHMp
+CgoKLS0gVGhpcyBJUyBhbiBpZGVudGl0eQpsaHMgOj0gdmFeKHZiXih2Y152ZCkpICsgdmJeKHZj
+Xih2ZF52YSkpICsgdmNeKHZkXih2YV52YikpICsgdmReKHZhXih2Yl52YykpCnJocyA6PSAodmFe
+dmMpXih2Yl52ZCkKaWRlbnRpdHk/KGxocywgcmhzKQotLSBUcnkgdG8gc2ltcGxpZnkgZmlyc3QK
+c2xocyA6PSBzaW1wbGlmeShsaHMpCnNyaHMgOj0gc2ltcGxpZnkocmhzKQppZGVudGl0eT8oc2xo
+cywgc3JocykKLS0gT2ssIGVub3VnaCBmb3IgdGhlIG1vbWVudAotLSBXZSB3b3VsZCBuZWVkIGlu
+dmVyc2Ugb2YgcnVsZTI4IHRvIGZpbmlzaAotLSBPZiBjb3Vyc2UgaWRlbnRpdHkgd2lsbCBlbXBs
+b3kgZnVsbCBzaW1wbGlmaWNhdGlvbiBsYXRlci4KCgotLSAgUGF0dGVyc29uCnggOj0gKHZiXnZj
+KSoodmFedmQpICsgKHZjXnZhKSoodmJedmQpICsgKHZhXnZiKSoodmNedmQpCnplcm8/KHgpCnhz
+IDo9IHNpbXBsaWZ5KHgpCnplcm8/KHhzKQppc1NjYWxhcj8oeCkKaXNTY2FsYXI/KHhzKQoKCngg
+Oj0gKCh2YV52YiledmMpXnZkICsgKCh2Yl52YSledmQpXnZjICsgKCh2Y152ZCledmEpXnZiICsg
+KCh2ZF52YyledmIpXnZhCnplcm8/KHgpCnhzIDo9IHNpbXBsaWZ5KHgpCnplcm8/KHhzKQppc1Zl
+Y3Rvcj8oeCkKaXNWZWN0b3I/KHhzKQo=
+--20cf307ca1e42d3e9c04d9198337
+Content-Type: application/octet-stream; name="tests.input"
+Content-Disposition: attachment; filename="tests.input"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: bf1544c94f8dd048_0.2
+
+dmEgOj0gdmVjdG9yKGEpJFZBKElOVCkKdmIgOj0gdmVjdG9yKGIpJFZBKElOVCkKdmMgOj0gdmVj
+dG9yKGMpJFZBKElOVCkKdmQgOj0gdmVjdG9yKGQpJFZBKElOVCkKdmUgOj0gdmVjdG9yKGUpJFZB
+KElOVCkKdmYgOj0gdmVjdG9yKGYpJFZBKElOVCkKdmcgOj0gdmVjdG9yKGcpJFZBKElOVCkKdmgg
+Oj0gdmVjdG9yKGgpJFZBKElOVCkKdmkgOj0gdmVjdG9yKGkpJFZBKElOVCkKdjAgOj0gdmVjdG9y
+WmVybygpJFZBKElOVCkKczAgOj0gc2NhbGFyWmVybygpJFZBKElOVCkKCi0tIFRlc3Qgc29tZSBz
+aW1wbGUgYXJpdGhtZXRpYwotdmEKCi12YSArIHZhCgp2YSArIHZiCgp2YSArIHZiICsgdmMKCgp2
+YSAqIHZhCgp2YSAqIHZiCgoKdmEgKiB2YiAqIHZjCgp2YSAqICh2YiAqIHZjKQoKKHZhICogdmIp
+ICogdmMKCi0tIFByb3BlcnRpZXMKaXNTY2FsYXI/IHMwCmlzVmVjdG9yPyBzMAoKaXNTY2FsYXI/
+IHYwCmlzVmVjdG9yPyB2MAoKaXNTY2FsYXI/IHZhCmlzVmVjdG9yPyB2YQoKaXNTY2FsYXI/KHZh
+KnZiKQppc1ZlY3Rvcj8odmEqdmIpCgppc1NjYWxhcj8odmFedmIpCmlzVmVjdG9yPyh2YV52YikK
+CmlzU2NhbGFyPyBzM3AodmEsIHZiLCB2YykKaXNWZWN0b3I/IHMzcCh2YSwgdmIsIHZjKQoKLS0g
+QmFzaWMgc2ltcGxpZmljYXRpb24Kc2ltcGxpZnkgczAKc2ltcGxpZnkgdjAKCnNpbXBsaWZ5KHZh
+ICsgdmEpCnNpbXBsaWZ5KHZhICsgdmIpCnNpbXBsaWZ5KHZhICsgdmIgKyB2YykKc2ltcGxpZnko
+dmEgKyB2YiArdmEgKyB2YiArIHZhKQpzaW1wbGlmeSh2YSAtIHZhKQpzaW1wbGlmeSh2YSAtIHZi
+KQpzaW1wbGlmeSh2YiAtIHZhKQoKc2ltcGxpZnkodjAqdjApCnNpbXBsaWZ5KHYwXnYwKQoKc2lt
+cGxpZnkodjAqdmEpCnNpbXBsaWZ5KHYwXnZhKQpzaW1wbGlmeSh2YV52MCkKCnNpbXBsaWZ5KHZh
+KnZhKQpzaW1wbGlmeSh2YSp2YikKCnNpbXBsaWZ5KHZhXnZhKQpzaW1wbGlmeSh2YV52YikKc2lt
+cGxpZnkodmJedmEpCgpzaW1wbGlmeSh2YV52YiArIHZiXnZhKQpzaW1wbGlmeSh2YV52YiAtIHZi
+XnZhKQoKLS0gQXhpb21zCnNpbXBsaWZ5KHZhXnZhKQoKc2ltcGxpZnkodmEqdmIpCnNpbXBsaWZ5
+KHZiKnZhKQoKc2ltcGxpZnkodmFedmIpCnNpbXBsaWZ5KC12Yl52YSkKCnNpbXBsaWZ5KHMzcCh2
+YSx2Yix2YykpCnNpbXBsaWZ5KHMzcCh2Yix2Yyx2YSkpCnNpbXBsaWZ5KHMzcCh2Yyx2YSx2Yikp
+CnNpbXBsaWZ5KC1zM3AodmEsdmMsdmIpKQpzaW1wbGlmeSgtczNwKHZiLHZhLHZjKSkKc2ltcGxp
+ZnkoLXMzcCh2Yyx2Yix2YSkpCgpzaW1wbGlmeShzM3AodmEsdmEsdmIpKQpzaW1wbGlmeShzM3Ao
+dmEsdmIsdmIpKQpzaW1wbGlmeShzM3AodmEsdmIsdmEpKQoKeCA6PSBzaW1wbGlmeSh2YV4odmJe
+dmMpKQp5IDo9IHNpbXBsaWZ5KCh2YSp2YykqdmIgLSAodmEqdmIpKnZjKQpzaW1wbGlmeSh4LXkp
+Cgp4IDo9IHNpbXBsaWZ5KCh2YV52YikqKHZjXnZkKSkKeSA6PSBzaW1wbGlmeSgodmEqdmMpKih2
+Yip2ZCkgLSAodmEqdmQpKih2Yip2YykpCnNpbXBsaWZ5KHgteSkKCnggOj0gc2ltcGxpZnkoKHZh
+XnZiKV4odmNedmQpKQp5IDo9IHNpbXBsaWZ5KHMzcCh2YSx2Yix2ZCkqdmMgLXMzcCh2YSx2Yix2
+YykqdmQpCnNpbXBsaWZ5KHgteSkKCi0tIENoZWNrIGV4cGFuc2lvbiBydWxlIGFwcGxpY2F0aW9u
+cwoKLS0gMi44CngxIDo9IHMzcCh2YSx2Yix2YykqdmQKc2ltcGxpZnkoeDEpCmFwcGx5UnVsZSh4
+MSwgInJ1bGUyOCIpCgp4MiA6PSB2ZCpzM3AodmEsdmIsdmMpCnNpbXBsaWZ5KHgyKQphcHBseVJ1
+bGUoeDIsICJydWxlMjgiKQoKc2ltcGxpZnkoeDEteDIpCgotLSAyLjkKeDEgOj0gczNwKHZhLHZi
+LHZjKSoodmRedmUpCnNpbXBsaWZ5KHgxKQphcHBseVJ1bGUoeDEsICJydWxlMjkiKQoKeDIgOj0g
+KHZkXnZlKSpzM3AodmEsdmIsdmMpCnNpbXBsaWZ5KHgyKQphcHBseVJ1bGUoeDIsICJydWxlMjki
+KQoKc2ltcGxpZnkoeDEteDIpCgotLSAyLjEwCngxIDo9ICh2ZCp2ZSkqczNwKHZhLHZiLHZjKQpz
+aW1wbGlmeSh4MSkKYXBwbHlSdWxlKHgxLCAicnVsZTIxMCIpCgp4MiA6PSBzM3AodmEsdmIsdmMp
+Kih2ZCp2ZSkKc2ltcGxpZnkoeDIpCmFwcGx5UnVsZSh4MiwgInJ1bGUyMTAiKQoKc2ltcGxpZnko
+eDEteDIpCgotLSAyLjExCngxIDo9IHMzcCh2YSx2Yix2YykqczNwKHZkLHZlLHZmKQpzaW1wbGlm
+eSh4MSkKYXBwbHlSdWxlKHgxLCAicnVsZTIxMSIpCgp4MiA6PSBzM3AodmQsdmUsdmYpKnMzcCh2
+YSx2Yix2YykKc2ltcGxpZnkoeDIpCmFwcGx5UnVsZSh4MiwgInJ1bGUyMTEiKQoKc2ltcGxpZnko
+eDEteDIpCgoKLS0gQSBsb25nZXIgZXhhbXBsZQp4IDo9IHMzcCh2YSx2Yix2YykqczNwKHZkLHZl
+LHZmKSpzM3AodmcsdmgsdmkpCnhyIDo9IGFwcGx5UnVsZSh4LCAicnVsZTIxMSIpCnhyciA6PSBh
+cHBseVJ1bGUoeHIsICJydWxlMjEwIikKeHJyciA6PSBhcHBseVJ1bGUoeHJyLCAicnVsZTIxMCIp
+CnhycnJyIDo9IGFwcGx5UnVsZSh4cnJyLCAicnVsZTIxMCIpCnhycnJyciA6PSBhcHBseVJ1bGUo
+eHJycnIsICJydWxlMjEwIikKLS0gQnkgZWFjaCBhcHBsaWNhdGlvbiB3ZSBjYW4gZG91YmxlIHRo
+ZSBleHByZXNzaW9uIHNpemUhCg==
+--20cf307ca1e42d3e9c04d9198337
+Content-Type: application/octet-stream; name="VA.spad"
+Content-Disposition: attachment; filename="VA.spad"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: bf1544c94f8dd048_0.3
+
+PDxjYXRlZ29yeSBWU0MgVmVjdG9yU3BhY2VDYXRlZ29yeT4+PQopYWJicmV2IGNhdGVnb3J5IFZT
+QyBWZWN0b3JTcGFjZUNhdGVnb3J5CisrIEF1dGhvcjogUmFvdWwgQm91cnF1aW4KKysgRGF0ZSBD
+cmVhdGVkOiA3IE9jdG9iZXIgMjAxMgorKyBEYXRlIExhc3QgVXBkYXRlZDogMTIgT2N0b2JlciAy
+MDEyCisrIERlc2NyaXB0aW9uOgorKyBJbXBsZW1lbnRhdGlvbiBvZiBjb21wb25lbnQtZnJlZSB2
+ZWN0b3IgYWxnZWJyYQorKyBiYXNlZCBvbiB0aGUgdGVjaG5pcXVlcyBkZXNjcmliZWQgaW4gdGhl
+IHBhcGVyCisrICJSdWxlLUJhc2VkIFNpbXBsaWZpY2F0aW9uIGluIFZlY3Rvci1Qcm9kdWN0IFNw
+YWNlcyIKKysgYnkgU29uZ3hpbiBMaWFuZyBhbmQgRGF2aWQgSi4gSmVmZnJleQpWZWN0b3JTcGFj
+ZUNhdGVnb3J5KFIgOiBSaW5nKSA6IENhdGVnb3J5ID09IENvZXJjaWJsZVRvKE91dHB1dEZvcm0p
+IHdpdGgKCiAgICAtLSBBZGRpdGlvbiBvZiB2ZWN0b3JzCiAgICAiKyI6ICglLCAlKSAtPiAlCgog
+ICAgLS0gU3VidHJhY3Rpb24gYW5kIHVuYXJ5IG1pbnVzIG9mIHZlY3RvcnMKICAgICItIjogKCUs
+ICUpIC0+ICUKICAgICItIjogJSAtPiAlCgogICAgLS0gTXVsdGlwbGljYXRpb24gYnkgc2NhbGFy
+cyBmcm9tIGJhc2UgZmllbGQgLyByaW5nCiAgICAiKiI6IChSLCAlKSAtPiAlCiAgICAiKiI6ICgl
+LCBSKSAtPiAlCgogICAgLS0gRXF1YWxpdHkgb2YgdmVjdG9ycwogICAgIj0iOiAoJSwgJSkgLT4g
+Qm9vbGVhbgoKICBhZGQKICAgICh4OiUgLSB5OiUpIDolID09IHggKyAoLTEpOjpSICogeQogICAg
+KC14OiUpIDolID09ICgtMSk6OlIgKiB4CiAgICAoeDolICogcjpSKSA6JSA9PSByICogeAoKICAg
+IC0tIHdoYXQgYWJvdXQgb3RoZXJzPwogICAgLS0geCA9IHkgPT0KCgo8PGNhdGVnb3J5IFZBQyBW
+ZWN0b3JBbGdlYnJhQ2F0ZWdvcnk+Pj0KKWFiYnJldiBjYXRlZ29yeSBWQUMgVmVjdG9yQWxnZWJy
+YUNhdGVnb3J5CisrIEF1dGhvcjogUmFvdWwgQm91cnF1aW4KKysgRGF0ZSBDcmVhdGVkOiA3IE9j
+dG9iZXIgMjAxMgorKyBEYXRlIExhc3QgVXBkYXRlZDogMTIgT2N0b2JlciAyMDEyCisrIERlc2Ny
+aXB0aW9uOgorKyBJbXBsZW1lbnRhdGlvbiBvZiBjb21wb25lbnQtZnJlZSB2ZWN0b3IgYWxnZWJy
+YQorKyBiYXNlZCBvbiB0aGUgdGVjaG5pcXVlcyBkZXNjcmliZWQgaW4gdGhlIHBhcGVyCisrICJS
+dWxlLUJhc2VkIFNpbXBsaWZpY2F0aW9uIGluIFZlY3Rvci1Qcm9kdWN0IFNwYWNlcyIKKysgYnkg
+U29uZ3hpbiBMaWFuZyBhbmQgRGF2aWQgSi4gSmVmZnJleQorKworKyBBeGlvbXM6CisrICAgXHNw
+YWR7IChhK2IpXmMgPSBhXmMgKyBiXmMgfQorKyAgIFxzcGFkeyBhXmIgPSAtYl5hIH0KKysgICBc
+c3BhZHsgYV4oYl5jKSA9IChhLmMpKmIgLSAoYS5iKSpjIH0KKysgICBcc3BhZHsgKGFiYykgPSAo
+YmNhKSB9IHdoZXJlIFxzcGFkeyhhYmMpfSBkZW5vdGVzIFxzcGFkeyhhXmIpLmN9CisrICAgXHNw
+YWR7IChhYmMpID0gMCB9IGltcGxpZXMgdGhhdCBcc3BhZHthLCBiLCBjfSBhcmUgbGluZWFybHkg
+ZGVwZW5kZW50ClZlY3RvckFsZ2VicmFDYXRlZ29yeShSIDogUmluZykgOiBDYXRlZ29yeSA9PSBW
+ZWN0b3JTcGFjZUNhdGVnb3J5KFIpIHdpdGgKICAgIC0tIG9yIEFsZ2VicmEoUikgPwoKICAgIHZl
+Y3RvcjogU3ltYm9sIC0+ICUKICAgICAgKysgQ3JlYXRlIGEgc3ltYm9saWMgY29tcG9uZW50LWZy
+ZWUgdmVjdG9yIG9iamVjdAoKICAgIHNjYWxhclplcm86ICgpIC0+ICUKICAgICAgKysgQ3JlYXRl
+IGEgc2NhbGFyIHplcm8gb2JqZWN0CgogICAgdmVjdG9yWmVybzogKCkgLT4gJQogICAgICArKyBD
+cmVhdGUgYSB2ZWN0b3IgemVybyBvYmplY3QKCiAgICBpc1NjYWxhcj86ICUgLT4gQm9vbGVhbgog
+ICAgICArKyBDaGVjayBpZiBhIGdpdmVuIGV4cHJlc3Npb24gaXMgc2NhbGFyIHZhbHVlZAoKICAg
+IGlzVmVjdG9yPzogJSAtPiBCb29sZWFuCiAgICAgICsrIENoZWNrIGlmIGEgZ2l2ZW4gZXhwcmVz
+c2lvbiBpcyB2ZWN0b3IgdmFsdWVkCgogICAgemVybz86ICUgLT4gQm9vbGVhbgoKICAgICIqIjog
+KCUsICUpIC0+ICUKICAgICAgKysgRG90L3NjYWxhciBwcm9kdWN0CiAgICAgIC0tIFBvc3NpYmxl
+IGNvbmZ1c2lvbiB3aXRoIGluaGVyaXRlZCByOlIqdjolIGZyb20gVlNDPwoKICAgICJeIjogKCUs
+ICUpIC0+ICUKICAgICAgKysgVmVjdG9yIGNyb3NzL3dlZGdlIHByb2R1Y3QKICAgICAgLS0gcmF0
+aGVyIHVzZSAiL1wiPwoKICAgIHMzcDogKCUsICUsICUpIC0+ICUKICAgICAgKysgVHJpcGxlIHZl
+Y3RvciBwcm9kdWN0CgogICAgc2ltcGxpZnk6ICUgLT4gJQogICAgICArKyBTaW1wbGlmeSBhIGdp
+dmVuIHZlY3RvciBleHByZXNzaW9uIGJ5IGZpcnN0CiAgICAgICsrIGJyaW5nIGl0IHRvIHRoZSBu
+b3JtYWwgZm9ybSwgdGhlbiBhcHBseQogICAgICArKyB0cmFuc2Zvcm1hdGlvbiBydWxlcwoKICAg
+IGlkZW50aXR5PzogKCUsICUpIC0+IEJvb2xlYW4KICAgICAgKysgQ2hlY2sgaWYgdHdvIGV4cHJl
+c3Npb25zIGFyZSBlcXVhbCBpbiB2YWx1ZQoKICAgIGNvZXJjZTogJSAtPiBPdXRwdXRGb3JtCiAg
+ICAgICsrCgogICAgYXBwbHlSdWxlOiAoJSwgU3RyaW5nKSAtPiAlCgogICAgbGF0ZXg6ICUgLT4g
+U3RyaW5nCgogIGFkZAoKICAgIHMzcCh4OiUsIHk6JSwgejolKSA6JSA9PSAoeF55KSAqIHoKCgo8
+PGRvbWFpbiBWQSBWZWN0b3JBbGdlYnJhPj49CilhYmJyZXYgZG9tYWluIFZBIFZlY3RvckFsZ2Vi
+cmEKKysgQXV0aG9yOiBSYW91bCBCb3VycXVpbgorKyBEYXRlIENyZWF0ZWQ6IDcgT2N0b2JlciAy
+MDEyCisrIERhdGUgTGFzdCBVcGRhdGVkOiAxMiBPY3RvYmVyIDIwMTIKKysgRGVzY3JpcHRpb246
+CisrIEltcGxlbWVudGF0aW9uIG9mIGNvbXBvbmVudC1mcmVlIHZlY3RvciBhbGdlYnJhCisrIGJh
+c2VkIG9uIHRoZSB0ZWNobmlxdWVzIGRlc2NyaWJlZCBpbiB0aGUgcGFwZXIKKysgIlJ1bGUtQmFz
+ZWQgU2ltcGxpZmljYXRpb24gaW4gVmVjdG9yLVByb2R1Y3QgU3BhY2VzIgorKyBieSBTb25neGlu
+IExpYW5nIGFuZCBEYXZpZCBKLiBKZWZmcmV5ClZlY3RvckFsZ2VicmEoUiA6IFJpbmcpIDogVmVj
+dG9yQWxnZWJyYUNhdGVnb3J5KFIpID09IEltcGxlbWVudGF0aW9uIHdoZXJlCgogIEV4cG9ydHMg
+PT0gd2l0aAoKICAgIG5vcm1hbGl6ZTogJSAtPiAlCiAgICAgICsrIEJyaW5nIHRoZSB2ZWN0b3Ig
+ZXhwcmVzc2lvbiBpbnRvIGEgbm9ybWFsIGZvcm0KICAgICAgKysgb2YgdHlwZSBbY29lZiwgc2Nh
+LCB2ZWNdCiAgICAgICsrIEV4YW1wbGUgb2YgYSBub3JtYWwgZm9ybToKICAgICAgKysgLTIgKiAo
+YS5iKSooYWJjKSAqIChjXmQpCiAgICAgICsrIFstMiwgW1thLCBiXSxbYSwgYiwgY11dLCBbYywg
+ZF1dCgogICAgLS10ZXJtT3JkZXI6CiAgICAtLSBXaGF0IGNhbiB3ZSBnYWluIGJ5IGV4cG9ydGlu
+ZyB0aGlzPwogICAgICArKyBSZW9yZGVyIHRoZSB0ZXJtcyBieSB0aGUgdGVybSBvcmRlciBjb25z
+dHJ1Y3RlZAoKICAgIC0tYXBwbHlSdWxlOiAoJSwgU3RyaW5nKSAtPiAlCgoKICBJbXBsZW1lbnRh
+dGlvbiA9PSBhZGQKCiAgICBJTlQgPT0+IEludGVnZXIKICAgIE5OSSA9PT4gTm9uTmVnYXRpdmVJ
+bnRlZ2VyCgogICAgcmVwIHggPT0+ICh4QCUpIHByZXRlbmQgUmVwCiAgICBwZXIgeCA9PT4gKHhA
+UmVwKSBwcmV0ZW5kICUKCiAgICAtLSBCYXNpYyBkYXRhIHR5cGVzIHVzZWQKICAgIGNvZVBhcnQg
+PT0gUgogICAgc2NhUGFydCA9PSBMaXN0IExpc3QgU3RyaW5nCiAgICB2ZWNQYXJ0ID09IExpc3Qg
+U3RyaW5nCiAgICAtLSB3ZSBkb250IHdhbnQgdG8gdXNlIFN0cmluZ3MsIHJhdGhlciBFeHBycz8g
+U3ltYm9scz8gVmFyaWFibGVzPwoKICAgIC0tIEEgc2luZ2xlIHRlcm0gaXMgb2YgdGhlIGZvcm0g
+YWxwaGEgKiBhICogdgogICAgVGVybSA9PSBSZWNvcmQoY29lOlIsIHNjYTpzY2FQYXJ0LCB2ZWM6
+dmVjUGFydCkKCiAgICAtLSBBIG5vcm1hbCBmb3JtIGlzIGEgc3VtIG9mIHRlcm1zCiAgICBSZXAg
+PT0gTGlzdCBUZXJtCgogICAgLS0gRnVydGhlciBzdHJ1Y3R1cmVzIHVzZWQgZm9yIGNvbnRyYWN0
+aW9uIHJ1bGVzCiAgICBzY2FUZXJtID09IFJlY29yZChjb2UyOlIsIHNjYTI6c2NhUGFydCkKICAg
+IHNjYUxpc3QgPT0gTGlzdChzY2FUZXJtKQogICAgbWl4VGVybSA9PSBSZWNvcmQoc2NhbDogc2Nh
+TGlzdCwgdmVjMjogdmVjUGFydCkKCiAgICAtLSBFeHRyYWN0IHNpbmdsZSBwYXJ0cyBvdXQgb2Yg
+dGVybXMKICAgIC0tIERvIHdlIHJlYWxseSBuZWVkIHRoaXM/CiAgICBjb2VmUGFydCh4OlRlcm0p
+IDogUiA9PSB4LmNvZQogICAgc2NhbGFyUGFydCh4OlRlcm0pIDogc2NhUGFydCA9PSB4LnNjYQog
+ICAgdmVjdG9yUGFydCh4OlRlcm0pIDogdmVjUGFydCA9PSB4LnZlYwoKCiAgICAtLSBDb25zdHJ1
+Y3QgbmV3IGRvbWFpbiBlbGVtZW50cwoKICAgIHNjYWxhclplcm8oKSA6ICUgPT0gcGVyIFsgWzAs
+IFtdLCBbXV0gXQoKICAgIHZlY3Rvclplcm8oKSA6ICUgPT0gcGVyIFsgWzAsIFtdLCBbIjAiXV0g
+XQogICAgICAtLSBUT0RPOiBGaXggIjAiIHN0cmluZyBoZXJlCgogICAgdmVjdG9yKHg6U3ltYm9s
+KSA6ICUgPT0gcGVyIFsgWzE6OlIsIFtdLCBbc3RyaW5nIHhdXSBdCgoKICAgIC0tIENoZWNrIGEg
+dGVybSBmb3IgYmVpbmcgemVybwoKICAgIHN6ZXJvPyh4OlRlcm0pIDogQm9vbGVhbiA9PQogICAg
+ICAtLSBDb2VmZmljaWVudCBpcyB6ZXJvIGFuZCB0aGVyZSBpcyBubyB2ZWN0b3IgcGFydAogICAg
+ICAtLSBCdXQgd2hhdCBhYm91dCBzY2FsYXIgcGFydDogc2NhbGFyIHBhcnQgY291bGQgYmUgemVy
+bwogICAgICAtLSBpZiBpdCBjb250YWlucyBhIHNjYWxhciBwcm9kdWN0IG9mIG9ydGhvZ29uYWwg
+dmVjdG9ycy4KICAgICAgLS0gQnV0OiB3ZSBjYW4gbm90IG1ha2UgYW55IGFzc3VtcHRpb25zIG9u
+IGFic3RyYWN0IHZlY3RvcnMgeWV0IQogICAgICB4LmNvZSA9IDAgYW5kIGVtcHR5PyB4LnZlYwoK
+ICAgIHZ6ZXJvPyh4OlRlcm0pIDogQm9vbGVhbiA9PQogICAgICAtLSBWZWN0b3IgaXMgemVybyBv
+ciBtdWx0aXBsaWVkIGJ5IHplcm8gY29lZmZpY2llbnQKICAgICAgLS0gQnV0IHdoYXQgYWJvdXQg
+c2NhbGFyIHBhcnQ6IHNjYWxhciBwYXJ0IGNvdWxkIGJlIHplcm8KICAgICAgLS0gaWYgaXQgY29u
+dGFpbnMgYSBzY2FsYXIgcHJvZHVjdCBvZiBvcnRob2dvbmFsIHZlY3RvcnMuCiAgICAgIC0tIEJ1
+dDogd2UgY2FuIG5vdCBtYWtlIGFueSBhc3N1bXB0aW9ucyBvbiBhYnN0cmFjdCB2ZWN0b3JzIHll
+dCEKICAgICAgfmVtcHR5PyB4LnZlYyBhbmQgKHguY29lID0gMCBvciAoeC52ZWMpKDEpID0gIjAi
+KQogICAgICAtLSBXaGF0IGFib3V0IHgudmVjIGJlZWluZyBhIHplcm8/CiAgICAgIC0tIE9yIGEg
+dmVjdG9yIHByb2R1Y3Qgd2l0aCBvbmUgZmFjdG9yIGEgemVybz8KCiAgICB6ZXJvPyh4OiUpIDog
+Qm9vbGVhbiA9PQogICAgICB4eCA6PSByZXAgeAogICAgICByZXN1bHQgOj0gdHJ1ZQogICAgICBm
+b3IgdHggaW4geHggcmVwZWF0CiAgICAgICAgbm90IHN6ZXJvPyB0eCBhbmQgbm90IHZ6ZXJvPyB0
+eCA9PiByZXN1bHQgOj0gZmFsc2UKICAgICAgcmVzdWx0CgoKICAgIC0tIENoZWNrIHNoYXBlcwoK
+ICAgIC0tIENoZWNrIGlmIGFuIGV4cHJlc3Npb24gaXMgYSB0cnVlIHZlY3RvciAocG9zc2libHkg
+emVybykKICAgIC0tIG9yIGp1c3QgYSBzY2FsYXIgZXhwcmVzc2lvbi4gRXhhbXBsZXMgZm9yIHNp
+bmdsZSB0ZXJtczoKICAgIC0tIFthLCBbXSwgW11dICBzY2FsYXIKICAgIC0tIFthLCBbLi4uXSwg
+W11dICBzY2FsYXIKICAgIC0tIFswLCBbLi4uXSwgW11dICBzY2FsYXIKICAgIC0tIFswLCBbXSwg
+W11dICBzY2FsYXIKICAgIC0tIFswLCBbLi4uXSwgWzBdXSAgemVyby12ZWN0b3IKICAgIC0tIFth
+LCBbLi4uXSwgWzBdXSAgemVyby12ZWN0b3IKICAgIC0tIFthLCBbMCwwXSwgWzBdXSAgemVyby12
+ZWN0b3IKICAgIC0tIFthLCBbLi4uXSwgW3ZdXSAgdmVjdG9yCiAgICAtLSBbYSwgWy4uLl0sIFt2
+LCB3XV0gIHZlY3RvcgogICAgLS0gWzAsIFsuLi5dLCBbdSwgdiwgd11dICB2ZWN0b3I/ICh0cmlw
+bGUgcHJvZHVjdCBldmFsdWF0ZWQgcmVzdWx0IGluIHNjYWxhciEpCgogICAgaXNTY2FsYXI/KHg6
+JSkgOiBCb29sZWFuID09CiAgICAgIHh4IDo9IHJlcCB4CiAgICAgIGVtcHR5PyB4eCA9PiBmYWxz
+ZQogICAgICByZXN1bHQgOj0gdHJ1ZQogICAgICAtLSBTZWFyY2ggaWYgdGhlcmUgaXMgYSB0ZXJt
+IHdoaWNoIGlzIG5vdCBhIHNjYWxhcgogICAgICBmb3IgdHggaW4geHggcmVwZWF0CiAgICAgICAg
+bm90IGVtcHR5PyB0eC52ZWMgPT4gKHJlc3VsdCA6PSBmYWxzZSkKICAgICAgcmVzdWx0CgogICAg
+aXNWZWN0b3I/KHg6JSkgOiBCb29sZWFuID09CiAgICAgIHh4IDo9IHJlcCB4CiAgICAgIGVtcHR5
+PyB4eCA9PiBmYWxzZQogICAgICAtLSBTZWFyY2ggaWYgdGhlcmUgaXMgYSB0ZXJtIHdoaWNoIGlz
+IG5vdCBhIHZlY3RvcgogICAgICByZXN1bHQgOj0gdHJ1ZQogICAgICBmb3IgdHggaW4geHggcmVw
+ZWF0CiAgICAgICAgZW1wdHk/IHR4LnZlYyA9PiAocmVzdWx0IDo9IGZhbHNlKQogICAgICByZXN1
+bHQKCgogICAgLS0gVGVybSBvcmRlciBmdW5jdGlvbnMKCiAgICBsaXN0T3JkZXI/KHYxOnZlY1Bh
+cnQsIHYyOnZlY1BhcnQpIDogQm9vbGVhbiA9PQogICAgICBlbXB0eT8gdjEgPT4gdHJ1ZQogICAg
+ICBlbXB0eT8gdjIgPT4gZmFsc2UKICAgICAgbjEgOj0gI3YxCiAgICAgIG4yIDo9ICN2MgogICAg
+ICBuMSA8IG4yID0+IHRydWUKICAgICAgbjEgPiBuMiA9PiBmYWxzZQoKICAgICAgLS0gQ2FzZSBu
+MSA9IG4yCiAgICAgIHJlc3VsdCA6PSB0cnVlCiAgICAgIGZvciBpIGluIDEuLm4xIHJlcGVhdAog
+ICAgICAgIGlmIHYxKGkpIDwgdjIoaSkgdGhlbgogICAgICAgICAgcmVzdWx0IDo9IHRydWUKICAg
+ICAgICAgIGJyZWFrCgogICAgICAgIGlmIHYxKGkpID4gdjIoaSkgdGhlbgogICAgICAgICAgcmVz
+dWx0IDo9IGZhbHNlCiAgICAgICAgICBicmVhawoKICAgICAgcmVzdWx0CgogICAgbGlzdEVxPyh2
+MTp2ZWNQYXJ0LCB2Mjp2ZWNQYXJ0KSA6IEJvb2xlYW4gPT0KICAgICAgZW1wdHk/IHYxIGFuZCBl
+bXB0eT8gdjIgPT4gdHJ1ZQogICAgICBlbXB0eT8gdjEgYW5kIG5vdCBlbXB0eT8gdjIgPT4gZmFs
+c2UKICAgICAgbjEgOj0gI3YxCiAgICAgIG4yIDo9ICN2MgogICAgICBuMSB+PSBuMiA9PiBmYWxz
+ZQoKICAgICAgLS0gQ2FzZSBuMSA9IG4yCiAgICAgIHJlc3VsdCA6PSB0cnVlCiAgICAgIGZvciBp
+IGluIDEuLm4xIHJlcGVhdAogICAgICAgIGlmIHYxKGkpIH49IHYyKGkpIHRoZW4KICAgICAgICAg
+IHJlc3VsdCA6PSBmYWxzZQogICAgICAgICAgYnJlYWsKCiAgICAgIHJlc3VsdAoKICAgIGxpc3RM
+aXN0T3JkZXI/KHMxOnNjYVBhcnQsIHMyOnNjYVBhcnQpIDogQm9vbGVhbiA9PQogICAgICBlbXB0
+eT8gczEgPT4gdHJ1ZQogICAgICBlbXB0eT8gczIgPT4gZmFsc2UKICAgICAgbjEgOj0gI3MxCiAg
+ICAgIG4yIDo9ICNzMgogICAgICBuMSA8IG4yID0+IHRydWUKICAgICAgbjEgPiBuMiA9PiBmYWxz
+ZQogICAgICByZXN1bHQgOj0gdHJ1ZQoKICAgICAgLS0gQ2FzZSBuMSA9IG4yCiAgICAgIGZvciBp
+IGluIDEuLm4xIHJlcGVhdAogICAgICAgIGlmIGxpc3RPcmRlcj8oczEoaSksIHMyKGkpKSBhbmQg
+bm90IGxpc3RFcT8oczEoaSksIHMyKGkpKSB0aGVuCiAgICAgICAgICByZXN1bHQgOj0gdHJ1ZQog
+ICAgICAgICAgYnJlYWsKCiAgICAgICAgaWYgbm90IGxpc3RPcmRlcj8oczEoaSksIHMyKGkpKSB0
+aGVuCiAgICAgICAgICByZXN1bHQgOj0gZmFsc2UKICAgICAgICAgIGJyZWFrCgogICAgICByZXN1
+bHQKCiAgICBsaXN0TGlzdEVxPyhzMTpzY2FQYXJ0LCBzMjpzY2FQYXJ0KSA6IEJvb2xlYW4gPT0K
+ICAgICAgZW1wdHk/IHMxIGFuZCBlbXB0eT8gczIgPT4gdHJ1ZQogICAgICBlbXB0eT8gczEgYW5k
+IG5vdCBlbXB0eT8gczIgPT4gZmFsc2UKICAgICAgbjEgOj0gI3MxCiAgICAgIG4yIDo9ICNzMgog
+ICAgICBuMSB+PSBuMiA9PiBmYWxzZQogICAgICByZXN1bHQgOj0gdHJ1ZQoKICAgICAgLS0gQ2Fz
+ZSBuMSA9IG4yCiAgICAgIGZvciBpIGluIDEuLm4xIHJlcGVhdAogICAgICAgIGlmIG5vdCBsaXN0
+RXE/KHMxKGkpLCBzMihpKSkgdGhlbgogICAgICAgICAgcmVzdWx0IDo9IGZhbHNlCiAgICAgICAg
+ICBicmVhawoKICAgICAgcmVzdWx0CgogICAgdGVybU9yZGVyPyh0MTpUZXJtLCB0MjpUZXJtKSA6
+IEJvb2xlYW4gPT0KICAgICAgc3plcm8/IHQxIG9yIHZ6ZXJvPyB0MSA9PiB0cnVlCiAgICAgIHN6
+ZXJvPyB0MiBvciB2emVybz8gdDIgPT4gZmFsc2UKCiAgICAgIGxpc3RPcmRlcj8odDEudmVjLCB0
+Mi52ZWMpIGFuZCBub3QgbGlzdEVxPyh0MS52ZWMsIHQyLnZlYykgPT4gdHJ1ZQogICAgICBub3Qg
+bGlzdEVxPyh0MS52ZWMsIHQyLnZlYykgPT4gZmFsc2UKCiAgICAgIGxpc3RMaXN0T3JkZXI/KHQx
+LnNjYSwgdDIuc2NhKSBhbmQgbm90IGxpc3RMaXN0RXE/KHQxLnNjYSwgdDIuc2NhKSA9PiB0cnVl
+CiAgICAgIG5vdCBsaXN0TGlzdEVxPyh0MS5zY2EsIHQyLnNjYSkgPT4gZmFsc2UKCiAgICAgIHRy
+dWUKCiAgICB0ZXJtRXE/KHQxOlRlcm0sIHQyOlRlcm0pIDogQm9vbGVhbiA9PQogICAgICB0MS5j
+b2UgPSB0Mi5jb2UgYW5kIGxpc3RMaXN0RXE/KHQxLnNjYSwgdDIuc2NhKSBhbmQgbGlzdEVxPyh0
+MS52ZWMsIHQyLnZlYykgPT4gdHJ1ZQoKICAgIHNjYWxhclBhcnRFcT8odDE6VGVybSwgdDI6VGVy
+bSkgOiBCb29sZWFuID09CiAgICAgIGxpc3RMaXN0RXE/KHQxLnNjYSwgdDIuc2NhKQoKICAgIHZl
+Y3RvclBhcnRFcT8odDE6VGVybSwgdDI6VGVybSkgOiBCb29sZWFuID09CiAgICAgIGxpc3RFcT8o
+dDEudmVjLCB0Mi52ZWMpCgoKICAgIC0tIEJyaW5nIHRoZSB2ZWN0b3IgZXhwcmVzc2lvbiBpbnRv
+IGEgbm9ybWFsIGZvcm0KICAgIC0tIG9mIHR5cGUgW2NvZWYsIHNjYSwgdmVjXQogICAgLS0gRXhh
+bXBsZSBvZiBhIG5vcm1hbCBmb3JtOgogICAgLS0gLTIgKiAoYS5iKSooYWJjKSAqIChjXmQpCiAg
+ICAtLSBbLTIsIFtbYSwgYl0sW2EsIGIsIGNdXSwgW2MsIGRdXQogICAgbm9ybWFsRm9ybSh4eDpS
+ZXApIDogUmVwID09CiAgICAgIC0tIGZvciBhbGwgdHggaW4geHgKICAgICAgLS0gICBtYWtlIHNj
+YWxhciBwYXJ0IGFuZCB2ZWN0b3IgcGFydCBpbiBhc2NlbmRpbmcgb3JkZXIKICAgICAgLS0gICB1
+c2UgdHJhbnNmb3JtYXRpb24gcnVsZXMgdG8gY2hlY2sgZm9yIHplcm8gKG5vdCBoZXJlKQogICAg
+ICAtLSAgIGNvbGxlY3Qgbm9uLXplcm8gdGVybXMgaW4geXkKICAgICAgLS0gICBtYWtlIHl5IGlu
+IGFzY2VuZGluZyBvcmRlcgogICAgICAtLSAgIGNvbWJpbmUgc2FtZSB0ZXJtcyAobm90IGhlcmUp
+CiAgICAgIC0tIHJldHVybiB5CgogICAgICByZXN1bHQgOiBSZXAgOj0gZW1wdHkoKQoKICAgICAg
+Zm9yIHR4IGluIHh4IHJlcGVhdAogICAgICAgIC0tIFJlc3VsdCB0ZXJtCiAgICAgICAgbnQgOiBU
+ZXJtIDo9IFt0eC5jb2UsIFtdLCBbXV0KCiAgICAgICAgLS0gT3JkZXIgc2NhbGFyIHBhcnRzCiAg
+ICAgICAgc2NhUGFydHMgOj0gdHguc2NhCiAgICAgICAgbnNwIDogc2NhUGFydCA6PSBlbXB0eSgp
+CgogICAgICAgIGZvciBzcCBpbiBzY2FQYXJ0cyByZXBlYXQKICAgICAgICAgIGlmICNzcCA9IDEg
+dGhlbgogICAgICAgICAgICAtLSBBIHNpbmdsZSBzY2FsYXIgcGFydAogICAgICAgICAgICBuc3Ag
+Oj0gY29ucyhzcCwgbnNwKQoKICAgICAgICAgIGVsc2UgaWYgI3NwID0gMiB0aGVuCiAgICAgICAg
+ICAgIC0tIEEgc2NhbGFyIHByb2R1Y3QKICAgICAgICAgICAgLS0gQXhpb20gMi4yIGFwcGxpZXM6
+IGEqYiA9IGIqYQogICAgICAgICAgICBuc3AgOj0gY29ucyhzb3J0KHNwKSwgbnNwKQoKICAgICAg
+ICAgIGVsc2UgaWYgI3NwID0gMyB0aGVuCiAgICAgICAgICAgIC0tIEEgc2NhbGFyIHRyaXBsZSBw
+cm9kdWN0CiAgICAgICAgICAgIC0tIEF4aW9tIDIuMyBhcHBsaWVzOiBbYWJjXSA9IFtiY2FdID0g
+W2NhYl0gPSAtW2FjYl0gPSAtW2NiYV0gPSAtW2JhY10KICAgICAgICAgICAgciA6PSBjb3VudGlu
+Z0J1YmJsZVNvcnQoc3ApJFNvcnRQYWNrYWdlKFN0cmluZywgTGlzdChTdHJpbmcpKQogICAgICAg
+ICAgICBuc3AgOj0gY29ucyhyLnNvcnRlZCwgbnNwKQogICAgICAgICAgICBpZiBvZGQ/IHIuZXhj
+aGFuZ2VzIHRoZW4gbnQuY29lIDo9IC1udC5jb2UKCiAgICAgICAgLS0gU29ydCB0aGUgc2NhbGFy
+IHBhcnRzCiAgICAgICAgbnQuc2NhIDo9IHNvcnQobGlzdE9yZGVyPywgbnNwKQoKICAgICAgICAt
+LSBPcmRlciB2ZWN0b3IgcGFydHMKICAgICAgICB2cCA6PSB0eC52ZWMKICAgICAgICBudnAgOiB2
+ZWNQYXJ0IDo9IGVtcHR5KCkKCiAgICAgICAgaWYgI3ZwID0gMSB0aGVuCiAgICAgICAgICAtLSBB
+IHNpbmdsZSB2ZWN0b3IgcGFydAogICAgICAgICAgbnZwIDo9IHZwCgogICAgICAgIGVsc2UgaWYg
+I3ZwID0gMiB0aGVuCiAgICAgICAgICAtLSBBIHZlY3RvciBwcm9kdWN0CiAgICAgICAgICAtLSBB
+eGlvbSAyLjIgYXBwbGllczogYV5iID0gLWJeYQogICAgICAgICAgciA6PSBjb3VudGluZ0J1YmJs
+ZVNvcnQodnApJFNvcnRQYWNrYWdlKFN0cmluZywgTGlzdChTdHJpbmcpKQogICAgICAgICAgbnZw
+IDo9IHIuc29ydGVkCiAgICAgICAgICBpZiBvZGQ/IHIuZXhjaGFuZ2VzIHRoZW4gbnQuY29lIDo9
+IC1udC5jb2UKCiAgICAgICAgbnQudmVjIDo9IG52cAoKICAgICAgICAtLSBBZGQgbmV3IHRlcm0g
+dG8gdGhlIHJlc3VsdAogICAgICAgIHJlc3VsdCA6PSBjb25zKG50LCByZXN1bHQpCgogICAgICAt
+LSBTb3J0IHRoZSB0ZXJtcyBpbiB0aGUgcmVzdWx0CiAgICAgIHJlc3VsdCA6PSBzb3J0ISh0ZXJt
+T3JkZXI/LCByZXN1bHQpCgoKICAgIG5vcm1hbGl6ZSh4OiUpIDogJSA9PQogICAgICBwZXIgbm9y
+bWFsRm9ybShyZXAgeCkKCgogICAgLS0gSW1wbGVtZW50YXRpb24gb2YgYWxnZWJyYWljIG9wZXJh
+dGlvbnMKCiAgICAtLSBBZGRpdGlvbgogICAgKHg6JSArIHk6JSkgOiAlID09CiAgICAgIGlzVmVj
+dG9yPyh4KSB+PSBpc1ZlY3Rvcj8oeSkgPT4gZXJyb3IgIkFkZGl0aW9uIG9mIG5vbi1jb21wYXRp
+YmxlIGVsZW1lbnQgc2hhcGVzIgogICAgICBwZXIgbm9ybWFsRm9ybSBhcHBlbmQocmVwIHgsIHJl
+cCB5KQoKICAgIC0tIFNjYWxhciB0aW1lcyB2ZWN0b3IKICAgIChyOlIgKiB4OiUpIDogJSA9PQog
+ICAgICB4eCA6PSByZXAgeAogICAgICB6eiA6PSBbIFtyKnR4LmNvZSwgdHguc2NhLCB0eC52ZWNd
+IGZvciB0eCBpbiB4eCBdCiAgICAgIHBlciBub3JtYWxGb3JtIHp6CgogICAgLS0gTXVsdGlwbHkg
+dHdvIGRvbWFpbiBlbGVtZW50cwogICAgc2NhbGFyVGltZXNTY2FsYXIocnI6UmVwLCBzczpSZXAp
+IDogUmVwID09CiAgICAgIHp6IDogUmVwIDo9IGVtcHR5KCkKCiAgICAgIGZvciB0ciBpbiByciBy
+ZXBlYXQKICAgICAgICBmb3IgdHMgaW4gc3MgcmVwZWF0CiAgICAgICAgICB0IDo9IFt0ci5jb2Uq
+dHMuY29lLCBhcHBlbmQodHIuc2NhLHRzLnNjYSksIFtdXUBUZXJtCiAgICAgICAgICB6eiA6PSBj
+b25zKHQsIHp6KQoKICAgICAgbm9ybWFsRm9ybSB6egoKICAgIHNjYWxhclRpbWVzVmVjdG9yKHNz
+OlJlcCwgdnY6UmVwKSA6IFJlcCA9PQogICAgICB6eiA6IFJlcCA6PSBlbXB0eSgpCgogICAgICBm
+b3IgdHMgaW4gc3MgcmVwZWF0CiAgICAgICAgZm9yIHR2IGluIHZ2IHJlcGVhdAogICAgICAgICAg
+dCA6PSBbdHMuY29lKnR2LmNvZSwgYXBwZW5kKHRzLnNjYSx0di5zY2EpLCB0di52ZWNdQFRlcm0K
+ICAgICAgICAgIHp6IDo9IGNvbnModCwgenopCgogICAgICBub3JtYWxGb3JtIHp6CgogICAgLS0g
+U2NhbGFyIG9yIGRvdC1wcm9kdWN0IG9mIHR3byB2ZWN0b3JzCiAgICB2ZWN0b3JUaW1lc1ZlY3Rv
+cih4eDpSZXAsIHl5OlJlcCkgOiBSZXAgPT0KICAgICAgenogOiBSZXAgOj0gZW1wdHkoKQoKICAg
+ICAgZm9yIHR4IGluIHh4IHJlcGVhdAogICAgICAgIG54OklOVCA6PSAjIHR4LnZlYwoKICAgICAg
+ICBmb3IgdHkgaW4geXkgcmVwZWF0CiAgICAgICAgICBueTpJTlQgOj0gIyB0eS52ZWMKCiAgICAg
+ICAgICB2eCA6PSB0eC52ZWMKICAgICAgICAgIHZ5IDo9IHR5LnZlYwoKICAgICAgICAgIGlmIG54
+ID0gMSBhbmQgbnkgPSAxIHRoZW4KICAgICAgICAgICAgc2NhcCA6PSBjb25zKFt2eCgxKSx2eSgx
+KV0sIGFwcGVuZCh0eC5zY2EsdHkuc2NhKSkKICAgICAgICAgICAgbSA6PSBbdHguY29lICogdHku
+Y29lLCBzY2FwLCBbXV1AVGVybQogICAgICAgICAgICB6eiA6PSBjb25zKG0sIHp6KQoKICAgICAg
+ICAgIGVsc2UgaWYgbnggPSAxIGFuZCBueSA9IDIgdGhlbgogICAgICAgICAgICBzY2FwIDo9IGNv
+bnMoW3Z4KDEpLHZ5KDEpLHZ5KDIpXSwgYXBwZW5kKHR4LnNjYSx0eS5zY2EpKQogICAgICAgICAg
+ICBtIDo9IFt0eC5jb2UqdHkuY29lLCBzY2FwLCBbXV1AVGVybQogICAgICAgICAgICB6eiA6PSBj
+b25zKG0sIHp6KQoKICAgICAgICAgIGVsc2UgaWYgbnggPSAyIGFuZCBueSA9IDEgdGhlbgogICAg
+ICAgICAgICBzY2FwIDo9IGNvbnMoW3Z4KDEpLHZ4KDIpLHZ5KDEpXSwgYXBwZW5kKHR4LnNjYSx0
+eS5zY2EpKQogICAgICAgICAgICBtIDo9IFt0eC5jb2UqdHkuY29lLCBzY2FwLCBbXV1AVGVybQog
+ICAgICAgICAgICB6eiA6PSBjb25zKG0sIHp6KQoKICAgICAgICAgIGVsc2UgaWYgbnggPSAyIGFu
+ZCBueSA9IDIgdGhlbgogICAgICAgICAgICBjb2VwIDo9IHR4LmNvZSAqIHR5LmNvZQogICAgICAg
+ICAgICBzY2FwMSA6PSBbW3Z4KDEpLHZ5KDEpXSwgW3Z4KDIpLHZ5KDIpXV0KICAgICAgICAgICAg
+c2NhcDIgOj0gW1t2eCgxKSx2eSgyKV0sIFt2eCgyKSx2eSgxKV1dCiAgICAgICAgICAgIG0xIDo9
+IFtjb2VwLCBhcHBlbmQoc2NhcDEsYXBwZW5kKHR4LnNjYSx0eS5zY2EpKSwgW11dQFRlcm0KICAg
+ICAgICAgICAgbTIgOj0gWygtMSkqY29lcCwgYXBwZW5kKHNjYXAyLGFwcGVuZCh0eC5zY2EsdHku
+c2NhKSksIFtdXUBUZXJtCiAgICAgICAgICAgIHp6IDo9IGFwcGVuZCh6eiwgW20xLCBtMl0pCgog
+ICAgICBub3JtYWxGb3JtIHp6CgogICAgLS0gRGlzcGF0Y2ggKiBvcGVyYXRvciBvZiB0d28gZG9t
+YWluIGVsZW1lbnRzIGRlcGVuZGluZyBvbiBlbGVtZW50IHNoYXBlCiAgICAoeDolICogeTolKSA6
+ICUgPT0KICAgICAgeHggOj0gcmVwIHgKICAgICAgeXkgOj0gcmVwIHkKICAgICAgdGV4IDo9IGlz
+VmVjdG9yPyh4KQogICAgICB0ZXkgOj0gaXNWZWN0b3I/KHkpCgogICAgICBub3QgdGV4IGFuZCBu
+b3QgdGV5ID0+CiAgICAgICAgcGVyIHNjYWxhclRpbWVzU2NhbGFyKHh4LCB5eSkKCiAgICAgIHRl
+eCBhbmQgbm90IHRleSA9PgogICAgICAgIHBlciBzY2FsYXJUaW1lc1ZlY3Rvcih5eSwgeHgpCgog
+ICAgICBub3QgdGV4IGFuZCB0ZXkgPT4KICAgICAgICBwZXIgc2NhbGFyVGltZXNWZWN0b3IoeHgs
+IHl5KQoKICAgICAgdGV4IGFuZCB0ZXkgPT4KICAgICAgICBwZXIgdmVjdG9yVGltZXNWZWN0b3Io
+eXksIHh4KQoKCiAgICAtLSBXZWRnZSBvciBjcm9zcy1wcm9kdWN0IG9mIHR3byB2ZWN0b3JzCiAg
+ICAoeDolIF4geTolKSA6JSA9PQogICAgICBub3QgaXNWZWN0b3I/KHgpIG9yIG5vdCBpc1ZlY3Rv
+cj8oeSkgPT4gZXJyb3IgIldlZGdlIHByb2R1Y3QgY2FuIG5vdCBjb250YWluIHNjYWxhciBlbGVt
+ZW50cyIKCiAgICAgIHh4IDo9IHJlcCB4CiAgICAgIHl5IDo9IHJlcCB5CgogICAgICB6eiA6IFJl
+cCA6PSBlbXB0eSgpCgogICAgICBmb3IgdHggaW4geHggcmVwZWF0CiAgICAgICAgbng6SU5UIDo9
+ICMgdHgudmVjCgogICAgICAgIGZvciB0eSBpbiB5eSByZXBlYXQKICAgICAgICAgIG55OklOVCA6
+PSAjIHR5LnZlYwoKICAgICAgICAgIHZ4IDo9IHR4LnZlYwogICAgICAgICAgdnkgOj0gdHkudmVj
+CgogICAgICAgICAgaWYgbnggPSAxIGFuZCBueSA9IDEgdGhlbgogICAgICAgICAgICBtIDo9IFt0
+eC5jb2UqdHkuY29lLCBhcHBlbmQodHguc2NhLHR5LnNjYSksIGFwcGVuZCh0eC52ZWMsdHkudmVj
+KV1AVGVybQogICAgICAgICAgICB6eiA6PSBjb25zKG0sIHp6KQoKICAgICAgICAgIGVsc2UgaWYg
+bnggPSAxIGFuZCBueSA9IDIgdGhlbgogICAgICAgICAgICBjb2VwIDo9IHR4LmNvZSAqIHR5LmNv
+ZQogICAgICAgICAgICBzY2FwMSA6PSBjb25zKFt2eCgxKSx2eSgyKV0sIGFwcGVuZCh0eC5zY2Es
+dHkuc2NhKSkKICAgICAgICAgICAgc2NhcDIgOj0gY29ucyhbdngoMSksdnkoMSldLCBhcHBlbmQo
+dHguc2NhLHR5LnNjYSkpCiAgICAgICAgICAgIG0xIDo9IFtjb2VwLCBzY2FwMSwgW3Z5KDEpXV1A
+VGVybQogICAgICAgICAgICBtMiA6PSBbKC0xKSpjb2VwLCBzY2FwMiwgW3Z5KDIpXV1AVGVybQog
+ICAgICAgICAgICB6eiA6PSBhcHBlbmQoenosIFttMSwgbTJdKQoKICAgICAgICAgIGVsc2UgaWYg
+bnggPSAyIGFuZCBueSA9IDEgdGhlbgogICAgICAgICAgICBjb2VwIDo9IHR4LmNvZSAqIHR5LmNv
+ZQogICAgICAgICAgICBzY2FwMSA6PSBjb25zKFt2eCgxKSx2eSgxKV0sIGFwcGVuZCh0eC5zY2Es
+dHkuc2NhKSkKICAgICAgICAgICAgc2NhcDIgOj0gY29ucyhbdngoMiksdnkoMSldLCBhcHBlbmQo
+dHguc2NhLHR5LnNjYSkpCiAgICAgICAgICAgIG0xIDo9IFtjb2VwLCBzY2FwMSwgW3Z4KDIpXV1A
+VGVybQogICAgICAgICAgICBtMiA6PSBbKC0xKSpjb2VwLCBzY2FwMiwgW3Z4KDEpXV1AVGVybQog
+ICAgICAgICAgICB6eiA6PSBhcHBlbmQoenosIFttMSwgbTJdKQoKICAgICAgICAgIGVsc2UgaWYg
+bnggPSAyIGFuZCBueSA9IDIgdGhlbgogICAgICAgICAgICBjb2VwIDo9IHR4LmNvZSAqIHR5LmNv
+ZQogICAgICAgICAgICBzY2FwMSA6PSBjb25zKFt2eCgxKSx2eCgyKSx2eSgyKV0sIGFwcGVuZCh0
+eC5zY2EsdHkuc2NhKSkKICAgICAgICAgICAgc2NhcDIgOj0gY29ucyhbdngoMSksdngoMiksdnko
+MSldLCBhcHBlbmQodHguc2NhLHR5LnNjYSkpCiAgICAgICAgICAgIG0xIDo9IFtjb2VwLCBzY2Fw
+MSwgW3Z5KDEpXV1AVGVybQogICAgICAgICAgICBtMiA6PSBbKC0xKSpjb2VwLCBzY2FwMiwgW3Z5
+KDIpXV1AVGVybQogICAgICAgICAgICB6eiA6PSBhcHBlbmQoenosIFttMSwgbTJdKQoKICAgICAg
+cGVyIG5vcm1hbEZvcm0genoKCgogICAgLS0gRXF1aXZhbGVuY2Ugb2YgdmVjdG9yIGV4cHJlc3Np
+b25zCiAgICAoeDolID0geTolKSA6IEJvb2xlYW4gPT0KICAgICAgaWRlbnRpdHk/KHgsIHkpCgoK
+ICAgIC0tIFNpbXBsZSB0cmFuc2Zvcm1hdGlvbnMKCiAgICBjb21iaW5lVGVybXMoeHg6UmVwKSA6
+IFJlcCA9PQogICAgICByZXN1bHQ6UmVwIDo9IGVtcHR5KCkKICAgICAgbiA6IE5OSSA6PSAjeHgK
+ICAgICAgaSA6IE5OSSA6PSAxCgogICAgICB3aGlsZSBpIDw9IG4gcmVwZWF0CiAgICAgICAgLS0g
+Q3VycmVudCB0ZXJtCiAgICAgICAgdGEgOj0geHgoaSkKICAgICAgICBjbmV3IDo9IHRhLmNvZQoK
+ICAgICAgICAtLSBDb2xsZWN0IGFsbCBmb2xsb3dpbmcgdGVybXMgdGhhdCBhcmUgZXF1YWwgdG8g
+Y3VycmVudAogICAgICAgIGogOiBOTkkgOj0gaSArIDEKICAgICAgICB3aGlsZSBqIDw9IG4gYW5k
+IHNjYWxhclBhcnRFcT8odGEsIHh4KGopKSBhbmQgdmVjdG9yUGFydEVxPyh0YSwgeHgoaikpIHJl
+cGVhdAogICAgICAgICAgY25ldyA6PSBjbmV3ICsgeHgoaikuY29lCiAgICAgICAgICBqIDo9IGog
+KyAxCgogICAgICAgIC0tIENvbWJpbmUgYW5kIGFwcGVuZAogICAgICAgIHRuZXc6VGVybSA6PSBb
+Y25ldywgdGEuc2NhLCB0YS52ZWNdQFRlcm0KICAgICAgICByZXN1bHQgOj0gY29ucyh0bmV3LCBy
+ZXN1bHQpCgogICAgICAgIC0tIENvbnRpbnVlIHdpdGggdGhlIGZpcnN0IG5vbi1lcXVhbCB0ZXJt
+CiAgICAgICAgaSA6PSBqCgogICAgICByZXZlcnNlISByZXN1bHQKCgogICAgcmVtb3ZlWmVyb2Vz
+KHh4OlJlcCkgOiBSZXAgPT0KICAgICAgLS0gQ2hlY2sgZm9yIGFuZCByZW1vdmUgemVyb2VzOgog
+ICAgICAtLSAgIGNvZSA9IDAKICAgICAgLS0gICBzY2EgaXMgemVybwogICAgICAtLSAgIHZlYyBp
+cyB6ZXJvCiAgICAgIC0tIFdlIGhhdmUKICAgICAgLS0gICBhXmEgLT4gMCBhbmQgMF5hIC0+IDAg
+YW5kIGFeMCAtPiAwCiAgICAgIC0tICAgKGFhYikgLT4gMCBhbmQgKGFiYikgLT4gMCBhbmQgKGFi
+YSkgLT4gMAogICAgICAtLSBXaXRoIGFzc3VtcHRpb25zIHdlIGNvdWxkIGFsc28gZG8KICAgICAg
+LS0gICBhKmIgLT4gMCBmb3IgYSBffF8gYgogICAgICByZXN1bHQgOiBSZXAgOj0gZW1wdHkoKQoK
+ICAgICAgZm9yIHR4IGluIHh4IHJlcGVhdAogICAgICAgIHN6ZXJvPyB0eCA9PiAiaXRlcmF0ZSIK
+ICAgICAgICB2emVybz8gdHggPT4gIml0ZXJhdGUiCgogICAgICAgIC0tIEF4aW9tOiBhXmEgPSAw
+CiAgICAgICAgdnAgOj0gdHgudmVjCiAgICAgICAgI3ZwID0gMiBhbmQgdnAoMSkgPSB2cCgyKSA9
+PiAiaXRlcmF0ZSIKCiAgICAgICAgLS0gQXhpb206IChhLGEsYikgPSAoYSxiLGEpID0gKGIsYSxh
+KSA9IDAKICAgICAgICAtLXNwIDo9IHR4LnNjYQogICAgICAgIHRwemVybyA6IEJvb2xlYW4gOj0g
+ZmFsc2UKICAgICAgICBmb3IgcyBpbiB0eC5zY2EgcmVwZWF0CiAgICAgICAgICBpZiAjcyA9IDMg
+dGhlbgogICAgICAgICAgICBzKDEpID0gcygyKSBvciBzKDEpID0gcygzKSBvciBzKDIpID0gcygz
+KSA9PiB0cHplcm8gOj0gdHJ1ZQoKICAgICAgICB0cHplcm8gPT4gIml0ZXJhdGUiCgogICAgICAg
+IC0tIFRlcm0gY29udGFpbnMgbm8ga25vd24gemVyb3MKICAgICAgICByZXN1bHQgOj0gY29ucyh0
+eCwgcmVzdWx0KQoKICAgICAgLS0gTm8gdGVybXMgbGVmdD8gQ29uc3RydWN0IGEgc2luZ2xlIHpl
+cm8KICAgICAgaWYgZW1wdHk/IHJlc3VsdCB0aGVuCiAgICAgICAgaXNTY2FsYXI/KHBlciB4eCkg
+PT4gcmVzdWx0IDo9IHJlcCBzY2FsYXJaZXJvKCkKICAgICAgICBpc1ZlY3Rvcj8ocGVyIHh4KSA9
+PiByZXN1bHQgOj0gcmVwIHZlY3Rvclplcm8oKQoKICAgICAgcmV2ZXJzZSEgcmVzdWx0CgoKICAg
+IC0tIFRyYW5zZm9ybWF0aW9uIHJ1bGVzIGJhc2VkIG9uIHRoZSBheGlvbXMKICAgIC0tIEZpcnN0
+IHBhcnQgYXJlIGV4cGFuc2lvbiBydWxlcwoKICAgIHJ1bGUyOCh4OlJlcCkgOiBSZXAgPT0KICAg
+ICAgKysgVGhpcyBydWxlIGltcGxlbWVudHMgdGhlIGV4cGFuc2lvbiBhY2NvcmRpbmcgdG8gdGhl
+IGF4aW9tCiAgICAgICsrIGQqKGFiYykgPSAoZCphKSooYl5jKSArIChkKmIpKihjXmEpICsgKGQq
+YykqKGFeYikKICAgICAgLS0gTm90IGEgcmVhbCB2ZWN0b3I/IEluIHRoYXQgY2FzZSB0aGUgc2hh
+cGVzIHdpbGwgbm90IG1hdGNoIGFueXdheQogICAgICBub3QgaXNWZWN0b3I/KHBlciB4KSA9PiB4
+CgogICAgICB5eSA6PSBub3JtYWxGb3JtKHgpCiAgICAgIHJlc3VsdCA6IFJlcCA6PSBlbXB0eSgp
+CgogICAgICBmb3IgdHggaW4geXkgcmVwZWF0CiAgICAgICAgLS0gQ29weSB0ZXJtcyBub3Qgc3Vp
+dGFibGUgZm9yIHRoaXMgcnVsZSBvdmVyIHRvIHRoZSByZXN1bHQKICAgICAgICBpZiAjdHgudmVj
+IH49IDEgb3IgZW1wdHk/IHR4LnNjYSB0aGVuCiAgICAgICAgICByZXN1bHQgOj0gY29ucyh0eCwg
+cmVzdWx0KQoKICAgICAgICAtLSBIYW5kbGUgdGVybXMgZm9yIHdoaWNoIHRoZSBydWxlIGFwcGxp
+ZXMKICAgICAgICBlbHNlCiAgICAgICAgICBmb3VuZCA6PSBmYWxzZQogICAgICAgICAgc2NhVGVy
+bXMgOj0gdHguc2NhCiAgICAgICAgICBuIDo9ICNzY2FUZXJtcwogICAgICAgICAgYXRwIDogTGlz
+dCBTdHJpbmcgOj0gZW1wdHkoKQogICAgICAgICAgb3RoZXJzIDogTGlzdCBMaXN0IFN0cmluZyA6
+PSBlbXB0eSgpCgogICAgICAgICAgLS0gVGFrZSBvdXQgdGhlIGZpcnN0IHNpbmdsZSB0cmlwbGUg
+cHJvZHVjdAogICAgICAgICAgZm9yIGkgaW4gMS4ubiByZXBlYXQKICAgICAgICAgICAgaWYgI3Nj
+YVRlcm1zKGkpID0gMyB0aGVuCiAgICAgICAgICAgICAgYXRwIDo9IHNjYVRlcm1zKGkpCiAgICAg
+ICAgICAgICAgb3RoZXJzIDo9IFtzY2FUZXJtcyhqKSBmb3IgaiBpbiAxLi5uIHwgaiB+PSBpXQog
+ICAgICAgICAgICAgIGZvdW5kIDo9IHRydWUKICAgICAgICAgICAgICBicmVhawoKICAgICAgICAg
+IC0tIFRha2Ugb3V0IHRoZSBmaXJzdCBzaW5nbGUgdmVjdG9yCiAgICAgICAgICBkIDo9IGZpcnN0
+IHR4LnZlYwoKICAgICAgICAgIGlmIG5vdCBmb3VuZCB0aGVuCiAgICAgICAgICAgIC0tIE5vIHRy
+aXBsZSBwcm9kdWN0IGZvdW5kLCBhZGQgdHggdG8gdGhlIHJlc3VsdCBhbmQgdGVybWluYXRlCiAg
+ICAgICAgICAgIHJlc3VsdCA6PSBjb25zKHR4LCByZXN1bHQpCiAgICAgICAgICBlbHNlCiAgICAg
+ICAgICAgIC0tIFRoZXJlIHdhcyBhIHRyaXBsZSBwcm9kdWN0LCBhZGQgdGhlIDMgdGVybXMgb2Yg
+dGhlIGF4aW9tcyBSSFMgdG8gdGhlIHJlc3VsdAogICAgICAgICAgICB0MTpUZXJtIDo9IFt0eC5j
+b2UsIGNvbnMoW2QsYXRwKDEpXSwgb3RoZXJzKSwgW2F0cCgyKSxhdHAoMyldXQogICAgICAgICAg
+ICB0MjpUZXJtIDo9IFt0eC5jb2UsIGNvbnMoW2QsYXRwKDIpXSwgb3RoZXJzKSwgW2F0cCgzKSxh
+dHAoMSldXQogICAgICAgICAgICB0MzpUZXJtIDo9IFt0eC5jb2UsIGNvbnMoW2QsYXRwKDMpXSwg
+b3RoZXJzKSwgW2F0cCgxKSxhdHAoMildXQogICAgICAgICAgICByZXN1bHQgOj0gYXBwZW5kKHJl
+c3VsdCwgW3QxLHQyLHQzXSkKCiAgICAgIG5vcm1hbEZvcm0gcmVzdWx0CgoKICAgIHJ1bGUyOSh4
+OlJlcCkgOiBSZXAgPT0KICAgICAgKysgVGhpcyBydWxlIGltcGxlbWVudHMgdGhlIGV4cGFuc2lv
+biBhY2NvcmRpbmcgdG8gdGhlIGF4aW9tCiAgICAgICsrIChkXmgpKihhYmMpID0gKChiXmMpKihk
+XmgpKSphICsgKChjXmEpKihkXmgpKSpiICsgKChhXmIpKihkXmgpKSpjCiAgICAgICsrICAgICAg
+ICAgICAgID0gICAoIChiKmQpKihjKmgpIC0gKGIqaCkqKGMqZCkgKSAqIGEKICAgICAgKysgICAg
+ICAgICAgICAgICArICggKGMqZCkqKGEqaCkgLSAoYypoKSooYSpkKSApICogYgogICAgICArKyAg
+ICAgICAgICAgICAgICsgKCAoYSpkKSooYipoKSAtIChhKmgpKihiKmQpICkgKiBjCiAgICAgICsr
+ICAgICAgICAgICAgID0gICAoYipkKSooYypoKSphIC0gKGIqaCkqKGMqZCkqYQogICAgICArKyAg
+ICAgICAgICAgICAgICsgKGMqZCkqKGEqaCkqYiAtIChjKmgpKihhKmQpKmIKICAgICAgKysgICAg
+ICAgICAgICAgICArIChhKmQpKihiKmgpKmMgLSAoYSpoKSooYipkKSpjCiAgICAgIC0tIE5vdCBh
+IHJlYWwgdmVjdG9yPyBJbiB0aGF0IGNhc2UgdGhlIHNoYXBlcyB3aWxsIG5vdCBtYXRjaCBhbnl3
+YXkKICAgICAgbm90IGlzVmVjdG9yPyhwZXIgeCkgPT4geAoKICAgICAgeXkgOj0gbm9ybWFsRm9y
+bSh4KQogICAgICByZXN1bHQgOiBSZXAgOj0gZW1wdHkoKQoKICAgICAgZm9yIHR4IGluIHl5IHJl
+cGVhdAogICAgICAgIC0tIENvcHkgdGVybXMgbm90IHN1aXRhYmxlIGZvciB0aGlzIHJ1bGUgb3Zl
+ciB0byB0aGUgcmVzdWx0CiAgICAgICAgaWYgI3R4LnZlYyB+PSAyIG9yIGVtcHR5PyB0eC5zY2Eg
+dGhlbgogICAgICAgICAgcmVzdWx0IDo9IGNvbnModHgsIHJlc3VsdCkKCiAgICAgICAgLS0gSGFu
+ZGxlIHRlcm1zIGZvciB3aGljaCB0aGUgcnVsZSBhcHBsaWVzCiAgICAgICAgZWxzZQogICAgICAg
+ICAgZm91bmQgOj0gZmFsc2UKICAgICAgICAgIHNjYVRlcm1zIDo9IHR4LnNjYQogICAgICAgICAg
+biA6PSAjc2NhVGVybXMKICAgICAgICAgIGF0cDpMaXN0IFN0cmluZyA6PSBlbXB0eSgpCiAgICAg
+ICAgICBvdGhlcnM6TGlzdCBMaXN0IFN0cmluZyA6PSBlbXB0eSgpCgogICAgICAgICAgLS0gVGFr
+ZSBvdXQgdGhlIGZpcnN0IHRyaXBsZSBwcm9kdWN0CiAgICAgICAgICBmb3IgaSBpbiAxLi5uIHJl
+cGVhdAogICAgICAgICAgICBpZiAjc2NhVGVybXMoaSkgPSAzIHRoZW4KICAgICAgICAgICAgICBh
+dHAgOj0gc2NhVGVybXMoaSkKICAgICAgICAgICAgICBvdGhlcnMgOj0gW3NjYVRlcm1zKGopIGZv
+ciBqIGluIDEuLm4gfCBqIH49IGldCiAgICAgICAgICAgICAgZm91bmQgOj0gdHJ1ZQogICAgICAg
+ICAgICAgIGJyZWFrCgogICAgICAgICAgLS0gVGFrZSBvdXQgdGhlIGNyb3NzIHZlY3RvcnMKICAg
+ICAgICAgIGQgOj0gZmlyc3QgdHgudmVjCiAgICAgICAgICBoIDo9IHNlY29uZCB0eC52ZWMKCiAg
+ICAgICAgICBpZiBub3QgZm91bmQgdGhlbgogICAgICAgICAgICAtLSBObyB0cmlwbGUgcHJvZHVj
+dCBmb3VuZCwgYWRkIHR4IHRvIHRoZSByZXN1bHQgYW5kIHRlcm1pbmF0ZQogICAgICAgICAgICBy
+ZXN1bHQgOj0gY29ucyh0eCwgcmVzdWx0KQogICAgICAgICAgZWxzZQogICAgICAgICAgICAtLSBU
+aGVyZSB3YXMgYSB0cmlwbGUgcHJvZHVjdCwgYWRkIHRoZSA2IHRlcm1zIG9mIHRoZSBheGlvbXMg
+UkhTIHRvIHRoZSByZXN1bHQKICAgICAgICAgICAgYSA6PSBhdHAoMSkKICAgICAgICAgICAgYiA6
+PSBhdHAoMikKICAgICAgICAgICAgYyA6PSBhdHAoMykKICAgICAgICAgICAgdDE6VGVybSA6PSBb
+IHR4LmNvZSwgYXBwZW5kKG90aGVycywgW1tiLGRdLCBbYyxoXV0pLCBbYV1dCiAgICAgICAgICAg
+IHQyOlRlcm0gOj0gWy10eC5jb2UsIGFwcGVuZChvdGhlcnMsIFtbYixoXSwgW2MsZF1dKSwgW2Fd
+XQogICAgICAgICAgICB0MzpUZXJtIDo9IFsgdHguY29lLCBhcHBlbmQob3RoZXJzLCBbW2MsZF0s
+IFthLGhdXSksIFtiXV0KICAgICAgICAgICAgdDQ6VGVybSA6PSBbLXR4LmNvZSwgYXBwZW5kKG90
+aGVycywgW1tjLGhdLCBbYSxkXV0pLCBbYl1dCiAgICAgICAgICAgIHQ1OlRlcm0gOj0gWyB0eC5j
+b2UsIGFwcGVuZChvdGhlcnMsIFtbYSxkXSwgW2IsaF1dKSwgW2NdXQogICAgICAgICAgICB0NjpU
+ZXJtIDo9IFstdHguY29lLCBhcHBlbmQob3RoZXJzLCBbW2EsaF0sIFtiLGRdXSksIFtjXV0KICAg
+ICAgICAgICAgcmVzdWx0IDo9IGFwcGVuZChyZXN1bHQsIFt0MSx0Mix0Myx0NCx0NSx0Nl0pCgog
+ICAgICBub3JtYWxGb3JtIHJlc3VsdAoKCiAgICBydWxlMjEwKHg6UmVwKSA6IFJlcCA9PQogICAg
+ICArKyBUaGlzIHJ1bGUgaW1wbGVtZW50cyB0aGUgZXhwYW5zaW9uIGFjY29yZGluZyB0byB0aGUg
+YXhpb20KICAgICAgKysgKGQqaCkoYWJjKSA9IChkKmEpKGhiYykgKyAoZCpiKShhaGMpICsgKGQq
+YykoYWJoKQogICAgICAtLSBOb3QgYSBzY2FsYXI/IEluIHRoYXQgY2FzZSB0aGUgc2hhcGVzIHdp
+bGwgbm90IG1hdGNoIGFueXdheQogICAgICBub3QgaXNTY2FsYXI/KHBlciB4KSA9PiB4CgogICAg
+ICB5eSA6PSBub3JtYWxGb3JtKHgpCiAgICAgIHJlc3VsdCA6IFJlcCA6PSBlbXB0eSgpCgogICAg
+ICBmb3IgdHggaW4geXkgcmVwZWF0CiAgICAgICAgLS0gQ29weSB0ZXJtcyBub3Qgc3VpdGFibGUg
+Zm9yIHRoaXMgcnVsZSBvdmVyIHRvIHRoZSByZXN1bHQKICAgICAgICBpZiBub3QgZW1wdHk/IHR4
+LnZlYyBvciBlbXB0eT8gdHguc2NhIHRoZW4KICAgICAgICAgIHJlc3VsdCA6PSBjb25zKHR4LCBy
+ZXN1bHQpCgogICAgICAgIC0tIEhhbmRsZSB0ZXJtcyBmb3Igd2hpY2ggdGhlIHJ1bGUgYXBwbGll
+cwogICAgICAgIGVsc2UKICAgICAgICAgIGZvdW5kZHAgOj0gZmFsc2UKICAgICAgICAgIGZvdW5k
+dHAgOj0gZmFsc2UKICAgICAgICAgIHNjYVRlcm1zIDo9IHR4LnNjYQogICAgICAgICAgbiA6PSAj
+c2NhVGVybXMKICAgICAgICAgIGFkcCA6IExpc3QgU3RyaW5nIDo9IGVtcHR5KCkKICAgICAgICAg
+IGF0cCA6IExpc3QgU3RyaW5nIDo9IGVtcHR5KCkKICAgICAgICAgIG90aGVycyA6IExpc3QgTGlz
+dCBTdHJpbmcgOj0gZW1wdHkoKQoKICAgICAgICAgIC0tIFRha2Ugb3V0IHRoZSBmaXJzdCBkb3Qg
+YW5kIHRyaXBsZSBwcm9kdWN0CiAgICAgICAgICBmb3IgaSBpbiAxLi5uIHJlcGVhdAogICAgICAg
+ICAgICBpZiBub3QgZm91bmRkcCBhbmQgI3NjYVRlcm1zKGkpID0gMiB0aGVuCiAgICAgICAgICAg
+ICAgYWRwIDo9IHNjYVRlcm1zKGkpCiAgICAgICAgICAgICAgZm91bmRkcCA6PSB0cnVlCiAgICAg
+ICAgICAgIGVsc2UgaWYgbm90IGZvdW5kdHAgYW5kICNzY2FUZXJtcyhpKSA9IDMgdGhlbgogICAg
+ICAgICAgICAgIGF0cCA6PSBzY2FUZXJtcyhpKQogICAgICAgICAgICAgIGZvdW5kdHAgOj0gdHJ1
+ZQogICAgICAgICAgICBlbHNlCgkgICAgICBvdGhlcnMgOj0gY29ucyhzY2FUZXJtcyhpKSwgb3Ro
+ZXJzKQoKICAgICAgICAgIGlmIG5vdCBmb3VuZGRwIG9yIG5vdCBmb3VuZHRwICB0aGVuCiAgICAg
+ICAgICAgIC0tIE5vIGRvdCBvciB0cmlwbGUgcHJvZHVjdCBmb3VuZCwgYWRkIHR4IHRvIHRoZSBy
+ZXN1bHQgYW5kIHRlcm1pbmF0ZQogICAgICAgICAgICByZXN1bHQgOj0gY29ucyh0eCwgcmVzdWx0
+KQogICAgICAgICAgZWxzZQogICAgICAgICAgICAtLSBUaGVyZSB3ZXJlIGRvdCBhbmQgdHJpcGxl
+IHByb2R1Y3RzLCBhZGQgdGhlIDMgdGVybXMgb2YgdGhlIGF4aW9tcyBSSFMgdG8gdGhlIHJlc3Vs
+dAogICAgICAgICAgICBhIDo9IGF0cCgxKQogICAgICAgICAgICBiIDo9IGF0cCgyKQogICAgICAg
+ICAgICBjIDo9IGF0cCgzKQogICAgICAgICAgICBkIDo9IGFkcCgxKQogICAgICAgICAgICBoIDo9
+IGFkcCgyKQogICAgICAgICAgICB0MTpUZXJtIDo9IFt0eC5jb2UsIGFwcGVuZChvdGhlcnMsIFtb
+ZCxhXSxbaCxiLGNdXSksIFtdXQogICAgICAgICAgICB0MjpUZXJtIDo9IFt0eC5jb2UsIGFwcGVu
+ZChvdGhlcnMsIFtbZCxiXSxbYSxoLGNdXSksIFtdXQogICAgICAgICAgICB0MzpUZXJtIDo9IFt0
+eC5jb2UsIGFwcGVuZChvdGhlcnMsIFtbZCxjXSxbYSxiLGhdXSksIFtdXQogICAgICAgICAgICBy
+ZXN1bHQgOj0gYXBwZW5kKHJlc3VsdCwgW3QxLHQyLHQzXSkKCiAgICAgIG5vcm1hbEZvcm0gcmVz
+dWx0CgoKICAgIHJ1bGUyMTEoeDpSZXApIDogUmVwID09CiAgICAgICsrIFRoaXMgcnVsZSBpbXBs
+ZW1lbnRzIHRoZSBleHBhbnNpb24gYWNjb3JkaW5nIHRvIHRoZSBheGlvbQogICAgICArKyAoYWJj
+KShkZ2gpID0gKChiXmMpKihkXmcpKShhKmgpICsgKChjXmEpKihkXmcpKShiKmgpICsgKChhXmIp
+KihkXmcpKShjKmgpCiAgICAgICsrICAgICAgICAgICAgPSAgICgoYipkKShjKmcpIC0gKGIqZyko
+YypkKSkgKGEqaCkKICAgICAgKysgICAgICAgICAgICAgICsgKChjKmQpKGEqZykgLSAoYypnKShh
+KmQpKSAoYipoKQogICAgICArKyAgICAgICAgICAgICAgKyAoKGEqZCkoYipnKSAtIChhKmcpKGIq
+ZCkpIChjKmgpCiAgICAgICsrICAgICAgICAgICAgPSAgIChiKmQpKGMqZykoYSpoKSAtIChiKmcp
+KGMqZCkoYSpoKQogICAgICArKyAgICAgICAgICAgICAgKyAoYypkKShhKmcpKGIqaCkgLSAoYypn
+KShhKmQpKGIqaCkKICAgICAgKysgICAgICAgICAgICAgICsgKGEqZCkoYipnKShjKmgpIC0gKGEq
+ZykoYipkKShjKmgpCiAgICAgIC0tIE5vdCBhIHNjYWxhcj8gSW4gdGhhdCBjYXNlIHRoZSBzaGFw
+ZXMgd2lsbCBub3QgbWF0Y2ggYW55d2F5CiAgICAgIG5vdCBpc1NjYWxhcj8ocGVyIHgpID0+IHgK
+CiAgICAgIHl5IDo9IG5vcm1hbEZvcm0oeCkKICAgICAgcmVzdWx0IDogUmVwIDo9IGVtcHR5KCkK
+CiAgICAgIGZvciB0eCBpbiB5eSByZXBlYXQKICAgICAgICAtLSBDb3B5IHRlcm1zIG5vdCBzdWl0
+YWJsZSBmb3IgdGhpcyBydWxlIG92ZXIgdG8gdGhlIHJlc3VsdAogICAgICAgIGlmIG5vdCBlbXB0
+eT8gdHgudmVjIG9yIGVtcHR5PyB0eC5zY2EgdGhlbgogICAgICAgICAgcmVzdWx0IDo9IGNvbnMo
+dHgsIHJlc3VsdCkKCiAgICAgICAgLS0gSGFuZGxlIHRlcm1zIGZvciB3aGljaCB0aGUgcnVsZSBh
+cHBsaWVzCiAgICAgICAgZWxzZQogICAgICAgICAgc2NhVGVybXMgOj0gdHguc2NhCiAgICAgICAg
+ICBuIDo9ICNzY2FUZXJtcwogICAgICAgICAgdHBzIDogTGlzdCBMaXN0IFN0cmluZyA6PSBlbXB0
+eSgpCiAgICAgICAgICBvdGhlcnMgOiBMaXN0IExpc3QgU3RyaW5nIDo9IGVtcHR5KCkKCiAgICAg
+ICAgICAtLSBUYWtlIG91dCB0aGUgZmlyc3QgdHdvIHRyaXBsZSBwcm9kdWN0cwogICAgICAgICAg
+Zm9yIGkgaW4gMS4ubiByZXBlYXQKICAgICAgICAgICAgaWYgI3NjYVRlcm1zKGkpID0gMyBhbmQg
+I3RwcyA8IDIgdGhlbgogICAgICAgICAgICAgIHRwcyA6PSBjb25zKHNjYVRlcm1zKGkpLCB0cHMp
+CiAgICAgICAgICAgIGVsc2UKCSAgICAgIG90aGVycyA6PSBjb25zKHNjYVRlcm1zKGkpLCBvdGhl
+cnMpCgogICAgICAgICAgaWYgI3RwcyA8IDIgIHRoZW4KICAgICAgICAgICAgLS0gTm8gdHJpcGxl
+IHByb2R1Y3QocykgZm91bmQsIGFkZCB0eCB0byB0aGUgcmVzdWx0IGFuZCB0ZXJtaW5hdGUKICAg
+ICAgICAgICAgcmVzdWx0IDo9IGNvbnModHgsIHJlc3VsdCkKICAgICAgICAgIGVsc2UKICAgICAg
+ICAgICAgLS0gVGhlcmUgd2VyZSB0d28gdHJpcGxlIHByb2R1Y3RzLCBhZGQgdGhlIDYgdGVybXMg
+b2YgdGhlIGF4aW9tcyBSSFMgdG8gdGhlIHJlc3VsdAogICAgICAgICAgICB0cDEgOj0gdHBzKDEp
+CiAgICAgICAgICAgIHRwMiA6PSB0cHMoMikKICAgICAgICAgICAgYSA6PSB0cDEoMSkKICAgICAg
+ICAgICAgYiA6PSB0cDEoMikKICAgICAgICAgICAgYyA6PSB0cDEoMykKICAgICAgICAgICAgZCA6
+PSB0cDIoMSkKICAgICAgICAgICAgZyA6PSB0cDIoMikKICAgICAgICAgICAgaCA6PSB0cDIoMykK
+ICAgICAgICAgICAgdDE6VGVybSA6PSBbIHR4LmNvZSwgYXBwZW5kKG90aGVycywgW1tiLGRdLFtj
+LGddLFthLGhdXSksIFtdXQogICAgICAgICAgICB0MjpUZXJtIDo9IFstdHguY29lLCBhcHBlbmQo
+b3RoZXJzLCBbW2IsZ10sW2MsZF0sW2EsaF1dKSwgW11dCiAgICAgICAgICAgIHQzOlRlcm0gOj0g
+WyB0eC5jb2UsIGFwcGVuZChvdGhlcnMsIFtbYyxkXSxbYSxnXSxbYixoXV0pLCBbXV0KICAgICAg
+ICAgICAgdDQ6VGVybSA6PSBbLXR4LmNvZSwgYXBwZW5kKG90aGVycywgW1tjLGddLFthLGRdLFti
+LGhdXSksIFtdXQogICAgICAgICAgICB0NTpUZXJtIDo9IFsgdHguY29lLCBhcHBlbmQob3RoZXJz
+LCBbW2EsZF0sW2IsZ10sW2MsaF1dKSwgW11dCiAgICAgICAgICAgIHQ2OlRlcm0gOj0gWy10eC5j
+b2UsIGFwcGVuZChvdGhlcnMsIFtbYSxnXSxbYixkXSxbYyxoXV0pLCBbXV0KICAgICAgICAgICAg
+cmVzdWx0IDo9IGFwcGVuZChyZXN1bHQsIFt0MSx0Mix0Myx0NCx0NSx0Nl0pCgogICAgICBub3Jt
+YWxGb3JtIHJlc3VsdAoKCiAgICAtLSBTaW1wbGlmaWNhdGlvbiByb3V0aW5lcwoKICAgIHNpbXBs
+aWZ5KHg6JSkgOiAlID09CiAgICAgIHh4IDo9IG5vcm1hbEZvcm0ocmVwIHgpCiAgICAgIHh4IDo9
+IGNvbWJpbmVUZXJtcyh4eCkKICAgICAgeHggOj0gcmVtb3ZlWmVyb2VzKHh4KQogICAgICBwZXIg
+eHgKCgogICAgaWRlbnRpdHk/KHg6JSwgeTolKSA6IEJvb2xlYW4gPT0KICAgICAgemVybz8gc2lt
+cGxpZnkoeC15KQoKCiAgICAtLSBBcHBseSBzcGVjaWZpYyBydWxlcyB0byB0aGUgZ2l2ZW4gZXhw
+cmVzc2lvbgoKICAgIGFwcGx5UnVsZSh4OiUsIHJ1bGU6U3RyaW5nKSA6ICUgPT0KICAgICAgKysg
+Q2VudHJhbCBydWxlIGRpc3BhdGNoZXIKICAgICAgLS0ocnVsZT0icnVsZTAxIilAQm9vbGVhbiA9
+PiBwZXIgcnVsZTAxKHJlcCB4KQogICAgICAtLShydWxlPSJydWxlMDIiKUBCb29sZWFuID0+IHBl
+ciBydWxlMDIocmVwIHgpCiAgICAgIChydWxlPSJydWxlMjgiKUBCb29sZWFuID0+IHBlciBydWxl
+MjgocmVwIHgpCiAgICAgIChydWxlPSJydWxlMjkiKUBCb29sZWFuID0+IHBlciBydWxlMjkocmVw
+IHgpCiAgICAgIChydWxlPSJydWxlMjEwIilAQm9vbGVhbiA9PiBwZXIgcnVsZTIxMChyZXAgeCkK
+ICAgICAgKHJ1bGU9InJ1bGUyMTEiKUBCb29sZWFuID0+IHBlciBydWxlMjExKHJlcCB4KQogICAg
+ICAtLSBTcGVjaWZpZWQgcnVsZSBub3QgdmFsaWQKICAgICAgeAoKCiAgICAtLSBPdXRwdXQgb2Yg
+ZG9tYWluIGVsZW1lbnRzCgogICAgY29lcmNlKHg6JSkgOiBPdXRwdXRGb3JtID09CiAgICAgIHh4
+IDo9IG5vcm1hbEZvcm0ocmVwIHgpCiAgICAgIG8gOiBMaXN0IE91dHB1dEZvcm0gOj0gZW1wdHko
+KQoKICAgICAgLS0gTG9vcCBvdmVyIGFsbCB0ZXJtcwogICAgICBmb3IgdHggaW4geHggcmVwZWF0
+CiAgICAgICAgLS0gQ29lZmZpY2llbnQgcGFydAogICAgICAgIGlmIHR4LmNvZSA9IDEgdGhlbgog
+ICAgICAgICAgb2NvZTpPdXRwdXRGb3JtIDo9IGVtcHR5KCkKICAgICAgICBlbHNlCiAgICAgICAg
+ICBvY29lOk91dHB1dEZvcm0gOj0gdHguY29lOjpPdXRwdXRGb3JtCgogICAgICAgIC0tIFNjYWxh
+ciBwYXJ0CiAgICAgICAgaWYgbm90IGVtcHR5PyB0eC5zY2EgdGhlbgogICAgICAgICAgb3NjYWw6
+TGlzdCBPdXRwdXRGb3JtIDo9IGVtcHR5KCkKICAgICAgICAgIGZvciBhc2NhIGluIHR4LnNjYSBy
+ZXBlYXQKICAgICAgICAgICAgaWYgI2FzY2EgPSAxIHRoZW4KICAgICAgICAgICAgICBzMSA6PSBh
+c2NhKDEpOjpTeW1ib2w6Ok91dHB1dEZvcm0KICAgICAgICAgICAgICBvc2NhbCA6PSBjb25zKHMx
+LCBvc2NhbCkKICAgICAgICAgICAgaWYgI2FzY2EgPSAyIHRoZW4KICAgICAgICAgICAgICBzMSA6
+PSBhc2NhKDEpOjpTeW1ib2w6Ok91dHB1dEZvcm0KICAgICAgICAgICAgICBzMiA6PSBhc2NhKDIp
+OjpTeW1ib2w6Ok91dHB1dEZvcm0KICAgICAgICAgICAgICBvc2NhbCA6PSBjb25zKHMxKnMyLCBv
+c2NhbCkKICAgICAgICAgICAgaWYgI2FzY2EgPSAzIHRoZW4KICAgICAgICAgICAgICBzMSA6PSBh
+c2NhKDEpOjpTeW1ib2w6Ok91dHB1dEZvcm0KICAgICAgICAgICAgICBzMiA6PSBhc2NhKDIpOjpT
+eW1ib2w6Ok91dHB1dEZvcm0KICAgICAgICAgICAgICBzMyA6PSBhc2NhKDMpOjpTeW1ib2w6Ok91
+dHB1dEZvcm0KICAgICAgICAgICAgICBvc2NhbCA6PSBjb25zKHMxKnMyKnMzLCBvc2NhbCkKCiAg
+ICAgICAgICBvc2NhOk91dHB1dEZvcm0gOj0gcmVkdWNlKCIqIiwgcmV2ZXJzZSEgb3NjYWwpCiAg
+ICAgICAgZWxzZQogICAgICAgICAgb3NjYTpPdXRwdXRGb3JtIDo9IGVtcHR5KCkKCiAgICAgICAg
+LS0gVmVjdG9yIHBhcnQKICAgICAgICBpZiBub3QgZW1wdHk/IHR4LnZlYyB0aGVuCiAgICAgICAg
+ICAgdmVjcyA6PSB0eC52ZWMKICAgICAgICAgICBpZiAjdmVjcyA9IDEgdGhlbgogICAgICAgICAg
+ICAgb3ZlYzpPdXRwdXRGb3JtIDo9IHZlY3MoMSk6OlN5bWJvbDo6T3V0cHV0Rm9ybQogICAgICAg
+ICAgIGlmICN2ZWNzID0gMiB0aGVuCiAgICAgICAgICAgICB2MSA6PSB2ZWNzKDEpOjpTeW1ib2w6
+Ok91dHB1dEZvcm0KICAgICAgICAgICAgIHYyIDo9IHZlY3MoMik6OlN5bWJvbDo6T3V0cHV0Rm9y
+bQogICAgICAgICAgICAgb3ZlYzpPdXRwdXRGb3JtIDo9IHYxXnYyCiAgICAgICAgZWxzZQogICAg
+ICAgICAgb3ZlYzpPdXRwdXRGb3JtIDo9IGVtcHR5KCkKCiAgICAgICAgbyA6PSBjb25zKG9jb2Ug
+KiBvc2NhICogb3ZlYywgbykKICAgICAgaWYgfmVtcHR5PyBvIHRoZW4KICAgICAgICBvbyA6PSBy
+ZWR1Y2UoIisiLCBvKQogICAgICBlbHNlCiAgICAgICAgb28gOj0gIj8iOjpPdXRwdXRGb3JtCiAg
+ICAgIG9vCgoKICAgIGxhdGV4KHg6JSkgOiBTdHJpbmcgPT0KICAgICAgKysgQ3VzdG9tIGxhdGV4
+IHByaW50aW5nIG91dHB1dCByb3V0aW5lLgogICAgICArKyBBIGRlc3BlcmF0ZSB0cnkgdG8gImZp
+eCIgdGhlIGJyb2tlbiBvdXRwdXQuCiAgICAgIHh4IDo9IG5vcm1hbEZvcm0ocmVwIHgpCiAgICAg
+IG8gOiBMaXN0IFN0cmluZyA6PSBlbXB0eSgpCgogICAgICAtLSBMb29wIG92ZXIgYWxsIHRlcm1z
+CiAgICAgIGZvciB0eCBpbiB4eCByZXBlYXQKICAgICAgICAtLSBDb2VmZmljaWVudCBwYXJ0CiAg
+ICAgICAgaWYgdHguY29lID0gMSB0aGVuCiAgICAgICAgICBvY29lIDogU3RyaW5nIDo9ICIiCiAg
+ICAgICAgZWxzZQoJICBvY29lIDogU3RyaW5nIDo9ICI/IgogICAgICAgICAgLS1vY29lIDogU3Ry
+aW5nIDo9IHN0cmluZyh0eC5jb2UpCgogICAgICAgIC0taWYgdHguY29lID49IDAgdGhlbgogICAg
+ICAgIG9vcCA6IFN0cmluZyA6PSAiICsgIgogICAgICAgIC0tZWxzZQogICAgICAgIC0tb29wIDog
+U3RyaW5nIDo9ICIgLSAiCgogICAgICAgIC0tIFNjYWxhciBwYXJ0CiAgICAgICAgaWYgbm90IGVt
+cHR5PyB0eC5zY2EgdGhlbgogICAgICAgICAgb3NjYWw6TGlzdCBTdHJpbmcgOj0gZW1wdHkoKQog
+ICAgICAgICAgZm9yIGFzY2EgaW4gdHguc2NhIHJlcGVhdAogICAgICAgICAgICBpZiAjYXNjYSA9
+IDEgdGhlbgogICAgICAgICAgICAgIHMxIDo9IHN0cmluZyhhc2NhKDEpOjpTeW1ib2wpCgkgICAg
+ICBvc2NhbCA6PSBjb25zKHMxLCBvc2NhbCkKCSAgICBpZiAjYXNjYSA9IDIgdGhlbgoJICAgICAg
+czEgOj0gc3RyaW5nKGFzY2EoMSk6OlN5bWJvbCkKCSAgICAgIHMyIDo9IHN0cmluZyhhc2NhKDIp
+OjpTeW1ib2wpCgkgICAgICBzdHIgOj0gY29uY2F0KFsiKCIsczEsIiBcY2RvdCAiLHMyLCIpIl0p
+CgkgICAgICBvc2NhbCA6PSBjb25zKHN0ciwgb3NjYWwpCgkgICAgaWYgI2FzY2EgPSAzIHRoZW4K
+CSAgICAgIHMxIDo9IHN0cmluZyhhc2NhKDEpOjpTeW1ib2wpCgkgICAgICBzMiA6PSBzdHJpbmco
+YXNjYSgyKTo6U3ltYm9sKQoJICAgICAgczMgOj0gc3RyaW5nKGFzY2EoMyk6OlN5bWJvbCkKCSAg
+ICAgIHN0ciA6PSBjb25jYXQoWyJcbGVmdFsiLHMxLCIsIixzMiwiLCIsczMgIlxyaWdodF0iXSkK
+CSAgICAgIG9zY2FsIDo9IGNvbnMoc3RyLCBvc2NhbCkKICAgICAgICAgICAgb3NjYWwgOj0gY29u
+cygiICIsIG9zY2FsKQoKCSAgb3NjYSA6PSByZWR1Y2UoY29uY2F0LCByZXN0IG9zY2FsKQoJZWxz
+ZQogICAgICAgICAgb3NjYTpTdHJpbmcgOj0gZW1wdHkoKQoKCS0tIFZlY3RvciBwYXJ0CglpZiBu
+b3QgZW1wdHk/IHR4LnZlYyB0aGVuCgkgIHZlY3MgOj0gdHgudmVjCgkgIGlmICN2ZWNzID0gMSB0
+aGVuCgkgICAgb3ZlYzpTdHJpbmcgOj0gc3RyaW5nKHZlY3MoMSk6OlN5bWJvbCkKCSAgaWYgI3Zl
+Y3MgPSAyIHRoZW4KCSAgICB2MSA6PSBzdHJpbmcodmVjcygxKTo6U3ltYm9sKQoJICAgIHYyIDo9
+IHN0cmluZyh2ZWNzKDIpOjpTeW1ib2wpCgkgICAgb3ZlYzpTdHJpbmcgOj0gY29uY2F0KFsiXGxl
+ZnQoIix2MSwgIiBcd2VkZ2UgIiwgdjIsIlxyaWdodCkiXSkKCWVsc2UKCSAgb3ZlYzpTdHJpbmcg
+Oj0gZW1wdHkoKQoKCW8gOj0gY29ucyhjb25jYXQoW29jb2UsIG9zY2EsIG92ZWNdKSwgbykKICAg
+ICAgICBvIDo9IGNvbnMob29wLCBvKQoKICAgICAgY29uY2F0KHJldmVyc2UocmVzdCBvKSkK
+--20cf307ca1e42d3e9c04d9198337--
+
+
+From MAILER-DAEMON Sat Mar 30 04:37:48 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1ULrIK-0005Ev-9D
+	for mharc-axiom-mail@gnu.org; Sat, 30 Mar 2013 04:37:48 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:40673)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1ULrIG-0005Ep-DS
+	for axiom-mail@nongnu.org; Sat, 30 Mar 2013 04:37:46 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1ULrIE-0007kN-JU
+	for axiom-mail@nongnu.org; Sat, 30 Mar 2013 04:37:44 -0400
+Received: from moutng.kundenserver.de ([212.227.17.8]:58600)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1ULrIE-0007fU-Aq
+	for axiom-mail@nongnu.org; Sat, 30 Mar 2013 04:37:42 -0400
+Received: from [192.168.1.64] (93-96-126-45.zone4.bethere.co.uk [93.96.126.45])
+	by mrelayeu.kundenserver.de (node=mreu1) with ESMTP (Nemesis)
+	id 0MErYk-1URtyT0RBa-00GGfk; Sat, 30 Mar 2013 09:37:39 +0100
+Message-ID: <5156A452.9040903@martinb.com>
+Date: Sat, 30 Mar 2013 08:37:38 +0000
+From: Martin Baker <ax87438@martinb.com>
+Organization: axiom
+User-Agent: Mozilla/5.0 (X11; Linux x86_64;
+	rv:17.0) Gecko/20130307 Thunderbird/17.0.4
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+References: <CAC6x94SuShzM=Ko8gdUvbq_YuGdoZgPRbg+U383aVReL8-3y2g@mail.gmail.com>
+In-Reply-To: <CAC6x94SuShzM=Ko8gdUvbq_YuGdoZgPRbg+U383aVReL8-3y2g@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID: V02:K0:F/gFr4qWlpV3XbAKiuk7hTRVVnA66HSRP2y2toen6el
+	60oOanba12pmxQP2xNH++ODAzUBLGFBY+XrgWJo0uBK+XSd4aT
+	ia2xl7SW9aQ4NID+PjAsTx4h9rGt1hVnhKQDSsrJ+8CTd/6KlG
+	9IUvVI+vhfAnBkq+/9Qbm4aslqnxSelHb+8s1hoqb2TgdOkHzr
+	7Nzv/bsr3mGNrxQAe9hEcPkdOGi2qDsaa56tEgdSvGqkkGir7x
+	J+XUcg8Pk4vzm4ryd2YGbI7A4zHpNOCz+IN5VArEwoHNlZvOnU
+	CcGLmTt+sRWWmoWjBKnzaVhMXXT1jDAcQAT7ovgwCErtGWuYlW
+	8Rq/gvKK2FsuqpZXTp30=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.4.x-2.6.x [generic]
+X-Received-From: 212.227.17.8
+Subject: Re: [Axiom-mail] A question about Axiom capabilities,
+ Fwd: [fricas-devel] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Mar 2013 08:37:46 -0000
+
+Would anyone object if I ask a slightly wider question on this topic?
+
+It would be really nice if one could write an equation solver for a 
+given algebra, I have often wanted to do that and I wonder if there is 
+any general advise on this topic for Axiom?
+
+I guess what I am looking for is a way to have variables that represent 
+a given algebra element. If I understand correctly variables are built 
+in to an Axiom Expression but they are hard coded to be some form of 
+number only.
+
+So I'm guessing that, to do this, one would not only need to define an 
+algebra but a specific expression (coalgebra) domain to go with it and 
+then some sort of rule solving logic?
+
+Martin Baker
+
+
+From MAILER-DAEMON Sat Mar 30 08:02:00 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1ULuTw-0002iw-Qd
+	for mharc-axiom-mail@gnu.org; Sat, 30 Mar 2013 08:02:00 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:40504)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.org>) id 1ULuTs-0002hN-0z
+	for axiom-mail@nongnu.org; Sat, 30 Mar 2013 08:01:58 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ralf@hemmecke.org>) id 1ULuTm-0005OP-OG
+	for axiom-mail@nongnu.org; Sat, 30 Mar 2013 08:01:55 -0400
+Received: from mo6-p00-ob.rzone.de ([2a01:238:20a:202:5300::1]:25483)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.org>) id 1ULuTm-0005Nc-HN
+	for axiom-mail@nongnu.org; Sat, 30 Mar 2013 08:01:50 -0400
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXs6bamDO4KmmoRsZ13hlmoEk5YblQhjM1buFUlnQ==
+X-RZG-CLASS-ID: mo00
+Received: from [192.168.2.102] (p57920103.dip.t-dialin.net [87.146.1.3])
+	by smtp.strato.de (josoe mo44) (RZmta 31.23 DYNA|AUTH)
+	with ESMTPA id j03d17p2UA6uoa for <axiom-mail@nongnu.org>;
+	Sat, 30 Mar 2013 13:01:46 +0100 (CET)
+Message-ID: <5156D42B.6080201@hemmecke.org>
+Date: Sat, 30 Mar 2013 13:01:47 +0100
+From: Ralf Hemmecke <ralf@hemmecke.org>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64;
+	rv:17.0) Gecko/20130308 Thunderbird/17.0.4
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+References: <CAC6x94SuShzM=Ko8gdUvbq_YuGdoZgPRbg+U383aVReL8-3y2g@mail.gmail.com>
+	<5156A452.9040903@martinb.com>
+In-Reply-To: <5156A452.9040903@martinb.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Error: Malformed IPv6 address
+	(bad octet value).
+X-Received-From: 2a01:238:20a:202:5300::1
+Subject: Re: [Axiom-mail] A question about Axiom capabilities,
+ Fwd: [fricas-devel] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Mar 2013 12:01:58 -0000
+
+> It would be really nice if one could write an equation solver for a
+> given algebra, I have often wanted to do that and I wonder if there is
+> any general advise on this topic for Axiom?
+
+Well, would be nice, but think about the following. An algebra, which is
+a field. Depending on which equations you want to solve, there is need
+for completely different algorithms. Solve (ax+by=c,dx+ey=f) for x and y
+or ax^2+bx+c=0 for x.
+Add a new operation (diferentiation) making the algebra into a
+differential field, there are even more ways to come up with equations.
+
+Unless you specify what solver you intend to write, it's probably an
+unsolvable task to write a general solver that works for all types of
+algebras.
+
+Ralf
+
+
+From MAILER-DAEMON Sat Mar 30 13:25:55 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1ULzXO-0004pI-MI
+	for mharc-axiom-mail@gnu.org; Sat, 30 Mar 2013 13:25:54 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:37778)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1ULzXK-0004p6-7z
+	for axiom-mail@nongnu.org; Sat, 30 Mar 2013 13:25:52 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1ULzXI-0008Bv-In
+	for axiom-mail@nongnu.org; Sat, 30 Mar 2013 13:25:50 -0400
+Received: from moutng.kundenserver.de ([212.227.17.8]:62217)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1ULzXH-0008Bm-Q1
+	for axiom-mail@nongnu.org; Sat, 30 Mar 2013 13:25:48 -0400
+Received: from [192.168.1.65] (93-96-126-45.zone4.bethere.co.uk [93.96.126.45])
+	by mrelayeu.kundenserver.de (node=mreu1) with ESMTP (Nemesis)
+	id 0LcTPG-1V2Ru00XwM-00k6U6; Sat, 30 Mar 2013 18:25:46 +0100
+Message-ID: <51572019.2070902@martinb.com>
+Date: Sat, 30 Mar 2013 17:25:45 +0000
+From: Martin Baker <ax87438@martinb.com>
+Organization: axiom
+User-Agent: Mozilla/5.0 (X11; Linux x86_64;
+	rv:17.0) Gecko/20130307 Thunderbird/17.0.4
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+References: <CAC6x94SuShzM=Ko8gdUvbq_YuGdoZgPRbg+U383aVReL8-3y2g@mail.gmail.com>
+	<5156A452.9040903@martinb.com> <5156D42B.6080201@hemmecke.org>
+In-Reply-To: <5156D42B.6080201@hemmecke.org>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID: V02:K0:zjphXJp/SxtoBSIMdyGHTQgVLmkyb1g3ip3jzHKwfg2
+	2OqJxnIkQyWFBRJyV43N3S76+FzFUhW+vIlJXFvoE9Bh1M5nPF
+	4UtkYeehE6nLNjbp2+tyEXRffa9Yb8uDlQ9SwjZ2Aqk50W2RQD
+	G45NavmsS7h/X9+nV78UxAFy/wQGxXteRZc8zLLiEGWjbiUfY/
+	5qiV6NIJSiqQ5UzzdGgSjKift/CoKcoJcao4A+NJNq8Mwx3XuT
+	+EfaL5wlifkPZMc100I5nv/H0LCTMANBDYeul+dt7kOw1KlBlX
+	gVEoG/ICBUdcVo8Dqnth2ORtz+gg8qmlFWMsMvQaRt0/Mq9jN3
+	n5QzjJSTGEO7n5R858P4=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.4.x-2.6.x [generic]
+X-Received-From: 212.227.17.8
+Subject: Re: [Axiom-mail] A question about Axiom capabilities,
+ Fwd: [fricas-devel] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Mar 2013 17:25:53 -0000
+
+On 30/03/13 12:01, Ralf Hemmecke wrote:
+ > Unless you specify what solver you intend to write, it's probably an
+ > unsolvable task to write a general solver that works for all types of
+ > algebras.
+ >
+ > Ralf
+
+Agreed, but I was thinking more about doing it on a per-domain basis and 
+building up gradually.
+
+So we start with a very simple algebra that we want to create a equation 
+solver for, for example we might want to create an algebra domain based 
+on this category:
+
+MyAlgebra() : Category with
+   myOp1 : ($,$) -> $
+   myOp2 : ($) -> $
+
+Then create an expression holder that is specific to that algebra:
+
+MyAlgebraExpression() : Exports == Implementation where
+   Implementation == add
+   Rep := Union(_
+          literalTerm : MyAlgebra, _
+          variableTerm : Symbol, _
+          myOp1Term : Record(left: $, right: $), _
+          myOp2Term : $_
+          )
+   bind : (Symbol,MyAlgebra,$) -> $
+   canonicalForm : $ -> $
+   decomposeMyOp1 : $ -> ($,$)
+   decomposeMyOp2 : $ -> ($)
+
+Then create an equation solver that is also specific to that algebra:
+
+MyAlgebraEquation() : Exports == Implementation where
+   Implementation == add
+   Rep := Record(left: MyAlgebraExpression, right: MyAlgebraExpression)
+   solveFor : (Symbol,$) -> MyAlgebraExpression
+
+This would require 3 domains for every algebra that we wanted to be able 
+to solve but why not have some separate common rule interpreter code. So 
+MyAlgebraEquation domain would consist mostly of a set of substitution 
+rules for that particular algebra?
+
+Martin
+
+
+
+From MAILER-DAEMON Sat Mar 30 23:01:36 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UM8WW-0006ym-Pw
+	for mharc-axiom-mail@gnu.org; Sat, 30 Mar 2013 23:01:36 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:60534)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mjb4567@yahoo.com>) id 1ULz1o-00039T-Px
+	for axiom-mail@nongnu.org; Sat, 30 Mar 2013 12:53:21 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <mjb4567@yahoo.com>) id 1ULz1i-00073b-Q9
+	for axiom-mail@nongnu.org; Sat, 30 Mar 2013 12:53:16 -0400
+Received: from moutng.kundenserver.de ([212.227.126.187]:54377)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mjb4567@yahoo.com>) id 1ULz1i-00073N-HF
+	for axiom-mail@nongnu.org; Sat, 30 Mar 2013 12:53:10 -0400
+Received: from [192.168.1.65] (93-96-126-45.zone4.bethere.co.uk [93.96.126.45])
+	by mrelayeu.kundenserver.de (node=mreu3) with ESMTP (Nemesis)
+	id 0MfNmw-1U1gBa2puE-00OsQ9; Sat, 30 Mar 2013 17:53:08 +0100
+Message-ID: <51571874.7060206@yahoo.com>
+Date: Sat, 30 Mar 2013 16:53:08 +0000
+From: martin <mjb4567@yahoo.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64;
+	rv:17.0) Gecko/20130307 Thunderbird/17.0.4
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+References: <CAC6x94SuShzM=Ko8gdUvbq_YuGdoZgPRbg+U383aVReL8-3y2g@mail.gmail.com>
+	<5156A452.9040903@martinb.com> <5156D42B.6080201@hemmecke.org>
+In-Reply-To: <5156D42B.6080201@hemmecke.org>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID: V02:K0:DB97D9dOfVue/FdhU6vG12Q9g7KjyQusnQaezvux1Xf
+	+heufkv0ni66q+s0OiOgKBhIUegPEJEVFoMqyq+6sWY/J4fvKu
+	qw6w5S+CllBKMURm/taOEfXSqBKEQHAlXKKQzl1W++3wJRsZ6h
+	0rF4LIbI/wZ/jECmhdYP1P8PWk0na934cSh+LEmuOb0AI70334
+	n28EJlFmwEei5UMwlb+txpo6ZwE9T+xc6qJrBm/Ub9WOXbDQtN
+	Irw/ncQI0whKU5Xa74rNNp6RRO578ixxqDiB41XgptJJWaL9Ll
+	PLoJvLfHpxRtp1aCHnScaw3Zgdj1l3I0k8q4sYD4NSTWpZahZn
+	6DsdeemJGNMBTxQ+6t50=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.4.x-2.6.x [generic]
+X-Received-From: 212.227.126.187
+X-Mailman-Approved-At: Sat, 30 Mar 2013 23:01:35 -0400
+Subject: Re: [Axiom-mail] A question about Axiom capabilities,
+ Fwd: [fricas-devel] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Mar 2013 16:53:22 -0000
+
+On 30/03/13 12:01, Ralf Hemmecke wrote:
+> Unless you specify what solver you intend to write, it's probably an
+> unsolvable task to write a general solver that works for all types of
+> algebras.
+>
+> Ralf
+
+Agreed, but I was thinking more about doing it on a per-domain basis and 
+building up gradually.
+
+So we start with a very simple algebra that we want to create a equation 
+solver for, for example we might want to create an algebra domain based 
+on this category:
+
+MyAlgebra() : Category with
+   myOp1 : ($,$) -> $
+   myOp2 : ($) -> $
+
+Then create an expression holder that is specific to that algebra:
+
+MyAlgebraExpression() : Exports == Implementation where
+   Implementation == add
+   Rep := Union(_
+          literalTerm : MyAlgebra, _
+          variableTerm : Symbol, _
+          myOp1Term : Record(left: $, right: $), _
+          myOp2Term : $_
+          )
+   bind : (Symbol,MyAlgebra,$) -> $
+   canonicalForm : $ -> $
+   decomposeMyOp1 : $ -> ($,$)
+   decomposeMyOp2 : $ -> ($)
+
+Then create an equation solver that is also specific to that algebra:
+
+MyAlgebraEquation() : Exports == Implementation where
+   Implementation == add
+   Rep := Record(left: MyAlgebraExpression, right: MyAlgebraExpression)
+   solveFor : (Symbol,$) -> MyAlgebraExpression
+
+This would require 3 domains for every algebra that we wanted to be able 
+to solve but why not have some separate common rule interpreter code. So 
+MyAlgebraEquation domain would consist mostly of a set of substitution 
+rules for that particular algebra?
+
+Martin
+
+
+
+
+

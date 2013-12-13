@@ -1,0 +1,136 @@
+From MAILER-DAEMON Sat Sep 29 21:54:16 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ibo0e-0004qb-4z
+	for mharc-axiom-mail@gnu.org; Sat, 29 Sep 2007 21:54:16 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ibo0c-0004qE-Sj
+	for axiom-mail@nongnu.org; Sat, 29 Sep 2007 21:54:14 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ibo0b-0004pL-SM
+	for axiom-mail@nongnu.org; Sat, 29 Sep 2007 21:54:14 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Ibo0b-0004pC-NM; Sat, 29 Sep 2007 21:54:13 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Ibo0b-0002vl-2K; Sat, 29 Sep 2007 21:54:13 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Ibo0V-0008Ly-VX; Sun, 30 Sep 2007 03:54:07 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Ibo0V-0002tK-SE; Sun, 30 Sep 2007 03:54:07 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: axiom-dev <axiom-developer@nongnu.org>, axiom-mail <axiom-mail@nongnu.org>,
+	fricas-devel <fricas-devel@googlegroups.com>, open-axiom-devel
+	<open-axiom-devel@lists.sf.net>
+Newsgroups: gnu.emacs.sources,comp.emacs.xemacs
+References: <9qabvv8xy9.fsf@aquin.mat.univie.ac.at>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 30 Sep 2007 03:53:53 +0200
+Message-ID: <9qtzpczzny.fsf@aquin.mat.univie.ac.at>
+Lines: 71
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+In-Reply-To: <9qabvv8xy9.fsf@aquin.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Posted-To: gnu.emacs.sources,comp.emacs.xemacs
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: 
+Subject: [Axiom-mail] [ANN] new version of axiom mode for emacs.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 30 Sep 2007 01:54:15 -0000
+
+The following message is a courtesy copy of an article
+that has been posted to gnu.emacs.sources,comp.emacs.xemacs as well.
+
+Axiom is a wonderful computer algebra system and
+
+  axiom.el
+
+ist the emacs mode that makes it great to use.
+
+This new version now has a command
+
+  axiom-yank
+
+by default bound to C-Ret, that puts the front item of the kill ring into a
+temporary .input file and makes axiom read that file.  This is useful when you
+make changes to an .input file and do not want to re-read the whole file.
+
+Furthermore it features directory tracking and filename completion after system
+commands.
+
+Get it from
+
+  http://wiki.axiom-developer.org/AxiomEmacsMode
+
+I'd be very happy to hear whether you find it useful in general, and
+suggestions on how to improve it.  For example, do you find it useful that
+touching previous input makes it turn red?
+
+Martin
+
+TODO: 
+
+* I am unable to test it on MS-Windows, I highly appreciate reports and
+  bugfixes.
+
+* cleanup code, especially mode initialisation.  don't know anything about
+  that.
+
+* xemacs port
+
+* allow lisp debugger to be entered, I.e., track when the prompt may change.
+  How does shell mode do this?
+
+* clean up initialisation routines.
+
+  In particular, I'd like to have the following behaviour:
+  
+  [[M-x axiom]] should switch to the buffer [[*axiom*]], if it exists and if it
+  is an "axiom buffer".  (I guess that should be a buffer in [[axiom-mode]],
+  with a running axiom process.)
+   
+  If there is no such buffer, it should create a new buffer and a new axiom
+  process.
+   
+  [[(add-hook 'axiom-mode-hook (lambda () (rename-uniquely)))]] should rename
+  the buffer.  I do not know what else one could use [[shell-mode-hook]] (and
+  therefore [[axiom-mode-hook]]) for.
+
+* update the documentation and make it more concise.
+
+* it would be important to have the possibility of deleting part or all of the
+  buffer.  (Personally, I often have a buffer with a 100000 lines, which is a
+  burden for emacs, it seems). By contrast, it is not necessary to provide
+  functionality as stated in the section "Restarting and Re-evaluating - Kill
+  and Restart Axiom without Erasing the Document" since such functionality is
+  provided by axiom itself.
+
+* undo should have sane behaviour, whatever that is.  Possibly, it should be
+  restricted to the current input, but that might be too restrictive. (For
+  example, if one has overwritten some important output by accident.)
+
+* it would be extremely nice to have command tab-completion, as when starting
+  axiom in a shell.  Very likely, one should prepare a TAGS file.
+
+
+
+
+

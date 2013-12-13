@@ -1,0 +1,333 @@
+From MAILER-DAEMON Wed Apr 02 09:39:48 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Jh3Bs-0006zU-1B
+	for mharc-axiom-mail@gnu.org; Wed, 02 Apr 2008 09:39:48 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Jh3Bp-0006xI-CH
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 09:39:45 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Jh3Bn-0006uQ-HD
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 09:39:44 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Jh3Bn-0006u9-4B
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 09:39:43 -0400
+Received: from ppsw-7.csi.cam.ac.uk ([131.111.8.137])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <dch24@hermes.cam.ac.uk>) id 1Jh3Bm-0008PE-4A
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 09:39:42 -0400
+X-Cam-SpamDetails: Not scanned
+X-Cam-AntiVirus: No virus found
+X-Cam-ScannerInfo: http://www.cam.ac.uk/cs/email/scanner/
+Received: from ext.bpi.cam.ac.uk ([131.111.65.2]:63994
+	helo=seagull.bpi.cam.ac.uk)
+	by ppsw-7.csi.cam.ac.uk (smtp.hermes.cam.ac.uk [131.111.8.157]:25)
+	with esmtpsa (LOGIN:dch24) (TLSv1:DHE-RSA-AES256-SHA:256)
+	id 1Jh3Bf-0007rC-NS (Exim 4.67) for axiom-mail@nongnu.org
+	(return-path <dch24@hermes.cam.ac.uk>); Wed, 02 Apr 2008 14:39:35 +0100
+Date: Wed, 2 Apr 2008 14:39:31 +0100 (BST)
+From: Dan Hatton <vi5u0-axiom@yahoo.co.uk>
+X-X-Sender: dan@seagull.bpi.cam.ac.uk
+To: Axiom Mail <axiom-mail@nongnu.org>
+Message-ID: <alpine.LFD.1.00.0804021430350.3260@seagull.bpi.cam.ac.uk>
+User-Agent: Alpine 1.00 (LFD 882 2007-12-20)
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; format=flowed; charset=US-ASCII
+Sender: Dan Hatton <dch24@hermes.cam.ac.uk>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Subject: [Axiom-mail] Axiom help browser fails with parse error
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 02 Apr 2008 13:39:46 -0000
+
+
+Dear All,
+
+I just upgraded Axiom, from a version from autumn 2005, to the January
+2008 version.  After doing this, running Axiom led to a help browser
+window that immediately disappeared, accompanied by an error message
+
+syntax error: expected a newcommand
+not a word
+(HyperDoc) While parsing RootPage on line 1
+         in the file
+ 	/usr/local/axiom/mnt/linux/doc/hypertex/pages/rootpage.ht
+Trying to print the next ten tokens
+item on rootpage \. \par \newcommand \{ \localinfo \} \{
+
+Thereafter, I had an Axiom prompt at which I could enter commands, but
+no help browser window.
+
+I was able to fix this by commenting out the line
+
+\localinfo
+
+(line 80) of
+/usr/local/axiom/mnt/linux/doc/hypertex/pages/rootpage.ht.
+
+Is this likely to cause any unwanted side effects?
+
+-- 
+
+Thanks,
+
+Dan Hatton
+
+
+
+
+From MAILER-DAEMON Wed Apr 02 09:45:19 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Jh3HD-00027I-5L
+	for mharc-axiom-mail@gnu.org; Wed, 02 Apr 2008 09:45:19 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Jh3HB-000270-2A
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 09:45:17 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Jh3H8-00026H-Et
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 09:45:15 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Jh3H8-00026E-BI
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 09:45:14 -0400
+Received: from mx-7.zoominternet.net ([24.154.1.26] helo=cm-1.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1Jh3H7-0001H4-Un
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 09:45:14 -0400
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=werTP0QaIO0A:15 a=73pKdsC6McEA:10
+	a=E8rTNAPPKTgA:10 a=R8wq1fwASjPrCsd6H0iYZg==:17
+	a=GSpgZH227IVvckE-X6oA:9 a=KrcAoO44lf6ye8n-pycA:7
+	a=SMs2xukLi89gSZqrfguNqIb2EF8A:4 a=yqFbmg6DZFsA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.45] ([24.154.1.45:34089] helo=pop-2.zoominternet.net)
+	by mx-7.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.1.25 r(21838)) with ESMTP
+	id 18/E5-18344-BDD83F74; Wed, 02 Apr 2008 09:44:59 -0400
+Received: (qmail 515 invoked from network); 2 Apr 2008 13:45:04 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.235.192])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-2.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 2 Apr 2008 13:45:04 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id m32Ewpq32335;
+	Wed, 2 Apr 2008 09:58:51 -0500
+Date: Wed, 2 Apr 2008 09:58:51 -0500
+Message-Id: <200804021458.m32Ewpq32335@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: vi5u0-axiom@yahoo.co.uk
+In-reply-to: <alpine.LFD.1.00.0804021430350.3260@seagull.bpi.cam.ac.uk>
+	(message from Dan Hatton on Wed, 2 Apr 2008 14:39:31 +0100 (BST))
+Subject: Re: [Axiom-mail] Axiom help browser fails with parse error
+References: <alpine.LFD.1.00.0804021430350.3260@seagull.bpi.cam.ac.uk>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 02 Apr 2008 13:45:17 -0000
+
+>I just upgraded Axiom, from a version from autumn 2005, to the January
+>2008 version.  After doing this, running Axiom led to a help browser
+>window that immediately disappeared, accompanied by an error message
+>
+>syntax error: expected a newcommand
+>not a word
+>(HyperDoc) While parsing RootPage on line 1
+>         in the file
+> 	/usr/local/axiom/mnt/linux/doc/hypertex/pages/rootpage.ht
+>Trying to print the next ten tokens
+>item on rootpage \. \par \newcommand \{ \localinfo \} \{
+>
+>Thereafter, I had an Axiom prompt at which I could enter commands, but
+>no help browser window.
+>
+>I was able to fix this by commenting out the line
+>
+>\localinfo
+>
+>(line 80) of
+>/usr/local/axiom/mnt/linux/doc/hypertex/pages/rootpage.ht.
+>
+>Is this likely to cause any unwanted side effects?
+
+This is a known problem that occurs if you rebuild the system, say
+after the make fails in midstream, or you add new algebra.
+
+I don't think it will cause a problem. It was intended to allow
+user information to be added, I believe, but no user ever added
+information. I'll look into it.
+
+Tim
+
+
+
+From MAILER-DAEMON Wed Apr 02 17:16:28 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1JhAJo-0004Ml-5Z
+	for mharc-axiom-mail@gnu.org; Wed, 02 Apr 2008 17:16:28 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1JhAJm-0004MQ-BV
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 17:16:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1JhAJk-0004MB-FV
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 17:16:25 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1JhAJk-0004M8-CQ
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 17:16:24 -0400
+Received: from smtp802.mail.ird.yahoo.com ([217.146.188.62])
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <vi5u0-axiom@yahoo.co.uk>) id 1JhAJj-0005vG-Le
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 17:16:23 -0400
+Received: (qmail 96860 invoked from network); 2 Apr 2008 21:16:22 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.co.uk;
+	h=Received:X-YMail-OSG:X-Yahoo-Newman-Property:Date:From:X-X-Sender:To:Subject:In-Reply-To:Message-ID:References:User-Agent:MIME-Version:Content-Type;
+	b=u7wWXGRI18nQQSN18xHOxXXo4qsENRr4Aa84JHqOJ8UvPZoZIod0OzGvBAhQF4YQD1BQ+5J7p+cfp+U8hhnJ3MIGpwvkJ+urEB3Sc1cWruIp4G4plSP/I11a62yZdtC7n6q2zLWNC7aSnl4/R8SHjd4j58W/s2USggOIwpO6QZM=
+	; 
+Received: from unknown (HELO seagull.home)
+	(dan.hatton@btinternet.com@86.130.9.163 with login)
+	by smtp802.mail.ird.yahoo.com with SMTP; 2 Apr 2008 21:16:21 -0000
+X-YMail-OSG: mAlYmEEVM1n_geffTaeaOmGgp1Ou6Y6eNiE_343EPMFnXw2IuDe5B5GIdJLHyyzsnhGQgl.waQ--
+X-Yahoo-Newman-Property: ymail-3
+Date: Wed, 2 Apr 2008 22:16:08 +0100 (BST)
+From: Dan Hatton <vi5u0-axiom@yahoo.co.uk>
+X-X-Sender: dan@seagull.home
+To: Axiom Mail <axiom-mail@nongnu.org>
+Subject: Re: [Axiom-mail] Axiom help browser fails with parse error
+In-Reply-To: <200804021458.m32Ewpq32335@localhost.localdomain>
+Message-ID: <alpine.LFD.1.00.0804022210070.3137@seagull.home>
+References: <alpine.LFD.1.00.0804021430350.3260@seagull.bpi.cam.ac.uk>
+	<200804021458.m32Ewpq32335@localhost.localdomain>
+User-Agent: Alpine 1.00 (LFD 882 2007-12-20)
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-detected-kernel: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 02 Apr 2008 21:16:26 -0000
+
+On Wed, 2 Apr 2008, root wrote:
+
+> This is a known problem that occurs if you rebuild the system, say
+> after the make fails in midstream, or you add new algebra.
+
+Ah, thank you.  I got a clean copy of the source code, and compiled
+without make failing in midstream, then the problem went away.
+
+The reason make failed in midstream the first time might be of
+interest: the configure script, as shipped, can't recognise when it's
+running on Fedora 8, so Makefile.pamphlet tries to use the
+non-existent static version of libXpm.
+
+-- 
+
+Thanks again,
+
+Dan Hatton
+
+
+
+From MAILER-DAEMON Wed Apr 02 17:36:12 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1JhAcu-00065V-Jy
+	for mharc-axiom-mail@gnu.org; Wed, 02 Apr 2008 17:36:12 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1JhAct-00064s-26
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 17:36:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1JhAcr-000642-AL
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 17:36:10 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1JhAcr-00063v-3Z
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 17:36:09 -0400
+Received: from mx-7.zoominternet.net ([24.154.1.26] helo=cm-1.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1JhAcq-0000jb-NR
+	for axiom-mail@nongnu.org; Wed, 02 Apr 2008 17:36:08 -0400
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=werTP0QaIO0A:15 a=73pKdsC6McEA:10
+	a=E8rTNAPPKTgA:10 a=R8wq1fwASjPrCsd6H0iYZg==:17
+	a=qkQZf6Nhy6v3rNaFuQEA:9 a=c-4jMcMregagi3syQ4oA:7
+	a=YaT9v_gBXOSJHM4R4LR0rLvzprcA:4 a=m-cwX0H6ZdQA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.44] ([24.154.1.44:36605] helo=pop-1.zoominternet.net)
+	by mx-7.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.1.25 r(21838)) with ESMTP
+	id 9F/72-05847-54CF3F74; Wed, 02 Apr 2008 17:36:05 -0400
+Received: (qmail 26262 invoked from network); 2 Apr 2008 21:36:06 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.235.192])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 2 Apr 2008 21:36:06 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id m32MngY32592;
+	Wed, 2 Apr 2008 17:49:42 -0500
+Date: Wed, 2 Apr 2008 17:49:42 -0500
+Message-Id: <200804022249.m32MngY32592@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: vi5u0-axiom@yahoo.co.uk
+In-reply-to: <alpine.LFD.1.00.0804022210070.3137@seagull.home> (message from
+	Dan Hatton on Wed, 2 Apr 2008 22:16:08 +0100 (BST))
+Subject: Re: [Axiom-mail] Axiom help browser fails with parse error
+References: <alpine.LFD.1.00.0804021430350.3260@seagull.bpi.cam.ac.uk>
+	<200804021458.m32Ewpq32335@localhost.localdomain>
+	<alpine.LFD.1.00.0804022210070.3137@seagull.home>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 02 Apr 2008 21:36:11 -0000
+
+configure is broken. known broken. I'd remove it but people expect
+ configure->make->make install
+so I need to update it for the latest systems. It will go away
+when the asdf rewrite occurs. Except for some trivial (but annoying)
+parameters Axiom depends on very little about the underlying system.
+
+I'll fix the /localinfo problem. Thanks for pointing it out.
+I don't normally see it because I always build systems from scratch.
+
+Tim
+
+
+

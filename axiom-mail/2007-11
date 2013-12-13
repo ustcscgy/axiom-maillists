@@ -1,0 +1,2057 @@
+From MAILER-DAEMON Thu Nov 01 01:49:27 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1InSvn-0006Ke-8h
+	for mharc-axiom-mail@gnu.org; Thu, 01 Nov 2007 01:49:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1InSvl-0006KQ-GA
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 01:49:25 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1InSvk-0006K7-Uw
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 01:49:25 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1InSvk-0006K3-P6
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 01:49:24 -0400
+Received: from fk-out-0910.google.com ([209.85.128.187])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1InSvk-0006j8-6g
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 01:49:24 -0400
+Received: by fk-out-0910.google.com with SMTP id 19so718776fkr
+	for <axiom-mail@nongnu.org>; Wed, 31 Oct 2007 22:49:23 -0700 (PDT)
+Received: by 10.86.4.2 with SMTP id 2mr183538fgd.1193896162410;
+	Wed, 31 Oct 2007 22:49:22 -0700 (PDT)
+Received: by 10.86.57.11 with HTTP; Wed, 31 Oct 2007 22:49:22 -0700 (PDT)
+Message-ID: <fbcd16d40710312249w67f8fba1xfa68fd1ac91f5de8@mail.gmail.com>
+Date: Thu, 1 Nov 2007 01:49:22 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: Axiom-Developer <axiom-developer@nongnu.org>, 
+	open-axiom-devel@lists.sourceforge.net, fricas-devel@googlegroups.com
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: William Stein <wstein@gmail.com>, sage-devel@googlegroups.com,
+	Axiom-Mail <axiom-mail@nongnu.org>
+Subject: [Axiom-mail] Axiom Wiki and Portal are moving
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 01 Nov 2007 05:49:25 -0000
+
+Dear Axiom Users and Developers;
+
+Earlier in October Tim Daly asked me if I would be able to move the Axiom wiki:
+
+    http://wiki.axiom-developer.org
+
+and the Axiom portal:
+
+    http://portal.axiom-developer.org
+
+web applications to a new server. The server where they have resided
+for the last three years is a shared virtual server located at a
+privately operated ISP. During the entire time Tim has paid for the
+operation of this server from his own personal financial resources.
+Meanwhile Tim's priorities for the original Axiom project have been
+clarified and two new forks of Axiom (FriCAS and OpenAxiom) have been
+created as a result. As implementer of the wiki and portal
+applications on the axiom-developer server (based on the 'mathaction'
+and 'LatexWiki' extension of ZWiki), I have argued that these
+applications should actually support all of the existing Axiom-related
+projects (Axiom, FriCAS, OpenAxiom and Aldor on Axiom) developers and
+users as well as continue to provide interfaces for Reduce, Maxima,
+and Sage. But Tim has decided that he would rather devote the
+resources of the axiom-developer.org server to more Axiom-project
+specific activities and also (if possible) reduce the cost of
+operation of this server. This is certainly his prerogative and it is
+my intention to help him meet that goal with as little disruption to
+people who current use these applications as possible.
+
+As most of you probably already know, William Stein offered to host a
+version of the Axiom wiki and Axiom portal applications on the large
+multi-processor computer system that supports the Sage project. So I
+have spent some time over the last couple of months re-implementing
+mathaction and related software there. The software is not identical
+to the software on axiom-developer.org but rather a long-needed
+software upgrade based on the most recent release of ZWiki. As a
+result, the specific look and feel of the new web sites is not
+identical to the old ones. There are some missing features some of
+which can be restored by special customizations of ZWiki (e.g. the
+lefthand sidebar, the comment preview function and the Axiom menus at
+the bottom of the edit page). Some of these I have not yet had time to
+do and others I am considering alternative ways of doing something
+similar but with less special customization. Also, due to lack of
+time, I have moved only a subset of the web pages from the old sites
+to the new one. This is true of both the wiki and portal sites.
+
+In spite of this and in view of Tim's desire to complete the move as
+soon as possible, I would like to invite everyone to begin using the
+new sites now. They can be found at:
+
+    http://axiom-wiki.newsynthesis.org
+
+and
+
+    http://axiom-portal.newsynthesis.org
+
+Don't be fooled by the domain name "newsynthesis.org". This is a
+domain name that I own but the names 'axiom-wiki' and 'axiom-portal'
+are actually mapped to the 'sage.math.washington.edu' server supplied
+by William Stein. I intend to continue to make these names available
+for Axiom-related use over at least the next 10 years. I chose this
+approach in order to provide as conveniently short urls as possible
+and also to permit the urls to remain the same and be remapped in case
+of any possible future move of these applications.
+
+For the time being, the applications at 'axiom-developer.org' will
+continue to operate but at some point (final details still to be
+determined) the old url names may be re-mapped to point at the same
+site as the new ones (for search engine compatibility) before they are
+eventually phased out altogether and the applications and associated
+database removed from axiom-developer.org.
+
+So I would like to encourage everyone who cares about Axiom (and/or
+it's forks) and who is interested in wiki and portal support for these
+projects to help with testing and re-populating the new sites as soon
+as possible. After three years of operation of the Axiom wiki there
+are a fairly large number of out-dated, poorly organized and possibly
+irrelevant pages which probably should not be simply copied over to
+the new site. I would be very very happy if some other Axiom users and
+developers would agree to assist with this "shifting" and
+re-organizing effort. Copying missing content between the sites can be
+easily done by cutting-and-pasting the text from the 'edit' of the old
+site to the corresponding 'edit' page of the new site. I would be
+happy to discuss details, make suggestions and general try to help
+anyone who wants to try this. These web sites are intended to be
+community supported web sites and everyone is welcome and encouraged
+to participate in making them as useful as possible to all Axiom users
+and developers.
+
+The most serious missing component at the new Axiom wiki site is the
+existing database of IssueTracker reports. I have tried unsuccessfully
+to copy to the old database to the new server. In any case it is also
+true that a number of these reports may be obsolete or may not apply
+equally to all of the Axiom projects. Also some of the Axiom projects
+(forks) have their own way of tracking problems, e.g. OpenAxiom simply
+uses SourceForge. So I am open to suggestions on how to proceed with
+this transferring this information (and/or comments about whether this
+is really necessary or not).
+
+At this time Aldor is the only computer algebra program that has not
+yet been installed on the new server. (Axiom, Maxima, Reduce, and Sage
+are also working.) My current priority is to complete the build of
+Aldor for Axiom so that it will be possible to run the Aldor example
+code on the wiki pages again. My intention is to use the newest
+version of FriCAS and the new open source release of Aldor. Some
+things have changed since I did this last, so it may take a little
+more time but this should be completed in the new few days.
+
+And as usual, if you have any questions, comments, suggestions or
+criticisms I would be glad to hear them.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Nov 01 02:22:06 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1InTRO-0006GE-KL
+	for mharc-axiom-mail@gnu.org; Thu, 01 Nov 2007 02:22:06 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1InTRN-0006G3-J2
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 02:22:05 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1InTRM-0006Fr-8a
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 02:22:04 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1InTRL-0006Fo-VF; Thu, 01 Nov 2007 02:22:03 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1InTRL-0005oE-Go; Thu, 01 Nov 2007 02:22:03 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1InTRG-0001TA-0s; Thu, 01 Nov 2007 07:21:58 +0100
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1InTRF-0005f7-Vx; Thu, 01 Nov 2007 07:21:58 +0100
+Sender: rubey@aquin.mat.univie.ac.at
+To: fricas-devel@googlegroups.com
+References: <fbcd16d40710312249w67f8fba1xfa68fd1ac91f5de8@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 01 Nov 2007 07:21:57 +0100
+In-Reply-To: <fbcd16d40710312249w67f8fba1xfa68fd1ac91f5de8@mail.gmail.com>
+Message-ID: <9qzlxypjsq.fsf@aquin.mat.univie.ac.at>
+Lines: 48
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: sage-devel@googlegroups.com, William Stein <wstein@gmail.com>,
+	Axiom-Developer <axiom-developer@nongnu.org>,
+	open-axiom-devel@lists.sourceforge.net, Axiom-Mail <axiom-mail@nongnu.org>
+Subject: [Axiom-mail] Re: [fricas-devel] Axiom Wiki and Portal are moving
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 01 Nov 2007 06:22:05 -0000
+
+Dear Bill,
+
+I'm very grateful to you, even though I'm unhappy that axiom-developer.org will
+not have the same contents in future.  Oh dear, I link to it in a paper...
+
+"Bill Page" <bill.page@newsynthesis.org> writes:
+
+>     http://axiom-wiki.newsynthesis.org
+> 
+> and
+> 
+>     http://axiom-portal.newsynthesis.org
+
+These names sound quite good to me.  "new synthesis" has something optimistic!
+
+> The most serious missing component at the new Axiom wiki site is the existing
+> database of IssueTracker reports. I have tried unsuccessfully to copy to the
+> old database to the new server. In any case it is also true that a number of
+> these reports may be obsolete or may not apply equally to all of the Axiom
+> projects. Also some of the Axiom projects (forks) have their own way of
+> tracking problems, e.g. OpenAxiom simply uses SourceForge. So I am open to
+> suggestions on how to proceed with this transferring this information (and/or
+> comments about whether this is really necessary or not).
+
+Oh dear, that's too bad.  In fact, I'm quite shocked.  
+
+I wanted to make the following suggestion already some time ago: If the three
+projects intend to cooperate, I think it would be a very wise thing to have
+only one database for bugs.
+
+I like IssueTracker a lot, mainly, because it is so easy to demonstrate the
+bug.  Since we have several projects now, it would be necessary though to be
+able to select any subset of
+
+fixed in Axiom
+fixed in FriCAS
+fixes in OpenAxiom
+
+Since FriCas and Axiom refers to the IssueTracker numbers in the logfiles and
+in source, it is a must (if possible) to keep the database numbering as is.
+
+Do you know already whether transferring is a fundamental problem?
+
+
+Many thanks again and good luck,
+
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Nov 01 13:43:40 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ine4y-0006Gw-AU
+	for mharc-axiom-mail@gnu.org; Thu, 01 Nov 2007 13:43:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ine4w-0006F0-IA
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 13:43:38 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ine4v-0006Dc-HP
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 13:43:37 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Ine4r-0006Bk-RS; Thu, 01 Nov 2007 13:43:33 -0400
+Received: from smtp.cs.tamu.edu ([128.194.138.100] helo=postal.cs.tamu.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <gdr@cs.tamu.edu>)
+	id 1Ine4r-0000Uo-DC; Thu, 01 Nov 2007 13:43:33 -0400
+Received: from soliton.cs.tamu.edu (vpn-13.cs.tamu.edu [128.194.150.13])
+	by postal.cs.tamu.edu (Postfix) with ESMTP id DD22B46DE04;
+	Thu,  1 Nov 2007 12:43:30 -0500 (CDT)
+Received: by soliton.cs.tamu.edu (Postfix, from userid 1000)
+	id 683991AB06; Thu,  1 Nov 2007 12:54:00 -0500 (CDT)
+Sender: gdr@cs.tamu.edu
+To: "Bill Page" <bill.page@newsynthesis.org>
+Subject: Re: [Axiom-mail] Axiom Wiki and Portal are moving
+References: <fbcd16d40710312249w67f8fba1xfa68fd1ac91f5de8@mail.gmail.com>
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+In-Reply-To: <fbcd16d40710312249w67f8fba1xfa68fd1ac91f5de8@mail.gmail.com>
+Organization: Texas A&M University, Department of Computer Science
+Date: 01 Nov 2007 12:54:00 -0500
+Message-ID: <87k5p1c0nb.fsf@soliton.cs.tamu.edu>
+Lines: 15
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: by monty-python.gnu.org: Solaris 8 (1)
+Cc: fricas-devel@googlegroups.com, sage-devel@googlegroups.com,
+	William Stein <wstein@gmail.com>,
+	Axiom-Developer <axiom-developer@nongnu.org>,
+	open-axiom-devel@lists.sourceforge.net, Axiom-Mail <axiom-mail@nongnu.org>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 01 Nov 2007 17:43:39 -0000
+
+"Bill Page" <bill.page@newsynthesis.org> writes:
+
+| In spite of this and in view of Tim's desire to complete the move as
+| soon as possible, I would like to invite everyone to begin using the
+| new sites now. They can be found at:
+| 
+|     http://axiom-wiki.newsynthesis.org
+| 
+| and
+| 
+|     http://axiom-portal.newsynthesis.org
+
+What will happen to the email mathaction@axiom-developer.org?
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu Nov 01 14:14:18 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IneYb-0002YR-Tj
+	for mharc-axiom-mail@gnu.org; Thu, 01 Nov 2007 14:14:18 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IneYa-0002XW-0S
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 14:14:16 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IneYZ-0002XB-AN
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 14:14:15 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IneYZ-0002X5-1U
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 14:14:15 -0400
+Received: from ug-out-1314.google.com ([66.249.92.169])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1IneYY-0001dd-C4
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 14:14:14 -0400
+Received: by ug-out-1314.google.com with SMTP id m2so476757uge
+	for <axiom-mail@nongnu.org>; Thu, 01 Nov 2007 11:14:11 -0700 (PDT)
+Received: by 10.66.249.8 with SMTP id w8mr323790ugh.1193940850949;
+	Thu, 01 Nov 2007 11:14:10 -0700 (PDT)
+Received: by 10.86.57.11 with HTTP; Thu, 1 Nov 2007 11:14:10 -0700 (PDT)
+Message-ID: <fbcd16d40711011114h7d1025f8ob1a26fb421165f53@mail.gmail.com>
+Date: Thu, 1 Nov 2007 14:14:10 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Gabriel Dos Reis" <gdr@cs.tamu.edu>
+Subject: Re: [Axiom-mail] Axiom Wiki and Portal are moving
+In-Reply-To: <87k5p1c0nb.fsf@soliton.cs.tamu.edu>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <fbcd16d40710312249w67f8fba1xfa68fd1ac91f5de8@mail.gmail.com>
+	<87k5p1c0nb.fsf@soliton.cs.tamu.edu>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: fricas-devel@googlegroups.com, sage-devel@googlegroups.com,
+	William Stein <wstein@gmail.com>,
+	Axiom-Developer <axiom-developer@nongnu.org>,
+	open-axiom-devel@lists.sourceforge.net, Axiom-Mail <axiom-mail@nongnu.org>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 01 Nov 2007 18:14:16 -0000
+
+On 01 Nov 2007 12:54:00 -0500, Gabriel Dos Reis wrote:
+> "Bill Page" <bill.page@newsynthesis.org> writes:
+>
+> | new sites now. They can be found at:
+> |
+> |     http://axiom-wiki.newsynthesis.org
+> |
+> | and
+> |
+> |     http://axiom-portal.newsynthesis.org
+>
+> What will happen to the email mathaction@axiom-developer.org?
+>
+
+Right now on 'axiom-developer.org' email sent to
+'mathaction@axiom-developer.org' containing a prefix in the subject
+line such as
+
+  Subject: [Moving] ...
+
+is automatically added as a comment to the page named 'Moving' on the
+Axiom Wiki. This works well for people who are subscribed to the wiki
+so that that receive notices of new pages and edits with this same
+return address.
+
+This includes Names that begin with numbers, eg. [187 trouble with
+tuples] which refer to issue tracker reports.
+
+Doing this requires a special alias in the configuration of sendmail
+on the server to pipe the content of the email to a particular method
+called 'mailin' at the wiki url. I have not yet asked William Stein if
+he is willing to allow this sort of 'mailin' processing on the
+'sage.math.washington.edu' server. If so, then we can at least
+temporarily redirect the old email address to the new one at for
+example: 'mathaction@axiom.newsynthesis.org'
+
+Alternatively we could just redirect 'mathaction@axiom-developer.org'
+to some appropriate mailing list.
+
+Any preferences?
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Nov 01 14:20:25 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IneeX-0000CI-Lb
+	for mharc-axiom-mail@gnu.org; Thu, 01 Nov 2007 14:20:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IneeV-0000AO-I4
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 14:20:23 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IneeT-00007G-Cd
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 14:20:22 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1IneeR-0008Vq-GB; Thu, 01 Nov 2007 14:20:19 -0400
+Received: from mailhost.cs.tamu.edu ([128.194.138.100] helo=postal.cs.tamu.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <gdr@cs.tamu.edu>)
+	id 1IneeR-00039d-DS; Thu, 01 Nov 2007 14:20:19 -0400
+Received: from gauss.cs.tamu.edu (gauss.cs.tamu.edu [128.194.146.28])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by postal.cs.tamu.edu (Postfix) with ESMTP id 7EA3246DE04;
+	Thu,  1 Nov 2007 13:20:18 -0500 (CDT)
+Date: Thu, 1 Nov 2007 13:19:06 -0500 (CDT)
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+To: Bill Page <bill.page@newsynthesis.org>
+Subject: Re: [Axiom-mail] Axiom Wiki and Portal are moving
+In-Reply-To: <fbcd16d40711011114h7d1025f8ob1a26fb421165f53@mail.gmail.com>
+Message-ID: <Pine.LNX.4.64.0711011316590.1902@gauss.cs.tamu.edu>
+References: <fbcd16d40710312249w67f8fba1xfa68fd1ac91f5de8@mail.gmail.com> 
+	<87k5p1c0nb.fsf@soliton.cs.tamu.edu>
+	<fbcd16d40711011114h7d1025f8ob1a26fb421165f53@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-detected-kernel: by monty-python.gnu.org: Solaris 8 (1)
+Cc: fricas-devel@googlegroups.com, sage-devel@googlegroups.com,
+	William Stein <wstein@gmail.com>,
+	Axiom-Developer <axiom-developer@nongnu.org>,
+	open-axiom-devel@lists.sourceforge.net, Axiom-Mail <axiom-mail@nongnu.org>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 01 Nov 2007 18:20:23 -0000
+
+On Thu, 1 Nov 2007, Bill Page wrote:
+
+| Doing this requires a special alias in the configuration of sendmail
+| on the server to pipe the content of the email to a particular method
+| called 'mailin' at the wiki url. I have not yet asked William Stein if
+| he is willing to allow this sort of 'mailin' processing on the
+| 'sage.math.washington.edu' server. If so, then we can at least
+| temporarily redirect the old email address to the new one at for
+| example: 'mathaction@axiom.newsynthesis.org'
+| 
+| Alternatively we could just redirect 'mathaction@axiom-developer.org'
+| to some appropriate mailing list.
+| 
+| Any preferences?
+
+If newsynthesis.org is going to be the `preferred' domain name, one
+may just discontinue mathaction@axiom-developer.org as well.  But, not
+having to do the actual work, it might be easier for me to state what
+should be done...
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu Nov 01 17:37:50 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1InhjZ-0000bX-V2
+	for mharc-axiom-mail@gnu.org; Thu, 01 Nov 2007 17:37:50 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1InhjX-0000Xi-V1
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 17:37:47 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1InhjX-0000VW-4w
+	for axiom-mail@nongnu.org; Thu, 01 Nov 2007 17:37:47 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1InhjV-0000TW-LM; Thu, 01 Nov 2007 17:37:45 -0400
+Received: from hera.math.uni.wroc.pl ([156.17.86.1])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <hebisch@math.uni.wroc.pl>)
+	id 1InhjV-0007pH-47; Thu, 01 Nov 2007 17:37:45 -0400
+Received: from hebisch by hera.math.uni.wroc.pl with local (Exim 3.36 #1
+	(Debian)) id 1InhjJ-0003Jm-00; Thu, 01 Nov 2007 22:37:33 +0100
+In-Reply-To: <fbcd16d40710312249w67f8fba1xfa68fd1ac91f5de8@mail.gmail.com>
+To: fricas-devel@googlegroups.com
+Date: Thu, 1 Nov 2007 22:37:33 +0100 (CET)
+X-Mailer: ELM [version 2.4ME+ PL100 (25)]
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=US-ASCII
+Message-Id: <E1InhjJ-0003Jm-00@hera.math.uni.wroc.pl>
+From: Waldek Hebisch <hebisch@math.uni.wroc.pl>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 1)
+Cc: sage-devel@googlegroups.com, William Stein <wstein@gmail.com>,
+	Axiom-Developer <axiom-developer@nongnu.org>,
+	open-axiom-devel@lists.sourceforge.net, Axiom-Mail <axiom-mail@nongnu.org>
+Subject: [Axiom-mail] Re: [fricas-devel] Axiom Wiki and Portal are moving
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 01 Nov 2007 21:37:48 -0000
+
+Bill Page wrote:
+> 
+> Dear Axiom Users and Developers;
+> 
+> Earlier in October Tim Daly asked me if I would be able to move the Axiom wiki:
+> 
+>     http://wiki.axiom-developer.org
+> 
+> and the Axiom portal:
+> 
+>     http://portal.axiom-developer.org
+> 
+> web applications to a new server.
+
+> In spite of this and in view of Tim's desire to complete the move as
+> soon as possible, I would like to invite everyone to begin using the
+> new sites now. They can be found at:
+> 
+>     http://axiom-wiki.newsynthesis.org
+> 
+> and
+> 
+>     http://axiom-portal.newsynthesis.org
+> 
+
+> So I would like to encourage everyone who cares about Axiom (and/or
+> it's forks) and who is interested in wiki and portal support for these
+> projects to help with testing and re-populating the new sites as soon
+> as possible. After three years of operation of the Axiom wiki there
+> are a fairly large number of out-dated, poorly organized and possibly
+> irrelevant pages which probably should not be simply copied over to
+> the new site. I would be very very happy if some other Axiom users and
+> developers would agree to assist with this "shifting" and
+> re-organizing effort. Copying missing content between the sites can be
+> easily done by cutting-and-pasting the text from the 'edit' of the old
+> site to the corresponding 'edit' page of the new site.
+
+Bill, I must admit that I have doubts concerning your migration
+tactic.  AFAU there are two goals:
+
+1) Primary goal: migrate content and users from the old site
+   to the new site.
+2) Secondary goal: update software and the content.
+
+As you wrote: Axiom wiki is a comunity site, so migrating users
+to the new site is crucial.  But to migrate users it is
+essential to migrate content.  I took quick look at the new site
+and I see that a large part (most??) of content is missing
+-- for example most links on AxiomContributions page does not work
+and many positions from the page on the old site are missing.
+
+IIUC you propose to transfer rest of the content via cutting-and-pasting
+from the old site.  I think this is problematic: without proofreading
+almost any automatic procedure will work better.  You probably hope
+that volunteers will proofread the content while copying.  However,
+it seems that creating current content took about 3 years.  I would
+expect that proofreading the site will take month or two and
+proofreaders will be slowed down by the need to copy things --
+I am not saying that proofreading itself takes a lot of time,
+but simply that our volunteers are in general busy, and can spend
+only a short time doing this.
+
+During that time the new site will be more or less broken, so many
+users will try to use the old site -- since only old site will
+be "complete".  Similarly links will continue to point to the old
+site.  Another problem is that users may come to the old place and
+add content there -- migrating additions will cause extra trouble.
+
+I would suggest to migrate content as much as possible in automatic
+way.  Once the new site is fully functional I would made first
+stage of transition:
+-- put prominent notice about new site on the front page of
+   the old site
+-- change old site to read-only and display notice about new
+   site on any attempt to edit
+-- redirect all links to the new site.
+
+In the next stage (two weeks or maybe month later) I would replace
+all pages on the old site by a notice about move and link to
+the corresponding page on the new site.  I would handle updates
+to the content separately.
+
+Rationalle: without proper action users will continue to come
+to the old site: it shows in search engines, it is in bookmarks,
+there are links to it.  The first stage is intended to shift
+critical mass of links and users to the new site.  To avoid loosing
+users old site should be operational.  Making old site read-only
+should avoid problems with synchronization.  Redirecting links
+should help with search engines and bookmarks -- search engines
+should notice new site, new bookmarks to links will point to
+the new site.
+
+Concerning update of content: the move may cause some loss of
+users.  Operating both sites in paralell is intended to minimize
+user loss.  However, it is essential that new site is fully
+operational -- otherwise users will go to the old site or we may
+loose them.  IMHO trying to update content during migration
+slows down migration and causes extra work.
+
+
+> The most serious missing component at the new Axiom wiki site is the
+> existing database of IssueTracker reports. I have tried unsuccessfully
+> to copy to the old database to the new server. In any case it is also
+> true that a number of these reports may be obsolete or may not apply
+> equally to all of the Axiom projects. Also some of the Axiom projects
+> (forks) have their own way of tracking problems, e.g. OpenAxiom simply
+> uses SourceForge. So I am open to suggestions on how to proceed with
+> this transferring this information (and/or comments about whether this
+> is really necessary or not).
+>
+
+FriCAS also has a bug tracker at SourceForge.  As a person reading
+bug reports I find bugzilla format preferable compared to current
+IssueTracker format.  More precisely:
+-- bugzilla is more restrictive when comes to edits, for example
+   for normal users is append-only and does not allow unautorized
+   changes to metadata (bug classification)
+-- IssueTracker shows Axiom output as images which is unsearchable,
+   does not work on text terminal and may hide some important
+   information 
+
+
+However, I feel that access to old reports is important, so I certainly
+would like to see old reports at the new site.
+
+I belive that common bug tracker for all Axiom forks would be good.
+In the past Tim said that he does not want FriCAS bugs in Axiom bug
+tracker, so FriCAS bug tracker was created.  Certainly, common
+bug tracker make sense only if one can restrict view so that
+only bugs reported against given fork are visible.  Technically,
+this should be not a problem...
+
+
+-- 
+                              Waldek Hebisch
+hebisch@math.uni.wroc.pl 
+
+
+
+From MAILER-DAEMON Fri Nov 02 11:22:54 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1InyMI-0003a4-GT
+	for mharc-axiom-mail@gnu.org; Fri, 02 Nov 2007 11:22:54 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1InyMF-0003Z2-MW
+	for axiom-mail@nongnu.org; Fri, 02 Nov 2007 11:22:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1InyME-0003Yl-QR
+	for axiom-mail@nongnu.org; Fri, 02 Nov 2007 11:22:51 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1InyME-0003Yf-FB
+	for axiom-mail@nongnu.org; Fri, 02 Nov 2007 11:22:50 -0400
+Received: from nf-out-0910.google.com ([64.233.182.185])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1InyMD-0005Rz-Pp
+	for axiom-mail@nongnu.org; Fri, 02 Nov 2007 11:22:50 -0400
+Received: by nf-out-0910.google.com with SMTP id 30so753355nfu
+	for <axiom-mail@nongnu.org>; Fri, 02 Nov 2007 08:22:48 -0700 (PDT)
+Received: by 10.86.4.2 with SMTP id 2mr596318fgd.1194016967645;
+	Fri, 02 Nov 2007 08:22:47 -0700 (PDT)
+Received: by 10.86.57.11 with HTTP; Fri, 2 Nov 2007 08:22:47 -0700 (PDT)
+Message-ID: <fbcd16d40711020822vda3b1d8hd009d61674072d2f@mail.gmail.com>
+Date: Fri, 2 Nov 2007 11:22:47 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: fricas-devel@googlegroups.com
+In-Reply-To: <E1InhjJ-0003Jm-00@hera.math.uni.wroc.pl>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <fbcd16d40710312249w67f8fba1xfa68fd1ac91f5de8@mail.gmail.com>
+	<E1InhjJ-0003Jm-00@hera.math.uni.wroc.pl>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: sage-devel@googlegroups.com, William Stein <wstein@gmail.com>,
+	Axiom-Developer <axiom-developer@nongnu.org>,
+	open-axiom-devel@lists.sourceforge.net, Axiom-Mail <axiom-mail@nongnu.org>
+Subject: [Axiom-mail] Re: [fricas-devel] Re: Axiom Wiki and Portal are moving
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 02 Nov 2007 15:22:51 -0000
+
+On 11/1/07, Waldek Hebisch wrote:
+>
+> Bill Page wrote:
+> ...
+> > new sites now. They can be found at:
+> >
+> >     http://axiom-wiki.newsynthesis.org
+> >
+> > and
+> >
+> >     http://axiom-portal.newsynthesis.org
+> >
+> ...
+> Bill, I must admit that I have doubts concerning your migration
+> tactic.  AFAU there are two goals:
+>
+> 1) Primary goal: migrate content and users from the old site
+>    to the new site.
+> 2) Secondary goal: update software and the content.
+>
+
+Waldek, I very much appreciate your taking the time to comment. I also
+have doubts as I will explain below. But I would state my own goals
+with respect to the migration somewhat differently:
+
+ Primary goal 1: Support all versions/forks of Axiom at one website
+ Primary goal 2: Reduce the operating costs of the axiom-developer.org website
+ Secondary goal 1: update software
+ Secondary goal 2: migrate critical and selected content
+
+The first three goals are well served by re-installing the web
+applications at another site.
+Notice I do not mention either updating content or migrating users.
+
+> As you wrote: Axiom wiki is a comunity site, so migrating users
+> to the new site is crucial.  But to migrate users it is
+> essential to migrate content.  I took quick look at the new site
+> and I see that a large part (most??) of content is missing
+> -- for example most links on AxiomContributions page does not work
+> and many positions from the page on the old site are missing.
+>
+
+I think we should be quite honest: There are very few users. Only
+about 3 or 4 people have ever made any effort to actually use the web
+site in the way it was intended - as a wiki, a community maintained
+web site. I do not think there will be any problem convincing these
+same people to continue to contribute to the new site.
+
+On the other hand, from the log statistics we can see that the Axiom
+wiki website does have quite a large number of visits by people who
+want only to read something about Axiom and is also very actively
+crawled by the major search engines. From my point of view, I think
+the partial content that I have already copied from the old site to
+the new is sufficient to sustain this sort of use of the site.
+
+> IIUC you propose to transfer rest of the content via cutting-and-pasting
+> from the old site.  I think this is problematic: without proofreading
+> almost any automatic procedure will work better.  You probably hope
+> that volunteers will proofread the content while copying.
+
+I do not understand your comment about proofreading. I suspect that
+probably my reference to cut-and-paste was not very clear and that you
+probably are not very familiar with how the content of the Axiom is
+created and maintained. Cut-and-paste is simple. It involves only a
+few steps and the entire content of a page is transferred and
+re-created in essential one step by clicking Save.
+
+Here is what I was hoping that you would do:
+
+When you looked at the AxiomContributions page and noticed that some
+apparently useful content was missing you could have added it with
+less than 30 seconds effort. For example in detail:
+
+1) At the new site
+
+   http://axiom-wiki.newsynthesis.org/AxiomContributions
+
+2) You see
+
+  [CommonDenominator for polynomials]?
+
+  where you would like to see a link to this web page that existed on
+the old site.
+
+3) Click on the blue ? to begin (re-)creating the page.
+
+4) Open the source for this page at the old site in a separate browser window
+
+  http://wiki.axiom-developer.org/CommonDenominatorForPolynomials/src
+
+  Notice /src at the end of the url and also the rule of removing
+blanks and capitalizing the first letter of each word.
+
+5) Click Edit/Select All, Edit/Copy
+
+6) Place the cursor in textbox in the page creation form and click
+Edit/Paste to move the enter text of the page
+
+7) Click the 'Create' button to render the new page. The link on the
+AxiomContributions has been automatically updated.
+
+Maybe during this process you notice that something is out of date so,
+now you might continue by clicking 'edit' (upper right corner of page)
+and make the correction.
+
+> However,  it seems that creating current content took about 3 years.
+
+I think a lot of this content is of out of date and no longer
+interesting. I would prefer to place the emphasis on generating new
+content and updating the old (if still relevant).
+
+>  I would expect that proofreading the site will take month or two and
+> proofreaders will be slowed down by the need to copy things --
+> I am not saying that proofreading itself takes a lot of time,
+> but simply that our volunteers are in general busy, and can spend
+> only a short time doing this.
+>
+
+What is the purpose of proof-reading? Keep in mind that this is a
+*wiki* web site. The content can be edited by anyone at any time and
+this use is strongly *encouraged*. Editing and extending the content
+is an ongoing process.
+
+> During that time the new site will be more or less broken, so many
+> users will try to use the old site -- since only old site will
+> be "complete".
+
+A wiki web site is never "complete". It is there to be changed,
+updated and extended as time and motivation allow.
+
+> Similarly links will continue to point to the old site.  Another problem
+> is that users may come to the old place and add content there --
+> migrating additions will cause extra trouble.
+>
+
+We can easily disable updates to the old site and direct the user to
+the new site in the resulting error message page.
+
+> I would suggest to migrate content as much as possible in automatic
+> way.
+
+Because of the change in the underlying software I do not know any
+easy way to accomplish this sort of automatic migration for the Axiom
+wiki site. I have already done as much automatic migration to the
+Axiom portal site as possible using the ZSyncer tool. If you have some
+ideas about how to do more automatic migration I would be very
+interested in this.
+
+> Once the new site is fully functional I would made first
+> stage of transition:
+
+I do not know what you mean by "fully functional" except if you refer
+to content as we discussed above. Other than that, I think the new
+site is (almost) fully functional as a wiki and as a portal. The only
+missing part right now that I know about as I mentioned in my previous
+email is support for Aldor.
+
+> -- put prominent notice about new site on the front page of
+>    the old site
+
+That is done now.
+
+> -- change old site to read-only and display notice about new
+>    site on any attempt to edit
+
+I can do that today if everyone agrees that is the right approach.
+
+> -- redirect all links to the new site.
+>
+
+I think this would be inconvenient. The old site must remain
+accessible for some period of to allow content to be transferred.
+
+> In the next stage (two weeks or maybe month later) I would replace
+> all pages on the old site by a notice about move and link to
+> the corresponding page on the new site.  I would handle updates
+> to the content separately.
+>
+
+I do not think we have the luxury of spending this much time and using
+this sort of more structured approach.
+
+> Rationalle: without proper action users will continue to come
+> to the old site: it shows in search engines, it is in bookmarks,
+> there are links to it.  The first stage is intended to shift
+> critical mass of links and users to the new site.  To avoid loosing
+> users old site should be operational.
+
+I do not know what is the required "critical mass" of links or users.
+So far as I can see we have never reached this "critical mass" stage
+in either links or users yet even on the old site.
+
+> Making old site read-only should avoid problems with
+> synchronization.
+
+Yes, but I do not expect the sites to every be anything except
+approximately synchronized.
+
+> Redirecting links should help with search engines and
+> bookmarks -- search engines should notice new site, new
+> bookmarks to links will point to the new site.
+>
+
+I think eventually redirecting links is definitely a good idea once
+the old site is no longer accessible at all. In fact I can tell from
+the web logs of the new site that the search engines have already
+noticed and started to crawl the new site. They are very agressive
+these days.
+
+> Concerning update of content: the move may cause some loss of
+> users.  Operating both sites in paralell is intended to minimize
+> user loss.  However, it is essential that new site is fully
+> operational -- otherwise users will go to the old site or we may
+> loose them.  IMHO trying to update content during migration
+> slows down migration and causes extra work.
+>
+
+As I explained above, I think that this is quite normal for a wiki-based site.
+
+> ...
+> FriCAS also has a bug tracker at SourceForge.  As a person reading
+> bug reports I find bugzilla format preferable compared to current
+> IssueTracker format.
+
+Of course I have no problem if you chose that as the preferred method
+of reporting bugs for FriCAS.
+
+>  More precisely:
+> -- bugzilla is more restrictive when comes to edits, for example
+>    for normal users is append-only and does not allow unautorized
+>    changes to metadata (bug classification)
+
+Why do you think that is important? Do you expect such changes?
+
+> -- IssueTracker shows Axiom output as images which is unsearchable,
+>    does not work on text terminal and may hide some important
+>    information
+>
+
+If desired Axiom output can be displayed in text form by including the commands:
+
+)set output tex off
+)set output algebra on
+
+But I do not understand why you would wish to use a "text terminal".
+
+>
+> However, I feel that access to old reports is important, so I certainly
+> would like to see old reports at the new site.
+>
+
+Agreed but transferring them is a problem.
+
+> I belive that common bug tracker for all Axiom forks would be good.
+> In the past Tim said that he does not want FriCAS bugs in Axiom bug
+> tracker, so FriCAS bug tracker was created.  Certainly, common
+> bug tracker make sense only if one can restrict view so that
+> only bugs reported against given fork are visible.  Technically,
+> this should be not a problem...
+>
+
+There are many good alternatives when it comes to bug tracking. For
+example the Sage project is using the Trac system.
+
+http://trac.edgewall.org
+
+that includes it's own integrated wiki and interface to subversion.
+
+Do you think we should try to operate something like this as a common
+bug tracker for all the Axiom versions/forks?
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Sat Nov 03 13:27:46 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IoMmg-000399-6e
+	for mharc-axiom-mail@gnu.org; Sat, 03 Nov 2007 13:27:46 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IoMme-00037I-9U
+	for axiom-mail@nongnu.org; Sat, 03 Nov 2007 13:27:44 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IoMmb-000363-HX
+	for axiom-mail@nongnu.org; Sat, 03 Nov 2007 13:27:42 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1IoMmX-00034L-ED; Sat, 03 Nov 2007 13:27:37 -0400
+Received: from hera.math.uni.wroc.pl ([156.17.86.1])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <hebisch@math.uni.wroc.pl>)
+	id 1IoMmW-0001yE-PK; Sat, 03 Nov 2007 13:27:37 -0400
+Received: from hebisch by hera.math.uni.wroc.pl with local (Exim 3.36 #1
+	(Debian)) id 1IoMmI-0006JU-00; Sat, 03 Nov 2007 18:27:22 +0100
+In-Reply-To: <fbcd16d40711020822vda3b1d8hd009d61674072d2f@mail.gmail.com>
+To: fricas-devel@googlegroups.com
+Date: Sat, 3 Nov 2007 18:27:22 +0100 (CET)
+X-Mailer: ELM [version 2.4ME+ PL100 (25)]
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=US-ASCII
+Message-Id: <E1IoMmI-0006JU-00@hera.math.uni.wroc.pl>
+From: Waldek Hebisch <hebisch@math.uni.wroc.pl>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 1)
+Cc: sage-devel@googlegroups.com, William Stein <wstein@gmail.com>,
+	Axiom-Developer <axiom-developer@nongnu.org>,
+	open-axiom-devel@lists.sourceforge.net, Axiom-Mail <axiom-mail@nongnu.org>
+Subject: [Axiom-mail] Re: [fricas-devel] Re: Axiom Wiki and Portal are moving
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 03 Nov 2007 17:27:45 -0000
+
+Bill Page wrote:
+> 
+> On 11/1/07, Waldek Hebisch wrote:
+> >
+> > Bill, I must admit that I have doubts concerning your migration
+> > tactic. 
+> Waldek, I very much appreciate your taking the time to comment. I also
+> have doubts as I will explain below. But I would state my own goals
+> with respect to the migration somewhat differently:
+> 
+>  Primary goal 1: Support all versions/forks of Axiom at one website
+>  Primary goal 2: Reduce the operating costs of the axiom-developer.org website
+>  Secondary goal 1: update software
+>  Secondary goal 2: migrate critical and selected content
+> 
+> The first three goals are well served by re-installing the web
+> applications at another site.
+> Notice I do not mention either updating content or migrating users.
+> 
+> > As you wrote: Axiom wiki is a comunity site, so migrating users
+> > to the new site is crucial.  But to migrate users it is
+> > essential to migrate content.  I took quick look at the new site
+> > and I see that a large part (most??) of content is missing
+> > -- for example most links on AxiomContributions page does not work
+> > and many positions from the page on the old site are missing.
+> >
+> 
+> I think we should be quite honest: There are very few users. Only
+> about 3 or 4 people have ever made any effort to actually use the web
+> site in the way it was intended - as a wiki, a community maintained
+> web site. I do not think there will be any problem convincing these
+> same people to continue to contribute to the new site.
+> 
+> On the other hand, from the log statistics we can see that the Axiom
+> wiki website does have quite a large number of visits by people who
+> want only to read something about Axiom and is also very actively
+> crawled by the major search engines. From my point of view, I think
+> the partial content that I have already copied from the old site to
+> the new is sufficient to sustain this sort of use of the site.
+>
+
+We are using different terminology here: for me people visiting the
+site are users.  But I do not want discuss names here.  For me
+important point of wiki is that content may be viewed by large
+number of visitors.  And I belive that you want visitors to go
+to the new site.
+
+ 
+> > IIUC you propose to transfer rest of the content via cutting-and-pasting
+> > from the old site.  I think this is problematic: without proofreading
+> > almost any automatic procedure will work better.  You probably hope
+> > that volunteers will proofread the content while copying.
+> 
+> I do not understand your comment about proofreading.
+
+You wrote about obsolete pages: to find out if a page is obsolete
+you need to read it.  And my impression is that 100% obsolete
+pages are rare, rather part of a page is obsolete.  So to
+eliminate obsolete pages and/or improve content you need
+proofreading.
+
+However below you explain that you just want mechanical copy...
+
+> I suspect that
+> probably my reference to cut-and-paste was not very clear and that you
+> probably are not very familiar with how the content of the Axiom is
+> created and maintained. Cut-and-paste is simple. It involves only a
+> few steps and the entire content of a page is transferred and
+> re-created in essential one step by clicking Save.
+> 
+> Here is what I was hoping that you would do:
+> 
+> When you looked at the AxiomContributions page and noticed that some
+> apparently useful content was missing you could have added it with
+> less than 30 seconds effort. For example in detail:
+> 
+> 1) At the new site
+> 
+>    http://axiom-wiki.newsynthesis.org/AxiomContributions
+> 
+> 2) You see
+> 
+>   [CommonDenominator for polynomials]?
+> 
+>   where you would like to see a link to this web page that existed on
+> the old site.
+> 
+> 3) Click on the blue ? to begin (re-)creating the page.
+> 
+> 4) Open the source for this page at the old site in a separate browser window
+> 
+>   http://wiki.axiom-developer.org/CommonDenominatorForPolynomials/src
+> 
+>   Notice /src at the end of the url and also the rule of removing
+> blanks and capitalizing the first letter of each word.
+> 
+
+OK, so we have easy way to grab sources of all pages from the old
+site.
+
+> 5) Click Edit/Select All, Edit/Copy
+> 
+> 6) Place the cursor in textbox in the page creation form and click
+> Edit/Paste to move the enter text of the page
+> 
+> 7) Click the 'Create' button to render the new page. The link on the
+> AxiomContributions has been automatically updated.
+> 
+
+This sound like work for Perl WW::Mechanize module.  However, since
+you have direct access to the machine there should be easier way
+to submit pages.  Note: I never used Mechanize module.  Since
+I may need it for other purposes I am willing to try mass upload
+using it (assuming you have no easier way).
+
+> > During that time the new site will be more or less broken, so many
+> > users will try to use the old site -- since only old site will
+> > be "complete".
+> 
+> A wiki web site is never "complete". It is there to be changed,
+> updated and extended as time and motivation allow.
+>
+
+Yesterday contents page of the new site contained 74 positions,
+while contens page of old site had 913 positions -- that is large
+difference.
+ 
+> > Similarly links will continue to point to the old site.  Another problem
+> > is that users may come to the old place and add content there --
+> > migrating additions will cause extra trouble.
+> >
+> 
+> We can easily disable updates to the old site and direct the user to
+> the new site in the resulting error message page.
+> 
+> > I would suggest to migrate content as much as possible in automatic
+> > way.
+> 
+> Because of the change in the underlying software I do not know any
+> easy way to accomplish this sort of automatic migration for the Axiom
+> wiki site. I have already done as much automatic migration to the
+> Axiom portal site as possible using the ZSyncer tool. If you have some
+> ideas about how to do more automatic migration I would be very
+> interested in this.
+>
+
+I have no experience with Zwiki.  But I would be very disappointed if
+Zwiki does not allow easy batch import from external source.
+
+> > Once the new site is fully functional I would made first
+> > stage of transition:
+> 
+> I do not know what you mean by "fully functional" except if you refer
+> to content as we discussed above.
+
+Yes.
+
+> >  More precisely:
+> > -- bugzilla is more restrictive when comes to edits, for example
+> >    for normal users is append-only and does not allow unautorized
+> >    changes to metadata (bug classification)
+> 
+> Why do you think that is important? Do you expect such changes?
+>
+
+I think it is important to store _exactly_ the report: frequently
+little details does not mater, but sometimes give very important
+clue.  I saw report which looked like somebody later edited them
+and reports were it was hard to distinguish what original reporter
+wrote and what later folks added.  Which means that in _all_
+cases there is danger that report was changed.  I guess one can
+trace history of the page to check this, but it seems much
+simpler to use append-only mode.
+ 
+Concering metadata: there is a lot of bogus metadata in current
+IssueTracker.  Part may be due to simple errors, but it seems
+that wandals frequently change metadata.  I would say that
+anuthorised people have no business changing metadata and
+that maintaining metadata is less work than correctiong wrong
+changes. 
+
+> > -- IssueTracker shows Axiom output as images which is unsearchable,
+> >    does not work on text terminal and may hide some important
+> >    information
+> >
+> 
+> If desired Axiom output can be displayed in text form by including the commands:
+> 
+> )set output tex off
+> )set output algebra on
+> 
+
+But that means that I would have to edit original report.  Beside
+extra effort I would like to keep original report "as is".
+
+BTW:  I _definitely_ prefer to store output of orignal report to
+recreating it on page change.  Note that storing output avoids
+all tricky issues with changing versions.
+
+> But I do not understand why you would wish to use a "text terminal".
+> 
+
+I _use_ "text terminal" -- that is just personal preference.
+
+> > I belive that common bug tracker for all Axiom forks would be good.
+> > In the past Tim said that he does not want FriCAS bugs in Axiom bug
+> > tracker, so FriCAS bug tracker was created.  Certainly, common
+> > bug tracker make sense only if one can restrict view so that
+> > only bugs reported against given fork are visible.  Technically,
+> > this should be not a problem...
+> >
+> 
+> There are many good alternatives when it comes to bug tracking. For
+> example the Sage project is using the Trac system.
+> 
+> http://trac.edgewall.org
+> 
+> that includes it's own integrated wiki and interface to subversion.
+> 
+> Do you think we should try to operate something like this as a common
+> bug tracker for all the Axiom versions/forks?
+> 
+
+I have no experience with Trac.  I really have no strong preference
+for specific software.  I mentioned Bugzilla because it is known
+and works "good enough".  I belive that changing IssueTracker in
+specific aspect I mentioned would not be very hard.  So, now
+it is mostly question what other versions want.
+
+-- 
+                              Waldek Hebisch
+hebisch@math.uni.wroc.pl 
+
+
+
+From MAILER-DAEMON Mon Nov 05 02:05:28 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Iow1Y-0006nw-QL
+	for mharc-axiom-mail@gnu.org; Mon, 05 Nov 2007 02:05:28 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Iow1W-0006lW-Vy
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 02:05:27 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Iow1T-0006hs-Vg
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 02:05:26 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Iow1T-0006hh-Rh
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 02:05:23 -0500
+Received: from mail6.skf.com ([163.157.254.161])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <Erik.Svensson@skf.com>) id 1Iow1S-00058H-Uz
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 02:05:23 -0500
+Importance: Normal
+X-Priority: 3 (Normal)
+MIME-Version: 1.0
+From: Erik.Svensson@skf.com
+To: axiom-mail@nongnu.org
+Date: Mon, 5 Nov 2007 08:05:18 +0100
+Message-ID: <OF889A9323.F8FE2438-ONC125738A.0026EFF6-C125738A.0026EFF9@skf.com>
+X-Mailer: Lotus Domino Web Server Release 6.5.5 November 30, 2005             
+X-MIMETrack: Serialize by Notes Server on ERCSRV21/ERC/SKF(Release
+	6.5.5|November 30, 2005) at 11/05/2007 08:05:18 AM,
+	Serialize complete at 11/05/2007 08:05:18 AM,
+	Serialize by Router on GOTSRV05/GOT/SKF(Release 6.5.5|November 30,
+	2005) at 2007-11-05 08:05:20
+Content-Type: multipart/alternative;
+	boundary="=_alternative 0026EFF7C125738A_="
+X-detected-kernel: by monty-python.gnu.org: FreeBSD 2.0-4.2
+Subject: [Axiom-mail] Matrix algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 05 Nov 2007 07:05:27 -0000
+
+--=_alternative 0026EFF7C125738A_=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+For symbolic computation can Axiom recognize that matrix multiplication in =
+general does not commute, that is, for square matrices A and B, AB is not (=
+in general) equal to BA?
+
+Best regards,
+
+Erik Svensson =C2=A0 =C2=A0 =20
+
+--=_alternative 0026EFF7C125738A_=
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div>For symbolic computation can Axiom recognize that matrix multiplicatio=
+n in general does not commute, that is, for square matrices A and B, AB is =
+not (in general) equal to BA?<br><br>Best regards,<br><br>Erik Svensson &nb=
+sp; &nbsp;  <br><div><br></div></div>
+--=_alternative 0026EFF7C125738A_=--
+
+
+
+From MAILER-DAEMON Mon Nov 05 02:43:17 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Iowc9-00010L-Eq
+	for mharc-axiom-mail@gnu.org; Mon, 05 Nov 2007 02:43:17 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Iowc8-0000yO-1B
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 02:43:16 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Iowc6-0000vt-6s
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 02:43:15 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Iowc6-0000vl-2C
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 02:43:14 -0500
+Received: from mx20.gnu.org ([199.232.41.8])
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA1:32)
+	(Exim 4.60) (envelope-from <martin.rubey@univie.ac.at>)
+	id 1Iowc5-0001ZZ-9l
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 02:43:13 -0500
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by mx20.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1Iowc2-0005HN-4V
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 02:43:10 -0500
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Iowbx-0002Pw-AU; Mon, 05 Nov 2007 08:43:05 +0100
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Iowbx-0000aL-9O; Mon, 05 Nov 2007 08:43:05 +0100
+Sender: rubey@aquin.mat.univie.ac.at
+To: Erik.Svensson@skf.com
+Subject: Re: [Axiom-mail] Matrix algebra
+References: <OF889A9323.F8FE2438-ONC125738A.0026EFF6-C125738A.0026EFF9@skf.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 05 Nov 2007 08:43:04 +0100
+In-Reply-To: <OF889A9323.F8FE2438-ONC125738A.0026EFF6-C125738A.0026EFF9@skf.com>
+Message-ID: <9qtzo1w31z.fsf@aquin.mat.univie.ac.at>
+Lines: 42
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: by mx20.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 05 Nov 2007 07:43:16 -0000
+
+Erik.Svensson@skf.com writes:
+
+> For symbolic computation can Axiom recognize that matrix multiplication in
+> general does not commute, that is, for square matrices A and B, AB is not (in
+> general) equal to BA?
+
+Well, currently, there is no domain specially geared towards symbolic matrix
+calculations, however:
+
+* if you know the dimensions (and they are not too big), you do not have a
+  problem at all, just use generic matrices
+
+* otherwise, you can use a noncommutative polynomial ring, for example XPOLY:
+
+(1) -> p1:XPOLY INT := x+y
+
+   (1)  x 1 + y 1
+                                                    Type: XPolynomial Integer
+(2) -> p2:XPOLY INT := x-y
+
+   (2)  x 1 + y(- 1)
+                                                    Type: XPolynomial Integer
+(3) -> p1*p2
+
+   (3)  x(x 1 + y(- 1)) + y(x 1 + y(- 1))
+                                                    Type: XPolynomial Integer
+(4) -> p2*p1
+
+   (4)  x(x 1 + y 1) + y(x(- 1) + y(- 1))
+                                                    Type: XPolynomial Integer
+(5) -> p1*p2-p2*p1
+
+   (5)  x y(- 2) + y x 2
+                                                    Type: XPolynomial Integer
+
+
+* if you need more general expressions in variables, you will probably have to
+  build your own domain, unfortunately.
+
+Hope this helps,
+
+Martin
+
+
+
+
+From MAILER-DAEMON Mon Nov 05 06:41:35 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ip0Kl-0005Ei-5w
+	for mharc-axiom-mail@gnu.org; Mon, 05 Nov 2007 06:41:35 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ip0Ki-0005C3-TT
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 06:41:32 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ip0Kg-0005Ab-GZ
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 06:41:31 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ip0Kg-0005AY-Bc
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 06:41:30 -0500
+Received: from athena.risc.uni-linz.ac.at ([140.78.116.39]
+	helo=smtpauthhost.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA1:24) (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1Ip0Kg-0007e5-27
+	for axiom-mail@nongnu.org; Mon, 05 Nov 2007 06:41:30 -0500
+Received: from [193.170.38.119] (hemmecke@woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by smtpauthhost.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with
+	ESMTP id lA5BfQn1027926
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Mon, 5 Nov 2007 12:41:26 +0100
+Message-ID: <472F0163.3050508@hemmecke.de>
+Date: Mon, 05 Nov 2007 12:41:23 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.6 (X11/20070728)
+MIME-Version: 1.0
+To: Erik.Svensson@skf.com, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Matrix algebra
+References: <OF889A9323.F8FE2438-ONC125738A.0026EFF6-C125738A.0026EFF9@skf.com>
+In-Reply-To: <OF889A9323.F8FE2438-ONC125738A.0026EFF6-C125738A.0026EFF9@skf.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 05 Nov 2007 11:41:33 -0000
+
+On 11/05/2007 08:05 AM, Erik.Svensson@skf.com wrote:
+> For symbolic computation can Axiom recognize that matrix multiplication 
+> in general does not commute, that is, for square matrices A and B, AB is 
+> not (in general) equal to BA?
+> 
+> Best regards,
+> 
+> Erik Svensson    
+
+Could you make your question more precise. I guess you already know what 
+is given below.
+
+Ralf
+
+
+(1) -> m: Matrix(Integer) := matrix [[1,2],[3,4]]
+         +1  2+
+    (1)  |    |
+         +3  4+
+                                      Type: Matrix Integer
+(2) -> n: Matrix(Integer) := matrix [[2,1],[3,4]]
+(2) ->
+         +2  1+
+    (2)  |    |
+         +3  4+
+                                      Type: Matrix Integer
+(3) -> m*n
+(3) ->
+         +8   9 +
+    (3)  |      |
+         +18  19+
+                                      Type: Matrix Integer
+(4) -> n*m
+(4) ->
+         +5   8 +
+    (4)  |      |
+         +15  22+
+                                      Type: Matrix Integer
+(5) -> n*m-m*n
+(5) ->
+         +- 3  - 1+
+    (5)  |        |
+         +- 3   3 +
+                                      Type: Matrix Integer
+
+
+
+From MAILER-DAEMON Wed Nov 21 12:22:08 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IutH6-0002cS-7f
+	for mharc-axiom-mail@gnu.org; Wed, 21 Nov 2007 12:22:08 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IutH4-0002bf-7V
+	for axiom-mail@nongnu.org; Wed, 21 Nov 2007 12:22:06 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IutH3-0002ax-Cl
+	for axiom-mail@nongnu.org; Wed, 21 Nov 2007 12:22:05 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IutH2-0002ap-Sl
+	for axiom-mail@nongnu.org; Wed, 21 Nov 2007 12:22:04 -0500
+Received: from smtp-103-wednesday.noc.nerim.net ([62.4.17.103]
+	helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <fmaltey@nerim.fr>) id 1IutH2-0001wC-Gr
+	for axiom-mail@nongnu.org; Wed, 21 Nov 2007 12:22:04 -0500
+Received: from localhost (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.nerim.net (Postfix) with ESMTP id B80E74F5A2;
+	Wed, 21 Nov 2007 18:21:51 +0100 (CET)
+Received: from fmy by localhost with local (Exim 4.63)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1IutGy-0001Po-GF; Wed, 21 Nov 2007 18:22:00 +0100
+To: fricas-devel@googlegroups.com, open-axiom-devel@lists.sourceforge.net,
+	axiom-mail@nongnu.org
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 21 Nov 2007 18:21:59 +0100
+Message-ID: <87y7crh5u0.fsf@nerim.fr>
+Lines: 53
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-kernel: by monty-python.gnu.org: FreeBSD 4.6-4.9
+Cc: 
+Subject: [Axiom-mail] I can't get the latex file for AxiomEmacsMode with
+	noweb
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 21 Nov 2007 17:22:06 -0000
+
+Hello Martin, I test your new axiom.el mode.
+And all *...
+
+I can get the axiom.el file by :=20
+
+cd /usr/local/axiom-local/mnt/linux/bin/lib/
+./notangle ~/Axiom/AxiomEmacsMode.pamphlet > ~/Axiom/axiom.el
+
+But I can't get the latex file by :
+
+cd /usr/local/axiom-local/mnt/linux/bin/lib/
+./noweb ~/Axiom/AxiomEmacsMode.pamphlet
+
+I get the error. And I don't understand it...
+
+<<*>> is not a good chunk name for noweb; use notangle instead
+./noweb: line 31: cpif: command not found
+
+So I don't know what is the [newline] key and the [compute-now] key...
+When I test [ctrl-return], [alt-return]=A0and so I get errors :
+
+Do you imagine what is wrong ?
+
+Francois
+
+(1) -> 11111     -- the return key is right.
+
+   (1)  11111
+                                                        Type: PositiveInt=
+eger
+(2) -> )read /tmp/axiom44459nt.input    --- the [ctrl-return] key make er=
+rors
+=20
+  Line   5: (2) -> )read /tmp/axiom44459nt.input
+           .......A
+  Error  A: Improper syntax.
+   1 error(s) parsing=20
+gnus
+=20
+
+   (2)  gnus
+                                                          Type: Variable =
+gnus
+=20
+=20
+   Declarations are only allowed on variables and=20
+      ((gnus 2) (gnus Type)) is not one.
+(3) ->=20
+=20
+=20
+   Cannot find a definition or applicable library operation named 3=20
+      with argument type(s)=20
+                                 Variable ->
+     =20
+      Perhaps you should use "@" to indicate the required return type,=20
+      or "$" to specify which version of the function you need.
+
+
+
+From MAILER-DAEMON Wed Nov 21 12:50:08 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IutiB-00025x-Vo
+	for mharc-axiom-mail@gnu.org; Wed, 21 Nov 2007 12:50:08 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IutiA-00025V-Gs
+	for axiom-mail@nongnu.org; Wed, 21 Nov 2007 12:50:06 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Iuti8-00024g-Hl
+	for axiom-mail@nongnu.org; Wed, 21 Nov 2007 12:50:05 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Iuti8-00024c-Ey
+	for axiom-mail@nongnu.org; Wed, 21 Nov 2007 12:50:04 -0500
+Received: from mo-p07-ob.rzone.de ([81.169.146.188])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1Iuti7-0002Ai-J9
+	for axiom-mail@nongnu.org; Wed, 21 Nov 2007 12:50:04 -0500
+X-RZG-CLASS-ID: mo07
+X-RZG-AUTH: kNhRm6lSBfihT3pKoa7cDjnLiK7IhtO0IEnMqYW9VSoKluelBt8gCTjZqQ==
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.webmailer.de (klopstock mo56) (RZmta 14.3)
+	with ESMTP id 506b33jALFB1ey ; Wed, 21 Nov 2007 18:49:49 +0100 (MET)
+	(envelope-from: <ralf@hemmecke.de>)
+Message-ID: <47446FBC.4050503@hemmecke.de>
+Date: Wed, 21 Nov 2007 18:49:48 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.9 (X11/20071031)
+MIME-Version: 1.0
+To: Francois Maltey <fmaltey@nerim.fr>
+Subject: Re: [Axiom-mail] I can't get the latex file for AxiomEmacsMode with
+	noweb
+References: <87y7crh5u0.fsf@nerim.fr>
+In-Reply-To: <87y7crh5u0.fsf@nerim.fr>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-kernel: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: fricas-devel@googlegroups.com, open-axiom-devel@lists.sourceforge.net,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 21 Nov 2007 17:50:07 -0000
+
+> cd /usr/local/axiom-local/mnt/linux/bin/lib/
+> ./noweb ~/Axiom/AxiomEmacsMode.pamphlet
+> 
+> I get the error. And I don't understand it...
+> 
+> <<*>> is not a good chunk name for noweb; use notangle instead
+> ./noweb: line 31: cpif: command not found
+
+Try
+
+noweave -n -delay AxiomEmacsMode.pamphlet > AxiomEmacsMode.tex
+
+Martin, I don't understand why you give
+
+   noweb axiom.el.pamphlet
+
+as a suggestion in
+
+http://wiki.axiom-developer.org/images/AxiomEmacsMode.pamphlet
+
+Francois, you can look at a precompiled file... (click on pdf)
+
+http://axiom-wiki.newsynthesis.org/AxiomEmacsMode
+
+
+Bill, why is that ....
+
+http://axiom-wiki.newsynthesis.org/images/AxiomEmacsMode.tex
+
+ERROR ...
+
+Ralf
+
+
+
+From MAILER-DAEMON Wed Nov 21 13:25:08 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IuuG4-0006xC-HQ
+	for mharc-axiom-mail@gnu.org; Wed, 21 Nov 2007 13:25:08 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IuuG3-0006wz-IM
+	for axiom-mail@nongnu.org; Wed, 21 Nov 2007 13:25:07 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IuuFz-0006wU-IG
+	for axiom-mail@nongnu.org; Wed, 21 Nov 2007 13:25:07 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IuuFz-0006wR-DL
+	for axiom-mail@nongnu.org; Wed, 21 Nov 2007 13:25:03 -0500
+Received: from nf-out-0910.google.com ([64.233.182.191])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1IuuFy-0004CX-Vs
+	for axiom-mail@nongnu.org; Wed, 21 Nov 2007 13:25:03 -0500
+Received: by nf-out-0910.google.com with SMTP id 30so2386030nfu
+	for <axiom-mail@nongnu.org>; Wed, 21 Nov 2007 10:25:00 -0800 (PST)
+Received: by 10.86.54.3 with SMTP id c3mr7589147fga.1195669500457;
+	Wed, 21 Nov 2007 10:25:00 -0800 (PST)
+Received: by 10.86.77.14 with HTTP; Wed, 21 Nov 2007 10:25:00 -0800 (PST)
+Message-ID: <fbcd16d40711211025gb0faddel1631c11b792894e4@mail.gmail.com>
+Date: Wed, 21 Nov 2007 13:25:00 -0500
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Ralf Hemmecke" <ralf@hemmecke.de>
+Subject: Re: [Axiom-mail] I can't get the latex file for AxiomEmacsMode with
+	noweb
+In-Reply-To: <47446FBC.4050503@hemmecke.de>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <87y7crh5u0.fsf@nerim.fr> <47446FBC.4050503@hemmecke.de>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: fricas-devel@googlegroups.com, open-axiom-devel@lists.sourceforge.net,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 21 Nov 2007 18:25:07 -0000
+
+On 11/21/07, Ralf Hemmecke wrote:
+> ...
+> Francois, you can look at a precompiled file... (click on pdf)
+>
+> http://axiom-wiki.newsynthesis.org/AxiomEmacsMode
+>
+>
+> Bill, why is that ....
+>
+> http://axiom-wiki.newsynthesis.org/images/AxiomEmacsMode.tex
+>
+> ERROR ...
+>
+
+Sorry, I have corrected this problem and the link should be ok now.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Nov 22 02:38:27 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Iv6dn-0003Fu-5n
+	for mharc-axiom-mail@gnu.org; Thu, 22 Nov 2007 02:38:27 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Iv6dk-0003Ei-UP
+	for axiom-mail@nongnu.org; Thu, 22 Nov 2007 02:38:24 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Iv6dj-0003CS-3U
+	for axiom-mail@nongnu.org; Thu, 22 Nov 2007 02:38:24 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Iv6di-0003CK-Rx
+	for axiom-mail@nongnu.org; Thu, 22 Nov 2007 02:38:22 -0500
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1Iv6di-0002vf-FS
+	for axiom-mail@nongnu.org; Thu, 22 Nov 2007 02:38:22 -0500
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Iv6dd-0001Df-7O; Thu, 22 Nov 2007 08:38:17 +0100
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Iv6dd-0000yc-6L; Thu, 22 Nov 2007 08:38:17 +0100
+Sender: rubey@aquin.mat.univie.ac.at
+To: fricas-devel@googlegroups.com
+References: <87y7crh5u0.fsf@nerim.fr>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 22 Nov 2007 08:38:16 +0100
+In-Reply-To: <87y7crh5u0.fsf@nerim.fr>
+Message-ID: <9qfxyylogn.fsf@aquin.mat.univie.ac.at>
+Lines: 35
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: open-axiom-devel@lists.sourceforge.net, axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: [fricas-devel] I can't get the latex file for
+	AxiomEmacsMode with noweb
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 22 Nov 2007 07:38:25 -0000
+
+Francois Maltey <fmaltey@nerim.fr> writes:
+
+> (1) -> 11111     -- the return key is right.
+> 
+>    (1)  11111
+>                                                         Type: PositiveInteger
+
+yes, by default [return] is bound to evaluate.
+
+> (2) -> )read /tmp/axiom44459nt.input    --- the [ctrl-return] key make errors
+
+[ctrl-return] puts the front item of the kill ring in a temporary file and
+")read" s it.  That way you can re-define easily function definitions you save
+in an input file, without having to re evaluate the whole input file.
+
+
+Of course, I'd be happy to have better - more emacs-like - keybindings,
+although I must say I found them pretty much OK so far.
+
+There is one important glitch in the mode currently:
+
+I want to be able to override old input-output combinations. Several people
+said that this would be useful.  However, it is quite difficult to detext, when
+a computation has finished and new input is to be accepted.  In particular, I
+do not really want to rely on the prompt appearing, since it might be desirable
+to have "interactive" axiom commands, like pause() somebody (was it
+Constantine?) is using already.  Also there are some system commands like 
+
+   )di op 1
+
+that ask the user a question, without displaying a prompt.
+
+Ideas welcome.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sat Nov 24 17:58:26 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Iw3xC-0007jO-5Y
+	for mharc-axiom-mail@gnu.org; Sat, 24 Nov 2007 17:58:26 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Iw3x9-0007gq-GV
+	for axiom-mail@nongnu.org; Sat, 24 Nov 2007 17:58:23 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Iw3x6-0007d8-Oi
+	for axiom-mail@nongnu.org; Sat, 24 Nov 2007 17:58:22 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Iw3x6-0007cp-ES
+	for axiom-mail@nongnu.org; Sat, 24 Nov 2007 17:58:20 -0500
+Received: from nf-out-0910.google.com ([64.233.182.191])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1Iw3x5-0006jC-Hw
+	for axiom-mail@nongnu.org; Sat, 24 Nov 2007 17:58:19 -0500
+Received: by nf-out-0910.google.com with SMTP id 30so248499nfu
+	for <axiom-mail@nongnu.org>; Sat, 24 Nov 2007 14:58:17 -0800 (PST)
+Received: by 10.86.84.5 with SMTP id h5mr909376fgb.1195945096437;
+	Sat, 24 Nov 2007 14:58:16 -0800 (PST)
+Received: by 10.86.77.14 with HTTP; Sat, 24 Nov 2007 14:58:16 -0800 (PST)
+Message-ID: <fbcd16d40711241458v73570e01gf64a1b35ebd23976@mail.gmail.com>
+Date: Sat, 24 Nov 2007 17:58:16 -0500
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: Axiom-Developer <axiom-developer@nongnu.org>, 
+	Axiom-Mail <axiom-mail@nongnu.org>, 
+	open-axiom-devel@lists.sourceforge.net, fricas-devel@googlegroups.com
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: sage-devel@googlegroups.com
+Subject: [Axiom-mail] Axiom Wiki and Axiom Portal
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 24 Nov 2007 22:58:24 -0000
+
+Dear Axiom Fans,
+
+The move of the Axiom Wiki and the Axiom Portal that was announced
+last month is now nearly complete. Monday, November 26 is the official
+date for the release of the new Axiom Wiki:
+
+  http://axiom-wiki.newsynthesis.org
+
+and the new Axiom Portal
+
+  http://axiom-portal.newsynthesis.org
+
+which is now hosted on the Sage server operated by William Stein at
+the University of Washington. On Monday the old urls:
+
+  http://wiki.axiom-developer.org      ** obsolete **
+
+and
+
+  http://portal.axiom-developer.org   **obsolete **
+
+will be automatically re-directed to the new sites. Later that week,
+all wiki and portal files will be removed from the axiom-developer.org
+server. Tim Daly has plans that he will announce separately for
+re-allocating resources on this server to focus on the goals of the
+original Axiom project.
+
+The new site is intended to support all three Axiom-related projects
+(the original project plus OpenAxiom and the FriCAS forks), as well as
+Aldor as a library compiler for Axiom. In addition to Axiom the wiki
+and portal include interfaces for Reduce, Maxima and Sage. It also
+supports pages containing noweb literate programs (pamphlets) and
+graphics generated by graphviz.
+
+All bug reports and issues from the old wiki site have been
+transferred to the new site and an updated version of the customized
+Topic navigation has been implemented at the new site (left sidebar).
+The only feature that has not (yet) been implemented at the new site
+is the point-and-click assistant extension of the edit and comment
+forms. I am not certain whether this feature is really desirable since
+in increases the size and there for the rendering time of every page
+on the site. I would be glad to receive opinions about this.
+
+If find any of your favorite pages from the old site are missing at
+the new site, there is still time to transfer the page source from old
+to the new. If you need help with doing this just let me know. Some of
+the pages on the new axiom-wiki site do not yet reflect the current
+state of the Axiom-related projects. Your help in updating the pages
+at the new axiom-wiki site would be greatly appreciated.
+
+If your were registered as a user of the old Axiom Portal site, your
+account has *not* been automatically transferred to the new site. If
+you have some files or other content that you wish to preserve and
+transfer to the new site, please register at the new site:
+
+  http://axiom-portal.newsynthesis.org
+
+and if necessary ask me for help in transferring the content.
+
+Regards,
+Bill Page.
+
+
+

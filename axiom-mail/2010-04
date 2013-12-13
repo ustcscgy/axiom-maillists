@@ -1,0 +1,650 @@
+From MAILER-DAEMON Mon Apr 26 22:10:16 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1O6aFb-00033A-VW
+	for mharc-axiom-mail@gnu.org; Mon, 26 Apr 2010 22:10:16 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1O6aFa-00031c-SG
+	for axiom-mail@nongnu.org; Mon, 26 Apr 2010 22:10:14 -0400
+Received: from [140.186.70.92] (port=35512 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1O6aFZ-00030g-Ne
+	for axiom-mail@nongnu.org; Mon, 26 Apr 2010 22:10:14 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <gcmam-axiom-mail@m.gmane.org>) id 1O6aFU-0003fb-O4
+	for axiom-mail@nongnu.org; Mon, 26 Apr 2010 22:10:13 -0400
+Received: from lo.gmane.org ([80.91.229.12]:42586)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <gcmam-axiom-mail@m.gmane.org>) id 1O6aFU-0003fG-IN
+	for axiom-mail@nongnu.org; Mon, 26 Apr 2010 22:10:08 -0400
+Received: from list by lo.gmane.org with local (Exim 4.69)
+	(envelope-from <gcmam-axiom-mail@m.gmane.org>) id 1O6aFO-0004W7-QZ
+	for axiom-mail@nongnu.org; Tue, 27 Apr 2010 04:10:02 +0200
+Received: from ppp121-45-188-54.lns6.syd7.internode.on.net ([121.45.188.54])
+	by main.gmane.org with esmtp (Gmexim 0.1 (Debian))
+	id 1AlnuQ-0007hv-00
+	for <axiom-mail@nongnu.org>; Tue, 27 Apr 2010 04:10:02 +0200
+Received: from jason by ppp121-45-188-54.lns6.syd7.internode.on.net with local
+	(Gmexim 0.1 (Debian)) id 1AlnuQ-0007hv-00
+	for <axiom-mail@nongnu.org>; Tue, 27 Apr 2010 04:10:02 +0200
+X-Injected-Via-Gmane: http://gmane.org/
+To: axiom-mail@nongnu.org
+connect(): No such file or directory
+From: Jason White <jason@jasonjgw.net>
+Date: Tue, 27 Apr 2010 12:06:42 +1000
+Lines: 5
+Message-ID: <87hbmxk5sd.fsf@jdc.jasonjgw.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Complaints-To: usenet@dough.gmane.org
+X-Gmane-NNTP-Posting-Host: ppp121-45-188-54.lns6.syd7.internode.on.net
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/23.1 (gnu/linux)
+Cancel-Lock: sha1:ZiqwvfDniVQ7ipzuiSaK3nPn7Ms=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 3)
+Subject: [Axiom-mail] Status of Axiom mode for Emacs
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 27 Apr 2010 02:10:15 -0000
+
+Web searches indicate that there is (or was) an Axiom mode for Emacs. If
+it is still being maintained, what is the official download site?
+
+The only link I could find (from a late 2007 mailing list archive)
+referred to the wiki, but visiting the link returned a 404 error.
+
+
+
+
+From MAILER-DAEMON Mon Apr 26 23:10:09 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1O6bBY-0004uN-Rb
+	for mharc-axiom-mail@gnu.org; Mon, 26 Apr 2010 23:10:08 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1O6bBW-0004u2-K3
+	for axiom-mail@nongnu.org; Mon, 26 Apr 2010 23:10:06 -0400
+Received: from [140.186.70.92] (port=54107 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1O6bBV-0004tg-Dn
+	for axiom-mail@nongnu.org; Mon, 26 Apr 2010 23:10:06 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <daly@axiom-developer.org>) id 1O6bBU-0000XN-4g
+	for axiom-mail@nongnu.org; Mon, 26 Apr 2010 23:10:05 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:35460
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <daly@axiom-developer.org>) id 1O6bBU-0000X4-0Z
+	for axiom-mail@nongnu.org; Mon, 26 Apr 2010 23:10:04 -0400
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id o3R39S8a032339;
+	Mon, 26 Apr 2010 22:09:28 -0500
+Message-ID: <4BD65518.70108@axiom-developer.org>
+Date: Mon, 26 Apr 2010 23:08:08 -0400
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Jason White <jason@jasonjgw.net>
+Subject: Re: [Axiom-mail] Status of Axiom mode for Emacs
+References: <87hbmxk5sd.fsf@jdc.jasonjgw.net>
+In-Reply-To: <87hbmxk5sd.fsf@jdc.jasonjgw.net>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Linux 2.6? (barebone, rare!)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 27 Apr 2010 03:10:08 -0000
+
+As far as I am aware there is no emacs mode for Axiom.
+Contact Martin Rubey
+
+Tim
+
+Jason White wrote:
+> Web searches indicate that there is (or was) an Axiom mode for Emacs. If
+> it is still being maintained, what is the official download site?
+>
+> The only link I could find (from a late 2007 mailing list archive)
+> referred to the wiki, but visiting the link returned a 404 error.
+>
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>   
+
+
+
+From MAILER-DAEMON Tue Apr 27 00:14:16 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1O6cBc-0003p6-Hp
+	for mharc-axiom-mail@gnu.org; Tue, 27 Apr 2010 00:14:16 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1O6cBb-0003oi-DP
+	for axiom-mail@nongnu.org; Tue, 27 Apr 2010 00:14:15 -0400
+Received: from [140.186.70.92] (port=40212 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1O6cBa-0003o1-1j
+	for axiom-mail@nongnu.org; Tue, 27 Apr 2010 00:14:15 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <gcmam-axiom-mail@m.gmane.org>) id 1O6cBY-0003SO-Vk
+	for axiom-mail@nongnu.org; Tue, 27 Apr 2010 00:14:13 -0400
+Received: from lo.gmane.org ([80.91.229.12]:51966)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <gcmam-axiom-mail@m.gmane.org>) id 1O6cBY-0003S9-Oo
+	for axiom-mail@nongnu.org; Tue, 27 Apr 2010 00:14:12 -0400
+Received: from list by lo.gmane.org with local (Exim 4.69)
+	(envelope-from <gcmam-axiom-mail@m.gmane.org>) id 1O6cBS-0006hQ-Qy
+	for axiom-mail@nongnu.org; Tue, 27 Apr 2010 06:14:06 +0200
+Received: from ppp121-45-188-54.lns6.syd7.internode.on.net ([121.45.188.54])
+	by main.gmane.org with esmtp (Gmexim 0.1 (Debian))
+	id 1AlnuQ-0007hv-00
+	for <axiom-mail@nongnu.org>; Tue, 27 Apr 2010 06:14:06 +0200
+Received: from jason by ppp121-45-188-54.lns6.syd7.internode.on.net with local
+	(Gmexim 0.1 (Debian)) id 1AlnuQ-0007hv-00
+	for <axiom-mail@nongnu.org>; Tue, 27 Apr 2010 06:14:06 +0200
+X-Injected-Via-Gmane: http://gmane.org/
+To: axiom-mail@nongnu.org
+connect(): No such file or directory
+From: Jason White <jason@jasonjgw.net>
+Date: Tue, 27 Apr 2010 14:13:58 +1000
+Lines: 6
+Message-ID: <87r5m11qih.fsf@jdc.jasonjgw.net>
+References: <87hbmxk5sd.fsf@jdc.jasonjgw.net>
+	<4BD65518.70108@axiom-developer.org>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Complaints-To: usenet@dough.gmane.org
+X-Gmane-NNTP-Posting-Host: ppp121-45-188-54.lns6.syd7.internode.on.net
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/23.1 (gnu/linux)
+Cancel-Lock: sha1:AR2O61zGOX5NavG54FQrSsd6D5U=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 3)
+Subject: [Axiom-mail] Re: Status of Axiom mode for Emacs
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 27 Apr 2010 04:14:15 -0000
+
+Tim Daly <daly@axiom-developer.org> writes:
+
+> As far as I am aware there is no emacs mode for Axiom.
+> Contact Martin Rubey
+
+Thank you for the clarification.
+
+
+
+
+From MAILER-DAEMON Tue Apr 27 02:42:05 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1O6eUf-0001gN-MK
+	for mharc-axiom-mail@gnu.org; Tue, 27 Apr 2010 02:42:05 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1O6eUe-0001fs-4b
+	for axiom-mail@nongnu.org; Tue, 27 Apr 2010 02:42:04 -0400
+Received: from [140.186.70.92] (port=58318 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1O6eUQ-0001dX-7E
+	for axiom-mail@nongnu.org; Tue, 27 Apr 2010 02:42:02 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1O6eUJ-0006Ul-Ej
+	for axiom-mail@nongnu.org; Tue, 27 Apr 2010 02:41:49 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:46900)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1O6eUB-0006RX-15
+	for axiom-mail@nongnu.org; Tue, 27 Apr 2010 02:41:38 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	o3R6eofx008151; Tue, 27 Apr 2010 08:40:51 +0200
+To: Jason White <jason@jasonjgw.net>
+Subject: Re: [Axiom-mail] Re: Status of Axiom mode for Emacs
+References: <87hbmxk5sd.fsf@jdc.jasonjgw.net>
+	<4BD65518.70108@axiom-developer.org> <87r5m11qih.fsf@jdc.jasonjgw.net>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Tue, 27 Apr 2010 08:40:50 +0200
+In-Reply-To: <87r5m11qih.fsf@jdc.jasonjgw.net> (Jason White's message of "Tue\,
+	27 Apr 2010 14\:13\:58 +1000")
+Message-ID: <d9wrvt1jpp.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.9.388399, Antispam-Engine: 2.7.2.376379,
+	Antispam-Data: 2010.4.27.62415
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 27 Apr 2010 06:42:04 -0000
+
+Jason White <jason@jasonjgw.net> writes:
+
+> Tim Daly <daly@axiom-developer.org> writes:
+>
+>> As far as I am aware there is no emacs mode for Axiom.
+>> Contact Martin Rubey
+>
+> Thank you for the clarification.
+
+axiom.el became fricas.el + fricas-cpl.el + efricas, is part of the
+fricas distribution, and actively maintained.
+
+I don't think it would be difficult to backport it to axiom (or
+open-axiom).  The main issue is that it requires fricas to wrap any
+output fricas sends in markers, grep the fricas sources for |$ioHook|.
+
+Martin
+
+
+
+From MAILER-DAEMON Wed Apr 28 03:00:54 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1O71GQ-0001tb-Fc
+	for mharc-axiom-mail@gnu.org; Wed, 28 Apr 2010 03:00:54 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1O71GO-0001tL-Qn
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 03:00:52 -0400
+Received: from [140.186.70.92] (port=57282 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1O71GK-0001t0-3f
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 03:00:51 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <byron.hale@einfo.com>) id 1O71GI-0007Zx-EE
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 03:00:47 -0400
+Received: from qmta05.emeryville.ca.mail.comcast.net ([76.96.30.48]:52063)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <byron.hale@einfo.com>) id 1O71GI-0007ZZ-1U
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 03:00:46 -0400
+Received: from omta01.emeryville.ca.mail.comcast.net ([76.96.30.11])
+	by qmta05.emeryville.ca.mail.comcast.net with comcast
+	id Auz31e0030EPchoA5v0klQ; Wed, 28 Apr 2010 07:00:44 +0000
+Received: from [192.168.0.100] ([67.188.28.122])
+	by omta01.emeryville.ca.mail.comcast.net with comcast
+	id Av0j1e00A2e4kKF8Mv0khf; Wed, 28 Apr 2010 07:00:44 +0000
+Message-ID: <4BD7D023.1030604@einfo.com>
+Date: Tue, 27 Apr 2010 23:05:23 -0700
+From: Byron Hale <byron.hale@einfo.com>
+User-Agent: Thunderbird 2.0.0.24 (X11/20100411)
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Genre and OS details not
+	recognized.
+Subject: [Axiom-mail] Open Axiom initialization error on Ubuntu 9.10
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Apr 2010 07:00:53 -0000
+
+Hi,
+
+I was happy to finally get my hands on Axiom after nearly 20 years.
+So, I was overjoyed that Ubuntu 9.10 had a ready-to-go package.
+
+However, there is a cloud over paradise.  Open Axiom fails to properly 
+initialise.
+
+The hardware is Intel Quad Core CPU, the OS is Ubuntu 9.10 AMD 64.
+I keep the CPU microcode up-to-date.
+
+Appended is the rather cryptic output I captured.
+
+I would certainly appreciate some help.
+
+Byron Hale
+
+
+byron@U9:~$ axiom
+GCL (GNU Common Lisp)  2.6.7 CLtL1    Nov 10 2006 14:25:02
+Source License: LGPL(gcl,gmp), GPL(unexec,bfd,xgcl)
+Binary License:  GPL due to GPL'ed components: (XGCL READLINE BFD UNEXEC)
+Modifications of this banner must retain notice of a compatible license
+Dedicated to the memory of W. Schelter
+
+Use (help) to get some basic information on how to use GCL.
+Temporary directory for compiler files set to /tmp/
+                        AXIOM Computer Algebra System
+                     Version: Axiom 3.9 (September 2005)
+              Timestamp: Saturday December 2, 2006 at 09:30:31
+-----------------------------------------------------------------------------
+   Issue )copyright to view copyright notices.
+   Issue )summary for a summary of useful system commands.
+   Issue )quit to leave AXIOM and return to shell.
+-----------------------------------------------------------------------------
+ 
+   Re-reading compress.daase   Re-reading interp.daase
+   Re-reading operation.daase
+   Re-reading category.daase
+   >> System error:
+   Couldn't protect
+
+
+Error: The tag |top_level| is undefined.
+Fast links are on: do (si::use-fast-links nil) for debugging
+Error signalled by RETURN.
+Broken at APPLY.  Type :H for Help.
+BOOT>>
+
+
+
+
+
+From MAILER-DAEMON Wed Apr 28 05:00:11 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1O737r-00054M-5j
+	for mharc-axiom-mail@gnu.org; Wed, 28 Apr 2010 05:00:11 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1O737p-00053w-Gv
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 05:00:09 -0400
+Received: from [140.186.70.92] (port=54536 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1O737m-00052s-Ms
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 05:00:08 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <daly@axiom-developer.org>) id 1O737i-0004lT-RI
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 05:00:04 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:52862
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <daly@axiom-developer.org>) id 1O737i-0004k1-NW
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 05:00:02 -0400
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id o3S8xw8a018750;
+	Wed, 28 Apr 2010 03:59:59 -0500
+Message-ID: <4BD7F94E.5040205@axiom-developer.org>
+Date: Wed, 28 Apr 2010 05:01:02 -0400
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Byron Hale <byron.hale@einfo.com>
+Subject: Re: [Axiom-mail] Open Axiom initialization error on Ubuntu 9.10
+References: <4BD7D023.1030604@einfo.com>
+In-Reply-To: <4BD7D023.1030604@einfo.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Linux 2.6? (barebone, rare!)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Apr 2010 09:00:09 -0000
+
+You're using a version from 2005.
+The latest release is March, 2010
+http://axiom-developer.org/axiom-website/download.html
+
+Download the ubuntu binary
+tar -zxf axiom-ubuntu-mar2010-bin.tgz
+cd axiom
+export AXIOM=`pwd`/mnt/ubuntu
+export PATH=$AXIOM/bin:$PATH
+axiom
+
+
+Tim
+
+Byron Hale wrote:
+> Hi,
+>
+> I was happy to finally get my hands on Axiom after nearly 20 years.
+> So, I was overjoyed that Ubuntu 9.10 had a ready-to-go package.
+>
+> However, there is a cloud over paradise.  Open Axiom fails to properly 
+> initialise.
+>
+> The hardware is Intel Quad Core CPU, the OS is Ubuntu 9.10 AMD 64.
+> I keep the CPU microcode up-to-date.
+>
+> Appended is the rather cryptic output I captured.
+>
+> I would certainly appreciate some help.
+>
+> Byron Hale
+>
+>
+> byron@U9:~$ axiom
+> GCL (GNU Common Lisp)  2.6.7 CLtL1    Nov 10 2006 14:25:02
+> Source License: LGPL(gcl,gmp), GPL(unexec,bfd,xgcl)
+> Binary License:  GPL due to GPL'ed components: (XGCL READLINE BFD UNEXEC)
+> Modifications of this banner must retain notice of a compatible license
+> Dedicated to the memory of W. Schelter
+>
+> Use (help) to get some basic information on how to use GCL.
+> Temporary directory for compiler files set to /tmp/
+>                        AXIOM Computer Algebra System
+>                     Version: Axiom 3.9 (September 2005)
+>              Timestamp: Saturday December 2, 2006 at 09:30:31
+> ----------------------------------------------------------------------------- 
+>
+>   Issue )copyright to view copyright notices.
+>   Issue )summary for a summary of useful system commands.
+>   Issue )quit to leave AXIOM and return to shell.
+> ----------------------------------------------------------------------------- 
+>
+>
+>   Re-reading compress.daase   Re-reading interp.daase
+>   Re-reading operation.daase
+>   Re-reading category.daase
+>   >> System error:
+>   Couldn't protect
+>
+>
+> Error: The tag |top_level| is undefined.
+> Fast links are on: do (si::use-fast-links nil) for debugging
+> Error signalled by RETURN.
+> Broken at APPLY.  Type :H for Help.
+> BOOT>>
+>
+>
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+
+
+
+From MAILER-DAEMON Wed Apr 28 05:39:05 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1O73jU-0000nS-Tq
+	for mharc-axiom-mail@gnu.org; Wed, 28 Apr 2010 05:39:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1O73jS-0000lx-Gh
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 05:39:02 -0400
+Received: from [140.186.70.92] (port=37953 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1O73jQ-0000kt-FQ
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 05:39:01 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <joke@seiken.de>) id 1O73jN-0004bI-5S
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 05:39:00 -0400
+Received: from seiken.de ([94.23.38.107]:49633 helo=titania.nodes.seiken.de)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <joke@seiken.de>) id 1O73jM-0004aH-Tx
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 05:38:57 -0400
+Received: from [2001:6f8:99c:0:21e:8cff:fea0:d269] (helo=oberon.localnet)
+	by titania.nodes.seiken.de with esmtpsa
+	(TLS1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.69)
+	(envelope-from <joke@seiken.de>) id 1O73j5-00034s-Hb
+	for axiom-mail@nongnu.org; Wed, 28 Apr 2010 11:38:39 +0200
+From: Joke de Buhr <joke@seiken.de>
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Open Axiom initialization error on Ubuntu 9.10
+Date: Wed, 28 Apr 2010 11:38:48 +0200
+User-Agent: KMail/1.13.2 (Linux/2.6.32-21-generic; KDE/4.4.2; x86_64; ; )
+References: <4BD7D023.1030604@einfo.com>
+In-Reply-To: <4BD7D023.1030604@einfo.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; boundary="nextPart1774499.d3NnatgW4o";
+	protocol="application/pgp-signature"; micalg=pgp-sha512
+Content-Transfer-Encoding: 7bit
+Message-Id: <201004281138.48823.joke@seiken.de>
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 1)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 28 Apr 2010 09:39:02 -0000
+
+--nextPart1774499.d3NnatgW4o
+Content-Type: Text/Plain;
+  charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+On amd64 systems you need to run
+
+  setarch i386 -R axiom
+
+from your commandline. It's an axiom bug which is fixed in newer axiom rele=
+ases=20
+but ubuntu doesn't have the updated version yet. Unfortunately the ubuntu=20
+package maintainer doesn't provide a wrapper script.
+
+
+https://bugs.launchpad.net/ubuntu/+source/axiom/+bug/295117
+
+On Wednesday, 28. April 2010 08:05:23 Byron Hale wrote:
+> Hi,
+>=20
+> I was happy to finally get my hands on Axiom after nearly 20 years.
+> So, I was overjoyed that Ubuntu 9.10 had a ready-to-go package.
+>=20
+> However, there is a cloud over paradise.  Open Axiom fails to properly
+> initialise.
+>=20
+> The hardware is Intel Quad Core CPU, the OS is Ubuntu 9.10 AMD 64.
+> I keep the CPU microcode up-to-date.
+>=20
+> Appended is the rather cryptic output I captured.
+>=20
+> I would certainly appreciate some help.
+>=20
+> Byron Hale
+>=20
+>=20
+> byron@U9:~$ axiom
+> GCL (GNU Common Lisp)  2.6.7 CLtL1    Nov 10 2006 14:25:02
+> Source License: LGPL(gcl,gmp), GPL(unexec,bfd,xgcl)
+> Binary License:  GPL due to GPL'ed components: (XGCL READLINE BFD UNEXEC)
+> Modifications of this banner must retain notice of a compatible license
+> Dedicated to the memory of W. Schelter
+>=20
+> Use (help) to get some basic information on how to use GCL.
+> Temporary directory for compiler files set to /tmp/
+>                         AXIOM Computer Algebra System
+>                      Version: Axiom 3.9 (September 2005)
+>               Timestamp: Saturday December 2, 2006 at 09:30:31
+> -------------------------------------------------------------------------=
+=2D-
+> -- Issue )copyright to view copyright notices.
+>    Issue )summary for a summary of useful system commands.
+>    Issue )quit to leave AXIOM and return to shell.
+> -------------------------------------------------------------------------=
+=2D-
+> --
+>=20
+>    Re-reading compress.daase   Re-reading interp.daase
+>    Re-reading operation.daase
+>    Re-reading category.daase
+>=20
+>    >> System error:
+>    Couldn't protect
+>=20
+>=20
+> Error: The tag |top_level| is undefined.
+> Fast links are on: do (si::use-fast-links nil) for debugging
+> Error signalled by RETURN.
+> Broken at APPLY.  Type :H for Help.
+> BOOT>>
+>=20
+>=20
+>=20
+>=20
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+
+--nextPart1774499.d3NnatgW4o
+Content-Type: application/pgp-signature; name=signature.asc 
+Content-Description: This is a digitally signed message part.
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.10 (GNU/Linux)
+
+iQI7BAABCgAlBQJL2AIoHhhoa3A6Ly9wb29sLnNrcy1rZXlzZXJ2ZXJzLm5ldAAK
+CRBChmW09WDbf+NCD/9FdqWM4w3sQ8vuIaG32mbcv34JlqxeKQLc9JSOELvgaTNd
+Indf7Ob8Tk3JeziTdh1ObEVPfYxQJiN9NELWHUN4/fhfl7gjpOaLFDJWrN4iMnXM
+J/m65/Aod3HSpMBfKyJY4ines7tJIvTz/B8tKs2D7nhWkf22hI0FBYpeoFkEVMkN
+j7fG24x/CGVFMvlzQKF+wC+uYvBEkVJCcAZsqJVzILg/xq3aD4pgErgs2LnkWwT9
+EYdrJIeMWjZY1/DW5UuzpNivIGaB2M7b/i4lQqOu4zAPHDuv53lzyphuLUazvJtV
+F77rqUnPbZ6aQcT2G1Z6A1ItWuBNth6aRdkGaJv0fkUsKxw09ttbn+mrBGoqY5nR
+u/4JXYrGbM2aMfHg1sRpNw9HJ1me73uVzwP67rWMn8vBLNuvI/neLZAfEf/Si2uw
+Pu00ZFeVFgFtPzN4f/pzTDVh28c7OenpzKl3dk6Xs62k/9BxVd1K5BBipna5kkog
+YHmJfok76yEJTcCvuBuH1C8zv0UoHODchCnDwJa+UOrtkUGIno5AFadwOhArfOwz
+mcnDFojREzUCKH56tumTDW1AwrkqBOPlSnRcz+w212BahwHsQRBAP2xqSY7XNokZ
+eTLcwEHtUuEDCSMbSU3yGy/ZwfC0W8S4K6uy7l4PFCnvDYKRDcesF9oDo+SRcA==
+=huOz
+-----END PGP SIGNATURE-----
+
+--nextPart1774499.d3NnatgW4o--
+
+
+

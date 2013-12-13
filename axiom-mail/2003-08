@@ -1,0 +1,2183 @@
+From MAILER-DAEMON Sun Aug 03 09:49:24 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19jJAN-0004SE-3P
+	for mharc-axiom-mail@gnu.org; Sun, 03 Aug 2003 09:44:55 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19jJ8l-0003BW-GW
+	for axiom-mail@nongnu.org; Sun, 03 Aug 2003 09:43:15 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19jJ4u-0001W9-TB
+	for axiom-mail@nongnu.org; Sun, 03 Aug 2003 09:39:48 -0400
+Received: from [207.217.120.48] (helo=mallard.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.20)
+	id 19jJ4O-0001Hd-Qo; Sun, 03 Aug 2003 09:38:44 -0400
+Received: from dialup-67.75.101.14.dial1.stamford1.level3.net ([67.75.101.14]
+	helo=localhost.localdomain)
+	by mallard.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19jJ4N-00014F-00; Sun, 03 Aug 2003 06:38:43 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h73Dce301983;
+	Sun, 3 Aug 2003 09:38:40 -0400
+Date: Sun, 3 Aug 2003 09:38:40 -0400
+Message-Id: <200308031338.h73Dce301983@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Cc: 
+Subject: [Axiom-mail] contacting Linux distributors
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 03 Aug 2003 13:44:53 -0000
+
+*,
+
+We have a major "business" opportunity in the near future.
+(No, this isn't spam but it sure starts out that way :-) )
+
+RedHat is changing its distribution model so that they maintain less
+of a distribution and accept more packages directly from the developers.
+I'm unfamiliar with the details of this change but it gives us a chance
+to reach a larger audience.
+
+We need to make a coordinated effort to identify and contact the major
+Linux distributors (at least RehHat, SUSE, Debian, etc) to 
+
+(a) understand their policy for "accepting and blessing" a package
+(b) understand their requirements for pacakging (rpm, apt, etc)
+(c) understand their config requirements
+(d) understand their user interface requirements
+(e) understand their support requirements
+
+we need to "market" to them that they have a "hole" in their "product
+line" in that they do not have an industrial strength scientific
+computation system. We need to explain that Mathematica, Maple, MuPAD,
+etc. are widely used and that Axiom can be a free alternative.
+
+It is still early in our "product cycle" but a stand-alone algebra build
+is frightenly close to reality and the rest of the system is targeted
+to be built by year end. At which point the first, major effort will be
+completed. 
+
+We need to find "distributors" and RedHat's changing business model is
+a major opportunity. 
+
+Is there anyone on the list who is interested in "taking the lead" 
+in the "marketing" department and coordinating "vendor" contacts?
+It would involve emailing, cold-calling, and coordinating vendors to
+gather the above "market requirements" and then making a plan with
+the vendors to coordinate becoming part of their distribution. It is
+essential that we find the right people to talk to within each 
+distributor, that we work closely with them to feed their requirements
+to the developers, and that they generally have a positive and professional
+experience when working with us.
+
+I understand that the prevailing "business model" of open source projects
+is "build it and they will come". I want to change that to "build it and
+deliver it to everyone's desktop". Yes, I know not everyone needs it but
+having just one major vendor like RedHat or SUSE would put us in every
+school and business worlwide.
+
+The personal advantage to you is that you get a list of contacts within
+the major vendors. You could leverage this to represent other open source
+products with the same model.
+
+I will, unfortunately, be only partially available until Aug 10th, as
+I'll be at a conference. So your "classwork" assignment is to discuss
+this among yourselves and volunteer to set something up.
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Sun Aug 03 12:12:41 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19jLT3-0006ib-4a
+	for mharc-axiom-mail@gnu.org; Sun, 03 Aug 2003 12:12:21 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19jLRF-00051s-QI
+	for axiom-mail@nongnu.org; Sun, 03 Aug 2003 12:10:29 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19jLMB-0000cj-NC
+	for axiom-mail@nongnu.org; Sun, 03 Aug 2003 12:05:47 -0400
+Received: from [216.136.173.86] (helo=web12202.mail.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.20) id 19jLM5-0000Ru-IM
+	for axiom-mail@nongnu.org; Sun, 03 Aug 2003 12:05:09 -0400
+Message-ID: <20030803160508.54731.qmail@web12202.mail.yahoo.com>
+Received: from [128.175.78.141] by web12202.mail.yahoo.com via HTTP;
+	Sun, 03 Aug 2003 09:05:08 PDT
+Date: Sun, 3 Aug 2003 09:05:08 -0700 (PDT)
+From: C Y <smustudent1@yahoo.com>
+Subject: Re: [Axiom-mail] contacting Linux distributors
+To: daly@idsi.net, axiom-developer@nongnu.org, axiom-mail@nongnu.org
+In-Reply-To: <200308031338.h73Dce301983@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 03 Aug 2003 16:12:20 -0000
+
+
+--- root <daly@idsi.net> wrote:
+
+> We need to make a coordinated effort to identify and contact the
+> major Linux distributors (at least RehHat, SUSE, Debian, etc) 
+
+Gentoo :-).
+
+__________________________________
+Do you Yahoo!?
+Yahoo! SiteBuilder - Free, easy-to-use web site design software
+http://sitebuilder.yahoo.com
+
+
+
+From MAILER-DAEMON Mon Aug 04 11:05:34 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19jfSu-0006Bz-Az
+	for mharc-axiom-mail@gnu.org; Mon, 04 Aug 2003 09:33:32 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19jfSk-0006BD-6B
+	for axiom-mail@nongnu.org; Mon, 04 Aug 2003 09:33:22 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19jfEH-0004BF-It
+	for axiom-mail@nongnu.org; Mon, 04 Aug 2003 09:18:57 -0400
+Received: from [193.252.22.30] (helo=mwinf0104.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.20)
+	id 19je6E-0008Kt-8R; Mon, 04 Aug 2003 08:06:02 -0400
+Received: from oops (ARennes-303-1-24-22.w81-53.abo.wanadoo.fr [81.53.39.22])
+	by mwinf0104.wanadoo.fr (SMTP Server) with ESMTP
+	id E07731BFFF85; Mon,  4 Aug 2003 14:06:00 +0200 (CEST)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 19je6C-0000Pc-00; Mon, 04 Aug 2003 14:06:00 +0200
+To: daly@idsi.net
+Subject: Re: [Axiom-mail] contacting Linux distributors
+References: <200308031338.h73Dce301983@localhost.localdomain>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Mon, 04 Aug 2003 14:05:59 +0200
+In-Reply-To: <200308031338.h73Dce301983@localhost.localdomain> (daly@idsi.net's
+	message of "Sun, 3 Aug 2003 09:38:40 -0400")
+Message-ID: <87brv5pqzc.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 04 Aug 2003 13:33:23 -0000
+
+Hello Tim,
+
+root <daly@idsi.net> writes:
+
+> We need to make a coordinated effort to identify and contact the major
+> Linux distributors (at least RehHat, SUSE, Debian, etc) to 
+
+As far as Debian is concerned...
+
+> (a) understand their policy for "accepting and blessing" a package
+
+... you need to be an official Debian Developer (a long and not so easy
+process)...
+
+> (b) understand their requirements for pacakging (rpm, apt, etc)
+> (c) understand their config requirements
+> (d) understand their user interface requirements
+> (e) understand their support requirements
+
+... and, for (b) to (e), follow the Debian Policy Manual:
+  http://www.fr.debian.org/doc/debian-policy/ 
+
+That's said, for Debian there are two alternatives:
+
+ 1. Camm is an official debian developer, so he might be willing to
+    package Axiom
+ 
+ 2. A friend of mine wants to make a debian package so he /might/ be
+    interested in packaging Axiom. Of course, once made, the package
+    will have to be "blessed" by an official debian developer. It's up
+    to him now to decide if he wants to do it or no.
+
+
+> we need to "market" to them that they have a "hole" in their "product
+> line" in that they do not have an industrial strength scientific
+> computation system. We need to explain that Mathematica, Maple, MuPAD,
+> etc. are widely used and that Axiom can be a free alternative.
+
+I personally think that explaining what is Axiom, compared to
+Mathematica & Co., is the role of the main page of the Axiom website
+(with screenshots, binaries, ...). We will have to present tutorials,
+papers, etc.
+
+I have stored all the references posted by Bill Page and links posted by
+Jason White. That might be a good start for a web page.
+
+By the way, friend of mine in Gulliver (the local Linux User Group here
+in Rennes) and I are willing to provide Axiom's binaries for x86,
+PowerPC and Linux-Sparc64.
+
+
+> I understand that the prevailing "business model" of open source projects
+> is "build it and they will come". I want to change that to "build it and
+> deliver it to everyone's desktop". Yes, I know not everyone needs it but
+> having just one major vendor like RedHat or SUSE would put us in every
+> school and business worlwide.
+
+I still do believe that "build it and they will come" is the right think
+to do. Of course, we can ease the process by providing pre-build
+packages. But I think that developers from major and minor linux
+distribution will come if we can show the capabilities of Axiom.
+
+
+Sorry to be so negative towards your initial proposal.
+
+Best regards,
+d.
+-- 
+ david.mentre@wanadoo.fr
+
+
+
+From MAILER-DAEMON Mon Aug 04 14:15:49 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19jjeG-00018O-Gf
+	for mharc-axiom-mail@gnu.org; Mon, 04 Aug 2003 14:01:32 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19jj48-00047m-Eh
+	for axiom-mail@nongnu.org; Mon, 04 Aug 2003 13:24:12 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19jj2w-0003mj-K7
+	for axiom-mail@nongnu.org; Mon, 04 Aug 2003 13:23:29 -0400
+Received: from [66.134.96.17] (helo=intech19.enhanced.com)
+	by monty-python.gnu.org with esmtp (Exim 4.20)
+	id 19jiqi-0000db-Nu; Mon, 04 Aug 2003 13:10:20 -0400
+Received: from camm by intech19.enhanced.com with local (Exim 3.35 #1 (Debian))
+	id 19jiqX-0007Wq-00; Mon, 04 Aug 2003 13:10:09 -0400
+To: daly@idsi.net
+References: <200308031338.h73Dce301983@localhost.localdomain>
+From: Camm Maguire <camm@enhanced.com>
+Date: 04 Aug 2003 13:10:09 -0400
+In-Reply-To: <200308031338.h73Dce301983@localhost.localdomain>
+Message-ID: <54n0ep5oy6.fsf@intech19.enhanced.com>
+Lines: 83
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: [Axiom-developer] contacting Linux distributors
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 04 Aug 2003 18:01:30 -0000
+
+Greetings!
+
+root <daly@idsi.net> writes:
+
+> *,
+> 
+> We have a major "business" opportunity in the near future.
+> (No, this isn't spam but it sure starts out that way :-) )
+> 
+> RedHat is changing its distribution model so that they maintain less
+> of a distribution and accept more packages directly from the developers.
+> I'm unfamiliar with the details of this change but it gives us a chance
+> to reach a larger audience.
+> 
+> We need to make a coordinated effort to identify and contact the major
+> Linux distributors (at least RehHat, SUSE, Debian, etc) to 
+> 
+
+I was planning on submitting/maintaining the Debian pakcage of axiom
+when its released.  I'm already a Debian developer.  I maintain gcl,
+maxima, and acl2 for Debian already.
+ 
+
+> (a) understand their policy for "accepting and blessing" a package
+> (b) understand their requirements for pacakging (rpm, apt, etc)
+> (c) understand their config requirements
+> (d) understand their user interface requirements
+> (e) understand their support requirements
+> 
+> we need to "market" to them that they have a "hole" in their "product
+> line" in that they do not have an industrial strength scientific
+> computation system. We need to explain that Mathematica, Maple, MuPAD,
+> etc. are widely used and that Axiom can be a free alternative.
+> 
+> It is still early in our "product cycle" but a stand-alone algebra build
+> is frightenly close to reality and the rest of the system is targeted
+> to be built by year end. At which point the first, major effort will be
+> completed. 
+> 
+> We need to find "distributors" and RedHat's changing business model is
+> a major opportunity. 
+> 
+> Is there anyone on the list who is interested in "taking the lead" 
+> in the "marketing" department and coordinating "vendor" contacts?
+> It would involve emailing, cold-calling, and coordinating vendors to
+> gather the above "market requirements" and then making a plan with
+> the vendors to coordinate becoming part of their distribution. It is
+> essential that we find the right people to talk to within each 
+> distributor, that we work closely with them to feed their requirements
+> to the developers, and that they generally have a positive and professional
+> experience when working with us.
+> 
+> I understand that the prevailing "business model" of open source projects
+> is "build it and they will come". I want to change that to "build it and
+> deliver it to everyone's desktop". Yes, I know not everyone needs it but
+> having just one major vendor like RedHat or SUSE would put us in every
+> school and business worlwide.
+> 
+> The personal advantage to you is that you get a list of contacts within
+> the major vendors. You could leverage this to represent other open source
+> products with the same model.
+> 
+> I will, unfortunately, be only partially available until Aug 10th, as
+> I'll be at a conference. So your "classwork" assignment is to discuss
+> this among yourselves and volunteer to set something up.
+> 
+> Tim Daly
+> axiom@tenkan.org
+> daly@idsi.net
+> 
+> 
+> _______________________________________________
+> Axiom-developer mailing list
+> Axiom-developer@nongnu.org
+> http://mail.nongnu.org/mailman/listinfo/axiom-developer
+> 
+> 
+> 
+
+-- 
+Camm Maguire			     			camm@enhanced.com
+==========================================================================
+"The earth is but one country, and mankind its citizens."  --  Baha'u'llah
+
+
+
+From MAILER-DAEMON Thu Aug 07 20:10:21 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19kun9-0000oH-UB
+	for mharc-axiom-mail@gnu.org; Thu, 07 Aug 2003 20:07:35 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19kun7-0000jq-1k
+	for axiom-mail@nongnu.org; Thu, 07 Aug 2003 20:07:33 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19kuma-0000P4-Nv
+	for axiom-mail@nongnu.org; Thu, 07 Aug 2003 20:07:31 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.20) id 19kuht-0006mV-NF
+	for axiom-mail@nongnu.org; Thu, 07 Aug 2003 20:02:09 -0400
+Received: (from root@localhost)
+	by fw.drenet.dnd.ca (8.12.9/8.12.8) id h78028rL027848;
+	Thu, 7 Aug 2003 20:02:08 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (corporateex.drdc-rddc.gc.ca
+	[131.136.1.77])
+	by fw.drenet.dnd.ca (8.12.9/8.12.9) with ESMTP id h78027Rr027772;
+	Thu, 7 Aug 2003 20:02:07 -0400 (EDT)
+Received: by corporateex.drdc-rddc.gc.ca with Internet Mail Service
+	(5.5.2653.19) id <Q30G6XLM>; Thu, 7 Aug 2003 20:02:47 -0400
+Message-ID: <2BE8D331ED40D611812300080219E7FE339CE7@corporateex.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "'Bertfried.Fauser@uni-konstanz.de'"
+	 <Bertfried.Fauser@uni-konstanz.de>
+Subject: RE: [Axiom-mail] Bourbaki as default pamphlet author name
+Date: Thu, 7 Aug 2003 20:02:46 -0400 
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Info: scanned for viruses
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: "Bill. Page1 \(E-mail\)" <bill.page1@sympatico.ca>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 08 Aug 2003 00:07:34 -0000
+
+Bertfried,
+
+Thank you very much for your comments on Bourbaki and your
+support for the idea of continuing to attempt to associate
+the name "Bourbaki" with AXIOM.
+
+On Wednesday, July 30, 2003 2:09 AM Bertfried Fauser
+[mailto:fauser@spock.physik.uni-konstanz.de] wrote:
+
+> 
+> Hi dear all!
+> 
+> 	as I said in my first mail, this was a subject for 
+> amusement, now it got serious. I can try to make direct
+> contact to some of the Bourbaki authors, e.g. Cartier, via
+> my colleagues in France. I hope to be in Paris in Fall.
+> In France the August is holiday month and nobody will be
+> in the department currently anyway.
+
+I will be in Paris for the week of 14 to 24 September for
+a physics conference and a short vacation (Avignon). Do you
+think it would be useful to attempt to meet with someone in
+Paris and vicinity to discuss and promote the association
+of Bourbaki with AXIOM?
+
+> ... 
+> f) Bourbaki and AXIOM.
+> 
+> I do lots of things with maple, and it was Bill Page who
+> made me aware of AXIOM and its possible new availability.
+> The mere structure of AXIOM as a strongly typed language
+> and the names of the types, is a bourbakism par excellence.
+> Suppose you are in a class and the system outputs a result
+> '...' together with "type: FractionalInteger" or "Ring" or
+> even more weird things. Indeed every student _will_ have
+> to ponder about domain, codomain of a map etc. great! In
+> this sense, AXIOM is the only CAS I know (there are a few
+> exotic ones for category theory around too) which deserved
+> the name badge Bourbaki on it.
+>
+
+I agree. Though AXIOM is not exactly category theory.
+Indeed AXIOM (and the Aldor language) seems to predate
+most of the current interest in category theory in computer
+science in the same way that Bourbakism predates category
+theory itself. For example
+
+  http://pauillac.inria.fr/caml/
+
+  http://www.cpsc.ucalgary.ca/Research/charity/home.html
+
+etc. And meanwhile category theory is now almost taken
+for granted in much of mathematics and advanced
+mathematical physics. I think the task of "preserving"
+(and reviving?) AXIOM that Tim Daly is leading is very
+important. AXIOM is still in many ways ahead of it's
+time as Saul Youssef points out
+
+  http://nut001.bu.edu/~youssef
+
+> 
+> If you don't mind, I will try to contact the Bourbaki
+> people to ask if the AXIOM pamphlet files can be written
+> 'officially' (i.e. with permission) under the name of
+> Bourbaki, I still like this idea very much....
+>
+
+I am not too optimistic that such an 'official'
+sanction is possible. After all, there really is still
+a large conceptual gap between the pure mathematicians
+and computer scientists. But I do not agree with the
+recent comments by Arthur Norman:
+
+> As well as feeling that it could be pretentious to try
+> to grab that mantle I note that Bourbaki is a mainly a
+> French institution (yes I know that maths is universal
+> and not tied to one country). But e.g. their annual
+> sessions are mostly held in French.  E.g. see
+
+http://www.iecn.u-nancy.fr/~eguether/bibliotheque/BOURBAKI/node2.html
+
+> I know that nothing I do is in their league!
+
+First, I think the goals of AXIOM certainly were/are
+pretentious - just as pretentious as the young
+Bourbaki's. In it's own context, one might also argue
+that AXIOM was about equally successful in meeting it's
+original goals. I don't think there is anything wrong
+with that. The application and enhancement of AXIOM as
+a computer algebra system deserves to continue in much
+the same way as Bourbakism survives today.
+
+About Bourbaki being "French". Also, I do not see any
+problem with this. AXIOM is now open source. And in
+many respects open source is strongest outside the
+influence of corporate North America. I am still amazed
+at the truly international flavour of almost all current
+open source / free software projects.
+
+Finally although humility is admirable, I disagree with
+you Norman, when you say that that what you do is "not
+in their league". Lisp, Reduce, Axiom many other projects
+in which you have been involved are all enormous
+intellectual achievements as far as I am concerned.
+There is a sense in which mathematics done by computer
+is harder (and much less forgiving) than any other
+kind of mathematics!
+
+Cheers,
+Bill Page.
+
+
+
+
+From MAILER-DAEMON Fri Aug 08 17:43:00 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19lF0m-0007VP-CP
+	for mharc-axiom-mail@gnu.org; Fri, 08 Aug 2003 17:43:00 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19lF0j-0007Ui-TY
+	for axiom-mail@nongnu.org; Fri, 08 Aug 2003 17:42:57 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19lF0C-0007R3-Qs
+	for axiom-mail@nongnu.org; Fri, 08 Aug 2003 17:42:56 -0400
+Received: from [193.252.22.29] (helo=mwinf0201.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.20) id 19lEKL-00032m-2G
+	for axiom-mail@nongnu.org; Fri, 08 Aug 2003 16:59:09 -0400
+Received: from oops (ARennes-303-1-32-39.w81-248.abo.wanadoo.fr [81.248.98.39])
+	by mwinf0201.wanadoo.fr (SMTP Server) with ESMTP
+	id 7226130003D2; Fri,  8 Aug 2003 22:59:08 +0200 (CEST)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 19lEKJ-0001Cr-00; Fri, 08 Aug 2003 22:59:07 +0200
+To: nanchen@ifrance.com
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Fri, 08 Aug 2003 22:59:07 +0200
+Message-ID: <87ekzvamsk.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: Tim Daly <axiom@tenkan.org>, axiom-mail@nongnu.org
+Subject: [Axiom-mail] About Axiom's availability
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 08 Aug 2003 21:42:59 -0000
+
+Hello Emmanuel,
+
+> Sender: nanchen@ifrance.com
+
+> So do I. It seems that no sources are available... and that 
+> nobody is answering messages.
+> 
+> I would appreciate some help/comments/etc.
+
+Here is private response made by Tim's Daly (Axiom lead developer) on
+the previous request:
+
+Tim Daly:
+Axiom is still in alpha development. It was released as open source
+in September 2002. However, the released code contained no build
+system and was missing pieces that were not released. I'm in the
+process of writing the build system and the missing pieces.
+
+Axiom is being built in alpha form on a private server at the moment.
+You can get the sources from
+
+cvs -d:pserver:anonymous@bogus.example.com:/home/cvs co axiom
+
+Work is being done to port Axiom to windows. You can see the current
+state by looking at the axiom-developer email logs at the home site
+http://savannah.nongnu.org/projects/axiom
+
+Axiom will sources will be available on the home site in the near
+future. There is no point in putting them there yet as Axiom isn't
+ready to be useful yet. Once the algebra compiles cleanly and passes
+the test suite it will be available on savannah.
+
+Tim Daly
+axiom@tenkan.org
+
+I hope it answers your questions.
+Best regards,
+d.
+-- 
+ david.mentre@wanadoo.fr
+
+
+
+From MAILER-DAEMON Tue Aug 12 00:24:22 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19mQgd-00033Y-JR
+	for mharc-axiom-mail@gnu.org; Tue, 12 Aug 2003 00:23:07 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19mQgS-0002ZO-NT
+	for axiom-mail@nongnu.org; Tue, 12 Aug 2003 00:22:56 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19mQfj-0000mG-0m
+	for axiom-mail@nongnu.org; Tue, 12 Aug 2003 00:22:43 -0400
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (Exim 4.20) id 19mQfi-0000ij-4P
+	for axiom-mail@nongnu.org; Tue, 12 Aug 2003 00:22:10 -0400
+Received: from harrier.mail.pas.earthlink.net ([207.217.120.12])
+	by mx20.gnu.org with esmtp (Exim 4.20) id 19mQfh-000794-NY
+	for axiom-mail@nongnu.org; Tue, 12 Aug 2003 00:22:09 -0400
+Received: from dialup-67.75.101.65.dial1.stamford1.level3.net ([67.75.101.65]
+	helo=localhost.localdomain)
+	by harrier.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19mQfQ-0007BZ-00; Mon, 11 Aug 2003 21:21:52 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7C4Lk120390;
+	Tue, 12 Aug 2003 00:21:46 -0400
+Date: Tue, 12 Aug 2003 00:21:46 -0400
+Message-Id: <200308120421.h7C4Lk120390@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Bruno.Salvy@inria.fr, Ludovic.Meunier@inria.fr
+Cc: daly@idsi.net, oscas@acm.org, axiom-mail@nongnu.org, boisvert@nist.gov
+Subject: [Axiom-mail] CATS test suite
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 12 Aug 2003 04:23:06 -0000
+
+Dr Salvy, Dr Meunier,
+
+I just returned from ISSAC where your paper on the Encyclopedia
+of Special Functions was presented.
+
+I'm the lead developer of Axiom which has recently become free and
+open source software.
+
+I'm involved in an effort called CATS (Computer Algebra Test Suite).
+We are collecting test suites from the various computer algebra
+systems, classifying the tests, and building a taxonomy from these
+tests. The rational is that each computer algebra system has a random
+collection of tests. These are usually created by the author of an
+algorithm at the time the algorithm is written. These tests are rerun
+to provide regression testing. The key flaw is that these tests are
+almost never validated. There are a large number of computer algebra
+systems and a limited number of computational mathematicians and we
+have every incentive to share the expertise to improve the systems.
+
+The ultimate goal is to have a taxonomy of validated tests organized
+similar to the GAMS classification. GAMS is too numeric-specific to be
+useful for the range of symbolic software functionality. Special
+functions are only one area where current systems need testing.
+
+We've been looking at various collections of mathematics, including
+DLMF, and are interested in electronic forms of examples to use as
+test cases. Note that CATS is intended as testing material, not
+as user-level examples. We expect that an independent, standardized
+test suite will raise the overall quality of the current computer
+algebra system results.
+
+Are your test cases for the algolib library available? 
+
+I think there is an overlap of interests between the CATS effort and
+the Algolib effort even though CATS is intended for internal use and
+Algolib is intended for the end user. In particular, it would be
+valuable if all of the current systems provided the same answers.  Is
+there a person on your project who is willing to be the principal
+contact between your effort and ours? Could you forward this message
+to that person?
+
+Many thanks,
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+
+
+
+
+From MAILER-DAEMON Mon Aug 18 11:49:19 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19omFy-000703-S1
+	for mharc-axiom-mail@gnu.org; Mon, 18 Aug 2003 11:49:18 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19omFv-0006th-Ie
+	for axiom-mail@nongnu.org; Mon, 18 Aug 2003 11:49:15 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19omFP-0006AF-Nw
+	for axiom-mail@nongnu.org; Mon, 18 Aug 2003 11:49:14 -0400
+Received: from [216.136.131.238] (helo=web11408.mail.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.20) id 19omFP-0006AB-A6
+	for axiom-mail@nongnu.org; Mon, 18 Aug 2003 11:48:43 -0400
+Message-ID: <20030818154841.22612.qmail@web11408.mail.yahoo.com>
+Received: from [156.153.254.41] by web11408.mail.yahoo.com via HTTP;
+	Mon, 18 Aug 2003 08:48:41 PDT
+Date: Mon, 18 Aug 2003 08:48:41 -0700 (PDT)
+From: JC <lovecraftesque@yahoo.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Subject: [Axiom-mail] The capabilities of Axiom
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 18 Aug 2003 15:49:16 -0000
+
+    I seem to recall having read that the commercial
+version of Axiom contained a complete implementation
+of Risch's algorithm for computing integrals in terms
+of elementary functions. 
+
+    The marketing blurb would then boast that if Axiom
+is not able to return an integral in closed form in
+terms of such functions then it has effectively proved
+that such an integral does not exist.
+
+    This raises two questions:
+
+    1) Was that assertion a truthful one, or just a
+marketing ploy?
+
+    2) If it was true, is such code available in the
+open source version?
+
+
+
+
+__________________________________
+Do you Yahoo!?
+Yahoo! SiteBuilder - Free, easy-to-use web site design software
+http://sitebuilder.yahoo.com
+
+
+
+From MAILER-DAEMON Mon Aug 18 13:12:11 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19onYB-00031b-28
+	for mharc-axiom-mail@gnu.org; Mon, 18 Aug 2003 13:12:11 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19onY6-00030w-Nn
+	for axiom-mail@nongnu.org; Mon, 18 Aug 2003 13:12:06 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19onXa-0002J3-NR
+	for axiom-mail@nongnu.org; Mon, 18 Aug 2003 13:12:05 -0400
+Received: from [207.217.120.62] (helo=snipe.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.20) id 19onXa-0002GZ-89
+	for axiom-mail@nongnu.org; Mon, 18 Aug 2003 13:11:34 -0400
+Received: from dialup-67.75.101.44.dial1.stamford1.level3.net ([67.75.101.44]
+	helo=localhost.localdomain)
+	by snipe.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19onXW-000611-00; Mon, 18 Aug 2003 10:11:31 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7IHBRZ15421;
+	Mon, 18 Aug 2003 13:11:27 -0400
+Date: Mon, 18 Aug 2003 13:11:27 -0400
+Message-Id: <200308181711.h7IHBRZ15421@localhost.localdomain>
+From: root <daly@idsi.net>
+To: lovecraftesque@yahoo.com
+Subject: Re: [Axiom-mail] The capabilities of Axiom
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 18 Aug 2003 17:12:09 -0000
+
+No, it wasn't a mareting ploy. Barry Trager's thesis
+contains a "decision procedure" for these integrals.
+It either returns an answer or the original integral
+there is no integral. Failure to return an answer
+implies that the integral does not exist. This code
+is implemented. (Barry Marshall Trager, 
+Integration of Algebraic Functions, Ph.D Thesis 1984
+MIT EECS dept.)
+
+Manuel Bronstein did the same for elementary functions 
+(Manuel Bronstein "Integration of Elementary Functions"
+Ph.D. thesis 1987 UC Berkeley ).
+
+All cases of the Risch algorithm are not coded however.
+Manual has worked on several cases, I believe the
+transcendental cases, from time to time.
+
+The source code is available as part of the open source
+version of Axiom. The thesis work will be integrated as
+part of the documentation of these domains when time
+permits.
+
+
+>    I seem to recall having read that the commercial
+>version of Axiom contained a complete implementation
+>of Risch's algorithm for computing integrals in terms
+>of elementary functions. 
+>
+>    The marketing blurb would then boast that if Axiom
+>is not able to return an integral in closed form in
+>terms of such functions then it has effectively proved
+>that such an integral does not exist.
+>
+>    This raises two questions:
+>
+>    1) Was that assertion a truthful one, or just a
+>marketing ploy?
+>
+>    2) If it was true, is such code available in the
+>open source version?
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Wed Aug 20 18:29:32 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19pbQw-0006as-SU
+	for mharc-axiom-mail@gnu.org; Wed, 20 Aug 2003 18:28:02 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19pbHS-0003h0-44
+	for axiom-mail@nongnu.org; Wed, 20 Aug 2003 18:18:14 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19pWHa-0006Gp-Ry
+	for axiom-mail@nongnu.org; Wed, 20 Aug 2003 12:58:34 -0400
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (Exim 4.20)
+	id 19pUxh-0007HO-4b; Wed, 20 Aug 2003 11:33:25 -0400
+Received: from conure.mail.pas.earthlink.net ([207.217.120.54])
+	by mx20.gnu.org with esmtp (Exim 4.20)
+	id 19pTzN-0005zb-Jj; Wed, 20 Aug 2003 10:31:05 -0400
+Received: from dialup-67.75.97.94.dial1.stamford1.level3.net ([67.75.97.94]
+	helo=localhost.localdomain)
+	by conure.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19pTyX-0000YU-00; Wed, 20 Aug 2003 07:30:15 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7KEU9p19425;
+	Wed, 20 Aug 2003 10:30:09 -0400
+Date: Wed, 20 Aug 2003 10:30:09 -0400
+Message-Id: <200308201430.h7KEU9p19425@localhost.localdomain>
+From: root <daly@idsi.net>
+To: david.mentre@wanadoo.fr
+Cc: axiom-developer@nongnu.org, advi@pauillac.inria.fr, daly@idsi.net,
+	axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: [Axiom-developer] ADVI browser
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 20 Aug 2003 22:28:02 -0000
+
+David,
+
+I might as well bore you with my long-term thoughts about pamphlets.
+
+If you do the ADVI browser think of it as the front end to a new kind
+of automated book. The browser is intended as a viewer for the dvi
+files generated from pamphlets. (Ideally the browser would handle the
+dvi generation from the pamphlets but you can assume that's been done)
+But the pile of pamphlets will eventually provide an N-dimensional
+matrix of information. We want to support at least 7 different views
+off the same data in this big pamphlet matrix:
+
+View 1 is a top-to-bottom path. At the top you start with a technical
+paper that provides the mathematical description. For example, looking
+at the area of integration starting with Barry Trager's Ph.D. thesis.
+>From there you eventually work your way down to executable code. Thus
+you move from theory to practice.
+
+View 2 is a side-to-side path. Here you are staying at the same level
+of abstraction. You would be exploring, for example, all of the matrix
+capabilities provided by Axiom by looking at the mathematics of each one.
+Or looking at the implementation of each one.
+
+View 3, unlike View 1 and 2 which remain within the text area of the 
+pamphlet files, would wander among the code area of the files, say, 
+finding the pamphlet which contains the source code of a function 
+called from the current pamphlet.
+
+View 4 is a "threaded walk". ADVI allows embedded graphics and active
+terminals. View 4 is intended to allow professors to develop course-related
+paths thru the pamphlets.  A particular course, say commutative algebra,
+could develop a "textbook" which visits subsections of pamphlet files
+in a particular order. This would also be used to construct further
+pamphlet files. These will also contain embeded active graphics for
+explaining things in class.
+
+View 5 is a "slide show" kind of presentation intended for classroom
+or lecture use. This would visit code, pop up graphics and active
+windows (hence use ADVI), etc so you could give a lecture using Axiom
+within the slides.
+
+View 6 follows "document structure" information such as following 
+bibligraphic references to other pamphlets or combining index information
+for cross-reference purposes. In general the browser will end up doing
+searches (e.g. looking for the pamphlet containing a function for View 3)
+and caching the results (e.g. building a file-based hashtable of 
+function->pamphlet cross-references).
+
+View 7 is a "concept map" form. This is the hardest to do as it
+requires input from the user to construct. There is technology
+available from the early 90s called KREP (Eric Mays's Knowledge
+Representation) which, combined with OPS5 (Charles Forgy's thesis work
+on rule based programming) forms a system called KROPS (my research
+work at IBM). KROPS is a ( concept graph / rule graph ) that 
+automatically classifies "concepts" based on subsumption. It "learns" 
+as you add concepts to the graph. The long term use of this in Axiom 
+is intended to support the ability to "shape" the pamphlet files matrix 
+based on the understanding of the user of the system.  
+
+There will be a large amount of mathematics in the pamphlet pile. We
+need to control the complexity. So the idea is to watch what the user
+visits and "learn" what he already knows. This gets added to a
+"concept graph".  The "concept graph" of a linear algebra professor
+would differ greatly from the concept graph of a group theory
+professor. This learned information feeds rules to drive the
+presentation of information. Note that this functionality is "a long
+way off". However you can see that the "30 year view" of Axiom's
+mathematics is somewhat beyond what is available today (but barely
+uses the technology available in the 1990s. sigh).
+
+So, in general, the pamphlet file is not intended to be a monolithic object.
+It is rather a sequence of chunks, subsections, and references that can be
+visited and recombined at will.
+
+There needs to be some sort of a "construction" support which will record
+visited or needed links into some sort of a tree structure. Think of it as
+a method of dynamically constructing a book by ripping out sections of
+other books, adding your own notes, and combining them to form another
+booklet. It's the "big staple" method of construction. Take a bunch of
+existing subsections and chunks and "staple" them together. This is
+different from the standard "back button history" trace because you 
+indicate things you want to keep and re-arrange. Ideally this would "save"
+as a booklet file format for later hand-editing. Using this mechanism
+authors can build on previous work and professors can construct class
+notes from existing work.
+
+Initially I don't expect any of these views to be supported. All we need
+in the beginning is some sort of a book-like front end. The "top level"
+file will just be a pamphlet file that is a table-of-contents containing
+"pamphlet" chunks using the "booklet" function you created:
+
+This is the first chapter
+<<pamphlet:src/doc/first.pamphlet>>
+This is the second chapter
+<<dvi:src/doc/second.dvi>>
+...
+
+I laid out the various views to give you some idea of the needed
+generality in the long term.
+
+Tim
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+
+
+From MAILER-DAEMON Thu Aug 28 21:56:40 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19sYUH-0000hd-GL
+	for mharc-axiom-mail@gnu.org; Thu, 28 Aug 2003 21:55:41 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19sYSY-0007ee-1s
+	for axiom-mail@nongnu.org; Thu, 28 Aug 2003 21:53:54 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19sYPO-0006WP-BU
+	for axiom-mail@nongnu.org; Thu, 28 Aug 2003 21:50:39 -0400
+Received: from [207.217.120.54] (helo=conure.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19sYOn-0006Kh-1j; Thu, 28 Aug 2003 21:50:01 -0400
+Received: from dialup-67.75.97.236.dial1.stamford1.level3.net ([67.75.97.236]
+	helo=localhost.localdomain)
+	by conure.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19sYOT-00008z-00; Thu, 28 Aug 2003 18:49:41 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7T1nXR09918;
+	Thu, 28 Aug 2003 21:49:33 -0400
+Date: Thu, 28 Aug 2003 21:49:33 -0400
+Message-Id: <200308290149.h7T1nXR09918@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Cc: axiom@tenkan.org, daly@idsi.net
+Subject: [Axiom-mail] Axiom Availability Announcement
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Aug 2003 01:55:35 -0000
+
+*,
+
+Axiom exists as free and open source software.
+
+The first version of the Axiom sources has been uploaded to the CVS at
+http://savannah.gnu.org/projects/axiom. Congrats to all involved.
+Many thanks to the Numerical Algorithms Group, the CAISS Institute at
+City College of New York and to the people of these mailing lists.
+
+This version contains (almost) all of the algebra, the interpreter,
+and the spad compiler. This is the heart of Axiom. The graphics,
+hyperdoc, documentation, numerical code, Axiom Journal papers,
+openmath, and CATS test suite are in my source tree but are not ready
+for distribution yet. I'll announce these parts as they become
+available.
+
+A gzipped-tar file of the sources will be available soon.
+Debian apt and Redhat rpm files are under discussion.
+
+The CVS version can be downloaded by anonymous CVS:
+
+cvs -d:pserver:anoncvs@subversions.gnu.org:/cvsroot/savannah login
+cvs -z3 -d:pserver:anoncvs@subversions.gnu.org:/cvsroot/savannah co axiom
+
+NOTE: when prompted for a password for anoncvs simply press the Enter key
+
+The primary documentation is in the Makefile.dvi file.
+
+To build the system in a directory (e.g. /SPAD) you do:
+
+cd /SPAD
+export AXIOM=/SPAD/mnt/linux
+make
+
+The executable is (currently) found by doing:
+
+export PATH=/SPAD/obj/linux/bin:/SPAD/mnt/linux/bin:$PATH
+interpsys
+
+The build takes about 2 hours and 15 minutes on a 2Ghz/1Gb machine.
+You might want to do the build in an emacs shell buffer so you can
+save the console output in case of trouble.
+
+So far the build works properly on Redhat GNU/Linux 9. If you build it
+on another system please let us know. A port to Windows is in process.
+
+This is an alpha version of the system so expect (and report) bugs.
+The savannah website has a bug reporting tool.
+
+The algebra runs but has not yet been tested. This version has been
+uploaded so we can all test from the same base. When reporting bugs
+please use this version number printed at the top of your Axiom session.
+It will look something like:
+  Thursday, August 28, 2003, 2:31am
+
+This version is a complete rebuild of Axiom. Many changes have been made.
+
+First, the system has been rewritten using literate programming.
+Each file is in "pamphlet" format (which is basically Latex with
+two extra tags). The reason for this is explained in the top-level
+Makefile.dvi file.
+
+Second, the system has been ported to GCL. This is the first of many
+common lisp ports where Axiom will exist.
+
+Third, the makefile tree has been rewritten. Most of the documentation
+that exists at the moment is in the various Makefile.dvi files.
+
+Fourth, the algebra is built from scratch rather than pre-existing files.
+
+The tenkan.org website and CVS is now obsolete and will be removed. 
+Please use savannah for future development.
+
+Much work needs to be done. Click on the homepage link to see some of
+the future tasks.
+
+Questions, comments, and snide remarks can be sent to me at:
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+
+
+From MAILER-DAEMON Thu Aug 28 23:55:00 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19saLj-0000It-V8
+	for mharc-axiom-mail@gnu.org; Thu, 28 Aug 2003 23:54:59 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19saLh-0000I3-ST
+	for axiom-mail@nongnu.org; Thu, 28 Aug 2003 23:54:57 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19saLg-0000HD-0S
+	for axiom-mail@nongnu.org; Thu, 28 Aug 2003 23:54:56 -0400
+Received: from [216.136.173.91] (helo=web12207.mail.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.22) id 19saK9-0008EZ-S5
+	for axiom-mail@nongnu.org; Thu, 28 Aug 2003 23:53:21 -0400
+Message-ID: <20030829034640.91203.qmail@web12207.mail.yahoo.com>
+Received: from [151.197.217.198] by web12207.mail.yahoo.com via HTTP;
+	Thu, 28 Aug 2003 20:46:40 PDT
+Date: Thu, 28 Aug 2003 20:46:40 -0700 (PDT)
+From: C Y <smustudent1@yahoo.com>
+Subject: Re: [Axiom-mail] Axiom Availability Announcement
+To: daly@idsi.net, axiom-developer@nongnu.org, axiom-mail@nongnu.org
+In-Reply-To: <200308290149.h7T1nXR09918@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom@tenkan.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Aug 2003 03:54:58 -0000
+
+
+--- root <daly@idsi.net> wrote:
+
+> This is an alpha version of the system so expect (and report) bugs.
+> The savannah website has a bug reporting tool.
+
+Congrats on the release!  A very impressive achievement.
+
+One question - is the file axiom/zips/XFree86-devel-4.2.0-72.i386.rpm
+needed in the cvs tree?  Wouldn't that be something the distro would
+provide?  
+
+Thanks much for all your tremendous work.
+
+CY
+
+__________________________________
+Do you Yahoo!?
+Yahoo! SiteBuilder - Free, easy-to-use web site design software
+http://sitebuilder.yahoo.com
+
+
+
+From MAILER-DAEMON Fri Aug 29 05:08:39 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19sfF0-0001Za-CG
+	for mharc-axiom-mail@gnu.org; Fri, 29 Aug 2003 05:08:22 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19sfE4-0000yK-3s
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 05:07:24 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19sfDk-0000hq-Le
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 05:07:05 -0400
+Received: from [207.217.120.116] (helo=grouse.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19sfDX-0000Tp-WF; Fri, 29 Aug 2003 05:06:52 -0400
+Received: from dialup-67.75.96.43.dial1.stamford1.level3.net ([67.75.96.43]
+	helo=localhost.localdomain)
+	by grouse.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19sfDW-0003F9-00; Fri, 29 Aug 2003 02:06:50 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7T96lM11013;
+	Fri, 29 Aug 2003 05:06:47 -0400
+Date: Fri, 29 Aug 2003 05:06:47 -0400
+Message-Id: <200308290906.h7T96lM11013@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Cc: 
+Subject: [Axiom-mail] sigh
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Aug 2003 09:08:20 -0000
+
+Well, it appears that the CVS commands that I copied from the 
+documentation on Savannah do not work. I'll figure it out and
+post new instructions. There is no such thing as a simple job.
+
+Tim
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Fri Aug 29 05:18:00 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19sfO7-0005db-Qx
+	for mharc-axiom-mail@gnu.org; Fri, 29 Aug 2003 05:17:47 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19sfLZ-00049s-3W
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 05:15:09 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19sfIx-0003AR-He
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 05:12:28 -0400
+Received: from [207.217.120.123] (helo=swan.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19sfID-0002o1-AY; Fri, 29 Aug 2003 05:11:41 -0400
+Received: from dialup-67.75.96.43.dial1.stamford1.level3.net ([67.75.96.43]
+	helo=localhost.localdomain)
+	by swan.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19sfIB-0000Ky-00; Fri, 29 Aug 2003 02:11:39 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7T9Ba811086;
+	Fri, 29 Aug 2003 05:11:36 -0400
+Date: Fri, 29 Aug 2003 05:11:36 -0400
+Message-Id: <200308290911.h7T9Ba811086@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Cc: 
+Subject: [Axiom-mail] sigh
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Aug 2003 09:17:45 -0000
+
+These are the corrected instructions for downloading Axiom from CVS:
+
+
+The CVS version can be downloaded by anonymous CVS:
+
+cvs -d:pserver:anoncvs@subversions.gnu.org:/cvsroot/axiom login
+cvs -z3 -d:pserver:anoncvs@subversions.gnu.org:/cvsroot/axiom co axiom
+
+NOTE: when prompted for a password for anoncvs simply press the Enter key
+
+Tim
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Fri Aug 29 05:28:43 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19sfYg-00083e-Ct
+	for mharc-axiom-mail@gnu.org; Fri, 29 Aug 2003 05:28:42 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19sfYX-0007y3-Sx
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 05:28:33 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19sfWg-0006uY-RY
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 05:26:39 -0400
+Received: from [61.8.0.36] (helo=snoopy.pacific.net.au)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19sfWU-0006iI-Mu; Fri, 29 Aug 2003 05:26:27 -0400
+Received: from mongrel.pacific.net.au (mongrel.pacific.net.au [61.8.0.107])
+	by snoopy.pacific.net.au (8.12.3/8.12.3/Debian-6.4) with ESMTP id
+	h7T9QHBt022336; Fri, 29 Aug 2003 19:26:17 +1000
+Received: from jdc.local (dyn172.mel2.homedsl.pacific.net.au [203.100.245.172])
+	by mongrel.pacific.net.au (8.12.3/8.12.3/Debian-6.4) with ESMTP id
+	h7T9PMBC004759; Fri, 29 Aug 2003 19:25:23 +1000
+Received: from jdc.local (localhost [127.0.0.1])
+	by jdc.local (8.12.9/8.12.9/Debian-5) with ESMTP id h7T9QFaf004868;
+	Fri, 29 Aug 2003 19:26:15 +1000
+Received: (from jason@localhost)
+	by jdc.local (8.12.9/8.12.9/Debian-5) id h7T9QEfT004856;
+	Fri, 29 Aug 2003 19:26:14 +1000
+From: Jason White <jasonw@ariel.ucs.unimelb.edu.au>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16207.7221.980423.602804@jdc.local>
+Date: Fri, 29 Aug 2003 19:26:13 +1000
+To: daly@idsi.net
+In-Reply-To: <200308290906.h7T96lM11013@localhost.localdomain>
+References: <200308290906.h7T96lM11013@localhost.localdomain>
+X-Mailer: VM 7.17 under Emacs 21.2.1
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: [Axiom-developer] sigh
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: jasonw@ariel.ucs.unimelb.edu.au
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Aug 2003 09:28:40 -0000
+
+Tim Daly writes:
+ > Well, it appears that the CVS commands that I copied from the 
+ > documentation on Savannah do not work. I'll figure it out and
+ > post new instructions. There is no such thing as a simple job.
+ > 
+Only the CVSROOT was wrong. It should be:
+:pserver:anoncvs@subversions.gnu.org:/cvsroot/axiom
+
+
+
+From MAILER-DAEMON Fri Aug 29 14:01:45 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19snXA-0003fQ-3B
+	for mharc-axiom-mail@gnu.org; Fri, 29 Aug 2003 13:59:40 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19snWt-0003XO-Qb
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 13:59:23 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19snVd-00033f-Jc
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 13:58:06 -0400
+Received: from [209.226.175.36] (helo=toclean1-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19snUc-0002Zi-Uf; Fri, 29 Aug 2003 13:57:03 -0400
+Received: from [192.168.1.10] ([204.101.104.3]) by tomts21-srv.bellnexxia.net
+	(InterMail vM.5.01.06.04 201-253-122-130-104-20030726) with ESMTP
+	id <20030829172701.XZXI25536.tomts21-srv.bellnexxia.net@[192.168.1.10]>;
+	Fri, 29 Aug 2003 13:27:01 -0400
+From: Bill Page <bill.page1@sympatico.ca>
+To: daly@idsi.net
+In-Reply-To: <200308290149.h7T1nXR09918@localhost.localdomain>
+References: <200308290149.h7T1nXR09918@localhost.localdomain>
+Content-Type: text/plain
+Organization: 
+Message-Id: <1062178006.5084.2.camel@asus>
+Mime-Version: 1.0
+X-Mailer: Ximian Evolution 1.2.2 (1.2.2-5) 
+Date: 29 Aug 2003 13:26:46 -0400
+Content-Transfer-Encoding: 7bit
+Cc: axiom@tenkan.org, axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: [Axiom-developer] Axiom Availability Announcement
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Aug 2003 17:59:38 -0000
+
+Tim,
+
+On my first attempt to compile the new Axiom source from Savannah
+I got the following error message:
+
+
+-------
+0 making /home/wspage/projects/axiom/int/algebra/AHYP.spad from
+/home/wspage/projects/axiom/src/algebra/trigcat.spad.pamphlet
+0 making /home/wspage/projects/axiom/int/algebra/AHYP.NRLIB from
+/home/wspage/projects/axiom/int/algebra/AHYP.spad
+ 
+(AXIOM Sockets) The AXIOM server number is undefined.
+-----------------------------------------------------------------------------
+   Issue )copyright to view copyright notices.
+   Issue )summary for a summary of useful system commands.
+   Issue )quit to leave AXIOM and return to shell.
+Friday August 29, 2003 at 13:14:01
+-----------------------------------------------------------------------------
+  
+   Using local database
+/home/wspage/projects/axiom/src/share/algebra/compress.daase..   Using
+local database
+/home/wspage/projects/axiom/src/share/algebra/interp.daase..
+   Using local database
+/home/wspage/projects/axiom/src/share/algebra/operation.daase..
+   Using local database
+/home/wspage/projects/axiom/src/share/algebra/category.daase..
+   Using local database
+/home/wspage/projects/axiom/src/share/algebra/browse.daase..
+(1) ->    Loading /projects/axiom/mnt/linux/autoload/apply.
+  
+   >> System error:
+   Cannot open the file /projects/axiom/mnt/linux/autoload/apply.
+ 
+protected-symbol-warn called with (NIL)
+(1) -> 0 making /home/wspage/projects/axiom/mnt/linux/algebra/AHYP.o
+from /home/wspage/projects/axiom/int/algebra/AHYP.NRLIB
+cp: cannot stat
+`/home/wspage/projects/axiom/int/algebra/AHYP.NRLIB/code.o': No
+such file or directory
+make[3]: *** [/home/wspage/projects/axiom/mnt/linux/algebra/AHYP.o]
+Error 1
+make[3]: Leaving directory `/home/wspage/projects/axiom/src/algebra'
+make[2]: *** [algebradir] Error 2
+make[2]: Leaving directory `/home/wspage/projects/axiom/src'
+make[1]: *** [srcdir] Error 2
+make[1]: Leaving directory `/home/wspage/projects/axiom'
+make: *** [all] Error 2
+[wspage@asus axiom]$
+
+
+-------
+
+Is there a problem with 'autoload/apply'??
+
+Cheers,
+Bill Page.
+
+
+On Thu, 2003-08-28 at 21:49, root wrote:
+> *,
+> 
+> Axiom exists as free and open source software.
+> 
+> The first version of the Axiom sources has been uploaded to the CVS at
+> http://savannah.gnu.org/projects/axiom. Congrats to all involved.
+> Many thanks to the Numerical Algorithms Group, the CAISS Institute at
+> City College of New York and to the people of these mailing lists.
+
+...
+
+
+
+
+From MAILER-DAEMON Fri Aug 29 17:06:39 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19sqRi-0004dT-Cu
+	for mharc-axiom-mail@gnu.org; Fri, 29 Aug 2003 17:06:14 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19sqR1-0004HZ-BM
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 17:05:31 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19sqQt-0004Fg-MX
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 17:05:24 -0400
+Received: from [207.217.120.120] (helo=albatross.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19sqQe-00049L-8N; Fri, 29 Aug 2003 17:05:08 -0400
+Received: from dialup-67.75.97.149.dial1.stamford1.level3.net ([67.75.97.149]
+	helo=localhost.localdomain)
+	by albatross.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19sqQb-0005tK-00; Fri, 29 Aug 2003 14:05:06 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7TL2Ya12615;
+	Fri, 29 Aug 2003 17:02:34 -0400
+Date: Fri, 29 Aug 2003 17:02:34 -0400
+Message-Id: <200308292102.h7TL2Ya12615@localhost.localdomain>
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca
+Cc: axiom@tenkan.org, axiom-developer@nongnu.org, daly@idsi.net,
+	axiom-mail@nongnu.org
+Subject: [Axiom-mail] apply.boot autoload
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Aug 2003 21:06:12 -0000
+
+Bill,
+
+The autoload path is correct so that isn't the problem.
+The AHYP compile is the first .spad compile so this is the first
+time that the new Axiom started.
+So it seems that apply.boot did not compile.
+Check your console output for the apply.boot compile and see why it failed.
+
+Tim
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Fri Aug 29 17:28:00 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19sqh2-0001O2-Hc
+	for mharc-axiom-mail@gnu.org; Fri, 29 Aug 2003 17:22:04 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19sqgq-00018x-4b
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 17:21:52 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19sqgb-0000uD-8Z
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 17:21:38 -0400
+Received: from [209.226.175.4] (helo=tomts16-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19sqfv-00006M-Ke; Fri, 29 Aug 2003 17:20:55 -0400
+Received: from Asus ([204.101.104.3]) by tomts16-srv.bellnexxia.net
+	(InterMail vM.5.01.06.04 201-253-122-130-104-20030726) with ESMTP
+	id <20030829212052.ZYUC684.tomts16-srv.bellnexxia.net@Asus>;
+	Fri, 29 Aug 2003 17:20:52 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <daly@idsi.net>
+Date: Fri, 29 Aug 2003 17:20:50 -0400
+Message-ID: <000801c36e73$6e9e0510$1401a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4024
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+In-Reply-To: <200308292102.h7TL2Ya12615@localhost.localdomain>
+Importance: Normal
+Cc: axiom@tenkan.org, axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-mail] RE: apply.boot autoload
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Aug 2003 21:22:02 -0000
+
+Tim,
+
+Here is what I see for apply.boot in the build log. It
+seems to have compiled normally. Any other ideas? Are
+there any environment variables besides AXIOM that might
+affect this?
+
+----------
+11 making /home/wspage/projects/axiom/int/interp/apply.clisp from
+/home/wspage/projects/axiom/src/interp/apply.boot.pamphlet
+
+>10 making /home/wspage/projects/axiom/obj/linux/interp/apply.o from
+/home/wspage/projects/axiom/int/interp/apply.clisp
+
+>
+Compiling /home/wspage/projects/axiom/int/interp/apply.clisp.
+; (DEFUN |compApplication| ...) is being compiled.
+;; The variable |$op| is undefined.
+;; The compiler will assume this variable is a global.
+; (DEFUN |compApplyModemap| ...) is being compiled.
+;; The variable |$bindings| is undefined.
+;; The compiler will assume this variable is a global.
+; (DEFUN |compMapCondFun| ...) is being compiled.
+;; Warning: The variable |op| is not used.
+;; Warning: The variable |dc| is not used.
+End of Pass 1.  
+End of Pass 2.  
+OPTIMIZE levels: Safety=0 (No runtime error checking), Space=0, Speed=3
+Finished compiling /home/wspage/projects/axiom/obj/linux/interp/apply.o.
+9 making /home/wspage/projects/axiom/mnt/linux/autoload/apply.o from
+/home/wspage/projects/axiom/obj/linux/interp/apply.o
+---------
+
+Cheers,
+Bill Page.
+
+> -----Original Message-----
+> From: root [mailto:daly@idsi.net] 
+> Sent: Friday, August 29, 2003 5:03 PM
+> To: bill.page1@sympatico.ca
+> Cc: daly@idsi.net; axiom-developer@nongnu.org; 
+> axiom-mail@nongnu.org; axiom@tenkan.org
+> Subject: apply.boot autoload
+> 
+> 
+> Bill,
+> 
+> The autoload path is correct so that isn't the problem.
+> The AHYP compile is the first .spad compile so this is the 
+> first time that the new Axiom started. So it seems that 
+> apply.boot did not compile. Check your console output for the 
+> apply.boot compile and see why it failed.
+> 
+> Tim
+> axiom@tenkan.org
+> daly@idsi.net
+> 
+
+
+
+
+From MAILER-DAEMON Fri Aug 29 18:05:49 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19srLr-0006rx-Ed
+	for mharc-axiom-mail@gnu.org; Fri, 29 Aug 2003 18:04:15 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19srL9-0006fp-LG
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 18:03:31 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19srKW-0006QT-0m
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 18:02:52 -0400
+Received: from [209.226.175.52] (helo=tomts8-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19srGI-0005Al-Az; Fri, 29 Aug 2003 17:58:30 -0400
+Received: from [192.168.1.10] ([204.101.104.3]) by tomts8-srv.bellnexxia.net
+	(InterMail vM.5.01.06.04 201-253-122-130-104-20030726) with ESMTP
+	id <20030829215827.TIDD25242.tomts8-srv.bellnexxia.net@[192.168.1.10]>; 
+	Fri, 29 Aug 2003 17:58:27 -0400
+From: Bill Page <bill.page1@sympatico.ca>
+To: daly@idsi.net
+In-Reply-To: <000801c36e73$6e9e0510$1401a8c0@Asus>
+References: <000801c36e73$6e9e0510$1401a8c0@Asus>
+Content-Type: text/plain
+Organization: 
+Message-Id: <1062194292.5438.4.camel@asus>
+Mime-Version: 1.0
+X-Mailer: Ximian Evolution 1.2.2 (1.2.2-5) 
+Date: 29 Aug 2003 17:58:14 -0400
+Content-Transfer-Encoding: 7bit
+Cc: axiom@tenkan.org, axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: [Axiom-developer] RE: apply.boot autoload
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Aug 2003 22:04:13 -0000
+
+Tim,
+
+The odd thing is this: I just returned to my 'projects/axiom'
+directory and typed 'make' again. Now it seems to be able to
+find apply and the compile continues...
+
+Right now I can't explain this. I haven't changed anything
+since the first attempt. I did not start from 'make clean'
+however. I just tried to reproduce the error by having make
+carrying on where it left off. But it didn't work - or rather
+it *is* now working, unexpectedly.
+
+Anyway, I let you know in a couple of hours if it completes
+properly.
+
+Cheers,
+Bill page.
+
+
+On Fri, 2003-08-29 at 17:20, Bill Page wrote:
+> Tim,
+> 
+> Here is what I see for apply.boot in the build log. It
+> seems to have compiled normally. Any other ideas? Are
+> there any environment variables besides AXIOM that might
+> affect this?
+> ...
+
+
+
+
+
+From MAILER-DAEMON Fri Aug 29 18:46:20 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19srxX-00028m-7B
+	for mharc-axiom-mail@gnu.org; Fri, 29 Aug 2003 18:43:11 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19srwv-0001gb-2t
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 18:42:33 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19srug-0000ot-BP
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2003 18:40:14 -0400
+Received: from [207.217.120.18] (helo=goose.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19srhh-00077S-IX; Fri, 29 Aug 2003 18:26:49 -0400
+Received: from dialup-67.75.101.45.dial1.stamford1.level3.net ([67.75.101.45]
+	helo=localhost.localdomain)
+	by goose.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19srhZ-0006Ea-00; Fri, 29 Aug 2003 15:26:41 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7TMQbE13109;
+	Fri, 29 Aug 2003 18:26:37 -0400
+Date: Fri, 29 Aug 2003 18:26:37 -0400
+Message-Id: <200308292226.h7TMQbE13109@localhost.localdomain>
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca
+In-reply-to: <1062194292.5438.4.camel@asus> (message from Bill Page on 29 Aug
+	2003 17:58:14 -0400)
+References: <000801c36e73$6e9e0510$1401a8c0@Asus>
+	<1062194292.5438.4.camel@asus>
+Cc: axiom@tenkan.org, axiom-developer@nongnu.org, daly@idsi.net,
+	axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: [Axiom-developer] RE: apply.boot autoload
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Aug 2003 22:43:09 -0000
+
+Bill,
+
+I'm unable to figure this one out. Perhaps we should talk on the phone and
+we can look over the details. 
+
+Tim
+
+
+
+From MAILER-DAEMON Sat Aug 30 16:17:03 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19tC9X-0001ve-Tc
+	for mharc-axiom-mail@gnu.org; Sat, 30 Aug 2003 16:16:55 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19tC9B-0001Sl-53
+	for axiom-mail@nongnu.org; Sat, 30 Aug 2003 16:16:33 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19tC8b-00016o-4L
+	for axiom-mail@nongnu.org; Sat, 30 Aug 2003 16:15:59 -0400
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.22) id 19tC8M-0000tU-6V; Sat, 30 Aug 2003 16:15:42 -0400
+Received: from [207.217.120.148] (helo=flavatown.mail.pas.earthlink.net)
+	by mx20.gnu.org with esmtp (Exim 4.22)
+	id 19tC3S-0006cA-Kq; Sat, 30 Aug 2003 16:10:38 -0400
+Received: from gull.mail.pas.earthlink.net (gull.mail.pas.earthlink.net
+	[207.217.120.84])
+	by flavatown.mail.pas.earthlink.net (8.11.6+Sun/8.11.6) with ESMTP id
+	h7UJvfq06773; Sat, 30 Aug 2003 12:57:41 -0700 (PDT)
+Received: from dialup-67.75.101.79.dial1.stamford1.level3.net ([67.75.101.79]
+	helo=localhost.localdomain)
+	by gull.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19tBqr-0006RG-00; Sat, 30 Aug 2003 12:57:37 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7UJvYP13933;
+	Sat, 30 Aug 2003 15:57:34 -0400
+Date: Sat, 30 Aug 2003 15:57:34 -0400
+Message-Id: <200308301957.h7UJvYP13933@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-mail@nongnu.org, axiom-developer@nongnu.org
+Cc: 
+Subject: [Axiom-mail] new mailing list
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Aug 2003 20:16:54 -0000
+
+I've set up a new mailing list, axiom-math@nongnu.org, for the purpose
+of discussing mathematical and philosophical issues with Axiom. The
+developer's mailing list is intended for more specific coding and
+debugging tasks.
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Sat Aug 30 16:56:07 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19tCjh-0002oY-0P
+	for mharc-axiom-mail@gnu.org; Sat, 30 Aug 2003 16:54:17 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19tCjd-0002lr-15
+	for axiom-mail@nongnu.org; Sat, 30 Aug 2003 16:54:13 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19tCjB-0002XF-9A
+	for axiom-mail@nongnu.org; Sat, 30 Aug 2003 16:53:45 -0400
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.22) id 19tCip-000263-Vm; Sat, 30 Aug 2003 16:53:24 -0400
+Received: from [209.226.175.3] (helo=tomts15-srv.bellnexxia.net)
+	by mx20.gnu.org with esmtp (Exim 4.22)
+	id 19tCgd-0000IY-Fw; Sat, 30 Aug 2003 16:51:07 -0400
+Received: from [192.168.1.10] ([204.101.104.3]) by tomts15-srv.bellnexxia.net
+	(InterMail vM.5.01.06.04 201-253-122-130-104-20030726) with ESMTP
+	id <20030830205104.WSII12272.tomts15-srv.bellnexxia.net@[192.168.1.10]>;
+	Sat, 30 Aug 2003 16:51:04 -0400
+Subject: Re: [Axiom-mail] new mailing list
+From: Bill Page <bill.page1@sympatico.ca>
+To: daly@idsi.net
+In-Reply-To: <200308301957.h7UJvYP13933@localhost.localdomain>
+References: <200308301957.h7UJvYP13933@localhost.localdomain>
+Content-Type: text/plain
+Organization: 
+Message-Id: <1062276648.13649.13.camel@asus>
+Mime-Version: 1.0
+X-Mailer: Ximian Evolution 1.2.2 (1.2.2-5) 
+Date: 30 Aug 2003 16:50:51 -0400
+Content-Transfer-Encoding: 7bit
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Aug 2003 20:54:13 -0000
+
+Tim,
+
+The url
+
+  http://mail.gnu.org/archive/html/axiom-math
+
+Gives the message:
+
+Not Found
+The requested URL /archive/html/axiom-math was not found on this server.
+
+Perhsps the list is not yet fully set up?
+
+I think your idea of creating this list is a good one!
+
+Cheers,
+Bill Page.
+
+
+On Sat, 2003-08-30 at 15:57, root wrote:
+> I've set up a new mailing list, axiom-math@nongnu.org, for the purpose
+> of discussing mathematical and philosophical issues with Axiom. The
+> developer's mailing list is intended for more specific coding and
+> debugging tasks.
+> 
+> Tim Daly
+> axiom@tenkan.org
+> daly@idsi.net
+> 
+> 
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://mail.nongnu.org/mailman/listinfo/axiom-mail
+
+
+
+
+From MAILER-DAEMON Sat Aug 30 16:58:22 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19tCnH-0004pY-Vk
+	for mharc-axiom-mail@gnu.org; Sat, 30 Aug 2003 16:57:59 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19tCmw-0004LD-1C
+	for axiom-mail@nongnu.org; Sat, 30 Aug 2003 16:57:38 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19tCmE-0003kM-SS
+	for axiom-mail@nongnu.org; Sat, 30 Aug 2003 16:56:55 -0400
+Received: from [207.217.120.18] (helo=goose.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19tCm0-0003an-Jv; Sat, 30 Aug 2003 16:56:40 -0400
+Received: from dialup-67.75.101.79.dial1.stamford1.level3.net ([67.75.101.79]
+	helo=localhost.localdomain)
+	by goose.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19tClk-0006Bq-00; Sat, 30 Aug 2003 13:56:27 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7UKt3414049;
+	Sat, 30 Aug 2003 16:55:03 -0400
+Date: Sat, 30 Aug 2003 16:55:03 -0400
+Message-Id: <200308302055.h7UKt3414049@localhost.localdomain>
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca
+In-reply-to: <1062276648.13649.13.camel@asus> (message from Bill Page on 30
+	Aug 2003 16:50:51 -0400)
+Subject: Re: [Axiom-mail] new mailing list
+References: <200308301957.h7UJvYP13933@localhost.localdomain>
+	<1062276648.13649.13.camel@asus>
+Cc: axiom-developer@nongnu.org, daly@idsi.net, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Aug 2003 20:57:57 -0000
+
+I was able to subscribe to the list without a problem.
+Try once more and let me know if you succeed or fail.
+
+Tim
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+From MAILER-DAEMON Sat Aug 30 17:06:39 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19tCvf-0005UX-0D
+	for mharc-axiom-mail@gnu.org; Sat, 30 Aug 2003 17:06:39 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19tCvd-0005U0-2I
+	for axiom-mail@nongnu.org; Sat, 30 Aug 2003 17:06:37 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19tCvb-0005TY-AU
+	for axiom-mail@nongnu.org; Sat, 30 Aug 2003 17:06:35 -0400
+Received: from [209.226.175.187] (helo=tomts24-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22)
+	id 19tCva-0005TQ-VN; Sat, 30 Aug 2003 17:06:35 -0400
+Received: from [192.168.1.10] ([204.101.104.3]) by tomts24-srv.bellnexxia.net
+	(InterMail vM.5.01.06.04 201-253-122-130-104-20030726) with ESMTP
+	id <20030830210632.TPAP29033.tomts24-srv.bellnexxia.net@[192.168.1.10]>;
+	Sat, 30 Aug 2003 17:06:32 -0400
+Subject: Re: [Axiom-mail] new mailing list
+From: Bill Page <bill.page1@sympatico.ca>
+To: daly@idsi.net
+In-Reply-To: <200308302055.h7UKt3414049@localhost.localdomain>
+References: <200308301957.h7UJvYP13933@localhost.localdomain>
+	<1062276648.13649.13.camel@asus>
+	<200308302055.h7UKt3414049@localhost.localdomain>
+Content-Type: text/plain
+Organization: 
+Message-Id: <1062277577.13649.18.camel@asus>
+Mime-Version: 1.0
+X-Mailer: Ximian Evolution 1.2.2 (1.2.2-5) 
+Date: 30 Aug 2003 17:06:18 -0400
+Content-Transfer-Encoding: 7bit
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Aug 2003 21:06:37 -0000
+
+Tim,
+
+I sucessfully subscribed, I am just not yet able to access the
+archives for the new list. It should be at
+
+  http://mail.gnu.org/archive/html/axiom-math
+
+but I get an error message.
+
+Bill.
+
+On Sat, 2003-08-30 at 16:55, root wrote:
+> I was able to subscribe to the list without a problem.
+> Try once more and let me know if you succeed or fail.
+> 
+> Tim
+> axiom@tenkan.org
+> daly@idsi.net
+
+
+
+
+From MAILER-DAEMON Sun Aug 31 01:58:26 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19tLDn-0006bz-No
+	for mharc-axiom-mail@gnu.org; Sun, 31 Aug 2003 01:57:55 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19tLDS-00069t-DB
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2003 01:57:34 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19tLDC-0005x9-LK
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2003 01:57:22 -0400
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.22) id 19tLCo-0005dI-Tb
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2003 01:56:54 -0400
+Received: from [213.228.0.62] (helo=postfix4-1.free.fr)
+	by mx20.gnu.org with esmtp (Exim 4.22) id 19tLCQ-0003E2-5D
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2003 01:56:30 -0400
+Received: from localhost (nas-p19-1-62-147-235-230.dial.proxad.net
+	[62.147.235.230])
+	by postfix4-1.free.fr (Postfix) with SMTP id 9C51943918
+	for <axiom-mail@nongnu.org>; Sun, 31 Aug 2003 07:56:27 +0200 (CEST)
+Date: Sun, 31 Aug 2003 07:56:41 +0000
+From: Daniel Duparc <daniel.duparc@free.fr>
+To: axiom-mail@nongnu.org
+Message-Id: <20030831075641.7eabe6a9.daniel.duparc@free.fr>
+X-Mailer: Sylpheed version 0.9.4 (GTK+ 1.2.10; i686-pc-linux-gnu)
+Mime-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-mail] retrieving the cvs ?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 31 Aug 2003 05:57:54 -0000
+
+I feel a bit stupid.
+
+I tried 
+cvs -d:pserver:anoncvs@bogus.example.com:/cvsroot/axiom login
+cvs -z3 -d:pserver:anoncvs@bogus.example.com:/cvsroot/axiom co axiom
+
+and got the answer:
+Unknown host bogus.example.com
+(twice)
+
+What's wrong?
+
+Best regards.
+-- 
+Daniel Duparc <daniel.duparc@free.fr>
+29 av. de la Commune de Paris
+94400 Vitry sur Seine (France)
+
+
+
+From MAILER-DAEMON Sun Aug 31 02:25:48 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.22)
+	id 19tLeK-0006nI-1j
+	for mharc-axiom-mail@gnu.org; Sun, 31 Aug 2003 02:25:20 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.22)
+	id 19tLe0-00064I-GG
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2003 02:25:00 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.22)
+	id 19tLdN-000541-If
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2003 02:24:22 -0400
+Received: from [207.217.120.122] (helo=pintail.mail.pas.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.22) id 19tLcr-0004Jc-VK
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2003 02:23:50 -0400
+Received: from dialup-67.75.101.79.dial1.stamford1.level3.net ([67.75.101.79]
+	helo=localhost.localdomain)
+	by pintail.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19tLcq-0006Yd-00; Sat, 30 Aug 2003 23:23:48 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h7V6Nig14330;
+	Sun, 31 Aug 2003 02:23:44 -0400
+Date: Sun, 31 Aug 2003 02:23:44 -0400
+Message-Id: <200308310623.h7V6Nig14330@localhost.localdomain>
+From: root <daly@idsi.net>
+To: daniel.duparc@free.fr
+Subject: Re: [Axiom-mail] retrieving the cvs ?
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 31 Aug 2003 06:25:11 -0000
+
+bogus?
+
+
+Try:
+
+cvs -d:pserver:anoncvs@subversions.gnu.org:/cvsroot/axiom login
+cvs -z3 -d:pserver:anoncvs@subversions.gnu.org:/cvsroot/axiom co axiom
+
+Tim
+axiom@tenkan.org
+daly@idsi.net
+
+
+

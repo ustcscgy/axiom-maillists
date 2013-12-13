@@ -1,0 +1,567 @@
+From MAILER-DAEMON Wed Aug 17 18:07:40 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QtoGy-0005Up-0g
+	for mharc-axiom-mail@gnu.org; Wed, 17 Aug 2011 18:07:40 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:57492)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <cloos@jhcloos.com>) id 1QtoGv-0005Sm-6g
+	for axiom-mail@nongnu.org; Wed, 17 Aug 2011 18:07:38 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <cloos@jhcloos.com>) id 1QtoGt-0008Dd-BQ
+	for axiom-mail@nongnu.org; Wed, 17 Aug 2011 18:07:37 -0400
+Received: from eagle.jhcloos.com ([207.210.242.212]:58149)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <cloos@jhcloos.com>) id 1QtoGt-0008DY-6h
+	for axiom-mail@nongnu.org; Wed, 17 Aug 2011 18:07:35 -0400
+Received: by eagle.jhcloos.com (Postfix, from userid 10)
+	id 1E2654016D; Wed, 17 Aug 2011 22:07:10 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jhcloos.com;
+	s=eagle; t=1313618854;
+	bh=zY02kBm4hDf8s1jyqjVgFSBWo/p8eDcahvdk9CDpXak=;
+	h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type;
+	b=d/NElQSVj9lZg2fGXcT3jLee5HRQck/HXn96+FlygLdQa7G7Xgt1aps2WtNo9J9tI
+	3PK3VxBGF/+m9b9Vv8DkeJnaqClGeShFvL0sjrT2bjU5dR3g3qT/CyANDRJaeUBMvV
+	ZZeYtjXCG+Uk76aiU1ovgzJ4uXrsvi0C1vya1c40=
+Received: by carbon.jhcloos.org (Postfix, from userid 500)
+	id 8249A260042; Wed, 17 Aug 2011 22:05:07 +0000 (UTC)
+From: James Cloos <cloos@jhcloos.com>
+To: axiom-mail@nongnu.org
+User-Agent: Gnus/5.110018 (No Gnus v0.18) Emacs/24.0.50 (gnu/linux)
+Face: iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEX///8ZGXBQKKnCrDQ3
+	AAAAJElEQVQImWNgQAAXzwQg4SKASgAlXIEEiwsSIYBEcLaAtMEAADJnB+kKcKioAAAAAElFTkSu
+	QmCC
+Copyright: Copyright 2011 James Cloos
+OpenPGP: ED7DAEA6; url=http://jhcloos.com/public_key/0xED7DAEA6.asc
+OpenPGP-Fingerprint: E9E9 F828 61A4 6EA9 0F2B  63E7 997A 9F17 ED7D AEA6
+Date: Wed, 17 Aug 2011 18:05:07 -0400
+Message-ID: <m3fwkzelsk.fsf@jhcloos.com>
+Lines: 51
+MIME-Version: 1.0
+Content-Type: text/plain
+X-Hashcash: 1:30:110817:axiom-mail@nongnu.org::5remnVo8Cnul3hkZ:000000000000000000000000000000000000000jInmp
+X-detected-operating-system: by eggs.gnu.org: Genre and OS details not
+	recognized.
+X-Received-From: 207.210.242.212
+Subject: [Axiom-mail] Broken compile?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 17 Aug 2011 22:07:38 -0000
+
+I compiled and installed 201107 today.
+
+When I run it, axiom and hyperdoc open OK, browsing in hyperdoc works,
+but axiom itself fails with, eg:
+
+                        AXIOM Computer Algebra System
+                         Version: Axiom (July 2011)
+              Timestamp: Wednesday August 17, 2011 at 16:48:12
+-----------------------------------------------------------------------------
+   Issue )copyright to view copyright notices.
+   Issue )summary for a summary of useful system commands.
+   Issue )quit to leave AXIOM and return to shell.
+   Visit http://axiom-developer.org for more information
+-----------------------------------------------------------------------------
+   
+   Re-reading compress.daase   Re-reading interp.daase
+   Re-reading operation.daase
+   Re-reading category.daase
+   Re-reading browse.daase
+(1) ->
+(1) -> m: MPOLY([x,y],INT) := (x**2 - x*y**3 + 3*y)**2
+ 1) ->
+   >> System error:
+   Can't open file "/opt/axiom/algebra/INT.data"
+
+There are no .data files there, just .o files.
+
+The build log shows:
+
+    compiling INT.lsp to INT.o
+
+    compiling INT.spad to INT.nrlib
+
+    copying INT.nrlib to INT.o
+
+but no mention of INT.data.
+
+An strace(8) shows that it looked for INT.data immediately after
+reading in INT.o.
+
+I'm at a bit of a loss of where to go from here.  The bug which
+prevented 201101 from working is gone, but it still fails.
+
+What is needed to get this to work?
+
+(Fricas and open-axiom are no better; they both dump into a lisp
+debugger when run.)
+
+-JimC
+-- 
+James Cloos <cloos@jhcloos.com>         OpenPGP: 1024D/ED7DAEA6
+
+
+From MAILER-DAEMON Wed Aug 17 18:18:20 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QtoRI-0005Hj-8D
+	for mharc-axiom-mail@gnu.org; Wed, 17 Aug 2011 18:18:20 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:57654)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <cloos@jhcloos.com>) id 1QtoRG-0005GW-CC
+	for axiom-mail@nongnu.org; Wed, 17 Aug 2011 18:18:19 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <cloos@jhcloos.com>) id 1QtoRE-0001dm-It
+	for axiom-mail@nongnu.org; Wed, 17 Aug 2011 18:18:17 -0400
+Received: from eagle.jhcloos.com ([207.210.242.212]:47103)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <cloos@jhcloos.com>) id 1QtoRE-0001dc-BS
+	for axiom-mail@nongnu.org; Wed, 17 Aug 2011 18:18:16 -0400
+Received: by eagle.jhcloos.com (Postfix, from userid 10)
+	id 6D3CB40171; Wed, 17 Aug 2011 22:17:51 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jhcloos.com;
+	s=eagle; t=1313619495;
+	bh=lNaH+K9xAJ3sG7hZiMwSNsv/FTfTPkukjtHt3kD7TKw=;
+	h=From:To:Subject:In-Reply-To:References:Date:Message-ID:
+	MIME-Version:Content-Type;
+	b=q0I+QgJA+xONbDaj6ysiF/XYVDBJjDj9LCJcFuSb0vbT/Zm9QLffxkMHmfhh4n0DS
+	lLPvrpdFkcD+nvuHd7IMMN0XdzWVLj4xqnrH8Ji3acCJum+plJZXnDTZNkuQGjfpvj
+	UMToei2nW9rdpZ4mjo7FBIqW2l11+k7zKBb2357I=
+Received: by carbon.jhcloos.org (Postfix, from userid 500)
+	id D2B01260046; Wed, 17 Aug 2011 22:16:55 +0000 (UTC)
+From: James Cloos <cloos@jhcloos.com>
+To: axiom-mail@nongnu.org
+In-Reply-To: <m3fwkzelsk.fsf@jhcloos.com> (James Cloos's message of "Wed, 17
+	Aug 2011 18:05:07 -0400")
+References: <m3fwkzelsk.fsf@jhcloos.com>
+User-Agent: Gnus/5.110018 (No Gnus v0.18) Emacs/24.0.50 (gnu/linux)
+Face: iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEX///8ZGXBQKKnCrDQ3
+	AAAAJElEQVQImWNgQAAXzwQg4SKASgAlXIEEiwsSIYBEcLaAtMEAADJnB+kKcKioAAAAAElFTkSu
+	QmCC
+Copyright: Copyright 2011 James Cloos
+OpenPGP: ED7DAEA6; url=http://jhcloos.com/public_key/0xED7DAEA6.asc
+OpenPGP-Fingerprint: E9E9 F828 61A4 6EA9 0F2B  63E7 997A 9F17 ED7D AEA6
+Date: Wed, 17 Aug 2011 18:16:55 -0400
+Message-ID: <m3aab7el8w.fsf@jhcloos.com>
+Lines: 7
+MIME-Version: 1.0
+Content-Type: text/plain
+X-Hashcash: 1:30:110817:axiom-mail@nongnu.org::XMEfMkMakhfO/XuF:000000000000000000000000000000000000000DT8VK
+X-detected-operating-system: by eggs.gnu.org: Genre and OS details not
+	recognized.
+X-Received-From: 207.210.242.212
+Subject: Re: [Axiom-mail] Broken compile?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 17 Aug 2011 22:18:19 -0000
+
+I should have added that the tests ran, so interpsys worked.
+
+But the dumped axiom does not.
+
+-JimC
+-- 
+James Cloos <cloos@jhcloos.com>         OpenPGP: 1024D/ED7DAEA6
+
+
+From MAILER-DAEMON Wed Aug 17 20:17:11 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1QtqIJ-0008Ec-HC
+	for mharc-axiom-mail@gnu.org; Wed, 17 Aug 2011 20:17:11 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:48400)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1QtqIG-0008BC-Ky
+	for axiom-mail@nongnu.org; Wed, 17 Aug 2011 20:17:09 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1QtqIF-0005yR-P6
+	for axiom-mail@nongnu.org; Wed, 17 Aug 2011 20:17:08 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:52832
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1QtqIF-0005yJ-If
+	for axiom-mail@nongnu.org; Wed, 17 Aug 2011 20:17:07 -0400
+Received: from [192.168.1.13] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id p7I0H075024349;
+	Wed, 17 Aug 2011 19:17:01 -0500
+From: daly <daly@axiom-developer.org>
+To: axiom-mail@nongnu.org, James Cloos <cloos@jhcloos.com>
+Content-Type: text/plain; charset="UTF-8"
+Date: Wed, 17 Aug 2011 20:16:49 -0400
+Message-ID: <1313626609.1920.8843.camel@pewter>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.28.1 
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Linux 2.6? (barebone, rare!)
+X-Received-From: 209.135.140.38
+Subject: [Axiom-mail] Broken compile?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Aug 2011 00:17:09 -0000
+
+Hmm, that's a new one.
+
+What operating system and version of OS are you using?
+I'll build a machine and try to recreate it.
+
+Tim
+
+
+
+
+From MAILER-DAEMON Thu Aug 18 10:09:52 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1Qu3I8-0001A9-Bc
+	for mharc-axiom-mail@gnu.org; Thu, 18 Aug 2011 10:09:52 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:33538)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <cloos@jhcloos.com>) id 1Qu3I5-000175-0T
+	for axiom-mail@nongnu.org; Thu, 18 Aug 2011 10:09:49 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <cloos@jhcloos.com>) id 1Qu3I3-0007EW-E3
+	for axiom-mail@nongnu.org; Thu, 18 Aug 2011 10:09:48 -0400
+Received: from eagle.jhcloos.com ([207.210.242.212]:33333)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <cloos@jhcloos.com>) id 1Qu3I3-0007EQ-3L
+	for axiom-mail@nongnu.org; Thu, 18 Aug 2011 10:09:47 -0400
+Received: by eagle.jhcloos.com (Postfix, from userid 10)
+	id 076084016D; Thu, 18 Aug 2011 14:09:22 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jhcloos.com;
+	s=eagle; t=1313676586;
+	bh=AT2vrcnIK2XIgN+QQx+yuxeN2PgNFZZmhVdjALibfKQ=;
+	h=From:To:Cc:Subject:In-Reply-To:References:Date:Message-ID:
+	MIME-Version:Content-Type;
+	b=Q1GJCGkRAvencao1Lo8bCnZWyor9YxZ+r+N/md0zmHTDFju3yzSL7eGCLor+I1RJV
+	J3pFbAMXtT2xSphRRwTk3AisDjZ/QSgnh5Z+WaQ2pqLOqs+USov+LvnReyupjw1nnA
+	Zl7Rrv6okER/bzzxUzoHCNyrh+LgaL74rHPMaelo=
+Received: by carbon.jhcloos.org (Postfix, from userid 500)
+	id C442E260042; Thu, 18 Aug 2011 14:05:37 +0000 (UTC)
+From: James Cloos <cloos@jhcloos.com>
+To: daly <daly@axiom-developer.org>
+In-Reply-To: <1313626609.1920.8843.camel@pewter> (daly@axiom-developer.org's
+	message of "Wed, 17 Aug 2011 20:16:49 -0400")
+References: <1313626609.1920.8843.camel@pewter>
+User-Agent: Gnus/5.110018 (No Gnus v0.18) Emacs/24.0.50 (gnu/linux)
+Face: iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEX///8ZGXBQKKnCrDQ3
+	AAAAJElEQVQImWNgQAAXzwQg4SKASgAlXIEEiwsSIYBEcLaAtMEAADJnB+kKcKioAAAAAElFTkSu
+	QmCC
+Copyright: Copyright 2011 James Cloos
+OpenPGP: ED7DAEA6; url=http://jhcloos.com/public_key/0xED7DAEA6.asc
+OpenPGP-Fingerprint: E9E9 F828 61A4 6EA9 0F2B  63E7 997A 9F17 ED7D AEA6
+Date: Thu, 18 Aug 2011 10:05:37 -0400
+Message-ID: <m339gy24s6.fsf@jhcloos.com>
+Lines: 69
+MIME-Version: 1.0
+Content-Type: text/plain
+X-Hashcash: 1:30:110818:daly@axiom-developer.org::sJmFN16DzpxiycSH:0000000000000000000000000000000000002sZ+n
+X-Hashcash: 1:30:110818:axiom-mail@nongnu.org::dCnNYH1ROFAaskok:000000000000000000000000000000000000000pXK2f
+X-detected-operating-system: by eggs.gnu.org: Genre and OS details not
+	recognized.
+X-Received-From: 207.210.242.212
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Broken compile?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Aug 2011 14:09:49 -0000
+
+>>>>> "td" == tim daly  <daly@axiom-developer.org> writes:
+
+td> What operating system and version of OS are you using?
+td> I'll build a machine and try to recreate it.
+
+Its an amd64 gentoo box.  I built from gentoo's ebuild, updated to point
+at the 201107 version.
+
+Having saved the build tree, I linked that into its build-time location
+and ran:
+
+:; env AXIOM=/var/tmp/portage/sci-mathematics/axiom-201107/work/axiom/mnt/linux PATH=/opt/axiom/bin:$PATH /opt/axiom/bin/AXIOMsys
+
+That worked fine.
+
+Leaving out the link and pointing AXIOM directly to the location to
+which I copied the build tree also worked:
+
+:; env AXIOM=/home/cloos/axiom-201107/work/axiom/mnt/linux PATH=/opt/axiom/bin:$PATH /opt/axiom/bin/AXIOMsys
+
+So I compared the .o files in .../work/axiom/mnt/linux/algebra vs the
+ones installed into /opt/axiom/algebra.  They differ.
+
+Something called by make install changes them.
+
+I'll try again with gentoo's nostrip FEATURE selected to see whether
+that makes the difference.
+
+It'll take a few hours.  The tests take forever to complete.
+
+Which reminds me: the failed tests summary is:
+
+int/input/ApplicationProgramInterface.regress:regression result FAILED 2 of 5 stanzas file ApplicationProgramInterface
+int/input/DoubleFloat.regress:regression result FAILED 2 of 13 stanzas file DoubleFloat
+int/input/GuessOptionFunctions0.regress:regression result FAILED 1 of 1 stanzas file GuessOptionFunctions0
+int/input/PlaneAlgebraicCurvePlot.regress:regression result FAILED 2 of 5 stanzas file PlaneAlgebraicCurvePlot
+int/input/cachedf.regress:regression result FAILED 1 of 8 stanzas file cachedf
+int/input/dfloat.regress:regression result FAILED 3 of 10 stanzas file dfloat
+int/input/dftrig.regress:regression result FAILED 233 of 672 stanzas file dftrig
+int/input/dop.regress:regression result FAILED 8 of 127 stanzas file dop
+int/input/e1.regress:regression result FAILED 4 of 7 stanzas file e1
+int/input/ei.regress:regression result FAILED 16 of 20 stanzas file ei
+int/input/elemnum.regress:regression result FAILED 16 of 50 stanzas file elemnum
+int/input/en.regress:regression result FAILED 5 of 7 stanzas file en
+int/input/gamma.regress:regression result FAILED 4 of 12 stanzas file gamma
+int/input/grpthry.regress:regression result FAILED 4 of 68 stanzas file grpthry
+int/input/guess.regress:regression result FAILED 62 of 102 stanzas file guess
+int/input/ico.regress:regression result FAILED 11 of 65 stanzas file ico
+int/input/newtonlisp.regress:regression result FAILED 2 of 14 stanzas file newtonlisp
+int/input/numericgamma.regress:regression result FAILED 7 of 36 stanzas file numericgamma
+int/input/r20bugs.regress:regression result FAILED 1 of 27 stanzas file r20bugs
+int/input/richalgebraic000-099.regress:regression result FAILED 2 of 518 stanzas file richalgebraic000-099
+int/input/richalgebraic100-199.regress:regression result FAILED 141 of 512 stanzas file richalgebraic100-199
+int/input/richalgebraic400-461.regress:regression result FAILED 4 of 324 stanzas file richalgebraic400-461
+int/input/richhyper1000-1098.regress:regression result FAILED 4 of 531 stanzas file richhyper1000-1098
+int/input/richlog300-391.regress:regression result FAILED 164 of 460 stanzas file richlog300-391
+int/input/richtrig000-099.regress:regression result FAILED 31 of 520 stanzas file richtrig000-099
+int/input/richtrig800-899.regress:regression result FAILED 165 of 526 stanzas file richtrig800-899
+int/input/tuplebug.regress:regression result FAILED 1 of 1 stanzas file tuplebug
+
+Most of the test failures with the January release were numerical; they
+looked to be the difference between the results of fpmath=387 (the
+default for the x86 abi) vs fpmath=sse (the default for the amd64 abi).
+
+That probably is still the case.
+
+-JimC
+-- 
+James Cloos <cloos@jhcloos.com>         OpenPGP: 1024D/ED7DAEA6
+
+
+From MAILER-DAEMON Sun Aug 21 03:09:13 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1Qv29h-00065Q-L4
+	for mharc-axiom-mail@gnu.org; Sun, 21 Aug 2011 03:09:13 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:57222)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <cloos@jhcloos.com>) id 1Qv29f-00065J-KC
+	for axiom-mail@nongnu.org; Sun, 21 Aug 2011 03:09:12 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <cloos@jhcloos.com>) id 1Qv29e-0007Pd-F8
+	for axiom-mail@nongnu.org; Sun, 21 Aug 2011 03:09:11 -0400
+Received: from eagle.jhcloos.com ([207.210.242.212]:38607)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <cloos@jhcloos.com>) id 1Qv29e-0007PZ-6m
+	for axiom-mail@nongnu.org; Sun, 21 Aug 2011 03:09:10 -0400
+Received: by eagle.jhcloos.com (Postfix, from userid 10)
+	id 4DC8B40179; Sun, 21 Aug 2011 07:08:44 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jhcloos.com;
+	s=eagle; t=1313910548;
+	bh=1hZrlYxyjhOaJ78n9HAxYB4SRwY5buvMPYQHWxnoZfw=;
+	h=From:To:Cc:Subject:In-Reply-To:References:Date:Message-ID:
+	MIME-Version:Content-Type;
+	b=efHLBy8SdgDE6jo+drx3IfrDAaaTiGuEu1Pe3qHFP/YDEUNjlyNItI21RzXvLNw16
+	1XrZQZg44YQbyiAvOTVFYyiVDOF7FCb/R762WgAPkHKpN7Qdv6tSi9pw9RH2/H73qU
+	magmV7Vx8hub+WOV9cKEjM9cBlpG4te/dOB5xMwg=
+Received: by carbon.jhcloos.org (Postfix, from userid 500)
+	id 0CAF5260042; Sun, 21 Aug 2011 07:03:41 +0000 (UTC)
+From: James Cloos <cloos@jhcloos.com>
+To: daly <daly@axiom-developer.org>
+In-Reply-To: <1313626609.1920.8843.camel@pewter> (daly@axiom-developer.org's
+	message of "Wed, 17 Aug 2011 20:16:49 -0400")
+References: <1313626609.1920.8843.camel@pewter>
+User-Agent: Gnus/5.110018 (No Gnus v0.18) Emacs/24.0.50 (gnu/linux)
+Face: iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEX///8ZGXBQKKnCrDQ3
+	AAAAJElEQVQImWNgQAAXzwQg4SKASgAlXIEEiwsSIYBEcLaAtMEAADJnB+kKcKioAAAAAElFTkSu
+	QmCC
+Copyright: Copyright 2011 James Cloos
+OpenPGP: ED7DAEA6; url=http://jhcloos.com/public_key/0xED7DAEA6.asc
+OpenPGP-Fingerprint: E9E9 F828 61A4 6EA9 0F2B  63E7 997A 9F17 ED7D AEA6
+Date: Sun, 21 Aug 2011 03:03:41 -0400
+Message-ID: <m3mxf3w8ii.fsf@jhcloos.com>
+Lines: 35
+MIME-Version: 1.0
+Content-Type: text/plain
+X-Hashcash: 1:30:110821:daly@axiom-developer.org::uaRJky0P1uUmjRde:00000000000000000000000000000000000096uET
+X-Hashcash: 1:30:110821:axiom-mail@nongnu.org::RVEm0XulzTqE3igZ:000000000000000000000000000000000000000k2QJV
+X-detected-operating-system: by eggs.gnu.org: Genre and OS details not
+	recognized.
+X-Received-From: 207.210.242.212
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Broken compile?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 21 Aug 2011 07:09:12 -0000
+
+[Sometimes just talking/writing publicly is enough to discover the solution.]
+
+It turns out that the problem was gentoo's portage.
+
+The axiom ebuild in gentoo, on which I based mine, is for 2008-May.
+Since then portage has added code to eliminate text relocations,
+executable stacks, writable+executable segments, and .hash sections
+from ELF files.  I had to modify and add these annotations:
+
+-RESTRICT="strip"
++RESTRICT="strip binchecks installsources"
+
++QA_TEXTRELS="opt/${P}/{algebra,autoload}/*.o opt/${P}/bin/AXIOMsys"
++QA_EXECSTACK="opt/${P}/{algebra,autoload}/*.o opt/${P}/bin/AXIOMsys"
++QA_WX_LOAD="opt/${P}/{algebra,autoload}/*.o opt/${P}/bin/AXIOMsys"
++QA_DT_HASH="opt/${P}/{algebra,autoload}/*.o opt/${P}/bin/AXIOMsys"
++QA_PRESTRIPPED="opt/${P}/{algebra,autoload}/*.o opt/${P}/bin/AXIOMsys"
+
+to get a working installation.
+
+(I haven't confirmed whether all of those are required -- it only takes
+about one hour to compile and four to run the tests -- but they are
+sufficient.)
+
+I suspect that the ebuilds for the forks also will require similar annotations.
+
+Appoloies for the false alarm.
+
+After a bit more polishing I will publish my ebuild at:
+
+      http://cgit.freedesktop.org/~cloos/overlay/
+
+-JimC
+-- 
+James Cloos <cloos@jhcloos.com>         OpenPGP: 1024D/ED7DAEA6
+
+
+From MAILER-DAEMON Sun Aug 21 03:25:07 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1Qv2P5-0001gU-9P
+	for mharc-axiom-mail@gnu.org; Sun, 21 Aug 2011 03:25:07 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:43505)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1Qv2P2-0001bH-DJ
+	for axiom-mail@nongnu.org; Sun, 21 Aug 2011 03:25:05 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1Qv2P1-00011D-F5
+	for axiom-mail@nongnu.org; Sun, 21 Aug 2011 03:25:04 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:42745
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>)
+	id 1Qv2Oy-00010U-RQ; Sun, 21 Aug 2011 03:25:00 -0400
+Received: from [192.168.1.13] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id p7L7Ou75030441;
+	Sun, 21 Aug 2011 02:24:56 -0500
+From: daly <daly@axiom-developer.org>
+To: James Cloos <cloos@jhcloos.com>
+In-Reply-To: <m3mxf3w8ii.fsf@jhcloos.com>
+References: <1313626609.1920.8843.camel@pewter> <m3mxf3w8ii.fsf@jhcloos.com>
+Content-Type: text/plain; charset="UTF-8"
+Date: Sun, 21 Aug 2011 03:24:45 -0400
+Message-ID: <1313911485.2543.6.camel@pewter>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.28.1 
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Linux 2.6? (barebone, rare!)
+X-Received-From: 209.135.140.38
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Broken compile?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 21 Aug 2011 07:25:05 -0000
+
+Whew. Thanks for that. 
+Constructing a gentoo machine is a bit of work.
+If you look at the download page of the Axiom website
+http://axiom-developer.org/axiom-website/download.html
+there is a section called "Compile Notes".
+
+If you write up a Gentoo section I will include it.
+
+Tim
+
+
+On Sun, 2011-08-21 at 03:03 -0400, James Cloos wrote:
+> [Sometimes just talking/writing publicly is enough to discover the solution.]
+> 
+> It turns out that the problem was gentoo's portage.
+> 
+> The axiom ebuild in gentoo, on which I based mine, is for 2008-May.
+> Since then portage has added code to eliminate text relocations,
+> executable stacks, writable+executable segments, and .hash sections
+> from ELF files.  I had to modify and add these annotations:
+> 
+> -RESTRICT="strip"
+> +RESTRICT="strip binchecks installsources"
+> 
+> +QA_TEXTRELS="opt/${P}/{algebra,autoload}/*.o opt/${P}/bin/AXIOMsys"
+> +QA_EXECSTACK="opt/${P}/{algebra,autoload}/*.o opt/${P}/bin/AXIOMsys"
+> +QA_WX_LOAD="opt/${P}/{algebra,autoload}/*.o opt/${P}/bin/AXIOMsys"
+> +QA_DT_HASH="opt/${P}/{algebra,autoload}/*.o opt/${P}/bin/AXIOMsys"
+> +QA_PRESTRIPPED="opt/${P}/{algebra,autoload}/*.o opt/${P}/bin/AXIOMsys"
+> 
+> to get a working installation.
+> 
+> (I haven't confirmed whether all of those are required -- it only takes
+> about one hour to compile and four to run the tests -- but they are
+> sufficient.)
+> 
+> I suspect that the ebuilds for the forks also will require similar annotations.
+> 
+> Appoloies for the false alarm.
+> 
+> After a bit more polishing I will publish my ebuild at:
+> 
+>       http://cgit.freedesktop.org/~cloos/overlay/
+> 
+> -JimC
+
+
+
+
+

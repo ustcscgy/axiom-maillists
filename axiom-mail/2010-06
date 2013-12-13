@@ -1,0 +1,730 @@
+From MAILER-DAEMON Fri Jun 04 05:25:51 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OKT9z-00083w-GA
+	for mharc-axiom-mail@gnu.org; Fri, 04 Jun 2010 05:25:51 -0400
+Received: from [140.186.70.92] (port=60700 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OKT9x-000815-0j
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2010 05:25:50 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <blurrpp@yahoo.com>) id 1OKT9w-0007Zs-3H
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2010 05:25:48 -0400
+Received: from web50308.mail.re2.yahoo.com ([206.190.38.62]:38267)
+	by eggs.gnu.org with smtp (Exim 4.69)
+	(envelope-from <blurrpp@yahoo.com>) id 1OKT9v-0007Zm-VW
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2010 05:25:48 -0400
+Received: (qmail 95821 invoked by uid 60001); 4 Jun 2010 09:25:46 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s1024;
+	t=1275643546; bh=i67sOnyjiA0mJIGt1AI3fTeZs+loR2imli8Opnae5MI=;
+	h=Message-ID:X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=r6YISCsaQrTrvUlpbhWM2Fk1CJ4ebJGH+n8f4Nkkpj6Nir+0Lrx7OLHlaR88lEjjihEtBrevn60ndIA+4dfbdpik4RcIpb2wkOFrxzOXbKpZdF4wpgwVpo+dnm8jhjPo6t8gLw534mZl/pr4ianpK6sSb5OEemQM1YqDF3KRO2s=
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=Message-ID:X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=iE0QPqjiwDTJDZUQanZtDbWEFrFW7jmaEeXyyIbQfCwuZlVDmJKbOyGNJvB7Z6WMc/9RKRYznddtQ5GlQnze24+1VIbDfoy/KQepNXNaWXRxhjHRIEod6+VVF6myXtHMvyg2x+iZnWHW94h3bLSu36EGQu3+UuW75GdYMuQ6irM=;
+Message-ID: <692440.95519.qm@web50308.mail.re2.yahoo.com>
+X-YMail-OSG: laF50wAVM1lEBu.r9BPWPVG.cnUoMoPJ0Q0Hm8efjM1r0Fu
+	t5VNojdjH7.D7WyDSY6Q75f4OL7zx7DDigYAnhIUBlxaFDaOoTk1ffv3RgrD
+	fltiHrAEE3AkP5ROYfukYBeJRvuNyJ9YumHXu7sOjxuXHUZtUCsqBA.aM19v
+	jmQxc55BXExr0oMpc06onXVs0WPVpe_glfRRfACpL6yKVaiE9WkDWiXILk9X
+	_ibEQjDgHZPSjpY1HjDw7OghK1UeQe..wAsvJe0KLJ4IhyekG2Hl8sq9HTYQ
+	JSQmGjPMnWb9rBWL.J5H._lMxCONGlw--
+Received: from [83.8.56.52] by web50308.mail.re2.yahoo.com via HTTP;
+	Fri, 04 Jun 2010 02:25:46 PDT
+X-Mailer: YahooMailClassic/11.0.8 YahooMailWebService/0.8.103.269680
+Date: Fri, 4 Jun 2010 02:25:46 -0700 (PDT)
+From: =?iso-8859-1?Q?=A3ukasz?= <blurrpp@yahoo.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by eggs.gnu.org: FreeBSD 6.x (1)
+Subject: [Axiom-mail] AXJOM and  C
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 04 Jun 2010 09:25:50 -0000
+
+Hi.
+I want to ask if its possibe to write some finction in C and aply it in AXj=
+OM ( its possibe in MATHEMATICA. SINGULAR, YACAS etc). If it is please give=
+ me some links.
+
+Regards
+Lukas=0A=0A=0A      
+
+
+From MAILER-DAEMON Fri Jun 04 10:40:29 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OKY4T-0000ZS-6t
+	for mharc-axiom-mail@gnu.org; Fri, 04 Jun 2010 10:40:29 -0400
+Received: from [140.186.70.92] (port=58320 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OKY4Q-0000YC-G0
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2010 10:40:27 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <dosreis@gmail.com>) id 1OKY4O-0007zK-9e
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2010 10:40:26 -0400
+Received: from mail-gw0-f45.google.com ([74.125.83.45]:57215)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <dosreis@gmail.com>) id 1OKY4O-0007zD-5A
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2010 10:40:24 -0400
+Received: by gwj20 with SMTP id 20so954536gwj.4
+	for <axiom-mail@nongnu.org>; Fri, 04 Jun 2010 07:40:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:mime-version:received:sender:received:date
+	:x-google-sender-auth:message-id:subject:from:to:cc:content-type
+	:content-transfer-encoding;
+	bh=YLsqU7/Z6RKWgG93zc63AmooSELbVDPiXyIHn6vD6tY=;
+	b=czHxss7aZICLV140ZgoC+DakT9aHddWH/UAg0AdgEjnKzL+zp5H9FdBLLkdkQNWNoH
+	sPGPaOhwrCoS75eD1wQH+xadRy6ohUvqsUnq1ldr//47dSFviXFWh1h+6zu4TyAcCCyU
+	ZTBZlQI2C47Cbp5AoPK1eviioitB5OTW+f4n0=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=mime-version:sender:date:x-google-sender-auth:message-id:subject
+	:from:to:cc:content-type:content-transfer-encoding;
+	b=Y/GY8xwxvow8pR/KARINDhhxnVPS+u28evny4RbRQXa/JB4dBiUewn+UN7+6+4UyEv
+	+Omdu46gWIfpt4KpdokPpDGP38Q9U8XIQSTe/VxgfTfn9LrU62MsXjFKPVjvZBIH0Pn9
+	u9i4GCRd1/cP4GJLZNAj4pgjjncEY4yFUtd3U=
+MIME-Version: 1.0
+Received: by 10.229.181.203 with SMTP id bz11mr2738480qcb.94.1275662422627; 
+	Fri, 04 Jun 2010 07:40:22 -0700 (PDT)
+Sender: dosreis@gmail.com
+Received: by 10.229.91.202 with HTTP; Fri, 4 Jun 2010 07:40:22 -0700 (PDT)
+Date: Fri, 4 Jun 2010 09:40:22 -0500
+X-Google-Sender-Auth: ZO4J79opsTlpyvrVDKgkE0riHFU
+Message-ID: <AANLkTilNc2QJo-ursndJEHrMKXzRNGYzDPuTUmpZOezX@mail.gmail.com>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+To: =?ISO-8859-1?B?o3VrYXN6?= <blurrpp@yahoo.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+Cc: open-axiom-help@lists.sf.net, axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: AXIOM and C
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 04 Jun 2010 14:40:28 -0000
+
+On Fri, Jun 4, 2010 at 4:25 AM, =A3ukasz <blurrpp@yahoo.com> wrote:
+> Hi.
+> I want to ask if its possibe to write some finction in C and aply it in A=
+XjOM ( its possibe in MATHEMATICA. SINGULAR, YACAS etc). If it is please gi=
+ve me some links.
+>
+
+It is possible to write a function in C and call it directly from
+library code (Spad code)
+in OpenAxiom.  Here is a link
+
+   http://parasol.tamu.edu/~gdr/OpenAxiom/ffi-draft.pdf
+
+It has been used by Stefan Mai to experiment with SIMD features (SSE2,
+SSE3, etc.)
+on modern CPUs.  More recently, Arthur Ralf has been using it to
+provide an interface
+to his panAXIOM server project.
+
+-- Gaby
+
+
+From MAILER-DAEMON Fri Jun 04 11:35:29 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OKYvh-0004kE-6q
+	for mharc-axiom-mail@gnu.org; Fri, 04 Jun 2010 11:35:29 -0400
+Received: from [140.186.70.92] (port=53319 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OKYvd-0004hu-Rg
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2010 11:35:27 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <daly@axiom-developer.org>) id 1OKYvc-00010r-Ev
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2010 11:35:25 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:35153
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <daly@axiom-developer.org>) id 1OKYvc-00010Z-BI
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2010 11:35:24 -0400
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id o54FZL8a009563;
+	Fri, 4 Jun 2010 10:35:21 -0500
+Message-ID: <4C091CD6.4090506@axiom-developer.org>
+Date: Fri, 04 Jun 2010 11:33:42 -0400
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: =?ISO-8859-1?Q?=A3ukasz?= <blurrpp@yahoo.com>
+Subject: Re: [Axiom-mail] AXJOM and  C
+References: <692440.95519.qm@web50308.mail.re2.yahoo.com>
+In-Reply-To: <692440.95519.qm@web50308.mail.re2.yahoo.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-MIME-Autoconverted: from 8bit to quoted-printable by axiom-developer.org id
+	o54FZL8a009563
+X-detected-operating-system: by eggs.gnu.org: Linux 2.6? (barebone, rare!)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 04 Jun 2010 15:35:27 -0000
+
+
+Axiom does use C code as part of its implementation
+and there are ways to link the C code so it is possible.
+
+Is there a reason you need to write in C?
+What is it you are trying to do?
+
+Tim
+
+
+=A3ukasz wrote:
+> Hi.
+> I want to ask if its possibe to write some finction in C and aply it in=
+ AXjOM ( its possibe in MATHEMATICA. SINGULAR, YACAS etc). If it is pleas=
+e give me some links.
+>
+> Regards
+> Lukas
+>
+>
+>      =20
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>  =20
+
+
+From MAILER-DAEMON Fri Jun 04 14:44:55 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OKbt1-0006aY-1v
+	for mharc-axiom-mail@gnu.org; Fri, 04 Jun 2010 14:44:55 -0400
+Received: from [140.186.70.92] (port=43708 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OKbsy-0006Yi-1t
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2010 14:44:53 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <blurrpp@yahoo.com>) id 1OKbsw-0005kw-Po
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2010 14:44:51 -0400
+Received: from web50308.mail.re2.yahoo.com ([206.190.38.62]:30076)
+	by eggs.gnu.org with smtp (Exim 4.69)
+	(envelope-from <blurrpp@yahoo.com>) id 1OKbsw-0005kl-MM
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2010 14:44:50 -0400
+Received: (qmail 82203 invoked by uid 60001); 4 Jun 2010 18:44:49 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s1024;
+	t=1275677089; bh=e9gHQuMhLOswsvFTUVk9kxTafkocRqMha/Zktd8zQXw=;
+	h=Message-ID:X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=Qxpu2q3j0yj0+vv6MHjqP52qGKuG6PFGOp3QC33XDj+xA+9Dxugm4SdpB+h4jAEFZ+VPxgr5cZDGzIJVS0x4p66XnSx2vudNlMKzuWfrUnFE8PyN9ZKIoU2nK+uejdpqFVj4QqkAAaeQQQNQDPju99x4nofo/5sVqNVjp0xm86A=
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=Message-ID:X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=rjdtd1XTFybBor9YvGjBvt71IA3GTOpiqyVGej2rhO1ApPHJhOgfkkyHkfy2Ljm0OeBDpdMWX9c3PckLdCTjTHtsVKbcVuGR2Ue14B6Xzg4NietNKAhpI2eKGJ8rVl2B0py6cr+Lh1zpET4CVqWdPT4JiEJI6h4bZ9w4Sl5NOQE=;
+Message-ID: <775649.82050.qm@web50308.mail.re2.yahoo.com>
+X-YMail-OSG: 7tqCT38VM1nidvL6eO2EbWVIL_h9pKE9i6KJ6pWUcT7dRht
+	lmujiW2C1mOlWCR6pyXXoJr6FpFRCLXx0NPounUAPkg4ZVU0g8XwhIZDKIWw
+	COvA_4xG0eqp84FMxt2ujwxZrWj.VWXE0liUPdEaD1BYqx35BOQfDTyA3r_U
+	Yh0yB476jgV90cgvNDoaAzlzSEEzaVR30LnJPQ4lWwvgE9kJ49KQLdbWvE3w
+	RlFrz5XJEj72jvUA7CgSgUSAZ_H2lQyGnXzHz4psPllTFiKwQ8PyM9WtYKnz
+	xoY6hV5jFXYfozK.PlPfu1W3E9IwYwzCh88ON9lJAAMWNxGVGx0vbvW.SRic
+	wEglq_51gCXAks7XzDK6Yu8xA_.Kq_E2ai7wACLlskPI-
+Received: from [156.17.88.232] by web50308.mail.re2.yahoo.com via HTTP;
+	Fri, 04 Jun 2010 11:44:49 PDT
+X-Mailer: YahooMailClassic/11.0.8 YahooMailWebService/0.8.103.269680
+Date: Fri, 4 Jun 2010 11:44:49 -0700 (PDT)
+From: =?iso-8859-1?Q?=A3ukasz?= <blurrpp@yahoo.com>
+Subject: Fw: Re: [Axiom-mail] AXIOM and  C
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by eggs.gnu.org: FreeBSD 6.x (1)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 04 Jun 2010 18:44:53 -0000
+
+
+
+--- On Fri, 6/4/10, =A3ukasz <blurrpp@yahoo.com> wrote:
+
+
+Hi thanks for answers.
+ There are many reeasons, for example i wrote fast
+ noncomutative algebra in assembler using SSEX etc.
+ multicores CPU GPGPU and i want to use it with some CAS ( of
+ course i didnt wrote whole CAS ;) ). Yep i can use pipelines
+ or sth. to establish communication betwen my program and
+ some CAS but its waste of "cycles" :).
+=20
+ Any way thakn You for link its useful. Im just cheacking
+ free CAS which can give me more flexibility ( implement for
+ example C function in REDUCE is more complex , in SINGULAR
+ not so etc. but its look like AXIOM has adv in this field)
+ Lukas
+=20
+> --- On Fri, 6/4/10, Tim Daly <daly@axiom-developer.org>
+> wrote:
+>=20
+> > From: Tim Daly <daly@axiom-developer.org>
+> > Subject: Re: [Axiom-mail] AXJOM and=A0 C
+> > To: "=A3ukasz" <blurrpp@yahoo.com>
+> > Cc: axiom-mail@nongnu.org
+> > Date: Friday, June 4, 2010, 5:33 PM
+> >=20
+> > Axiom does use C code as part of its implementation
+> > and there are ways to link the C code so it is
+> possible.
+> >=20
+> > Is there a reason you need to write in C?
+> > What is it you are trying to do?
+> >=20
+> > Tim
+> >=20
+> >=20
+> > =A3ukasz wrote:
+> > > Hi.
+> > > I want to ask if its possibe to write some
+> finction in
+> > C and aply it in AXjOM ( its possibe in MATHEMATICA.
+> > SINGULAR, YACAS etc). If it is please give me some
+> links.
+> > >
+> > > Regards
+> > > Lukas
+> > >
+> > >
+> > >=A0 =A0 =A0=A0=A0
+> > >
+> > > _______________________________________________
+> > > Axiom-mail mailing list
+> > > Axiom-mail@nongnu.org
+> > > http://lists.nongnu.org/mailman/listinfo/axiom-mail
+> > >
+> > >=A0=A0=A0
+> >=20
+>=20
+>=20
+>=20
+> =0A=0A=0A      
+
+
+From MAILER-DAEMON Tue Jun 08 05:19:44 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1OLuyF-0002Mk-AN
+	for mharc-axiom-mail@gnu.org; Tue, 08 Jun 2010 05:19:43 -0400
+Received: from [140.186.70.92] (port=51689 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1OLuy8-0002Gk-Lu
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2010 05:19:41 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <f.stumbo@unife.it>) id 1OLuy7-0002ZG-HU
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2010 05:19:36 -0400
+Received: from carne.unife.it ([192.167.219.26]:50249)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <f.stumbo@unife.it>) id 1OLuy6-0002Wd-VY
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2010 05:19:35 -0400
+Received: from carne.unife.it (localhost.localdomain [127.0.0.1])
+	by localhost (Email Security Appliance) with SMTP id
+	D4D491A7F906_C0E0B1AB
+	for <axiom-mail@nongnu.org>; Tue,  8 Jun 2010 09:19:22 +0000 (GMT)
+Received: from dns.unife.it (dns.unife.it [192.167.219.2])
+	by carne.unife.it (Sophos Email Appliance) with ESMTP id
+	C839B1A75A62_C0E0B1AF
+	for <axiom-mail@nongnu.org>; Tue,  8 Jun 2010 09:19:22 +0000 (GMT)
+Received: from em243.mate.man (em243.mate.man [10.80.2.121])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by dns.unife.it (Postfix) with ESMTP id EAA9472E0B
+	for <axiom-mail@nongnu.org>; Tue,  8 Jun 2010 11:19:21 +0200 (CEST)
+Date: Tue, 8 Jun 2010 11:19:16 +0200 (CEST)
+From: "Fabio S." <f.stumbo@unife.it>
+X-X-Sender: stumbo@localhost.localdomain
+To: axiom-mail@nongnu.org
+Message-ID: <alpine.DEB.2.00.1006081040410.3867@localhost.localdomain>
+User-Agent: Alpine 2.00 (DEB 1167 2008-08-23)
+Organization: =?ISO-8859-15?Q?Universit=E0_di_Ferrara?=
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; format=flowed; charset=US-ASCII
+X-detected-operating-system: by eggs.gnu.org: FreeBSD 6.x (1)
+Subject: [Axiom-mail] Keyboard problem
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: axiom-mail@nongnu.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 08 Jun 2010 09:19:41 -0000
+
+
+I am experiencing a problem with the keyboard which is rather annoying.
+
+If I call back a command from history using the up arrow and then I modify 
+it (moving the cursor with the arrow keys, deleting with backspace and 
+writing new test) the result is completely messed up.
+This happens in a terminal window but not on the console shell, so I guess 
+it depends on some settings, but I can't figure out which.
+
+I am working on ubuntu (64 bit) 10.04, with gnome terminal (but the same 
+happens also in xterm) with axiom version from the repository, that is
+
+                        Version: Axiom (November 2009)
+                Timestamp: Thursday April 8, 2010 at 18:12:43
+
+
+
+An esample of my problem is as follows: type
+
+-----------------
+(1) -> [[1,2]]
+(1) ->
+    (1)  [[1,2]]
+-----------------
+
+Now, assume I want to change the "1" into a "3". I go back with the left 
+arrows then I delete it with "Backspace" (BTW: "delete" doesn't 
+work at all in the term: it gives "^[[3~", while it works in the shell)
+
+What I get is the following:
+
+-----------------
+(2) -> [[3,]]]
+   Line   1: [[3,]]]
+            ....A
+   Error  A: syntax error at top level
+   Error  A: Improper syntax.
+    2 error(s) parsing
+-----------------
+
+Please observe that the "2" disappears as soon as I delete the "1" (and, 
+in the same moment, the extra "]" appears).
+
+Another small question: is the Kronecker product between matrices 
+implemented somewhere?
+
+Thanks a lot
+
+Fabio
+
+
+From MAILER-DAEMON Fri Jun 11 10:08:41 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1ON4uX-0002iF-Ms
+	for mharc-axiom-mail@gnu.org; Fri, 11 Jun 2010 10:08:41 -0400
+Received: from [140.186.70.92] (port=40049 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1ON4uV-0002hc-5u
+	for axiom-mail@nongnu.org; Fri, 11 Jun 2010 10:08:40 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <Renaud.Rioboo@ensiie.fr>) id 1ON4uS-0001tQ-4e
+	for axiom-mail@nongnu.org; Fri, 11 Jun 2010 10:08:37 -0400
+Received: from smtp2.ensiie.fr ([193.54.195.27]:31370)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <Renaud.Rioboo@ensiie.fr>)
+	id 1ON4uR-0001ow-HM; Fri, 11 Jun 2010 10:08:36 -0400
+Received: from popens.ensiie.fr (rioboo@lunix.ensiie.fr [193.54.195.202])
+	by smtp2.ensiie.fr (8.12.11/8.12.11) with ESMTP id o5BDMIhL000866;
+	Fri, 11 Jun 2010 15:22:18 +0200 (CEST)
+To: axiom-mail@nongnu.org, axiom-math@nongnu.org
+Organization: ENSIIE http://www.ensiie.fr/~rioboo/
+From: Renaud.Rioboo@ensiie.fr
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <m3wru59037.fsf@popens.ensiie.fr>
+Date: Fri, 11 Jun 2010 15:21:16 +0200
+X-detected-operating-system: by eggs.gnu.org: OpenBSD 3.0-3.9
+Cc: 
+Subject: [Axiom-mail] CICM 2010 Call for participation
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 11 Jun 2010 14:08:40 -0000
+
+CICM 2010 Call for participation
+
+                   Please apolgy for multiple copies
+
+We are pleased to announce CICM 2010 which will take place at
+Conservatoire National des Arts et M=C3=A9tiers in Paris, France from July 5
+to July 10, 2010.  This continues the CICM series begun with the
+successful CICM 2008 in in Birmingham, England and CICM 2009 in Grand
+Bend, Ontario, Canada.
+
+Please visit
+
+                   http://cicm2010.cnam.fr/
+
+Conferences on Intelligent Computer Mathematics gather several
+conferences:
+
+- 10th International Conference onArticficial Intelligence and Symbolic
+  Computation (AISC 2010)=20
+- 17th Symposium on the Integration of Symbolic
+  Computation and Mechanised Reasoning (Calculemus 2010)=20
+- 9th International Conference on Mathematical Knowledge Management=20
+  (MKM 2010)
+
+Associated Workshops are:
+
+- 3rd Workshop on Compact Computer Algebra (CCA 2010)
+- 3rd Workshop, Towards a Digital Mathematics Library (DML 2010)
+- 4th Workshop on Programming Languages for Mechanized Mathematics (PLMMS 2=
+010)
+- 23rd Workshop on OpenMath (OpenMath)
+- Mathematically Intelligent Proof Search (MIPS 2010)
+- 6th Workshop on Mathematical User-Interfaces (MathUI 2010)
+- Content Math Training Camp with Doctoral Programme (CMTC+DP)=20
+
+Further events include:
+
+- A ScienCe Eu project meeting
+- The EuDML European project kickoff meeting
+- A program for doctoral students
+- A special training camp on Content Markup for Mathematics
+- A day program in honour of Therese Hardin
+
+Social Events
+
+- Conference reception with Wine & Cheese buffet at the "Cafe des
+  Techniques" at the CNAM Museum.
+- Conference Banquet at restaurant le Grand Bleu, Port de l'Arsenal.
+
+The full list of events is at
+
+                 http://cicm2010.cnam.fr/programme.html
+
+Looking forward to see you in Paris.
+
+Laurence Rideau, Renaud Rioboo
+
+
+
+From MAILER-DAEMON Sat Jun 12 07:31:29 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1ONOvx-0002HE-7T
+	for mharc-axiom-mail@gnu.org; Sat, 12 Jun 2010 07:31:29 -0400
+Received: from [140.186.70.92] (port=35807 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1ONOvu-0002G2-S8
+	for axiom-mail@nongnu.org; Sat, 12 Jun 2010 07:31:28 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.69)
+	(envelope-from <david.delahaye@cnam.fr>) id 1ONOvt-0001kR-NC
+	for axiom-mail@nongnu.org; Sat, 12 Jun 2010 07:31:26 -0400
+Received: from incoming2.cnam.fr ([163.173.128.34]:64173)
+	by eggs.gnu.org with esmtp (Exim 4.69)
+	(envelope-from <david.delahaye@cnam.fr>)
+	id 1ONOvt-0001k4-DD; Sat, 12 Jun 2010 07:31:25 -0400
+From: david.delahaye@cnam.fr
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: ApsEAMYJE0yjrYAN/2dsb2JhbACfdL4Ugl6COgQ
+X-IronPort-AV: E=Sophos;i="4.53,408,1272837600"; d="scan'208";a="15580228"
+Received: from urien.cnam.fr (HELO webmail.cnam.fr) ([163.173.128.13])
+	by outgoing2.cnam.fr with ESMTP; 12 Jun 2010 13:31:21 +0200
+Received: from 87.231.49.143 (SquirrelMail authenticated user delahayd)
+	by webmail.cnam.fr with HTTP; Sat, 12 Jun 2010 13:31:21 +0200 (CEST)
+Message-ID: <59605.87.231.49.143.1276342281.squirrel@webmail.cnam.fr>
+Date: Sat, 12 Jun 2010 13:31:21 +0200 (CEST)
+To: axiom-mail@nongnu.org,
+ axiom-math@nongnu.org
+User-Agent: SquirrelMail/1.4.13
+MIME-Version: 1.0
+Content-Type: text/plain;charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-Priority: 3 (Normal)
+Importance: Normal
+X-detected-operating-system: by eggs.gnu.org: Genre and OS details not
+	recognized.
+Cc: 
+Subject: [Axiom-mail] Calculemus 2010: Call for Participation
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 12 Jun 2010 11:31:28 -0000
+
+[Apologies for cross-postings.]
+
+------------------------------------------
+ CALCULEMUS 2010 - Call for Participation
+------------------------------------------
+
+17th Symposium on the Integration of
+Symbolic Computation and Mechanised Reasoning
+
+CNAM, Paris, France, July 6-7, 2010
+
+http://cicm2010.cnam.fr/calculemus/
+
+*******************************************
+    >>>> Registration is now open! <<<<
+          (via CICM registration)
+
+ http://cicm2010.cnam.fr/registration.html
+
+ Registration deadline: July 4, 2010
+*******************************************
+
+Calculemus is a series of conferences dedicated to the integration of computer
+algebra systems (CAS) and systems for mechanised reasoning, the interactive
+theorem provers or proof assistants (PA) and the automated theorem provers
+(ATP).
+
+Currently, symbolic computation is divided into several (more or less)
+independent branches: traditional ones (e.g., computer algebra and mechanised
+reasoning) as well as newly emerging ones (on user interfaces, knowledge
+management, theory exploration, etc.) The main concern of the Calculemus
+community is to bring these developments together in order to facilitate the
+theory, design, and implementation of integrated systems for computer
+mathematics that will routinely be used by mathematicians, computer scientists
+and engineers in their every day business.
+
+Calculemus 2010 will be held jointly with AISC 2010 and MKM 2010 (confederated
+in the Conferences on Intelligent Computer Mathematics, CICM 2010) in Paris
+(France).
+
+Topics of Interest
+==================
+
+The scope of Calculemus covers all aspects of the interplay of mechanised
+reasoning and computer algebra, including cross-fertilisation between those two
+research areas, as well as the development of integrated systems that transcend
+both computer algebra and theorem proving. Potential topics of interest
+include:
+
+  * Theorem proving in computer algebra (CAS)
+  * Computer algebra in theorem proving (PA and ATP)
+  * Case studies and applications that both involve computer algebra and
+    mechanised reasoning
+  * Representation of mathematics in computer algebra
+  * Adding computational capabilities to PA and ATP
+  * Formal methods requiring mixed computing and proving
+  * Combining methods of symbolic computation and formal deduction
+  * Mathematical computation in PA and ATP
+  * Theory, design and implementation of interdisciplinary systems for computer
+    mathematics
+  * Infrastructure for mathematical services
+  * Theory exploration techniques
+
+Accepted Papers
+===============
+
+This year, 7 full papers have been accepted for presentation at the conference.
+These papers are the following:
+
+  * Formal Proof of SCHUR Conjugate Function
+    Franck Butelle, Florent Hivert, Micaela Mayero and Frédéric Toumazet
+
+  * Symbolic Domain Decomposition
+    Jacques Carette, Alan Sexton, Volker Sorge and Stephen Watt
+
+  * A Formal Quantifier Elimination for Algebraically Closed Fields
+    Cyril Cohen and Assia Mahboubi
+
+  * Computing in Coq with Infinite Algebraic Data Structures
+    Cesar Dominguez and Julio Rubio
+
+  * Formally Verified Conditions for Regularity of Interval Matrices
+    Ioana Pasca
+
+  * Reducing Expression Size using Rule-Based Integration
+    Albert Rich and David Jeffrey
+
+  * A Unified Formal Description of Arithmetic and Set Theoretical Data Types
+    Paul Tarau
+
+In addition, there will be short presentations for extended abstracts on
+emerging trends, and possibly, sessions dedicated to demos.
+
+Invited Speakers
+================
+
+Andrea Asperti    (University of Bologna, Italy)
+Jacques Carette   (McMaster University, Canada)
+
+Proceedings
+===========
+
+The proceedings of full papers of the conference will be published as a volume
+in the series Lecture Notes in Artificial Intelligence (LNAI) by
+Springer-Verlag. In addition to the formal proceedings published by Springer,
+we will provide links to online versions of the published papers from the
+conference website.
+
+Extended abstracts on emerging trends will be published as a technical report
+of CEDRIC (CNAM/ENSIIE) and will be electronically available. These papers are
+expected to be describing work in progress.
+
+Important Dates
+===============
+
+The registration deadline is July 4, 2010.
+The Calculemus conference is on July 6-7, 2010.
+
+Programme Committee
+===================
+
+Markus Aderhold         (TU Darmstadt, Germany)
+Arjeh Cohen             (Eindhoven University of Technology, The Netherlands)
+Thierry Coquand         (Chalmers University of Technology, Sweden)
+James H. Davenport      (University of Bath, UK)
+David Delahaye          (CNAM, France), Chair
+Lucas Dixon             (University of Edinburgh, UK)
+William M. Farmer       (McMaster University, Canada)
+Temur Kutsia            (RISC, Austria)
+Assia Mahboubi          (INRIA Saclay, France)
+Renaud Rioboo           (ENSIIE, France), Chair
+Julio Rubio             (Universidad de La Rioja, Spain)
+Volker Sorge            (University of Birmingham, UK)
+Stephen M. Watt         (University of Western Ontario, Canada)
+Freek Wiedijk           (Radboud University Nijmegen, The Netherlands)
+Wolfgang Windsteiger    (RISC, Austria)
+
+
+
+

@@ -1,0 +1,3668 @@
+From bill.page1@sympatico.ca Fri Nov 01 01:18:48 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 187V8p-0005OG-00
+	for axiom-mail@nongnu.org; Fri, 01 Nov 2002 01:18:47 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 187V8n-0005O2-00
+	for axiom-mail@nongnu.org; Fri, 01 Nov 2002 01:18:47 -0500
+Received: from tomts6.bellnexxia.net ([209.226.175.26] helo=tomts6-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 187V8m-0005Nq-00
+	for axiom-mail@nongnu.org; Fri, 01 Nov 2002 01:18:44 -0500
+Received: from [209.226.175.20] by tomts6-srv.bellnexxia.net
+          (InterMail vM.5.01.04.19 201-253-122-122-119-20020516) with SMTP
+          id <20021101061841.UBMW26144.tomts6-srv.bellnexxia.net@[209.226.175.20]>;
+          Fri, 1 Nov 2002 01:18:41 -0500
+From: Bill Page <bill.page1@sympatico.ca>
+Organization: Daneliuk & Page
+To: <daly@idsi.net>
+CC: <axiom-mail@nongnu.org>
+Subject: Re: [Axiom-mail] Status
+Date: Fri, 1 Nov 2002 1:18:40 -0500
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Message-Id: <20021101061841.UBMW26144.tomts6-srv.bellnexxia.net@[209.226.175.20]>
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Tim,
+
+On 2002/10/31 Thu PM 11:23:33 EST you wrote:
+> 
+> Actually, I have no estimate. The key to the game is to
+> get the lisp running as this is the only part of the
+> system that is new to me.  Axiom used to be hosted on
+> AKCL, now GCL, and Camm and I have discussed rehosting
+> it there. I expect it to run on both as they each have
+> advantages. In any case, though, the game is to get it
+> to run anywhere and I'm working on that at the moment.
+> There really isn't any point to posting the sources as
+> the build process is very complex and not documented (as
+> yet. it will be). I've built the first version of the
+> lisp and now am working on building the "image" file.
+> Unfortunately there isn't any obvious way to share this
+> task.
+
+What is Camm? You mentions Codemist Lisp earlier. If I
+remember installing REDUCE correctly, after the initial
+installation there was a step involving creating
+(compiling?) an image file that is loaded when Lisp starts
+up. Is that what you are creating for AXIOM?
+
+What operating system are you using? What platform should
+I set up for this work? Linux? Any particular flavor?
+(I'm a RedHat kind of Linux person.)
+
+> 
+> The new system build uses noweb (search for noweb Ramsey
+> in google) which is a tool to support literate
+> programming. If Axiom has any chance to survive it has
+> got to be documented so anyone who is willing to put out
+> the effort can learn how to build, modify and maintain
+> it. I suggest you look at noweb and I can send you an
+> example file or two to bring you up to speed on how I'm
+> using it.
+
+Ok, I'll do that. I agree about the need for documentation
+and a structured approach. Literate programming to me means
+writing code in manner intended specifically to make it
+easy to read. I am not so sure that is so easy or even
+possible in older languages like Lisp <grin> but I am
+willing to give it a try. 
+
+> 
+> Once the lisp build works locally I can upload the lisp
+> portion of the system, you can try to build it, and we
+> can work on correcting the problems with the build.
+> 
+
+Ok.
+
+> What is your background? Programmer? Mathematician?
+> What area of Axiom strikes your interest?
+> 
+
+Programmer, physicist, mathematician in order of decreasing
+expertise. See previous email.
+
+What is of most interest to me in Axiom is the programming
+language. But I want it embedded in a user interface that
+is somewhat more powerful than emacs. I am quite strongly
+motivated to develop code for symbolic manipulation of
+tensors (as in general relativity and differential
+geometry). I am also interested in applied (physics)
+mathematical research in Clifford algebra and in category
+theory.
+
+Regards,
+Bill Page.
+
+
+
+
+From bill.page1@sympatico.ca Fri Nov 01 09:43:32 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 187d1I-000252-00
+	for axiom-mail@nongnu.org; Fri, 01 Nov 2002 09:43:32 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 187d1F-00023y-00
+	for axiom-mail@nongnu.org; Fri, 01 Nov 2002 09:43:31 -0500
+Received: from tomts24-srv.bellnexxia.net ([209.226.175.187])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 187d1E-00023o-00
+	for axiom-mail@nongnu.org; Fri, 01 Nov 2002 09:43:28 -0500
+Received: from [209.226.175.18] by tomts24-srv.bellnexxia.net
+          (InterMail vM.5.01.04.19 201-253-122-122-119-20020516) with SMTP
+          id <20021101144327.IEOH6868.tomts24-srv.bellnexxia.net@[209.226.175.18]>;
+          Fri, 1 Nov 2002 09:43:27 -0500
+From: Bill Page <bill.page1@sympatico.ca>
+Organization: Daneliuk & Page
+To: <daly@idsi.net>,
+CC: <axiom-mail@nongnu.org>
+Subject: Re: Re: [Axiom-mail] Status
+Date: Fri, 1 Nov 2002 9:43:27 -0500
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Message-Id: <20021101144327.IEOH6868.tomts24-srv.bellnexxia.net@[209.226.175.18]>
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Tim,
+
+On 2002/10/31 Thu PM 11:23:33 EST you wrote:
+> ... 
+> The new system build uses noweb (search for noweb Ramsey
+> in google) which is a tool to support literate
+> programming. If Axiom has any chance to survive it has
+> got to be documented so anyone who is willing to put out
+> the effort can learn how to build, modify and maintain
+> it. I suggest you look at noweb and I can send you an
+> example file or two to bring you up to speed on how
+> I'm using it.
+> 
+
+Ok. I've read Ramsey's article and I now understand that
+noweb is a stripdown version of Knuth's WEB. No problem.
+A little "old fashioned" but that's ok.
+
+I suppose almost everyone has their own "literate
+programming" philosophy. For me it usually just involves
+writing code in a style and format (within the constraints
+of a particular language) that is intended to be read and
+understood by others as well as compiled. When the language
+is sufficiently rich, I also prefer to move as much of the
+documentation as possible into the compilable code itself
+rather than depending on a parallel textual description to
+be accurate - too often the comments are right but the code
+is still wrong. Of course you can't do that very well if
+the code already exists or if the language is too arcane
+to be easily read by a human. So WEB (noweb) is ok.
+
+Are you using LaTex or some other output format?
+
+Ramsey (and WEB in general) does not emphasize the use of
+diagrammatic techniques, but I am rather much oriented that
+way. Did you have any particular graphical documentation
+tools in mind?
+
+I am setting up the MSDOS/Windows/Perl version of noweb
+in order to play. Feel free to send a few sample files
+when you get a chance.
+
+Bill Page.
+
+
+
+
+From daly@idsi.net Fri Nov 01 13:27:54 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 187gWQ-0006JU-00
+	for axiom-mail@nongnu.org; Fri, 01 Nov 2002 13:27:54 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 187gWO-0006Iz-00
+	for axiom-mail@nongnu.org; Fri, 01 Nov 2002 13:27:53 -0500
+Received: from falcon.mail.pas.earthlink.net ([207.217.120.74])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 187gH0-0002VZ-00
+	for axiom-mail@nongnu.org; Fri, 01 Nov 2002 13:11:58 -0500
+Received: from dialup-63.208.87.56.dial1.stamford1.level3.net ([63.208.87.56] helo=localhost.localdomain)
+	by falcon.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 187gGp-0004Ds-00; Fri, 01 Nov 2002 10:11:48 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gA1HpI508303;
+	Fri, 1 Nov 2002 12:51:18 -0500
+Date: Fri, 1 Nov 2002 12:51:18 -0500
+Message-Id: <200211011751.gA1HpI508303@localhost.localdomain>
+From: root <daly@idsi.net>
+To: sims@math.rutgers.edu, axiom-mail@nongnu.org
+Cc: daly@idsi.net
+Reply-to: daly@idsi.net
+Subject: [Axiom-mail] [axiom] Finitely Presented Groups and Axiom
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Dr Sims,
+
+I've recently purchased your book "Computation with Finitely
+Presented Groups".
+
+My particular interest in the book is related to Axiom. Axiom
+is a computer algebra system that was developed at IBM, sold
+to the Numerical Algorithms Group (NAG), and released as 
+free source code in September. I'm leading an effort to bring
+the Axiom system back to life as free code. You can find it at:
+http://savannah.nongnu.org/projects/axiom if you are interested.
+
+Axiom is weak in group theory and really has nothing related to
+infinite group theory. I've looked at the algorithms in your book
+briefly with the hope of building up strength in infinite group
+theory.
+
+The key item for me is the question of the representation of these
+groups and the representation of a presentation. The examples in the
+book use a matrix but the groups are really infinite objects. It is
+unclear what a good computational representation would be for them.
+Do you have any guidance you can provide?  I've done work with the
+Magnus group (Baumslag) but that code is all C++ and the group
+representations are not easily expressed.
+
+I'd like to develop a small set of representations in Axiom that
+will work across your set of algorithms. 
+
+Tim Daly
+daly@idsi.net
+
+
+
+From daly@idsi.net Fri Nov 01 22:18:38 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 187oo2-0005kp-00
+	for axiom-mail@nongnu.org; Fri, 01 Nov 2002 22:18:38 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 187ony-0005i3-00
+	for axiom-mail@nongnu.org; Fri, 01 Nov 2002 22:18:36 -0500
+Received: from snipe.mail.pas.earthlink.net ([207.217.120.62])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 187onx-0005hA-00; Fri, 01 Nov 2002 22:18:33 -0500
+Received: from dialup-63.208.87.56.dial1.stamford1.level3.net ([63.208.87.56] helo=localhost.localdomain)
+	by snipe.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 187ono-00043f-00; Fri, 01 Nov 2002 19:18:24 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gA22vnU08915;
+	Fri, 1 Nov 2002 21:57:49 -0500
+Date: Fri, 1 Nov 2002 21:57:49 -0500
+Message-Id: <200211020257.gA22vnU08915@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Bill Page <bill.page1@sympatico.ca>, Robert Morelli <morelli@cs.utah.edu>,
+   Philippe Toffin <toffin@math.unicaen.fr>, axiom-developer@nongnu.org
+CC: daly@idsi.net, axiom-mail@nongnu.org
+In-reply-to: 
+	<20021101144327.IEOH6868.tomts24-srv.bellnexxia.net@[209.226.175.18]>
+	(message from Bill Page on Fri, 1 Nov 2002 9:43:27 -0500)
+Subject: Re: [Axiom-mail] Status
+Reply-to: daly@idsi.net
+References: <20021101144327.IEOH6868.tomts24-srv.bellnexxia.net@[209.226.175.18]>
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+All,
+
+Be sure you've subscribed to the axiom-developer mailing list as I'll only
+be copying the list from now on so we can journal the discussions. I urge
+you to actually try these instructions because it will make sure that we
+share the same ability to create, use and view pamphlets. If these
+instructions don't work for you let me know because we need to make
+sure you've got a proper environment set up.
+
+I've uploaded 3 examples of literate programming to illustrate styles.
+
+An Algebra Example:
+
+The first is called dhmatrix.pamphlet. The instructions for use are:
+
+1)  wget http://home.earthlink.net/~jgg964/dhmatrix.pamphlet
+2)  notangle dhmatrix.pamphlet >dhmatrix.spad
+3)  noweave dhmatrix.pamphlet >dhmatrix.tex
+4)  latex dhmatrix.tex
+5)  latex dhmatrix.tex
+6)  xdvi dhmatrix.dvi
+
+step (1) will fetch the file. (wget is a useful utility for fetching
+   files given by a url. how you actually get the file is up to you)
+step (2) will read the pamphlet file and create a spad file.
+   spad is the algebra language of Axiom. This file is extracted from
+   the pamphlet file and when diff'ed against the original source
+   shows no difference (an important point since we don't want to
+   introduce errors by wrapping the original source files into a
+   literate style).
+step (3) will extract the tex output from the pamphlet file. notice
+   that the dhmatrix.tex file has commands like \documentclass 
+   prepended automatically by noweb. This is, in general, not what
+   we want so normally we will use the -delay parameter to noweave.
+   However for this particular example I am experimenting with the
+   ability to collect many pamphlets into a booklet and I deliberately
+   left off the \documentclass, etc. The default behavior of noweb
+   works in this case.
+step (4) and (5) read the dhmatrix.tex file and create dhmatrix.dvi
+   We need to latex it twice to get the cross-references right. I
+   don't believe there are any cross-references in this file yet but
+   I do this by habit.
+step (6) will let us view the dhmatrix.dvi file. You could also use
+   other utilities like dvips to create a postscript file or dvipdf
+   to create a pdf file. I tend to work directly from the dvi file.
+
+The dhmatrix.pamphlet file is an example of documenting the algebra
+code. The original dhmatrix.spad file (which I wrote) was taken from
+Richard Paul's Ph.D. thesis which became a book (Robot Manipulators).
+Richard gave me permission to quote from his thesis for documenting
+the domain. There is much more work to be done but this pamphlet was
+written as a first experiment.
+
+In general I hope to search out primary sources for the algebra
+that lives in Axiom and either get permission to directly quote
+the relevant paper or study the paper and write a new pamphlet.
+There is a large piece of work to track down the original works.
+
+The next piece of algebra documentation is to use Barry Trager's
+Ph.D. thesis to document the integration code. I have his thesis
+and permission to use it for documentation purposes. There is a
+long leap from the thesis to the code so I have a fair bit of
+background research I need to do before I can write up the 
+pamphlet. The original thesis is 85 pages.
+
+
+
+A MAKEFILE Example:
+
+The second file I've uploaded is actually from the sources we'll
+be using. It is a Makefile in the Codemist Common Lisp (CCL) subtree.
+The instructions are:
+
+1)  wget http://home.earthlink.net/~jgg964/Makefile.pamphlet
+2)  notangle -t8 Makefile.pamphlet >Makefile
+3)  noweave -delay Makefile.pamphlet >Makefile.tex
+4)  latex Makefile.tex
+5)  latex Makefile.tex
+6)  xdvi -expert -s 3 Makefile.dvi
+
+step (1) will fetch the file.
+step (2) will read the pamphlet file and create the Makefile. Notice
+   the -t8 (tabs every 8 spaces) parameter to notangle. In general we
+   will need this parameter and it doesn't hurt to have it if there are
+   no tabs so we will use it all the time.
+step (3) noweave will read the pamphlet file and create the tex output.
+   Notice the -delay option to noweave. We have included the \documentstyle
+   and other header information in the pamphlet file already. The -delay
+   option allows us to do this. Unless the file is going to be included
+   as part of a larger document (like the algebra file above) we will
+   generally write our own document headers.
+steps (4) and (5) are latex->dvi done twice to get reference right.
+   You are certain to get a complaint about a missing noweb.sty file
+   because this Makefile was ripped out of the real source tree.
+   For demo purposes you can modify the line in the original pamphlet
+   file from:
+\usepackage{/home/axiomgnu/new/mnt/linux/bin/tex/noweb}
+   to:
+\usepackage{noweb}
+   and rerun the command. I would ask you to resist the urge to 
+   change the tex file directly as you need to think of the pamphlet
+   file as the source and everything else as machine-generated files.
+step (6) invokes xdvi with -expert (which eliminates the buttons as
+   I know the keyboard commands) and -s 3 (which gives sufficient
+   magnification so I can read it).
+
+This makefile shows a documentation style for Makefiles in general.
+
+Makefiles are generally very verbose in their stanzas because we will
+not be doing compiles in the same directories as the source files nor
+will we be depending on default stanzas to do compiles. 
+
+We need to document the various stanzas and any special options that
+we might add to the compile commands. Look for the TPD string which
+I use to ifdef any changes I made to the original C sources. This
+shows up as a -DTPD on the compile line for that particular stanza.
+
+Also note that the end of the Makefile.tex contains references to
+other pamphlets. The reason for these to support a future plan. We'd
+like to be able to accept new code, particularly algebra code, that
+we can add to the system in a reasonably automated fashion. The 
+references will give us this connection. I expect to expand the
+format later. These are only placeholders.
+
+The other reason for the references is that the commands are not
+actually documented in the Makefile. The Makefile only documents
+build information and other special instructions. For instance,
+in another Makefile (not shown here) you need to build a special
+Axiom library before you build the C code. While the Makefiles
+know this it would be easy for a human to overlook. Instructions
+on how to use a particular command as well as documentation on
+the C code that implements the command do not belong in the Makefile
+but reside in the pamphlet file for the command itself.
+
+Makefiles will also contain information about what a particular
+directory contains and why it exists in the source tree.
+
+
+
+A Non-Axiom Example:
+
+This is an example using Java to show how to build a stand-alone
+command and its Makefile
+
+1)  wget http://home.earthlink.net/~jgg964/Magman.pamphlet
+2)  notangle -t8 Magman.pamphlet >Makefile
+3)  make
+
+This illustrates a couple of useful points. First, the default
+output of running notangle is the stanza marked <<*>>= in the
+original source file. In Magman.pamphlet this is the Makefile.
+If you read the dvi file that gets generated (or read the
+generated Makefile if you must (sigh)) you will see that we
+use the -R feature of notangle. The -R flag will extract particular
+tags from the pamphlet file. So, if this were C code we could embed
+the .h file, the .c file, and the associated Makefile into the pamphlet 
+and send them as one file.
+
+Another point is that this pamphlet file has real mathematics and
+real references in it. We will need this to explain sections of Axiom.
+In the long term plan we want people to submit papers to an Axiom 
+Journal that includes the mathematics and executable code. That way
+reviewers can test the code, readers can understand the code, the
+system can import the code and maintainers can update the code.
+
+This code is not related to Axiom but is here to illustrate the
+embedded Makefile and mathematics points. If you don't have Java 
+this will fail but that is not important. Note that we mix Java
+C and Makefile in the same pamphlet file.
+
+Tim
+
+
+
+
+
+
+
+
+
+From daly@idsi.net Fri Nov 08 15:10:55 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18AFSx-0006vf-00
+	for axiom-mail@nongnu.org; Fri, 08 Nov 2002 15:10:55 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18AFSu-0006v2-00
+	for axiom-mail@nongnu.org; Fri, 08 Nov 2002 15:10:54 -0500
+Received: from scaup.mail.pas.earthlink.net ([207.217.120.49])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18AFSt-0006tO-00
+	for axiom-mail@nongnu.org; Fri, 08 Nov 2002 15:10:51 -0500
+Received: from dialup-63.215.235.26.dial1.stamford1.level3.net ([63.215.235.26] helo=localhost.localdomain)
+	by scaup.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18AFSe-0003y4-00; Fri, 08 Nov 2002 12:10:36 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gA8JnvG27279;
+	Fri, 8 Nov 2002 14:49:57 -0500
+Date: Fri, 8 Nov 2002 14:49:57 -0500
+Message-Id: <200211081949.gA8JnvG27279@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Bertfried.Fauser@uni-konstanz.de
+CC: bill.page1@sympatico.ca, miked@nag.co.uk, daly@idsi.net,
+   axiom-mail@nongnu.org
+Reply-to: daly@idsi.net
+Subject: [Axiom-mail] Re: aldor
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Dear Prof Bertfried,
+
+Axiom was one of "the big three" (Maple and Mathematica were the other
+two) general purpose computer algebra systems.
+
+A small bit of history is needed here to clarify the discussion.
+Axiom started at IBM Research as "Scratchpad" in 1971. It has a
+language called "Spad". In the 1990s the compiler language was
+formalized and a new compiler implemented. One design decision was to
+make the new compiler, now called Aldor, a stand-alone program. The
+Spad compiler (written in Lisp) and the Aldor compiler (written in C)
+are compatible within certain limits dictated by their respective
+roles. Aldor code runs inside of the Axiom system.
+
+In the early 90s Axiom was boxed up and sold to the Numerical
+Algorithms Group (NAG), a respected scientific software house in
+England. They sold Axiom commercially and recently withdrew it from
+the market. They have released the source code under a BSD style
+license.
+
+The Texexplorer interface was a separate product by one of the
+IBM group members. It was added to the Axiom product from NAG.
+It is now sold as a product by IBM and was not released as part 
+of the Axiom source code per IBM's request. It only ran on the
+Windows version of the system as I understand it.
+
+I'm currently the lead person on the Axiom project whose primary
+goal is to document, maintain, upgrade and support Axiom for the
+next 30 years. (http://savannah.nongnu.org/projects/axiom). A
+list of tasks, both present and proposed, is available at:
+(http://www.nongnu.org/axiom).
+
+The good Professor Page has volunteered to help with this effort.
+Now, back to your comments:
+
+> Bertfried,
+> 
+> On Friday, November 08, 2002 1:03 PM you wrote:
+> > 
+> > Dear Prof Page!
+> > 
+> 
+> <grin> It is a very pleasant European honorific title, but
+> one to which I am not entitled since I am not currently
+> employed as a teacher...
+> 
+> > thank you once more for your mail about aldor/axiom. I 
+> > have downloaded the compiler and tested it for my purpose. 
+> 
+> I hope that you do not mind that I have copied this reply
+> to your message two other people with whom I am currently
+> associated in the development of a new open source version
+> of AXIOM. They in turn may be aware of some other people
+> that share some of your concerns and ambitions.
+> 
+> As you now know, Aldor is a high level compiler for the
+> language that is really a part of AXIOM. AXIOM used to
+> be available from NAG with a graphical front end called
+> Techexplorer (Techexplorer is now a separate product
+> available from IBM but without AXIOM). In this packaging
+> Axiom was a competitor to Maple, but for various reasons
+> (most of which I am not aware) NAG decided against
+> continuing the development.
+> 
+> The open source version of AXIOM is intended to preserve
+> and then continue the enhancement of AXIOM as a fullfledged
+> computer algebra system. The intial version of OpenAxiom
+> that will be available will have a basic character style
+> interface rather like command line Maple.
+
+There is work in progress in cooperation with TeXmacs to make a
+tex-like user interface. As TeXmacs works with many other computer
+algebra systems I don't anticipate any difficulty making it work
+with Axiom. I've sent them parts of the source code so they can
+optimize the connection.
+
+> 
+> At this point it is not entirely clear to me what the
+> long term relationship between Aldor and OpenAxiom will
+> be. Perhaps Mike or Tim could comment...
+
+Stephen Watt (www.aldor.org) was the compiler lead on the
+Scratchpad project. He is the most qualified to maintain
+and extend it. Stephen and I have both stated our goal of
+keeping both projects compatible. Aldor code in the system
+is in files with the .as suffix, Spad code with the .spad
+suffix. This should be transparent to you if you use the
+)compile command.
+
+> 
+> > However, I have several problems:
+> > 
+> > -- Indeed I like very much the categorial approach, but
+> > its implementation is beyond the ability to use it as a
+> > student teaching tool. (OK, but good for research)
+> >
+> 
+> My understanding is that it is the intention of some of
+> the people who are currently interested in Axiom to use
+> it as a teaching tool for abstract algebra.
+
+There are a large number of people in Europe who have ambitions
+to use Axiom as a teaching tool in various courses. The design
+of the system and the open source nature of the code will make
+it possible to reshape the system to their teaching needs.
+Contact Paul Zimmerman <Paul.Zimmermann@loria.fr> 
+for more information on the people interested in a teaching use.
+
+Axiom's great strength has been in research so it is no
+surprise that this is where people find it easiest to use.
+
+>  
+> > -- We use in Clifford/Bigebra at several very important
+> > steps the equation solver of maple. That's tremendously
+> > convenient! In aldor itself there is nothing comparable
+> > and in the Algebra library (which I am on the way to
+> > install) it looks from the documentation as if only very
+> > basic solving mechanisms are incorporated. This means
+> > that you have to implement your own solver and thats heavy
+> > work to do...
+> >
+> 
+> I think you are right, however most of the algorithms for
+> more general solution methods (Grobner bases etc.) are well
+> known and well documented. I expect that a lot of work will
+> be done in this area in a short time once AXIOM becomes
+> available.
+
+We are hoping that people will use Axiom to develop their
+algorithms and contribute the results back to the project.
+This has been true historically. 
+
+>  
+> > -- This situation was similar to the state of the art with 
+> > GINAC, which I had a look on some time ago.
+> > 
+> > -- I will see what kind of features are provided by
+> > MACSIMA, which went open source too. Colleagues who used
+> > MACSYMA reported that it was poor in graphics (no problem
+> > for me) but very good in performance.
+> > 
+> 
+> I think that you will find MACSYMA rather like Maple (that's
+> both good and bad) - much easier to convert what you have
+> already written in Maple, but it lacks the very high level
+> object orientation and rigorous type system that is a
+> trademark of Axiom. I think that a better, more expressive
+> and more "mathematically" or better said, "algebraically"
+> compatible language is critical to advanced research
+> applications such as yours. I am rather amazed that you
+> have accomplished as much as you have with Maple. Some
+> times it takes a lot of dedication and hard work to see
+> the mathematics in Maple code!
+
+MACSYMA no longer exists as the source code was bought and
+has never been heard from again. MAXIMA is a project (originally
+done by Bill Schelter) to port the original Department of Energy
+code to Common Lisp. (maxima.sourceforge.net)
+
+> 
+> > 	However, I have learned already now many things from 
+> > aldor/AXIOM and the overall sped of an compiled aldor
+> > program is amazing and makes me hungry about more :)
+> > Perhaps it would be a good idea to see a sort of maple
+> > compiler?
+> 
+> >From Maple 7 on there has been the capability to call
+> external programs (written in C or other high level
+> language) and to return results to Maple. Maple also
+> has the ability to convert Maple procedures to "C"
+> code which can then be compiled and called externally.
+> Unfortunately this feature is seriously limited in
+> the case of algebraically intense applications by the
+> limited nature of the native data structures available
+> in most other high level languages.
+> 
+> > I am curious about the maple aldor interface which is
+> > announced on the web-page.
+> > 
+> 
+> As far as I know this is only in the research stage. At
+> one time a few years ago there was also a project to link
+> Maple and Axiom and even very optimistic statements to
+> the effect that Axiom would likely be the successor to
+> Maple. The problems to solve involve the conversion
+> of data structures between these two systems. But it
+> should be possible in principle to call an Aldor routine
+> from Maple.
+
+Aldor, in stand-alone mode, can call foreign programs. There is an
+effort underway to make Axiom's algebra available in this stand-alone
+form. (Contact www.aldor.org for further information). Of course,
+given that Lisp exists I can't imagine why anyone would write in
+C. All the device drivers I need already exist :-)
+
+> 
+> Kind Regards,
+> Bill Page.
+
+Ultimately, the difference between the Maple, Mathematica, and MAXIMA
+computer algebra systems and the Axiom system lies in the design.
+Maple, Mathematica, and MAXIMA are all "engineering" systems. They do
+whatever it takes to make the answer work. (Thus subtracting two equal
+matrices will give an "integer" 0 result). Axiom is a theory-based
+system. (Thus subtracting two matrices will give a zero matrix). I
+believe that for correctness and scalability you need to have a
+guiding theory. These systems are much too complex to check the
+details so you have to trust the results. Without theory there is no
+guidance about correctness. There has been much talk recently, by the
+way, about proving Axiom's algorithms correct.  Let me know if you are
+interested in such work and I can put you in touch with the people.
+
+As for teaching purposes Axiom has a much higher learning curve
+than the other systems. There is also an effort underway to try
+to match Axiom with a "zero-learning curve" front end which should
+make it much easier to use for students. Again, let me know if you are
+interested in such work and I can put you in touch with the people.
+
+Feel free to send me any questions you have. You might want to
+visit the Axiom home page and sign up for the Axiom mailing list
+(In spite of the shameless plug).
+
+Tim Daly
+daly@idsi.net
+
+
+
+
+From fauser@spock.physik.uni-konstanz.de Fri Nov 08 18:46:57 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18AIq1-00067S-00
+	for axiom-mail@nongnu.org; Fri, 08 Nov 2002 18:46:57 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18AIpw-00065w-00
+	for axiom-mail@nongnu.org; Fri, 08 Nov 2002 18:46:53 -0500
+Received: from spock.physik.uni-konstanz.de ([134.34.143.6])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18AIpv-00065k-00
+	for axiom-mail@nongnu.org; Fri, 08 Nov 2002 18:46:51 -0500
+Received: from clifford.physik.uni-konstanz.de (clifford [134.34.143.32])
+	by spock.physik.uni-konstanz.de (8.8.5/8.8.5) with ESMTP id AAA06148;
+	Sat, 9 Nov 2002 00:33:43 +0100 (MET)
+Received: from clifford.physik.uni-konstanz.de (localhost [127.0.0.1])
+	by clifford.physik.uni-konstanz.de (8.12.3/8.12.3/SuSE Linux 0.6) with ESMTP id gA8Nerwc012805;
+	Sat, 9 Nov 2002 00:40:53 +0100
+Received: from localhost (fauser@localhost)
+	by clifford.physik.uni-konstanz.de (8.12.3/8.12.3/Submit) with ESMTP id gA8NenPE012802;
+	Sat, 9 Nov 2002 00:40:52 +0100
+Date: Sat, 9 Nov 2002 00:40:49 +0100 (CET)
+From: Bertfried Fauser <fauser@spock.physik.uni-konstanz.de>
+Reply-To: Bertfried.Fauser@uni-konstanz.de
+To: root <daly@idsi.net>
+cc: Bertfried.Fauser@uni-konstanz.de, <bill.page1@sympatico.ca>,
+        <miked@nag.co.uk>, <axiom-mail@nongnu.org>
+In-Reply-To: <200211081949.gA8JnvG27279@localhost.localdomain>
+Message-ID: <Pine.LNX.4.44.0211082356370.12493-100000@clifford.physik.uni-konstanz.de>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Subject: [Axiom-mail] Re: aldor
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Dear Tim!
+
+	thank you for the offer to ask questions. But let me beforehand
+explain what my background is.
+
+	By the way you should drop 'Professor', which is untrue (hopefully
+not for ever). I am working in quantum field theory and need urgently
+abstract algebra, however I am not canonically trained in this field. The
+last three years showed me that I need urgently things like categories,
+functors, but also Groebner bases for non-commutative algebras (that's not
+yet solved on my side).
+	My interest in computer algebra started when I used the Clifford
+package of Rafal Ablamowicz (TN Tech Univ. Cookevile) for my work in 1996.
+First I asked for procedures, then I was beta tester, then I wrote an own
+package on Clifford Hopf algebras and since last September I am coauthor
+of the Clifford/Bigebra package. This was done in maple, since Rafal had
+by chance a maple around when he started his first hack.
+	The package is awkward, since it grew up from a quick and dirty
+hack and we had to do much nasty tricks to speed it up and make it usable
+for a general purpose. However, you might acknowledge that this was also
+due my very basic programming skills.
+
+	For me, research has priority and I would not spend at the current
+time to much efforts in using CAS systems in teaching, since in a physics
+department (I am member of an astrophysics group, hahaha ..) I cannot say
+the word category loudly (even if some guests which I invited did so).
+Things are different with Rafal, he uses the software for teaching
+mathematics and engineering students. Some of our algorithms are very fast
+an my be useful in projective geometry and then in Robotics, such people
+do not have any idea about categories (nor on Hopf algebras, but one can
+just explaing the algorithm without saying 'Hopf' :).
+
+	Indeed I was pressed several time by maple to do quite nasty
+things to keep the type of objects, e.g. to write &t(0) for zero just to
+be able to typecheck it being a tensor! Such things would not happen with
+AXIOM ! My experience with multiliner algebra, Hopf algebras and quantum
+groups is that a serious type system is 75% of the thing to do, so one
+more point for Aldor/AXIOM.
+
+	On the other hand, I spend several weeks and looked at the
+Internet and asked lots of people at the ACA 2002 in Volos, Greece about
+Groebner basis methods for non-commutative algebras (I would also be
+interested in the theory of generating functions in non-commutative
+variables which is related) but I was not able yet to implement an
+algorithm in maple (and that's not maples fault :).
+
+	I could imagine to look closer to Aldor, I have not yet any hint
+how to get AXIOM or to use it, but I think together with the Algebra
+library Aldor/Algebra = AXIOM, isn't it? For research projects I do not
+need any graphical interface.
+
+	I will sign up the mailing list you told me. Bill Page has send me
+the Aldor, AXIOM etc web pages which I have visited. (There I got
+Aldor/Algebra). However, since my main activity is in research, I cannot
+guarantee that I even have enough time to do some reasonable things there.
+As you have confessed the learning curve is really high!
+
+	I am trying to do a base free package for Grassmann and Clifford
+Hopf algebras now for several times, but it seems as if the mathematics is
+not yet fully understood. That is a further problem with such a high
+level approach as is issued by AXIOM: You need from the very beginning a
+very precise and theoretical idea about the objects (better morphisms) you
+want to deal with.
+
+	Rafal is a person for a quick and dirty hack. He wrote several
+procedures which I would not have succeeded to write because he went back
+to some maple internal abilities which I didn't want to use since it shows
+that one has not understand the case at hand. However it worked pretty
+fine! I am not sure if I really will be able to convince him to use
+something like AXIOM or Aldor (I was not even able to convince him to use
+text based code in maple, but he prefers these awkward worksheets which
+cannot be transfered from one maple version to the other).  However, I
+know that in Rafal's bookshelf is a volume on AXIOM which he got some time
+ago when he went with Prof. Lounesto (who died this year unfortunately)
+to some conference on computer algebra. I was already then fascinated by
+the clear theoretical concept of this system.
+
+	Compared to GINAC, Aldor has a concept. GINAC is just a collection
+of C++ library routines which can be used in any C++ program. However I
+miss there a theoretical background, the user has to think there to much
+on his own, this was the reason for me not to join that thread.
+
+	I spend quite a bit of time on the maple external c interface.
+However, as every time with WMI, it was badly documented and the wrappers
+generated by maple took all efficiecy away by data translation into
+external C compliant code. Maple does not want you to get access to
+internal data strcuturs but that would be necessary fro algebraically
+operating functions. Hence I was not able to go beyond some numerical
+examples.
+
+	All in all, I cannot promise you to develop anything, but I will
+certainly keep track of the further development of Aldor (Where to get
+AXIOM?) I will also try to do some private experiments, and let's see what
+happens...
+
+Thank you for you kind mail, and hope to stay loosely in contact.
+best
+BF.
+
+% Bertfried Fauser          Fachbereich Physik    Fach M 678
+% Universit"at Konstanz     78457 Konstanz        Germany
+% Phone : +49 7531 883786   FAX : +49 7531 88-4864 or 4266
+% E-mail: Bertfried.Fauser@uni-konstanz.de
+% Web   : http://clifford.physik.uni-konstanz.de/~fauser
+
+
+
+
+From daly@idsi.net Mon Nov 11 22:19:44 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18BRaZ-0001yE-00
+	for axiom-mail@nongnu.org; Mon, 11 Nov 2002 22:19:43 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18BRaX-0001y1-00
+	for axiom-mail@nongnu.org; Mon, 11 Nov 2002 22:19:43 -0500
+Received: from scaup.mail.pas.earthlink.net ([207.217.120.49])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18BRaN-0001u6-00
+	for axiom-mail@nongnu.org; Mon, 11 Nov 2002 22:19:31 -0500
+Received: from dialup-63.215.234.71.dial1.stamford1.level3.net ([63.215.234.71] helo=localhost.localdomain)
+	by scaup.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18BRaI-0005oJ-00; Mon, 11 Nov 2002 19:19:26 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gAC2wkh04965;
+	Mon, 11 Nov 2002 21:58:46 -0500
+Date: Mon, 11 Nov 2002 21:58:46 -0500
+Message-Id: <200211120258.gAC2wkh04965@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Bertfried.Fauser@uni-konstanz.de
+CC: daly@idsi.net, axiom-mail@nongnu.org
+Reply-to: daly@idsi.net
+Subject: [Axiom-mail] Hopf Algebras
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Bertfried,
+
+When Axiom comes out we should have a further discussion about
+possible contributions. I'm unfamiliar with Hopf Algebras but
+that is no surprise. Is there a paper or reference on the subject
+you can recommend?
+
+Re: GINAC. Be aware that the library-only approach to system building
+leads to a complex tangle that gets progressively more difficult to
+use. System like Axiom help you to coercions and simplify results.
+
+Tim
+
+
+
+From fauser@spock.physik.uni-konstanz.de Tue Nov 12 05:14:25 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18BY3t-0004Dr-00
+	for axiom-mail@nongnu.org; Tue, 12 Nov 2002 05:14:25 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18BY3p-00044g-00
+	for axiom-mail@nongnu.org; Tue, 12 Nov 2002 05:14:23 -0500
+Received: from spock.physik.uni-konstanz.de ([134.34.143.6])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18BY3o-00043m-00
+	for axiom-mail@nongnu.org; Tue, 12 Nov 2002 05:14:20 -0500
+Received: from clifford.physik.uni-konstanz.de (clifford [134.34.143.32])
+	by spock.physik.uni-konstanz.de (8.8.5/8.8.5) with ESMTP id LAA06327;
+	Tue, 12 Nov 2002 11:01:15 +0100 (MET)
+Received: from clifford.physik.uni-konstanz.de (localhost [127.0.0.1])
+	by clifford.physik.uni-konstanz.de (8.12.3/8.12.3/SuSE Linux 0.6) with ESMTP id gACA3Wuc007348;
+	Tue, 12 Nov 2002 11:03:32 +0100
+Received: from localhost (fauser@localhost)
+	by clifford.physik.uni-konstanz.de (8.12.3/8.12.3/Submit) with ESMTP id gACA3NT8007345;
+	Tue, 12 Nov 2002 11:03:27 +0100
+Date: Tue, 12 Nov 2002 11:03:23 +0100 (CET)
+From: Bertfried Fauser <fauser@spock.physik.uni-konstanz.de>
+Reply-To: Bertfried.Fauser@uni-konstanz.de
+To: root <daly@idsi.net>
+cc: axiom-mail@nongnu.org
+In-Reply-To: <200211120258.gAC2wkh04965@localhost.localdomain>
+Message-ID: <Pine.LNX.4.44.0211121019440.7045-100000@clifford.physik.uni-konstanz.de>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=iso-8859-1
+Content-Transfer-Encoding: QUOTED-PRINTABLE
+Subject: [Axiom-mail] Re: Hopf Algebras
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+On Mon, 11 Nov 2002, root wrote:
+
+> When Axiom comes out we should have a further discussion about
+> possible contributions.
+
+Dear Tim,
+
+please keep me informed, but I guess it will be posted on the axiom-mail
+group?
+
+> I'm unfamiliar with Hopf Algebras but
+> that is no surprise. Is there a paper or reference on the subject
+> you can recommend?
+
+The idea of a Hopf algebra came out of topology in the early 40ies, the
+name was given by Milnor and Moore (see refs below) and refers to Heinz
+Hopf`s pioneering work. However, they survived in the theory of
+combinatorics for some decades. In physics, Hopf algebras became famous in
+a special flavor called quantum groups in the late 80ies. You can look at
+a Hopf algebra as a sort of generalized group (yes, group not algebra)
+which has a pseudo inverse called antipode and allows to transport much
+reasoning of group theory to the a general setting.
+
+Technically there is one new operation:
+
+-- Algebra   =3D=3D   Module + morphism A \otimes A --> A  ++ as common
+-- Coalgebra =3D=3D coModule + morphism A --> A \otimes A  ++ new
+
+In computer science, you have already coproducts, if you think of anything
+which generates a tree of possibilities. It is possible to build a
+coalgebra theory on an equal footing with an algebra theory, there are
+comodules, corepresentation, coideals, etc which however have sometimes
+different properties than modules, ideals, representations of algebras.
+
+-- Hopf algebra =3D=3D Algebra + Coalgebra + compatibility laws -> Antipode
+
+A Hopf algebra is hence in the same time an algebra and coalgebra, where
+the algebra product is a coalgebra homomorphism and the coalgebra
+coproduct is an algebra homomorphism and the existence of a map
+S : module -> module is required, which is called antipode and is
+a generalized inverse.
+
+-- Convolution
+
+Today it seems to be most promising to start with a convolution. That is
+with a product say m : V \otimes V -> V and a coproduct say \Delta : U
+--> U \otimes U. Given morphisms f,g : U ---> V, you can define an
+
+-- convolution algebra with product * on morphisms
+
+via the formula
+
+f * g(x) :=3D m =B0 ( f \otimes g) =B0 \Delta(x)  +++ You can drop the x sa=
+vely!
+
+One can prove that if product and coproduct are (co)associative and
+(co)unital and the identity morphism has a convolutive inverse, than this
+inverse is the antipode called S and the convolution is already a Hopf
+algebra, i.e. Id^(-1) (w.r.t. *) =3D S
+
+-- Quantum groups
+
+in physics are Hopf algebras having special `nice` features, called
+(quasi) triangular structures, which can be recast in categorial terms to
+be based on naturalness and coherence of certain categorial maps. (In
+physicist's terms, they have a sort of integrability condition which
+guarantee that if you reach a result by different way's of reasoning in a
+category then the result does not depend on the way you got it, which is
+convenient and that you can identify several tensor modules)
+
+-- Example: A group is a (trivial) Hopf algebra
+
+let G be a group, * the group multiplication and define \Delta to be the
+`diagonal map` \Delta : G --> G \otimes G, \Delta(g) =3D g \otimes g (just
+doubling the element). One can show that the antipode S is an
+anti-homomorphisms and is given in the group case by the inverse
+S : G --> G, S(g) =3D g^(-1). A group action may be given as (using a switc=
+h
+sw : G \otimes G --> G \otimes G, sw(g \otimes h ) =3D h \otimes g)
+
+g > h =3D  m =B0 (m \otimes Id) =B0 (Id\otimes S) =B0 \Delta(g) \otimes h
+      =3D g * h * g^(-1)
+
+--> generalization. \Delta(g) =3D \sum g_[1] \otimes g_[2] which is no
+longer diagonal.
+
+-- Example: Universal enveloping Lie algebras are Hopf algebras
+
+(Its generalizations are called sometimes 'matrix pseudo groups',
+you end up with matrices which have non-commuting entries)
+The product is the matrix product in a suitable representation (fundamental
+representation) and the coproduct is given on generators x as
+\Delta(x) =3D x \otimes 1 + 1 \otimes x and extended to the whole (graded)
+module via the homomorphism properties. The antipode is given on
+generators by S(x)=3D-x and also extended in a recursive way.
+
+The extension of Lie symmetries was the main motivation in physics to study
+this type of objects.
+
+Given this short explanation you might judge yourself if you really need
+to look for such mathematics. Some references are:
+
+-- Classical texts
+
+[1] Milnor, Moore, "On the structure of Hopf algebras", Ann. of Math.
+81:211---264, 1965
+
+[2] M.E. Sweedler, "Hopf algebras", W.A. Benjamin, INC, New York, 1996
+
+--
+
+if you are interested in combinatorics, you have to seek for texts of
+Gian-Calro Rota and collaborators  or on Umbral calculus.
+
+-- more recent
+
+[3] S. Montgomery, "Hopf Algebras and their Actions on Rings", AMS
+conference series CBMS, No. 82, 1993
+
+[4] my habilitation, see xxx.lanl.gov math.QA/0202059 (partly physics)
+    (gives also refs to geometry and Rota's work)
+
+-- physics
+
+[5] Shahn Majid, "Foundations of quantum group theory", Cambridge Univ.
+Press, Cambridge, 1995
+
+
+this is a subjective selection, but you might scan references of these
+refs. to find more suitable reading.
+
+greetings
+BF.
+
+% Bertfried Fauser          Fachbereich Physik    Fach M 678
+% Universit"at Konstanz     78457 Konstanz        Germany
+% Phone : +49 7531 883786   FAX : +49 7531 88-4864 or 4266
+% E-mail: Bertfried.Fauser@uni-konstanz.de
+% Web   : http://clifford.physik.uni-konstanz.de/~fauser
+
+
+
+
+From daly@idsi.net Sat Nov 23 12:21:42 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18FdyP-0004qe-00
+	for axiom-mail@nongnu.org; Sat, 23 Nov 2002 12:21:41 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18FdyM-0004oZ-00
+	for axiom-mail@nongnu.org; Sat, 23 Nov 2002 12:21:40 -0500
+Received: from flamingo.mail.pas.earthlink.net ([207.217.120.232])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18FdyE-0004gL-00; Sat, 23 Nov 2002 12:21:30 -0500
+Received: from dialup-63.215.227.131.dial1.stamford1.level3.net ([63.215.227.131] helo=localhost.localdomain)
+	by flamingo.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18Fdy7-0005vW-00; Sat, 23 Nov 2002 09:21:24 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gANHHqI12842;
+	Sat, 23 Nov 2002 12:17:52 -0500
+Date: Sat, 23 Nov 2002 12:17:52 -0500
+Message-Id: <200211231717.gANHHqI12842@localhost.localdomain>
+From: root <daly@idsi.net>
+To: "'Joris van der Hoeven'" <TeXmacs@math.u-psud.fr>
+Cc: <texmacs-dev@gnu.org>, <daly@idsi.net>, <axiom-developer@nongnu.org>,
+   "Bill Page" <bill.page1@sympatico.ca>, Norman Ramsey <nr@eecs.harvard.edu>,
+   axiom-mail@nongnu.org, Barry Trager <bmt@us.ibm.com>,
+   Manuel Bronstein <Manuel.Bronstein@sophia.inria.fr>,
+   William Sit <wyscc@cunyvm.cuny.edu>
+Reply-to: daly@idsi.net
+Subject: [Axiom-mail] noweb, pamphlets, and TeXmacs
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+All,
+
+I've written some tutorial notes on the pamphlet idea to try to get
+everyone at the same level of discussion. Essentially what Bill
+has been pursuing is a way to integrate noweb and TeXmacs so that
+we can support pamphlet file documents. As there is some confusion
+about what each part is I've decided to write it out in full. 
+Feel free to complain about mistakes.
+
+Bill's ideas are essentially correct. His note is attached.
+
+=================
+RE: NOWEB
+=================
+
+Knuth and Dijkstra advocated literate programming to try to solve
+the problem of marrying the knowledge behind a program with the 
+text of the program itself. Knuth wrote Web which was designed to
+work with Pascal thus:
+
+    .web formatted document
+        |   |
+        |   ------> tangle ----> pascal code ----> compile ---> execute
+        ----------> weave  ----> tex format  ----> latex   ---> read
+
+As this was Pascal-specific various other language-specific versions
+were generated, e.g. CWeb for C.
+
+Norman's innovation is that we don't need to be language specific.
+With just a few additional tags above TeX we gain great power.
+
+Since Axiom uses many forms of code (Makefiles, C, lisp, boot, spad, etc)
+this is a key idea. We need to be able to embed many things transparently.
+If we remove the language-specific options and simplify things we
+can reduce the problem to this:
+
+
+    .noweb formatted document
+        |   |
+        |   ------> notangle ----> any code    ----> compile ---> execute
+        ----------> noweave  ----> tex format  ----> latex   ---> read
+
+Norman's implementation is called noweb. In essence, a noweb document
+consists of alternations of code chunks and text blocks. A code
+block is marked by:
+
+<<(some string)>>=
+
+   code
+
+@
+
+Code chunks continue until encountering an @ in column 1 or another
+chunk marker (the <<(some string)>>= tag). 
+
+The trailing equal sign marks this as a "definition" of the (some
+string) block. Lack of a trailing equal sign marks this as a "use"
+of the (some string) block. Uses are expanded by notangle.
+
+Another important idea is that multiple occurences of the definition
+string are concatenated into one definition thus:
+
+<<a>>=
+  code 1
+@
+....
+<<a>>=
+  code 2
+@
+....
+<<a>>  ==> expands into:
+              code 1
+              code 2
+
+We use this idea extensively in the documentation of code.
+
+Text blocks are all that are not code chunks. Text blocks are tex
+formatted document blocks.
+
+
+=================
+RE: TEXMACS
+=================
+
+TeXmacs is neither emacs not TeX but is an interesting cross-product
+of the two ideas. Joris set out to make a useful front-end to a
+computer algebra system and ended up with a generally useful tool.
+It communicates with many computer algebra systems and is able to
+properly format the math output in TeX style yet retain it as a
+live object that can be handed back to the underlying system. In
+addition, TeXmacs is able to properly format a large subset of 
+Tex and Latex documents.
+
+TeXmacs, as Bill has been pointing out, is an excellent target for
+an Axiom front-end. It already can talk directly to Axiom's interpreter
+and embed the output into the TeXmacs buffer. It can already display
+the .tex output from noweb.
+
+Support for native noweb format would be most useful. The subtle
+distinction that Bill was mentioning is that currently we can take
+the "tex format" output and display it in TeXmacs. However, we would
+like to fully support noweb as a standard format. This implies a couple
+changes.
+
+As mentioned above noweb does:
+
+    .noweb formatted document
+        |   |
+        |   ------> notangle ----> any code    ----> compile ---> execute
+        ----------> noweave  ----> tex format  ----> latex   ---> read
+
+If TeXmacs understood the noweb format fully it would need to have
+the following features:
+
+0) The ability to recognize and format a code chunk.
+1) The ability to recognize the <<defn>>=, concatenation, and <<use>>
+   features of the code chunks.
+2) The ability to create a "notangled" buffer from the current buffer
+   that would contain the formatted code.
+
+     Ideally you could make changes in the formatted code and have the
+     changes reflected back into the original buffer. Some of these
+     changes could be problematic.
+
+3) The ability to create a "noweave" buffer from the current buffer
+   that would contain the formatted document.
+
+     The same comment as above applies. It would take some careful
+     design to properly "untangle" some changes.
+
+4) Bill has suggested that the folding mechanism know about the code
+   chunks and be able to fold and unfold them. Perhaps the way to 
+   make the "untangle" work would be to ignore the separate buffer
+   idea above and just use folding. I have no opinion about either
+   path yet.
+
+     It is very important that NO changes occur in the code chunks.
+     If TeXmacs or noweb or any other tool does not understand the
+     format it must maintain "transparency". That is, it must NOT
+     try to format things in the code chunks. Other tools have special
+     needs (e.g. Makefiles care about tabs) and you can't change
+     the code chunks because they will be output to other tools.
+
+5) There are other ideas, not yet exposed, that it would be nice to
+   have supported. I guess I need to talk more about the pamphlet 
+   idea in depth.
+
+
+=================
+RE: PAMPHLET FILES AND THE PRESENT
+=================
+
+Pamphlet files are now the native format for code and documentation.
+There are no longer any Makefile, C, lisp, boot or spad files in the 
+system. All file formats have been subsumed into pamphlet files.
+
+Currently .pamphlet documents, except for a recent patch, are 
+normal .noweb formatted documents. They have very little structure
+at the moment.
+
+Here is the way things currently interact:
+
+    .pamphlet formatted document
+        |   |
+        |   ------> notangle ----> any code    ----> compile ---> execute
+        ----------> noweave  ----> tex format  ----> latex   ---> read
+
+Pamphlet files are currently being used to document the internals
+of Axiom. A file written originally in Boot is now written as a
+pamphlet file. The pamphlet file is expanded and the rest of the
+compile process takes place thus:
+
+Originally:
+
+   foo.boot -> (translate) -> foo.lisp -> (compile) -> foo.o (load) .....
+
+Now:
+
+    foo.pamphlet 
+        |   |
+        |   -> notangle -> foo.boot -> (translate) ....
+        -----> noweave  -> foo.tex  -> latex -> read
+
+
+=================
+RE: PAMPHLET FILES AND THE FUTURE
+=================
+
+However, pamphlet files have a larger purpose besides documenting
+internals of the system. Axiom has a large amount of algebra code
+written in SPAD, a high level language. Much of the research behind
+this code is hidden away in libraries. I'm hoping to use literate
+programming to join these two threads, the theory and the implementation,
+into a unified whole and then expand it beyond a simple join. 
+
+The end vision of using literate programming in Axiom is that you can
+receive a "Booklet" which gives the theory and implementation of some
+area of math, say linear algebra.  The "Booklet" is composed of
+"pamphlets" (not the same concept as a chapter but that's close
+enough).
+
+Suppose you have an Axiom system. If you receive a Booklet you can
+"drag and drop" the Booklet onto the system. It decomposes the Booklet
+into Pamphlets, follows the references to pick up required pamphlets,
+compiles the code, expands the user documentation into the proper
+format, sets up example files for use, runs test cases to ensure that
+functions work, adds the documentation to the theory tree, and washes
+the dirty dishes.
+
+Booklet format or Pamphlet format would be the standard format
+for submission to an "Axiom Journal". This journal would allow
+people to test code that was submitted with the theory. After all,
+we expect Physics and Chemistry experiments to be reproduced and
+validated; why not Computational Mathematics?
+
+Booklets can be composed from a running system in (at least) two
+directions. 
+
+First, you compose a set of Pamphlet files "across the system" so that
+you could document, say, all of the matrix facilities currently
+available. 
+
+Second, you compose a set of Pamphlet files "thru the system" so that
+you could document, say, the integration mechanism from the top level
+function all the way to the implementation details.
+
+Thus you can insert and extract Booklets with Axiom making it easier
+to share knowledge.
+
+Future:
+
+ Linear Algebra Booklet
+ |   
+ |-> NullSpace.pamphlet 
+ |   |   |   |
+ |   |   |   -> notangle -> nullspace.spad -> 
+ |   |   -----> noweave  -> nullspace.tex  -> latex -> read
+ |   |--------> dereference -> load and use other code.spad ->
+ |   |--------> userdocs    -> update Axioms user documentation 
+ |   |--------> testcase    -> run test cases
+ |   |--------> examples    -> input files
+ |   |--------> textbook    -> update Axiom's current textbook
+ |   |--------> proofs      -> ACL2, MetaPRL files
+ |-> Pivots.pamphlet
+    ......
+
+Huge dream, I realize, but except for the dishes, I see no technical
+reason why it can't be done.
+
+This implies, of course, that Pamphlets can be decomposed into a
+finer level of detail which is still under development. 
+
+=================
+RE: PAMPHLET FILES AND THE NEAR TERM
+=================
+
+All of which implies a huge amount of work. It would be great
+to have a front-end that supported both the current and future
+directions. 
+
+RE: NOWEB CHANGES
+
+Currently noweb needs to expand the chunk definition syntax
+to handle some more general scheme such as a URL. We need to
+be able to extract code chunks from other pamphlets so that
+you can have the following situation:
+
+pamphlet A:  (the definition document)
+    ...
+    <<foo>>=
+    ...
+
+pamphlet B:  (the using document)
+    ...
+    <<pamphlet:/path/A#foo>>
+    ...
+
+It would be useful if this could happen for text blocks also
+so that generally useful descriptions could be inserted into
+multiple pamphlets. Since the text blocks currently have
+no label this becomes problematic. We need to develop text
+labels so we can follow a uniform scheme. Multiple text blocks
+containing essentially the same information already exist in
+the system. This needs to be fixed.
+
+For larger references (e.g. whole pamphlets) I'm currently
+using the bibliography environment. However, I plan to have
+a new Latex tag, say PAMPHLETREFS, that have a bibtex-like
+reference set. Tags in this environment point to other
+pamphlet files. Perhaps the "URL syntax" proposed above 
+could use the \PCITE{} tag instead:
+
+pamphlet A:  (the definition document)
+    ...
+    <<foo>>=
+    ...
+
+pamphlet B:  (the using document)
+    ...
+    <<\pcite{3}{foo}>>
+    ...
+
+
+Anybody who understands bibtex and would like
+to take a shot at this is welcome. 
+
+RE: TEXMACS CHANGES
+
+Currently TeXmacs could take the following steps, probably as
+a joint effort, to support Axiom:
+
+1) Recognize noweb format
+2) Integrate commands to notangle and noweave
+3) Possibly either support
+   a) folding out code
+   b) notangle, noweave to "dependent" buffers
+   c) backport changes to "dependent" buffers to the original document
+   d) possibly all of the above
+4) Integrate noweb.sty
+     Eventually this will evolve into Axiom.sty as we need to add
+     more latex macros, like \begin{theorem}, \begin{userdoc}, 
+     \begin{pamphletrefs}, etc
+
+Perhaps we can lay out a more detailed plan that includes various
+steps we can all work on.
+
+I'm willing to help with any steps taken in this direction.
+Feedback is welcome.
+
+Tim
+
+
+
+------------------------- forwarded note ---------------------------
+On Saturday, November 23, 2002 3:19 AM Joris van der Hoeven
+TeXmacs@math.u-psud.fr wrote:
+> ... 
+> Well, as I understand it, the pamphlet format is
+> a LaTeX with special escape sequences for dealing
+> with code or other special markup. Therefore,
+> I think that the best way of importing such files
+> is to first convert it to standard LaTeX
+> (with possible pamphlet-specific commands),
+> with a language like Perl, and next convert
+> the result to TeXmacs using the standard input filter.
+
+Yes and no. Tim, please correct me if I make a mistake
+here...
+
+The pamphlet format is really noweb input format. As
+Norman Ramsey defines it, the input to noweb is quite
+language independent and very simple. noweb is a
+simplified version of Knuth's web ("no" for Norman,
+I guess). All we have are named "code" chunks e.g.
+
+ <<name>>= ... <<othername>> ... @
+
+which may reference other code chunks, e.g.
+<<othername>> above, embedded in a text stream. Text
+areas start with @ (except first). There are two
+primary operations to be done on this file. One is
+"weave" which extracts just the text stream (no code)
+and the other is "tangle" which expands a given code
+chunk (by default starting with the root chunk <<*>>=)
+by including all of the other code chunks referenced
+in that chunk, recursively. It is possible to 
+generate different results from the same input file
+by specifying a different root for tangle.
+
+It is true that the text stream is usually LaTex
+code but I don't think that is a requirement of
+noweb. The code chunks can also be in any language.
+
+I believe Tim Daly defined the term "pamphlet" to
+refer to the noweb input files that he is using in
+the open source axiom project. These will (I presume)
+always have a LaTex text stream part plus code
+chunks in several different languages: makefile
+script, C, lisp, SPAD (axiom specific), etc. I think
+Tim has in mind also using such pamphlet files to
+exchange axiom code between users.
+
+And of course we also plan to use TeXmacs as
+a front-end to axiom itself as a high level user
+interface capable of entering and displaying
+mathematics in a rich graphics format.
+
+So when importing a pamphlet file into TeXmacs,
+it is desirable to interpret the text stream part
+of the input file as LaTex and convert it
+appropriately, but it is also important to retain
+the code chunks in their place in the original
+file. What I was suggesting below was that it
+seemed natural to me to treat these chunks as
+"folded" into the TeXmacs document. That way,
+when the folds are collapsed (closed), the
+document would have the appearance of LaTex applied
+to the weave output and would print that way. But
+one could open a folded code chunk and edit it.
+The only new thing would be expanding code chunks
+during a "tangle" export. This could be done
+easily just by extracting all code chunks and
+then calling notangle.
+
+> 
+> > Perhaps it would be nicer if TeXmacs was able to
+> > expand and collapse folds on demand. It is not
+> > really clear to me hold folding is intended to
+> > work in TeXmacs. I wasn't able to find any
+> > documentation about it and my experiments with
+> > it so far have not produced a clear picture. 
+> > Perhaps it is still largely in the planning stage?
+> 
+> Yes, this will be dealt with sometime next year.
+>
+
+Would you be interested in having someone (me) help
+to accelerate that schedule? Are there other people
+interested in the "fold" concept?
+ 
+> > ... 
+> > Perhaps it would help to be able to look at some
+> > existing styles that do something similar to what
+> > we want. What would you recommend?
+> 
+> I think that we first need to know what you already
+> have.
+
+There are LaTex "styles" and TeXmacs "styles". These
+are different, right? So far I think Tim has only
+made use of only relatively standard LaTex style
+files.
+
+The reason I mentioned TeXmacs styles is because
+that is the only way thing that I could find at
+this time that interacts with how folded text is
+displayed. Perhaps that is not the way you intend
+to go with folds?
+
+> Also: how much documentation does already exist
+> in the pamphlet format?
+>
+
+We are only at the beginning of the project. Did
+you have in mind some other format?
+
+Regards,
+Bill Page. 
+
+
+
+
+From bill.page1@sympatico.ca Sat Nov 23 14:05:58 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18FfbK-0001C3-00
+	for axiom-mail@nongnu.org; Sat, 23 Nov 2002 14:05:58 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18Ffad-0000tk-00
+	for axiom-mail@nongnu.org; Sat, 23 Nov 2002 14:05:18 -0500
+Received: from tomts19-srv.bellnexxia.net ([209.226.175.73])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18FfaX-0000iz-00; Sat, 23 Nov 2002 14:05:09 -0500
+Received: from Asus ([209.226.189.119]) by tomts19-srv.bellnexxia.net
+          (InterMail vM.5.01.04.19 201-253-122-122-119-20020516) with ESMTP
+          id <20021123190505.UIIP27245.tomts19-srv.bellnexxia.net@Asus>;
+          Sat, 23 Nov 2002 14:05:05 -0500
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <daly@idsi.net>,
+	"'Joris van der Hoeven'" <TeXmacs@math.u-psud.fr>
+Cc: <texmacs-dev@gnu.org>,
+	<axiom-developer@nongnu.org>,
+	"'Norman Ramsey'" <nr@eecs.harvard.edu>,
+	<axiom-mail@nongnu.org>,
+	"'Barry Trager'" <bmt@us.ibm.com>,
+	"'Manuel Bronstein'" <Manuel.Bronstein@sophia.inria.fr>,
+	"'William Sit'" <wyscc@cunyvm.cuny.edu>
+Date: Sat, 23 Nov 2002 14:05:01 -0500
+Message-ID: <000001c29323$3b705070$6601a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4024
+Importance: Normal
+In-Reply-To: <200211231717.gANHHqI12842@localhost.localdomain>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+Subject: [Axiom-mail] RE: noweb, pamphlets, and TeXmacs
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Tim,
+
+Thanks for the treatise on noweb etc.
+
+On Saturday, November 23, 2002 12:18 PM
+daly@idsi.net wrote:
+
+>... 
+> RE: NOWEB CHANGES
+> 
+> Currently noweb needs to expand the chunk definition syntax
+> to handle some more general scheme such as a URL. We need to
+> be able to extract code chunks from other pamphlets so that
+> you can have the following situation:
+> 
+> pamphlet A:  (the definition document)
+>     ...
+>     <<foo>>=
+>     ...
+> 
+> pamphlet B:  (the using document)
+>     ...
+>     <<pamphlet:/path/A#foo>>
+>     ...
+> 
+
+Sounds cool to me! Hypercode - perhaps the ultimate form
+of open source. Maybe someone's thought of this before?
+
+I especially like the idea of using code that is contained
+within its own (presumably complete) documentation.
+
+> It would be useful if this could happen for text blocks
+> also so that generally useful descriptions could be
+> inserted into multiple pamphlets. Since the text blocks
+> currently have no label this becomes problematic. We need
+> to develop text labels so we can follow a uniform scheme.
+> Multiple text blocks containing essentially the same
+> information already exist in the system. This needs to be
+> fixed.
+> 
+
+Why not just forget what is now the text part and
+simply have at least two pre-defined roots, one
+for code and one for documentation? Then tangle does
+both jobs.
+
+Regards,
+Bill Page.
+
+
+
+
+From wyscc@cunyvm.cuny.edu Sun Nov 24 01:52:12 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18Fqcl-0000DN-00
+	for axiom-mail@nongnu.org; Sun, 24 Nov 2002 01:52:11 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18Fqcf-0008SO-00
+	for axiom-mail@nongnu.org; Sun, 24 Nov 2002 01:52:10 -0500
+Received: from pop017pub.verizon.net ([206.46.170.210] helo=pop017.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18FqcY-00088S-00; Sun, 24 Nov 2002 01:51:58 -0500
+Received: from cunyvm.cuny.edu ([151.202.188.144]) by pop017.verizon.net
+          (InterMail vM.5.01.05.09 201-253-122-126-109-20020611) with ESMTP
+          id <20021124065152.WRBZ1423.pop017.verizon.net@cunyvm.cuny.edu>;
+          Sun, 24 Nov 2002 00:51:52 -0600
+Message-ID: <3DE07701.FA856C02@cunyvm.cuny.edu>
+Date: Sun, 24 Nov 2002 01:51:45 -0500
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Reply-To: wyscc@cunyvm.cuny.edu
+Organization: City College of New York
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+X-Accept-Language: zh,en
+MIME-Version: 1.0
+To: daly@idsi.net
+CC: 'Joris van der Hoeven' <TeXmacs@math.u-psud.fr>,
+ 	texmacs-dev@gnu.org, axiom-developer@nongnu.org,
+ 	Bill Page <bill.page1@sympatico.ca>,
+ 	Norman Ramsey <nr@eecs.harvard.edu>, axiom-mail@nongnu.org,
+ 	Barry Trager <bmt@us.ibm.com>,
+ 	Manuel Bronstein <Manuel.Bronstein@sophia.inria.fr>
+References: <200211231717.gANHHqI12842@localhost.localdomain>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Authentication-Info: Submitted using SMTP AUTH PLAIN at pop017.verizon.net from [151.202.188.144] at Sun, 24 Nov 2002 00:51:51 -0600
+Subject: [Axiom-mail] Re: noweb, pamphlets, and TeXmacs
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Just a simple comment on:
+
+> Currently noweb needs to expand the chunk definition syntax
+> to handle some more general scheme such as a URL.
+
+I object to allowing URL in the pamphlet document, the reason being that
+pamplet is designed to be "self-contained" (as much as possible). A URL
+is unfortunately not something permanent and the link therefore can
+frequently be broken. Unless there is some mechanism to ensure that all
+URL are valid and updated, it would not be useful. An example: authors
+post preprints to the web. Perhaps because of copyright, the preprints
+are withdrawn after publication. The URL pointing to the preprint no
+longer works, and no new one can be substituted (even pointing to the
+journal does not assure availability because of subscription; pointing
+to an archive may violate copyright).
+
+  The trouble is that there is no mechanism for the author of the
+pamphlet who cited the URL to be aware or notified when the URL fails
+(which may happen years afterwards when someone try that link). If the
+goal is to preserve documentation and readability "for eternity", this
+would not be acceptable.
+
+  Ideally, it seems we are planning to build Axiom into a mathematical
+encyclopedia for symbolic computation, and so references should be as
+internal as possible. Of course, we cannot achieve this until "steady
+state" occurs, but if this dilemma is not considered and resolved now,
+the goal could never be reached.
+
+  The same consideration would require that the Axiom system be always
+backward compatible when the language grows to incorporate new
+technologies; and if not, there should be automatic translations to
+update all existing pamphlets.
+
+William
+-- 
+William Sit
+Department of Mathematics..............Email: wyscc@cunyvm.cuny.edu
+City College of New York..........................Tel: 212-650-5179
+Convent Ave at West 138th Street..................Fax: 212-862-0004
+New York, NY 10031.....Asian Symposium on Computer Mathematics 2003
+USA..........................http://www.mmrc.iss.ac.cn/~ascm/ascm03
+
+
+
+From daly@idsi.net Sun Nov 24 10:00:33 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18FyFN-0001TU-00
+	for axiom-mail@nongnu.org; Sun, 24 Nov 2002 10:00:33 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18FyFJ-0001QZ-00
+	for axiom-mail@nongnu.org; Sun, 24 Nov 2002 10:00:31 -0500
+Received: from albatross.mail.pas.earthlink.net ([207.217.120.120] helo=albatross.prod.itd.earthlink.net)
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18FyF7-0001F6-00; Sun, 24 Nov 2002 10:00:17 -0500
+Received: from dialup-65.59.73.45.dial1.stamford1.level3.net ([65.59.73.45] helo=localhost.localdomain)
+	by albatross.prod.itd.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18FyEq-0004cV-00; Sun, 24 Nov 2002 07:00:00 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gAOEuQh21874;
+	Sun, 24 Nov 2002 09:56:26 -0500
+Date: Sun, 24 Nov 2002 09:56:26 -0500
+Message-Id: <200211241456.gAOEuQh21874@localhost.localdomain>
+From: root <daly@idsi.net>
+To: wyscc@cunyvm.cuny.edu
+CC: daly@idsi.net, TeXmacs@math.u-psud.fr, texmacs-dev@gnu.org,
+   axiom-developer@nongnu.org, bill.page1@sympatico.ca, nr@eecs.harvard.edu,
+   axiom-mail@nongnu.org, bmt@us.ibm.com, Manuel.Bronstein@sophia.inria.fr
+In-reply-to: <3DE07701.FA856C02@cunyvm.cuny.edu> (message from William Sit on
+	Sun, 24 Nov 2002 01:51:45 -0500)
+Reply-to: daly@idsi.net
+References: <200211231717.gANHHqI12842@localhost.localdomain> <3DE07701.FA856C02@cunyvm.cuny.edu>
+Subject: [Axiom-mail] Re: noweb, pamphlets, and TeXmacs
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Bill,
+
+The URLs are all assumed to be internal, hence the pamphlet:
+prefix. I only wanted to steal the syntax since parsers are
+available and the syntax is already defined. Nothing about
+Axiom is intended to point elsewhere.
+
+The key issue is that I'd like to share code chunks and text blocks
+between pamphlets. I can do this with \include tex macros but the
+macros do not know the pamphlet file format. URLs (PRLs? Pamphlet
+resource locators?)
+
+Consider the issue of describing the way your code makes novel use
+of some routine out of another document, say DHMATRIX.spad.pamphlet.
+Rather than either copying the code or including a makefile
+that will build both documents and strip the code block (both
+solutions work) you could just <<PRL:/(path)/doc#code>>.
+
+You do make a good point that this technology cries for abuse.
+Perhaps a new syntax and working could correct that.
+
+Tim
+
+
+
+
+
+
+
+From fauser@spock.physik.uni-konstanz.de Sun Nov 24 10:36:16 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18Fynw-0005bZ-00
+	for axiom-mail@nongnu.org; Sun, 24 Nov 2002 10:36:16 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18Fynu-0005bL-00
+	for axiom-mail@nongnu.org; Sun, 24 Nov 2002 10:36:15 -0500
+Received: from spock.physik.uni-konstanz.de ([134.34.143.6])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18Fynu-0005aw-00; Sun, 24 Nov 2002 10:36:14 -0500
+Received: from clifford.physik.uni-konstanz.de (clifford [134.34.143.32])
+	by spock.physik.uni-konstanz.de (8.8.5/8.8.5) with ESMTP id QAA07934;
+	Sun, 24 Nov 2002 16:24:11 +0100 (MET)
+Received: from clifford.physik.uni-konstanz.de (localhost [127.0.0.1])
+	by clifford.physik.uni-konstanz.de (8.12.3/8.12.3/SuSE Linux 0.6) with ESMTP id gAOFaHjM023188;
+	Sun, 24 Nov 2002 16:36:17 +0100
+Received: from localhost (fauser@localhost)
+	by clifford.physik.uni-konstanz.de (8.12.3/8.12.3/Submit) with ESMTP id gAOFaGjL023185;
+	Sun, 24 Nov 2002 16:36:16 +0100
+Date: Sun, 24 Nov 2002 16:36:16 +0100 (CET)
+From: Bertfried Fauser <fauser@spock.physik.uni-konstanz.de>
+Reply-To: Bertfried.Fauser@uni-konstanz.de
+To: axiom-developer@nongnu.org
+cc: axiom-mail@nongnu.org
+In-Reply-To: <200211241456.gAOEuQh21874@localhost.localdomain>
+Message-ID: <Pine.LNX.4.44.0211241629530.23149-100000@clifford.physik.uni-konstanz.de>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Subject: [Axiom-mail] axiom mailing lists
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Dear All,
+
+	I follow with great interest and emphasis the mails in the
+axiom-mail and axiom-developer mailing lists. However, if you dump all
+messages into both lists, one gets really spamed by copies of identical
+mails.
+
+	I would also appreciate if replies would contain only those parts
+of the original message which are relavant, e.g. the very helpfull and
+nice desciption of the pamphlet format was received some 4 to 5 times, and
+in such long mail replies its very cumbersome to scan the whole several
+kB long mail if reasonable further comments supplied.
+
+	Sorry if this is mail, comming from an inactive listener to the
+lists, is considered unpolite, I would appologize for that.
+
+yours sincerely
+BF.
+
+% Bertfried Fauser          Fachbereich Physik    Fach M 678
+% Universit"at Konstanz     78457 Konstanz        Germany
+% Phone : +49 7531 883786   FAX : +49 7531 88-4864 or 4266
+% E-mail: Bertfried.Fauser@uni-konstanz.de
+% Web   : http://clifford.physik.uni-konstanz.de/~fauser
+
+
+
+
+From daly@idsi.net Sun Nov 24 10:43:10 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18Fyuc-0007CG-00
+	for axiom-mail@nongnu.org; Sun, 24 Nov 2002 10:43:10 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18FyuZ-00078P-00
+	for axiom-mail@nongnu.org; Sun, 24 Nov 2002 10:43:08 -0500
+Received: from flamingo.mail.pas.earthlink.net ([207.217.120.232])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18FyuT-000728-00; Sun, 24 Nov 2002 10:43:01 -0500
+Received: from dialup-65.59.73.45.dial1.stamford1.level3.net ([65.59.73.45] helo=localhost.localdomain)
+	by flamingo.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18FyuK-0004C8-00; Sun, 24 Nov 2002 07:42:53 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gAOFdIN21913;
+	Sun, 24 Nov 2002 10:39:18 -0500
+Date: Sun, 24 Nov 2002 10:39:18 -0500
+Message-Id: <200211241539.gAOFdIN21913@localhost.localdomain>
+From: root <daly@idsi.net>
+To: wyscc@cunyvm.cuny.edu
+CC: daly@idsi.net, TeXmacs@math.u-psud.fr, texmacs-dev@gnu.org,
+   axiom-developer@nongnu.org, bill.page1@sympatico.ca, nr@eecs.harvard.edu,
+   axiom-mail@nongnu.org, bmt@us.ibm.com, Manuel.Bronstein@sophia.inria.fr
+In-reply-to: <3DE07701.FA856C02@cunyvm.cuny.edu> (message from William Sit on
+	Sun, 24 Nov 2002 01:51:45 -0500)
+Reply-to: daly@idsi.net
+References: <200211231717.gANHHqI12842@localhost.localdomain> <3DE07701.FA856C02@cunyvm.cuny.edu>
+Subject: [Axiom-mail] Re: noweb, pamphlets, and TeXmacs
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Bill,
+
+About PRLs (Pamphlet URLs)...
+
+The key reason, which didn't leap to mind this morning, is that
+they are the enabling technology behind "Booklets". The Booklet
+is intended to collect Pamphlets into a joined form. However,
+for purposes of a readable exposition, it will almost certainly
+be necessary to quote sections of the Pamphlets "out of order".
+
+Consider what happens when you try to explain all of the matrix
+facilities, which are individually described in Pamphlets, as one
+Booklet. Clearly one could use the "Big Staple" approach and just
+concatenate them. However, it would be better if the Booklet were
+more organized. Booklets need to quote portions of the Pamphlets.
+You could clearly do this by copying but it would be better to
+use <<PRL:>> style references.
+
+Tim
+
+
+
+
+
+
+
+From TeXmacs@math.u-psud.fr Sun Nov 24 12:17:39 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18G0O1-0005UK-00
+	for axiom-mail@nongnu.org; Sun, 24 Nov 2002 12:17:37 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18G0Nw-0005Fa-00
+	for axiom-mail@nongnu.org; Sun, 24 Nov 2002 12:17:35 -0500
+Received: from matups.math.u-psud.fr ([129.175.50.4])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18G0Nv-00058x-00; Sun, 24 Nov 2002 12:17:31 -0500
+Received: from anh.math.u-psud.fr (anh.math.u-psud.fr [129.175.50.156])
+          by matups.math.u-psud.fr (8.11.6/jtpda-5.3.3) with ESMTP id gAOHHQj21314
+          ; Sun, 24 Nov 2002 18:17:26 +0100 (MET)
+Received: from anh (anh [129.175.50.156])
+	by anh.math.u-psud.fr (Postfix) with SMTP
+	id AE41DB2C8; Sun, 24 Nov 2002 18:17:25 +0100 (MET)
+Date: Sun, 24 Nov 2002 18:17:25 +0100 (MET)
+From: Joris van der Hoeven <TeXmacs@math.u-psud.fr>
+X-Sender: texmacs@anh
+To: root <daly@idsi.net>
+Cc: "'Joris van der Hoeven'" <TeXmacs@math.u-psud.fr>, texmacs-dev@gnu.org,
+   axiom-developer@nongnu.org, Bill Page <bill.page1@sympatico.ca>,
+   Norman Ramsey <nr@eecs.harvard.edu>, axiom-mail@nongnu.org,
+   Barry Trager <bmt@us.ibm.com>,
+   Manuel Bronstein <Manuel.Bronstein@sophia.inria.fr>,
+   William Sit <wyscc@cunyvm.cuny.edu>
+In-Reply-To: <200211231717.gANHHqI12842@localhost.localdomain>
+Message-ID: <Pine.GSO.3.96.1021124170706.14294D-100000@anh>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Subject: [Axiom-mail] Re: noweb, pamphlets, and TeXmacs
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+Thanks for the detailed tutorial, Tim.
+
+> Knuth and Dijkstra advocated literate programming to try to solve
+> the problem of marrying the knowledge behind a program with the 
+> text of the program itself. Knuth wrote Web which was designed to
+> work with Pascal thus:
+> 
+>     .web formatted document
+>         |   |
+>         |   ------> tangle ----> pascal code ----> compile ---> execute
+>         ----------> weave  ----> tex format  ----> latex   ---> read
+> 
+> As this was Pascal-specific various other language-specific versions
+> were generated, e.g. CWeb for C.
+> 
+> Norman's innovation is that we don't need to be language specific.
+> With just a few additional tags above TeX we gain great power.
+
+I also would like to stress that 1) there is no reason to stick to
+only two possible ways of extraction (tangle and weave) and
+2) that the language independence might also hold for weave.
+
+> In addition, TeXmacs is able to properly format a large subset of 
+> Tex and Latex documents.
+
+Notice that TeXmacs is not just capable to properly format a large
+subset of TeX/LaTeX, but that it also provides markup which is not
+available in TeX/LaTeX (hyperlinks, actions, simple folding, etc.).
+What is more, like in TeX/LaTeX, you may define your own markup,
+and, like in Emacs, construct special editing modes for editing
+such markup. This may apply in particular to things like customized
+ways of folding, direct execution of an Axiom example from
+the documentation, etc.
+
+> 0) The ability to recognize and format a code chunk.
+> 1) The ability to recognize the <<defn>>=, concatenation, and <<use>>
+>    features of the code chunks.
+
+All you have to do is to add a special tag like "chunk"
+with one or more arguments. A preprocessor might then rewrite
+your <<defn>>= syntax into more standard LaTeX like
+\begin{chunk}{...} ... \end{chunk} and then use
+the standard input filter.
+
+However, as I pointed out before, it might be better to directly
+use the TeXmacs format with additional tags and write the operations
+like tangle and weave in Scheme.
+
+> 2) The ability to create a "notangled" buffer from the current buffer
+>    that would contain the formatted code.
+> 
+>      Ideally you could make changes in the formatted code and have the
+>      changes reflected back into the original buffer. Some of these
+>      changes could be problematic.
+
+I rather see this as having several possible ways of looking at
+pamphlet documents. Also, David Allouche will be working next year on
+a way to perform operations like "tangle" and "weave" dynamically during
+the editing phase. This presupposes that "tangle" and "weave" become
+native operations in TeXmacs, comparible to (but not an instance of)
+the application of an XML style.
+
+> 3) The ability to create a "noweave" buffer from the current buffer
+>    that would contain the formatted document.
+> 
+>      The same comment as above applies. It would take some careful
+>      design to properly "untangle" some changes.
+
+Yes, as I said before, there is no reason to distinguish between tangle
+and weave and no reason to limit oneself to two operations.
+
+> 4) Bill has suggested that the folding mechanism know about the code
+>    chunks and be able to fold and unfold them. Perhaps the way to 
+>    make the "untangle" work would be to ignore the separate buffer
+>    idea above and just use folding. I have no opinion about either
+>    path yet.
+
+In a dynamic editor like TeXmacs, it should be noticed that
+folding/unfolding becomes in fact a quite subtle operation.
+In fact, one has to think about the kind of semantics that one requires.
+
+For instance, do you see folding as an operations which makes a change
+in the text, or rather like an operation which modifies the view of
+a text? The first interpretation is easiest to implement.
+In the second case, one has to define the notion of a "view"
+(and in particular: what information determines a view?).
+Also, you would have to think about how to undo changes.
+
+Another difficulty has to do with TeXmacs' ability to let the user
+define his/her own macros. What should be the semantics of
+a macro which is built upon a "fold" tag?
+
+> 5) There are other ideas, not yet exposed, that it would be nice to
+>    have supported. I guess I need to talk more about the pamphlet 
+>    idea in depth.
+
+Well, it would be nice to make up a list of all tags (with options and
+everything) which might be useful for pamphlet files. You might also
+want to take a look at some (still very rudimentary) ideas in
+the tmdoc format.
+
+At the moment, I mainly see the "chunk" tag as a variant of
+our "specific" tag, which is used in order to export content
+in a specific way to specific formats. We basically have to
+respecify the semantics of such a tag in a very general setting.
+
+> First, you compose a set of Pamphlet files "across the system" so that
+> you could document, say, all of the matrix facilities currently
+> available. 
+> 
+> Second, you compose a set of Pamphlet files "thru the system" so that
+> you could document, say, the integration mechanism from the top level
+> function all the way to the implementation details.
+
+My way of viewing this is the use of one file for each atomic
+functionality of the system. Each such file should come with
+meta-information like the bigger classes to which it belongs
+(linear algebra, topology, etc.). Each file may also contain
+information about other relevant related files or how to
+traverse files in a sensible order (cf. tmdoc style).
+One may then implement special functions into TeXmacs for
+extracting the information one needs.
+
+> Thus you can insert and extract Booklets with Axiom making it easier
+> to share knowledge.
+> 
+> Future:
+> 
+>  Linear Algebra Booklet
+>  |   
+>  |-> NullSpace.pamphlet 
+>  |   |   |   |
+>  |   |   |   -> notangle -> nullspace.spad -> 
+>  |   |   -----> noweave  -> nullspace.tex  -> latex -> read
+>  |   |--------> dereference -> load and use other code.spad ->
+>  |   |--------> userdocs    -> update Axioms user documentation 
+>  |   |--------> testcase    -> run test cases
+>  |   |--------> examples    -> input files
+>  |   |--------> textbook    -> update Axiom's current textbook
+>  |   |--------> proofs      -> ACL2, MetaPRL files
+>  |-> Pivots.pamphlet
+>     ......
+
+Absolutely.
+
+> Huge dream, I realize, but except for the dishes, I see no technical
+> reason why it can't be done.
+>
+> This implies, of course, that Pamphlets can be decomposed into a
+> finer level of detail which is still under development. 
+
+Well, it all boils down to inventing suitable markup tags which
+reflect the complexity of the problem. So please give this matter
+a thought and come up with some more precise proposals.
+After that, we will have a discussion and see how to implement
+all this in TeXmacs.
+
+> Currently noweb needs to expand the chunk definition syntax
+> to handle some more general scheme such as a URL. We need to
+> be able to extract code chunks from other pamphlets so that
+> you can have the following situation:
+> 
+> pamphlet A:  (the definition document)
+>     ...
+>     <<foo>>=
+>     ...
+> 
+> pamphlet B:  (the using document)
+>     ...
+>     <<pamphlet:/path/A#foo>>
+>     ...
+> 
+> It would be useful if this could happen for text blocks also
+> so that generally useful descriptions could be inserted into
+> multiple pamphlets. Since the text blocks currently have
+> no label this becomes problematic. We need to develop text
+> labels so we can follow a uniform scheme. Multiple text blocks
+> containing essentially the same information already exist in
+> the system. This needs to be fixed.
+> 
+> For larger references (e.g. whole pamphlets) I'm currently
+> using the bibliography environment. However, I plan to have
+> a new Latex tag, say PAMPHLETREFS, that have a bibtex-like
+> reference set. Tags in this environment point to other
+> pamphlet files. Perhaps the "URL syntax" proposed above 
+> could use the \PCITE{} tag instead:
+> 
+> pamphlet A:  (the definition document)
+>     ...
+>     <<foo>>=
+>     ...
+> 
+> pamphlet B:  (the using document)
+>     ...
+>     <<\pcite{3}{foo}>>
+>     ...
+>
+> Anybody who understands bibtex and would like
+> to take a shot at this is welcome.
+
+As I see it now, you have the following ingredients for chunck tags:
+
+1) A "format" which determines the program which should be used 
+   in order to do extractions. More generally, it reflects the purpose
+   of the enclosed content (documentation, code, example, etc.).
+
+2) An "identifier" for specifying how several chunks should be grouped
+   together. In fact, it might be nice to see this independently from
+   the chunk tags, but rather as a variant of labels and references.
+   In other words, logical grouping of different parts of content
+   may be nice in other circumstances too.
+
+So maybe we should see the chunk tag as the combination of
+two more basic tags: one for specifying the purpose, functionality
+or class of a given region of text, and one for grouping scattered
+pieces of information.
+
+> RE: TEXMACS CHANGES
+> 
+> Currently TeXmacs could take the following steps, probably as
+> a joint effort, to support Axiom:
+> 
+> 1) Recognize noweb format
+
+And we should decide whether we want to keep on working with this format,
+or whether we want to switch to a format for which it will be easier to
+add new features.
+
+> 2) Integrate commands to notangle and noweave.
+
+This should be straightforward to write in Scheme once that one has
+the appropriate tags.
+
+> 3) Possibly either support
+>    a) folding out code
+
+Please think more precisely about the semantics that
+you would like to have.
+
+>    b) notangle, noweave to "dependent" buffers
+
+Cf. improving the markup for inclusions like in the tmdoc style.
+
+>    c) backport changes to "dependent" buffers to the original document
+
+Dynamic editing of depending buffers is very likely to require
+the "dynamic rewriters" that David Allouche will implement next year;
+this will probably take us a year of work. 
+
+I also remind you that TeXmacs does not have a one-to-one mapping with
+TeX/LaTeX. In other words, you can not longer use TeX/LaTeX as a reliable
+format for explanatory text in this scheme. If you want to edit
+the original document using TeXmacs, it is better to either use TeXmacs
+as the document format for your pamphlet files, or at least to replace
+chunks of LaTeX by chunks of TeXmacs.
+
+> 4) Integrate noweb.sty
+>      Eventually this will evolve into Axiom.sty as we need to add
+>      more latex macros, like \begin{theorem}, \begin{userdoc}, 
+>      \begin{pamphletrefs}, etc
+
+You should write a noweb.ts TeXmacs style file for this.
+Unfortunately, writing style files is not well documented yet,
+but you can ask questions on the texmacs-dev list.
+
+
+
+
+From wyscc@cunyvm.cuny.edu Sun Nov 24 13:45:50 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18G1lO-0003Vs-00
+	for axiom-mail@nongnu.org; Sun, 24 Nov 2002 13:45:50 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18G1lI-0003OT-00
+	for axiom-mail@nongnu.org; Sun, 24 Nov 2002 13:45:46 -0500
+Received: from out002pub.verizon.net ([206.46.170.141] helo=out002.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18G1lB-00037K-00; Sun, 24 Nov 2002 13:45:37 -0500
+Received: from cunyvm.cuny.edu ([151.202.188.144]) by out002.verizon.net
+          (InterMail vM.5.01.05.09 201-253-122-126-109-20020611) with ESMTP
+          id <20021124184536.DWEX9109.out002.verizon.net@cunyvm.cuny.edu>;
+          Sun, 24 Nov 2002 12:45:36 -0600
+Message-ID: <3DE11E49.36D1D69B@cunyvm.cuny.edu>
+Date: Sun, 24 Nov 2002 13:45:29 -0500
+From: William Sit <wyscc@cunyvm.cuny.edu>
+Reply-To: wyscc@cunyvm.cuny.edu
+Organization: City College of New York
+X-Mailer: Mozilla 4.7 [en] (WinNT; U)
+X-Accept-Language: zh,en
+MIME-Version: 1.0
+To: daly@idsi.net
+CC: TeXmacs@math.u-psud.fr, texmacs-dev@gnu.org,
+ 	axiom-developer@nongnu.org, bill.page1@sympatico.ca,
+ 	nr@eecs.harvard.edu, axiom-mail@nongnu.org, bmt@us.ibm.com,
+ 	Manuel.Bronstein@sophia.inria.fr
+References: <200211231717.gANHHqI12842@localhost.localdomain>
+	            <3DE07701.FA856C02@cunyvm.cuny.edu> <200211241456.gAOEuQh21874@localhost.localdomain>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Authentication-Info: Submitted using SMTP AUTH PLAIN at out002.verizon.net from [151.202.188.144] at Sun, 24 Nov 2002 12:45:35 -0600
+Subject: [Axiom-mail] Re: noweb, pamphlets, and TeXmacs
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+> The URLs are all assumed to be internal, hence the pamphlet:
+> prefix. 
+> you could just <<PRL:/(path)/doc#code>>
+In this case, we agree. I would suggest then that the (path) be left out
+and recovered dynamically from the user's installation (much like a
+relative html reference, but based on the Pamphlet system installation
+directory path). Here I am assuming that a user installs all existing
+pamphlets when the new Axiom system is installed. If this is not the
+case (as some users may prefer), then some "external" but stable
+depository for these pamphlets would be searched (also dynamically
+rather than hard coded into the pamphlet). So new versions can update
+the external paths without having to change the pamphlets. These updates
+can also be done automatically similar to patches to software bugs.
+
+William
+-- 
+William Sit
+Department of Mathematics..............Email: wyscc@cunyvm.cuny.edu
+City College of New York..........................Tel: 212-650-5179
+Convent Ave at West 138th Street..................Fax: 212-862-0004
+New York, NY 10031.....Asian Symposium on Computer Mathematics 2003
+USA..........................http://www.mmrc.iss.ac.cn/~ascm/ascm03
+
+
+
+From daly@idsi.net Wed Nov 27 18:01:15 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18HBBD-0005PI-00
+	for axiom-mail@nongnu.org; Wed, 27 Nov 2002 18:01:15 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18HBBA-0005Op-00
+	for axiom-mail@nongnu.org; Wed, 27 Nov 2002 18:01:14 -0500
+Received: from flamingo.mail.pas.earthlink.net ([207.217.120.232])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18HBB9-0005Oc-00
+	for axiom-mail@nongnu.org; Wed, 27 Nov 2002 18:01:12 -0500
+Received: from dialup-65.58.184.146.dial1.stamford1.level3.net ([65.58.184.146] helo=localhost.localdomain)
+	by flamingo.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18HBB6-000357-00; Wed, 27 Nov 2002 15:01:08 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gARMvZq26719;
+	Wed, 27 Nov 2002 17:57:35 -0500
+Date: Wed, 27 Nov 2002 17:57:35 -0500
+Message-Id: <200211272257.gARMvZq26719@localhost.localdomain>
+From: root <daly@idsi.net>
+To: OSCAS@ACM.ORG
+Cc: axiom-mail@nongnu.org, daly@idsi.net, Gilles.Khan@inria.fr
+Reply-to: daly@idsi.net
+Subject: [Axiom-mail] Axiom Journal
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+All,
+
+Axiom is in the process of becoming open sourced.
+With luck we expect to have at least the interpreter and algebra
+portions available by year end. More info exists at:
+http://savannah.nongnu.org/projects/axiom
+
+I believe that we need to push the development of Axiom with a 30 year
+goal in mind. That is, we need to make sure that we have a quality
+system that can be used, maintained and enhanced by the next
+generation 30 years from now.
+
+Axiom, as you know, has a vast amount of algebra encoded.
+Unfortunately the documentation for the algorithms exists as thesis
+work and conference papers which ar enshrined in research libraries. 
+Most people do not have access to these papers. So, unlike other 
+open source projects, you cannot simply tell people to "read the code".
+
+In order to address this problem Axiom is pushing hard in the
+direction of completely developing the system using literate
+programming. On the algebra front this means that we need to
+do two things. 
+
+First, we need to find the original sources for the research behind
+the algorithms in Axiom. Once these are found we need to create a
+literate document that wraps the source code with the theory and
+reduces the whole to a coherent explanation. We have created a
+document format based on Knuth's literate programming idea and
+Norman Ramsey's noweb implementation called "Pamphlets". Pamphlets
+are basically TeX documents with a few additional tags so virtually
+all of the mathematics community can use it immediately.
+
+In order to take the first step all of Axiom's internals are now
+implemented using pamphlet files. These files contain explanations
+for developers so the internals can be maintained. There will be
+an effort to extend this to the algebra files. We have a working
+prototype for one domain (dhmatrix.spad).
+
+Second, we need to encourage people to consider combining algorithms
+with the theory in future technical papers. Currently one gets credit
+for developing the theory but not the algorithm. I believe this needs
+to change. Papers need to include the algorithm so reviewers and
+readers can easily reproduce the results and use the implementation.
+Physics and Chemistry require results to be reproduced; why not
+Computational Mathematics? Why can't we just "drag and drop" a
+technical paper onto a running system and have it work?
+
+In order to take the second step we need to foster a forum for
+publication of literate programs in Computational Mathematics.
+I'm proposing creating an "Axiom Journal" which uses these
+Pamphlet files as the submission format (basically, TeX with
+trivial extensions).
+
+What is your opinion of creating such a Journal?
+
+Tim Daly
+daly@idsi.net
+
+
+
+
+From daly@idsi.net Wed Nov 27 23:18:40 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18HG8N-0005FS-00
+	for axiom-mail@nongnu.org; Wed, 27 Nov 2002 23:18:39 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18HG8K-0005FF-00
+	for axiom-mail@nongnu.org; Wed, 27 Nov 2002 23:18:39 -0500
+Received: from falcon.mail.pas.earthlink.net ([207.217.120.74])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18HG8J-0005FB-00
+	for axiom-mail@nongnu.org; Wed, 27 Nov 2002 23:18:35 -0500
+Received: from dialup-65.58.184.146.dial1.stamford1.level3.net ([65.58.184.146] helo=localhost.localdomain)
+	by falcon.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18HG89-00031K-00; Wed, 27 Nov 2002 20:18:26 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gAS4Epe26890;
+	Wed, 27 Nov 2002 23:14:51 -0500
+Date: Wed, 27 Nov 2002 23:14:51 -0500
+Message-Id: <200211280414.gAS4Epe26890@localhost.localdomain>
+From: root <daly@idsi.net>
+To: OSCAS@ACM.ORG, axiom-mail@nongnu.org
+Reply-to: daly@idsi.net
+Subject: [Axiom-mail] Axiom Journal
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+> Emil Volcheck wrote:
+
+> I'm glad to hear of progress towards getting Axiom
+> open-sourced.  Please post updates regularly to the
+> OSCAS list.
+
+I'll mention it at major milestones but the point of this list isn't
+really to advertise Axiom so I'm not sure how regularly I'll post
+progress here. Alpha development is being done on a non-public website
+that developers can reach so there isn't much to say yet anyway. I'll
+announce the arrival of source at the website when it happens.
+
+> 
+> Let me respond to some of your comments and questions.
+> 
+> On Wed, 2002-11-27 at 17:57, root wrote:
+> > All,
+> >
+> > Axiom is in the process of becoming open sourced.
+> > With luck we expect to have at least the interpreter and algebra
+> > portions available by year end. More info exists at:
+> > http://savannah.nongnu.org/projects/axiom
+> >
+> > I believe that we need to push the development of Axiom with a 30 year
+> > goal in mind. That is, we need to make sure that we have a quality
+> > system that can be used, maintained and enhanced by the next
+> > generation 30 years from now.
+> >
+> 
+> A 30-year goal is ambitious.  Does this change how you approach
+> the development of the system?
+
+Well, to answer this question I really have to digress into a
+bit of speculation about what I think is happening and will happen.
+So none of this is anything but religious noise at the moment.
+That said, I am motivated by a couple beliefs.
+
+First, I don't believe the funding and manpower will be available
+to support another large-scale computer algebra effort such as
+we've seen over the last 30 years. Mathematica, Maple, Macsyma,
+Axiom and other systems were innovative when they were proposed.
+Now that these systems exist it is hard to claim that building
+yet-another-polynomial-manipulation-system is research and should
+be funded. Of course, that isn't the idea proposed but in order to
+do the proposed research from scratch SOMEBODY has to write all
+the low level details again. It would be better to start work
+using an existing platform. Especially on a platform that you
+have permission to modify any way you please.
+
+Axiom has shown its real strength when supporting research work.
+Now that it is open source it will be available for modification.
+
+The problem is that it requires a good deal of knowledge just
+to build the system at the moment. Knowledge that needs to be
+written down in some way that will change as the system is changed.
+And it requires a good deal of mathematical knowledge to modify
+the mathematics. This knowledge is hidden in research papers and
+libraries. 
+
+Which brings me to my second fundamental movitating point.  We need to
+fully integrate the research work and the code.  I say this because I
+believe that the system, actually all of the current systems, have
+reached a natural limit for the given style of development. The
+systems are both too broad and not nearly broad enough. 
+
+They are "too broad" in that it is very difficult to be an expert user
+of any of these systems in all of the areas they cover. In order to
+use portions of these systems you need to understand the theory
+supporting them.
+
+They are "not broad enough" because there are many, many areas of
+math that need to be encoded. They need a strong theoretical background
+so we can know what answers we SHOULD expect. They need proven
+algorithms so we can trust the results. In short, they need more
+research done and added to them.
+
+But I believe that the limitations of the "code only" approach 
+make it ever more difficult to expand the system without error.
+I believe we need to bring the research out of Mathematics
+and the code out of Computer Science and pair them into the
+Computational Mathematics framework in a more formal way.
+
+So, to answer your question, I'm trying to architect the system
+so that it fully understands, uses and support literate programming.
+I believe we need to foster Computational Mathematics as a separate
+science with its own standards of, among other things, publications.
+
+Changes to Axiom are now done in the documentation. These changes
+are compiled directly into the code. Documentation is automatically
+split up into various parts including code, test cases, etc.
+
+Pamphlet files are the primitive layer and they focus on one
+pile of code. Booklet files will consist of cross-sections of
+pamphlet files allowing "across the system" (e.g. all matrix 
+functions) and "down into the system" (e.g. deep discussion of
+integration). Booklets are intended to make teaching easier
+and provide better support for teachers.
+
+At the algebra level the implication is that the documentation
+contains the theory as well as the code. Or at least that is the 
+goal.
+
+
+> >From my perspective, it seems far more likely for a computer
+> algebra _language_ to endure 30 years than for a specific
+> computer algebra system.  I would advocate channeling efforts
+> into developing Aldor as a good language for writing computer
+> algebra software.  Axiom then could offer itself as one system that
+> runs Aldor code.  Axiom would best thrive as an open source
+> project if other proprietary computer algebra systems could
+> use Aldor code as well.
+
+The Axiom language (Aldor language, Spad language, whatever)
+is well thought out and carefully designed. The Aldor vs Axiom
+debate is pointless. Whether you find stand-alone compiled
+code (Aldor) or compiled-environment code (Axiom) depends on
+what your needs are. The languages, modulo some platform issues,
+are essentially the same. Axiom contains much more code than
+the current Aldor libraries. Aldor libraries have facilities
+(like parallel code) which are not (yet) in Axiom. (Axiom's
+underlying lisp DOES support the same facilities. It needs
+to be "raised up" into the code and will be, given time).
+
+I hope to see 100% compatibility between Axiom and Aldor for
+non-platform related code. Currently I/O is the main issue
+and I suppose we need to modify Axiom to support Aldor's model
+and/or write an Axiom I/O support library for Aldor. It can
+be done and, given the time, will almost certainly come to pass.
+
+Aldor is never going to be user-affectionate enough for new
+users in a teaching environment. The Axiom interpreted version
+has the potential to have many different teaching front-ends
+that make it a better teaching vehicle. Axiom is never going
+to be as efficient as Aldor. 
+
+The Axiom algorithms were written by experts in their fields
+and, as mentioned above, I don't think we'll be able to bring
+together that much expertise again. "Lifting them" into Aldor
+can probably be done but the research areas have improved and
+it would be better to spend the time updating the algorithms
+(in a literate way, of course).
+
+I'd love to see Mathematica and Maple run Aldor code. It is
+not clear how they will deal with Type towers which are an
+essential feature of Aldor's world view but there are very
+clever people in this field and I hope the idea gets the 
+support it needs to make such a thing possible.
+
+> > Axiom, as you know, has a vast amount of algebra encoded.
+> > Unfortunately the documentation for the algorithms exists as thesis
+> > work and conference papers which are enshrined in research libraries.
+> > Most people do not have access to these papers. So, unlike other
+> > open source projects, you cannot simply tell people to "read the code".
+> 
+> Papers can be posted on the web.  Once Axiom becomes fully open
+> source, people can read the code.  I'm not sure I follow you.
+
+Yes, papers can be posted on the web. That's hardly the same thing
+as a structured document that includes source code and test cases.
+The web documents won't contain cross-references to other pamphlets.
+The web documents are unlikely to be reviewed to the standards that
+a paper submitted to an Axiom Journal would be (that is, the code
+is checked for conforming to the theory, the code is run and tested,
+the code is checked for conformance to standards, the pamphlet 
+contains proper cross-references, etc). 
+
+Without the underlying assumption of Axiom and/or Aldor it hardly
+makes sense to include anything but pseudo-code which cannot be run.
+The effort to create runnable, journal-quality code is much, much
+harder than writing pseudo-code.
+
+Furthermore, the code can be improved by interacting with the
+reviewers before publication.
+
+> >
+> > In order to address this problem Axiom is pushing hard in the
+> > direction of completely developing the system using literate
+> > programming. On the algebra front this means that we need to
+> > do two things.
+> 
+> I'm all for this.  I like noweb.  But is this "pamphlet" format
+> compatible with noweb?  Why not just use noweb?  Noweb can be
+> used with Aldor.
+
+Pamphlet files ARE noweb files. At least at the moment. The goal
+is to add structure to the document format so that the system can
+decompose the files into useful parts. Thus, using multiple "roots"
+in a noweb file you can include several code packages, test cases
+and examples in one Pamphlet. Or have a group of Pamphlets that
+cross-reference each other to develop portions of the theory.
+Thus a researcher can submit multiple papers over time which
+reference and use his prior work automatically.
+
+> 
+> >....
+> > Second, we need to encourage people to consider combining algorithms
+> > with the theory in future technical papers. Currently one gets credit
+> > for developing the theory but not the algorithm. I believe this needs
+> > to change. Papers need to include the algorithm so reviewers and
+> 
+> Why do you think there is no credit for developing an algorithm?
+> I believe people do get credit for developing algorithms.
+> Think of the Journal of Symbolic Computation and the Proceedings of
+> any ISSAC conference.  Most papers in these publications
+> do include algorithms.
+
+The "lack of credit" comes from discussions during an open-source
+conference in May of 2002. Professors under the gun to generate
+papers for a tenure track position have a good incentive to skip
+the reduction-to-practice step in favor of pushing the research
+papers further. ISSAC conference proceedings rarely contain 
+executable code and, if they do, it is only code fragments.
+Full listings are hard to come by. I know of none that have been
+published in Axiom's language (though that could just be my oversight).
+And even where I've seen code it hardly is "production quality",
+ready-to-run software.
+
+> 
+> > readers can easily reproduce the results and use the implementation.
+> 
+> I agree that many journals may not include the source code or
+> implementation of an algorithm.  Perhaps TOMS is an exception.
+> The JSC contemplated an initiative some years ago to allow authors
+> to submit source code that would be tested at a basic level by
+> the Journal to make sure it compiles and works on the examples
+> provided by the author.  Is this the sort of thing you have in mind?
+
+Actually, as you can see above, I have much more ambitious goals than
+just running "make" and "make test" over submitted code. There is a
+large conceptual gap, usually only crossed by the researcher in
+isolation and never written down, between the theory and the code.
+Currently there is no vehicle to capture this crucial transition.
+Literate programming can offer that vehicle. Time will tell if it
+gets used.
+
+Furthermore, Axiom Journal articles can assume a particular 
+environment. Axiom algorithms tend to be very short, sometimes
+even "1-liners", because the Axiom language allows you (with
+careful thought) to get fairly close to the mathematics. If you 
+are able to assume existing facilities for, say groebner basis 
+computations, you can write very concise algorithms that work
+in a very general setting.
+
+Thus, an article may contain a complete code implementation 
+that takes up less than a page of text. This is unlike other
+environments where code listings in C can go on for dozens
+of pages, especially if you want fully runnable code.
+
+> > Physics and Chemistry require results to be reproduced; why not
+> > Computational Mathematics? Why can't we just "drag and drop" a
+> > technical paper onto a running system and have it work?
+> 
+> This does happen to a limited extent in computational mathematics
+> when one author proposes a new algorithm for a problem and
+> implements an older algorithm to demonstrate the improvement.
+> I think that more such comparative analysis or efforts to
+> reproduce results need to happen in the computer algebra
+> community.
+> 
+> Literate programming does provide a means to convert a paper
+> into source code, e.g., "notangle".  That's almost drag and drop.
+
+Notangle isn't even close to "drag and drop" in the sense I'm using.
+Notangle will extract the code (or one of the code roots, anyway).
+However you still have to look at the references to other pamphlets 
+that are cited and extract their code. You have to compile the code. 
+You have to extract test cases (well, one SHOULD, but...). You
+have to extract examples. You have to update online documentation.
+Heck, if we get lucky, we might even have to run the proof,
+validate the result and add the proven theorems to the existing
+list of known results.
+
+There is much to be done to fully integrate new algebra but all
+of it can be automated. Ten years from now this should be expected
+behavior. 
+
+> 
+> >
+> > In order to take the second step we need to foster a forum for
+> > publication of literate programs in Computational Mathematics.
+> > I'm proposing creating an "Axiom Journal" which uses these
+> > Pamphlet files as the submission format (basically, TeX with
+> > trivial extensions).
+> >
+> > What is your opinion of creating such a Journal?
+> 
+> Why create a new journal when you could submit to an existing
+> journal?  Or if you need a less formal venue, how about a formally
+> reviewed paper in the SIGSAM Bulletin?  Write your code with noweb,
+> do "noweave" and submit.  I don't see a problem.  I'm sure the
+> JSC and Bulletin would be receptive to such submissions.  The JSC
+> does have a category of submissions that are for implementation
+> papers.  I know SIGSAM would be happy to post noweb source for
+> Bulletin articles.
+
+Submitting the noweave'd code misses the whole point. You really want
+the end user to run noweave, whether that end user is the Journal
+typesetters or the Axiom end user. You submit the noweb pamphlet
+file. The noweave output is just dead TeX code. It isn't executable
+unless you sit and type it into the system. That's a method of last
+resort for someone who can only find the paper copy in a
+library. People who receive the "Axiom Journal" would get the noweb
+pamphlet file electronically, not as a paper copy. They can add it
+directly to their system.  In fact, paper is irrelevant. The Axiom
+Journal would be all electronic.  Worst case, it arrives on a CD in 
+the mail.
+
+> Starting a new "Axiom Journal" might tend to separate you from
+> the larger community of researchers in computer algebra, which
+> could hide the advantages of literate programming and Aldor
+> rather than publicize them.
+
+True. There is a Mathematica Journal, I'm told, but I've never seen
+it. Maple also has one, I'm told, though I've never seen it either.
+So why not Axiom?
+
+The advantage of submitting pamphlet files to an online Axiom 
+Journal would be that, except for reviewing time, you can publish
+quickly. And your code could be spread quickly. Paper Journals
+can take months to publish an article and ISSAC comes but once
+a year.
+
+Existing Journals would probably not accept and distribute pamphlet
+files; certainly not as the "default" format.  Pamphlet files are
+assumed to be open source (almost by definition) so they do threaten
+the "copyright" of existing Journals. But this whole issue has been
+brought up elsewhere and I don't want to discuss legal issues. I want
+to explore new concepts that will get us thru the next 30 years.
+
+>From your questions I can see that I wasn't as clear as I intended
+to be. Mea Culpa.
+
+Tim
+
+
+
+
+
+
+From miked@nag.co.uk Thu Nov 28 05:39:14 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18HM4g-0004gm-00
+	for axiom-mail@nongnu.org; Thu, 28 Nov 2002 05:39:14 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18HM4d-0004gF-00
+	for axiom-mail@nongnu.org; Thu, 28 Nov 2002 05:39:12 -0500
+Received: from mail22.messagelabs.com ([193.109.255.115])
+	by monty-python.gnu.org with smtp (Exim 4.10)
+	id 18HM4d-0004gB-00
+	for axiom-mail@nongnu.org; Thu, 28 Nov 2002 05:39:11 -0500
+X-VirusChecked: Checked
+X-Env-Sender: miked@nag.co.uk
+X-Msg-Ref: server-16.tower-22.messagelabs.com!1038479949!7047
+Received: (qmail 17762 invoked from network); 28 Nov 2002 10:39:09 -0000
+Received: from smtp-6.star.net.uk (212.125.75.75)
+  by server-16.tower-22.messagelabs.com with SMTP; 28 Nov 2002 10:39:09 -0000
+Received: (qmail 26479 invoked from network); 28 Nov 2002 10:39:09 -0000
+Received: from nagmx1.nag.co.uk (HELO nag.co.uk) (62.231.145.242)
+  by smtp-6.star.net.uk with SMTP; 28 Nov 2002 10:39:09 -0000
+Received: from brackley.nag.co.uk (brackley.nag.co.uk [192.156.217.21])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id KAA11942;
+	Thu, 28 Nov 2002 10:39:01 GMT
+Received: from nag.co.uk (IDENT:root@trowbridge.nag.co.uk [192.156.217.69])
+	by brackley.nag.co.uk (8.11.1/8.11.1) with ESMTP id gASAeDJ11218;
+	Thu, 28 Nov 2002 10:40:13 GMT
+	(envelope-from miked@nag.co.uk)
+Received: (from miked@localhost)
+	by nag.co.uk (8.9.3/8.9.3) id KAA13254;
+	Thu, 28 Nov 2002 10:38:56 GMT
+Date: Thu, 28 Nov 2002 10:38:56 +0000
+From: Mike Dewar <miked@nag.co.uk>
+To: root <daly@idsi.net>
+Cc: OSCAS@ACM.ORG, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Axiom Journal
+Message-ID: <20021128103856.B13121@nag.co.uk>
+References: <200211280414.gAS4Epe26890@localhost.localdomain>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Mailer: Mutt 1.0.1i
+In-Reply-To: <200211280414.gAS4Epe26890@localhost.localdomain>; from daly@idsi.net on Wed, Nov 27, 2002 at 11:14:51PM -0500
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+While I like Tim's idea in theory, I think Emil has made some valid
+points about using existing Journals.  Setting up an electronic journal
+which is regarded in the same light as an existing paper-based one is
+actually very difficult.
+
+Although SIGSAM and JSC are the obvious routes for printed papers in
+this subject, there is also the LMS Journal of Computation and
+Mathematics at http://www.lms.ac.uk/jcm.  This is a fully-refereed
+electronic journal although paper copies are produced for copyright
+libraries (I understand that this gets the Journal an ISSN number,
+papers have page numbers etc, and as a result its easier for academics
+to get credit for papers published there).  I believe you can add any
+attachments you wish to the paper, so they would probably be happy to
+accept pamphlet files as appendices.  James Davenport is the
+editor-in-chief by the way.
+
+Cheers, Mike.
+
+_____________________________________________________________________
+This message has been checked for all known viruses by Star Internet
+delivered through the MessageLabs Virus Scanning Service. For further
+information visit http://www.star.net.uk/stats.asp or alternatively call
+Star Internet for details on the Virus Scanning Service.
+
+
+
+From daly@idsi.net Fri Nov 29 08:41:00 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18HlO7-0007SO-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 08:40:59 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18HlO3-0007PS-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 08:40:58 -0500
+Received: from flamingo.mail.pas.earthlink.net ([207.217.120.232])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18HlO3-0007PI-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 08:40:55 -0500
+Received: from dialup-65.58.188.137.dial1.stamford1.level3.net ([65.58.188.137] helo=localhost.localdomain)
+	by flamingo.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18HlNt-0007Mf-00; Fri, 29 Nov 2002 05:40:46 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gATDb8Z28881;
+	Fri, 29 Nov 2002 08:37:08 -0500
+Date: Fri, 29 Nov 2002 08:37:08 -0500
+Message-Id: <200211291337.gATDb8Z28881@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Carlo Traverso <traverso@dm.unipi.it>, OSCAS@ACM.ORG,
+   axiom-mail@nongnu.org
+Reply-to: daly@idsi.net
+Subject: [Axiom-mail] Axiom Journal
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+>  Carlo Traverso wrote:
+>
+> I would like to use an existing journal, if it were not a journal with
+> a restrictive policy on electronic access.
+> 
+> Journals (including SIGSAM, JSC and JCM) usually allow access only to
+> subscribers, and often prohibit reposting and free access to the
+> articles.
+> 
+> Creating a new journal has a sense if it is a GNU-licence journal. But
+> of course it has to be journal with a good program committee, and a
+> backing organization - that means some kind of funding. But the
+> program committee is the difficult part.
+
+re: Existing vs Free Journal
+
+Since virtually every Journal I've ever received was paper and 
+restricted I can't say what the actual dynamics of Journals are.
+
+In some sense there is a direct analogy between commercial software
+and current Journals. Both are centralized and both are expensive.
+
+The free software model can be applied to Journals. 
+
+re: Reviewers
+
+It is clear that the quality of a Journal is related to the quality
+of the reviewers as well as of the received papers. Quality review is
+time-consuming work. Unpaid work, at least in my experience. While
+the "work for free and give it away to everyone" model has clearly
+infected the programming community I don't see it having spread
+widely in the Journal community (except for the reviewers and
+contributors, of course). One would have to build up a supporting
+group of open-source reviewers just like building up a supporting
+group of open-source developers. If the work is interesting and
+worthwhile an open-source project can attract developers. So is
+is unreasonable to expect that it could attract reviewers?
+
+A key advantage for reviewing Pamphlet files would be that the
+theory has been "reduced to practice" in the form of runnable code.
+That would make checking the results somewhat easier and make the
+review more concrete. Of course, the author has to work harder to
+write quality code as well as the new theory but that's the glory
+of it all, no?
+
+re: Copyright
+
+The copyright issue might be a problem for some University based
+work. I'm not sure if there are Universities that insist on
+holding some part of a copyright on published work. Clearly you
+would not want publishing in an online Journal to preclude also
+publishing elsewhere. So the Journal would have to have a license
+policy more like a BSD-style license.
+
+I know that it is bad form to publish the same paper in two Journals
+(and probably violates current copyright agreements).  This might be a
+problem since who, after all, would want to publish a paper online in
+some iffy-startup-journal when there are more widely recognized
+Journals available. Perhaps the early submissions will consist of
+"republished" material where the author owns or has re-acquired
+publication rights. Or they might consist of rewritten papers with
+the embedded code which would hardly be a republish.
+
+re: Distribution
+
+An Axiom Journal, because it is composed of pamphlet files, would have
+to have electronic distribution. And since virtually all parts of the
+pamphlet would be absorbed into various parts of a running system
+you'd have to have a "free-license-only" (e.g. BSD) policy. Otherwise
+you couldn't compose the various pamphlets into booklets for teaching
+or use the "proven code" as a theorem (the very notion of a
+"copyrighted" theorem gives me pause...).
+
+Given that the distribution is electronic there would be essentially
+zero distribution cost. Since submission and review are already done
+on a free basis I don't see much of a change, except that perhaps
+reviewers would be identified by name and reviews could happen
+continuously even after "publication". I suppose you'd have to keep
+the Journal articles (pamphlets) under some sort of CVS control as
+misprints and mistakes were corrected.
+
+Reviewers, by the way, could have recognized areas of expertise.
+So a submission could be "reviewed for theory", "reviewed for form",
+"reviewed for algorithm proof", etc.
+
+One could even have "threads" of topics in the Journal that go into
+the details of discussion among reviewers and the author.  So an
+online Journal would have a newsgroup quality to it also.  Later users
+of the article (pamphlet) could contribute to the threads.
+
+re: Funding
+
+As to the funding part... well, funding is always welcome, of course.
+However, money is only a form of "stored work" and the community has
+so far been willing to store their work in running code instead. I
+think we need to build it, see who comes, try it out, modify it and
+extend it. I've searched around and haven't found a source of funding
+for free computer algebra in general nor Axiom in the specific so
+I don't expect to see financial support for a Journal. 
+
+Thirty years from now nobody will care who funded it but the work will
+still be in the CVS. I'm trying to "take the long view".
+
+Tim 
+daly@idsi.net
+
+
+
+
+From daly@idsi.net Fri Nov 29 16:24:24 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18Hsca-0000vn-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 16:24:24 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18HscY-0000vR-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 16:24:23 -0500
+Received: from grebe.mail.pas.earthlink.net ([207.217.120.46])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18HscX-0000vN-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 16:24:21 -0500
+Received: from dialup-65.58.188.137.dial1.stamford1.level3.net ([65.58.188.137] helo=localhost.localdomain)
+	by grebe.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18HscV-0006kL-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 13:24:20 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gATLKiu29103;
+	Fri, 29 Nov 2002 16:20:44 -0500
+Date: Fri, 29 Nov 2002 16:20:44 -0500
+Message-Id: <200211292120.gATLKiu29103@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-mail@nongnu.org
+Reply-to: daly@idsi.net
+Subject: [Axiom-mail] [beebe@math.utah.edu: Re: Axiom Journal]
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+------- Start of forwarded message -------
+Date: Fri, 29 Nov 2002 10:23:37 -0700 (MST)
+From: "Nelson H. F. Beebe" <beebe@math.utah.edu>
+To: daly@idsi.net
+Cc: beebe@math.utah.edu
+X-US-Mail: "Center for Scientific Computing, Department of Mathematics, 110
+        LCB, University of Utah, 155 S 1400 E RM 233, Salt Lake City, UT
+        84112-0090, USA"
+X-Telephone: +1 801 581 5254
+X-FAX: +1 801 585 1640, +1 801 581 4148
+X-URL: http://www.math.utah.edu/~beebe
+Subject: Re: Axiom Journal
+In-Reply-To: Your message of Fri, 29 Nov 2002 09:54:51 -0500
+X-RAVMilter-Version: 8.3.1(snapshot 20020109) (mail.idsi.net)
+X-UIDL: `MT!!Rc1"!")6"!fbX"!
+
+Thanks for your detailed response to my comments on the proposed Axiom
+Journal.  
+
+I agree that such a journal could offer a distinctively different
+publication forum for research in this area.  I'm strongly in favor of
+getting software published together with theory.  The computer is
+often a harsh and unforgiving judge of correctness, but at least it's
+just a machine, and perfectly neutral.
+
+Mathematicians are fond of saying that mathematical proofs are truths
+that are absolute, unlike most results in the rest of the sciences.
+However, my concern is that logical thinking is very difficult for
+humans, and proofs are often so complex that a cynic like me can have
+little confidence in their correctness.  Proofs of proofs are usually
+bigger than the original proof, so how does one prove the
+proof-of-the-proof?
+
+Even simple algorithms and protocols can have exceedingly subtle
+points of failure, as Bob Sedgewick's analysis of quicksort showed,
+and the recent demonstration of failure of the 1978 Needham-Schroeder
+communications protocol.  The latter had stood in the open literature
+for about two decades, and was widely taught in computer science
+courses, before a problem was discovered in the late 1990s.
+
+If simple tasks like divide-and-conquor, and communications
+handshaking, hold such difficulties, then I think that we have to be
+very sceptical of correctness claims of more complex statements,
+whether they are mathematical, or the ISO network model, or the laws
+of most countries.
+
+A correctness proof of a computer program may be nice to have, but it
+is not sufficient: one still can have errors in its implementation,
+either from the program itself, or from its compilation into some host
+machine code, or from errors in its run-time libraries, or in the
+network, or in the underlying hardware.  
+
+The engineering solution to problems like this is multiple independent
+implementations of portable computer programs that can be run on
+multiple operating systems, architectures, and compilers.  Only by
+reproducing results with independent studies can we garner confidence
+in them.
+
+The growing practice in the free software community of including a
+"make check" validation suite in software distributions is a good step
+in the right direction: at least then one can have confidence that a
+local installation of software is behaving the same way it did for its
+original authors.  The idea isn't new: Don Knuth was doing that in the
+early 1960s with his Algol compiler: every bug report became a member
+of a test suite the ensure that fixes did not get unfixed by later
+modifications.
+
+It has long been of concern to me that software written for
+single-compiler languages is of necessity suspect: this includes
+Visual Basic, C#, perl, python, Macsyma, Mathematica, Maple, Axiom,
+Reduce, and essentially all other symbolic algebra languages.  To some
+extent, I also include Matlab and S-Plus: octave and R are independent
+implementations of those two, but octave at least is not complete
+enough to handle every Matlab program.
+
+In the symbolic algebra community, it has so far proven impossible to
+automatically translate software from one language into another.
+Richard Fateman tried a Mathematica-to-Macsyma translation, only to
+discover ambiguities arising from the fact that Mathematica is not
+defined by a rigorous grammar.
+
+The lessons of Fred Brooks ``The Mythical Man Month'' and Bruce
+Schneier's ``Secrets and Lies'' are that complexity is a huge
+impediment to getting things right.  
+
+Don Knuth once told me that he hopes that long after he's gone, the
+work that he'll most be remembered for is literate programming,
+because he feels that it is the only way to program computers
+reliably.  It is sad how little the idea has caught on, as documented
+in
+
+	http://www.math.utah.edu/pub/tex/bib/index-table-l.html#litprog
+
+- -------------------------------------------------------------------------------
+- - Nelson H. F. Beebe                    Tel: +1 801 581 5254                  -
+- - Center for Scientific Computing       FAX: +1 801 581 4148                  -
+- - University of Utah                    Internet e-mail: beebe@math.utah.edu  -
+- - Department of Mathematics, 110 LCB        beebe@acm.org  beebe@computer.org -
+- - 155 S 1400 E RM 233                       beebe@ieee.org                    -
+- - Salt Lake City, UT 84112-0090, USA    URL: http://www.math.utah.edu/~beebe  -
+- -------------------------------------------------------------------------------
+------- End of forwarded message -------
+
+
+
+From daly@idsi.net Fri Nov 29 16:24:43 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18Hscs-00010U-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 16:24:42 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18Hscp-0000wL-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 16:24:42 -0500
+Received: from hawk.mail.pas.earthlink.net ([207.217.120.22])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18Hscp-0000wB-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 16:24:39 -0500
+Received: from dialup-65.58.188.137.dial1.stamford1.level3.net ([65.58.188.137] helo=localhost.localdomain)
+	by hawk.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18Hscj-00023o-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 13:24:34 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gATLL0K29107;
+	Fri, 29 Nov 2002 16:21:00 -0500
+Date: Fri, 29 Nov 2002 16:21:00 -0500
+Message-Id: <200211292121.gATLL0K29107@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-mail@nongnu.org
+Reply-to: daly@idsi.net
+Subject: [Axiom-mail] [daly@idsi.net: Re: Axiom Journal]
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+------- Start of forwarded message -------
+Date: Fri, 29 Nov 2002 14:47:18 -0500
+From: root <daly@idsi.net>
+To: beebe@math.utah.edu
+CC: daly@idsi.net, beebe@math.utah.edu
+In-reply-to: <CMM.0.92.0.1038590617.beebe@suncore.math.utah.edu>
+Subject: Re: Axiom Journal
+Reply-to: daly@idsi.net
+X-RAVMilter-Version: 8.3.1(snapshot 20020109) (mail.idsi.net)
+X-UIDL: ;(>"!H!6"!;Jd"!#H)"!
+
+
+> Nelson Beebe wrote:
+> 
+> Thanks for your detailed response to my comments on the proposed Axiom
+> Journal.  
+
+You're welcome. Discussion is good. You're making me think.
+
+> 
+> I agree that such a journal could offer a distinctively different
+> publication forum for research in this area.  I'm strongly in favor of
+> getting software published together with theory.  The computer is
+> often a harsh and unforgiving judge of correctness, but at least it's
+> just a machine, and perfectly neutral.
+> 
+> Mathematicians are fond of saying that mathematical proofs are truths
+> that are absolute, unlike most results in the rest of the sciences.
+> However, my concern is that logical thinking is very difficult for
+> humans, and proofs are often so complex that a cynic like me can have
+> little confidence in their correctness.  Proofs of proofs are usually
+> bigger than the original proof, so how does one prove the
+> proof-of-the-proof?
+
+Actually, I'm not one who subscribes to the "proofs are absolute"
+theory. There have been instances of things proven what are later
+qualified or disproven. Indeed the standards of proof of the 19th
+century are considered as too weak in the 20th. Even mathematics
+suffers from this flaw.
+
+As to the size of the proof... There is a certain conceptual distance
+between your idea and the implementation. The closer the implementation
+is to the machine the larger the gap you need to cross (e.g. writing
+in assembler). The closer the language is to the idea the smaller the
+gap. Axiom is rather close to the mathematics and far away from the
+machine model. That makes the proofs shorter as you are working at
+a conceptual level not far removed from the theory and the length
+of the proof is the cube of the width of the conceptual gap (daly's thm).
+Consider how easy it is to prove something to a fellow prof vs proving
+something to a new student.
+
+
+> Even simple algorithms and protocols can have exceedingly subtle
+> points of failure, as Bob Sedgewick's analysis of quicksort showed,
+> and the recent demonstration of failure of the 1978 Needham-Schroeder
+> communications protocol.  The latter had stood in the open literature
+> for about two decades, and was widely taught in computer science
+> courses, before a problem was discovered in the late 1990s.
+> 
+> If simple tasks like divide-and-conquor, and communications
+> handshaking, hold such difficulties, then I think that we have to be
+> very sceptical of correctness claims of more complex statements,
+> whether they are mathematical, or the ISO network model, or the laws
+> of most countries.
+
+I AM sceptical of proofs of correctness. However, I've tried to prove
+programs correct in the past. I find that I learn a great deal more
+about my program than I knew before I started. I have no belief that
+the program is fully correct but my confidence level was very much
+higher after the proof than before.
+
+> A correctness proof of a computer program may be nice to have, but it
+> is not sufficient: one still can have errors in its implementation,
+> either from the program itself, or from its compilation into some host
+> machine code, or from errors in its run-time libraries, or in the
+> network, or in the underlying hardware.  
+
+One of the problems that you run into trying to prove a C program correct
+is that you have to have a logical model of the machine on which to
+ground the idea of a pointer, for instance. That way lies madness.
+
+We've been looking at MetaPRL and ACL2. The MetaPRL allows you to
+"declare theorems", that is make the claim that some function performs
+in the manner stated. The plan of attack is likely to start with the
+lowest level constructs expressed in Spad (Axiom's algebra code), 
+The definitions of BasicType, SemiGroup, Monoid, etc., then to
+assume the necessary preconditions, and begin proving from "the
+ground up" within the algebra. Thus you have a clearly stated set
+of assumptions to start and each algorithm you prove beyond that can
+be used as a theorem at the next level.
+
+Since Axiom's libraries are structured in well-defined hierarchies
+you can build on all of the previous proofs by using the results
+as theorems. In this way you prove Spad algorithms which are fairly
+close to the mathematics. 
+
+The big hole in this is, of course, the basic assumptions which are made.
+These are made about underlying lisp functions that are called in the
+lowest level routines. Failures in these functions invalidate the
+chains of proof. However, I would advocate other methods of showing
+correctness than trying to recurse into the lisp code.
+
+The small hole in this is, of course, that the proof systems may be
+flawed.
+
+In general, it isn't perfect and sometimes isn't even pretty. However,
+it does raise the level of confidence in the code. It does give some
+assurance that the algorithmic failures are likely to be very subtle
+and related to special cases. And it gives a base on which to "debug
+the proof" as we get smarter about the process of proving programs.
+
+All of these systems have reached a complexity that is just too hard
+for one individual to trust. Mathematica and Maple are "engineering"
+systems. That is, they strive to "make it work". Unfortunately this
+ends up that subtracting two equal MATRICIES results in an INTEGER 0.
+
+Axiom strives to "make it correct" and follows theory as much as
+possible (you at least get the 0 MATRIX). Thus you know what you
+SHOULD expect for an answer. The problem is to raise the confidence
+that you WILL get the correct answer. Proof is too strong a word in
+some sense.
+
+Computer Algebra systems have the advantage that they are modelled on
+mathematics. When you try to prove code in other areas, say a text
+editor's source code, you have no model of correctness and have to
+build one in the logic.  In some sense computer algebra systems are
+unique and uniquely qualified as an area of proof.
+
+> 
+> The engineering solution to problems like this is multiple independent
+> implementations of portable computer programs that can be run on
+> multiple operating systems, architectures, and compilers.  Only by
+> reproducing results with independent studies can we garner confidence
+> in them.
+> 
+> The growing practice in the free software community of including a
+> "make check" validation suite in software distributions is a good step
+> in the right direction: at least then one can have confidence that a
+> local installation of software is behaving the same way it did for its
+> original authors.  The idea isn't new: Don Knuth was doing that in the
+> early 1960s with his Algol compiler: every bug report became a member
+> of a test suite the ensure that fixes did not get unfixed by later
+> modifications.
+
+You're certain to know of Dijkstra's comment that you can never prove
+anything by testing. Actually, Axiom does run regression testing during
+the build. There is a test suite that is used and grows with time.
+Every system build runs the test suite and diffs the output reporting
+any change.
+
+The pamphlet file format will eventually require two sections, one
+of test cases intended for boundary results and one of examples 
+intended for user education. However, both of these will be used for
+regression testing.
+
+Yet we both know this isn't enough. I'd also like to see the proofs
+rerun.
+
+> It has long been of concern to me that software written for
+> single-compiler languages is of necessity suspect: this includes
+> Visual Basic, C#, perl, python, Macsyma, Mathematica, Maple, Axiom,
+> Reduce, and essentially all other symbolic algebra languages.  To some
+> extent, I also include Matlab and S-Plus: octave and R are independent
+> implementations of those two, but octave at least is not complete
+> enough to handle every Matlab program.
+
+There is a second "Axiom" implementation now, called Aldor. The
+compiler was written from scratch in C. Axiom is written in Lisp.
+They both accept the same input language (modulo platform issues)
+so you can test your algorithm in two settings.
+
+> In the symbolic algebra community, it has so far proven impossible to
+> automatically translate software from one language into another.
+> Richard Fateman tried a Mathematica-to-Macsyma translation, only to
+> discover ambiguities arising from the fact that Mathematica is not
+> defined by a rigorous grammar.
+
+Yes, I know there has been talk about using the Aldor compiler as a
+front-end to systems like Maple. Personally I have little confidence
+in the result as Axiom and Aldor have a very strong type system and
+other computer algebra systems don't. Statements are ambiguous without
+the type system to define the domain. It seems unreasonable to backfit 
+the type system into Maple as it goes against the fundamental engineering
+philosophy of the Maple system. There are very clever people in this
+area, however, and I'm willing to be convinced otherwise.
+
+> The lessons of Fred Brooks ``The Mythical Man Month'' and Bruce
+> Schneier's ``Secrets and Lies'' are that complexity is a huge
+> impediment to getting things right.  
+
+Well, I see we are of like minds. I've insisted every student of
+mine read the mythical man month in every computer course I ever
+taught.
+
+> Don Knuth once told me that he hopes that long after he's gone, the
+> work that he'll most be remembered for is literate programming,
+> because he feels that it is the only way to program computers
+> reliably.  It is sad how little the idea has caught on, as documented
+> in
+> 
+> 	http://www.math.utah.edu/pub/tex/bib/index-table-l.html#litprog
+
+Knuth is likely to be remembered for more things than he can count.
+I'm expecting to take a skyload of flak once the source code for
+Axiom hits the streets. I'm rewriting it all into pamphlets. The
+C, Lisp, Boot, Spad, shell scripts and even the Makefiles have all
+been rewritten into pamphlets. There are no other files in the system.
+This is certain to cause havoc. I'm gonna blame Knuth :-)
+
+However, I wrote portions of this code many years ago and in some
+sense I did it wrong. My code lacks good documentation so it can
+be maintained and changed. That may be fine while either I'm the
+one maintaining the code or the code is commercial and closed and
+maintained by a small team. But once the code "hits the streets"
+it would be impossible to train the people to support it in its
+raw form. If the code is going to survive for the next 30 years
+I've got to "squeeze my brains out onto the desk" and document it.
+
+Documenting the source code directly is wrong because you tend to
+write very local, specific comments like "this should work". 
+Documenting the code in another file is wrong because you tend to
+never revisit that file again. I've "wired" the whole thing
+together so that you HAVE to change the documentation in order to
+change the source code. The traditional source code is now overwritten
+every time the system is changed so you lose your changes if you
+change the Lisp code and don't change the document.
+
+I'll just be sure to take a long vacation the day I post the code :-)
+
+Tim
+
+P.S. I'd like to make the discussion public by adding it to the
+axiom-mail list if you don't mind. These are points I need to
+make anyway with the Axiom community and it would save me a bit
+of typing. They probably aren't of interest to the OSCAS list though.
+------- End of forwarded message -------
+
+
+
+From daly@idsi.net Fri Nov 29 16:25:07 2002
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10)
+	id 18HsdG-0001HC-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 16:25:06 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10)
+	id 18HsdC-0001BV-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 16:25:04 -0500
+Received: from harrier.mail.pas.earthlink.net ([207.217.120.12])
+	by monty-python.gnu.org with esmtp (Exim 4.10)
+	id 18Hsbq-0000mH-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 16:23:38 -0500
+Received: from dialup-65.58.188.137.dial1.stamford1.level3.net ([65.58.188.137] helo=localhost.localdomain)
+	by harrier.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 18Hsbo-0001pe-00
+	for axiom-mail@nongnu.org; Fri, 29 Nov 2002 13:23:36 -0800
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id gATLK0C29099;
+	Fri, 29 Nov 2002 16:20:00 -0500
+Date: Fri, 29 Nov 2002 16:20:00 -0500
+Message-Id: <200211292120.gATLK0C29099@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-mail@nongnu.org
+Reply-to: daly@idsi.net
+Subject: [Axiom-mail] [daly@idsi.net: Re: Axiom Journal]
+Sender: axiom-mail-admin@nongnu.org
+Errors-To: axiom-mail-admin@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.0.11
+Precedence: bulk
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.nongnu.org/pipermail/axiom-mail/>
+
+------- Start of forwarded message -------
+Date: Fri, 29 Nov 2002 09:54:51 -0500
+From: root <daly@idsi.net>
+To: beebe@math.utah.edu
+CC: daly@idsi.net
+Subject: Re: Axiom Journal
+Reply-to: daly@idsi.net
+X-RAVMilter-Version: 8.3.1(snapshot 20020109) (mail.idsi.net)
+X-UIDL: EgU!!;Qj!!"H>!!U"R"!
+
+> While I'm strongly in support of your views of literate programming
+> and your ideas for an Axiom Journal, I think that the issue is hard to
+> solve: people mostly don't want to publish in niche journals,
+> electronic journals have not existed long enough to know whether any
+> particular one will survive, and there are already so many journals
+> that no one really claim to can keep up.  So far electronic journals
+> exist as a labor of love by their founders and supporters: what
+> happens when those people lose interest, retire, expire, change jobs,
+> ...?
+
+Ah, there's the rub... In fact, it is the driving point behind the
+literate programming effort. At the moment I'm one of probably three
+people in the world who know how to build Axiom and I'm working hard
+to permanently code myself out of that position. That way I can retire :-)
+
+The Journal issue is somewhat different though. I can set up the
+machinery to support the Journal but I can't force people to 
+contribute. My current plan of attack is to work with people who
+have already written Axiom code to convert existing code into 
+Journal pamphlets and update them with new theory. I have talked
+to a few people who seem willing to do this provided I'm willing
+to handle most of the grunt work like final rewrites into the
+proper format, etc.
+
+Axiom has about 370 algebra files. Some percentage of these will
+eventually be backed by existing published papers. I'm hoping that
+these can be used as a demonstration (even to me) of the usefulness
+of publishing pamphlets. I've already gotten permission to use some
+of the original publish source materials.
+
+I'm also in discussions about actually proving the algorithms
+with some formal logic which would make the publications unique.
+If I can build support in the program proof community for proving
+submitted algorithms as part of the "review" process then the 
+Journal would offer something unique and useful as an incentive.
+
+Beyond that, it depends on how active the Axiom community becomes.
+There is a fair-sized community of teachers in France who have
+an interest in using Axiom for teaching. And another community
+interested in using it for research. I'm hoping that since this
+Journal has a non-exclusive policy that people will be willing to
+consider this as a secondary path for publishing.
+
+The only permanent "cure" for the "labor of love" problem is either
+the Journal is picked up by an organization like the ACM or the
+community of mathematicians using Axiom come to see it as a legitimate
+"publish" path with real value. Beyond the startup issues and 
+maintaining the background machinery I'm hoping to have an editorial
+board and reviewers running that portion of the website.
+
+The concept is still evolving. In any case, I figure it is worth
+having a discussion about it and use the "group mind" rather than
+muttering to myself.
+
+Tim
+------- End of forwarded message -------
+
+
+

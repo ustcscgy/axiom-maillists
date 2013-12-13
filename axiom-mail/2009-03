@@ -1,0 +1,1559 @@
+From MAILER-DAEMON Tue Mar 17 17:06:23 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LjgUR-0000yc-FA
+	for mharc-axiom-mail@gnu.org; Tue, 17 Mar 2009 17:06:23 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LjgUP-0000xm-PX
+	for axiom-mail@nongnu.org; Tue, 17 Mar 2009 17:06:22 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LjgUM-0000vP-2P
+	for axiom-mail@nongnu.org; Tue, 17 Mar 2009 17:06:21 -0400
+Received: from [199.232.76.173] (port=60608 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LjgUL-0000vG-M2
+	for axiom-mail@nongnu.org; Tue, 17 Mar 2009 17:06:17 -0400
+Received: from mns5.alterhosting.net ([209.85.28.39]:45594)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <consulting@papadimitriou.info>) id 1LjgUL-0006mY-2K
+	for axiom-mail@nongnu.org; Tue, 17 Mar 2009 17:06:17 -0400
+Received: (qmail 11459 invoked from network); 17 Mar 2009 16:06:02 -0500
+Received: from adsl179-14.kln.forthnet.gr (HELO ?192.168.1.3?) (77.49.0.14)
+	by plesk.ev1servers.net with (AES128-SHA encrypted) SMTP;
+	17 Mar 2009 16:05:59 -0500
+Message-Id: <1E4EF747-9E11-4DA4-80FF-F1D52638EF1B@papadimitriou.info>
+From: George Papadimitriou <consulting@papadimitriou.info>
+To: axiom-mail@nongnu.org
+In-Reply-To: <mailman.0.1237321665.13317.axiom-mail@nongnu.org>
+Content-Type: text/plain; charset=US-ASCII; format=flowed; delsp=yes
+Content-Transfer-Encoding: 7bit
+Mime-Version: 1.0 (Apple Message framework v930.3)
+Date: Tue, 17 Mar 2009 23:06:02 +0200
+References: <mailman.0.1237321665.13317.axiom-mail@nongnu.org>
+X-Mailer: Apple Mail (2.930.3)
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+Subject: [Axiom-mail] eval function
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Mar 2009 21:06:22 -0000
+
+I'm trying to do the following:
+
+1) In the axiom command line, I enter a ponynomial: f:=-(37/84)*x^2 -  
+(7/12)*x -1/42
+2) Find the roots: x12:=radicalSolve(f,x)
+3) Trying to evaluate the polynomial 12x^3 + 5x^2 + 11x + 16:
+	g:=12*x^3 + 5*x^2 + 11*x + 16
+	eval(f,x,x12.1)
+
+Then I get the error:
+    There are 15 exposed and 1 unexposed library operations named eval
+       having 3 argument(s) but none was determined to be applicable.
+       Use HyperDoc Browse, or issue
+                               )display op eval
+       to learn more about the available operations. Perhaps
+       package-calling the operation or using coercions on the arguments
+       will allow you to apply the operation.
+
+    Cannot find a definition or applicable library operation named eval
+       with argument type(s)
+                              Polynomial Integer
+                                  Variable x
+                          Equation Expression Integer
+
+       Perhaps you should use "@" to indicate the required return type,
+       or "$" to specify which version of the function you need.
+
+
+Can somebody tell me how to convert the type of x12.1 to something  
+that eval will do the work with?
+
+thanks
+G
+
+
+
+From MAILER-DAEMON Wed Mar 18 01:18:41 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LjoAr-0000fm-Jj
+	for mharc-axiom-mail@gnu.org; Wed, 18 Mar 2009 01:18:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LjoAq-0000fh-8J
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 01:18:40 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LjoAk-0000fL-Nk
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 01:18:38 -0400
+Received: from [199.232.76.173] (port=56771 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LjoAk-0000fI-Ig
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 01:18:34 -0400
+Received: from mx-8.zoominternet.net ([24.154.1.27]:43814
+	helo=cm-2.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1LjoAk-00039F-CM
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 01:18:34 -0400
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=E8rTNAPPKTgA:10 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=ORGAJnXDtDqO-doSQuEA:9 a=JZMLqYZ6xH6HCuTgWeWPai1VLpcA:4
+	a=uocofYhV6bsA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.46] ([24.154.1.46:42668] helo=pop-3.zoominternet.net)
+	by mx-8.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 80/E4-04759-22480C94; Wed, 18 Mar 2009 01:18:26 -0400
+Received: (qmail 13718 invoked from network); 18 Mar 2009 05:18:27 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-3.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 18 Mar 2009 05:18:27 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id n2I664530752;
+	Wed, 18 Mar 2009 01:06:04 -0500
+Date: Wed, 18 Mar 2009 01:06:04 -0500
+Message-Id: <200903180606.n2I664530752@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: consulting@papadimitriou.info
+In-reply-to: <1E4EF747-9E11-4DA4-80FF-F1D52638EF1B@papadimitriou.info>
+	(message from George Papadimitriou on Tue, 17 Mar 2009 23:06:02 +0200)
+Subject: Re: [Axiom-mail] eval function
+References: <mailman.0.1237321665.13317.axiom-mail@nongnu.org>
+	<1E4EF747-9E11-4DA4-80FF-F1D52638EF1B@papadimitriou.info>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 18 Mar 2009 05:18:40 -0000
+
+Use the right-hand side function (rhs):
+
+f:=-(37/84)*x^2 - (7/12)*x -1/42
+x12:=radicalSolve(f,x)
+g:=12*x^3 + 5*x^2 + 11*x + 16
+eval(g,x,rhs x12.1)
+
+
+
+From MAILER-DAEMON Wed Mar 18 11:55:17 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ljy6v-0006Yz-OV
+	for mharc-axiom-mail@gnu.org; Wed, 18 Mar 2009 11:55:17 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ljy6t-0006YK-WD
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 11:55:16 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ljy6s-0006Wi-22
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 11:55:15 -0400
+Received: from [199.232.76.173] (port=59051 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ljy6r-0006WW-S3
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 11:55:13 -0400
+Received: from aa011msr.fastwebnet.it ([85.18.95.71]:53738)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <sp_rm_it@yahoo.it>) id 1Ljy6r-0002vM-26
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 11:55:13 -0400
+Received: from [192.168.1.2] (151.50.62.137) by aa011msr.fastwebnet.it
+	(8.0.013.8) (authenticated as sergio.polini)
+	id 49AE652F0206C6B6; Wed, 18 Mar 2009 16:55:06 +0100
+From: Sergio Polini <sp_rm_it@yahoo.it>
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-mail] Axiom and Firefox (newbie)
+Date: Wed, 18 Mar 2009 16:55:00 +0100
+User-Agent: KMail/1.9.10
+References: <200902222229.23459.sp_rm_it@yahoo.it>
+	<200902230836.16989.sp_rm_it@yahoo.it>
+	<200902231151.n1NBpN923611@localhost.localdomain>
+In-Reply-To: <200902231151.n1NBpN923611@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200903181655.01042.sp_rm_it@yahoo.it>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 18 Mar 2009 15:55:16 -0000
+
+> >> SELinux isn't a firewall technology.
+> >
+> >Yes, I know.
+> >Sorry, I've not said clearly that I'm not running SELinux.
+> >
+> >However, I've found that "Access to restricted URI denied
+> >(NS_ERROR_DOM_BAD_URI)" errors occur when there is a cross domain Ajax
+> > call:
+> > http://www.leveltendesign.com/solution/error-access-restricted-uri-denied
+> >-when-making-ajax-cal
+> > http://extjs.com/learn/Ext_FAQ_Ajax#.22Permission_denied_to_call_method_X
+> >MLHttpRequest.open.22 etc.
+> >
+> >Is this finding useful to trace the error?
+>
+> Sorry about the focus on SELinux. It was my best guess.
+> I'll google this when I get a chance but I have more guesses.
+
+Sorry, I'ld like to restart from the beginning.
+I've downloaded axiom-ubuntu-jan2009-bin.tgz, then I've looked at 
+bookvol11.pdf. Here I read:
+
+mkdir -p /home/silver/bitmaps
+cp bookvol11.pamphlet /home/silver
+cd /home/silver
+export AXIOM=(where)
+export PATH=$AXIOM/bin/lib:$AXIOM/bin:$PATH
+notangle -t8 bookvol11.pamphlet > Makefile
+make -j 10
+
+Two (eventually stupid) questions:
+a) should I create a bitmaps folder in my home directory?
+b) where is bookvol11.pamplet? (I can't find it in 
+axiom-ubuntu-jan2009-bin.tgz)
+
+Thanks
+Sergio
+
+
+
+
+
+
+From MAILER-DAEMON Wed Mar 18 12:37:53 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ljym9-0005oF-Jw
+	for mharc-axiom-mail@gnu.org; Wed, 18 Mar 2009 12:37:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ljym7-0005lt-Dp
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 12:37:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ljym2-0005j4-Io
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 12:37:50 -0400
+Received: from [199.232.76.173] (port=46762 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ljym2-0005j0-6G
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 12:37:46 -0400
+Received: from mx-8.zoominternet.net ([24.154.1.27]:34861
+	helo=cm-2.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1Ljym1-0002Uq-Sj
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 12:37:45 -0400
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=Sf8xxCKpoZoA:10 a=uo0fd_dr16kA:10
+	a=E8rTNAPPKTgA:10 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=llDoWTY6cwsMJKQCwgsA:9 a=YMtoRAVwIjcq-KuSngYA:7
+	a=tATx6BoQNuoUT31ljBU_cPOFwiYA:4 a=XF7b4UCPwd8A:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.46] ([24.154.1.46:56028] helo=pop-3.zoominternet.net)
+	by mx-8.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 4B/51-04759-84321C94; Wed, 18 Mar 2009 12:37:28 -0400
+Received: (qmail 26871 invoked from network); 18 Mar 2009 16:37:31 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-3.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 18 Mar 2009 16:37:31 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id n2IHPEu31303;
+	Wed, 18 Mar 2009 12:25:14 -0500
+Date: Wed, 18 Mar 2009 12:25:14 -0500
+Message-Id: <200903181725.n2IHPEu31303@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: sp_rm_it@yahoo.it
+In-reply-to: <200903181655.01042.sp_rm_it@yahoo.it> (message from Sergio
+	Polini on Wed, 18 Mar 2009 16:55:00 +0100)
+Subject: Re: [Axiom-mail] Axiom and Firefox (newbie)
+References: <200902222229.23459.sp_rm_it@yahoo.it>
+	<200902230836.16989.sp_rm_it@yahoo.it>
+	<200902231151.n1NBpN923611@localhost.localdomain>
+	<200903181655.01042.sp_rm_it@yahoo.it>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 18 Mar 2009 16:37:51 -0000
+
+The pamphlets are in the sources, not in the binaries.
+Look for axiom-jan2009-src.tgz (the src link under ubuntu)
+
+Actually while chasing your bug I narrowed it down to a bug in the
+browser interface.  The bug was due to a change in the GCL lisp code
+I patched it and it is fixed in the silver version.
+
+I'm about to release a new version of Axiom in a week or two.  You
+could either download the development (silver) version or wait a bit
+for me to make new binaries. I'll send you a note when they exist.
+
+Tim
+
+
+
+From MAILER-DAEMON Wed Mar 18 20:58:29 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Lk6ab-0008Qv-B6
+	for mharc-axiom-mail@gnu.org; Wed, 18 Mar 2009 20:58:29 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Lk6aZ-0008QY-DU
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 20:58:27 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Lk6aY-0008QF-6s
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 20:58:26 -0400
+Received: from [199.232.76.173] (port=49445 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Lk6aX-0008QB-S5
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 20:58:25 -0400
+Received: from yx-out-1718.google.com ([74.125.44.154]:30359)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <renatacereja@ig.com.br>) id 1Lk6aX-000701-Bq
+	for axiom-mail@nongnu.org; Wed, 18 Mar 2009 20:58:25 -0400
+Received: by yx-out-1718.google.com with SMTP id 34so209544yxf.82
+	for <axiom-mail@nongnu.org>; Wed, 18 Mar 2009 17:58:23 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.231.16.74 with SMTP id n10mr651443iba.44.1237424303407; Wed, 
+	18 Mar 2009 17:58:23 -0700 (PDT)
+Date: Wed, 18 Mar 2009 21:58:23 -0300
+Message-ID: <cdbfb78c0903181758v42e333a9ra89f7feebce7a337@mail.gmail.com>
+From: Renata Cereja <renatacereja@ig.com.br>
+To: axiom-mail@nongnu.org
+Content-Type: multipart/alternative; boundary=000325574d7a0a820c04656e4c12
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] create a function
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 19 Mar 2009 00:58:28 -0000
+
+--000325574d7a0a820c04656e4c12
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+I created the following function:
+
+AddPoints(func:POLY(INT),P1:LIST(INT),P2:LIST(INT)):LIST(FRAC(INT)) ==
+   z:=1
+   if (P1.3 = 1) and (P2.3 = 1) then
+      if (P1.1 < P2.1) then
+         m:= (P2.2 - P1.2)/(P2.1 - P1.1)
+      if (P2.1 < P1.1) then
+         m:= (P1.2 - P2.2)/(P1.1 - P2.1)
+      if (P1.1 = P2.1) and (P1.2 ~= P2.2) then
+         z:=0
+      if (P1.1 = P2.1) and (P1.2 = P2.2) then
+         dx(x) == D(func,x)
+         m:= dx(P1.1)/(2*P1.2)
+      if (z = 1) then
+         a := m^2
+         xsoma := (-(P1.1 + P2.1 - a))
+         ysoma := ((m*(xsoma-P1.1) + P1.2) * (-1))
+         ponto := [xsoma,ysoma,z]
+         ponto
+      else
+         [0,1,z]
+   else
+      if (P1.3 = 0) then
+         ponto := P2
+      else
+         ponto := P1
+      ponto
+
+When I use this function, the following message appears before the result:
+   Compiled code for dx has been cleared.
+   Compiled code for AddPoints has been cleared.
+   1 old definition(s) deleted for function or rule dx
+   Your expression cannot be fully compiled because it contains an
+      integer expression (for x ) whose sign cannot be determined (in
+      general) and so must be specified by you. Perhaps you can try
+      substituting something like
+                                  (x :: PI)
+                                     or
+                                 (x :: NNI)
+      into your expression for x .
+   AXIOM will attempt to step through and interpret the code.
+   Cannot compile map: dx
+   We will attempt to interpret the code.
+   Compiling function AddPoints with type (Polynomial Integer,List
+      Integer,List Integer) -> List Fraction Integer
+  Compiled code for dx has been cleared.
+  Compiled code for AddPoints has been cleared.
+  1 old definition(s) deleted for function or rule dx
+   Compiling function dx with type PositiveInteger -> Integer
+
+What can I do to this not happen? Because I have another function that uses
+this one and isn't working as well as I wanted. I think this happen because
+of the function AddPoints.
+
+Thanks,
+Cereja
+
+--000325574d7a0a820c04656e4c12
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div>I created the following function:</div>
+<div>=A0</div>
+<div>AddPoints(func:POLY(INT),P1:LIST(INT),P2:LIST(INT)):LIST(FRAC(INT)) =
+=3D=3D</div>
+<div>=A0=A0 z:=3D1</div>
+<div>=A0=A0 if (P1.3 =3D 1) and (P2.3 =3D 1) then</div>
+<div>=A0=A0=A0=A0=A0 if (P1.1 &lt; P2.1) then</div>
+<div>=A0=A0=A0=A0=A0=A0=A0=A0 m:=3D (P2.2 - P1.2)/(P2.1 - P1.1)</div>
+<div>=A0=A0=A0=A0=A0 if (P2.1 &lt; P1.1) then</div>
+<div>=A0=A0=A0=A0=A0=A0=A0=A0 m:=3D (P1.2 - P2.2)/(P1.1 - P2.1)<br>=A0=A0=
+=A0=A0=A0 if (P1.1 =3D P2.1) and (P1.2 ~=3D P2.2) then</div>
+<div>=A0=A0=A0=A0=A0=A0=A0=A0 z:=3D0</div>
+<div>=A0=A0=A0=A0=A0 if (P1.1 =3D P2.1) and (P1.2 =3D P2.2) then</div>
+<div>=A0=A0=A0=A0=A0=A0=A0=A0 dx(x) =3D=3D D(func,x)</div>
+<div>=A0=A0=A0=A0=A0=A0=A0=A0 m:=3D dx(P1.1)/(2*P1.2)<br>=A0=A0=A0=A0=A0 if=
+ (z =3D 1) then</div>
+<div>=A0=A0=A0=A0=A0=A0=A0=A0 a :=3D m^2</div>
+<div>=A0=A0=A0=A0=A0=A0=A0=A0 xsoma :=3D (-(P1.1 + P2.1 - a))</div>
+<div>=A0=A0=A0=A0=A0=A0=A0=A0 ysoma :=3D ((m*(xsoma-P1.1) + P1.2) * (-1))</=
+div>
+<div>=A0=A0=A0=A0=A0=A0=A0=A0 ponto :=3D [xsoma,ysoma,z]</div>
+<div>=A0=A0=A0=A0=A0=A0=A0=A0 ponto<br>=A0=A0=A0=A0=A0 else<br>=A0=A0=A0=A0=
+=A0=A0=A0=A0 [0,1,z]<br>=A0=A0 else<br>=A0=A0=A0=A0=A0 if (P1.3 =3D 0) then=
+<br>=A0=A0=A0=A0=A0=A0=A0=A0 ponto :=3D P2<br>=A0=A0=A0=A0=A0 else<br>=A0=
+=A0=A0=A0=A0=A0=A0=A0 ponto :=3D P1<br>=A0=A0=A0=A0=A0 ponto</div>
+<p>When I use this function, the following message appears before the resul=
+t:</p>
+<div>=A0=A0 Compiled code for dx has been cleared.</div>
+<div>=A0=A0 Compiled code for AddPoints has been cleared.</div>
+<div>=A0=A0 1 old definition(s) deleted for function or rule dx=A0<br>=A0=
+=A0 Your expression cannot be fully compiled because it contains an=A0<br>=
+=A0=A0=A0=A0=A0 integer expression (for x ) whose sign cannot be determined=
+ (in=A0<br>=A0=A0=A0=A0=A0 general) and so must be specified by you. Perhap=
+s you can try=A0<br>
+=A0=A0=A0=A0=A0 substituting something like</div>
+<div>=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=
+=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0 (x :: PI)=A0<br>=A0=A0=A0=A0=A0=A0=A0=A0=A0=
+=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=
+=A0=A0 or</div>
+<div>=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=
+=A0=A0=A0=A0=A0=A0=A0=A0=A0 (x :: NNI)=A0<br>=A0=A0=A0=A0=A0 into your expr=
+ession for x .</div>
+<div>=A0=A0 AXIOM will attempt to step through and interpret the code.</div=
+>
+<div>=A0=A0 Cannot compile map: dx=A0</div>
+<div>=A0=A0 We will attempt to interpret the code.</div>
+<div>=A0=A0 Compiling function AddPoints with type (Polynomial Integer,List=
+=A0<br>=A0=A0=A0=A0=A0 Integer,List Integer) -&gt; List Fraction Integer=A0=
+<br>=A0 Compiled code for dx has been cleared.</div>
+<div>=A0 Compiled code for AddPoints has been cleared.</div>
+<div>=A0 1 old definition(s) deleted for function or rule dx</div>
+<div>=A0=A0 Compiling function dx with type PositiveInteger -&gt; Integer</=
+div>
+<p>What can I do to this not happen? Because I have another function that u=
+ses this one and isn&#39;t working as well as I wanted. I think this happen=
+ because of the function=A0AddPoints.</p>
+<p>Thanks,<br>Cereja</p>
+
+--000325574d7a0a820c04656e4c12--
+
+
+
+From MAILER-DAEMON Fri Mar 20 09:07:31 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LkeRf-0003a9-8L
+	for mharc-axiom-mail@gnu.org; Fri, 20 Mar 2009 09:07:31 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ljgmz-0004JH-2m
+	for axiom-mail@nongnu.org; Tue, 17 Mar 2009 17:25:33 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ljgmu-0004Gd-5I
+	for axiom-mail@nongnu.org; Tue, 17 Mar 2009 17:25:32 -0400
+Received: from [199.232.76.173] (port=48761 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ljgmt-0004GX-Vh
+	for axiom-mail@nongnu.org; Tue, 17 Mar 2009 17:25:28 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:37063)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1Ljgmt-0000G6-I7
+	for axiom-mail@nongnu.org; Tue, 17 Mar 2009 17:25:27 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	n2HLPELX031758; Tue, 17 Mar 2009 22:25:18 +0100
+Sender: rubey@ada0.ifam.uni-hannover.de
+To: George Papadimitriou <consulting@papadimitriou.info>
+Subject: Re: [Axiom-mail] eval function
+References: <mailman.0.1237321665.13317.axiom-mail@nongnu.org>
+	<1E4EF747-9E11-4DA4-80FF-F1D52638EF1B@papadimitriou.info>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: 17 Mar 2009 22:25:14 +0100
+In-Reply-To: <1E4EF747-9E11-4DA4-80FF-F1D52638EF1B@papadimitriou.info>
+Message-ID: <d9mybjetad.fsf@ada0.ifam.uni-hannover.de>
+Lines: 34
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.3.17.211019
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+X-Mailman-Approved-At: Fri, 20 Mar 2009 09:07:30 -0400
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Mar 2009 21:25:33 -0000
+
+
+(1) -> f:=-(37/84)*x^2 -(7/12)*x -1/42
+
+          37  2    7      1
+   (1)  - -- x  - -- x - --
+          84      12     42
+                                          Type: Polynomial(Fraction(Integer))
+(2) -> x12:=radicalSolve(f,x)
+
+               +----+          +----+
+            - \|2105  - 49    \|2105  - 49
+   (2)  [x= --------------,x= ------------]
+                  74               74
+                                    Type: List(Equation(Expression(Integer)))
+(3) -> g:=12*x^3 + 5*x^2 + 11*x + 16
+
+           3     2
+   (3)  12x  + 5x  + 11x + 16
+                                                    Type: Polynomial(Integer)
+(4) -> eval(f,x12.1)
+
+   (4)  0
+                                                    Type: Expression(Integer)
+(5) -> eval(g,x12.1)
+
+                +----+
+        - 16959\|2105  + 9279
+   (5)  ---------------------
+                50653
+                                                    Type: Expression(Integer)
+
+Just note that x12.1 is an equation, fit for eval...
+
+Martin
+
+
+
+
+From MAILER-DAEMON Mon Mar 23 15:12:41 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LlpZg-0007Or-Sc
+	for mharc-axiom-mail@gnu.org; Mon, 23 Mar 2009 15:12:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LlpZf-0007Ok-8J
+	for axiom-mail@nongnu.org; Mon, 23 Mar 2009 15:12:39 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LlpZa-0007Nu-0G
+	for axiom-mail@nongnu.org; Mon, 23 Mar 2009 15:12:38 -0400
+Received: from [199.232.76.173] (port=56175 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LlpZZ-0007Nr-PU
+	for axiom-mail@nongnu.org; Mon, 23 Mar 2009 15:12:33 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:58205)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1LlpZZ-00068T-B3
+	for axiom-mail@nongnu.org; Mon, 23 Mar 2009 15:12:33 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	n2NJCKhN029329; Mon, 23 Mar 2009 20:12:21 +0100
+Sender: rubey@ada0.ifam.uni-hannover.de
+To: Renata Cereja <renatacereja@ig.com.br>
+Subject: Re: [Axiom-mail] create a function
+References: <cdbfb78c0903181758v42e333a9ra89f7feebce7a337@mail.gmail.com>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: 23 Mar 2009 20:12:20 +0100
+In-Reply-To: <cdbfb78c0903181758v42e333a9ra89f7feebce7a337@mail.gmail.com>
+Message-ID: <d9hc1khx4b.fsf@ada0.ifam.uni-hannover.de>
+Lines: 62
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.3.23.190140
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Mar 2009 19:12:39 -0000
+
+Hi Cereja!
+
+There is one "real" problem with your definition, and another one
+that is trivial.
+
+The "real" problem is that
+
+         dx(x) == D(func,x)
+
+cannot work.  (I'm guessing that you want to define a function that
+returns the derivative of func evaluated at x.)  Actually, I'm not
+sure what the interpreter would do with it in case it could compile
+it.  I guess it would interpret it as a "rule", which is certainly
+not what you had in mind.
+
+The right way to do this is
+
+         dx := D(func, x)
+         m := eval(dx, x=P1.1)/(2*P1.2)
+
+i.e., you define dx to be the derivative of func (i.e., dx is a
+polynomial) and then you evaluate it using "eval".
+
+
+The second, minor problem is that the interpreter is too stupid to
+infer the types of m and ponto.  The workaround is to help the
+interpreter by declaring them appropriately.
+
+Below a function that seems to work.
+
+Martin
+
+
+AddPoints(func:POLY(INT),P1:LIST(INT),P2:LIST(INT)):LIST(FRAC(INT)) ==
+   z:=1
+   m: FRAC INT
+   ponto: List FRAC INT
+   if (P1.3 = 1) and (P2.3 = 1) then
+      if (P1.1 < P2.1) then
+         m:= (P2.2 - P1.2)/(P2.1 - P1.1)
+      if (P2.1 < P1.1) then
+         m:= (P1.2 - P2.2)/(P1.1 - P2.1)
+      if (P1.1 = P2.1) and (P1.2 ~= P2.2) then
+         z:=0
+      if (P1.1 = P2.1) and (P1.2 = P2.2) then
+         dx := D(func, x)
+         m:= eval(dx, x=P1.1)/(2*P1.2)
+      if (z = 1) then
+         a := m^2
+         xsoma := (-(P1.1 + P2.1 - a))
+         ysoma := ((m*(xsoma-P1.1) + P1.2) * (-1))
+         ponto := [xsoma,ysoma,z]
+         ponto
+      else
+         [0,1,z]
+   else
+      if (P1.3 = 0) then
+         ponto := P2
+      else
+         ponto := P1
+      ponto
+
+
+
+
+
+From MAILER-DAEMON Mon Mar 23 19:17:15 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LltON-00053c-Np
+	for mharc-axiom-mail@gnu.org; Mon, 23 Mar 2009 19:17:15 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LltOL-00053H-Dx
+	for axiom-mail@nongnu.org; Mon, 23 Mar 2009 19:17:13 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LltOJ-00052x-K2
+	for axiom-mail@nongnu.org; Mon, 23 Mar 2009 19:17:12 -0400
+Received: from [199.232.76.173] (port=38752 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LltOJ-00052u-H3
+	for axiom-mail@nongnu.org; Mon, 23 Mar 2009 19:17:11 -0400
+Received: from yw-out-1718.google.com ([74.125.46.155]:17274)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <renatacereja@ig.com.br>) id 1LltOJ-0007ox-36
+	for axiom-mail@nongnu.org; Mon, 23 Mar 2009 19:17:11 -0400
+Received: by yw-out-1718.google.com with SMTP id 9so1376261ywk.82
+	for <axiom-mail@nongnu.org>; Mon, 23 Mar 2009 16:17:09 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.100.151.8 with SMTP id y8mr5922458and.106.1237850229207; Mon, 
+	23 Mar 2009 16:17:09 -0700 (PDT)
+In-Reply-To: <d9hc1khx4b.fsf@ada0.ifam.uni-hannover.de>
+References: <cdbfb78c0903181758v42e333a9ra89f7feebce7a337@mail.gmail.com>
+	<d9hc1khx4b.fsf@ada0.ifam.uni-hannover.de>
+Date: Mon, 23 Mar 2009 20:17:09 -0300
+Message-ID: <cdbfb78c0903231617u3039dcc5mdb23d690de50c1bc@mail.gmail.com>
+Subject: Re: [Axiom-mail] create a function
+From: Renata Cereja <renatacereja@ig.com.br>
+To: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Content-Type: multipart/alternative; boundary=001485f945623275200465d1776d
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Mar 2009 23:17:14 -0000
+
+--001485f945623275200465d1776d
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+Hi Martin,
+
+Now, the function works. Thanks for the help and explanation.
+
+2009/3/23 Martin Rubey <martin.rubey@math.uni-hannover.de>
+
+> Hi Cereja!
+>
+> There is one "real" problem with your definition, and another one
+> that is trivial.
+>
+> The "real" problem is that
+>
+>         dx(x) == D(func,x)
+>
+> cannot work.  (I'm guessing that you want to define a function that
+> returns the derivative of func evaluated at x.)  Actually, I'm not
+> sure what the interpreter would do with it in case it could compile
+> it.  I guess it would interpret it as a "rule", which is certainly
+> not what you had in mind.
+>
+> The right way to do this is
+>
+>         dx := D(func, x)
+>         m := eval(dx, x=P1.1)/(2*P1.2)
+>
+> i.e., you define dx to be the derivative of func (i.e., dx is a
+> polynomial) and then you evaluate it using "eval".
+>
+>
+> The second, minor problem is that the interpreter is too stupid to
+> infer the types of m and ponto.  The workaround is to help the
+> interpreter by declaring them appropriately.
+>
+> Below a function that seems to work.
+>
+> Martin
+>
+>
+> AddPoints(func:POLY(INT),P1:LIST(INT),P2:LIST(INT)):LIST(FRAC(INT)) ==
+>   z:=1
+>   m: FRAC INT
+>   ponto: List FRAC INT
+>   if (P1.3 = 1) and (P2.3 = 1) then
+>      if (P1.1 < P2.1) then
+>         m:= (P2.2 - P1.2)/(P2.1 - P1.1)
+>      if (P2.1 < P1.1) then
+>         m:= (P1.2 - P2.2)/(P1.1 - P2.1)
+>      if (P1.1 = P2.1) and (P1.2 ~= P2.2) then
+>         z:=0
+>      if (P1.1 = P2.1) and (P1.2 = P2.2) then
+>         dx := D(func, x)
+>         m:= eval(dx, x=P1.1)/(2*P1.2)
+>       if (z = 1) then
+>         a := m^2
+>         xsoma := (-(P1.1 + P2.1 - a))
+>         ysoma := ((m*(xsoma-P1.1) + P1.2) * (-1))
+>         ponto := [xsoma,ysoma,z]
+>         ponto
+>      else
+>         [0,1,z]
+>   else
+>      if (P1.3 = 0) then
+>         ponto := P2
+>      else
+>         ponto := P1
+>      ponto
+>
+>
+>
+
+--001485f945623275200465d1776d
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div>Hi Martin,</div>
+<div>=A0</div>
+<div>Now, the function works. Thanks for the help and explanation.<br><br><=
+/div>
+<div class=3D"gmail_quote">2009/3/23 Martin Rubey <span dir=3D"ltr">&lt;<a =
+href=3D"mailto:martin.rubey@math.uni-hannover.de">martin.rubey@math.uni-han=
+nover.de</a>&gt;</span><br>
+<blockquote class=3D"gmail_quote" style=3D"PADDING-LEFT: 1ex; MARGIN: 0px 0=
+px 0px 0.8ex; BORDER-LEFT: #ccc 1px solid">Hi Cereja!<br><br>There is one &=
+quot;real&quot; problem with your definition, and another one<br>that is tr=
+ivial.<br>
+<br>The &quot;real&quot; problem is that<br>
+<div class=3D"im"><br>=A0 =A0 =A0 =A0 dx(x) =3D=3D D(func,x)<br><br></div>c=
+annot work. =A0(I&#39;m guessing that you want to define a function that<br=
+>returns the derivative of func evaluated at x.) =A0Actually, I&#39;m not<b=
+r>sure what the interpreter would do with it in case it could compile<br>
+it. =A0I guess it would interpret it as a &quot;rule&quot;, which is certai=
+nly<br>not what you had in mind.<br><br>The right way to do this is<br><br>=
+=A0 =A0 =A0 =A0 dx :=3D D(func, x)<br>=A0 =A0 =A0 =A0 m :=3D eval(dx, x=3DP=
+1.1)/(2*P1.2)<br><br>
+i.e., you define dx to be the derivative of func (i.e., dx is a<br>polynomi=
+al) and then you evaluate it using &quot;eval&quot;.<br><br><br>The second,=
+ minor problem is that the interpreter is too stupid to<br>infer the types =
+of m and ponto. =A0The workaround is to help the<br>
+interpreter by declaring them appropriately.<br><br>Below a function that s=
+eems to work.<br><br>Martin<br>
+<div class=3D"im"><br><br>AddPoints(func:POLY(INT),P1:LIST(INT),P2:LIST(INT=
+)):LIST(FRAC(INT)) =3D=3D<br>=A0 z:=3D1<br></div>=A0 m: FRAC INT<br>=A0 pon=
+to: List FRAC INT<br>
+<div class=3D"im">=A0 if (P1.3 =3D 1) and (P2.3 =3D 1) then<br>=A0 =A0 =A0i=
+f (P1.1 &lt; P2.1) then<br>=A0 =A0 =A0 =A0 m:=3D (P2.2 - P1.2)/(P2.1 - P1.1=
+)<br>=A0 =A0 =A0if (P2.1 &lt; P1.1) then<br>=A0 =A0 =A0 =A0 m:=3D (P1.2 - P=
+2.2)/(P1.1 - P2.1)<br>=A0 =A0 =A0if (P1.1 =3D P2.1) and (P1.2 ~=3D P2.2) th=
+en<br>
+=A0 =A0 =A0 =A0 z:=3D0<br>=A0 =A0 =A0if (P1.1 =3D P2.1) and (P1.2 =3D P2.2)=
+ then<br></div>=A0 =A0 =A0 =A0 dx :=3D D(func, x)<br>=A0 =A0 =A0 =A0 m:=3D =
+eval(dx, x=3DP1.1)/(2*P1.2)<br>
+<div>
+<div></div>
+<div class=3D"h5">=A0 =A0 =A0if (z =3D 1) then<br>=A0 =A0 =A0 =A0 a :=3D m^=
+2<br>=A0 =A0 =A0 =A0 xsoma :=3D (-(P1.1 + P2.1 - a))<br>=A0 =A0 =A0 =A0 yso=
+ma :=3D ((m*(xsoma-P1.1) + P1.2) * (-1))<br>=A0 =A0 =A0 =A0 ponto :=3D [xso=
+ma,ysoma,z]<br>=A0 =A0 =A0 =A0 ponto<br>=A0 =A0 =A0else<br>
+=A0 =A0 =A0 =A0 [0,1,z]<br>=A0 else<br>=A0 =A0 =A0if (P1.3 =3D 0) then<br>=
+=A0 =A0 =A0 =A0 ponto :=3D P2<br>=A0 =A0 =A0else<br>=A0 =A0 =A0 =A0 ponto :=
+=3D P1<br>=A0 =A0 =A0ponto<br><br><br></div></div></blockquote></div><br>
+
+--001485f945623275200465d1776d--
+
+
+
+From MAILER-DAEMON Thu Mar 26 02:53:27 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LmjSx-0004Te-FB
+	for mharc-axiom-mail@gnu.org; Thu, 26 Mar 2009 02:53:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LmjSu-0004T7-SY
+	for axiom-mail@nongnu.org; Thu, 26 Mar 2009 02:53:24 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LmjSq-0004Pq-6g
+	for axiom-mail@nongnu.org; Thu, 26 Mar 2009 02:53:24 -0400
+Received: from [199.232.76.173] (port=57416 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LmjSp-0004Pn-Tl
+	for axiom-mail@nongnu.org; Thu, 26 Mar 2009 02:53:19 -0400
+Received: from mx20.gnu.org ([199.232.41.8]:11813)
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA1:32)
+	(Exim 4.60) (envelope-from <s.blomberg1@uq.edu.au>)
+	id 1LmjSp-0001qq-DC
+	for axiom-mail@nongnu.org; Thu, 26 Mar 2009 02:53:19 -0400
+Received: from mailhub3.uq.edu.au ([130.102.148.131])
+	by mx20.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <s.blomberg1@uq.edu.au>) id 1LmjSk-0008Sv-S4
+	for axiom-mail@nongnu.org; Thu, 26 Mar 2009 02:53:15 -0400
+Received: from smtp3.uq.edu.au (smtp3.uq.edu.au [130.102.128.18])
+	by mailhub3.uq.edu.au (8.13.8/8.13.8) with ESMTP id n2Q6r7Eu019336
+	for <axiom-mail@nongnu.org>; Thu, 26 Mar 2009 16:53:07 +1000
+Received: from uqexav01.soe.uq.edu.au (uqexav01.soe.uq.edu.au [130.102.4.248])
+	by smtp3.uq.edu.au (8.13.8/8.13.8) with ESMTP id n2Q6r78O006830
+	for <axiom-mail@nongnu.org>; Thu, 26 Mar 2009 16:53:07 +1000
+Received: from uqexav02.soe.uq.edu.au ([130.102.4.249]) by
+	uqexav01.soe.uq.edu.au with Microsoft SMTPSVC(6.0.3790.1830); 
+	Thu, 26 Mar 2009 16:53:06 +1000
+Received: from uqeximf02.soe.uq.edu.au ([130.102.6.17]) by
+	uqexav02.soe.uq.edu.au with Microsoft SMTPSVC(6.0.3790.1830); 
+	Thu, 26 Mar 2009 16:53:06 +1000
+Received: from uqeximf02.soe.uq.edu.au ([130.102.6.17]) by
+	uqeximf02.soe.uq.edu.au with Microsoft SMTPSVC(6.0.3790.1830); 
+	Thu, 26 Mar 2009 16:53:06 +1000
+Received: from [172.23.218.220] ([172.23.218.220]) by uqeximf02.soe.uq.edu.au
+	with Microsoft SMTPSVC(6.0.3790.1830); 
+	Thu, 26 Mar 2009 16:53:06 +1000
+From: Simon Blomberg <s.blomberg1@uq.edu.au>
+To: axiom-mail@nongnu.org
+Content-Type: text/plain
+Date: Thu, 26 Mar 2009 16:52:01 +1000
+Message-Id: <1238050321.8432.70.camel@sib-sblomber01d.sib.uq.edu.au>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.24.5 
+Content-Transfer-Encoding: 7bit
+X-OriginalArrivalTime: 26 Mar 2009 06:53:06.0511 (UTC)
+	FILETIME=[8443ADF0:01C9ADDF]
+X-UQ-FilterTime: 1238050387
+X-Scanned-By: MIMEDefang 2.58 on UQ Mailhub on 130.102.148.131
+X-detected-kernel: by mx20.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+Subject: [Axiom-mail] Programming with the Tree domain
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 26 Mar 2009 06:53:25 -0000
+
+Hi,
+
+I'm pretty new to Axiom, although I have been lurking on this list for a
+long time. So please forgive my newbieness.
+
+I'm interested in programming with tree data structures, and the Tree
+domain looks like what I need. However, due to my newness to Axiom, I'm
+having trouble getting started. There also doesn't appear to be much
+documentation (apart from the source code), especially for newbies.
+
+Is there anyone on the list that can give me some pointers on how to get
+started (creating trees from lists, and manipulating them for example)?
+I know this is a too-broad question, but a couple of toy examples would
+really help at this stage.
+
+Thanks,
+
+Simon.
+-- 
+Simon Blomberg, BSc (Hons), PhD, MAppStat. 
+Lecturer and Consultant Statistician 
+School of Biological Sciences
+The University of Queensland 
+St. Lucia Queensland 4072 
+Australia
+Room 320 Goddard Building (8)
+T: +61 7 3365 2506
+http://www.uq.edu.au/~uqsblomb
+email: S.Blomberg1_at_uq.edu.au
+
+Policies:
+1.  I will NOT analyse your data for you.
+2.  Your deadline is your problem.
+
+The combination of some data and an aching desire for 
+an answer does not ensure that a reasonable answer can 
+be extracted from a given body of data. - John Tukey.
+
+
+
+
+From MAILER-DAEMON Thu Mar 26 03:37:06 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Lmk9B-00070m-IR
+	for mharc-axiom-mail@gnu.org; Thu, 26 Mar 2009 03:37:06 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Lmk94-0006xm-Vy
+	for axiom-mail@nongnu.org; Thu, 26 Mar 2009 03:36:59 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Lmk8x-0006u2-Nl
+	for axiom-mail@nongnu.org; Thu, 26 Mar 2009 03:36:55 -0400
+Received: from [199.232.76.173] (port=56123 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Lmk8x-0006tq-1Q
+	for axiom-mail@nongnu.org; Thu, 26 Mar 2009 03:36:51 -0400
+Received: from mo-p05-ob.rzone.de ([81.169.146.180]:55195)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1Lmk8w-0004nQ-IZ
+	for axiom-mail@nongnu.org; Thu, 26 Mar 2009 03:36:50 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; t=1238053007; l=1139;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:CC:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=3yh7NpgW+DjjWgKtOYwAezNUXLUlWZoOGII6t7U4zrE=;
+	b=YNg8PJD2Omkep3CqJlgqee9LpnRjCQKgyxQ+esGbadeEl4fbWRHZPsj4UU9O0fH4aD9
+	lEKOwb/9555V/pa35ZixwHAPTYcLthAqOoTcucjoWD5g5WdQsAUWMrh4edsciiu0Y27Lr
+	Zj+yHj+lssvrQCJQMP55Hj/jWeAI6U531nE=
+X-RZG-AUTH: :Pm0IcwWgfvKNhyTiA5K9aSc1pwDnmpaKQTqQszbwOAxYBAKGS3+FyCi9EANtaw==
+X-RZG-CLASS-ID: mo05
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (fruni mo16) (RZmta 18.28)
+	with DHE-RSA-AES128-SHA encrypted ESMTP id L03ccel2Q7W54g ;
+	Thu, 26 Mar 2009 08:36:01 +0100 (MET)
+Message-ID: <49CB3060.30103@hemmecke.de>
+Date: Thu, 26 Mar 2009 08:36:00 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.19 (X11/20090105)
+MIME-Version: 1.0
+To: Simon Blomberg <s.blomberg1@uq.edu.au>
+Subject: Re: [Axiom-mail] Programming with the Tree domain
+References: <1238050321.8432.70.camel@sib-sblomber01d.sib.uq.edu.au>
+In-Reply-To: <1238050321.8432.70.camel@sib-sblomber01d.sib.uq.edu.au>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 26 Mar 2009 07:37:01 -0000
+
+Hello,
+
+If you have already found Tree then you are pretty close.
+Maybe you state some more concrete problem so that someone can give you 
+the corresponding source code and explain what it does. Small problems 
+would probably help to get you started and for the person who will 
+actually answer to start investing time into this.
+
+What exactly do you want to do?
+
+Ralf
+
+On 03/26/2009 07:52 AM, Simon Blomberg wrote:
+> Hi,
+> 
+> I'm pretty new to Axiom, although I have been lurking on this list for a
+> long time. So please forgive my newbieness.
+> 
+> I'm interested in programming with tree data structures, and the Tree
+> domain looks like what I need. However, due to my newness to Axiom, I'm
+> having trouble getting started. There also doesn't appear to be much
+> documentation (apart from the source code), especially for newbies.
+> 
+> Is there anyone on the list that can give me some pointers on how to get
+> started (creating trees from lists, and manipulating them for example)?
+> I know this is a too-broad question, but a couple of toy examples would
+> really help at this stage.
+> 
+> Thanks,
+> 
+> Simon.
+
+
+
+From MAILER-DAEMON Thu Mar 26 03:56:40 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LmkS8-0006w0-Hk
+	for mharc-axiom-mail@gnu.org; Thu, 26 Mar 2009 03:56:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LmkS6-0006uQ-UO
+	for axiom-mail@nongnu.org; Thu, 26 Mar 2009 03:56:39 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LmkS2-0006s6-UC
+	for axiom-mail@nongnu.org; Thu, 26 Mar 2009 03:56:38 -0400
+Received: from [199.232.76.173] (port=56794 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1LmkRy-0006rj-LZ; Thu, 26 Mar 2009 03:56:30 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:36629
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>)
+	id 1LmkRx-0008IK-QF; Thu, 26 Mar 2009 03:56:30 -0400
+Received: from axiom-developer.org (lincoln.rosehosting.com [127.0.0.1])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id n2Q7uOug031851;
+	Thu, 26 Mar 2009 01:56:26 -0600
+From: daly@axiom-developer.org
+Received: (from daly@localhost)
+	by axiom-developer.org (8.12.8/8.12.8/Submit) id n2Q7uN3o031845;
+	Thu, 26 Mar 2009 01:56:23 -0600
+Date: Thu, 26 Mar 2009 01:56:23 -0600
+Message-Id: <200903260756.n2Q7uN3o031845@axiom-developer.org>
+To: "Simon Blomberg" <s.blomberg1@uq.edu.au>
+X-detected-operating-system: by monty-python.gnu.org: Error: This connection
+	is not (no longer?) in the cache.
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-mail] Programming with the Tree domain
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 26 Mar 2009 07:56:39 -0000
+
+If you are using the latest March 2009 sources (See
+  http://axiom-developer.org/axiom-website/download.html
+
+you'll find that there are several sources of information about trees.
+
+First, there is the actual Tree domain (attached below)
+
+which is contained in Book Volume 10.3: Axiom Algebra Domains (See
+  http://axiom-developer.org/axiom-website/bookvol10.3.pdf
+
+
+
+Second, if you look at the tree domain sources below you will see
+various functions that are available. You will also see lines that
+begin with --X which are examples of using each function.  These
+examples will show up if you display the operation, such as:
+
+  )display op cyclic?
+
+
+
+
+Third, Book Volume 0: Axiom Jenks and Sutor (See:
+  http://axiom-developer.org/axiom-website/documentation.html
+  http://axiom-developer.org/axiom-website/bookvol0.pdf
+
+has a few references to the tree domain (e.g. p93). See
+  BalancedBinaryTree (BBTREE) in section 9.2 of volume 0 and
+  BinarySearchTree (BSTREE) in section 9.4 of volume 0.
+
+
+
+
+Fourth, in a running Axiom there are several "tree" domains which you 
+can find by typing:
+
+  )apropos tree
+  
+
+
+Fifth, there is domain specific information you can get with:
+
+  )show BalancedBinaryTree
+  )show BinarySearchTree
+  )show Tree
+
+You can get some help on these by typing:
+
+  )help BalancedBinaryTree
+  )help BinarySearchTree
+
+or you can use their abbreviations:
+
+  )help BBTREE
+  )help BSTREE
+
+
+
+Sixth, in the $AXIOM/doc/src/input directory there is a .dvi
+file for bbtree, bstree, and tree:
+
+ xdvi $AXIOM/doc/src/input/bbtree.input.dvi 
+ xdvi $AXIOM/doc/src/input/bstree.input.dvi 
+ xdvi $AXIOM/doc/src/input/tree.input.dvi 
+
+
+
+Seventh, if you start Axiom and use Hyperdoc you can do:
+
+  Reference -> Examples -> BalancedBinaryTree 
+  Reference -> Examples -> BinarySearchTree
+
+
+
+and finally, the corresponding input files can be read into Axiom using:
+
+  )read /home/simon/axiom/mnt/fedora10/input/bbtree.input
+  )read /home/simon/axiom/mnt/fedora10/input/bstree.input
+  )read /home/simon/axiom/mnt/fedora10/input/tree.input
+
+
+Feel free to post further questions.
+
+Tim
+
+======================================================================
+ tree.spad
+======================================================================
+)abbrev domain TREE Tree
+++ Author:W. H. Burge
+++ Date Created:17 Feb 1992
+++ Date Last Updated:
+++ Basic Operations:
+++ Related Domains:
+++ Also See:
+++ AMS Classifications:
+++ Keywords:
+++ Examples:
+++ References:
+++ Description: \spadtype{Tree(S)} is a basic domains of tree structures.
+++ Each tree is either empty or else is a {\it node} consisting of a value and
+++ a list of (sub)trees.
+Tree(S: SetCategory): T==C where
+ T== RecursiveAggregate(S) with
+     finiteAggregate
+     shallowlyMutable
+     tree: (S,List %) -> %
+       ++ tree(nd,ls) creates a tree with value nd, and children ls.
+       ++
+       ++X t1:=tree [1,2,3,4]
+       ++X tree(5,[t1])
+
+     tree: List S -> %
+       ++ tree(ls) creates a tree from a list of elements of s. 
+       ++
+       ++X tree [1,2,3,4]
+
+     tree: S -> %
+       ++ tree(nd) creates a tree with value nd, and no children
+       ++
+       ++X tree 6
+
+     cyclic?: % -> Boolean
+       ++ cyclic?(t) tests if t is a cyclic tree.
+       ++
+       ++X t1:=tree [1,2,3,4]
+       ++X cyclic? t1
+
+     cyclicCopy: % -> %
+       ++ cyclicCopy(l) makes a copy of a (possibly) cyclic tree l.
+       ++
+       ++X t1:=tree [1,2,3,4]
+       ++X cyclicCopy t1
+
+     cyclicEntries:    % -> List %
+       ++ cyclicEntries(t) returns a list of top-level cycles in tree t.
+       ++
+       ++X t1:=tree [1,2,3,4]
+       ++X cyclicEntries t1
+
+     cyclicEqual?: (%, %) -> Boolean
+       ++ cyclicEqual?(t1, t2) tests of two cyclic trees have 
+       ++ the same structure.
+       ++
+       ++X t1:=tree [1,2,3,4]
+       ++X t2:=tree [1,2,3,4]
+       ++X cyclicEqual?(t1,t2)
+
+     cyclicParents: % -> List %
+       ++ cyclicParents(t) returns a list of cycles that are parents of t.
+       ++
+       ++X t1:=tree [1,2,3,4]
+       ++X cyclicParents t1
+
+ C== add
+    cycleTreeMax ==> 5
+
+    Rep := Union(node:Record(value: S, args: List %),empty:"empty")
+    t:%
+    br:%
+    s: S
+    ls: List S
+    empty? t == t case empty
+    empty()  == ["empty"]
+    children t == 
+      t case empty => error "cannot take the children of an empty tree" 
+      (t.node.args)@List(%)
+    setchildren_!(t,lt) == 
+      t case empty => error "cannot set children of an empty tree"
+      (t.node.args:=lt;t pretend %)
+    setvalue_!(t,s) == 
+      t case empty => error "cannot set value of an empty tree"
+      (t.node.value:=s;s)
+    count(n, t) == 
+      t case empty => 0
+      i := +/[count(n, c) for c in children t]
+      value t = n => i + 1
+      i
+    count(fn: S -> Boolean, t: %): NonNegativeInteger ==
+      t case empty => 0
+      i := +/[count(fn, c) for c in children t]
+      fn value t => i + 1
+      i
+    map(fn, t) == 
+      t case empty => t
+      tree(fn value t,[map(fn, c) for c in children t])
+    map_!(fn, t) == 
+      t case empty => t
+      setvalue_!(t, fn value t)
+      for c in children t repeat map_!(fn, c)
+    tree(s,lt) == [[s,lt]]
+    tree(s) == [[s,[]]]
+    tree(ls) ==
+      empty? ls => empty()
+      tree(first ls, [tree s for s in rest ls])
+    value t ==
+      t case empty => error "cannot take the value of an empty tree" 
+      t.node.value
+    child?(t1,t2) == 
+      empty? t2 => false
+      "or"/[t1 = t for t in children t2]
+    distance1(t1: %, t2: %): Integer ==
+      t1 = t2 => 0
+      t2 case empty => -1
+      u := [n for t in children t2 | (n := distance1(t1,t)) >= 0]
+      #u > 0 => 1 + "min"/u 
+      -1 
+    distance(t1,t2) == 
+      n := distance1(t1, t2)
+      n >= 0 => n
+      distance1(t2, t1)
+    node?(t1, t2) ==
+      t1 = t2 => true
+      t case empty => false
+      "or"/[node?(t1, t) for t in children t2]
+    leaf? t == 
+      t case empty => false
+      empty? children t
+    leaves t == 
+      t case empty => empty()
+      leaf? t => [value t]
+      "append"/[leaves c for c in children t]
+    less? (t, n) == # t < n
+    more?(t, n) == # t > n
+    nodes t ==       ---buggy
+      t case empty => empty()
+      nl := [nodes c for c in children t]
+      nl = empty() => [t]
+      cons(t,"append"/nl)
+    size? (t, n) == # t = n
+    any?(fn, t) ==  ---bug fixed
+      t case empty => false
+      fn value t or "or"/[any?(fn, c) for c in children t]
+    every?(fn, t) == 
+      t case empty => true
+      fn value t and "and"/[every?(fn, c) for c in children t]
+    member?(n, t) == 
+      t case empty => false
+      n = value t or "or"/[member?(n, c) for c in children t]
+    members t == parts t
+    parts t == --buggy?
+      t case empty => empty()
+      u := [parts c for c in children t]
+      u = empty() => [value t]
+      cons(value t,"append"/u)
+ 
+    ---Functions that guard against cycles: =, #, copy-------------
+
+    -----> =   
+    equal?: (%, %, %, %, Integer) -> Boolean
+
+    t1 = t2 == equal?(t1, t2, t1, t2, 0) 
+
+    equal?(t1, t2, ot1, ot2, k) ==
+      k = cycleTreeMax and (cyclic? ot1 or cyclic? ot2) => 
+        error "use cyclicEqual? to test equality on cyclic trees"
+      t1 case empty => t2 case empty
+      t2 case empty => false
+      value t1 = value t2 and (c1 := children t1) = (c2 := children t2) and
+        "and"/[equal?(x,y,ot1, ot2,k + 1) for x in c1 for y in c2]
+
+    -----> #
+    treeCount: (%, %, NonNegativeInteger) -> NonNegativeInteger    
+    # t == treeCount(t, t, 0)
+    treeCount(t, origTree, k) ==
+      k = cycleTreeMax and cyclic? origTree => 
+        error "# is not defined on cyclic trees"
+      t case empty => 0
+      1 + +/[treeCount(c, origTree, k + 1) for c in children t]
+ 
+    -----> copy
+    copy1: (%, %, Integer) -> %
+    copy t == copy1(t, t, 0)
+    copy1(t, origTree, k) == 
+      k = cycleTreeMax and cyclic? origTree => 
+        error "use cyclicCopy to copy a cyclic tree"
+      t case empty  => t
+      empty? children t => tree value t
+      tree(value t, [copy1(x, origTree, k + 1) for x in children t])
+      
+    -----------Functions that allow cycles---------------
+    --local utility functions:
+    eqUnion: (List %, List %) -> List %
+    eqMember?: (%, List %) -> Boolean
+    eqMemberIndex: (%, List %, Integer) -> Integer
+    lastNode: List % -> List %
+    insert: (%, List %) -> List %
+
+    -----> coerce to OutputForm
+    if S has SetCategory then
+      multipleOverbar: (OutputForm, Integer, List %) -> OutputForm
+      coerce1: (%, List %, List %) -> OutputForm
+
+      coerce(t:%): OutputForm == coerce1(t, empty()$(List %), cyclicParents t)
+
+      coerce1(t,parents, pl) ==
+        t case empty => empty()@List(S)::OutputForm
+        eqMember?(t, parents) => 
+          multipleOverbar((".")::OutputForm,eqMemberIndex(t, pl,0),pl)
+        empty? children t => value t::OutputForm
+        nodeForm := (value t)::OutputForm
+        if (k := eqMemberIndex(t, pl, 0)) > 0 then
+           nodeForm := multipleOverbar(nodeForm, k, pl)
+        prefix(nodeForm, 
+          [coerce1(br,cons(t,parents),pl) for br in children t])
+
+      multipleOverbar(x, k, pl) ==
+        k < 1 => x
+        #pl = 1 => overbar x
+        s : String := "abcdefghijklmnopqrstuvwxyz"
+        c := s.(1 + ((k - 1) rem 26))
+        overlabel(c::OutputForm, x)
+ 
+    -----> cyclic?
+    cyclic2?: (%, List %) -> Boolean
+
+    cyclic? t == cyclic2?(t, empty()$(List %))
+
+    cyclic2?(x,parents) ==  
+      empty? x => false
+      eqMember?(x, parents) => true
+      for y in children x repeat
+        cyclic2?(y,cons(x, parents)) => return true
+      false
+ 
+    -----> cyclicCopy
+    cyclicCopy2: (%, List %) -> %
+    copyCycle2: (%, List %) -> %
+    copyCycle4: (%, %, %, List %) -> %
+
+    cyclicCopy(t) == cyclicCopy2(t, cyclicEntries t)
+
+    cyclicCopy2(t, cycles) ==
+      eqMember?(t, cycles) => return copyCycle2(t, cycles)
+      tree(value t, [cyclicCopy2(c, cycles) for c in children t])
+   
+    copyCycle2(cycle, cycleList) == 
+      newCycle := tree(value cycle, nil)
+      setchildren!(newCycle,
+        [copyCycle4(c,cycle,newCycle, cycleList) for c in children cycle])
+      newCycle
+
+    copyCycle4(t, cycle, newCycle, cycleList) == 
+      empty? cycle => empty()
+      eq?(t, cycle) => newCycle
+      eqMember?(t, cycleList) => copyCycle2(t, cycleList)
+      tree(value t,
+           [copyCycle4(c, cycle, newCycle, cycleList) for c in children t])
+
+    -----> cyclicEntries
+    cyclicEntries3: (%, List %, List %) -> List %
+
+    cyclicEntries(t) == cyclicEntries3(t, empty()$(List %), empty()$(List %))
+
+    cyclicEntries3(t, parents, cl) ==
+      empty? t => cl
+      eqMember?(t, parents) => insert(t, cl)
+      parents := cons(t, parents)
+      for y in children t repeat
+        cl := cyclicEntries3(t, parents, cl)
+      cl
+   
+    -----> cyclicEqual?
+    cyclicEqual4?: (%, %, List %, List %) -> Boolean
+
+    cyclicEqual?(t1, t2) ==
+      cp1 := cyclicParents t1
+      cp2 := cyclicParents t2
+      #cp1 ^= #cp2 or null cp1 => t1 = t2
+      cyclicEqual4?(t1, t2, cp1, cp2)
+
+    cyclicEqual4?(t1, t2, cp1, cp2) == 
+      t1 case empty => t2 case empty
+      t2 case empty => false
+      0 ^= (k := eqMemberIndex(t1, cp1, 0)) => eq?(t2, cp2 . k)
+      value t1 = value t2 and 
+        "and"/[cyclicEqual4?(x,y,cp1,cp2) 
+                 for x in children t1 for y in children t2]
+
+    -----> cyclicParents t
+    cyclicParents3: (%, List %, List %) -> List %
+
+    cyclicParents t == cyclicParents3(t, empty()$(List %), empty()$(List %))
+
+    cyclicParents3(x, parents, pl) ==
+      empty? x => pl
+      eqMember?(x, parents) => 
+        cycleMembers := [y for y in parents while not eq?(x,y)]
+        eqUnion(cons(x, cycleMembers), pl)
+      parents := cons(x, parents)
+      for y in children x repeat 
+        pl := cyclicParents3(y, parents, pl)
+      pl
+
+    insert(x, l) ==
+      eqMember?(x, l) => l
+      cons(x, l)
+
+    lastNode l ==
+      empty? l => error "empty tree has no last node"
+      while not empty? rest l repeat l := rest l
+      l
+
+    eqMember?(y,l) ==
+      for x in l repeat eq?(x,y) => return true
+      false
+
+    eqMemberIndex(x, l, k) ==
+      null l => k
+      k := k + 1
+      eq?(x, first l) => k
+      eqMemberIndex(x, rest l, k)
+
+    eqUnion(u, v) ==
+      null u => v
+      x := first u
+      newV :=
+        eqMember?(x, v) => v
+        cons(x, v)
+      eqUnion(rest u, newV)
+
+@
+
+
+

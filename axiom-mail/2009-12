@@ -1,0 +1,1228 @@
+From MAILER-DAEMON Tue Dec 01 14:03:43 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NFY0l-0001YE-Gc
+	for mharc-axiom-mail@gnu.org; Tue, 01 Dec 2009 14:03:43 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NFY0j-0001XF-FY
+	for axiom-mail@nongnu.org; Tue, 01 Dec 2009 14:03:41 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NFY0e-0001Ux-8y
+	for axiom-mail@nongnu.org; Tue, 01 Dec 2009 14:03:40 -0500
+Received: from [199.232.76.173] (port=57067 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NFY0e-0001Uu-6J
+	for axiom-mail@nongnu.org; Tue, 01 Dec 2009 14:03:36 -0500
+Received: from web36708.mail.mud.yahoo.com ([209.191.85.42]:24774)
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <daCaptain@rocketmail.com>) id 1NFY0d-00045B-IM
+	for axiom-mail@nongnu.org; Tue, 01 Dec 2009 14:03:35 -0500
+Received: (qmail 76115 invoked by uid 60001); 1 Dec 2009 19:03:33 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=rocketmail.com; s=s1024;
+	t=1259694213; bh=QPaNefDNgZYzRgZpnwn87g0fl99E7WpFY5TX5v8B5Ww=;
+	h=Message-ID:X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=gCgfNKPD8jY/1TJ+k8myS7lLzJlugJl4Ecdqnd50rf8EhjTq0peuZ9TZmfCcwAhKUVLQTawkkEMOjejUdP9lA9ZVLi1iP2Z+iDPYjK2P4oYYq2tA9RIsZ5HJfsOnOGqB7FY6qH+/FooleXKjNBKxYxSRJM1WnkDGfaZt9+X2r8k=
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=rocketmail.com;
+	h=Message-ID:X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=uuQL6XGlotIRU4bGhGUdah+qizumKq/W4soraTUGhu9tmkVs8A6ab6lSXPIeECVOCZcRyv088cp3s5ZCU/feejhQBaJcZERLxLeoRc7C8FJZQc4dBhf+AzmXxQWitleygJJAvE/Sg3GEjmhPNOHIR/qvAouNzf609iRNMRjArxo=;
+Message-ID: <853488.75951.qm@web36708.mail.mud.yahoo.com>
+X-YMail-OSG: vLnzX80VM1kTooie5sQdi_0m0WfLFoeSphuNvbtGPjUX62mbj5P_qrHlKhvfi8qeCmBbQSfvShGnCDCxfOgHrPUUzh0mX8QmI0Q.wkFCcUX5CAtV8VOj.SOQxPjXng.8.1PPGm4SxpKQ35JSPrbwboO8Dh0lm_HE8ImkfRe5zJogAU2UbsH_qnU7Qes7ZGl.yqRQVNWUU1pTQ11yy05hpc9z6qDm4qCAA2fSbq_bktQt9_7qC6n7us3Mem4KL22lqO2FNlFvP_JCqmHzuUT7eoSXGSjmzN1jDTNB.L8eOwi8u7TE64QghOfI5RNGi95R3HMjRHvZ2NVlzNyuQ.OWL3AAX8M82lO..qzuiE4vlml1
+Received: from [77.11.8.112] by web36708.mail.mud.yahoo.com via HTTP;
+	Tue, 01 Dec 2009 11:03:33 PST
+X-Mailer: YahooMailClassic/8.1.6 YahooMailWebService/0.8.100.260964
+Date: Tue, 1 Dec 2009 11:03:33 -0800 (PST)
+From: Cap <daCaptain@rocketmail.com>
+Subject: Re: [Axiom-mail] my axiom is broken
+To: axiom-mail@nongnu.org
+In-Reply-To: <4B144CCC.4050700@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by monty-python.gnu.org: FreeBSD 6.x (1)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 01 Dec 2009 19:03:41 -0000
+
+Hi again,=0A=0AI installed axiom using the Synaptic packet manager. Here is=
+ the complete output of the axiom command:=0A=0Acap@miles:~$ axiom=0AGCL (G=
+NU Common Lisp)  2.6.7 CLtL1    Nov 10 2006 14:25:02=0ASource License: LGPL=
+(gcl,gmp), GPL(unexec,bfd,xgcl)=0ABinary License:  GPL due to GPL'ed compon=
+ents: (XGCL READLINE BFD UNEXEC)=0AModifications of this banner must retain=
+ notice of a compatible license=0ADedicated to the memory of W. Schelter=0A=
+=0AUse (help) to get some basic information on how to use GCL.=0ATemporary =
+directory for compiler files set to /tmp/=0A                        AXIOM C=
+omputer Algebra System =0A                     Version: Axiom 3.9 (Septembe=
+r 2005)=0A              Timestamp: Saturday December 2, 2006 at 09:30:31 =
+=0A------------------------------------------------------------------------=
+-----=0A   Issue )copyright to view copyright notices.=0A   Issue )summary =
+for a summary of useful system commands.=0A   Issue )quit to leave AXIOM an=
+d return to shell.=0A------------------------------------------------------=
+-----------------------=0A =0A   Re-reading compress.daase   Re-reading int=
+erp.daase=0A   Re-reading operation.daase=0A   Re-reading category.daase =
+=0A   >> System error:=0A   Couldn't protect=0A=0A=0AError: The tag |top_le=
+vel| is undefined.=0AFast links are on: do (si::use-fast-links nil) for deb=
+ugging=0AError signalled by RETURN.=0ABroken at APPLY.  Type :H for Help.=
+=0ABOOT>>=0A=0A=0A=0ACappy=0A=0A=0A--- On Mon, 11/30/09, Tim Daly <daly@axi=
+om-developer.org> wrote:=0A=0A> From: Tim Daly <daly@axiom-developer.org>=
+=0A> Subject: Re: [Axiom-mail] my axiom is broken=0A> To: "Cap" <daCaptain@=
+rocketmail.com>=0A> Cc: axiom-mail@nongnu.org=0A> Date: Monday, November 30=
+, 2009, 2:53 PM=0A> Cap wrote:=0A> > Hello,=0A> >=0A> > I get an error mess=
+age when I try to start axiom.=0A> >=0A> > Re-reading compress.daase=A0=A0=
+=A0Re-reading=0A> interp.daase=0A> >=A0 =A0 Re-reading operation.daase=0A> =
+>=A0 =A0 Re-reading category.daase =0A> >=A0 =A0 >> System error:=0A> >=A0 =
+=A0 Couldn't protect=0A> >=0A> >=0A> > Error: The tag |top_level| is undefi=
+ned.=0A> > Fast links are on: do (si::use-fast-links nil) for=0A> debugging=
+=0A> > Error signalled by RETURN.=0A> > Broken at APPLY.=A0 Type :H for Hel=
+p.=0A> > BOOT>>=0A> >=0A> > I tried reinstalling the package (Ubuntu 9.04 6=
+4), but=0A> it didn't help. I don't know what else to try. Can anyone=0A> p=
+lease help?=0A> >=0A> >=0A> > thanks=0A> > Cappy=0A> >=0A> >=0A> >=0A> >=A0=
+ =A0 =A0=A0=A0=0A> >=0A> >=0A> > __________________________________________=
+_____=0A> > Axiom-mail mailing list=0A> > Axiom-mail@nongnu.org=0A> > http:=
+//lists.nongnu.org/mailman/listinfo/axiom-mail=0A> >=0A> >=A0=A0=A0=0A> Axi=
+om prints out a banner that contains the date.=0A> What is the build date i=
+n the banner?=0A> Where did you get Axiom?=0A> =0A> Tim=0A> =0A> =0A=0A=0A =
+     
+
+
+
+From MAILER-DAEMON Tue Dec 01 18:40:15 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NFcKM-0007b0-SU
+	for mharc-axiom-mail@gnu.org; Tue, 01 Dec 2009 18:40:14 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NFcKK-0007aP-Cz
+	for axiom-mail@nongnu.org; Tue, 01 Dec 2009 18:40:12 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NFcKF-0007Z7-LN
+	for axiom-mail@nongnu.org; Tue, 01 Dec 2009 18:40:12 -0500
+Received: from [199.232.76.173] (port=48170 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NFcKF-0007Z2-FD
+	for axiom-mail@nongnu.org; Tue, 01 Dec 2009 18:40:07 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:36218
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1NFcKF-0008N4-3V
+	for axiom-mail@nongnu.org; Tue, 01 Dec 2009 18:40:07 -0500
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id nB1Ne08a001452;
+	Tue, 1 Dec 2009 17:40:01 -0600
+Message-ID: <4B15A9C5.10807@axiom-developer.org>
+Date: Tue, 01 Dec 2009 18:41:57 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Cap <daCaptain@rocketmail.com>, axiom-mail@nongnu.org,
+	"daly@axiom-developer.org >> daly" <daly@axiom-developer.org>
+Subject: Re: [Axiom-mail] my axiom is broken
+References: <853488.75951.qm@web36708.mail.mud.yahoo.com>
+In-Reply-To: <853488.75951.qm@web36708.mail.mud.yahoo.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 01 Dec 2009 23:40:13 -0000
+
+Cap wrote:
+> Hi again,
+>
+> I installed axiom using the Synaptic packet manager. Here is the complete output of the axiom command:
+>
+> cap@miles:~$ axiom
+> GCL (GNU Common Lisp)  2.6.7 CLtL1    Nov 10 2006 14:25:02
+> Source License: LGPL(gcl,gmp), GPL(unexec,bfd,xgcl)
+> Binary License:  GPL due to GPL'ed components: (XGCL READLINE BFD UNEXEC)
+> Modifications of this banner must retain notice of a compatible license
+> Dedicated to the memory of W. Schelter
+>
+> Use (help) to get some basic information on how to use GCL.
+> Temporary directory for compiler files set to /tmp/
+>                         AXIOM Computer Algebra System 
+>                      Version: Axiom 3.9 (September 2005)
+>               Timestamp: Saturday December 2, 2006 at 09:30:31 
+> -----------------------------------------------------------------------------
+>    Issue )copyright to view copyright notices.
+>    Issue )summary for a summary of useful system commands.
+>    Issue )quit to leave AXIOM and return to shell.
+> -----------------------------------------------------------------------------
+>  
+>    Re-reading compress.daase   Re-reading interp.daase
+>    Re-reading operation.daase
+>    Re-reading category.daase 
+>    >> System error:
+>    Couldn't protect
+>
+>
+> Error: The tag |top_level| is undefined.
+> Fast links are on: do (si::use-fast-links nil) for debugging
+> Error signalled by RETURN.
+> Broken at APPLY.  Type :H for Help.
+> BOOT>>
+>
+>
+>
+> Cappy
+>
+>
+> --- On Mon, 11/30/09, Tim Daly <daly@axiom-developer.org> wrote:
+>
+>   
+>> From: Tim Daly <daly@axiom-developer.org>
+>> Subject: Re: [Axiom-mail] my axiom is broken
+>> To: "Cap" <daCaptain@rocketmail.com>
+>> Cc: axiom-mail@nongnu.org
+>> Date: Monday, November 30, 2009, 2:53 PM
+>> Cap wrote:
+>>     
+>>> Hello,
+>>>
+>>> I get an error message when I try to start axiom.
+>>>
+>>> Re-reading compress.daase   Re-reading
+>>>       
+>> interp.daase
+>>     
+>>>     Re-reading operation.daase
+>>>     Re-reading category.daase 
+>>>     >> System error:
+>>>     Couldn't protect
+>>>
+>>>
+>>> Error: The tag |top_level| is undefined.
+>>> Fast links are on: do (si::use-fast-links nil) for
+>>>       
+>> debugging
+>>     
+>>> Error signalled by RETURN.
+>>> Broken at APPLY.  Type :H for Help.
+>>> BOOT>>
+>>>
+>>> I tried reinstalling the package (Ubuntu 9.04 64), but
+>>>       
+>> it didn't help. I don't know what else to try. Can anyone
+>> please help?
+>>     
+>>> thanks
+>>> Cappy
+>>>
+>>>
+>>>
+>>>        
+>>>
+>>>
+>>> _______________________________________________
+>>> Axiom-mail mailing list
+>>> Axiom-mail@nongnu.org
+>>> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>>>
+>>>    
+>>>       
+>> Axiom prints out a banner that contains the date.
+>> What is the build date in the banner?
+>> Where did you get Axiom?
+>>
+>> Tim
+>>
+>>
+>>     
+>
+>
+>       
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>   
+This package is broken. I am unable to convince Debian to
+fix it or to let me fix it. Please visit
+http://axiom-developer.org/axiom-website/download.html
+
+
+
+
+From MAILER-DAEMON Fri Dec 04 17:37:19 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NGgm7-0006AX-L6
+	for mharc-axiom-mail@gnu.org; Fri, 04 Dec 2009 17:37:19 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NGgm6-00069H-Az
+	for axiom-mail@nongnu.org; Fri, 04 Dec 2009 17:37:18 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NGgm0-00062I-K4
+	for Axiom-mail@nongnu.org; Fri, 04 Dec 2009 17:37:17 -0500
+Received: from [199.232.76.173] (port=60466 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NGgm0-000622-Ep
+	for Axiom-mail@nongnu.org; Fri, 04 Dec 2009 17:37:12 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:57981
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1NGglz-00044g-Rp
+	for Axiom-mail@nongnu.org; Fri, 04 Dec 2009 17:37:12 -0500
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id nB4Mb48a006317;
+	Fri, 4 Dec 2009 16:37:05 -0600
+Message-ID: <4B198F80.6090505@axiom-developer.org>
+Date: Fri, 04 Dec 2009 17:38:56 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Alejandro Jakubi <jakubi@df.uba.ar>
+Subject: Re: [Axiom-mail] recent versions
+References: <Pine.WNT.4.64.0911282148560.3324@usuario-de5f78f>
+In-Reply-To: <Pine.WNT.4.64.0911282148560.3324@usuario-de5f78f>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 04 Dec 2009 22:37:18 -0000
+
+Alejandro Jakubi wrote:
+> The download page 
+> (http://axiom-developer.org/axiom-website/download.html) has links for 
+> downloading Axiom versions up to May 2009. Where are the more recent 
+> versions?
+>
+> Regards, Alejandro Jakubi
+>
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+The lastest Axiom versions have been built and uploaded. -- Tim
+
+
+
+
+From MAILER-DAEMON Fri Dec 04 20:28:24 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NGjRg-0004bU-1z
+	for mharc-axiom-mail@gnu.org; Fri, 04 Dec 2009 20:28:24 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NGjRd-0004Xs-VC
+	for axiom-mail@nongnu.org; Fri, 04 Dec 2009 20:28:22 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NGjRZ-0004UL-0F
+	for Axiom-mail@nongnu.org; Fri, 04 Dec 2009 20:28:21 -0500
+Received: from [199.232.76.173] (port=38370 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NGjRY-0004U3-OG
+	for Axiom-mail@nongnu.org; Fri, 04 Dec 2009 20:28:16 -0500
+Received: from mail.df.uba.ar ([157.92.11.91]:40832)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <jakubi@df.uba.ar>) id 1NGjRY-00017C-CX
+	for Axiom-mail@nongnu.org; Fri, 04 Dec 2009 20:28:16 -0500
+Received: from localhost (login.df.uba.ar [157.92.11.80])
+	by mail.df.uba.ar (Postfix) with ESMTP id 103DC117C38;
+	Fri,  4 Dec 2009 22:28:08 -0300 (ART)
+Date: Fri, 4 Dec 2009 22:28:02 -0300
+From: Alejandro Jakubi <jakubi@df.uba.ar>
+To: Tim Daly <daly@axiom-developer.org>
+Subject: Re: [Axiom-mail] recent versions
+In-Reply-To: <4B198F80.6090505@axiom-developer.org>
+Message-ID: <Pine.WNT.4.64.0912042224370.1808@usuario-de5f78f>
+References: <Pine.WNT.4.64.0911282148560.3324@usuario-de5f78f>
+	<4B198F80.6090505@axiom-developer.org>
+X-X-Sender: jakubi@mail.df.uba.ar
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 05 Dec 2009 01:28:22 -0000
+
+> The lastest Axiom versions have been built and uploaded. -- Tim
+
+Excellent.
+
+Just curious. Is there any estimate available on how far away is a native
+Windows port of Axiom?
+
+This is not an urgent issue for me. As I am working through the Axiom
+documentation while on Windows, I find that the behavior of OpenAxiom, from my
+elementary level, is almost indistinguishable.
+
+Alejandro
+
+
+
+
+
+From MAILER-DAEMON Sun Dec 27 09:52:04 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NOuTT-00079x-PU
+	for mharc-axiom-mail@gnu.org; Sun, 27 Dec 2009 09:52:03 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NOuTS-00079X-JC
+	for axiom-mail@nongnu.org; Sun, 27 Dec 2009 09:52:02 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NOuTN-00075p-6q
+	for axiom-mail@nongnu.org; Sun, 27 Dec 2009 09:52:02 -0500
+Received: from [199.232.76.173] (port=52095 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NOuTM-00075h-Ta
+	for axiom-mail@nongnu.org; Sun, 27 Dec 2009 09:51:56 -0500
+Received: from fti.dn.ua ([82.207.93.10]:61547)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <metlov@fti.dn.ua>) id 1NOuTM-00076c-Bv
+	for axiom-mail@nongnu.org; Sun, 27 Dec 2009 09:51:56 -0500
+Received: from fti.dn.ua (localhost.kinetic.local [127.0.0.1])
+	by fti.dn.ua (Postfix) with ESMTP id 1559129DC6
+	for <axiom-mail@nongnu.org>; Sun, 27 Dec 2009 16:51:49 +0200 (EET)
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=fti.dn.ua; h=from:to:subject
+	:date:mime-version:content-type:content-transfer-encoding
+	:message-id; q=dns; s=mail; b=oNUCbEB5I1nee9uvTfopc8ziX9dCQeblsO
+	9R8bu6xUOTUlojUKxWkogI3LREeQ1nX2+COuWIxXhQZuZsSQqJqE1iyw8rq5/hkP
+	PK/lYFF4cGKKHT9hMc2H8hzIv7VuyOqgWXQd9QpbQDBlfQSj0UqqN0cKjuV4Nzsf
+	xKFPYxpbA=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed; d=fti.dn.ua; h=from:to
+	:subject:date:mime-version:content-type
+	:content-transfer-encoding:message-id; s=mail; bh=bUUMDQzQieEM8d
+	tK4EhkoIY9w2I8ZxBNjaFtZwlMy+Y=; b=H6adIQKVhLp4Esall1hb+9igs5RHQ6
+	BIkskBqBCSPbZeZS1zJ8AhaLh0V4MxLmOFLuOzwTpCDL8Z82vXigXeFfGZAa+8Lr
+	ccMHaB9NleEwher6auK1GM7rrrt5eVfaK5+4srAXBhym6dAiPQFaNma3Ma7/E+wK
+	hpNFsdnhkzwbY=
+Received: from kite.kinetic.local (kite.kinetic.local [192.168.250.130])
+	by fti.dn.ua (Postfix) with ESMTPSA id 8456629BCF
+	for <axiom-mail@nongnu.org>; Sun, 27 Dec 2009 16:51:42 +0200 (EET)
+From: "Konstantin L. Metlov" <metlov@fti.dn.ua>
+Organization: DIPT
+To: axiom-mail@nongnu.org
+Date: Sun, 27 Dec 2009 16:51:41 +0200
+User-Agent: KMail/1.9.10
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200912271651.41952.metlov@fti.dn.ua>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] positive definite matrix predicate
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 27 Dec 2009 14:52:02 -0000
+
+Hello ! I have a lot of questions :-)
+
+Trying to implement a certain special function in Axiom (Epstein zeta, to be 
+precise), which depends on a positive definite matrix argument. How do I 
+properly implement the test that the matrix is positive definite ?
+
+Did I overlook a standard predicate, which tests for this ? Should I perform 
+the test in my function (which, since such a test seems to be quite basis, 
+may potentially lead to duplication of code in future) and potentially fail ? 
+If I add such predicate to MatrixCategory (which looks like a proper place 
+for such a basic thing), what are the conditions for the patch to be 
+accepted ?
+
+With the best regards,
+                          Konstantin.
+
+
+
+From MAILER-DAEMON Sun Dec 27 10:32:22 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NOv6U-0006kI-Bp
+	for mharc-axiom-mail@gnu.org; Sun, 27 Dec 2009 10:32:22 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NOv6S-0006jv-Lj
+	for axiom-mail@nongnu.org; Sun, 27 Dec 2009 10:32:20 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NOv6N-0006jB-5x
+	for axiom-mail@nongnu.org; Sun, 27 Dec 2009 10:32:19 -0500
+Received: from [199.232.76.173] (port=42610 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NOv6N-0006j8-11
+	for axiom-mail@nongnu.org; Sun, 27 Dec 2009 10:32:15 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:32920
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1NOv6M-0002Jg-Mv
+	for axiom-mail@nongnu.org; Sun, 27 Dec 2009 10:32:14 -0500
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id nBRFW88a030146;
+	Sun, 27 Dec 2009 09:32:09 -0600
+Message-ID: <4B377E8A.8050704@axiom-developer.org>
+Date: Sun, 27 Dec 2009 10:34:34 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: "Konstantin L. Metlov" <metlov@fti.dn.ua>
+Subject: Re: [Axiom-mail] positive definite matrix predicate
+References: <200912271651.41952.metlov@fti.dn.ua>
+In-Reply-To: <200912271651.41952.metlov@fti.dn.ua>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 27 Dec 2009 15:32:21 -0000
+
+Konstantin
+> Hello ! I have a lot of questions :-)
+>
+> Trying to implement a certain special function in Axiom (Epstein zeta, to be 
+> precise), which depends on a positive definite matrix argument. How do I 
+> properly implement the test that the matrix is positive definite?
+>   
+I do not see this test anywhere. The only mention of the subject seems 
+to be in MHROWRED
+ModulareHermitianRowReduction but I do not see a test for this condition.
+> Did I overlook a standard predicate, which tests for this ? 
+
+I do not think you overlooked anything.
+> Should I perform 
+> the test in my function (which, since such a test seems to be quite basis, 
+> may potentially lead to duplication of code in future) and potentially fail ? 
+>   
+Write your own test but give some thought to making it general.
+> If I add such predicate to MatrixCategory (which looks like a proper place 
+> for such a basic thing), what are the conditions for the patch to be 
+> accepted ?
+>   
+I'm not sure if this should be defined at the category level. That 
+complicates the problem because
+now you have to figure out all of the places where matrix category is 
+used and check that your
+category-level function is valid (e.g. over complex domains?).
+
+You could look at MATLIN MatrixLinearAlgebraFunctions and add it there 
+at the level
+of generality you need. Does your code work over IntegralDomains? 
+EuclideanDomains?
+Fields?, etc.
+
+There are no conditions for a patch to be "accepted" but I need to be 
+fairly confident that the
+patch doesn't break anything, and that the patch works as users expect. 
+This is helped along
+by having lots of simple test cases sent along with the patch. Even 
+better is a set of explanations
+of the function (which I'd otherwise have to create that documentation 
+which takes time for me
+to learn).
+
+Tim
+
+
+
+
+
+From MAILER-DAEMON Mon Dec 28 10:22:35 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NPHQZ-0000d2-QO
+	for mharc-axiom-mail@gnu.org; Mon, 28 Dec 2009 10:22:35 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NPHQY-0000cx-AH
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 10:22:34 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NPHQT-0000bI-5H
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 10:22:33 -0500
+Received: from [199.232.76.173] (port=36622 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NPHQT-0000bE-1x
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 10:22:29 -0500
+Received: from fti.dn.ua ([82.207.93.10]:60296)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <metlov@fti.dn.ua>) id 1NPHQS-0000B1-LD
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 10:22:29 -0500
+Received: from fti.dn.ua (localhost.kinetic.local [127.0.0.1])
+	by fti.dn.ua (Postfix) with ESMTP id 5BA6D29DC6
+	for <axiom-mail@nongnu.org>; Mon, 28 Dec 2009 17:22:01 +0200 (EET)
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=fti.dn.ua; h=from:to:subject
+	:date:mime-version:content-type:content-transfer-encoding
+	:message-id; q=dns; s=mail; b=pKSzuwa0NzN1wMXZh0j1lFiVUFTbrR+Im3
+	uLgu9N6fBfuKjymHCXlHySMZVv44ssCtDRh7BWCqq9bBUFae/dKDvYPOKWTlWEAj
+	4JsP59bgPy6hpMf+5AXG0SZbcarcQjpOKObvIKyzBf7bBs0k3+old+8BJkgsDeXr
+	7G4ctuLtI=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed; d=fti.dn.ua; h=from:to
+	:subject:date:mime-version:content-type
+	:content-transfer-encoding:message-id; s=mail; bh=Z4SQ9oQ4ULtA5M
+	CrNoClNxfsK3JFq00b387C+XytpXE=; b=6dd+lo7dU3fs+copGUC4JsApV+DKZr
+	QlSgWIF0Ucsb+96rbPV5RZ8wy68OAVC9d6mIa1SnBqqfrqn5OIvDKE0IelnZSCHR
+	GPTD9tnOEt9TPqfCcqQ7uUFwE+QzQWInxWm6JwjnpZZAuBKV0G+nA6jQ1r0ndK7n
+	lYVxPwS7vxXqs=
+Received: from kite.kinetic.local (kite.kinetic.local [192.168.250.130])
+	by fti.dn.ua (Postfix) with ESMTPSA id 3B70A29BCF
+	for <axiom-mail@nongnu.org>; Mon, 28 Dec 2009 17:22:01 +0200 (EET)
+From: "Konstantin L. Metlov" <metlov@fti.dn.ua>
+Organization: DIPT
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] positive definite matrix predicate
+Date: Mon, 28 Dec 2009 17:22:00 +0200
+User-Agent: KMail/1.9.10
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+Message-Id: <200912281722.00479.metlov@fti.dn.ua>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 28 Dec 2009 15:22:34 -0000
+
+> Definitely avoid subdomains. They require support from the interpreter.
+> There are only 2 subdomains that have been properly implemented in Axiom,
+> PositiveInteger and NonNegativeInteger and both required a lot of effort.
+Even if what I really want is just check the predicate ?
+
+=46rom what I've read in "The AXIOM System" J.H. Davenport it seemed like t=
+he=20
+right feature to use for this... Yes, I understand that only the interprete=
+r=20
+would automatically identify the matrix in its output as, let's say,=20
+Hermitean. In the SPAD code I'd write that my function requires a Hermitian=
+=20
+matrix and will have to make an explicit coercion (which would check the=20
+predicate and ensure it is a Hermitian indeed or signal an error that it is=
+=20
+not). For all the other purposes Hermitean matrix would be just a=20
+SquareMatrix.
+
+I was thinking about defining a domain, but the problem, which turned this=
+=20
+idea down, that this domain would not be closed. Yes, the sum of Hermitian=
+=20
+(and positive definite) matrices is Hermitian (positive definite) too, but=
+=20
+their product is only Hermitian if they commute. This seemed (on my current=
+,=20
+almost non-existant, level of knowledge of Axiom) to be hard to capture by =
+a=20
+type system... at least by a static one. The type of the result of the=20
+multiplication would depend on whether two particular matrices commute.
+
+May be it is impossible to represent in Axiom ? Which would explain why it=
+=20
+does not have these basic notions built into its matrix algebra...
+
+With the best regards,
+                         Konstantin.
+
+p.s. Is this feature (subdomains) going to be removed ?
+
+
+
+From MAILER-DAEMON Mon Dec 28 11:45:10 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NPIiU-0007Jn-CG
+	for mharc-axiom-mail@gnu.org; Mon, 28 Dec 2009 11:45:10 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NPIiT-0007Ja-E0
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 11:45:09 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NPIiO-0007Iy-0g
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 11:45:08 -0500
+Received: from [199.232.76.173] (port=55603 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NPIiN-0007Iv-QV
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 11:45:03 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:33935
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1NPIiN-0003iH-Aq
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 11:45:03 -0500
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id nBSGij8a004258;
+	Mon, 28 Dec 2009 10:44:45 -0600
+Message-ID: <4B38E117.6020409@axiom-developer.org>
+Date: Mon, 28 Dec 2009 11:47:19 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: "Konstantin L. Metlov" <metlov@fti.dn.ua>
+Subject: Re: [Axiom-mail] positive definite matrix predicate
+References: <200912281722.00479.metlov@fti.dn.ua>
+In-Reply-To: <200912281722.00479.metlov@fti.dn.ua>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 28 Dec 2009 16:45:09 -0000
+
+Konstantin L. Metlov wrote:
+>> Definitely avoid subdomains. They require support from the interpreter.
+>> There are only 2 subdomains that have been properly implemented in Axiom,
+>> PositiveInteger and NonNegativeInteger and both required a lot of effort.
+>>     
+> Even if what I really want is just check the predicate ?
+>
+> >From what I've read in "The AXIOM System" J.H. Davenport it seemed like the 
+> right feature to use for this... Yes, I understand that only the interpreter 
+> would automatically identify the matrix in its output as, let's say, 
+> Hermitean. In the SPAD code I'd write that my function requires a Hermitian 
+> matrix and will have to make an explicit coercion (which would check the 
+> predicate and ensure it is a Hermitian indeed or signal an error that it is 
+> not). For all the other purposes Hermitean matrix would be just a 
+> SquareMatrix.
+>
+> I was thinking about defining a domain, but the problem, which turned this 
+> idea down, that this domain would not be closed. Yes, the sum of Hermitian 
+> (and positive definite) matrices is Hermitian (positive definite) too, but 
+> their product is only Hermitian if they commute. This seemed (on my current, 
+> almost non-existant, level of knowledge of Axiom) to be hard to capture by a 
+> type system... at least by a static one. The type of the result of the 
+> multiplication would depend on whether two particular matrices commute.
+>
+> May be it is impossible to represent in Axiom ? Which would explain why it 
+> does not have these basic notions built into its matrix algebra...
+>   
+I don't think it is impossible to represent in the algebra. The usual 
+way to restrict a result is
+to define a retractIfCan or coerceIfCan function that will attempt to 
+return a restricted result.
+If the retraction (of type Union(restrictedtype,"failed")) returns 
+"failed" then the wider result
+is used.
+> With the best regards,
+>                          Konstantin.
+>
+> p.s. Is this feature (subdomains) going to be removed ?
+>   
+No. Subdomains will continue to exist.
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>   
+
+
+
+
+From MAILER-DAEMON Mon Dec 28 16:03:17 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NPMkH-00007s-63
+	for mharc-axiom-mail@gnu.org; Mon, 28 Dec 2009 16:03:17 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NPMkF-00007X-Gc
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 16:03:15 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NPMkB-00006z-Eq
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 16:03:15 -0500
+Received: from [199.232.76.173] (port=51011 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NPMkB-00006s-7i
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 16:03:11 -0500
+Received: from fti.dn.ua ([82.207.93.10]:30770)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <metlov@fti.dn.ua>) id 1NPMkA-0001uf-Lc
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 16:03:10 -0500
+Received: from fti.dn.ua (localhost.kinetic.local [127.0.0.1])
+	by fti.dn.ua (Postfix) with ESMTP id 739C629DC6
+	for <axiom-mail@nongnu.org>; Mon, 28 Dec 2009 23:03:07 +0200 (EET)
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=fti.dn.ua; h=from:to:subject
+	:date:references:in-reply-to:mime-version:content-type
+	:content-transfer-encoding:message-id; q=dns; s=mail; b=cJFPQl4c
+	kkbQNQRbT91sS+0UtTl8wMHOyqnA2+Ned/qoormRpEaDf0qwvxwYt+pfN7XFhBWB
+	AHTtUkTNTaA0uRKjg9nGoPjiO0M17w+QIQ5McVp38VxyM/KzJYme5v7wdppOtbdx
+	DAZeIAoVnczOrPcDednwP3J9ae064Q7Sltk=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed; d=fti.dn.ua; h=from:to
+	:subject:date:references:in-reply-to:mime-version:content-type
+	:content-transfer-encoding:message-id; s=mail; bh=Vdg9lqDuctLTIn
+	9YzosDCST1BNUrd400AKDyWp4Dncs=; b=meRaNjXYzVSacno96vasV9TJg1DQVJ
+	RFTQgoCZ8cl1WjYdVkDyO0PVh5LdCZ2HXWhkizdRZFPfnTMjrh3gBAhS13P49EcA
+	MBzbJC/bmX7UO9iKBrt4HPoAwRVPjs0Pn7YXpX1iM6x2yql2h8yEcYDDH/vp21Bp
+	77KSvG/cgkYCc=
+Received: from kite.kinetic.local (kite.kinetic.local [192.168.250.130])
+	by fti.dn.ua (Postfix) with ESMTPSA id 05C7729D3B
+	for <axiom-mail@nongnu.org>; Mon, 28 Dec 2009 23:03:07 +0200 (EET)
+From: "Konstantin L. Metlov" <metlov@fti.dn.ua>
+Organization: DIPT
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] positive definite matrix predicate
+Date: Mon, 28 Dec 2009 23:03:05 +0200
+User-Agent: KMail/1.9.10
+References: <200912281722.00479.metlov@fti.dn.ua>
+	<4B38E117.6020409@axiom-developer.org>
+In-Reply-To: <4B38E117.6020409@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200912282303.06104.metlov@fti.dn.ua>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 28 Dec 2009 21:03:15 -0000
+
+I think I found an answer within Axiom itself:
+
+(1) -> sqrt(-1.0)
+ 1) ->
+   >> Error detected within library code:
+   negative sqrt
+
+This is, probably, what I should do. It was really a question of how to fail: 
+at type conversion or during the computation itself. This example shows that 
+in the case of Float Axiom fails during the computation. My computation will 
+involve floats and is similar to this example. This way to fail is simple and 
+makes it unnecessary to define categories. I should, probably, simply add 
+predicates to SquareMatrixCategory to test for hermitiannes (symmetricity, if 
+its real) and positive definiteness to avoid duplicate code in future.
+
+On the other hand:
+
+(1) -> sqrt(-1)
+(1) ->
+         +---+
+   (1)  \|- 1
+                                                        Type: AlgebraicNumber
+
+(2) -> sqrt(-1)::Complex(Float)
+(2) ->
+   (2)  %i
+                                                          Type: Complex Float
+
+Shouldn't it be consistent with the former ?
+
+With the best regards,
+                           Konstantin.
+
+
+
+From MAILER-DAEMON Mon Dec 28 17:14:44 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NPNrQ-00070J-2A
+	for mharc-axiom-mail@gnu.org; Mon, 28 Dec 2009 17:14:44 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NPNrO-0006zt-Il
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 17:14:42 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NPNrJ-0006yh-1y
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 17:14:41 -0500
+Received: from [199.232.76.173] (port=43156 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NPNrI-0006yc-UC
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 17:14:36 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:37137
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1NPNrI-0007qi-Ha
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 17:14:36 -0500
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id nBSMEQ8a032585;
+	Mon, 28 Dec 2009 16:14:27 -0600
+Message-ID: <4B392E5D.8000205@axiom-developer.org>
+Date: Mon, 28 Dec 2009 17:17:01 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: "Konstantin L. Metlov" <metlov@fti.dn.ua>
+Subject: Re: [Axiom-mail] positive definite matrix predicate
+References: <200912281722.00479.metlov@fti.dn.ua>	<4B38E117.6020409@axiom-developer.org>
+	<200912282303.06104.metlov@fti.dn.ua>
+In-Reply-To: <200912282303.06104.metlov@fti.dn.ua>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 28 Dec 2009 22:14:42 -0000
+
+Konstantin L. Metlov wrote:
+> I think I found an answer within Axiom itself:
+>
+> (1) -> sqrt(-1.0)
+>  1) ->
+>    >> Error detected within library code:
+>    negative sqrt
+>
+> This is, probably, what I should do. It was really a question of how to fail: 
+> at type conversion or during the computation itself. This example shows that 
+> in the case of Float Axiom fails during the computation. My computation will 
+> involve floats and is similar to this example. This way to fail is simple and 
+> makes it unnecessary to define categories. I should, probably, simply add 
+> predicates to SquareMatrixCategory to test for hermitiannes (symmetricity, if 
+> its real) and positive definiteness to avoid duplicate code in future.
+>
+> On the other hand:
+>
+> (1) -> sqrt(-1)
+> (1) ->
+>          +---+
+>    (1)  \|- 1
+>                                                         Type: AlgebraicNumber
+>
+> (2) -> sqrt(-1)::Complex(Float)
+> (2) ->
+>    (2)  %i
+>                                                           Type: Complex Float
+>
+> Shouldn't it be consistent with the former ?
+>
+> With the best regards,
+>                            Konstantin.
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>   
+It is consistent with the former. The domain Float does not include the
+result %i so it is an error. The other domains include the result.
+
+Tim
+
+
+
+
+From MAILER-DAEMON Mon Dec 28 17:38:06 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NPOE1-0007na-UP
+	for mharc-axiom-mail@gnu.org; Mon, 28 Dec 2009 17:38:05 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NPODz-0007mV-VX
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 17:38:03 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NPODu-0007ko-D1
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 17:38:02 -0500
+Received: from [199.232.76.173] (port=60433 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NPODu-0007kh-AO
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 17:37:58 -0500
+Received: from fti.dn.ua ([82.207.93.10]:32663)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <metlov@fti.dn.ua>) id 1NPODt-0003iP-M2
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 17:37:57 -0500
+Received: from fti.dn.ua (localhost.kinetic.local [127.0.0.1])
+	by fti.dn.ua (Postfix) with ESMTP id 7C05129DC6
+	for <axiom-mail@nongnu.org>; Tue, 29 Dec 2009 00:37:54 +0200 (EET)
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=fti.dn.ua; h=from:to:subject
+	:date:references:in-reply-to:mime-version:content-type
+	:content-transfer-encoding:message-id; q=dns; s=mail; b=JGIP89Df
+	m2L1xi0c7vUwJBKSyBfkOZEjiEaJyJsHSxL6q4EVlkG0od2SMMk5qGHv4a3pYGYJ
+	nfWFG0Q2E8Dl7HYqqBtJ5S2otq1aXEfI7kAjPMZ0Kf3BTiMMVzrmjr30d9f8xzoJ
+	St43YNJbxerwmRFwxKClxjFeLgxfXnOY/o8=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed; d=fti.dn.ua; h=from:to
+	:subject:date:references:in-reply-to:mime-version:content-type
+	:content-transfer-encoding:message-id; s=mail; bh=sF2CnrtNJoCM0w
+	jsDMnLJcWIvTFiT+kRkOkOBf2jqtI=; b=5xJhP8YmD0qnnkpTprl7brcgFm+0RI
+	0lHaCxJnzgO/4loIuznXF3ADmY2pyDUnlwrUvwBACADkedhYJH4vUMUek+iNMEdd
+	q/JjOuBhxPxAmheQHV50ipZjFi8+6yJxG1ba6l930vZkPs4HmNDfkzCBa7muiKpH
+	fGOtwLk3iQEvc=
+Received: from future.home.local (196-20-132-95.pool.ukrtel.net
+	[95.132.20.196]) by fti.dn.ua (Postfix) with ESMTPSA id 3D4EC29D3B
+	for <axiom-mail@nongnu.org>; Tue, 29 Dec 2009 00:37:54 +0200 (EET)
+From: "Konstantin L. Metlov" <metlov@fti.dn.ua>
+Organization: DIPT
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] positive definite matrix predicate
+Date: Tue, 29 Dec 2009 00:37:53 +0200
+User-Agent: KMail/1.9.10
+References: <200912281722.00479.metlov@fti.dn.ua>
+	<200912282303.06104.metlov@fti.dn.ua>
+	<4B392E5D.8000205@axiom-developer.org>
+In-Reply-To: <4B392E5D.8000205@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200912290037.53916.metlov@fti.dn.ua>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 28 Dec 2009 22:38:04 -0000
+
+> It is consistent with the former. The domain Float does not include the
+> result %i so it is an error. The other domains include the result.
+Yes, but the Integer domain does not include complex unity either and in that 
+case the result is automatically converted to AlgebraicNumber, which can 
+represent it. Analogous behaviour in the first case could be to declare the 
+result of sqrt on Float as Complex(Float).
+
+Konstantin
+
+
+
+From MAILER-DAEMON Mon Dec 28 17:50:35 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NPOQ6-0003Wx-EB
+	for mharc-axiom-mail@gnu.org; Mon, 28 Dec 2009 17:50:34 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NPOQ1-0003SF-Ow
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 17:50:31 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NPOPv-0003LZ-7e
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 17:50:27 -0500
+Received: from [199.232.76.173] (port=44104 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NPOPu-0003LA-Uh
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 17:50:23 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:59465
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1NPOPu-0005Og-10
+	for axiom-mail@nongnu.org; Mon, 28 Dec 2009 17:50:22 -0500
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id nBSMoI8a013614;
+	Mon, 28 Dec 2009 16:50:18 -0600
+Message-ID: <4B3936C5.60406@axiom-developer.org>
+Date: Mon, 28 Dec 2009 17:52:53 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: "Konstantin L. Metlov" <metlov@fti.dn.ua>
+Subject: Re: [Axiom-mail] positive definite matrix predicate
+References: <200912281722.00479.metlov@fti.dn.ua>	<200912282303.06104.metlov@fti.dn.ua>	<4B392E5D.8000205@axiom-developer.org>
+	<200912290037.53916.metlov@fti.dn.ua>
+In-Reply-To: <200912290037.53916.metlov@fti.dn.ua>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 28 Dec 2009 22:50:32 -0000
+
+Konstantin L. Metlov wrote:
+>> It is consistent with the former. The domain Float does not include the
+>> result %i so it is an error. The other domains include the result.
+>>     
+> Yes, but the Integer domain does not include complex unity either and in that 
+> case the result is automatically converted to AlgebraicNumber, which can 
+> represent it. Analogous behaviour in the first case could be to declare the 
+> result of sqrt on Float as Complex(Float).
+>
+> Konstantin
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>   
+It could be argued either way. Using floats is generally done because you
+want a numeric answer. A %i answer would by symbolic. I'd be willing to
+accept either form but, at the moment, Axiom does not do the coercion for
+floats automatically. You can get the behavior you want by an explicit call
+(the so-called dollar call which specifies which domain to choose):
+
+sqrt(-1.0)$Complex(Float) ==> %i
+
+Tim
+
+
+
+
+From MAILER-DAEMON Tue Dec 29 03:38:21 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NPXav-0006PJ-N9
+	for mharc-axiom-mail@gnu.org; Tue, 29 Dec 2009 03:38:21 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NPXat-0006P6-FQ
+	for axiom-mail@nongnu.org; Tue, 29 Dec 2009 03:38:19 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NPXao-0006OW-Rs
+	for axiom-mail@nongnu.org; Tue, 29 Dec 2009 03:38:18 -0500
+Received: from [199.232.76.173] (port=57932 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NPXao-0006OT-KW
+	for axiom-mail@nongnu.org; Tue, 29 Dec 2009 03:38:14 -0500
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:33904)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1NPXao-00012m-Aw
+	for axiom-mail@nongnu.org; Tue, 29 Dec 2009 03:38:14 -0500
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	nBT8c0c5027072; Tue, 29 Dec 2009 09:38:01 +0100
+To: "Konstantin L. Metlov" <metlov@fti.dn.ua>
+Subject: Re: [Axiom-mail] positive definite matrix predicate
+References: <200912281722.00479.metlov@fti.dn.ua>
+	<4B38E117.6020409@axiom-developer.org>
+	<200912282303.06104.metlov@fti.dn.ua>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Tue, 29 Dec 2009 09:38:00 +0100
+In-Reply-To: <200912282303.06104.metlov@fti.dn.ua> (Konstantin L. Metlov's
+	message of "Mon\, 28 Dec 2009 23\:03\:05 +0200")
+Message-ID: <d9r5qech07.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.10.31.165419
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 29 Dec 2009 08:38:20 -0000
+
+"Konstantin L. Metlov" <metlov@fti.dn.ua> writes:
+
+> (1) -> sqrt(-1.0)
+>  1) ->
+>    >> Error detected within library code:
+>    negative sqrt
+
+
+> On the other hand:
+>
+> (1) -> sqrt(-1)
+> (1) ->
+>          +---+
+>    (1)  \|- 1
+>                                                         Type: AlgebraicNumber
+>
+> (2) -> sqrt(-1)::Complex(Float)
+> (2) ->
+>    (2)  %i
+>                                                           Type: Complex Float
+>
+> Shouldn't it be consistent with the former ?
+
+The interpreter uses a heuristic to choose which operation "sqrt" to use
+roughly based on it's
+
+- name                 (here: sqrt)
+- argument types       (here: Float,      Integer,    Integer)
+- expected return type (here: none given, none given, Complex Float)
+
+(The details are in i-funsel.boot, which unfortunately is quite
+underdocumented, in my opinion.)
+
+You can watch the choices the interpreter makes by typing
+
+)set message bottom on
+
+(or simply )se me bo on)
+
+hope this helps,
+
+Martin
+
+
+

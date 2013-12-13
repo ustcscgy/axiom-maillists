@@ -1,0 +1,540 @@
+From MAILER-DAEMON Wed Apr 19 21:41:45 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FWOAz-0007FJ-OX
+	for mharc-axiom-mail@gnu.org; Wed, 19 Apr 2006 21:41:45 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FQsGO-0003rx-Io
+	for axiom-mail@nongnu.org; Tue, 04 Apr 2006 16:36:32 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FQsGN-0003r4-V7
+	for Axiom-mail@nongnu.org; Tue, 04 Apr 2006 16:36:32 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FQsGN-0003qu-Ss
+	for Axiom-mail@nongnu.org; Tue, 04 Apr 2006 16:36:31 -0400
+Received: from [207.226.17.186] (helo=mail.peoplesquest.com)
+	by monty-python.gnu.org with smtp (Exim 4.52) id 1FQsJj-0007Vx-Tv
+	for Axiom-mail@nongnu.org; Tue, 04 Apr 2006 16:40:00 -0400
+Received: (qmail 9804 invoked by uid 399); 4 Apr 2006 20:36:30 -0000
+Received: from unknown (HELO ?192.168.0.102?) (68.32.113.56)
+	by 207.226.17.187 with SMTP; 4 Apr 2006 20:36:30 -0000
+Message-ID: <4432D955.4090104@outstep.com>
+From: Lonnie Cumberland <lonnie@outstep.com>
+User-Agent: Mozilla Thunderbird 1.0.7 (Windows/20050923)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: Axiom-mail@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Mailman-Approved-At: Wed, 19 Apr 2006 21:41:42 -0400
+Cc: 
+Subject: [Axiom-mail] Newbie Questions
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+Date: Tue, 04 Apr 2006 20:36:33 -0000
+X-Original-Date: Tue, 04 Apr 2006 16:38:45 -0400
+X-List-Received-Date: Tue, 04 Apr 2006 20:36:33 -0000
+
+Greetings All,
+
+I have recently come across Axiom and am very impressed with what I have 
+seen so far.
+
+I was trying to do some simple calculation looking for the floor, and 
+integer of  the sqrt of a number but could not seem to get this to work 
+and could not locate these in any documentation.
+
+This project has very good potential I think but seems to have a long 
+way to go in order to be on the level of Mathematica.
+
+One other thing that I noticed was that plotting is still in development 
+for Windows but you might consider looking to use something like 
+LiveGraphics3d for the plotting of 2D and 3D graphics as is this a free 
+component and is also what is used in Mathematica.  Just an idea to 
+offer the community until I can figure out how to get involved with the 
+development side of the house.
+
+-- 
+Thanks and have a good day,
+
+Lonnie T. Cumberland
+OutStep Technologies Incorporated
+
+Email: Lonnie@outstep.com
+       Lonnie_Cumberland@yahoo.com 
+
+Recommended sites: 
+
+	http://www.peoplesquest.com
+
+"Open Source...... opening the doors for the future in the world of today...."
+
+
+
+
+From MAILER-DAEMON Wed Apr 19 21:41:46 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FWOB0-0007Fh-61
+	for mharc-axiom-mail@gnu.org; Wed, 19 Apr 2006 21:41:46 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FVwAp-0000JL-EC
+	for axiom-mail@nongnu.org; Tue, 18 Apr 2006 15:47:43 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FVwAo-0000J5-5v
+	for axiom-mail@nongnu.org; Tue, 18 Apr 2006 15:47:42 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1FVwAl-0000IT-Nv; Tue, 18 Apr 2006 15:47:39 -0400
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52)
+	id 1FVwBh-0002vl-U4; Tue, 18 Apr 2006 15:48:38 -0400
+Received: from [192.168.138.29] (funklan.is4all.net [194.96.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k3IJlaRi002386
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Tue, 18 Apr 2006 21:47:37 +0200
+Message-ID: <4445427E.2070703@hemmecke.de>
+Date: Tue, 18 Apr 2006 21:48:14 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5 (X11/20051201)
+MIME-Version: 1.0
+To: axiom-dev <axiom-developer@nongnu.org>, axiom-mail@nongnu.org,
+	axiom-math@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Mailman-Approved-At: Wed, 19 Apr 2006 21:41:41 -0400
+Cc: 
+Subject: [Axiom-mail] Call for active participation
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 18 Apr 2006 19:47:43 -0000
+
+Hello friends of Axiom,
+
+I'd like to invite you to improve Axiom's website
+
+http://wiki.axiom-developer.org/
+
+There is already quite a lot of information available, but it is perhaps 
+not in a form that suits best the need of its users.
+
+As you all know anyone can edit these pages and can improve them. Yes, 
+also YOU can. But if you don't yet feel like editing pages in public, 
+simply reply to that mail and tell us all what you like and dislike there.
+(1) Which information should be more easily accessible?
+(2) Which information you are constantly missing?
+(3) Is the FrontPage good enough? Does it contain too much/too few 
+information?
+(4) What questions should be added to the FAQ page? (If you can manage, 
+immediately enter your question there. Simply press the _edit_ link in 
+the top right corner, enter your question and press SAVE.)
+(5) ...
+
+Please help. A better AXIOM depends on YOU.
+
+Hope to hear from you
+
+Ralf Hemmecke
+
+
+
+From MAILER-DAEMON Wed Apr 19 21:41:47 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FWOB0-0007GB-Uk
+	for mharc-axiom-mail@gnu.org; Wed, 19 Apr 2006 21:41:47 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FWNmy-0007Hw-BA
+	for axiom-mail@nongnu.org; Wed, 19 Apr 2006 21:16:56 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FWNmw-0007H8-Mv
+	for axiom-mail@nongnu.org; Wed, 19 Apr 2006 21:16:55 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FWNmw-0007H3-JD
+	for axiom-mail@nongnu.org; Wed, 19 Apr 2006 21:16:54 -0400
+Received: from [209.191.85.148] (helo=web36413.mail.mud.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.52) id 1FWNoA-0003Wa-9K
+	for axiom-mail@nongnu.org; Wed, 19 Apr 2006 21:18:10 -0400
+Received: (qmail 91179 invoked by uid 60001); 20 Apr 2006 01:16:53 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=Message-ID:Received:Date:From:Subject:To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=0QLiXEoU6fTPc/nj/BoZc8k13Dqt6zMp/Reqd4yOgrAGLyxjzZuNnhF98sMxL32geR6H7U0YJKQfDNujWkdhNVbBsZXEWE3dIsfiLZmbdfxErkKK091riUAt9bHJSkcNqM++KWt6GEqMqdZT64/4/VI3RoMH+aC8w2pWn2xZhNo=
+	; 
+Message-ID: <20060420011653.91177.qmail@web36413.mail.mud.yahoo.com>
+Received: from [210.7.5.159] by web36413.mail.mud.yahoo.com via HTTP;
+	Wed, 19 Apr 2006 18:16:53 PDT
+Date: Wed, 19 Apr 2006 18:16:53 -0700 (PDT)
+From: CHARLES HILL <zephill@yahoo.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="0-1646085854-1145495813=:89489"
+Content-Transfer-Encoding: 8bit
+X-Mailman-Approved-At: Wed, 19 Apr 2006 21:41:42 -0400
+Subject: [Axiom-mail] Axiom download for Windows
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 20 Apr 2006 01:16:57 -0000
+
+--0-1646085854-1145495813=:89489
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+Can someone help me! I'm pretty eager to try out the full potential of Axiom. I've downloaded the Feb. 2005 version and it runs ok apart from a few snags: It won't produce graphs plus the DOS interface is not too user friendly! I haven't tried much else (apart from the usual simple math equations). Could someone instruct a novice like me on where to get the latest version, a more friendly user GUI (eg. Derive), loading instructions(Windows XP), etc.  I've visited the Axiom website many times but find it bewildering and frustrating! Your help in this matter is gratefully appreciated.
+   
+  Regards
+   
+  Charles Hill.
+   
+   
+
+		
+---------------------------------
+Yahoo! Messenger with Voice. Make PC-to-Phone Calls to the US (and 30+ countries) for 2¢/min or less.
+--0-1646085854-1145495813=:89489
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+<DIV>Can someone help me! I'm pretty eager to try out the full potential of&nbsp;Axiom. I've downloaded the Feb. 2005 version and it runs ok apart from a few snags: It won't produce graphs plus the DOS interface is not too user friendly! I haven't tried much else (apart from the usual simple math equations). Could someone instruct a novice like me on where to get the latest version, a more friendly user GUI (eg. Derive), loading instructions(Windows XP), etc.&nbsp; I've&nbsp;visited the Axiom website many times but&nbsp;find&nbsp;it bewildering and frustrating! Your&nbsp;help in this matter is gratefully appreciated.</DIV>  <DIV>&nbsp;</DIV>  <DIV>Regards</DIV>  <DIV>&nbsp;</DIV>  <DIV>Charles Hill.</DIV>  <DIV>&nbsp;</DIV>  <DIV>&nbsp;</DIV><p>
+		<hr size=1>Yahoo! Messenger with Voice. <a href="http://us.rd.yahoo.com/mail_us/taglines/postman1/*http://us.rd.yahoo.com/evt=39663/*http://voice.yahoo.com">Make PC-to-Phone Calls</a> to the US (and 30+ countries) for 2¢/min or less.
+--0-1646085854-1145495813=:89489--
+
+
+
+From MAILER-DAEMON Wed Apr 19 21:41:46 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FWOAz-0007FT-Te
+	for mharc-axiom-mail@gnu.org; Wed, 19 Apr 2006 21:41:45 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FRodU-00006S-7i
+	for axiom-mail@nongnu.org; Fri, 07 Apr 2006 06:56:16 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FRodQ-00006E-VU
+	for axiom-mail@nongnu.org; Fri, 07 Apr 2006 06:56:15 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FRodQ-00006A-QB
+	for axiom-mail@nongnu.org; Fri, 07 Apr 2006 06:56:12 -0400
+Received: from [62.4.17.105] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FRohN-0006Lh-DC
+	for axiom-mail@nongnu.org; Fri, 07 Apr 2006 07:00:17 -0400
+Received: from uniton.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by mallaury.nerim.net (Postfix) with ESMTP id 813084F3EF;
+	Fri,  7 Apr 2006 12:56:04 +0200 (CEST)
+Received: from uniton.integrable-solutions.net (localhost [127.0.0.1])
+	by uniton.integrable-solutions.net (8.12.10/8.12.10/SuSE Linux 0.7)
+	with ESMTP id k37AsatZ001564; Fri, 7 Apr 2006 12:54:36 +0200
+Received: (from gdr@localhost)
+	by uniton.integrable-solutions.net (8.12.10/8.12.10/Submit) id
+	k37AsaOm001563; Fri, 7 Apr 2006 12:54:36 +0200
+X-Authentication-Warning: uniton.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: axiom-mail@nongnu.org
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+Organization: Integrable Solutions
+Date: 07 Apr 2006 12:54:36 +0200
+Message-ID: <m3zmix3bbn.fsf@uniton.integrable-solutions.net>
+Lines: 11
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Mailman-Approved-At: Wed, 19 Apr 2006 21:41:41 -0400
+Cc: Benjamin Kosnik <bkoz@redhat.com>
+Subject: [Axiom-mail] Axiom and linux distros
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 07 Apr 2006 10:56:16 -0000
+
+
+Hi,
+
+  I just spoke with Benjamin (in CC:), from Red Hat, about possible
+inclusion of Axiom in linux distros, and Red Hat in particular.  That
+would increase the visbility of Axiom, I think.
+
+Benjamin pointed out that a minimal requirement would be for Axiom to
+support cross-compilation, "easy" packaging, etc.  
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Wed Apr 19 21:41:47 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FWOB0-0007Fw-IR
+	for mharc-axiom-mail@gnu.org; Wed, 19 Apr 2006 21:41:46 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FWNmH-000715-UO
+	for axiom-mail@nongnu.org; Wed, 19 Apr 2006 21:16:13 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FWNmE-00070q-TR
+	for axiom-mail@nongnu.org; Wed, 19 Apr 2006 21:16:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FWNmE-00070g-Lo
+	for axiom-mail@nongnu.org; Wed, 19 Apr 2006 21:16:10 -0400
+Received: from [209.191.85.149] (helo=web36414.mail.mud.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.52) id 1FWNnS-0003IH-CZ
+	for axiom-mail@nongnu.org; Wed, 19 Apr 2006 21:17:26 -0400
+Received: (qmail 69381 invoked by uid 60001); 20 Apr 2006 01:16:09 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=Message-ID:Received:Date:From:Subject:To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=JMgpyxbisM2/UGxsOq0lrtonIQZ5DJBO8JRRRkrVZ3N6j/0krqNe/JrSOp2JShJ0YLPEQyWh/AnxdRkOOXo/auCe4GOzeIj6jkXSSOEqR8TAJqOdLg8QFpor9UmVaFph3BZRaDOaz0xFIJhpE5JkzZJDzM6gisyMDflZhjuuJV0=
+	; 
+Message-ID: <20060420011609.69379.qmail@web36414.mail.mud.yahoo.com>
+Received: from [210.7.5.159] by web36414.mail.mud.yahoo.com via HTTP;
+	Wed, 19 Apr 2006 18:16:09 PDT
+Date: Wed, 19 Apr 2006 18:16:09 -0700 (PDT)
+From: CHARLES HILL <zephill@yahoo.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="0-1400492587-1145495769=:68225"
+Content-Transfer-Encoding: 8bit
+X-Mailman-Approved-At: Wed, 19 Apr 2006 21:41:42 -0400
+Subject: [Axiom-mail] Axiom download for Windows
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 20 Apr 2006 01:16:14 -0000
+
+--0-1400492587-1145495769=:68225
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+Can someone help me! I'm pretty eager to try out the full potential of Axiom. I've downloaded the Feb. 2005 version and it runs ok apart from a few snags: It won't produce graphs plus the DOS interface is not too user friendly! I haven't tried much else (apart from the usual simple math equations). Could someone instruct a novice like me on where to get the latest version, a more friendly user GUI (eg. Derive), loading instructions(Windows XP), etc.  I've visited the Axiom website many times but find it bewildering and frustrating! Your help in this matter is gratefully appreciated.
+   
+  Regards
+   
+  Charles Hill.
+   
+   
+
+			
+---------------------------------
+Celebrate Earth Day everyday!  Discover 10 things you can do to help slow climate change. Yahoo! Earth Day
+--0-1400492587-1145495769=:68225
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+<DIV>Can someone help me! I'm pretty eager to try out the full potential of&nbsp;Axiom. I've downloaded the Feb. 2005 version and it runs ok apart from a few snags: It won't produce graphs plus the DOS interface is not too user friendly! I haven't tried much else (apart from the usual simple math equations). Could someone instruct a novice like me on where to get the latest version, a more friendly user GUI (eg. Derive), loading instructions(Windows XP), etc.&nbsp; I've&nbsp;visited the Axiom website many times but&nbsp;find&nbsp;it bewildering and frustrating! Your&nbsp;help in this matter is gratefully appreciated.</DIV>  <DIV>&nbsp;</DIV>  <DIV>Regards</DIV>  <DIV>&nbsp;</DIV>  <DIV>Charles Hill.</DIV>  <DIV>&nbsp;</DIV>  <DIV>&nbsp;</DIV><p>
+	
+		<hr size=1>Celebrate Earth Day everyday!  Discover 10 things you can do to help slow climate change. <a href="http://us.rd.yahoo.com/mail_us/taglines/earthday/*http://earth.yahoo.com">Yahoo! Earth Day</a>
+--0-1400492587-1145495769=:68225--
+
+
+
+From MAILER-DAEMON Thu Apr 20 06:07:11 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FWW47-0004Rn-Km
+	for mharc-axiom-mail@gnu.org; Thu, 20 Apr 2006 06:07:11 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FWVX9-0003Kt-LJ
+	for axiom-mail@nongnu.org; Thu, 20 Apr 2006 05:33:07 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FWVX5-0003I2-QR
+	for axiom-mail@nongnu.org; Thu, 20 Apr 2006 05:33:06 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FWVX5-0003Hs-IX
+	for axiom-mail@nongnu.org; Thu, 20 Apr 2006 05:33:03 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FWVYN-0000jv-Ss
+	for axiom-mail@nongnu.org; Thu, 20 Apr 2006 05:34:24 -0400
+Received: from localhost.localdomain ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id k3K9VGA3094792; 
+	Thu, 20 Apr 2006 11:31:18 +0200 (CEST)
+Sender: rubey@localhost.localdomain
+To: Martin Rubey <martin.rubey@univie.ac.at>
+References: <854q18wku1.fsf@localhost.localdomain>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 20 Apr 2006 11:36:25 +0200
+In-Reply-To: <854q18wku1.fsf@localhost.localdomain>
+Message-ID: <85y7y0pp0m.fsf@localhost.localdomain>
+Lines: 122
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4249; Body=0 Fuz1=0 Fuz2=0
+X-Mailman-Approved-At: Thu, 20 Apr 2006 06:07:10 -0400
+Cc: 
+Subject: [Axiom-mail] [ANN] Axiom Workshop 2006 -- Final Announcement
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 20 Apr 2006 09:33:08 -0000
+
+Dear all,
+
+this is the final announcement of the Axiom Workshop 2006 at the RISC in
+Hagenberg.
+
+Please note that it is not at all a prerequesite to be familiar with the
+computer algebra system axiom. In particular, the talks will address issues
+inherent to symbolic computation in general, and not any particular system.
+
+The schedule is as follows:
+
+Thursday, April 27
+
+10:00 M. Rubey           Opening and Introduction to Axiom
+11:00 C. Schneider       Sigma - A package for multi-summation
+12:00 Lunch
+14:00 N. Thiery          Implementing Algebraic Combinatorics - some
+                         experiences with MuPAD-Combinat
+15:00 R. Hemmecke        Introduction to Aldor I
+16:00                    Workshop I
+
+
+Friday, April 28
+
+10:00 P. Hlineny         MACEK - real structural computations with
+                         matroids
+11:00 B. Gittenberger    Extended admissible functions
+12:00 Lunch
+15:00 R. Hemmecke        Introduction to Aldor II
+16:00                    Workshop II
+
+
+Saturday, April 29
+
+09:00 M. Rubey           Guessing formulas for sequences
+10:00 A. Hersen          Implementing a hierarchy of Recurrences
+11:00                    Workshop III: Presentation of Results
+
+
+
+I hope to see you soon,
+
+
+Martin Rubey
+
+
+-------------------------------------------------------------------------------
+                                    _
+                                   (_)
+                          __ ___  ___  ___  _ __ ___
+                         / _` \ \/ / |/ _ \| '_ ` _ \
+                        | (_| |>  <| | (_) | | | | | |
+                         \__,_/_/\_\_|\___/|_| |_| |_|
+                                    _
+                                   (_)
+
+         __          ______  _____  _  __ _____ _    _  ____  _____
+         \ \        / / __ \|  __ \| |/ // ____| |  | |/ __ \|  __ \
+          \ \  /\  / / |  | | |__) | ' /| (___ | |__| | |  | | |__) |
+           \ \/  \/ /| |  | |  _  /|  <  \___ \|  __  | |  | |  ___/
+            \  /\  / | |__| | | \ \| . \ ____) | |  | | |__| | |
+             \/  \/   \____/|_|  \_\_|\_\_____/|_|  |_|\____/|_|
+
+                            ___   ___   ___    __
+                           |__ \ / _ \ / _ \  / /
+                              ) | | | | | | |/ /_
+                             / /| | | | | | | '_ \
+                            / /_| |_| | |_| | (_) |
+                           |____|\___/ \___/ \___/
+
+
+
+                Domain Specific Packages and their Mathematics
+
+
+with a special focus on
+
+
+                             Discrete Mathematics
+
+
+It will take place at the Research Institute for Symbolic Computation
+
+  http://www.risc.uni-linz.ac.at
+
+in Hagenberg, Austria
+
+  http://www.risc.uni-linz.ac.at/about/map
+
+from Thursday, April 27, 10 am, to Saturday, April 29, noon.
+
+-------------------------------------------------------------------------------
+
+Axiom is a Computer Algebra System with a long tradition.  It recently became
+free software. See http://www.axiom-developer.org for more details.
+
+
+The workshop aims at a cooperation of Axiom developers with developers of
+packages written for other Computer Algebra Systems or developers of
+stand-alone packages.  Furthermore, the workshop wants to make the potential of
+Axiom and Aldor more widely known in order to attract new users and new
+developers.
+
+
+If you would like to attend the workshop, please send a message to
+axiomize@yahoo.de.
+
+
+There is no conference fee, but it is expected that participants pay
+accommodation and meals themselves.  There is a limited number of rooms
+available in Hagenberg for approximately 26 EUR/night.  Contact
+axiomize@yahoo.de for details.
+
+-------------------------------------------------------------------------------
+
+
+Organisers: Ralf Hemmecke
+            Martin Rubey
+
+Email: axiomize@yahoo.de
+
+Homepage: http://axiom-developer.org/workshop
+
+
+
+

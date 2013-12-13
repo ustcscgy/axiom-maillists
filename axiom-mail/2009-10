@@ -1,0 +1,1952 @@
+From MAILER-DAEMON Tue Oct 13 17:55:25 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MxpL3-0005lI-6O
+	for mharc-axiom-mail@gnu.org; Tue, 13 Oct 2009 17:55:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MxpL0-0005is-SP
+	for axiom-mail@nongnu.org; Tue, 13 Oct 2009 17:55:22 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MxpKw-0005dF-8D
+	for axiom-mail@nongnu.org; Tue, 13 Oct 2009 17:55:22 -0400
+Received: from [199.232.76.173] (port=32905 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MxpKw-0005d1-31
+	for axiom-mail@nongnu.org; Tue, 13 Oct 2009 17:55:18 -0400
+Received: from smtp2-g21.free.fr ([212.27.42.2]:54640)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <paratribulations@free.fr>) id 1MxpKv-0005to-Cr
+	for axiom-mail@nongnu.org; Tue, 13 Oct 2009 17:55:17 -0400
+Received: from smtp2-g21.free.fr (localhost [127.0.0.1])
+	by smtp2-g21.free.fr (Postfix) with ESMTP id EFB224B095E
+	for <axiom-mail@nongnu.org>; Tue, 13 Oct 2009 23:55:10 +0200 (CEST)
+Received: from bro69-2-82-228-92-97.fbx.proxad.net
+	(bro69-2-82-228-92-97.fbx.proxad.net [82.228.92.97])
+	by smtp2-g21.free.fr (Postfix) with ESMTP id 1B67B4B065A
+	for <axiom-mail@nongnu.org>; Tue, 13 Oct 2009 23:55:08 +0200 (CEST)
+From: TP <paratribulations@free.fr>
+To: axiom-mail@nongnu.org
+Date: Tue, 13 Oct 2009 23:55:08 +0200
+User-Agent: KMail/1.9.9
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200910132355.08228.paratribulations@free.fr>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Subject: [Axiom-mail] how to turn pretty print off
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 13 Oct 2009 21:55:23 -0000
+
+Hi everybody,
+
+My question is in the header.
+I have looked for the string "pretty" and "pretty print" in "bookvol0.pdf", 
+but without success.
+
+Thanks in advance,
+
+Julien
+
+
+
+From MAILER-DAEMON Tue Oct 13 18:01:28 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MxpQu-0003Fq-G1
+	for mharc-axiom-mail@gnu.org; Tue, 13 Oct 2009 18:01:28 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MxpQs-0003EA-PA
+	for axiom-mail@nongnu.org; Tue, 13 Oct 2009 18:01:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MxpQo-00039p-0p
+	for axiom-mail@nongnu.org; Tue, 13 Oct 2009 18:01:26 -0400
+Received: from [199.232.76.173] (port=54608 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MxpQn-00039k-RO
+	for axiom-mail@nongnu.org; Tue, 13 Oct 2009 18:01:21 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.161]:45067)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA1:24) (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1MxpQn-0006sh-Cv
+	for axiom-mail@nongnu.org; Tue, 13 Oct 2009 18:01:21 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1255471278; l=286;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=gVhIa3bB/sHarGP+Z18eMjEjGiI=;
+	b=TQOZysJjUqB+x7wKx29PP1RBNZNPpAxNmOEK2KYiBw5EGKZ2MeZBGnybJXYIJ5BIm+q
+	OPHceMqSh2Bm9pSBzPGLSJ78YNzzbkHpxOwUzAK1nDMPSq5GMVhp0Qpc7K5rvT2CwYoNX
+	44ydi3G+Q33eeF8nFlUL9QG+6k05RpuMlfo=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSWk1ofrjzdkGiMXGz0=
+X-RZG-CLASS-ID: mo00
+Received: from [10.0.0.5] (62-47-35-163.adsl.highway.telekom.at [62.47.35.163])
+	by post.strato.de (fruni mo2) (RZmta 22.1)
+	with (DHE-RSA-AES128-SHA encrypted) ESMTP id Z04597l9DKZcSW ;
+	Wed, 14 Oct 2009 00:00:32 +0200 (MEST)
+Message-ID: <4AD4F87F.7040903@hemmecke.de>
+Date: Wed, 14 Oct 2009 00:00:31 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.23 (X11/20090817)
+MIME-Version: 1.0
+To: TP <paratribulations@free.fr>, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] how to turn pretty print off
+References: <200910132355.08228.paratribulations@free.fr>
+In-Reply-To: <200910132355.08228.paratribulations@free.fr>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 13 Oct 2009 22:01:27 -0000
+
+what do you see and how would you like it do display?
+
+On 10/13/2009 11:55 PM, TP wrote:
+> Hi everybody,
+> 
+> My question is in the header.
+> I have looked for the string "pretty" and "pretty print" in "bookvol0.pdf", 
+> but without success.
+> 
+> Thanks in advance,
+> 
+> Julien
+
+
+
+From MAILER-DAEMON Wed Oct 14 02:39:05 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MxxVo-0005ML-JI
+	for mharc-axiom-mail@gnu.org; Wed, 14 Oct 2009 02:39:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MxxVm-0005KW-5J
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 02:39:02 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MxxVh-0005GR-1Q
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 02:39:01 -0400
+Received: from [199.232.76.173] (port=59355 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MxxVg-0005GJ-TV
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 02:38:56 -0400
+Received: from smtp2-g21.free.fr ([212.27.42.2]:48415)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <paratribulations@free.fr>) id 1MxxVg-0003IH-42
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 02:38:56 -0400
+Received: from smtp2-g21.free.fr (localhost [127.0.0.1])
+	by smtp2-g21.free.fr (Postfix) with ESMTP id 07C374B00E9;
+	Wed, 14 Oct 2009 08:38:51 +0200 (CEST)
+Received: from bro69-2-82-228-92-97.fbx.proxad.net
+	(bro69-2-82-228-92-97.fbx.proxad.net [82.228.92.97])
+	by smtp2-g21.free.fr (Postfix) with ESMTP id 292A54B0026;
+	Wed, 14 Oct 2009 08:38:49 +0200 (CEST)
+From: TP <paratribulations@free.fr>
+To: Ralf Hemmecke <ralf@hemmecke.de>
+Subject: Re: [Axiom-mail] how to turn pretty print off
+Date: Wed, 14 Oct 2009 08:38:50 +0200
+User-Agent: KMail/1.9.9
+References: <200910132355.08228.paratribulations@free.fr>
+	<4AD4F87F.7040903@hemmecke.de>
+In-Reply-To: <4AD4F87F.7040903@hemmecke.de>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200910140838.51090.paratribulations@free.fr>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 14 Oct 2009 06:39:02 -0000
+
+On Wednesday 14 October 2009 00:00:31 you wrote:
+> what do you see and how would you like it do display?
+
+For example:
+
+             1  5   5    4     2    2  3      1  3   3  2   2
+             - x  - - d x  + (d  - a )x  + (- - d  + - a d)x
+             2      4                         4      2
+(sorry if it is bad aligned)
+I would like it to display as:
+1/2*x^5-5/4*d*x^4+......
+
+Thanks
+
+
+
+From MAILER-DAEMON Wed Oct 14 02:49:53 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MxxgH-0001XL-58
+	for mharc-axiom-mail@gnu.org; Wed, 14 Oct 2009 02:49:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MxxgE-0001WO-Ki
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 02:49:50 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MxxgA-0001TS-I4
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 02:49:50 -0400
+Received: from [199.232.76.173] (port=50030 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MxxgA-0001TD-AK
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 02:49:46 -0400
+Received: from mx20.gnu.org ([199.232.41.8]:3439)
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA1:32)
+	(Exim 4.60) (envelope-from <bill.page@newsynthesis.org>)
+	id 1Mxxg9-0004XH-Ol
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 02:49:45 -0400
+Received: from mail-yx0-f188.google.com ([209.85.210.188])
+	by mx20.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1Mxxg7-0006de-Mm
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 02:49:43 -0400
+Received: by yxe26 with SMTP id 26so5101069yxe.4
+	for <axiom-mail@nongnu.org>; Tue, 13 Oct 2009 23:49:41 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.150.46.5 with SMTP id t5mr1043095ybt.97.1255502981393; Tue, 13 
+	Oct 2009 23:49:41 -0700 (PDT)
+In-Reply-To: <200910140838.51090.paratribulations@free.fr>
+References: <200910132355.08228.paratribulations@free.fr>
+	<4AD4F87F.7040903@hemmecke.de>
+	<200910140838.51090.paratribulations@free.fr>
+Date: Wed, 14 Oct 2009 02:49:41 -0400
+Message-ID: <fbcd16d40910132349n4e88f32bybf2e1017ef3c488e@mail.gmail.com>
+Subject: Re: [Axiom-mail] how to turn pretty print off
+From: Bill Page <bill.page@newsynthesis.org>
+To: TP <paratribulations@free.fr>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by mx20.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 14 Oct 2009 06:49:51 -0000
+
+(1) -> p:=3D1/2*x^5-5/4*d*x^4
+
+        1  5   5    4
+   (1)  - x  - - d x
+        2      4
+                                            Type: Polynomial Fraction Integ=
+er
+
+(2) ->  message(unparse(p::InputForm))$OutputForm
+
+   (2)  (1/2)*x**5+(-(5/4)*d*x**4)
+                                                             Type: OutputFo=
+rm
+
+
+On Wed, Oct 14, 2009 at 2:38 AM, TP <paratribulations@free.fr> wrote:
+> On Wednesday 14 October 2009 00:00:31 you wrote:
+>> what do you see and how would you like it do display?
+>
+> For example:
+>
+> =A0 =A0 =A0 =A0 =A0 =A0 1 =A05 =A0 5 =A0 =A04 =A0 =A0 2 =A0 =A02 =A03 =A0=
+ =A0 =A01 =A03 =A0 3 =A02 =A0 2
+> =A0 =A0 =A0 =A0 =A0 =A0 - x =A0- - d x =A0+ (d =A0- a )x =A0+ (- - d =A0+=
+ - a d)x
+> =A0 =A0 =A0 =A0 =A0 =A0 2 =A0 =A0 =A04 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =
+=A0 =A0 =A0 =A0 4 =A0 =A0 =A02
+> (sorry if it is bad aligned)
+> I would like it to display as:
+> 1/2*x^5-5/4*d*x^4+......
+>
+> Thanks
+>
+
+
+
+From MAILER-DAEMON Wed Oct 14 05:43:52 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1My0Oe-0001xi-Ep
+	for mharc-axiom-mail@gnu.org; Wed, 14 Oct 2009 05:43:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1My0Od-0001vy-Ap
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 05:43:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1My0OY-0001o3-7k
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 05:43:50 -0400
+Received: from [199.232.76.173] (port=60080 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1My0OY-0001nn-1A
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 05:43:46 -0400
+Received: from mail-vw0-f203.google.com ([209.85.212.203]:42847)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <dosreis@gmail.com>) id 1My0OX-0004ct-Mn
+	for axiom-mail@nongnu.org; Wed, 14 Oct 2009 05:43:45 -0400
+Received: by vws41 with SMTP id 41so5647546vws.4
+	for <axiom-mail@nongnu.org>; Wed, 14 Oct 2009 02:43:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:mime-version:sender:received:in-reply-to
+	:references:date:x-google-sender-auth:message-id:subject:from:to:cc
+	:content-type:content-transfer-encoding;
+	bh=C7c2ct8H4n8xXzpnCHO4FFPklOpZZY6GEorbwk40D5s=;
+	b=djg0D/dHOOLiuxeaBrRPZ4Xgq336bm2N35nzBmK62bRmovlHZ667wliMGWV0Rn/lc7
+	1ecM51VCNmogvuNaQYZ5Avp7iTsB5G79A1lOS+eTw2bfKxAN3/oRrfd/050TZBrsKVQZ
+	tAVUwq+e4hVP43bW5KOmu2ZHjWamihR/0bAGI=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=mime-version:sender:in-reply-to:references:date
+	:x-google-sender-auth:message-id:subject:from:to:cc:content-type
+	:content-transfer-encoding;
+	b=ONBFVcjuoO9RT55CTwgNr8moCK+vP/fQkldghZvn5ZpEmDqNx2t2RdlqeTD/0pmtO1
+	0+avBTUNDdtraJ8l8vabOX6xMFYqWEjXoPnIvukdPEwLa6vGWLnCzjMATQJDHyGgCMZ8
+	SgDbVfauNQGdkTHV5JV9QGqGkP/s/mJEIX3Q4=
+MIME-Version: 1.0
+Sender: dosreis@gmail.com
+Received: by 10.220.102.3 with SMTP id e3mr12483851vco.56.1255513423938; Wed, 
+	14 Oct 2009 02:43:43 -0700 (PDT)
+In-Reply-To: <200910140838.51090.paratribulations@free.fr>
+References: <200910132355.08228.paratribulations@free.fr>
+	<4AD4F87F.7040903@hemmecke.de>
+	<200910140838.51090.paratribulations@free.fr>
+Date: Wed, 14 Oct 2009 04:43:43 -0500
+X-Google-Sender-Auth: 8cfaa8f685f93687
+Message-ID: <206fcf960910140243x73b3f1c8sc000a050fcd52017@mail.gmail.com>
+Subject: Re: [Axiom-mail] how to turn pretty print off
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+To: TP <paratribulations@free.fr>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Cc: open-axiom-help@lists.sourceforge.net, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 14 Oct 2009 09:43:51 -0000
+
+On Wed, Oct 14, 2009 at 1:38 AM, TP <paratribulations@free.fr> wrote:
+> On Wednesday 14 October 2009 00:00:31 you wrote:
+>> what do you see and how would you like it do display?
+>
+> For example:
+>
+> =A0 =A0 =A0 =A0 =A0 =A0 1 =A05 =A0 5 =A0 =A04 =A0 =A0 2 =A0 =A02 =A03 =A0=
+ =A0 =A01 =A03 =A0 3 =A02 =A0 2
+> =A0 =A0 =A0 =A0 =A0 =A0 - x =A0- - d x =A0+ (d =A0- a )x =A0+ (- - d =A0+=
+ - a d)x
+> =A0 =A0 =A0 =A0 =A0 =A0 2 =A0 =A0 =A04 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =
+=A0 =A0 =A0 =A0 4 =A0 =A0 =A02
+> (sorry if it is bad aligned)
+> I would like it to display as:
+> 1/2*x^5-5/4*d*x^4+......
+
+In OpenAxiom, you just coerce to InputForm:
+
+
+(1) -> p :=3D 1/2*x^5-5/4*d*x^4
+
+        1  5   5    4
+   (1)  - x  - - d x
+        2      4
+                                            Type: Polynomial Fraction Integ=
+er
+(2) -> p :: InputForm
+
+   (2)  (1/2)*x^5 + (-5/4)*d*x^4
+                                                              Type: InputFo=
+rm
+
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu Oct 29 05:12:53 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1N3R3t-0004mQ-DU
+	for mharc-axiom-mail@gnu.org; Thu, 29 Oct 2009 05:12:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1N3R3s-0004m2-10
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 05:12:52 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1N3R3m-0004la-GD
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 05:12:50 -0400
+Received: from [199.232.76.173] (port=54368 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1N3R3m-0004lX-As
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 05:12:46 -0400
+Received: from moutng.kundenserver.de ([212.227.17.9]:63141)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ax87438@martinb.com>) id 1N3R3l-0007fl-7h
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 05:12:45 -0400
+Received: from suse111.localnet (94-193-164-220.zone7.bethere.co.uk
+	[94.193.164.220])
+	by mrelayeu.kundenserver.de (node=mrbap2) with ESMTP (Nemesis)
+	id 0M7VWZ-1MISoY3rnz-00x9Mp; Thu, 29 Oct 2009 10:12:42 +0100
+From: Martin Baker <ax87438@martinb.com>
+To: axiom-mail@nongnu.org
+Date: Thu, 29 Oct 2009 09:12:35 +0000
+User-Agent: KMail/1.11.0 (Linux/2.6.27.29-0.1-default; KDE/4.2.2; x86_64; ; )
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200910290912.35514.ax87438@martinb.com>
+X-Provags-ID: V01U2FsdGVkX19E202zN7elNsm+dWsixlmnJwXgPd6aDJ4+1+W
+	DHv8PkMCnRTBmLbc161z8FzAFqbKr7hhLqkDktcX6h/YOPzu4f
+	45wbzbym2wwvJQskl2IBg==
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Subject: [Axiom-mail] finding source code
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 29 Oct 2009 09:12:52 -0000
+
+Hello I am new to this mailing list.
+
+I would like to understand how the clifford implementation works so I have 
+been trying to find the source code definition. I understand that this is 
+mixed into a pamphlet file? I downloaded the src but the only such file that I 
+could find is:
+
+clifford.input.pamphlet
+
+However this file only seems to to contain the documentation in a coded form?
+
+I also tried:
+
+(1) -> )lisp (tangle "/axiom/axiom/src/input/clifford.input.pamphlet")
+
+Value = NIL
+(1) ->
+
+Could anyone help me find the source of the clifford definition?
+
+Thanks,
+
+Martin
+
+
+
+From MAILER-DAEMON Thu Oct 29 05:35:16 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1N3RPY-000656-7v
+	for mharc-axiom-mail@gnu.org; Thu, 29 Oct 2009 05:35:16 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1N3RPW-00064X-TN
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 05:35:15 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1N3RPS-00062e-M7
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 05:35:14 -0400
+Received: from [199.232.76.173] (port=53482 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1N3RPS-00062P-B9
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 05:35:10 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.160]:49233)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA1:24) (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1N3RPR-0002as-UC
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 05:35:10 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1256808906; l=231;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:CC:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=YcUSn0JAyqcoTA9uzEE8qOzjvK4=;
+	b=Ot89FwsRL7qFi1Hv3VWF01nao9FMe6azJlC1NoDw5dzokLEXbjPEsfgaoj9iJD2Oti3
+	2DbgGwDzekgn8mNpDVnUNwyPHdX9OnZ4OZNcPAm/ZVsBuA/qVlIYSrEjpm3o1CAsK9tr2
+	ScRHFSoSC97+iKonE3eXVKId5UyEeahl2CE=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSJk0FxqVB+K06YOFo6aDQ==
+X-RZG-CLASS-ID: mo00
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (klopstock mo60) (RZmta 22.1)
+	with (DHE-RSA-AES128-SHA encrypted) ESMTP id x07427l9T8ctIJ ;
+	Thu, 29 Oct 2009 10:34:20 +0100 (MET)
+Message-ID: <4AE96199.80309@hemmecke.de>
+Date: Thu, 29 Oct 2009 10:34:17 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.23 (X11/20090817)
+MIME-Version: 1.0
+To: Martin Baker <ax87438@martinb.com>
+Subject: Re: [Axiom-mail] finding source code
+References: <200910290912.35514.ax87438@martinb.com>
+In-Reply-To: <200910290912.35514.ax87438@martinb.com>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 29 Oct 2009 09:35:15 -0000
+
+Go to the root of your Axiom checkout and say:
+ >egrep -R '^\)abb.*CliffordAlgebra' *
+books/bookvol10.3.pamphlet:)abbrev domain CLIF CliffordAlgebra
+
+Your editor certainly finds "CliffordAlgebra" inside that pamphlet.
+
+Ralf
+
+
+
+From MAILER-DAEMON Thu Oct 29 06:42:35 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1N3SSg-0008SD-Ti
+	for mharc-axiom-mail@gnu.org; Thu, 29 Oct 2009 06:42:34 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1N3SSe-0008PV-1E
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 06:42:32 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1N3SSZ-0008Ld-Vt
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 06:42:31 -0400
+Received: from [199.232.76.173] (port=52346 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1N3SSZ-0008LN-Hn
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 06:42:27 -0400
+Received: from moutng.kundenserver.de ([212.227.126.187]:62246)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ax87438@martinb.com>) id 1N3SSY-0005Xk-V6
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 06:42:27 -0400
+Received: from suse111.localnet (94-193-164-220.zone7.bethere.co.uk
+	[94.193.164.220])
+	by mrelayeu.kundenserver.de (node=mreu2) with ESMTP (Nemesis)
+	id 0M9tYC-1MsQun0tcO-00BFdd; Thu, 29 Oct 2009 11:42:25 +0100
+From: Martin Baker <ax87438@martinb.com>
+To: axiom-mail@nongnu.org
+Subject: Re: Re: [Axiom-mail] finding source code
+Date: Thu, 29 Oct 2009 10:42:24 +0000
+User-Agent: KMail/1.11.0 (Linux/2.6.27.29-0.1-default; KDE/4.2.2; x86_64; ; )
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+Message-Id: <200910291042.24547.ax87438@martinb.com>
+X-Provags-ID: V01U2FsdGVkX18b96jWBc4A7v3aMcnnbIBsiC7xznR74EPAldv
+	gtdO41QgxNcICzgir4h2vaI3cDzBLwYmjFTlE4epPgHrnSK3eO
+	kJQS4PT0LyIC+P/kSGR5Q==
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 29 Oct 2009 10:42:32 -0000
+
+> Go to the root of your Axiom checkout and say:
+>=C2=A0>egrep -R '^\)abb.*CliffordAlgebra' *
+> books/bookvol10.3.pamphlet:)abbrev domain CLIF CliffordAlgebra
+
+Ralf,
+
+Thank you very much, I found the source code in books/bookvol10.3.pamphlet,=
+ I=20
+would not have thought of looking in there for source code (I am very new t=
+o=20
+Axiom).
+
+Now all I have to do is understand the source code! At least I now have a=20
+starting point.
+
+Cheers,
+
+Martin
+
+
+
+From MAILER-DAEMON Thu Oct 29 07:42:57 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1N3TP7-0001bI-2V
+	for mharc-axiom-mail@gnu.org; Thu, 29 Oct 2009 07:42:57 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1N3TP5-0001aW-Pq
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 07:42:55 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1N3TP0-0001WN-W6
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 07:42:55 -0400
+Received: from [199.232.76.173] (port=38477 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1N3TP0-0001W6-PQ
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 07:42:50 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.160]:40035)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA1:24) (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1N3TP0-0001kZ-Cz
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 07:42:50 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1256816568; l=336;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:CC:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=+CJxifY3PBClJzBr8IyEjCQsy0Y=;
+	b=iJTWTRS6Ao06PqYbr7m4dd5CYSbenFhY96AlHa20ivElm3pmeKCEgz2ebXoCb518vtH
+	ivf+pCG5IUkh3BLX/MArzXCeSlSFYtwZGKpPeRokIh0unfYqB5bV9D7gUfCtX7LxFwtdO
+	9P4KVEO1PhdrqfxhEmdZES4jm/Z6srXaQnk=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSJk0FxqVB+K06YOFo6aDQ==
+X-RZG-CLASS-ID: mo00
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (klopstock mo56) (RZmta 22.1)
+	with (DHE-RSA-AES128-SHA encrypted) ESMTP id 5070e5l9TBcW9l ;
+	Thu, 29 Oct 2009 12:42:02 +0100 (MET)
+Message-ID: <4AE97F89.3020604@hemmecke.de>
+Date: Thu, 29 Oct 2009 12:42:01 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.23 (X11/20090817)
+MIME-Version: 1.0
+To: Martin Baker <ax87438@martinb.com>
+Subject: Re: [Axiom-mail] finding source code
+References: <200910291042.24547.ax87438@martinb.com>
+In-Reply-To: <200910291042.24547.ax87438@martinb.com>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 29 Oct 2009 11:42:56 -0000
+
+> Now all I have to do is understand the source code! At least I now have a 
+> starting point.
+
+We all know that Axiom has a steep learning curve. Just keep asking at 
+the mailing list if you cannot find something yourself.
+
+May I ask how you found out about Axiom? What version did you actually 
+install on your computer?
+
+Ralf
+
+
+
+From MAILER-DAEMON Thu Oct 29 13:25:24 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1N3YkW-0004S4-4c
+	for mharc-axiom-mail@gnu.org; Thu, 29 Oct 2009 13:25:24 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1N3YkU-0004OL-EO
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 13:25:22 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1N3YkP-0004DC-I6
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 13:25:21 -0400
+Received: from [199.232.76.173] (port=51484 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1N3YkP-0004Cz-DP
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 13:25:17 -0400
+Received: from moutng.kundenserver.de ([212.227.126.171]:60090)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ax87438@martinb.com>) id 1N3YkO-00039J-NJ
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 13:25:17 -0400
+Received: from suse111.localnet (94-193-164-220.zone7.bethere.co.uk
+	[94.193.164.220])
+	by mrelayeu.kundenserver.de (node=mreu1) with ESMTP (Nemesis)
+	id 0Lmyqm-1MXWmE2wNo-00hD2d; Thu, 29 Oct 2009 18:25:15 +0100
+From: Martin Baker <ax87438@martinb.com>
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] finding source code
+Date: Thu, 29 Oct 2009 17:25:14 +0000
+User-Agent: KMail/1.11.0 (Linux/2.6.27.29-0.1-default; KDE/4.2.2; x86_64; ; )
+References: <200910291042.24547.ax87438@martinb.com>
+	<4AE97F89.3020604@hemmecke.de>
+In-Reply-To: <4AE97F89.3020604@hemmecke.de>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200910291725.14554.ax87438@martinb.com>
+X-Provags-ID: V01U2FsdGVkX18jwQ408MUXJQzWEbzA+SLdSEvwg0v82l9pfRy
+	Qii4g80bXILxYBgbKJDReD7pEmXtbaEJqZ2j391EOc0cU0P7bt
+	tUJEKd5tdNsH179ry0Nwg==
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 29 Oct 2009 17:25:22 -0000
+
+> May I ask how you found out about Axiom? What version did you
+> actually install on your computer?
+
+Ralf,
+
+I have been looking for an open source computer algebra system for some time 
+although I did not try any, I came across Axiom in lists of such systems but I 
+did not try it because (for some reason) I was put off when it said that it 
+was based on LISP.
+
+Having tried it now it works well and it seems very good (I wish I had done so 
+earlier). At first sight the user language reminds me a bit of 'Scala' in that 
+the type is given after the variable if required, also the way that brackets 
+can sometimes be omitted for what looks to me like function calls.
+
+I loaded the binary from this page:
+http://www.axiom-developer.org/axiom-website/download.html
+(suse,May2009)
+
+I recorded what I did on my web page here:
+http://www.euclideanspace.com/maths/standards/program/
+
+As you can see the program seems to work except the draw function which seems 
+to fail with:
+
+>> System error:
+Unknown bfd format
+
+The only other problem is capturing the output to put on a web page, you can 
+see what I mean about 2/3 of the way down this screen:
+
+http://www.euclideanspace.com/maths/algebra/equations/polynomial/cubic/
+
+Apart from being too big for the page, not all the LaTeX seemed to be 
+recognised (I cut and pasted from Axiom to Lyx and then did a screen shot).
+
+So, that's my experience so far, apart from these small problems it looks like 
+a very useful program.
+
+Martin
+
+
+
+From MAILER-DAEMON Thu Oct 29 14:13:25 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1N3ZUz-00059K-R9
+	for mharc-axiom-mail@gnu.org; Thu, 29 Oct 2009 14:13:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1N3ZUx-00057I-Bk
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 14:13:23 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1N3ZUs-00050t-CK
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 14:13:22 -0400
+Received: from [199.232.76.173] (port=53214 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1N3ZUm-0004yv-Rg; Thu, 29 Oct 2009 14:13:12 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:32988
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>)
+	id 1N3ZUm-00038g-5f; Thu, 29 Oct 2009 14:13:12 -0400
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id n9TID58a014404;
+	Thu, 29 Oct 2009 12:13:05 -0600
+Message-ID: <4AE9DA72.1080001@axiom-developer.org>
+Date: Thu, 29 Oct 2009 13:09:54 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Martin Baker <ax87438@martinb.com>
+Subject: Re: [Axiom-mail] finding source code
+References: <200910291042.24547.ax87438@martinb.com>	<4AE97F89.3020604@hemmecke.de>
+	<200910291725.14554.ax87438@martinb.com>
+In-Reply-To: <200910291725.14554.ax87438@martinb.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 29 Oct 2009 18:13:23 -0000
+
+Martin Baker wrote:
+>> May I ask how you found out about Axiom? What version did you
+>> actually install on your computer?
+>>     
+>
+> Ralf,
+>
+> I have been looking for an open source computer algebra system for some time 
+> although I did not try any, I came across Axiom in lists of such systems but I 
+> did not try it because (for some reason) I was put off when it said that it 
+> was based on LISP.
+>
+> Having tried it now it works well and it seems very good (I wish I had done so 
+> earlier). At first sight the user language reminds me a bit of 'Scala' in that 
+> the type is given after the variable if required, also the way that brackets 
+> can sometimes be omitted for what looks to me like function calls.
+>
+> I loaded the binary from this page:
+> http://www.axiom-developer.org/axiom-website/download.html
+> (suse,May2009)
+>
+> I recorded what I did on my web page here:
+> http://www.euclideanspace.com/maths/standards/program/
+>
+> As you can see the program seems to work except the draw function which seems 
+> to fail with:
+>
+>   
+>>> System error:
+>>>       
+> Unknown bfd format
+>
+> The only other problem is capturing the output to put on a web page, you can 
+> see what I mean about 2/3 of the way down this screen:
+>
+> http://www.euclideanspace.com/maths/algebra/equations/polynomial/cubic/
+>
+> Apart from being too big for the page, not all the LaTeX seemed to be 
+> recognised (I cut and pasted from Axiom to Lyx and then did a screen shot).
+>
+> So, that's my experience so far, apart from these small problems it looks like 
+> a very useful program.
+>
+> Martin
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>   
+Martin,
+
+It appears that you have an interest in documenting the use of mathematics.
+Axiom is being rewritten into literate form, which means that the source 
+code
+is now taken directly from the books, such as bookvol10.3 which contains the
+sources for the Axiom domains.
+
+You may also find interesting examples in several places in Axiom.
+
+1) EXAMPLES OF FUNCTION CALLS
+
+First, there is documentation of example code use. You can type
+  )display operation makeprod
+and you will see the "Mappings" and some example code. In the case
+of the "makeprod" function the example will look like:
+
+  Examples of makeprod from Product
+
+  f:(x:INT):INT +-> 3*x
+  g:(x:INT):INT +-> x^3
+  h(x:INT):Product(INT,INT) == makeprod(f x,g x)
+  h(3)
+
+This gives you sample input for the makeprod command.
+
+
+2) FUNCTIONS FROM A DOMAIN
+
+You have also expressed an interest in Quaternions. You can see
+what functions are available for Quaternions by typing
+   )show Quaternion
+which gives the output shown below.
+
+
+3) HELP FUNCTION
+
+For some domains you can also type
+   )help Quaternion
+and see a help page for that domain with the output shown below.
+
+Axiom is in the process of documenting all of the code. If you
+would like to help, either with examples or with explanations of
+areas like Quaternions that would be greatly appreciated.
+
+
+4) INPUT FILES
+
+The directory $AXIOM/input contains a large number of files
+which can be read into Axiom and executed. There are examples
+of quite a few domains.
+
+5) HYPERDOC
+
+Clearly you cannot get hyperdoc running. I am not sure what
+the problem might be but if you send me email we can discuss
+it further.
+
+Tim Daly
+Elder of the Internet
+
+
+
+
+
+                        AXIOM Computer Algebra System
+                       Version: Axiom (September 2009)
+              Timestamp: Thursday October 29, 2009 at 06:43:59
+-----------------------------------------------------------------------------
+   Issue )copyright to view copyright notices.
+   Issue )summary for a summary of useful system commands.
+   Issue )quit to leave AXIOM and return to shell.
+-----------------------------------------------------------------------------
+ 
+   Re-reading compress.daase   Re-reading interp.daase
+   Re-reading operation.daase
+   Re-reading category.daase
+   Re-reading browse.daase
+(1) ->
+(1) -> )display operation makeprod
+
+There is one unexposed function called makeprod :
+   [1] (D1,D2) -> Product(D1,D2) from Product(D1,D2)
+            if D1 has SETCAT and D2 has SETCAT
+
+Examples of makeprod from Product
+
+f:=(x:INT):INT +-> 3*x
+g:=(x:INT):INT +-> x^3
+h(x:INT):Product(INT,INT) == makeprod(f x, g x)
+h(3)
+
+(1) -> )show Quaternion
+ Quaternion R: CommutativeRing  is a domain constructor
+ Abbreviation for Quaternion is QUAT
+ This constructor is exposed in this frame.
+ Issue )edit bookvol10.3.spad.pamphlet to see algebra source code for QUAT
+
+------------------------------- Operations --------------------------------
+ ?*? : (R,%) -> %                      ?*? : (%,R) -> %
+ ?*? : (%,%) -> %                      ?*? : (Integer,%) -> %
+ ?*? : (PositiveInteger,%) -> %        ?**? : (%,PositiveInteger) -> %
+ ?+? : (%,%) -> %                      ?-? : (%,%) -> %
+ -? : % -> %                           ?=? : (%,%) -> Boolean
+ D : (%,(R -> R)) -> %                 D : % -> % if R has DIFRING
+ 1 : () -> %                           0 : () -> %
+ ?^? : (%,PositiveInteger) -> %        abs : % -> R if R has RNS
+ coerce : R -> %                       coerce : Integer -> %
+ coerce : % -> OutputForm              conjugate : % -> %
+ hash : % -> SingleInteger             imagI : % -> R
+ imagJ : % -> R                        imagK : % -> R
+ inv : % -> % if R has FIELD           latex : % -> String
+ map : ((R -> R),%) -> %               norm : % -> R
+ one? : % -> Boolean                   quatern : (R,R,R,R) -> %
+ real : % -> R                         recip : % -> Union(%,"failed")
+ retract : % -> R                      sample : () -> %
+ zero? : % -> Boolean                  ?~=? : (%,%) -> Boolean
+ ?*? : (Fraction Integer,%) -> % if R has FIELD
+ ?*? : (%,Fraction Integer) -> % if R has FIELD
+ ?*? : (NonNegativeInteger,%) -> %
+ ?**? : (%,Integer) -> % if R has FIELD
+ ?**? : (%,NonNegativeInteger) -> %
+ ?<? : (%,%) -> Boolean if R has ORDSET
+ ?<=? : (%,%) -> Boolean if R has ORDSET
+ ?>? : (%,%) -> Boolean if R has ORDSET
+ ?>=? : (%,%) -> Boolean if R has ORDSET
+ D : (%,(R -> R),NonNegativeInteger) -> %
+ D : (%,List Symbol,List NonNegativeInteger) -> % if R has PDRING SYMBOL
+ D : (%,Symbol,NonNegativeInteger) -> % if R has PDRING SYMBOL
+ D : (%,List Symbol) -> % if R has PDRING SYMBOL
+ D : (%,Symbol) -> % if R has PDRING SYMBOL
+ D : (%,NonNegativeInteger) -> % if R has DIFRING
+ ?^? : (%,Integer) -> % if R has FIELD
+ ?^? : (%,NonNegativeInteger) -> %
+ characteristic : () -> NonNegativeInteger
+ charthRoot : % -> Union(%,"failed") if R has CHARNZ
+ coerce : Fraction Integer -> % if R has FIELD or R has RETRACT FRAC INT
+ convert : % -> InputForm if R has KONVERT INFORM
+ differentiate : (%,(R -> R)) -> %
+ differentiate : (%,(R -> R),NonNegativeInteger) -> %
+ differentiate : (%,List Symbol,List NonNegativeInteger) -> % if R has 
+PDRING SYMBOL
+ differentiate : (%,Symbol,NonNegativeInteger) -> % if R has PDRING SYMBOL
+ differentiate : (%,List Symbol) -> % if R has PDRING SYMBOL
+ differentiate : (%,Symbol) -> % if R has PDRING SYMBOL
+ differentiate : (%,NonNegativeInteger) -> % if R has DIFRING
+ differentiate : % -> % if R has DIFRING
+ ?.? : (%,R) -> % if R has ELTAB(R,R)
+ eval : (%,Symbol,R) -> % if R has IEVALAB(SYMBOL,R)
+ eval : (%,List Symbol,List R) -> % if R has IEVALAB(SYMBOL,R)
+ eval : (%,List Equation R) -> % if R has EVALAB R
+ eval : (%,Equation R) -> % if R has EVALAB R
+ eval : (%,R,R) -> % if R has EVALAB R
+ eval : (%,List R,List R) -> % if R has EVALAB R
+ max : (%,%) -> % if R has ORDSET
+ min : (%,%) -> % if R has ORDSET
+ rational : % -> Fraction Integer if R has INS
+ rational? : % -> Boolean if R has INS
+ rationalIfCan : % -> Union(Fraction Integer,"failed") if R has INS
+ reducedSystem : Matrix % -> Matrix R
+ reducedSystem : (Matrix %,Vector %) -> Record(mat: Matrix R,vec: Vector R)
+ reducedSystem : (Matrix %,Vector %) -> Record(mat: Matrix Integer,vec: 
+Vector Integer) if R has LINEXP INT
+ reducedSystem : Matrix % -> Matrix Integer if R has LINEXP INT
+ retract : % -> Fraction Integer if R has RETRACT FRAC INT
+ retract : % -> Integer if R has RETRACT INT
+ retractIfCan : % -> Union(R,"failed")
+ retractIfCan : % -> Union(Fraction Integer,"failed") if R has RETRACT 
+FRAC INT
+ retractIfCan : % -> Union(Integer,"failed") if R has RETRACT INT
+ subtractIfCan : (%,%) -> Union(%,"failed")
+
+(1) -> )help Quaternion
+====================================================================
+Quaternion examples
+====================================================================
+
+The domain constructor Quaternion implements quaternions over
+commutative rings.
+
+The basic operation for creating quaternions is quatern.  This is a
+quaternion over the rational numbers.
+
+  q := quatern(2/11,-8,3/4,1)
+     2        3
+    -- - 8i + - j + k
+    11        4
+                        Type: Quaternion Fraction Integer
+
+The four arguments are the real part, the i imaginary part, the j
+imaginary part, and the k imaginary part, respectively.
+
+  [real q, imagI q, imagJ q, imagK q]
+      2     3
+    [--,- 8,-,1]
+     11     4
+                        Type: List Fraction Integer
+
+Because q is over the rationals (and nonzero), you can invert it.
+
+  inv q
+      352     15488      484       1936
+    ------ + ------ i - ----- j - ------ k
+    126993   126993     42331     126993
+                        Type: Quaternion Fraction Integer
+
+The usual arithmetic (ring) operations are available
+
+  q^6
+      2029490709319345   48251690851     144755072553     48251690851
+    - ---------------- - ----------- i + ------------ j + ----------- k
+         7256313856        1288408         41229056         10307264
+                        Type: Quaternion Fraction Integer
+
+  r := quatern(-2,3,23/9,-89); q + r
+      20        119
+    - -- - 5i + --- j - 88k
+      11         36
+                        Type: Quaternion Fraction Integer
+
+In general, multiplication is not commutative.
+
+  q * r - r * q
+      2495             817
+    - ---- i - 1418j - --- k
+       18               18
+                         Type: Quaternion Fraction Integer
+
+There are no predefined constants for the imaginary i, j, and k parts,
+but you can easily define them.
+
+  i:=quatern(0,1,0,0)
+    i
+                         Type: Quaternion Integer
+
+  j:=quatern(0,0,1,0)
+    j
+                         Type: Quaternion Integer
+ 
+  k:=quatern(0,0,0,1)
+    k
+                         Type: Quaternion Integer
+
+These satisfy the normal identities.
+
+  [i*i, j*j, k*k, i*j, j*k, k*i, q*i]
+                             2         3
+     [- 1,- 1,- 1,k,i,j,8 + -- i + j - - k]
+                            11         4
+                          Type: List Quaternion Fraction Integer
+
+The norm is the quaternion times its conjugate.
+
+  norm q
+    126993
+    ------
+     1936
+                          Type: Fraction Integer
+
+  conjugate q
+      2        3
+     -- + 8i - - j - k
+     11        4
+                          Type: Quaternion Fraction Integer
+
+  q * %
+     126993
+     ------
+      1936
+                          Type: Quaternion Fraction Integer
+
+See Also:
+o )help Octonion
+o )help Complex
+o )help CliffordAlgebra
+o )show Quaternion
+
+(1) -> )sys cat int/input/Quaternion.output
+Starts dribbling to Quaternion.output (2009/10/29, 7:36:17).
+)set message test on
+ 
+)set message auto off
+ 
+)clear all
+ 
+--S 1 of 13
+q := quatern(2/11,-8,3/4,1)
+ 
+
+         2        3
+   (1)  -- - 8i + - j + k
+        11        4
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R         2        3
+--R   (1)  -- - 8i + - j + k
+--R        11        4
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 1
+
+--S 2 of 13
+[real q, imagI q, imagJ q, imagK q]
+ 
+
+          2     3
+   (2)  [--,- 8,-,1]
+         11     4
+                                                  Type: List Fraction 
+Integer
+--R
+--R
+--R          2     3
+--R   (2)  [--,- 8,-,1]
+--R         11     4
+--R                                                  Type: List Fraction 
+Integer
+--E 2
+
+--S 3 of 13
+inv q
+ 
+
+          352     15488      484       1936
+   (3)  ------ + ------ i - ----- j - ------ k
+        126993   126993     42331     126993
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R          352     15488      484       1936
+--R   (3)  ------ + ------ i - ----- j - ------ k
+--R        126993   126993     42331     126993
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 3
+
+--S 4 of 13
+q^6
+ 
+
+          2029490709319345   48251690851     144755072553     48251690851
+   (4)  - ---------------- - ----------- i + ------------ j + ----------- k
+             7256313856        1288408         41229056         10307264
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R          2029490709319345   48251690851     144755072553     48251690851
+--R   (4)  - ---------------- - ----------- i + ------------ j + 
+----------- k
+--R             7256313856        1288408         41229056         10307264
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 4
+
+--S 5 of 13
+r := quatern(-2,3,23/9,-89); q + r
+ 
+
+          20        119
+   (5)  - -- - 5i + --- j - 88k
+          11         36
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R          20        119
+--R   (5)  - -- - 5i + --- j - 88k
+--R          11         36
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 5
+
+--S 6 of 13
+q * r - r * q
+ 
+
+          2495             817
+   (6)  - ---- i - 1418j - --- k
+           18               18
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R          2495             817
+--R   (6)  - ---- i - 1418j - --- k
+--R           18               18
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 6
+
+--S 7 of 13
+i:=quatern(0,1,0,0)
+ 
+
+   (7)  i
+                                                     Type: Quaternion 
+Integer
+--R
+--R
+--R   (7)  i
+--R                                                     Type: Quaternion 
+Integer
+--E 7
+
+--S 8 of 13
+j:=quatern(0,0,1,0)
+ 
+
+   (8)  j
+                                                     Type: Quaternion 
+Integer
+--R
+--R
+--R   (8)  j
+--R                                                     Type: Quaternion 
+Integer
+--E 8
+
+--S 9 of 13
+k:=quatern(0,0,0,1)
+ 
+
+   (9)  k
+                                                     Type: Quaternion 
+Integer
+--R
+--R
+--R   (9)  k
+--R                                                     Type: Quaternion 
+Integer
+--E 9
+
+--S 10 of 13
+[i*i, j*j, k*k, i*j, j*k, k*i, q*i]
+ 
+
+                                 2         3
+   (10)  [- 1,- 1,- 1,k,i,j,8 + -- i + j - - k]
+                                11         4
+                                       Type: List Quaternion Fraction 
+Integer
+--R
+--R
+--R                                 2         3
+--R   (10)  [- 1,- 1,- 1,k,i,j,8 + -- i + j - - k]
+--R                                11         4
+--R                                       Type: List Quaternion Fraction 
+Integer
+--E 10
+
+--S 11 of 13
+norm q
+ 
+
+         126993
+   (11)  ------
+          1936
+                                                       Type: Fraction 
+Integer
+--R
+--R
+--R         126993
+--R   (11)  ------
+--R          1936
+--R                                                       Type: Fraction 
+Integer
+--E 11
+
+--S 12 of 13
+conjugate q
+ 
+
+          2        3
+   (12)  -- + 8i - - j - k
+         11        4
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R          2        3
+--R   (12)  -- + 8i - - j - k
+--R         11        4
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 12
+
+--S 13 of 13
+q * %
+ 
+
+         126993
+   (13)  ------
+          1936
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R         126993
+--R   (13)  ------
+--R          1936
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 13
+)spool
+ 
+(1) ->
+
+                        AXIOM Computer Algebra System
+                       Version: Axiom (September 2009)
+              Timestamp: Thursday October 29, 2009 at 06:43:59
+-----------------------------------------------------------------------------
+   Issue )copyright to view copyright notices.
+   Issue )summary for a summary of useful system commands.
+   Issue )quit to leave AXIOM and return to shell.
+-----------------------------------------------------------------------------
+ 
+   Re-reading compress.daase   Re-reading interp.daase
+   Re-reading operation.daase
+   Re-reading category.daase
+   Re-reading browse.daase
+(1) ->
+(1) -> )display operation makeprod
+
+There is one unexposed function called makeprod :
+   [1] (D1,D2) -> Product(D1,D2) from Product(D1,D2)
+            if D1 has SETCAT and D2 has SETCAT
+
+Examples of makeprod from Product
+
+f:=(x:INT):INT +-> 3*x
+g:=(x:INT):INT +-> x^3
+h(x:INT):Product(INT,INT) == makeprod(f x, g x)
+h(3)
+
+(1) -> )show Quaternion
+ Quaternion R: CommutativeRing  is a domain constructor
+ Abbreviation for Quaternion is QUAT
+ This constructor is exposed in this frame.
+ Issue )edit bookvol10.3.spad.pamphlet to see algebra source code for QUAT
+
+------------------------------- Operations --------------------------------
+ ?*? : (R,%) -> %                      ?*? : (%,R) -> %
+ ?*? : (%,%) -> %                      ?*? : (Integer,%) -> %
+ ?*? : (PositiveInteger,%) -> %        ?**? : (%,PositiveInteger) -> %
+ ?+? : (%,%) -> %                      ?-? : (%,%) -> %
+ -? : % -> %                           ?=? : (%,%) -> Boolean
+ D : (%,(R -> R)) -> %                 D : % -> % if R has DIFRING
+ 1 : () -> %                           0 : () -> %
+ ?^? : (%,PositiveInteger) -> %        abs : % -> R if R has RNS
+ coerce : R -> %                       coerce : Integer -> %
+ coerce : % -> OutputForm              conjugate : % -> %
+ hash : % -> SingleInteger             imagI : % -> R
+ imagJ : % -> R                        imagK : % -> R
+ inv : % -> % if R has FIELD           latex : % -> String
+ map : ((R -> R),%) -> %               norm : % -> R
+ one? : % -> Boolean                   quatern : (R,R,R,R) -> %
+ real : % -> R                         recip : % -> Union(%,"failed")
+ retract : % -> R                      sample : () -> %
+ zero? : % -> Boolean                  ?~=? : (%,%) -> Boolean
+ ?*? : (Fraction Integer,%) -> % if R has FIELD
+ ?*? : (%,Fraction Integer) -> % if R has FIELD
+ ?*? : (NonNegativeInteger,%) -> %
+ ?**? : (%,Integer) -> % if R has FIELD
+ ?**? : (%,NonNegativeInteger) -> %
+ ?<? : (%,%) -> Boolean if R has ORDSET
+ ?<=? : (%,%) -> Boolean if R has ORDSET
+ ?>? : (%,%) -> Boolean if R has ORDSET
+ ?>=? : (%,%) -> Boolean if R has ORDSET
+ D : (%,(R -> R),NonNegativeInteger) -> %
+ D : (%,List Symbol,List NonNegativeInteger) -> % if R has PDRING SYMBOL
+ D : (%,Symbol,NonNegativeInteger) -> % if R has PDRING SYMBOL
+ D : (%,List Symbol) -> % if R has PDRING SYMBOL
+ D : (%,Symbol) -> % if R has PDRING SYMBOL
+ D : (%,NonNegativeInteger) -> % if R has DIFRING
+ ?^? : (%,Integer) -> % if R has FIELD
+ ?^? : (%,NonNegativeInteger) -> %
+ characteristic : () -> NonNegativeInteger
+ charthRoot : % -> Union(%,"failed") if R has CHARNZ
+ coerce : Fraction Integer -> % if R has FIELD or R has RETRACT FRAC INT
+ convert : % -> InputForm if R has KONVERT INFORM
+ differentiate : (%,(R -> R)) -> %
+ differentiate : (%,(R -> R),NonNegativeInteger) -> %
+ differentiate : (%,List Symbol,List NonNegativeInteger) -> % if R has 
+PDRING SYMBOL
+ differentiate : (%,Symbol,NonNegativeInteger) -> % if R has PDRING SYMBOL
+ differentiate : (%,List Symbol) -> % if R has PDRING SYMBOL
+ differentiate : (%,Symbol) -> % if R has PDRING SYMBOL
+ differentiate : (%,NonNegativeInteger) -> % if R has DIFRING
+ differentiate : % -> % if R has DIFRING
+ ?.? : (%,R) -> % if R has ELTAB(R,R)
+ eval : (%,Symbol,R) -> % if R has IEVALAB(SYMBOL,R)
+ eval : (%,List Symbol,List R) -> % if R has IEVALAB(SYMBOL,R)
+ eval : (%,List Equation R) -> % if R has EVALAB R
+ eval : (%,Equation R) -> % if R has EVALAB R
+ eval : (%,R,R) -> % if R has EVALAB R
+ eval : (%,List R,List R) -> % if R has EVALAB R
+ max : (%,%) -> % if R has ORDSET
+ min : (%,%) -> % if R has ORDSET
+ rational : % -> Fraction Integer if R has INS
+ rational? : % -> Boolean if R has INS
+ rationalIfCan : % -> Union(Fraction Integer,"failed") if R has INS
+ reducedSystem : Matrix % -> Matrix R
+ reducedSystem : (Matrix %,Vector %) -> Record(mat: Matrix R,vec: Vector R)
+ reducedSystem : (Matrix %,Vector %) -> Record(mat: Matrix Integer,vec: 
+Vector Integer) if R has LINEXP INT
+ reducedSystem : Matrix % -> Matrix Integer if R has LINEXP INT
+ retract : % -> Fraction Integer if R has RETRACT FRAC INT
+ retract : % -> Integer if R has RETRACT INT
+ retractIfCan : % -> Union(R,"failed")
+ retractIfCan : % -> Union(Fraction Integer,"failed") if R has RETRACT 
+FRAC INT
+ retractIfCan : % -> Union(Integer,"failed") if R has RETRACT INT
+ subtractIfCan : (%,%) -> Union(%,"failed")
+
+(1) -> )help Quaternion
+====================================================================
+Quaternion examples
+====================================================================
+
+The domain constructor Quaternion implements quaternions over
+commutative rings.
+
+The basic operation for creating quaternions is quatern.  This is a
+quaternion over the rational numbers.
+
+  q := quatern(2/11,-8,3/4,1)
+     2        3
+    -- - 8i + - j + k
+    11        4
+                        Type: Quaternion Fraction Integer
+
+The four arguments are the real part, the i imaginary part, the j
+imaginary part, and the k imaginary part, respectively.
+
+  [real q, imagI q, imagJ q, imagK q]
+      2     3
+    [--,- 8,-,1]
+     11     4
+                        Type: List Fraction Integer
+
+Because q is over the rationals (and nonzero), you can invert it.
+
+  inv q
+      352     15488      484       1936
+    ------ + ------ i - ----- j - ------ k
+    126993   126993     42331     126993
+                        Type: Quaternion Fraction Integer
+
+The usual arithmetic (ring) operations are available
+
+  q^6
+      2029490709319345   48251690851     144755072553     48251690851
+    - ---------------- - ----------- i + ------------ j + ----------- k
+         7256313856        1288408         41229056         10307264
+                        Type: Quaternion Fraction Integer
+
+  r := quatern(-2,3,23/9,-89); q + r
+      20        119
+    - -- - 5i + --- j - 88k
+      11         36
+                        Type: Quaternion Fraction Integer
+
+In general, multiplication is not commutative.
+
+  q * r - r * q
+      2495             817
+    - ---- i - 1418j - --- k
+       18               18
+                         Type: Quaternion Fraction Integer
+
+There are no predefined constants for the imaginary i, j, and k parts,
+but you can easily define them.
+
+  i:=quatern(0,1,0,0)
+    i
+                         Type: Quaternion Integer
+
+  j:=quatern(0,0,1,0)
+    j
+                         Type: Quaternion Integer
+ 
+  k:=quatern(0,0,0,1)
+    k
+                         Type: Quaternion Integer
+
+These satisfy the normal identities.
+
+  [i*i, j*j, k*k, i*j, j*k, k*i, q*i]
+                             2         3
+     [- 1,- 1,- 1,k,i,j,8 + -- i + j - - k]
+                            11         4
+                          Type: List Quaternion Fraction Integer
+
+The norm is the quaternion times its conjugate.
+
+  norm q
+    126993
+    ------
+     1936
+                          Type: Fraction Integer
+
+  conjugate q
+      2        3
+     -- + 8i - - j - k
+     11        4
+                          Type: Quaternion Fraction Integer
+
+  q * %
+     126993
+     ------
+      1936
+                          Type: Quaternion Fraction Integer
+
+See Also:
+o )help Octonion
+o )help Complex
+o )help CliffordAlgebra
+o )show Quaternion
+
+(1) -> )sys cat int/input/Quaternion.output
+Starts dribbling to Quaternion.output (2009/10/29, 7:36:17).
+)set message test on
+ 
+)set message auto off
+ 
+)clear all
+ 
+--S 1 of 13
+q := quatern(2/11,-8,3/4,1)
+ 
+
+         2        3
+   (1)  -- - 8i + - j + k
+        11        4
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R         2        3
+--R   (1)  -- - 8i + - j + k
+--R        11        4
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 1
+
+--S 2 of 13
+[real q, imagI q, imagJ q, imagK q]
+ 
+
+          2     3
+   (2)  [--,- 8,-,1]
+         11     4
+                                                  Type: List Fraction 
+Integer
+--R
+--R
+--R          2     3
+--R   (2)  [--,- 8,-,1]
+--R         11     4
+--R                                                  Type: List Fraction 
+Integer
+--E 2
+
+--S 3 of 13
+inv q
+ 
+
+          352     15488      484       1936
+   (3)  ------ + ------ i - ----- j - ------ k
+        126993   126993     42331     126993
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R          352     15488      484       1936
+--R   (3)  ------ + ------ i - ----- j - ------ k
+--R        126993   126993     42331     126993
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 3
+
+--S 4 of 13
+q^6
+ 
+
+          2029490709319345   48251690851     144755072553     48251690851
+   (4)  - ---------------- - ----------- i + ------------ j + ----------- k
+             7256313856        1288408         41229056         10307264
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R          2029490709319345   48251690851     144755072553     48251690851
+--R   (4)  - ---------------- - ----------- i + ------------ j + 
+----------- k
+--R             7256313856        1288408         41229056         10307264
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 4
+
+--S 5 of 13
+r := quatern(-2,3,23/9,-89); q + r
+ 
+
+          20        119
+   (5)  - -- - 5i + --- j - 88k
+          11         36
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R          20        119
+--R   (5)  - -- - 5i + --- j - 88k
+--R          11         36
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 5
+
+--S 6 of 13
+q * r - r * q
+ 
+
+          2495             817
+   (6)  - ---- i - 1418j - --- k
+           18               18
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R          2495             817
+--R   (6)  - ---- i - 1418j - --- k
+--R           18               18
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 6
+
+--S 7 of 13
+i:=quatern(0,1,0,0)
+ 
+
+   (7)  i
+                                                     Type: Quaternion 
+Integer
+--R
+--R
+--R   (7)  i
+--R                                                     Type: Quaternion 
+Integer
+--E 7
+
+--S 8 of 13
+j:=quatern(0,0,1,0)
+ 
+
+   (8)  j
+                                                     Type: Quaternion 
+Integer
+--R
+--R
+--R   (8)  j
+--R                                                     Type: Quaternion 
+Integer
+--E 8
+
+--S 9 of 13
+k:=quatern(0,0,0,1)
+ 
+
+   (9)  k
+                                                     Type: Quaternion 
+Integer
+--R
+--R
+--R   (9)  k
+--R                                                     Type: Quaternion 
+Integer
+--E 9
+
+--S 10 of 13
+[i*i, j*j, k*k, i*j, j*k, k*i, q*i]
+ 
+
+                                 2         3
+   (10)  [- 1,- 1,- 1,k,i,j,8 + -- i + j - - k]
+                                11         4
+                                       Type: List Quaternion Fraction 
+Integer
+--R
+--R
+--R                                 2         3
+--R   (10)  [- 1,- 1,- 1,k,i,j,8 + -- i + j - - k]
+--R                                11         4
+--R                                       Type: List Quaternion Fraction 
+Integer
+--E 10
+
+--S 11 of 13
+norm q
+ 
+
+         126993
+   (11)  ------
+          1936
+                                                       Type: Fraction 
+Integer
+--R
+--R
+--R         126993
+--R   (11)  ------
+--R          1936
+--R                                                       Type: Fraction 
+Integer
+--E 11
+
+--S 12 of 13
+conjugate q
+ 
+
+          2        3
+   (12)  -- + 8i - - j - k
+         11        4
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R          2        3
+--R   (12)  -- + 8i - - j - k
+--R         11        4
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 12
+
+--S 13 of 13
+q * %
+ 
+
+         126993
+   (13)  ------
+          1936
+                                            Type: Quaternion Fraction 
+Integer
+--R
+--R
+--R         126993
+--R   (13)  ------
+--R          1936
+--R                                            Type: Quaternion Fraction 
+Integer
+--E 13
+)spool
+ 
+(1) ->
+
+
+
+
+From MAILER-DAEMON Thu Oct 29 15:36:04 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1N3amy-0005gn-C1
+	for mharc-axiom-mail@gnu.org; Thu, 29 Oct 2009 15:36:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1N3amw-0005ga-RO
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 15:36:02 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1N3amr-0005e4-AK
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 15:36:01 -0400
+Received: from [199.232.76.173] (port=33507 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1N3amr-0005dx-3S
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 15:35:57 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.161]:24345)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA1:24) (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1N3amq-0007vY-Na
+	for axiom-mail@nongnu.org; Thu, 29 Oct 2009 15:35:56 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1256844954; l=2053;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:CC:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=D3s/YLqJq3UX4qR32eFh0UrZEG4=;
+	b=tKNtDM6Jux/1STTWQJCCRgJmvUBKnMuC7QZ4uj0js7rVmcVGbrqJti7a8eElRSFXDcF
+	dBLUIGFsoYdgvSa+IpTTam47tnVvWEg61naR+v05Q1kLft7SbbOijj6gGBpZN6+r+wPpF
+	mwOseoiknb/bvK064nEPxKCohdDRXVmfVzs=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSWk1ofrjzBoGl1Mr+o=
+X-RZG-CLASS-ID: mo00
+Received: from [10.0.0.1] (62-47-49-206.adsl.highway.telekom.at [62.47.49.206])
+	by post.strato.de (klopstock mo63) (RZmta 22.1)
+	with (DHE-RSA-AES128-SHA encrypted) ESMTP id 2001f3l9TGYrqJ ;
+	Thu, 29 Oct 2009 20:35:08 +0100 (MET)
+Message-ID: <4AE9EE6B.7020304@hemmecke.de>
+Date: Thu, 29 Oct 2009 20:35:07 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.23 (X11/20090817)
+MIME-Version: 1.0
+To: Martin Baker <ax87438@martinb.com>
+Subject: Re: [Axiom-mail] finding source code
+References: <200910291042.24547.ax87438@martinb.com>	<4AE97F89.3020604@hemmecke.de>
+	<200910291725.14554.ax87438@martinb.com>
+In-Reply-To: <200910291725.14554.ax87438@martinb.com>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 29 Oct 2009 19:36:03 -0000
+
+> I have been looking for an open source computer algebra system for some time 
+> although I did not try any, I came across Axiom in lists of such systems but I 
+> did not try it because (for some reason) I was put off when it said that it 
+> was based on LISP.
+
+Well, I guess, but now you have realised that axiom has a lot of languages.
+http://axiom-wiki.newsynthesis.org/AxiomProgramming
+
+SPAD being the language of choice for new library development. The input 
+language that you type at the axiom prompt is close to spad, but add 
+some convenient type coercions that are unwanted in library programming.
+
+Anyway, SPAD is statically typed which means that every type must be 
+known at compile time. There is no need for runtime type checking 
+anymore. SPAD has been designed and developed with the goal to program 
+mathematics. Although developed 30 years ago it has features that are 
+much better done (compare java generics with parametric domains and 
+categories in SPAD).
+
+> As you can see the program seems to work except the draw function which seems 
+> to fail with:
+> 
+>>> System error:
+> Unknown bfd format
+
+I guess Tim Daly will help you with that one. Graphics is not one of my 
+strengths.
+
+> So, that's my experience so far, apart from these small problems it looks like 
+> a very useful program.
+
+Axiom used to be one of the 3 big Computer Algebra Systems. 
+Unfortunately, Axiom has a very steep learning curve. All these types 
+that are actually quite useful get in the way when one wants to do 
+things quickly. However, these types enable Axiom to construct type 
+hierarchies that neither Maple nor Mathematica can construct today in a 
+natural way.
+
+And I would also like to draw your attention to the Axiom-Wiki. You can 
+actually edit and add pages. Yes, you can! There, you even can enter 
+actual Axiom code (inside \begin{axiom} ... \end{axiom}) and have it 
+evaluated when you save the page. Try it out. Maybe you should first 
+start with a page that has "SandBox" at the beginning of its page name.
+
+Ralf
+
+
+

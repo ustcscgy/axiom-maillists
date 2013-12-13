@@ -1,0 +1,308 @@
+From MAILER-DAEMON Mon Nov 10 04:47:47 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KzTN5-0001ij-F6
+	for mharc-axiom-mail@gnu.org; Mon, 10 Nov 2008 04:47:47 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KzTN3-0001hw-IN
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 04:47:45 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KzTN1-0001ge-Gn
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 04:47:44 -0500
+Received: from [199.232.76.173] (port=39725 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KzTGc-0008O9-Cb
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 04:41:07 -0500
+Received: from atena.polito.it ([130.192.3.45]:56349 helo=polito.it)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <andrea.gamba@polito.it>) id 1KzTGc-000254-2h
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 04:41:06 -0500
+X-ExtScanner: Niversoft's FindAttachments (free)
+Received: from [85.18.81.128] (account d002020@polito.it HELO [1.11.138.34])
+	by atena.polito.it (CommuniGate Pro SMTP 5.2.10)
+	with ESMTPA id 18710097 for axiom-mail@nongnu.org;
+	Mon, 10 Nov 2008 09:41:01 +0100
+Message-ID: <4917F39B.6080803@polito.it>
+Date: Mon, 10 Nov 2008 09:40:59 +0100
+From: Andrea Gamba <andrea.gamba@polito.it>
+User-Agent: Thunderbird 2.0.0.17 (X11/20080925)
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Windows 98 (no sack)
+Subject: [Axiom-mail] texmacs interface
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 10 Nov 2008 09:47:45 -0000
+
+I have found a bug in the texmacs 
+interface: at the end of a particular sequence
+of commands (which works perfectly from the terminal) in an axiom sessions one
+gets 
+
+generic axiom program roman 10 [busy]
+
+and no result is given (should be 1) or prompt returned.
+
+The sequence of commands is
+
+Dx:LODO(EXPR INT, f +->D(f, x)) 
+Mx:LODO(EXPR INT, f +->D(f, x))
+Dx:=D()
+Mx:=x
+Dx*Mx-Mx*Dx
+
+I guess it must have something to do with uncorrect parsing of the axiom
+messages.
+
+By the way, these messages are filtered away by the interface, is there a way
+to have them printed instead?
+
+I am using texmacs 1.07 installed from rpm with alien on ubuntu intrepid, and
+axiom (july 2008) compiled from source and run using the infamous 
+echo 0 >/proc/sys/kernel/randomize_va_space
+trick (without which it was impossible to have axiom working on ubuntu; took a
+long time to discover).
+
+Andrea
+
+
+
+From MAILER-DAEMON Mon Nov 10 07:48:52 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KzWCK-0006We-4y
+	for mharc-axiom-mail@gnu.org; Mon, 10 Nov 2008 07:48:52 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KzWCI-0006WZ-Ce
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 07:48:50 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KzWCF-0006WN-UD
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 07:48:49 -0500
+Received: from [199.232.76.173] (port=48166 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KzWCF-0006WK-O7
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 07:48:47 -0500
+Received: from eracle.polito.it ([130.192.3.44]:45061 helo=polito.it)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <andrea.gamba@polito.it>) id 1KzWCF-0008Qq-3o
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 07:48:47 -0500
+X-ExtScanner: Niversoft's FindAttachments (free)
+Received: from [85.18.81.128] (account d002020@polito.it HELO [192.168.1.20])
+	by eracle.polito.it (CommuniGate Pro SMTP 5.2.6)
+	with ESMTPA id 19544671 for axiom-mail@nongnu.org;
+	Mon, 10 Nov 2008 13:48:36 +0100
+Message-ID: <49182D9F.4050208@polito.it>
+Date: Mon, 10 Nov 2008 13:48:31 +0100
+From: Andrea Gamba <andrea.gamba@polito.it>
+User-Agent: Thunderbird 2.0.0.17 (X11/20080925)
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Windows 98 (no sack)
+Subject: [Axiom-mail] texmacs interface
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 10 Nov 2008 12:48:51 -0000
+
+It would be good to have this patch applied:
+
+http://www.nabble.com/-patch--Greek-letters-in-TeX-output-td7532740.html
+
+To be able to use Greek letters in computations as is done with maxima would be really handy.
+
+Andrea
+
+
+
+
+From MAILER-DAEMON Mon Nov 10 23:13:45 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KzkdM-0003yU-UJ
+	for mharc-axiom-mail@gnu.org; Mon, 10 Nov 2008 23:13:44 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KzkdK-0003yO-Uu
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 23:13:42 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KzkdH-0003yC-Hi
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 23:13:41 -0500
+Received: from [199.232.76.173] (port=43863 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KzkdH-0003y9-B8
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 23:13:39 -0500
+Received: from mx-7.zoominternet.net ([24.154.1.26]:58650
+	helo=cm-1.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1KzkdH-0006S6-0M
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 23:13:39 -0500
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=E8rTNAPPKTgA:10 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=HwWWN2sIGOvFa2g5FpwA:9 a=cuOFrD39_VBIQTRBgqwsTVBc4VkA:4
+	a=7mayv77iRtYA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.44] ([24.154.1.44:37874] helo=pop-1.zoominternet.net)
+	by mx-7.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 52/27-08953-96609194; Mon, 10 Nov 2008 23:13:29 -0500
+Received: (qmail 11533 invoked from network); 11 Nov 2008 04:13:32 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 11 Nov 2008 04:13:32 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id mAAGOWU09630;
+	Mon, 10 Nov 2008 11:24:32 -0500
+Date: Mon, 10 Nov 2008 11:24:32 -0500
+Message-Id: <200811101624.mAAGOWU09630@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: andrea.gamba@polito.it
+In-reply-to: <4917F39B.6080803@polito.it> (message from Andrea Gamba on Mon,
+	10 Nov 2008 09:40:59 +0100)
+Subject: Re: [Axiom-mail] texmacs interface
+References: <4917F39B.6080803@polito.it>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 11 Nov 2008 04:13:43 -0000
+
+You can run Axiom from the command line by setting two environment
+variables to point to the executable. 
+
+The first variable is used by Axiom to find its libraries:
+
+export AXIOM=(pathToThe mnt directory)/ubuntu
+
+e.g. export AXIOM=/usr/local/axiom/mnt/ubuntu
+
+and setting the PATH:
+
+export PATH=$AXIOM/bin:$PATH
+
+and then type:
+
+axiom
+
+
+Tim
+
+
+
+From MAILER-DAEMON Tue Nov 11 16:43:47 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1L011X-0008BF-GW
+	for mharc-axiom-mail@gnu.org; Tue, 11 Nov 2008 16:43:47 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KzRBK-0001ni-SW
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 02:27:30 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KzRBJ-0001n6-8g
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 02:27:30 -0500
+Received: from [199.232.76.173] (port=48958 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KzRBJ-0001n3-2h
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 02:27:29 -0500
+Received: from atena.polito.it ([130.192.3.45]:54653 helo=polito.it)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <andrea.gamba@polito.it>) id 1KzRBI-0007dy-LI
+	for axiom-mail@nongnu.org; Mon, 10 Nov 2008 02:27:28 -0500
+X-ExtScanner: Niversoft's FindAttachments (free)
+Received: from [85.18.81.128] (account d002020@polito.it HELO [1.11.138.34])
+	by atena.polito.it (CommuniGate Pro SMTP 5.2.6)
+	with ESMTPA id 18698155 for axiom-mail@nongnu.org;
+	Mon, 10 Nov 2008 07:25:54 +0100
+Message-ID: <4917D3F1.9040302@polito.it>
+Date: Mon, 10 Nov 2008 07:25:53 +0100
+From: Andrea Gamba <andrea.gamba@polito.it>
+User-Agent: Thunderbird 2.0.0.17 (X11/20080925)
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Windows 98 (no sack)
+X-Greylist: delayed 3600 seconds by postgrey-1.27 at monty-python;
+	Mon, 10 Nov 2008 02:25:56 EST
+X-Mailman-Approved-At: Tue, 11 Nov 2008 16:43:46 -0500
+Subject: [Axiom-mail] echo 0 >/proc/sys/kernel/randomize_va_space needed for
+ normal Axiom functioning
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 10 Nov 2008 07:27:31 -0000
+
+I have recently compiled axiom (v. July 2008) on Ubuntu Intrepid.
+
+I have spent some hours trying to figure out why the newly compiled 
+program worked seamlessly during the first few hours, and became badly 
+broken afterwards.
+
+I have found that the infamous
+
+echo 0 >/proc/sys/kernel/randomize_va_space
+
+is now not only necessary for compiling, but also for the normal 
+functioning of the program.
+
+To have this setting permanently enabled I have added
+kernel.randomize_va_space=0
+in
+/etc/sysctl.con
+
+Please add a warning here:
+
+http://www.axiom-developer.org/axiom-website/download.html
+
+about this fact, to keep Axiom running on Ubuntu.
+
+I guess the solution of turning off randomization permanently is not 
+good in the long term for security reasons, it would be interesting to 
+understand whether this bug can be solved for good by axiom developers.
+
+Probably the better solution would be to use setarch -R in the script 
+that launches axiom, when an ubuntu system is detected. Could someone 
+provide the corrisponding patch?
+
+See also:
+http://www.mail-archive.com/axiom-mail@nongnu.org/msg00664.html
+
+Andrea
+
+
+
+
+

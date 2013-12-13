@@ -1,0 +1,875 @@
+From MAILER-DAEMON Sun Oct 26 08:37:36 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ku4sC-0004LF-0r
+	for mharc-axiom-mail@gnu.org; Sun, 26 Oct 2008 08:37:36 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KteOK-0000wq-7V
+	for axiom-mail@nongnu.org; Sat, 25 Oct 2008 04:21:00 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KteOJ-0000we-Gw
+	for axiom-mail@nongnu.org; Sat, 25 Oct 2008 04:20:59 -0400
+Received: from [199.232.76.173] (port=45371 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KteOJ-0000wb-CV
+	for axiom-mail@nongnu.org; Sat, 25 Oct 2008 04:20:59 -0400
+Received: from smtp3-g19.free.fr ([212.27.42.29]:42974)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <henrigirard@free.fr>) id 1KteOI-0004iB-PG
+	for axiom-mail@nongnu.org; Sat, 25 Oct 2008 04:20:59 -0400
+Received: from smtp3-g19.free.fr (localhost.localdomain [127.0.0.1])
+	by smtp3-g19.free.fr (Postfix) with ESMTP id D58DE17B5BD
+	for <axiom-mail@nongnu.org>; Sat, 25 Oct 2008 10:20:54 +0200 (CEST)
+Received: from [192.168.0.10] (roo49-2-88-161-139-50.fbx.proxad.net
+	[88.161.139.50])
+	by smtp3-g19.free.fr (Postfix) with ESMTP id B0CE617B5B7
+	for <axiom-mail@nongnu.org>; Sat, 25 Oct 2008 10:20:54 +0200 (CEST)
+From: Henri Girard <henrigirard@free.fr>
+To: axiom-mail@nongnu.org
+Content-Type: multipart/mixed; boundary="=-8jrv4BzKZznVFv04SERq"
+Date: Sat, 25 Oct 2008 10:20:54 +0200
+Message-Id: <1224922854.7928.5.camel@pc>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.24.1 
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+X-Mailman-Approved-At: Sun, 26 Oct 2008 08:37:35 -0400
+Subject: [Axiom-mail] newbie
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 25 Oct 2008 08:21:00 -0000
+
+
+--=-8jrv4BzKZznVFv04SERq
+Content-Type: text/plain
+Content-Transfer-Encoding: 7bit
+
+Hi 
+hope i am sending to the right list : first time :)
+
+i have done this exemple but the last command doesn't work ?
+
+http://axiom-wiki.newsynthesis.org/SandBoxBiQuaternions
+
+and attachment for the problem :)
+with siglist which doesn't work
+
+kind regards
+
+
+
+
+
+
+
+
+
+--=-8jrv4BzKZznVFv04SERq
+Content-Disposition: attachment; filename="biquataxiom.tm"
+Content-Type: text/plain; name="biquataxiom.tm"; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<TeXmacs|1.0.6.14>
+
+<style|<tuple|generic|axiom>>
+
+<\body>
+  <with|prog-language|axiom|prog-session|default|<\session>
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      C:=Complex Expression Integer
+    </input>
+
+    <\output>
+      <with|mode|math|math-display|true|<with|mode|text|font-family|rm|Complex
+      Expression Integer><leqno>(1)>
+
+      <axiomtype|Domain >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      Q:=Quaternion C
+    </input>
+
+    <\output>
+      <with|mode|math|math-display|true|<with|mode|text|font-family|rm|Quaternion
+      Complex Expression Integer><leqno>(2)>
+
+      <axiomtype|Domain >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      q:Q:=quatern(q0,q1,q2,q3)
+    </input>
+
+    <\output>
+      <with|mode|math|math-display|true|q0+q1i+q2j+q3k<leqno>(3)>
+
+      <axiomtype|Quaternion Complex Expression Integer >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      qlist(l:List C):Q==quatern(l.1,l.2,l.3,l.4)
+    </input>
+
+    <\output>
+      \ \ \ Function declaration qlist : List Complex Expression Integer
+      -\<gtr\>\ 
+
+      \ \ \ \ \ \ Quaternion Complex Expression Integer has been added to\ 
+
+      \ \ \ \ \ \ workspace.
+
+      <axiomtype|Void >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      listq(x:Q):List C == [real x, imagI x, imagJ x, imagK x]
+    </input>
+
+    <\output>
+      \ \ \ Function declaration listq : Quaternion Complex Expression
+      Integer
+
+      \ \ \ \ \ \ \ -\<gtr\> List Complex Expression Integer has been added
+      to workspace.
+
+      <axiomtype|Void >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      matrixq(x:Q):Matrix C == matrix _ [[real x + %i*imagI(x), imagJ x +
+      %i*imagK(x)], _ [-imagJ(x) + %i*imagK(x), real x - %i*imagI(x)]]
+    </input>
+
+    <\output>
+      \ \ \ Function declaration matrixq : Quaternion Complex Expression
+      Integer
+
+      \ \ \ \ \ \ \ -\<gtr\> Matrix Complex Expression Integer has been added
+      to\ 
+
+      \ \ \ \ \ \ workspace.
+
+      <axiomtype|Void >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      sig0:=quatern(1,0,0,0)::Q
+    </input>
+
+    <\output>
+      <with|mode|math|math-display|true|1<leqno>(10)>
+
+      <axiomtype|Quaternion Complex Expression Integer >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      sig1:=%i*quatern(0,0,0,1)::Q
+    </input>
+
+    <\output>
+      <with|mode|math|math-display|true|i*k<leqno>(11)>
+
+      <axiomtype|Quaternion Complex Expression Integer >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      sig2:=%i*quatern(0,0,1,0)::Q
+    </input>
+
+    <\output>
+      <with|mode|math|math-display|true|i*j<leqno>(12)>
+
+      <axiomtype|Quaternion Complex Expression Integer >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      sig3:=-%i*quatern(0,1,0,0)::Q
+    </input>
+
+    <\output>
+      <with|mode|math|math-display|true|-i*i<leqno>(13)>
+
+      <axiomtype|Quaternion Complex Expression Integer >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      siglist(x:Q):List C == [real x, -imagK(x)*%i,-imagJ(x)*%i,%i*imagI(x)]
+    </input>
+
+    <\output>
+      \ \ \ Function declaration siglist : Quaternion Complex Expression
+      Integer
+
+      \ \ \ \ \ \ \ -\<gtr\> List Complex Expression Integer has been added
+      to workspace.
+
+      <axiomtype|Void >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      D(q:Q,x:Symbol,y:Symbol,z:Symbol):Q==sig1*D(q,x)+sig2*D(q,y)+sig3&#
+      42;D(q,z)
+    </input>
+
+    <\output>
+      \ \ \ Function declaration D : (Quaternion Complex Expression Integer,
+
+      \ \ \ \ \ \ Symbol,Symbol,Symbol) -\<gtr\> Quaternion Complex
+      Expression Integer\ 
+
+      \ \ \ \ \ \ has been added to workspace.
+
+      <with|mode|math|math-display|true|0<leqno>(15)>
+
+      <axiomtype|Quaternion Complex Expression Integer >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      Ft:=operator 'Ft; Fx:=operator 'Fx; Fy:=operator 'Fy; Fz:=operator 'Fz;
+    </input>
+
+    <\output>
+      <axiomtype|BasicOperator >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      F:Q:=Ft(x,y,z)*sig0+Fx(x,y,z)*sig1+Fy(x,y,z)*sig2+Fz(x,y,z)*sig3
+    </input>
+
+    <\output>
+      <with|mode|math|math-display|true|F*t<left|(>x,<space|0.5spc>y,<space|0.5spc>z<right|)>-F*z<left|(>x,<space|0.5spc>y,<space|0.5spc>z<right|)>i*i+F*y<left|(>x,<space|0.5spc>y,<space|0.5spc>z<right|)>i*j+F*x<left|(>x,<space|0.5spc>y,<space|0.5spc>z<right|)>i*k<leqno>(17)>
+
+      <axiomtype|Quaternion Complex Expression Integer >
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      siglist(D(F,x,y,z))
+    </input>
+
+    <\output>
+      \ \ \ There are no library operations named # having 2 argument(s)
+      though\ 
+
+      \ \ \ \ \ \ there are 2 exposed operation(s) and 1 unexposed
+      operation(s)\ 
+
+      \ \ \ \ \ \ having a different number of arguments. Use HyperDoc
+      Browse, or\ 
+
+      \ \ \ \ \ \ issue
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )what
+      op #
+
+      \ \ \ \ \ \ to learn what operations contain " # " in their names, or
+      issue
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )display
+      op #
+
+      \ \ \ \ \ \ to learn more about the available operations.
+
+      \ \ \ Cannot find a definition or applicable library operation named #\ 
+
+      \ \ \ \ \ \ with argument type(s)\ 
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Quaternion Complex Expression
+      Integer
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PositiveInteger
+
+      \ \ \ \ \ \ 
+
+      \ \ \ \ \ \ Perhaps you should use "@" to indicate the required return
+      type,\ 
+
+      \ \ \ \ \ \ or "$" to specify which version of the function you need.
+
+      \ \ \ AXIOM will attempt to step through and interpret the code.
+
+      \ \ \ Compiling function D with type (Quaternion Complex Expression\ 
+
+      \ \ \ \ \ \ Integer,Symbol,Symbol,Symbol) -\<gtr\> Quaternion Complex
+      Expression\ 
+
+      \ \ \ \ \ \ Integer\ 
+
+      \ \ \ There are no library operations named # having 2 argument(s)
+      though\ 
+
+      \ \ \ \ \ \ there are 2 exposed operation(s) and 1 unexposed
+      operation(s)\ 
+
+      \ \ \ \ \ \ having a different number of arguments. Use HyperDoc
+      Browse, or\ 
+
+      \ \ \ \ \ \ issue
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )what
+      op #
+
+      \ \ \ \ \ \ to learn what operations contain " # " in their names, or
+      issue
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )display
+      op #
+
+      \ \ \ \ \ \ to learn more about the available operations.
+
+      \ 
+
+      \ \ \ Cannot find a definition or applicable library operation named #\ 
+
+      \ \ \ \ \ \ with argument type(s)\ 
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Quaternion Complex Expression
+      Integer
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PositiveInteger
+
+      \ \ \ \ \ \ 
+
+      \ \ \ \ \ \ Perhaps you should use "@" to indicate the required return
+      type,\ 
+
+      \ \ \ \ \ \ or "$" to specify which version of the function you need.
+    </output>
+
+    <\input|<with|color|red|<with|mode|math|\<rightarrow\>> >>
+      \;
+    </input>
+
+    \;
+  </session>>
+</body>
+
+<\initial>
+  <\collection>
+    <associate|language|french>
+  </collection>
+</initial>
+--=-8jrv4BzKZznVFv04SERq--
+
+
+
+
+From MAILER-DAEMON Sun Oct 26 13:12:28 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ku9AC-00005Z-5Q
+	for mharc-axiom-mail@gnu.org; Sun, 26 Oct 2008 13:12:28 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ku9AB-00005J-7N
+	for axiom-mail@nongnu.org; Sun, 26 Oct 2008 13:12:27 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ku9A9-0008WN-1y
+	for axiom-mail@nongnu.org; Sun, 26 Oct 2008 13:12:26 -0400
+Received: from [199.232.76.173] (port=47079 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ku9A8-0008WK-VW
+	for axiom-mail@nongnu.org; Sun, 26 Oct 2008 13:12:24 -0400
+Received: from mx-8.zoominternet.net ([24.154.1.27]:39708
+	helo=cm-2.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1Ku9A8-0006ot-UN
+	for axiom-mail@nongnu.org; Sun, 26 Oct 2008 13:12:25 -0400
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=ygnQrepZDJogc-rQ_ZQA:9 a=Dj0Dr8dfgO1Ozv2nwxcpGUnJU-EA:4
+	a=gi0PWCVxevcA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.47] ([24.154.1.47:44131] helo=pop-4.zoominternet.net)
+	by mx-8.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 98/13-10556-2F4A4094; Sun, 26 Oct 2008 13:12:18 -0400
+Received: (qmail 23496 invoked from network); 26 Oct 2008 17:12:18 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-4.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 26 Oct 2008 17:12:18 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id m9QHDWH16125;
+	Sun, 26 Oct 2008 12:13:32 -0500
+Date: Sun, 26 Oct 2008 12:13:32 -0500
+Message-Id: <200810261713.m9QHDWH16125@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: henrigirard@free.fr
+In-reply-to: <1224922854.7928.5.camel@pc> (message from Henri Girard on Sat,
+	25 Oct 2008 10:20:54 +0200)
+Subject: Re: [Axiom-mail] newbie
+References: <1224922854.7928.5.camel@pc>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Oct 2008 17:12:27 -0000
+
+I believe there is some sort of translation problem in the page that
+contains the original source code. The wiki is no longer available
+as part of the Axiom project. The problem is that the line which
+defines the D operator has the html string &#42; in it. Here is a
+corrected version:
+
+
+      C:=Complex Expression Integer
+      Q:=Quaternion C
+      q:Q:=quatern(q0,q1,q2,q3)
+      qlist(l:List C):Q==quatern(l.1,l.2,l.3,l.4)
+      listq(x:Q):List C == [real x, imagI x, imagJ x, imagK x]
+      matrixq(x:Q):Matrix C == matrix _ 
+       [[real x + %i*imagI(x), imagJ x + %i*imagK(x)], _ 
+        [-imagJ(x) + %i*imagK(x), real x - %i*imagI(x)]]
+      sig0:=quatern(1,0,0,0)::Q
+      sig1:=%i*quatern(0,0,0,1)::Q
+      sig2:=%i*quatern(0,0,1,0)::Q
+      sig3:=-%i*quatern(0,1,0,0)::Q
+      siglist(x:Q):List C == [real x, -imagK(x)*%i,-imagJ(x)*%i,%i*imagI(x)]
+      D(q:Q,x:Symbol,y:Symbol,z:Symbol):Q==sig1*D(q,x)+sig2*D(q,y)+sig3*D(q,z)
+      Ft:=operator 'Ft; Fx:=operator 'Fx; Fy:=operator 'Fy; Fz:=operator 'Fz;
+      F:Q:=Ft(x,y,z)*sig0+Fx(x,y,z)*sig1+Fy(x,y,z)*sig2+Fz(x,y,z)*sig3
+      siglist(D(F,x,y,z))
+
+To use this put it into an input file such as "quatin.input" and then
+type:
+
+   )read quatin.input
+
+at the axiom command prompt.
+
+Tim
+
+
+
+From MAILER-DAEMON Mon Oct 27 09:11:17 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KuRsL-0001RL-Rf
+	for mharc-axiom-mail@gnu.org; Mon, 27 Oct 2008 09:11:17 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KuRsK-0001RE-DB
+	for axiom-mail@nongnu.org; Mon, 27 Oct 2008 09:11:16 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KuRsJ-0001Qy-IY
+	for axiom-mail@nongnu.org; Mon, 27 Oct 2008 09:11:16 -0400
+Received: from [199.232.76.173] (port=53901 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KuRsJ-0001Qt-Cp
+	for axiom-mail@nongnu.org; Mon, 27 Oct 2008 09:11:15 -0400
+Received: from av12-1-sn2.hy.skanova.net ([81.228.8.185]:52635)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <enrio@online.no>) id 1KuRjW-0002c1-8t
+	for axiom-mail@nongnu.org; Mon, 27 Oct 2008 09:02:10 -0400
+Received: by av12-1-sn2.hy.skanova.net (Postfix, from userid 502)
+	id 6299237E72; Mon, 27 Oct 2008 14:02:08 +0100 (CET)
+Received: from smtp4-1-sn2.hy.skanova.net (smtp4-1-sn2.hy.skanova.net
+	[81.228.8.92])
+	by av12-1-sn2.hy.skanova.net (Postfix) with ESMTP id 4596E3874B
+	for <axiom-mail@nongnu.org>; Mon, 27 Oct 2008 14:02:08 +0100 (CET)
+Received: from [192.168.0.2] (81-236-14-221-no26.tbcn.telia.com
+	[81.236.14.221])
+	by smtp4-1-sn2.hy.skanova.net (Postfix) with ESMTP id 2FBE237E55
+	for <axiom-mail@nongnu.org>; Mon, 27 Oct 2008 14:02:08 +0100 (CET)
+From: Enrique Perez-Terron <enrio@online.no>
+To: axiom-mail@nongnu.org
+Content-Type: text/plain
+Date: Mon, 27 Oct 2008 14:02:07 +0100
+Message-Id: <1225112527.12106.237.camel@apeiron.home.lan>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.22.3.1 (2.22.3.1-1.fc9) 
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.4-2.6
+Subject: [Axiom-mail] Getting started on Fedora9
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 27 Oct 2008 13:11:16 -0000
+
+I just donwloaded, untarred, etc, axiom-fedora9-sept2008-bin.tgz,
+
+but when I run it, I get these messages, and nothing more happens.:
+
+(HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+(HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+(HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+(HyperDoc) Cannot load font -adobe-courier-bold-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+(HyperDoc) Cannot load font -adobe-courier-bold-o-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+(HyperDoc) Cannot load font -adobe-courier-medium-o-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+(HyperDoc) Cannot load font -adobe-courier-bold-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+
+I was unable to find any running processes. Certainly no windows.
+
+To be little more specific: As root:
+
+  # cd /usr/local
+  # tar zxf /home/enrique/axiom-fedora9-sept2008-bin.tgz
+  # ls axiom/mnt
+  fedora9
+  # EXPORT AXIOM=/usr/local/axiom/mnt/fedora9
+  # PATH=$AXIOM/bin:$PATH
+  # axiom
+
+I also tried to run as non-root user, after again setting AXIOM and
+PATH, and exporting. The program terminated after the above output, with
+exit status 0.
+
+I then tried to get a glimpse of what was happening. I used "strace to
+track all system calls. Unfortunately, it failed in a way I have never
+seen before:
+
+  $ strace -f -o /tmp/axiom.strace axiom
+  resume: ptrace(PTRACE_SYSCALL, ...): No such process
+  resume: ptrace(PTRACE_SYSCALL, ...): No such process
+  PANIC: attached pid 31124 exited
+  resume: ptrace(PTRACE_SYSCALL, ...): No such process
+  (HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+  (HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+  (HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+  (HyperDoc) Cannot load font -adobe-courier-bold-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+  (HyperDoc) Cannot load font -adobe-courier-bold-o-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+  (HyperDoc) Cannot load font -adobe-courier-medium-o-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+  (HyperDoc) Cannot load font -adobe-courier-bold-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+  resume: ptrace(PTRACE_SYSCALL, ...): No such process
+
+and this time the process did not terminate. From a different terminal,
+I found the following processes:
+
+  # ps -t pts/2
+    PID TTY          TIME CMD
+  30583 pts/2    00:00:00 bash
+  31120 pts/2    00:00:00 strace
+  31121 pts/2    00:00:00 sman
+  31127 pts/2    00:00:00 session
+  31128 pts/2    00:00:00 clef
+  31129 pts/2    00:00:00 hypertex
+  31131 pts/2    00:00:00 viewman
+  31132 pts/2    00:00:00 sman <defunct>
+
+yet the output file from strace contains no output concerning any other
+processes than the first 'sman' process, 31121 (except the clone calls
+that create the subprocesses).
+
+I could not see that X had any related clients:
+
+  # xlsclients
+  apeiron.home.lan  gnome-session
+  apeiron.home.lan  gnome-settings-daemon
+  apeiron.home.lan  gnome-screensaver
+  apeiron.home.lan  metacity
+  apeiron.home.lan  gnome-panel
+  apeiron.home.lan  nautilus
+  apeiron.home.lan  bluetooth-applet
+  apeiron.home.lan  gnome-user-share
+  apeiron.home.lan  nm-applet
+  apeiron.home.lan  gnome-power-manager
+  apeiron.home.lan  pam-panel-icon
+  apeiron.home.lan  applet.py
+  apeiron.home.lan  trashapplet
+  apeiron.home.lan  wnck-applet
+  apeiron.home.lan  notification-area-applet
+  apeiron.home.lan  mixer_applet2
+  apeiron.home.lan  clock-applet
+  apeiron.home.lan  Tomboy
+  apeiron.home.lan  gnome-terminal
+  apeiron.home.lan  evolution-alarm-notify
+  apeiron.home.lan  notification-daemon
+  apeiron.home.lan  evolution
+  apeiron.home.lan  firefox
+
+I tried to attach to any of the processes with strace, but got 
+
+  attach: ptrace(PTRACE_ATTACH, ...): Operation not permitted
+
+Could it be that sman does itself ptrace its children?
+
+
+Then I did "kill -9" on all processes.  A new message has appeared in
+the terminal window where I started axiom:
+
+  (HyperDoc) Error opening AXIOM server. Retrying ...
+
+I don't know if that message came before doing the kill.
+
+Where do I go from here?
+
+
+
+
+From MAILER-DAEMON Mon Oct 27 09:50:45 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KuSUX-0001pb-GE
+	for mharc-axiom-mail@gnu.org; Mon, 27 Oct 2008 09:50:45 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KuSUV-0001oi-CI
+	for axiom-mail@nongnu.org; Mon, 27 Oct 2008 09:50:43 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KuSUT-0001o6-Lp
+	for axiom-mail@nongnu.org; Mon, 27 Oct 2008 09:50:43 -0400
+Received: from [199.232.76.173] (port=43633 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KuSUT-0001o1-FF
+	for axiom-mail@nongnu.org; Mon, 27 Oct 2008 09:50:41 -0400
+Received: from ppsw-5.csi.cam.ac.uk ([131.111.8.135]:44563)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <dch24@hermes.cam.ac.uk>) id 1KuSUT-00088C-4y
+	for axiom-mail@nongnu.org; Mon, 27 Oct 2008 09:50:41 -0400
+X-Cam-AntiVirus: no malware found
+X-Cam-SpamDetails: not scanned
+X-Cam-ScannerInfo: http://www.cam.ac.uk/cs/email/scanner/
+Received: from lapc-br1-337.maths.private.cam.ac.uk ([172.16.219.81]:37783)
+	by ppsw-5.csi.cam.ac.uk (smtp.hermes.cam.ac.uk [131.111.8.155]:25)
+	with esmtpsa (LOGIN:dch24) (TLSv1:DHE-RSA-AES256-SHA:256)
+	id 1KuSUQ-0003pV-IL (Exim 4.70) for axiom-mail@nongnu.org
+	(return-path <dch24@hermes.cam.ac.uk>); Mon, 27 Oct 2008 13:50:38 +0000
+Date: Mon, 27 Oct 2008 13:50:34 +0000 (GMT)
+From: Dan Hatton <vi5u0-axiom@yahoo.co.uk>
+X-X-Sender: dan@seagull
+To: Axiom Mail <axiom-mail@nongnu.org>
+Subject: Re: [Axiom-mail] Getting started on Fedora9
+In-Reply-To: <1225112527.12106.237.camel@apeiron.home.lan>
+Message-ID: <alpine.LFD.2.00.0810271341410.26901@seagull>
+References: <1225112527.12106.237.camel@apeiron.home.lan>
+User-Agent: Alpine 2.00 (LFD 1167 2008-08-23)
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+Sender: Dan Hatton <dch24@hermes.cam.ac.uk>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 27 Oct 2008 13:50:44 -0000
+
+On Mon, 27 Oct 2008, Enrique Perez-Terron wrote:
+
+> (HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> (HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> (HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> (HyperDoc) Cannot load font -adobe-courier-bold-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> (HyperDoc) Cannot load font -adobe-courier-bold-o-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> (HyperDoc) Cannot load font -adobe-courier-medium-o-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> (HyperDoc) Cannot load font -adobe-courier-bold-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+
+This is a bit of a stab in the dark, but...
+
+Does your system contain a file
+
+/etc/X11/fs/config.rpmnew
+
+?
+
+If so, this indicates that a Fedora upgrade wanted to change your font
+configuration, but didn't, because it was too polite to overwrite your
+existing config.  That happened to me a few months back, and various
+applications started giving error messages very similar to the ones
+you've received from Axiom.  If you're in the same position, you could
+try saving your previous font config with something like
+
+mv /etc/X11/fs/config /etc/X11/fs/config.rpmsave
+
+then implementing the changes Fedora wanted to make with
+
+mv /etc/X11/fs/config.rpmnew /etc/X11/fs/config
+
+You'll probably need to do a
+
+/etc/init.d/xfs restart
+
+to get the changes to take effect.
+
+-- 
+
+HTH,
+
+Dan
+
+<http://www.bib.hatton.btinternet.co.uk/dan/>
+
+
+
+From MAILER-DAEMON Mon Oct 27 23:39:55 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KufQx-00052Y-3s
+	for mharc-axiom-mail@gnu.org; Mon, 27 Oct 2008 23:39:55 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KufQv-00050S-Kr
+	for axiom-mail@nongnu.org; Mon, 27 Oct 2008 23:39:53 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KufQu-0004zR-PG
+	for axiom-mail@nongnu.org; Mon, 27 Oct 2008 23:39:53 -0400
+Received: from [199.232.76.173] (port=45301 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KufQu-0004zO-L6
+	for axiom-mail@nongnu.org; Mon, 27 Oct 2008 23:39:52 -0400
+Received: from av7-2-sn3.vrr.skanova.net ([81.228.9.182]:36926)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <enrio@online.no>) id 1KufQt-0006mZ-Jv
+	for axiom-mail@nongnu.org; Mon, 27 Oct 2008 23:39:52 -0400
+Received: by av7-2-sn3.vrr.skanova.net (Postfix, from userid 502)
+	id 37FDC38BD7; Tue, 28 Oct 2008 04:08:32 +0100 (CET)
+Received: from smtp3-2-sn3.vrr.skanova.net (smtp3-2-sn3.vrr.skanova.net
+	[81.228.9.102]) by av7-2-sn3.vrr.skanova.net (Postfix) with ESMTP
+	id 1707537E90; Tue, 28 Oct 2008 04:08:32 +0100 (CET)
+Received: from [192.168.0.2] (81-236-14-221-no26.tbcn.telia.com
+	[81.236.14.221])
+	by smtp3-2-sn3.vrr.skanova.net (Postfix) with ESMTP id 3199C37E45;
+	Tue, 28 Oct 2008 04:39:49 +0100 (CET)
+Subject: Re: [Axiom-mail] Getting started on Fedora9
+From: Enrique Perez-Terron <enrio@online.no>
+To: Dan Hatton <vi5u0-axiom@yahoo.co.uk>
+In-Reply-To: <alpine.LFD.2.00.0810271341410.26901@seagull>
+References: <1225112527.12106.237.camel@apeiron.home.lan>
+	<alpine.LFD.2.00.0810271341410.26901@seagull>
+Content-Type: text/plain
+Date: Tue, 28 Oct 2008 04:39:48 +0100
+Message-Id: <1225165188.12106.305.camel@apeiron.home.lan>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.22.3.1 (2.22.3.1-1.fc9) 
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.4-2.6
+Cc: Axiom Mail <axiom-mail@nongnu.org>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 28 Oct 2008 03:39:53 -0000
+
+On Mon, 2008-10-27 at 13:50 +0000, Dan Hatton wrote:
+> On Mon, 27 Oct 2008, Enrique Perez-Terron wrote:
+> 
+> > (HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> > (HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> > (HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> > (HyperDoc) Cannot load font -adobe-courier-bold-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> > (HyperDoc) Cannot load font -adobe-courier-bold-o-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> > (HyperDoc) Cannot load font -adobe-courier-medium-o-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> > (HyperDoc) Cannot load font -adobe-courier-bold-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+> 
+> This is a bit of a stab in the dark, but...
+> 
+> Does your system contain a file
+> 
+> /etc/X11/fs/config.rpmnew
+> 
+> ?
+
+Hey, I did not even have xfs installed at all. I did not know that I did
+not have it. So I thought you had a very good point. Thanks!
+
+But after installing, the only change was that now the number of error
+messages was reduced:
+
+(HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+(HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+(HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
+
+Then I checked if xfs was listening on a tcp port, and it was not. (Of
+course.) But just to make sure, I enabled the tcp port and restarted the
+xfs daemon. This time, all seven error messages were present.  No joy.
+
+Next I came to think of the old program xlsfonts.
+
+Ha! I have the unicode version:
+
+  -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso10646-1
+
+but not iso8859.
+
+Some old memories came trickling back... xfs is quite obsolete these
+days. I stopped xfs, and ran xlsfonts again. All the same fonts as
+before are present.
+
+So thanks again, I may well be on the track now. I just have to find out
+how to have my system offer some iso8859 fonts.
+
+Ugh, I already have that also, only not in size 18:
+
+  $ xlsfonts | grep adobe-courier.\*8859
+  -adobe-courier-bold-o-normal--11-80-100-100-m-60-iso8859-1
+  -adobe-courier-bold-o-normal--14-100-100-100-m-90-iso8859-1
+  -adobe-courier-bold-o-normal--17-120-100-100-m-100-iso8859-1
+  -adobe-courier-bold-o-normal--20-140-100-100-m-110-iso8859-1
+  -adobe-courier-bold-o-normal--25-180-100-100-m-150-iso8859-1
+  -adobe-courier-bold-o-normal--34-240-100-100-m-200-iso8859-1
+  -adobe-courier-bold-r-normal--11-80-100-100-m-60-iso8859-1
+  -adobe-courier-bold-r-normal--14-100-100-100-m-90-iso8859-1
+  -adobe-courier-bold-r-normal--17-120-100-100-m-100-iso8859-1
+  -adobe-courier-bold-r-normal--20-140-100-100-m-110-iso8859-1
+  -adobe-courier-bold-r-normal--25-180-100-100-m-150-iso8859-1
+  -adobe-courier-bold-r-normal--34-240-100-100-m-200-iso8859-1
+  -adobe-courier-medium-o-normal--11-80-100-100-m-60-iso8859-1
+  -adobe-courier-medium-o-normal--14-100-100-100-m-90-iso8859-1
+  -adobe-courier-medium-o-normal--17-120-100-100-m-100-iso8859-1
+  -adobe-courier-medium-o-normal--20-140-100-100-m-110-iso8859-1
+  -adobe-courier-medium-o-normal--25-180-100-100-m-150-iso8859-1
+  -adobe-courier-medium-o-normal--34-240-100-100-m-200-iso8859-1
+  -adobe-courier-medium-r-normal--11-80-100-100-m-60-iso8859-1
+  -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1
+  -adobe-courier-medium-r-normal--17-120-100-100-m-100-iso8859-1
+  -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
+  -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
+  -adobe-courier-medium-r-normal--34-240-100-100-m-200-iso8859-1
+
+OK, now I have looked in the source, and found that hyperdoc accepts
+font settings in .Xdefaults, and I have set all the font variables to 17
+pixels instead of 18.
+
+This time there are no error messages, but still no window!!
+
+I have now tried to make a new axiom from the source corresponding to
+the binary tar file, but it does not build. I appears to have a couple
+of problems, which seem to originate in the "configure" script in the
+common lisp source tree. The makefile writes a shell script that tries
+to "exec" a directory.  There should have been a program name after that
+directory, but the Make variable has not been set. The configure script
+has code to set this variable....
+
+Perhaps the source tarball was not correctly cleaned. There also appears
+to be some leftovers from a debian customization.  It is not likely that
+debian files and patches should be present in a tarball prepared for
+Fedora.
+
+I guess I will return to this next week or so. 
+
+Thanks anyway.
+
+-Enrique
+
+
+
+

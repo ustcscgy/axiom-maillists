@@ -1,0 +1,1696 @@
+From MAILER-DAEMON Mon Apr 06 21:55:24 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Lr0X6-0001Pr-K6
+	for mharc-axiom-mail@gnu.org; Mon, 06 Apr 2009 21:55:24 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Lr0X4-0001Ly-Ic
+	for axiom-mail@nongnu.org; Mon, 06 Apr 2009 21:55:22 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Lr0Wz-0001AW-7m
+	for axiom-mail@nongnu.org; Mon, 06 Apr 2009 21:55:21 -0400
+Received: from [199.232.76.173] (port=34508 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Lr0Wz-0001AH-2n
+	for axiom-mail@nongnu.org; Mon, 06 Apr 2009 21:55:17 -0400
+Received: from mailhub4.uq.edu.au ([130.102.149.131]:60010)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <s.blomberg1@uq.edu.au>) id 1Lr0Wy-0007QT-72
+	for axiom-mail@nongnu.org; Mon, 06 Apr 2009 21:55:16 -0400
+Received: from smtp4.uq.edu.au (smtp4.uq.edu.au [130.102.128.19])
+	by mailhub4.uq.edu.au (8.13.8/8.13.8) with ESMTP id n371t9GB021701
+	for <axiom-mail@nongnu.org>; Tue, 7 Apr 2009 11:55:09 +1000
+Received: from uqexav02.soe.uq.edu.au (uqexav02.soe.uq.edu.au [130.102.4.249])
+	by smtp4.uq.edu.au (8.13.8/8.13.8) with ESMTP id n371tAqu005712
+	for <axiom-mail@nongnu.org>; Tue, 7 Apr 2009 11:55:10 +1000
+Received: from UQEXMB2.soe.uq.edu.au ([130.102.4.225]) by
+	uqexav02.soe.uq.edu.au with Microsoft SMTPSVC(6.0.3790.1830); 
+	Tue, 7 Apr 2009 11:55:07 +1000
+X-MimeOLE: Produced By Microsoft Exchange V6.5
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C9B723.DC53EDCA"
+Date: Tue, 7 Apr 2009 11:55:00 +1000
+Message-ID: <DE3D1F203DAF7A4CB259560D2801DF8B3B2B82@UQEXMB2.soe.uq.edu.au>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+thread-topic: Programming with BTREEs.
+thread-index: Acm3I9xTe3VgwwrMSpGhDecqPjdzdQ==
+From: "Simon Blomberg" <s.blomberg1@uq.edu.au>
+To: <axiom-mail@nongnu.org>
+X-OriginalArrivalTime: 07 Apr 2009 01:55:07.0546 (UTC)
+	FILETIME=[E0871FA0:01C9B723]
+X-UQ-FilterTime: 1239069310
+X-Scanned-By: MIMEDefang 2.58 on UQ Mailhub on 130.102.149.131
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Subject: [Axiom-mail] Programming with BTREEs.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Apr 2009 01:55:22 -0000
+
+This is a multi-part message in MIME format.
+
+------_=_NextPart_001_01C9B723.DC53EDCA
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+I sent a message asking for help a couple of weeks ago. Thanks to those =
+who responded. I have a more concrete question:
+
+I am trying to write a simple recursive function to build binary trees =
+from a List object. My test tree is the following:
+
+treeList :=3D [e,[5,1],[[a,[1,1],b], [1,1], [c,[1,2],d]]]
+
+Each nested level contains a list of three elements, which are to become =
+the left branch, value, and right branch of the tree, respectively. For =
+internal nodes, the value of the tree is a two-element list representing =
+the left- and right branch lengths. The leaves of the tree are to be =
+binary trees with a Symbol as the value (a to e) and empty left - and =
+right branches. Here is my code:
+
+buildTree(lst: List Any):BTREE(Any) =3D=3D binaryTree(buildTree(lst.1), =
+lst.2, buildTree(lst.3))
+buildTree(val:Symbol):BTREE(Any)  =3D=3D binaryTree(val)
+
+However, calling buildTree(treeList) doesn't work. The second rule =
+overwrites the first rule, even though the arguments are of different =
+types. I'm still getting my head around how types are specified in =
+Axiom, so any assistance would be greatly valued.
+
+Thanks in advance,
+
+Simon.
+
+Simon Blomberg, BSc (Hons), PhD, MAppStat.=20
+Lecturer and Consultant Statistician=20
+School of Biological Sciences
+The University of Queensland=20
+St. Lucia Queensland 4072=20
+Australia=20
+T: +61 7 3365 2506=20
+email: S.Blomberg1_at_uq.edu.au
+http://www.uq.edu.au/~uqsblomb/
+
+Policies:
+1.  I will NOT analyse your data for you.
+2.  Your deadline is your problem.
+
+The combination of some data and an aching desire for=20
+an answer does not ensure that a reasonable answer can=20
+be extracted from a given body of data. - John Tukey.
+
+
+------_=_NextPart_001_01C9B723.DC53EDCA
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Diso-8859-1">
+<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
+6.5.7654.12">
+<TITLE>Programming with BTREEs.</TITLE>
+</HEAD>
+<BODY>
+<!-- Converted from text/plain format -->
+
+<P><FONT SIZE=3D2>Hi,<BR>
+<BR>
+I sent a message asking for help a couple of weeks ago. Thanks to those =
+who responded. I have a more concrete question:<BR>
+<BR>
+I am trying to write a simple recursive function to build binary trees =
+from a List object. My test tree is the following:<BR>
+<BR>
+treeList :=3D [e,[5,1],[[a,[1,1],b], [1,1], [c,[1,2],d]]]<BR>
+<BR>
+Each nested level contains a list of three elements, which are to become =
+the left branch, value, and right branch of the tree, respectively. For =
+internal nodes, the value of the tree is a two-element list representing =
+the left- and right branch lengths. The leaves of the tree are to be =
+binary trees with a Symbol as the value (a to e) and empty left - and =
+right branches. Here is my code:<BR>
+<BR>
+buildTree(lst: List Any):BTREE(Any) =3D=3D binaryTree(buildTree(lst.1), =
+lst.2, buildTree(lst.3))<BR>
+buildTree(val:Symbol):BTREE(Any)&nbsp; =3D=3D binaryTree(val)<BR>
+<BR>
+However, calling buildTree(treeList) doesn't work. The second rule =
+overwrites the first rule, even though the arguments are of different =
+types. I'm still getting my head around how types are specified in =
+Axiom, so any assistance would be greatly valued.<BR>
+<BR>
+Thanks in advance,<BR>
+<BR>
+Simon.<BR>
+<BR>
+Simon Blomberg, BSc (Hons), PhD, MAppStat.<BR>
+Lecturer and Consultant Statistician<BR>
+School of Biological Sciences<BR>
+The University of Queensland<BR>
+St. Lucia Queensland 4072<BR>
+Australia<BR>
+T: +61 7 3365 2506<BR>
+email: S.Blomberg1_at_uq.edu.au<BR>
+<A =
+HREF=3D"http://www.uq.edu.au/~uqsblomb/">http://www.uq.edu.au/~uqsblomb/<=
+/A><BR>
+<BR>
+Policies:<BR>
+1.&nbsp; I will NOT analyse your data for you.<BR>
+2.&nbsp; Your deadline is your problem.<BR>
+<BR>
+The combination of some data and an aching desire for<BR>
+an answer does not ensure that a reasonable answer can<BR>
+be extracted from a given body of data. - John Tukey.<BR>
+<BR>
+</FONT>
+</P>
+
+</BODY>
+</HTML>
+------_=_NextPart_001_01C9B723.DC53EDCA--
+
+
+
+From MAILER-DAEMON Tue Apr 07 00:01:47 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Lr2VP-0003aX-7D
+	for mharc-axiom-mail@gnu.org; Tue, 07 Apr 2009 00:01:47 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Lr2VN-0003Z3-VA
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 00:01:46 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Lr2VN-0003YN-9M
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 00:01:45 -0400
+Received: from [199.232.76.173] (port=47464 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Lr2VN-0003YI-4M
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 00:01:45 -0400
+Received: from yx-out-1718.google.com ([74.125.44.152]:58424)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1Lr2VM-0000oQ-Hb
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 00:01:44 -0400
+Received: by yx-out-1718.google.com with SMTP id 34so1509604yxf.82
+	for <axiom-mail@nongnu.org>; Mon, 06 Apr 2009 21:01:42 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.150.218.10 with SMTP id q10mr5033686ybg.15.1239076902500; Mon, 
+	06 Apr 2009 21:01:42 -0700 (PDT)
+In-Reply-To: <DE3D1F203DAF7A4CB259560D2801DF8B3B2B82@UQEXMB2.soe.uq.edu.au>
+References: <DE3D1F203DAF7A4CB259560D2801DF8B3B2B82@UQEXMB2.soe.uq.edu.au>
+Date: Tue, 7 Apr 2009 00:01:42 -0400
+Message-ID: <fbcd16d40904062101w5a7b786erce7774aa356e13b1@mail.gmail.com>
+Subject: Re: [Axiom-mail] Programming with BTREEs.
+From: Bill Page <bill.page@newsynthesis.org>
+To: Simon Blomberg <s.blomberg1@uq.edu.au>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Apr 2009 04:01:46 -0000
+
+Simon,
+
+Here is one solution:
+
+(1) -> )r treelist.input
+
+buildTree(lst:List Any):BTREE(Any) =3D=3D binaryTree( _
+    (car dom(lst.1)=3D'List::SExpression =3D> buildTree(lst.1); _
+     binaryTree(lst.1)),_
+    lst.2,_
+    (car dom(lst.3)=3D'List::SExpression =3D> buildTree(lst.3);_
+    binaryTree(lst.3)))
+
+   Function declaration buildTree : List Any -> BinaryTree Any has been
+      added to workspace.
+                                                    Type: Void
+
+(2) -> treeList :=3D [e,[5,1],[[a,[1,1],b], [1,1], [c,[1,2],d]]]
+
+   (2)  [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]
+                                                    Type: List Any
+
+(3) -> buildTree(treeList)
+
+   (3)  [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]
+                                                     Type: BinaryTree Any
+
+---
+
+'Any' is a very special type in Axiom. It is probably not a good place
+to start to learn about types - or maybe it is if you can tolerate the
+complexity of this answer :-)
+
+Explanation:
+
+Overloaded function names are not supported in the Axiom interpreter.
+They are only available when writing in the library compiler language
+called SPAD. But even if you wrote in SPAD, the function as you wrote
+it originally would not work because in SPAD, types are static - that
+is they are decided at the time you compile the program, not at the
+time you run it. What you wrote requires dynamic type.
+
+The type 'Any' is used to dynamically encapsulate values of any type
+as a single type and that way avoid much of the type-checking
+mechanism that would otherwise make this sort of routine rather
+awkward. It is sometimes referred to in computer science literature as
+"duck typing".
+
+There are several ways to query the real type of the value
+encapsulated as a value of type Any. This can be done by the function
+'dom' which returns something in "Lisp form" called an s-expression.
+In the case of a value of type List, the first component of the
+s-expression (obtained by the function 'car') is the literal symbol
+List.
+
+The way to read the expression:
+
+    (car dom(lst.1)=3D'List::SExpression =3D> buildTree(lst.1); _
+     binaryTree(lst.1)),_
+
+is:
+
+   Check if the first item in lst is a List.
+   If it is, call 'buildTree' recursively with the value.
+   Otherwise call 'binaryTree' with the value.
+
+Ref:
+
+(4) -> )show Any
+(4) -> )show SExpression
+
+Regards,
+Bill Page.
+
+On Mon, Apr 6, 2009 at 9:55 PM, Simon Blomberg <s.blomberg1@uq.edu.au> wrot=
+e:
+> Hi,
+>
+> I sent a message asking for help a couple of weeks ago. Thanks to those w=
+ho
+> responded. I have a more concrete question:
+>
+> I am trying to write a simple recursive function to build binary trees fr=
+om
+> a List object. My test tree is the following:
+>
+> treeList :=3D [e,[5,1],[[a,[1,1],b], [1,1], [c,[1,2],d]]]
+>
+> Each nested level contains a list of three elements, which are to become =
+the
+> left branch, value, and right branch of the tree, respectively. For inter=
+nal
+> nodes, the value of the tree is a two-element list representing the left-
+> and right branch lengths. The leaves of the tree are to be binary trees w=
+ith
+> a Symbol as the value (a to e) and empty left - and right branches. Here =
+is
+> my code:
+>
+> buildTree(lst: List Any):BTREE(Any) =3D=3D binaryTree(buildTree(lst.1), l=
+st.2,
+> buildTree(lst.3))
+> buildTree(val:Symbol):BTREE(Any)=A0 =3D=3D binaryTree(val)
+>
+> However, calling buildTree(treeList) doesn't work. The second rule
+> overwrites the first rule, even though the arguments are of different typ=
+es.
+> I'm still getting my head around how types are specified in Axiom, so any
+> assistance would be greatly valued.
+>
+> Thanks in advance,
+>
+> Simon.
+>
+> Simon Blomberg, BSc (Hons), PhD, MAppStat.
+> Lecturer and Consultant Statistician
+> School of Biological Sciences
+> The University of Queensland
+> St. Lucia Queensland 4072
+> Australia
+> T: +61 7 3365 2506
+> email: S.Blomberg1_at_uq.edu.au
+> http://www.uq.edu.au/~uqsblomb/
+>
+> Policies:
+> 1.=A0 I will NOT analyse your data for you.
+> 2.=A0 Your deadline is your problem.
+>
+> The combination of some data and an aching desire for
+> an answer does not ensure that a reasonable answer can
+> be extracted from a given body of data. - John Tukey.
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>
+
+
+
+From MAILER-DAEMON Tue Apr 07 02:13:25 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Lr4Yn-0004Q7-Hn
+	for mharc-axiom-mail@gnu.org; Tue, 07 Apr 2009 02:13:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Lr4Yl-0004Pm-Cq
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 02:13:23 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Lr4Yg-0004Ju-8o
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 02:13:23 -0400
+Received: from [199.232.76.173] (port=58170 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Lr4Yg-0004Jq-55
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 02:13:18 -0400
+Received: from mailhub4.uq.edu.au ([130.102.149.131]:38629)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <s.blomberg1@uq.edu.au>) id 1Lr4Ye-0004uq-85
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 02:13:18 -0400
+Received: from smtp4.uq.edu.au (smtp4.uq.edu.au [130.102.128.19])
+	by mailhub4.uq.edu.au (8.13.8/8.13.8) with ESMTP id n376BIk7010138;
+	Tue, 7 Apr 2009 16:11:18 +1000
+Received: from uqexav02.soe.uq.edu.au (uqexav02.soe.uq.edu.au [130.102.4.249])
+	by smtp4.uq.edu.au (8.13.8/8.13.8) with ESMTP id n376BIoU022567;
+	Tue, 7 Apr 2009 16:11:18 +1000
+Received: from UQEXMB2.soe.uq.edu.au ([130.102.4.225]) by
+	uqexav02.soe.uq.edu.au with Microsoft SMTPSVC(6.0.3790.1830); 
+	Tue, 7 Apr 2009 16:11:18 +1000
+X-MimeOLE: Produced By Microsoft Exchange V6.5
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C9B747.AA3D9FA7"
+Subject: RE: [Axiom-mail] Programming with BTREEs.
+Date: Tue, 7 Apr 2009 16:11:18 +1000
+Message-ID: <DE3D1F203DAF7A4CB259560D2801DF8B3B2B84@UQEXMB2.soe.uq.edu.au>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+thread-topic: [Axiom-mail] Programming with BTREEs.
+thread-index: Acm3NZJFEz9Vv8y5T4qQt68Fa+FxyQAEVkJF
+References: <DE3D1F203DAF7A4CB259560D2801DF8B3B2B82@UQEXMB2.soe.uq.edu.au>
+	<fbcd16d40904062101w5a7b786erce7774aa356e13b1@mail.gmail.com>
+From: "Simon Blomberg" <s.blomberg1@uq.edu.au>
+To: "Bill Page" <bill.page@newsynthesis.org>
+X-OriginalArrivalTime: 07 Apr 2009 06:11:18.0109 (UTC)
+	FILETIME=[AA18E8D0:01C9B747]
+X-UQ-FilterTime: 1239084679
+X-Scanned-By: MIMEDefang 2.58 on UQ Mailhub on 130.102.149.131
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Apr 2009 06:13:23 -0000
+
+This is a multi-part message in MIME format.
+
+------_=_NextPart_001_01C9B747.AA3D9FA7
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Bill,
+
+Thanks for that! I really needed to know about dom. Many years ago, I =
+used XLisp-Stat as my primary programming platform, so I am used to car, =
+cdr and friends. I have a question. In your code there is the clause:
+
+car dom(lst.1)=3D'List::SExpression
+
+When and how does this get evaluated? When I type it in to the =
+interpreter, I get:=20
+
+(21) -> car dom(treeList.1) =3D 'List::SExpression
+
+   (21)  Variable=3D List
+
+Which does not get evaluated to a Boolean False. What gives? I think I =
+understand the rest of your code. Thanks again.
+
+Simon.
+
+Simon Blomberg, BSc (Hons), PhD, MAppStat.=20
+Lecturer and Consultant Statistician=20
+School of Biological Sciences
+The University of Queensland=20
+St. Lucia Queensland 4072=20
+Australia=20
+T: +61 7 3365 2506=20
+email: S.Blomberg1_at_uq.edu.au
+http://www.uq.edu.au/~uqsblomb/
+
+Policies:
+1.  I will NOT analyse your data for you.
+2.  Your deadline is your problem.
+
+The combination of some data and an aching desire for=20
+an answer does not ensure that a reasonable answer can=20
+be extracted from a given body of data. - John Tukey.
+
+
+
+-----Original Message-----
+From: Bill Page [mailto:bill.page@newsynthesis.org]
+Sent: Tue 7/04/2009 2:01 PM
+To: Simon Blomberg
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Programming with BTREEs.
+=20
+Simon,
+
+Here is one solution:
+
+(1) -> )r treelist.input
+
+buildTree(lst:List Any):BTREE(Any) =3D=3D binaryTree( _
+    (car dom(lst.1)=3D'List::SExpression =3D> buildTree(lst.1); _
+     binaryTree(lst.1)),_
+    lst.2,_
+    (car dom(lst.3)=3D'List::SExpression =3D> buildTree(lst.3);_
+    binaryTree(lst.3)))
+
+   Function declaration buildTree : List Any -> BinaryTree Any has been
+      added to workspace.
+                                                    Type: Void
+
+(2) -> treeList :=3D [e,[5,1],[[a,[1,1],b], [1,1], [c,[1,2],d]]]
+
+   (2)  [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]
+                                                    Type: List Any
+
+(3) -> buildTree(treeList)
+
+   (3)  [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]
+                                                     Type: BinaryTree =
+Any
+
+---
+
+'Any' is a very special type in Axiom. It is probably not a good place
+to start to learn about types - or maybe it is if you can tolerate the
+complexity of this answer :-)
+
+Explanation:
+
+Overloaded function names are not supported in the Axiom interpreter.
+They are only available when writing in the library compiler language
+called SPAD. But even if you wrote in SPAD, the function as you wrote
+it originally would not work because in SPAD, types are static - that
+is they are decided at the time you compile the program, not at the
+time you run it. What you wrote requires dynamic type.
+
+The type 'Any' is used to dynamically encapsulate values of any type
+as a single type and that way avoid much of the type-checking
+mechanism that would otherwise make this sort of routine rather
+awkward. It is sometimes referred to in computer science literature as
+"duck typing".
+
+There are several ways to query the real type of the value
+encapsulated as a value of type Any. This can be done by the function
+'dom' which returns something in "Lisp form" called an s-expression.
+In the case of a value of type List, the first component of the
+s-expression (obtained by the function 'car') is the literal symbol
+List.
+
+The way to read the expression:
+
+    (car dom(lst.1)=3D'List::SExpression =3D> buildTree(lst.1); _
+     binaryTree(lst.1)),_
+
+is:
+
+   Check if the first item in lst is a List.
+   If it is, call 'buildTree' recursively with the value.
+   Otherwise call 'binaryTree' with the value.
+
+Ref:
+
+(4) -> )show Any
+(4) -> )show SExpression
+
+Regards,
+Bill Page.
+
+On Mon, Apr 6, 2009 at 9:55 PM, Simon Blomberg <s.blomberg1@uq.edu.au> =
+wrote:
+> Hi,
+>
+> I sent a message asking for help a couple of weeks ago. Thanks to =
+those who
+> responded. I have a more concrete question:
+>
+> I am trying to write a simple recursive function to build binary trees =
+from
+> a List object. My test tree is the following:
+>
+> treeList :=3D [e,[5,1],[[a,[1,1],b], [1,1], [c,[1,2],d]]]
+>
+> Each nested level contains a list of three elements, which are to =
+become the
+> left branch, value, and right branch of the tree, respectively. For =
+internal
+> nodes, the value of the tree is a two-element list representing the =
+left-
+> and right branch lengths. The leaves of the tree are to be binary =
+trees with
+> a Symbol as the value (a to e) and empty left - and right branches. =
+Here is
+> my code:
+>
+> buildTree(lst: List Any):BTREE(Any) =3D=3D =
+binaryTree(buildTree(lst.1), lst.2,
+> buildTree(lst.3))
+> buildTree(val:Symbol):BTREE(Any)=A0 =3D=3D binaryTree(val)
+>
+> However, calling buildTree(treeList) doesn't work. The second rule
+> overwrites the first rule, even though the arguments are of different =
+types.
+> I'm still getting my head around how types are specified in Axiom, so =
+any
+> assistance would be greatly valued.
+>
+> Thanks in advance,
+>
+> Simon.
+>
+> Simon Blomberg, BSc (Hons), PhD, MAppStat.
+> Lecturer and Consultant Statistician
+> School of Biological Sciences
+> The University of Queensland
+> St. Lucia Queensland 4072
+> Australia
+> T: +61 7 3365 2506
+> email: S.Blomberg1_at_uq.edu.au
+> http://www.uq.edu.au/~uqsblomb/
+>
+> Policies:
+> 1.=A0 I will NOT analyse your data for you.
+> 2.=A0 Your deadline is your problem.
+>
+> The combination of some data and an aching desire for
+> an answer does not ensure that a reasonable answer can
+> be extracted from a given body of data. - John Tukey.
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>
+
+
+------_=_NextPart_001_01C9B747.AA3D9FA7
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Diso-8859-1">
+<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
+6.5.7654.12">
+<TITLE>RE: [Axiom-mail] Programming with BTREEs.</TITLE>
+</HEAD>
+<BODY>
+<!-- Converted from text/plain format -->
+
+<P><FONT SIZE=3D2>Hi Bill,<BR>
+<BR>
+Thanks for that! I really needed to know about dom. Many years ago, I =
+used XLisp-Stat as my primary programming platform, so I am used to car, =
+cdr and friends. I have a question. In your code there is the =
+clause:<BR>
+<BR>
+car dom(lst.1)=3D'List::SExpression<BR>
+<BR>
+When and how does this get evaluated? When I type it in to the =
+interpreter, I get:<BR>
+<BR>
+(21) -&gt; car dom(treeList.1) =3D 'List::SExpression<BR>
+<BR>
+&nbsp;&nbsp; (21)&nbsp; Variable=3D List<BR>
+<BR>
+Which does not get evaluated to a Boolean False. What gives? I think I =
+understand the rest of your code. Thanks again.<BR>
+<BR>
+Simon.<BR>
+<BR>
+Simon Blomberg, BSc (Hons), PhD, MAppStat.<BR>
+Lecturer and Consultant Statistician<BR>
+School of Biological Sciences<BR>
+The University of Queensland<BR>
+St. Lucia Queensland 4072<BR>
+Australia<BR>
+T: +61 7 3365 2506<BR>
+email: S.Blomberg1_at_uq.edu.au<BR>
+<A =
+HREF=3D"http://www.uq.edu.au/~uqsblomb/">http://www.uq.edu.au/~uqsblomb/<=
+/A><BR>
+<BR>
+Policies:<BR>
+1.&nbsp; I will NOT analyse your data for you.<BR>
+2.&nbsp; Your deadline is your problem.<BR>
+<BR>
+The combination of some data and an aching desire for<BR>
+an answer does not ensure that a reasonable answer can<BR>
+be extracted from a given body of data. - John Tukey.<BR>
+<BR>
+<BR>
+<BR>
+-----Original Message-----<BR>
+From: Bill Page [<A =
+HREF=3D"mailto:bill.page@newsynthesis.org">mailto:bill.page@newsynthesis.=
+org</A>]<BR>
+Sent: Tue 7/04/2009 2:01 PM<BR>
+To: Simon Blomberg<BR>
+Cc: axiom-mail@nongnu.org<BR>
+Subject: Re: [Axiom-mail] Programming with BTREEs.<BR>
+<BR>
+Simon,<BR>
+<BR>
+Here is one solution:<BR>
+<BR>
+(1) -&gt; )r treelist.input<BR>
+<BR>
+buildTree(lst:List Any):BTREE(Any) =3D=3D binaryTree( _<BR>
+&nbsp;&nbsp;&nbsp; (car dom(lst.1)=3D'List::SExpression =3D&gt; =
+buildTree(lst.1); _<BR>
+&nbsp;&nbsp;&nbsp;&nbsp; binaryTree(lst.1)),_<BR>
+&nbsp;&nbsp;&nbsp; lst.2,_<BR>
+&nbsp;&nbsp;&nbsp; (car dom(lst.3)=3D'List::SExpression =3D&gt; =
+buildTree(lst.3);_<BR>
+&nbsp;&nbsp;&nbsp; binaryTree(lst.3)))<BR>
+<BR>
+&nbsp;&nbsp; Function declaration buildTree : List Any -&gt; BinaryTree =
+Any has been<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; added to workspace.<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp; Type: Void<BR>
+<BR>
+(2) -&gt; treeList :=3D [e,[5,1],[[a,[1,1],b], [1,1], [c,[1,2],d]]]<BR>
+<BR>
+&nbsp;&nbsp; (2)&nbsp; [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp; Type: List Any<BR>
+<BR>
+(3) -&gt; buildTree(treeList)<BR>
+<BR>
+&nbsp;&nbsp; (3)&nbsp; [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp; Type: BinaryTree Any<BR>
+<BR>
+---<BR>
+<BR>
+'Any' is a very special type in Axiom. It is probably not a good =
+place<BR>
+to start to learn about types - or maybe it is if you can tolerate =
+the<BR>
+complexity of this answer :-)<BR>
+<BR>
+Explanation:<BR>
+<BR>
+Overloaded function names are not supported in the Axiom =
+interpreter.<BR>
+They are only available when writing in the library compiler =
+language<BR>
+called SPAD. But even if you wrote in SPAD, the function as you =
+wrote<BR>
+it originally would not work because in SPAD, types are static - =
+that<BR>
+is they are decided at the time you compile the program, not at the<BR>
+time you run it. What you wrote requires dynamic type.<BR>
+<BR>
+The type 'Any' is used to dynamically encapsulate values of any type<BR>
+as a single type and that way avoid much of the type-checking<BR>
+mechanism that would otherwise make this sort of routine rather<BR>
+awkward. It is sometimes referred to in computer science literature =
+as<BR>
+&quot;duck typing&quot;.<BR>
+<BR>
+There are several ways to query the real type of the value<BR>
+encapsulated as a value of type Any. This can be done by the =
+function<BR>
+'dom' which returns something in &quot;Lisp form&quot; called an =
+s-expression.<BR>
+In the case of a value of type List, the first component of the<BR>
+s-expression (obtained by the function 'car') is the literal symbol<BR>
+List.<BR>
+<BR>
+The way to read the expression:<BR>
+<BR>
+&nbsp;&nbsp;&nbsp; (car dom(lst.1)=3D'List::SExpression =3D&gt; =
+buildTree(lst.1); _<BR>
+&nbsp;&nbsp;&nbsp;&nbsp; binaryTree(lst.1)),_<BR>
+<BR>
+is:<BR>
+<BR>
+&nbsp;&nbsp; Check if the first item in lst is a List.<BR>
+&nbsp;&nbsp; If it is, call 'buildTree' recursively with the value.<BR>
+&nbsp;&nbsp; Otherwise call 'binaryTree' with the value.<BR>
+<BR>
+Ref:<BR>
+<BR>
+(4) -&gt; )show Any<BR>
+(4) -&gt; )show SExpression<BR>
+<BR>
+Regards,<BR>
+Bill Page.<BR>
+<BR>
+On Mon, Apr 6, 2009 at 9:55 PM, Simon Blomberg =
+&lt;s.blomberg1@uq.edu.au&gt; wrote:<BR>
+&gt; Hi,<BR>
+&gt;<BR>
+&gt; I sent a message asking for help a couple of weeks ago. Thanks to =
+those who<BR>
+&gt; responded. I have a more concrete question:<BR>
+&gt;<BR>
+&gt; I am trying to write a simple recursive function to build binary =
+trees from<BR>
+&gt; a List object. My test tree is the following:<BR>
+&gt;<BR>
+&gt; treeList :=3D [e,[5,1],[[a,[1,1],b], [1,1], [c,[1,2],d]]]<BR>
+&gt;<BR>
+&gt; Each nested level contains a list of three elements, which are to =
+become the<BR>
+&gt; left branch, value, and right branch of the tree, respectively. For =
+internal<BR>
+&gt; nodes, the value of the tree is a two-element list representing the =
+left-<BR>
+&gt; and right branch lengths. The leaves of the tree are to be binary =
+trees with<BR>
+&gt; a Symbol as the value (a to e) and empty left - and right branches. =
+Here is<BR>
+&gt; my code:<BR>
+&gt;<BR>
+&gt; buildTree(lst: List Any):BTREE(Any) =3D=3D =
+binaryTree(buildTree(lst.1), lst.2,<BR>
+&gt; buildTree(lst.3))<BR>
+&gt; buildTree(val:Symbol):BTREE(Any)=A0 =3D=3D binaryTree(val)<BR>
+&gt;<BR>
+&gt; However, calling buildTree(treeList) doesn't work. The second =
+rule<BR>
+&gt; overwrites the first rule, even though the arguments are of =
+different types.<BR>
+&gt; I'm still getting my head around how types are specified in Axiom, =
+so any<BR>
+&gt; assistance would be greatly valued.<BR>
+&gt;<BR>
+&gt; Thanks in advance,<BR>
+&gt;<BR>
+&gt; Simon.<BR>
+&gt;<BR>
+&gt; Simon Blomberg, BSc (Hons), PhD, MAppStat.<BR>
+&gt; Lecturer and Consultant Statistician<BR>
+&gt; School of Biological Sciences<BR>
+&gt; The University of Queensland<BR>
+&gt; St. Lucia Queensland 4072<BR>
+&gt; Australia<BR>
+&gt; T: +61 7 3365 2506<BR>
+&gt; email: S.Blomberg1_at_uq.edu.au<BR>
+&gt; <A =
+HREF=3D"http://www.uq.edu.au/~uqsblomb/">http://www.uq.edu.au/~uqsblomb/<=
+/A><BR>
+&gt;<BR>
+&gt; Policies:<BR>
+&gt; 1.=A0 I will NOT analyse your data for you.<BR>
+&gt; 2.=A0 Your deadline is your problem.<BR>
+&gt;<BR>
+&gt; The combination of some data and an aching desire for<BR>
+&gt; an answer does not ensure that a reasonable answer can<BR>
+&gt; be extracted from a given body of data. - John Tukey.<BR>
+&gt;<BR>
+&gt;<BR>
+&gt; _______________________________________________<BR>
+&gt; Axiom-mail mailing list<BR>
+&gt; Axiom-mail@nongnu.org<BR>
+&gt; <A =
+HREF=3D"http://lists.nongnu.org/mailman/listinfo/axiom-mail">http://lists=
+.nongnu.org/mailman/listinfo/axiom-mail</A><BR>
+&gt;<BR>
+&gt;<BR>
+<BR>
+</FONT>
+</P>
+
+</BODY>
+</HTML>
+------_=_NextPart_001_01C9B747.AA3D9FA7--
+
+
+
+From MAILER-DAEMON Tue Apr 07 08:19:59 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LrAHW-0000Zf-1N
+	for mharc-axiom-mail@gnu.org; Tue, 07 Apr 2009 08:19:58 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LrAHP-0000Xq-3Q
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 08:19:52 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LrAHJ-0000V0-R7
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 08:19:49 -0400
+Received: from [199.232.76.173] (port=55391 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LrAHI-0000U7-8g
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 08:19:44 -0400
+Received: from mo-p05-ob.rzone.de ([81.169.146.181]:53614)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1LrAHH-0000VB-Kg
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 08:19:44 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; t=1239106781; l=4906;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:CC:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=OPHvCqn2LwP4ZNdNtLEFKBceKXRrlsaIWWcOhJ0H89w=;
+	b=ZPjigpZdcFm/2VR5GCWw2J1+XLzihbrhpwXyKR2uwAPBS7idmmxawcB0+zfPPsGNtsy
+	llgwjmIoWop/VFsk6MfbypxGYaM4qF2YUTGn3Yy1Q+HwEu3NE9YZM5jYSYFM+FKKeGJO2
+	Mos3JNHYOeTY39bseOT4pEEln2SZQyLxGX0=
+X-RZG-AUTH: :Pm0IcwWgfvKNhyTiA5K9aSc1pwDnmpaKQTqQszbwOAxYBAKGS3+FyCi9EANtaw==
+X-RZG-CLASS-ID: mo05
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (klopstock mo63) (RZmta 18.28)
+	with DHE-RSA-AES128-SHA encrypted ESMTP id 20633al37C2qAX ;
+	Tue, 7 Apr 2009 14:18:52 +0200 (MEST)
+Message-ID: <49DB44AB.5060506@hemmecke.de>
+Date: Tue, 07 Apr 2009 14:18:51 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.19 (X11/20090105)
+MIME-Version: 1.0
+To: Simon Blomberg <s.blomberg1@uq.edu.au>
+Subject: Re: [Axiom-mail] Programming with BTREEs.
+References: <DE3D1F203DAF7A4CB259560D2801DF8B3B2B82@UQEXMB2.soe.uq.edu.au>
+In-Reply-To: <DE3D1F203DAF7A4CB259560D2801DF8B3B2B82@UQEXMB2.soe.uq.edu.au>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: fricas-devel <fricas-devel@googlegroups.com>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Apr 2009 12:19:54 -0000
+
+> I sent a message asking for help a couple of weeks ago. Thanks to those 
+> who responded. I have a more concrete question:
+> 
+> I am trying to write a simple recursive function to build binary trees 
+> from a List object. My test tree is the following:
+> 
+> treeList := [e,[5,1],[[a,[1,1],b], [1,1], [c,[1,2],d]]]
+
+> Each nested level contains a list of three elements, which are to become 
+> the left branch, value, and right branch of the tree, respectively. For 
+> internal nodes, the value of the tree is a two-element list representing 
+> the left- and right branch lengths. The leaves of the tree are to be 
+> binary trees with a Symbol as the value (a to e) and empty left - and 
+> right branches.
+
+You've already described your tree quite nicely. You have already given 
+all the types that are needed. So, in fact, it would be a relatively 
+simple task to generate an appropriate tree structure. I said 
+'relatively', because it is not totally trivial.
+
+But first my question: do you really want that?
+Is it necessary that you put the branch length into the tree?
+Why are they there and what are they useful for?
+Translating your treeList into a picture gives
+
+       [5,1]
+      /     \
+     e     [1,1]
+          /     \
+         /       \
+        /         \
+     [1,1]       [1,2]
+    /     \     /     \
+   a       b   c       d
+
+I don't see why there is 5 and 2 in the tree, I cannot connect them to 
+lengths.
+
+Next question... Do you really want to convert from these very untyped 
+list of list of list .... structures to binary trees? Why don't you 
+input your tree correctly in the first place?
+
+My assumption now is that you sit in front of your computer and want to 
+construct such a tree structure manually.
+
+OK, let it be that way that you have lists as your internal nodes and 
+symbols as your leaves. Let us now (imperfectly) model your data 
+structure. (I said "imperfectly", because what follows below allows to 
+construct trees whose nodes completely consist of symbols or whose 
+leaves are lists of integers of length different from 2. If you really 
+want to model your tree with internal leaves being pairs of integers and 
+leaves being symbols and no mixtures allowed, you have to invest a bit 
+more time and do some programming.)
+
+First, the type of your nodes is (as you would have guessed):
+
+N := Union(Symbol, List Integer)
+
+Then your tree structure is
+
+BT := BinaryTree N
+
+now to make the input a bit shorter, we introduce a shortcut.
+
+B ==> binaryTree  -- the 3-argument version
+V ==> binaryTree  -- the 1-argument version
+
+Your original tree would then be...
+
+bt:BT:=B(V e,[5,1],B(B(V a,[1,1],V b),[1,1],B(V c,[1,2],V d)))
+
+... which gives....
+
+    (6)  [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]
+                 Type: BinaryTree(Union(Symbol,List(Integer)))
+
+
+Now, of course, you don't want B and V, right? So what now comes is my 
+speculation, but I think it should work since an input like
+
+   [a,b,c,d]
+
+ought to be translated into
+
+   construct(a,b,c,d)
+
+but maybe my knowledge of SPAD is too bad...
+
+S==>Symbol
+L==>List Integer
+construct(x: S, l: L, y: S): BT == binaryTree(V(x::N), l::N, V(y::N))
+bt2: BT := [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]
+
+The last line of this run forever on my computer, but that might be 
+because I run it with fricas (a fork of the axiom project) with sbcl as 
+the underlying lisp.
+
+I hope, I could help you a bit.
+
+My suggestion is: forget about the Any domain. If you encounter it at 
+any point in Axiom then that basically says that the interpreter has 
+lost track of what you actually mean and you might expect trouble later.
+
+Axiom is unconventional since it works better if you think about 
+expected input/output types before you enter anything into the system.
+
+Strong typing is the strength and the weakness of Axiom.
+
+It is good, because, one can handle complex expressions cleanly (for 
+example you can distinguish between a polynomial in x with coefficients 
+being square matrices of size 3x3 and 3x3 matricies with entries being 
+polynomials in x).
+
+It is bad, because it takes quite some time to get used to types and to 
+understand the sometimes not so clear error messages. And it is 
+frustrating that the system sometimes doesn't let you do things that you 
+think would be natural for the expression that you hand to the system.
+
+So I hope you stay with us...
+More questions are welcome.
+
+Ralf
+
+PS: Here are the commands written in an input file that you can load 
+with ")read aaa.input" from the Axiom command line.
+
+---rhxBEGIN aaa.input
+)set messages autoload off
+N := Union(Symbol, List Integer)
+BT := BinaryTree N
+B ==> binaryTree  -- the 3-argument version
+V ==> binaryTree  -- the 1-argument version
+bt:BT := B(V e,[5,1],B(B(V a,[1,1],V b),[1,1],B(V c,[1,2],V d)))
+S==>Symbol
+L==>List Integer
+construct(x: S, l: L, y: S): BT == binaryTree(V(x::N), l::N, V(y::N))
+--bt2: BT := [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]
+---rhxEND aaa.input
+
+
+
+From MAILER-DAEMON Tue Apr 07 08:37:39 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LrAYc-0005z9-Gv
+	for mharc-axiom-mail@gnu.org; Tue, 07 Apr 2009 08:37:39 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LrAYZ-0005yJ-32
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 08:37:35 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LrAYU-0005wT-Vc
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 08:37:34 -0400
+Received: from [199.232.76.173] (port=45698 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LrAYT-0005w8-OH
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 08:37:30 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:41953)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1LrAYT-0002hV-7i
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 08:37:29 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	n37CbHnJ029769; Tue, 7 Apr 2009 14:37:18 +0200
+Sender: rubey@ada0.ifam.uni-hannover.de
+To: fricas-devel@googlegroups.com
+Subject: Re: [fricas-devel] Re: [Axiom-mail] Programming with BTREEs.
+References: <DE3D1F203DAF7A4CB259560D2801DF8B3B2B82@UQEXMB2.soe.uq.edu.au>
+	<49DB44AB.5060506@hemmecke.de>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: 07 Apr 2009 14:37:17 +0200
+In-Reply-To: <49DB44AB.5060506@hemmecke.de>
+Message-ID: <d9eiw44p36.fsf@ada0.ifam.uni-hannover.de>
+Lines: 30
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.4.7.122229
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: Simon Blomberg <s.blomberg1@uq.edu.au>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Apr 2009 12:37:35 -0000
+
+Dear Ralf,
+
+I'm extremely grateful that you answered...
+
+Ralf Hemmecke <ralf@hemmecke.de> writes:
+N := Union(Symbol, List Integer)
+BT := BinaryTree N
+B ==> binaryTree  -- the 3-argument version
+V ==> binaryTree  -- the 1-argument version
+bt:BT:=B(V e,[5,1],B(B(V a,[1,1],V b),[1,1],B(V c,[1,2],V d)))
+
+[...]
+
+S==>Symbol
+L==>List Integer
+construct(x: S, l: L, y: S): BT == binaryTree(V(x::N), l::N, V(y::N))
+bt2: BT := [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]
+
+['a, [1,3], 'b]@BT
+
+works for me
+
+but 
+
+[e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]@BT
+
+cannot work, I think, because the argument types don't match.  You
+will need to allow also binary trees.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Apr 07 08:54:53 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LrApJ-00060b-7p
+	for mharc-axiom-mail@gnu.org; Tue, 07 Apr 2009 08:54:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LrApG-0005zN-GH
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 08:54:50 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LrApA-0005yj-Gi
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 08:54:49 -0400
+Received: from [199.232.76.173] (port=53525 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LrAp5-0005xN-HS
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 08:54:40 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:36710)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1LrAp4-0005Nd-Jy
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 08:54:39 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	n37CsYh0031298; Tue, 7 Apr 2009 14:54:35 +0200
+Sender: rubey@ada0.ifam.uni-hannover.de
+To: fricas-devel@googlegroups.com
+Subject: Re: [fricas-devel] Re: [Axiom-mail] Programming with BTREEs.
+References: <DE3D1F203DAF7A4CB259560D2801DF8B3B2B82@UQEXMB2.soe.uq.edu.au>
+	<49DB44AB.5060506@hemmecke.de>
+	<d9eiw44p36.fsf@ada0.ifam.uni-hannover.de>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: 07 Apr 2009 14:54:34 +0200
+In-Reply-To: <d9eiw44p36.fsf@ada0.ifam.uni-hannover.de>
+Message-ID: <d9ws9w39px.fsf@ada0.ifam.uni-hannover.de>
+Lines: 52
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.4.7.123721
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: Simon Blomberg <s.blomberg1@uq.edu.au>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Apr 2009 12:54:51 -0000
+
+Martin Rubey <martin.rubey@math.uni-hannover.de> writes:
+
+> Dear Ralf,
+> 
+> I'm extremely grateful that you answered...
+> 
+> Ralf Hemmecke <ralf@hemmecke.de> writes:
+> N := Union(Symbol, List Integer)
+> BT := BinaryTree N
+> B ==> binaryTree  -- the 3-argument version
+> V ==> binaryTree  -- the 1-argument version
+> bt:BT:=B(V e,[5,1],B(B(V a,[1,1],V b),[1,1],B(V c,[1,2],V d)))
+> 
+> [...]
+> 
+> S==>Symbol
+> L==>List Integer
+> construct(x: S, l: L, y: S): BT == binaryTree(V(x::N), l::N, V(y::N))
+> bt2: BT := [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]
+> 
+> ['a, [1,3], 'b]@BT
+> 
+> works for me
+> 
+> but 
+> 
+> [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]@BT
+> 
+> cannot work, I think, because the argument types don't match.  You
+> will need to allow also binary trees.
+
+construct(x: Union(S, BT), l: L, y: Union(S, BT)): BT == binaryTree((if x case S then V(x::N) else x::BT), l::N, (if y case S then V(y::N) else y::BT))
+
+will work *almost*:
+
+(20) -> ['a, [1,3], ['d, [1,3], 'c]@BT]@BT
+
+   (20)  [a,[1,3],[d,[1,3],c]]
+                                Type:
+                                BinaryTree(Union(Symbol,List(Integer)))
+
+(21) -> ['a, [1,3], ['d, [1,3], 'c]]@BT
+   Conversion failed in the compiled user function construct .
+ 
+   Cannot convert from type List(Any) to Union(Symbol,BinaryTree(Union(
+      Symbol,List(Integer)))) for value
+   [d,[1,3],c]
+
+
+Not sure whether this is an improvement.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Apr 07 09:26:19 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LrBJi-0002yD-SN
+	for mharc-axiom-mail@gnu.org; Tue, 07 Apr 2009 09:26:18 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LrBJh-0002xm-Pr
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 09:26:17 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LrBJd-0002xI-9q
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 09:26:17 -0400
+Received: from [199.232.76.173] (port=49583 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LrBJd-0002xF-3h
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 09:26:13 -0400
+Received: from mo-p05-ob.rzone.de ([81.169.146.181]:58552)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1LrBJb-0002wZ-BL
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 09:26:11 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; t=1239110769; l=1006;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:CC:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=R80Di3HxVkmLjkSJCV3YISVvxSnJzrq/sMBlCzn7rR8=;
+	b=YtGX4kepPZxgjX5x3nEA5PLEcuuGrN7fEdknE+QV8Gbv+gUThy2cmx5SQMmzebCIeB2
+	ku+aFgcyjul9aHwzwdHaUd5KLUnBsLLqTGvHOXnLqyRqnyTLT5QmTZFSXyMDiD1I29Z22
+	KyCn2hxm5nmFkQdgI32IdGAPdvOpRzZT6o4=
+X-RZG-AUTH: :Pm0IcwWgfvKNhyTiA5K9aSc1pwDnmpaKQTqQszbwOAxYBAKGS3+FyCi9EANtaw==
+X-RZG-CLASS-ID: mo05
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (klopstock mo21) (RZmta 18.28)
+	with DHE-RSA-AES128-SHA encrypted ESMTP id 6048a5l37CSZlP ;
+	Tue, 7 Apr 2009 15:25:23 +0200 (MEST)
+Message-ID: <49DB5442.208@hemmecke.de>
+Date: Tue, 07 Apr 2009 15:25:22 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.19 (X11/20090105)
+MIME-Version: 1.0
+To: fricas-devel@googlegroups.com
+Subject: Re: [fricas-devel] Re: [Axiom-mail] Programming with BTREEs.
+References: <DE3D1F203DAF7A4CB259560D2801DF8B3B2B82@UQEXMB2.soe.uq.edu.au>
+	<49DB44AB.5060506@hemmecke.de>
+	<d9eiw44p36.fsf@ada0.ifam.uni-hannover.de>
+In-Reply-To: <d9eiw44p36.fsf@ada0.ifam.uni-hannover.de>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: Simon Blomberg <s.blomberg1@uq.edu.au>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Apr 2009 13:26:18 -0000
+
+> but 
+> 
+> [e,[5,1],[[a,[1,1],b],[1,1],[c,[1,2],d]]]@BT
+> 
+> cannot work, I think, because the argument types don't match.  You
+> will need to allow also binary trees.
+
+Ooops. You are completely right.
+
+The last part in the input file can be replaced by
+
+----
+S==>Symbol
+L==>List Integer
+U==>Union(BT,S)
+
+construct(x: U, l: L, y: U): U ==
+   u: BT := if x case S then binaryTree(x::N) else x::BT
+   v: BT := if y case S then binaryTree(y::N) else y::BT
+   binaryTree(u, l, v)::U
+
+l: List U := [a,b,c,d,e]
+(a,b,c,d,e):=(l 1, l 2, l 3, l 4, l 5)
+u: U := [e,[5,1],[[a,[1,1],b]@U,[1,1],[c,[1,2],d]@U]@U]
+bt2: BT := u :: BT
+----
+
+where the @U part is necessary (though ugly) since otherwise Axiom (oh, 
+FriCAS in my case) falsely creates
+
+(25) -> [a,[1,2],b]
+
+    (25)  [a,[1,2],b]
+                             Type: List(Any)
+
+which is a very unspecific (and bad) choice in the pressence of my new 
+function from above and a and b being both variables of type U.
+
+Yet another instance of why I hate "Any".
+
+Ralf
+
+
+
+From MAILER-DAEMON Tue Apr 07 10:46:51 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LrCZe-0007AJ-P0
+	for mharc-axiom-mail@gnu.org; Tue, 07 Apr 2009 10:46:50 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LrCZd-00079h-VE
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 10:46:50 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LrCZZ-00076O-Sg
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 10:46:49 -0400
+Received: from [199.232.76.173] (port=60658 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LrCZZ-00076I-OB
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 10:46:45 -0400
+Received: from mo-p05-ob.rzone.de ([81.169.146.180]:27923)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1LrCZZ-0006xZ-2t
+	for axiom-mail@nongnu.org; Tue, 07 Apr 2009 10:46:45 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; t=1239115603; l=3104;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:CC:MIME-Version:From:Date:X-RZG-CLASS-ID:To:X-RZG-AUTH;
+	bh=kVHkvZFYk55Lsz/kSMMcKyBI0FTi9zj0sMAjvnHx/1g=;
+	b=uXtMDCaFAUlkeP8n3+TmNU/esKlQXM3cwn9kckxFhV5ufGEdq/m00mmYeishZvaXk7P
+	WQcUmZUr3hc/FDTEmh7t8en8mSBzAxbSODE4E43FFOBZgzMqbSrUw+QSr8JSvJSJCDF6P
+	gDUCCcBK4uPCRdZGVmfmcY6a022ETJJLmvg=
+X-RZG-AUTH: :Pm0IcwWgfvKNhyTiA5K9aSc1pwDnmpaKQTqQszbwOAxYBAKGS3+FyCi9EANtaw==
+To: undisclosed-recipients:;
+X-RZG-CLASS-ID: mo05
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (klopstock mo22) (RZmta 18.28)
+	with DHE-RSA-AES128-SHA encrypted ESMTP id R048cdl37E99qV ;
+	Tue, 7 Apr 2009 16:45:57 +0200 (MEST)
+Message-ID: <49DB6724.2090403@hemmecke.de>
+Date: Tue, 07 Apr 2009 16:45:56 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.19 (X11/20090105)
+MIME-Version: 1.0
+Subject: Re: [fricas-devel] Re: [Axiom-mail] Programming with BTREEs.
+References: <DE3D1F203DAF7A4CB259560D2801DF8B3B2B82@UQEXMB2.soe.uq.edu.au>	<49DB44AB.5060506@hemmecke.de>	<d9eiw44p36.fsf@ada0.ifam.uni-hannover.de>
+	<49DB5442.208@hemmecke.de>
+In-Reply-To: <49DB5442.208@hemmecke.de>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: fricas-devel@googlegroups.com, Simon Blomberg <s.blomberg1@uq.edu.au>,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Apr 2009 14:46:50 -0000
+
+> Yet another instance of why I hate "Any".
+
+... The interpreter seems to like List(Any) more than my specific types. 
+See bolow... :-(
+
+Let's do a little programming ... this is the more complicated form.
+
+Simon, my example is not completely finished since the MyBinaryTree you 
+find below, doesn't have much functionality (except equality), but it is 
+preferable to BinaryTree, because if you construct a tree in 
+MyBinaryTree(I, L) then you have no chance to construct a tree that has 
+inner nodes that are not of type I and leaves of any other type than L.
+So the code below is an example of how to translate your tree structure 
+into SPAD code.
+
+The input then is
+
+B := MyBinaryTree(List Integer, Symbol)
+t: B := [e,[5,1],[[a,[1,1],b]@B,[1,1],[c,[1,2],d]@B]]
+
+The @B is still needed since otherwise the Axiom/FriCAS interpreter 
+tries to construct again something of type List(Any)... Extremely bad
+behaviour of the interpreter in my eyes...
+
+The @B is even needed if you add
+
+l: List Symbol := [a,b,c,d,e]
+(a,b,c,d,e):=(l 1, l 2, l 3, l 4, l 5)
+
+before the assignment to t.
+
+You have to live with that for the moment, at least you have the chance 
+that adding @B gives a hint to the interpreter of what you actually 
+intended with your input.
+
+Try for example
+
+t: B := [a,b,c]
+
+You get
+
+(5) -> t:B := [a,b,c]
+
+    Cannot convert right-hand side of assignment
+    [a,b,c]
+
+       to an object of the type MyBinaryTree(List(Integer),Symbol) of
+       the left-hand side.
+
+Seeing such error message in Axiom is quite common, but wait. Think of 
+it for a moment. You just asked to system to create a tree for you 
+(namely an element t of type B) which would have the inner node b. 
+However, b is of type Symbol and inner nodes should not be of type 
+Symbol, but rather of type List(Integer). So the system is completely 
+right throwing that error message at you.
+
+Imagine you are inside a big program and you've put there an assignment 
+like (5). The SPAD compiler will detect that you are doing things where 
+the types do not match and will tell you at compile time (not at runtime).
+
+So here is your code... put it into aaa.spad and in Axiom say
+
+)co aaa.spad
+
+followed by the assignments at the beginning of this mail.
+
+Ralf
+
+---rhxBEGIN aaa.spad
+-- Note that I and L must always be different types.
+-- MyBinaryTree(Integer, Integer) is forbidden.
+
+COUT==>CoercibleTo(OutputForm)
+
+)abbrev domain MBTREE MyBinaryTree
+MyBinaryTree(I: COUT, L: COUT): COUT with
+   construct: L -> %
+   construct: (L, I, L) -> %
+   construct: (%, I, L) -> %
+   construct: (L, I, %) -> %
+   construct: (%, I, %) -> %
+  == add
+   N := Union(I, L)
+   Rep := BinaryTree N
+   construct(l: L): % == binaryTree(l::N)$Rep
+   V ==> construct
+   construct(l: L, i: I, r: L): % == binaryTree(V l, i, V r)
+   construct(l: %, i: I, r: L): % == binaryTree(  l, i, V r)
+   construct(l: L, i: I, r: %): % == binaryTree(V l, i,   r)
+   construct(l: %, i: I, r: %): % == binaryTree(  l, i,   r)
+   coerce(x: %): OutputForm == coerce(x)$Rep
+   ((x: %) = (y: %)): Boolean == (x::Rep) =$Rep (y::Rep)
+---rhxEND aaa.spad
+
+
+
+From MAILER-DAEMON Fri Apr 10 21:43:00 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LsSFH-0001qB-Vi
+	for mharc-axiom-mail@gnu.org; Fri, 10 Apr 2009 21:43:00 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LsSFG-0001py-36
+	for axiom-mail@nongnu.org; Fri, 10 Apr 2009 21:42:58 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LsSFA-0001o6-EK
+	for axiom-mail@nongnu.org; Fri, 10 Apr 2009 21:42:56 -0400
+Received: from [199.232.76.173] (port=43604 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LsSFA-0001o3-9M
+	for axiom-mail@nongnu.org; Fri, 10 Apr 2009 21:42:52 -0400
+Received: from web81203.mail.mud.yahoo.com ([68.142.199.107]:43448)
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <grunberg@wans.net>) id 1LsSF9-0005tX-PU
+	for axiom-mail@nongnu.org; Fri, 10 Apr 2009 21:42:52 -0400
+Received: (qmail 56067 invoked by uid 60001); 11 Apr 2009 01:42:47 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=wans.net; s=s1024;
+	t=1239414167; bh=4OCHj8MycUrjt8sd+CnvdatOfwsBaWCry+piHGN5aTA=;
+	h=Message-ID:X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type;
+	b=kzrsD4oEeF24o5HVXZRpNLxBMncjHd1HShu4UDj0RKnq/qTuxXKJ92xoYPgQgnxDYULDhn1TBhXtuVJVWt/dNjyLIYzYBs0nvtCf2X6ryEr7zBd4eFFQGHk6XV/3qOqCkrQXR1fUBtFBKOhXFdt3FclNRsvCAMGzda9BlnUGKW4=
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=wans.net;
+	h=Message-ID:X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type;
+	b=qf3xAOraDp7+KQVG7bdveZw2Orq9Uvm4AzHukrVP6p1qoES2I1jzX73P+JRo2IP7ih55rJUvF0jQKaHYtrfA95GNiMPcyjrIJLIUuKeZHqj0P3vJKxpZOHo3p5FavsZIaE0+IvMXzxXt/id97KLz3T5g83bBKMKilasqqKuwJ8I=;
+Message-ID: <109929.55948.qm@web81203.mail.mud.yahoo.com>
+X-YMail-OSG: _7KjF5QVM1lZoY.gDUmdb256vCF0gopFRq4Uscnt4C2ULIBL5z2oh2h6uS2IBpWyc2C5xVdv.TjVbcIp2zOvyzblcdvhkCg_7BrBI7HyWQWNNXS0nWalT81ljC381WkHq7PQn4vj8T2etCnEKyNdrK9ORYvqeS5N3M0mIsysfShddEtl14Xd63k2lAe2nn5hj1I3HL_0FiNyaMyaIBC6_J97qN3GUCemJrGOVt7vZVS1Yw07NODsTOtLdfY5eJ_ExDZO9ltjjUcwFt79A95yykRueQ6_ejCgfQImTRc_6_xniZa7771KXePitmdSDm9MNIbxDgKsMisVUSBrPtNO
+Received: from [71.145.169.150] by web81203.mail.mud.yahoo.com via HTTP;
+	Fri, 10 Apr 2009 18:42:46 PDT
+X-Mailer: YahooMailRC/1277.35 YahooMailWebService/0.7.289.1
+Date: Fri, 10 Apr 2009 18:42:46 -0700 (PDT)
+From: GREGORY GRUNBERG <grunberg@wans.net>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="0-6556253-1239414166=:55948"
+X-detected-operating-system: by monty-python.gnu.org: FreeBSD 6.x (1)
+Subject: [Axiom-mail] Compressed archive file "axiom-ubuntu-mar2009-bin.tgz"
+	appears to be corrupted.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 11 Apr 2009 01:42:58 -0000
+
+
+--0-6556253-1239414166=:55948
+Content-Type: text/plain; charset=us-ascii
+
+I am the rawest beginner at Axiom -- so new that I haven't yet successfully installed it.  I am not yet familiar with the appropriate venues for requesting help, so my apologies if this e-mail has been posted incorrectly.  Here's my problem:
+
+I have downloaded the file axiom-ubuntu-mar2009-bin.tgz.  from the website http://axiom.axiom-developer.org/axiom-website/download.html.  When trying to decompress that file I received error messages from Ubuntu 8.10's decompression program as well as from WinZip 10.0 (running under Windows XP).  The message from WinZip read "Invalid compressed data -- unable to inflate", but WinZip does display a list of files.
+
+The same thing happened after I downloaded a second and third time, and after downloading on a second computer.  The files that WinZip lists after it achieves what appears to be a partial decompression are significantly less in number than the 6570 files listed in a successful decompression of axiom-ubuntu-jan2009-bin.tgz.
+
+My conclusion is that the archive file axiom-ubuntu-mar2009-bin.tgz has been corrupted and needs to be replaced.  Who do I contact (name and e-mail address) about this conclusion?
+
+Greg Grunberg
+grunberg@wans.net
+
+--0-6556253-1239414166=:55948
+Content-Type: text/html; charset=us-ascii
+
+<html><head><style type="text/css"><!-- DIV {margin:0px;} --></style></head><body><div style="font-family:times new roman,new york,times,serif;font-size:14pt"><div>I am the rawest beginner at Axiom -- so new that I haven't yet successfully installed it.&nbsp; I am not yet familiar with the appropriate venues for requesting help, so my apologies if this e-mail has been posted incorrectly.&nbsp; Here's my problem:<br><br>I have downloaded the file <span style="font-family: Courier New,courier,monaco,monospace,sans-serif;">axiom-ubuntu-mar2009-bin.tgz</span>.&nbsp; from the website <span style="font-family: arial,helvetica,sans-serif;"><span><a target="_blank" href="http://axiom.axiom-developer.org/axiom-website/download.html">http://axiom.axiom-developer.org/axiom-website/download.html</a></span></span>.&nbsp; When trying to decompress that file I received error messages from Ubuntu 8.10's decompression program as well as from WinZip 10.0 (running under
+ Windows XP).&nbsp; The message from WinZip read "Invalid compressed data -- unable to inflate", but WinZip does display a list of files.<br><br>The same thing happened after I downloaded a second and third time, and after downloading on a second computer.&nbsp; The files that WinZip lists after it achieves what appears to be a partial decompression are significantly less in number than the 6570 files listed in a successful decompression of <span style="font-family: Courier New,courier,monaco,monospace,sans-serif;">axiom-ubuntu-jan2009-bin.tgz</span>.<br><br>My conclusion is that <span style="font-style: italic;">the archive file </span><span style="font-family: Courier New,courier,monaco,monospace,sans-serif;"><span style="font-style: italic;">axiom-ubuntu-mar2009-bin.tgz </span><span style="font-family: times new roman,new york,times,serif;"><span style="font-style: italic;">has been corrupted and needs to be replaced</span>.&nbsp; Who do I contact
+ (name and e-mail address) about this conclusion?<br><br>Greg Grunberg<br>grunberg@wans.net<br></span></span></div></div></body></html>
+--0-6556253-1239414166=:55948--
+
+
+
+From MAILER-DAEMON Sat Apr 11 00:26:33 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LsUnZ-0007HB-Cn
+	for mharc-axiom-mail@gnu.org; Sat, 11 Apr 2009 00:26:33 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LsUnY-0007Gv-Nt
+	for axiom-mail@nongnu.org; Sat, 11 Apr 2009 00:26:32 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LsUnT-0007FL-Dz
+	for axiom-mail@nongnu.org; Sat, 11 Apr 2009 00:26:31 -0400
+Received: from [199.232.76.173] (port=60508 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LsUnT-0007FI-9S
+	for axiom-mail@nongnu.org; Sat, 11 Apr 2009 00:26:27 -0400
+Received: from mx-8.zoominternet.net ([24.154.1.27]:52565
+	helo=cm-2.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1LsUnT-0004t2-1k
+	for axiom-mail@nongnu.org; Sat, 11 Apr 2009 00:26:27 -0400
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=Gm2pMpp722IA:10 a=GhJQTdUu5p4A:10
+	a=E8rTNAPPKTgA:10 a=37mPLz1kAAAA:8 a=Nsn06fl_C7AtBciiycUA:9
+	a=JQDW2StMIqG9P6AKObb7tWKAABEA:4 a=XF7b4UCPwd8A:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.46] ([24.154.1.46:54494] helo=pop-3.zoominternet.net)
+	by mx-8.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 48/C4-05439-A3710E94; Sat, 11 Apr 2009 00:06:18 -0400
+Received: (qmail 25599 invoked from network); 11 Apr 2009 04:06:25 -0000
+Received: from dynamic-acs-72-23-19-139.zoominternet.net (HELO
+	localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-3.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 11 Apr 2009 04:06:25 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id n3B4u0h07754;
+	Sat, 11 Apr 2009 00:56:00 -0400
+Date: Sat, 11 Apr 2009 00:56:00 -0400
+Message-Id: <200904110456.n3B4u0h07754@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: grunberg@wans.net, Alfredo Portes <doyenatccny@gmail.com>
+In-reply-to: <109929.55948.qm@web81203.mail.mud.yahoo.com> (message from
+	GREGORY GRUNBERG on Fri, 10 Apr 2009 18:42:46 -0700 (PDT))
+Subject: Re: [Axiom-mail] Compressed archive file
+	"axiom-ubuntu-mar2009-bin.tgz" appears to be corrupted.
+References: <109929.55948.qm@web81203.mail.mud.yahoo.com>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 11 Apr 2009 04:26:32 -0000
+
+The build process appears to have run out of disk space
+at the tgz-compression step. I have rebuilt the file and uploaded it.
+Try:
+
+http://axiom-developer.org/axiom-website/downloads/axiom-mar2009-ubuntu-bin.tgz
+
+
+

@@ -1,0 +1,995 @@
+From MAILER-DAEMON Tue Nov 17 01:04:39 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NAHB9-0000gF-6n
+	for mharc-axiom-mail@gnu.org; Tue, 17 Nov 2009 01:04:39 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NAHB7-0000g2-F0
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 01:04:37 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NAHB3-0000fi-LM
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 01:04:37 -0500
+Received: from [199.232.76.173] (port=50454 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NAHB3-0000fb-F1
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 01:04:33 -0500
+Received: from casexg03.anu.edu.au ([130.56.11.202]:27681
+	helo=casevs04.anu.edu.au)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <Mark.Clements@anu.edu.au>) id 1NAHB2-0006rS-PR
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 01:04:33 -0500
+X-MimeOLE: Produced By Microsoft Exchange V6.0.6619.12
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01CA6745.EA753A5A"
+Date: Tue, 17 Nov 2009 16:22:11 +1100
+Message-ID: <C9083D308DAB5345B61E1C7E68F7F4A81DEC03@CASEVS04.cas.anu.edu.au>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: Easy Problem. Can this be done in Maxima/Axiom?
+Thread-Index: AcpnRes3Aq1LMFgBQkm5hwJTlEhoXQ==
+From: "Mark Clements" <Mark.Clements@anu.edu.au>
+To: <axiom-mail@nongnu.org>
+X-detected-operating-system: by monty-python.gnu.org: Windows 2000 SP4, XP SP1+
+X-Greylist: delayed 2535 seconds by postgrey-1.27 at monty-python;
+	Tue, 17 Nov 2009 01:04:29 EST
+Subject: [Axiom-mail] Easy Problem. Can this be done in Maxima/Axiom?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Nov 2009 06:04:37 -0000
+
+This is a multi-part message in MIME format.
+
+------_=_NextPart_001_01CA6745.EA753A5A
+Content-Type: text/plain;
+	charset="US-ASCII"
+Content-Transfer-Encoding: quoted-printable
+
+The following problem came up on the Maxima mail-list (translated here
+into Axiom):
+
+-- solve for x (over the Reals?)
+ex :=3D (3/7)^(4*x-5)*(7/3)^(2*x-7)=3D1
+
+I came up with several overly long solutions (using Fricas 1.0.3):
+
+rule1 :=3D (rule log(7/3)=3D=3D-log(3/7))
+rule1 rhs solve(map(expandLog,map(log,ex)), x).1
+-- or, similarly
+rule1 rhs solve(expandLog log lhs ex, x).1
+
+rule2 :=3D rule((a/b)^c*(b/a)^d=3D=3D(a/b)^(c-d))
+solve((rule2 lhs ex)=3D(rhs ex),x)
+
+Can anyone come up with a better solution?
+
+Kindly, Mark Clements.
+
+------_=_NextPart_001_01CA6745.EA753A5A
+Content-Type: text/html;
+	charset="US-ASCII"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
+6.0.6620.9">
+<TITLE>Easy Problem. Can this be done in Maxima/Axiom?</TITLE>
+</HEAD>
+<BODY>
+<!-- Converted from text/rtf format -->
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"><FONT =
+SIZE=3D2 FACE=3D"Arial">The following problem came up on the Maxima =
+mail-list (trans</FONT></SPAN><SPAN LANG=3D"en-au"></SPAN><SPAN =
+LANG=3D"en-au"><FONT SIZE=3D2 FACE=3D"Arial">lated</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"><FONT SIZE=3D2 =
+FACE=3D"Arial"></FONT></SPAN><SPAN LANG=3D"en-au"></SPAN><SPAN =
+LANG=3D"en-au"> <FONT SIZE=3D2 FACE=3D"Arial">here</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"> <FONT SIZE=3D2 =
+FACE=3D"Arial">into</FONT></SPAN><SPAN LANG=3D"en-au"></SPAN><SPAN =
+LANG=3D"en-au"> <FONT SIZE=3D2 FACE=3D"Arial">Axiom):</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"></SPAN><SPAN =
+LANG=3D"en-au"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"><FONT =
+SIZE=3D2 FACE=3D"Arial">-- solve for x</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"><FONT SIZE=3D2 =
+FACE=3D"Arial"> (over</FONT></SPAN><SPAN LANG=3D"en-au"></SPAN><SPAN =
+LANG=3D"en-au"> <FONT SIZE=3D2 FACE=3D"Arial">the</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"> <FONT SIZE=3D2 =
+FACE=3D"Arial">Reals?)</FONT></SPAN><SPAN LANG=3D"en-au"></SPAN><SPAN =
+LANG=3D"en-au"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"><FONT SIZE=3D2 FACE=3D"Arial">ex :=3D =
+(3/7)^(4*x-5)*(7/3)^(2*x-7)=3D1</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"><FONT SIZE=3D2 FACE=3D"Arial">I came =
+up with several overly long solutions</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"><FONT SIZE=3D2 =
+FACE=3D"Arial"> (using Fricas 1.0.3)</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"><FONT SIZE=3D2 =
+FACE=3D"Arial">:</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"><FONT =
+SIZE=3D2 FACE=3D"Arial">rule1 :=3D (rule =
+log(7/3)=3D=3D-log(3/7))</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"><FONT SIZE=3D2 FACE=3D"Arial">rule1 =
+rhs solve(map(expandLog,map(log,ex)), x).1</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"><FONT =
+SIZE=3D2 FACE=3D"Arial">--</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"> <FONT SIZE=3D2 =
+FACE=3D"Arial">or, similarly</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"><FONT =
+SIZE=3D2 FACE=3D"Arial">rule1 rhs solve(expandLog log lhs ex, =
+x).1</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"><FONT SIZE=3D2 FACE=3D"Arial">rule2 =
+:=3D rule((a/b)^c*(b/a)^d=3D=3D(a/b)^(c-d))</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"fr"><FONT SIZE=3D2 =
+FACE=3D"Arial">solve((rule2 lhs ex)=3D(rhs ex),x)</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"></SPAN><SPAN =
+LANG=3D"fr"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-gb"><FONT SIZE=3D2 =
+FACE=3D"Arial">Can anyone come up with a better</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-gb"> =
+<FONT SIZE=3D2 FACE=3D"Arial">solution</FONT></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-au"></SPAN><SPAN =
+LANG=3D"en-gb"><FONT SIZE=3D2 FACE=3D"Arial">?</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-au"></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-gb"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-gb"><FONT SIZE=3D2 FACE=3D"Arial">Kindly, =
+Mark Clements.</FONT></SPAN><SPAN LANG=3D"en-au"></SPAN><SPAN =
+LANG=3D"en-au"></SPAN><SPAN LANG=3D"en-gb"></SPAN></P>
+
+</BODY>
+</HTML>
+------_=_NextPart_001_01CA6745.EA753A5A--
+
+
+
+From MAILER-DAEMON Tue Nov 17 01:56:48 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NAHzb-0000Ls-Ts
+	for mharc-axiom-mail@gnu.org; Tue, 17 Nov 2009 01:56:47 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NAHzZ-0000KP-23
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 01:56:45 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NAHzT-0000Gt-M5
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 01:56:43 -0500
+Received: from [199.232.76.173] (port=56233 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NAHzT-0000Gi-HV
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 01:56:39 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:44438
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1NAHzS-0006Od-Vh
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 01:56:39 -0500
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id nAH6uW8a023113;
+	Tue, 17 Nov 2009 00:56:33 -0600
+Message-ID: <4B024924.90901@axiom-developer.org>
+Date: Tue, 17 Nov 2009 01:56:36 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Mark Clements <Mark.Clements@anu.edu.au>
+Subject: Re: [Axiom-mail] Easy Problem. Can this be done in Maxima/Axiom?
+References: <C9083D308DAB5345B61E1C7E68F7F4A81DEC03@CASEVS04.cas.anu.edu.au>
+In-Reply-To: <C9083D308DAB5345B61E1C7E68F7F4A81DEC03@CASEVS04.cas.anu.edu.au>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Nov 2009 06:56:45 -0000
+
+Mark Clements wrote:
+>
+> The following problem came up on the Maxima mail-list (translated here 
+> into Axiom):
+>
+> -- solve for x (over the Reals?)
+>
+> ex := (3/7)^(4*x-5)*(7/3)^(2*x-7)=1
+>
+> I came up with several overly long solutions (using Fricas 1.0.3):
+>
+> rule1 := (rule log(7/3)==-log(3/7))
+>
+> rule1 rhs solve(map(expandLog,map(log,ex)), x).1
+>
+> -- or, similarly
+>
+> rule1 rhs solve(expandLog log lhs ex, x).1
+>
+> rule2 := rule((a/b)^c*(b/a)^d==(a/b)^(c-d))
+>
+> solve((rule2 lhs ex)=(rhs ex),x)
+>
+> Can anyone come up with a better solution?
+>
+> Kindly, Mark Clements.
+>
+> ------------------------------------------------------------------------
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>   
+a:=(3/7)*(4*x-5)*(7/3)*(2*x-7)-1
+b:=zerosOf(a)
+
+    +--+         +--+
+   \|89 + 19, - \|89 + 19
+  [---------, -----------]
+       8           8
+                                 Type: List AlgebraicNumber
+
+
+eval(a,x=b.1)
+    0
+
+eval(a,x=b.2)
+    0
+
+
+
+From MAILER-DAEMON Tue Nov 17 02:12:48 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NAIF6-0005UF-J3
+	for mharc-axiom-mail@gnu.org; Tue, 17 Nov 2009 02:12:48 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NAIF5-0005UA-5i
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 02:12:47 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NAIEz-0005TY-LO
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 02:12:46 -0500
+Received: from [199.232.76.173] (port=46040 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NAIEz-0005TV-FO
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 02:12:41 -0500
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:55823)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1NAIEz-0000WA-0I
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 02:12:41 -0500
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	nAH7CQeG025359; Tue, 17 Nov 2009 08:12:27 +0100
+To: "Mark Clements" <Mark.Clements@anu.edu.au>,
+	fricas-devel <fricas-devel@googlegroups.com>
+Subject: Re: [Axiom-mail] Easy Problem. Can this be done in Maxima/Axiom?
+References: <C9083D308DAB5345B61E1C7E68F7F4A81DEC03@CASEVS04.cas.anu.edu.au>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Tue, 17 Nov 2009 08:12:26 +0100
+In-Reply-To: <C9083D308DAB5345B61E1C7E68F7F4A81DEC03@CASEVS04.cas.anu.edu.au>
+	(Mark Clements's message of "Tue\, 17 Nov 2009 16\:22\:11 +1100")
+Message-ID: <d9ocn1d3qd.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.10.31.165419
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Nov 2009 07:12:47 -0000
+
+I'm responding also to fricas-devel, since a problem shows up there...
+
+"Mark Clements" <Mark.Clements@anu.edu.au> writes:
+
+> The following problem came up on the Maxima mail-list (translated here into Axiom):
+>
+> -- solve for x (over the Reals?)
+>
+> ex := (3/7)^(4*x-5)*(7/3)^(2*x-7)=1
+
+
+> I came up with several overly long solutions (using Fricas 1.0.3):
+>
+> rule1 := (rule log(7/3)==-log(3/7))
+>
+> rule1 rhs solve(map(expandLog,map(log,ex)), x).1
+
+curiously, this doesn't work here, the solve won't yield a solution :-(
+If this really used to work, we should add it as a regression to
+bugs2009.input.pamphlet.
+
+> -- or, similarly
+>
+> rule1 rhs solve(expandLog log lhs ex, x).1
+>
+> rule2 := rule((a/b)^c*(b/a)^d==(a/b)^(c-d))
+>
+> solve((rule2 lhs ex)=(rhs ex),x)
+
+this works here, too.
+
+I'm not sure whether the following yields all the solutions, but at
+least you get one:
+
+(1) -> ex := (3/7)^(4*x-5)*(7/3)^(2*x-7)=1
+
+         3 4x - 5 7 2x - 7
+   (1)  (-)      (-)      = 1
+         7        3
+
+(2) -> res := solve(ex, x)
+
+                 3          19683
+            7log(-) - log(--------)
+                 7        40353607
+   (2)  [x= -----------------------]
+                         3
+                    2log(-)
+                         7
+
+(3) -> X := normalize rhs(res.1)
+
+   (3)  - 1
+
+(4) -> eval(ex, x=X)
+
+   (4)  1= 1
+
+
+normalize is quite powerful!  (and that huge fraction is just (3/7)^9,
+no idea why it doesn't get simplified immediately.)
+
+Martin
+
+
+
+From MAILER-DAEMON Tue Nov 17 02:14:24 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NAIGd-0005l0-Sr
+	for mharc-axiom-mail@gnu.org; Tue, 17 Nov 2009 02:14:23 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NAIGc-0005kt-Uc
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 02:14:23 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NAIGY-0005jn-Ak
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 02:14:22 -0500
+Received: from [199.232.76.173] (port=58702 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NAIGY-0005jk-7b
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 02:14:18 -0500
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:55873)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1NAIGX-0000kl-M7
+	for axiom-mail@nongnu.org; Tue, 17 Nov 2009 02:14:18 -0500
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	nAH7E85f025404; Tue, 17 Nov 2009 08:14:09 +0100
+To: Tim Daly <daly@axiom-developer.org>
+Subject: Re: [Axiom-mail] Easy Problem. Can this be done in Maxima/Axiom?
+References: <C9083D308DAB5345B61E1C7E68F7F4A81DEC03@CASEVS04.cas.anu.edu.au>
+	<4B024924.90901@axiom-developer.org>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Tue, 17 Nov 2009 08:14:08 +0100
+In-Reply-To: <4B024924.90901@axiom-developer.org> (Tim Daly's message of "Tue\,
+	17 Nov 2009 01\:56\:36 -0500")
+Message-ID: <d9k4xpd3nj.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.10.31.165419
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: axiom-mail@nongnu.org, Mark Clements <Mark.Clements@anu.edu.au>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Nov 2009 07:14:23 -0000
+
+Tim Daly <daly@axiom-developer.org> writes:
+
+> a:=(3/7)*(4*x-5)*(7/3)*(2*x-7)-1
+
+you are missing some stars...
+
+Martin
+
+
+
+From MAILER-DAEMON Sat Nov 28 19:51:17 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NEY0T-0001N8-1U
+	for mharc-axiom-mail@gnu.org; Sat, 28 Nov 2009 19:51:17 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NEY0R-0001La-3R
+	for axiom-mail@nongnu.org; Sat, 28 Nov 2009 19:51:15 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NEY0M-0001Hq-I1
+	for Axiom-mail@nongnu.org; Sat, 28 Nov 2009 19:51:14 -0500
+Received: from [199.232.76.173] (port=41135 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NEY0M-0001Hn-Bm
+	for Axiom-mail@nongnu.org; Sat, 28 Nov 2009 19:51:10 -0500
+Received: from mail.df.uba.ar ([157.92.11.91]:59130)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <jakubi@df.uba.ar>) id 1NEY0L-0007EB-QS
+	for Axiom-mail@nongnu.org; Sat, 28 Nov 2009 19:51:10 -0500
+Received: from localhost (login.df.uba.ar [157.92.11.80])
+	by mail.df.uba.ar (Postfix) with ESMTP id 769A61188D4
+	for <Axiom-mail@nongnu.org>; Sat, 28 Nov 2009 21:51:03 -0300 (ART)
+Date: Sat, 28 Nov 2009 21:51:00 -0300
+From: Alejandro Jakubi <jakubi@df.uba.ar>
+To: Axiom-mail@nongnu.org
+Message-ID: <Pine.WNT.4.64.0911282148560.3324@usuario-de5f78f>
+X-X-Sender: jakubi@mail.df.uba.ar
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: 
+Subject: [Axiom-mail] recent versions
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 29 Nov 2009 00:51:15 -0000
+
+The download page (http://axiom-developer.org/axiom-website/download.html) 
+has links for downloading Axiom versions up to May 2009. Where are the 
+more recent versions?
+
+Regards, Alejandro Jakubi
+
+
+
+
+From MAILER-DAEMON Sat Nov 28 20:38:24 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NEYk3-0007uV-U4
+	for mharc-axiom-mail@gnu.org; Sat, 28 Nov 2009 20:38:23 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NEYk2-0007ro-1I
+	for axiom-mail@nongnu.org; Sat, 28 Nov 2009 20:38:22 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NEYjx-0007q5-I9
+	for Axiom-mail@nongnu.org; Sat, 28 Nov 2009 20:38:21 -0500
+Received: from [199.232.76.173] (port=58802 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NEYjx-0007q2-CO
+	for Axiom-mail@nongnu.org; Sat, 28 Nov 2009 20:38:17 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:49289
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1NEYjx-0002bA-2H
+	for Axiom-mail@nongnu.org; Sat, 28 Nov 2009 20:38:17 -0500
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id nAT1c48a003871;
+	Sat, 28 Nov 2009 19:38:05 -0600
+Message-ID: <4B11D09B.8080703@axiom-developer.org>
+Date: Sat, 28 Nov 2009 20:38:35 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Alejandro Jakubi <jakubi@df.uba.ar>
+Subject: Re: [Axiom-mail] recent versions
+References: <Pine.WNT.4.64.0911282148560.3324@usuario-de5f78f>
+In-Reply-To: <Pine.WNT.4.64.0911282148560.3324@usuario-de5f78f>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 29 Nov 2009 01:38:22 -0000
+
+Alejandro Jakubi wrote:
+> The download page 
+> (http://axiom-developer.org/axiom-website/download.html) has links for 
+> downloading Axiom versions up to May 2009. Where are the more recent 
+> versions?
+>
+> Regards, Alejandro Jakubi
+>
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+I did not create them. I will put it on the list to do.
+You would be amazed how little time there is between releases
+if you do them every 2 months.
+
+The effort has been mostly removing boot and converging the
+interpreter into book volume 5. This doesn't change the user
+functionality (although I've introduced )debug and )describe).
+ From my point of view the effort is continuous but I have
+committed to time-boxed Axiom releases every 2 months.
+
+There is a long thread (pre-fork) about the importance of doing
+time-boxed releases every 2 months.
+
+Tim
+
+
+
+
+From MAILER-DAEMON Sat Nov 28 22:49:56 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NEanM-0004nk-CN
+	for mharc-axiom-mail@gnu.org; Sat, 28 Nov 2009 22:49:56 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NEanK-0004le-9s
+	for axiom-mail@nongnu.org; Sat, 28 Nov 2009 22:49:54 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NEanF-0004e5-FX
+	for Axiom-mail@nongnu.org; Sat, 28 Nov 2009 22:49:53 -0500
+Received: from [199.232.76.173] (port=60254 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NEanF-0004e2-Bh
+	for Axiom-mail@nongnu.org; Sat, 28 Nov 2009 22:49:49 -0500
+Received: from mail.df.uba.ar ([157.92.11.91]:36587)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <jakubi@df.uba.ar>) id 1NEanE-0003ki-OT
+	for Axiom-mail@nongnu.org; Sat, 28 Nov 2009 22:49:49 -0500
+Received: from localhost (login.df.uba.ar [157.92.11.80])
+	by mail.df.uba.ar (Postfix) with ESMTP id D63541187AD;
+	Sun, 29 Nov 2009 00:49:44 -0300 (ART)
+Date: Sun, 29 Nov 2009 00:49:41 -0300
+From: Alejandro Jakubi <jakubi@df.uba.ar>
+To: Tim Daly <daly@axiom-developer.org>
+Subject: Re: [Axiom-mail] recent versions
+In-Reply-To: <4B11D09B.8080703@axiom-developer.org>
+Message-ID: <Pine.WNT.4.64.0911290047390.2192@usuario-de5f78f>
+References: <Pine.WNT.4.64.0911282148560.3324@usuario-de5f78f>
+	<4B11D09B.8080703@axiom-developer.org>
+X-X-Sender: jakubi@mail.df.uba.ar
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 29 Nov 2009 03:49:54 -0000
+
+I find the recent improvements in the documentation of Axiom of paramount
+importance in trying to understand this complex system. In this regards, I
+have just read about the new )describe command and found it quite interesting.
+
+Anyways, I have found in another of your posts a link to a Debian binary for
+the November 2009 version. I have downloaded it already but not installed yet.
+Hopefully it will work in Debian Etch. Will be there an Ubuntu binary for this
+(or latter) version? (if it were an issue of priorities, I would prefer it to
+an updated download page).
+
+Of course, it would be wonderful if the maintainer of the Axiom package in
+Debian and Ubuntu distributions could keep it updated, ideally in sync
+with the 2-month (or whatever) period source releases. See e.g.:
+
+http://packages.debian.org/etch/math/axiom
+
+http://packages.ubuntu.com/hardy/math/axiom
+
+This package seems stuck because of bugs and other issues.
+
+Alejandro
+
+
+
+
+
+
+On Sat, 28 Nov 2009, Tim Daly wrote:
+
+> Alejandro Jakubi wrote:
+>> The download page (http://axiom-developer.org/axiom-website/download.html) 
+>> has links for downloading Axiom versions up to May 2009. Where are the more 
+>> recent versions?
+>> 
+>> Regards, Alejandro Jakubi
+>> 
+>> 
+>> 
+>> _______________________________________________
+>> Axiom-mail mailing list
+>> Axiom-mail@nongnu.org
+>> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>> 
+> I did not create them. I will put it on the list to do.
+> You would be amazed how little time there is between releases
+> if you do them every 2 months.
+>
+> The effort has been mostly removing boot and converging the
+> interpreter into book volume 5. This doesn't change the user
+> functionality (although I've introduced )debug and )describe).
+> From my point of view the effort is continuous but I have
+> committed to time-boxed Axiom releases every 2 months.
+>
+> There is a long thread (pre-fork) about the importance of doing
+> time-boxed releases every 2 months.
+>
+> Tim
+>
+
+
+
+From MAILER-DAEMON Sat Nov 28 23:13:00 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NEb9g-0007oB-2X
+	for mharc-axiom-mail@gnu.org; Sat, 28 Nov 2009 23:13:00 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NEb9e-0007ml-Mp
+	for axiom-mail@nongnu.org; Sat, 28 Nov 2009 23:12:58 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NEb9a-0007jZ-MO
+	for Axiom-mail@nongnu.org; Sat, 28 Nov 2009 23:12:58 -0500
+Received: from [199.232.76.173] (port=57443 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NEb9a-0007jO-HS
+	for Axiom-mail@nongnu.org; Sat, 28 Nov 2009 23:12:54 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:48412
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1NEb9a-0004lc-6Z
+	for Axiom-mail@nongnu.org; Sat, 28 Nov 2009 23:12:54 -0500
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id nAT4Cj8a027819;
+	Sat, 28 Nov 2009 22:12:46 -0600
+Message-ID: <4B11F4F3.7080105@axiom-developer.org>
+Date: Sat, 28 Nov 2009 23:13:39 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Alejandro Jakubi <jakubi@df.uba.ar>
+Subject: Re: [Axiom-mail] recent versions
+References: <Pine.WNT.4.64.0911282148560.3324@usuario-de5f78f>
+	<4B11D09B.8080703@axiom-developer.org>
+	<Pine.WNT.4.64.0911290047390.2192@usuario-de5f78f>
+In-Reply-To: <Pine.WNT.4.64.0911290047390.2192@usuario-de5f78f>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 29 Nov 2009 04:12:58 -0000
+
+Alejandro:
+
+http://daly.axiom-developer.org:/axiom-ubuntu-nov2009-bin.tgz
+
+Let me know if it works.
+
+Tim
+
+Alejandro Jakubi wrote:
+> I find the recent improvements in the documentation of Axiom of paramount
+> importance in trying to understand this complex system. In this 
+> regards, I
+> have just read about the new )describe command and found it quite 
+> interesting.
+>
+> Anyways, I have found in another of your posts a link to a Debian 
+> binary for
+> the November 2009 version. I have downloaded it already but not 
+> installed yet.
+> Hopefully it will work in Debian Etch. Will be there an Ubuntu binary 
+> for this
+> (or latter) version? (if it were an issue of priorities, I would 
+> prefer it to
+> an updated download page).
+>
+> Of course, it would be wonderful if the maintainer of the Axiom 
+> package in
+> Debian and Ubuntu distributions could keep it updated, ideally in sync
+> with the 2-month (or whatever) period source releases. See e.g.:
+>
+> http://packages.debian.org/etch/math/axiom
+>
+> http://packages.ubuntu.com/hardy/math/axiom
+>
+> This package seems stuck because of bugs and other issues.
+>
+> Alejandro
+>
+>
+>
+>
+>
+>
+> On Sat, 28 Nov 2009, Tim Daly wrote:
+>
+>> Alejandro Jakubi wrote:
+>>> The download page 
+>>> (http://axiom-developer.org/axiom-website/download.html) has links 
+>>> for downloading Axiom versions up to May 2009. Where are the more 
+>>> recent versions?
+>>>
+>>> Regards, Alejandro Jakubi
+>>>
+>>>
+>>>
+>>> _______________________________________________
+>>> Axiom-mail mailing list
+>>> Axiom-mail@nongnu.org
+>>> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>>>
+>> I did not create them. I will put it on the list to do.
+>> You would be amazed how little time there is between releases
+>> if you do them every 2 months.
+>>
+>> The effort has been mostly removing boot and converging the
+>> interpreter into book volume 5. This doesn't change the user
+>> functionality (although I've introduced )debug and )describe).
+>> From my point of view the effort is continuous but I have
+>> committed to time-boxed Axiom releases every 2 months.
+>>
+>> There is a long thread (pre-fork) about the importance of doing
+>> time-boxed releases every 2 months.
+>>
+>> Tim
+>>
+>
+
+
+
+
+From MAILER-DAEMON Mon Nov 30 15:43:05 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NFD5N-0006hE-MS
+	for mharc-axiom-mail@gnu.org; Mon, 30 Nov 2009 15:43:05 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NFD5L-0006fi-Jc
+	for axiom-mail@nongnu.org; Mon, 30 Nov 2009 15:43:03 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NFD5G-0006cx-Dc
+	for axiom-mail@nongnu.org; Mon, 30 Nov 2009 15:43:03 -0500
+Received: from [199.232.76.173] (port=60164 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NFD5G-0006cq-6m
+	for axiom-mail@nongnu.org; Mon, 30 Nov 2009 15:42:58 -0500
+Received: from web36705.mail.mud.yahoo.com ([209.191.85.39]:44772)
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <daCaptain@rocketmail.com>) id 1NFD5F-0001eL-J3
+	for axiom-mail@nongnu.org; Mon, 30 Nov 2009 15:42:58 -0500
+Received: (qmail 46040 invoked by uid 60001); 30 Nov 2009 20:42:55 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=rocketmail.com; s=s1024;
+	t=1259613775; bh=2ZHq3yeAfH8+IEcn/PmHojblGT6e3Y6I/6wKSTIIlqI=;
+	h=Message-ID:X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type;
+	b=FyUX99JZaQ7w8tezGMGSVVdUlduxJ/vERLodW6cW/ZpY/PSV/Wgqcu8VY3aWQP9dL+FQmZBJxwSi0/v0wLMItu+/FU9MJoQuOBCwM6bUleFz0r6quWJjCOzAweariaBN+mPNkSPQhFfoZW4COw2xgnLwP1Ad21niDBd96QCPp0Q=
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=rocketmail.com;
+	h=Message-ID:X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type;
+	b=FnJb/3TY4ft7TiEqwi5qG2fRPHgCdWErV0Qf4EBis4xUGRiJTPViui/SbQcQpLUptWgBu6fufgMAqmZih+zWbejZ1xatUcZeQ5nZvEsHTz8EUX/9VFh1Mj/Rka/jwK4qlc/oY+hzVRtPJhQ4JxZjCI222gkjoUCj3LXDJJaDoew=;
+Message-ID: <99168.45980.qm@web36705.mail.mud.yahoo.com>
+X-YMail-OSG: __EERdQVM1kVeehH2ppyG_uqvgsP6zKbXify5xB_lEPUonLrO0Q5JEnU3ON4Dm7NeAz7a0evzbNSnFn4_JL6K20whai4FeYFrlbQCqPwKDlHjyXRzjd8oX565rV3LZPcd9twFy8aB5J_uURtsgMbxEjxIgGbNeJvdw6SMd5vxmStLZzUly9E7W_mjoNqEfsci9l8mBVJrhOh.ilW.tp_TvahP4Ecl5Rm_6anvccuguSX2k__oJ5TnSU8Nflo4X6RtAR7MM7nJITO.3Cu5W9DudDofr4mHHQobbg4oaPj.3PN4R4tXHJ9Mpk0MfkGzzBBOSbzsxtIdmiOGqCl0.vt2Q--
+Received: from [77.11.8.112] by web36705.mail.mud.yahoo.com via HTTP;
+	Mon, 30 Nov 2009 12:42:55 PST
+X-Mailer: YahooMailClassic/8.1.6 YahooMailWebService/0.8.100.260964
+Date: Mon, 30 Nov 2009 12:42:55 -0800 (PST)
+From: Cap <daCaptain@rocketmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by monty-python.gnu.org: FreeBSD 6.x (1)
+Subject: [Axiom-mail] my axiom is broken
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 30 Nov 2009 20:43:04 -0000
+
+Hello,
+
+I get an error message when I try to start axiom.
+
+Re-reading compress.daase   Re-reading interp.daase
+   Re-reading operation.daase
+   Re-reading category.daase 
+   >> System error:
+   Couldn't protect
+
+
+Error: The tag |top_level| is undefined.
+Fast links are on: do (si::use-fast-links nil) for debugging
+Error signalled by RETURN.
+Broken at APPLY.  Type :H for Help.
+BOOT>>
+
+I tried reinstalling the package (Ubuntu 9.04 64), but it didn't help. I don't know what else to try. Can anyone please help?
+
+
+thanks
+Cappy
+
+
+
+      
+
+
+
+From MAILER-DAEMON Mon Nov 30 17:51:10 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1NFF5K-00047c-Jv
+	for mharc-axiom-mail@gnu.org; Mon, 30 Nov 2009 17:51:10 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1NFF5J-00047O-QK
+	for axiom-mail@nongnu.org; Mon, 30 Nov 2009 17:51:09 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1NFF5E-00046v-TT
+	for axiom-mail@nongnu.org; Mon, 30 Nov 2009 17:51:09 -0500
+Received: from [199.232.76.173] (port=50927 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1NFF5E-00046s-N2
+	for axiom-mail@nongnu.org; Mon, 30 Nov 2009 17:51:04 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:49789
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1NFF5E-0004V0-2x
+	for axiom-mail@nongnu.org; Mon, 30 Nov 2009 17:51:04 -0500
+Received: from [192.168.1.100] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id nAUMp08a026767;
+	Mon, 30 Nov 2009 16:51:01 -0600
+Message-ID: <4B144CCC.4050700@axiom-developer.org>
+Date: Mon, 30 Nov 2009 17:53:00 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Cap <daCaptain@rocketmail.com>
+Subject: Re: [Axiom-mail] my axiom is broken
+References: <99168.45980.qm@web36705.mail.mud.yahoo.com>
+In-Reply-To: <99168.45980.qm@web36705.mail.mud.yahoo.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 30 Nov 2009 22:51:09 -0000
+
+Cap wrote:
+> Hello,
+>
+> I get an error message when I try to start axiom.
+>
+> Re-reading compress.daase   Re-reading interp.daase
+>    Re-reading operation.daase
+>    Re-reading category.daase 
+>    >> System error:
+>    Couldn't protect
+>
+>
+> Error: The tag |top_level| is undefined.
+> Fast links are on: do (si::use-fast-links nil) for debugging
+> Error signalled by RETURN.
+> Broken at APPLY.  Type :H for Help.
+> BOOT>>
+>
+> I tried reinstalling the package (Ubuntu 9.04 64), but it didn't help. I don't know what else to try. Can anyone please help?
+>
+>
+> thanks
+> Cappy
+>
+>
+>
+>       
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>   
+Axiom prints out a banner that contains the date.
+What is the build date in the banner?
+Where did you get Axiom?
+
+Tim
+
+
+
+

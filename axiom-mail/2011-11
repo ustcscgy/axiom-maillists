@@ -1,0 +1,309 @@
+From MAILER-DAEMON Thu Nov 03 09:57:26 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1RLxnK-0003p5-7E
+	for mharc-axiom-mail@gnu.org; Thu, 03 Nov 2011 09:57:26 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:32907)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mechvel@scico.botik.ru>) id 1RLYRt-0002ec-PV
+	for axiom-mail@nongnu.org; Wed, 02 Nov 2011 06:53:38 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <mechvel@scico.botik.ru>) id 1RLYRs-0001iK-DB
+	for axiom-mail@nongnu.org; Wed, 02 Nov 2011 06:53:37 -0400
+Received: from mail.botik.ru ([95.129.137.166]:46759)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mechvel@scico.botik.ru>) id 1RLYRs-0001Kd-2w
+	for axiom-mail@nongnu.org; Wed, 02 Nov 2011 06:53:36 -0400
+Received: from scico.botik.ru ([193.232.174.15]:36563 ident=Debian-exim)
+	by mail.botik.ru with esmtp (Exim 4.69)
+	(envelope-from <mechvel@scico.botik.ru>) id 1RLYRe-0003mB-Ve
+	for axiom-mail@nongnu.org; Wed, 02 Nov 2011 14:53:23 +0400
+Received: from mechvel by scico.botik.ru with local (Exim 4.69)
+	(envelope-from <mechvel@scico.botik.ru>) id 1RLYRX-0004eD-J7
+	for axiom-mail@nongnu.org; Wed, 02 Nov 2011 13:53:15 +0300
+Date: Wed, 2 Nov 2011 13:53:15 +0300
+From: "Serge D. Mechveliani" <mechvel@botik.ru>
+To: axiom-mail@nongnu.org
+Message-ID: <20111102105315.GA17861@scico.botik.ru>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Organization: Program Systems Inst., Pereslavl-Zalessky, Russia
+User-Agent: Mutt/1.5.18 (2008-05-17)
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-Received-From: 95.129.137.166
+X-Mailman-Approved-At: Thu, 03 Nov 2011 09:57:24 -0400
+Subject: [Axiom-mail] source download
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 02 Nov 2011 10:53:38 -0000
+
+People, 
+please, how can I download the axiom source? 
+
+The page of  http://www.axiom-developer.org/axiom-website/download.html
+says 
+-----------------------------
+The Gold (November 2008) release of Axiom is available.
+The source code tarball from November, 2008 is here
+wget http://axiom.axiom-developer.org/axiom-website/downloads/axiom-july2008-src.tgz
+-----------------------------
+
+I command this and obtain the result 
+---------
+connected with  axiom.axiom-developer.org|209.135.140.38|:80...
+HTTP request sent, ... 404 Not Found
+---------
+
+Please, answer to    mechvel@botik.ru
+
+Thank you in advance for explanation.
+Regards,
+
+------
+Sergei
+
+
+
+
+
+
+
+
+
+
+From MAILER-DAEMON Thu Nov 03 10:18:47 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1RLy7z-0002ky-HK
+	for mharc-axiom-mail@gnu.org; Thu, 03 Nov 2011 10:18:47 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:57154)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1RLy7t-0002jZ-1g
+	for axiom-mail@nongnu.org; Thu, 03 Nov 2011 10:18:46 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1RLy7n-0007nP-21
+	for axiom-mail@nongnu.org; Thu, 03 Nov 2011 10:18:41 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:51383
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1RLy7m-0007nK-UL
+	for axiom-mail@nongnu.org; Thu, 03 Nov 2011 10:18:35 -0400
+Received: from [192.168.1.6] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id pA3EIF75009361;
+	Thu, 3 Nov 2011 08:18:15 -0600
+From: daly <daly@axiom-developer.org>
+To: "Serge D. Mechveliani" <mechvel@botik.ru>
+In-Reply-To: <20111102105315.GA17861@scico.botik.ru>
+References: <20111102105315.GA17861@scico.botik.ru>
+Content-Type: text/plain; charset="UTF-8"
+Date: Thu, 03 Nov 2011 10:17:41 -0400
+Message-ID: <1320329861.30722.1013.camel@pewter>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.28.1 
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Linux 2.6? (barebone, rare!)
+X-Received-From: 209.135.140.38
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] source download
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 03 Nov 2011 14:18:46 -0000
+
+wget  
+http://axiom-developer.org/axiom-website/downloads/axiom-sept2011-src.tgz
+
+On Wed, 2011-11-02 at 13:53 +0300, Serge D. Mechveliani wrote:
+> People, 
+> please, how can I download the axiom source? 
+> 
+> The page of  http://www.axiom-developer.org/axiom-website/download.html
+> says 
+> -----------------------------
+> The Gold (November 2008) release of Axiom is available.
+> The source code tarball from November, 2008 is here
+> wget http://axiom.axiom-developer.org/axiom-website/downloads/axiom-july2008-src.tgz
+> -----------------------------
+> 
+> I command this and obtain the result 
+> ---------
+> connected with  axiom.axiom-developer.org|209.135.140.38|:80...
+> HTTP request sent, ... 404 Not Found
+> ---------
+> 
+> Please, answer to    mechvel@botik.ru
+> 
+> Thank you in advance for explanation.
+> Regards,
+> 
+> ------
+> Sergei
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> https://lists.nongnu.org/mailman/listinfo/axiom-mail
+
+
+
+
+From MAILER-DAEMON Sun Nov 27 09:31:18 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1RUflG-0008C8-GP
+	for mharc-axiom-mail@gnu.org; Sun, 27 Nov 2011 09:31:18 -0500
+Received: from eggs.gnu.org ([140.186.70.92]:43035)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <dcarrera@gmail.com>) id 1RU1xQ-0007io-Bd
+	for axiom-mail@nongnu.org; Fri, 25 Nov 2011 15:01:13 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <dcarrera@gmail.com>) id 1RU1xP-0000Ae-2B
+	for axiom-mail@nongnu.org; Fri, 25 Nov 2011 15:01:12 -0500
+Received: from mail-fx0-f45.google.com ([209.85.161.45]:34453)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <dcarrera@gmail.com>) id 1RU1xO-0000Aa-TY
+	for axiom-mail@nongnu.org; Fri, 25 Nov 2011 15:01:11 -0500
+Received: by faas14 with SMTP id s14so4044867faa.4
+	for <axiom-mail@nongnu.org>; Fri, 25 Nov 2011 12:01:09 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=message-id:date:from:user-agent:mime-version:to:subject
+	:content-type:content-transfer-encoding;
+	bh=b+ZVLlJ5iEG4zDOkCeat2YbJdXZgG+b0o+gKNoMt6Ts=;
+	b=LdOcjIO72hJ5hsJGSRUVykTX+5573o/khkSbzk6uaBW1SThXTpV+QwSbkkikLSZsAR
+	XkBI7vDk6GgKBtGTQNau7i7D9MuEecSJB4D1YD1YS8xf1NqoAk4EQRjl6+xR/XgWbyvd
+	G3ODBfmQkIunR9+yAVOeRfZKhUJKImscpHv0k=
+Received: by 10.152.102.138 with SMTP id fo10mr21631221lab.44.1322251269133;
+	Fri, 25 Nov 2011 12:01:09 -0800 (PST)
+Received: from [192.168.10.107] (c-83-233-147-220.cust.bredband2.com.
+	[83.233.147.220])
+	by mx.google.com with ESMTPS id mo6sm23782693lab.11.2011.11.25.12.01.06
+	(version=SSLv3 cipher=OTHER); Fri, 25 Nov 2011 12:01:07 -0800 (PST)
+Message-ID: <4ECFF401.7050400@gmail.com>
+Date: Fri, 25 Nov 2011 21:01:05 +0100
+From: Daniel Carrera <dcarrera@gmail.com>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.9.2.23) Gecko/20110921 Thunderbird/3.1.15
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-Received-From: 209.85.161.45
+X-Mailman-Approved-At: Sun, 27 Nov 2011 09:31:17 -0500
+Subject: [Axiom-mail] GUI for Axiom?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 25 Nov 2011 20:01:13 -0000
+
+Hello,
+
+Is there a GUI for axiom?
+
+Something analogous to wxMaxima for axiom...
+
+Cheers,
+Daniel.
+-- 
+I'm not overweight, I'm undertall.
+
+
+From MAILER-DAEMON Mon Nov 28 11:03:19 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1RV3fr-0007W9-1G
+	for mharc-axiom-mail@gnu.org; Mon, 28 Nov 2011 11:03:19 -0500
+Received: from eggs.gnu.org ([140.186.70.92]:45957)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1RV3fn-0007Tn-Ps
+	for axiom-mail@nongnu.org; Mon, 28 Nov 2011 11:03:17 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1RV3fi-0001QV-V4
+	for axiom-mail@nongnu.org; Mon, 28 Nov 2011 11:03:15 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:56224
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1RV3fi-0001PQ-Q6
+	for axiom-mail@nongnu.org; Mon, 28 Nov 2011 11:03:10 -0500
+Received: from [192.168.1.6] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id pASG3775022231;
+	Mon, 28 Nov 2011 10:03:07 -0600
+From: daly <daly@axiom-developer.org>
+To: Daniel Carrera <dcarrera@gmail.com>
+In-Reply-To: <4ECFF401.7050400@gmail.com>
+References: <4ECFF401.7050400@gmail.com>
+Content-Type: text/plain; charset="UTF-8"
+Date: Mon, 28 Nov 2011 11:03:02 -0500
+Message-ID: <1322496182.32500.2.camel@pewter>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.28.1 
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Linux 2.6? (barebone, rare!)
+X-Received-From: 209.135.140.38
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] GUI for Axiom?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 28 Nov 2011 16:03:17 -0000
+
+Sorry for the delay. I have been away for a few days.
+
+There is a browser interface to Axiom under development.
+Hyperdoc will allow you to interact with Axiom by example.
+
+There is no wxMaxima style interface.
+
+Tim
+
+On Fri, 2011-11-25 at 21:01 +0100, Daniel Carrera wrote:
+> Hello,
+> 
+> Is there a GUI for axiom?
+> 
+> Something analogous to wxMaxima for axiom...
+> 
+> Cheers,
+> Daniel.
+
+
+
+

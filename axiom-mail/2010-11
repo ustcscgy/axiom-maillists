@@ -1,0 +1,522 @@
+From MAILER-DAEMON Wed Nov 10 13:40:21 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1PGFan-00045L-FN
+	for mharc-axiom-mail@gnu.org; Wed, 10 Nov 2010 13:40:21 -0500
+Received: from [140.186.70.92] (port=38460 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1PGFak-00042Y-VV
+	for axiom-mail@nongnu.org; Wed, 10 Nov 2010 13:40:19 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <rocanaan@gmail.com>) id 1PGFaj-0007eB-UM
+	for axiom-mail@nongnu.org; Wed, 10 Nov 2010 13:40:18 -0500
+Received: from mail-ww0-f41.google.com ([74.125.82.41]:60367)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <rocanaan@gmail.com>) id 1PGFaj-0007e7-P9
+	for axiom-mail@nongnu.org; Wed, 10 Nov 2010 13:40:17 -0500
+Received: by wwc33 with SMTP id 33so339943wwc.4
+	for <axiom-mail@nongnu.org>; Wed, 10 Nov 2010 10:40:16 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:mime-version:received:received:date:message-id
+	:subject:from:to:content-type;
+	bh=QjJsC4eRBaB21KmHhL4ztDEVsZLo69FvdrcLnHbwUiY=;
+	b=kxMklWKgmugSiaJ5TlQh6PHhc9BuuPUEIEMqcveVqqhUOwUXWbmvYyRA7Fv/1kPoPE
+	3myZTFSvpPZYMW4/nNMkWLDjJt0NfHpTfGyo0kqwc9MLGqVjz4D/frpqPbx7maTZH1Jj
+	wgBIfIlfvG0UlsBxpI6hQo5AmgY3D8nxbRmBs=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=mime-version:date:message-id:subject:from:to:content-type;
+	b=ht+kLjJ7H8TqOQHRPD52yTbntLbcKlxaKdJaAG//5TVGCzxwEV5kxEB5sgGOOXRiSq
+	gKwm5Z2u7vV1voRAQFPnXvhjTdSj4mj/Fxoitp/nCYANebwTskMC3x8ow1bbnx3NKjG/
+	7f/YPyrKBCve0lmd/gyYqWd9uSrs4AL0BcK1w=
+MIME-Version: 1.0
+Received: by 10.216.24.139 with SMTP id x11mr8638856wex.75.1289414415931; Wed,
+	10 Nov 2010 10:40:15 -0800 (PST)
+Received: by 10.216.80.2 with HTTP; Wed, 10 Nov 2010 10:40:15 -0800 (PST)
+Date: Wed, 10 Nov 2010 16:40:15 -0200
+Message-ID: <AANLkTinUJbZ6GuCyapQfzuozZAvTYU=oNYnTn175X9xw@mail.gmail.com>
+From: Rodrigo Canaan <rocanaan@gmail.com>
+To: axiom-mail@nongnu.org
+Content-Type: multipart/alternative; boundary=0016e6dbe2953aeb500494b730ce
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] Saving intermediate results and loading them later in
+	another session
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 10 Nov 2010 18:40:20 -0000
+
+--0016e6dbe2953aeb500494b730ce
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hello!
+
+I am working on a program that takes quite a long time to execute, and I
+wanted to be able to save the intermediate results to an output and to load
+it later in another session, so that I wouldn't need to run the program
+overnight everytime. I want to run a bit, save the important variables, be
+able to close the session, shut down my computer and continue running later.
+Or if there is a way to save the entire state of the session, that would
+work as well.
+
+The spool command won't work, because it won't print the output in a format
+that is readable later as an input by Axiom.
+
+If there is a way to do it, please let me know!
+
+Thanks in advance!
+
+--0016e6dbe2953aeb500494b730ce
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hello!<div><br></div><div>I am working on a program that takes quite a long=
+ time to execute, and I wanted to be able to save the intermediate results =
+to an output and to load it later in another session, so that I wouldn&#39;=
+t need to run the program overnight everytime. I want to run a bit, save th=
+e important variables, be able to close the session, shut down my computer =
+and continue running later. Or if there is a way to save the entire state o=
+f the session, that would work as well.</div>
+<div><br></div><div>The spool command won&#39;t work, because it won&#39;t =
+print the output in a format that is readable later as an input by Axiom.</=
+div><div><br></div><div>If there is a way to do it, please let me know!</di=
+v>
+<div><br></div><div>Thanks in advance!</div>
+
+--0016e6dbe2953aeb500494b730ce--
+
+
+From MAILER-DAEMON Wed Nov 10 13:49:56 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1PGFk4-0000sh-Cc
+	for mharc-axiom-mail@gnu.org; Wed, 10 Nov 2010 13:49:56 -0500
+Received: from [140.186.70.92] (port=43825 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1PGFk1-0000qb-My
+	for axiom-mail@nongnu.org; Wed, 10 Nov 2010 13:49:54 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1PGFk0-00016l-Ct
+	for axiom-mail@nongnu.org; Wed, 10 Nov 2010 13:49:53 -0500
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:46067)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1PGFk0-00015v-48
+	for axiom-mail@nongnu.org; Wed, 10 Nov 2010 13:49:52 -0500
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.4/8.14.4) with ESMTP id
+	oAAInjda011238; Wed, 10 Nov 2010 19:49:46 +0100
+To: Rodrigo Canaan <rocanaan@gmail.com>
+Subject: Re: [Axiom-mail] Saving intermediate results and loading them later
+	in another session
+References: <AANLkTinUJbZ6GuCyapQfzuozZAvTYU=oNYnTn175X9xw@mail.gmail.com>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Wed, 10 Nov 2010 19:49:45 +0100
+In-Reply-To: <AANLkTinUJbZ6GuCyapQfzuozZAvTYU=oNYnTn175X9xw@mail.gmail.com>
+	(Rodrigo Canaan's message of "Wed\, 10 Nov 2010 16\:40\:15 -0200")
+Message-ID: <d9y691f1yu.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.9.395186, Antispam-Engine: 2.7.2.376379,
+	Antispam-Data: 2010.11.10.183628
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 10 Nov 2010 18:49:54 -0000
+
+Rodrigo Canaan <rocanaan@gmail.com> writes:
+
+> Hello!
+>
+> I am working on a program that takes quite a long time to execute, and I wanted to be able to save the intermediate results to an output and to load it
+> later in another session, so that I wouldn't need to run the program overnight everytime. I want to run a bit, save the important variables, be able to
+> close the session, shut down my computer and continue running later. Or if there is a way to save the entire state of the session, that would work as
+> well.
+>
+> The spool command won't work, because it won't print the output in a format that is readable later as an input by Axiom.
+>
+> If there is a way to do it, please let me know!
+
+)history )save file
+)history )restore file
+
+Note that this is not completely reliable.
+
+Martin
+
+
+From MAILER-DAEMON Sat Nov 13 12:59:59 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1PHKON-0008Pr-A0
+	for mharc-axiom-mail@gnu.org; Sat, 13 Nov 2010 12:59:59 -0500
+Received: from [140.186.70.92] (port=59984 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1PHKOK-0008Pj-K3
+	for axiom-mail@nongnu.org; Sat, 13 Nov 2010 12:59:58 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1PHKOF-0002Y9-SV
+	for axiom-mail@nongnu.org; Sat, 13 Nov 2010 12:59:56 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:34945
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1PHKOF-0002Xz-Fl
+	for axiom-mail@nongnu.org; Sat, 13 Nov 2010 12:59:51 -0500
+Received: from [192.168.1.4] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id oADHxo75004183;
+	Sat, 13 Nov 2010 11:59:50 -0600
+Message-ID: <4CDED218.6070900@axiom-developer.org>
+Date: Sat, 13 Nov 2010 12:59:52 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US;
+	rv:1.9.2.9) Gecko/20100825 Thunderbird/3.1.3
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Saving intermediate results and loading them later
+	in	another session
+References: <AANLkTinUJbZ6GuCyapQfzuozZAvTYU=oNYnTn175X9xw@mail.gmail.com>
+In-Reply-To: <AANLkTinUJbZ6GuCyapQfzuozZAvTYU=oNYnTn175X9xw@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Linux 2.6? (barebone, rare!)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 Nov 2010 17:59:58 -0000
+
+  Sorry, I was away on a business trip.
+
+There is a save/restore facility (see the Jenks book, volume 0 at
+http://axiom-developer.org/axiom-website/documentation.html)
+
+You cannot interrupt a long running computation, save it, and then
+restore it and continue. Break the computation in parts and do
+save/restore at the parts. You could write an input file to do
+checkpoint saves after each part completes.
+
+Tim Daly
+
+On 11/10/2010 1:40 PM, Rodrigo Canaan wrote:
+> Hello!
+>
+> I am working on a program that takes quite a long time to execute, and 
+> I wanted to be able to save the intermediate results to an output and 
+> to load it later in another session, so that I wouldn't need to run 
+> the program overnight everytime. I want to run a bit, save the 
+> important variables, be able to close the session, shut down my 
+> computer and continue running later. Or if there is a way to save the 
+> entire state of the session, that would work as well.
+>
+> The spool command won't work, because it won't print the output in a 
+> format that is readable later as an input by Axiom.
+>
+> If there is a way to do it, please let me know!
+>
+> Thanks in advance!
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+
+
+From MAILER-DAEMON Mon Nov 15 09:47:37 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1PI0LJ-0000Yg-24
+	for mharc-axiom-mail@gnu.org; Mon, 15 Nov 2010 09:47:37 -0500
+Received: from [140.186.70.92] (port=41334 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1PI0LE-0000Vt-Tw
+	for axiom-mail@nongnu.org; Mon, 15 Nov 2010 09:47:35 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <rocanaan@gmail.com>) id 1PI0L9-0002gb-EO
+	for axiom-mail@nongnu.org; Mon, 15 Nov 2010 09:47:31 -0500
+Received: from mail-wy0-f173.google.com ([74.125.82.173]:42939)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <rocanaan@gmail.com>) id 1PI0L9-0002g5-1X
+	for axiom-mail@nongnu.org; Mon, 15 Nov 2010 09:47:27 -0500
+Received: by wyj26 with SMTP id 26so6117894wyj.4
+	for <axiom-mail@nongnu.org>; Mon, 15 Nov 2010 06:47:25 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:mime-version:received:received:date:message-id
+	:subject:from:to:content-type;
+	bh=M/fMx5jWPSFtoEDsPgWFEgX34ftY8cGRdS1ZCfwthas=;
+	b=iK/ABykqTEwkTRPv6v5JBBryzhBYS2fPQohZ5Usv98RYvaQIJ1amFJOhv/0f6VA63B
+	74ZTG88yZp4hv2CUFEvDCzoYxpPfEbiBXBHXZTUoIKgUjMi5Q7JWrr2QoMJvn0o0ZFSR
+	DqjRSP6miCrr1f2BYuJoyHWOUusPX6zXGnhQM=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=mime-version:date:message-id:subject:from:to:content-type;
+	b=wQ6J68fQ69JvA+yDUheeXpP0m9x4wHl+bdcBIWprLSrJj08Gn6fNMTufqsN0Kx9UXc
+	j6j33ERWhpxQomFV6VMz+5WP7lY53wBnrSigko2DqnoabdLqBMel+Ur9GmzzJ0+1GvL2
+	6HGh/V3N4tA47E78D5eimlVn6IisHNlSFHVps=
+MIME-Version: 1.0
+Received: by 10.216.177.9 with SMTP id c9mr2951482wem.60.1289832444727; Mon,
+	15 Nov 2010 06:47:24 -0800 (PST)
+Received: by 10.216.80.2 with HTTP; Mon, 15 Nov 2010 06:47:24 -0800 (PST)
+Date: Mon, 15 Nov 2010 12:47:24 -0200
+Message-ID: <AANLkTi=3vnd7G3ycmsYQ8zNRV50vvnOrmxExNANpRbfw@mail.gmail.com>
+From: Rodrigo Canaan <rocanaan@gmail.com>
+To: axiom-mail@nongnu.org
+Content-Type: multipart/alternative; boundary=001636832eecb0121f04951884af
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] Re: Saving intermediate results and loading them later
+	in another session
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 15 Nov 2010 14:47:35 -0000
+
+--001636832eecb0121f04951884af
+Content-Type: text/plain; charset=ISO-8859-1
+
+>
+>
+>  Sorry, I was away on a business trip.
+>
+> There is a save/restore facility (see the Jenks book, volume 0 at
+> http://axiom-developer.org/axiom-website/documentation.html)
+>
+> You cannot interrupt a long running computation, save it, and then
+> restore it and continue. Break the computation in parts and do
+> save/restore at the parts. You could write an input file to do
+> checkpoint saves after each part completes.
+>
+> Tim Daly
+>
+> On 11/10/2010 1:40 PM, Rodrigo Canaan wrote:
+> > Hello!
+> >
+> > I am working on a program that takes quite a long time to execute, and
+> > I wanted to be able to save the intermediate results to an output and
+> > to load it later in another session, so that I wouldn't need to run
+> > the program overnight everytime. I want to run a bit, save the
+> > important variables, be able to close the session, shut down my
+> > computer and continue running later. Or if there is a way to save the
+> > entire state of the session, that would work as well.
+> >
+> > The spool command won't work, because it won't print the output in a
+> > format that is readable later as an input by Axiom.
+> >
+> > If there is a way to do it, please let me know!
+> >
+> > Thanks in advance!
+>
+>
+Hello, Tim!
+
+What I meant by saving the intermediate results was what you said: break the
+computation in multiple input files and save at the end of them and load at
+the begining.
+
+I tried using the )history commands, but it isn't working. I am using
+OpenAxiom-1.3.0 on Windows, and when I issue a command like ")history )save
+test", axiom returns me
+
+>> System.error:
+#p"test.input" is not a type of STRING.
+
+I don't know how to fix it.
+Thanks a lot!
+
+Rodrigo Canaan
+
+--001636832eecb0121f04951884af
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div class=3D"gmail_quote"><blockquote class=3D"gmail_quote" style=3D"margi=
+n: 0pt 0pt 0pt 0.8ex; border-left: 1px solid rgb(204, 204, 204); padding-le=
+ft: 1ex;">
+<br>
+ =A0Sorry, I was away on a business trip.<br>
+<br>
+There is a save/restore facility (see the Jenks book, volume 0 at<br>
+<a href=3D"http://axiom-developer.org/axiom-website/documentation.html" tar=
+get=3D"_blank">http://axiom-developer.org/axiom-website/documentation.html<=
+/a>)<br>
+<br>
+You cannot interrupt a long running computation, save it, and then<br>
+restore it and continue. Break the computation in parts and do<br>
+save/restore at the parts. You could write an input file to do<br>
+checkpoint saves after each part completes.<br>
+<br>
+Tim Daly<br>
+<br>
+On 11/10/2010 1:40 PM, Rodrigo Canaan wrote:<br>
+&gt; Hello!<br>
+&gt;<br>
+&gt; I am working on a program that takes quite a long time to execute, and=
+<br>
+&gt; I wanted to be able to save the intermediate results to an output and<=
+br>
+&gt; to load it later in another session, so that I wouldn&#39;t need to ru=
+n<br>
+&gt; the program overnight everytime. I want to run a bit, save the<br>
+&gt; important variables, be able to close the session, shut down my<br>
+&gt; computer and continue running later. Or if there is a way to save the<=
+br>
+&gt; entire state of the session, that would work as well.<br>
+&gt;<br>
+&gt; The spool command won&#39;t work, because it won&#39;t print the outpu=
+t in a<br>
+&gt; format that is readable later as an input by Axiom.<br>
+&gt;<br>
+&gt; If there is a way to do it, please let me know!<br>
+&gt;<br>
+&gt; Thanks in advance!<br>
+<br></blockquote><div><br>Hello, Tim!<br><br>What I meant by saving the int=
+ermediate results was what you said: break the computation in multiple inpu=
+t files and save at the end of them and load at the begining.<br><br>I trie=
+d using the )history commands, but it isn&#39;t working. I am using OpenAxi=
+om-1.3.0 on Windows, and when I issue a command like &quot;)history )save t=
+est&quot;, axiom returns me <br>
+<br>&gt;&gt; System.error:<br>#p&quot;test.input&quot; is not a type of STR=
+ING.<br><br>I don&#39;t know how to fix it.<br>Thanks a lot!<br><br>Rodrigo=
+ Canaan<br></div></div><br>
+
+--001636832eecb0121f04951884af--
+
+
+From MAILER-DAEMON Mon Nov 15 10:19:00 2010
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1PI0pg-0004AR-KG
+	for mharc-axiom-mail@gnu.org; Mon, 15 Nov 2010 10:19:00 -0500
+Received: from [140.186.70.92] (port=56284 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1PI0pd-00048l-3m
+	for axiom-mail@nongnu.org; Mon, 15 Nov 2010 10:18:58 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1PI0pW-00030d-Jr
+	for axiom-mail@nongnu.org; Mon, 15 Nov 2010 10:18:56 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:42140
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1PI0pW-00030K-Fy
+	for axiom-mail@nongnu.org; Mon, 15 Nov 2010 10:18:50 -0500
+Received: from [192.168.1.4] (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id oAFFIj75012452;
+	Mon, 15 Nov 2010 09:18:46 -0600
+Message-ID: <4CE14F5A.20405@axiom-developer.org>
+Date: Mon, 15 Nov 2010 10:18:50 -0500
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US;
+	rv:1.9.2.9) Gecko/20100825 Thunderbird/3.1.3
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org, Gabriel Dos Reis <gdr@integrable-solutions.net>,
+	Gabriel Dos Reis <gdr@cs.tamu.edu>
+Subject: Re: [Axiom-mail] Re: Saving intermediate results and loading them
+	later	in another session
+References: <AANLkTi=3vnd7G3ycmsYQ8zNRV50vvnOrmxExNANpRbfw@mail.gmail.com>
+In-Reply-To: <AANLkTi=3vnd7G3ycmsYQ8zNRV50vvnOrmxExNANpRbfw@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Linux 2.6? (barebone, rare!)
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 15 Nov 2010 15:18:59 -0000
+
+  This is the Axiom project.
+You want the Open-Axiom project (www.open-axiom.org)
+
+
+On 11/15/2010 9:47 AM, Rodrigo Canaan wrote:
+>
+>
+>      Sorry, I was away on a business trip.
+>
+>     There is a save/restore facility (see the Jenks book, volume 0 at
+>     http://axiom-developer.org/axiom-website/documentation.html)
+>
+>     You cannot interrupt a long running computation, save it, and then
+>     restore it and continue. Break the computation in parts and do
+>     save/restore at the parts. You could write an input file to do
+>     checkpoint saves after each part completes.
+>
+>     Tim Daly
+>
+>     On 11/10/2010 1:40 PM, Rodrigo Canaan wrote:
+>     > Hello!
+>     >
+>     > I am working on a program that takes quite a long time to
+>     execute, and
+>     > I wanted to be able to save the intermediate results to an
+>     output and
+>     > to load it later in another session, so that I wouldn't need to run
+>     > the program overnight everytime. I want to run a bit, save the
+>     > important variables, be able to close the session, shut down my
+>     > computer and continue running later. Or if there is a way to
+>     save the
+>     > entire state of the session, that would work as well.
+>     >
+>     > The spool command won't work, because it won't print the output in a
+>     > format that is readable later as an input by Axiom.
+>     >
+>     > If there is a way to do it, please let me know!
+>     >
+>     > Thanks in advance!
+>
+>
+> Hello, Tim!
+>
+> What I meant by saving the intermediate results was what you said: 
+> break the computation in multiple input files and save at the end of 
+> them and load at the begining.
+>
+> I tried using the )history commands, but it isn't working. I am using 
+> OpenAxiom-1.3.0 on Windows, and when I issue a command like ")history 
+> )save test", axiom returns me
+>
+> >> System.error:
+> #p"test.input" is not a type of STRING.
+>
+> I don't know how to fix it.
+> Thanks a lot!
+>
+> Rodrigo Canaan
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+
+

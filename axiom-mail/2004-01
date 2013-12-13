@@ -1,0 +1,2393 @@
+From MAILER-DAEMON Thu Jan 01 18:33:42 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AcBpQ-0005qf-9Z
+	for mharc-axiom-mail@gnu.org; Thu, 01 Jan 2004 18:02:08 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AcBpM-0005pO-7O
+	for axiom-mail@nongnu.org; Thu, 01 Jan 2004 18:02:04 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1Ac8LK-0006dJ-Cj
+	for axiom-mail@nongnu.org; Thu, 01 Jan 2004 14:19:21 -0500
+Received: from [193.252.22.30] (helo=mwinf0103.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1Ac79K-0000gk-3r; Thu, 01 Jan 2004 13:02:22 -0500
+Received: from oops (ARennes-303-1-17-2.w81-51.abo.wanadoo.fr [81.51.43.2])
+	by mwinf0103.wanadoo.fr (SMTP Server) with ESMTP
+	id 6F2BE1BFFF6F; Thu,  1 Jan 2004 18:00:54 +0100 (CET)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 1Ac6Bp-0000z8-00; Thu, 01 Jan 2004 18:00:53 +0100
+To: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Thu, 01 Jan 2004 18:00:53 +0100
+Message-ID: <87pte3txh6.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: 
+Subject: [Axiom-mail] New procedure to download Axiom source code anonymously
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 01 Jan 2004 23:02:05 -0000
+
+Hello,
+
+After Savannah compromise, you should now use CVS through SSH to
+download Axiom source code anonymously. Here is the new procedure:
+
+
+    * export CVS_RSH="ssh"
+
+    * cvs -z3 -d:ext:anoncvs@savannah.nongnu.org:/cvsroot/axiom co axiom 
+
+
+The SSHv2 public key fingerprints for the machine hosting the cvs trees are:
+
+RSA: 1024 80:5a:b0:0c:ec:93:66:29:49:7e:04:2b:fd:ba:2c:d5
+DSA: 1024 4d:c8:dc:9a:99:96:ae:cc:ce:d3:2b:b0:a3:a4:95:a5
+
+
+After first download, you can type usual 'cvs -z6 update' to update your
+local source tree.
+
+
+If you are a Savannah developer, please be sure that you have Protocol 2
+for all savannah related hosts in your .ssh/config file.
+
+
+Let us know of any issues,
+Yours,
+d.
+
+PS: I have updated the web page accordingly but I don't know when
+changes will take effect.
+-- 
+David MENTRE <david.mentre@wanadoo.fr> -- http://www.nongnu.org/axiom/
+
+
+
+From MAILER-DAEMON Mon Jan 05 16:15:28 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1Adc4N-0001Hy-NW
+	for mharc-axiom-mail@gnu.org; Mon, 05 Jan 2004 16:15:27 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Adc42-0001D0-Bd
+	for axiom-mail@nongnu.org; Mon, 05 Jan 2004 16:15:06 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1Adc3T-000154-G9
+	for axiom-mail@nongnu.org; Mon, 05 Jan 2004 16:15:02 -0500
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1Adbqu-0005jm-MP; Mon, 05 Jan 2004 16:01:32 -0500
+Received: from [134.74.86.20] (helo=groups.sci.ccny.cuny.edu)
+	by mx20.gnu.org with esmtp (Exim 4.24)
+	id 1AdaUF-0002pr-4T; Mon, 05 Jan 2004 14:34:03 -0500
+Received: from rio.sci.ccny.cuny.edu (rio.sci.ccny.cuny.edu [134.74.120.4])
+	by groups.sci.ccny.cuny.edu (8.11.0/8.11.2) with ESMTP id i05JXav06441; 
+	Mon, 5 Jan 2004 14:33:36 -0500
+Received: (from daly@localhost)
+	by rio.sci.ccny.cuny.edu (8.11.0/8.11.0) id i05Im5Z27572;
+	Mon, 5 Jan 2004 13:48:05 -0500
+Date: Mon, 5 Jan 2004 13:48:05 -0500
+Message-Id: <200401051848.i05Im5Z27572@rio.sci.ccny.cuny.edu>
+From: Tim Daly  <daly@rio.sci.ccny.cuny.edu>
+To: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Cc: gilbert@sci.ccny.cuny.edu, daly@idsi.net
+Subject: [Axiom-mail] Richard Jenks
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 05 Jan 2004 21:15:08 -0000
+
+Would you please send the following sad notice to the Axiom mailing list.
+Thanks, and
+
+Best regards,
+Bob Caviness 
+----------
+                        Richard Dimick Jenks
+                 Axiom Developer and Computer Algebra Pioneer
+
+On December 30, 2003, Dick died at the age of 66 after an extended and
+courageous battle with multiple system atrophy.  He received his PhD in
+mathematics from the University of Illinois at Urbana-Champaign and was
+a long time employee of IBM Research until his retirement in 2002.  At
+IBM he was a principal in the design and implementation of the Axiom
+computer algebra system and a co-author with Robert Sutor of the
+"Axiom" book.  He was also the manager, for many years, of the IBM
+group that developed Axiom.  He, along with David Chudnovsky, organized
+the highly successful meetings on Computers and Mathematics that were
+held at Stanford in 1986 and MIT in 1989.  As a legacy of those
+meetings, a Jenks Prize for outstanding contributions to software
+engineering in computer algebra is being established.  If you would
+like to make a contribution to the prize fund, make a check to the
+"Jenks Computer Algebra Prize" and send it to
+
+  Jenks Computer Algebra Prize
+  c/o Prof. B. F. Caviness
+  Dept. of Computer & Information Sciences
+  103 Smith Hall
+  University of Delaware
+  Newark, DE 19716
+  USA
+
+A memorial service is scheduled for 11AM on Saturday, January 10, 2004 at
+St. Luke's Episcopal Church
+850 Wolcott Avenue
+Beacon, NY
+
+A more extensive death notice was published in the New York Times on
+Sunday, January 4, 2004.
+
+
+
+From MAILER-DAEMON Thu Jan 08 10:56:40 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AecWW-0004ne-0l
+	for mharc-axiom-mail@gnu.org; Thu, 08 Jan 2004 10:56:40 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AecWT-0004nM-Uj
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 10:56:37 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AecVx-0004ks-9F
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 10:56:37 -0500
+Received: from [195.134.65.4] (helo=zeus.di.uoa.gr)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AecVw-0004kn-C3
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 10:56:04 -0500
+Received: from di.uoa.gr (IDENT:1000@pythagoras.di.uoa.gr [195.134.66.218])
+	by zeus.di.uoa.gr (8.12.10/8.12.10) with ESMTP id i08EsaBg007276
+	for <axiom-mail@nongnu.org>; Thu, 8 Jan 2004 16:54:36 +0200 (EET)
+Message-ID: <3FFD6F04.9070804@di.uoa.gr>
+Date: Thu, 08 Jan 2004 16:53:56 +0200
+From: "Elias P. TSIGARIDAS" <et@di.uoa.gr>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.4) Gecko/20030624 Netscape/7.1
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-mail] Help with AXIOM
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 08 Jan 2004 15:56:38 -0000
+
+
+Hello to all and happy new year
+
+
+I have some questions about axiom
+
+Can anyone tell me how to open a file and read some values from it?
+
+Is there a time function in axiom?
+
+Any good online tutorial except 
+http://www.dcs.st-and.ac.uk/~mnd/documentation/axiom_tutorial/
+
+
+
+
+Thanks in advance
+
+--Elias
+
+
+
+
+From MAILER-DAEMON Thu Jan 08 19:18:56 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AekMa-00079s-F3
+	for mharc-axiom-mail@gnu.org; Thu, 08 Jan 2004 19:18:56 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AekMX-000791-45
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 19:18:53 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AekM0-000740-E8
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 19:18:51 -0500
+Received: from [193.252.22.26] (helo=mwinf0502.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1Aefqi-0005SH-OW
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 14:29:44 -0500
+Received: from oops (ARennes-303-1-12-62.w81-49.abo.wanadoo.fr [81.49.95.62])
+	by mwinf0502.wanadoo.fr (SMTP Server) with ESMTP
+	id DE6D0E800328; Thu,  8 Jan 2004 19:28:12 +0100 (CET)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 1Aeet9-0000tI-00; Thu, 08 Jan 2004 19:28:11 +0100
+To: "Elias P. TSIGARIDAS" <et@di.uoa.gr>
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Thu, 08 Jan 2004 19:28:11 +0100
+In-Reply-To: <3FFD6F04.9070804@di.uoa.gr> (Elias P. TSIGARIDAS's message of
+	"Thu, 08 Jan 2004 16:53:56 +0200")
+Message-ID: <877k02z45g.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 09 Jan 2004 00:18:54 -0000
+
+Hello Elias,
+
+"Elias P. TSIGARIDAS" <et@di.uoa.gr> writes:
+
+> Can anyone tell me how to open a file and read some values from it?
+
+Yes, use the File package:
+
+(2) -> )show File
+ File S: SetCategory  is a domain constructor
+ Abbreviation for File is FILE 
+ This constructor is exposed in this frame.
+ Issue )edit /home/david/pub/axiom-libre/axiom-i386/axiom/mnt/linux/../../src/algebra/FILE.spad to see algebra source code for FILE 
+
+------------------------------- Operations --------------------------------
+ ?=? : (%,%) -> Boolean                close! : % -> %
+ coerce : % -> OutputForm              hash : % -> SingleInteger
+ iomode : % -> String                  latex : % -> String
+ name : % -> FileName                  open : (FileName,String) -> %
+ open : FileName -> %                  read! : % -> S
+ reopen! : (%,String) -> %             write! : (%,S) -> S
+ ?~=? : (%,%) -> Boolean              
+ readIfCan! : % -> Union(S,"failed")
+
+
+File works over typed values:
+
+(2) -> afile : File List Integer := open ("/tmp/jazz1", "output")
+
+   (2)  "/tmp/jazz1"
+                                                      Type: File List Integer
+                                       Time: 0.01 (EV) + 0.01 (OT) = 0.02 sec
+(3) -> write!(afile, [-1, 2, 3])
+
+   (3)  [- 1,2,3]
+                                                           Type: List Integer
+                                                                  Time: 0 sec
+(4) -> reopen!(afile, "input")
+
+   (4)  "/tmp/jazz1"
+                                                      Type: File List Integer
+                                                   Time: 0.01 (EV) = 0.01 sec
+(5) -> read! afile
+
+   (5)  [- 1,2,3]
+                                                           Type: List Integer
+                                                                  Time: 0 sec
+
+
+
+The content of the file seems to be written as Lisp values:
+
+(6) -> )system cat /tmp/jazz1
+
+(-1 2 3) 
+
+
+See also TextFile KeyedAccessFile, Library and Filename packages.
+
+
+> Is there a time function in axiom?
+
+If you want to time computations in axiom, you can use following
+command:
+(1) -> )set message time on
+(1) -> 1+1
+
+   (1)  2
+                                                        Type: PositiveInteger
+                                       Time: 0.01 (IN) + 0.01 (OT) = 0.02 sec
+
+
+
+> Any good online tutorial except
+> http://www.dcs.st-and.ac.uk/~mnd/documentation/axiom_tutorial/
+
+Yep. Bill Page has retranscripted a tutorial that is available in both
+TeXmacs and PDF formats.
+
+Due to savannah download area currently down, I have put them at:
+http://www.linux-france.org/~dmentre/axiom/doc/axiom_texmacs.pkg/
+
+Look at latest version of it.
+
+You can also find the introduction of Axiom Book at:
+http://www.linux-france.org/~dmentre/axiom/doc/axiom_book.pkg/Introduction%20v1.0.0/
+
+I hope it helps,
+Yours,
+d.
+-- 
+David MENTRE <david.mentre@wanadoo.fr> -- http://www.nongnu.org/axiom/
+
+
+
+From MAILER-DAEMON Fri Jan 09 07:27:04 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AevjA-0008PU-Nk
+	for mharc-axiom-mail@gnu.org; Fri, 09 Jan 2004 07:27:00 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Aevj7-0008OX-BZ
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 07:26:57 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AeviW-0008Fp-QM
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 07:26:53 -0500
+Received: from [195.134.65.4] (helo=zeus.di.uoa.gr)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AeviV-0008FD-Mr
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 07:26:19 -0500
+Received: from di.uoa.gr (IDENT:1000@pythagoras.di.uoa.gr [195.134.66.218])
+	by zeus.di.uoa.gr (8.12.10/8.12.10) with ESMTP id i09BOoBg013114;
+	Fri, 9 Jan 2004 13:24:50 +0200 (EET)
+Message-ID: <3FFE8F5A.7060706@di.uoa.gr>
+Date: Fri, 09 Jan 2004 13:24:10 +0200
+From: "Elias P. TSIGARIDAS" <et@di.uoa.gr>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.4) Gecko/20030624 Netscape/7.1
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: David MENTRE <david.mentre@wanadoo.fr>
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr> <877k02z45g.fsf@wanadoo.fr>
+	<87y8sixoqk.fsf@wanadoo.fr>
+In-Reply-To: <87y8sixoqk.fsf@wanadoo.fr>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 09 Jan 2004 12:26:59 -0000
+
+
+Hello David,
+
+
+Thank you very much for your help
+
+
+--Elias
+
+
+
+
+
+
+From MAILER-DAEMON Fri Jan 09 17:16:02 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1Af30e-0004g3-LI
+	for mharc-axiom-mail@gnu.org; Fri, 09 Jan 2004 15:13:32 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Aev6r-0001x3-Qy
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 06:47:25 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AeiPO-0000al-Pw
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 17:14:14 -0500
+Received: from [193.252.22.23] (helo=mwinf0803.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1Aeg0d-0006aO-U9
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 14:40:00 -0500
+Received: from oops (ARennes-303-1-12-62.w81-49.abo.wanadoo.fr [81.49.95.62])
+	by mwinf0803.wanadoo.fr (SMTP Server) with ESMTP
+	id 1A37118000A7; Thu,  8 Jan 2004 19:38:29 +0100 (CET)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 1Aef36-0000tV-00; Thu, 08 Jan 2004 19:38:28 +0100
+To: "Elias P. TSIGARIDAS" <et@di.uoa.gr>
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr> <877k02z45g.fsf@wanadoo.fr>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Thu, 08 Jan 2004 19:38:28 +0100
+In-Reply-To: <877k02z45g.fsf@wanadoo.fr> (David MENTRE's message of "Thu, 08
+	Jan 2004 19:28:11 +0100")
+Message-ID: <873caqz3ob.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 09 Jan 2004 20:13:30 -0000
+
+David MENTRE <david.mentre@wanadoo.fr> writes:
+
+>> Is there a time function in axiom?
+>
+> If you want to time computations in axiom, you can use following
+> command:
+> (1) -> )set message time on
+> (1) -> 1+1
+>
+>    (1)  2
+>                                                         Type: PositiveInteger
+>                                        Time: 0.01 (IN) + 0.01 (OT) = 0.02 sec
+
+Of course, if you want absolute time, you can call the underlying lisp:
+
+(6) -> )lisp (get-universal-time)                 
+
+Value = 3282575827
+
+
+Yours,
+d.
+-- 
+ david.mentre@wanadoo.fr
+
+
+
+From MAILER-DAEMON Fri Jan 09 20:20:49 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1Af7o0-0008Ux-U3
+	for mharc-axiom-mail@gnu.org; Fri, 09 Jan 2004 20:20:48 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Af7nx-0008Tj-0F
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 20:20:45 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1Af7nN-0008K5-K7
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 20:20:41 -0500
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1Af7nJ-0008Ix-VF
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 20:20:06 -0500
+Received: from localhost.localdomain (158.113.252.64.snet.net [64.252.113.158])
+	by pimout3-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	i0A0IUJx093994; Fri, 9 Jan 2004 19:18:30 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i0A1AZE15176;
+	Fri, 9 Jan 2004 20:10:35 -0500
+Date: Fri, 9 Jan 2004 20:10:35 -0500
+Message-Id: <200401100110.i0A1AZE15176@localhost.localdomain>
+From: root <daly@idsi.net>
+To: mktg@miraclelinux.com, aliceyang@redflag-linux.com
+Cc: axiom-mail@nongnu.org
+Subject: [Axiom-mail] Axiom on Asianux
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 10 Jan 2004 01:20:46 -0000
+
+I understand from your recent press release that you are developing
+a version of Linux for the Asian market. 
+
+Education and Research are two areas where Linux is widely used.
+
+I'm the lead developer of Axiom, a general purpose computer algebra
+system similar to Mathematica and Maple. Axiom is available as free
+and open source software. The primary website is:
+http://savannah.nongnu.org/projects/axiom
+
+Axiom has been ported to Red Flag Linux (V4.0). I would like to ensure
+that it will run on the new version you are developing. Can you give
+me the email address of a technical contact? 
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+
+From MAILER-DAEMON Fri Jan 09 23:30:09 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1Af75j-0006pZ-9N
+	for mharc-axiom-mail@gnu.org; Fri, 09 Jan 2004 19:35:03 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Af75e-0006nm-Mp
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 19:34:58 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1Af755-0006gQ-V0
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 19:34:55 -0500
+Received: from [193.252.22.26] (helo=mwinf0504.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1Af6PB-0005A8-J5
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 18:51:05 -0500
+Received: from oops (ARennes-303-1-3-199.w217-128.abo.wanadoo.fr
+	[217.128.248.199]) by mwinf0504.wanadoo.fr (SMTP Server) with ESMTP
+	id ED1E310003F7; Fri,  9 Jan 2004 23:49:25 +0100 (CET)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 1Af5RU-0000TQ-00; Fri, 09 Jan 2004 23:49:24 +0100
+To: "Elias P. TSIGARIDAS" <et@di.uoa.gr>
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr> <877k02z45g.fsf@wanadoo.fr>
+	<87y8sixoqk.fsf@wanadoo.fr> <3FFEA305.5060909@di.uoa.gr>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Fri, 09 Jan 2004 23:49:24 +0100
+In-Reply-To: <3FFEA305.5060909@di.uoa.gr> (Elias P. TSIGARIDAS's message of
+	"Fri, 09 Jan 2004 14:48:05 +0200")
+Message-ID: <87llogn3ez.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: gcl-devel@gnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 10 Jan 2004 00:35:01 -0000
+
+Hello Elias,
+
+I would prefer that you publicly ask on axiom-mail mailing list, it
+would probably help other people.
+
+"Elias P. TSIGARIDAS" <et@di.uoa.gr> writes:
+
+> I have the code that i append you at the end of the email
+>
+> i compile the code
+>
+> )compile timer.spad
+>
+>
+> but the i can not understand how to call the functions....
+>
+>
+> i have a function say foo()
+> How  can i time it with runFunction() ??
+
+(1) -> )compile timer.spad
+[...]
+(1) -> foo () == 1 + 2
+                                                                   Type: Void
+(2) -> runFunction(foo, 3)
+   Compiling function foo with type () -> PositiveInteger 
+ 
+   >> System error:
+   GCTIME is invalid as a function.
+
+protected-symbol-warn called with (NIL)
+
+
+However, it appears that your package call a lisp fonction GCTIME that
+does not exists, at least in GCL. Sorry, I can't help on that. I have
+googled but found nothing. 
+
+I include gcl-devel in copy, maybe somebody there can be of some help
+for your issue.
+
+Why don't you use standard Axiom functions for timing? Need to store the
+result?
+
+Yours,
+d.
+
+> --- code for timer.spad
+>
+>
+>
+> )ab package TIMER NewTimingFunctions
+>
+> NewTimingFunctions : PUB == PRIV where
+>
+>   PUB == with
+>     totalTime : () -> Integer
+>       ++ Total counting time in milliseconds
+>     gcTime : () -> Integer
+>       ++ Gc counting time in milliseconds
+>     evaluationTime : () -> Integer
+>       ++ Evaluation counting time in milliseconds
+>
+>   PRIV == add
+>
+>     totalTime () ==
+>       evaluationTime() + gcTime()
+>
+>     evaluationTime () ==
+>       (GET_-INTERNAL_-RUN_-TIME()$Lisp) pretend Integer
+>
+>     gcTime () ==
+>        (GCTIME()$Lisp) pretend Integer
+>
+>
+> )ab package RUNF RunFunction
+>
+> RunFunction(Dom:SetCategory) : PUB == PRIV where
+>
+>   PUB == with
+>
+>    runFunction : ((()->Dom),Dom) -> Integer
+>    doRun : ((()->Dom),Dom,String) -> Void
+>    mapRun : (List(()->Dom),Dom,String) -> Void
+>
+>   PRIV == add
+>
+>     mapRun(lf,res,mes) ==
+>       for f in lf repeat
+>         t := totalTime()$NewTimingFunctions
+>         runRes := f()
+>         (runRes = res) =>
+>           s : String := convert(totalTime()$NewTimingFunctions -t)$Integer
+>           messagePrint(concat([mes, " in ", s ]))$OutputForm
+>         messagePrint(concat(mes, " Bad result"))$OutputForm
+>
+>     doRun(f,res,mes) ==
+>       t := totalTime()$NewTimingFunctions
+>       runRes := f()
+>       (runRes = res) =>
+>         s : String := convert(totalTime()$NewTimingFunctions -t)$Integer
+>         messagePrint(concat([mes, " in ", s ]))$OutputForm
+>       messagePrint(concat(mes, " Bad result"))$OutputForm
+>
+>     runFunction(f,res) ==
+>       t := totalTime()$NewTimingFunctions
+>       runRes := f()
+>       if runRes = res
+>       then ( messagePrint("foo")$OutputForm ; totalTime()$NewTimingFunctions -t)
+>       else 0
+>
+>
+>
+
+-- 
+ david.mentre@wanadoo.fr
+
+
+
+From MAILER-DAEMON Sat Jan 10 00:18:09 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AfBVg-0004QI-Js
+	for mharc-axiom-mail@gnu.org; Sat, 10 Jan 2004 00:18:08 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Af86V-0004XN-IM
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 20:39:55 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1Af7am-0004jL-0S
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 20:07:40 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1Af7ab-0004gk-5q
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 20:06:57 -0500
+Received: from localhost.localdomain (158.113.252.64.snet.net [64.252.113.158])
+	by pimout2-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	i0A05JoG004214; Fri, 9 Jan 2004 19:05:19 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i0A0vPX15159;
+	Fri, 9 Jan 2004 19:57:25 -0500
+Date: Fri, 9 Jan 2004 19:57:25 -0500
+Message-Id: <200401100057.i0A0vPX15159@localhost.localdomain>
+From: root <daly@idsi.net>
+To: david.mentre@wanadoo.fr
+In-reply-to: <87llogn3ez.fsf@wanadoo.fr> (message from David MENTRE on Fri, 09
+	Jan 2004 23:49:24 +0100)
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr> <877k02z45g.fsf@wanadoo.fr>
+	<87y8sixoqk.fsf@wanadoo.fr> <3FFEA305.5060909@di.uoa.gr>
+	<87llogn3ez.fsf@wanadoo.fr>
+Cc: axiom-mail@nongnu.org, gcl-devel@gnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 10 Jan 2004 05:18:07 -0000
+
+You can extend Axiom with lisp functions by either from the command line:
+
+)lisp (defun foo (x y) (+ x y))
+
+or by putting it in a file thus:
+
+(in-package "BOOT")
+
+(defun foo (x y)
+  (+ x y))
+
+Tim
+
+
+
+From MAILER-DAEMON Sat Jan 10 00:54:32 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AfC4t-0003aX-V4
+	for mharc-axiom-mail@gnu.org; Sat, 10 Jan 2004 00:54:31 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AfAGj-0000g4-3o
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 22:58:37 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AfAGC-0000XY-0A
+	for axiom-mail@nongnu.org; Fri, 09 Jan 2004 22:58:36 -0500
+Received: from [66.134.96.17] (helo=intech19.enhanced.com)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1AfAFO-0000Q5-Fm; Fri, 09 Jan 2004 22:57:14 -0500
+Received: from camm by intech19.enhanced.com with local (Exim 3.35 #1 (Debian))
+	id 1Af9ED-0006HF-00; Fri, 09 Jan 2004 21:51:57 -0500
+To: David MENTRE <david.mentre@wanadoo.fr>
+Subject: Re: [Gcl-devel] Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr> <877k02z45g.fsf@wanadoo.fr>
+	<87y8sixoqk.fsf@wanadoo.fr> <3FFEA305.5060909@di.uoa.gr>
+	<87llogn3ez.fsf@wanadoo.fr>
+From: Camm Maguire <camm@enhanced.com>
+Date: 09 Jan 2004 21:51:57 -0500
+In-Reply-To: <87llogn3ez.fsf@wanadoo.fr>
+Message-ID: <54brpc8qia.fsf@intech19.enhanced.com>
+Lines: 136
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org, gcl-devel@gnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 10 Jan 2004 05:54:30 -0000
+
+Are you looking for the GCL function (si::gbc-time)?  (See gcl-si docs
+for more info).
+
+Take care,
+
+David MENTRE <david.mentre@wanadoo.fr> writes:
+
+> Hello Elias,
+> 
+> I would prefer that you publicly ask on axiom-mail mailing list, it
+> would probably help other people.
+> 
+> "Elias P. TSIGARIDAS" <et@di.uoa.gr> writes:
+> 
+> > I have the code that i append you at the end of the email
+> >
+> > i compile the code
+> >
+> > )compile timer.spad
+> >
+> >
+> > but the i can not understand how to call the functions....
+> >
+> >
+> > i have a function say foo()
+> > How  can i time it with runFunction() ??
+> 
+> (1) -> )compile timer.spad
+> [...]
+> (1) -> foo () == 1 + 2
+>                                                                    Type: Void
+> (2) -> runFunction(foo, 3)
+>    Compiling function foo with type () -> PositiveInteger 
+>  
+>    >> System error:
+>    GCTIME is invalid as a function.
+> 
+> protected-symbol-warn called with (NIL)
+> 
+> 
+> However, it appears that your package call a lisp fonction GCTIME that
+> does not exists, at least in GCL. Sorry, I can't help on that. I have
+> googled but found nothing. 
+> 
+> I include gcl-devel in copy, maybe somebody there can be of some help
+> for your issue.
+> 
+> Why don't you use standard Axiom functions for timing? Need to store the
+> result?
+> 
+> Yours,
+> d.
+> 
+> > --- code for timer.spad
+> >
+> >
+> >
+> > )ab package TIMER NewTimingFunctions
+> >
+> > NewTimingFunctions : PUB == PRIV where
+> >
+> >   PUB == with
+> >     totalTime : () -> Integer
+> >       ++ Total counting time in milliseconds
+> >     gcTime : () -> Integer
+> >       ++ Gc counting time in milliseconds
+> >     evaluationTime : () -> Integer
+> >       ++ Evaluation counting time in milliseconds
+> >
+> >   PRIV == add
+> >
+> >     totalTime () ==
+> >       evaluationTime() + gcTime()
+> >
+> >     evaluationTime () ==
+> >       (GET_-INTERNAL_-RUN_-TIME()$Lisp) pretend Integer
+> >
+> >     gcTime () ==
+> >        (GCTIME()$Lisp) pretend Integer
+> >
+> >
+> > )ab package RUNF RunFunction
+> >
+> > RunFunction(Dom:SetCategory) : PUB == PRIV where
+> >
+> >   PUB == with
+> >
+> >    runFunction : ((()->Dom),Dom) -> Integer
+> >    doRun : ((()->Dom),Dom,String) -> Void
+> >    mapRun : (List(()->Dom),Dom,String) -> Void
+> >
+> >   PRIV == add
+> >
+> >     mapRun(lf,res,mes) ==
+> >       for f in lf repeat
+> >         t := totalTime()$NewTimingFunctions
+> >         runRes := f()
+> >         (runRes = res) =>
+> >           s : String := convert(totalTime()$NewTimingFunctions -t)$Integer
+> >           messagePrint(concat([mes, " in ", s ]))$OutputForm
+> >         messagePrint(concat(mes, " Bad result"))$OutputForm
+> >
+> >     doRun(f,res,mes) ==
+> >       t := totalTime()$NewTimingFunctions
+> >       runRes := f()
+> >       (runRes = res) =>
+> >         s : String := convert(totalTime()$NewTimingFunctions -t)$Integer
+> >         messagePrint(concat([mes, " in ", s ]))$OutputForm
+> >       messagePrint(concat(mes, " Bad result"))$OutputForm
+> >
+> >     runFunction(f,res) ==
+> >       t := totalTime()$NewTimingFunctions
+> >       runRes := f()
+> >       if runRes = res
+> >       then ( messagePrint("foo")$OutputForm ; totalTime()$NewTimingFunctions -t)
+> >       else 0
+> >
+> >
+> >
+> 
+> -- 
+>  david.mentre@wanadoo.fr
+> 
+> 
+> _______________________________________________
+> Gcl-devel mailing list
+> Gcl-devel@gnu.org
+> http://mail.gnu.org/mailman/listinfo/gcl-devel
+> 
+> 
+> 
+
+-- 
+Camm Maguire			     			camm@enhanced.com
+==========================================================================
+"The earth is but one country, and mankind its citizens."  --  Baha'u'llah
+
+
+
+From MAILER-DAEMON Sat Jan 10 04:07:42 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AfEzp-0008Ha-Pg
+	for mharc-axiom-mail@gnu.org; Sat, 10 Jan 2004 04:01:29 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Aeem4-0005Is-Vs
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 13:20:52 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AeeeH-0004L6-9R
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 13:13:21 -0500
+Received: from [62.231.145.254] (helo=loanamd11.nag.co.uk)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1AedzT-0008Rc-7z
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 12:30:39 -0500
+Received: from loanamd11.nag.co.uk (localhost [127.0.0.1])
+	by loanamd11.nag.co.uk (8.12.3/8.12.3/SuSE Linux 0.6) with ESMTP id
+	i08GSmLq013865
+	for <axiom-mail@nongnu.org>; Thu, 8 Jan 2004 16:28:48 GMT
+Received: from localhost (themos@localhost)
+	by loanamd11.nag.co.uk (8.12.3/8.12.3/Submit) with ESMTP id
+	i08GSmNG013862
+	for <axiom-mail@nongnu.org>; Thu, 8 Jan 2004 17:28:48 +0100
+X-Authentication-Warning: loanamd11.nag.co.uk: themos owned process doing -bs
+Date: Thu, 8 Jan 2004 17:28:48 +0100 (BST)
+From: themos@nag.co.uk
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Help with AXIOM
+Message-ID: <Pine.LNX.4.44.0401081727060.2231-100000@loanamd11.nag.co.uk>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 10 Jan 2004 09:01:19 -0000
+
+
+On Thu, 8 Jan 2004, Elias P. TSIGARIDAS wrote:
+
+>
+> Hello to all and happy new year
+>
+>
+> I have some questions about axiom
+>
+> Can anyone tell me how to open a file and read some values from it?
+
+NOTE:The following works on the last commercial version of AXIOM - don't
+know about the free version.
+
+
+
+Text can be read in using the facilities provided by domain TextFile
+
+example:
+
+(1) -> tf:TextFile := open("/etc/motd")
+
+   (1)  "/etc/motd"
+                                                          Type: TextFile
+(2) -> read! tf
+
+   (2)  "Have a lot of fun..."
+                                                          Type: String
+
+
+conversions from String to Integer are provided by the package
+NumberFormats
+
+To store and retrieve values of a particular domain S, use domain File(S)
+
+To do the same with values of different domains, use domain Library.
+
+(1) -> lb:Library := library("foo")
+
+   (1)  "foo"
+                                                         Type: Library
+(2) -> x:=1 ; z := z+3
+
+   (2)  z + 3
+                                              Type: Polynomial Integer
+(3) -> lb.'number:=x
+
+   (3)  1
+                                                 Type: PositiveInteger
+(4) -> lb.'poly:=z
+
+   (4)  z + 3
+                                              Type: Polynomial Integer
+(5) -> keys lb
+
+   (5)  ["poly","number"]
+                                                     Type: List String
+(6) -> lb.'number
+
+   (6)  1
+                                                 Type: PositiveInteger
+(7) -> lb.'poly
+
+   (7)  z + 3
+                                              Type: Polynomial Integer
+
+
+>
+> Is there a time function in axiom?
+
+There should be a CPU timer available from domain Timer
+
+(1) -> )sh Timer
+ Timer  is a domain constructor
+ Abbreviation for Timer is TIMER
+ This constructor is exposed in this frame.
+ Issue )edit axtimer.as to see algebra source code for TIMER
+
+---------------------------- Operations ----------------------------
+ ?=? : (%,%) -> Boolean             coerce : % -> OutputForm
+ read : % -> Integer                reset! : % -> %
+ start! : % -> Integer              stop! : % -> Integer
+ timer : () -> %                    ?~=? : (%,%) -> Boolean
+ HMS : Integer -> Record(hours: Integer,mins: Integer,seconds:
+Integer,milliseconds: Integer)
+
+
+
+>
+> Any good online tutorial except
+> http://www.dcs.st-and.ac.uk/~mnd/documentation/axiom_tutorial/
+
+Doesn't the free Axiom version you are using come with hypertext help?
+
+regards
+Themos Tsikas
+
+
+
+
+
+From MAILER-DAEMON Sat Jan 10 05:15:53 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AfG8t-00028E-QW
+	for mharc-axiom-mail@gnu.org; Sat, 10 Jan 2004 05:14:55 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Aeh26-0005RN-AZ
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 15:45:34 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1Aeg8S-0007TV-B1
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 14:48:35 -0500
+Received: from [193.252.22.26] (helo=mwinf0504.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1Aeg8R-0007TI-Pg
+	for axiom-mail@nongnu.org; Thu, 08 Jan 2004 14:48:03 -0500
+Received: from oops (ARennes-303-1-12-62.w81-49.abo.wanadoo.fr [81.49.95.62])
+	by mwinf0504.wanadoo.fr (SMTP Server) with ESMTP
+	id 26449100038B; Thu,  8 Jan 2004 19:46:33 +0100 (CET)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 1AefAq-0000uK-00; Thu, 08 Jan 2004 19:46:28 +0100
+To: "Elias P. TSIGARIDAS" <et@di.uoa.gr>
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr> <877k02z45g.fsf@wanadoo.fr>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Thu, 08 Jan 2004 19:46:27 +0100
+In-Reply-To: <877k02z45g.fsf@wanadoo.fr> (David MENTRE's message of "Thu, 08
+	Jan 2004 19:28:11 +0100")
+Message-ID: <87y8sixoqk.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 10 Jan 2004 10:14:53 -0000
+
+David MENTRE <david.mentre@wanadoo.fr> writes:
+
+>> Any good online tutorial except
+>> http://www.dcs.st-and.ac.uk/~mnd/documentation/axiom_tutorial/
+>
+> Yep. Bill Page has retranscripted a tutorial that is available in both
+> TeXmacs and PDF formats.
+>
+> Due to savannah download area currently down, I have put them at:
+> http://www.linux-france.org/~dmentre/axiom/doc/axiom_texmacs.pkg/
+
+Oops. Sorry. I messed up with directory names. The tutorial is in:
+
+http://www.linux-france.org/~dmentre/axiom/doc/Axiom_Tutorial.pkg/1.0.0/
+
+
+Yours,
+d.
+-- 
+ david.mentre@wanadoo.fr
+
+
+
+From MAILER-DAEMON Sat Jan 10 07:26:08 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AfHxu-0001vj-KB
+	for mharc-axiom-mail@gnu.org; Sat, 10 Jan 2004 07:11:42 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AfHiW-0008Sp-FQ
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 06:55:48 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AfHaR-0007Bp-8A
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 06:47:58 -0500
+Received: from [195.134.65.4] (helo=zeus.di.uoa.gr)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1AfHXC-0005xk-Gv; Sat, 10 Jan 2004 06:44:06 -0500
+Received: from di.uoa.gr (IDENT:1000@pythagoras.di.uoa.gr [195.134.66.218])
+	by zeus.di.uoa.gr (8.12.10/8.12.10) with ESMTP id i0AAgXBg021765;
+	Sat, 10 Jan 2004 12:42:33 +0200 (EET)
+Message-ID: <3FFFD6EE.3040003@di.uoa.gr>
+Date: Sat, 10 Jan 2004 12:41:50 +0200
+From: "Elias P. TSIGARIDAS" <et@di.uoa.gr>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.4) Gecko/20030624 Netscape/7.1
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: David MENTRE <david.mentre@wanadoo.fr>
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr>
+	<877k02z45g.fsf@wanadoo.fr>	<87y8sixoqk.fsf@wanadoo.fr>
+	<3FFEA305.5060909@di.uoa.gr> <87llogn3ez.fsf@wanadoo.fr>
+In-Reply-To: <87llogn3ez.fsf@wanadoo.fr>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: gcl-devel@gnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 10 Jan 2004 12:11:39 -0000
+
+
+
+David MENTRE wrote:
+
+>Hello Elias,
+>
+>I would prefer that you publicly ask on axiom-mail mailing list, it
+>would probably help other people.
+>  
+>
+I'm sorry, i forgot the reply all option :-)
+
+>Why don't you use standard Axiom functions for timing? Need to store the
+>  
+>
+>result?
+>
+That's right.
+I read data from a file and i do computations. I just want to measure 
+the computation time
+
+
+I forgot to say that the code timer.spad is due to Renaud Rioboo
+
+
+--Elias
+
+
+
+
+
+From MAILER-DAEMON Sat Jan 10 09:20:08 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AfJyC-00060Z-3F
+	for mharc-axiom-mail@gnu.org; Sat, 10 Jan 2004 09:20:08 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AfJy8-0005zk-Tg
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 09:20:04 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AfJxb-0005ti-8w
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 09:20:02 -0500
+Received: from [132.227.60.2] (helo=isis.lip6.fr)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1AfJRA-0007RE-NE
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 08:46:00 -0500
+Received: from calfor.lip6.fr (calfor.lip6.fr [132.227.66.193])
+	by isis.lip6.fr (8.12.10/jtpda-5.4+victor) with ESMTP id i0ACiTAh016242
+	for <axiom-mail@nongnu.org>; Sat, 10 Jan 2004 13:44:29 +0100
+X-pt: isis.lip6.fr
+Received: from login-calfor.lip6.fr (login-calfor.lip6.fr [132.227.66.1])
+	by calfor.lip6.fr (8.11.6/jtpda-5.2) with ESMTP id i0ACkpM11543
+	; Sat, 10 Jan 2004 13:46:53 +0100
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr>
+From: Renaud.Rioboo@lip6.fr
+In-Reply-To: <3FFD6F04.9070804@di.uoa.gr> (Elias P. TSIGARIDAS's message of
+	"Thu, 08 Jan 2004 16:53:56 +0200")
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Message-ID: <m3k740ynuw.fsf@login-calfor.lip6.fr>
+Date: Sat, 10 Jan 2004 13:44:39 +0100
+X-Draft-From: ("nndraft:queue" "")
+X-Scanned-By: isis.lip6.fr
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 10 Jan 2004 14:20:06 -0000
+
+Dear Axiom Lovers,
+
+Some clarification on Elias's mails. In fact he is trying to compile a package
+I wrote for Axiom when there was no timer available for the programmer and
+when timing functions returned wrong results (Axiom 2.1 I think).
+
+Sources for the package are available somewhere (Misc ?) from
+
+http://ftp.lip6.fr/lip6/softs/formel/Axiom/
+
+Basically the package needs to call two external Lisp functions :
+
+GET-INTERNAL-RUN-TIME and GCTIME
+
+which should return integer times in milliseconds. This is what I could hack
+on the CCL Axiom was running above by that time. These are very basic
+information from the lisp point of vue:
+
+- GET-INTERNAL-RUN-TIME returns the total running time of the Lisp running
+  Axiom in milliseconds not counting garbage collector activity.
+
+- GCTIME returns the total running time of garbage collector activity.
+
+These were the functions used by the interpreter Top Level when it returns
+timing statistics.
+
+I was aware very late of the availability of Axiom and could only download it
+by mid december and due many deadlines, meetings, teaching, system updates,
+the sources are still at my office untouched.
+
+Furthermore I will be out of my office next week and Elias' deadline is
+wednesday 14 for Issac. I can thus not be of any help other that email
+support.
+
+However the informations needed to rewrite my package (or the axtimer of Axiom
+2.3 which does almost the same thing) should be available inside the Lisp
+system Axiom is running above since statistics are displayed by Axiom with 
+
+)set message time on
+
+Older Axioms using AKCL used other functions coming from the operating system
+sys.time returning the time of the process from operating system statistics,
+this should be available under some name in GCL.
+
+As far as I know Elias would be fine in simply obtaining total timings coming
+from the operating system.
+
+May be someone knowing GCL or having access to the documentation of the
+operating system interface and gc statistics may help ?
+
+		Renaud
+
+
+
+
+From MAILER-DAEMON Sat Jan 10 10:26:32 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AfL0R-0006T5-RC
+	for mharc-axiom-mail@gnu.org; Sat, 10 Jan 2004 10:26:31 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AfL0P-0006Rh-N5
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 10:26:29 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AfKzt-0006Mz-ST
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 10:26:28 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AfKwv-0005vV-Tr
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 10:22:53 -0500
+Received: from localhost.localdomain (33.178.252.64.snet.net [64.252.178.33])
+	by pimout2-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	i0AELLoG093392; Sat, 10 Jan 2004 09:21:21 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i0AFDRo16200;
+	Sat, 10 Jan 2004 10:13:27 -0500
+Date: Sat, 10 Jan 2004 10:13:27 -0500
+Message-Id: <200401101513.i0AFDRo16200@localhost.localdomain>
+From: root <daly@idsi.net>
+To: themos@nag.co.uk
+In-reply-to: <Pine.LNX.4.44.0401081727060.2231-100000@loanamd11.nag.co.uk>
+	(themos@nag.co.uk)
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <Pine.LNX.4.44.0401081727060.2231-100000@loanamd11.nag.co.uk>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 10 Jan 2004 15:26:30 -0000
+
+Themos,
+
+The hypertex/sman/etc are not yet available.
+
+Tim
+
+
+
+From MAILER-DAEMON Sat Jan 10 10:26:48 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AfL0h-0006Xv-W8
+	for mharc-axiom-mail@gnu.org; Sat, 10 Jan 2004 10:26:47 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AfL0g-0006Xk-5i
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 10:26:46 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AfKwN-0005nA-Pj
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 10:22:51 -0500
+Received: from [207.115.63.103] (helo=pimout4-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AfKwJ-0005hS-HA
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 10:22:15 -0500
+Received: from localhost.localdomain (33.178.252.64.snet.net [64.252.178.33])
+	by pimout4-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	i0AEKgL8210982; Sat, 10 Jan 2004 09:20:42 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i0AFClw16196;
+	Sat, 10 Jan 2004 10:12:47 -0500
+Date: Sat, 10 Jan 2004 10:12:47 -0500
+Message-Id: <200401101512.i0AFClw16196@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Renaud.Rioboo@lip6.fr
+In-reply-to: <m3k740ynuw.fsf@login-calfor.lip6.fr> (Renaud.Rioboo@lip6.fr)
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr> <m3k740ynuw.fsf@login-calfor.lip6.fr>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 10 Jan 2004 15:26:47 -0000
+
+Elias,
+
+I am going to a funeral service for Dick Jenks today but I'll be back
+later this evening. If you can give me a detailed idea of what kind
+of time you are trying to measure I can work with you to find the
+particular functions you need. The available timing functions from
+the underlying lisp are in the GCL documentation and I'll try to 
+find them and summarize them for you.
+
+In general you can call any lisp function from Axiom directly by using
+the uppercase version of the name. For example to call the lisp function
+
+)lisp (defun foo (x y) (+ x y))
+
+you can call it in algebra code thus:
+
+FOO()$LISP
+
+Let me know how else I can help.
+
+Tim
+
+
+
+From MAILER-DAEMON Sat Jan 10 14:18:25 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AfOcq-0007eX-Nb
+	for mharc-axiom-mail@gnu.org; Sat, 10 Jan 2004 14:18:24 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AfOar-0006zj-51
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 14:16:21 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AfOa4-0006gM-Vx
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 14:16:04 -0500
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1AfOa1-0006GQ-5v
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 14:15:29 -0500
+Received: from [193.252.22.26] (helo=mwinf0503.wanadoo.fr)
+	by mx20.gnu.org with esmtp (Exim 4.24) id 1AfNZR-0002dH-7x
+	for axiom-mail@nongnu.org; Sat, 10 Jan 2004 13:10:49 -0500
+Received: from oops (ARennes-303-1-23-102.w81-53.abo.wanadoo.fr [81.53.39.102])
+	by mwinf0503.wanadoo.fr (SMTP Server) with ESMTP
+	id 7B4B0680015C; Sat, 10 Jan 2004 19:10:47 +0100 (CET)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 1AfNZO-0000KS-00; Sat, 10 Jan 2004 19:10:46 +0100
+To: "Elias P. TSIGARIDAS" <et@di.uoa.gr>
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr> <877k02z45g.fsf@wanadoo.fr>
+	<87y8sixoqk.fsf@wanadoo.fr> <3FFEA305.5060909@di.uoa.gr>
+	<87llogn3ez.fsf@wanadoo.fr> <3FFFD6EE.3040003@di.uoa.gr>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Sat, 10 Jan 2004 19:10:46 +0100
+In-Reply-To: <3FFFD6EE.3040003@di.uoa.gr> (Elias P. TSIGARIDAS's message of
+	"Sat, 10 Jan 2004 12:41:50 +0200")
+Message-ID: <87oetb4qu1.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 10 Jan 2004 19:18:22 -0000
+
+Hello Elias,
+
+"Elias P. TSIGARIDAS" <et@di.uoa.gr> writes:
+
+> I read data from a file and i do computations. I just want to measure
+> the computation time
+
+Ok. 
+
+First solution: use previously mentioned ")set message time on".
+
+
+Second solution: update Renaud's TIMER package.
+ http://ftp.lip6.fr/lip6/softs/formel/Axiom/Misc/timer.spad.gz
+
+GCTIME should be replaced by GCL SI::GBC-TIME (thank you Camm). 
+
+  Function: GBC-TIME (&optional x)
+      Package:SI
+
+  Sets the internal C variable gc_time to X if X is supplied and then
+  returns gc_time. If gc_time is greater or equal to 0, then gc_time is
+  incremented by the garbage collector, according to the number of
+  internal time units spent there. The initial value of gc_time is -1.
+
+
+I tried to update the package but there is an issue with the SI:: common
+lisp package prefix.
+
+ Either I use SI_:_:GBC_-TIME()$Lisp syntax, the code compiles but Axiom
+ compiler produces |SI::GBC-TIME| symbol which is not recognized as GCL
+ function.
+
+ Or either I use SI::GBC_-TIME()$Lisp syntax but in the case the code
+ does not compile.
+
+Another point is that a command like ")lisp (si::gbc-time 0)" should be
+entered at package initialization to enable gbc-time computation.
+
+Last point, one should use INTERNAL-TIME-UNITS-PER-SECOND from Lisp to
+get the transform returned number into seconds.
+
+ Constant: INTERNAL-TIME-UNITS-PER-SECOND
+     Package:LISP The number of internal time units that fit into a second.
+
+
+
+Sorry, I cannot help you further, what your are asking is beyond my
+knowledge. As he proposed to you, Tim will help you.
+
+
+Yours,
+d.
+-- 
+David MENTRE <david.mentre@wanadoo.fr> -- http://www.nongnu.org/axiom/
+
+
+
+From MAILER-DAEMON Sun Jan 11 06:46:03 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1Afe1K-0001Ne-Gl
+	for mharc-axiom-mail@gnu.org; Sun, 11 Jan 2004 06:44:42 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Afe0z-0001AZ-R0
+	for axiom-mail@nongnu.org; Sun, 11 Jan 2004 06:44:21 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1Afe0C-0000gA-Bs
+	for axiom-mail@nongnu.org; Sun, 11 Jan 2004 06:44:05 -0500
+Received: from [193.252.22.28] (helo=mwinf0303.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1AfdzS-00005J-8A; Sun, 11 Jan 2004 06:42:46 -0500
+Received: from oops (ARennes-303-1-24-193.w81-53.abo.wanadoo.fr [81.53.40.193])
+	by mwinf0303.wanadoo.fr (SMTP Server) with ESMTP
+	id D780F5000902; Sun, 11 Jan 2004 11:41:15 +0100 (CET)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 1Afd1u-0000VF-00; Sun, 11 Jan 2004 11:41:14 +0100
+To: axiom-mail@nongnu.org
+References: <87zndjk2ey.fsf@wanadoo.fr>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Sun, 11 Jan 2004 11:41:14 +0100
+In-Reply-To: <87zndjk2ey.fsf@wanadoo.fr> (David MENTRE's message of "Tue, 23
+	Dec 2003 15:57:09 +0100")
+Message-ID: <87oetaix85.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: axiom-developer@nongnu.org
+Subject: [Axiom-mail] CVS tree up-to-date & web site updated (was: Re:
+ [Axiom-developer] Savannah is back)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 11 Jan 2004 11:44:40 -0000
+
+Hello,
+
+David MENTRE <david.mentre@wanadoo.fr> writes:
+
+> Tim Daly, Axiom project leader, has checked the Axiom sources and
+> confirmed that Axiom sources has NOT been compromised[2].
+
+Moreover, I have compared a freshly downloaded savannah source tree (in
+anonymous mode) against my own copy of the axiom source tree. There is
+no difference, so the savannah cvs repository is up-to-date with latest
+update before Savannah crack.
+
+As a side note, the web pages of axiom web site on savannah
+(http://www.nongnu.org/axiom/) have been updated.
+
+Yours,
+d.
+-- 
+David MENTRE <david.mentre@wanadoo.fr> -- http://www.nongnu.org/axiom/
+
+
+
+From MAILER-DAEMON Mon Jan 12 03:40:05 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AfxcD-0005Xh-O8
+	for mharc-axiom-mail@gnu.org; Mon, 12 Jan 2004 03:40:05 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Afxc1-0005Rb-1a
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2004 03:39:53 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AfxbS-0005FF-QC
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2004 03:39:49 -0500
+Received: from [195.134.65.4] (helo=zeus.di.uoa.gr)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AfxbR-0005Da-OL
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2004 03:39:17 -0500
+Received: from di.uoa.gr (IDENT:1000@pythagoras.di.uoa.gr [195.134.66.218])
+	by zeus.di.uoa.gr (8.12.10/8.12.10) with ESMTP id i0C7blBg015368;
+	Mon, 12 Jan 2004 09:37:47 +0200 (EET)
+Message-ID: <40024E9F.4050704@di.uoa.gr>
+Date: Mon, 12 Jan 2004 09:37:03 +0200
+From: "Elias P. TSIGARIDAS" <et@di.uoa.gr>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.4) Gecko/20030624 Netscape/7.1
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: David MENTRE <david.mentre@wanadoo.fr>
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr>
+	<877k02z45g.fsf@wanadoo.fr>	<87y8sixoqk.fsf@wanadoo.fr>
+	<3FFEA305.5060909@di.uoa.gr>	<87llogn3ez.fsf@wanadoo.fr>
+	<3FFFD6EE.3040003@di.uoa.gr> <87oetb4qu1.fsf@wanadoo.fr>
+In-Reply-To: <87oetb4qu1.fsf@wanadoo.fr>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 12 Jan 2004 08:40:02 -0000
+
+For the moment i will use
+)set message time on
+which is the easier and the faster solution for me :-)
+
+I will try the other way with the package of Renaud after Wednesday
+because i have a deadline then....
+
+
+
+Thank you all very much for you help
+
+--Elias
+
+
+David MENTRE wrote:
+
+>Hello Elias,
+>
+>"Elias P. TSIGARIDAS" <et@di.uoa.gr> writes:
+>
+>  
+>
+>>I read data from a file and i do computations. I just want to measure
+>>the computation time
+>>    
+>>
+>
+>Ok. 
+>
+>First solution: use previously mentioned ")set message time on".
+>
+>
+>Second solution: update Renaud's TIMER package.
+> http://ftp.lip6.fr/lip6/softs/formel/Axiom/Misc/timer.spad.gz
+>
+>GCTIME should be replaced by GCL SI::GBC-TIME (thank you Camm). 
+>
+>  Function: GBC-TIME (&optional x)
+>      Package:SI
+>
+>  Sets the internal C variable gc_time to X if X is supplied and then
+>  returns gc_time. If gc_time is greater or equal to 0, then gc_time is
+>  incremented by the garbage collector, according to the number of
+>  internal time units spent there. The initial value of gc_time is -1.
+>
+>
+>I tried to update the package but there is an issue with the SI:: common
+>lisp package prefix.
+>
+> Either I use SI_:_:GBC_-TIME()$Lisp syntax, the code compiles but Axiom
+> compiler produces |SI::GBC-TIME| symbol which is not recognized as GCL
+> function.
+>
+> Or either I use SI::GBC_-TIME()$Lisp syntax but in the case the code
+> does not compile.
+>
+>Another point is that a command like ")lisp (si::gbc-time 0)" should be
+>entered at package initialization to enable gbc-time computation.
+>
+>Last point, one should use INTERNAL-TIME-UNITS-PER-SECOND from Lisp to
+>get the transform returned number into seconds.
+>
+> Constant: INTERNAL-TIME-UNITS-PER-SECOND
+>     Package:LISP The number of internal time units that fit into a second.
+>
+>
+>
+>Sorry, I cannot help you further, what your are asking is beyond my
+>knowledge. As he proposed to you, Tim will help you.
+>
+>
+>Yours,
+>d.
+>  
+>
+
+-- 
+
+
+/------------------------------------------------\
+|  Elias P. TSIGARIDAS        ////               |
+|  PhD student                ///                |
+|  et@di.uoa.gr               //                 |
+|  http://www.di.uoa.gr/~et   /   x^2 - Dy^2 = 1 |
++------------------------------------------------+
+|"... et paeterea censeo, Carthago delenda est." |
+|                                        CATON   |
+\------------------------------------------------/
+
+
+
+
+
+
+From MAILER-DAEMON Mon Jan 12 03:43:56 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1Afxcz-0005wQ-7Q
+	for mharc-axiom-mail@gnu.org; Mon, 12 Jan 2004 03:40:53 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Afxcx-0005vv-7a
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2004 03:40:51 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AfxcR-0005em-H0
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2004 03:40:49 -0500
+Received: from [195.134.65.4] (helo=zeus.di.uoa.gr)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AfxcN-0005db-Iu
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2004 03:40:15 -0500
+Received: from di.uoa.gr (IDENT:1000@pythagoras.di.uoa.gr [195.134.66.218])
+	by zeus.di.uoa.gr (8.12.10/8.12.10) with ESMTP id i0C7cXBg015408;
+	Mon, 12 Jan 2004 09:38:34 +0200 (EET)
+Message-ID: <40024ECD.6000001@di.uoa.gr>
+Date: Mon, 12 Jan 2004 09:37:49 +0200
+From: "Elias P. TSIGARIDAS" <et@di.uoa.gr>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.4) Gecko/20030624 Netscape/7.1
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: daly@idsi.net
+Subject: Re: [Axiom-mail] Help with AXIOM
+References: <3FFD6F04.9070804@di.uoa.gr> <m3k740ynuw.fsf@login-calfor.lip6.fr>
+	<200401101512.i0AFClw16196@localhost.localdomain>
+In-Reply-To: <200401101512.i0AFClw16196@localhost.localdomain>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 12 Jan 2004 08:40:51 -0000
+
+
+
+root wrote:
+
+>Elias,
+>
+>I am going to a funeral service for Dick Jenks today but I'll be back
+>later this evening. If you can give me a detailed idea of what kind
+>of time you are trying to measure I can work with you to find the
+>particular functions you need. The available timing functions from
+>the underlying lisp are in the GCL documentation and I'll try to 
+>find them and summarize them for you.
+>
+>In general you can call any lisp function from Axiom directly by using
+>the uppercase version of the name. For example to call the lisp function
+>
+>)lisp (defun foo (x y) (+ x y))
+>
+>you can call it in algebra code thus:
+>
+>FOO()$LISP
+>
+>Let me know how else I can help.
+>  
+>
+I'll try it
+
+
+Thank you very much for your help
+
+--Elias
+
+
+
+
+
+From MAILER-DAEMON Mon Jan 12 05:52:06 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AfzeW-0004ph-7I
+	for mharc-axiom-mail@gnu.org; Mon, 12 Jan 2004 05:50:36 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Afze8-0004jX-Qg
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2004 05:50:12 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1Afzd2-0003au-6u
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2004 05:49:35 -0500
+Received: from [195.134.65.4] (helo=zeus.di.uoa.gr)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1Afzcb-0003Id-Ps
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2004 05:48:38 -0500
+Received: from di.uoa.gr (IDENT:1000@pythagoras.di.uoa.gr [195.134.66.218])
+	by zeus.di.uoa.gr (8.12.10/8.12.10) with ESMTP id i0C9l9Bg022430
+	for <axiom-mail@nongnu.org>; Mon, 12 Jan 2004 11:47:09 +0200 (EET)
+Message-ID: <40026CF1.50307@di.uoa.gr>
+Date: Mon, 12 Jan 2004 11:46:25 +0200
+From: "Elias P. TSIGARIDAS" <et@di.uoa.gr>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.4) Gecko/20030624 Netscape/7.1
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-mail] What is the meaning of time output
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 12 Jan 2004 10:50:34 -0000
+
+First of all 
+I am sorry for the multiple mails during the last few days :-)
+
+Can anyone tell me the meaning of IN, EV and OT
+in the following output ?
+
+Time: 0.15 (IN) + 0.13 (EV) + 0.26 (OT) + 0.31 (GC) = 0.85 sec
+
+
+
+
+Thanks in advance
+
+
+--Elias
+
+
+
+
+
+From MAILER-DAEMON Mon Jan 12 06:33:30 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1Ag0H2-00086C-Ve
+	for mharc-axiom-mail@gnu.org; Mon, 12 Jan 2004 06:30:24 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1Ag0Gu-00082L-Sa
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2004 06:30:16 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1Ag0GJ-0007fh-N3
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2004 06:30:11 -0500
+Received: from [62.231.145.254] (helo=loanamd11.nag.co.uk)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1Ag0GC-0007GO-03
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2004 06:29:33 -0500
+Received: from loanamd11.nag.co.uk (localhost [127.0.0.1])
+	by loanamd11.nag.co.uk (8.12.3/8.12.3/SuSE Linux 0.6) with ESMTP id
+	i0CARFLq027192; Mon, 12 Jan 2004 10:27:15 GMT
+Received: from localhost (themos@localhost)
+	by loanamd11.nag.co.uk (8.12.3/8.12.3/Submit) with ESMTP id
+	i0CARER0027189; Mon, 12 Jan 2004 11:27:15 +0100
+X-Authentication-Warning: loanamd11.nag.co.uk: themos owned process doing -bs
+Date: Mon, 12 Jan 2004 11:27:14 +0100 (BST)
+From: themos@nag.co.uk
+To: "Elias P. TSIGARIDAS" <et@di.uoa.gr>
+Subject: Re: [Axiom-mail] What is the meaning of time output
+In-Reply-To: <40026CF1.50307@di.uoa.gr>
+Message-ID: <Pine.LNX.4.44.0401121104310.19854-100000@loanamd11.nag.co.uk>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 12 Jan 2004 11:30:19 -0000
+
+
+
+On Mon, 12 Jan 2004, Elias P. TSIGARIDAS wrote:
+
+> First of all
+> I am sorry for the multiple mails during the last few days :-)
+>
+> Can anyone tell me the meaning of IN, EV and OT
+> in the following output ?
+>
+> Time: 0.15 (IN) + 0.13 (EV) + 0.26 (OT) + 0.31 (GC) = 0.85 sec
+>
+
+
+IN stands for interpreter: This is the time spent figuring out the types,
+selecting appropriate functions from the library database, selecting
+coercions and such things.
+
+EV stands for evaluation: This is simply the time spent in AXIOM library
+code
+
+OT stands for other time: mainly printing the result
+
+GC stands for garbage collection.
+
+
+It seems that IN time includes library code time for whatever functions
+the interpreter will call (map, convert, coerce, and such like). For
+instance, if there is a convert function in D(P) (with signature % ->
+Fraction P), we can call it with
+
+g::FRAC P
+
+or
+
+convert(g)$D(P)
+
+In the first case, the convert time will be reported in IN, in the second
+the time will be reported in EV.
+
+
+
+
+Themos Tsikas
+
+
+
+
+
+From MAILER-DAEMON Wed Jan 14 08:54:51 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AglTu-0005JH-SY
+	for mharc-axiom-mail@gnu.org; Wed, 14 Jan 2004 08:54:50 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AglTn-0005IF-3Z
+	for axiom-mail@nongnu.org; Wed, 14 Jan 2004 08:54:43 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AglJD-0003ac-Q6
+	for axiom-mail@nongnu.org; Wed, 14 Jan 2004 08:44:18 -0500
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AglGk-00036r-5l
+	for axiom-mail@nongnu.org; Wed, 14 Jan 2004 08:41:14 -0500
+Received: from localhost.localdomain (151.176.252.64.snet.net [64.252.176.151])
+	by pimout1-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	i0EDfA8b240942; Wed, 14 Jan 2004 08:41:10 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i0EEXAJ27699;
+	Wed, 14 Jan 2004 09:33:10 -0500
+Date: Wed, 14 Jan 2004 09:33:10 -0500
+Message-Id: <200401141433.i0EEXAJ27699@localhost.localdomain>
+From: root <daly@idsi.net>
+To: paule@risc.uni-linz.ac.at
+Cc: gilbert@sci.ccny.cuny.edu, teresa@medicis.polytechnique.fr, daly@idsi.net,
+	axiom-mail@nongnu.org, daly@rio.sci.ccny.cuny.edu
+Subject: [Axiom-mail] RISC-Linz PhD Studies 2004/2005
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 14 Jan 2004 13:54:44 -0000
+
+Peter,
+
+I've posted your announcement in my department at City College of
+New York as well as copied the Axiom mailing list.
+
+Please let me know if there is a way that Axiom can help with
+your graduate studies effort. Axiom has always been a good platform
+for research and will be even more useful now that it is open source.
+And Axiom can benefit greatly from graduate student efforts.
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+------- Start of forwarded message -------
+
+Dear colleague,
+
+At the below url you will find the announcement of PhD studies
+starting October 2004 in "symbolic computation" at RISC-Linz.
+http://www.risc.uni-linz.ac.at/education/curriculum/phd/
+
+Could yoou please be so kind to make this announcement known in your
+department? 
+
+In case you receive this mail several times, we want to appologize in
+advance.
+
+Best regards,
+  Peter Paule (RISC graduate studies coordinator)
+
+- --3V7upXqbjpZ4EhLz--
+------- End of forwarded message -------
+
+
+
+From MAILER-DAEMON Mon Jan 19 06:27:00 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AiXYa-00084n-0X
+	for mharc-axiom-mail@gnu.org; Mon, 19 Jan 2004 06:27:00 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AiXYW-00083A-OG
+	for axiom-mail@nongnu.org; Mon, 19 Jan 2004 06:26:56 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AiXXz-0007xT-OE
+	for axiom-mail@nongnu.org; Mon, 19 Jan 2004 06:26:55 -0500
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1AiXVb-0007XR-68
+	for axiom-mail@nongnu.org; Mon, 19 Jan 2004 06:23:55 -0500
+Received: from [213.64.235.229] (helo=sholem.dactylis.com)
+	by mx20.gnu.org with esmtp (Exim 4.24) id 1AiXOe-0000Nc-EB
+	for axiom-mail@nongnu.org; Mon, 19 Jan 2004 06:16:44 -0500
+Received: from dhcp168-30.math.chalmers.se (dhcp168-30.math.chalmers.se
+	[129.16.168.30])
+	by sholem.dactylis.com (8.12.6/8.12.6) with ESMTP id i0JBGFYE018703
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=OK)
+	for <axiom-mail@nongnu.org>; Mon, 19 Jan 2004 12:16:41 +0100 (CET)
+From: Marcus Better <marcusb@math.su.se>
+To: axiom-mail@nongnu.org
+Date: Mon, 19 Jan 2004 12:16:11 +0100
+User-Agent: KMail/1.5.94
+MIME-Version: 1.0
+Content-Disposition: inline
+Content-Type: text/plain;
+  charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Message-Id: <200401191216.12349.marcusb@math.su.se>
+Subject: [Axiom-mail] Generating documentation
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 19 Jan 2004 11:26:58 -0000
+
+Hi all,
+
+How can I generate documentation from the pamphlet files? I've built Axiom 
+from CVS sources on Linux. I didn't succeed to get anything useful with 
+noweave.
+
+-----------------------------------------------------------------
+Marcus Better
+Department of Mathematics                      Tel. +46 8 164539
+Stockholm University                           Fax +46 8 6126717
+SE-106 91 Stockholm
+Sweden                                     http://www.math.su.se
+-----------------------------------------------------------------
+
+
+
+From MAILER-DAEMON Mon Jan 19 10:27:39 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AibJS-0006y3-Dw
+	for mharc-axiom-mail@gnu.org; Mon, 19 Jan 2004 10:27:38 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AibF7-0005V3-NK
+	for axiom-mail@nongnu.org; Mon, 19 Jan 2004 10:23:09 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AibCc-0004JR-2s
+	for axiom-mail@nongnu.org; Mon, 19 Jan 2004 10:21:05 -0500
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1Aib6P-0002Tz-O5
+	for axiom-mail@nongnu.org; Mon, 19 Jan 2004 10:14:09 -0500
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by mx20.gnu.org with esmtp (Exim 4.24) id 1Aib1u-0001ow-Bt
+	for axiom-mail@nongnu.org; Mon, 19 Jan 2004 10:09:30 -0500
+Received: from localhost.localdomain (17.180.252.64.snet.net [64.252.180.17])
+	by pimout3-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	i0JF9SMH073850; Mon, 19 Jan 2004 10:09:28 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i0JG1NL09488;
+	Mon, 19 Jan 2004 11:01:23 -0500
+Date: Mon, 19 Jan 2004 11:01:23 -0500
+Message-Id: <200401191601.i0JG1NL09488@localhost.localdomain>
+From: root <daly@idsi.net>
+To: marcusb@math.su.se
+In-reply-to: <200401191216.12349.marcusb@math.su.se> (message from Marcus
+	Better on Mon, 19 Jan 2004 12:16:11 +0100)
+Subject: Re: [Axiom-mail] Generating documentation
+References: <200401191216.12349.marcusb@math.su.se>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 19 Jan 2004 15:27:36 -0000
+
+There is a command "document" which will extract the .dvi file 
+from a pamphlet. If you have a pamphlet called foo.bar.pamphlet
+you type:
+
+document foo.bar
+
+(the command assumes the trailing "pamphlet"). The plan is to
+automate the extraction for documents with significant content
+like dhmatrix.spad.pamphlet
+
+Tim
+
+
+
+From MAILER-DAEMON Wed Jan 21 06:18:43 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AjGNV-0003hs-Cu
+	for mharc-axiom-mail@gnu.org; Wed, 21 Jan 2004 06:18:33 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AjGLt-0002yw-TF
+	for axiom-mail@nongnu.org; Wed, 21 Jan 2004 06:16:53 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AjGK2-0001rF-BE
+	for axiom-mail@nongnu.org; Wed, 21 Jan 2004 06:15:29 -0500
+Received: from [213.64.235.229] (helo=sholem.dactylis.com)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1AjGJv-0001nK-RL
+	for axiom-mail@nongnu.org; Wed, 21 Jan 2004 06:14:52 -0500
+Received: from math.su.se (dhcp168-30.math.chalmers.se [129.16.168.30])
+	by sholem.dactylis.com (8.12.6/8.12.6) with ESMTP id i0LBEjYE001452
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK)
+	for <axiom-mail@nongnu.org>; Wed, 21 Jan 2004 12:14:47 +0100 (CET)
+Message-ID: <400E5F24.40600@math.su.se>
+Date: Wed, 21 Jan 2004 12:14:44 +0100
+From: Marcus Better <marcusb@math.su.se>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.6) Gecko/20040115
+X-Accept-Language: sv, en-us, en
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-mail] Power series with coeffs in positive characteristic
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 21 Jan 2004 11:18:31 -0000
+
+Hi all,
+
+I am trying to compute with Laurent series over some unspecified field 
+of postitive characteristic, where the coefficients may be indeterminate 
+variables. I declare my power series as follows:
+
+   z: ULS(FRAC POLY PrimeField 2, z, 0) := z
+
+I can now create expressions like
+
+   1/a*z^(-1)  + 1 + z^2 + b*z^4
+
+which works nicely. The problem is to use GenerateUnivariatePowerSeries 
+to generate series of this type. It seems that there is no such thing as 
+Expression(PrimeField 2) which this package would expect.
+
+I have defined a function
+   coeffs: Integer -> FRAC POLY PrimeField 2
+which computes the coefficients. How can I put them together into a 
+power (or Laurent) series? The command
+   series(n +-> coeffs(n), z=0)
+just gives the error message
+"Cannot find a definition or applicable library operation named series 
+with argument type(s)
+   AnonymousFunction
+   Equation UnivariateLaurentSeries(Fraction Polynomial PrimeField 2,z,0)
+"
+
+There is a similar error if I declare z simply as FRAC POLY PrimeField 2.
+
+Also, if I don't declare z at all, the above command gives me a UTS(EXPR 
+INT,z,0) with the correct coefficients but treated as EXPR INT, which is 
+not what I want. Is there any way I can get around this?
+
+Thanks,
+
+Marcus
+
+-----------------------------------------------------------------
+Marcus Better
+Department of Mathematics                      Tel. +46 8 164539
+Stockholm University                           Fax +46 8 6126717
+SE-106 91 Stockholm
+Sweden                                     http://www.math.su.se
+-----------------------------------------------------------------
+
+
+
+From MAILER-DAEMON Wed Jan 21 07:07:05 2004
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AjH7X-0003vH-W5
+	for mharc-axiom-mail@gnu.org; Wed, 21 Jan 2004 07:06:08 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AjH7B-0003Pw-AK
+	for axiom-mail@nongnu.org; Wed, 21 Jan 2004 07:05:45 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AjH5a-0002Nj-DI
+	for axiom-mail@nongnu.org; Wed, 21 Jan 2004 07:04:50 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AjH3c-0001TF-TF
+	for axiom-mail@nongnu.org; Wed, 21 Jan 2004 07:02:05 -0500
+Received: from localhost.localdomain (221.113.252.64.snet.net [64.252.113.221])
+	by pimout2-ext.prodigy.net (8.12.10/8.12.10) with ESMTP id
+	i0LC1qFh152072; Wed, 21 Jan 2004 07:01:52 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i0LCrk211636;
+	Wed, 21 Jan 2004 07:53:46 -0500
+Date: Wed, 21 Jan 2004 07:53:46 -0500
+Message-Id: <200401211253.i0LCrk211636@localhost.localdomain>
+From: root <daly@idsi.net>
+To: marcusb@math.su.se, daly@rio.sci.ccny.cuny.edu, daly@idsi.net
+In-reply-to: <400E5F24.40600@math.su.se> (message from Marcus Better on Wed,
+	21 Jan 2004 12:14:44 +0100)
+Subject: Re: [Axiom-mail] Power series with coeffs in positive characteristic
+References: <400E5F24.40600@math.su.se>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 21 Jan 2004 12:06:04 -0000
+
+Marcus,
+
+
+>I am trying to compute with Laurent series over some unspecified field 
+>of postitive characteristic, where the coefficients may be indeterminate 
+>variables. I declare my power series as follows:
+>
+>   z: ULS(FRAC POLY PrimeField 2, z, 0) := z
+>
+>I can now create expressions like
+>
+>   1/a*z^(-1)  + 1 + z^2 + b*z^4
+>
+>which works nicely. The problem is to use GenerateUnivariatePowerSeries 
+>to generate series of this type. It seems that there is no such thing as 
+>Expression(PrimeField 2) which this package would expect.
+>
+>I have defined a function
+>   coeffs: Integer -> FRAC POLY PrimeField 2
+>which computes the coefficients. How can I put them together into a 
+>power (or Laurent) series? The command
+>   series(n +-> coeffs(n), z=0)
+>just gives the error message
+>"Cannot find a definition or applicable library operation named series 
+>with argument type(s)
+>   AnonymousFunction
+>   Equation UnivariateLaurentSeries(Fraction Polynomial PrimeField 2,z,0)
+>"
+>
+>There is a similar error if I declare z simply as FRAC POLY PrimeField 2.
+>
+>Also, if I don't declare z at all, the above command gives me a UTS(EXPR 
+>INT,z,0) with the correct coefficients but treated as EXPR INT, which is 
+>not what I want. Is there any way I can get around this?
+
+EXPR is basically Axiom's attempt at a "typeless" place to work.
+Axiom ends up there when it has to guess and can't find anything
+else useful. You may be confusing the interpreter by overusing z in:
+
+>   z: ULS(FRAC POLY PrimeField 2, z, 0) := z
+
+I'm not sharp enough at the moment to see exactly what is failing.
+I'll have to read the code in GenerateUnivariatePowerSeries to get
+up to speed on what you are trying to do. Unfortunately that won't be
+until later this evening. I'll get back to you.
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+

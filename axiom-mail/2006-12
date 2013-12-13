@@ -1,0 +1,140 @@
+From MAILER-DAEMON Tue Dec 19 08:36:43 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gwf98-0004cc-VC
+	for mharc-axiom-mail@gnu.org; Tue, 19 Dec 2006 08:36:43 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gwf97-0004cH-By
+	for axiom-mail@nongnu.org; Tue, 19 Dec 2006 08:36:41 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gwf96-0004bQ-Az
+	for axiom-mail@nongnu.org; Tue, 19 Dec 2006 08:36:40 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gwf96-0004bK-59
+	for axiom-mail@nongnu.org; Tue, 19 Dec 2006 08:36:40 -0500
+Received: from [62.218.130.236] (helo=mail.xmt.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1Gwf95-0003lY-LU
+	for axiom-mail@nongnu.org; Tue, 19 Dec 2006 08:36:40 -0500
+Received: (qmail 1616 invoked by uid 89); 19 Dec 2006 13:36:37 -0000
+Message-ID: <20061219133637.1615.qmail@mail.xmt.at>
+From: "Gernot Hueber" <ghue@xmt.at>
+To: axiom-mail@nongnu.org
+Date: Tue, 19 Dec 2006 14:36:37 +0100
+Mime-Version: 1.0
+Content-Type: text/plain; charset="utf-8"; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-mail] Roots of Polynomials
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 19 Dec 2006 13:36:41 -0000
+
+Hi, 
+
+I would like to calculate the roots of polynomials with unknown or partly
+unknown coefficients. For some rare cases there are solutions known e.g.
+Cardans formulas for cubic polynomials, and low order reciprocal polynomials
+can be solved.
+However I don't know how to achieve this with Axiom.
+See some trials below.
+However, I guess I should be possible to get more than shown below, but I am
+sorry I have no idea how. 
+
+Thanks 
+
+Gernot 
+
+1) Second order polynomial 
+
+(5) -> p1 := x**2 + a*x + b
+(5) ->
+      2
+(5)  x  + a x + b
+                                                  Type: Polynomial Integer
+                                                               Time: 0 sec
+(6) -> zerosOf(p1, x)
+(6) ->
+       +---------+        +---------+
+       |        2         |        2
+      \|- 4b + a   - a - \|- 4b + a   - a
+(6)  [----------------,------------------]
+              2                 2
+                                             Type: List Expression Integer 
+
+2) Cubic polynomial 
+
+(9) -> p2 := x**3 + a*x**2 + b*x + c
+(9) ->
+      3      2
+(9)  x  + a x  + b x + c
+                                                  Type: Polynomial Integer
+                                                  Time: 0.01(O) = 0.02 sec
+(10) -> zerosOf(p2, x)
+(10) ->
+(10)
+       +--------------------------+
+       |      2                  2
+      \|- 3%x9  - 2a %x9 - 4b + a   - %x9 - a
+[%x9, ---------------------------------------,
+                         2
+    +--------------------------+
+    |      2                  2
+ - \|- 3%x9  - 2a %x9 - 4b + a   - %x9 - a
+ -----------------------------------------]
+                     2
+                                             Type: List Expression Integer
+                                                  Time: 0.02(E) = 0.02 sec
+(11) -> definingPolynomial %x9
+(11) ->
+                     2       3
+(11)  c + %x9 b + %x9 a + %x9
+                                                  Type: Expression Integer
+                                                               Time: 0 sec 
+
+3) Simple reciprocal polynomial 
+
+(12) -> p3 := x**3 + a*x**2 + a*x + 1
+(12) ->
+       3      2
+(12)  x  + a x  + a x + 1
+                                                  Type: Polynomial Integer
+                                                               Time: 0 sec
+(13) -> zerosOf(p3, x)
+(13) ->
+(13)
+        +----------------------------+
+        |       2              2
+       \|- 3%x12  - 2a %x12 + a  - 4a  - %x12 - a
+[%x12, ------------------------------------------,
+                            2
+    +----------------------------+
+    |       2              2
+ - \|- 3%x12  - 2a %x12 + a  - 4a  - %x12 - a
+ --------------------------------------------]
+                       2
+                                             Type: List Expression Integer
+                                                  Time: 0.01(O) = 0.02 sec
+(14) -> definingPolynomial %x12
+(14) ->
+           2                3
+(14)  (%x12  + %x12)a + %x12  + 1
+                                                  Type: Expression Integer
+                                                               Time: 0 sec
+(15) -> rootsOf(p3, x)
+(15) ->
+(15)  [%x15,%x16,- %x16 - %x15 - a]
+                                             Type: List Expression Integer
+                                                  Time: 0.01(O) = 0.02 sec 
+
+
+
+
+

@@ -1,0 +1,1058 @@
+From MAILER-DAEMON Mon Aug 01 05:09:49 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DzWIF-0003e8-2w
+	for mharc-axiom-mail@gnu.org; Mon, 01 Aug 2005 05:09:07 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DzW6s-0002Bz-B1
+	for axiom-mail@nongnu.org; Mon, 01 Aug 2005 04:57:23 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DzW5q-00028V-7D
+	for axiom-mail@nongnu.org; Mon, 01 Aug 2005 04:56:57 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DzVq9-0001Qp-6Q
+	for axiom-mail@nongnu.org; Mon, 01 Aug 2005 04:40:07 -0400
+Received: from [62.231.131.195] (helo=mail35.messagelabs.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1DzVzR-0005cu-U6
+	for axiom-mail@nongnu.org; Mon, 01 Aug 2005 04:49:42 -0400
+X-VirusChecked: Checked
+X-Env-Sender: themos@nag.co.uk
+X-Msg-Ref: server-13.tower-35.messagelabs.com!1122885428!32408237!1
+X-StarScan-Version: 5.4.15; banners=nag.co.uk,-,-
+X-Originating-IP: [212.125.75.77]
+Received: (qmail 31001 invoked from network); 1 Aug 2005 08:37:08 -0000
+Received: from smtp-8.star.net.uk (212.125.75.77)
+	by server-13.tower-35.messagelabs.com with SMTP;
+	1 Aug 2005 08:37:08 -0000
+Received: (qmail 26519 invoked from network); 1 Aug 2005 08:37:07 -0000
+Received: from unknown (HELO nag.co.uk) (62.231.145.242)
+	by smtp-8.star.net.uk with SMTP; 1 Aug 2005 08:37:07 -0000
+Received: from loanamd6.nag.co.uk (loanamd6.nag.co.uk [192.156.217.152])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id JAA18938;
+	Mon, 1 Aug 2005 09:36:49 +0100 (BST)
+From: Themos Tsikas <themos@nag.co.uk>
+To: g.vanuxem@wanadoo.fr
+Subject: Re: [Axiom-mail] Re: input initialization file
+Date: Mon, 1 Aug 2005 09:36:45 +0100
+User-Agent: KMail/1.8
+References: <200507301810.j6UIA9hM018641@axiom-developer.org>
+	<1122747278.3699.0.camel@localhost.localdomain>
+In-Reply-To: <1122747278.3699.0.camel@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200508010936.45550.themos@nag.co.uk>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 01 Aug 2005 09:07:53 -0000
+
+Hello
+
+In your axiom.input file add the line
+ 
+)set message prompt frame
+
+as the first line
+
+You will see that the axiom.input definitions belong to the "initial" but you 
+are offered a prompt belonging to a new frame. 
+
+Give the command ")frame" to read about frames. To switch back to the frame 
+that your axiom.input definitions are in, issue ")frame drop" interactively. 
+
+What's happening is that AXIOMsys stays with the first "initial" frame but 
+"axiom" starts a client process ("AXIOMsys" + "spadclient") for which 
+AXIOMsys makes a new frame.
+
+Best Regards
+Themos Tsikas
+
+PS. All this applies to the NAG version of axiom but it may well apply to the 
+version you have.
+
+
+________________________________________________________________________
+This e-mail has been scanned for all viruses by Star. The
+service is powered by MessageLabs. For more information on a proactive
+anti-virus service working around the clock, around the globe, visit:
+http://www.star.net.uk
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Thu Aug 11 20:02:05 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E3Mzs-0001xK-Kg
+	for mharc-axiom-mail@gnu.org; Thu, 11 Aug 2005 20:02:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E3Mzq-0001w2-40
+	for axiom-mail@nongnu.org; Thu, 11 Aug 2005 20:02:02 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E3MwT-0000wh-QG
+	for axiom-mail@nongnu.org; Thu, 11 Aug 2005 19:58:35 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E3MwJ-0000rk-VT
+	for axiom-mail@nongnu.org; Thu, 11 Aug 2005 19:58:24 -0400
+Received: from [204.127.198.43] (helo=rwcrmhc12.comcast.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E3N2X-0004xW-6p
+	for axiom-mail@nongnu.org; Thu, 11 Aug 2005 20:04:49 -0400
+Received: from [192.168.0.103]
+	(c-67-191-234-179.hsd1.ga.comcast.net[67.191.234.179])
+	by comcast.net (rwcrmhc12) with ESMTP
+	id <20050811234950014009p4g2e>; Thu, 11 Aug 2005 23:49:51 +0000
+Message-ID: <42FBE41D.5090706@comcast.net>
+Date: Thu, 11 Aug 2005 19:49:49 -0400
+From: Ryan Krauss <ryanfedora@comcast.net>
+User-Agent: Mozilla Thunderbird 1.0 (Windows/20041206)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-mail] \begin{axiom} latex on windows
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Aug 2005 00:02:03 -0000
+
+I found this example on the axiom-developer mailing list from about a 
+year ago:
+
+  \begin{axiom-input}
+  R1:=matrix([[cos a, sin a, 0],[-sin a, cos a, 0],[0, 0, 1]])
+  \end{axiom-input}
+  Next we define a rotation around the Y axis by a rotation angle of b 
+  \begin{axiom-input}
+  R2:=matrix([[cos b, 0, -sin b],[0, 1, 0],[sin b, 0, cos b]])
+  \end{axiom-input}
+  The we compose them (order is important) to form the single
+  rotation equivalent to first rotating around X, then around
+  the new, displaced Y. 
+  \begin{axiom-input}
+  R:=R1*R2
+  \end{axiom-input}
+
+I would very much like to be able to write LaTeX documents like this on 
+Windows XP.  Has anyone done this?
+
+If not, I am a bit of a Python programmer and I was thinking one way to 
+make it work would be to have Python parse the tex file and take 
+whatever is between the \begin{axiom} and \end{axiom} statements and 
+create an input file for axiom with the output set by the file to go to 
+numbered .tex files.  Python would then replace the \begin{axiom}... 
+with \begin{equation} \input{....###} (i.e. the output files from axiom).
+
+But in order to make something like this work, Python needs to be able 
+to call axiom and tell it to run the script (and possibly close axiom 
+afterward).  Is there a way to do this on Windows?  Can it be done with 
+a dos command?
+
+Is there an easier way?
+
+Thanks for your thoughts,
+
+Ryan
+
+
+
+From MAILER-DAEMON Thu Aug 11 20:30:22 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E3NQR-0000gR-R6
+	for mharc-axiom-mail@gnu.org; Thu, 11 Aug 2005 20:29:32 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E3NQ6-0000Wa-Ge
+	for axiom-mail@nongnu.org; Thu, 11 Aug 2005 20:29:14 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E3NQ1-0000RZ-Bz
+	for axiom-mail@nongnu.org; Thu, 11 Aug 2005 20:29:07 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E3NPy-0000QB-V2
+	for axiom-mail@nongnu.org; Thu, 11 Aug 2005 20:29:03 -0400
+Received: from [69.36.241.242] (helo=moya.mcelrath.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34) id 1E3NZV-0006xo-TJ
+	for axiom-mail@nongnu.org; Thu, 11 Aug 2005 20:38:55 -0400
+Received: from moya.mcelrath.org (mcelrath@localhost [127.0.0.1])
+	by moya.mcelrath.org (8.13.4/8.13.4/Debian-3) with ESMTP id
+	j7C0NbuP005079
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NOT);
+	Thu, 11 Aug 2005 17:23:37 -0700
+Received: (from mcelrath@localhost)
+	by moya.mcelrath.org (8.13.4/8.13.4/Submit) id j7C0Nbbi005076;
+	Thu, 11 Aug 2005 17:23:37 -0700
+X-Authentication-Warning: moya.mcelrath.org: mcelrath set sender to
+	bob+axiom@mcelrath.org using -f
+Date: Thu, 11 Aug 2005 17:23:37 -0700
+From: Bob McElrath <bob+axiom@mcelrath.org>
+To: Ryan Krauss <ryanfedora@comcast.net>
+Subject: Re: [Axiom-mail] \begin{axiom} latex on windows
+Message-ID: <20050812002337.GB30171@mcelrath.org>
+References: <42FBE41D.5090706@comcast.net>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="1sNVjLsmu1MXqwQ/"
+Content-Disposition: inline
+In-Reply-To: <42FBE41D.5090706@comcast.net>
+User-Agent: Mutt/1.5.6+20040523i
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Aug 2005 00:29:16 -0000
+
+
+--1sNVjLsmu1MXqwQ/
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+Ryan Krauss [ryanfedora@comcast.net] wrote:
+> I found this example on the axiom-developer mailing list from about a 
+> year ago:
+> 
+>  \begin{axiom-input}
+>  R1:=matrix([[cos a, sin a, 0],[-sin a, cos a, 0],[0, 0, 1]])
+>  \end{axiom-input}
+>  Next we define a rotation around the Y axis by a rotation angle of b 
+>  \begin{axiom-input}
+>  R2:=matrix([[cos b, 0, -sin b],[0, 1, 0],[sin b, 0, cos b]])
+>  \end{axiom-input}
+>  The we compose them (order is important) to form the single
+>  rotation equivalent to first rotating around X, then around
+>  the new, displaced Y. 
+>  \begin{axiom-input}
+>  R:=R1*R2
+>  \end{axiom-input}
+> 
+> I would very much like to be able to write LaTeX documents like this on 
+> Windows XP.  Has anyone done this?
+
+The MathAction wiki
+(http://page.axiom-developer.org/zope/mathaction/FrontPage)
+allows documents like this.  It runs on the zope server, and some code
+pasted together by myself and Bill Page calls axiom on the server to
+render the document.
+
+Additionally the "pamphlet" format used natively by axiom supports
+running axiom commands, using a similar syntax.
+
+Finally, we are currently working on a more "worksheet" style interface,
+and the first iteration I did was a modification of tiddlywiki
+(http://www.tiddlywiki.com) to support axiom and jsMath.  (it runs axiom
+without a server using some javascript tricks in firefox)  However this
+will definitely not work on windows.
+
+> If not, I am a bit of a Python programmer and I was thinking one way to 
+> make it work would be to have Python parse the tex file and take 
+> whatever is between the \begin{axiom} and \end{axiom} statements and 
+> create an input file for axiom with the output set by the file to go to 
+> numbered .tex files.  Python would then replace the \begin{axiom}... 
+> with \begin{equation} \input{....###} (i.e. the output files from axiom).
+
+The code is all python but does not run standalone, currently.  Trivial
+modifications could be made to make it run standalone.
+
+> But in order to make something like this work, Python needs to be able 
+> to call axiom and tell it to run the script (and possibly close axiom 
+> afterward).  Is there a way to do this on Windows?  Can it be done with 
+> a dos command?
+
+I can't comment on windows...
+
+If you're interested in working on this, please join axiom-developer!
+;)
+
+--
+Cheers,
+Bob McElrath [Univ. of California at Davis, Department of Physics]
+
+    "One of the best ways to get yourself a reputation as a dangerous citizen
+    these days is to go about repeating the very phrases which our founding
+    fathers used in the great struggle for independence." --Charles A. Beard
+
+--1sNVjLsmu1MXqwQ/
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFC++wJjwioWRGe9K0RAnMLAJ9Z9H6fW5G4yOyNydVGJOjJt/wI1ACfRqUx
+isi8f7JNPJSMoe9U12v8Veo=
+=ZfqU
+-----END PGP SIGNATURE-----
+
+--1sNVjLsmu1MXqwQ/--
+
+
+
+From MAILER-DAEMON Thu Aug 11 20:36:08 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E3NWq-0002SO-0L
+	for mharc-axiom-mail@gnu.org; Thu, 11 Aug 2005 20:36:08 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E3NWj-0002QX-UX
+	for axiom-mail@nongnu.org; Thu, 11 Aug 2005 20:36:02 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E3NWc-0002MI-3l
+	for axiom-mail@nongnu.org; Thu, 11 Aug 2005 20:35:56 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E3NWb-0002K0-N6
+	for axiom-mail@nongnu.org; Thu, 11 Aug 2005 20:35:53 -0400
+Received: from [63.240.76.28] (helo=sccrmhc13.comcast.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E3NdS-0007JJ-HU
+	for axiom-mail@nongnu.org; Thu, 11 Aug 2005 20:42:58 -0400
+Received: from [192.168.0.103]
+	(c-67-191-234-179.hsd1.ga.comcast.net[67.191.234.179])
+	by comcast.net (sccrmhc13) with ESMTP
+	id <2005081200275701300l4nqqe>; Fri, 12 Aug 2005 00:27:58 +0000
+Message-ID: <42FBED0C.2010600@comcast.net>
+Date: Thu, 11 Aug 2005 20:27:56 -0400
+From: Ryan Krauss <ryanfedora@comcast.net>
+User-Agent: Mozilla Thunderbird 1.0 (Windows/20041206)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: Bob McElrath <bob+axiom@mcelrath.org>
+Subject: Re: [Axiom-mail] \begin{axiom} latex on windows
+References: <42FBE41D.5090706@comcast.net>
+	<20050812002337.GB30171@mcelrath.org>
+In-Reply-To: <20050812002337.GB30171@mcelrath.org>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Aug 2005 00:36:04 -0000
+
+I can't find any documentation on the pamphlet format.  Can you tell me 
+where I can find out more?
+
+Thanks,
+
+Ryan
+
+Bob McElrath wrote:
+> Ryan Krauss [ryanfedora@comcast.net] wrote:
+> 
+>>I found this example on the axiom-developer mailing list from about a 
+>>year ago:
+>>
+>> \begin{axiom-input}
+>> R1:=matrix([[cos a, sin a, 0],[-sin a, cos a, 0],[0, 0, 1]])
+>> \end{axiom-input}
+>> Next we define a rotation around the Y axis by a rotation angle of b 
+>> \begin{axiom-input}
+>> R2:=matrix([[cos b, 0, -sin b],[0, 1, 0],[sin b, 0, cos b]])
+>> \end{axiom-input}
+>> The we compose them (order is important) to form the single
+>> rotation equivalent to first rotating around X, then around
+>> the new, displaced Y. 
+>> \begin{axiom-input}
+>> R:=R1*R2
+>> \end{axiom-input}
+>>
+>>I would very much like to be able to write LaTeX documents like this on 
+>>Windows XP.  Has anyone done this?
+> 
+> 
+> The MathAction wiki
+> (http://page.axiom-developer.org/zope/mathaction/FrontPage)
+> allows documents like this.  It runs on the zope server, and some code
+> pasted together by myself and Bill Page calls axiom on the server to
+> render the document.
+> 
+> Additionally the "pamphlet" format used natively by axiom supports
+> running axiom commands, using a similar syntax.
+> 
+> Finally, we are currently working on a more "worksheet" style interface,
+> and the first iteration I did was a modification of tiddlywiki
+> (http://www.tiddlywiki.com) to support axiom and jsMath.  (it runs axiom
+> without a server using some javascript tricks in firefox)  However this
+> will definitely not work on windows.
+> 
+> 
+>>If not, I am a bit of a Python programmer and I was thinking one way to 
+>>make it work would be to have Python parse the tex file and take 
+>>whatever is between the \begin{axiom} and \end{axiom} statements and 
+>>create an input file for axiom with the output set by the file to go to 
+>>numbered .tex files.  Python would then replace the \begin{axiom}... 
+>>with \begin{equation} \input{....###} (i.e. the output files from axiom).
+> 
+> 
+> The code is all python but does not run standalone, currently.  Trivial
+> modifications could be made to make it run standalone.
+> 
+> 
+>>But in order to make something like this work, Python needs to be able 
+>>to call axiom and tell it to run the script (and possibly close axiom 
+>>afterward).  Is there a way to do this on Windows?  Can it be done with 
+>>a dos command?
+> 
+> 
+> I can't comment on windows...
+> 
+> If you're interested in working on this, please join axiom-developer!
+> ;)
+> 
+> --
+> Cheers,
+> Bob McElrath [Univ. of California at Davis, Department of Physics]
+> 
+>     "One of the best ways to get yourself a reputation as a dangerous citizen
+>     these days is to go about repeating the very phrases which our founding
+>     fathers used in the great struggle for independence." --Charles A. Beard
+
+
+
+From MAILER-DAEMON Fri Aug 12 12:01:12 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E3by3-0002Fl-20
+	for mharc-axiom-mail@gnu.org; Fri, 12 Aug 2005 12:01:11 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E3TAO-0004ga-AV
+	for axiom-mail@nongnu.org; Fri, 12 Aug 2005 02:37:20 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E3TAH-0004fM-Tx
+	for axiom-mail@nongnu.org; Fri, 12 Aug 2005 02:37:16 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E3TAH-0004Jo-4l
+	for axiom-mail@nongnu.org; Fri, 12 Aug 2005 02:37:13 -0400
+Received: from [64.233.182.194] (helo=nproxy.gmail.com)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E3T8B-0002UN-Tb
+	for axiom-mail@nongnu.org; Fri, 12 Aug 2005 02:35:04 -0400
+Received: by nproxy.gmail.com with SMTP id n15so113052nfc
+	for <axiom-mail@nongnu.org>; Thu, 11 Aug 2005 23:20:02 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:reply-to:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=pwEpK902Mu7PhA5ysOeVUyH9r3opT+bDUtX3YMdddWhVs4cnCKxGNutHQoE4PH680dfIONNyoVmJWNNLlIbcTVkxZ7HpskshA53gx0Q+n7L5g8e34ImvC9mExwR3bL+bf1VrSnsp8fD3QOFMEGscxzMykoW/3g1GiRfSjGIHVMc=
+Received: by 10.48.142.20 with SMTP id p20mr82437nfd;
+	Thu, 11 Aug 2005 23:20:02 -0700 (PDT)
+Received: by 10.48.237.20 with HTTP; Thu, 11 Aug 2005 23:20:02 -0700 (PDT)
+Message-ID: <3d13dcfc050811232023208920@mail.gmail.com>
+Date: Fri, 12 Aug 2005 08:20:02 +0200
+From: David MENTRE <david.mentre@gmail.com>
+To: Ryan Krauss <ryanfedora@comcast.net>
+Subject: Re: [Axiom-mail] \begin{axiom} latex on windows
+In-Reply-To: <42FBED0C.2010600@comcast.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+References: <42FBE41D.5090706@comcast.net>
+	<20050812002337.GB30171@mcelrath.org> <42FBED0C.2010600@comcast.net>
+X-Mailman-Approved-At: Fri, 12 Aug 2005 12:01:08 -0400
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Aug 2005 06:37:22 -0000
+
+Hello Ryan,
+
+2005/8/12, Ryan Krauss <ryanfedora@comcast.net>:
+> I can't find any documentation on the pamphlet format.  Can you tell me
+> where I can find out more?
+
+I've not followed latest Axiom developments but as far as I know
+pamphlet format is the same as noweb format (noweb is the tool used to
+parse pamphlets in Axiom).
+
+noweb home page: http://www.eecs.harvard.edu/~nr/noweb/
+
+A single page doc: http://www.eecs.harvard.edu/~nr/noweb/onepage.ps
+
+Some examples : http://www.eecs.harvard.edu/~nr/noweb/examples/index.html
+
+You should also look at axiom-developer mailing list archives, Tim
+Daly has made extensive description of pamphlets.
+
+I hope it helps,
+Yours,
+david
+
+
+
+From MAILER-DAEMON Fri Aug 12 12:14:37 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E3cB3-0000CL-4Q
+	for mharc-axiom-mail@gnu.org; Fri, 12 Aug 2005 12:14:37 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E3cB0-0000An-Kc
+	for axiom-mail@nongnu.org; Fri, 12 Aug 2005 12:14:34 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E3cAv-00008B-Pp
+	for axiom-mail@nongnu.org; Fri, 12 Aug 2005 12:14:31 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E3cAu-0008W6-Q0
+	for axiom-mail@nongnu.org; Fri, 12 Aug 2005 12:14:28 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E3cJz-0008OK-BC
+	for axiom-mail@nongnu.org; Fri, 12 Aug 2005 12:23:52 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j7CG89s3070216; 
+	Fri, 12 Aug 2005 18:08:12 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <17148.51458.818908.224886@seam101.local>
+Date: Fri, 12 Aug 2005 18:06:26 +0200
+To: David MENTRE <david.mentre@gmail.com>
+Subject: Re: [Axiom-mail] \begin{axiom} latex on windows
+In-Reply-To: <3d13dcfc050811232023208920@mail.gmail.com>
+References: <42FBE41D.5090706@comcast.net>
+	<20050812002337.GB30171@mcelrath.org>
+	<42FBED0C.2010600@comcast.net>
+	<3d13dcfc050811232023208920@mail.gmail.com>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4249; Body=3
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Aug 2005 16:14:35 -0000
+
+I just sent one to axiom-math...
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Aug 25 09:11:33 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E8HW0-0003j2-VA
+	for mharc-axiom-mail@gnu.org; Thu, 25 Aug 2005 09:11:33 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E8Drt-00031S-Rb
+	for axiom-mail@nongnu.org; Thu, 25 Aug 2005 05:17:55 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E8Drp-0002yY-37
+	for axiom-mail@nongnu.org; Thu, 25 Aug 2005 05:17:52 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E8Drn-0002Qk-Ju
+	for axiom-mail@nongnu.org; Thu, 25 Aug 2005 05:17:48 -0400
+Received: from [212.216.176.141] (helo=vsmtp1.tin.it)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E8Dgx-0004hE-CA
+	for axiom-mail@nongnu.org; Thu, 25 Aug 2005 05:06:35 -0400
+Received: from [82.53.125.138] (82.53.125.138) by vsmtp1.tin.it (7.2.060.1)
+	id 4300FA6500390928 for axiom-mail@nongnu.org;
+	Thu, 25 Aug 2005 11:05:13 +0200
+Message-ID: <430D89C9.7040606@tin.it>
+Date: Thu, 25 Aug 2005 11:05:13 +0200
+From: Stefano Simonucci <stefano.simonucci@tin.it>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.7.10) Gecko/20050802 Debian/1.7.10-1
+X-Accept-Language: en-us, it
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Mailman-Approved-At: Thu, 25 Aug 2005 09:11:31 -0400
+Subject: [Axiom-mail] Non elementary integration 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 25 Aug 2005 09:17:56 -0000
+
+
+Hi.
+In the axiom manual I find
+
+"Integration is the reverse process of differentiation, that is, an 
+integral of a function f with respect to a variable x is any function g 
+such that D(g, x) is equal to f.
+....
+Given an elementary function to integrate, Axiom returns a formal 
+integral as above only when it can prove that the integral is not 
+elementary and not when it cannot determine the integral. In this rare 
+case it prints a message that it cannot determine if an elementary 
+integral exists.
+
+Now if I write
+integrate(exp(x)/x,x)
+I obtain
+Ei(x)
+while if I write
+integrate(exp(x)/x^2,x)
+I get a form integral. But the integral of exp(x)/x^2 can be given in 
+terms of Ei(x) as exp(x).
+In fact I believed that the axiom can be able to find the solution that is
+
+integrate(exp(x)/x^2,x) --> Ei(x)-exp(x)/x
+
+But from the manual I deduce that exp(x)/x^2  can be prooved not 
+elementary integrable. Why  exp(x)/x  is integrable while  exp(x)/x^2 not?
+
+Thank you
+             Stefano
+
+
+
+
+From MAILER-DAEMON Thu Aug 25 10:21:48 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E8Ic0-00011A-0k
+	for mharc-axiom-mail@gnu.org; Thu, 25 Aug 2005 10:21:48 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E8Ibw-0000zF-Kt
+	for axiom-mail@nongnu.org; Thu, 25 Aug 2005 10:21:44 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E8Ibu-0000yD-QF
+	for axiom-mail@nongnu.org; Thu, 25 Aug 2005 10:21:43 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E8Ial-0000N3-UP
+	for axiom-mail@nongnu.org; Thu, 25 Aug 2005 10:20:31 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E8I5d-0002bb-Pe
+	for axiom-mail@nongnu.org; Thu, 25 Aug 2005 09:48:22 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j7PDk7Hw014285; 
+	Thu, 25 Aug 2005 15:46:16 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <17165.52018.250573.300334@seam101.local>
+Date: Thu, 25 Aug 2005 15:44:18 +0200
+To: Stefano Simonucci <stefano.simonucci@tin.it>
+Subject: Re: [Axiom-mail] Non elementary integration 
+In-Reply-To: <430D89C9.7040606@tin.it>
+References: <430D89C9.7040606@tin.it>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4248; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 25 Aug 2005 14:21:45 -0000
+
+Dear Stefano,
+
+Stefano Simonucci writes:
+
+ > Now if I write
+ > integrate(exp(x)/x,x)
+ > I obtain
+ > Ei(x)
+ > while if I write
+ > integrate(exp(x)/x^2,x)
+
+ > I get a form integral. But the integral of exp(x)/x^2 can be given in terms
+ > of Ei(x) as exp(x).  In fact I believed that the axiom can be able to find
+ > the solution that is
+ 
+ > integrate(exp(x)/x^2,x) --> Ei(x)-exp(x)/x
+
+this would be correct, yes.
+
+ > But from the manual I deduce that exp(x)/x^2 can be prooved not elementary
+ > integrable. Why exp(x)/x is integrable while exp(x)/x^2 not?
+
+Well, exp(x)/x is *not* elementarily integrable, Ei(x) is simply defined to be
+its integral. Ei(x) is *not* an elementary function. (in the mathematical
+sense)
+
+However, Axiom should still be able to figure out your integral. The
+corresponding code is in intpm.spad, but your integral doesn't fit, it seems.
+
+If you are willing to do some research, we might be able to figure out how to
+improve the pattern matcher. There is also code by Manuel Bronstein (written in
+maple), that would handle special functions. Maybe this should be integrated,
+too.
+
+Note that there are also two bugs (with fixes) filed on IssueTracker, so if you
+rely heavily on integrals, you might want to patch your axiom:
+
+http://page.axiom-developer.org/zope/mathaction/198IntegrateSinX2XIsNotHandled
+
+http://page.axiom-developer.org/zope/mathaction/199IntegrateExpX2ExpXXX
+
+The first patch is hidden in a comment, you'll have to look for it.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sun Aug 28 18:52:59 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E9W1K-00048O-Rt
+	for mharc-axiom-mail@gnu.org; Sun, 28 Aug 2005 18:52:58 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E9Vwx-0002n4-Mf
+	for axiom-mail@nongnu.org; Sun, 28 Aug 2005 18:48:27 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E9Vqt-0001aK-RM
+	for axiom-mail@nongnu.org; Sun, 28 Aug 2005 18:42:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1E9Vqt-0001Nt-Hp
+	for axiom-mail@nongnu.org; Sun, 28 Aug 2005 18:42:11 -0400
+Received: from [195.41.46.235] (helo=pfepa.post.tele.dk)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1E9VSU-0002d1-Vy
+	for axiom-mail@nongnu.org; Sun, 28 Aug 2005 18:16:59 -0400
+Received: from [10.0.0.90] (0x503e5363.hrnxx2.adsl-dhcp.tele.dk [80.62.83.99])
+	by pfepa.post.tele.dk (Postfix) with ESMTP id 7B23247FE43
+	for <axiom-mail@nongnu.org>; Mon, 29 Aug 2005 00:14:07 +0200 (CEST)
+Message-ID: <43123731.7020106@soegaard.net>
+Date: Mon, 29 Aug 2005 00:14:09 +0200
+From: =?ISO-8859-1?Q?Jens_Axel_S=F8gaard?= <jensaxel@soegaard.net>
+User-Agent: Mozilla Thunderbird 1.0.2 (Windows/20050317)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-Mailman-Approved-At: Sun, 28 Aug 2005 18:52:57 -0400
+Subject: [Axiom-mail] Lexicographic order
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 28 Aug 2005 22:48:28 -0000
+
+Hi all,
+
+Is there a smarter way than the following to write lexorder?(p,q) ?
+
+lexorder?(p,q) =3D=3D
+   if empty?(variables(p))
+   then return ~empty(variables(q))
+   else
+     vars :=3D members(difference( set(variables( secret1*p + secret2*q))=
+,
+                                 set([secret1, secret2])))
+     a :=3D members(degree( p::DMP(vars,?) ))
+     b :=3D members(degree( q::DMP(vars,?) ))
+     return negative?( first(a) - first(b) )
+
+
+My first attempt used:
+
+   vars :=3D sort(members(union(set(variables(p), variables(q)))))
+
+but was surprised to see
+
+  > sort([x,y,z])
+  [z,y,x]
+
+  > sort([x,z,y])
+  [y,z,x]
+
+and thus made up the secret-trick in order to avoid sort.
+
+--=20
+Jens Axel S=F8gaard
+
+
+
+
+From MAILER-DAEMON Mon Aug 29 04:53:18 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E9fO7-0003Q2-0n
+	for mharc-axiom-mail@gnu.org; Mon, 29 Aug 2005 04:53:10 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E9fNt-0003Pe-5u
+	for axiom-mail@nongnu.org; Mon, 29 Aug 2005 04:52:53 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E9fI1-00031x-PU
+	for axiom-mail@nongnu.org; Mon, 29 Aug 2005 04:46:50 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1E9fFj-0002jJ-75; Mon, 29 Aug 2005 04:44:27 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1E9f6z-0008Fr-Mr; Mon, 29 Aug 2005 04:35:26 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j7T8U4EU097001; 
+	Mon, 29 Aug 2005 10:30:06 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <17170.50973.133261.616524@seam101.local>
+Date: Mon, 29 Aug 2005 10:28:13 +0200
+To: =?ISO-8859-1?Q?Jens_Axel_S=F8gaard?= <jensaxel@soegaard.net>
+Subject: Re: [Axiom-mail] Lexicographic order
+In-Reply-To: <43123731.7020106@soegaard.net>
+References: <43123731.7020106@soegaard.net>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4249; Body=1 Fuz1=1 Fuz2=1
+Cc: axiom-math@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 29 Aug 2005 08:52:58 -0000
+
+Dear Jens,
+
+Although I'm not 100% sure what lexorder? ought to do exactly, you migh=
+t want
+to notice the following:
+
+the first matching type the interpreter finds for [x,y,z] is=20
+
+(13) -> [x,y,z]
+
+   (13)  [x,y,z]
+                                       Type: List OrderedVariableList [=
+x,y,z]
+
+which means that in sort([x,z,y]) you are using the order imposed by
+OrderedVariableList [x,y,z], which is z < y < x.
+
+So, although=20
+
+ >   > sort([x,y,z])
+ >   [z,y,x]
+ >=20
+ >   > sort([x,z,y])
+ >   [y,z,x]
+
+is surprising, it shouldn't be ;-) (<- please note the smiley !)
+
+If you say
+
+sort([x,z,y]::List Symbol), you will get the expected output.
+
+I'm not totally sure how you can find out what ordering a domain uses. =
+But very
+likely, if its name doesn't contain something like "Ordered", it is the=
+ usual
+lexicographic order.
+
+Hope this helps,
+
+Martin
+
+Jens Axel S=F8gaard writes:
+ > Hi all,
+ >=20
+ > Is there a smarter way than the following to write lexorder?(p,q) ?
+ >=20
+ > lexorder?(p,q) =3D=3D
+ >    if empty?(variables(p))
+ >    then return ~empty(variables(q))
+ >    else
+ >      vars :=3D members(difference( set(variables( secret1*p + secret=
+2*q)),
+ >                                  set([secret1, secret2])))
+ >      a :=3D members(degree( p::DMP(vars,?) ))
+ >      b :=3D members(degree( q::DMP(vars,?) ))
+ >      return negative?( first(a) - first(b) )
+ >=20
+ >=20
+ > My first attempt used:
+ >=20
+ >    vars :=3D sort(members(union(set(variables(p), variables(q)))))
+ >=20
+ > but was surprised to see
+ >=20
+ >   > sort([x,y,z])
+ >   [z,y,x]
+ >=20
+ >   > sort([x,z,y])
+ >   [y,z,x]
+ >=20
+ > and thus made up the secret-trick in order to avoid sort.
+ >=20
+ > --=20
+ > Jens Axel S=F8gaard
+ >=20
+ >=20
+ >=20
+ > _______________________________________________
+ > Axiom-mail mailing list
+ > Axiom-mail@nongnu.org
+ > http://lists.nongnu.org/mailman/listinfo/axiom-mail
+ >=20
+
+
+
+
+From MAILER-DAEMON Mon Aug 29 13:51:58 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1E9nnZ-0004mF-A6
+	for mharc-axiom-mail@gnu.org; Mon, 29 Aug 2005 13:51:57 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1E9nnU-0004km-Oi
+	for axiom-mail@nongnu.org; Mon, 29 Aug 2005 13:51:52 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1E9nnQ-0004i3-97
+	for axiom-mail@nongnu.org; Mon, 29 Aug 2005 13:51:50 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1E9nnQ-0004i0-5w; Mon, 29 Aug 2005 13:51:48 -0400
+Received: from [195.41.46.236] (helo=pfepb.post.tele.dk)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1E9nYw-0004vD-Uo; Mon, 29 Aug 2005 13:36:51 -0400
+Received: from [10.0.0.90] (0x503e5363.hrnxx2.adsl-dhcp.tele.dk [80.62.83.99])
+	by pfepb.post.tele.dk (Postfix) with ESMTP id 878B25EE094;
+	Mon, 29 Aug 2005 19:34:13 +0200 (CEST)
+Message-ID: <43134712.3030907@soegaard.net>
+Date: Mon, 29 Aug 2005 19:34:10 +0200
+From: =?ISO-8859-1?Q?Jens_Axel_S=F8gaard?= <jensaxel@soegaard.net>
+User-Agent: Mozilla Thunderbird 1.0.2 (Windows/20050317)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-mail] Lexicographic order
+References: <43123731.7020106@soegaard.net>
+	<17170.50973.133261.616524@seam101.local>
+In-Reply-To: <17170.50973.133261.616524@seam101.local>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-math@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 29 Aug 2005 17:51:54 -0000
+
+Hi Martin,
+
+ > Although I'm not 100% sure what lexorder? ought to do exactly, you
+ > might want to notice the following:
+ >
+ > the first matching type the interpreter finds for [x,y,z] is
+ >
+ > (13) -> [x,y,z]
+ >
+ >    (13)  [x,y,z]
+ >                                        Type: List OrderedVariableList=20
+[x,y,z]
+ >
+ > which means that in sort([x,z,y]) you are using the order imposed by
+ > OrderedVariableList [x,y,z], which is z < y < x.
+
+Ah!
+
+ > If you say
+ >
+ > sort([x,z,y]::List Symbol), you will get the expected output.
+
+That worked.
+
+ > I'm not totally sure how you can find out what ordering a domain uses.
+ > But very likely, if its name doesn't contain something like "Ordered",
+ > it is the usual lexicographic order.
+
+Part of my problem was that I had to polynomials, which might be belong
+to polynomial rings over different variables. I am probably not going
+to use lexorder?, I am just trying to get used to the Axiom way of
+doing things. Fortunately it feels very Lispy to me (if it weren't for=20
+the fact that tail recursion wasn't supported, I'd had said Schemy).
+
+Lexorder examines the difference of exponent vectors of the multivariate
+polynomials p and q. If the leftmost non-zero entry is positive, then p>q=
+.
+
+lexorder?(p,q) =3D=3D
+   if  empty?(variables(p))
+   then return ~empty?(variables(q))
+   else
+     vars :=3D sort(members(union(set(variables(p)),
+                                set(variables(q))))::List Symbol)
+     a :=3D vector(members(degree( p::DMP(vars,?) )))
+     b :=3D vector(members(degree( q::DMP(vars,?) )))
+     n :=3D select( x +-> ~zero?(x), members(a-b))
+     if empty?(n)
+     then return false
+     else return positive?(first(n))
+
+--=20
+Jens Axel S=F8gaard
+
+
+
+

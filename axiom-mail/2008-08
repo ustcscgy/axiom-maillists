@@ -1,0 +1,2371 @@
+From MAILER-DAEMON Fri Aug 01 10:18:27 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KOvSd-000692-8u
+	for mharc-axiom-mail@gnu.org; Fri, 01 Aug 2008 10:18:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KOvSa-00068u-U6
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:18:24 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KOvSZ-00068i-Gt
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:18:24 -0400
+Received: from [199.232.76.173] (port=34408 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KOvSZ-00068f-Bx
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:18:23 -0400
+Received: from wf-out-1314.google.com ([209.85.200.172]:8663)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <amca01@gmail.com>) id 1KOvSZ-0004Dl-78
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:18:23 -0400
+Received: by wf-out-1314.google.com with SMTP id 27so1461999wfd.4
+	for <axiom-mail@nongnu.org>; Fri, 01 Aug 2008 07:18:21 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from:to
+	:subject:mime-version:content-type;
+	bh=UnVcARfjlmH+ARuDAUpEGgd+03vdSRxehIJHsQCEXMk=;
+	b=RDkpVrj9UMq5Y2FMSOLRS0GirUeQ2JF2TAzpCC5c/BowpwkIOwVG3Dlqgtp9ldSuA5
+	N+tCGYjU9wM4qyaw3YoJgso05Dp/4IEXSMKEMpRCoDEyKjgQkYsTNqWb//PL6/MiV5uz
+	qi+spHq39luJbx79d9p32wNuHl7zDylpiUu0Q=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:to:subject:mime-version:content-type;
+	b=GH2jFf3iQ8zhx3bcL96nOYIdTIOacJ0pa5IQKbXa/UDaoMVZfu6pcZJW1LxDtwIKus
+	RsG1WRPSirtoVLdjlRY6C1TxgI+XiPQ5pTfHLw3GwKpAyzGhb32zmAoV/J5+KhGAdaHQ
+	z+REqxrReArCjXEnjavxqcprQ6H904mJf9AF8=
+Received: by 10.142.225.11 with SMTP id x11mr3768817wfg.101.1217600301501;
+	Fri, 01 Aug 2008 07:18:21 -0700 (PDT)
+Received: by 10.142.164.17 with HTTP; Fri, 1 Aug 2008 07:18:21 -0700 (PDT)
+Message-ID: <1d67a53c0808010718j3e4e4be0nb27899b7ff5e7c56@mail.gmail.com>
+Date: Sat, 2 Aug 2008 00:18:21 +1000
+From: "Alasdair McAndrew" <amca01@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1425_23025755.1217600301508"
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] A little simplification problem
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 01 Aug 2008 14:18:25 -0000
+
+------=_Part_1425_23025755.1217600301508
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+f(n)==7^n
+f(n+1)-7*f(n)
+simplify(%)
+
+What do I need to do to enable the final statement to produce 0?
+
+Thanks,
+Alasdair
+
+-- 
+Blog: http://amca01.wordpress.com
+
+------=_Part_1425_23025755.1217600301508
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+<div dir="ltr">f(n)==7^n<br>f(n+1)-7*f(n)<br>simplify(%)<br><br>What do I need to do to enable the final statement to produce 0?<br><br>Thanks,<br>Alasdair<br clear="all"><br>-- <br>Blog: <a href="http://amca01.wordpress.com">http://amca01.wordpress.com</a><br>
+
+</div>
+
+------=_Part_1425_23025755.1217600301508--
+
+
+
+From MAILER-DAEMON Fri Aug 01 10:41:46 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KOvpC-0004Wp-4g
+	for mharc-axiom-mail@gnu.org; Fri, 01 Aug 2008 10:41:46 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KOvpA-0004W3-MO
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:41:44 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KOvp8-0004Uy-6X
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:41:44 -0400
+Received: from [199.232.76.173] (port=56450 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KOvp7-0004Uq-Sj
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:41:41 -0400
+Received: from mail35.messagelabs.com ([62.231.131.195]:44442)
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <themos@nag.co.uk>) id 1KOvp7-0000GD-GZ
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:41:41 -0400
+X-VirusChecked: Checked
+X-Env-Sender: themos@nag.co.uk
+X-Msg-Ref: server-12.tower-35.messagelabs.com!1217601698!30002322!1
+X-StarScan-Version: 5.5.12.14.2; banners=nag.co.uk,-,-
+X-Originating-IP: [62.231.145.242]
+Received: (qmail 16520 invoked from network); 1 Aug 2008 14:41:38 -0000
+Received: from nagmx1.nag.co.uk (HELO nagmx1.nag.co.uk) (62.231.145.242)
+	by server-12.tower-35.messagelabs.com with SMTP;
+	1 Aug 2008 14:41:38 -0000
+Received: from loanamd6.nag.co.uk (loanamd6.nag.co.uk [192.156.217.152])
+	by nagmx1.nag.co.uk (Postfix) with ESMTP id 5DBC812015F
+	for <axiom-mail@nongnu.org>; Fri,  1 Aug 2008 15:40:31 +0100 (BST)
+From: Themos Tsikas <themos@nag.co.uk>
+Organization: NAG Ltd
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A little simplification problem
+Date: Fri, 1 Aug 2008 15:41:37 +0100
+User-Agent: KMail/1.9.6 (enterprise 20070904.708012)
+References: <1d67a53c0808010718j3e4e4be0nb27899b7ff5e7c56@mail.gmail.com>
+In-Reply-To: <1d67a53c0808010718j3e4e4be0nb27899b7ff5e7c56@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200808011541.37464.themos@nag.co.uk>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: themos@nag.co.uk
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 01 Aug 2008 14:41:45 -0000
+
+On Friday 01 August 2008, Alasdair McAndrew wrote:
+> f(n)==7^n
+> f(n+1)-7*f(n)
+> simplify(%)
+
+normalize %
+
+
+________________________________________________________________________
+The Numerical Algorithms Group Ltd is a company registered in England
+and Wales with company number 1249803. The registered office is:
+Wilkinson House, Jordan Hill Road, Oxford OX2 8DR, United Kingdom.
+
+This e-mail has been scanned for all viruses by Star. The service is
+powered by MessageLabs. 
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Fri Aug 01 10:43:41 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KOvr3-0005RC-N1
+	for mharc-axiom-mail@gnu.org; Fri, 01 Aug 2008 10:43:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KOvr2-0005Q1-7a
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:43:40 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KOvqy-0005Lr-Ff
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:43:39 -0400
+Received: from [199.232.76.173] (port=56510 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KOvqy-0005LX-7o
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:43:36 -0400
+Received: from mo-p05-ob.rzone.de ([81.169.146.180]:33876)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1KOvqx-0000cw-MI
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:43:36 -0400
+X-RZG-CLASS-ID: mo05
+X-RZG-AUTH: :PmQcMEitdvJk4Q5CJd22y2+5o33+jZtqGPj+dLDXdpIXuAlIRTZF+Phj0FJS
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.webmailer.de (klopstock mo36) (RZmta 16.47)
+	with ESMTP id x029b4k71DW3Ku ; Fri, 1 Aug 2008 16:43:23 +0200 (MEST)
+	(envelope-from: <ralf@hemmecke.de>)
+Message-ID: <489320F8.80607@hemmecke.de>
+Date: Fri, 01 Aug 2008 16:43:04 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.16 (X11/20080707)
+MIME-Version: 1.0
+To: Alasdair McAndrew <amca01@gmail.com>
+Subject: Re: [Axiom-mail] A little simplification problem
+References: <1d67a53c0808010718j3e4e4be0nb27899b7ff5e7c56@mail.gmail.com>
+In-Reply-To: <1d67a53c0808010718j3e4e4be0nb27899b7ff5e7c56@mail.gmail.com>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-kernel: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 01 Aug 2008 14:43:40 -0000
+
+On 08/01/2008 04:18 PM, Alasdair McAndrew wrote:
+> f(n)==7^n
+> f(n+1)-7*f(n)
+> simplify(%)
+> 
+> What do I need to do to enable the final statement to produce 0?
+
+Does that help?
+
+(1) -> f(n)==7^n
+     Type: Void
+
+(2) -> a := f(n+1)-f(n)*7
+
+          n + 1      n
+    (2)  7      - 7 7
+    Type: Expression Integer
+
+(3) -> r := rule x^(y+1)==x*x^y
+
+          y + 1       y
+    (3)  x      == x x
+    Type: RewriteRule(Integer,Integer,Expression Integer)
+
+(4) -> r a
+    (4)  0
+    Type: Expression Integer
+
+
+
+From MAILER-DAEMON Fri Aug 01 10:43:50 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KOvrB-0005Yd-Ug
+	for mharc-axiom-mail@gnu.org; Fri, 01 Aug 2008 10:43:49 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KOvrA-0005XP-CB
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:43:48 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KOvr8-0005WF-SK
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:43:48 -0400
+Received: from [199.232.76.173] (port=56513 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KOvr8-0005W1-Lf
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:43:46 -0400
+Received: from fg-out-1718.google.com ([72.14.220.158]:16684)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1KOvr8-0000ei-EK
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 10:43:46 -0400
+Received: by fg-out-1718.google.com with SMTP id l26so571928fgb.8
+	for <axiom-mail@nongnu.org>; Fri, 01 Aug 2008 07:43:44 -0700 (PDT)
+Received: by 10.86.1.1 with SMTP id 1mr7363806fga.61.1217601824438;
+	Fri, 01 Aug 2008 07:43:44 -0700 (PDT)
+Received: by 10.86.91.2 with HTTP; Fri, 1 Aug 2008 07:43:44 -0700 (PDT)
+Message-ID: <fbcd16d40808010743t48940dddy19e872ae77528ef7@mail.gmail.com>
+Date: Fri, 1 Aug 2008 10:43:44 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Alasdair McAndrew" <amca01@gmail.com>
+Subject: Re: [Axiom-mail] A little simplification problem
+In-Reply-To: <1d67a53c0808010718j3e4e4be0nb27899b7ff5e7c56@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <1d67a53c0808010718j3e4e4be0nb27899b7ff5e7c56@mail.gmail.com>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 01 Aug 2008 14:43:48 -0000
+
+On Fri, Aug 1, 2008 at 10:18 AM, Alasdair McAndrew wrote:
+
+> f(n)==7^n
+> f(n+1)-7*f(n)
+> simplify(%)
+>
+> What do I need to do to enable the final statement to produce 0?
+>
+
+You might use a pattern like this:
+
+(1) -> f(n)==7^n
+                                                    Type: Void
+(2) -> f(n+1)-7*f(n)
+
+         n + 1      n
+   (2)  7      - 7 7
+                                                     Type: Expression Integer
+
+(3) -> expandPowers := rule x^(n+1) == x*x^n
+
+         n + 1       n
+   (3)  x      == x x
+                        Type: RewriteRule(Integer,Integer,Expression Integer)
+
+(4) -> expandPowers( %% 2)
+
+   (4)  0
+                                                     Type: Expression Integer
+
+---------
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Fri Aug 01 19:07:25 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KP3iX-0004xL-Ke
+	for mharc-axiom-mail@gnu.org; Fri, 01 Aug 2008 19:07:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KP3iW-0004xA-4w
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 19:07:24 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KP3iU-0004wq-I1
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 19:07:23 -0400
+Received: from [199.232.76.173] (port=32836 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KP3iU-0004wn-DO
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 19:07:22 -0400
+Received: from wf-out-1314.google.com ([209.85.200.173]:38185)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <amca01@gmail.com>) id 1KP3iT-00020J-P4
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 19:07:22 -0400
+Received: by wf-out-1314.google.com with SMTP id 27so1748057wfd.4
+	for <axiom-mail@nongnu.org>; Fri, 01 Aug 2008 16:07:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from:to
+	:subject:in-reply-to:mime-version:content-type:references;
+	bh=mXO7VehWd0Dy7X9h8ImyhHE50rFmLV/r5xfSPJU/TeY=;
+	b=ey6w9NkZRxar8w+oA/JggT8GXfuFbnq1GJV734Q7e2hukcWV1TPhFGgu11bKaVJVjf
+	KTJjbhpWcdbCemYbRfP6hloSGCOfnKjaxKKvTBkJ2IyLLQ4N8nfleQCFdwE8jV0HwmCL
+	v4TLWQi37qJ+X2FjCL6THKZLV0Oz0GQL1sONQ=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:to:subject:in-reply-to:mime-version
+	:content-type:references;
+	b=D3hsQcC27YltilAMBqwh05ZuGYGyzAXdZjHwkJOd7Zcpq7f3T0MctlKwqlEPCQyy0V
+	xprGtIvFCmLrlC8aTS0AkeWZGZC4agWrZvfn3hW2vVVnzoKmqg26RuVezhQOkZGzwt0A
+	HZv+/jfT3skQBvYQtcgKUUwXVJyTdybu4MZeY=
+Received: by 10.143.5.7 with SMTP id h7mr3927892wfi.319.1217632040750;
+	Fri, 01 Aug 2008 16:07:20 -0700 (PDT)
+Received: by 10.142.164.17 with HTTP; Fri, 1 Aug 2008 16:07:20 -0700 (PDT)
+Message-ID: <1d67a53c0808011607r4de646aby63263e038f770cc1@mail.gmail.com>
+Date: Sat, 2 Aug 2008 09:07:20 +1000
+From: "Alasdair McAndrew" <amca01@gmail.com>
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A little simplification problem
+In-Reply-To: <200808011541.37464.themos@nag.co.uk>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3990_18336825.1217632040745"
+References: <1d67a53c0808010718j3e4e4be0nb27899b7ff5e7c56@mail.gmail.com>
+	<200808011541.37464.themos@nag.co.uk>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 01 Aug 2008 23:07:24 -0000
+
+------=_Part_3990_18336825.1217632040745
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Thank you!  In fact the rule
+
+expandPowers := rule x^(n+k) == x*x^(n+k-1)
+
+also seems to work well.  But why does Axiom not automatically apply this
+rule for simplification of expressions involving powers, as other CAS's
+(Maple, Maxima, Mathematica) do?
+
+Thanks again,
+Alasdair
+
+On Sat, Aug 2, 2008 at 12:41 AM, Themos Tsikas <themos@nag.co.uk> wrote:
+
+> On Friday 01 August 2008, Alasdair McAndrew wrote:
+> > f(n)==7^n
+> > f(n+1)-7*f(n)
+> > simplify(%)
+>
+> normalize %
+>
+>
+> ________________________________________________________________________
+> The Numerical Algorithms Group Ltd is a company registered in England
+> and Wales with company number 1249803. The registered office is:
+> Wilkinson House, Jordan Hill Road, Oxford OX2 8DR, United Kingdom.
+>
+> This e-mail has been scanned for all viruses by Star. The service is
+> powered by MessageLabs.
+> ________________________________________________________________________
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+
+
+
+-- 
+Blog: http://amca01.wordpress.com
+
+------=_Part_3990_18336825.1217632040745
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+<div dir="ltr">Thank you!&nbsp; In fact the rule<br><br>expandPowers := rule x^(n+k) == x*x^(n+k-1)<br><br>also seems to work well.&nbsp; But why does Axiom not automatically apply this rule for simplification of expressions involving powers, as other CAS&#39;s (Maple, Maxima, Mathematica) do?<br>
+<br>Thanks again,<br>Alasdair<br><br><div class="gmail_quote">On Sat, Aug 2, 2008 at 12:41 AM, Themos Tsikas <span dir="ltr">&lt;<a href="mailto:themos@nag.co.uk">themos@nag.co.uk</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
+<div class="Ih2E3d">On Friday 01 August 2008, Alasdair McAndrew wrote:<br>
+&gt; f(n)==7^n<br>
+&gt; f(n+1)-7*f(n)<br>
+&gt; simplify(%)<br>
+<br>
+</div>normalize %<br>
+<br>
+<br>
+________________________________________________________________________<br>
+The Numerical Algorithms Group Ltd is a company registered in England<br>
+and Wales with company number 1249803. The registered office is:<br>
+Wilkinson House, Jordan Hill Road, Oxford OX2 8DR, United Kingdom.<br>
+<br>
+This e-mail has been scanned for all viruses by Star. The service is<br>
+powered by MessageLabs.<br>
+________________________________________________________________________<br>
+<br>
+<br>
+_______________________________________________<br>
+Axiom-mail mailing list<br>
+<a href="mailto:Axiom-mail@nongnu.org">Axiom-mail@nongnu.org</a><br>
+<a href="http://lists.nongnu.org/mailman/listinfo/axiom-mail" target="_blank">http://lists.nongnu.org/mailman/listinfo/axiom-mail</a><br>
+</blockquote></div><br><br clear="all"><br>-- <br>Blog: <a href="http://amca01.wordpress.com">http://amca01.wordpress.com</a><br>
+</div>
+
+------=_Part_3990_18336825.1217632040745--
+
+
+
+From MAILER-DAEMON Fri Aug 01 19:27:00 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KP41U-000641-Fi
+	for mharc-axiom-mail@gnu.org; Fri, 01 Aug 2008 19:27:00 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KP41S-00061q-DY
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 19:26:58 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KP41Q-00060d-HH
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 19:26:57 -0400
+Received: from [199.232.76.173] (port=50790 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KP41Q-00060O-8t
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 19:26:56 -0400
+Received: from mo-p05-ob.rzone.de ([81.169.146.180]:27140)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1KP41P-0003rp-Os
+	for axiom-mail@nongnu.org; Fri, 01 Aug 2008 19:26:56 -0400
+X-RZG-CLASS-ID: mo05
+X-RZG-AUTH: :PmQcMEitdvJk4Q5CJd22y2+5o33+jZtqGPj+dLDXcZnAbB/Ay+MnBVt9jA==
+Received: from [10.0.0.1] (62-47-52-194.adsl.highway.telekom.at [62.47.52.194])
+	by post.webmailer.de (klopstock mo56) (RZmta 16.47)
+	with ESMTP id 503620k71JiwyM ; Sat, 2 Aug 2008 01:26:42 +0200 (MEST)
+	(envelope-from: <ralf@hemmecke.de>)
+Message-ID: <48939B9F.1020307@hemmecke.de>
+Date: Sat, 02 Aug 2008 01:26:23 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.16 (X11/20080707)
+MIME-Version: 1.0
+To: Alasdair McAndrew <amca01@gmail.com>
+Subject: Re: [Axiom-mail] A little simplification problem
+References: <1d67a53c0808010718j3e4e4be0nb27899b7ff5e7c56@mail.gmail.com>	<200808011541.37464.themos@nag.co.uk>
+	<1d67a53c0808011607r4de646aby63263e038f770cc1@mail.gmail.com>
+In-Reply-To: <1d67a53c0808011607r4de646aby63263e038f770cc1@mail.gmail.com>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-kernel: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 01 Aug 2008 23:26:58 -0000
+
+> expandPowers := rule x^(n+k) == x*x^(n+k-1)
+
+> also seems to work well.  But why does Axiom not automatically apply 
+> this rule for simplification of expressions involving powers, as other 
+> CAS's (Maple, Maxima, Mathematica) do?
+
+Maybe some people like to apply it in the other direction...
+
+contractPowers := rule x*x^n == x^(n+1)
+
+or even
+
+combinePowers := rule x^a*x^b == x^(a+b)
+
+Have you ever tried to apply the above rule as follows?
+
+expandPowers(x^(n+k))
+
+Be sure to be close to Ctrl-C, since that seems to run forever.
+
+Ralf
+
+
+
+From MAILER-DAEMON Sun Aug 03 10:33:11 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KPedz-0008UX-Mk
+	for mharc-axiom-mail@gnu.org; Sun, 03 Aug 2008 10:33:11 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KPedz-0008UM-7Z
+	for axiom-mail@nongnu.org; Sun, 03 Aug 2008 10:33:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KPedx-0008U2-GL
+	for axiom-mail@nongnu.org; Sun, 03 Aug 2008 10:33:09 -0400
+Received: from [199.232.76.173] (port=54702 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KPedx-0008Tz-6v
+	for axiom-mail@nongnu.org; Sun, 03 Aug 2008 10:33:09 -0400
+Received: from smtp23.orange.fr ([80.12.242.97]:18725)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <g.vanuxem@orange.fr>) id 1KPedx-00009c-5P
+	for axiom-mail@nongnu.org; Sun, 03 Aug 2008 10:33:09 -0400
+Received: from me-wanadoo.net (localhost [127.0.0.1])
+	by mwinf2309.orange.fr (SMTP Server) with ESMTP id A62857000088;
+	Sun,  3 Aug 2008 16:33:06 +0200 (CEST)
+Received: from [192.168.1.10] (ALille-251-1-45-136.w82-127.abo.wanadoo.fr
+	[82.127.199.136])
+	by mwinf2309.orange.fr (SMTP Server) with ESMTP id 5093F7000085;
+	Sun,  3 Aug 2008 16:33:06 +0200 (CEST)
+X-ME-UUID: 20080803143306330.5093F7000085@mwinf2309.orange.fr
+From: Gregory Vanuxem <g.vanuxem@orange.fr>
+To: Axiom-Mail <axiom-mail@nongnu.org>,
+	FriCAS Devel <fricas-devel@googlegroups.com>,
+	OpenAxiom <open-axiom-devel@lists.sourceforge.net>
+Content-Type: text/plain
+Date: Sun, 03 Aug 2008 16:32:53 +0200
+Message-Id: <1217773973.4894.2.camel@ellipse>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.22.3.1 
+Content-Transfer-Encoding: 7bit
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+Cc: 
+Subject: [Axiom-mail] if then followed by for
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 03 Aug 2008 14:33:11 -0000
+
+Hello,
+
+Here is a simple piece of code:
+----------------------------------------------
+)abb package FOO Foo
+Foo(R,VCR): Exports == Implementation where
+  R   : FloatingPointSystem
+  VCR : VectorCategory R
+  Exports == with
+    bar : (Boolean, VCR) -> Integer
+    ++ bar(b,v)
+  Implementation == add
+    import OutputPackage
+    bar(b, v) ==
+      if b then
+        --output("")
+        for i in minIndex v..maxIndex v repeat
+          if v.i <= 0 then return -1
+      else
+        for i in minIndex v ..maxIndex v repeat
+          v.i := 1
+      output(v::OutputForm)
+      0
+------------------------------------------------
+
+why if I run:
+
+v:=new(5,0)$Vector(SF)
+bar(false,v)
+
+[0.0,0.0,0.0,0.0,0.0] is printed
+
+but if I uncomment 'output("")'
+
+[1.0,1.0,1.0,1.0,1.0] is printed as expected ?
+
+Where am I wrong ? Looks like a bug, no ?
+
+Greg
+
+
+
+
+
+
+From MAILER-DAEMON Mon Aug 04 04:44:18 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KPvft-0005M9-W0
+	for mharc-axiom-mail@gnu.org; Mon, 04 Aug 2008 04:44:18 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KPvfs-0005M4-Ou
+	for axiom-mail@nongnu.org; Mon, 04 Aug 2008 04:44:16 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KPvfq-0005LR-6o
+	for axiom-mail@nongnu.org; Mon, 04 Aug 2008 04:44:16 -0400
+Received: from [199.232.76.173] (port=45653 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KPvfq-0005LO-3b
+	for axiom-mail@nongnu.org; Mon, 04 Aug 2008 04:44:14 -0400
+Received: from mail183.messagelabs.com ([62.231.131.67]:17263)
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <themos@nag.co.uk>) id 1KPvfp-0001S1-BC
+	for axiom-mail@nongnu.org; Mon, 04 Aug 2008 04:44:13 -0400
+X-VirusChecked: Checked
+X-Env-Sender: themos@nag.co.uk
+X-Msg-Ref: server-4.tower-183.messagelabs.com!1217839451!15778805!1
+X-StarScan-Version: 5.5.12.14.2; banners=nag.co.uk,-,-
+X-Originating-IP: [62.231.145.242]
+Received: (qmail 18371 invoked from network); 4 Aug 2008 08:44:11 -0000
+Received: from nagmx1.nag.co.uk (HELO nagmx1.nag.co.uk) (62.231.145.242)
+	by server-4.tower-183.messagelabs.com with SMTP;
+	4 Aug 2008 08:44:11 -0000
+Received: from loanamd6.nag.co.uk (loanamd6.nag.co.uk [192.156.217.152])
+	by nagmx1.nag.co.uk (Postfix) with ESMTP id D863012015F
+	for <axiom-mail@nongnu.org>; Mon,  4 Aug 2008 09:42:59 +0100 (BST)
+From: Themos Tsikas <themos@nag.co.uk>
+Organization: NAG Ltd
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A little simplification problem
+Date: Mon, 4 Aug 2008 09:44:09 +0100
+User-Agent: KMail/1.9.6 (enterprise 20070904.708012)
+References: <1d67a53c0808010718j3e4e4be0nb27899b7ff5e7c56@mail.gmail.com>
+	<200808011541.37464.themos@nag.co.uk>
+	<1d67a53c0808011607r4de646aby63263e038f770cc1@mail.gmail.com>
+In-Reply-To: <1d67a53c0808011607r4de646aby63263e038f770cc1@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200808040944.09632.themos@nag.co.uk>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: themos@nag.co.uk
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 04 Aug 2008 08:44:16 -0000
+
+Why? I didn't write the code but my best guess is that such rules would slow 
+things down dramatically if they had to be applied everytime there's a "+" 
+or "-" or "*" in Expression. You could experiment with your own Expression 
+domain, adding more simplification rules and attaching them to the basic 
+arithmetic ops. The current Expression implementation relies on the use 
+of "normalize"  for when you want to eliminate algebraically redundant 
+kernels (informally, subexpressions). There's still the question of why 
+does "simplify" not call "normalize". I don't know the answer.
+
+Themos Tsikas
+
+
+On Saturday 02 August 2008, Alasdair McAndrew wrote:
+> Thank you!  In fact the rule
+>
+> expandPowers := rule x^(n+k) == x*x^(n+k-1)
+>
+> also seems to work well.  But why does Axiom not automatically apply this
+> rule for simplification of expressions involving powers, as other CAS's
+> (Maple, Maxima, Mathematica) do?
+>
+> Thanks again,
+> Alasdair
+>
+> On Sat, Aug 2, 2008 at 12:41 AM, Themos Tsikas <themos@nag.co.uk> wrote:
+> > On Friday 01 August 2008, Alasdair McAndrew wrote:
+> > > f(n)==7^n
+> > > f(n+1)-7*f(n)
+> > > simplify(%)
+> >
+> > normalize %
+
+________________________________________________________________________
+The Numerical Algorithms Group Ltd is a company registered in England
+and Wales with company number 1249803. The registered office is:
+Wilkinson House, Jordan Hill Road, Oxford OX2 8DR, United Kingdom.
+
+This e-mail has been scanned for all viruses by Star. The service is
+powered by MessageLabs. 
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Tue Aug 12 12:50:52 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KSx5A-0003ag-Dj
+	for mharc-axiom-mail@gnu.org; Tue, 12 Aug 2008 12:50:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KS07L-0007Yg-3O
+	for axiom-mail@nongnu.org; Sat, 09 Aug 2008 21:53:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KS07J-0007UT-F2
+	for axiom-mail@nongnu.org; Sat, 09 Aug 2008 21:53:10 -0400
+Received: from [199.232.76.173] (port=46894 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KS07J-0007UM-BB
+	for axiom-mail@nongnu.org; Sat, 09 Aug 2008 21:53:09 -0400
+Received: from web52803.mail.re2.yahoo.com ([206.190.48.246]:44384)
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <perrinmeyer@yahoo.com>) id 1KS07J-0000Xr-J6
+	for axiom-mail@nongnu.org; Sat, 09 Aug 2008 21:53:09 -0400
+Received: (qmail 89087 invoked by uid 60001); 10 Aug 2008 01:53:08 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID;
+	b=wpFmg+OedWBGsVy8/DbxQLNz+exflWAZ/a51wLV7hBW5rq07Wfjl9ezjnP1wvXj8A1d3bzBWdliO1CF2ZiP3JKtOnKg9h0a0xjNfzpBWx3v+SjJoQOEXx72rnrJmUtfn9zUcEYVwb9RVGbukIt6G2XywEHpTuOgGA6Lxb7ZlPLQ=;
+Received: from [70.231.241.72] by web52803.mail.re2.yahoo.com via HTTP;
+	Sat, 09 Aug 2008 18:53:07 PDT
+X-Mailer: YahooMailRC/1042.48 YahooMailWebService/0.7.218
+Date: Sat, 9 Aug 2008 18:53:07 -0700 (PDT)
+From: Perrin Meyer <perrinmeyer@yahoo.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <230694.88241.qm@web52803.mail.re2.yahoo.com>
+X-detected-kernel: by monty-python.gnu.org: FreeBSD 6.x (1)
+X-Mailman-Approved-At: Tue, 12 Aug 2008 12:50:50 -0400
+Subject: [Axiom-mail] negative integer exponents in polynomials
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 10 Aug 2008 01:53:11 -0000
+
+=0A=0AHi,=0A=0AI'm new to axiom, which so far seems great.=0A=0AHow do I ge=
+t axiom to display polynomials with negative integer exponents, like=0A=0A-=
+-> a + b * z^-1 + c * z^-2 =0A=0A(DSP style). See below for a transcript. =
+=0A=0A(I am using axiom on my Intel macbook 10.5 (I got sbcl and texmacs fr=
+om macports, and I compiled frimacs using sbcl.  I made a soft link between=
+ /usr/local/bin/axiom and AXIOMsys, to get texmacs to work)=0A=0AThanks,=0A=
+=0APerrin Meyer=0A=0A=E2=86=92 f :=3D a*z^2 + b*z + c =0A=E2=86=92  =0Aa z2=
+ + b z + c=0A(1)=0AType: Polynomial Integer=0A=E2=86=92 f / z^2 =0A=E2=86=
+=92  =0Aa z2 + b z + c =0Az2 =0A(2)=0AType: Fraction Polynomial Integer=0A=
+=E2=86=92 % :: UP(z,?) =0A=E2=86=92  =0Aa =0Az2 z 2 +b =0Az2 z +c =0Az2 =0A=
+(3)=0AType: UnivariatePolynomial(z,Fraction Polynomial Integer)=0A=E2=86=92=
+  
+
+
+
+From MAILER-DAEMON Tue Aug 12 20:56:54 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KT4fW-00086v-2Q
+	for mharc-axiom-mail@gnu.org; Tue, 12 Aug 2008 20:56:54 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KT4fT-00086S-S2
+	for axiom-mail@nongnu.org; Tue, 12 Aug 2008 20:56:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KT4fT-00086C-BV
+	for axiom-mail@nongnu.org; Tue, 12 Aug 2008 20:56:51 -0400
+Received: from [199.232.76.173] (port=39409 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KT4fT-000869-4Z
+	for axiom-mail@nongnu.org; Tue, 12 Aug 2008 20:56:51 -0400
+Received: from web52809.mail.re2.yahoo.com ([206.190.48.252]:31582)
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <perrinmeyer@yahoo.com>) id 1KT4fT-0003Qi-2w
+	for axiom-mail@nongnu.org; Tue, 12 Aug 2008 20:56:51 -0400
+Received: (qmail 77108 invoked by uid 60001); 13 Aug 2008 00:56:49 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID;
+	b=uSSGGs9jGC+/dDPB7y3MpVA8en5/+CK+9PKPGxLyBeDvr88b0gvgzlWkJVeFrSIujuJB6ke8wpUGADSHbQGUtnqezTC+MOxuS7tTCVcr2TxzL0luSMejuicfz1u7UwAV/I5Dt0UPQmdQQkBagOzaDsNQJV904bzeyiT59DpneC0=;
+Received: from [216.52.12.242] by web52809.mail.re2.yahoo.com via HTTP;
+	Tue, 12 Aug 2008 17:56:49 PDT
+X-Mailer: YahooMailRC/1042.48 YahooMailWebService/0.7.218
+Date: Tue, 12 Aug 2008 17:56:49 -0700 (PDT)
+From: Perrin Meyer <perrinmeyer@yahoo.com>
+To: axiom mail <axiom-mail@nongnu.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <500654.76912.qm@web52809.mail.re2.yahoo.com>
+X-detected-kernel: by monty-python.gnu.org: FreeBSD 6.x (1)
+Subject: [Axiom-mail] Re: negative integer exponents in polynomials
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 13 Aug 2008 00:56:52 -0000
+
+=0AI sent this email a few days ago, but yahoo email spam filter ate the em=
+ail list confirmation, so I just found it.  The nice people on the FriCAS e=
+mail list have meanwhile almost answered all my questions, but I'm still ha=
+ving trouble with eval()=0A=0AThanks,=0A=0APerrin Meyer=0A=0A=0A----- laupo=
+lerror.input -----------------=0A)clear completely=0AR =3D=3D> FRAC DMP([a0=
+,a1,a2,b0,b1,b2,p],INT)=0AM =3D=3D> LAUPOL(R, UP(z,R))=0Af(s) =3D=3D (b2 * =
+s^2 + b1 * s + b0) / (a2 * s^2 + a1 * s + a0)=0Afz :=3D f(p * ((z-1)/(z+1))=
+)=0Afzn :=3D numer(fz)=0Afzn2 :=3D fzn / (a2 * p^2  + a1 * p + a0)=0Afzn3 :=
+=3D fzn2::UP(z,?)=0Afzn4 :=3D fzn3::FRAC M::M=0Afzn5 :=3D fzn4 * (z^(-2))::=
+FRAC M::M=0Afzd :=3D denom(fz)=0Afzd2 :=3D fzd / (a2 * p^2  + a1 * p + a0)=
+=0Afzd3 :=3D fzd2::UP(z,?)=0Afzd4 :=3D fzd3::FRAC M::M=0Afzd5 :=3D fzd4 * (=
+z^(-2))::FRAC M::M=0Affinal :=3D fzn5::FRAC M::M / fzd5::FRAC M::M=0Aeval(f=
+final,[a0=3D1.0,a1=3D1.0,a2=3D1.0,b0=3D1.0,b1=3D1.0,p=3D1.0,z=3D1.0])=0A=0A=
+[axiom output]=0A=0Affinal :=3D fzn5::FRAC M::M / fzd5::FRAC M::M=0A=0A   L=
+oading=0A      /home/perrin/cas/ax-install//lib/fricas/target/x86_64-unknow=
+n-linux/algebra/FRETRCT-.o=0A      for domain FullyRetractableTo&=0A   Load=
+ing=0A      /home/perrin/cas/ax-install//lib/fricas/target/x86_64-unknown-l=
+inux/algebra/PRS.o=0A      for package PseudoRemainderSequence=0A=0A       =
+                  2                 2                          2=0A        =
+ b0 + b1 p + b2 p       2b0 - 2b2 p     - 1   b0 - b1 p + b2 p   - 2=0A    =
+     ----------------- + ----------------- z    + ----------------- z=0A   =
+                      2                   2                        2=0A    =
+     a0 + a1 p + a2 p    a0 + a1 p + a2 p         a0 + a1 p + a2 p=0A   (15=
+)  -------------------------------------------------------------------=0A  =
+                                 2                          2=0A           =
+             2a0 - 2a2 p     - 1   a0 - a1 p + a2 p   - 2=0A               =
+  1 + ----------------- z    + ----------------- z=0A                      =
+               2                        2=0A                     a0 + a1 p =
++ a2 p         a0 + a1 p + a2 p=0AType: Fraction LaurentPolynomial(Fraction=
+ DistributedMultivariatePolynomial([a0,a1,a2,b0,b1,b2,p],Integer),Univariat=
+ePolynomial(z,Fraction DistributedMultivariatePolynomial([a0,a1,a2,b0,b1,b2=
+,p],Integer)))=0Aeval(ffinal,[a0=3D1.0,a1=3D1.0,a2=3D1.0,b0=3D1.0,b1=3D1.0,=
+p=3D1.0,z=3D1.0])=0A=0A   Loading=0A      /home/perrin/cas/ax-install//lib/=
+fricas/target/x86_64-unknown-linux/algebra/FLOAT.o=0A      for domain Float=
+=0A   Loading=0A      /home/perrin/cas/ax-install//lib/fricas/target/x86_64=
+-unknown-linux/algebra/EQ.o=0A      for domain Equation=0A   Loading=0A    =
+  /home/perrin/cas/ax-install//lib/fricas/target/x86_64-unknown-linux/algeb=
+ra/LIST2.o=0A      for package ListFunctions2=0A   Loading=0A      /home/pe=
+rrin/cas/ax-install//lib/fricas/target/x86_64-unknown-linux/algebra/FLAGG2.=
+o=0A      for package FiniteLinearAggregateFunctions2=0A   Loading=0A      =
+/home/perrin/cas/ax-install//lib/fricas/target/x86_64-unknown-linux/algebra=
+/EQ2.o=0A      for package EquationFunctions2=0A   There are 10 exposed and=
+ 4 unexposed library operations named eval=0A      having 2 argument(s) but=
+ none was determined to be applicable.=0A      Use HyperDoc Browse, or issu=
+e=0A                              )display op eval=0A      to learn more ab=
+out the available operations. Perhaps=0A      package-calling the operation=
+ or using coercions on the arguments=0A      will allow you to apply the op=
+eration.=0A=0A   Cannot find a definition or applicable library operation n=
+amed eval=0A      with argument type(s)=0AFraction LaurentPolynomial(Fracti=
+on DistributedMultivariatePolynomial([a0,a1,a2,b0,b1,b2,p],Integer),Univari=
+atePolynomial(z,Fraction DistributedMultivariatePolynomial([a0,a1,a2,b0,b1,=
+b2,p],Integer)))=0A                       List Equation Polynomial Float=0A=
+=0A      Perhaps you should use "@" to indicate the required return type,=
+=0A      or "$" to specify which version of the function you need.=0A(16) -=
+> )quit=0A=0A=0A=0A=0A----- Forwarded Message ----=0A> From: Perrin Meyer <=
+perrinmeyer@yahoo.com>=0A> To: axiom-mail@nongnu.org=0A> Sent: Saturday, Au=
+gust 9, 2008 6:53:07 PM=0A> Subject: negative integer exponents in polynomi=
+als=0A> =0A> =0A> =0A> Hi,=0A> =0A> I'm new to axiom, which so far seems gr=
+eat.=0A> =0A> How do I get axiom to display polynomials with negative integ=
+er exponents, like=0A> =0A> --> a + b * z^-1 + c * z^-2 =0A> =0A> (DSP styl=
+e). See below for a transcript. =0A> =0A> (I am using axiom on my Intel mac=
+book 10.5 (I got sbcl and texmacs from =0A> macports, and I compiled frimac=
+s using sbcl.  I made a soft link between =0A> /usr/local/bin/axiom and AXI=
+OMsys, to get texmacs to work)=0A> =0A> Thanks,=0A> =0A> Perrin Meyer=0A> =
+=0A> =E2=86=92 f :=3D a*z^2 + b*z + c =0A> =E2=86=92  =0A> a z2 + b z + c=
+=0A> (1)=0A> Type: Polynomial Integer=0A> =E2=86=92 f / z^2 =0A> =E2=86=92 =
+ =0A> a z2 + b z + c =0A> z2 =0A> (2)=0A> Type: Fraction Polynomial Integer=
+=0A> =E2=86=92 % :: UP(z,?) =0A> =E2=86=92  =0A> a =0A> z2 z 2 +b =0A> z2 z=
+ +c =0A> z2 =0A> (3)=0A> Type: UnivariatePolynomial(z,Fraction Polynomial I=
+nteger)=0A> =E2=86=92=0A
+
+
+
+From MAILER-DAEMON Wed Aug 27 11:35:05 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KYN33-0005LV-Er
+	for mharc-axiom-mail@gnu.org; Wed, 27 Aug 2008 11:35:05 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KYN31-0005LJ-QE
+	for axiom-mail@nongnu.org; Wed, 27 Aug 2008 11:35:03 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KYN2z-0005L3-K0
+	for axiom-mail@nongnu.org; Wed, 27 Aug 2008 11:35:02 -0400
+Received: from [199.232.76.173] (port=40653 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KYN2z-0005Kz-8p
+	for axiom-mail@nongnu.org; Wed, 27 Aug 2008 11:35:01 -0400
+Received: from mail-gx0-f19.google.com ([209.85.217.19]:58152)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <tigertooth4@gmail.com>) id 1KYN2x-0007F7-PU
+	for axiom-mail@nongnu.org; Wed, 27 Aug 2008 11:35:00 -0400
+Received: by gxk12 with SMTP id 12so3981133gxk.10
+	for <axiom-mail@nongnu.org>; Wed, 27 Aug 2008 08:34:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from:to
+	:subject:mime-version:content-type;
+	bh=tt1TwZpaBDdXWn6T2VSJaRdGZZhBC7sWS4ADeURPR+A=;
+	b=dSRvoufNQfxpyNnDgR8J81O9g7Cv2TtWTp4zm8+aUjhpRbBp4YH0v6GP/ndf15B+9W
+	b+kLJg9n2HT4GXYvfusJEptkRNIPnAz4jZkZKdlTdSnQWTIwQD0xBrzG0lnqkk6cQRtu
+	GNL9tgdN/weL/zhevp0+/X5xEtRbMYWWiTQwQ=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:to:subject:mime-version:content-type;
+	b=omxQPQr3UvWaWxJnBLs3Es4Trq8tc6OBOiTgXvgDenfFEC9WUyn+lk3QCZiX4cOMoW
+	ghhezIpZvWlfXSyObvmBtM4X0AONSpejhBhZfPqr4oo+h1yvuQ9DH6tneqYpWsledfoS
+	/6172TRJ4sxu4HDqEZR8jjG0mMjMWXKoHQ3Us=
+Received: by 10.150.51.6 with SMTP id y6mr358289yby.5.1219851287412;
+	Wed, 27 Aug 2008 08:34:47 -0700 (PDT)
+Received: by 10.150.202.10 with HTTP; Wed, 27 Aug 2008 08:34:47 -0700 (PDT)
+Message-ID: <360bb81c0808270834x6fc47178n4f1ccb8c873c1883@mail.gmail.com>
+Date: Wed, 27 Aug 2008 23:34:47 +0800
+From: "Liu Xiaojun" <tigertooth4@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_22764_25073159.1219851287428"
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] Unexpected results w.r.t. exponential operation of
+	LODO (with july2008 release)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 27 Aug 2008 15:35:04 -0000
+
+------=_Part_22764_25073159.1219851287428
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Hi,
+
+    Does exponential operation (^ or **) of a differential operator, say L,
+means repeating multiplications of L in Axiom ? If so, it seems the
+following code produced an unexpected result:
+
+(1) -> Dx: LODO(EXPR INT, f+->D(f,x)) := D()
+
+   (1)  D
+Type: LinearOrdinaryDifferentialOperator(Expression Integer,theMap
+LAMBDA-CLOSURE(NIL,NIL,NIL,G1402 envArg,SPADCALL(G1402,QUOTE
+x,ELT(*1;anonymousFunction;0;frame0;internal;MV,0))))
+
+(2) -> u := operator 'u
+
+   (2)  u
+                                                          Type:
+BasicOperator
+
+
+(3) -> L := Dx + u(x)
+
+   (3)  D + u(x)
+Type: LinearOrdinaryDifferentialOperator(Expression Integer,theMap
+LAMBDA-CLOSURE(NIL,NIL,NIL,G1402 envArg,SPADCALL(G1402,QUOTE
+x,ELT(*1;anonymousFunction;0;frame0;internal;MV,0))))
+
+(4) -> L**2 = L*L
+
+         2                2   2             ,          2
+   (4)  D  + 2u(x)D + u(x) = D  + 2u(x)D + u (x) + u(x)
+
+L^2 produces the same result as l.h.s. of (4) shows. However, it does not
+equal to the r.h.s. generally, and r.h.s. should be correct answer. I also
+tried similar things w.r.t. the parent domain of LODO, which is
+UnivariateSkewPolynomial, it produces similar unexpected result:
+
+(1)-> f: INT->INT:=x+->x+1
+
+(2) -> K := OREUP ( x, INT, 1, f)
+                                                                 Type:
+Domain
+(3) -> x:K
+                                                                   Type:
+Void
+
+(4) -> L:=x+1
+
+(4) ->
+   (4)  x + 1
+
+(5) -> L^2=L*L
+           2            2
+   (5)  x  + 2x + 1= x  + 4x + 3
+
+Clearly, the r.h.s. is correct too. I checked the .spad file, it seems the
+exponential operation of LODO (or its parent OREUP) is missed (or I guess it
+is directly inherited as usual polynomial operation). However I am not
+clever enough to modify the code. Please check this, thanks.
+
+Best Regards,
+Xiaojun Liu
+
+------=_Part_22764_25073159.1219851287428
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+<div dir=3D"ltr">Hi,<br><br>&nbsp;&nbsp;&nbsp; Does exponential operation (=
+^ or **) of a differential operator, say L, means repeating multiplications=
+ of L in Axiom ? If so, it seems the following code produced an unexpected =
+result:<br><br>
+(1) -&gt; Dx: LODO(EXPR INT, f+-&gt;D(f,x)) :=3D D()<br><br>&nbsp;&nbsp; (1=
+)&nbsp; D<br>Type: LinearOrdinaryDifferentialOperator(Expression Integer,th=
+eMap LAMBDA-CLOSURE(NIL,NIL,NIL,G1402 envArg,SPADCALL(G1402,QUOTE x,ELT(*1;=
+anonymousFunction;0;frame0;internal;MV,0))))<br>
+<br>(2) -&gt; u :=3D operator &#39;u<br><br>&nbsp;&nbsp; (2)&nbsp; u<br>&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type: BasicOperator<br><br><br>(3) =
+-&gt; L :=3D Dx + u(x)<br><br>&nbsp;&nbsp; (3)&nbsp; D + u(x)<br>Type: Line=
+arOrdinaryDifferentialOperator(Expression Integer,theMap LAMBDA-CLOSURE(NIL=
+,NIL,NIL,G1402 envArg,SPADCALL(G1402,QUOTE x,ELT(*1;anonymousFunction;0;fra=
+me0;internal;MV,0))))<br>
+<br clear=3D"all">(4) -&gt; L**2 =3D L*L<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>&nbsp;&nbsp; (4)&nbsp; D&nbsp; + 2u(x=
+)D + u(x) =3D D&nbsp; + 2u(x)D + u (x) + u(x)<br><br>L^2 produces the same =
+result as l.h.s. of (4) shows. However, it does not equal to the r.h.s. gen=
+erally, and r.h.s. should be correct answer. I also tried similar things w.=
+r.t. the parent domain of LODO, which is UnivariateSkewPolynomial, it produ=
+ces similar unexpected result:<br>
+<br>(1)-&gt; f: INT-&gt;INT:=3Dx+-&gt;x+1<br><br>(2) -&gt; K :=3D OREUP ( x=
+, INT, 1, f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p; Type: Domain<br>(3) -&gt; x:K<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type: Void<br>
+<br>(4) -&gt; L:=3Dx+1<br><br>(4) -&gt; <br>&nbsp;&nbsp; (4)&nbsp; x + 1<br=
+><br>(5) -&gt; L^2=3DL*L<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+; 2<br>&nbsp;&nbsp; (5)&nbsp; x&nbsp; + 2x + 1=3D x&nbsp; + 4x + 3<br><br>C=
+learly, the r.h.s. is correct too. I checked the .spad file, it seems the e=
+xponential operation of LODO (or its parent OREUP) is missed (or I guess it=
+ is directly inherited as usual polynomial operation). However I am not cle=
+ver enough to modify the code. Please check this, thanks.<br>
+<br>Best Regards,<br>Xiaojun Liu<br>
+</div>
+
+------=_Part_22764_25073159.1219851287428--
+
+
+
+From MAILER-DAEMON Wed Aug 27 14:50:52 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KYQ6W-0001vK-Cd
+	for mharc-axiom-mail@gnu.org; Wed, 27 Aug 2008 14:50:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KYQ6U-0001tn-9S
+	for axiom-mail@nongnu.org; Wed, 27 Aug 2008 14:50:50 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KYQ6T-0001tG-Cb
+	for axiom-mail@nongnu.org; Wed, 27 Aug 2008 14:50:49 -0400
+Received: from [199.232.76.173] (port=52183 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KYQ6S-0001t7-UI
+	for axiom-mail@nongnu.org; Wed, 27 Aug 2008 14:50:49 -0400
+Received: from mx-8.zoominternet.net ([24.154.1.27]:39046
+	helo=cm-2.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1KYQ6S-0006VV-JK
+	for axiom-mail@nongnu.org; Wed, 27 Aug 2008 14:50:48 -0400
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=aebgfQvSQ7QA:10 a=9lb5763lEHkA:10
+	a=E8rTNAPPKTgA:10 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=GwxsKoE1qVT488QGDIoA:9 a=ZeefLi5biAJbo-G3jFP0AG6LBR4A:4
+	a=v47ZLdibA2YA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.47] ([24.154.1.47:58231] helo=pop-4.zoominternet.net)
+	by mx-8.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id F6/9A-30579-CF1A5B84; Wed, 27 Aug 2008 14:50:36 -0400
+Received: (qmail 7199 invoked from network); 27 Aug 2008 18:50:35 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-4.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 27 Aug 2008 18:50:35 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id m7RKGrl08881;
+	Wed, 27 Aug 2008 16:16:53 -0400
+Date: Wed, 27 Aug 2008 16:16:53 -0400
+Message-Id: <200808272016.m7RKGrl08881@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: tigertooth4@gmail.com
+In-reply-to: <360bb81c0808270834x6fc47178n4f1ccb8c873c1883@mail.gmail.com>
+	(tigertooth4@gmail.com)
+Subject: Re: [Axiom-mail] Unexpected results w.r.t. exponential operation of
+	LODO (with july2008 release)
+References: <360bb81c0808270834x6fc47178n4f1ccb8c873c1883@mail.gmail.com>
+X-detected-kernel: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 27 Aug 2008 18:50:50 -0000
+
+Although I believe ^ and ** are intended to be the same operation
+clearly they are not. This will require some thought:
+
+(1)-> )d op ^
+
+There are 6 exposed functions called ^ :
+   [1] Boolean -> Boolean from Boolean
+   [2] D -> D from D if D has BTAGG
+   [3] (D,Integer) -> D from D if D has DIVRING
+   [4] (D,Integer) -> D from D if D has GROUP
+   [5] (D,NonNegativeInteger) -> D from D if D has MONOID
+   [6] (D,PositiveInteger) -> D from D if D has SGROUP
+
+Examples of ^ from Boolean
+
+
+Examples of ^ from BitAggregate
+
+
+Examples of ^ from DivisionRing
+
+
+Examples of ^ from Group
+
+
+Examples of ^ from Monoid
+
+
+Examples of ^ from SemiGroup
+
+(1) -> )d op **
+
+There are 20 exposed functions called ** :
+   [1] (CardinalNumber,CardinalNumber) -> CardinalNumber from 
+            CardinalNumber
+   [2] (DoubleFloat,DoubleFloat) -> DoubleFloat from DoubleFloat
+   [3] (D,Integer) -> D from D if D has DIVRING
+   [4] (D,D) -> D from D if D has ELEMFUN
+   [5] (Float,Float) -> Float from Float
+   [6] (D,NonNegativeInteger) -> D from D
+            if D has FS D2 and D2 has ORDSET and D2 has SGROUP
+   [7] (D,Integer) -> D from D if D has GROUP
+   [8] (PolynomialIdeals(D2,D3,D4,D5),NonNegativeInteger) -> 
+            PolynomialIdeals(D2,D3,D4,D5)
+            from PolynomialIdeals(D2,D3,D4,D5)
+            if D2 has FIELD and D3 has OAMONS and D4 has ORDSET and D5 
+            has POLYCAT(D2,D3,D4)
+   [9] ((D3 -> D3),NonNegativeInteger) -> (D3 -> D3) from 
+            MappingPackage1 D3
+            if D3 has SETCAT
+   [10] (D,Integer) -> D from D
+            if D has MATCAT(D2,D3,D4) and D2 has RING and D3 has FLAGG 
+            D2 and D4 has FLAGG D2 and D2 has FIELD
+   [11] (D,NonNegativeInteger) -> D from D
+            if D has MATCAT(D2,D3,D4) and D2 has RING and D3 has FLAGG 
+            D2 and D4 has FLAGG D2
+   [12] (ModuleOperator(D2,D3),Integer) -> ModuleOperator(D2,D3)
+            from ModuleOperator(D2,D3)
+            if D2 has RING and D3 has LMODULE D2
+   [13] (BasicOperator,Integer) -> ModuleOperator(D3,D4)
+            from ModuleOperator(D3,D4)
+            if D3 has RING and D4 has LMODULE D3
+   [14] (D,PositiveInteger) -> D from D if D has MONAD
+   [15] (D,NonNegativeInteger) -> D from D if D has MONADWU
+   [16] (D,NonNegativeInteger) -> D from D if D has MONOID
+   [17] (D,Fraction Integer) -> D from D if D has RADCAT
+   [18] (D,PositiveInteger) -> D from D if D has SGROUP
+   [19] (D,Integer) -> D from D
+            if D has SMATCAT(D2,D3,D4,D5) and D3 has RING and D4 has 
+            DIRPCAT(D2,D3) and D5 has DIRPCAT(D2,D3) and D3 has FIELD
+         
+   [20] (D,D1) -> D from D
+            if D has UTSCAT D1 and D1 has RING and D1 has FIELD
+
+There are 18 unexposed functions called ** :
+   [1] (D1,Fraction Integer) -> D1 from AlgebraicFunction(D3,D1)
+            if D3 has RETRACT INT and D3 has Join(OrderedSet,
+            IntegralDomain) and D1 has FS D3
+   [2] (D1,D1) -> D1 from CombinatorialFunction(D2,D1)
+            if D2 has Join(OrderedSet,IntegralDomain) and D1 has FS D2
+            
+   [3] (D1,Fraction Integer) -> D1
+            from ElementaryFunctionsUnivariateLaurentSeries(D3,D4,D1)
+            if D3 has FIELD and D3 has ALGEBRA FRAC INT and D4 has 
+            UTSCAT D3 and D1 has ULSCCAT(D3,D4)
+   [4] (D1,Fraction Integer) -> D1
+            from ElementaryFunctionsUnivariatePuiseuxSeries(D3,D4,D1,D5
+            )
+            if D3 has FIELD and D3 has ALGEBRA FRAC INT and D4 has 
+            ULSCAT D3 and D1 has UPXSCCA(D3,D4) and D5 has PTRANFN D4
+         
+   [5] (D1,Integer) -> FreeGroup D1 from FreeGroup D1 if D1 has SETCAT
+            
+   [6] (D1,NonNegativeInteger) -> FreeMonoid D1 from FreeMonoid D1
+            if D1 has SETCAT
+   [7] (Vector D3,Integer) -> Vector D3 from 
+            InnerNormalBasisFieldFunctions D3
+            if D3 has FFIELDC
+   [8] (InputForm,Integer) -> InputForm from InputForm
+   [9] (InputForm,NonNegativeInteger) -> InputForm from InputForm
+   [10] (Matrix D3,NonNegativeInteger) -> Matrix D3
+            from StorageEfficientMatrixOperations D3 if D3 has RING
+   [11] (D1,NonNegativeInteger) -> OrderedFreeMonoid D1
+            from OrderedFreeMonoid D1 if D1 has ORDSET
+   [12] (Operator D2,Integer) -> Operator D2 from Operator D2 if D2 has
+            RING
+   [13] (BasicOperator,Integer) -> Operator D3 from Operator D3 if D3 
+            has RING
+   [14] (OutputForm,OutputForm) -> OutputForm from OutputForm
+   [15] (Pattern D1,Pattern D1) -> Pattern D1 from Pattern D1 if D1 has
+            SETCAT
+   [16] (Pattern D2,NonNegativeInteger) -> Pattern D2 from Pattern D2
+            if D2 has SETCAT
+   [17] (Stream D2,Stream D2) -> Stream D2
+            from StreamTranscendentalFunctionsNonCommutative D2
+            if D2 has ALGEBRA FRAC INT
+   [18] (Stream D2,Stream D2) -> Stream D2
+            from StreamTranscendentalFunctions D2 if D2 has ALGEBRA 
+            FRAC INT
+
+Examples of ** from AlgebraicFunction
+
+
+Examples of ** from CardinalNumber
+
+ c2:=2::CardinalNumber
+ c2**c2
+ A1:=Aleph 1
+ A1**c2
+ generalizedContinuumHypothesisAssumed true
+ A1**A1
+
+
+Examples of ** from CombinatorialFunction
+
+
+Examples of ** from DoubleFloat
+
+
+Examples of ** from DivisionRing
+
+
+Examples of ** from ElementaryFunctionsUnivariateLaurentSeries
+
+
+Examples of ** from ElementaryFunctionsUnivariatePuiseuxSeries
+
+
+Examples of ** from ElementaryFunctionCategory
+
+
+Examples of ** from FreeGroup
+
+
+Examples of ** from Float
+
+
+Examples of ** from FreeMonoid
+
+
+Examples of ** from FunctionSpace
+
+
+Examples of ** from Group
+
+
+Examples of ** from PolynomialIdeals
+
+
+Examples of ** from InnerNormalBasisFieldFunctions
+
+
+Examples of ** from InputForm
+
+
+Examples of ** from MappingPackage1
+
+
+Examples of ** from MatrixCategory
+
+
+Examples of ** from StorageEfficientMatrixOperations
+
+
+Examples of ** from ModuleOperator
+
+
+Examples of ** from Monad
+
+
+Examples of ** from MonadWithUnit
+
+
+Examples of ** from Monoid
+
+
+Examples of ** from OrderedFreeMonoid
+
+
+Examples of ** from Operator
+
+
+Examples of ** from OutputForm
+
+
+Examples of ** from Pattern
+
+
+Examples of ** from RadicalCategory
+
+
+Examples of ** from SemiGroup
+
+
+Examples of ** from SquareMatrixCategory
+
+
+Examples of ** from StreamTranscendentalFunctionsNonCommutative
+
+
+Examples of ** from StreamTranscendentalFunctions
+
+
+Examples of ** from UnivariateTaylorSeriesCategory
+
+
+
+
+From MAILER-DAEMON Wed Aug 27 22:15:11 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KYX2V-0001VE-2p
+	for mharc-axiom-mail@gnu.org; Wed, 27 Aug 2008 22:15:11 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KYX2T-0001TE-J1
+	for axiom-mail@nongnu.org; Wed, 27 Aug 2008 22:15:09 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KYX2R-0001Qu-SB
+	for axiom-mail@nongnu.org; Wed, 27 Aug 2008 22:15:08 -0400
+Received: from [199.232.76.173] (port=51831 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KYX2R-0001Qf-L6
+	for axiom-mail@nongnu.org; Wed, 27 Aug 2008 22:15:07 -0400
+Received: from yx-out-1718.google.com ([74.125.44.157]:54600)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <tigertooth4@gmail.com>) id 1KYX2R-00049F-4J
+	for axiom-mail@nongnu.org; Wed, 27 Aug 2008 22:15:07 -0400
+Received: by yx-out-1718.google.com with SMTP id 3so85108yxi.82
+	for <axiom-mail@nongnu.org>; Wed, 27 Aug 2008 19:15:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from:to
+	:subject:cc:in-reply-to:mime-version:content-type:references;
+	bh=cmv8yzpJkmNuRWVHR7vyLikppoDCkXmrh/RGtb4BSyI=;
+	b=T0ObVnfmxqDlqi+n8QMkDxADWZHx9FfaQWrlH0enTbq6UPi6aNK+h5QBZQBQaQEaSp
+	C8xTpBszwNHiMFpsi5xKhBqXt/Eg63uxW1Ywpkyrizlo9T8MJiknSIXav9T/IXFb/M4f
+	ICJW26nD75Fs1NFKSCOYuHK2rgb5Nxh8so9ZY=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:to:subject:cc:in-reply-to:mime-version
+	:content-type:references;
+	b=rqGBoH2MWh7LyJkcHgblijgjSLlVGuYv2SmX/3pAPZi690Cpne2+OIdtDCtqHsaxAc
+	N9a/4ldW4/B/RmWufCuClFzWf7UWVhoj8NjGYhS6xbYFRbm0bLH+zIQ3bPyUgdOaX18X
+	CyyBS6PSJCNnM8v0+kpTo33Z949TXt/rMF1bc=
+Received: by 10.150.229.16 with SMTP id b16mr1214865ybh.164.1219889706355;
+	Wed, 27 Aug 2008 19:15:06 -0700 (PDT)
+Received: by 10.150.202.10 with HTTP; Wed, 27 Aug 2008 19:15:06 -0700 (PDT)
+Message-ID: <360bb81c0808271915k41d9bee7xcb7ae48c5adf3423@mail.gmail.com>
+Date: Thu, 28 Aug 2008 10:15:06 +0800
+From: "Liu Xiaojun" <tigertooth4@gmail.com>
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-mail] Unexpected results w.r.t. exponential operation of
+	LODO (with july2008 release)
+In-Reply-To: <200808272016.m7RKGrl08881@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_30869_15047190.1219889706356"
+References: <360bb81c0808270834x6fc47178n4f1ccb8c873c1883@mail.gmail.com>
+	<200808272016.m7RKGrl08881@localhost.localdomain>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Aug 2008 02:15:09 -0000
+
+------=_Part_30869_15047190.1219889706356
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Oh, it looks quite different, thanks for your answer. But this didn't answer
+my question: does L^2 (or L**2)
+should produce the same result as L*L in LODO ?
+
+Best Regards,
+Xiaojun
+
+
+2008/8/28 root <daly@axiom-developer.org>
+
+> Although I believe ^ and ** are intended to be the same operation
+> clearly they are not. This will require some thought:
+>
+> (1)-> )d op ^
+>
+> There are 6 exposed functions called ^ :
+>   [1] Boolean -> Boolean from Boolean
+>   [2] D -> D from D if D has BTAGG
+>   [3] (D,Integer) -> D from D if D has DIVRING
+>   [4] (D,Integer) -> D from D if D has GROUP
+>   [5] (D,NonNegativeInteger) -> D from D if D has MONOID
+>   [6] (D,PositiveInteger) -> D from D if D has SGROUP
+>
+> Examples of ^ from Boolean
+>
+>
+> Examples of ^ from BitAggregate
+>
+>
+> Examples of ^ from DivisionRing
+>
+>
+> Examples of ^ from Group
+>
+>
+> Examples of ^ from Monoid
+>
+>
+> Examples of ^ from SemiGroup
+>
+> (1) -> )d op **
+>
+> There are 20 exposed functions called ** :
+>   [1] (CardinalNumber,CardinalNumber) -> CardinalNumber from
+>            CardinalNumber
+>   [2] (DoubleFloat,DoubleFloat) -> DoubleFloat from DoubleFloat
+>   [3] (D,Integer) -> D from D if D has DIVRING
+>   [4] (D,D) -> D from D if D has ELEMFUN
+>   [5] (Float,Float) -> Float from Float
+>   [6] (D,NonNegativeInteger) -> D from D
+>            if D has FS D2 and D2 has ORDSET and D2 has SGROUP
+>   [7] (D,Integer) -> D from D if D has GROUP
+>   [8] (PolynomialIdeals(D2,D3,D4,D5),NonNegativeInteger) ->
+>            PolynomialIdeals(D2,D3,D4,D5)
+>            from PolynomialIdeals(D2,D3,D4,D5)
+>            if D2 has FIELD and D3 has OAMONS and D4 has ORDSET and D5
+>            has POLYCAT(D2,D3,D4)
+>   [9] ((D3 -> D3),NonNegativeInteger) -> (D3 -> D3) from
+>            MappingPackage1 D3
+>            if D3 has SETCAT
+>   [10] (D,Integer) -> D from D
+>            if D has MATCAT(D2,D3,D4) and D2 has RING and D3 has FLAGG
+>            D2 and D4 has FLAGG D2 and D2 has FIELD
+>   [11] (D,NonNegativeInteger) -> D from D
+>            if D has MATCAT(D2,D3,D4) and D2 has RING and D3 has FLAGG
+>            D2 and D4 has FLAGG D2
+>   [12] (ModuleOperator(D2,D3),Integer) -> ModuleOperator(D2,D3)
+>            from ModuleOperator(D2,D3)
+>            if D2 has RING and D3 has LMODULE D2
+>   [13] (BasicOperator,Integer) -> ModuleOperator(D3,D4)
+>            from ModuleOperator(D3,D4)
+>            if D3 has RING and D4 has LMODULE D3
+>   [14] (D,PositiveInteger) -> D from D if D has MONAD
+>   [15] (D,NonNegativeInteger) -> D from D if D has MONADWU
+>   [16] (D,NonNegativeInteger) -> D from D if D has MONOID
+>   [17] (D,Fraction Integer) -> D from D if D has RADCAT
+>   [18] (D,PositiveInteger) -> D from D if D has SGROUP
+>   [19] (D,Integer) -> D from D
+>            if D has SMATCAT(D2,D3,D4,D5) and D3 has RING and D4 has
+>            DIRPCAT(D2,D3) and D5 has DIRPCAT(D2,D3) and D3 has FIELD
+>
+>   [20] (D,D1) -> D from D
+>            if D has UTSCAT D1 and D1 has RING and D1 has FIELD
+>
+> There are 18 unexposed functions called ** :
+>   [1] (D1,Fraction Integer) -> D1 from AlgebraicFunction(D3,D1)
+>            if D3 has RETRACT INT and D3 has Join(OrderedSet,
+>            IntegralDomain) and D1 has FS D3
+>   [2] (D1,D1) -> D1 from CombinatorialFunction(D2,D1)
+>            if D2 has Join(OrderedSet,IntegralDomain) and D1 has FS D2
+>
+>   [3] (D1,Fraction Integer) -> D1
+>            from ElementaryFunctionsUnivariateLaurentSeries(D3,D4,D1)
+>            if D3 has FIELD and D3 has ALGEBRA FRAC INT and D4 has
+>            UTSCAT D3 and D1 has ULSCCAT(D3,D4)
+>   [4] (D1,Fraction Integer) -> D1
+>            from ElementaryFunctionsUnivariatePuiseuxSeries(D3,D4,D1,D5
+>            )
+>            if D3 has FIELD and D3 has ALGEBRA FRAC INT and D4 has
+>            ULSCAT D3 and D1 has UPXSCCA(D3,D4) and D5 has PTRANFN D4
+>
+>   [5] (D1,Integer) -> FreeGroup D1 from FreeGroup D1 if D1 has SETCAT
+>
+>   [6] (D1,NonNegativeInteger) -> FreeMonoid D1 from FreeMonoid D1
+>            if D1 has SETCAT
+>   [7] (Vector D3,Integer) -> Vector D3 from
+>            InnerNormalBasisFieldFunctions D3
+>            if D3 has FFIELDC
+>   [8] (InputForm,Integer) -> InputForm from InputForm
+>   [9] (InputForm,NonNegativeInteger) -> InputForm from InputForm
+>   [10] (Matrix D3,NonNegativeInteger) -> Matrix D3
+>            from StorageEfficientMatrixOperations D3 if D3 has RING
+>   [11] (D1,NonNegativeInteger) -> OrderedFreeMonoid D1
+>            from OrderedFreeMonoid D1 if D1 has ORDSET
+>   [12] (Operator D2,Integer) -> Operator D2 from Operator D2 if D2 has
+>            RING
+>   [13] (BasicOperator,Integer) -> Operator D3 from Operator D3 if D3
+>            has RING
+>   [14] (OutputForm,OutputForm) -> OutputForm from OutputForm
+>   [15] (Pattern D1,Pattern D1) -> Pattern D1 from Pattern D1 if D1 has
+>            SETCAT
+>   [16] (Pattern D2,NonNegativeInteger) -> Pattern D2 from Pattern D2
+>            if D2 has SETCAT
+>   [17] (Stream D2,Stream D2) -> Stream D2
+>            from StreamTranscendentalFunctionsNonCommutative D2
+>            if D2 has ALGEBRA FRAC INT
+>   [18] (Stream D2,Stream D2) -> Stream D2
+>            from StreamTranscendentalFunctions D2 if D2 has ALGEBRA
+>            FRAC INT
+>
+> Examples of ** from AlgebraicFunction
+>
+>
+> Examples of ** from CardinalNumber
+>
+>  c2:=2::CardinalNumber
+>  c2**c2
+>  A1:=Aleph 1
+>  A1**c2
+>  generalizedContinuumHypothesisAssumed true
+>  A1**A1
+>
+>
+> Examples of ** from CombinatorialFunction
+>
+>
+> Examples of ** from DoubleFloat
+>
+>
+> Examples of ** from DivisionRing
+>
+>
+> Examples of ** from ElementaryFunctionsUnivariateLaurentSeries
+>
+>
+> Examples of ** from ElementaryFunctionsUnivariatePuiseuxSeries
+>
+>
+> Examples of ** from ElementaryFunctionCategory
+>
+>
+> Examples of ** from FreeGroup
+>
+>
+> Examples of ** from Float
+>
+>
+> Examples of ** from FreeMonoid
+>
+>
+> Examples of ** from FunctionSpace
+>
+>
+> Examples of ** from Group
+>
+>
+> Examples of ** from PolynomialIdeals
+>
+>
+> Examples of ** from InnerNormalBasisFieldFunctions
+>
+>
+> Examples of ** from InputForm
+>
+>
+> Examples of ** from MappingPackage1
+>
+>
+> Examples of ** from MatrixCategory
+>
+>
+> Examples of ** from StorageEfficientMatrixOperations
+>
+>
+> Examples of ** from ModuleOperator
+>
+>
+> Examples of ** from Monad
+>
+>
+> Examples of ** from MonadWithUnit
+>
+>
+> Examples of ** from Monoid
+>
+>
+> Examples of ** from OrderedFreeMonoid
+>
+>
+> Examples of ** from Operator
+>
+>
+> Examples of ** from OutputForm
+>
+>
+> Examples of ** from Pattern
+>
+>
+> Examples of ** from RadicalCategory
+>
+>
+> Examples of ** from SemiGroup
+>
+>
+> Examples of ** from SquareMatrixCategory
+>
+>
+> Examples of ** from StreamTranscendentalFunctionsNonCommutative
+>
+>
+> Examples of ** from StreamTranscendentalFunctions
+>
+>
+> Examples of ** from UnivariateTaylorSeriesCategory
+>
+>
+
+------=_Part_30869_15047190.1219889706356
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+<div dir="ltr">Oh, it looks quite different, thanks for your answer. But this didn&#39;t answer my question: does L^2 (or L**2)<br>should produce the same result as L*L in LODO ? <br><br>Best Regards,<br>Xiaojun<br><br><br>
+<div class="gmail_quote">2008/8/28 root <span dir="ltr">&lt;<a href="mailto:daly@axiom-developer.org">daly@axiom-developer.org</a>&gt;</span><br><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
+Although I believe ^ and ** are intended to be the same operation<br>
+clearly they are not. This will require some thought:<br>
+<br>
+(1)-&gt; )d op ^<br>
+<br>
+There are 6 exposed functions called ^ :<br>
+ &nbsp; [1] Boolean -&gt; Boolean from Boolean<br>
+ &nbsp; [2] D -&gt; D from D if D has BTAGG<br>
+ &nbsp; [3] (D,Integer) -&gt; D from D if D has DIVRING<br>
+ &nbsp; [4] (D,Integer) -&gt; D from D if D has GROUP<br>
+ &nbsp; [5] (D,NonNegativeInteger) -&gt; D from D if D has MONOID<br>
+ &nbsp; [6] (D,PositiveInteger) -&gt; D from D if D has SGROUP<br>
+<br>
+Examples of ^ from Boolean<br>
+<br>
+<br>
+Examples of ^ from BitAggregate<br>
+<br>
+<br>
+Examples of ^ from DivisionRing<br>
+<br>
+<br>
+Examples of ^ from Group<br>
+<br>
+<br>
+Examples of ^ from Monoid<br>
+<br>
+<br>
+Examples of ^ from SemiGroup<br>
+<br>
+(1) -&gt; )d op **<br>
+<br>
+There are 20 exposed functions called ** :<br>
+ &nbsp; [1] (CardinalNumber,CardinalNumber) -&gt; CardinalNumber from<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;CardinalNumber<br>
+ &nbsp; [2] (DoubleFloat,DoubleFloat) -&gt; DoubleFloat from DoubleFloat<br>
+ &nbsp; [3] (D,Integer) -&gt; D from D if D has DIVRING<br>
+ &nbsp; [4] (D,D) -&gt; D from D if D has ELEMFUN<br>
+ &nbsp; [5] (Float,Float) -&gt; Float from Float<br>
+ &nbsp; [6] (D,NonNegativeInteger) -&gt; D from D<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D has FS D2 and D2 has ORDSET and D2 has SGROUP<br>
+ &nbsp; [7] (D,Integer) -&gt; D from D if D has GROUP<br>
+ &nbsp; [8] (PolynomialIdeals(D2,D3,D4,D5),NonNegativeInteger) -&gt;<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PolynomialIdeals(D2,D3,D4,D5)<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;from PolynomialIdeals(D2,D3,D4,D5)<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D2 has FIELD and D3 has OAMONS and D4 has ORDSET and D5<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;has POLYCAT(D2,D3,D4)<br>
+ &nbsp; [9] ((D3 -&gt; D3),NonNegativeInteger) -&gt; (D3 -&gt; D3) from<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;MappingPackage1 D3<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D3 has SETCAT<br>
+ &nbsp; [10] (D,Integer) -&gt; D from D<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D has MATCAT(D2,D3,D4) and D2 has RING and D3 has FLAGG<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;D2 and D4 has FLAGG D2 and D2 has FIELD<br>
+ &nbsp; [11] (D,NonNegativeInteger) -&gt; D from D<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D has MATCAT(D2,D3,D4) and D2 has RING and D3 has FLAGG<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;D2 and D4 has FLAGG D2<br>
+ &nbsp; [12] (ModuleOperator(D2,D3),Integer) -&gt; ModuleOperator(D2,D3)<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;from ModuleOperator(D2,D3)<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D2 has RING and D3 has LMODULE D2<br>
+ &nbsp; [13] (BasicOperator,Integer) -&gt; ModuleOperator(D3,D4)<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;from ModuleOperator(D3,D4)<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D3 has RING and D4 has LMODULE D3<br>
+ &nbsp; [14] (D,PositiveInteger) -&gt; D from D if D has MONAD<br>
+ &nbsp; [15] (D,NonNegativeInteger) -&gt; D from D if D has MONADWU<br>
+ &nbsp; [16] (D,NonNegativeInteger) -&gt; D from D if D has MONOID<br>
+ &nbsp; [17] (D,Fraction Integer) -&gt; D from D if D has RADCAT<br>
+ &nbsp; [18] (D,PositiveInteger) -&gt; D from D if D has SGROUP<br>
+ &nbsp; [19] (D,Integer) -&gt; D from D<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D has SMATCAT(D2,D3,D4,D5) and D3 has RING and D4 has<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DIRPCAT(D2,D3) and D5 has DIRPCAT(D2,D3) and D3 has FIELD<br>
+<br>
+ &nbsp; [20] (D,D1) -&gt; D from D<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D has UTSCAT D1 and D1 has RING and D1 has FIELD<br>
+<br>
+There are 18 unexposed functions called ** :<br>
+ &nbsp; [1] (D1,Fraction Integer) -&gt; D1 from AlgebraicFunction(D3,D1)<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D3 has RETRACT INT and D3 has Join(OrderedSet,<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;IntegralDomain) and D1 has FS D3<br>
+ &nbsp; [2] (D1,D1) -&gt; D1 from CombinatorialFunction(D2,D1)<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D2 has Join(OrderedSet,IntegralDomain) and D1 has FS D2<br>
+<br>
+ &nbsp; [3] (D1,Fraction Integer) -&gt; D1<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;from ElementaryFunctionsUnivariateLaurentSeries(D3,D4,D1)<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D3 has FIELD and D3 has ALGEBRA FRAC INT and D4 has<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;UTSCAT D3 and D1 has ULSCCAT(D3,D4)<br>
+ &nbsp; [4] (D1,Fraction Integer) -&gt; D1<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;from ElementaryFunctionsUnivariatePuiseuxSeries(D3,D4,D1,D5<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;)<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D3 has FIELD and D3 has ALGEBRA FRAC INT and D4 has<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ULSCAT D3 and D1 has UPXSCCA(D3,D4) and D5 has PTRANFN D4<br>
+<br>
+ &nbsp; [5] (D1,Integer) -&gt; FreeGroup D1 from FreeGroup D1 if D1 has SETCAT<br>
+<br>
+ &nbsp; [6] (D1,NonNegativeInteger) -&gt; FreeMonoid D1 from FreeMonoid D1<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D1 has SETCAT<br>
+ &nbsp; [7] (Vector D3,Integer) -&gt; Vector D3 from<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;InnerNormalBasisFieldFunctions D3<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D3 has FFIELDC<br>
+ &nbsp; [8] (InputForm,Integer) -&gt; InputForm from InputForm<br>
+ &nbsp; [9] (InputForm,NonNegativeInteger) -&gt; InputForm from InputForm<br>
+ &nbsp; [10] (Matrix D3,NonNegativeInteger) -&gt; Matrix D3<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;from StorageEfficientMatrixOperations D3 if D3 has RING<br>
+ &nbsp; [11] (D1,NonNegativeInteger) -&gt; OrderedFreeMonoid D1<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;from OrderedFreeMonoid D1 if D1 has ORDSET<br>
+ &nbsp; [12] (Operator D2,Integer) -&gt; Operator D2 from Operator D2 if D2 has<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;RING<br>
+ &nbsp; [13] (BasicOperator,Integer) -&gt; Operator D3 from Operator D3 if D3<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;has RING<br>
+ &nbsp; [14] (OutputForm,OutputForm) -&gt; OutputForm from OutputForm<br>
+ &nbsp; [15] (Pattern D1,Pattern D1) -&gt; Pattern D1 from Pattern D1 if D1 has<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SETCAT<br>
+ &nbsp; [16] (Pattern D2,NonNegativeInteger) -&gt; Pattern D2 from Pattern D2<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D2 has SETCAT<br>
+ &nbsp; [17] (Stream D2,Stream D2) -&gt; Stream D2<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;from StreamTranscendentalFunctionsNonCommutative D2<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if D2 has ALGEBRA FRAC INT<br>
+ &nbsp; [18] (Stream D2,Stream D2) -&gt; Stream D2<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;from StreamTranscendentalFunctions D2 if D2 has ALGEBRA<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FRAC INT<br>
+<br>
+Examples of ** from AlgebraicFunction<br>
+<br>
+<br>
+Examples of ** from CardinalNumber<br>
+<br>
+&nbsp;c2:=2::CardinalNumber<br>
+&nbsp;c2**c2<br>
+&nbsp;A1:=Aleph 1<br>
+&nbsp;A1**c2<br>
+&nbsp;generalizedContinuumHypothesisAssumed true<br>
+&nbsp;A1**A1<br>
+<br>
+<br>
+Examples of ** from CombinatorialFunction<br>
+<br>
+<br>
+Examples of ** from DoubleFloat<br>
+<br>
+<br>
+Examples of ** from DivisionRing<br>
+<br>
+<br>
+Examples of ** from ElementaryFunctionsUnivariateLaurentSeries<br>
+<br>
+<br>
+Examples of ** from ElementaryFunctionsUnivariatePuiseuxSeries<br>
+<br>
+<br>
+Examples of ** from ElementaryFunctionCategory<br>
+<br>
+<br>
+Examples of ** from FreeGroup<br>
+<br>
+<br>
+Examples of ** from Float<br>
+<br>
+<br>
+Examples of ** from FreeMonoid<br>
+<br>
+<br>
+Examples of ** from FunctionSpace<br>
+<br>
+<br>
+Examples of ** from Group<br>
+<br>
+<br>
+Examples of ** from PolynomialIdeals<br>
+<br>
+<br>
+Examples of ** from InnerNormalBasisFieldFunctions<br>
+<br>
+<br>
+Examples of ** from InputForm<br>
+<br>
+<br>
+Examples of ** from MappingPackage1<br>
+<br>
+<br>
+Examples of ** from MatrixCategory<br>
+<br>
+<br>
+Examples of ** from StorageEfficientMatrixOperations<br>
+<br>
+<br>
+Examples of ** from ModuleOperator<br>
+<br>
+<br>
+Examples of ** from Monad<br>
+<br>
+<br>
+Examples of ** from MonadWithUnit<br>
+<br>
+<br>
+Examples of ** from Monoid<br>
+<br>
+<br>
+Examples of ** from OrderedFreeMonoid<br>
+<br>
+<br>
+Examples of ** from Operator<br>
+<br>
+<br>
+Examples of ** from OutputForm<br>
+<br>
+<br>
+Examples of ** from Pattern<br>
+<br>
+<br>
+Examples of ** from RadicalCategory<br>
+<br>
+<br>
+Examples of ** from SemiGroup<br>
+<br>
+<br>
+Examples of ** from SquareMatrixCategory<br>
+<br>
+<br>
+Examples of ** from StreamTranscendentalFunctionsNonCommutative<br>
+<br>
+<br>
+Examples of ** from StreamTranscendentalFunctions<br>
+<br>
+<br>
+Examples of ** from UnivariateTaylorSeriesCategory<br>
+<br>
+</blockquote></div><br><br clear="all"><br><br>
+</div>
+
+------=_Part_30869_15047190.1219889706356--
+
+
+
+From MAILER-DAEMON Fri Aug 29 04:47:03 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KYzdH-0006YN-FU
+	for mharc-axiom-mail@gnu.org; Fri, 29 Aug 2008 04:47:03 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KYzdF-0006Wp-Lq
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2008 04:47:01 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KYzdE-0006VT-FB
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2008 04:47:00 -0400
+Received: from [199.232.76.173] (port=51607 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KYzdE-0006VE-5p
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2008 04:47:00 -0400
+Received: from grace.univie.ac.at ([131.130.3.115]:45302)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1KYzdD-0007PX-A5
+	for axiom-mail@nongnu.org; Fri, 29 Aug 2008 04:46:59 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=univie.ac.at; s=rev1; h=Sender:To:Cc:Subject:References:From:
+	Date:In-Reply-To:Message-ID:MIME-Version:Content-Type; bh=DSMl9v
+	CBQj7ZldYINeUBN+JSwGXeggiC8uaqtm01Xj4=; b=kp9OeYBspMeFfdUI0Hs5J7
+	48Lin50WuVhu+R/kOnCrKTS+ejON4fDL8RkiL3dn618TAk7SX6LZ+WfT3fACzfQ4
+	YfMCC2F1ojKZtigg+N7ZowO7wCbKrf7jttHE2ZEDd06+0l/PnTxMm+D8+ILFkKDC
+	jBYBagC0HDOga9oUD9ndM=
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.69)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1KYzdB-0002mB-IH; Fri, 29 Aug 2008 10:46:57 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.69)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1KYzdB-0000w2-Gt; Fri, 29 Aug 2008 10:46:57 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Liu Xiaojun" <tigertooth4@gmail.com>
+Subject: Re: [Axiom-mail] Unexpected results w.r.t. exponential operation of
+	LODO (with july2008 release)
+References: <360bb81c0808270834x6fc47178n4f1ccb8c873c1883@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 29 Aug 2008 10:46:58 +0200
+In-Reply-To: <360bb81c0808270834x6fc47178n4f1ccb8c873c1883@mail.gmail.com>
+Message-ID: <9q7ia0w6m5.fsf@aquin.mat.univie.ac.at>
+Lines: 110
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: fricas-devel <fricas-devel@googlegroups.com>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Aug 2008 08:47:01 -0000
+
+Dear Liu,
+
+"Liu Xiaojun" <tigertooth4@gmail.com> writes:
+
+> Hi,
+> 
+>     Does exponential operation (^ or **) of a differential operator, say L,
+> means repeating multiplications of L in Axiom ? If so, it seems the following
+> code produced an unexpected result:
+> 
+> (1) -> Dx: LODO(EXPR INT, f+->D(f,x)) := D()
+> (2) -> u := operator 'u
+> (3) -> L := Dx + u(x)
+> (4) -> L**2 = L*L
+> 
+>          2                2   2             ,          2
+>    (4)  D  + 2u(x)D + u(x) = D  + 2u(x)D + u (x) + u(x)
+> 
+> L^2 produces the same result as l.h.s. of (4) shows. However, it does not
+> equal to the r.h.s. generally, and r.h.s. should be correct answer. 
+
+Quite right, it's a bug.  COuld you please file it with the example above on
+MathAction/IssueTracker (click on "Bug Reports" on the Frontpage of
+Mathaction)?
+
+> I checked the .spad file, it seems the exponential operation of LODO (or its
+> parent OREUP) is missed (or I guess it is directly inherited as usual
+> polynomial operation). 
+
+You are completely right:
+
+SparseUnivariateSkewPolynomial(R:Ring, sigma:Automorphism R, delta: R -> R):
+ UnivariateSkewPolynomialCategory R with
+      outputForm: (%, OutputForm) -> OutputForm
+        ++ outputForm(p, x) returns the output form of p using x for the
+        ++ otherwise anonymous variable.
+   == SparseUnivariatePolynomial R add
+ 
+ ...
+
+(and ** does not appear below)
+
+The rules for inheritance spelt out for our situation are as follows:
+
+MyCat: Category with
+    foo: % -> %
+    bar: % -> %
+    xxx: % -> %
+  add
+    foo a == xxx a
+    bar a == xxx a
+
+MyDom1: MyCat ==
+  add 
+    xxx a == ... -- define xxx
+    bar a == ... -- override bar from MyCat
+
+
+MyDom2: MyCat == MyDom1
+  add 
+    xxx a == ... -- give a definition different from the one in MyDom1
+
+
+Now, foo$MyDom2 will give the same result as xxx$MyDom2, 
+ but bar$MyDom2 will use the definition given in MyDom1!
+
+Thus, since ** is inherited from SparseUnivariatePolynomial, and it is
+redefined there, we have a bug.  In my experience, reusing *all* definitions
+from another domain as in
+
+MyDom2: MyCat == MyDom1 add 
+
+has to be done *very* carefully.  (But it is a nice feature, still!)
+
+In our case, we may want to do
+
+SparseUnivariateSkewPolynomial(R:Ring, sigma:Automorphism R, delta: R -> R):
+ UnivariateSkewPolynomialCategory R with
+      outputForm: (%, OutputForm) -> OutputForm
+        ++ outputForm(p, x) returns the output form of p using x for the
+        ++ otherwise anonymous variable.
+   == SparseUnivariatePolynomial R add
+
+-- We have to define ^ and **, because taking it from SUP R is wrong.  It is
+-- sufficient to do it for PositiveInteger, since for n=0 the definitions
+-- agree.  However, there might be a faster definition.
+
+      import RepeatedSquaring(%)
+      _^(x:%, n:PositiveInteger):% == x ** n
+      x:% ** n:PositiveInteger == expt(x,n)
+
+...
+
+Liu, could you (in return :-) write a tiny testcase for each of the exported
+functions of SparseUnivariateSkewPolynomial (or, if you prefer, for
+LinearOrdinaryDifferentialOperator).  For example:
+
+)expose UnittestCount UnittestAux Unittest
+testsuite "LODO"
+testcase "exponentiation"
+Dx: LODO(EXPR INT, f+->D(f,x)) := D()
+u := operator 'u
+L := Dx + u(x)
+
+testEquals("L*L*L", "L^3")
+testEquals("L*L", "L**2")
+testcase "leftQuotient"
+...
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sun Aug 31 06:52:14 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KZkXW-0003Uf-5o
+	for mharc-axiom-mail@gnu.org; Sun, 31 Aug 2008 06:52:14 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KZkXT-0003Sn-Nh
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2008 06:52:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KZkXR-0003RF-S1
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2008 06:52:11 -0400
+Received: from [199.232.76.173] (port=51326 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KZkXR-0003R8-N2
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2008 06:52:09 -0400
+Received: from grace.univie.ac.at ([131.130.3.115]:59390)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1KZkXR-0003c8-9N
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2008 06:52:09 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=univie.ac.at; s=rev1; h=Sender:To:Cc:Subject:References:From:
+	Date:In-Reply-To:Message-ID:MIME-Version:Content-Type; bh=UXhUoE
+	+gbfDlh9V6uw6LJFB9UK6SuL9WsLQUni2ZDa4=; b=ijWi5nm5FrdBUoLjCHRIBV
+	Ny82oAaEvb9i1bie6iL99BNsVQLCzY/2cD4emoI3NnALkOQB7Iv9dyF+oNw/2b5+
+	mj4o2SMDyzZT7LfudvvUXCjbVSVKHdn3izRONHtKCIXh/hQkFa+R7NYNgqbKtUug
+	EIvu+SudkNZRVQB3fMM0M=
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.69)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1KZkXM-000061-7T; Sun, 31 Aug 2008 12:52:04 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.69)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1KZkXM-00044G-5A; Sun, 31 Aug 2008 12:52:04 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Liu Xiaojun" <tigertooth4@gmail.com>
+Subject: Re: [Axiom-mail] Unexpected results w.r.t. exponential operation of
+	LODO (with july2008 release)
+References: <360bb81c0808270834x6fc47178n4f1ccb8c873c1883@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 31 Aug 2008 12:52:05 +0200
+In-Reply-To: <360bb81c0808270834x6fc47178n4f1ccb8c873c1883@mail.gmail.com>
+Message-ID: <9qr685o3sa.fsf@aquin.mat.univie.ac.at>
+Lines: 16
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: fricas-devel <fricas-devel@googlegroups.com>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 31 Aug 2008 10:52:12 -0000
+
+"Liu Xiaojun" <tigertooth4@gmail.com> writes:
+
+> (1)-> f: INT->INT:=x+->x+1
+> 
+> (2) -> K := OREUP ( x, INT, 1, f)
+
+Note that this violates the assumptions on sigma and delta - sigma has to be a
+Ring homomorphism and delta has to be additive and in a certain way compatible
+with sigma!  I guess you wanted something like
+
+f: UP(n, INT) -> UP(n, INT) := p +-> p.(n+1)
+g: UP(n, INT) -> UP(n, INT) := p +-> 0
+K := OREUP(E, UP(n, INT), morphism f, g)
+M := E::K+n
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sun Aug 31 09:29:29 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KZmzg-0000iM-Ti
+	for mharc-axiom-mail@gnu.org; Sun, 31 Aug 2008 09:29:28 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KZmze-0000hJ-Ld
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2008 09:29:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KZmzd-0000gh-Hr
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2008 09:29:26 -0400
+Received: from [199.232.76.173] (port=55847 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KZmzd-0000ga-CA
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2008 09:29:25 -0400
+Received: from yw-out-1718.google.com ([74.125.46.158]:24887)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <tigertooth4@gmail.com>) id 1KZmzd-0002G8-1a
+	for axiom-mail@nongnu.org; Sun, 31 Aug 2008 09:29:25 -0400
+Received: by yw-out-1718.google.com with SMTP id 6so137854ywa.82
+	for <axiom-mail@nongnu.org>; Sun, 31 Aug 2008 06:29:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from:to
+	:subject:cc:in-reply-to:mime-version:content-type:references;
+	bh=zBMclv1rkhozovDCMvi8zPS4z/HaFz2z2Zy/UOZiC5Y=;
+	b=uovEzTb7zcxos/wV3M3GzVs7xckrXK9J2ZN8Nhm+Xu9ffhaewLz7NTDOZI+cw4Nq3r
+	b1B55e/43wFR9ti0UxdZ3zrNeG6bu2X433VZppi4TxY1ONK2j2aETzzB44hUXSbq6WaR
+	flMHryUVGjKTzouwKvVC2enr961vPp3BuXq+c=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:to:subject:cc:in-reply-to:mime-version
+	:content-type:references;
+	b=c8Otms8xirDqetnmHpdBL+d558nEo8iGEkTmO+G7sOR+4m06BzdNj1EGfiNb1aXtSi
+	qiGyIk+vlnhMh226YRn9kOaYN6KGf82lO8+Y/TCHHPxYs2x1O3W7+3vXFkI43kKjTbdx
+	6Dnpff7jCJobRtNLTPCgVS+yXQM3XKufqhCmk=
+Received: by 10.150.136.6 with SMTP id j6mr304467ybd.226.1220189363935;
+	Sun, 31 Aug 2008 06:29:23 -0700 (PDT)
+Received: by 10.150.230.2 with HTTP; Sun, 31 Aug 2008 06:29:23 -0700 (PDT)
+Message-ID: <360bb81c0808310629t170064far61f3c78cf441d1a1@mail.gmail.com>
+Date: Sun, 31 Aug 2008 21:29:23 +0800
+From: "Liu Xiaojun" <tigertooth4@gmail.com>
+To: "Martin Rubey" <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-mail] Unexpected results w.r.t. exponential operation of
+	LODO (with july2008 release)
+In-Reply-To: <9qr685o3sa.fsf@aquin.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_15189_3604493.1220189363913"
+References: <360bb81c0808270834x6fc47178n4f1ccb8c873c1883@mail.gmail.com>
+	<9qr685o3sa.fsf@aquin.mat.univie.ac.at>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: fricas-devel <fricas-devel@googlegroups.com>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 31 Aug 2008 13:29:27 -0000
+
+------=_Part_15189_3604493.1220189363913
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+I just learned this rule from a math book yesterday :-)
+Delta must be something like differentiation or something more general. My
+example was
+mathematically meaningless. Also, in hyperdoc, there is no description about
+the
+mathematical properties delta should have, so I think adding some words to
+hyperdoc about
+"what delta is" is preferable.
+
+It's great to see the patch, quick fix, thanks ! You mentioned the testcase
+before, but I'm sorry
+it is not written yet. I tried the command in my axiom console, like this
+
+)expose UnittestCount UnittestAux Unittest
+
+but it comes out errors
+
+   UnittestCount is not a known constructor. You can make the
+      constructor known to the system by loading it.
+   UnittestAux is not a known constructor. You can make the constructor
+      known to the system by loading it.
+   Unittest is not a known constructor. You can make the constructor
+      known to the system by loading it.
+
+Or maybe I should write a .input file to put all the test code in ? ...
+Another question is: why we need to test "each" of the exported functions?
+In my opinion,  test the exponentiation related function is enough, is it
+ok?
+
+PS: I know FriCAS is a fork of AXIOM. Is this patch will soon applied to
+AXIOM? What's the difference between Axiom and FriCAS? I'm thinking about
+which one is better for use.
+
+Best Regards,
+Xiaojun
+
+
+
+2008/8/31 Martin Rubey <martin.rubey@univie.ac.at>
+
+> "Liu Xiaojun" <tigertooth4@gmail.com> writes:
+>
+> > (1)-> f: INT->INT:=x+->x+1
+> >
+> > (2) -> K := OREUP ( x, INT, 1, f)
+>
+> Note that this violates the assumptions on sigma and delta - sigma has to
+> be a
+> Ring homomorphism and delta has to be additive and in a certain way
+> compatible
+> with sigma!  I guess you wanted something like
+>
+> f: UP(n, INT) -> UP(n, INT) := p +-> p.(n+1)
+> g: UP(n, INT) -> UP(n, INT) := p +-> 0
+> K := OREUP(E, UP(n, INT), morphism f, g)
+> M := E::K+n
+>
+> Martin
+>
+>
+
+------=_Part_15189_3604493.1220189363913
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+<div dir="ltr">I just learned this rule from a math book yesterday :-)<br>Delta must be something like differentiation or something more general. My example was<br>mathematically meaningless. Also, in hyperdoc, there is no description about the <br>
+mathematical properties delta should have, so I think adding some words to hyperdoc about<br>&quot;what delta is&quot; is preferable. <br><br>It&#39;s great to see the patch, quick fix, thanks ! You mentioned the testcase before, but I&#39;m sorry<br>
+it is not written yet. I tried the command in my axiom console, like this<br><br>)expose UnittestCount UnittestAux Unittest<br><br>but it comes out errors<br><br>&nbsp;&nbsp; UnittestCount is not a known constructor. You can make the <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; constructor known to the system by loading it.<br>&nbsp;&nbsp; UnittestAux is not a known constructor. You can make the constructor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; known to the system by loading it.<br>&nbsp;&nbsp; Unittest is not a known constructor. You can make the constructor <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; known to the system by loading it.<br><br>Or maybe I should write a .input file to put all the test code in ? ... <br>Another question is: why we need to test &quot;each&quot; of the exported functions? <br>In my opinion,&nbsp; test the exponentiation related function is enough, is it ok?<br>
+<br>PS: I know FriCAS is a fork of AXIOM. Is this patch will soon applied to <br>AXIOM? What&#39;s the difference between Axiom and FriCAS? I&#39;m thinking about<br>which one is better for use.<br><br>Best Regards,<br>Xiaojun<br>
+<br><br><br><div class="gmail_quote">2008/8/31 Martin Rubey <span dir="ltr">&lt;<a href="mailto:martin.rubey@univie.ac.at">martin.rubey@univie.ac.at</a>&gt;</span><br><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
+<div class="Ih2E3d">&quot;Liu Xiaojun&quot; &lt;<a href="mailto:tigertooth4@gmail.com">tigertooth4@gmail.com</a>&gt; writes:<br>
+<br>
+</div><div class="Ih2E3d">&gt; (1)-&gt; f: INT-&gt;INT:=x+-&gt;x+1<br>
+&gt;<br>
+&gt; (2) -&gt; K := OREUP ( x, INT, 1, f)<br>
+<br>
+</div>Note that this violates the assumptions on sigma and delta - sigma has to be a<br>
+Ring homomorphism and delta has to be additive and in a certain way compatible<br>
+with sigma! &nbsp;I guess you wanted something like<br>
+<br>
+f: UP(n, INT) -&gt; UP(n, INT) := p +-&gt; p.(n+1)<br>
+g: UP(n, INT) -&gt; UP(n, INT) := p +-&gt; 0<br>
+K := OREUP(E, UP(n, INT), morphism f, g)<br>
+M := E::K+n<br>
+<font color="#888888"><br>
+Martin<br>
+<br>
+</font></blockquote></div><br><br clear="all"><br><br>
+</div>
+
+------=_Part_15189_3604493.1220189363913--
+
+
+

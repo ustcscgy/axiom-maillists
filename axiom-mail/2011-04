@@ -1,0 +1,712 @@
+From MAILER-DAEMON Fri Apr 08 18:28:25 2011
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Q8KAD-0002Fu-HL
+	for mharc-axiom-mail@gnu.org; Fri, 08 Apr 2011 18:28:25 -0400
+Received: from [140.186.70.92] (port=48713 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Q8KAC-0002Fp-7Y
+	for axiom-mail@nongnu.org; Fri, 08 Apr 2011 18:28:25 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <gabpires21@gmail.com>) id 1Q8KAA-0002H7-Vz
+	for axiom-mail@nongnu.org; Fri, 08 Apr 2011 18:28:23 -0400
+Received: from mail-fx0-f45.google.com ([209.85.161.45]:35451)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <gabpires21@gmail.com>) id 1Q8KAA-0002H2-RP
+	for axiom-mail@nongnu.org; Fri, 08 Apr 2011 18:28:22 -0400
+Received: by fxm2 with SMTP id 2so3159650fxm.4
+	for <axiom-mail@nongnu.org>; Fri, 08 Apr 2011 15:28:21 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:mime-version:from:date:message-id:subject:to
+	:content-type; bh=4gatSnM2Llxkw92XDMwWqH0BVlZmlMDziZwv/nt62Fc=;
+	b=jQJifc7L667Cg5SZ6EX4GKAzg7ncFLi78AnUgbd276PIpslm5gJ+rGBQrvuefQr8fx
+	lRzQjAjCNNrF33QY+K4Z+JRNLYBqffTFxeVsMBJzXgjshCw5oqZ/iX2xDrf2x/CMXy6R
+	8XazJWQS3zynx+QtQoAg+UNA8Cj9O4LdboOk4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=mime-version:from:date:message-id:subject:to:content-type;
+	b=RCKS/mJkYXTlrfS9DurSQkpGc7bdd3vDXk8hVpRNMSXKWMijQN+WPT5tAqZSdWs26G
+	+8qE/vir6C3VyMzi5J4rmX1beHVstFCbr7XuvwGHZrwkEvK0n1ANxt5eGEldQPrl5zLM
+	Pgr0EflTXZNq04CWTod7yWIbyT+0tO4kDzCi8=
+Received: by 10.223.15.71 with SMTP id j7mr2565120faa.11.1302301701243; Fri,
+	08 Apr 2011 15:28:21 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.223.122.65 with HTTP; Fri, 8 Apr 2011 15:28:01 -0700 (PDT)
+From: Gabriel Pires <gabpires21@gmail.com>
+Date: Fri, 8 Apr 2011 19:28:01 -0300
+Message-ID: <BANLkTinnUXE5krwjrFaktQk4T9eKXXGHcg@mail.gmail.com>
+To: axiom-mail@nongnu.org
+Content-Type: multipart/alternative; boundary=001517447c724b023204a06fbe4a
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-Received-From: 209.85.161.45
+Subject: [Axiom-mail] Doubt about IndexedExponents
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 08 Apr 2011 22:28:25 -0000
+
+--001517447c724b023204a06fbe4a
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hay all, good evening =),
+
+Well, I'm having some problems in understanding the way "IndexedExponents"
+work.
+
+I'm trying to use the RESRING domain, to create and manipulate Residue
+Rings.
+
+I managed to properly create one object from ResidueRing by doing:
+
+R := FRAC(INT)   -- defining the field
+
+ls : List Symbol := [x]
+V := OVAR(ls)
+-- V is the OrderedSet of ls, as the variables on the
+-- polynomial ring I will create
+
+E := IndexedExponents(V)
+-- Well, I don't know how this works, but I need an
+-- OrderedAbelianMonoidSup to create a
+-- Residue Ring, this step is the one I'm trying to get
+-- help to understand
+
+P := NSMP(R,V)
+-- Defining the polynomial ring, of only one variable
+
+L := [x**2 - 1]
+-- Defining the Ideal which I'm going to use to
+-- get my Residue Ring
+
+S := ResidueRing(R, E, V, P, L)
+
+Then I can properly use S to calculate what I want in that Residue Ring, but
+I certainly wish to know more about the IndexedExponents, like what it does
+and why it is needed.
+
+Thanks in advance!
+
+--001517447c724b023204a06fbe4a
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hay all, good evening =3D),<div><br></div><div>Well, I&#39;m having some pr=
+oblems in understanding the way &quot;IndexedExponents&quot; work.</div><di=
+v><br></div><div>I&#39;m trying to use the RESRING domain, to create and ma=
+nipulate Residue Rings.</div>
+
+<div><br></div><div>I managed to properly create one object from ResidueRin=
+g by doing:</div><div><br></div><div>R :=3D FRAC(INT) =A0 -- defining the f=
+ield</div><div><br></div><div>ls : List Symbol :=3D [x]</div><div>V :=3D OV=
+AR(ls)</div>
+
+<div>-- V is the OrderedSet of ls, as the variables on the</div><div>-- pol=
+ynomial ring I will create</div><div><br></div><div>E :=3D IndexedExponents=
+(V)</div><div>-- Well, I don&#39;t know how this works, but I need an</div>
+
+<div>-- OrderedAbelianMonoidSup to create a</div><div>-- Residue Ring, this=
+ step is the one I&#39;m trying to get</div><div>-- help to understand</div=
+><div><br></div><div>P :=3D NSMP(R,V)</div><div>-- Defining the polynomial =
+ring, of only one variable</div>
+
+<div><br></div><div>L :=3D [x**2 - 1]</div><div>-- Defining the Ideal which=
+ I&#39;m going to use to</div><div>-- get my Residue Ring</div><div><br></d=
+iv><div>S :=3D ResidueRing(R, E, V, P, L)</div><div><br></div><div>Then I c=
+an properly use S to calculate what I want in that Residue Ring, but I cert=
+ainly wish to know more about the IndexedExponents, like what it does and w=
+hy it is needed.</div>
+
+<div><br></div><div>Thanks in advance!</div>
+
+--001517447c724b023204a06fbe4a--
+
+
+From MAILER-DAEMON Sat Apr 09 03:24:02 2011
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Q8SWY-0007mC-AG
+	for mharc-axiom-mail@gnu.org; Sat, 09 Apr 2011 03:24:02 -0400
+Received: from [140.186.70.92] (port=51679 helo=eggs.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Q8SWR-0007ie-Oe
+	for axiom-mail@nongnu.org; Sat, 09 Apr 2011 03:24:01 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1Q8SWQ-00044X-7j
+	for axiom-mail@nongnu.org; Sat, 09 Apr 2011 03:23:55 -0400
+Received: from mo-p00-ob.rzone.de ([81.169.146.162]:50414)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.de>) id 1Q8SWP-00044D-Po
+	for axiom-mail@nongnu.org; Sat, 09 Apr 2011 03:23:54 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1302333831; l=2624;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=aDl9K2P5zs8Njo4OfTgonNO68sg=;
+	b=WdFUtcvarDzeV3CCSrgx4PqvJ/KA7X5REiED0pzkCd/wsHHOIvOqB1erYIOvq71s4F7
+	TOkFZOH9nkDGfqp45b+UsG3BDNgci3D48hBrytt727zIcERnW7NJ7uBUtS3xWBmA9/mL7
+	A5dN5I6PQO0tmsAYNtNvIkhaSz7wBnMVBaU=
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXn/kzLaHTdYnTFXEqQA90LpSWk1ofrjzFjGky6mg==
+X-RZG-CLASS-ID: mo00
+Received: from [10.0.0.27] (62-47-52-55.adsl.highway.telekom.at [62.47.52.55])
+	by post.strato.de (fruni mo19) (RZmta 25.10)
+	with (DHE-RSA-AES128-SHA encrypted) ESMTPA id C03ef0n396MQhy ;
+	Sat, 9 Apr 2011 09:23:19 +0200 (MEST)
+Message-ID: <4DA00966.7080402@hemmecke.de>
+Date: Sat, 09 Apr 2011 09:23:18 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.9.2.15) Gecko/20110303 Thunderbird/3.1.9
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Doubt about IndexedExponents
+References: <BANLkTinnUXE5krwjrFaktQk4T9eKXXGHcg@mail.gmail.com>
+In-Reply-To: <BANLkTinnUXE5krwjrFaktQk4T9eKXXGHcg@mail.gmail.com>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by eggs.gnu.org: Solaris 10 (beta)
+X-Received-From: 81.169.146.162
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 09 Apr 2011 07:24:01 -0000
+
+> E :=3D IndexedExponents(V)
+> -- Well, I don't know how this works, but I need an
+> -- OrderedAbelianMonoidSup to create a
+> -- Residue Ring, this step is the one I'm trying to get
+> -- help to understand
+>
+> P :=3D NSMP(R,V)
+> -- Defining the polynomial ring, of only one variable
+>
+> L :=3D [x**2 - 1]
+> -- Defining the Ideal which I'm going to use to
+> -- get my Residue Ring
+>
+> S :=3D ResidueRing(R, E, V, P, L)
+>
+> Then I can properly use S to calculate what I want in that Residue Ring=
+, but
+> I certainly wish to know more about the IndexedExponents, like what it =
+does
+> and why it is needed.
+
+In fact, I find the construction of polynomials not really optimal. Look =
+
+at polynomials, one actually doesn't need variables. A polynomial is a=20
+special instance of a monoid ring where in your case the coefficient=20
+ring is R and the monoid is E. Now, if you look deeper in the code then=20
+you find that internally, NSMP(R,V) constructs such a monoid ring by=20
+constructing the monoid via IndexedExponents(V).
+
+In such a monoid ring you would not be able to do reduction, because=20
+there is need for an order on the power products. So one has to require=20
+not just monoid, but OrderedMonoid (the "Abelian" in the name just means =
+
+that you basically deal with an additively written monoid).
+
+Furthermore, you need this ...Sup, because you have to be able to divide =
+
+power products in order to reduce polynomials.
+
+Simply taking variables doesn't give you anything. In Fricas you must=20
+declare with which structures you actually work.
+
+As you see with NSMP(R,V), FriCAS has some domains that cover the=20
+standard case. But internally, the Gr=F6bner basis machinery is used and =
+
+(as you might know), there is an additional parameter, namely the order=20
+of terms, that influences the speed in which the result is computed. The =
+
+specific order is not important mathematically, any will do, but most=20
+people will claim that a degree reverse lexicographical order is better=20
+suited for Gr=F6bner basis computations than a pure lexicographical one.
+
+I hope that this gives you a hint of what is behind the need for=20
+IndexedExponents.
+
+Oh yes, I've forgotten something. It's also a way to represent the power =
+
+products. Maybe you know you use case better and rather want a more=20
+efficient implementation of power products. In FriCAS you can do this.=20
+Just invent (program) the respective domain of power products. It is not =
+
+really necessary to use IndexedExponents, if you have more inside in how =
+
+everything works.
+
+Ralf
+
+
+
+From MAILER-DAEMON Mon Apr 11 22:29:07 2011
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1Q9TLn-0005Rx-Tr
+	for mharc-axiom-mail@gnu.org; Mon, 11 Apr 2011 22:29:07 -0400
+Received: from eggs.gnu.org ([140.186.70.92]:53602)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <gabpires21@gmail.com>) id 1Q9TLj-0005Pe-SN
+	for axiom-mail@nongnu.org; Mon, 11 Apr 2011 22:29:05 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <gabpires21@gmail.com>) id 1Q9TLh-0006x0-Dh
+	for axiom-mail@nongnu.org; Mon, 11 Apr 2011 22:29:03 -0400
+Received: from mail-fx0-f45.google.com ([209.85.161.45]:59857)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <gabpires21@gmail.com>) id 1Q9TLh-0006w9-1L
+	for axiom-mail@nongnu.org; Mon, 11 Apr 2011 22:29:01 -0400
+Received: by fxm2 with SMTP id 2so4877026fxm.4
+	for <axiom-mail@nongnu.org>; Mon, 11 Apr 2011 19:28:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:mime-version:in-reply-to:references:from:date
+	:message-id:subject:to:content-type;
+	bh=ngH/zh8ve0ujgzgYipacqLzO7qSqNG+p55WC+7ojAJE=;
+	b=bPg6036aPeXlFN7YPVDxsz1UX7HLfK8CBcu/FjWnpPJzvcgg7U/5jFniS0g2AJjkua
+	nwBOiup0lLD7aYdoS7sOhBul0gXoWEVG7sDRO7WlKVIDl+HbVGk4QzxbfCCWSnFK2sgr
+	2sz6GCsHam9A9IMa2HL+2VHRD7/obtsqz0CNs=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+	:content-type;
+	b=whRqeQUgFifzQXfh5IlsRh70D0A4ldyE2tMziQLhNoA2Qo0AqGcRwOYx3URedlzJbu
+	Alxmj4HTNHo8pHpUn9wQPq7Da8oHLZc0aBhXeNT5xv2957JUt8XAMHuYjpv+a7njA6fd
+	jz6WHDX6rurcCtK96AuD2bUSsCRKvQr3zziYM=
+Received: by 10.223.33.80 with SMTP id g16mr4958153fad.125.1302575339748; Mon,
+	11 Apr 2011 19:28:59 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.223.59.20 with HTTP; Mon, 11 Apr 2011 19:14:20 -0700 (PDT)
+In-Reply-To: <4DA38AC7.7060301@hemmecke.de>
+References: <BANLkTinnUXE5krwjrFaktQk4T9eKXXGHcg@mail.gmail.com>
+	<4DA00966.7080402@hemmecke.de>
+	<BANLkTi=kdVjhOt+=pLtYcLSPMbzhaEF5Bg@mail.gmail.com>
+	<4DA38AC7.7060301@hemmecke.de>
+From: Gabriel Pires <gabpires21@gmail.com>
+Date: Mon, 11 Apr 2011 23:14:20 -0300
+Message-ID: <BANLkTim_R+mfzYUB79ZpY=UmsecMfZpyRw@mail.gmail.com>
+To: axiom-mail@nongnu.org
+Content-Type: multipart/alternative; boundary=00151747864c6b3c9d04a0af74fc
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-Received-From: 209.85.161.45
+Subject: Re: [Axiom-mail] Doubt about IndexedExponents
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 12 Apr 2011 02:29:05 -0000
+
+--00151747864c6b3c9d04a0af74fc
+Content-Type: text/plain; charset=ISO-8859-1
+
+Thank you again!
+
+Yeah, I didn't mean to send a private mail, my intention was to send a reply
+to the list, but I must have clicked somewhere stupid on my gmail.
+
+That sure helped me a lot, now I suppose I understand how IndexedElements
+work and can use it with my mind at ease!
+
+Thanks,
+
+Gabriel,
+
+On Mon, Apr 11, 2011 at 8:12 PM, Ralf Hemmecke <ralf@hemmecke.de> wrote:
+
+> Are you sure you wanted to send a private email? I very much prefer if the
+> discussion stays public.
+>
+>  So, I used Axiom
+>>
+>
+> As you have certainly realized, I'm a user/developer of FriCAS, a fork of
+> Axiom. But all I'm saying probably also applies to Axiom. But if I point you
+> to code, I'll point you to FriCAS code, simply, because I am more familiar
+> with it than with the Axiom code base.
+>
+>
+>  to try to manipulate some objects in an
+>> AbelianOrderedMonoidSup, but I can't seem to find a way. Let me show you
+>> my
+>> steps (they don't differ from OP, but anyways):
+>>
+>
+>  ls : List Symbol := [x]
+>> V := OVAR(ls)
+>> E := IndexedExponents(V)
+>>
+>
+> Let's first look into the code.
+>
+> The implementation of IndexedExponents inherits most of its implementation
+> from IndexedDirectProductOrderedAbelianMonoidSup.
+>
+>
+> https://github.com/hemmecke/fricas-svn/blob/master/src/algebra/multpoly.spad.pamphlet#L820
+>
+> This inherits from IndexedDirectProductOrderedAbelianMonoid.
+>
+>
+> https://github.com/hemmecke/fricas-svn/blob/master/src/algebra/indexedp.spad.pamphlet#L296
+>
+> etc. I hope you know how to use grep. It's a bit tedious, but you can learn
+> a lot from the code.
+>
+> OK, you probably want a simpler method. Take hyperdoc browse and enter
+> IndexedExponents. Click on Constructors. Then click Operations ->
+> Signatures.
+> Or simply type
+>
+>  )show E
+>
+> after you have defined E like above.
+>
+> Now, as I said in my last mail about "Abelian", the Monoid E is additively
+> written. In hyperdoc you see +:(%,%)->%, but no *:(%,%)->%.
+>
+> And sample:()->% is a function that returns an element of E. It is nowhere
+> said that it returns a random element. So if it returns 1
+>
+> Showing 1 is a bit misleading, since it rather behaves like zero.
+>
+> (5) -> e:E :=sample()$E
+>
+>   (5)  1
+>        Type: IndexedExponents(OrderedVariableList([x]))
+> (6) -> e+e
+>
+>   (6)  1
+>        Type: IndexedExponents(OrderedVariableList([x]))
+>
+>
+>  Ok, now, what I expect to see from what I learned is that E is a monoid of
+>> powers of x, possibly with 1 being the "highest" term of the monoid.
+>>
+>
+> I'd bet that 1 is rather the "lowest" term. That depends on how you read
+> a<b.
+>
+>
+>  And I can't use 'x' to make an object, or multiply by x, or multiply 1 by
+>> a
+>> constant... can't seem to use or know what are the objects in the
+>> monoid...
+>>
+>
+> If you just say
+>
+>  x*e
+>
+> that will of course not work. Why? Because, the x you give here is of type
+> Symbol. Do you find a function *: (Symbol, %) -> % in the list from ")show
+> E"? No. So x*e can only return an error.
+>
+> How to construct the right x? Well, the x you are looking for is not the
+> symbol x, but rather the monomial x^1 from E. And there is a function
+>
+>  monomial : (NonNegativeInteger,OrderedVariableList([x])) -> %
+>
+> The first argument is the power and the second is an element of V.
+> How to get an element of V? V has only 1 element, so lets
+>
+> )show V
+>  OrderedVariableList([x]) is a domain constructor.
+>  Abbreviation for OrderedVariableList is OVAR
+>  This constructor is not exposed in this frame.
+> ------------------------------- Operations --------------------------------
+>
+>  ?<? : (%,%) -> Boolean                ?<=? : (%,%) -> Boolean
+>  ?=? : (%,%) -> Boolean                ?>? : (%,%) -> Boolean
+>  ?>=? : (%,%) -> Boolean               coerce : % -> OutputForm
+>  convert : % -> InputForm              convert : % -> Pattern(Float)
+>  convert : % -> Pattern(Integer)       convert : % -> Symbol
+>  enumerate : () -> List(%)             hash : % -> SingleInteger
+>  index : PositiveInteger -> %          latex : % -> String
+>  lookup : % -> PositiveInteger         max : (%,%) -> %
+>  min : (%,%) -> %                      random : () -> %
+>  size : () -> NonNegativeInteger       smaller? : (%,%) -> Boolean
+>  ?~=? : (%,%) -> Boolean
+>  variable : Symbol -> Union(%,"failed")
+>
+> I'm sure you try
+>
+> (7) -> v:V :=index 1
+>
+>   (7)  x
+>                         Type: OrderedVariableList([x])
+>
+> first. Voila, there is your x, now stored in the variable v. Oh, but it's
+> of type V, not E!!!
+> OK, we use
+>
+> (10) -> z: E := monomial(1,v)
+>
+>   (10)  x
+>            Type: IndexedExponents(OrderedVariableList([x]))
+>
+> and have the x we were looking for (stored in the variable z).
+> And now we can do monoid operations with this x.
+>
+> (12) -> z+z
+>
+>          2
+>   (12)  x
+>           Type: IndexedExponents(OrderedVariableList([x]))
+>
+> (14) -> 3*z
+>
+>          3
+>   (14)  x
+>            Type: IndexedExponents(OrderedVariableList([x]))
+>
+> I know this additive structure written in a multiplicative form is a bit
+> confusing, but that's the way it is currently. Some long time ago, wrote my
+> own polynomial domain with the corresponding monoid written
+> multiplicatively. But here you have to live with it until somebody comes and
+> changes it to something better.
+>
+> Does that help you?
+>
+> Ralf
+>
+> PS: If you like to reply, please do it on the mailing list. Other people
+> might benefit from it. You have my permission to use the text from above.
+>
+> PPS: You should also try to use a sandbox on the axiomwiki
+> http://axiom-wiki.newsynthesis.org/FrontPage
+> Just replace "FrontPage" with "SandboxYourFancyTitle" in order to create a
+> new page.
+>
+>
+
+--00151747864c6b3c9d04a0af74fc
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Thank you again!<div><br></div><div>Yeah, I didn&#39;t mean to send a priva=
+te mail, my intention was to send a reply to the list, but I must have clic=
+ked somewhere stupid on my gmail.</div><div><br></div><div>That sure helped=
+ me a lot, now I suppose I understand how IndexedElements work and can use =
+it with my mind at ease!</div>
+
+<div><br></div><div>Thanks,</div><div><br></div><div>Gabriel,<br><br><div c=
+lass=3D"gmail_quote">On Mon, Apr 11, 2011 at 8:12 PM, Ralf Hemmecke <span d=
+ir=3D"ltr">&lt;<a href=3D"mailto:ralf@hemmecke.de">ralf@hemmecke.de</a>&gt;=
+</span> wrote:<br>
+
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex;">Are you sure you wanted to send a private e=
+mail? I very much prefer if the discussion stays public.<br>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+So, I used Axiom<br>
+</blockquote>
+<br>
+As you have certainly realized, I&#39;m a user/developer of FriCAS, a fork =
+of Axiom. But all I&#39;m saying probably also applies to Axiom. But if I p=
+oint you to code, I&#39;ll point you to FriCAS code, simply, because I am m=
+ore familiar with it than with the Axiom code base.<div class=3D"im">
+
+<br>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+to try to manipulate some objects in an<br>
+AbelianOrderedMonoidSup, but I can&#39;t seem to find a way. Let me show yo=
+u my<br>
+steps (they don&#39;t differ from OP, but anyways):<br>
+</blockquote>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+ls : List Symbol :=3D [x]<br>
+V :=3D OVAR(ls)<br>
+E :=3D IndexedExponents(V)<br>
+</blockquote>
+<br></div>
+Let&#39;s first look into the code.<br>
+<br>
+The implementation of IndexedExponents inherits most of its implementation =
+from IndexedDirectProductOrderedAbelianMonoidSup.<br>
+<br>
+<a href=3D"https://github.com/hemmecke/fricas-svn/blob/master/src/algebra/m=
+ultpoly.spad.pamphlet#L820" target=3D"_blank">https://github.com/hemmecke/f=
+ricas-svn/blob/master/src/algebra/multpoly.spad.pamphlet#L820</a><br>
+<br>
+This inherits from IndexedDirectProductOrderedAbelianMonoid.<br>
+<br>
+<a href=3D"https://github.com/hemmecke/fricas-svn/blob/master/src/algebra/i=
+ndexedp.spad.pamphlet#L296" target=3D"_blank">https://github.com/hemmecke/f=
+ricas-svn/blob/master/src/algebra/indexedp.spad.pamphlet#L296</a><br>
+<br>
+etc. I hope you know how to use grep. It&#39;s a bit tedious, but you can l=
+earn a lot from the code.<br>
+<br>
+OK, you probably want a simpler method. Take hyperdoc browse and enter Inde=
+xedExponents. Click on Constructors. Then click Operations -&gt; Signatures=
+.<br>
+Or simply type<br>
+<br>
+ =A0)show E<br>
+<br>
+after you have defined E like above.<br>
+<br>
+Now, as I said in my last mail about &quot;Abelian&quot;, the Monoid E is a=
+dditively written. In hyperdoc you see +:(%,%)-&gt;%, but no *:(%,%)-&gt;%.=
+<br>
+<br>
+And sample:()-&gt;% is a function that returns an element of E. It is nowhe=
+re said that it returns a random element. So if it returns 1<br>
+<br>
+Showing 1 is a bit misleading, since it rather behaves like zero.<br>
+<br>
+(5) -&gt; e:E :=3Dsample()$E<br>
+<br>
+ =A0 (5) =A01<br>
+ =A0 =A0 =A0 =A0Type: IndexedExponents(OrderedVariableList([x]))<br>
+(6) -&gt; e+e<br>
+<br>
+ =A0 (6) =A01<br>
+ =A0 =A0 =A0 =A0Type: IndexedExponents(OrderedVariableList([x]))<div class=
+=3D"im"><br>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+Ok, now, what I expect to see from what I learned is that E is a monoid of<=
+br>
+powers of x, possibly with 1 being the &quot;highest&quot; term of the mono=
+id.<br>
+</blockquote>
+<br></div>
+I&#39;d bet that 1 is rather the &quot;lowest&quot; term. That depends on h=
+ow you read a&lt;b.<div class=3D"im"><br>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+And I can&#39;t use &#39;x&#39; to make an object, or multiply by x, or mul=
+tiply 1 by a<br>
+constant... can&#39;t seem to use or know what are the objects in the monoi=
+d...<br>
+</blockquote>
+<br></div>
+If you just say<br>
+<br>
+ =A0x*e<br>
+<br>
+that will of course not work. Why? Because, the x you give here is of type =
+Symbol. Do you find a function *: (Symbol, %) -&gt; % in the list from &quo=
+t;)show E&quot;? No. So x*e can only return an error.<br>
+<br>
+How to construct the right x? Well, the x you are looking for is not the sy=
+mbol x, but rather the monomial x^1 from E. And there is a function<br>
+<br>
+ =A0monomial : (NonNegativeInteger,OrderedVariableList([x])) -&gt; %<br>
+<br>
+The first argument is the power and the second is an element of V.<br>
+How to get an element of V? V has only 1 element, so lets<br>
+<br>
+)show V<br>
+=A0OrderedVariableList([x]) is a domain constructor.<br>
+=A0Abbreviation for OrderedVariableList is OVAR<br>
+=A0This constructor is not exposed in this frame.<br>
+------------------------------- Operations --------------------------------=
+<br>
+<br>
+=A0?&lt;? : (%,%) -&gt; Boolean =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0?&lt;=3D? : =
+(%,%) -&gt; Boolean<br>
+=A0?=3D? : (%,%) -&gt; Boolean =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0?&gt;? : (%,%=
+) -&gt; Boolean<br>
+=A0?&gt;=3D? : (%,%) -&gt; Boolean =A0 =A0 =A0 =A0 =A0 =A0 =A0 coerce : % -=
+&gt; OutputForm<br>
+=A0convert : % -&gt; InputForm =A0 =A0 =A0 =A0 =A0 =A0 =A0convert : % -&gt;=
+ Pattern(Float)<br>
+=A0convert : % -&gt; Pattern(Integer) =A0 =A0 =A0 convert : % -&gt; Symbol<=
+br>
+=A0enumerate : () -&gt; List(%) =A0 =A0 =A0 =A0 =A0 =A0 hash : % -&gt; Sing=
+leInteger<br>
+=A0index : PositiveInteger -&gt; % =A0 =A0 =A0 =A0 =A0latex : % -&gt; Strin=
+g<br>
+=A0lookup : % -&gt; PositiveInteger =A0 =A0 =A0 =A0 max : (%,%) -&gt; %<br>
+=A0min : (%,%) -&gt; % =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0random : =
+() -&gt; %<br>
+=A0size : () -&gt; NonNegativeInteger =A0 =A0 =A0 smaller? : (%,%) -&gt; Bo=
+olean<br>
+=A0?~=3D? : (%,%) -&gt; Boolean<br>
+=A0variable : Symbol -&gt; Union(%,&quot;failed&quot;)<br>
+<br>
+I&#39;m sure you try<br>
+<br>
+(7) -&gt; v:V :=3Dindex 1<br>
+<br>
+ =A0 (7) =A0x<br>
+ =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 Type: OrderedVariableList(=
+[x])<br>
+<br>
+first. Voila, there is your x, now stored in the variable v. Oh, but it&#39=
+;s of type V, not E!!!<br>
+OK, we use<br>
+<br>
+(10) -&gt; z: E :=3D monomial(1,v)<br>
+<br>
+ =A0 (10) =A0x<br>
+ =A0 =A0 =A0 =A0 =A0 =A0Type: IndexedExponents(OrderedVariableList([x]))<br=
+>
+<br>
+and have the x we were looking for (stored in the variable z).<br>
+And now we can do monoid operations with this x.<br>
+<br>
+(12) -&gt; z+z<br>
+<br>
+ =A0 =A0 =A0 =A0 =A02<br>
+ =A0 (12) =A0x<br>
+ =A0 =A0 =A0 =A0 =A0 Type: IndexedExponents(OrderedVariableList([x]))<br>
+<br>
+(14) -&gt; 3*z<br>
+<br>
+ =A0 =A0 =A0 =A0 =A03<br>
+ =A0 (14) =A0x<br>
+ =A0 =A0 =A0 =A0 =A0 =A0Type: IndexedExponents(OrderedVariableList([x]))<br=
+>
+<br>
+I know this additive structure written in a multiplicative form is a bit co=
+nfusing, but that&#39;s the way it is currently. Some long time ago, wrote =
+my own polynomial domain with the corresponding monoid written multiplicati=
+vely. But here you have to live with it until somebody comes and changes it=
+ to something better.<br>
+
+
+<br>
+Does that help you?<br>
+<br>
+Ralf<br>
+<br>
+PS: If you like to reply, please do it on the mailing list. Other people mi=
+ght benefit from it. You have my permission to use the text from above.<br>
+<br>
+PPS: You should also try to use a sandbox on the axiomwiki<br>
+<a href=3D"http://axiom-wiki.newsynthesis.org/FrontPage" target=3D"_blank">=
+http://axiom-wiki.newsynthesis.org/FrontPage</a><br>
+Just replace &quot;FrontPage&quot; with &quot;SandboxYourFancyTitle&quot; i=
+n order to create a new page.<br>
+<br>
+</blockquote></div><br></div>
+
+--00151747864c6b3c9d04a0af74fc--
+
+

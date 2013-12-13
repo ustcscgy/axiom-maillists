@@ -1,0 +1,575 @@
+From MAILER-DAEMON Thu Dec 11 05:18:25 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LAicj-0005SR-Fu
+	for mharc-axiom-mail@gnu.org; Thu, 11 Dec 2008 05:18:25 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LAich-0005SJ-JT
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 05:18:23 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LAicg-0005S1-5Y
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 05:18:22 -0500
+Received: from [199.232.76.173] (port=59007 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LAicf-0005Ry-T8
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 05:18:21 -0500
+Received: from carne.unife.it ([192.167.219.26]:65328)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <f.stumbo@unife.it>) id 1LAicf-0001r9-H4
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 05:18:21 -0500
+Received: from carne.unife.it (localhost.localdomain [127.0.0.1])
+	by localhost (Email Security Appliance) with SMTP id 9D0C71A7F7EF
+	for <axiom-mail@nongnu.org>; Thu, 11 Dec 2008 10:18:14 +0000 (GMT)
+Received: from dns.unife.it (dns.unife.it [192.167.219.2])
+	by carne.unife.it (Email Security Appliance) with ESMTP id 9240D1A75811
+	for <axiom-mail@nongnu.org>; Thu, 11 Dec 2008 10:18:14 +0000 (GMT)
+Received: from em243.mate.man (em243.mate.man [10.80.2.121])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by dns.unife.it (Postfix) with ESMTP id 3F1DE72DE3
+	for <axiom-mail@nongnu.org>; Thu, 11 Dec 2008 11:18:14 +0100 (CET)
+Date: Thu, 11 Dec 2008 11:18:13 +0100 (CET)
+From: "Fabio S." <f.stumbo@unife.it>
+X-X-Sender: stumbo@localhost.localdomain
+To: axiom-mail@nongnu.org
+Message-ID: <alpine.DEB.2.00.0812111045290.5995@localhost.localdomain>
+User-Agent: Alpine 2.00 (DEB 1167 2008-08-23)
+Organization: =?ISO-8859-15?Q?Universit=E0_di_Ferrara?=
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; format=flowed; charset=US-ASCII
+X-detected-operating-system: by monty-python.gnu.org: FreeBSD 6.x (1)
+Subject: [Axiom-mail] Axiom does not start
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: axiom-mail@nongnu.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 11 Dec 2008 10:18:23 -0000
+
+
+I just installed ubuntu 8.10 and then downloaded the relative binary
+axiom-ubuntu-nov2008-bin.tgz
+
+I then followed the usual procedure: I unzipped it, moved the dir axiom to 
+$HOME/axiom
+and I added as needed
+export AXIOM=$HOME/axiom/mnt/ubuntu
+export PATH=$HOME/axiom/mnt/ubuntu/bin:$PATH
+
+Now, when I launch axiom, nothing happens: the prompt waits for a couple 
+of seconds, then I get a couple of empy lines and then the shell prompt.
+Other times, I get "reading: integer: Connection reset by peer", then the 
+standard greeting
+######################################################################
+[em243 10:59:20 ~]$ axiom
+reading: integer: Connection reset by peer
+                         AXIOM Computer Algebra System
+                        Version: Axiom (November 2008)
+               Timestamp: Friday November 21, 2008 at 03:39:29
+-----------------------------------------------------------------------------
+    Issue )copyright to view copyright notices.
+    Issue )summary for a summary of useful system commands.
+    Issue )quit to leave AXIOM and return to shell.
+-----------------------------------------------------------------------------
+
+    Re-reading compress.daase   Re-reading interp.daase
+    Re-reading operation.daase
+    Re-reading category.daase
+######################################################################
+
+and then back again to the shell.
+
+I also tried axiom -nox, as suggested on a mail on the list archive, and 
+the result is similar, with the difference that the times when I get the 
+greeting there is not the error message.
+
+Please note that if I boot from the other partition where I still have 
+ubuntu 8.04, then, after having properly setted the env variables with 
+respect to the downloaded axiom on 8.10, axiom starts properly.
+
+Am I missing something? The installation is a fresh one with (nearly) 
+nothing yet added: is there some package missing?
+
+Thanks a lot
+
+Fabio
+
+
+
+From MAILER-DAEMON Thu Dec 11 09:46:40 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LAmoK-0004bH-Bw
+	for mharc-axiom-mail@gnu.org; Thu, 11 Dec 2008 09:46:40 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LAmoI-0004ak-JY
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 09:46:38 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LAmoH-0004aH-HL
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 09:46:38 -0500
+Received: from [199.232.76.173] (port=37319 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LAmoH-0004aD-Ad
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 09:46:37 -0500
+Received: from mx-7.zoominternet.net ([24.154.1.26]:38574
+	helo=cm-1.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1LAmoH-00030V-0o
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 09:46:37 -0500
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=zSFfcfGTsaAA:10 a=E8rTNAPPKTgA:10
+	a=9x1qJYSYWOoMgoVr+WVG7Q==:17 a=qL0GlnF9I2fBamXIp44A:9
+	a=zUqzk1icTGO5FLnYhrzfV4ndH7kA:4 a=eHaSlhIXOnoA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.44] ([24.154.1.44:50181] helo=pop-1.zoominternet.net)
+	by mx-7.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id B3/36-25390-BB721494; Thu, 11 Dec 2008 09:46:19 -0500
+Received: (qmail 15187 invoked from network); 11 Dec 2008 14:46:23 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 11 Dec 2008 14:46:23 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id mBBEpMx05516;
+	Thu, 11 Dec 2008 09:51:22 -0500
+Date: Thu, 11 Dec 2008 09:51:22 -0500
+Message-Id: <200812111451.mBBEpMx05516@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: axiom-mail@nongnu.org
+CC: axiom-mail@nongnu.org
+In-reply-to: <alpine.DEB.2.00.0812111045290.5995@localhost.localdomain>
+	(f.stumbo@unife.it)
+Subject: Re: [Axiom-mail] Axiom does not start
+References: <alpine.DEB.2.00.0812111045290.5995@localhost.localdomain>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 11 Dec 2008 14:46:38 -0000
+
+Fabio,
+
+The problem is that you have randomize_va_space enabled.
+This causes the image to fail on startup.
+
+either:
+
+(a) become root and do:
+
+echo 0 >/proc/sys/kernel/randomize_va_space
+
+or (b)
+
+launch with 
+
+setarch i386 -R axiom
+
+This should be fixed in the next release.
+
+Tim
+
+
+
+
+
+From MAILER-DAEMON Thu Dec 11 22:18:39 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LAyY2-0000op-Ut
+	for mharc-axiom-mail@gnu.org; Thu, 11 Dec 2008 22:18:39 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LAyY1-0000o4-9E
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 22:18:37 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LAyXz-0000nD-Gt
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 22:18:36 -0500
+Received: from [199.232.76.173] (port=47015 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LAyXz-0000nA-AJ
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 22:18:35 -0500
+Received: from odarragh.astro.utoronto.ca ([128.100.89.35]:46919)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <dyer@odarragh.astro.utoronto.ca>) id 1LAyXy-00011K-Rl
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 22:18:35 -0500
+Received: from odarragh.astro.utoronto.ca (localhost.localdomain [127.0.0.1])
+	by odarragh.astro.utoronto.ca (8.13.8/8.13.8) with ESMTP id
+	mBC3IXvv002325
+	for <axiom-mail@nongnu.org>; Thu, 11 Dec 2008 22:18:33 -0500
+Received: (from dyer@localhost)
+	by odarragh.astro.utoronto.ca (8.13.8/8.13.8/Submit) id mBC3IXVv002324
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 22:18:33 -0500
+Date: Thu, 11 Dec 2008 22:18:33 -0500
+From: Charles Dyer <dyer@astro.utoronto.ca>
+To: axiom-mail@nongnu.org
+Message-ID: <20081212031833.GA2265@odarragh.astro.utoronto.ca>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+User-Agent: Mutt/1.4.2.1i
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Subject: [Axiom-mail] Axiom on MacOSXPPC ... pty problem
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Dec 2008 03:18:37 -0000
+
+
+I have been using Axiom on Linux, and just installed it on my Mac-PPC
+with OS X Tiger, using the March 2008 binary distribution.
+
+When I try to start Axiom, I get the following:
+
+    ptyopen: Failed to open /dev/ptmx: No such file or directory
+    start_the_Axiom: ptyopen failed: No such file or directory
+
+and axiom exits with status 255 to the shell.
+
+I have tried this from both X and the usual graphics display in Tiger OS
+X.
+
+This suggests to me that this is related to the /dev/pty problem listed
+on the http://wiki.axiom-developer.org/axiom-website/download.html site
+under the heading: Mac OSX PPC
+
+Is there some work-around for this? How does one suppress the use of
+pseudo terminals? Is there a command line switch related to this?
+
+Thanks,
+
+- charles
+
+-- 
+Professor Charles C. Dyer
+Physical and Environmental Sciences, UTSC
+and Department of Astronomy and Astrophysics
+University of Toronto
+
+
+
+From MAILER-DAEMON Thu Dec 11 22:29:38 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LAyig-0004Hm-H3
+	for mharc-axiom-mail@gnu.org; Thu, 11 Dec 2008 22:29:38 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LAyif-0004GU-A4
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 22:29:37 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LAyic-0004Fc-IG
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 22:29:35 -0500
+Received: from [199.232.76.173] (port=60904 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LAyic-0004FZ-Eu
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 22:29:34 -0500
+Received: from mx-8.zoominternet.net ([24.154.1.27]:53060
+	helo=cm-2.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1LAyic-0001qK-6R
+	for axiom-mail@nongnu.org; Thu, 11 Dec 2008 22:29:34 -0500
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=NM7z0BsSq20A:10 a=MULslr2f_dwA:10
+	a=E8rTNAPPKTgA:10 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=-UxaLf3lULLMEW1ojnMA:9 a=tz5dE_KFJ9nJpdZggFKeomKtaIMA:4
+	a=8UL1S1SzPDgA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.47] ([24.154.1.47:55341] helo=pop-4.zoominternet.net)
+	by mx-8.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id A1/2A-26921-59AD1494; Thu, 11 Dec 2008 22:29:25 -0500
+Received: (qmail 29552 invoked from network); 12 Dec 2008 03:29:26 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-4.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 12 Dec 2008 03:29:26 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id mBC3YRC05853;
+	Thu, 11 Dec 2008 22:34:27 -0500
+Date: Thu, 11 Dec 2008 22:34:27 -0500
+Message-Id: <200812120334.mBC3YRC05853@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: dyer@astro.utoronto.ca
+In-reply-to: <20081212031833.GA2265@odarragh.astro.utoronto.ca> (message from
+	Charles Dyer on Thu, 11 Dec 2008 22:18:33 -0500)
+Subject: Re: [Axiom-mail] Axiom on MacOSXPPC ... pty problem
+References: <20081212031833.GA2265@odarragh.astro.utoronto.ca>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Dec 2008 03:29:37 -0000
+
+Try:
+
+ axiom -nox
+
+which will start Axiom without using the sman/pty interface.
+
+You won't have hyperdoc or graphics connected to Axiom.
+Hyperdoc and graphics can be run standalone.
+sman ("superman") is task that uses pty to communicate between all
+of the other processes.
+
+Tim
+
+
+
+From MAILER-DAEMON Fri Dec 12 23:09:41 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LBLoy-0005Tw-VD
+	for mharc-axiom-mail@gnu.org; Fri, 12 Dec 2008 23:09:40 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LBLox-0005SP-Ie
+	for axiom-mail@nongnu.org; Fri, 12 Dec 2008 23:09:39 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LBLov-0005Qc-Iu
+	for axiom-mail@nongnu.org; Fri, 12 Dec 2008 23:09:38 -0500
+Received: from [199.232.76.173] (port=33955 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LBLov-0005QZ-FC
+	for axiom-mail@nongnu.org; Fri, 12 Dec 2008 23:09:37 -0500
+Received: from web50406.mail.re2.yahoo.com ([206.190.38.71]:23265)
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <rcari2000@yahoo.com>) id 1LBLou-0000RH-Tg
+	for axiom-mail@nongnu.org; Fri, 12 Dec 2008 23:09:37 -0500
+Received: (qmail 45549 invoked by uid 60001); 13 Dec 2008 04:09:14 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=X-YMail-OSG:Received:X-Mailer:Date:From:Reply-To:Subject:To:MIME-Version:Content-Type:Message-ID;
+	b=6NLfY/Wrz8PJ3DFzs3XH03Tq1NAN4ClzRZuO6PtuP1hurXqUaI8TjyHlIurPtMWDistKgFXKIRVIprf9ygwO/XkaWAO1bnzkWMsqCaxHUmDmhjkOnGf381gThWBTKNRKExfxgqmnt3dWyHov3JQYWRIfqPP4AHiPxZjfCr4EiIs=;
+X-YMail-OSG: fUG7IGsVM1mtYg60kjeB1jOpxl3PpDr2WNg9eYTfojXOvavn4_4E8j9ixLmd1u14P0EzR2UCIZ0tQbiW25xOfSXwWF0DdJjrr4iRL3bLqQsUDRIXqlkP4YtEkxugUH.14GOFhivDUFiQxC3xsxx6yMxNtNbOISQ5eUij1Cz2J5pTlVZOye_tDK4vW2pl
+Received: from [217.221.110.232] by web50406.mail.re2.yahoo.com via HTTP;
+	Fri, 12 Dec 2008 20:09:14 PST
+X-Mailer: YahooMailWebService/0.7.260.1
+Date: Fri, 12 Dec 2008 20:09:14 -0800 (PST)
+From: Roberto Cari <rcari2000@yahoo.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Message-ID: <494905.45280.qm@web50406.mail.re2.yahoo.com>
+X-detected-operating-system: by monty-python.gnu.org: FreeBSD 6.x (1)
+Subject: [Axiom-mail] Axiom installation on Vector linux
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: rcari2000@yahoo.com
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 Dec 2008 04:09:39 -0000
+
+Hi you all,
+I'm a newbie in Axiom, I tried to install a source distro (the last one) on Vector linux (5.9.1) and after an half hour of compiling activities the compiler stopped warning that it misses the Xlib.a libraries on ../X11R6/.. directory. What do I need? Isn't Linux Vector complete with X11 libs or maybe it's necessary an extra (non) standard lib to let Axiom to be fully compiled?
+Thank you.
+
+Rob  
+
+
+      
+
+
+
+From MAILER-DAEMON Fri Dec 12 23:52:08 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LBMU4-0001FM-3v
+	for mharc-axiom-mail@gnu.org; Fri, 12 Dec 2008 23:52:08 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LBMU1-0001Cm-No
+	for axiom-mail@nongnu.org; Fri, 12 Dec 2008 23:52:05 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LBMTx-00019K-CS
+	for axiom-mail@nongnu.org; Fri, 12 Dec 2008 23:52:02 -0500
+Received: from [199.232.76.173] (port=33749 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LBMTw-00018y-Vc
+	for axiom-mail@nongnu.org; Fri, 12 Dec 2008 23:52:00 -0500
+Received: from mx-8.zoominternet.net ([24.154.1.27]:57756
+	helo=cm-2.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1LBMTw-0003Zc-L0
+	for axiom-mail@nongnu.org; Fri, 12 Dec 2008 23:52:00 -0500
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=2hQdktirwAkA:10 a=9Er4NZPiIvgA:10
+	a=E8rTNAPPKTgA:10 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=8JZRz6DX-OvCLg9L4QMA:9 a=RaontuTPJ16QLDPEMOMRi0jSqxEA:4
+	a=yqFbmg6DZFsA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.47] ([24.154.1.47:35703] helo=pop-4.zoominternet.net)
+	by mx-8.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 65/FA-26921-56F33494; Fri, 12 Dec 2008 23:51:49 -0500
+Received: (qmail 17292 invoked from network); 13 Dec 2008 04:51:50 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-4.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 13 Dec 2008 04:51:50 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id mBD4uuB06687;
+	Fri, 12 Dec 2008 23:56:56 -0500
+Date: Fri, 12 Dec 2008 23:56:56 -0500
+Message-Id: <200812130456.mBD4uuB06687@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: rcari2000@yahoo.com
+In-reply-to: <494905.45280.qm@web50406.mail.re2.yahoo.com> (message from
+	Roberto Cari on Fri, 12 Dec 2008 20:09:14 -0800 (PST))
+Subject: Re: [Axiom-mail] Axiom installation on Vector linux
+References: <494905.45280.qm@web50406.mail.re2.yahoo.com>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 Dec 2008 04:52:06 -0000
+
+>I'm a newbie in Axiom, I tried to install a source distro (the last
+>one) on Vector linux (5.9.1) and after an half hour of compiling
+>activities the compiler stopped warning that it misses the Xlib.a
+>libraries on ../X11R6/.. directory. What do I need? Isn't Linux
+>Vector complete with X11 libs or maybe it's necessary an extra (non)
+>standard lib to let Axiom to be fully compiled?
+
+Can you tell me where to get your Vector linux distribution?
+I'll build a machine and see if I can reproduce the problem.
+You may have to install some additional package.
+
+Tim
+
+
+
+
+
+From MAILER-DAEMON Mon Dec 15 10:18:36 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LCFDQ-0002a3-09
+	for mharc-axiom-mail@gnu.org; Mon, 15 Dec 2008 10:18:36 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LCFDN-0002ZB-Pd
+	for axiom-mail@nongnu.org; Mon, 15 Dec 2008 10:18:34 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LCFDL-0002XV-PT
+	for axiom-mail@nongnu.org; Mon, 15 Dec 2008 10:18:32 -0500
+Received: from [199.232.76.173] (port=50906 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LCFDL-0002XJ-JT
+	for axiom-mail@nongnu.org; Mon, 15 Dec 2008 10:18:31 -0500
+Received: from mx-7.zoominternet.net ([24.154.1.26]:60099
+	helo=cm-1.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1LCFDL-0000QI-3Q
+	for axiom-mail@nongnu.org; Mon, 15 Dec 2008 10:18:31 -0500
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=2hQdktirwAkA:10 a=9Er4NZPiIvgA:10
+	a=E8rTNAPPKTgA:10 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=37mPLz1kAAAA:8 a=jIPVdbTqbQf4cZy3VWIA:9
+	a=kM4n5g1Z6ygBp--i40LVxalDGZAA:4 a=Dqp-bWOt5EsA:10
+	a=cA5gs72ALFiy1z_-:21 a=7-QunIEacWPwknFl:21
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.45] ([24.154.1.45:47801] helo=pop-2.zoominternet.net)
+	by mx-7.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 10/3F-25390-53576494; Mon, 15 Dec 2008 10:18:13 -0500
+Received: (qmail 5748 invoked from network); 15 Dec 2008 15:18:18 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-2.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 15 Dec 2008 15:18:18 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id mBFFNaS15895;
+	Mon, 15 Dec 2008 10:23:36 -0500
+Date: Mon, 15 Dec 2008 10:23:36 -0500
+Message-Id: <200812151523.mBFFNaS15895@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: rcari2000@yahoo.com
+Subject: Re: [Axiom-mail] Axiom installation on Vector linux
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 15 Dec 2008 15:18:34 -0000
+
+Rob,
+
+I've fixed the problem. 
+I put the vector platform and the binary on the binary download page:
+
+http://axiom-developer.org/axiom-website/download.html
+
+Now that I've built a vector linux machine for it I'll post a new
+version with each Axiom release (every 2 months).
+
+The fix has to go thru a large number of steps, including testing on
+the other platforms I support, so the source won't show up for a while
+yet. It will certainly be part of the next release.
+
+Assuming you've unpacked it and put it into /usr/local/axiom you would
+then do:
+
+export AXIOM=/usr/local/axiom/mnt/vector
+export PATH=$AXIOM/bin:$PATH
+axiom
+
+Let me know if there are any other problems.
+
+Tim
+
+
+

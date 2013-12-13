@@ -1,0 +1,2372 @@
+From MAILER-DAEMON Fri Sep 15 07:50:57 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GOCDh-0007Uo-Pe
+	for mharc-axiom-mail@gnu.org; Fri, 15 Sep 2006 07:50:57 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GOCDg-0007Th-TG
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 07:50:56 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GOCDe-0007Rm-K9
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 07:50:56 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GOCDe-0007Rj-Ef
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 07:50:54 -0400
+Received: from [141.35.1.24] (helo=fsuj28a.rz.uni-jena.de)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GOCFo-0002CP-3I
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 07:53:08 -0400
+Received: from schnapphans.rz.uni-jena.de (schnapphans.rz.uni-jena.de
+	[141.35.1.29])
+	by fsuj28a.rz.uni-jena.de (8.12.11/8.12.11) with SMTP id k8FBonTV031565
+	for <axiom-mail@nongnu.org>; Fri, 15 Sep 2006 13:50:49 +0200
+Received: from lc08.rz.uni-jena.de(141.35.1.23) by schnapphans.rz.uni-jena.de
+	via smtp id 033a_08ac81a2_44b0_11db_8d11_001143376fda;
+	Fri, 15 Sep 2006 13:47:58 +0200
+Received: from localhost (p54B86B14.dip.t-dialin.net [84.184.107.20])
+	by lc08.rz.uni-jena.de (8.12.8/8.12.8) with ESMTP id k8FBofM9015491
+	(version=TLSv1/SSLv3 cipher=AES256-SHA bits=256 verify=NO)
+	for <axiom-mail@nongnu.org>; Fri, 15 Sep 2006 13:50:42 +0200
+Received: from frithjof (helo=localhost)
+	by localhost with local-esmtp (Exim 4.63)
+	(envelope-from <frithjof@localhost>) id 1GOCGw-0001Ja-VW
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 13:54:19 +0200
+To: axiom-mail@nongnu.org
+X-Mailer: MH-E 8.0.2; nmh 1.1; GNU Emacs 21.4.1
+Date: Fri, 15 Sep 2006 13:54:18 +0200
+Message-ID: <5057.1158321258@localhost>
+From: Frithjof Schulze <frithjof@minet.uni-jena.de>
+Subject: [Axiom-mail] Jordan normal form
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 15 Sep 2006 11:50:57 -0000
+
+Hello,
+
+is there somewhere a package for computing Jordan normal forms of
+matrices in Axiom? I can't find anything in Axiom and using Google only
+a reference to a paper from 1992
+
+     Computation of the Jordan canonical form of a square matrix (using
+     the Axiom programming language)
+
+Frithjof
+
+
+
+
+
+
+
+
+
+
+
+
+
+From MAILER-DAEMON Fri Sep 15 12:04:12 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GOGAm-0008Ki-J3
+	for mharc-axiom-mail@gnu.org; Fri, 15 Sep 2006 12:04:12 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GOGAk-0008JX-1m
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:04:10 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GOGAg-0008F5-Sr
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:04:09 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GOGAg-0008Eu-4b
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:04:06 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GOGCs-0002NB-74
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:06:22 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GOGAe-0005GO-2q; Fri, 15 Sep 2006 18:04:04 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GOGAe-0008CH-0c; Fri, 15 Sep 2006 18:04:04 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Frithjof Schulze <frithjof@minet.uni-jena.de>, igil@blizzard.imag.fr
+Subject: Re: [Axiom-mail] Jordan normal form
+References: <5057.1158321258@localhost>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 15 Sep 2006 18:04:03 +0200
+In-Reply-To: <5057.1158321258@localhost>
+Message-ID: <9q3batm80c.fsf@aquin.mat.univie.ac.at>
+Lines: 18
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 15 Sep 2006 16:04:10 -0000
+
+Dear Frithjof,
+
+Frithjof Schulze <frithjof@minet.uni-jena.de> writes:
+
+> is there somewhere a package for computing Jordan normal forms of
+> matrices in Axiom? I can't find anything in Axiom and using Google only
+> a reference to a paper from 1992
+> 
+>      Computation of the Jordan canonical form of a square matrix (using
+>      the Axiom programming language)
+
+I only found the above article - it is online:
+
+portal.acm.org/ft_gateway.cfm?id=143295&type=pdf
+
+It would certainly be good to get the package...
+
+Martin
+
+
+
+
+From MAILER-DAEMON Fri Sep 15 12:20:41 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GOGQj-0002sU-A2
+	for mharc-axiom-mail@gnu.org; Fri, 15 Sep 2006 12:20:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GOGQh-0002qb-1A
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:20:39 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GOGQf-0002p9-80
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:20:38 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GOGQf-0002p4-0I
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:20:37 -0400
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GOGSn-0003xw-UW
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:22:53 -0400
+Received: from pop-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id k8FGKC0m025417
+	for <axiom-mail@nongnu.org>; Fri, 15 Sep 2006 12:20:16 -0400
+Received: (qmail 16240 invoked from network); 15 Sep 2006 16:20:13 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.185])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <frithjof@minet.uni-jena.de>; 15 Sep 2006 16:20:13 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k8FGBd829785;
+	Fri, 15 Sep 2006 12:11:39 -0400
+Date: Fri, 15 Sep 2006 12:11:39 -0400
+Message-Id: <200609151611.k8FGBd829785@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: martin.rubey@univie.ac.at
+In-reply-to: <9q3batm80c.fsf@aquin.mat.univie.ac.at> (message from Martin
+	Rubey on 15 Sep 2006 18:04:03 +0200)
+Subject: Re: [Axiom-mail] Jordan normal form
+References: <5057.1158321258@localhost> <9q3batm80c.fsf@aquin.mat.univie.ac.at>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: igil@blizzard.imag.fr, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 15 Sep 2006 16:20:39 -0000
+
+that seems to require an ACM account. --t
+
+
+
+From MAILER-DAEMON Fri Sep 15 12:35:15 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GOGeo-0000z9-TA
+	for mharc-axiom-mail@gnu.org; Fri, 15 Sep 2006 12:35:14 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GOGen-0000vy-1q
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:35:13 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GOGel-0000tm-7I
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:35:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GOGel-0000tj-0B
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:35:11 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GOGgx-0005bI-J9
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:37:27 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GOGei-0006zh-QC; Fri, 15 Sep 2006 18:35:08 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GOGei-0000Qh-Lo; Fri, 15 Sep 2006 18:35:08 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-mail] Jordan normal form
+References: <5057.1158321258@localhost> <9q3batm80c.fsf@aquin.mat.univie.ac.at>
+	<200609151611.k8FGBd829785@localhost.localdomain>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 15 Sep 2006 18:35:08 +0200
+In-Reply-To: <200609151611.k8FGBd829785@localhost.localdomain>
+Message-ID: <9qejud84w3.fsf@aquin.mat.univie.ac.at>
+Lines: 15
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: martin.rubey@univie.ac.at, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 15 Sep 2006 16:35:13 -0000
+
+root <daly@axiom-developer.org> writes:
+
+> that seems to require an ACM account. --t
+
+maybe. However, I just googled a little and came up with the following:
+
+Computing Rational Forms of Integer Matrices
+    MARK GIESBRECHT AND ARNE STORJOHANN
+
+which should be a lot faster...
+
+I also found out that Isabelle Gil did her phd in Grenoble in 1993, maybe the
+thesis contains the code. It is not online though.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Fri Sep 15 12:56:32 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GOGzQ-0002jf-7q
+	for mharc-axiom-mail@gnu.org; Fri, 15 Sep 2006 12:56:32 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GOGzN-0002gP-T7
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:56:29 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GOGzJ-0002dA-F5
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:56:28 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GOGzJ-0002ce-5e
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:56:25 -0400
+Received: from [141.35.1.24] (helo=fsuj28a.rz.uni-jena.de)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GOH1V-0008Cg-Nm
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:58:42 -0400
+Received: from schnapphans.rz.uni-jena.de (schnapphans.rz.uni-jena.de
+	[141.35.1.29])
+	by fsuj28a.rz.uni-jena.de (8.12.11/8.12.11) with SMTP id k8FGuM2L014264
+	for <axiom-mail@nongnu.org>; Fri, 15 Sep 2006 18:56:22 +0200
+Received: from lc08.rz.uni-jena.de(141.35.1.23) by schnapphans.rz.uni-jena.de
+	via smtp id 3c47_b7fdff3a_44da_11db_8bf8_001143376fda;
+	Fri, 15 Sep 2006 18:53:31 +0200
+Received: from localhost (p54B86B14.dip.t-dialin.net [84.184.107.20])
+	by lc08.rz.uni-jena.de (8.12.8/8.12.8) with ESMTP id k8FGuFM9016353
+	(version=TLSv1/SSLv3 cipher=AES256-SHA bits=256 verify=NO)
+	for <axiom-mail@nongnu.org>; Fri, 15 Sep 2006 18:56:15 +0200
+Received: from frithjof (helo=localhost)
+	by localhost with local-esmtp (Exim 4.63)
+	(envelope-from <frithjof@localhost>) id 1GOH2d-0000JH-Qc
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 18:59:51 +0200
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-mail] Jordan normal form 
+In-reply-to: <200609151611.k8FGBd829785@localhost.localdomain> 
+References: <5057.1158321258@localhost> <9q3batm80c.fsf@aquin.mat.univie.ac.at>
+	<200609151611.k8FGBd829785@localhost.localdomain>
+Comments: In-reply-to root <daly@axiom-developer.org>
+	message dated "Fri, 15 Sep 2006 12:11:39 -0400."
+X-Mailer: MH-E 8.0.2; nmh 1.1; GNU Emacs 21.4.1
+Date: Fri, 15 Sep 2006 18:44:32 +0200
+Message-ID: <27216.1158338672@localhost>
+From: Frithjof Schulze <frithjof@minet.uni-jena.de>
+Resent-To: axiom-mail@nongnu.org
+Resent-Date: Fri, 15 Sep 2006 18:59:51 +0200
+Resent-From: Frithjof Schulze <frithjof@minet.uni-jena.de>
+Resent-Message-Id: <E1GOH2d-0000JH-Qc@localhost>
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 15 Sep 2006 16:56:30 -0000
+
+root <daly@axiom-developer.org> wrote:
+
+> that seems to require an ACM account. --t
+
+Yes. And not just a free web-account. I will have too look in the
+library on monday.
+Thanks.
+
+
+
+
+
+From MAILER-DAEMON Fri Sep 15 12:58:29 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GOH1J-0005Sx-1F
+	for mharc-axiom-mail@gnu.org; Fri, 15 Sep 2006 12:58:29 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GOH1H-0005OA-51
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:58:27 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GOH1G-0005N9-GR
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:58:26 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GOH1G-0005Mp-Cc
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 12:58:26 -0400
+Received: from [141.35.1.24] (helo=fsuj28a.rz.uni-jena.de)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GOH3S-0008Nz-T9
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 13:00:43 -0400
+Received: from schnapphans.rz.uni-jena.de (schnapphans.rz.uni-jena.de
+	[141.35.1.29])
+	by fsuj28a.rz.uni-jena.de (8.12.11/8.12.11) with SMTP id k8FGwOxt014609
+	for <axiom-mail@nongnu.org>; Fri, 15 Sep 2006 18:58:24 +0200
+Received: from lc08.rz.uni-jena.de(141.35.1.23) by schnapphans.rz.uni-jena.de
+	via smtp id 4e9e_00779cd0_44db_11db_80c0_001143376fda;
+	Fri, 15 Sep 2006 18:55:32 +0200
+Received: from localhost (p54B86B14.dip.t-dialin.net [84.184.107.20])
+	by lc08.rz.uni-jena.de (8.12.8/8.12.8) with ESMTP id k8FGwGM9016507
+	(version=TLSv1/SSLv3 cipher=AES256-SHA bits=256 verify=NO)
+	for <axiom-mail@nongnu.org>; Fri, 15 Sep 2006 18:58:17 +0200
+Received: from frithjof (helo=localhost)
+	by localhost with local-esmtp (Exim 4.63)
+	(envelope-from <frithjof@localhost>) id 1GOH4b-0000Qz-H8
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 19:01:53 +0200
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-mail] Jordan normal form 
+In-reply-to: <9qejud84w3.fsf@aquin.mat.univie.ac.at> 
+References: <5057.1158321258@localhost> <9q3batm80c.fsf@aquin.mat.univie.ac.at>
+	<200609151611.k8FGBd829785@localhost.localdomain>
+	<9qejud84w3.fsf@aquin.mat.univie.ac.at>
+Comments: In-reply-to Martin Rubey <martin.rubey@univie.ac.at>
+	message dated "15 Sep 2006 18:35:08 +0200."
+X-Mailer: MH-E 8.0.2; nmh 1.1; GNU Emacs 21.4.1
+Date: Fri, 15 Sep 2006 18:49:26 +0200
+Message-ID: <29546.1158338966@localhost>
+From: Frithjof Schulze <frithjof@minet.uni-jena.de>
+Resent-To: axiom-mail@nongnu.org
+Resent-Date: Fri, 15 Sep 2006 19:01:53 +0200
+Resent-From: Frithjof Schulze <frithjof@minet.uni-jena.de>
+Resent-Message-Id: <E1GOH4b-0000Qz-H8@localhost>
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 15 Sep 2006 16:58:27 -0000
+
+Martin Rubey <martin.rubey@univie.ac.at> wrote:
+
+> maybe. However, I just googled a little and came up with the following:
+> 
+> Computing Rational Forms of Integer Matrices
+>     MARK GIESBRECHT AND ARNE STORJOHANN
+> 
+> which should be a lot faster...
+
+And it is downloadable. I have to see if I can understand it. Thanks
+too.
+
+Frithjof
+
+
+
+From MAILER-DAEMON Fri Sep 15 13:10:56 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GOHDM-0001Gb-DJ
+	for mharc-axiom-mail@gnu.org; Fri, 15 Sep 2006 13:10:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GOHDL-0001GF-2n
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 13:10:55 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GOHDJ-0001G3-Lh
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 13:10:53 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GOHDJ-0001G0-FS
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 13:10:53 -0400
+Received: from [141.35.1.24] (helo=fsuj28a.rz.uni-jena.de)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GOHFW-0001Nq-Bb
+	for axiom-mail@nongnu.org; Fri, 15 Sep 2006 13:13:10 -0400
+Received: from schnapphans.rz.uni-jena.de (schnapphans.rz.uni-jena.de
+	[141.35.1.29])
+	by fsuj28a.rz.uni-jena.de (8.12.11/8.12.11) with SMTP id k8FHApK1017155;
+	Fri, 15 Sep 2006 19:10:51 +0200
+Received: from lc08.rz.uni-jena.de(141.35.1.23) by schnapphans.rz.uni-jena.de
+	via smtp id 4f1d_bdcb5e1a_44dc_11db_8285_001143376fda;
+	Fri, 15 Sep 2006 19:08:00 +0200
+Received: from localhost (p54B86B14.dip.t-dialin.net [84.184.107.20])
+	by lc08.rz.uni-jena.de (8.12.8/8.12.8) with ESMTP id k8FHAhM9017515
+	(version=TLSv1/SSLv3 cipher=AES256-SHA bits=256 verify=NO);
+	Fri, 15 Sep 2006 19:10:44 +0200
+Received: from frithjof (helo=localhost)
+	by localhost with local-esmtp (Exim 4.63)
+	(envelope-from <frithjof@localhost>)
+	id 1GOHGe-0001Af-FD; Fri, 15 Sep 2006 19:14:20 +0200
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-mail] Jordan normal form 
+In-reply-to: <9qirjpt66i.fsf@aquin.mat.univie.ac.at> 
+References: <5057.1158321258@localhost> <9q3batm80c.fsf@aquin.mat.univie.ac.at>
+	<200609151611.k8FGBd829785@localhost.localdomain>
+	<27216.1158338672@localhost>
+	<9qirjpt66i.fsf@aquin.mat.univie.ac.at>
+Comments: In-reply-to Martin Rubey <martin.rubey@univie.ac.at>
+	message dated "15 Sep 2006 19:01:41 +0200."
+X-Mailer: MH-E 8.0.2; nmh 1.1; GNU Emacs 21.4.1
+Date: Fri, 15 Sep 2006 19:14:20 +0200
+Message-ID: <4504.1158340460@localhost>
+From: Frithjof Schulze <frithjof@minet.uni-jena.de>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 15 Sep 2006 17:10:55 -0000
+
+Martin Rubey <martin.rubey@univie.ac.at> wrote:
+> 
+> Here you go, but don't tell anybody :-)
+
+Great!  How is code published in papers copyrighted? Is it free like an
+algorithm ?
+
+Frithjof  
+
+
+
+From MAILER-DAEMON Wed Sep 27 16:14:08 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSfnE-0008M0-Cg
+	for mharc-axiom-mail@gnu.org; Wed, 27 Sep 2006 16:14:08 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSfnC-0008Jl-O4
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 16:14:06 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSfnB-0008IN-LI
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 16:14:06 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSfnB-0008IB-Go
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 16:14:05 -0400
+Received: from [62.4.16.103] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSfs7-0001fA-1R
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 16:19:11 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by kraid.nerim.net (Postfix) with ESMTP id 0388540F56
+	for <axiom-mail@nongnu.org>; Wed, 27 Sep 2006 22:14:02 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k8RKBK8M023539
+	for <axiom-mail@nongnu.org>; Wed, 27 Sep 2006 22:11:22 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k8RKBKkq023538; Wed, 27 Sep 2006 22:11:20 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: axiom-mail@nongnu.org
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+Organization: Integrable Solutions
+Date: 27 Sep 2006 22:11:19 +0200
+Message-ID: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+Lines: 15
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Subject: [Axiom-mail] Data structure for object definition
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 27 Sep 2006 20:14:07 -0000
+
+
+Hi, 
+
+  Is there an accessible algebra in Axiom that holds the
+internal representation of Axiom object?
+
+Assume, I have
+
+     (x:% - %:y):% == reduc(x -$Rep y, commonk(x, y))
+
+Who to I get hold on the internal representation of "-"?
+
+(SEX an EXPR do not see, to give me  what I want).
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Wed Sep 27 16:25:36 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSfyK-00016i-7i
+	for mharc-axiom-mail@gnu.org; Wed, 27 Sep 2006 16:25:36 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSfyI-00016A-SF
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 16:25:34 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSfyH-00015d-7K
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 16:25:34 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSfyG-00015U-Vp
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 16:25:33 -0400
+Received: from [24.154.1.27] (helo=mx-8.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSg3C-0003dP-Ok
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 16:30:38 -0400
+Received: from pop-4.zoominternet.net (mua-4.zoominternet.net [24.154.1.47])
+	by mx-8.zoominternet.net (8.13.1/8.13.1) with ESMTP id k8RKPIJI014811
+	for <axiom-mail@nongnu.org>; Wed, 27 Sep 2006 16:25:26 -0400
+Received: (qmail 6558 invoked from network); 27 Sep 2006 20:25:18 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.22.111])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-4.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 27 Sep 2006 20:25:18 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k8RKGIU21531;
+	Wed, 27 Sep 2006 16:16:18 -0400
+Date: Wed, 27 Sep 2006 16:16:18 -0400
+Message-Id: <200609272016.k8RKGIU21531@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: gdr@integrable-solutions.net
+In-reply-to: <m3ven9f4t4.fsf@zeus.integrable-solutions.net> (message from
+	Gabriel Dos Reis on 27 Sep 2006 22:11:19 +0200)
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+X-Spam-Score: 1.20 (*) [Tag at 15.00] FORGED_RCVD_HELO, J_CHICKENPOX_51,
+	J_CHICKENPOX_71
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.27
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 27 Sep 2006 20:25:35 -0000
+
+>   Is there an accessible algebra in Axiom that holds the
+> internal representation of Axiom object?
+> 
+> Assume, I have
+> 
+>      (x:% - %:y):% == reduc(x -$Rep y, commonk(x, y))
+> 
+> Who to I get hold on the internal representation of "-"?
+> 
+> (SEX an EXPR do not see, to give me  what I want).
+
+I don't understand the question. Please give more detail. --t
+
+
+
+From MAILER-DAEMON Wed Sep 27 16:50:11 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSgM7-0006nS-8B
+	for mharc-axiom-mail@gnu.org; Wed, 27 Sep 2006 16:50:11 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSgM5-0006mm-QH
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 16:50:09 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSgM4-0006mZ-Jy
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 16:50:08 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSgM4-0006mW-Ch
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 16:50:08 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSgR0-0006os-7y
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 16:55:14 -0400
+Received: from localhost (amavis.drenet.dnd.ca [131.136.244.251])
+	by fw.drenet.dnd.ca (_) with ESMTP id 95A3768B8C;
+	Wed, 27 Sep 2006 16:50:07 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca (unknown [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id 6AFA468B77;
+	Wed, 27 Sep 2006 16:50:03 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-mail] Data structure for object definition
+Date: Wed, 27 Sep 2006 16:50:01 -0400
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE388D0CF@corporateex02.Corporate.drdc-rddc.gc.ca>
+In-Reply-To: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-mail] Data structure for object definition
+Thread-Index: AcbicYIwCp9qM+xxRCCvOJhxFXf45gAARSew
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Gabriel Dos Reis" <gdr@integrable-solutions.net>, <axiom-mail@nongnu.org>
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 27 Sep 2006 20:50:10 -0000
+
+Gaby,=20
+
+On Wednesday, September 27, 2006 4:11 PM you wrote:
+>=20
+>   Is there an accessible algebra in Axiom that holds the
+> internal representation of Axiom object?
+>
+
+I suppose that depends on what you mean by "accessible" and
+"algebra" :) Certainly everything in Axiom has a type but
+many of these types are not "domains" so they do not really
+have an "algebra" in the sense in which I think you mean it.
+In many cases we do not even have a notion of equality.
+=20
+> Assume, I have
+>=20
+>      (x:% - %:y):% =3D=3D reduc(x -$Rep y, commonk(x, y))
+>=20
+> Who to I get hold on the internal representation of "-"?
+>=20
+> (SEX an EXPR do not see, to give me  what I want).
+>=20
+
+"-" is a function presumably of type ((Rep,Rep) -> Rep) from
+the built-in Mapping domain constructor. Mapping does provide
+some limited "algebraic" properties.
+
+Is this something like what you want?
+
+(1) ->  m:=3D _-$Integer
+
+   There is more than one - in the domain or package Integer . The one
+      being chosen has type ((Integer,Integer) -> Integer) .
+
+   (1)  theMap(INT;-;3$;38,126)
+        Type: ((Integer,Integer) -> Integer)
+
+(2) -> m(1,2)
+
+   (2)  - 1
+        Type: Integer
+
+(3) -> typeOf(m)
+
+   (3)  ((Integer,Integer) -> Integer)
+        Type: Domain
+
+(4) ->  n:=3D(_-)$Integer
+   There is more than one - in the domain or package Integer . The one
+      being chosen has type ((Integer,Integer) -> Integer) .
+
+   (4)  theMap(INT;-;3$;38,126)
+   Type: ((Integer,Integer) -> Integer)
+
+(5) -> (m=3Dn)::Boolean
+
+   Loading C:/Program Files/axiom/mnt/windows/algebra/EQ.o for domain
+      Equation
+
+   (9)  true
+   Type: Boolean
+
+(6) ->  p:=3D(_+)$Integer
+
+   (6)  theMap(INT;+;3$;37,126)
+   Type: ((Integer,Integer) -> Integer)
+
+(7) -> (m=3Dp)::Boolean
+
+   (7)  false
+   Type: Boolean
+
+---------
+
+Of course this is in the Axiom interpreter and your example
+suggests you are talking about SPAD code. The reflection
+'typeOf' is not available in SPAD as far as I know and is
+not of much use in the interpreter. It's nice to see however
+that at least Mapping provides an equality and this I am
+sure you can exploit in SPAD and Aldor.
+
+You might also be able to resort to some "tricks" at the
+level of Lisp or would you prefer to avoid that?
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Wed Sep 27 18:39:18 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSi3i-0002e2-3A
+	for mharc-axiom-mail@gnu.org; Wed, 27 Sep 2006 18:39:18 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSi3g-0002di-Lr
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 18:39:16 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSi3g-0002dO-4W
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 18:39:16 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSi3f-0002dJ-Uh
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 18:39:15 -0400
+Received: from [62.4.16.103] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSi8c-0001EQ-Og
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 18:44:23 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by kraid.nerim.net (Postfix) with ESMTP id E987A40E8F;
+	Thu, 28 Sep 2006 00:39:12 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k8RMaUNC026572; Thu, 28 Sep 2006 00:36:32 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k8RMaU0J026571; Thu, 28 Sep 2006 00:36:30 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: <bill.page1@synthesis.anikast.ca>
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <CAE9B164E720CE4D8727792DF8F28AE388D0CF@corporateex02.Corporate.drdc-rddc.gc.ca>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <CAE9B164E720CE4D8727792DF8F28AE388D0CF@corporateex02.Corporate.drdc-rddc.gc.ca>
+Organization: Integrable Solutions
+Date: 28 Sep 2006 00:36:29 +0200
+Message-ID: <m3psdhey36.fsf@zeus.integrable-solutions.net>
+Lines: 104
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 27 Sep 2006 22:39:16 -0000
+
+"Page, Bill" <Bill.Page@drdc-rddc.gc.ca> writes:
+
+| Gaby, 
+| 
+| On Wednesday, September 27, 2006 4:11 PM you wrote:
+| > 
+| >   Is there an accessible algebra in Axiom that holds the
+| > internal representation of Axiom object?
+| >
+| 
+| I suppose that depends on what you mean by "accessible" and
+| "algebra" :) Certainly everything in Axiom has a type but
+| many of these types are not "domains" so they do not really
+| have an "algebra" in the sense in which I think you mean it.
+| In many cases we do not even have a notion of equality.
+
+OK.
+
+| > Assume, I have
+| > 
+| >      (x:% - %:y):% == reduc(x -$Rep y, commonk(x, y))
+| > 
+| > Who to I get hold on the internal representation of "-"?
+| > 
+| > (SEX an EXPR do not see, to give me  what I want).
+| > 
+| 
+| "-" is a function presumably of type ((Rep,Rep) -> Rep) from
+| the built-in Mapping domain constructor. Mapping does provide
+| some limited "algebraic" properties.
+| 
+| Is this something like what you want?
+| 
+| (1) ->  m:= _-$Integer
+| 
+|    There is more than one - in the domain or package Integer . The one
+|       being chosen has type ((Integer,Integer) -> Integer) .
+| 
+|    (1)  theMap(INT;-;3$;38,126)
+|         Type: ((Integer,Integer) -> Integer)
+| 
+| (2) -> m(1,2)
+| 
+|    (2)  - 1
+|         Type: Integer
+| 
+| (3) -> typeOf(m)
+| 
+|    (3)  ((Integer,Integer) -> Integer)
+|         Type: Domain
+| 
+| (4) ->  n:=(_-)$Integer
+|    There is more than one - in the domain or package Integer . The one
+|       being chosen has type ((Integer,Integer) -> Integer) .
+| 
+|    (4)  theMap(INT;-;3$;38,126)
+|    Type: ((Integer,Integer) -> Integer)
+| 
+| (5) -> (m=n)::Boolean
+| 
+|    Loading C:/Program Files/axiom/mnt/windows/algebra/EQ.o for domain
+|       Equation
+| 
+|    (9)  true
+|    Type: Boolean
+| 
+| (6) ->  p:=(_+)$Integer
+| 
+|    (6)  theMap(INT;+;3$;37,126)
+|    Type: ((Integer,Integer) -> Integer)
+| 
+| (7) -> (m=p)::Boolean
+| 
+|    (7)  false
+|    Type: Boolean
+| 
+| ---------
+| 
+| Of course this is in the Axiom interpreter and your example
+| suggests you are talking about SPAD code. 
+
+Yes, I'm talking of SPAD code.  Basically, given a SPAD file, I
+would like to have the code it contains (category, domain, package
+declarations) in form of Axiom data type that I can manipulate work
+with.  What is in INFORM seems too primitive for my needs.
+
+| The reflection
+| 'typeOf' is not available in SPAD as far as I know and is
+| not of much use in the interpreter. It's nice to see however
+| that at least Mapping provides an equality and this I am
+| sure you can exploit in SPAD and Aldor.
+
+Thank you for the tip.  Basically, I would be very happy if I can have
+access to function bodies, type definitions.
+
+| You might also be able to resort to some "tricks" at the
+| level of Lisp or would you prefer to avoid that?
+
+If I can avoid it, that would be great.  Otherwise, I would like to
+minimize the amount of tricks.  
+
+Thanks!
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Wed Sep 27 18:41:22 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSi5i-0003qF-Bx
+	for mharc-axiom-mail@gnu.org; Wed, 27 Sep 2006 18:41:22 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSi5g-0003pQ-QN
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 18:41:20 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSi5d-0003la-1U
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 18:41:20 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSi5c-0003lN-QG
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 18:41:16 -0400
+Received: from [62.4.17.103] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSiAZ-0001Nv-Q7
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 18:46:23 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by mallaury.nerim.net (Postfix) with ESMTP id A73AF4F3A4;
+	Thu, 28 Sep 2006 00:41:01 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k8RMcQWB026576; Thu, 28 Sep 2006 00:38:28 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k8RMcQhI026575; Thu, 28 Sep 2006 00:38:26 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+	<200609272016.k8RKGIU21531@localhost.localdomain>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <200609272016.k8RKGIU21531@localhost.localdomain>
+Organization: Integrable Solutions
+Date: 28 Sep 2006 00:38:26 +0200
+Message-ID: <m3k63pexzx.fsf@zeus.integrable-solutions.net>
+Lines: 20
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 27 Sep 2006 22:41:21 -0000
+
+root <daly@axiom-developer.org> writes:
+
+| >   Is there an accessible algebra in Axiom that holds the
+| > internal representation of Axiom object?
+| > 
+| > Assume, I have
+| > 
+| >      (x:% - %:y):% == reduc(x -$Rep y, commonk(x, y))
+| > 
+| > Who to I get hold on the internal representation of "-"?
+| > 
+| > (SEX an EXPR do not see, to give me  what I want).
+| 
+| I don't understand the question. Please give more detail. --t
+
+Basically I would like functionalities similar to those in
+mkfunc.spad, but that lets me inspect (using SPAD code) category,
+domain, and package definitions as SPAD objects.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Wed Sep 27 20:21:41 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSjen-00068Z-Fp
+	for mharc-axiom-mail@gnu.org; Wed, 27 Sep 2006 20:21:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSjem-00067P-E9
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 20:21:40 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSjek-00066T-RK
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 20:21:40 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSjek-00066M-N6
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 20:21:38 -0400
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSjji-0001sy-3S
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 20:26:46 -0400
+Received: from pop-2.zoominternet.net (mua-2.zoominternet.net [24.154.1.45])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id k8S0LC4w024734
+	for <axiom-mail@nongnu.org>; Wed, 27 Sep 2006 20:21:21 -0400
+Received: (qmail 27512 invoked from network); 28 Sep 2006 00:21:13 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.22.111])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-2.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 28 Sep 2006 00:21:13 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k8S0CF021594;
+	Wed, 27 Sep 2006 20:12:15 -0400
+Date: Wed, 27 Sep 2006 20:12:15 -0400
+Message-Id: <200609280012.k8S0CF021594@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: gdr@integrable-solutions.net
+In-reply-to: <m3k63pexzx.fsf@zeus.integrable-solutions.net> (message from
+	Gabriel Dos Reis on 28 Sep 2006 00:38:26 +0200)
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+	<200609272016.k8RKGIU21531@localhost.localdomain>
+	<m3k63pexzx.fsf@zeus.integrable-solutions.net>
+X-Spam-Score: 1.90 (*) [Tag at 15.00] FORGED_RCVD_HELO, J_CHICKENPOX_51,
+	J_CHICKENPOX_64, J_CHICKENPOX_71
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Sep 2006 00:21:40 -0000
+
+> | >   Is there an accessible algebra in Axiom that holds the
+> | > internal representation of Axiom object?
+> | > 
+> | > Assume, I have
+> | > 
+> | >      (x:% - %:y):% == reduc(x -$Rep y, commonk(x, y))
+> | > 
+> | > Who to I get hold on the internal representation of "-"?
+> | > 
+> | > (SEX an EXPR do not see, to give me  what I want).
+> | 
+> | I don't understand the question. Please give more detail. --t
+> 
+> Basically I would like functionalities similar to those in
+> mkfunc.spad, but that lets me inspect (using SPAD code) category,
+> domain, and package definitions as SPAD objects.
+
+All of the things you want are available as lisp objects.
+Ultimately Spad is just a cover language for lisp.
+If you compile a spad file you can see the functions in
+the NRLIB/code.lsp file. You can manipulate them directly
+using code such as is found in src/interp/monitor.lisp.pamphlet
+
+Types created at runtime can also be accessed.
+
+What you'd need to do is define a package which exports a set
+of functions you'd like which give you the ability you need.
+Once these functions are defined we can certainly create the
+lisp functions which implement them. Your package can then call
+these lisp functions at the spad level to let you do anything 
+you'd like.
+
+What functions do you need and why do you need them?
+
+t
+
+
+
+
+
+From MAILER-DAEMON Wed Sep 27 21:29:33 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSkiT-0003Vm-Dd
+	for mharc-axiom-mail@gnu.org; Wed, 27 Sep 2006 21:29:33 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSkiR-0003VQ-10
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 21:29:31 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSkiO-0003VD-HR
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 21:29:29 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSkiO-0003VA-Cy
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 21:29:28 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSknM-0005xr-Vu
+	for axiom-mail@nongnu.org; Wed, 27 Sep 2006 21:34:37 -0400
+Received: from localhost (amavis.drenet.dnd.ca [131.136.244.251])
+	by fw.drenet.dnd.ca (_) with ESMTP id 2E86F68BFA;
+	Wed, 27 Sep 2006 21:29:27 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca (unknown [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id 022AA68BEF;
+	Wed, 27 Sep 2006 21:29:25 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-mail] Data structure for object definition
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Date: Wed, 27 Sep 2006 21:29:23 -0400
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE388D0E0@corporateex02.Corporate.drdc-rddc.gc.ca>
+In-Reply-To: <m3k63pexzx.fsf@zeus.integrable-solutions.net>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-mail] Data structure for object definition
+Thread-Index: AcbihjoxY1ZiP1mESyWr4W3JpkxcFQAEbakg
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Gabriel Dos Reis" <gdr@integrable-solutions.net>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Sep 2006 01:29:31 -0000
+
+On Wednesday, September 27, 2006 6:38 PM Gabriel Dos Reis wrote:
+> ...=20
+> Basically I would like functionalities similar to those in
+> mkfunc.spad, but that lets me inspect (using SPAD code)
+> category, domain, and package definitions as SPAD objects.
+>=20
+
+In other words: structural reflection. Right?
+
+Aside: Have I mentioned this article before?
+
+http://citeseer.ist.psu.edu/106401.html
+
+"Reflection in logic, functional and object-oriented programming:
+a Short Comparative Study"
+by Fran=E7ois-Nicola Demers, Jacques Malenfant.
+
+In Proceedings of the IJCAI'95 Workshop on Reflection
+and Metalevel Architectures and their Applications in AI,
+pages 29-38, August 1995.
+
+I think it is an excellent survey of the subject.
+
+-------
+
+Anyway, I still am not convinced that use of reflection in a
+statically-typed programming language really makes sense. It
+seems to me that most of the information that you seek is easily
+available in other ways - simply because the language *is*
+statically-typed. I am concerned that the use of reflection in
+this context might promote a coding style that is somewhat
+contrary to that envisaged by the language designers: where such
+"introspective" information must be made explicit and manifest
+in the structure of the program rather than implicit in the
+data structures on which it operates.
+
+SPAD is not Java and believe that is a good thing since I have
+already seen some remarkably obscure techniques in Java based
+on reflection. Of course this is just a point of philosophy
+and not a comment on the effectiveness of these methods.
+
+IN any case, do not forget the initial work done in Aldor and
+SPAD on this subject by Peter Broadbery that I am sure I have
+mentioned before. I think it is directly related to what you
+want to do. See:
+
+http://wiki.axiom-developer.org/209
+
+Peter was involved with the project to integrate Aldor with Axiom
+while at IBM so he is/was intimately familiar with this subject.
+See especially his reference to 'interop.boot' in
+
+http://lists.nongnu.org/archive/html/axiom-developer/2005-09/msg00250.htm=
+l
+
+"From memory, and looking at interop.boot, we find that a domain
+is a cons pair of two elements.  The first is a vector of functions
+(eg. $oldAxiomDomainDispatch), and the second is used as an argument
+to functions within the vector.=20
+
+The functions do the following:
+1)      return the name of the domain, as a null terminated string
+2)      unknown
+3)      lookup an export by hashcode
+4)      return the domain's hashcode
+5)      unknown (inheritance related).
+
+
+Categories are similar, but have a different vector of functions.
+
+Next step is to abuse this information and extend our aldor domain
+above to include these operations."
+
+-------
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Sep 28 07:50:02 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSuOw-0002pA-NX
+	for mharc-axiom-mail@gnu.org; Thu, 28 Sep 2006 07:50:02 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSuOv-0002o1-C8
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 07:50:01 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSuOu-0002lO-2e
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 07:50:00 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSuOt-0002kz-N8
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 07:49:59 -0400
+Received: from [62.4.17.104] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSuTx-0003Ak-Ii
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 07:55:13 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by mallaury.nerim.net (Postfix) with ESMTP id 0057E4F3F7;
+	Thu, 28 Sep 2006 13:49:49 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k8SBlBd0004470; Thu, 28 Sep 2006 13:47:13 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k8SBlB6P004469; Thu, 28 Sep 2006 13:47:11 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: <bill.page1@synthesis.anikast.ca>
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <CAE9B164E720CE4D8727792DF8F28AE388D0E0@corporateex02.Corporate.drdc-rddc.gc.ca>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <CAE9B164E720CE4D8727792DF8F28AE388D0E0@corporateex02.Corporate.drdc-rddc.gc.ca>
+Organization: Integrable Solutions
+Date: 28 Sep 2006 13:47:11 +0200
+Message-ID: <m3bqp0fc1s.fsf@zeus.integrable-solutions.net>
+Lines: 94
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Sep 2006 11:50:01 -0000
+
+"Page, Bill" <Bill.Page@drdc-rddc.gc.ca> writes:
+
+| On Wednesday, September 27, 2006 6:38 PM Gabriel Dos Reis wrote:
+| > ...=20
+| > Basically I would like functionalities similar to those in
+| > mkfunc.spad, but that lets me inspect (using SPAD code)
+| > category, domain, and package definitions as SPAD objects.
+| >=20
+|=20
+| In other words: structural reflection. Right?
+|=20
+| Aside: Have I mentioned this article before?
+|=20
+| http://citeseer.ist.psu.edu/106401.html
+|=20
+| "Reflection in logic, functional and object-oriented programming:
+| a Short Comparative Study"
+| by Fran=E7ois-Nicola Demers, Jacques Malenfant.
+
+I'll have a look at it.
+
+| In Proceedings of the IJCAI'95 Workshop on Reflection
+| and Metalevel Architectures and their Applications in AI,
+| pages 29-38, August 1995.
+|=20
+| I think it is an excellent survey of the subject.
+|=20
+| -------
+|=20
+| Anyway, I still am not convinced that use of reflection in a
+| statically-typed programming language really makes sense. It
+| seems to me that most of the information that you seek is easily
+| available in other ways - simply because the language *is*
+| statically-typed.
+
+I would like to do Algoritmic Differentiation of codes written in SPAD.
+
+What other ways do you think is better than having the function bodies
+as objects to manipulate?  I don't want to write another SPAD parser if
+I can use the existing one.
+
+| I am concerned that the use of reflection in
+| this context might promote a coding style that is somewhat
+| contrary to that envisaged by the language designers: where such
+| "introspective" information must be made explicit and manifest
+| in the structure of the program rather than implicit in the
+| data structures on which it operates.
+
+I hate it when it comes to "language designers thought you only need
+this, and thou shall not need something else".
+
+| SPAD is not Java and believe that is a good thing since I have
+| already seen some remarkably obscure techniques in Java based
+| on reflection.
+
+Please please, let not go there -- I'm not interested in the Java
+vs. SPAD debate.  I have a need for manipulating SPAD codes as
+objects.  (I do the same for C++ -- see "The Pivot" project.)
+One uses is for Algorithmic Differentiation (the immediate use I would
+like to achieve).
+
+[...]
+
+| IN any case, do not forget the initial work done in Aldor and
+| SPAD on this subject by Peter Broadbery that I am sure I have
+| mentioned before. I think it is directly related to what you
+| want to do. See:
+|=20
+| http://wiki.axiom-developer.org/209
+|=20
+| Peter was involved with the project to integrate Aldor with Axiom
+| while at IBM so he is/was intimately familiar with this subject.
+| See especially his reference to 'interop.boot' in
+|=20
+| http://lists.nongnu.org/archive/html/axiom-developer/2005-09/msg00250.html
+|=20
+| "From memory, and looking at interop.boot, we find that a domain
+| is a cons pair of two elements.  The first is a vector of functions
+| (eg. $oldAxiomDomainDispatch), and the second is used as an argument
+| to functions within the vector.=20
+|=20
+| The functions do the following:
+| 1)      return the name of the domain, as a null terminated string
+| 2)      unknown
+| 3)      lookup an export by hashcode
+| 4)      return the domain's hashcode
+| 5)      unknown (inheritance related).
+|=20
+|=20
+| Categories are similar, but have a different vector of functions.
+
+Thanks!
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu Sep 28 07:54:19 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSuT5-0005zs-LT
+	for mharc-axiom-mail@gnu.org; Thu, 28 Sep 2006 07:54:19 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSuT3-0005zV-RQ
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 07:54:17 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSuT1-0005yt-3t
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 07:54:17 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSuT1-0005yq-0a
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 07:54:15 -0400
+Received: from [62.4.16.104] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSuY5-0003Q3-A5
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 07:59:29 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by kraid.nerim.net (Postfix) with ESMTP id 13CE341091;
+	Thu, 28 Sep 2006 13:54:13 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k8SBpRrO004474; Thu, 28 Sep 2006 13:51:30 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k8SBpR8A004473; Thu, 28 Sep 2006 13:51:27 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+	<200609272016.k8RKGIU21531@localhost.localdomain>
+	<m3k63pexzx.fsf@zeus.integrable-solutions.net>
+	<200609280012.k8S0CF021594@localhost.localdomain>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <200609280012.k8S0CF021594@localhost.localdomain>
+Organization: Integrable Solutions
+Date: 28 Sep 2006 13:51:27 +0200
+Message-ID: <m364f8fbuo.fsf@zeus.integrable-solutions.net>
+Lines: 59
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Sep 2006 11:54:18 -0000
+
+root <daly@axiom-developer.org> writes:
+
+| > | >   Is there an accessible algebra in Axiom that holds the
+| > | > internal representation of Axiom object?
+| > | > 
+| > | > Assume, I have
+| > | > 
+| > | >      (x:% - %:y):% == reduc(x -$Rep y, commonk(x, y))
+| > | > 
+| > | > Who to I get hold on the internal representation of "-"?
+| > | > 
+| > | > (SEX an EXPR do not see, to give me  what I want).
+| > | 
+| > | I don't understand the question. Please give more detail. --t
+| > 
+| > Basically I would like functionalities similar to those in
+| > mkfunc.spad, but that lets me inspect (using SPAD code) category,
+| > domain, and package definitions as SPAD objects.
+| 
+| All of the things you want are available as lisp objects.
+
+Yes, I figured that part out; but I did not know how to access them as 
+SPAD objects.  
+
+| Ultimately Spad is just a cover language for lisp.
+
+Yes, but I would prefer to work at the SPAD level if possible.
+
+| If you compile a spad file you can see the functions in
+| the NRLIB/code.lsp file. 
+
+Yes.
+
+| You can manipulate them directly
+| using code such as is found in src/interp/monitor.lisp.pamphlet
+
+This, I did not know.  
+
+| Types created at runtime can also be accessed.
+| 
+| What you'd need to do is define a package which exports a set
+| of functions you'd like which give you the ability you need.
+| Once these functions are defined we can certainly create the
+| lisp functions which implement them.
+
+So those functions need to be Lisp, instead of SPAD?
+
+| Your package can then call
+| these lisp functions at the spad level to let you do anything 
+| you'd like.
+
+OK.
+
+| What functions do you need and why do you need them?
+
+I need the functions for implementing Algorithmic Differentiation of
+codes written in SPAD.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu Sep 28 09:11:24 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSvfg-0000PX-58
+	for mharc-axiom-mail@gnu.org; Thu, 28 Sep 2006 09:11:24 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSvfe-0000P3-R2
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 09:11:22 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSvfd-0000Og-7z
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 09:11:22 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSvfd-0000Od-5V
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 09:11:21 -0400
+Received: from [24.154.1.27] (helo=mx-8.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSvki-0002VF-JJ
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 09:16:36 -0400
+Received: from pop-4.zoominternet.net (mua-4.zoominternet.net [24.154.1.47])
+	by mx-8.zoominternet.net (8.13.1/8.13.1) with ESMTP id k8SDB0Et025153
+	for <axiom-mail@nongnu.org>; Thu, 28 Sep 2006 09:11:09 -0400
+Received: (qmail 4875 invoked from network); 28 Sep 2006 13:11:01 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.18.37])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-4.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 28 Sep 2006 13:11:01 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k8SD28n22224;
+	Thu, 28 Sep 2006 09:02:08 -0400
+Date: Thu, 28 Sep 2006 09:02:08 -0400
+Message-Id: <200609281302.k8SD28n22224@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: gdr@integrable-solutions.net
+In-reply-to: <m364f8fbuo.fsf@zeus.integrable-solutions.net> (message from
+	Gabriel Dos Reis on 28 Sep 2006 13:51:27 +0200)
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+	<200609272016.k8RKGIU21531@localhost.localdomain>
+	<m3k63pexzx.fsf@zeus.integrable-solutions.net>
+	<200609280012.k8S0CF021594@localhost.localdomain>
+	<m364f8fbuo.fsf@zeus.integrable-solutions.net>
+X-Spam-Score: 0.70 () [Tag at 15.00] FORGED_RCVD_HELO,J_CHICKENPOX_51
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.27
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Sep 2006 13:11:23 -0000
+
+> | Types created at runtime can also be accessed.
+> | 
+> | What you'd need to do is define a package which exports a set
+> | of functions you'd like which give you the ability you need.
+> | Once these functions are defined we can certainly create the
+> | lisp functions which implement them.
+> 
+> So those functions need to be Lisp, instead of SPAD?
+> 
+> | Your package can then call
+> | these lisp functions at the spad level to let you do anything 
+> | you'd like.
+> 
+> OK.
+> 
+> | What functions do you need and why do you need them?
+> 
+> I need the functions for implementing Algorithmic Differentiation of
+> codes written in SPAD.
+
+Ultimately any reflection mechanism needs to know the details
+of the underlying data structures and how information is represented.
+How detailed this knowledge needs to be depends on what you want to know.
+
+See FAQ #19 How can I get equations written on one line?
+It hay answer some of your questions.
+
+More detailed information requires that you reach into lisp.
+Axiom does this all the time. For instance in outform.spad.pamphlet
+we see
+
+        (a:$ = b:$):Boolean  == EQUAL(a, b)$Lisp
+
+which means that we define the Spad "=" function to be the lisp EQUAL.
+The $Lisp package is always available so you can define any function
+you want in lisp and use it in spad.
+
+I'd recomment that you define a spad package that exports all of
+the functions you'd like to have to do Algorithmic Differentiation.
+We can then work on creating lisp functions that access and format
+the underlying lisp data structures so you can implement the spad
+level functions. 
+
+No one outside of the Algorithmic Differentiation package will know
+that it accesses lisp.
+
+t
+
+
+
+From MAILER-DAEMON Thu Sep 28 10:48:34 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSxBi-0006Go-3v
+	for mharc-axiom-mail@gnu.org; Thu, 28 Sep 2006 10:48:34 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSxBg-0006Em-Mm
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 10:48:32 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSxBf-0006Db-V2
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 10:48:32 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSxBf-0006D8-KJ
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 10:48:31 -0400
+Received: from [62.4.17.104] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSxGl-0005VD-SJ
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 10:53:48 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by mallaury.nerim.net (Postfix) with ESMTP id C3EBF4F448;
+	Thu, 28 Sep 2006 16:48:20 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k8SEjhBK008791; Thu, 28 Sep 2006 16:45:45 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k8SEjheS008790; Thu, 28 Sep 2006 16:45:43 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+	<200609272016.k8RKGIU21531@localhost.localdomain>
+	<m3k63pexzx.fsf@zeus.integrable-solutions.net>
+	<200609280012.k8S0CF021594@localhost.localdomain>
+	<m364f8fbuo.fsf@zeus.integrable-solutions.net>
+	<200609281302.k8SD28n22224@localhost.localdomain>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <200609281302.k8SD28n22224@localhost.localdomain>
+Organization: Integrable Solutions
+Date: 28 Sep 2006 16:45:39 +0200
+Message-ID: <m3psdgxd64.fsf@zeus.integrable-solutions.net>
+Lines: 72
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Sep 2006 14:48:33 -0000
+
+root <daly@axiom-developer.org> writes:
+
+| > | Types created at runtime can also be accessed.
+| > | 
+| > | What you'd need to do is define a package which exports a set
+| > | of functions you'd like which give you the ability you need.
+| > | Once these functions are defined we can certainly create the
+| > | lisp functions which implement them.
+| > 
+| > So those functions need to be Lisp, instead of SPAD?
+| > 
+| > | Your package can then call
+| > | these lisp functions at the spad level to let you do anything 
+| > | you'd like.
+| > 
+| > OK.
+| > 
+| > | What functions do you need and why do you need them?
+| > 
+| > I need the functions for implementing Algorithmic Differentiation of
+| > codes written in SPAD.
+| 
+| Ultimately any reflection mechanism needs to know the details
+| of the underlying data structures and how information is represented.
+
+Yes.
+
+| How detailed this knowledge needs to be depends on what you want to know.
+| 
+| See FAQ #19 How can I get equations written on one line?
+| It hay answer some of your questions.
+| 
+| More detailed information requires that you reach into lisp.
+| Axiom does this all the time. For instance in outform.spad.pamphlet
+| we see
+| 
+|         (a:$ = b:$):Boolean  == EQUAL(a, b)$Lisp
+| 
+| which means that we define the Spad "=" function to be the lisp EQUAL.
+
+Indeed.
+
+| The $Lisp package is always available so you can define any function
+| you want in lisp and use it in spad.
+
+After I failed to find its definition, I concluded that it was one of
+those magical package, and I'm fine with that.
+
+| I'd recomment that you define a spad package that exports all of
+| the functions you'd like to have to do Algorithmic Differentiation.
+| We can then work on creating lisp functions that access and format
+| the underlying lisp data structures so you can implement the spad
+| level functions. 
+
+That sound good to me. 
+I have little time today, but I'll moll over this and report back
+(either me or one of the students).
+
+| No one outside of the Algorithmic Differentiation package will know
+| that it accesses lisp.
+
+Definitely.
+
+
+On a slightly related note, how many "old new worlds", are there in the
+intepreter?  I've been reading the source codes, and each refers to
+"old" something, "new" something, "Davenport's new world", etc.
+Without proper documentation it is all confusing :-(
+
+Thanks!
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu Sep 28 11:16:20 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSxca-0005H0-1V
+	for mharc-axiom-mail@gnu.org; Thu, 28 Sep 2006 11:16:20 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSxcY-0005FM-8g
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 11:16:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSxcV-0005DD-Ep
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 11:16:17 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSxcV-0005D9-CK
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 11:16:15 -0400
+Received: from [24.154.1.27] (helo=mx-8.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSxhb-0008Iw-BA
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 11:21:31 -0400
+Received: from pop-4.zoominternet.net (mua-4.zoominternet.net [24.154.1.47])
+	by mx-8.zoominternet.net (8.13.1/8.13.1) with ESMTP id k8SFFoDc024452
+	for <axiom-mail@nongnu.org>; Thu, 28 Sep 2006 11:15:55 -0400
+Received: (qmail 4755 invoked from network); 28 Sep 2006 15:15:52 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.18.37])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-4.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 28 Sep 2006 15:15:52 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k8SF6xS22280;
+	Thu, 28 Sep 2006 11:06:59 -0400
+Date: Thu, 28 Sep 2006 11:06:59 -0400
+Message-Id: <200609281506.k8SF6xS22280@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: gdr@integrable-solutions.net
+In-reply-to: <m3psdgxd64.fsf@zeus.integrable-solutions.net> (message from
+	Gabriel Dos Reis on 28 Sep 2006 16:45:39 +0200)
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+	<200609272016.k8RKGIU21531@localhost.localdomain>
+	<m3k63pexzx.fsf@zeus.integrable-solutions.net>
+	<200609280012.k8S0CF021594@localhost.localdomain>
+	<m364f8fbuo.fsf@zeus.integrable-solutions.net>
+	<200609281302.k8SD28n22224@localhost.localdomain>
+	<m3psdgxd64.fsf@zeus.integrable-solutions.net>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.27
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Sep 2006 15:16:18 -0000
+
+> On a slightly related note, how many "old new worlds", are there in the
+> intepreter?  I've been reading the source codes, and each refers to
+> "old" something, "new" something, "Davenport's new world", etc.
+> Without proper documentation it is all confusing :-(
+
+funny you should mention that.  'new' became a standard joke within the
+scratchpad group.  we were all developing things rapidly and at each
+meeting we talked about the 'new version' vs the 'old version'.  if
+there were several changes we talked about the 'new-new version' vs
+the 'new version' vs the 'old version'. after a while this became a
+point of humor.
+
+there was no tagging of versions to any great extent. 
+we created and extended function in the main line on a daily basis.
+every part of the system has 'new-new', 'new', and 'old' pieces.
+sometimes 'new' became 'old' within a day or so.
+
+i added an automatic timestamp mechanism so we could distinguish
+which version was being run down to the second.
+
+we were not trying to create a commercial product. we were doing
+research. so you'll see layers of software (charybdis is a 1960s
+2D printing routine that axiom still uses for 2D terminal output). 
+
+the most rapid changes were in the parser as we thought of new ideas.
+Bill Burge did extensive research in parsing techniques. the last
+surviving technique uses what he called a "zipper parser".  the zipper
+technique was never published as far as i know.  it basically builds a
+stack of functions and then unwinds the stack to finish the parse.
+
+so the term 'new' is without meaning and should be ignored.
+
+t
+
+
+
+From MAILER-DAEMON Thu Sep 28 11:18:40 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSxeq-0005Uj-7v
+	for mharc-axiom-mail@gnu.org; Thu, 28 Sep 2006 11:18:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSxeo-0005Ue-Mq
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 11:18:38 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSxem-0005US-Bh
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 11:18:37 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSxem-0005UP-79
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 11:18:36 -0400
+Received: from [24.154.1.27] (helo=mx-8.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GSxjs-0008Vo-UH
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 11:23:53 -0400
+Received: from pop-4.zoominternet.net (mua-4.zoominternet.net [24.154.1.47])
+	by mx-8.zoominternet.net (8.13.1/8.13.1) with ESMTP id k8SFINlB026152
+	for <axiom-mail@nongnu.org>; Thu, 28 Sep 2006 11:18:23 -0400
+Received: (qmail 10580 invoked from network); 28 Sep 2006 15:18:25 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.18.37])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-4.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 28 Sep 2006 15:18:25 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k8SF9Xa22286;
+	Thu, 28 Sep 2006 11:09:33 -0400
+Date: Thu, 28 Sep 2006 11:09:33 -0400
+Message-Id: <200609281509.k8SF9Xa22286@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: gdr@integrable-solutions.net
+In-reply-to: <m3psdgxd64.fsf@zeus.integrable-solutions.net> (message from
+	Gabriel Dos Reis on 28 Sep 2006 16:45:39 +0200)
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+	<200609272016.k8RKGIU21531@localhost.localdomain>
+	<m3k63pexzx.fsf@zeus.integrable-solutions.net>
+	<200609280012.k8S0CF021594@localhost.localdomain>
+	<m364f8fbuo.fsf@zeus.integrable-solutions.net>
+	<200609281302.k8SD28n22224@localhost.localdomain>
+	<m3psdgxd64.fsf@zeus.integrable-solutions.net>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.27
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Sep 2006 15:18:38 -0000
+
+> On a slightly related note, how many "old new worlds", are there in the
+> intepreter?  I've been reading the source codes, and each refers to
+> "old" something, "new" something, "Davenport's new world", etc.
+> Without proper documentation it is all confusing :-(
+
+if you're truly bored there is a video somewhere online of a talk
+i gave to the Lisp-NYC group about code archeology within axiom.
+it addresses this very point. i have no idea where the video lives
+but i know it exists as i've seen portions of it.
+
+t
+
+
+
+From MAILER-DAEMON Thu Sep 28 11:38:28 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GSxy0-0002dK-9l
+	for mharc-axiom-mail@gnu.org; Thu, 28 Sep 2006 11:38:28 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GSxxy-0002cE-QG
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 11:38:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GSxxw-0002b8-T2
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 11:38:26 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GSxxw-0002b2-Nl
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 11:38:24 -0400
+Received: from [66.196.97.71] (helo=web56712.mail.re3.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.52) id 1GSy32-0006R6-0l
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 11:43:40 -0400
+Received: (qmail 2337 invoked by uid 60001); 28 Sep 2006 15:38:21 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=Message-ID:Received:Date:From:Subject:To:Cc:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=e+KG8/CdN9fcvIdxmIHUeOxRCx5TJNSX7WcHsyCQ6b3h01Ec7I3zycjrVjdkYhSk5jl/WD6GVbzNO17AfnBVbBZ5hhgATcqjk7vpG/4CoVclbXk3x8DJZqB+Q+CW8+bwSnBNRmgW5IuuTfPdSigVCOljjkjT7UJB2psPL8KzCv8=
+	; 
+Message-ID: <20060928153821.2335.qmail@web56712.mail.re3.yahoo.com>
+Received: from [216.174.43.195] by web56712.mail.re3.yahoo.com via HTTP;
+	Thu, 28 Sep 2006 08:38:21 PDT
+Date: Thu, 28 Sep 2006 08:38:21 -0700 (PDT)
+From: C Y <smustudent1@yahoo.com>
+Subject: Re: [Axiom-mail] Data structure for object definition
+To: daly@axiom-developer.org, gdr@integrable-solutions.net
+In-Reply-To: <200609281509.k8SF9Xa22286@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Sep 2006 15:38:27 -0000
+
+--- root <daly@axiom-developer.org> wrote:
+
+> > On a slightly related note, how many "old new worlds", are there in
+> the
+> > intepreter?  I've been reading the source codes, and each refers to
+> > "old" something, "new" something, "Davenport's new world", etc.
+> > Without proper documentation it is all confusing :-(
+> 
+> if you're truly bored there is a video somewhere online of a talk
+> i gave to the Lisp-NYC group about code archeology within axiom.
+> it addresses this very point. i have no idea where the video lives
+> but i know it exists as i've seen portions of it.
+
+It's probably somewhere in here:  ftp://lispnyc.org/video/
+
+I downloaded it successfully once, but I no longer have the exact URLs
+and I neglected to save the files when I re-did my system last weekend
+as they are rather large.  (Currently the ftp site won't let me on for
+some reason).  I extracted the audio to wav files and I may still have
+that somewhere.  Dunno what the copyright would be on the video (Tim?
+Lispnyc?  Whoever filmed it?) but if Tim is interested I can try to
+find the audio files and upload them somewhere (I can also oggenc them
+which would probably help the size.)  I think there are four clips, the
+last one of which is only like 1 and a half minutes.  Not a complete
+video, but what was there was very interesting!
+
+Cheers,
+CY
+
+__________________________________________________
+Do You Yahoo!?
+Tired of spam?  Yahoo! Mail has the best spam protection around 
+http://mail.yahoo.com 
+
+
+
+From MAILER-DAEMON Thu Sep 28 20:06:51 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GT5tz-0008GL-3q
+	for mharc-axiom-mail@gnu.org; Thu, 28 Sep 2006 20:06:51 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GT5tw-0008Fr-UZ
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 20:06:49 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GT5tv-0008FO-6O
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 20:06:48 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GT5tv-0008FL-1K
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 20:06:47 -0400
+Received: from [62.4.16.105] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GT5z6-0004Cy-OX
+	for axiom-mail@nongnu.org; Thu, 28 Sep 2006 20:12:08 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by kraid.nerim.net (Postfix) with ESMTP id 2F63F40F71;
+	Fri, 29 Sep 2006 02:06:44 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k8T03wYh020036; Fri, 29 Sep 2006 02:04:00 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k8T03wux020015; Fri, 29 Sep 2006 02:03:58 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+	<200609272016.k8RKGIU21531@localhost.localdomain>
+	<m3k63pexzx.fsf@zeus.integrable-solutions.net>
+	<200609280012.k8S0CF021594@localhost.localdomain>
+	<m364f8fbuo.fsf@zeus.integrable-solutions.net>
+	<200609281302.k8SD28n22224@localhost.localdomain>
+	<m3psdgxd64.fsf@zeus.integrable-solutions.net>
+	<200609281506.k8SF6xS22280@localhost.localdomain>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <200609281506.k8SF6xS22280@localhost.localdomain>
+Organization: Integrable Solutions
+Date: 29 Sep 2006 02:03:58 +0200
+Message-ID: <m3y7s3h72p.fsf@zeus.integrable-solutions.net>
+Lines: 19
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Sep 2006 00:06:49 -0000
+
+root <daly@axiom-developer.org> writes:
+
+[...]
+
+| the most rapid changes were in the parser as we thought of new ideas.
+| Bill Burge did extensive research in parsing techniques. the last
+| surviving technique uses what he called a "zipper parser".  the zipper
+| technique was never published as far as i know.
+
+Is this the same "zipper" idea published by Huet?
+
+|  it basically builds a
+| stack of functions and then unwinds the stack to finish the parse.
+| 
+| so the term 'new' is without meaning and should be ignored.
+
+OK, thanks!
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Fri Sep 29 13:26:14 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GTM7q-0007O7-DO
+	for mharc-axiom-mail@gnu.org; Fri, 29 Sep 2006 13:26:14 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GTM7o-0007NU-Li
+	for axiom-mail@nongnu.org; Fri, 29 Sep 2006 13:26:12 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GTM7n-0007NI-61
+	for axiom-mail@nongnu.org; Fri, 29 Sep 2006 13:26:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GTM7m-0007NF-WD
+	for axiom-mail@nongnu.org; Fri, 29 Sep 2006 13:26:11 -0400
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GTMD8-0006wr-MT
+	for axiom-mail@nongnu.org; Fri, 29 Sep 2006 13:31:42 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GTM7j-0005mc-1U; Fri, 29 Sep 2006 19:26:07 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GTM7i-0006ea-VW; Fri, 29 Sep 2006 19:26:07 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Gabriel Dos Reis <gdr@integrable-solutions.net>
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 29 Sep 2006 19:26:04 +0200
+In-Reply-To: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+Message-ID: <9qsliawpn7.fsf@aquin.mat.univie.ac.at>
+Lines: 24
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Sep 2006 17:26:13 -0000
+
+Dear Gaby,
+
+Gabriel Dos Reis <gdr@integrable-solutions.net> writes:
+
+> Hi, 
+> 
+>   Is there an accessible algebra in Axiom that holds the
+> internal representation of Axiom object?
+> 
+> Assume, I have
+> 
+>      (x:% - %:y):% == reduc(x -$Rep y, commonk(x, y))
+> 
+> Who to I get hold on the internal representation of "-"?
+> 
+> (SEX an EXPR do not see, to give me  what I want).
+
+I'm a little worried: what do you really want to do? This doesn't look like the
+way things should be done in Axiom or Aldor. Could you give an example, i.e.,
+input plus desired output that explains *why* you want access to the internal
+representation?
+
+Martin
+
+
+
+
+
+From MAILER-DAEMON Fri Sep 29 14:03:47 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GTMiB-0003Wu-Ab
+	for mharc-axiom-mail@gnu.org; Fri, 29 Sep 2006 14:03:47 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GTMi9-0003Wj-K5
+	for axiom-mail@nongnu.org; Fri, 29 Sep 2006 14:03:45 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GTMi7-0003WA-7u
+	for axiom-mail@nongnu.org; Fri, 29 Sep 2006 14:03:44 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GTMi7-0003W7-2r
+	for axiom-mail@nongnu.org; Fri, 29 Sep 2006 14:03:43 -0400
+Received: from [62.4.17.105] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GTMnT-0002Iz-3f
+	for axiom-mail@nongnu.org; Fri, 29 Sep 2006 14:09:15 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by mallaury.nerim.net (Postfix) with ESMTP id E89634F399;
+	Fri, 29 Sep 2006 20:03:29 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k8TI0pZM003775; Fri, 29 Sep 2006 20:00:54 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k8TI0pMv003774; Fri, 29 Sep 2006 20:00:51 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+	<9qsliawpn7.fsf@aquin.mat.univie.ac.at>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <9qsliawpn7.fsf@aquin.mat.univie.ac.at>
+Organization: Integrable Solutions
+Date: 29 Sep 2006 20:00:51 +0200
+Message-ID: <m3ven6o8mk.fsf@zeus.integrable-solutions.net>
+Lines: 39
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Sep 2006 18:03:46 -0000
+
+Martin Rubey <martin.rubey@univie.ac.at> writes:
+
+| Dear Gaby,
+| 
+| Gabriel Dos Reis <gdr@integrable-solutions.net> writes:
+| 
+| > Hi, 
+| > 
+| >   Is there an accessible algebra in Axiom that holds the
+| > internal representation of Axiom object?
+| > 
+| > Assume, I have
+| > 
+| >      (x:% - %:y):% == reduc(x -$Rep y, commonk(x, y))
+| > 
+| > Who to I get hold on the internal representation of "-"?
+| > 
+| > (SEX an EXPR do not see, to give me  what I want).
+| 
+| I'm a little worried: what do you really want to do? This doesn't
+| look like the way things should be done in Axiom or Aldor. Could you
+| give an example, i.e., input plus desired output that explains *why*
+| you want access to the internal representation?
+
+I have various projects, ranging from refactoring to Algorithmic
+Differentiation, proper symbolic manipulation in Axiom, etc.
+
+For algorithmic differentiation, see
+
+   http://www.autodiff.org/
+
+
+I'm surprised that you are worried.  I don't quite understand where
+you draw the barrier between what things can be done in Axiom and what
+should not.  I see Axiom as a computational platform.  As such, it
+should enable and support various styles and flavour of computations.
+
+-- Gaby
+
+
+
+
+From MAILER-DAEMON Fri Sep 29 14:18:55 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GTMwo-0002vq-VL
+	for mharc-axiom-mail@gnu.org; Fri, 29 Sep 2006 14:18:55 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GTMwn-0002uS-NR
+	for axiom-mail@nongnu.org; Fri, 29 Sep 2006 14:18:53 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GTMwm-0002tj-5d
+	for axiom-mail@nongnu.org; Fri, 29 Sep 2006 14:18:53 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GTMwm-0002tg-1s
+	for axiom-mail@nongnu.org; Fri, 29 Sep 2006 14:18:52 -0400
+Received: from [24.154.1.27] (helo=mx-8.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GTN26-0003PS-6r
+	for axiom-mail@nongnu.org; Fri, 29 Sep 2006 14:24:24 -0400
+Received: from pop-3.zoominternet.net (mua-3.zoominternet.net [24.154.1.46])
+	by mx-8.zoominternet.net (8.13.1/8.13.1) with ESMTP id k8TIImTZ014744
+	for <axiom-mail@nongnu.org>; Fri, 29 Sep 2006 14:18:48 -0400
+Received: (qmail 11406 invoked from network); 29 Sep 2006 18:18:47 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.18.37])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-3.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <gdr@integrable-solutions.net>; 29 Sep 2006 18:18:47 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k8TI9i223109;
+	Fri, 29 Sep 2006 14:09:44 -0400
+Date: Fri, 29 Sep 2006 14:09:44 -0400
+Message-Id: <200609291809.k8TI9i223109@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: martin.rubey@univie.ac.at
+In-reply-to: <9qsliawpn7.fsf@aquin.mat.univie.ac.at> (message from Martin
+	Rubey on 29 Sep 2006 19:26:04 +0200)
+Subject: Re: [Axiom-mail] Data structure for object definition
+References: <m3ven9f4t4.fsf@zeus.integrable-solutions.net>
+	<9qsliawpn7.fsf@aquin.mat.univie.ac.at>
+X-Spam-Score: 1.20 (*) [Tag at 15.00] FORGED_RCVD_HELO, J_CHICKENPOX_51,
+	J_CHICKENPOX_71
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.27
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 29 Sep 2006 18:18:54 -0000
+
+> > Hi, 
+> > 
+> >   Is there an accessible algebra in Axiom that holds the
+> > internal representation of Axiom object?
+> > 
+> > Assume, I have
+> > 
+> >      (x:% - %:y):% == reduc(x -$Rep y, commonk(x, y))
+> > 
+> > Who to I get hold on the internal representation of "-"?
+> > 
+> > (SEX an EXPR do not see, to give me  what I want).
+> 
+> I'm a little worried: what do you really want to do? This doesn't
+> look like the way things should be done in Axiom or Aldor. Could you
+> give an example, i.e., input plus desired output that explains *why*
+> you want access to the internal representation?
+
+Actually, introspection would be quite useful when trying to develop
+a general purpose routine for line-wrapping or equation formating.
+
+The line wrapping problem could take two paths. 
+
+Path 1 is to hierarchically organize the expression and ask each 
+subexpression to format itself into a multi-line buffer. If the
+subexpression exceeds the linelength and indentation depth requirements
+you can recurse into the expression, split it on operators, and retry.
+
+Path 2 is to create a "WHERE" package. The WHERE package would extract
+subexpressions from an expression and print is as:
+
+   f(x) = a op b
+     where a = expr1
+           b = expr2
+
+etc.
+
+t
+
+
+
+

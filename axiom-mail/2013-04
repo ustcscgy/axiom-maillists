@@ -1,0 +1,2108 @@
+From MAILER-DAEMON Thu Apr 04 20:07:46 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UNuC2-000178-DN
+	for mharc-axiom-mail@gnu.org; Thu, 04 Apr 2013 20:07:46 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:36138)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.org>) id 1UNuBy-00016U-VX
+	for axiom-mail@nongnu.org; Thu, 04 Apr 2013 20:07:45 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ralf@hemmecke.org>) id 1UNuBw-0007K7-5z
+	for axiom-mail@nongnu.org; Thu, 04 Apr 2013 20:07:42 -0400
+Received: from mo6-p00-ob.rzone.de ([2a01:238:20a:202:5300::1]:54738)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.org>) id 1UNuBv-0007Jb-V3
+	for axiom-mail@nongnu.org; Thu, 04 Apr 2013 20:07:40 -0400
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXs6bamDO4KmmoRsZ13hlmoEk5Wa1Qkj9VDuTRCa5D6
+X-RZG-CLASS-ID: mo00
+Received: from [192.168.1.2]
+	(62-47-60-224.adsl.highway.telekom.at [62.47.60.224])
+	by smtp.strato.de (joses mo37) (RZmta 31.24 DYNA|AUTH)
+	with ESMTPA id 4003c4p34Nk5V8 for <axiom-mail@nongnu.org>;
+	Fri, 5 Apr 2013 02:07:37 +0200 (CEST)
+Message-ID: <515E15C9.4080003@hemmecke.org>
+Date: Fri, 05 Apr 2013 02:07:37 +0200
+From: Ralf Hemmecke <ralf@hemmecke.org>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64;
+	rv:17.0) Gecko/20130308 Thunderbird/17.0.4
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+References: <CAC6x94SuShzM=Ko8gdUvbq_YuGdoZgPRbg+U383aVReL8-3y2g@mail.gmail.com>
+	<5156A452.9040903@martinb.com> <5156D42B.6080201@hemmecke.org>
+	<51572019.2070902@martinb.com>
+In-Reply-To: <51572019.2070902@martinb.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Error: Malformed IPv6 address
+	(bad octet value).
+X-Received-From: 2a01:238:20a:202:5300::1
+Subject: Re: [Axiom-mail] A question about Axiom capabilities,
+ Fwd: [fricas-devel] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Apr 2013 00:07:45 -0000
+
+On 03/30/2013 06:25 PM, Martin Baker wrote:
+> On 30/03/13 12:01, Ralf Hemmecke wrote:
+>> Unless you specify what solver you intend to write, it's probably an
+>> unsolvable task to write a general solver that works for all types of
+>> algebras.
+
+> Agreed, but I was thinking more about doing it on a per-domain basis and
+> building up gradually.
+> 
+> So we start with a very simple algebra that we want to create a equation
+> solver for, for example we might want to create an algebra domain based
+> on this category:
+> 
+> MyAlgebra() : Category with
+>   myOp1 : ($,$) -> $
+>   myOp2 : ($) -> $
+
+I don't quite understand. If you assume myOp1 to be commutative, then
+solving equations is quite a different task from when it is
+non-commutative. Where would you store all these axioms?
+
+If you mean "equations solver" then that includes also solving for (x,y)
+in x + y = 0.
+
+Or suppose your algebra is a ring. Do you want to write a solver for
+
+  7*x^5+y^3*x^4+2 = 0
+
+i.e. finding all pairs (x,y) that fulfil this equation?
+
+Looks like you aim at a general term rewriting system.
+
+Ralf
+
+
+
+From MAILER-DAEMON Fri Apr 05 04:52:02 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UO2NO-0007KM-3b
+	for mharc-axiom-mail@gnu.org; Fri, 05 Apr 2013 04:52:02 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:47604)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UO2NI-0007J2-Iq
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 04:52:01 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UO2ND-000081-TE
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 04:51:56 -0400
+Received: from moutng.kundenserver.de ([212.227.17.8]:52226)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UO2ND-00007P-Ju
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 04:51:51 -0400
+Received: from [192.168.1.64] (93-96-126-45.zone4.bethere.co.uk [93.96.126.45])
+	by mrelayeu.kundenserver.de (node=mreu4) with ESMTP (Nemesis)
+	id 0LcrNk-1V5vlM0hCC-00i3C5; Fri, 05 Apr 2013 10:51:48 +0200
+Message-ID: <515E90A2.9000403@martinb.com>
+Date: Fri, 05 Apr 2013 09:51:46 +0100
+From: Martin Baker <ax87438@martinb.com>
+Organization: axiom
+User-Agent: Mozilla/5.0 (X11; Linux x86_64;
+	rv:17.0) Gecko/20130307 Thunderbird/17.0.4
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+References: <CAC6x94SuShzM=Ko8gdUvbq_YuGdoZgPRbg+U383aVReL8-3y2g@mail.gmail.com>
+	<5156A452.9040903@martinb.com> <5156D42B.6080201@hemmecke.org>
+	<51572019.2070902@martinb.com> <515E15C9.4080003@hemmecke.org>
+In-Reply-To: <515E15C9.4080003@hemmecke.org>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID: V02:K0:qTpW/06cV9xbDkr77Cydn9qX11aJHq8F7Kehwn9QGOZ
+	+BzsGphZSP2AZ5q3yIBox6aYLZizZC5PJEHt4jaEtgKLYuPTr6
+	ik0/Zg9RolCbroazXRmkEKHdPH10s7oiF10tRT+7fgN6zqBS3B
+	/tZLaWHvLCBiJ6+92cqEEQ1hH9rKVx9uQ0gz9hQhsIG9QT2znd
+	upWAPEtJiBhScUK6KrhyhDYQ11ZT/l2FgfHBRFFyllEM+WPRuG
+	gjgjmfsf+e51VO8OIZVRKUt7GGgZX/jyNs7CqZ3uK+vizVD+T/
+	KwmwS+muc0WSZ8TRGgOTHvBMdfCCCP5Yd+XVr+Qe8qIoA3hQSd
+	OhBfCjFTWRBCqleD81ws=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.4.x-2.6.x [generic]
+X-Received-From: 212.227.17.8
+Subject: Re: [Axiom-mail] A question about Axiom capabilities,
+ Fwd: [fricas-devel] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Apr 2013 08:52:01 -0000
+
+On 05/04/13 01:07, Ralf Hemmecke wrote:
+> I don't quite understand. If you assume myOp1 to be commutative, then
+> solving equations is quite a different task from when it is
+> non-commutative. Where would you store all these axioms?
+
+Yes that's an interesting question. For an Axiom category to correspond 
+to a 'category' in category theory or a 'theory' in universal algebra 
+then it should define both the function signatures and the axioms. I get 
+the impression that Axiom(the program) attempts to include axioms in 
+categories to a limited extent by say: inheriting commutative but this 
+would not be complete enough to drive a general equation solver? (and, 
+of course, it cannot enforce commutative axiom in domain instances). It 
+seems a sight irony that Axiom(the program) does not do much about axioms.
+
+Given that there is no resources (or desire, as far as I can see) to 
+change the structure of Axiom then I was wondering, just for specific 
+domains where we want a specific equation solver, could we encode the 
+axioms in a set of rules in a domain or package? I guess I'm looking for 
+a compromise between building this into the Lisp code and writing a 
+seperate equation solver in every domain.
+
+> Looks like you aim at a general term rewriting system.
+
+Yes, but again I recognise that there are no resources, so I was 
+wondering if it would be possible to start with a very simple domain 
+(not a field, something really simple, which is what I was trying to 
+indicate in the psudocode in my last message). Then abstract out a rule 
+engine. Then gradually build it up over time so that it could cope with 
+more complex domains.
+
+This is probably not very practical, but I was just trying to do a 
+thought experiment to investigate what would be required to have 
+variables that range over domains that are not numbers.
+
+Martin
+
+
+
+From MAILER-DAEMON Fri Apr 05 05:21:00 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UO2pQ-00069I-6O
+	for mharc-axiom-mail@gnu.org; Fri, 05 Apr 2013 05:21:00 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:57191)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.org>) id 1UO2pI-000688-HF
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 05:20:58 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ralf@hemmecke.org>) id 1UO2p7-0002U8-HY
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 05:20:52 -0400
+Received: from mo6-p00-ob.rzone.de ([2a01:238:20a:202:5300::1]:61001)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ralf@hemmecke.org>) id 1UO2p7-0002TX-An
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 05:20:41 -0400
+X-RZG-AUTH: :Pm0Ic2CgfvKqpyys4bXs6bamDO4KmmoRsZ13hlmoEk5RYEk+icxFp+pk/v/tAqQ=
+X-RZG-CLASS-ID: mo00
+Received: from [193.170.38.230] (trex.risc.uni-linz.ac.at [193.170.38.230])
+	by smtp.strato.de (jorabe mo22) (RZmta 31.24 AUTH)
+	with ESMTPA id R06348p358KVBf for <axiom-mail@nongnu.org>;
+	Fri, 5 Apr 2013 11:20:37 +0200 (CEST)
+Message-ID: <515E9765.6000100@hemmecke.org>
+Date: Fri, 05 Apr 2013 11:20:37 +0200
+From: Ralf Hemmecke <ralf@hemmecke.org>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64;
+	rv:17.0) Gecko/20130308 Thunderbird/17.0.4
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+References: <CAC6x94SuShzM=Ko8gdUvbq_YuGdoZgPRbg+U383aVReL8-3y2g@mail.gmail.com>
+	<5156A452.9040903@martinb.com> <5156D42B.6080201@hemmecke.org>
+	<51572019.2070902@martinb.com> <515E15C9.4080003@hemmecke.org>
+	<515E90A2.9000403@martinb.com>
+In-Reply-To: <515E90A2.9000403@martinb.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Error: Malformed IPv6 address
+	(bad octet value).
+X-Received-From: 2a01:238:20a:202:5300::1
+Subject: Re: [Axiom-mail] A question about Axiom capabilities,
+ Fwd: [fricas-devel] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Apr 2013 09:20:59 -0000
+
+On 04/05/2013 10:51 AM, Martin Baker wrote:
+> It seems a sight irony that Axiom(the program) does not do much about
+> axioms.
+
+Of course, AXIOM can deal with axioms, but the SPAD language does not
+include any way to specify axiom (not even Aldor can do this).
+
+>> Looks like you aim at a general term rewriting system.
+
+> Yes, but again I recognise that there are no resources, so I was 
+> wondering if it would be possible to start with a very simple domain 
+
+For a term rewriting system you basically have to start with the
+implementation of a term algebra. The signature would basically tell,
+what symbols are allowed. Since LISP is so fitting for a representation
+of such a term algebra, it is no surprise that quite a lot of computer
+algebra systems were written in LISP.
+
+Then you can add equations (axioms) and a mechanism to reduce a given
+term modulo such equations. But there is no general algorithm to
+transform a given term modulo such equation into a canonical form. A
+"canonical form" does not even exist for every given term rewriting
+system. The non-existence of the "eierlegende Wollmilchsau"
+(http://de.wikipedia.org/wiki/Eierlegende_Wollmilchsau
+http://en.wiktionary.org/wiki/eierlegende_Wollmilchsau) is the reason
+why people work on specialized solvers and use special representations
+of the respective term algebra to make things fast.
+
+Ralf
+
+
+
+From MAILER-DAEMON Fri Apr 05 06:11:27 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UO3cF-0002jn-3h
+	for mharc-axiom-mail@gnu.org; Fri, 05 Apr 2013 06:11:27 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:45417)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UO3c5-0002jY-C7
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 06:11:25 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UO3bx-0005HW-JS
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 06:11:17 -0400
+Received: from moutng.kundenserver.de ([212.227.17.10]:57646)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UO3bx-0005H3-8Q
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 06:11:09 -0400
+Received: from [192.168.1.64] (93-96-126-45.zone4.bethere.co.uk [93.96.126.45])
+	by mrelayeu.kundenserver.de (node=mrbap4) with ESMTP (Nemesis)
+	id 0Lm4C9-1UxOMS3sRt-00ZP5F; Fri, 05 Apr 2013 12:11:06 +0200
+Message-ID: <515EA338.6020607@martinb.com>
+Date: Fri, 05 Apr 2013 11:11:04 +0100
+From: Martin Baker <ax87438@martinb.com>
+Organization: axiom
+User-Agent: Mozilla/5.0 (X11; Linux x86_64;
+	rv:17.0) Gecko/20130307 Thunderbird/17.0.4
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+References: <CAC6x94SuShzM=Ko8gdUvbq_YuGdoZgPRbg+U383aVReL8-3y2g@mail.gmail.com>
+	<5156A452.9040903@martinb.com> <5156D42B.6080201@hemmecke.org>
+	<51572019.2070902@martinb.com> <515E15C9.4080003@hemmecke.org>
+	<515E90A2.9000403@martinb.com> <515E9765.6000100@hemmecke.org>
+In-Reply-To: <515E9765.6000100@hemmecke.org>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID: V02:K0:8+DnGFkm550HPR6yKaoxiVr+tmg/l0WTxjEZBxk52cQ
+	aPIYRpF+2J9a2SvxI9mfduZlm5pCG7g9yPimgyMGyJafD0ieO8
+	3nmoZBDVM8aFoJTiiRTZIAHSDrI2JjITvDrQLXqCNRIIUDzvjC
+	TPB+Dz/XQcMye1YWgA047JuBx/iiubZgr7Qx6TyP2Jj6XsoGfS
+	83/wSS+ndcMlNkI27d918NcBIwlzUI0/iPdTrij1M7saNP/IZw
+	yl1UkX5z2iVKjOlx/ENxccGjYZ7JPRqgUgrSSoH0UgfdtvnjQZ
+	vy5L4GC7I1I2Y44/NFwP8vB7Hms4qr54lDh9/ZKy8gGL5Z84Yn
+	O7KbYvL5DPIylaLApwVA=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.4.x-2.6.x [generic]
+X-Received-From: 212.227.17.10
+Subject: Re: [Axiom-mail] A question about Axiom capabilities,
+ Fwd: [fricas-devel] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Apr 2013 10:11:26 -0000
+
+On 05/04/13 10:20, Ralf Hemmecke wrote:
+> On 04/05/2013 10:51 AM, Martin Baker wrote:
+>> It seems a sight irony that Axiom(the program) does not do much about
+>> axioms.
+>
+> Of course, AXIOM can deal with axioms, but the SPAD language does not
+> include any way to specify axiom (not even Aldor can do this).
+
+I was thinking of something like CASL:
+http://www.informatik.uni-bremen.de/cofi/wiki/index.php/CASL
+I realise that its purpose is different to a category in Axiom but it 
+does at least show how the semantics as well as the syntax of a category 
+could be encoded in a well defined language.
+
+Even if it were not possible to use this 'semantic' information for 
+enforcing axioms or equation solvers it would be good to have it for 
+documentation and automatically generating test scripts.
+
+>>> Looks like you aim at a general term rewriting system.
+>
+>> Yes, but again I recognise that there are no resources, so I was
+>> wondering if it would be possible to start with a very simple domain
+>
+> For a term rewriting system you basically have to start with the
+> implementation of a term algebra. The signature would basically tell,
+> what symbols are allowed. Since LISP is so fitting for a representation
+> of such a term algebra, it is no surprise that quite a lot of computer
+> algebra systems were written in LISP.
+>
+> Then you can add equations (axioms) and a mechanism to reduce a given
+> term modulo such equations. But there is no general algorithm to
+> transform a given term modulo such equation into a canonical form. A
+> "canonical form" does not even exist for every given term rewriting
+> system. The non-existence of the "eierlegende Wollmilchsau"
+> (http://de.wikipedia.org/wiki/Eierlegende_Wollmilchsau
+> http://en.wiktionary.org/wiki/eierlegende_Wollmilchsau) is the reason
+> why people work on specialized solvers and use special representations
+> of the respective term algebra to make things fast.
+
+So are you saying that, for practical purposes, it is not even worth 
+trying to write an equation solver for a given category/domain in SPAD, 
+even for a very simple category?
+
+I realise there is no general algorithm to do this, but I was hoping 
+there might have been the possibility of a common 'toolkit' so at least 
+every category/domain writer was not totally on their own.
+
+Martin
+
+
+
+
+
+From MAILER-DAEMON Fri Apr 05 07:11:30 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UO4YM-0003MP-3w
+	for mharc-axiom-mail@gnu.org; Fri, 05 Apr 2013 07:11:30 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:38726)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UO4Y9-0003M0-Ml
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 07:11:28 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UO4Y5-0004Zg-Qg
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 07:11:17 -0400
+Received: from mail-ee0-f41.google.com ([74.125.83.41]:61722)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UO4Y5-0004Z1-K1
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 07:11:13 -0400
+Received: by mail-ee0-f41.google.com with SMTP id c1so1322687eek.14
+	for <axiom-mail@nongnu.org>; Fri, 05 Apr 2013 04:11:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:x-received:sender:date:x-google-sender-auth:message-id
+	:subject:from:to:cc:content-type;
+	bh=U87kJe8udO9cGLPSZsqzw9qbU2tjY1k88JRX2SVp4OQ=;
+	b=qHkVqf53mR8+L3I60GM/10QcJp62nWC8k87rDRQi8WIRCgSKvAYFeGDRzelDEz/csJ
+	PJ/lWmfs7YnQDSZJQWLpK1Ik4gU5p59OC72vsYxxrXQNJYk576Pn5cP6BgAmUudDlrdn
+	FXspbIU1ZKprDamfdFx9bxsZelNJFGhUJK0dlfkKXEed03n6vCt/xTIEc0w2mwNkIL/4
+	2rMaqjhDn0jS7bWJayJlW4fNRUh6T8htjtXa9P/0nqgVPGnzEN3FkmbkHhH5nN/mPAvY
+	zMt3e0bMhTflU0OHiE4oF3ooOpAPhoMdaebn/67j+DOjhsuQ0VfF5uORGd5hKaewz/5Z
+	2obA==
+MIME-Version: 1.0
+X-Received: by 10.14.5.6 with SMTP id 6mr18661700eek.42.1365160272179; Fri, 05
+	Apr 2013 04:11:12 -0700 (PDT)
+Sender: dosreis@gmail.com
+Received: by 10.14.207.201 with HTTP; Fri, 5 Apr 2013 04:11:12 -0700 (PDT)
+Date: Fri, 5 Apr 2013 06:11:12 -0500
+X-Google-Sender-Auth: OPNafn03ermQM0pp2hLmWClr18A
+Message-ID: <CAAiZkiB-ijgKamHTxpT3nYpc20KPyzBHa4-KukT96skcEuOVWw@mail.gmail.com>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+To: Martin Baker <ax87438@martinb.com>
+Content-Type: text/plain; charset=ISO-8859-1
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x [fuzzy]
+X-Received-From: 74.125.83.41
+Cc: open-axiom-devel@lists.sf.net, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Apr 2013 11:11:28 -0000
+
+On Fri, Apr 5, 2013 at 3:51 AM, Martin Baker <ax87438@martinb.com> wrote:
+
+> Given that there is no resources (or desire, as far as I can see) to change
+> the structure of Axiom then I was wondering, just for specific domains where
+> we want a specific equation solver, could we encode the axioms in a set of
+> rules in a domain or package? I guess I'm looking for a compromise between
+> building this into the Lisp code and writing a seperate equation solver in
+> every domain.
+
+Your probably know that OpenAxiom started putting the axioms in AXIOM.
+See for example:
+
+  http://sourceforge.net/p/open-axiom/code/2800/tree/trunk/src/algebra/catdef.spad.pamphlet
+
+In fact, a couple of years ago, a student of mine did experiments on
+exploiting these axioms to help code generation and automatic
+parallelization.  The results were very encouraging (see the
+yli-sandbox for example.)
+
+OpenAxiom is very much committed to get the axioms integrated to the
+entire type checking and elaboration process.
+
+-- Gaby
+
+
+From MAILER-DAEMON Fri Apr 05 12:05:57 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UO99J-000633-3K
+	for mharc-axiom-mail@gnu.org; Fri, 05 Apr 2013 12:05:57 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:38664)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UO99F-00061C-WB
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 12:05:56 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UO99A-0005AD-W8
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 12:05:53 -0400
+Received: from moutng.kundenserver.de ([212.227.17.8]:50021)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UO99A-0005A4-Jz
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 12:05:48 -0400
+Received: from [192.168.1.64] (93-96-126-45.zone4.bethere.co.uk [93.96.126.45])
+	by mrelayeu.kundenserver.de (node=mreu1) with ESMTP (Nemesis)
+	id 0Lg4q7-1Uz5Wr3PtT-00pKV0; Fri, 05 Apr 2013 18:05:46 +0200
+Message-ID: <515EF65A.5080006@martinb.com>
+Date: Fri, 05 Apr 2013 17:05:46 +0100
+From: Martin Baker <ax87438@martinb.com>
+Organization: axiom
+User-Agent: Mozilla/5.0 (X11; Linux x86_64;
+	rv:17.0) Gecko/20130307 Thunderbird/17.0.4
+MIME-Version: 1.0
+To: open-axiom-devel@lists.sf.net, axiom-mail@nongnu.org
+References: <CAAiZkiB-ijgKamHTxpT3nYpc20KPyzBHa4-KukT96skcEuOVWw@mail.gmail.com>
+In-Reply-To: <CAAiZkiB-ijgKamHTxpT3nYpc20KPyzBHa4-KukT96skcEuOVWw@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID: V02:K0:hVJSXpa5uwlYMoG5yKnweOgo8hdZ1e9c1DGzzm8UeQ1
+	iq3FWT6M+uyWXrB24m1PyMIxH2szWYgY1761OHePkAErM4YegP
+	wtJlEb9T5c4q1aQ79THbaeSHtxtdeUTN+WQ5YqwC3Y+K/d1W5y
+	YQdBb1oMMxEchV/ey1Cm+hmqpddVeYJz5SPPjUF19NKXlDyIG3
+	mRsb0NQIZGhRZpLg2MMXVpR9UDkLatNSq6usHfe1uMP7MqTehm
+	4zCbrQVD6DdDw9fTecHmvnHJ9/E/A+Cw0cjmbGzVMwVLqeV9NY
+	5atoA1O08rcQ5PAuupDcR9Nk3yaT3qmuq/wWDjhSICJkZhVYB/
+	gWVYddxaZgdO8OSc/ehw=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.4.x-2.6.x [generic]
+X-Received-From: 212.227.17.8
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Apr 2013 16:05:56 -0000
+
+On 05/04/13 12:11, Gabriel Dos Reis wrote:
+ > Your probably know that OpenAxiom started putting the axioms in AXIOM.
+ > See for example:
+ >
+ > 
+http://sourceforge.net/p/open-axiom/code/2800/tree/trunk/src/algebra/catdef.spad.pamphlet
+ >
+ > In fact, a couple of years ago, a student of mine did experiments on
+ > exploiting these axioms to help code generation and automatic
+ > parallelization.  The results were very encouraging (see the
+ > yli-sandbox for example.)
+ >
+ > OpenAxiom is very much committed to get the axioms integrated to the
+ > entire type checking and elaboration process.
+
+Gaby,
+
+Thanks, I find this stuff interesting, Its not that I expect it to 
+appear in any flavour of Axiom soon (feel free to correct my 
+assumptions), its just that I like to know how things work, what can and 
+what can't be done.
+
+AFSICS axioms are currently embedded in the inline documentation for the 
+category like this:
+
+snippet from:
+http://sourceforge.net/p/open-axiom/code/2800/tree/trunk/src/algebra/catdef.spad.pamphlet
+++ Axioms:
+++   \spad{associative("+":(%,%)->%)}\tab{30}\spad{ (x+y)+z = x+(y+z) }
+++   \spad{commutative("+":(%,%)->%)}\tab{30}\spad{ x+y = y+x }
+AbelianSemiGroup(): Category == SetCategory with
+
+I had a rummage about in the sandbox you mentioned (written by Yueli 
+about 3 years ago) and I did not come across any overall tutorial file 
+(what I would think of as top level documentation) I may have missed it. 
+Did Yueli write any thesis or anything like that?
+
+At first glance it does look encouraging as the code to analyse the code 
+does seems to be written in SPAD, which hopefully shows that it can be 
+done. When I look at the code (such as snippet below) it looks like the 
+axioms are coded differently, that is on a per operator basis?
+
+snippet from:
+http://sourceforge.net/apps/trac/open-axiom/browser/yli-sandbox/contrib/redec/operatorcats.spad?rev=2776
+)abbrev category ASSOCOP AssociativeOperator
+   ++ Axiom: associativity: rule op(a, op(b, c)) == op(op(a,b), c)
+   AssociativeOperator(T: SetCategory, op: Mapping(T, T, T)):Category
+     == MagmaOperator(T, op)
+
+Any further clues for understanding the code appreciated, thanks,
+
+Martin
+
+
+
+From MAILER-DAEMON Fri Apr 05 22:39:31 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UOJ2R-0003bg-7f
+	for mharc-axiom-mail@gnu.org; Fri, 05 Apr 2013 22:39:31 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:36037)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UOJ2I-0003Q0-Lp
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 22:39:29 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UOJ2B-000257-U4
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 22:39:22 -0400
+Received: from mail-ea0-x234.google.com ([2a00:1450:4013:c01::234]:62839)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UOJ2B-000240-G6
+	for axiom-mail@nongnu.org; Fri, 05 Apr 2013 22:39:15 -0400
+Received: by mail-ea0-f180.google.com with SMTP id d10so1533502eaj.39
+	for <axiom-mail@nongnu.org>; Fri, 05 Apr 2013 19:39:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:x-received:sender:in-reply-to:references:date
+	:x-google-sender-auth:message-id:subject:from:to:cc:content-type;
+	bh=YpvCcxL6WYNSuLjcUWUqYFBT9XYrxUprcHJZ6c4EnrA=;
+	b=FIyYdnofpdzsKHMBXei9dsuj7txGumHCFGNI1F1zzVplYo+YyraSqzCqmLP20fxeZT
+	Jrb9y7aTHQt7rOWjcgDGkkQiAzupw4psCbqgD1BrFv9whosOgVXwi5dRsC6V1dGgqElr
+	J19tUmDDIhG46IIO1RNQks81FW0KYrlHKe35EZumSVec0l9SM1TOINkrZIP/dAFJbSzU
+	ZKVShgRIskTeoBOog/T/xkJV+9t7URkFuh4mY+Isaok4VbnUdmJ8tiSbq8NSiwT29Lzj
+	pm42lgIFabPgg9YpAPWrnA+vi+vGA+r19RxEpTJc9p0NNMw7BqVSUSVMjjCvXiNEiliF
+	w2hw==
+MIME-Version: 1.0
+X-Received: by 10.15.43.73 with SMTP id w49mr24785250eev.12.1365215954563;
+	Fri, 05 Apr 2013 19:39:14 -0700 (PDT)
+Sender: dosreis@gmail.com
+Received: by 10.14.207.201 with HTTP; Fri, 5 Apr 2013 19:39:14 -0700 (PDT)
+In-Reply-To: <515EF65A.5080006@martinb.com>
+References: <CAAiZkiB-ijgKamHTxpT3nYpc20KPyzBHa4-KukT96skcEuOVWw@mail.gmail.com>
+	<515EF65A.5080006@martinb.com>
+Date: Fri, 5 Apr 2013 21:39:14 -0500
+X-Google-Sender-Auth: 4gpVeucoEkAfZ2DOVWMXm2qQvw4
+Message-ID: <CAAiZkiBNp=LHJ10qTtd_vAZWS_jKUxcuHgMLA+QQsL+TpRi13w@mail.gmail.com>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+To: Martin Baker <ax87438@martinb.com>
+Content-Type: text/plain; charset=ISO-8859-1
+X-detected-operating-system: by eggs.gnu.org: Error: Malformed IPv6 address
+	(bad octet value).
+X-Received-From: 2a00:1450:4013:c01::234
+Cc: open-axiom-devel@lists.sf.net, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Apr 2013 02:39:29 -0000
+
+On Fri, Apr 5, 2013 at 11:05 AM, Martin Baker <ax87438@martinb.com> wrote:
+> On 05/04/13 12:11, Gabriel Dos Reis wrote:
+>> Your probably know that OpenAxiom started putting the axioms in AXIOM.
+>> See for example:
+>>
+>>
+>> http://sourceforge.net/p/open-axiom/code/2800/tree/trunk/src/algebra/catdef.spad.pamphlet
+>>
+>> In fact, a couple of years ago, a student of mine did experiments on
+>> exploiting these axioms to help code generation and automatic
+>> parallelization.  The results were very encouraging (see the
+>> yli-sandbox for example.)
+>>
+>> OpenAxiom is very much committed to get the axioms integrated to the
+>> entire type checking and elaboration process.
+>
+> Gaby,
+>
+> Thanks, I find this stuff interesting, Its not that I expect it to appear in
+> any flavour of Axiom soon (feel free to correct my assumptions), its just
+> that I like to know how things work, what can and what can't be done.
+>
+> AFSICS axioms are currently embedded in the inline documentation for the
+> category like this:
+>
+> snippet from:
+> http://sourceforge.net/p/open-axiom/code/2800/tree/trunk/src/algebra/catdef.spad.pamphlet
+> ++ Axioms:
+> ++   \spad{associative("+":(%,%)->%)}\tab{30}\spad{ (x+y)+z = x+(y+z) }
+> ++   \spad{commutative("+":(%,%)->%)}\tab{30}\spad{ x+y = y+x }
+> AbelianSemiGroup(): Category == SetCategory with
+
+We did not get time to convert all the comments into code as is done
+for some the new categories and domains in the trunk repository.
+For example, from
+
+http://sourceforge.net/p/open-axiom/code/2800/tree/trunk/src/algebra/catdef.spad.pamphlet
+
+you see:
+
+SemiGroupOperatorCategory(T: BasicType): Category ==
+  BinaryOperatorCategory T with
+    assume associativity ==
+      forall(f: %, x: T, y:T, z: T) . f(f(x,y),z) = f(x,f(y,z))
+
+and
+
+MonoidOperatorCategory(T: BasicType): Category ==
+  SemiGroupOperatorCategory T with
+    neutralValue: % -> T
+      ++ \spad{neutralValue f} returns the neutral value of the
+      ++ monoid operation \spad{f}.
+    assume neutrality ==
+      forall(f: %, x: T) .
+         f(x, neutralValue f) = x
+         f(neutralValue f, x) = x
+
+The general idea is that most of the axioms and properties are
+with the operations, not the carrier sets of structures (as currently
+done for old domains.)  That entails some redesign of the
+category and domain hierarchies.  We didn't get around to finish
+the conversion; plus Yue  is no longer working in this area.
+
+> I had a rummage about in the sandbox you mentioned (written by Yueli about 3
+> years ago) and I did not come across any overall tutorial file (what I would
+> think of as top level documentation) I may have missed it. Did Yueli write
+> any thesis or anything like that?
+
+unfortunately, no.  What I have are internal reports we didn't to put
+in shape that is publishable, even as technical reports.
+
+> At first glance it does look encouraging as the code to analyse the code
+> does seems to be written in SPAD, which hopefully shows that it can be done.
+
+Yes, most of the code was written in Spad; some hooks into the parser was
+needed, but the elaboration, and the whole static analysis is written in Spad.
+
+(By the way, I used OpenAxiom in 2006 and 2008 for static analysis and
+compiler courses so, there was precedent for writing the "compiler stuff" in
+Spad.  Some improvements were needed to make the whole experience palatable
+though -- for example, that is why we have a Syntax domain, some form of
+pattern matching, user-defined case operator, existential type, etc.)
+
+> When I look at the code (such as snippet below) it looks like the axioms are
+> coded differently, that is on a per operator basis?
+
+Yes, I explained above many properties are with the operators, not the
+carrier set -- Integer can be the carrier set for many monoidal structures.
+
+>
+> snippet from:
+> http://sourceforge.net/apps/trac/open-axiom/browser/yli-sandbox/contrib/redec/operatorcats.spad?rev=2776
+> )abbrev category ASSOCOP AssociativeOperator
+>   ++ Axiom: associativity: rule op(a, op(b, c)) == op(op(a,b), c)
+>   AssociativeOperator(T: SetCategory, op: Mapping(T, T, T)):Category
+>     == MagmaOperator(T, op)
+>
+> Any further clues for understanding the code appreciated, thanks,
+
+The main trunk has the axioms integrated in codes.  One of the reasons why
+Yue used the old commentary style to write some of the axioms is that he
+needed to analyse the entire algebra set (which he did), but he did
+not have the time
+to redesign the entire algebra hierarchy.  After the positive
+preliminary reports,
+we headed for getting some results out (see the ISSAC 2011 paper); and
+after that
+he changed fields of studies.
+
+-- Gaby
+
+
+From MAILER-DAEMON Sat Apr 06 00:34:35 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UOKpn-0007vZ-F9
+	for mharc-axiom-mail@gnu.org; Sat, 06 Apr 2013 00:34:35 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:51925)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOKpg-0007kw-BN
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 00:34:34 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOKpd-0003Wk-69
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 00:34:28 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:42242
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOKpd-0003WS-12
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 00:34:25 -0400
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r364YJse001114;
+	Fri, 5 Apr 2013 22:34:20 -0600
+Received: by u1204 (Postfix, from userid 1000)
+	id 2343A6873B; Sat,  6 Apr 2013 00:34:20 -0400 (EDT)
+From: u1204 <daly@axiom-developer.org>
+To: Martin Baker <ax87438@martinb.com>
+In-Reply-To: <515E90A2.9000403@martinb.com> (message from Martin Baker on Fri,
+	05 Apr 2013 09:51:46 +0100)
+Date: Sat, 06 Apr 2013 00:34:20 -0400
+Message-ID: <877gkgz38z.fsf@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x
+X-Received-From: 209.135.140.38
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities,
+ Fwd: [fricas-devel] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Apr 2013 04:34:34 -0000
+
+>Given that there is no resources (or desire, as far as I can see) to 
+>change the structure of Axiom 
+
+There is the desire. Axiom has a long term goal of introducing
+program-proof technology (either COQ or ACL2). ACL2 runs on the same
+lisp as Axiom. The plan is to load it into the Axiom image and make it
+support program proofs for spad code.
+
+I do not have the resources to attack this problem yet. I am still
+rewriting Axiom into literate form. However, I assure you that it
+is in Axiom's long-term goals, somewhere in the "30 year horizon".
+
+Look at http://axiom-developer.org (the Axiom home page) and see
+item (f), that's the program-proof goal.
+
+Tim Daly
+
+
+
+
+
+From MAILER-DAEMON Sat Apr 06 00:44:40 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UOKzY-0003AQ-IX
+	for mharc-axiom-mail@gnu.org; Sat, 06 Apr 2013 00:44:40 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:53596)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOKzV-00038F-HY
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 00:44:39 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOKzU-0006zL-8C
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 00:44:37 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:47505
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOKzU-0006zE-2g
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 00:44:36 -0400
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r364iUse001124;
+	Fri, 5 Apr 2013 22:44:32 -0600
+Received: by u1204 (Postfix, from userid 1000)
+	id 9F5E96873B; Sat,  6 Apr 2013 00:44:31 -0400 (EDT)
+From: u1204 <daly@axiom-developer.org>
+To: Martin Baker <ax87438@martinb.com>
+In-Reply-To: <515E90A2.9000403@martinb.com> (message from Martin Baker on Fri,
+	05 Apr 2013 09:51:46 +0100)
+Date: Sat, 06 Apr 2013 00:44:31 -0400
+Message-ID: <874nfkz2s0.fsf@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x
+X-Received-From: 209.135.140.38
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities,
+ Fwd: [fricas-devel] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Apr 2013 04:44:39 -0000
+
+>This is probably not very practical, but I was just trying to do a 
+>thought experiment to investigate what would be required to have 
+>variables that range over domains that are not numbers.
+
+Actually, I wrote an NSF proposal to introduce "indeterminate integers".
+This would be a first example of a special symbolic domain that would
+create "arbitrary integers" rather than actual integers.
+
+This is my approach to the Maple "assume" facility. I want to say that
+the uderlying domain is an "indeterminate integer" rather than
+"assume x is an integer". This idea seems more in-line with Axiom's
+approach to computational mathematics.
+
+I'm working on creating a sort-of "indeterminate matrix" domain based
+on a prior question on this list so you can perform operations like
+
+   (A B)^T => B^T A^T
+
+where A and B are "indeterminate matrices".
+
+I will note that the NSF will not fund open source projects.
+Science can only occur if you are at a University. Sigh.
+
+Tim Daly
+
+
+
+
+
+From MAILER-DAEMON Sat Apr 06 01:00:22 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UOLEk-0000oZ-AM
+	for mharc-axiom-mail@gnu.org; Sat, 06 Apr 2013 01:00:22 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:56577)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UOLEg-0000o8-Le
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 01:00:21 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UOLEd-0003hP-9F
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 01:00:18 -0400
+Received: from mail-ee0-f51.google.com ([74.125.83.51]:53711)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UOLEd-0003gQ-2h
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 01:00:15 -0400
+Received: by mail-ee0-f51.google.com with SMTP id c4so1574074eek.10
+	for <axiom-mail@nongnu.org>; Fri, 05 Apr 2013 22:00:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:x-received:sender:date:x-google-sender-auth:message-id
+	:subject:from:to:cc:content-type;
+	bh=B8VwC1IjyfazAI5nFm6UzWNukm6asdkO4IR5FZVmzBg=;
+	b=H3agIuHvPxJ2f+6QCE19c+4gbADqHI7ixngDi3OPtqYDb/Z31YmCiDnXD8lqeujG0A
+	q2eBgJlkpMXrqpCexByayGKat1g6VgETcjPosGmm7l/GS5Yz+dEWhPADCUJIvCPQgXr3
+	8BZA7Fltgg/1SScsbIoluBBl12zeiPaIPG12l6VsQ7q4L4g6JlZrrl2TmZRdUSPUD9Vq
+	scDdZPQ4DybJ5XP37rwiokXoo66GtHWOUdHce+Ch/k07PTIuw84/N4pyEXsv3F3NIgK7
+	nfkTjSDqOFOPYBbs8bdgQThSKqtlcL/ZRNKxfD7UNCwvbsQlu2IOLfQUf6JY1+v5NXbU
+	vynw==
+MIME-Version: 1.0
+X-Received: by 10.14.182.72 with SMTP id n48mr26149671eem.3.1365224413984;
+	Fri, 05 Apr 2013 22:00:13 -0700 (PDT)
+Sender: dosreis@gmail.com
+Received: by 10.14.207.201 with HTTP; Fri, 5 Apr 2013 22:00:13 -0700 (PDT)
+Date: Sat, 6 Apr 2013 00:00:13 -0500
+X-Google-Sender-Auth: keRLdJJGcRa_0uD9cXAWeKtHP6c
+Message-ID: <CAAiZkiDd_edr8nZiW4vYuX5URTJZNckUEbVC9J=dxjPan9GCMQ@mail.gmail.com>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+To: u1204 <daly@axiom-developer.org>
+Content-Type: text/plain; charset=ISO-8859-1
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x [fuzzy]
+X-Received-From: 74.125.83.51
+Cc: open-axiom-devel <open-axiom-devel@lists.sourceforge.net>,
+	axiom-mail@nongnu.org
+Subject: [Axiom-mail] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Apr 2013 05:00:21 -0000
+
+On Fri, Apr 5, 2013 at 11:44 PM, u1204 <daly@axiom-developer.org> wrote:
+>>This is probably not very practical, but I was just trying to do a
+>>thought experiment to investigate what would be required to have
+>>variables that range over domains that are not numbers.
+>
+> Actually, I wrote an NSF proposal to introduce "indeterminate integers".
+
+I did something like this in 2009 -- some of it made it to released OpenAxiom.
+
+> This would be a first example of a special symbolic domain that would
+> create "arbitrary integers" rather than actual integers.
+>
+> This is my approach to the Maple "assume" facility. I want to say that
+> the uderlying domain is an "indeterminate integer" rather than
+> "assume x is an integer". This idea seems more in-line with Axiom's
+> approach to computational mathematics.
+
+OpenAxiom's syntax is " assume x : T" where T can be any domain.
+
+
+>
+> I'm working on creating a sort-of "indeterminate matrix" domain based
+> on a prior question on this list so you can perform operations like
+>
+>    (A B)^T => B^T A^T
+>
+> where A and B are "indeterminate matrices".
+>
+> I will note that the NSF will not fund open source projects.
+> Science can only occur if you are at a University. Sigh.
+
+I don't know why you are saying that, NSF certainly has been
+funding many open source projects, as long as they enable or
+they are part of fundamental research.  Check out the projects
+that made it through this program:
+
+   http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504817
+
+-- Gaby
+
+
+From MAILER-DAEMON Sat Apr 06 02:02:02 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UOMCQ-0003iR-3H
+	for mharc-axiom-mail@gnu.org; Sat, 06 Apr 2013 02:02:02 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:37268)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOMCJ-0003fv-Jz
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 02:02:00 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOMCG-0004wM-I5
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 02:01:55 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:57652
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOMCG-0004w7-D4
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 02:01:52 -0400
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r3661fse001293;
+	Sat, 6 Apr 2013 00:01:42 -0600
+Received: by u1204 (Postfix, from userid 1000)
+	id C051E6873B; Sat,  6 Apr 2013 02:01:40 -0400 (EDT)
+From: u1204 <daly@axiom-developer.org>
+To: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <CAAiZkiDd_edr8nZiW4vYuX5URTJZNckUEbVC9J=dxjPan9GCMQ@mail.gmail.com>
+	(message from Gabriel Dos Reis on Sat, 6 Apr 2013 00:00:13 -0500)
+Date: Sat, 06 Apr 2013 02:01:40 -0400
+Message-ID: <87hajkp58b.fsf@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x
+X-Received-From: 209.135.140.38
+Cc: open-axiom-devel@lists.sourceforge.net, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Apr 2013 06:02:00 -0000
+
+Gaby, 
+
+>> I will note that the NSF will not fund open source projects.
+>> Science can only occur if you are at a University. Sigh.
+>
+>I don't know why you are saying that, NSF certainly has been
+>funding many open source projects, as long as they enable or
+>they are part of fundamental research.  Check out the projects
+>that made it through this program:
+>
+>   http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504817
+
+Thanks for the link. Quote from that page:
+
+ "SI^2 envisions vibrant partnerships among academia, government
+  laboratories and industry, including international entities, 
+  for the development and stewardship of sustainable software
+  ..."
+
+Both Open-Axiom (you) and FriCAS (Waldek) are university related
+and university supported efforts. Axiom is pure open source with
+no affilations.
+
+I'm saying what I said as an almost direct quote from the person
+at NSF responsible for the relevant program. And from the person
+before that. I tried for several years. I also tried at NIST in
+relation to the Mathematical Handbook. I would like to see 
+algorithms in the handbook and thought I could find funding there.
+
+The issue seems to be that there needs to be someone who can handle the
+receipts. At a University (e.g. CCNY where I used to work) the provost
+did that.  Grants to your university fund students.  Open source
+projects not associated with a university don't have the required
+accounting setup.
+
+I approached IBM (where I used to work) with the suggestion that they
+set up a very small (e.g. 2 person) "open source support" organization,
+not specifically related to Axiom, which had the job of receiving the
+NSF grant money and handling receipts. The accountants would be paid out
+of the grant money, similar to the way the provost took over 50% of my
+grant for "overhead". I also approached Texas Instruments and Hewlett
+Packard. I suppose I should have approached Google but my frustration
+level just got too high.
+
+This isn't money for programming. It would be grant money to have
+conferences, travel expenses, website support, and code sprints. 
+The only direct cash payments would go to summer-of-code-like projects.
+
+It is much more costly but way less frustrating to just fund it myself.
+
+Tim Daly
+
+
+
+
+
+
+From MAILER-DAEMON Sat Apr 06 02:21:58 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UOMVi-0001Hu-4V
+	for mharc-axiom-mail@gnu.org; Sat, 06 Apr 2013 02:21:58 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:40789)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOMVc-0001Hj-Tp
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 02:21:57 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOMVb-0002WH-Ny
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 02:21:52 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:38987
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOMVb-0002Uk-Iz
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 02:21:51 -0400
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r366LZse001312;
+	Sat, 6 Apr 2013 00:21:37 -0600
+Received: by u1204 (Postfix, from userid 1000)
+	id 8B57E6873B; Sat,  6 Apr 2013 02:21:35 -0400 (EDT)
+From: u1204 <daly@axiom-developer.org>
+To: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <CAAiZkiDd_edr8nZiW4vYuX5URTJZNckUEbVC9J=dxjPan9GCMQ@mail.gmail.com>
+	(message from Gabriel Dos Reis on Sat, 6 Apr 2013 00:00:13 -0500)
+Date: Sat, 06 Apr 2013 02:21:35 -0400
+Message-ID: <87eheop4b4.fsf@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x
+X-Received-From: 209.135.140.38
+Cc: open-axiom-devel@lists.sourceforge.net, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Apr 2013 06:21:57 -0000
+
+>> This would be a first example of a special symbolic domain that would
+>> create "arbitrary integers" rather than actual integers.
+>>
+>> This is my approach to the Maple "assume" facility. I want to say that
+>> the uderlying domain is an "indeterminate integer" rather than
+>> "assume x is an integer". This idea seems more in-line with Axiom's
+>> approach to computational mathematics.
+>
+>OpenAxiom's syntax is " assume x : T" where T can be any domain.
+
+The idea of an "assume" facility seems antithetical to the design
+of Axiom. It feels more natural to me to create categories and
+domains which remain symbolic (e.g. symbolic matrices). If necessary
+they could be coerced to definite values at the appropriate time.
+
+I want
+
+  t2:POLY(IndefinteInteger(x)) := x^2+2*x+3
+  t3:POLY(IndefinitePositiveInteger(x)) := x^2+2*x+3
+  t4:POLY(Complex(IndefiniteInteger(x))) := x^2+2*x+3
+
+and I can choose the appropriate manipulation algorithms based on
+the given types following the same rules we now use.
+
+I'd like to be able to say something like:
+
+  A:SymbolicMatrix := [[a b],[c,d]]
+  B:SymbolicMatrix := [[e,f],[g,h]]
+  t1 := (A*B)^T
+                  B^T A^T
+  Type:                       Expression(SymbolicMatrix)
+
+and coerce B^T to a matrix domain if I need to see the entries.
+
+Or I can subtype it to SymbolicMatrix(DoubleFloat), do the
+manipulations symbolically and then coerce the final result
+to Matrix(DoubleFloat).
+
+Done this way, the indefinites (or symbolics) fit naturally into
+the mathematical structure of Axiom. There is probably even some
+category theory support for lifting operations (arrows) to 
+symbolic form.
+
+Tim Daly
+
+
+
+From MAILER-DAEMON Sat Apr 06 12:48:36 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UOWI8-00073S-ET
+	for mharc-axiom-mail@gnu.org; Sat, 06 Apr 2013 12:48:36 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:58671)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UOWI1-00072c-9G
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 12:48:35 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UOWHs-000259-Vq
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 12:48:29 -0400
+Received: from mail-ee0-f47.google.com ([74.125.83.47]:37335)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UOWHs-00024B-Pj
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 12:48:20 -0400
+Received: by mail-ee0-f47.google.com with SMTP id t10so1718310eei.20
+	for <axiom-mail@nongnu.org>; Sat, 06 Apr 2013 09:48:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:x-received:sender:in-reply-to:references:date
+	:x-google-sender-auth:message-id:subject:from:to:cc:content-type;
+	bh=1kjP8bqBq5NTMbVurVM2gr1z9HxoloFs8/B2eIjIuHs=;
+	b=viHRBrL0yq9f/ySaQqD1q1P+PgBesH6Km1CjVO4meY+Z3vCnturN2jklY8xV07wDA+
+	6RkqguCk0vQ05bW6TXD5fK9iuB3i4APge+qE68nstFMbqhTXRnoc3ZzE7CZ27aGIPWz6
+	UkkXWIoVy/ZvyEm1xafYlNKzYcxTt4jpki62tY+cYDeUjem0KyeoGkSSsSW8e/gKk/iB
+	pYtq0DLhJdW6HE53WcvydNLCdM+tHJ7JkCtcjzAxpk5QytdwuI5OoBrO2tzM52c1Fu4/
+	J2w+Pyn0PZuk554kg0WZHh32K/ZrLvPe9gl6RCgPhFXo4xwFxhSnd/KATpCqtnfwRoTu
+	IWoQ==
+MIME-Version: 1.0
+X-Received: by 10.14.1.130 with SMTP id 2mr30945735eed.15.1365266899255; Sat,
+	06 Apr 2013 09:48:19 -0700 (PDT)
+Sender: dosreis@gmail.com
+Received: by 10.14.207.201 with HTTP; Sat, 6 Apr 2013 09:48:19 -0700 (PDT)
+In-Reply-To: <87hajkp58b.fsf@axiom-developer.org>
+References: <CAAiZkiDd_edr8nZiW4vYuX5URTJZNckUEbVC9J=dxjPan9GCMQ@mail.gmail.com>
+	<87hajkp58b.fsf@axiom-developer.org>
+Date: Sat, 6 Apr 2013 11:48:19 -0500
+X-Google-Sender-Auth: Flfr5Ktb7SBTFUZCc3E8k0kM5Nk
+Message-ID: <CAAiZkiDb4VQPoJ8SuOYtET0ULmOCbjNJqDHq7QN=KQWweOw1aQ@mail.gmail.com>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+To: u1204 <daly@axiom-developer.org>
+Content-Type: text/plain; charset=ISO-8859-1
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x [fuzzy]
+X-Received-From: 74.125.83.47
+Cc: open-axiom-devel@lists.sourceforge.net, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Apr 2013 16:48:35 -0000
+
+On Sat, Apr 6, 2013 at 1:01 AM, u1204 <daly@axiom-developer.org> wrote:
+> Gaby,
+>
+>>> I will note that the NSF will not fund open source projects.
+>>> Science can only occur if you are at a University. Sigh.
+>>
+>>I don't know why you are saying that, NSF certainly has been
+>>funding many open source projects, as long as they enable or
+>>they are part of fundamental research.  Check out the projects
+>>that made it through this program:
+>>
+>>   http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504817
+>
+> Thanks for the link. Quote from that page:
+>
+>  "SI^2 envisions vibrant partnerships among academia, government
+>   laboratories and industry, including international entities,
+>   for the development and stewardship of sustainable software
+>   ..."
+>
+> Both Open-Axiom (you) and FriCAS (Waldek) are university related
+> and university supported efforts. Axiom is pure open source with
+> no affilations.
+>
+> I'm saying what I said as an almost direct quote from the person
+> at NSF responsible for the relevant program. And from the person
+> before that. I tried for several years. I also tried at NIST in
+> relation to the Mathematical Handbook. I would like to see
+> algorithms in the handbook and thought I could find funding there.
+>
+> The issue seems to be that there needs to be someone who can handle the
+> receipts. At a University (e.g. CCNY where I used to work) the provost
+> did that.  Grants to your university fund students.  Open source
+> projects not associated with a university don't have the required
+> accounting setup.
+
+NSF's mission
+
+   http://www.nsf.gov/nsf/nsfpubs/straplan/mission.htm
+
+is defined by law.  You would have to make a case that your proposal
+fits its mission, e.g. strongly argue the research aspects of it. I do
+not claim it is easy.  That also entails that you would have to be very
+specific, and make convincing case of intellectual merits and broader
+impacts that advance the mission of NSF.
+
+If you go through the list of projects that made it through that
+program, you will notice that the vast majority of them are open source.
+
+
+Also, this is an aside, but I don't think one can convincingly
+argue a notion of "pure open source."
+
+> I approached IBM (where I used to work) with the suggestion that they
+> set up a very small (e.g. 2 person) "open source support" organization,
+> not specifically related to Axiom, which had the job of receiving the
+> NSF grant money and handling receipts. The accountants would be paid out
+> of the grant money, similar to the way the provost took over 50% of my
+> grant for "overhead". I also approached Texas Instruments and Hewlett
+> Packard. I suppose I should have approached Google but my frustration
+> level just got too high.
+
+I can't comment on that.  Each organization has its own policy
+regarding dealing with funding agencies and contracts matters.
+
+>
+> This isn't money for programming. It would be grant money to have
+> conferences, travel expenses, website support, and code sprints.
+> The only direct cash payments would go to summer-of-code-like projects.
+>
+> It is much more costly but way less frustrating to just fund it myself.
+
+I understand.  Working on AXIOM is a full time job.
+
+-- Gaby
+
+
+From MAILER-DAEMON Sat Apr 06 13:02:02 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UOWV8-0002JD-LL
+	for mharc-axiom-mail@gnu.org; Sat, 06 Apr 2013 13:02:02 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:33347)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UOWV3-0002Ba-18
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 13:02:00 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UOWV0-00071Y-2q
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 13:01:56 -0400
+Received: from mail-ee0-f52.google.com ([74.125.83.52]:50393)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <dosreis@gmail.com>) id 1UOWUz-00070m-TH
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 13:01:54 -0400
+Received: by mail-ee0-f52.google.com with SMTP id d17so1627779eek.25
+	for <axiom-mail@nongnu.org>; Sat, 06 Apr 2013 10:01:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:x-received:sender:in-reply-to:references:date
+	:x-google-sender-auth:message-id:subject:from:to:cc:content-type;
+	bh=B16wYRKBj6lcrQ6+Hr2jx7aQEBbq5/PKC0m96j89Fdk=;
+	b=LeMLPUAZuqPEg9KubZ2tILpwi+jXXXwSpQYNbV5Z7IA9P0j5U26K3Zn2wfyThfir6O
+	vjOTNq6Pq+M//IjmP2Y2TAjJEBASgL5pEAXdgSFWCN+sfeOgfXmvRpoKtGZ2ucnyiO/R
+	RUYh1QGzj6jqGLQa5oPevet0FvYJ6Xdj4qhqDMaRX4CXXOMGpK7/SS9ftAiP9fobjlQ+
+	6aj1dXr18NYcBs9SWCJDf1+UNhPJwebMJk1sCXjIjWIKMDfUypdvN+FNnMZfD8lvBLkd
+	7M79dUMFKh7nvcgp9+nbGvG5x6qWtaw3L00FrRl+lCsItSLwcqEwR1LhH3pCXKuw+Iwh
+	mriQ==
+MIME-Version: 1.0
+X-Received: by 10.15.102.3 with SMTP id bq3mr4742970eeb.42.1365267713031; Sat,
+	06 Apr 2013 10:01:53 -0700 (PDT)
+Sender: dosreis@gmail.com
+Received: by 10.14.207.201 with HTTP; Sat, 6 Apr 2013 10:01:52 -0700 (PDT)
+In-Reply-To: <87eheop4b4.fsf@axiom-developer.org>
+References: <CAAiZkiDd_edr8nZiW4vYuX5URTJZNckUEbVC9J=dxjPan9GCMQ@mail.gmail.com>
+	<87eheop4b4.fsf@axiom-developer.org>
+Date: Sat, 6 Apr 2013 12:01:52 -0500
+X-Google-Sender-Auth: GlEyKL5RpZ7_6jQwyM2tzuh6twc
+Message-ID: <CAAiZkiCb-t-CtP3bpGatczMZ39CuLzg69G7BvigSMYJ9qJ9EsQ@mail.gmail.com>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+To: u1204 <daly@axiom-developer.org>
+Content-Type: text/plain; charset=ISO-8859-1
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x [fuzzy]
+X-Received-From: 74.125.83.52
+Cc: open-axiom-devel@lists.sourceforge.net, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Abstract Vector Algebra
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Apr 2013 17:02:00 -0000
+
+On Sat, Apr 6, 2013 at 1:21 AM, u1204 <daly@axiom-developer.org> wrote:
+>>> This would be a first example of a special symbolic domain that would
+>>> create "arbitrary integers" rather than actual integers.
+>>>
+>>> This is my approach to the Maple "assume" facility. I want to say that
+>>> the uderlying domain is an "indeterminate integer" rather than
+>>> "assume x is an integer". This idea seems more in-line with Axiom's
+>>> approach to computational mathematics.
+>>
+>>OpenAxiom's syntax is " assume x : T" where T can be any domain.
+>
+> The idea of an "assume" facility seems antithetical to the design
+> of Axiom.
+
+I do not know what that mean.  Could you clarify?
+
+> It feels more natural to me to create categories and
+> domains which remain symbolic (e.g. symbolic matrices). If necessary
+> they could be coerced to definite values at the appropriate time.
+
+OpenAxiom uses domain for schematic expressions, e.g. expressions
+with "indefinite" variables.  You can't coerce an indefinite variable
+into define values.  That would creating values out of void.
+The best you can do is to give values to indefinites.
+
+>
+> I want
+>
+>   t2:POLY(IndefinteInteger(x)) := x^2+2*x+3
+>   t3:POLY(IndefinitePositiveInteger(x)) := x^2+2*x+3
+>   t4:POLY(Complex(IndefiniteInteger(x))) := x^2+2*x+3
+>
+> and I can choose the appropriate manipulation algorithms based on
+> the given types following the same rules we now use.
+
+I would find it poor design to have to duplicate domains that way.
+Clearly there must be a notion of natural transformation (in the
+categorical sense) that allows lifting of operations to the symbolic/indefinite
+level -- see the past work with did on OpenAxiom; I seem to remember
+I had a long discussion with Bill Page (or Ralf?) on this topic.
+
+Rather, I would use the notion of schematic expressions -- expressions
+from well defined arithmetic domains with indefinite variables.  These
+expressions follow well typed and well defined arithmetic; they can be evaluated
+to definite values if their schematic variables are given values.
+
+>
+> I'd like to be able to say something like:
+>
+>   A:SymbolicMatrix := [[a b],[c,d]]
+>   B:SymbolicMatrix := [[e,f],[g,h]]
+>   t1 := (A*B)^T
+>                   B^T A^T
+>   Type:                       Expression(SymbolicMatrix)
+>
+> and coerce B^T to a matrix domain if I need to see the entries.
+
+In fact, if you do it properly you would notice that you are just
+fixing some bugs in the Expression domain and you do not need
+Symbolic anything :-)   At least, that was my final conclusion when
+I worked on this for many years.
+
+>
+> Or I can subtype it to SymbolicMatrix(DoubleFloat), do the
+> manipulations symbolically and then coerce the final result
+> to Matrix(DoubleFloat).
+>
+> Done this way, the indefinites (or symbolics) fit naturally into
+> the mathematical structure of Axiom. There is probably even some
+> category theory support for lifting operations (arrows) to
+> symbolic form.
+
+Yes, but I don't see where that contradicts the notion of "assume".
+
+>
+> Tim Daly
+>
+
+
+From MAILER-DAEMON Sat Apr 06 14:15:57 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UOXee-0008Ny-Jl
+	for mharc-axiom-mail@gnu.org; Sat, 06 Apr 2013 14:15:56 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:49637)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UOXeV-0008NH-Sy
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 14:15:54 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UOXeT-0008D7-1D
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 14:15:47 -0400
+Received: from moutng.kundenserver.de ([212.227.126.187]:51833)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UOXeS-0008Cd-Km
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 14:15:44 -0400
+Received: from [192.168.1.64] (93-96-126-45.zone4.bethere.co.uk [93.96.126.45])
+	by mrelayeu.kundenserver.de (node=mreu2) with ESMTP (Nemesis)
+	id 0MAidD-1UIjxx1lIR-00BPCM; Sat, 06 Apr 2013 20:15:30 +0200
+Message-ID: <51606641.7030005@martinb.com>
+Date: Sat, 06 Apr 2013 19:15:29 +0100
+From: Martin Baker <ax87438@martinb.com>
+Organization: axiom
+User-Agent: Mozilla/5.0 (X11; Linux x86_64;
+	rv:17.0) Gecko/20130329 Thunderbird/17.0.5
+MIME-Version: 1.0
+To: open-axiom-devel@lists.sf.net, axiom-mail@nongnu.org
+References: <CAAiZkiB-ijgKamHTxpT3nYpc20KPyzBHa4-KukT96skcEuOVWw@mail.gmail.com>
+	<515EF65A.5080006@martinb.com>
+	<CAAiZkiBNp=LHJ10qTtd_vAZWS_jKUxcuHgMLA+QQsL+TpRi13w@mail.gmail.com>
+In-Reply-To: <CAAiZkiBNp=LHJ10qTtd_vAZWS_jKUxcuHgMLA+QQsL+TpRi13w@mail.gmail.com>
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Provags-ID: V02:K0:FZPfVp1nHJDYlP6VgdRrJc2Gj7pdSGbV0d0dS4Q1+qz
+	e42X4m7yB19aOhFAtmIRz1buUhAbDUz32ge5xLHAsHdis8kHxw
+	ZNVyymP5yfE494fdMsvgocQjISesM826KBdtNnAOXjOC/84aSx
+	YaMJtTQ6JqoW9U5frw0HnJ8rCf5xAAt3spZeP4Koh9mMvLBtY1
+	wd6UMg5cuTqxnSCU8EugO86TPDtgD37flatZrhUdQ3oVGjzCK6
+	O6cdQ7C6WIi9UDbxoSraZtDSYa160W8qmWjZcshiS+k14Idi3L
+	VWgZQ0ED8yvA575bHcJN0v+vOielCdAWHYJN2qJ5v4Lq7a/p4D
+	qeWEuhKNncrcAZxXvBzQ=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.4.x-2.6.x [generic]
+X-Received-From: 212.227.126.187
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Apr 2013 18:15:54 -0000
+
+ > We did not get time to convert all the comments into code as is done
+ > for some the new categories and domains in the trunk repository.
+ > For example, from
+ >
+ > 
+http://sourceforge.net/p/open-axiom/code/2800/tree/trunk/src/algebra/catdef.spad.pamphlet
+
+Is there a way I could help in a pan-Axiom sort of way? For instance, 
+would it be any help if I went through these categories and drew a 
+diagram of their relationships? I realise diagrams like:
+http://www.axiom-developer.org/axiom-website/bookvol10.2full.html
+tend to quickly become unwieldy. But if the diagram was limited to pure 
+algebras and split into operator and algebra categories, perhaps it 
+might be more manageable?
+
+Or, would it be more practical to model it in one of the formal methods 
+tools around, such as?
+* Formal specification program,
+* Formal development program,
+* Formal verification program,
+* Theorem provers
+
+I have no experience in using any of these programs but, when they came 
+up in this thread I did some searches and they appear to be very 
+powerful (I guess their limitations only become clear with experience)?
+At first glance CASL appears very powerful for axioms.
+
+quote from wiki page here.
+http://en.wikipedia.org/wiki/Specification_language
+"In the property-oriented approach to specification (taken e.g. by 
+CASL), specifications of programs consist mainly of logical axioms, 
+usually in a logical system in which equality has a prominent role, 
+describing the properties that the functions are required to satisfy - 
+often just by their interrelationship. This is in contrast to so-called 
+model-oriented specification in frameworks like VDM and Z, which consist 
+of a simple realization of the required behaviour."
+
+So, if I understand correctly:
+CASL is good at theories (axiom categories).
+ACL2 is good at models of those theories (axiom domains).
+(or by Curry–Howard: proofs)
+
+I have not yet seen a program that is good at both.
+
+I get the impression that ACL2, after a very quick search on the web (so 
+I may be wrong), does term rewriting and proofs but its input is not 
+axioms but some sort of state machine defined in LISP? (I have not seen 
+the light regarding LISP, but let not have that debate!).
+
+So I just wondered if anyone has had experience with any of these 
+'formal methods tools' and would there be any benefit in my attempting 
+to learn one? (to experiment with specifying axioms or to experiment 
+with term rewriting systems).
+
+Or would it be best to wait (hopefully not for the full 30 years) until 
+you guys implement more of this stuff?
+
+Martin
+
+
+From MAILER-DAEMON Sat Apr 06 14:50:11 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UOYBn-0007P4-5V
+	for mharc-axiom-mail@gnu.org; Sat, 06 Apr 2013 14:50:11 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:58909)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <gdr@cs.tamu.edu>) id 1UOYBg-0007KM-Cy
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 14:50:09 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <gdr@cs.tamu.edu>) id 1UOXyI-0007Jh-6N
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 14:37:29 -0400
+Received: from postal.cs.tamu.edu ([128.194.138.107]:52392
+	helo=smtp.cs.tamu.edu) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <gdr@cs.tamu.edu>) id 1UOXyI-0007IH-0T
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 14:36:14 -0400
+Received: from gauss.cs.tamu.edu (gauss.cs.tamu.edu [128.194.136.74])
+	by smtp.cs.tamu.edu (Postfix) with ESMTP id 52CEE9973;
+	Sat,  6 Apr 2013 13:36:11 -0500 (CDT)
+Received: from gauss.cs.tamu.edu (localhost [IPv6:::1])
+	by gauss.cs.tamu.edu (Postfix) with ESMTP id 1B7D214CCE0;
+	Sat,  6 Apr 2013 13:36:11 -0500 (CDT)
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+To: Martin Baker <ax87438@martinb.com>
+In-Reply-To: <51606641.7030005@martinb.com> (Martin Baker's message of "Sat,
+	06 Apr 2013 19:15:29 +0100")
+Organization: Texas A&M University
+References: <CAAiZkiB-ijgKamHTxpT3nYpc20KPyzBHa4-KukT96skcEuOVWw@mail.gmail.com>
+	<515EF65A.5080006@martinb.com>
+	<CAAiZkiBNp=LHJ10qTtd_vAZWS_jKUxcuHgMLA+QQsL+TpRi13w@mail.gmail.com>
+	<51606641.7030005@martinb.com>
+Sender: gdr@cs.tamu.edu
+Date: Sat, 06 Apr 2013 13:36:11 -0500
+Message-ID: <87a9pbld5w.fsf@gauss.cs.tamu.edu>
+Lines: 105
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by eggs.gnu.org: Solaris 10
+X-Received-From: 128.194.138.107
+Cc: open-axiom-devel@lists.sf.net, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] [open-axiom-devel] A question about Axiom
+	capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Apr 2013 18:50:09 -0000
+
+Martin Baker <ax87438@martinb.com> writes:
+
+|  > We did not get time to convert all the comments into code as is done
+|  > for some the new categories and domains in the trunk repository.
+|  > For example, from
+|  >
+|  >=20
+| http://sourceforge.net/p/open-axiom/code/2800/tree/trunk/src/algebra/catd=
+ef.spad.pamphlet
+|=20
+| Is there a way I could help in a pan-Axiom sort of way? For instance,=20
+| would it be any help if I went through these categories and drew a=20
+| diagram of their relationships?
+
+That would be terrific and greatly appreciated.  It would be beneficial
+to lot of people (some of them quietly following the discussion.)
+
+| I realise diagrams like:
+| http://www.axiom-developer.org/axiom-website/bookvol10.2full.html
+| tend to quickly become unwieldy. But if the diagram was limited to pure=20
+| algebras and split into operator and algebra categories, perhaps it=20
+| might be more manageable?
+
+Yes.  If you need some tool support, just let me know.=20
+
+| Or, would it be more practical to model it in one of the formal methods=20
+| tools around, such as?
+| * Formal specification program,
+| * Formal development program,
+| * Formal verification program,
+| * Theorem provers
+
+Either way, I think your suggestion of drawing relationship between the
+fundamental categories is a great one.
+
+On a separate note, I started in 2009 moving in the direction on
+integration between OpenAxiom and Isabelle.  The first batch of work led
+to initial code generators targetting PolyML (one of the primary ML
+implementation used for Isabelle).  Yue was also involved in that
+effort.  David Mattews (the main guy behind PolyML) has been very
+helpful.  More remain to be done.=20=20
+
+| I have no experience in using any of these programs but, when they came=20
+| up in this thread I did some searches and they appear to be very=20
+| powerful (I guess their limitations only become clear with experience)?
+| At first glance CASL appears very powerful for axioms.
+|=20
+| quote from wiki page here.
+| http://en.wikipedia.org/wiki/Specification_language
+| "In the property-oriented approach to specification (taken e.g. by=20
+| CASL), specifications of programs consist mainly of logical axioms,=20
+| usually in a logical system in which equality has a prominent role,=20
+| describing the properties that the functions are required to satisfy -=20
+| often just by their interrelationship. This is in contrast to so-called=20
+| model-oriented specification in frameworks like VDM and Z, which consist=
+=20
+| of a simple realization of the required behaviour."
+|=20
+| So, if I understand correctly:
+| CASL is good at theories (axiom categories).
+| ACL2 is good at models of those theories (axiom domains).
+| (or by Curry=E2=80=93Howard: proofs)
+|=20
+| I have not yet seen a program that is good at both.
+
+Correct.  That is part of the Calculemus project.
+
+|=20
+| I get the impression that ACL2, after a very quick search on the web (so=
+=20
+| I may be wrong), does term rewriting and proofs but its input is not=20
+| axioms but some sort of state machine defined in LISP? (I have not seen=20
+| the light regarding LISP, but let not have that debate!).
+
+ACL2 is a first order prover, the leader in that field; Isabelle/HOl,
+Coq are higher order prover, based on lambda calculus encoding.
+
+| So I just wondered if anyone has had experience with any of these=20
+| 'formal methods tools' and would there be any benefit in my attempting=20
+| to learn one? (to experiment with specifying axioms or to experiment=20
+| with term rewriting systems).
+
+One of the thing we did was to prove that popular object layout
+algorithms used by real-world C++ compilers are semantically correct,
+and also justify popular C++ programming idioms such as "resource
+acquisition is initialization."  See papers here:
+
+   http://www.axiomatics.org/~gdr/formal-cxx/layout-popl11.pdf
+   http://www.axiomatics.org/~gdr/formal-cxx/ctor-dtor-popl12.pdf
+
+The work is the subject of a PhD thesis in itself :-)
+These things tend work ans scale only when one has a good understanding
+of what it is to be implemented -- so having an initial non-formalized
+implementation helps a lot.
+
+Xavier Leroy has writen a real world C compiler in Coq:
+
+   http://compcert.inria.fr/
+
+This is a fantastic and colossal work.
+
+| Or would it be best to wait (hopefully not for the full 30 years) until=20
+| you guys implement more of this stuff?
+
+I am a believer in incremental improvements, so I will take any
+improvement you have now :-)
+
+-- Gaby
+
+
+From MAILER-DAEMON Sat Apr 06 16:53:20 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UOa6y-0000lv-JD
+	for mharc-axiom-mail@gnu.org; Sat, 06 Apr 2013 16:53:20 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:42075)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOa6s-0000lo-1N
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 16:53:19 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOa6o-0000eg-2l
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 16:53:13 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:47093
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOa6n-0000eN-TQ
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 16:53:10 -0400
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r36Kqvse005528;
+	Sat, 6 Apr 2013 14:52:58 -0600
+Received: by u1204 (Postfix, from userid 1000)
+	id A331C6875F; Sat,  6 Apr 2013 16:52:56 -0400 (EDT)
+From: u1204 <daly@axiom-developer.org>
+To: Martin Baker <ax87438@martinb.com>
+In-Reply-To: <51606641.7030005@martinb.com> (message from Martin Baker on Sat,
+	06 Apr 2013 19:15:29 +0100)
+Date: Sat, 06 Apr 2013 16:52:56 -0400
+Message-ID: <87k3ofz8if.fsf@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x
+X-Received-From: 209.135.140.38
+Cc: open-axiom-devel@lists.sf.net, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Apr 2013 20:53:19 -0000
+
+> Is there a way I could help in a pan-Axiom sort of way? For instance, 
+> would it be any help if I went through these categories and drew a 
+> diagram of their relationships? I realise diagrams like:
+> http://www.axiom-developer.org/axiom-website/bookvol10.2full.html
+> tend to quickly become unwieldy. But if the diagram was limited to pure 
+> algebras and split into operator and algebra categories, perhaps it 
+> might be more manageable?
+
+The graph is very large. All of the information to create the graph
+exists in static files (the algebra Makefile and the bookvol10* files).
+
+It would be useful to be able to create portions of the graph
+dynamically. Some of the functionality exists in the API domain
+(ApplicationProgramInterface), such as getAncestors and getDomains.
+Any other functionality is just as easy to add. I'd be happy to help.
+
+In addition, it would be useful to be able to graph some information
+related to functions. Where are all of the "integrate" functions and
+how are they related? Or to know about a domain by showing the locally
+defined functions and the tree of parents whose functions it inherits.
+
+>From a given domain it would be useful to create portions of the graph
+of a given distance around the domain. So you could ask for a small
+graph of categories and make the limit distance of 3. If the output
+was in some standard format (e.g. dot files, html, etc.) it could be
+used as input to graph drawing programs.
+
+This is a reasonably straightforward problem and would get you more
+familiar with Axiom's hierarchy as well as writing code.
+
+Some of this functionality can be embedded into latex documents which
+would make them much more useful. Currently the big graph contains
+links to the source code in the books. There are mini-graphs in the
+books but the links are not (yet) part of the graphs. It would be
+useful to click on the pictures in the book and move to, say, a
+parent category's source code.
+
+Tim Daly
+
+
+From MAILER-DAEMON Sat Apr 06 17:46:20 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UOawF-0004vA-W6
+	for mharc-axiom-mail@gnu.org; Sat, 06 Apr 2013 17:46:19 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:50519)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOaw8-0004v3-Sp
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 17:46:19 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOaw3-0000Uo-34
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 17:46:12 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:45010
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UOaw2-0000Uk-Ta
+	for axiom-mail@nongnu.org; Sat, 06 Apr 2013 17:46:07 -0400
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r36Ljsse005570;
+	Sat, 6 Apr 2013 15:45:55 -0600
+Received: by u1204 (Postfix, from userid 1000)
+	id 624576875F; Sat,  6 Apr 2013 17:45:54 -0400 (EDT)
+From: u1204 <daly@axiom-developer.org>
+To: Martin Baker <ax87438@martinb.com>
+In-Reply-To: <51606641.7030005@martinb.com> (message from Martin Baker on Sat,
+	06 Apr 2013 19:15:29 +0100)
+Date: Sat, 06 Apr 2013 17:45:54 -0400
+Message-ID: <87ehengwod.fsf@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x
+X-Received-From: 209.135.140.38
+Cc: open-axiom-devel@lists.sf.net, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Apr 2013 21:46:19 -0000
+
+
+AXIOM CATEGORY/DOMAIN GRAPH:
+
+Axiom is working on creating a new web-based front end based on the
+AXSERV domain. The static hyperdoc pages are being converted (Book
+Volume 11: Axiom Browser). AJAX is used for the dynamic pages to
+pass equations and display results. 
+
+Eventually the Axiom graphics will be converted to work on an HTML
+canvas. I've done some minimal experiments with the HTML canvas so
+I have some clue about what we need to write to port Axiom's graphics.
+
+I'd recommend that you consider either a graph that can be drawn on
+an HTML canvas or creating SVG files which a browser can read. That 
+way your work would fit into the long term goals and be easy to 
+pick up.
+
+
+AXIOM BROWSER:
+
+Alternatively you could pick up the whole browser effort and maintain
+volume 11 as well as the AXSERV domain. The short term goal is to 
+replace hyperdoc yet preserve all of the current functionality.
+
+You can run the pages standalone (without running Axiom). Suppose
+your $AXIOM variable is set to /here/test/mnt/ubuntu. In your
+browser you can open the page:
+file:///here/test/mnt/ubuntu/doc/hypertex/rootpage.xhtml
+and see the current state of the world. Visit
+
+Reference -> Topics -> Numbers -> Integers 
+
+and you will see a page from hyperdoc. If Axiom is connected and running
+in the background the equations can be clicked on and the results
+returned to the browser.
+
+I am currently rewriting the "basic commands" code for hyperdoc
+which is in lisp. It implements an html-like language with extensions
+for inline latex (Scott Morrison is a very clever fellow and was WAY
+ahead of his time.) I'm documenting it as I rewrite it so I know 
+what to change for the browser functionality. This rewrite will
+be the next patch released.
+
+The longer term goal is to make an Axiom "appliance server" which
+will be completely browser-driven so it can be used in a classroom
+or network setting.
+
+Tim Daly
+
+
+
+
+From MAILER-DAEMON Mon Apr 08 10:50:57 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UPDPN-0003iL-6S
+	for mharc-axiom-mail@gnu.org; Mon, 08 Apr 2013 10:50:57 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:43688)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <surow@attglobal.net>) id 1UPDP0-0003T4-2S
+	for axiom-mail@nongnu.org; Mon, 08 Apr 2013 10:50:55 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <surow@attglobal.net>) id 1UPDOv-0002oN-D0
+	for axiom-mail@nongnu.org; Mon, 08 Apr 2013 10:50:33 -0400
+Received: from vms173011pub.verizon.net ([206.46.173.11]:33722)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <surow@attglobal.net>) id 1UPDOv-0002nx-8r
+	for axiom-mail@nongnu.org; Mon, 08 Apr 2013 10:50:29 -0400
+Received: from [127.0.0.1] ([unknown] [72.80.111.106])
+	by vms173011.mailsrvcs.net
+	(Sun Java(tm) System Messaging Server 7u2-7.02 32bit (built Apr 16
+	2009)) with ESMTPA id <0MKX00MXLYIRXVO2@vms173011.mailsrvcs.net> for
+	axiom-mail@nongnu.org; Mon, 08 Apr 2013 09:49:51 -0500 (CDT)
+Message-id: <5162D905.6010708@attglobal.net>
+Date: Mon, 08 Apr 2013 10:49:41 -0400
+From: Eugene Surowitz <surow@attglobal.net>
+User-Agent: Mozilla/5.0 (Windows NT 5.1; rv:17.0) Gecko/20130328
+	Thunderbird/17.0.5
+MIME-version: 1.0
+To: axiom-mail@nongnu.org
+References: <87k3ofz8if.fsf@axiom-developer.org>
+In-reply-to: <87k3ofz8if.fsf@axiom-developer.org>
+Content-type: text/plain; charset=ISO-8859-1; format=flowed
+Content-transfer-encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Genre and OS details not
+	recognized.
+X-Received-From: 206.46.173.11
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+Reply-To: surow@attglobal.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 08 Apr 2013 14:50:56 -0000
+
+Doing it by hand is highly prone to errors and more importantly omissions.
+
+I've experimenting with some code on the Axiom interpreter code as a guinea pig,
+before running through all the text of Axiom, to generate a full tokenary.
+The text walker starts with output from the tar-ball and busts all text
+into tokens, which can be tunable to sub-language.
+
+Or putting it another way: Where is "integrate" everywhere?
+
+Cheers, Gene
+
+
+On 4/6/2013 4:52 PM, u1204 wrote:
+>> Is there a way I could help in a pan-Axiom sort of way? For instance,
+>> would it be any help if I went through these categories and drew a
+>> diagram of their relationships? I realise diagrams like:
+>> http://www.axiom-developer.org/axiom-website/bookvol10.2full.html
+>> tend to quickly become unwieldy. But if the diagram was limited to pure
+>> algebras and split into operator and algebra categories, perhaps it
+>> might be more manageable?
+>
+> The graph is very large. All of the information to create the graph
+> exists in static files (the algebra Makefile and the bookvol10* files).
+>
+> It would be useful to be able to create portions of the graph
+> dynamically. Some of the functionality exists in the API domain
+> (ApplicationProgramInterface), such as getAncestors and getDomains.
+> Any other functionality is just as easy to add. I'd be happy to help.
+>
+> In addition, it would be useful to be able to graph some information
+> related to functions. Where are all of the "integrate" functions and
+> how are they related? Or to know about a domain by showing the locally
+> defined functions and the tree of parents whose functions it inherits.
+>
+>>From a given domain it would be useful to create portions of the graph
+> of a given distance around the domain. So you could ask for a small
+> graph of categories and make the limit distance of 3. If the output
+> was in some standard format (e.g. dot files, html, etc.) it could be
+> used as input to graph drawing programs.
+>
+> This is a reasonably straightforward problem and would get you more
+> familiar with Axiom's hierarchy as well as writing code.
+>
+> Some of this functionality can be embedded into latex documents which
+> would make them much more useful. Currently the big graph contains
+> links to the source code in the books. There are mini-graphs in the
+> books but the links are not (yet) part of the graphs. It would be
+> useful to click on the pictures in the book and move to, say, a
+> parent category's source code.
+>
+> Tim Daly
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> https://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>
+
+
+
+From MAILER-DAEMON Mon Apr 08 11:46:48 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UPEHQ-0003uI-Pl
+	for mharc-axiom-mail@gnu.org; Mon, 08 Apr 2013 11:46:48 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:33986)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UPEHK-0003tl-Rk
+	for axiom-mail@nongnu.org; Mon, 08 Apr 2013 11:46:47 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UPEHF-0001vU-Qf
+	for axiom-mail@nongnu.org; Mon, 08 Apr 2013 11:46:42 -0400
+Received: from moutng.kundenserver.de ([212.227.17.9]:55748)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <ax87438@martinb.com>) id 1UPEHF-0001us-GZ
+	for axiom-mail@nongnu.org; Mon, 08 Apr 2013 11:46:37 -0400
+Received: from [192.168.1.64] (93-96-126-45.zone4.bethere.co.uk [93.96.126.45])
+	by mrelayeu.kundenserver.de (node=mreu2) with ESMTP (Nemesis)
+	id 0M5Ksl-1Uo4Dc3PIt-00yvZK; Mon, 08 Apr 2013 17:46:28 +0200
+Message-ID: <5162E653.3050101@martinb.com>
+Date: Mon, 08 Apr 2013 16:46:27 +0100
+From: Martin Baker <ax87438@martinb.com>
+Organization: axiom
+User-Agent: Mozilla/5.0 (X11; Linux x86_64;
+	rv:17.0) Gecko/20130329 Thunderbird/17.0.5
+MIME-Version: 1.0
+To: open-axiom-devel@lists.sf.net, axiom-mail@nongnu.org
+References: <CAAiZkiB-ijgKamHTxpT3nYpc20KPyzBHa4-KukT96skcEuOVWw@mail.gmail.com>
+	<515EF65A.5080006@martinb.com>
+	<CAAiZkiBNp=LHJ10qTtd_vAZWS_jKUxcuHgMLA+QQsL+TpRi13w@mail.gmail.com>
+	<51606641.7030005@martinb.com> <87a9pbld5w.fsf@gauss.cs.tamu.edu>
+In-Reply-To: <87a9pbld5w.fsf@gauss.cs.tamu.edu>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID: V02:K0:NbFJvunfQQ2eXhjjrAFXMlUkLZp/HpdwqY6dJfoMjL8
+	oUeIgUHICjmxSWXo8mD9BShXBf39GdokbMb60ikPKhRelRuhWa
+	F2zLK6OZ2ydrU4cgmChnP04/TOs8GQWVUiMOkKiadyBH5BE9fN
+	e1Trir71aqZqcvV+n6cprlxTrvR4LEgJNmts+cwuCAfNhqGeuU
+	XZFQfQidrwje2DNSQB1xDM0yUPgXBdUu3siRyruOQgIACi6NYm
+	sa0P1PXI5Y7wlZ2wLosUzFFLqFJaJK7vtCwcSZXYfV5xN4UkLD
+	7+VmkCIQk4X4jbKFct11wwOxA4jHdS50LI04deTotmYb19JPYo
+	0MTIPywlocM4imK6cqLU=
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.4.x-2.6.x [generic]
+X-Received-From: 212.227.17.9
+Subject: Re: [Axiom-mail] [open-axiom-devel] A question about Axiom
+	capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 08 Apr 2013 15:46:48 -0000
+
+On 06/04/13 19:36, Gabriel Dos Reis wrote:
+> Martin Baker <ax87438@martinb.com> writes:
+> | Is there a way I could help in a pan-Axiom sort of way? For instance,
+> | would it be any help if I went through these categories and drew a
+> | diagram of their relationships?
+>
+> That would be terrific and greatly appreciated.  It would be beneficial
+> to lot of people (some of them quietly following the discussion.)
+
+OK, As an experiment I created a diagram using a simple graphical editor 
+(Inkscape) just to start thinking about layout and level-of-detail 
+issues. This is a very tiny subset of the category structure but do you 
+think it is enough to draw any conclusions about what would be useful?
+
+The diagram is on this page:
+http://www.euclideanspace.com/maths/standards/program/axiomsInAxiom/
+
+Also, on this page, I have tried to gather together some of the 
+interesting information that has come from this thread. Hopefully, if it 
+were expanded and corrected it may find its way into more official 
+documentation, tutorials and wikis.
+
+Martin
+
+
+

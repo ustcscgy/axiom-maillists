@@ -1,0 +1,2668 @@
+From MAILER-DAEMON Wed Aug 04 07:57:07 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BsKOJ-0000iQ-JW
+	for mharc-axiom-mail@gnu.org; Wed, 04 Aug 2004 07:57:07 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BsKOH-0000iD-IJ
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 07:57:05 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BsKOG-0000hm-7F
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 07:57:04 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BsKOG-0000hj-3s
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 07:57:04 -0400
+Received: from [81.228.9.113] (helo=av5-1-sn3.vrr.skanova.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BsKKe-0000wx-Rd
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 07:53:21 -0400
+Received: by av5-1-sn3.vrr.skanova.net (Postfix, from userid 502)
+	id 97540380C5; Wed,  4 Aug 2004 13:53:17 +0200 (CEST)
+Received: from smtp4-1-sn2.hy.skanova.net (smtp4-1-sn2.hy.skanova.net
+	[81.228.8.92])
+	by av5-1-sn3.vrr.skanova.net (Postfix) with ESMTP id 8576537E56
+	for <axiom-mail@nongnu.org>; Wed,  4 Aug 2004 13:53:17 +0200 (CEST)
+Received: from kakmonster.dactylis.com (h229n2fls306o871.telia.com
+	[213.64.235.229])
+	by smtp4-1-sn2.hy.skanova.net (Postfix) with ESMTP id 2930F37E4D
+	for <axiom-mail@nongnu.org>; Wed,  4 Aug 2004 13:53:17 +0200 (CEST)
+Received: from sholem.dactylis.com (sholem.dactylis.com
+	[IPv6:2002:d540:ebe5:1::1])
+	by kakmonster.dactylis.com (8.12.11/8.12.11) with ESMTP id
+	i74BsXj0017290
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <axiom-mail@nongnu.org>; Wed, 4 Aug 2004 13:54:33 +0200
+Received: from math.su.se (h214n2fls31o839.telia.com [217.211.212.214])
+	by sholem.dactylis.com (8.12.9/8.12.9) with ESMTP id i74BrD5N016857
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK)
+	for <axiom-mail@nongnu.org>; Wed, 4 Aug 2004 13:53:15 +0200 (CEST)
+Message-ID: <4110CE14.6040107@math.su.se>
+Date: Wed, 04 Aug 2004 13:52:52 +0200
+From: Marcus Better <marcusb@math.su.se>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.6) Gecko/20040510
+X-Accept-Language: sv, en-us, en
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Received-SPF: none (kakmonster.dactylis.com: 2002:d540:ebe5:1::1 is neither
+	permitted nor denied by domain of math.su.se)
+	client-ip=2002:d540:ebe5:1::1; envelope-from=marcusb@math.su.se;
+	helo=sholem.dactylis.com; 
+X-Greylist: Message not sent from an IPv4 address, not delayed by
+	milter-greylist-1.5.3 (kakmonster.dactylis.com
+	[IPv6:2002:d540:ebe5:1::2]); Wed, 04 Aug 2004 13:54:34 +02
+X-Scanned-By: MIMEDefang 2.41
+Subject: [Axiom-mail] Creating a Stream from a function calculating
+	coefficients
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 04 Aug 2004 11:57:05 -0000
+
+Hi all,
+
+I have written a package which calculates coefficients of a certain 
+power series. It has a function which calculates the next coefficient, 
+given all previous coefficient:
+
+   nextCoeff: List K -> K
+
+(here K is the coefficient domain).
+
+How can I use this to create a lazy Stream of all the coefficients? I 
+tried using delay, but cannot seem to get it right. (I am doing this 
+inside a package.)
+
+Marcus
+
+-----------------------------------------------------------------
+Marcus Better
+Department of Mathematics                      Tel. +46 8 164539
+Stockholm University                           Fax +46 8 6126717
+SE-106 91 Stockholm
+Sweden                                     http://www.math.su.se
+-----------------------------------------------------------------
+
+
+
+From MAILER-DAEMON Wed Aug 04 09:07:02 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BsLTy-00055X-KV
+	for mharc-axiom-mail@gnu.org; Wed, 04 Aug 2004 09:07:02 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BsLTw-00054Z-Dy
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 09:07:00 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BsLTu-00054A-Fs
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 09:07:00 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BsLTu-000540-BO
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 09:06:58 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BsLPz-0007Bv-Od
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 09:02:56 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i74D2Epm929722;
+	Wed, 4 Aug 2004 15:02:35 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16656.63953.323243.200692@gargle.gargle.HOWL>
+Date: Wed, 4 Aug 2004 14:59:29 +0000
+To: Marcus Better <marcusb@math.su.se>
+Subject: Re: [Axiom-mail] Creating a Stream from a function calculating
+	coefficients
+In-Reply-To: <4110CE14.6040107@math.su.se>
+References: <4110CE14.6040107@math.su.se>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: imap 4248; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 04 Aug 2004 13:07:00 -0000
+
+The generate function from Stream should do this. See Section 5.6 of the Axiom
+book (online-version: pg. 225, printed: pg. 132)
+
+Hope this helps
+
+Martin
+
+Marcus Better writes:
+ > Hi all,
+ > 
+ > I have written a package which calculates coefficients of a certain 
+ > power series. It has a function which calculates the next coefficient, 
+ > given all previous coefficient:
+ > 
+ >    nextCoeff: List K -> K
+ > 
+ > (here K is the coefficient domain).
+ > 
+ > How can I use this to create a lazy Stream of all the coefficients? I 
+ > tried using delay, but cannot seem to get it right. (I am doing this 
+ > inside a package.)
+ > 
+ > Marcus
+ > 
+ > -----------------------------------------------------------------
+ > Marcus Better
+ > Department of Mathematics                      Tel. +46 8 164539
+ > Stockholm University                           Fax +46 8 6126717
+ > SE-106 91 Stockholm
+ > Sweden                                     http://www.math.su.se
+ > -----------------------------------------------------------------
+ > 
+ > 
+ > _______________________________________________
+ > Axiom-mail mailing list
+ > Axiom-mail@nongnu.org
+ > http://lists.nongnu.org/mailman/listinfo/axiom-mail
+
+
+
+
+From MAILER-DAEMON Wed Aug 04 17:04:44 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BsSwD-0006NW-8H
+	for mharc-axiom-mail@gnu.org; Wed, 04 Aug 2004 17:04:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BsSwB-0006NP-8F
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 17:04:39 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BsSw9-0006ND-CY
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 17:04:38 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BsSw9-0006NA-9o
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 17:04:37 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BsSsZ-0004sB-Do
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 17:00:55 -0400
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP id 6D05D644683
+	for <axiom-mail@nongnu.org>; Wed,  4 Aug 2004 17:00:54 -0400 (EDT)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 66178-04 for <axiom-mail@nongnu.org>;
+	Wed,  4 Aug 2004 17:00:53 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (corporateex.drdc-rddc.gc.ca
+	[131.136.1.77])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP id 8286F64468F
+	for <axiom-mail@nongnu.org>; Wed,  4 Aug 2004 17:00:52 -0400 (EDT)
+Received: by corporateex.drdc-rddc.gc.ca with Internet Mail Service
+	(5.5.2653.19) id <Q2LKWM42>; Wed, 4 Aug 2004 16:56:33 -0400
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DBD4@corporateex.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: axiom-mail@nongnu.org
+Date: Wed, 4 Aug 2004 16:56:32 -0400 
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Subject: [Axiom-mail] Experimental Online Web Interface for REDUCE
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 04 Aug 2004 21:04:39 -0000
+
+Dear Axiom Users:
+
+Yes, this is still the Axiom mailing list. But I wanted you to know that a
+wiki-based interface for Reduce (similar to the one developed for Axiom) is
+now available for testing on the Axiom developer system. See:
+
+  http://page.axiom-developer.org
+
+About Reduce:
+
+  http://test.axiom-developer.org/reducewiki
+ 
+Axiom and Reduce:
+
+  http://test.axiom-developer.org/Members/billpage/TestReduce
+ 
+GNUplot Graphics:
+
+  http://test.axiom-developer.org/Members/billpage/ReduceTest1
+ 
+Now you can access both Axiom and Reduce online - even on the same web page
+if you wish!
+This new feature is still in the testing stage, so it available only on the
+test system. Some features may change as development progresses but please
+feel free to try it and experiment (at your own risk of course! :)
+
+It is important to report any problems you notice and if you have
+suggestions for improvements or other comments about this work, I would be
+delighted to hear them.
+
+I am particularly interested in your views on the pros and cons of having a
+"bilingual" online mathematics web site supporting both Axiom and Reduce.
+Both Axiom and Reduce are similar in "age" -- or should I say maturity? Both
+are now open source systems. But they differ significantly in their approach
+to implementing mathematics on the computer.
+
+BTW, a copy of Tim Daly's "Rosetta document" is available online. See:
+
+A comparison of systems:
+
+  http://test.axiom-developer.org/wiki/RosettaStone
+
+Some of the information here is out of date and some is missing. If you are
+able to contribute to the completion of the tables in this document your
+collaboration will be most greatfully acknowledged. Note that since this is
+a "wiki" page, you can edit it simply by logging in to the web site.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Wed Aug 04 19:12:12 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BsUvc-0000Dv-JU
+	for mharc-axiom-mail@gnu.org; Wed, 04 Aug 2004 19:12:12 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BsUva-0000DI-G2
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 19:12:10 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BsUvY-0000Bw-I5
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 19:12:09 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BsUvY-0000BS-BS
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 19:12:08 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BsUrm-0008Gg-L6
+	for axiom-mail@nongnu.org; Wed, 04 Aug 2004 19:08:14 -0400
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id 4C0D264466E; Wed,  4 Aug 2004 19:08:14 -0400 (EDT)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 68456-08; Wed,  4 Aug 2004 19:08:12 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (corporateex.drdc-rddc.gc.ca
+	[131.136.1.77]) by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id 81E6D644618; Wed,  4 Aug 2004 19:08:12 -0400 (EDT)
+Received: by corporateex.drdc-rddc.gc.ca with Internet Mail Service
+	(5.5.2653.19) id <Q2LKWMY5>; Wed, 4 Aug 2004 19:03:53 -0400
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DBD5@corporateex.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: axiom-mail@nongnu.org
+Subject: RE: [Axiom-mail] Experimental Online Web Interface for REDUCE
+Date: Wed, 4 Aug 2004 19:03:53 -0400 
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 04 Aug 2004 23:12:10 -0000
+
+Axiom Users:
+
+I know everyone hates to talk about "licenses" and such but
+I think I need to make as brief as possible clarification
+of what I wrote earlier.
+
+On Wednesday, August 04, 2004 4:57 PM I wrote:
+> ... 
+> I am particularly interested in your views on the pros
+> and cons of having a "bilingual" online mathematics web
+> site supporting both Axiom and Reduce. Both Axiom and
+> Reduce are similar in "age" -- or should I say maturity?
+> Both are now open source systems. But they differ
+> significantly in their approach to implementing mathematics
+> on the computer.
+> 
+
+Tony Hearn has pointed out to me that what I wrote is not
+correct. Reduce is not "open source". In fact the source
+code of Reduce is available (for a fee). For ordering
+information see:
+
+  http://reduce-algebra.com/ordering%20information.htm
+
+Licensing information is here:
+
+  http://reduce.codemist.co.uk
+
+and here
+
+  http://www.zib.de/Symbolik/reduce/dist/
+
+But Reduce *cannot* be redistributed to others without
+permission from the original distributors. This is not
+consistent with the strict definition of open source as
+defined by www.opensource.org.
+
+But in the same email Dr. Hearn confirmed that [my
+paraphrase]: although one can not give anyone open access
+to the Reduce source code, they can of course have free
+use of the web interface.
+
+This seems very clear to me and I have no problem continuing
+to work with Reduce and Axiom on these terms.
+
+Regards,
+Bill Page.
+
+http://page.axiom-developer.org
+
+
+
+From MAILER-DAEMON Tue Aug 10 06:59:53 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BuUMD-0001FX-Jl
+	for mharc-axiom-mail@gnu.org; Tue, 10 Aug 2004 06:59:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BuUMB-0001F7-79
+	for axiom-mail@nongnu.org; Tue, 10 Aug 2004 06:59:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BuUM9-0001Eu-Ij
+	for axiom-mail@nongnu.org; Tue, 10 Aug 2004 06:59:50 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BuUM9-0001Er-Er
+	for axiom-mail@nongnu.org; Tue, 10 Aug 2004 06:59:49 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BuUIK-0007b0-0X
+	for axiom-mail@nongnu.org; Tue, 10 Aug 2004 06:55:52 -0400
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id CB6C06444F6; Tue, 10 Aug 2004 06:55:50 -0400 (EDT)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 02758-02; Tue, 10 Aug 2004 06:55:48 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (corporateex.drdc-rddc.gc.ca
+	[131.136.1.77]) by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id B080E6444A2; Tue, 10 Aug 2004 06:55:48 -0400 (EDT)
+Received: by corporateex.drdc-rddc.gc.ca with Internet Mail Service
+	(5.5.2653.19) id <Q2LKW421>; Tue, 10 Aug 2004 06:51:28 -0400
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DBDD@corporateex.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: axiom-mail@nongnu.org
+Date: Tue, 10 Aug 2004 06:51:18 -0400
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: "Tim Daly \(E-mail\)" <daly@idsi.net>,
+	"Bob McElrath \(E-mail\)" <bob@mcelrath.org>
+Subject: [Axiom-mail] Axiom Portal test web site updated with bibliography
+	and multilin gual interface
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 10 Aug 2004 10:59:51 -0000
+
+Dear Axiom (and Reduce) Users:
+
+I have installed the CMFBibliography package on the test
+version of the Axiom portal web site. This package allows
+you to enter or upload "bibtex" style literature references,
+to search for these and to download bibtex format references
+for inclusion in papers etc. See:
+
+  http://test.axiom-developer.org/refs
+
+I have loaded approximately 150 entries for Axiom from
+Nelson Beebe's circa 2002 bibliography and over 900 entries
+for Reduce from the Reduce web site (most of which were
+also collected by Beebe). These references include papers
+where a research made use of Axiom or Reduce for specific
+applications.
+
+You can search for references based on words from the
+title, the authors, the abstract etc. For example, keying
+
+  general relativity
+
+into the Search box on the upper right produces a list of
+16 references and 2 wiki pages.
+
+These bibliographic entries are editable - if you are logged
+in to the portal. Please feel free to update them if you have
+new or more complete information about these entries. And
+also to add new entries.
+
+-------
+
+You will also notice that it is now possible to set the
+user language of the portal to English, French, German,
+Italian, Portuguese, Russian and Spanish. Support for
+multiple languages is a feature of Plone. You can set the
+language preferences in your browser and Plone will
+automatically display your preferred language (if it is
+available). Additional languages can be added later.
+Please let me know if you have any trouble with this or
+if you find seriously incorrect or missing translations.
+
+There is another Plone feature called I18N which permits
+one to store different language versions of selected web
+pages and to serve these pages in the language of choice
+of the user. I have not yet installed this feature on the
+Axiom portal test system, but if there is some interest in
+this I can do so quite easily.
+
+As usual if you have some spare time, I would really
+appreciate it if you could try out these new features and
+give me some feedback - comments like: good, bad and
+suggestions. If there are no major problems, this is will
+be migrated to the main Axiom Portal web site later this
+week.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Aug 12 23:06:25 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BvSOe-0001yU-TE
+	for mharc-axiom-mail@gnu.org; Thu, 12 Aug 2004 23:06:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BvSOe-0001yH-5j
+	for axiom-mail@nongnu.org; Thu, 12 Aug 2004 23:06:24 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BvSOc-0001xT-Io
+	for axiom-mail@nongnu.org; Thu, 12 Aug 2004 23:06:23 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BvSOc-0001xQ-9a
+	for axiom-mail@nongnu.org; Thu, 12 Aug 2004 23:06:22 -0400
+Received: from [140.254.92.31] (helo=hermes.math.ohio-state.edu)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1BvSKJ-0007UE-30
+	for axiom-mail@nongnu.org; Thu, 12 Aug 2004 23:01:55 -0400
+Received: from math.ohio-state.edu (math.ohio-state.edu [140.254.92.30])
+	by hermes.math.ohio-state.edu (8.13.1/8.13.1) with ESMTP id
+	i7D31q00013638
+	for <axiom-mail@nongnu.org>; Thu, 12 Aug 2004 23:01:53 -0400
+Received: (from thomasb@localhost)
+	by math.ohio-state.edu (8.11.0/8.11.0) id i7D31qF04723
+	for axiom-mail@nongnu.org; Thu, 12 Aug 2004 23:01:52 -0400 (EDT)
+Date: Thu, 12 Aug 2004 23:01:52 -0400
+From: B Thomas <thomasb@math.ohio-state.edu>
+To: axiom-mail@nongnu.org
+Message-ID: <20040813030152.GA4703@scientificcomputing.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+User-Agent: Mutt/1.5.4i
+X-OSU-Math-MailScanner-Information: Please contact support for more information
+X-OSU-Math-MailScanner: Found to be clean
+X-MailScanner-From: thomasb@math.ohio-state.edu
+Subject: [Axiom-mail] Graphics not working ?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 13 Aug 2004 03:06:24 -0000
+
+Hi,
+Is there any way to get the graphics working as of 
+now ? Would be greatful for any tips on this.
+regards
+b thomas
+
+
+
+From MAILER-DAEMON Fri Aug 13 01:22:28 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BvUWJ-000698-SH
+	for mharc-axiom-mail@gnu.org; Fri, 13 Aug 2004 01:22:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BvUWI-00068M-GF
+	for axiom-mail@nongnu.org; Fri, 13 Aug 2004 01:22:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BvUWG-00067m-NV
+	for axiom-mail@nongnu.org; Fri, 13 Aug 2004 01:22:25 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1BvUWF-00067V-US; Fri, 13 Aug 2004 01:22:23 -0400
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1BvUSI-0007UZ-OU; Fri, 13 Aug 2004 01:18:18 -0400
+Received: from localhost.localdomain (234.178.252.64.snet.net [64.252.178.234])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i7D5I1fA194430; Fri, 13 Aug 2004 01:18:01 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i7D62iK01196;
+	Fri, 13 Aug 2004 02:02:44 -0400
+Date: Fri, 13 Aug 2004 02:02:44 -0400
+Message-Id: <200408130602.i7D62iK01196@localhost.localdomain>
+From: root <daly@idsi.net>
+To: thomasb@math.ohio-state.edu
+In-reply-to: <20040813030152.GA4703@scientificcomputing.net> (message from B
+	Thomas on Thu, 12 Aug 2004 23:01:52 -0400)
+Subject: Re: [Axiom-mail] Graphics not working ?
+References: <20040813030152.GA4703@scientificcomputing.net>
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 13 Aug 2004 05:22:26 -0000
+
+The graphics work (src/graph) and the viewAlone program exists that
+can view the graphics files that are created. The file format for 
+2D graphics files is documented by the current build. The document is:
+
+(path)/axiom/mnt/linux/doc/src/graph/fileformats.dvi
+
+I have yet to document the 3D case. 
+
+Also during the build a test file is created (from the 
+src/graph/fileformats.pamphlet) in the (path)/axiom/int/graph directory.
+You can see the 2D version of graphics working if you do:
+
+cd (path)/axiom/int/graph
+../../mnt/linux/bin/viewAlone parabola
+
+This will bring up a 2D graph. If you click anywhere on the graph the
+control panel will appear and you can manipulate the graph. Click on
+the quit button twice to end the program.
+
+There are two steps to do:
+
+1. Integrate the graphics with the Axiom system
+2. Document the 3D file format and source files
+3. Build a 3D test case
+
+Step 1 is in process. It requires recovering the sman program (aka
+"superman"). I am in the process of building, documenting and testing
+this locally but have not yet put it up on the worldwide server. Once
+I complete step 1 I'll move on to steps 2 and 3.
+
+At present I've stopped working on the sman program while I install
+a series of long-overdue patches for the freebsd version (as you can
+see from the flurry of patch confirmation messages). Once these
+get locally tested I have to test them on Mark's freebsd system
+so I can see how badly I've broken freebsd. When that completes
+and is stable I'll return to building sman.
+
+Tim
+
+
+
+From MAILER-DAEMON Fri Aug 13 03:51:04 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BvWq8-000469-4U
+	for mharc-axiom-mail@gnu.org; Fri, 13 Aug 2004 03:51:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BvWq5-000461-ML
+	for axiom-mail@nongnu.org; Fri, 13 Aug 2004 03:51:01 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BvWq2-00045o-K5
+	for axiom-mail@nongnu.org; Fri, 13 Aug 2004 03:51:00 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BvWq2-00045l-4j
+	for axiom-mail@nongnu.org; Fri, 13 Aug 2004 03:50:58 -0400
+Received: from [213.228.0.169] (helo=postfix3-2.free.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BvWlo-0001Qo-QY
+	for axiom-mail@nongnu.org; Fri, 13 Aug 2004 03:46:37 -0400
+Received: from [82.67.35.85] (tonkin-1-82-67-35-85.fbx.proxad.net
+	[82.67.35.85])
+	by postfix3-2.free.fr (Postfix) with ESMTP id 91C5FC23E
+	for <axiom-mail@nongnu.org>; Fri, 13 Aug 2004 09:46:35 +0200 (CEST)
+Message-ID: <411C71DD.50403@free.fr>
+Date: Fri, 13 Aug 2004 09:46:37 +0200
+From: argos3@free.fr
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; fr-FR;
+	rv:1.7.2) Gecko/20040810 Debian/1.7.2-2
+X-Accept-Language: fr
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Graphics not working ?
+References: <20040813030152.GA4703@scientificcomputing.net>
+In-Reply-To: <20040813030152.GA4703@scientificcomputing.net>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 13 Aug 2004 07:51:02 -0000
+
+B Thomas wrote:
+
+>Hi,
+>Is there any way to get the graphics working as of=20
+>now ? Would be greatful for any tips on this.
+>regards
+>b thomas
+>
+>
+>_______________________________________________
+>Axiom-mail mailing list
+>Axiom-mail@nongnu.org
+>http://lists.nongnu.org/mailman/listinfo/axiom-
+> =20
+>
+
+Mhhh... I have also a problem with graphics. As I'm very new to Axiom, I=20
+did not want to ask any question before having tried many things... but..=
+.
+
+I Launch Axiom, and type a "draw" command:
+:axiom
+:draw(sin(x+y),x=3D0..1,y=3D0..1)
+
+what I get is:
+  ....
+  Loading /usr/lib/axiom-0.20040705/algebra/VIEW3D.o for domain
+      ThreeDimensionalViewport
+   Transmitting data...
+   Loading /usr/lib/axiom-0.20040705/algebra/COORDSYS.o for package
+      CoordinateSystems
+   Loading /usr/lib/axiom-0.20040705/algebra/PTPACK.o for package
+      PointPackage
+
+   (1)  ThreeDimensionalViewport: "sin y*y+x*x"
+                                               Type:=20
+ThreeDimensionalViewport
+
+
+and no graphics at all... What should I do ?
+
+My Axiom version whas shipped with Debian unstable on linux x86.
+
+Yours,
+-----
+Thierry Dumont
+Laboratoire de Math=E9matiques Appliqu=E9es de Lyon
+Universit=E9 Lyon 1 et CNRS, Villeurbanne (Lyon), Francd.
+
+
+
+From MAILER-DAEMON Fri Aug 20 04:06:14 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1By4Pe-0005Z4-As
+	for mharc-axiom-mail@gnu.org; Fri, 20 Aug 2004 04:06:14 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1By4Pb-0005Yi-4H
+	for axiom-mail@nongnu.org; Fri, 20 Aug 2004 04:06:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1By4PY-0005Y6-UO
+	for axiom-mail@nongnu.org; Fri, 20 Aug 2004 04:06:10 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1By4PY-0005Xx-JN
+	for axiom-mail@nongnu.org; Fri, 20 Aug 2004 04:06:08 -0400
+Received: from [140.78.161.123] (helo=proxy.riic.at)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1By4L9-0007ju-B2
+	for axiom-mail@nongnu.org; Fri, 20 Aug 2004 04:01:35 -0400
+Received: from hanni.riic.uni-linz.ac.at (hanni.riic.uni-linz.ac.at
+	[140.78.161.78])
+	by proxy.riic.at (8.12.3/8.12.3/Debian-6.6) with ESMTP id
+	i7K7O42S017230
+	for <axiom-mail@nongnu.org>; Fri, 20 Aug 2004 09:24:04 +0200
+Date: Fri, 20 Aug 2004 10:01:30 +0200
+From: Gernot Hueber <hueber@riic.at>
+To: axiom-mail@nongnu.org
+Message-ID: <20040820080130.GE31265@hanni.riic.uni-linz.ac.at>
+Mime-Version: 1.0
+Content-Type: text/plain; Format=Flowed; DelSp=Yes; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+X-Mailer: Balsa 2.0.18
+Lines: 43
+Subject: [Axiom-mail] Graphics not working ...
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 20 Aug 2004 08:06:12 -0000
+
+Hello,
+
+Great tool, great work!
+
+I got axiom running of FreeBSD by integrating recent patches and doing  
+some handwork ;-) and I am happy to hear the FreeBSD stuff is going to  
+be integrated into the main tree soon!
+
+I tried to compile graphics, which worked fine. But using viewAlone  
+parabol chrashed.
+
+...
+(spoon2D makeView2DFromFileData)
+(spoon2D) title=x*x
+
+(spoon2D) X=0 Y=0 W=400 H=400
+(spoon2D) i=0 key=1
+Error occured during
+Error code of 2
+Error in line number 88 of process 66582
+(spoon2D) scaleX=0.867014 scaleY=0.575432
+No such file or directory
+(spoon2D) deltaX=0 deltaY=0
+(spoon2D) centerX=0 centerY=0
+...
+(spoon2d)k=47 x=0.479167 y=0.418403 hue=0 shade=2
+(spoon2d)k=48 x=0.5 y=0.5 hue=0 shade=2
+  Transmitting data to viewport...
+Broken pipe
+
+regards
+
+Gernot
+
+-- 
+Dipl.-Ing. Gernot Hueber
+Institut f. Integrierte Schaltungen
+Altenbergerstr. 69
+4040 Linz
+
+Tel: +43 732 2468-7120, Fax: -7126
+E-mail: hueber@riic.at
+WWW: www.riic.at
+
+
+
+From MAILER-DAEMON Sun Aug 22 13:12:48 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Byvtg-0002Ne-3E
+	for mharc-axiom-mail@gnu.org; Sun, 22 Aug 2004 13:12:48 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Byvtf-0002NW-2O
+	for axiom-mail@nongnu.org; Sun, 22 Aug 2004 13:12:47 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Byvtc-0002Ma-Uk
+	for axiom-mail@nongnu.org; Sun, 22 Aug 2004 13:12:46 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Byvtc-0002MQ-Qj
+	for axiom-mail@nongnu.org; Sun, 22 Aug 2004 13:12:44 -0400
+Received: from [213.165.64.20] (helo=mail.gmx.net)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1Byvp7-0006vb-1l
+	for axiom-mail@nongnu.org; Sun, 22 Aug 2004 13:08:05 -0400
+Received: (qmail 24262 invoked by uid 0); 22 Aug 2004 17:07:53 -0000
+Received: from 130.225.2.159 by www10.gmx.net with HTTP;
+	Sun, 22 Aug 2004 19:07:53 +0200 (MEST)
+Date: Sun, 22 Aug 2004 19:07:53 +0200 (MEST)
+From: "Bjarke Roune" <bjarke100@gmx.net>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+X-Priority: 3 (Normal)
+X-Authenticated: #13569844
+Message-ID: <21832.1093194473@www10.gmx.net>
+X-Mailer: WWW-Mail 1.6 (Global Message Exchange)
+X-Flags: 0001
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-mail] (no subject)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 22 Aug 2004 17:12:47 -0000
+
+Hi
+
+I'm new to Axiom. Is there some kind of comprehensive and searchable
+documentation for what the various packages of Axiom do? The book in the
+distribution only contains a little bit about some of the packages. I'm
+thinking about a kind of "API documentation" in the style "this function
+takes these parameters and does this and that".
+
+More concretely, I want to implement a Groebner basis algorithm in Axiom
+(The F4 algorithm of Faugere). However, I cannot find out how to make a
+polynomial monic. What is the procedure to find out how to do something like
+that?
+
+Given the name of a package, how can I find the pamphlet file that contains
+the code for that package?
+
+-Bjarke Roune
+
+-- 
+Supergünstige DSL-Tarife + WLAN-Router für 0,- EUR*
+Jetzt zu GMX wechseln und sparen http://www.gmx.net/de/go/dsl
+
+
+
+
+From MAILER-DAEMON Mon Aug 23 04:59:35 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BzAfv-0002fC-O3
+	for mharc-axiom-mail@gnu.org; Mon, 23 Aug 2004 04:59:35 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BzAfs-0002ed-Tf
+	for axiom-mail@nongnu.org; Mon, 23 Aug 2004 04:59:33 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BzAfq-0002eI-BT
+	for axiom-mail@nongnu.org; Mon, 23 Aug 2004 04:59:31 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BzAfq-0002e7-5l
+	for axiom-mail@nongnu.org; Mon, 23 Aug 2004 04:59:30 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BzAbF-0000Gx-NX
+	for axiom-mail@nongnu.org; Mon, 23 Aug 2004 04:54:46 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i7N8sAJP237304;
+	Mon, 23 Aug 2004 10:54:29 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16681.52250.27879.400093@gargle.gargle.HOWL>
+Date: Mon, 23 Aug 2004 10:51:06 +0000
+To: "Bjarke Roune" <bjarke100@gmx.net>
+Subject: Re: [Axiom-mail] (no subject)
+In-Reply-To: <21832.1093194473@www10.gmx.net>
+References: <21832.1093194473@www10.gmx.net>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4248; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Aug 2004 08:59:34 -0000
+
+Bjarke Roune writes:
+ > Hi
+ > 
+ > I'm new to Axiom. 
+
+Welcome!
+
+ > Is there some kind of comprehensive and searchable
+ > documentation for what the various packages of Axiom do? The book in the
+ > distribution only contains a little bit about some of the packages. I'm
+ > thinking about a kind of "API documentation" in the style "this function
+ > takes these parameters and does this and that".
+ > 
+ > More concretely, I want to implement a Groebner basis algorithm in Axiom
+ > (The F4 algorithm of Faugere). However, I cannot find out how to make a
+ > polynomial monic. What is the procedure to find out how to do something like
+ > that?
+
+Hmm, I use trial and error. And I'm lucky, since I've got the book by
+Jenks/Sutor, and in the printed version there is a nice summary of many
+commands. I don't really know why it's missing from the online version. (It
+should be Appendix E...)
+
+However, all the stuff which should be in Appendix E is in the source files,
+roughly the comments following "++".
+
+It often helps to look at the available commands of your domain using
+
+)sh UP
+
+for example. Also, if I'm looking for something, I try to imagine which
+algorithms could use that something and read the source code there. That way, I
+also found quite some bugs :-)
+
+To make a polynomial monic, you can use divide by leadingCoefficient, of
+course, but you probably knew that...
+
+ > Given the name of a package, how can I find the pamphlet file that contains
+ > the code for that package?
+
+I use (at a unix command prompt)
+
+grep ")abbr.* INT " *
+
+since the information by asq is not correct at the moment.
+
+Good luck,
+
+Martin
+
+
+
+
+From MAILER-DAEMON Mon Aug 23 06:45:48 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BzCKh-0005Di-8y
+	for mharc-axiom-mail@gnu.org; Mon, 23 Aug 2004 06:45:47 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BzCKY-0005C8-D4
+	for axiom-mail@nongnu.org; Mon, 23 Aug 2004 06:45:38 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BzCKU-0005B8-Bp
+	for axiom-mail@nongnu.org; Mon, 23 Aug 2004 06:45:35 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BzCCl-0003ci-7u
+	for axiom-mail@nongnu.org; Mon, 23 Aug 2004 06:37:35 -0400
+Received: from [140.78.161.123] (helo=proxy.riic.at)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1BzC8A-0000WX-7U
+	for axiom-mail@nongnu.org; Mon, 23 Aug 2004 06:32:50 -0400
+Received: from hanni.riic.uni-linz.ac.at (hanni.riic.uni-linz.ac.at
+	[140.78.161.78])
+	by proxy.riic.at (8.12.3/8.12.3/Debian-6.6) with ESMTP id
+	i7N9t42S012145
+	for <axiom-mail@nongnu.org>; Mon, 23 Aug 2004 11:55:04 +0200
+Date: Mon, 23 Aug 2004 12:32:47 +0200
+From: Gernot Hueber <hueber@riic.at>
+To: axiom-mail@nongnu.org
+Message-ID: <20040823103247.GC31265@hanni.riic.uni-linz.ac.at>
+Mime-Version: 1.0
+Content-Type: text/plain; Format=Flowed; DelSp=Yes; charset=ISO-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+X-Mailer: Balsa 2.0.18
+Lines: 31
+Subject: [Axiom-mail] change dir
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Aug 2004 10:45:40 -0000
+
+Hello,
+
+what is going wrong here (OS is FreeBSD)?
+
+  )cd /
+System error:
+
+#p"/.amd_mnt/johnson/vol/vol0/home/hueber/" is not of type SEQUENCE.
+
+  protected-symbol-warn called with (NIL)
+
+  )cd projects/dfe/axiom
+System error:
+
+#p"/.amd_mnt/johnson/vol/vol0/home/hueber/" is not of type SEQUENCE.
+
+  protected-symbol-warn called with (NIL)
+
+regards
+
+Gernot
+
+-- 
+Dipl.-Ing. Gernot Hueber
+Institut f. Integrierte Schaltungen
+Altenbergerstr. 69
+4040 Linz
+
+Tel: +43 732 2468-7120, Fax: -7126
+E-mail: hueber@riic.at
+WWW: www.riic.at
+
+
+
+From MAILER-DAEMON Wed Aug 25 13:09:18 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C01DX-0006V2-KP
+	for mharc-axiom-mail@gnu.org; Wed, 25 Aug 2004 13:05:50 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C01DQ-0006Tu-Mk
+	for axiom-mail@nongnu.org; Wed, 25 Aug 2004 13:05:41 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C01DM-0006St-W4
+	for axiom-mail@nongnu.org; Wed, 25 Aug 2004 13:05:38 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C00z2-0001a5-Ff
+	for axiom-mail@nongnu.org; Wed, 25 Aug 2004 12:50:48 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BzwEu-0005KY-CP
+	for axiom-mail@nongnu.org; Wed, 25 Aug 2004 07:46:52 -0400
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id BBAB56447A2; Wed, 25 Aug 2004 07:46:48 -0400 (EDT)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 98472-03; Wed, 25 Aug 2004 07:46:47 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (corporateex.drdc-rddc.gc.ca
+	[131.136.1.77]) by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id 49873644794; Wed, 25 Aug 2004 07:46:47 -0400 (EDT)
+Received: by corporateex.drdc-rddc.gc.ca with Internet Mail Service
+	(5.5.2653.19) id <Q2LKXP3K>; Wed, 25 Aug 2004 07:42:23 -0400
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DBFC@corporateex.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Axiom-Mail (E-mail)" <axiom-mail@nongnu.org>
+Date: Wed, 25 Aug 2004 07:42:23 -0400
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>
+Subject: [Axiom-mail] Axiom Portal and Mathaction Wiki have been updated
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 25 Aug 2004 17:05:42 -0000
+
+Dear Axiom User:
+
+I have just completed updating the axiom-developer.org
+web site to include some of the new features that have
+been under test: 1) You can now use both Axiom and Reduce
+on these interactive web pages. 2) The Axiom portal
+now includes an extensive bibliography of publications
+on Axiom and on Reduce in the "References" section.
+
+Click http://page.axiom-developer.org/zope/mathaction
+to access the MathAction wiki web site.
+
+Click http://page.axiom-developer.org/zope/Plone
+to access the Axiom/Reduce Portal.
+
+Finally, you can also continue to help with testing and
+the development at http://test.axiom-developer.org currently
+I am workin on the multilingual user interface, noweb-style
+"literate programming" features for creating wiki pages,
+and generation of graphical output. 
+
+Regards to all.
+
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Aug 26 11:51:38 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C0MXK-0004jB-O0
+	for mharc-axiom-mail@gnu.org; Thu, 26 Aug 2004 11:51:38 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C0MXJ-0004iO-32
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 11:51:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C0MXG-0004i3-3P
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 11:51:36 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C0MXE-0004hx-OI
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 11:51:34 -0400
+Received: from [209.226.175.34] (helo=tomts13-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C0MSK-0002Gs-6d
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 11:46:28 -0400
+Received: from Asus ([216.208.193.148]) by tomts13-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20040826154625.XHUG4758.tomts13-srv.bellnexxia.net@Asus>
+	for <axiom-mail@nongnu.org>; Thu, 26 Aug 2004 11:46:25 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <axiom-mail@nongnu.org>
+Date: Thu, 26 Aug 2004 11:46:26 -0400
+Message-ID: <005d01c48b83$d9af56a0$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1441
+Importance: Normal
+Subject: [Axiom-mail] FW: [Maxima] 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 26 Aug 2004 15:51:37 -0000
+
+Someone anonymously tried the following command on MathAction.
+Is there any interest in a Maxima interface on MathAction? If
+so, then I would be willing to work with someone how knows
+Maxima to accomplish this. It should be quite easy.
+
+-----Original Message-----
+From: mathaction@axiom-developer.org =
+[mailto:mathaction@axiom-developer.org]
+
+Sent: Thursday, August 26, 2004 4:15 AM
+To: mathaction@axiom-developer.org
+Subject: [Maxima]=20
+
+
+\begin{maxima}
+diff(x^2,x)
+\end{maxima}
+--
+forwarded from
+http://page.axiom-developer.org/zope/mathaction/Maxima#msg20040826031457-=
+050
+0@page.axiom-developer.org
+
+
+
+
+From MAILER-DAEMON Thu Aug 26 13:30:45 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C0O5E-0003Ks-Sz
+	for mharc-axiom-mail@gnu.org; Thu, 26 Aug 2004 13:30:45 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C0O5D-0003KB-82
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 13:30:43 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C0O59-0003II-8e
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 13:30:42 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C0O59-0003ID-2B
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 13:30:39 -0400
+Received: from [69.36.241.242] (helo=moya.mcelrath.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1C0O05-0001A8-Oq
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 13:25:26 -0400
+Received: from moya.mcelrath.org (mcelrath@localhost [127.0.0.1])
+	by moya.mcelrath.org (8.12.11/8.12.11/Debian-5) with ESMTP id
+	i7QHPNso014720
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NOT);
+	Thu, 26 Aug 2004 10:25:23 -0700
+Received: (from mcelrath@localhost)
+	by moya.mcelrath.org (8.12.11/8.12.11/Debian-5) id i7QHPNg9014717;
+	Thu, 26 Aug 2004 10:25:23 -0700
+X-Authentication-Warning: moya.mcelrath.org: mcelrath set sender to
+	bob+axiom@mcelrath.org using -f
+Date: Thu, 26 Aug 2004 10:25:22 -0700
+From: Bob McElrath <bob+axiom@mcelrath.org>
+To: Bill Page <bill.page1@sympatico.ca>
+Subject: Re: [Axiom-mail] FW: [Maxima]
+Message-ID: <20040826172522.GC10309@mcelrath.org>
+References: <005d01c48b83$d9af56a0$6501a8c0@Asus>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="mvpLiMfbWzRoNl4x"
+Content-Disposition: inline
+In-Reply-To: <005d01c48b83$d9af56a0$6501a8c0@Asus>
+User-Agent: Mutt/1.5.6+20040523i
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 26 Aug 2004 17:30:43 -0000
+
+
+--mvpLiMfbWzRoNl4x
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+Bill Page [bill.page1@sympatico.ca] wrote:
+> Someone anonymously tried the following command on MathAction.
+> Is there any interest in a Maxima interface on MathAction? If
+> so, then I would be willing to work with someone how knows
+> Maxima to accomplish this. It should be quite easy.
+
+Yes yes yes!
+
+Maxima over Reduce, I say, as Maxima is free.  This kind of integration
+and comparison will help to improve all.
+
+I'm sorry I am extremely busy with physics projects right now, but I
+still want to consolidate your work on external algebra systems.
+
+Basically you've been copying my ReplaceInlineLatex.py and
+latexWrapper.py for each new algebra system.  I would rather have one
+ReplaceInline... which does regex matching and HTML stuff (there is much
+code duplication currently) and dispatches to some kind of class which
+just gets handed the code and returns html.
+
+Also someday I plan to plug this all into the StructuredText class,
+which will give it more rigor.  (Since zwiki and latexwiki are a pile of
+regexps, it's not too hard to make all this fail)  I can identify
+\begin{...}...\end{...} as a block in a StructuredText module, and hand
+it off to a plugin to render...  See my StructuredTextLatex.py which is
+a start in this direction.
+
+But as you have been doing all the work on this, what I wan't doesn't
+really matter, now does it!
+
+Thanks for your work!
+
+Cheers,
+Bob McElrath [Univ. of California at Davis, Department of Physics]
+    
+    It is unpatriotic to question the Kleptocracy.
+
+--mvpLiMfbWzRoNl4x
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBLh0CjwioWRGe9K0RAhOTAKCQV0fyRetCjv2CA5PMcehsFPS9jACeN+/g
+RGFl2vk19tItPBX4RylOZ4g=
+=wsWX
+-----END PGP SIGNATURE-----
+
+--mvpLiMfbWzRoNl4x--
+
+
+
+From MAILER-DAEMON Thu Aug 26 17:19:22 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C0ReU-0004Vh-0w
+	for mharc-axiom-mail@gnu.org; Thu, 26 Aug 2004 17:19:22 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C0ReS-0004Vb-Fz
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 17:19:20 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C0ReR-0004VP-Jb
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 17:19:20 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C0ReR-0004VM-4l
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 17:19:19 -0400
+Received: from [209.226.175.93] (helo=tomts36-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C0RZc-0002Wz-2U
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 17:14:20 -0400
+Received: from Asus ([216.209.138.105]) by tomts36-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20040826211417.WVHI25796.tomts36-srv.bellnexxia.net@Asus>;
+	Thu, 26 Aug 2004 17:14:17 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: "'Bob McElrath'" <bob+axiom@mcelrath.org>
+Subject: RE: [Axiom-mail] FW: [Maxima]
+Date: Thu, 26 Aug 2004 17:14:14 -0400
+Message-ID: <008701c48bb1$a6921400$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+In-Reply-To: <20040826172522.GC10309@mcelrath.org>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1441
+Importance: Normal
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 26 Aug 2004 21:19:20 -0000
+
+Bob,
+
+Thanks for your comments about how to properly implement
+the idea of "external algebra systems". Yes, I suppose
+a lot of this could be made just "pluggable" but on the
+other hand really the duplicated coding is quite short
+and simple. At least based on the current sample of two,
+it is dealing with the particulars of the target system
+that takes up most of the code and I don't see how that
+could really change. Fortunately Python's regexp features
+are quite powerful and easy to use so in any case it is
+only really 10 or 20 lines of specific code.
+
+I would really support your idea to do this all in a
+better way if the goal was to immediately support all
+20 or so of the RosettaStone systems (such as we are
+considering in Tim's "Doyen" project where actually the
+number might be closer to 200 if we included all of the
+Quantian tools). But that is really a different (: and
+hopefully better funded/resourced than the current work :)
+Right now I can only see this progressing in small
+increments, so it is hard to find the time to "really
+do it right"...
+
+So, if/when you get the time and motivation to consolidate
+this in the manner you suggest, then I would certainly
+appreciate it.
+
+So, back to the Maxima increment:
+
+1) How does Maxima do LaTeX? What flavour TeX/LaTeX?
+2) Can we run a command line interface the same way
+we do in Axiom and Reduce that processes code in chunks
+like this:
+
+   > setup environment
+   > read file1
+   > read file2
+   > read file3
+   > ...
+   > quit nicely
+
+3) What kind of syntactical delimiters can we depend on
+in the output file? For example both Axiom and Reduce
+produce appropriate user input prompts which can be
+used to separate and match the output chunks to input
+chunks.
+
+4) If someone can run Maxima in a "filter" mode like
+this
+
+  maxima <inputfile >outputfile
+
+where the inputfile is structured like in 2) and
+the chunks would be typical of what one might want
+to put in between \begin{maxima} ... \end{maxima},
+then I can take a look at the problem of parsing
+the output.
+
+5) Of course I *could* do all this again on my own, but
+for my goals and purposes there are quickly diminishing
+returns so I would prefer if someone else stepped up to
+do Maxima and then someone stepped forward to do Yucas
+etc. etc.
+
+In fact I would say that with Axiom and Reduce, and the
+Reduce interface to gnuplot, I have what I currently
+need to do the things that I want personally to do with
+this system - except I would really like to include Maple!
+Because of damned licensing restrictions of non-free code,
+though, maybe I will do that on my own personal "daughter"
+system. Really I too just want to get back to simply
+*using* this stuff for physics ... :(
+
+Finally, about Reduce and licensing. Yes, it is "non-free".
+Pity. But it is "almost free"... and I hope that we can
+continue to put pressure on the current developers and
+those marketing it, to fully release it as open source.
+I have also repeatedly made the same argument to the Maple
+developers. So far they do not "see the light" but they
+have continued to move in the right direction.
+
+Cheers,
+Bill Page.
+
+> -----Original Message-----
+> From: Bob McElrath [mailto:bob+axiom@mcelrath.org] 
+> Sent: Thursday, August 26, 2004 1:25 PM
+> To: Bill Page
+> Cc: axiom-mail@nongnu.org
+> Subject: Re: [Axiom-mail] FW: [Maxima]
+> 
+> 
+> Bill Page [bill.page1@sympatico.ca] wrote:
+> > Someone anonymously tried the following command on MathAction.
+> > Is there any interest in a Maxima interface on MathAction? If
+> > so, then I would be willing to work with someone how knows
+> > Maxima to accomplish this. It should be quite easy.
+> 
+> Yes yes yes!
+> 
+> Maxima over Reduce, I say, as Maxima is free.  This kind of 
+> integration and comparison will help to improve all.
+> 
+> I'm sorry I am extremely busy with physics projects right now,
+> but I still want to consolidate your work on external algebra
+> systems.
+> 
+> Basically you've been copying my ReplaceInlineLatex.py and
+> latexWrapper.py for each new algebra system.  I would rather
+> have one ReplaceInline... which does regex matching and HTML
+> stuff (there is much code duplication currently) and dispatches
+> to some kind of class which just gets handed the code and
+> returns html.
+> 
+> Also someday I plan to plug this all into the StructuredText
+> class, which will give it more rigor.  (Since zwiki and latexwiki 
+> are a pile of regexps, it's not too hard to make all this fail)
+> I can identify \begin{...}...\end{...} as a block in a
+> StructuredText module, and hand it off to a plugin to render...
+> See my StructuredTextLatex.py which is a start in this direction.
+> 
+> But as you have been doing all the work on this, what I wan't
+> doesn't really matter, now does it!
+> 
+> Thanks for your work!
+> 
+> Cheers,
+> Bob McElrath [Univ. of California at Davis, Department of Physics]
+>     
+>     It is unpatriotic to question the Kleptocracy.
+> 
+
+
+
+
+From MAILER-DAEMON Thu Aug 26 17:37:42 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C0RwE-0002Uj-86
+	for mharc-axiom-mail@gnu.org; Thu, 26 Aug 2004 17:37:42 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C0RwC-0002UH-12
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 17:37:40 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C0Rw8-0002S3-Gz
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 17:37:39 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C0Rw8-0002Rw-EA
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 17:37:36 -0400
+Received: from [69.36.241.242] (helo=moya.mcelrath.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1C0Rr4-0005RS-TV
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 17:32:23 -0400
+Received: from moya.mcelrath.org (mcelrath@localhost [127.0.0.1])
+	by moya.mcelrath.org (8.12.11/8.12.11/Debian-5) with ESMTP id
+	i7QLWLTk016161
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NOT);
+	Thu, 26 Aug 2004 14:32:21 -0700
+Received: (from mcelrath@localhost)
+	by moya.mcelrath.org (8.12.11/8.12.11/Debian-5) id i7QLWLne016158;
+	Thu, 26 Aug 2004 14:32:21 -0700
+X-Authentication-Warning: moya.mcelrath.org: mcelrath set sender to
+	bob+axiom@mcelrath.org using -f
+Date: Thu, 26 Aug 2004 14:32:21 -0700
+From: Bob McElrath <bob+axiom@mcelrath.org>
+To: Bill Page <bill.page1@sympatico.ca>
+Subject: Re: [Axiom-mail] FW: [Maxima]
+Message-ID: <20040826213221.GF10309@mcelrath.org>
+References: <20040826172522.GC10309@mcelrath.org>
+	<008701c48bb1$a6921400$6501a8c0@Asus>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="4VrXvz3cwkc87Wze"
+Content-Disposition: inline
+In-Reply-To: <008701c48bb1$a6921400$6501a8c0@Asus>
+User-Agent: Mutt/1.5.6+20040523i
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 26 Aug 2004 21:37:40 -0000
+
+
+--4VrXvz3cwkc87Wze
+Content-Type: multipart/mixed; boundary="19uQFt6ulqmgNgg1"
+Content-Disposition: inline
+
+
+--19uQFt6ulqmgNgg1
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+Bill Page [bill.page1@sympatico.ca] wrote:
+> Bob,
+> 
+> Thanks for your comments about how to properly implement
+> the idea of "external algebra systems". Yes, I suppose
+> a lot of this could be made just "pluggable" but on the
+> other hand really the duplicated coding is quite short
+> and simple. At least based on the current sample of two,
+> it is dealing with the particulars of the target system
+> that takes up most of the code and I don't see how that
+> could really change. Fortunately Python's regexp features
+> are quite powerful and easy to use so in any case it is
+> only really 10 or 20 lines of specific code.
+
+There are numerous existing problems with ZWiki and LatexWiki that I
+know how to trigger with the right code.  In the long run we must move
+away from regexes, but this is a long-term project.
+
+> I would really support your idea to do this all in a
+> better way if the goal was to immediately support all
+> 20 or so of the RosettaStone systems (such as we are
+> considering in Tim's "Doyen" project where actually the
+> number might be closer to 200 if we included all of the
+> Quantian tools). But that is really a different (: and
+> hopefully better funded/resourced than the current work :)
+> Right now I can only see this progressing in small
+> increments, so it is hard to find the time to "really
+> do it right"...
+
+Yeah, okay I will do it when I get time.  :)
+
+> So, if/when you get the time and motivation to consolidate
+> this in the manner you suggest, then I would certainly
+> appreciate it.
+> 
+> So, back to the Maxima increment:
+> 
+> 1) How does Maxima do LaTeX? What flavour TeX/LaTeX?
+
+Here is a little on that:
+
+    http://www.hippasus.com/resources/symmath/maximatypeset.html
+
+You can run the code straight, and then append code to typeset it like:
+    tex(C1);
+    tex(D1);
+    tex(C2);
+    tex(D2);
+where Ci are the commands run and Di are the results generated from the
+session.  Attached is a test file like this.
+
+> 2) Can we run a command line interface the same way
+> we do in Axiom and Reduce that processes code in chunks
+> like this:
+> 
+>    > setup environment
+>    > read file1
+>    > read file2
+>    > read file3
+>    > ...
+>    > quit nicely
+> 
+> 3) What kind of syntactical delimiters can we depend on
+> in the output file? For example both Axiom and Reduce
+> produce appropriate user input prompts which can be
+> used to separate and match the output chunks to input
+> chunks.
+
+(C#) and (D#) denote input and output respectively where # is the line
+number.
+
+> 4) If someone can run Maxima in a "filter" mode like
+> this
+> 
+>   maxima <inputfile >outputfile
+> 
+> where the inputfile is structured like in 2) and
+> the chunks would be typical of what one might want
+> to put in between \begin{maxima} ... \end{maxima},
+> then I can take a look at the problem of parsing
+> the output.
+
+Note that maxima is free and in debian.  (love debian)  'apt-get install
+maxima'.
+
+
+> Finally, about Reduce and licensing. Yes, it is "non-free".
+> Pity. But it is "almost free"... and I hope that we can
+> continue to put pressure on the current developers and
+> those marketing it, to fully release it as open source.
+> I have also repeatedly made the same argument to the Maple
+> developers. So far they do not "see the light" but they
+> have continued to move in the right direction.
+
+This argument will likely continue for a long time.
+
+But, when bugs are found, we can fix axiom, we cannot fix reduce.  So in
+the end it is beneficial to the free systems that are incorporated, and
+cannot be beneficial to the non-free systems.  (unless their developers
+are paying attention to us)
+
+Cheers,
+Bob McElrath [Univ. of California at Davis, Department of Physics]
+    
+    It is unpatriotic to question the Kleptocracy.
+
+--19uQFt6ulqmgNgg1
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: attachment; filename="maximaoutput.txt"
+
+GCL (GNU Common Lisp)  2.6.2 CLtL1   Jun 29 2004 18:53:13
+Source License: LGPL(gcl,gmp), GPL(unexec,bfd)
+Binary License:  GPL due to GPL'ed components: (READLINE BFD UNEXEC)
+Modifications of this banner must retain notice of a compatible license
+Dedicated to the memory of W. Schelter
+
+Use (help) to get some basic information on how to use GCL.
+Maxima restarted.
+(C1) 
+					  2
+(D1) 				   (x + 1)
+(C2) 
+				  2
+(D2) 				 x  + 2 x + 1
+(C3) 
+
+|(C1) FACTOR(x^2+2*x+1);|
+(D3) 				     (C1)
+(C4) 
+$$\left(x+1\right)^2\leqno{\tt (D1)}$$
+(D4) 				     (D1)
+(C5) 
+
+|(C2) EXPAND(%);|
+(D5) 				     (C2)
+(C6) 
+$$x^2+2\,x+1\leqno{\tt (D2)}$$
+(D6) 				     (D2)
+(C7) 
+--19uQFt6ulqmgNgg1--
+
+--4VrXvz3cwkc87Wze
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBLlbljwioWRGe9K0RAs3/AJ9H3c/bjLpy2DP8QARXrxONG0F/7wCfS1bk
+fhAShGJkLLHEOAEFq/MgrQc=
+=hqMu
+-----END PGP SIGNATURE-----
+
+--4VrXvz3cwkc87Wze--
+
+
+
+From MAILER-DAEMON Thu Aug 26 19:24:15 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C0TbL-0001jk-0v
+	for mharc-axiom-mail@gnu.org; Thu, 26 Aug 2004 19:24:15 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C0TbI-0001j9-RO
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 19:24:12 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C0TbI-0001ix-11
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 19:24:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C0TbH-0001in-W7
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 19:24:12 -0400
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C0TW9-0004E8-80
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 19:18:53 -0400
+Received: from localhost.localdomain (139.177.252.64.snet.net [64.252.177.139])
+	by pimout1-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i7QNIphh107004; Thu, 26 Aug 2004 19:18:51 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i7R03HD29941;
+	Thu, 26 Aug 2004 20:03:17 -0400
+Date: Thu, 26 Aug 2004 20:03:17 -0400
+Message-Id: <200408270003.i7R03HD29941@localhost.localdomain>
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca
+In-reply-to: <008701c48bb1$a6921400$6501a8c0@Asus> (bill.page1@sympatico.ca)
+Subject: Re: [Axiom-mail] FW: [Maxima]
+References: <008701c48bb1$a6921400$6501a8c0@Asus>
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 26 Aug 2004 23:24:13 -0000
+
+Bill,
+
+> Finally, about Reduce and licensing. Yes, it is "non-free".
+> Pity. But it is "almost free"... and I hope that we can
+> continue to put pressure on the current developers and
+> those marketing it, to fully release it as open source.
+> I have also repeatedly made the same argument to the Maple
+> developers. So far they do not "see the light" but they
+> have continued to move in the right direction.
+
+(Clearly this reply is biased by the fact that I maintain Axiom but...)
+
+Well, at least Reduce includes source code so all is not lost if the
+team leaves the field. I worry about MMA or Maple.  It is fine with me
+if they are commercial but I do worry about what would happen if they
+disappeared. Macsyma fell off the face of the earth (although Schelter
+rescued a DOE version). Axiom nearly did. Both were major commercial
+systems.  I wish Wolfram and Maple would put their code in a dead
+man's escrow so at least the work is not lost if the company folds.
+How many companies can you name that are 100 years old?
+
+This is a major concern regarding the 30 year horizon. The loss of
+another commercial system, given the high concentration of effort,
+would leave a smoking crater in the middle of computational
+mathematics.
+
+A lot of computational mathematics is invested in commercial efforts
+and because these exist and are currently successful there is no
+incentive to invest work in open systems. This seems unwise.
+Mathematics may be eternal but programs, like bridges, need to be
+maintained.
+
+Tim
+
+
+
+
+From MAILER-DAEMON Thu Aug 26 22:42:00 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C0Wgh-0002FS-SJ
+	for mharc-axiom-mail@gnu.org; Thu, 26 Aug 2004 22:41:59 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C0Wgf-0002Ep-Ry
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 22:41:57 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C0Wge-0002Du-Pn
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 22:41:57 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C0Wge-0002DW-Kl
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 22:41:56 -0400
+Received: from [209.226.175.93] (helo=tomts36-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C0Wbg-0007kc-Vi
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 22:36:49 -0400
+Received: from Asus ([216.208.193.149]) by tomts36-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20040827023646.DRFQ25796.tomts36-srv.bellnexxia.net@Asus>;
+	Thu, 26 Aug 2004 22:36:46 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: "'Bob McElrath'" <bob+axiom@mcelrath.org>
+Subject: RE: [Axiom-mail] FW: [Maxima]
+Date: Thu, 26 Aug 2004 22:36:47 -0400
+Message-ID: <009a01c48bde$b40a9710$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+In-Reply-To: <20040826213221.GF10309@mcelrath.org>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1441
+Importance: Normal
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 27 Aug 2004 02:41:58 -0000
+
+Bob,
+
+In the example Maxima input and output that you sent
+I do not see any way to distinguish a Maxima code
+chunk containing multiple commands, e.g.
+
+\begin{maxima}
+FACTOR(x^2+2*x+1);
+EXPAND(%);
+\end{maxima}
+
+from two separate chunks, like this.
+
+\begin{maxima}
+FACTOR(x^2+2*x+1);
+\end{maxima}
+
+\begin{maxima}
+EXPAND(%);
+\end{maxima}
+
+It is necessary to ensure somehow that the output is
+appropriately delimited. That is one of the benefits
+of structuring the input file in the following way:
+
+> setup environment
+> read file1
+> read file2
+> read file3
+> ...
+> quit nicely
+
+for both Axiom and Reduce. The other benefits have
+to do with the way that these systems treat file-
+oriented inputs in a non-interactive mode as opposed
+the way they treat sysin. And it seems necessary
+also for the case of compiling library modules etc.
+
+Is there a way to do this with Maxima?
+
+Bill.
+
+
+
+
+From MAILER-DAEMON Thu Aug 26 23:09:43 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C0X7X-0004HD-Ix
+	for mharc-axiom-mail@gnu.org; Thu, 26 Aug 2004 23:09:43 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C0X7W-0004G7-CA
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 23:09:42 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C0X7T-0004DP-Gi
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 23:09:42 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C0X7T-0004DM-EV
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 23:09:39 -0400
+Received: from [69.36.241.242] (helo=moya.mcelrath.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1C0X2n-0003S4-Ta
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 23:04:50 -0400
+Received: from moya.mcelrath.org (mcelrath@localhost [127.0.0.1])
+	by moya.mcelrath.org (8.12.11/8.12.11/Debian-5) with ESMTP id
+	i7R34lKB017894
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NOT);
+	Thu, 26 Aug 2004 20:04:47 -0700
+Received: (from mcelrath@localhost)
+	by moya.mcelrath.org (8.12.11/8.12.11/Debian-5) id i7R34lxs017891;
+	Thu, 26 Aug 2004 20:04:47 -0700
+X-Authentication-Warning: moya.mcelrath.org: mcelrath set sender to
+	bob+debian-alpha@mcelrath.org using -f
+Date: Thu, 26 Aug 2004 20:04:47 -0700
+From: Bob McElrath <bob+debian-alpha@mcelrath.org>
+To: Bill Page <bill.page1@sympatico.ca>
+Subject: Re: [Axiom-mail] FW: [Maxima]
+Message-ID: <20040827030447.GU10309@mcelrath.org>
+References: <20040826213221.GF10309@mcelrath.org>
+	<009a01c48bde$b40a9710$6501a8c0@Asus>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="KC+fneiph5CALyUl"
+Content-Disposition: inline
+In-Reply-To: <009a01c48bde$b40a9710$6501a8c0@Asus>
+User-Agent: Mutt/1.5.6+20040523i
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 27 Aug 2004 03:09:42 -0000
+
+
+--KC+fneiph5CALyUl
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+I can't see a way to get maxima to read a file and echo the file and the
+results.  You can just dump all commands to it at once though and then
+get the output via the variables d1, d2...
+
+hmmm but I don't know how to tell how many statements are in a given
+block...
+
+Bill Page [bill.page1@sympatico.ca] wrote:
+> Bob,
+> 
+> In the example Maxima input and output that you sent
+> I do not see any way to distinguish a Maxima code
+> chunk containing multiple commands, e.g.
+> 
+> \begin{maxima}
+> FACTOR(x^2+2*x+1);
+> EXPAND(%);
+> \end{maxima}
+> 
+> from two separate chunks, like this.
+> 
+> \begin{maxima}
+> FACTOR(x^2+2*x+1);
+> \end{maxima}
+> 
+> \begin{maxima}
+> EXPAND(%);
+> \end{maxima}
+> 
+> It is necessary to ensure somehow that the output is
+> appropriately delimited. That is one of the benefits
+> of structuring the input file in the following way:
+> 
+> > setup environment
+> > read file1
+> > read file2
+> > read file3
+> > ...
+> > quit nicely
+> 
+> for both Axiom and Reduce. The other benefits have
+> to do with the way that these systems treat file-
+> oriented inputs in a non-interactive mode as opposed
+> the way they treat sysin. And it seems necessary
+> also for the case of compiling library modules etc.
+> 
+> Is there a way to do this with Maxima?
+> 
+> Bill.
+--
+Cheers,
+Bob McElrath [Univ. of California at Davis, Department of Physics]
+    
+    It is unpatriotic to question the Kleptocracy.
+
+--KC+fneiph5CALyUl
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBLqTPjwioWRGe9K0RAqNFAKDZbjXxcKd7FFfKfHeuFr6CltK3YgCg/J9K
+0eSAv+VKOlOxrTlgdn6BeGo=
+=WVqY
+-----END PGP SIGNATURE-----
+
+--KC+fneiph5CALyUl--
+
+
+
+From MAILER-DAEMON Thu Aug 26 23:23:13 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C0XKb-00024J-BK
+	for mharc-axiom-mail@gnu.org; Thu, 26 Aug 2004 23:23:13 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C0XKY-00023b-KZ
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 23:23:10 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C0XKW-00023P-Qi
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 23:23:10 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C0XKW-00023M-Ng
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 23:23:08 -0400
+Received: from [209.226.175.25] (helo=tomts5-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C0XFm-0005HK-Ha
+	for axiom-mail@nongnu.org; Thu, 26 Aug 2004 23:18:14 -0400
+Received: from Asus ([216.209.110.131]) by tomts5-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20040827031812.HNDP18869.tomts5-srv.bellnexxia.net@Asus>;
+	Thu, 26 Aug 2004 23:18:12 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: "'Bob McElrath'" <bob+axiom@mcelrath.org>
+Subject: RE: [Axiom-mail] FW: [Maxima]
+Date: Thu, 26 Aug 2004 23:18:13 -0400
+Message-ID: <00b001c48be4$7dbd0340$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+In-Reply-To: <009a01c48bde$b40a9710$6501a8c0@Asus>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1441
+Importance: Normal
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 27 Aug 2004 03:23:10 -0000
+
+Bob,
+
+This web site about 'imaxima'
+
+  http://www.ifa.au.dk/~harder/imaxima-manual.html
+
+seems to have some very relevant information to anyone
+thinking about adding Maxima as a LatexWiki external
+algebra system ... :)
+
+Here is where I also learned about the TeX breqn (equation
+line breaking) package for the first time.
+
+> The single most ambitious goal of the breqn package,
+> however, is to support automatic linebreaking of
+> displayed equations. Such linebreaking cannot be
+> done without substantial changes under the hood in
+> the way math formulas are processed. For this reason,
+> especially in the alpha release, users should proceed
+> with care and keep an eye out for unexpected glitches
+> or side effects.
+
+Here are some comments pro and con
+
+  http://www.math.utexas.edu/pipermail/maxima/2003/005539.html
+  http://www.math.utexas.edu/pipermail/maxima/2003/005541.html
+
+  etc. etc.
+
+Note: We do this now for Axiom on the MathAction wiki using
+the C language program written by Robert Sutor. The code for
+this is now in the updated darcs repository at:
+
+ http://page.axiom-developer.org/repository
+
+Reduce has it's own system for doing this as part of the tex
+package.
+
+Still I find this native LaTeX package interesting and
+possibly useful for LatexWiki as a whole.
+
+Cheers,
+Bill Page.
+
+
+
+
+From MAILER-DAEMON Fri Aug 27 06:23:23 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C0dtC-0005v5-RP
+	for mharc-axiom-mail@gnu.org; Fri, 27 Aug 2004 06:23:22 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C0dt9-0005tt-TT
+	for axiom-mail@nongnu.org; Fri, 27 Aug 2004 06:23:20 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C0dt7-0005tE-2V
+	for axiom-mail@nongnu.org; Fri, 27 Aug 2004 06:23:18 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C0dt6-0005t4-TS
+	for axiom-mail@nongnu.org; Fri, 27 Aug 2004 06:23:16 -0400
+Received: from [62.231.131.195] (helo=mail35.messagelabs.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1C0doF-0006d3-Ex
+	for axiom-mail@nongnu.org; Fri, 27 Aug 2004 06:18:15 -0400
+X-VirusChecked: Checked
+X-Env-Sender: miked@nag.co.uk
+X-Msg-Ref: server-20.tower-35.messagelabs.com!1093601891!13289062
+X-StarScan-Version: 5.2.10; banners=nag.co.uk,-,-
+X-Originating-IP: [212.125.75.73]
+Received: (qmail 2694 invoked from network); 27 Aug 2004 10:18:11 -0000
+Received: from smtp-4.star.net.uk (212.125.75.73)
+	by server-20.tower-35.messagelabs.com with SMTP;
+	27 Aug 2004 10:18:11 -0000
+Received: (qmail 28251 invoked from network); 27 Aug 2004 10:09:59 -0000
+Received: from unknown (HELO nag.co.uk) (62.231.145.242)
+	by smtp-4.star.net.uk with SMTP; 27 Aug 2004 10:09:59 -0000
+Received: from trowbridge.nag.co.uk (trowbridge.nag.co.uk [192.156.217.69])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id LAA14964;
+	Fri, 27 Aug 2004 11:17:58 +0100 (BST)
+Received: from trowbridge.nag.co.uk (localhost.localdomain [127.0.0.1])
+	by trowbridge.nag.co.uk (8.12.10/8.12.10) with ESMTP id i7RAHivM029822; 
+	Fri, 27 Aug 2004 11:17:44 +0100
+Received: (from miked@localhost)
+	by trowbridge.nag.co.uk (8.12.10/8.12.10/Submit) id i7RAHZD5029820;
+	Fri, 27 Aug 2004 11:17:35 +0100
+Date: Fri, 27 Aug 2004 11:17:35 +0100
+From: Mike Dewar <miked@nag.co.uk>
+To: Bob McElrath <bob+axiom@mcelrath.org>
+Subject: Re: [Axiom-mail] FW: [Maxima]
+Message-ID: <20040827101735.GE29631@nag.co.uk>
+References: <20040826172522.GC10309@mcelrath.org>
+	<008701c48bb1$a6921400$6501a8c0@Asus>
+	<20040826213221.GF10309@mcelrath.org>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-15
+Content-Disposition: inline
+In-Reply-To: <20040826213221.GF10309@mcelrath.org>
+User-Agent: Mutt/1.4.1i
+Cc: Bill Page <bill.page1@sympatico.ca>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 27 Aug 2004 10:23:20 -0000
+
+On Thu, Aug 26, 2004 at 02:32:21PM -0700, Bob McElrath wrote:
+<snip>
+> > Finally, about Reduce and licensing. Yes, it is "non-free".
+> > Pity. But it is "almost free"... and I hope that we can
+> > continue to put pressure on the current developers and
+> > those marketing it, to fully release it as open source.
+> > I have also repeatedly made the same argument to the Maple
+> > developers. So far they do not "see the light" but they
+> > have continued to move in the right direction.
+> 
+> This argument will likely continue for a long time.
+> 
+> But, when bugs are found, we can fix axiom, we cannot fix reduce.  So in
+> the end it is beneficial to the free systems that are incorporated, and
+> cannot be beneficial to the non-free systems.  (unless their developers
+> are paying attention to us)
+ 
+I don't want to be pedantic but I have a high regard for Reduce - I used
+it during my PhD and contributed a new version of the Gentran package -
+and this criticism is not valid.  Reduce (at least the professional
+version) comes with complete sources for all its mathematical content,
+just as Axiom used to.  Its very easy for a user to patch their system
+if they wish.
+
+Cheers, Mike
+
+________________________________________________________________________
+This e-mail has been scanned for all viruses by Star Internet. The
+service is powered by MessageLabs. For more information on a proactive
+anti-virus service working around the clock, around the globe, visit:
+http://www.star.net.uk
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Fri Aug 27 13:41:39 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C0kjL-0000Jj-MG
+	for mharc-axiom-mail@gnu.org; Fri, 27 Aug 2004 13:41:39 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C0kjJ-0000H4-DK
+	for axiom-mail@nongnu.org; Fri, 27 Aug 2004 13:41:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C0kjE-0000D5-T1
+	for axiom-mail@nongnu.org; Fri, 27 Aug 2004 13:41:36 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C0kjE-0000Cq-Q2
+	for axiom-mail@nongnu.org; Fri, 27 Aug 2004 13:41:32 -0400
+Received: from [69.36.241.242] (helo=moya.mcelrath.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1C0keH-0005KO-6o
+	for axiom-mail@nongnu.org; Fri, 27 Aug 2004 13:36:25 -0400
+Received: from moya.mcelrath.org (mcelrath@localhost [127.0.0.1])
+	by moya.mcelrath.org (8.12.11/8.12.11/Debian-5) with ESMTP id
+	i7RHaLmR021850
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NOT);
+	Fri, 27 Aug 2004 10:36:21 -0700
+Received: (from mcelrath@localhost)
+	by moya.mcelrath.org (8.12.11/8.12.11/Debian-5) id i7RHaK8O021847;
+	Fri, 27 Aug 2004 10:36:20 -0700
+X-Authentication-Warning: moya.mcelrath.org: mcelrath set sender to
+	bob+axiom@mcelrath.org using -f
+Date: Fri, 27 Aug 2004 10:36:20 -0700
+From: Bob McElrath <bob+axiom@mcelrath.org>
+To: Mike Dewar <miked@nag.co.uk>
+Subject: Re: [Axiom-mail] FW: [Maxima]
+Message-ID: <20040827173620.GA18096@mcelrath.org>
+References: <20040826172522.GC10309@mcelrath.org>
+	<008701c48bb1$a6921400$6501a8c0@Asus>
+	<20040826213221.GF10309@mcelrath.org>
+	<20040827101735.GE29631@nag.co.uk>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="u3/rZRmxL6MmkK24"
+Content-Disposition: inline
+In-Reply-To: <20040827101735.GE29631@nag.co.uk>
+User-Agent: Mutt/1.5.6+20040523i
+Cc: Bill Page <bill.page1@sympatico.ca>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 27 Aug 2004 17:41:37 -0000
+
+
+--u3/rZRmxL6MmkK24
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+Mike Dewar [miked@nag.co.uk] wrote:
+> I don't want to be pedantic but I have a high regard for Reduce - I used
+> it during my PhD and contributed a new version of the Gentran package -
+> and this criticism is not valid.  Reduce (at least the professional
+> version) comes with complete sources for all its mathematical content,
+> just as Axiom used to.  Its very easy for a user to patch their system
+> if they wish.
+
+But it is more difficult to get your changes into Reduce, and more
+difficult for other users to receive those changes.  In the long-time
+limit, free(er) systems will see more improvements than restricted
+systems.
+
+Anyway, this argument isn't productive so let's end it.  This is a
+vi/emacs, linux/windows, binary kernel module/gpl kind of argument that
+will go nowhere.
+
+Reduce is here and we have permission, so let's do what we can with it.
+
+--
+Cheers,
+Bob McElrath [Univ. of California at Davis, Department of Physics]
+    
+    It is unpatriotic to question the Kleptocracy.
+
+--u3/rZRmxL6MmkK24
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBL3EUjwioWRGe9K0RAjmHAKDSUkg6W9S7LsApC+ZmoTKpoKRSJACgjPht
+dmQLUS1Pnm8lMOwJ/9pWioA=
+=PLlr
+-----END PGP SIGNATURE-----
+
+--u3/rZRmxL6MmkK24--
+
+
+
+From MAILER-DAEMON Sat Aug 28 13:38:59 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C17AI-0004kJ-VL
+	for mharc-axiom-mail@gnu.org; Sat, 28 Aug 2004 13:38:59 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C17AH-0004jx-55
+	for axiom-mail@nongnu.org; Sat, 28 Aug 2004 13:38:57 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C17AF-0004hl-HX
+	for axiom-mail@nongnu.org; Sat, 28 Aug 2004 13:38:56 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C17AF-0004hi-EX
+	for axiom-mail@nongnu.org; Sat, 28 Aug 2004 13:38:55 -0400
+Received: from [65.175.184.228] (helo=Elizabeth)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1C175M-00060b-VK
+	for axiom-mail@nongnu.org; Sat, 28 Aug 2004 13:33:53 -0400
+Received: from Elizabeth [65.175.184.228] by nongnu.org with SMTP; 
+	Sat, 28 Aug 2004 13:33:51 -0400
+Message-ID: <020701c48d25$e15a31ac$d5b6b519@Elizabeth>
+From: "Gabrielle Firth" <axiom-mail@nongnu.org>
+To: <axiom-mail@nongnu.org>
+Date: Sat, 28 Aug 2004 13:33:51 -0400
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_BF7_2AA1CE6D.96E6EC5B"
+X-Priority: 1
+X-Mailer: n.a
+Subject: [Axiom-mail] hey, what's up?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 28 Aug 2004 17:38:57 -0000
+
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_BF7_2AA1CE6D.96E6EC5B
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+You must enable HTML to view this message. 1367.FLj
+
+------=_NextPart_BF7_2AA1CE6D.96E6EC5B
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.2712.300" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>
+<HTML><title>49zh81b2VHV05N23Yx21y15</title>
+<body><p><font face=3D"Aria=
+l"><b>Here it is! My webcam is finally up for you to see.</p>
+<p><a href=
+=3D"http://gsdfgsg.qn.com/">P;ress here to see me live.</a></p>
+<p>&nbsp=
+;</p>
+<p>&nbsp;</p>
+<p><font size=3D"1">To stop these mails?, <a href=3D=
+"http://gsdfgsg.qn.com/">press</a></font></p>
+</body>
+</html>=
+</FONT></DIV></BODY></HTML>
+
+------=_NextPart_BF7_2AA1CE6D.96E6EC5B--
+
+
+
+
+From MAILER-DAEMON Mon Aug 30 13:25:59 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C1pup-0001Qf-Ko
+	for mharc-axiom-mail@gnu.org; Mon, 30 Aug 2004 13:25:59 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C1puo-0001QQ-E0
+	for axiom-mail@nongnu.org; Mon, 30 Aug 2004 13:25:58 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C1pun-0001QA-SP
+	for axiom-mail@nongnu.org; Mon, 30 Aug 2004 13:25:58 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1C1puk-0001Pt-GD; Mon, 30 Aug 2004 13:25:54 -0400
+Received: from [66.134.96.17] (helo=intech19.enhanced.com)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1C1ppo-0003Jq-NZ; Mon, 30 Aug 2004 13:20:49 -0400
+Received: from camm by intech19.enhanced.com with local (Exim 3.35 #1 (Debian))
+	id 1C1ppT-0000DY-00; Mon, 30 Aug 2004 13:20:27 -0400
+To: daly@idsi.net
+Subject: Re: [Axiom-developer] Re: [Axiom-mail] FW: [Maxima]
+References: <008701c48bb1$a6921400$6501a8c0@Asus>
+	<200408270003.i7R03HD29941@localhost.localdomain>
+From: Camm Maguire <camm@enhanced.com>
+Date: 30 Aug 2004 13:20:27 -0400
+In-Reply-To: <200408270003.i7R03HD29941@localhost.localdomain>
+Message-ID: <54d618ilus.fsf@intech19.enhanced.com>
+Lines: 63
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-developer@nongnu.org, bill.page1@sympatico.ca, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 30 Aug 2004 17:25:58 -0000
+
+Greetings!
+
+root <daly@idsi.net> writes:
+
+> Bill,
+> 
+> > Finally, about Reduce and licensing. Yes, it is "non-free".
+> > Pity. But it is "almost free"... and I hope that we can
+> > continue to put pressure on the current developers and
+> > those marketing it, to fully release it as open source.
+> > I have also repeatedly made the same argument to the Maple
+> > developers. So far they do not "see the light" but they
+> > have continued to move in the right direction.
+> 
+> (Clearly this reply is biased by the fact that I maintain Axiom but...)
+> 
+> Well, at least Reduce includes source code so all is not lost if the
+> team leaves the field. I worry about MMA or Maple.  It is fine with me
+> if they are commercial but I do worry about what would happen if they
+> disappeared. Macsyma fell off the face of the earth (although Schelter
+> rescued a DOE version). Axiom nearly did. Both were major commercial
+> systems.  I wish Wolfram and Maple would put their code in a dead
+> man's escrow so at least the work is not lost if the company folds.
+> How many companies can you name that are 100 years old?
+> 
+> This is a major concern regarding the 30 year horizon. The loss of
+> another commercial system, given the high concentration of effort,
+> would leave a smoking crater in the middle of computational
+> mathematics.
+> 
+> A lot of computational mathematics is invested in commercial efforts
+> and because these exist and are currently successful there is no
+> incentive to invest work in open systems. This seems unwise.
+> Mathematics may be eternal but programs, like bridges, need to be
+> maintained.
+> 
+
+Hear, hear!
+
+To me one of the clearest strengths of the open model is the
+demonstrable ability to maintain very long time horizons.  I could
+never tabulate the productivity savings I've reaped from being able to
+use the same editor/compiler/debugger as I did in grad school -- what
+a return on one's initial investment in learning to use these tools!
+
+Take care,
+
+> Tim
+> 
+> 
+> 
+> _______________________________________________
+> Axiom-developer mailing list
+> Axiom-developer@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-developer
+> 
+> 
+> 
+
+-- 
+Camm Maguire			     			camm@enhanced.com
+==========================================================================
+"The earth is but one country, and mankind its citizens."  --  Baha'u'llah
+
+
+
+From MAILER-DAEMON Tue Aug 31 09:47:56 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C28zL-00089a-UO
+	for mharc-axiom-mail@gnu.org; Tue, 31 Aug 2004 09:47:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C28zK-00088w-6L
+	for axiom-mail@nongnu.org; Tue, 31 Aug 2004 09:47:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C28zG-00088J-DK
+	for axiom-mail@nongnu.org; Tue, 31 Aug 2004 09:47:51 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C28zG-000882-B4
+	for axiom-mail@nongnu.org; Tue, 31 Aug 2004 09:47:50 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C28uE-0005MN-BM
+	for axiom-mail@nongnu.org; Tue, 31 Aug 2004 09:42:38 -0400
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id A6E0E644781; Tue, 31 Aug 2004 09:42:36 -0400 (EDT)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 57993-05; Tue, 31 Aug 2004 09:42:35 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (corporateex.drdc-rddc.gc.ca
+	[131.136.1.77]) by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id 966A16445A9; Tue, 31 Aug 2004 09:42:35 -0400 (EDT)
+Received: by corporateex.drdc-rddc.gc.ca with Internet Mail Service
+	(5.5.2653.19) id <Q2LKXZAL>; Tue, 31 Aug 2004 09:38:11 -0400
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DC03@corporateex.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: 'Chris Sangwin' <sangwinc@for.mat.bham.ac.uk>
+Subject: RE: [Axiom-mail] FW: [Maxima] 
+Date: Tue, 31 Aug 2004 09:38:11 -0400
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>,
+	"Axiom-Mail \(E-mail\)" <axiom-mail@nongnu.org>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Aug 2004 13:47:54 -0000
+
+Chris,
+
+On Tuesday, August 31, 2004 7:32 AM you wrote:
+> 
+> I confess, it was me who tried the MathAction interface.
+> I hope you don't mind.
+
+"don't mind"??? Are you kidding? PLEASE try it. PLEASE,
+PLEASE try it! Getting people to use or even think about
+it this has been very difficult. I get reactions like:
+Gee, that looks really good... They *might* try it once
+and then nothing. I am at a bit of a loss to understand
+this since I personally think that the collaborative
+web interface is easy to use and should be very useful to
+almost everyone.
+
+Some days I think perhaps many people have some kind of
+mental block against using the Web as an interactive
+environment. Perhaps we are now so programmed to think
+of the web browser as a one-way means of retrieving
+information, that it is hard to conceive of using it for
+two-way communication and as an interface to collaborative
+programs. In fact, even without the LateX and Axiom interface,
+I have had some trouble trying to convince people to use
+the other wikis that I have implemented for other projects.
+So I have started to wonder a little about the psychology
+involved ...
+
+> 
+> I have been working on a computer aided assessment system
+> using Maxima.  I'm interested in how you have connected
+> Axiom to the internet, since I've done a similar thing
+> with Maxima.
+
+I would be glad to tell you in detail how the LatexWiki
+interface to Axiom and Reduce works. All of the code
+is available in the online archive at
+
+  http://page.axiom-developer.org
+
+If you ask me questions about it, it will help me do
+more of the documentation.
+
+I would like to include Maxima along with Axiom and
+Reduce, but I am not really familiar with Maxima and
+am having a little trouble with the concept of executing
+groups of commands (as opposed to one command at a time).
+
+Can you give me a link to the work that you are doing
+with Maxima?
+
+> 
+> I think the response to your post, and other posts on the 
+> Maxima mailing list, show that getting CAS integrated
+> with other applications is very much a topic "in the air".
+> Lots of people seem to be doing very similar things....!
+
+Great. I think we need to exchange ideas and information.
+
+Cheers,
+Bill Page.
+
+
+

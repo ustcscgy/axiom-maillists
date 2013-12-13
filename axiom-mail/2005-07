@@ -1,0 +1,185 @@
+From MAILER-DAEMON Sat Jul 30 14:05:36 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DyviK-0001Yd-0Q
+	for mharc-axiom-mail@gnu.org; Sat, 30 Jul 2005 14:05:36 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DyviI-0001YC-1I
+	for axiom-mail@nongnu.org; Sat, 30 Jul 2005 14:05:34 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DyviG-0001XD-44
+	for axiom-mail@nongnu.org; Sat, 30 Jul 2005 14:05:33 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DyvgQ-0000od-Ti
+	for axiom-mail@nongnu.org; Sat, 30 Jul 2005 14:03:39 -0400
+Received: from [193.252.22.24] (helo=smtp7.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DyvPj-0005lv-4c
+	for axiom-mail@nongnu.org; Sat, 30 Jul 2005 13:46:23 -0400
+Received: from me-wanadoo.net (localhost [127.0.0.1])
+	by mwinf0712.wanadoo.fr (SMTP Server) with ESMTP id 0505A1C00098
+	for <axiom-mail@nongnu.org>; Sat, 30 Jul 2005 19:34:16 +0200 (CEST)
+Received: from ALille-251-1-90-187.w83-204.abo.wanadoo.fr
+	(ALille-251-1-90-187.w83-204.abo.wanadoo.fr [83.204.89.187])
+	by mwinf0712.wanadoo.fr (SMTP Server) with ESMTP id B7B9B1C0008F
+	for <axiom-mail@nongnu.org>; Sat, 30 Jul 2005 19:34:15 +0200 (CEST)
+X-ME-UUID: 20050730173415752.B7B9B1C0008F@mwinf0712.wanadoo.fr
+From: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+To: axiom-mail@nongnu.org
+Content-Type: text/plain
+Date: Sat, 30 Jul 2005 19:34:40 +0200
+Message-Id: <1122744880.3541.4.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.2.2 
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-mail] input initialization file
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Jul 2005 18:05:34 -0000
+
+Hi,
+
+Do you why all my functions defined in .axiom.input
+are not usabla if i use the 'axiom' script.
+If i use AXIOMsys that's work.
+
+A strange thing is that my functions are added to workspace.
+
+Cheers,
+
+Greg
+
+
+
+
+
+From MAILER-DAEMON Sat Jul 30 14:14:24 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Dyvqp-0004Qp-DS
+	for mharc-axiom-mail@gnu.org; Sat, 30 Jul 2005 14:14:23 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Dyvqk-0004P7-Hv
+	for axiom-mail@nongnu.org; Sat, 30 Jul 2005 14:14:19 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Dyvqh-0004Mw-G5
+	for axiom-mail@nongnu.org; Sat, 30 Jul 2005 14:14:15 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Dyvqh-0004Mm-Ck
+	for axiom-mail@nongnu.org; Sat, 30 Jul 2005 14:14:15 -0400
+Received: from [209.135.140.38] (helo=axiom-developer.org)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34) id 1DyvyY-0007Ua-91
+	for axiom-mail@nongnu.org; Sat, 30 Jul 2005 14:22:22 -0400
+Received: from axiom-developer.org (lincoln.rosehosting.com [127.0.0.1])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id j6UIA9wl018645;
+	Sat, 30 Jul 2005 13:10:09 -0500
+From: daly@axiom-developer.org
+Received: (from daly@localhost)
+	by axiom-developer.org (8.12.8/8.12.8/Submit) id j6UIA9hM018641;
+	Sat, 30 Jul 2005 13:10:09 -0500
+Date: Sat, 30 Jul 2005 13:10:09 -0500
+Message-Id: <200507301810.j6UIA9hM018641@axiom-developer.org>
+To: g.vanuxem@wanadoo.fr
+Cc: axiom-mail@nongnu.org
+Subject: [Axiom-mail] input initialization file
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Jul 2005 18:14:21 -0000
+
+Greg,
+
+It sounds like the axiom script is running as a different user.
+Are you starting the axiom script by hand or are you using a
+desktop shortcut? 
+
+Tim
+
+
+
+
+From MAILER-DAEMON Sat Jul 30 14:30:56 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Dyw6p-0000q6-SL
+	for mharc-axiom-mail@gnu.org; Sat, 30 Jul 2005 14:30:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Dyw6c-0000ny-TS
+	for axiom-mail@nongnu.org; Sat, 30 Jul 2005 14:30:43 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Dyw6W-0000lz-Mj
+	for axiom-mail@nongnu.org; Sat, 30 Jul 2005 14:30:37 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Dyw6V-0000fc-H2
+	for axiom-mail@nongnu.org; Sat, 30 Jul 2005 14:30:35 -0400
+Received: from [193.252.22.31] (helo=smtp11.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Dyw2Q-0007pU-Ka
+	for axiom-mail@nongnu.org; Sat, 30 Jul 2005 14:26:22 -0400
+Received: from me-wanadoo.net (localhost [127.0.0.1])
+	by mwinf1103.wanadoo.fr (SMTP Server) with ESMTP id 00D041C000A3
+	for <axiom-mail@nongnu.org>; Sat, 30 Jul 2005 20:14:14 +0200 (CEST)
+Received: from ALille-251-1-90-187.w83-204.abo.wanadoo.fr
+	(ALille-251-1-90-187.w83-204.abo.wanadoo.fr [83.204.89.187])
+	by mwinf1103.wanadoo.fr (SMTP Server) with ESMTP id A25C11C00096;
+	Sat, 30 Jul 2005 20:14:13 +0200 (CEST)
+X-ME-UUID: 20050730181413665.A25C11C00096@mwinf1103.wanadoo.fr
+From: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+To: daly@axiom-developer.org
+In-Reply-To: <200507301810.j6UIA9hM018641@axiom-developer.org>
+References: <200507301810.j6UIA9hM018641@axiom-developer.org>
+Content-Type: text/plain; charset=ISO-8859-1
+Date: Sat, 30 Jul 2005 20:14:38 +0200
+Message-Id: <1122747278.3699.0.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.2.2 
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: input initialization file
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 30 Jul 2005 18:30:44 -0000
+
+Le samedi 30 juillet 2005 =E0 13:10 -0500, daly@axiom-developer.org a
+=E9crit :
+> Greg,
+>=20
+> It sounds like the axiom script is running as a different user.
+> Are you starting the axiom script by hand or are you using a
+> desktop shortcut?=20
+I run it from a terminal.
+
+Cheers,
+
+Greg
+>=20
+> Tim
+>=20
+>=20
+
+
+
+
+

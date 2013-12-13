@@ -1,0 +1,384 @@
+From MAILER-DAEMON Tue Oct 25 11:49:27 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EUR3H-0005WZ-7t
+	for mharc-axiom-mail@gnu.org; Tue, 25 Oct 2005 11:49:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EULRh-0000uw-El
+	for axiom-mail@nongnu.org; Tue, 25 Oct 2005 05:50:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EULRY-0000t4-Pq
+	for axiom-mail@nongnu.org; Tue, 25 Oct 2005 05:50:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EULAm-0006uQ-HP
+	for axiom-mail@nongnu.org; Tue, 25 Oct 2005 05:32:50 -0400
+Received: from [129.129.190.111] (helo=psi11.psi.ch)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1EULAg-0007XB-9w
+	for axiom-mail@nongnu.org; Tue, 25 Oct 2005 05:32:43 -0400
+Received: from 129.129.190.113 by psi11.psi.ch (InterScan E-Mail VirusWall NT);
+	Tue, 25 Oct 2005 11:32:35 +0200
+Received: from pc5490.psi.ch ([129.129.195.64]) by psi13.psi.ch with SMTP
+	(Microsoft Exchange Internet Mail Service Version 5.5.2657.72)
+	id VJWQTBZ8; Tue, 25 Oct 2005 11:32:34 +0200
+Date: Tue, 25 Oct 2005 11:32:33 +0200 (CEST)
+From: Bertrand Roessli <bertrand.roessli@psi.ch>
+X-X-Sender: l_roessli@pc5490.psi.ch
+To: axiom-mail@nongnu.org
+Message-ID: <Pine.LNX.4.58.0510251130590.20991@pc5490.psi.ch>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Mailman-Approved-At: Tue, 25 Oct 2005 11:49:26 -0400
+Subject: [Axiom-mail] vector
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 25 Oct 2005 09:50:19 -0000
+
+Hello,
+
+I am really new to axiom, so my question is 
+naive. 
+How is it possible to multiply two vectors??
+
+thanks,
+
+B.
+
+-- 
+Dr. Bertrand Roessli
+Laboratory for Neutron Scattering
+ETHZ and Paul Scherrer Institut
+CH-5232 Villigen, PSI
+
+
+
+From MAILER-DAEMON Tue Oct 25 12:23:05 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EURZn-0006o3-74
+	for mharc-axiom-mail@gnu.org; Tue, 25 Oct 2005 12:23:03 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EURZk-0006mp-9v
+	for axiom-mail@nongnu.org; Tue, 25 Oct 2005 12:23:00 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EURZh-0006lm-UA
+	for axiom-mail@nongnu.org; Tue, 25 Oct 2005 12:22:59 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EURZh-0006li-Gh
+	for axiom-mail@nongnu.org; Tue, 25 Oct 2005 12:22:57 -0400
+Received: from [193.252.22.28] (helo=smtp3.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1EURZh-0006Gs-FM
+	for axiom-mail@nongnu.org; Tue, 25 Oct 2005 12:22:57 -0400
+Received: from me-wanadoo.net (localhost [127.0.0.1])
+	by mwinf0301.wanadoo.fr (SMTP Server) with ESMTP id BEF6D1C00513
+	for <axiom-mail@nongnu.org>; Tue, 25 Oct 2005 18:22:55 +0200 (CEST)
+Received: from ALille-251-1-39-93.w82-127.abo.wanadoo.fr
+	(ALille-251-1-39-93.w82-127.abo.wanadoo.fr [82.127.193.93])
+	by mwinf0301.wanadoo.fr (SMTP Server) with ESMTP id 63B131C0051C;
+	Tue, 25 Oct 2005 18:22:55 +0200 (CEST)
+X-ME-UUID: 20051025162255408.63B131C0051C@mwinf0301.wanadoo.fr
+Subject: Re: [Axiom-mail] vector
+From: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+To: Bertrand Roessli <bertrand.roessli@psi.ch>
+In-Reply-To: <Pine.LNX.4.58.0510251130590.20991@pc5490.psi.ch>
+References: <Pine.LNX.4.58.0510251130590.20991@pc5490.psi.ch>
+Content-Type: text/plain; charset=ISO-8859-1
+Date: Tue, 25 Oct 2005 18:22:57 +0200
+Message-Id: <1130257377.3590.3.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.2.3 
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 25 Oct 2005 16:23:01 -0000
+
+Le mardi 25 octobre 2005 =E0 11:32 +0200, Bertrand Roessli a =E9crit :
+> Hello,
+>=20
+> I am really new to axiom, so my question is=20
+> naive.=20
+> How is it possible to multiply two vectors??
+
+multiplication element by element
+
+a:=3D vector [1,2,3,5,6]
+map(*,a,a)
+
+otherwise use Matrix=20
+
+a:=3D matrix [[1,2,3,4,5,6]]
+a * transpose a
+
+Cheers,
+
+Greg
+
+>=20
+> thanks,
+>=20
+> B.
+>=20
+
+
+
+
+
+From MAILER-DAEMON Tue Oct 25 13:05:40 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EUSF2-0006kN-6q
+	for mharc-axiom-mail@gnu.org; Tue, 25 Oct 2005 13:05:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EUSF0-0006k6-2q
+	for axiom-mail@nongnu.org; Tue, 25 Oct 2005 13:05:38 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EUSEj-0006fp-1h
+	for axiom-mail@nongnu.org; Tue, 25 Oct 2005 13:05:36 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EUSEi-0006fk-S9
+	for axiom-mail@nongnu.org; Tue, 25 Oct 2005 13:05:20 -0400
+Received: from [24.154.1.22] (helo=mx-3.zoominternet.net)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34) id 1EUSEg-0002Bd-PO
+	for axiom-mail@nongnu.org; Tue, 25 Oct 2005 13:05:19 -0400
+Received: from mua-3.zoominternet.net (mua-3.zoominternet.net [24.154.1.46])
+	by mx-3.zoominternet.net (8.12.11/8.12.11) with ESMTP id j9PH5FIo027069;
+	Tue, 25 Oct 2005 13:05:15 -0400
+Received: from localhost.localdomain (acs-72-23-21-146.zoominternet.net
+	[72.23.21.146])
+	by mua-3.zoominternet.net (Postfix) with ESMTP id B74F67F407;
+	Tue, 25 Oct 2005 13:05:14 -0400 (EDT)
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j9PH0qZ14724;
+	Tue, 25 Oct 2005 13:00:52 -0400
+Date: Tue, 25 Oct 2005 13:00:52 -0400
+Message-Id: <200510251700.j9PH0qZ14724@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: bertrand.roessli@psi.ch
+In-reply-to: <Pine.LNX.4.58.0510251130590.20991@pc5490.psi.ch> (message from
+	Bertrand Roessli on Tue, 25 Oct 2005 11:32:33 +0200 (CEST))
+Subject: Re: [Axiom-mail] vector
+References: <Pine.LNX.4.58.0510251130590.20991@pc5490.psi.ch>
+X-CanItPRO-Stream: outgoing
+X-Spam-Score: 1.2 (*) J_CHICKENPOX_31,J_CHICKENPOX_51
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.22
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 25 Oct 2005 17:05:38 -0000
+
+)clear all
+
+-- make three vectors
+u : VECTOR INT := new(5,12)
+v : VECTOR INT := vector([1,2,3])
+w : VECTOR INT := vector([2,3,4])
+-- multiply them
+cross(v,w)
+-- dot product
+dot(v,w)
+-- ask for the length
+#(v)
+-- access an element
+v.2
+-- set an element
+v.3 := 99
+-- show the vector
+v
+-- multiply by a constant
+5 * v
+-- on either side
+v * 7
+-- add them
+v + w
+-- substract them
+v - w
+-- display all possible functions
+)show Vector(Integer)
+
+
+
+
+From MAILER-DAEMON Fri Oct 28 10:13:59 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EVUzX-0003Q9-4S
+	for mharc-axiom-mail@gnu.org; Fri, 28 Oct 2005 10:13:59 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EVL4V-0002OA-Cd
+	for axiom-mail@nongnu.org; Thu, 27 Oct 2005 23:38:27 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EVL4U-0002Nb-O7
+	for axiom-mail@nongnu.org; Thu, 27 Oct 2005 23:38:27 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EVL4U-0002NR-Js
+	for axiom-mail@nongnu.org; Thu, 27 Oct 2005 23:38:26 -0400
+Received: from [129.100.16.102] (helo=scl.csd.uwo.ca)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34) id 1EVL4U-0008DZ-JS
+	for axiom-mail@nongnu.org; Thu, 27 Oct 2005 23:38:26 -0400
+Received: from sanatorium.scl.csd.uwo.ca (sanatorium.scl.csd.uwo.ca
+	[129.100.16.144])
+	by scl.csd.uwo.ca (8.13.1/8.13.1) with ESMTP id j9S3cQpP002170
+	for <axiom-mail@nongnu.org>; Thu, 27 Oct 2005 23:38:26 -0400
+Received: (from tc2006@localhost)
+	by sanatorium.scl.csd.uwo.ca (8.12.8/8.12.8/Submit) id j9S2mGOG018772
+	for axiom-mail@nongnu.org; Thu, 27 Oct 2005 22:48:16 -0400
+Date: Thu, 27 Oct 2005 22:48:16 -0400
+From: Transgressive Computing 2006 Conference <tc2006@scl.csd.uwo.ca>
+Message-Id: <200510280248.j9S2mGOG018772@sanatorium.scl.csd.uwo.ca>
+To: axiom-mail@nongnu.org
+X-Mailman-Approved-At: Fri, 28 Oct 2005 10:13:57 -0400
+Subject: [Axiom-mail] TC 2006. Call for Papers
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 28 Oct 2005 03:38:27 -0000
+
+   Transgressive Computing TC'2006: THIRD CALL FOR PAPERS.
+
+A conference in honor of Jean Della Dora will be held next year
+at the University of Granada (Spain) from the 24th to the 26th
+of April 2006, a few weeks after his 60th birthday. In order
+to acknowledge the many innovative contributions of Jean, this 
+event will be called "Transgressive Computing 2006".
+
+TC'2006 web page: www.orcca.on.ca/conferences/tc2006
+TC'2006 e-mail: tc2006@orcca.on.ca
+
+Important Dates
+
+Deadline for Submissions:    November 15, 2005
+Notification of Acceptance:  January 15, 2006
+Camera-ready copy received:  February 15, 2006
+
+Conference Topics
+
+The presentations will include invited and contributed talks which
+topics comprise, but are not limited to, the 
+various research interests of Jean; among those: Computer Algebra, 
+Differential Equations, Pade Approximants, Parallel Computing, 
+Linear Algebra, Complexity Theory, Dynamical Systems, Hybrid Systems, 
+Complex Networks, Optimal Control, Algorithmic Number Theory and
+Cryptology, Programming Languages and Categorical Semantics, Open Software 
+and Applications of the previous topics to Biology, Environment, 
+Physics, DNA Computing, Genetics, Robotics,  Automatics etc.
+
+Instructions to Authors
+
+Authors are invited to submit an extended abstract of at least 
+4 pages or a full paper of at most 16 pages in LaTeX 11pt article 
+size. This submitted article can be written in English, French 
+or Spanish but must include in any case English versions of the 
+title and abstract. LaTeX templates in each of the three languages 
+are available at
+http://www.orcca.on.ca/conferences/tc2006/site/submission/submission.html
+
+Original research results and insightful analysis of current concerns 
+are solicited for submission. Submissions must not substantially duplicate 
+work published or submitted for publication elsewhere. Late submissions
+will be rejected. Papers will be reviewed by the program committee 
+and additional referees. Proceedings will be distributed at the
+symposium.  Electronic submission is mandatory and the submission 
+web page is
+http://www.easychair.org/TC2006/submit/
+
+Each submission should have an abstract as well as an introductory 
+section that: describes the problem, motivates the study of the 
+problem, states the main results and compares them to other work 
+(including theoretical or empirical performance) and summarizes the 
+original aspects of the contribution. Authors of accepted papers 
+are expected to present their work at the symposium, or to make 
+arrangements to have it presented.
+
+Invited Speakers:
+
+   * Jean Della Dora, INPG, Grenoble, France
+   * Eugene Asarin, Univ. Paris 7, France
+   * Leon Brenig, Univ. Libre de Bruxelles, Belgium
+   * Claude Brezinski, Univ. Lille 1, France
+   * Alessandra Carbone, IHES, France.
+   * Michel Cosnard, INRIA, France
+   * Victor Fairen, UNED, Spain
+   * Jean-Pierre Ramis, Univ. Paul Sabatier, France
+   * Stephen M. Watt, Univ. Western Ontario, Canada
+
+TC'2006 Program Committee:
+
+   * Leon Brenig, Belgium
+   * Claude Brezinski, France
+   * Bernard Brogliato, France
+   * Bernhard Beckermann, France
+   * Guoting Chen, France
+   * Robert M. Corless, Canada
+   * Dominique Duval, France
+   * Roderick Edwards, Canada
+   * Victor Fairen, Spain
+   * Mark Giesbrecht, Canada
+   * Aziz Hilali, Morocco
+   * Francisco-Jesus Castro-Jimenez, Spain
+   * Lila Kari, Canada
+   * Franck Leprevost, Luxembourg
+   * Luis Miguel Pardo, Spain
+   * Michel Petitot, France
+   * Jean-Pierre Ramis, France
+   * B. David Saunders, USA
+   * Eric Schost, France
+   * Yun Tang, China
+   * Gilles Villard, France
+   * Stephen M. Watt, Canada
+   * Jean-Louis Roch, France
+   * Timothy P. Daly, USA
+ and
+   * Jean-Guillaume Dumas, France 
+     (Proceeding Editor)
+   * Jose Gomez-Torrecillas, Spain 
+     (Local Arrangements Chair)
+   * Francoise Jung, France 
+     (Treasurer)
+   * Francois Lemaire, France 
+     (Web Master)
+   * Francisco-Javier Lobillo-Borrero, Spain 
+     (Local Arrangements Chair)
+   * Marc Moreno Maza, Canada
+     (General Chair)
+   * Tomas Recio Muniz, Spain
+     (Program Chair)
+   * Evelyne Tournier, France
+     (Publicity Chair)
+
+
+
+

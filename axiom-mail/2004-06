@@ -1,0 +1,1623 @@
+From MAILER-DAEMON Fri Jun 04 16:04:56 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BWKvw-0003Dg-Ki
+	for mharc-axiom-mail@gnu.org; Fri, 04 Jun 2004 16:04:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BWKvu-0003D7-P8
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2004 16:04:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BWKvs-0003CD-W8
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2004 16:04:54 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BWKvs-0003CA-Qj
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2004 16:04:52 -0400
+Received: from [192.115.104.7] (helo=bela.bezeqint.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BWKub-0003Us-2D
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2004 16:03:33 -0400
+Received: from bela.bezeqint.net (localhost [127.0.0.1])
+	by bela.bezeqint.net (Bezeq International SMTP out Mail Server) with
+	SMTP id E1D64FC115
+	for <axiom-mail@nongnu.org>; Fri,  4 Jun 2004 23:03:30 +0300 (IDT)
+Received: from localhost.bsd.net.il ([IP=62.219.134.234]) by eSafe SMTP Relay
+	1086251573; Fri Jun  4 23:03:30 2004
+Received: from localhost.bsd.net.il (nimrodm@localhost [127.0.0.1])
+	by localhost.bsd.net.il (8.12.9p2/8.12.9) with ESMTP id i54K0FI2006758
+	for <axiom-mail@nongnu.org>; Fri, 4 Jun 2004 23:00:15 +0300 (IDT)
+	(envelope-from nimrodm@localhost.bsd.net.il)
+Received: (from nimrodm@localhost)
+	by localhost.bsd.net.il (8.12.9p2/8.12.6/Submit) id i54K0F6k006757
+	for axiom-mail@nongnu.org; Fri, 4 Jun 2004 23:00:15 +0300 (IDT)
+From: Nimrod Mesika <nimrod-me@bezeqint.net>
+Date: Fri, 4 Jun 2004 23:00:15 +0300
+To: axiom-mail@nongnu.org
+Message-ID: <20040604200015.GA6642@localhost.bsd.net.il>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+User-Agent: Mutt/1.4.2.1i
+Subject: [Axiom-mail] z-transforms and numerical intergration
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 04 Jun 2004 20:04:54 -0000
+
+Seems like Axiom does not provide a package for working with
+z-transforms (inverse transform of rational functions is my main
+interest -- for discrete systems analysis). Anyone knows of a
+freely available package available for that purpose?
+
+[Might be possible to create one based on the laplace package, but
+I'm not familiar enough with Axiom to do that, yet].
+
+Another issue - is it possible to do numerical integration in Axiom?
+I'm mostly interested in integrating functions that are usually
+difficult for standard numerical tools (the accuracy of a CAS should
+help here). I have found numericalIntegration, but can't figure out
+how to use that function.
+
+--
+Nimrod.
+
+
+
+From MAILER-DAEMON Fri Jun 04 17:00:54 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BWLo6-0007Z0-4y
+	for mharc-axiom-mail@gnu.org; Fri, 04 Jun 2004 17:00:54 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BWLo5-0007Yv-0h
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2004 17:00:53 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BWLo2-0007Yj-CM
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2004 17:00:52 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BWLo2-0007Yg-9z
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2004 17:00:50 -0400
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BWLnJ-00054j-Oy
+	for axiom-mail@nongnu.org; Fri, 04 Jun 2004 17:00:05 -0400
+Received: from localhost.localdomain (7.114.252.64.snet.net [64.252.114.7])
+	by pimout1-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i54KxwKF188992; Fri, 4 Jun 2004 16:59:58 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i54Ljxo20733;
+	Fri, 4 Jun 2004 17:45:59 -0400
+Date: Fri, 4 Jun 2004 17:45:59 -0400
+Message-Id: <200406042145.i54Ljxo20733@localhost.localdomain>
+From: root <daly@idsi.net>
+To: nimrod-me@bezeqint.net
+In-reply-to: <20040604200015.GA6642@localhost.bsd.net.il> (message from Nimrod
+	Mesika on Fri, 4 Jun 2004 23:00:15 +0300)
+Subject: Re: [Axiom-mail] z-transforms and numerical intergration
+References: <20040604200015.GA6642@localhost.bsd.net.il>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 04 Jun 2004 21:00:53 -0000
+
+I don't know of a package to do z-transforms either although
+it would certainly be possible to write one.
+
+Axiom's numeric capabilities require NAG's library which were not
+included in the open source code pile. (The connection code still
+exists). The commercial version might help you there if it came
+with the NAG library.
+
+Tim
+
+
+
+From MAILER-DAEMON Tue Jun 08 05:22:04 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BXco0-0007if-9e
+	for mharc-axiom-mail@gnu.org; Tue, 08 Jun 2004 05:22:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BXcnz-0007iU-4p
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2004 05:22:03 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BXcnx-0007i5-Bi
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2004 05:22:02 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BXcnx-0007i2-9Y
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2004 05:22:01 -0400
+Received: from [130.232.202.172] (helo=smtp-out-02.utu.fi)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BXcnC-0008Sr-GM
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2004 05:21:14 -0400
+Received: from utu.fi (nihal.mess.utu.fi [10.10.15.2])
+	by smtp02.mess.utu.fi (iPlanet Messaging Server 5.2 HotFix 1.21 (built
+	Sep 8 2003)) with ESMTP id <0HYZ00IQKG2RFB@smtp02.mess.utu.fi> for
+	axiom-mail@nongnu.org; Tue, 08 Jun 2004 12:08:51 +0300 (EEST)
+Received: from [10.10.11.1] (Forwarded-For: [130.232.111.62])
+	by mailstore2.mess.utu.fi (mshttpd); Tue, 08 Jun 2004 12:08:50 +0300
+Date: Tue, 08 Jun 2004 12:08:50 +0300
+From: Matti Soittola <matsoi@utu.fi>
+To: axiom-mail@nongnu.org
+Message-id: <4e05053064.530644e050@utu.fi>
+MIME-version: 1.0
+X-Mailer: iPlanet Messenger Express 5.2 HotFix 1.21 (built Sep  8 2003)
+Content-type: text/plain; charset=us-ascii
+Content-language: fi
+Content-transfer-encoding: 7BIT
+Content-disposition: inline
+X-Accept-Language: fi
+Priority: normal
+Subject: [Axiom-mail] Axiom under TeXmacs
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 08 Jun 2004 09:22:03 -0000
+
+I have mandrake linux, axiom was compiled and it works  when I use it from the terminal. However, if I call axiom from TeXMacs I get the message 'clef trying to get the initial terminal settings:invalid argument' Is there any remedy for this?
+M. Soittola 
+
+
+
+
+From MAILER-DAEMON Tue Jun 08 06:51:08 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BXeCC-0004a0-H8
+	for mharc-axiom-mail@gnu.org; Tue, 08 Jun 2004 06:51:08 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BXeCB-0004Yv-0E
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2004 06:51:07 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BXeC8-0004Wu-C5
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2004 06:51:06 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BXeC8-0004Wb-8f
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2004 06:51:04 -0400
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BXeBG-0005sO-9e
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2004 06:50:10 -0400
+Received: from localhost.localdomain (7.114.252.64.snet.net [64.252.114.7])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i58Ao9bj207754; Tue, 8 Jun 2004 06:50:09 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i58Ba6W07430;
+	Tue, 8 Jun 2004 07:36:06 -0400
+Date: Tue, 8 Jun 2004 07:36:06 -0400
+Message-Id: <200406081136.i58Ba6W07430@localhost.localdomain>
+From: root <daly@idsi.net>
+To: matsoi@utu.fi
+In-reply-to: <4e05053064.530644e050@utu.fi> (message from Matti Soittola on
+	Tue, 08 Jun 2004 12:08:50 +0300)
+Subject: Re: [Axiom-mail] Axiom under TeXmacs
+References: <4e05053064.530644e050@utu.fi>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 08 Jun 2004 10:51:07 -0000
+
+the 'axiom' command is a shell script. it tries to run clef which
+is a rewrite of gnu readline. if this fails for you then you can
+run the axiom image directly. the image is named AXIOMsys. so try:
+
+AXIOMsys
+
+rather than
+
+axiom
+
+to start.
+
+Tim
+
+
+
+From MAILER-DAEMON Tue Jun 08 13:27:09 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BXkNQ-00087P-Uk
+	for mharc-axiom-mail@gnu.org; Tue, 08 Jun 2004 13:27:08 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BXkNP-00086w-AW
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2004 13:27:07 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BXkNN-00086O-H6
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2004 13:27:06 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BXkNN-00086E-Cw
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2004 13:27:05 -0400
+Received: from [193.252.22.23] (helo=mwinf0804.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BXkMU-0004Pa-T0
+	for axiom-mail@nongnu.org; Tue, 08 Jun 2004 13:26:11 -0400
+Received: from morgana (ARennes-303-1-21-125.w81-53.abo.wanadoo.fr
+	[81.53.6.125]) by mwinf0804.wanadoo.fr (SMTP Server) with ESMTP
+	id 7EEBA18002BA; Tue,  8 Jun 2004 19:26:09 +0200 (CEST)
+Received: from david by morgana with local (Exim 4.32)
+	id 1BXkMS-0000aT-HX; Tue, 08 Jun 2004 19:26:08 +0200
+To: Matti Soittola <matsoi@utu.fi>
+Subject: Re: [Axiom-mail] Axiom under TeXmacs
+References: <4e05053064.530644e050@utu.fi>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Tue, 08 Jun 2004 19:26:08 +0200
+In-Reply-To: <4e05053064.530644e050@utu.fi> (Matti Soittola's message of
+	"Tue, 08 Jun 2004 12:08:50 +0300")
+Message-ID: <874qpmneq7.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) Emacs/21.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: David <david.mentre@wanadoo.fr>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 08 Jun 2004 17:27:07 -0000
+
+Hello Matti,
+
+Matti Soittola <matsoi@utu.fi> writes:
+
+> I have mandrake linux, axiom was compiled and it works when I use it
+> from the terminal. However, if I call axiom from TeXMacs I get the
+> message 'clef trying to get the initial terminal settings:invalid
+> argument' Is there any remedy for this?
+
+Could you give us:
+
+ 1. the result of 'strings axiom_tm' command? axiom_tm binary should be
+    in /usr/lib/texmacs/TeXmacs/bin or similar directory;
+
+ 2. the content of the init-axiom.scm file? This file should be in
+    /usr/share/texmacs/TeXmacs/plugins/axiom/progs or similar directory.
+
+
+Did you compile TeXmacs yourself? What is 'texmacs --version'?
+
+Yours,
+david
+-- 
+David MENTRE <david.mentre@wanadoo.fr> -- http://www.nongnu.org/axiom/
+
+
+
+From MAILER-DAEMON Thu Jun 10 12:52:07 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BYSmc-0000Cd-CV
+	for mharc-axiom-mail@gnu.org; Thu, 10 Jun 2004 12:52:06 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BYSmZ-0000CL-FK
+	for axiom-mail@nongnu.org; Thu, 10 Jun 2004 12:52:04 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BYSmX-0000BH-GR
+	for axiom-mail@nongnu.org; Thu, 10 Jun 2004 12:52:02 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BYSmX-0000BA-CZ
+	for axiom-mail@nongnu.org; Thu, 10 Jun 2004 12:52:01 -0400
+Received: from [193.252.22.26] (helo=mwinf0503.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BYSlO-0006aU-Pw
+	for axiom-mail@nongnu.org; Thu, 10 Jun 2004 12:50:51 -0400
+Received: from morgana (ARennes-303-1-4-162.w80-11.abo.wanadoo.fr
+	[80.11.201.162]) by mwinf0503.wanadoo.fr (SMTP Server) with ESMTP
+	id E58A068001ED; Thu, 10 Jun 2004 18:50:48 +0200 (CEST)
+Received: from david by morgana with local (Exim 4.32)
+	id 1BYSlL-0000Vy-It; Thu, 10 Jun 2004 18:50:47 +0200
+To: Matti Soittola <matsoi@utu.fi>
+Subject: Re: [Axiom-mail] Axiom under TeXmacs
+References: <1f5f611fb4e9.1fb4e91f5f61@utu.fi>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Thu, 10 Jun 2004 18:50:47 +0200
+In-Reply-To: <1f5f611fb4e9.1fb4e91f5f61@utu.fi> (Matti Soittola's message of
+	"Thu, 10 Jun 2004 12:18:21 +0300")
+Message-ID: <873c53e4rc.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) Emacs/21.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-=-="
+Sender: David <david.mentre@wanadoo.fr>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 10 Jun 2004 16:52:04 -0000
+
+--=-=-=
+
+Hello Matti,
+
+Matti Soittola <matsoi@utu.fi> writes:
+
+> I suppose that texmacs was a Mandrake package. It tells that the
+> version is 1.0.1.24 but changelog knows version 1.0.3.5. Hmmm.. I have
+> noted that axiom runs equally well if I give the command AXIOMsys, but
+> when I write this short command to the script axiom, then nothing
+> happens under texmacs.
+>
+> Now I have attached the texts that You asked. Thanking You very much
+
+I don't really understand what is going wrong. I propose the two
+following solutions:
+
+ 1. compiled the attached file tm_axiom.c and substitute it for the
+    tm_axiom on your linux (save the current one with a suffix like
+    .orig). 
+
+    To compile tm_axiom.c use command: 
+               cc -o tm_axiom tm_axiom.c
+
+
+ 2. Compile and install the latest release of TeXmacs from sources. See
+    http://texmacs.org/ 
+
+
+Sorry not to be able to be more useful.
+
+Yours,
+david
+
+
+
+--=-=-=
+Content-Type: text/x-csrc
+Content-Disposition: attachment; filename=tm_axiom.c
+Content-Description: tm_axiom.c
+
+
+/******************************************************************************
+* MODULE     : tm_axiom.c
+* DESCRIPTION: Glue between TeXmacs and Axiom
+* COPYRIGHT  : (C) 1999  Andrey Grozin
+*******************************************************************************
+* This software falls under the GNU general public license and comes WITHOUT
+* ANY WARRANTY WHATSOEVER. See the file $TEXMACS_PATH/LICENSE for more details.
+* If you don't have this file, write to the Free Software Foundation, Inc.,
+* 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+******************************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+#define NORMAL 0
+#define LONG   1
+#define END    2
+#define PROMPT 3
+#define MATH   4
+#define TYPE   5
+
+#define LEN 256
+/* #define LOG "/tmp/tm_axiom.log" */
+
+char buf[LEN];
+char mathbuf[4096];
+int len,code,writing=0,wait_type=0,mmode=0; /* was writing=1 */
+char prompt[]="-> ";
+char math[]="$$\n";
+char Type[]="Type: ";
+FILE *axin,*axout;
+
+#ifdef LOG
+FILE *log;
+int details=0;
+
+void lline(void)
+{ switch (code)
+  { case NORMAL: fputs("NORMAL",log); break;
+    case LONG:   fputs("LONG  ",log); break;
+    case END:    fputs("END   ",log); break;
+    case PROMPT: fputs("PROMPT",log); break;
+    case MATH:   fputs("MATH  ",log); break;
+    case TYPE:   fputs("TYPE  ",log); break;
+  }
+  fprintf(log," %3d: ",len);
+  fputs(buf,log);
+  if ((code==PROMPT)||(code==MATH)) fputs("\n",log);
+  fflush(log);
+}
+#endif
+
+int ch(void)
+{ char c;
+  while (1)
+  { c=getc(axout);
+#ifdef LOG
+    if (details)
+    { fprintf(log,"%02x",c);
+      if (c>=' ') fprintf(log," [%c]",c);
+      fprintf(log,"\n"); fflush(log);
+    }
+#endif
+    if (c!='\r') return c;
+  }
+}
+
+void tail(void)
+{ int c;
+  while (1)
+  { c=ch();
+    if (c==EOF) { code=END; break; }
+    else if (c=='\r')
+    { c=ch();
+      if (c==EOF) { code=END; break; }
+      else if (c=='\n') { if (writing) putchar('\n'); break; }
+      else if (writing) putchar(c);
+    }
+    else if (writing) putchar(c);
+  }
+}
+
+void iline(void)
+{ int i=0,j=0,k,c;
+  while (1)
+  { c=ch();
+    if (c==prompt[j])
+      if (j==2) { code=PROMPT; break; } else j++;
+    else
+    { for (k=0;k<j;) buf[i++]=prompt[k++];
+      j=0;
+      if (i>LEN-4) { code=LONG; break; }
+      else if (c==EOF) { code=END; break; }
+      else if (c=='\n') { buf[i++]='\n'; code=NORMAL; break; }
+      else buf[i++]=c;
+    }
+  }
+  buf[i]='\0'; len=i;
+  if (len==78)
+  if (buf[77]=='\n')
+  { j=1;
+    for (k=0;k<76;k++) if (buf[k]!='-') { j=0; break; }
+    if (j) code=TYPE;
+  }
+#ifdef LOG
+  lline();
+#endif
+  if (code==PROMPT) return;
+  if (writing) fputs(buf,stdout);
+  if (code==LONG) tail();
+  if (code==END)
+  { fputs("\n\2latex:\\red Unexpected end\\black5\5",stdout);
+    exit(1);
+  }
+  if (code==LONG) code=NORMAL;
+}
+
+void line(void)
+{ int i=0,j,k,c; char *s;
+  code=NORMAL; c=ch();
+  if (c==EOF) code=END;
+  else if (c=='-')
+  { j=1;
+    while (1)
+    { c=ch();
+      if (c==prompt[j])
+        if (j==2) { code=PROMPT; break; } else j++;
+      else
+      { for (k=0;k<j;) buf[i++]=prompt[k++];
+        break;
+      }
+    }
+  }
+  else if (c=='$')
+  { j=1;
+    while (1)
+    { c=ch();
+      if (c==math[j])
+        if (j==2) { code=MATH; break; } else j++;
+      else
+      { for (k=0;k<j;) buf[i++]=math[k++];
+        buf[i++]=c;
+      }
+    }
+  }
+  if (c!=EOF) buf[i++]=c;
+  if ((code==PROMPT)||(code==MATH)||(code==END))
+  { buf[i]='\0'; len=i;
+#ifdef LOG
+    lline();
+#endif
+    return;
+  }
+  while (1)
+  { if (i>LEN-2) { code=LONG; break; }
+    else if (c=='\n') break;
+    c=ch();
+    if (c==EOF) { code=END; break; }
+    else buf[i++]=c;
+  }
+  buf[i]='\0'; len=i;
+#ifdef LOG
+  lline();
+#endif
+  if (/*wait_type && */(code==NORMAL))
+  { if (len==1) return;
+    wait_type=0;
+    if (len==78)
+    { for (s=buf,k=0;k<len-7;s++,k++) if ((*s)!=' ') break;
+      for (k=0;k<6;s++,k++) if ((*s)!=Type[k]) break;
+      if (k==6)
+      { /* buf[77]='\0'; */
+	wait_type=1;
+        printf("\2latex:\\axiomtype{%s}\5",s);
+        return;
+      }
+    }
+  };
+  if (wait_type) printf("\2latex:\\red$\\rightarrow$\\black\\ \5");
+  if (mmode) {
+    strcat(mathbuf,buf);
+  } else {
+    fputs(buf,stdout);
+  };
+  if (code==LONG) tail();
+  if (code==LONG) code=NORMAL;
+}
+
+void must_be_prompt(char *mess)
+{ iline();
+  if (code!=PROMPT)
+  { printf("\2latex:\\red Cannot get prompt %s\\black\5\5",mess);
+    exit(1);
+  }
+}
+
+void tex_to_latex(char buf[])
+{
+  char *ptr1, *ptr2;
+
+  while ((ptr1=strchr(buf,'\n'))) { strcpy(ptr1,ptr1+1); };
+  while ((ptr1=strstr(buf,"\\root {"))) {
+    if ((ptr2=strstr(ptr1,"} \\of "))) {
+      strncpy(ptr1,"\\sqrt[",6);
+      strncpy(ptr1+6,ptr1+7,ptr2-ptr1-7);
+      strncpy(ptr1+6+(ptr2-ptr1-7),"]",1);
+      strcpy(ptr1+7+(ptr2-ptr1-7),ptr2+6);
+    }
+  }
+}
+
+void session(void)
+{ int c,delims=0;
+#ifdef LOG
+  log=fopen(LOG,"w");
+#endif
+  /* Write initial lines up to (but not including)
+     the line with the first prompt
+  */
+  fputs("\2verbatim:",stdout);
+  while (1)
+  { iline();
+    if (code==TYPE) { if ((++delims)==2) writing=0; }
+    else if (code==PROMPT) break;
+  }
+  /* force-feeding */
+  fputs(")set messages prompt plain\n",axin); fflush(axin);
+#ifdef LOG
+  fputs("SENT )set messages prompt plain\n",log); fflush(log);
+#endif
+  must_be_prompt("0");
+  fputs(")set messages autoload off\n",axin); fflush(axin);
+#ifdef LOG
+  fputs("SENT )set messages autoload off\n",log); fflush(log);
+#endif
+  must_be_prompt("1");
+  fputs(")set quit unprotected\n",axin); fflush(axin);
+#ifdef LOG
+  fputs("SENT )set quit unprotected\n",log); fflush(log);
+#endif
+  must_be_prompt("2");
+  fputs(")set output tex on\n",axin); fflush(axin);
+#ifdef LOG
+  fputs("SENT )set output tex on\n",log); fflush(log);
+#endif
+  must_be_prompt("3");
+  fputs(")set output algebra off\n",axin); fflush(axin);
+#ifdef LOG
+  fputs("SENT )set output algebra off\n",log); fflush(log);
+#endif
+  must_be_prompt("4");
+  /* Main prompt-read-write loop */
+  while (1)
+  { fputs("\2channel:prompt\5\2latex:\\red$\\rightarrow$\\ \5\5",stdout);
+    fflush(stdout);
+    fputs("\2verbatim:",stdout);
+    while (1)
+    { c=getchar();
+      if ((c==EOF)||(c=='\n')) break;
+      putc(c,axin);
+    }
+    if (c==EOF) fputs(")quit\n",axin);
+    else putc('\n',axin);
+    fflush(axin);
+    mmode=0;
+    while (1)
+    { line();
+      if ((code==PROMPT)||(code==END)) break;
+      if (code==MATH) {
+        if (mmode) { /* convert TeX to LaTex etc. */
+	  tex_to_latex(mathbuf);
+	  fputs(mathbuf,stdout);
+	  mmode=0; wait_type=1; fputs("$\5\n",stdout);
+       	} else {
+	  strcpy(mathbuf,"");
+	  mmode=1; fputs("\2latex:$\\displaystyle\n",stdout);
+       	}
+     };
+    }
+    if (code==END) break;
+  }
+  fputs("\2latex:\\red The end\\black\5\5",stdout);
+}
+
+void fatal(char *mess)
+{ fprintf(stdout,"\2latex:\\red Cannot %s\\black\5\5",mess);
+  exit(1);
+}
+
+int main()
+{ int p1[2],p2[2];
+  if (pipe(p1)<0) fatal("create pipe");
+  if (pipe(p2)<0) fatal("create pipe");
+  switch (fork())
+  { case -1: fatal("fork");
+    case 0: /* Axiom */
+      dup2(p1[1],1); close(p1[1]); close(p1[0]);
+      dup2(p2[0],0); close(p2[0]); close(p2[1]);
+      execlp("AXIOMsys","AXIOMsys","-noclef",0);
+      fatal("exec AXIOMsys");
+    default: /* parent */
+      close(p1[1]); close(p2[0]);
+      axin=fdopen(p2[1],"w"); axout=fdopen(p1[0],"r");
+      session();
+  }
+  return 0;
+}
+
+--=-=-=
+
+
+-- 
+ david.mentre@wanadoo.fr
+
+--=-=-=--
+
+
+
+From MAILER-DAEMON Fri Jun 11 14:02:40 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BYqMR-0005mX-VQ
+	for mharc-axiom-mail@gnu.org; Fri, 11 Jun 2004 14:02:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BYqMQ-0005mR-94
+	for axiom-mail@nongnu.org; Fri, 11 Jun 2004 14:02:38 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BYqMO-0005mB-JV
+	for axiom-mail@nongnu.org; Fri, 11 Jun 2004 14:02:37 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BYqMO-0005m7-Hr
+	for axiom-mail@nongnu.org; Fri, 11 Jun 2004 14:02:36 -0400
+Received: from [193.252.22.23] (helo=mwinf0803.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BYqLJ-00068V-U4
+	for axiom-mail@nongnu.org; Fri, 11 Jun 2004 14:01:30 -0400
+Received: from morgana (ARennes-303-1-18-142.w81-51.abo.wanadoo.fr
+	[81.51.59.142]) by mwinf0803.wanadoo.fr (SMTP Server) with ESMTP
+	id 9F2EA18001D2; Fri, 11 Jun 2004 20:01:28 +0200 (CEST)
+Received: from david by morgana with local (Exim 4.32)
+	id 1BYqLI-0000WF-0I; Fri, 11 Jun 2004 20:01:28 +0200
+To: Matti Soittola <matsoi@utu.fi>
+Subject: Re: [Axiom-mail] Axiom under TeXmacs
+References: <2bb4dc2bca62.2bca622bb4dc@utu.fi>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Fri, 11 Jun 2004 20:01:27 +0200
+In-Reply-To: <2bb4dc2bca62.2bca622bb4dc@utu.fi> (Matti Soittola's message of
+	"Fri, 11 Jun 2004 12:08:42 +0300")
+Message-ID: <87pt86nfd4.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) Emacs/21.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: David <david.mentre@wanadoo.fr>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 11 Jun 2004 18:02:38 -0000
+
+Matti Soittola <matsoi@utu.fi> writes:
+
+>  That was the right advice! I downloaded the last stable version as
+>  rpm and installed it. Now axiom sessions run perfectly.
+
+Great! Happy Axiom use.
+
+Yours,
+d.
+-- 
+ david.mentre@wanadoo.fr
+
+
+
+From MAILER-DAEMON Fri Jun 18 20:47:51 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BbU1P-0007iz-6D
+	for mharc-axiom-mail@gnu.org; Fri, 18 Jun 2004 20:47:51 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BbU1N-0007i4-Cq
+	for axiom-mail@nongnu.org; Fri, 18 Jun 2004 20:47:49 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BbU1L-0007gQ-22
+	for Axiom-mail@nongnu.org; Fri, 18 Jun 2004 20:47:48 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BbU1K-0007gE-T8
+	for Axiom-mail@nongnu.org; Fri, 18 Jun 2004 20:47:46 -0400
+Received: from [206.46.170.140] (helo=out001.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BbU0B-0004dq-Kg
+	for Axiom-mail@nongnu.org; Fri, 18 Jun 2004 20:46:36 -0400
+Received: from [68.163.249.180] by out001.verizon.net
+	(InterMail vM.5.01.06.06 201-253-122-130-106-20030910) with ESMTP
+	id <20040619004633.NSMP1464.out001.verizon.net@[68.163.249.180]>
+	for <Axiom-mail@nongnu.org>; Fri, 18 Jun 2004 19:46:33 -0500
+Message-ID: <40D38EE5.8020306@verizon.net>
+Date: Fri, 18 Jun 2004 20:55:01 -0400
+From: Jelena i Zoran <macak.macak@verizon.net>
+User-Agent: Mozilla Thunderbird 0.7 (X11/20040615)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: Axiom-mail@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Authentication-Info: Submitted using SMTP AUTH at out001.verizon.net from
+	[68.163.249.180] at Fri, 18 Jun 2004 19:46:33 -0500
+Cc: 
+Subject: [Axiom-mail] Compiling Axiom
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 19 Jun 2004 00:47:50 -0000
+
+Hello,
+I compiled axiom at work using Red Hat Fedora Core 2 without any problems.
+Axiom does not run when I type "axiom". It returns "Could not find a 
+free pty" instead.
+However, it seems to run fine if I execute "AXIOMsys" in its 
+installation directory.
+I have the same system at home and axiom would not compile for some reason.
+My guess is that some packages are missing from my Fedora Core 2 home 
+installation.
+But I can not figure out which ones. The compilation error that I 
+receive is included below.
+Unfortunately, I am not a programmer so I can not figure out what it is 
+saying.
+I would greatly appreciate any help regarding the compilation issue.
+I am a theoretical mathematician and would like to use axiom to evaluate 
+a rather difficult
+integral.
+Best regards to all,
+Zoran
+
+=================================================================
+Compilation error:
+
+
+[root@zs axiom]# make
+13 making noweb
+patching file modules.c
+mnt.o(.text+0x364): In function `emitfile':
+: warning: the use of `tmpnam' is dangerous, better use `mkstemp'
+make[1]: [install-shell] Error 1 (ignored)
+make[1]: [install-code] Error 1 (ignored)
+make[1]: [install-elisp] Error 1 (ignored)
+0 SPAD=/home/zoran/Download/axiom/mnt/linux SYS=linux 
+SPD=/home/zoran/Download/axiom LSP=/home/zoran/Download/axiom/lsp 
+GCLDIR=/home/zoran/Download/axiom/lsp/gcl-2.6.2a 
+SRC=/home/zoran/Download/axiom/src INT=/home/zoran/Download/axiom/int 
+OBJ=/home/zoran/Download/axiom/obj MNT=/home/zoran/Download/axiom/mnt 
+ZIPS=/home/zoran/Download/axiom/zips 
+TMP=/home/zoran/Download/axiom/obj/tmp 
+SPADBIN=/home/zoran/Download/axiom/mnt/linux/bin 
+INC=/home/zoran/Download/axiom/src/include 
+CCLBASE=/home/zoran/Download/axiom/obj/linux/ccl/ccllisp PART=cprogs 
+SUBPART=everything NOISE=-o /home/zoran/Download/axiom/obj/tmp/trace 
+GCLVERSION=gcl-2.6.2a 
+TANGLE=/home/zoran/Download/axiom/mnt/linux/bin/lib/notangle
+10 copying /home/zoran/Download/axiom/src/scripts to 
+/home/zoran/Download/axiom/mnt/linux/bin
+1 making a linux system, PART=cprogs SUBPART=everything
+2 Environment SPAD=/home/zoran/Download/axiom/mnt/linux SYS=linux 
+SPD=/home/zoran/Download/axiom LSP=/home/zoran/Download/axiom/lsp 
+GCLDIR=/home/zoran/Download/axiom/lsp/gcl-2.6.2a 
+SRC=/home/zoran/Download/axiom/src INT=/home/zoran/Download/axiom/int 
+OBJ=/home/zoran/Download/axiom/obj MNT=/home/zoran/Download/axiom/mnt 
+ZIPS=/home/zoran/Download/axiom/zips 
+TMP=/home/zoran/Download/axiom/obj/tmp 
+SPADBIN=/home/zoran/Download/axiom/mnt/linux/bin 
+INC=/home/zoran/Download/axiom/src/include 
+CCLBASE=/home/zoran/Download/axiom/obj/linux/ccl/ccllisp PART=cprogs 
+SUBPART=everything NOISE=-o /home/zoran/Download/axiom/obj/tmp/trace 
+GCLVERSION=gcl-2.6.2a 
+TANGLE=/home/zoran/Download/axiom/mnt/linux/bin/lib/notangle
+make[1]: Entering directory `/home/zoran/Download/axiom'
+11 checking directory structure
+12 Environment: PLF=LINUXplatform CCF=-O2 -fno-strength-reduce -Wall 
+-D_GNU_SOURCE -DLINUXplatform -I/usr/X11/include LDF=-L/usr/X11R6/lib 
+CC=gcc AWK=gawk RANLIB=ranlib TOUCH=touch TAR=tar 
+AXIOMXLROOT=/home/zoran/Download/axiom/mnt/linux/compiler O=o BYE=bye 
+LISP=lsp DAASE=/home/zoran/Download/axiom/src/share XLIB=/usr/X11R6/lib
+16 making /home/zoran/Download/axiom/src/Makefile from 
+/home/zoran/Download/axiom/src/Makefile.pamphlet
+which: no latex in 
+(/home/zoran/Download/axiom/mnt/linux/bin:/usr/local/adabas/bin:/usr/local/adabas/pgm:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin:/home/zoran/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/java/j2sdk1.4.1_04/bin:/usr/local/WordNet-2.0/bin:/usr/local/axiom/mnt/linux/bin)
+document ERROR You must install latex first
+18 making /home/zoran/Download/axiom/src
+make[2]: Entering directory `/home/zoran/Download/axiom/src'
+make[2]: *** No rule to make target `setup'.  Stop.
+make[2]: Leaving directory `/home/zoran/Download/axiom/src'
+make[1]: *** [srcsetup] Error 2
+make[1]: Leaving directory `/home/zoran/Download/axiom'
+make: *** [all] Error 2
+[root@zs axiom]#
+
+
+
+
+
+
+
+
+From MAILER-DAEMON Fri Jun 18 21:10:19 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BbUN8-0008Dw-IQ
+	for mharc-axiom-mail@gnu.org; Fri, 18 Jun 2004 21:10:18 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BbUN7-0008Di-I8
+	for axiom-mail@nongnu.org; Fri, 18 Jun 2004 21:10:17 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BbUN3-0008CY-TW
+	for Axiom-mail@nongnu.org; Fri, 18 Jun 2004 21:10:17 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BbUN3-0008CV-Pb
+	for Axiom-mail@nongnu.org; Fri, 18 Jun 2004 21:10:13 -0400
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BbULf-0004Fp-OI
+	for Axiom-mail@nongnu.org; Fri, 18 Jun 2004 21:08:47 -0400
+Received: from localhost.localdomain (18.180.252.64.snet.net [64.252.180.18])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i5J18FX2213204; Fri, 18 Jun 2004 21:08:32 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i5J1rSP28658;
+	Fri, 18 Jun 2004 21:53:28 -0400
+Date: Fri, 18 Jun 2004 21:53:28 -0400
+Message-Id: <200406190153.i5J1rSP28658@localhost.localdomain>
+From: root <daly@idsi.net>
+To: macak.macak@verizon.net
+In-reply-to: <40D38EE5.8020306@verizon.net> (message from Jelena i Zoran on
+	Fri, 18 Jun 2004 20:55:01 -0400)
+Subject: Re: [Axiom-mail] Compiling Axiom
+References: <40D38EE5.8020306@verizon.net>
+Cc: Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 19 Jun 2004 01:10:17 -0000
+
+Zoran,
+
+Axiom needs latex in order to build.
+You don't have latex installed.
+
+Tim
+
+
+
+From MAILER-DAEMON Sat Jun 19 03:15:43 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Bba4k-0006wQ-QK
+	for mharc-axiom-mail@gnu.org; Sat, 19 Jun 2004 03:15:42 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bba4i-0006vz-VR
+	for axiom-mail@nongnu.org; Sat, 19 Jun 2004 03:15:41 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bba4i-0006vW-0n
+	for Axiom-mail@nongnu.org; Sat, 19 Jun 2004 03:15:40 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bba4h-0006vF-S1
+	for Axiom-mail@nongnu.org; Sat, 19 Jun 2004 03:15:39 -0400
+Received: from [204.101.243.152] (helo=lattice.dyns.cx)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1Bba3M-0006XW-45
+	for Axiom-mail@nongnu.org; Sat, 19 Jun 2004 03:14:16 -0400
+Received: from lattice.dyns.cx (localhost [127.0.0.1])
+	by lattice.dyns.cx (8.12.10/8.12.10) with ESMTP id i5J7BPVd018375;
+	Sat, 19 Jun 2004 03:11:26 -0400
+Received: (from steve@localhost)
+	by lattice.dyns.cx (8.12.10/8.12.10/Submit) id i5J7BPEx018368;
+	Sat, 19 Jun 2004 03:11:25 -0400
+Date: Sat, 19 Jun 2004 03:11:25 -0400
+From: Stephen Wilson <wilsons@multiboard.com>
+To: Jelena i Zoran <macak.macak@verizon.net>
+Subject: Re: [Axiom-mail] Compiling Axiom
+Message-ID: <20040619071125.GA23359@lattice>
+References: <40D38EE5.8020306@verizon.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <40D38EE5.8020306@verizon.net>
+User-Agent: Mutt/1.4.2i
+X-Operating-System: GNU/Linux 2.4.22
+Cc: Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 19 Jun 2004 07:15:41 -0000
+
+On Fri, Jun 18, 2004 at 08:55:01PM -0400, Jelena i Zoran wrote:
+
+> I compiled axiom at work using Red Hat Fedora Core 2 without any problems.
+> Axiom does not run when I type "axiom". It returns "Could not find a 
+> free pty" instead.
+
+I have experienced this same problem a few days ago while installing
+Axiom on a fresh Mandrake 10 system. I am not very familiar with the
+Mandrake or Redhat distros, but I know they have been fairly similar
+in the past. Perhaps this fix will work for you. You probably have
+restrictive permissions for the pty devices under /dev/pty. Try giving
+yourself read/write access (the error is coming from clef, the Axiom
+rewrite of GNU Readline, which explains why you do not see the same
+problem when executing AXIOMsys).
+
+Sincerely, 
+Steve
+
+
+
+
+
+From MAILER-DAEMON Sat Jun 19 09:11:12 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Bbfcm-0007cF-Hf
+	for mharc-axiom-mail@gnu.org; Sat, 19 Jun 2004 09:11:12 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bbfck-0007c3-Vy
+	for axiom-mail@nongnu.org; Sat, 19 Jun 2004 09:11:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bbfck-0007be-5t
+	for Axiom-mail@nongnu.org; Sat, 19 Jun 2004 09:11:10 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bbfcj-0007bb-UB
+	for Axiom-mail@nongnu.org; Sat, 19 Jun 2004 09:11:10 -0400
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BbfbC-0004Eq-Te
+	for Axiom-mail@nongnu.org; Sat, 19 Jun 2004 09:09:35 -0400
+Received: from localhost.localdomain (18.180.252.64.snet.net [64.252.180.18])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	i5JD9XPX230616; Sat, 19 Jun 2004 09:09:33 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id i5JDgD529176;
+	Sat, 19 Jun 2004 09:42:13 -0400
+Date: Sat, 19 Jun 2004 09:42:13 -0400
+Message-Id: <200406191342.i5JDgD529176@localhost.localdomain>
+From: root <daly@idsi.net>
+To: wilsons@multiboard.com
+In-reply-to: <20040619071125.GA23359@lattice> (message from Stephen Wilson on
+	Sat, 19 Jun 2004 03:11:25 -0400)
+Subject: Re: [Axiom-mail] Compiling Axiom
+References: <40D38EE5.8020306@verizon.net> <20040619071125.GA23359@lattice>
+Cc: axiom-developer.org@sbcglobal.net, Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 19 Jun 2004 13:11:11 -0000
+
+Steve,
+
+>> I compiled axiom at work using Red Hat Fedora Core 2 without any problems.
+>> Axiom does not run when I type "axiom". It returns "Could not find a 
+>> free pty" instead.
+>
+>I have experienced this same problem a few days ago while installing
+>Axiom on a fresh Mandrake 10 system. I am not very familiar with the
+>Mandrake or Redhat distros, but I know they have been fairly similar
+>in the past. Perhaps this fix will work for you. You probably have
+>restrictive permissions for the pty devices under /dev/pty. Try giving
+>yourself read/write access (the error is coming from clef, the Axiom
+>rewrite of GNU Readline, which explains why you do not see the same
+>problem when executing AXIOMsys).
+
+
+Good tip. I'll add that to the README file.
+Clef should also output an error message that suggests
+workarounds and fixes if it fails.
+
+Tim
+
+
+
+
+From MAILER-DAEMON Mon Jun 21 16:09:00 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BcV6C-0003ll-5F
+	for mharc-axiom-mail@gnu.org; Mon, 21 Jun 2004 16:09:00 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BcV68-0003lL-4w
+	for axiom-mail@nongnu.org; Mon, 21 Jun 2004 16:08:56 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BcV65-0003kY-FD
+	for axiom-mail@nongnu.org; Mon, 21 Jun 2004 16:08:55 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BcV65-0003kV-Bh
+	for axiom-mail@nongnu.org; Mon, 21 Jun 2004 16:08:53 -0400
+Received: from [81.228.9.108] (helo=av2-2-sn3.vrr.skanova.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BcV4N-0006q8-Bu
+	for axiom-mail@nongnu.org; Mon, 21 Jun 2004 16:07:07 -0400
+Received: by av2-2-sn3.vrr.skanova.net (Postfix, from userid 502)
+	id 8A3C237E63; Mon, 21 Jun 2004 22:07:04 +0200 (CEST)
+Received: from smtp4-2-sn2.hy.skanova.net (smtp4-2-sn2.hy.skanova.net
+	[81.228.8.93])
+	by av2-2-sn3.vrr.skanova.net (Postfix) with ESMTP id 79B1E37E44
+	for <axiom-mail@nongnu.org>; Mon, 21 Jun 2004 22:07:04 +0200 (CEST)
+Received: from sholem.dactylis.com (h229n2fls306o871.telia.com
+	[213.64.235.229])
+	by smtp4-2-sn2.hy.skanova.net (Postfix) with ESMTP id 3E23E37E48
+	for <axiom-mail@nongnu.org>; Mon, 21 Jun 2004 22:07:04 +0200 (CEST)
+Received: from math.su.se (c-314273d5.165-1-64736c11.cust.bredbandsbolaget.se
+	[213.115.66.49])
+	by sholem.dactylis.com (8.12.9/8.12.9) with ESMTP id i5LK71Xm026173
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK)
+	for <axiom-mail@nongnu.org>; Mon, 21 Jun 2004 22:07:03 +0200 (CEST)
+Message-ID: <40D73FA1.7040202@math.su.se>
+Date: Mon, 21 Jun 2004 22:05:53 +0200
+From: Marcus Better <marcusb@math.su.se>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.6) Gecko/20040510
+X-Accept-Language: sv, en-us, en
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-mail] sum()
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 21 Jun 2004 20:08:56 -0000
+
+Hi all,
+
+I am trying to define a simple recursive function, but axiom refuses to 
+obey me. I would like to do something like this:
+
+   f: Integer -> Integer;
+   f(0)==1; f(1)==2;
+   f(n)==sum(f(i)*f(n-i), i=0..(n-1))
+
+which gives me "Cannot convert from type Variable i to Integer for value 
+i". I have also tried other variants.
+
+Thanks,
+
+Marcus
+
+-----------------------------------------------------------------
+Marcus Better
+Department of Mathematics                      Tel. +46 8 164539
+Stockholm University                           Fax +46 8 6126717
+SE-106 91 Stockholm
+Sweden                                     http://www.math.su.se
+-----------------------------------------------------------------
+
+
+
+From MAILER-DAEMON Tue Jun 22 03:03:41 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BcfJl-0003a4-8C
+	for mharc-axiom-mail@gnu.org; Tue, 22 Jun 2004 03:03:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BcfJj-0003YL-2D
+	for axiom-mail@nongnu.org; Tue, 22 Jun 2004 03:03:39 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BcfJh-0003Xr-83
+	for axiom-mail@nongnu.org; Tue, 22 Jun 2004 03:03:38 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BcfJh-0003Xo-6J
+	for axiom-mail@nongnu.org; Tue, 22 Jun 2004 03:03:37 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BcfHw-0003lL-Q1
+	for axiom-mail@nongnu.org; Tue, 22 Jun 2004 03:01:49 -0400
+X-Spam-Flags: <.IPWHOIS-RFC-IGNORANT.@imap.univie.ac.at>[131.130.93.101:[131.130.93.101]]<univie.ac.at>
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i5M71QpX912256;
+	Tue, 22 Jun 2004 09:01:38 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16599.62680.814858.194434@gargle.gargle.HOWL>
+Date: Tue, 22 Jun 2004 08:59:04 +0000
+To: Marcus Better <marcusb@math.su.se>
+Subject: Re: [Axiom-mail] sum()
+In-Reply-To: <40D73FA1.7040202@math.su.se>
+References: <40D73FA1.7040202@math.su.se>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mail 4249; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 22 Jun 2004 07:03:39 -0000
+
+You tried: 
+
+ >    f: Integer -> Integer;
+ >    f(0)==1; f(1)==2;
+ >    f(n)==sum(f(i)*f(n-i), i=0..(n-1))
+
+Try
+
+f: Integer -> Integer;		
+f(0)==1; f(1)==2;			
+f(n)==reduce(+,[f(i)*f(n-i) for i in 1..(n-1)])
+
+I have no good explanation why sum won't work. (Well, I know why it happens
+internally. I'm looking for a solution...)
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Jun 22 11:02:53 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BcmnV-0004Nc-9p
+	for mharc-axiom-mail@gnu.org; Tue, 22 Jun 2004 11:02:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BcmnS-0004M9-Td
+	for axiom-mail@nongnu.org; Tue, 22 Jun 2004 11:02:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BcmnO-0004L2-23
+	for axiom-mail@nongnu.org; Tue, 22 Jun 2004 11:02:49 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BcmnN-0004Ks-UV
+	for axiom-mail@nongnu.org; Tue, 22 Jun 2004 11:02:45 -0400
+Received: from [200.213.197.161] (helo=hm61.locaweb.com.br)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1Bcmli-000330-ND
+	for axiom-mail@nongnu.org; Tue, 22 Jun 2004 11:01:03 -0400
+Received: (qmail 23276 invoked from network); 22 Jun 2004 14:57:53 -0000
+Received: from hm47.locaweb.com.br (200.182.98.147)
+	by hm61.locaweb.com.br with QMTP; 22 Jun 2004 14:57:53 -0000
+Received: (qmail 832 invoked by uid 11435); 22 Jun 2004 15:00:36 -0000
+Message-ID: <20040622150036.830.qmail@hm47.locaweb.com.br>
+From: "Daniel Yokomiso" <daniel.yokomiso@minddrome.com>
+Date: Tue, 22 Jun 2004 12:00:35 -0300
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] sum()
+References: <16599.62680.814858.194434@gargle.gargle.HOWL>
+In-Reply-To: <16599.62680.814858.194434@gargle.gargle.HOWL>
+X-Mailer: LocaMail
+X-IPAddress: 201.1.88.47
+X-Sender: daniel.yokomiso@minddrome.com
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+Reply-To: daniel.yokomiso@minddrome.com
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 22 Jun 2004 15:02:51 -0000
+
+On Tue, 22 Jun 2004 08:59:04 +0000, Martin Rubey <martin> escreveu:
+
+> De: Martin Rubey <martin>
+> Data: Tue, 22 Jun 2004 08:59:04 +0000
+> Para: Marcus Better <marcusb>
+> Assunto: Re: [Axiom-mail] sum()
+> 
+> You tried: 
+> 
+>  >    f: Integer -> Integer;
+>  >    f(0)==1; f(1)==2;
+>  >    f(n)==sum(f(i)*f(n-i), i=0..(n-1))
+> 
+> Try
+> 
+> f: Integer -> Integer;		
+> f(0)==1; f(1)==2;			
+> f(n)==reduce(+,[f(i)*f(n-i) for i in 1..(n-1)])
+> 
+> I have no good explanation why sum won't work.
+
+"sum" doesn't work because your definition is different. The original has "i" ranging from 0 to (n - 1), while yours ranges from 1 to (n - 1). Using "i" from 0 makes the definition incorrect.
+
+> (Well, I know why it happens
+> internally. I'm looking for a solution...)
+> 
+> Martin
+
+    Best regards,
+    Daniel Yokomizo.
+
+
+
+From MAILER-DAEMON Tue Jun 22 12:36:12 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BcoFo-00037R-Pu
+	for mharc-axiom-mail@gnu.org; Tue, 22 Jun 2004 12:36:12 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BcoFm-00035O-Gr
+	for axiom-mail@nongnu.org; Tue, 22 Jun 2004 12:36:10 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BcoFj-00034Y-Ii
+	for axiom-mail@nongnu.org; Tue, 22 Jun 2004 12:36:09 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BcoFj-00034Q-82
+	for axiom-mail@nongnu.org; Tue, 22 Jun 2004 12:36:07 -0400
+Received: from [193.252.22.27] (helo=mwinf0401.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BcoEF-00043L-Pl
+	for axiom-mail@nongnu.org; Tue, 22 Jun 2004 12:34:36 -0400
+Received: from morgana (ARennes-303-1-5-9.w80-15.abo.wanadoo.fr [80.15.137.9])
+	by mwinf0401.wanadoo.fr (SMTP Server) with ESMTP
+	id BB1A5580075E; Tue, 22 Jun 2004 18:34:34 +0200 (CEST)
+Received: from david by morgana with local (Exim 4.32)
+	id 1BcoED-0000UZ-UV; Tue, 22 Jun 2004 18:34:33 +0200
+To: daniel.yokomiso@minddrome.com
+Subject: Re: [Axiom-mail] sum()
+References: <16599.62680.814858.194434@gargle.gargle.HOWL>
+	<20040622150036.830.qmail@hm47.locaweb.com.br>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Tue, 22 Jun 2004 18:34:33 +0200
+In-Reply-To: <20040622150036.830.qmail@hm47.locaweb.com.br> (Daniel
+	Yokomiso's message of "Tue, 22 Jun 2004 12:00:35 -0300")
+Message-ID: <87llifmu06.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) Emacs/21.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: David <david.mentre@wanadoo.fr>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 22 Jun 2004 16:36:11 -0000
+
+Hello Daniel,
+
+"Daniel Yokomiso" <daniel.yokomiso@minddrome.com> writes:
+
+>> You tried: 
+>> 
+>>  >    f: Integer -> Integer;
+>>  >    f(0)==1; f(1)==2;
+>>  >    f(n)==sum(f(i)*f(n-i), i=0..(n-1))
+>> 
+>> Try
+>> 
+>> f: Integer -> Integer;		
+>> f(0)==1; f(1)==2;			
+>> f(n)==reduce(+,[f(i)*f(n-i) for i in 1..(n-1)])
+>> 
+>> I have no good explanation why sum won't work.
+>
+> "sum" doesn't work because your definition is different. The original
+> has "i" ranging from 0 to (n - 1), while yours ranges from 1 to (n -
+> 1). Using "i" from 0 makes the definition incorrect.
+
+I don't agree with you. The range of i was one bug (when i=0,
+f(n)=...*f(n-0)...=...*f(n)... -> stack overflow).
+
+But there is another type bug.
+
+
+-> f: Integer -> Integer; f(0)==1; f(1)==2; f(n)==sum(f(i)*f(n-i), i=1..(n-1))
+
+-> f(3)
+   Compiling function f with type Integer -> Integer 
+   Conversion failed in the compiled user function f .
+ 
+   Cannot convert from type Variable i to Integer for value
+   i
+
+
+sum expects (rationalFunction, symbolOrSegmentBinding), from Axiom book
+p. 683 in its paper form (Operations appendix).
+
+f as defined by Marcus is not a rationalFunction and thus cannot be
+defined using sum.
+
+reduce is a program loop and not the mathematical Sum operator, that's
+why it works.
+
+
+Yours,
+david
+-- 
+David MENTRE <david.mentre@wanadoo.fr> -- http://www.nongnu.org/axiom/
+
+
+
+From MAILER-DAEMON Wed Jun 23 06:06:28 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Bd4eC-0003iL-Jw
+	for mharc-axiom-mail@gnu.org; Wed, 23 Jun 2004 06:06:28 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bd4e9-0003ht-W3
+	for axiom-mail@nongnu.org; Wed, 23 Jun 2004 06:06:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bd4e7-0003gh-2h
+	for axiom-mail@nongnu.org; Wed, 23 Jun 2004 06:06:24 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bd4e6-0003gW-VV
+	for axiom-mail@nongnu.org; Wed, 23 Jun 2004 06:06:22 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Bd4cb-00044x-2B
+	for axiom-mail@nongnu.org; Wed, 23 Jun 2004 06:04:49 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i5NA4Khp1326964;
+	Wed, 23 Jun 2004 12:04:33 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16601.28981.656206.352320@gargle.gargle.HOWL>
+Date: Wed, 23 Jun 2004 12:01:57 +0000
+To: Marcus Better <marcusb@math.su.se>, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] sum()
+In-Reply-To: <16599.62680.814858.194434@gargle.gargle.HOWL>
+References: <40D73FA1.7040202@math.su.se>
+	<16599.62680.814858.194434@gargle.gargle.HOWL>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4249; Body=2 Fuz1=2 Fuz2=2
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 23 Jun 2004 10:06:26 -0000
+
+Martin Rubey writes:
+ > You tried: 
+ > 
+ >  >    f: Integer -> Integer;
+ >  >    f(0)==1; f(1)==2;
+ >  >    f(n)==sum(f(i)*f(n-i), i=0..(n-1))
+ > 
+ > Try
+ > 
+ > f: Integer -> Integer;		
+ > f(0)==1; f(1)==2;			
+ > f(n)==reduce(+,[f(i)*f(n-i) for i in 1..(n-1)])
+ > 
+ > I have no good explanation why sum won't work. (Well, I know why it happens
+ > internally. I'm looking for a solution...)
+
+Unfortunately, the solution won't be easy. The problem in writing an operator
+"sum" that does what you need is the following: It seems that in axiom all the
+parameters of a function are evaluated first. Thus, the first thing the
+interpreter sees when it tries to do calculate f(2) is
+
+f(i)*f(n-i)
+
+which is not defined, since we said that f is a function on the
+integers. However, "i" is no an integer but a symbol here...
+
+So what would be needed is a facility to tell axiom *not* to evaluate the
+argument of some function. On the other hand, there might be other solutions
+I'm unable to think of right now. We'll see.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Jun 23 06:25:21 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Bd4wT-0006qR-2J
+	for mharc-axiom-mail@gnu.org; Wed, 23 Jun 2004 06:25:21 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bd4wQ-0006q0-Sm
+	for axiom-mail@nongnu.org; Wed, 23 Jun 2004 06:25:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bd4wO-0006oy-RB
+	for axiom-mail@nongnu.org; Wed, 23 Jun 2004 06:25:18 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bd4wO-0006mv-I0
+	for axiom-mail@nongnu.org; Wed, 23 Jun 2004 06:25:16 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Bd4u9-00028X-2Z
+	for axiom-mail@nongnu.org; Wed, 23 Jun 2004 06:22:57 -0400
+X-Spam-Flags: <.IPWHOIS-RFC-IGNORANT.@imap.univie.ac.at>[131.130.93.101:[131.130.93.101]]<univie.ac.at>
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i5NAMaGH1232582;
+	Wed, 23 Jun 2004 12:22:46 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16601.30075.860437.536806@gargle.gargle.HOWL>
+Date: Wed, 23 Jun 2004 12:20:11 +0000
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] sum()
+In-Reply-To: <16601.28981.656206.352320@gargle.gargle.HOWL>
+References: <40D73FA1.7040202@math.su.se>
+	<16599.62680.814858.194434@gargle.gargle.HOWL>
+	<16601.28981.656206.352320@gargle.gargle.HOWL>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4247; Body=2 Fuz1=2 Fuz2=2
+Cc: Marcus Better <marcusb@math.su.se>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.4
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 23 Jun 2004 10:25:19 -0000
+
+Martin Rubey writes:
+ > Martin Rubey writes:
+ >  > You tried: 
+ >  > 
+ >  >  >    f: Integer -> Integer;
+ >  >  >    f(0)==1; f(1)==2;
+ >  >  >    f(n)==sum(f(i)*f(n-i), i=0..(n-1))
+ >  > 
+ >  > Try
+ >  > 
+ >  > f: Integer -> Integer;		
+ >  > f(0)==1; f(1)==2;			
+ >  > f(n)==reduce(+,[f(i)*f(n-i) for i in 1..(n-1)])
+ >  > 
+
+Now I got it:
+
+
+f:EXPR INT -> EXPR INT
+f(0)==1; f(1)==2;			
+f(n | number? n)==sum(f(i)*f(n-i), i=1..(n-1))
+f(n | not number? n)==kernel(fop, [n])
+fop := operator 'fop
+evaluate(fop,f)
+
+We declare the function to take expressions as arguments.  If the argument is a
+number, go ahead.  Otherwise, return an unevaluated operator fop, which
+evaluates to f...
+
+I think that evaluating fop i does the following:
+
+axiom looks for an %eval property of fop and finds f.
+axiom applies f to i and returns kernel(fop, [i])
+
+If we wrote
+
+f(n | not number? n)==fop n
+
+we produced an infinite loop...
+
+Martin
+
+
+
+

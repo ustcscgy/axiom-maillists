@@ -1,0 +1,1482 @@
+From MAILER-DAEMON Fri Nov 12 08:03:21 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CSb5E-00054s-J4
+	for mharc-axiom-mail@gnu.org; Fri, 12 Nov 2004 08:03:20 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CSb5B-00053N-5V
+	for axiom-mail@nongnu.org; Fri, 12 Nov 2004 08:03:17 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CSb57-00051Z-Rc
+	for axiom-mail@nongnu.org; Fri, 12 Nov 2004 08:03:14 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CSb57-000517-ME
+	for axiom-mail@nongnu.org; Fri, 12 Nov 2004 08:03:13 -0500
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CSavm-0000ZU-DH
+	for axiom-mail@nongnu.org; Fri, 12 Nov 2004 07:53:34 -0500
+Received: from [196.25.211.6] (helo=telkomsa.net)
+	by mx20.gnu.org with esmtp (Exim 4.34) id 1CSant-00071F-LY
+	for axiom-mail@nongnu.org; Fri, 12 Nov 2004 07:45:26 -0500
+Received: (qmail 7119 invoked from network); 12 Nov 2004 12:40:19 -0000
+Received: from cfrangos@telkomsa.net by ariel.telkomsa.net by uid 81 with
+	qmail-scanner-1.22 ( Clear:RC:1(155.239.189.129):. 
+	Processed in 0.378929 secs); 12 Nov 2004 12:40:19 -0000
+Received: from unknown (HELO wnmvihjd) ([155.239.189.129])
+	(envelope-sender <cfrangos@telkomsa.net>)
+	by O (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 12 Nov 2004 12:40:19 -0000
+From: "cf" <cfrangos@telkomsa.net>
+To: <axiom-mail@nongnu.org>,
+	<axiom-developer@nongnu.org>
+Date: Fri, 12 Nov 2004 11:17:30 +0200
+X-MSMail-Priority: Normal
+X-Priority: 3
+X-Mailer: Microsoft Internet Mail 4.70.1155
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Qmail-Scanner-Message-ID: <11002632196727098@ariel.telkomsa.net>
+Message-Id: <E1CSb57-00051Z-Rc@lists.gnu.org>
+Cc: axiom-math@nongnu.org
+Subject: [Axiom-mail] (no subject)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Nov 2004 13:03:19 -0000
+
+
+12 November 2004
+
+Hi there,
+
+I recently downloaded the Axiom tutorial and am very interested in
+trying out this program on my linux system. I have been using the
+Matlab extended symbolic toolbox for the last five years in the
+modelling and control of mechanical systems, and would like to compare
+with Axiom.
+
+I have a suse linux 7.2 installation with gcc version 2.95.3. Will the
+source code compile under this version of gcc ?? Alternatively, is it
+possible for somebody to do a static compilation of the source code and
+place these binaries on your website ??
+
+Yours sincerely,
+
+C. Frangos.
+
+------
+Constantine Frangos.
+Professor
+Dept. of Mathematics and Statistics
+Rand Afrikaans University
+P O Box 524
+Auckland Park 2006
+South Africa
+
+Tel: +27-11-489-2452
+Fax: +27-11-489-2832
+e-mail: cf@rau.ac.za (work)
+              cfrangos@telkomsa.net (home)
+
+
+
+
+
+From MAILER-DAEMON Fri Nov 12 09:40:46 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CScbW-0006B0-Cy
+	for mharc-axiom-mail@gnu.org; Fri, 12 Nov 2004 09:40:46 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CScbU-0006Av-VX
+	for axiom-mail@nongnu.org; Fri, 12 Nov 2004 09:40:45 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CScbU-0006Aj-GZ
+	for axiom-mail@nongnu.org; Fri, 12 Nov 2004 09:40:44 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CScbU-0006Ag-DD
+	for axiom-mail@nongnu.org; Fri, 12 Nov 2004 09:40:44 -0500
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CScSV-00013G-SB
+	for axiom-mail@nongnu.org; Fri, 12 Nov 2004 09:31:28 -0500
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id iACEV50L430048;
+	Fri, 12 Nov 2004 15:31:09 +0100
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16788.51435.898808.794871@gargle.gargle.HOWL>
+Date: Fri, 12 Nov 2004 15:30:03 +0100
+To: "cf" <cfrangos@telkomsa.net>
+Subject: Re: [Axiom-mail] getting Axiom
+In-Reply-To: <E1CSb57-00051Z-Rc@lists.gnu.org>
+References: <E1CSb57-00051Z-Rc@lists.gnu.org>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx7.univie.ac.at 4249; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Nov 2004 14:40:45 -0000
+
+There are three possibilities:
+
+source or binary from
+
+http://page.axiom-developer.org/zope/mathaction/AxiomDownload
+
+(I don't know about suse, sorry) or trying it out online here
+
+http://page.axiom-developer.org/zope/mathaction/SandBox
+
+(the latter is slow, of course)
+
+
+Martin
+
+cf writes:
+ > 
+ > 12 November 2004
+ > 
+ > Hi there,
+ > 
+ > I recently downloaded the Axiom tutorial and am very interested in
+ > trying out this program on my linux system. I have been using the
+ > Matlab extended symbolic toolbox for the last five years in the
+ > modelling and control of mechanical systems, and would like to compare
+ > with Axiom.
+ > 
+ > I have a suse linux 7.2 installation with gcc version 2.95.3. Will the
+ > source code compile under this version of gcc ?? Alternatively, is it
+ > possible for somebody to do a static compilation of the source code and
+ > place these binaries on your website ??
+ > 
+ > Yours sincerely,
+ > 
+ > C. Frangos.
+ > 
+ > ------
+ > Constantine Frangos.
+ > Professor
+ > Dept. of Mathematics and Statistics
+ > Rand Afrikaans University
+ > P O Box 524
+ > Auckland Park 2006
+ > South Africa
+ > 
+ > Tel: +27-11-489-2452
+ > Fax: +27-11-489-2832
+ > e-mail: cf@rau.ac.za (work)
+ >               cfrangos@telkomsa.net (home)
+ > 
+ > 
+ > 
+ > 
+ > _______________________________________________
+ > Axiom-mail mailing list
+ > Axiom-mail@nongnu.org
+ > http://lists.nongnu.org/mailman/listinfo/axiom-mail
+
+
+
+
+From MAILER-DAEMON Fri Nov 12 09:44:52 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CScfU-00073z-0D
+	for mharc-axiom-mail@gnu.org; Fri, 12 Nov 2004 09:44:52 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CScfS-00072y-1N
+	for axiom-mail@nongnu.org; Fri, 12 Nov 2004 09:44:50 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CScfQ-00072V-VX
+	for axiom-mail@nongnu.org; Fri, 12 Nov 2004 09:44:49 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CScfO-00070k-QU; Fri, 12 Nov 2004 09:44:46 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CScVl-0001Z8-Gx; Fri, 12 Nov 2004 09:34:49 -0500
+Received: from localhost.localdomain (164.119.252.64.snet.net [64.252.119.164])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iACEYgm9302614; Fri, 12 Nov 2004 09:34:43 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iACFGKZ26720;
+	Fri, 12 Nov 2004 10:16:20 -0500
+Date: Fri, 12 Nov 2004 10:16:20 -0500
+Message-Id: <200411121516.iACFGKZ26720@localhost.localdomain>
+From: root <daly@idsi.net>
+To: cfrangos@telkomsa.net
+In-reply-to: <E1CSb57-00051Z-Rc@lists.gnu.org> (cfrangos@telkomsa.net)
+Subject: Re: [Axiom-mail] (no subject)
+References: <E1CSb57-00051Z-Rc@lists.gnu.org>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 12 Nov 2004 14:44:50 -0000
+
+I'm unaware of any issues related to GCC 2.95.3
+Axiom is mostly written in Common Lisp so if you get GCL to
+compile (the first steps of the Axiom build) it is likely that
+the complete system will build.
+
+I don't have SUSE running anywhere but I believe I could build
+a 2.95.3 copy of GCC.
+
+Since you have it already set up just try to build Axiom:
+
+cd /tmp
+cvs -z3 -d:ext:anoncvs@savannah.gnu.org:/cvsroot/axiom co axiom
+cd axiom
+export AXIOM=/tmp/axiom/mnt/linux
+export PATH=$AXIOM/bin:$PATH
+make
+
+when this build completes you should be able to type
+
+axiom
+
+and have a running system. If you do the build in an emacs shell buffer
+you can email the failure to "daly@idsi.net" and I can try to figure out
+what failed.
+
+Tim Daly
+
+
+
+From MAILER-DAEMON Mon Nov 15 08:14:40 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CTggq-0003Ja-5J
+	for mharc-axiom-mail@gnu.org; Mon, 15 Nov 2004 08:14:40 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CTggo-0003HP-3k
+	for axiom-mail@nongnu.org; Mon, 15 Nov 2004 08:14:38 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CTggn-0003Gf-7Y
+	for axiom-mail@nongnu.org; Mon, 15 Nov 2004 08:14:37 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CTggl-0003F1-Do; Mon, 15 Nov 2004 08:14:35 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CTgXt-0002dO-1V; Mon, 15 Nov 2004 08:05:25 -0500
+Received: from localhost.localdomain (172.180.252.64.snet.net [64.252.180.172])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iAFD5Em9365252; Mon, 15 Nov 2004 08:05:18 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iAFDkm911607;
+	Mon, 15 Nov 2004 08:46:48 -0500
+Date: Mon, 15 Nov 2004 08:46:48 -0500
+Message-Id: <200411151346.iAFDkm911607@localhost.localdomain>
+From: root <daly@idsi.net>
+To: cfrangos@telkomsa.net
+In-reply-to: <E1CSbHp-0001Xt-Mk@lists.gnu.org> (cfrangos@telkomsa.net)
+References: <E1CSbHp-0001Xt-Mk@lists.gnu.org>
+Cc: axiom-developer@nongnu.org, axiom-math@nongnu.org, axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: [Axiom-math] (no subject)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 15 Nov 2004 13:14:38 -0000
+
+Constantine,
+
+I tried to reply to your previous message but it bounced.
+You sent it from some random numeric username it seems.
+Anyway, I retried the instructions I sent you and they work here.
+
+In any case, I've put a recent tarball of Axiom at:
+http://axiom.axiom-developer.org/axiom-website/download.html
+
+Click on the link that reads:
+  "The source code tarball from November 15, 2004 is here"
+and store it somewhere (I'm assuming /tmp but you can put it anywhere
+if you replace the /tmp)
+
+Once you get it type:
+tar -zxf axiom.20041115.tgz
+cd axiom
+export AXIOM=/tmp/axiom/mnt/linux
+export PATH=$AXIOM/bin:$PATH
+make
+(wait until the build completes)
+axiom
+
+
+Tim
+
+
+
+
+
+From MAILER-DAEMON Fri Nov 19 12:03:11 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CVCAB-0004O5-40
+	for mharc-axiom-mail@gnu.org; Fri, 19 Nov 2004 12:03:11 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CVCA8-0004NC-3p for axiom-mail@mail.freesoftware.fsf.org;
+	Fri, 19 Nov 2004 12:03:08 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CVCA6-0004MW-Hr for axiom-mail@mail.freesoftware.fsf.org;
+	Fri, 19 Nov 2004 12:03:07 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CVCA6-0004Lz-13; Fri, 19 Nov 2004 12:03:06 -0500
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CVC0x-0001vM-04; Fri, 19 Nov 2004 11:53:39 -0500
+Received: from [80.108.81.179] (helo=chello080108081179.5.11.vie.surfer.at)
+	by mx20.gnu.org with smtp (Exim 4.34)
+	id 1CVC0r-0005de-5X; Fri, 19 Nov 2004 11:53:35 -0500
+Received: from 122.112.196.230 by 80.108.81.179;
+	Fri, 19 Nov 2004 19:52:31 +0300
+Message-ID: <TUXPCHORWKBZHGLBGEVDEYPOQ@fat.coara.or.jp>
+From: "Sofia Kennedy" <errlbtwefgtiw@ht.co.kr>
+To: axiom-mail@mail.freesoftware.fsf.org, carbone-dev@mail.freesoftware.fsf.org
+Date: Fri, 19 Nov 2004 20:44:31 +0400
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--0C7964F531937341"
+X-Webmail-Time: Fri, 19 Nov 2004 13:50:31 -0300
+Cc: 
+Subject: [Axiom-mail] dentist directory, 7, 000 hospitals, 25,
+	000 nursing homes and 400, 000 doctors.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Sofia Kennedy <errlbtwefgtiw@ht.co.kr>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 19 Nov 2004 17:03:08 -0000
+
+----0C7964F531937341
+Content-Type: text/html;
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859=
+-1">
+</head>
+
+<body>
+The New 2005 United States Healthcare Database.<br>
+<br>
+price of $195 (reg. $745).
+<p>The United States Healthcare Database is a comprehensive NEW product <b=
+r>
+  that is offered exclusively on a limited-time basis. This complete <br>
+  database includes all hospitals, nursing homes, and physicians in the <b=
+r>
+  country.</p>
+<p>In a rapidly-changing industry, current healthcare information is an <b=
+r>
+  invaluable resource to businesses and organizations. The United States <=
+br>
+  Healthcare Database includes comprehensive information on more than <br>=
+
+  7,000 hospitals, 25,000 nursing homes and 400,000 doctors. It is the <br=
+>
+  most extensive and reliable mailing list and database of key decision <b=
+r>
+  makers in the health care market.</p>
+<p>Available exclusively on CD-Rom (Excel), the data can be used on an <br=
+>
+  unlimited basis. It is easily exportable to other programs for mailing <=
+br>
+  or faxing purposes.</p>
+<p>To order, please print this e-mail, <br>
+  complete the information below and<br>
+  <br>
+  fax it to 416-765-0029 (tel: 416-765-0028).</p>
+<p>NAME:</p>
+<p>TITLE:</p>
+<p>ORGANIZATION:</p>
+<p>ADDRESS:</p>
+<p>CITY:</p>
+<p>STATE:</p>
+<p>POSTAL:</p>
+<p>FAX:</p>
+<p>EMAIL:</p>
+<p>TEL:</p>
+<p>MedCom<br>
+  4410 Massachusettes Ave. NW, #201<br>
+  Washington, DC 20016<br>
+  <br>
+</p>
+</body>
+</html>
+
+
+----0C7964F531937341--
+
+
+
+
+From MAILER-DAEMON Sun Nov 21 07:46:56 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CVr7I-0007QP-0f
+	for mharc-axiom-mail@gnu.org; Sun, 21 Nov 2004 07:46:56 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CVr7F-0007PQ-E4 for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 21 Nov 2004 07:46:53 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CVr7E-0007Oz-KK for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 21 Nov 2004 07:46:52 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CVr7E-0007Ow-H4; Sun, 21 Nov 2004 07:46:52 -0500
+Received: from [67.171.142.189] (helo=c-67-171-142-189.client.comcast.net)
+	by monty-python.gnu.org with smtp (Exim 4.34)
+	id 1CVqy9-00032t-E3; Sun, 21 Nov 2004 07:37:30 -0500
+X-Message-Info: 61JN454QBt22M129yofFwveISH212wqiQWS1zJZHaRAM839B767
+Received: from mail pickup service by 83.174.129.218 with Microsoft SMTPSVC;
+	Sun, 21 Nov 2004 11:28:11 -0100
+Content-Class: urn:content-classes:message
+From: "Miguel Patton" <xtjrovmj@yahoo.com>
+To: "Axiom-mail" <axiom-mail@mail.freesoftware.fsf.org>
+Date: Sun, 21 Nov 2004 07:32:11 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--273679938285315070"
+Message-Id: <E1CVr7E-0007Oz-KK@lists.gnu.org>
+Cc: 
+Subject: [Axiom-mail] dermatology, neurology, pathology,
+	american doctors directory 40, 000 hospitals, 25,
+	000 nursing homes and 400, 000 doctors.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Miguel Patton <xtjrovmj@yahoo.com>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 21 Nov 2004 12:46:53 -0000
+
+----273679938285315070
+Content-Type: text/plain;
+	charset="iso-0129-1"
+Content-Transfer-Encoding: quoted-printable
+
+The New 2005 United States Healthcare Database.
+
+This complete database includes all hospitals, nursing homes, 
+and physicians in the country.
+
+In a rapidly-changing industry, current healthcare information is an 
+invaluable resource to businesses and organizations.  The United States 
+Healthcare Database includes comprehensive information on more than 
+7,000 hospitals, 25,000 nursing homes and 400,000 doctors.  It is the 
+most extensive and reliable mailing list and database of key decision 
+makers in the health care market.
+ 
+Each record is indexed by such features as name, address, phone and 
+fax. The database is available in Excel format on CD Rom.  It is 
+designed for mailing lists and merges.  The data can be selected by 
+state or other criteria such as type of practice. It can be used on 
+an unlimited basis.
+
+For the past 14 years, MedCom has maintained the most comprehensive 
+healthcare lists.  Our directories are 100% telephone verified and 
+updated every quarter. MedCom continues to hold the nation's most 
+extensive and reliable databases of key decision-makers in the health 
+care market.
+ 
+Available exclusively on CD-Rom (Excel), the data can be used on an 
+unlimited basis. It is easily exportable to other programs for 
+mailing or faxing purposes.
+
+For a limited time, this extensive database is offered at an introductory =
+
+
+Price of $195 (reg. $745).
+
+To order, please print this e-mail, complete the information below and 
+fax it to 416-765-0029 (tel: 416-765-0028).
+
+NAME:
+    
+TITLE:
+
+ORGANIZATION:
+
+ADDRESS:
+
+CITY:
+
+STATE:
+
+POSTAL:
+
+TEL:
+
+FAX:
+
+EMAIL:
+ 
+
+
+
+----273679938285315070--
+
+
+
+From MAILER-DAEMON Sun Nov 21 19:18:30 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CW1uY-0004Al-4d
+	for mharc-axiom-mail@gnu.org; Sun, 21 Nov 2004 19:18:30 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CW1uV-00049T-9u for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 21 Nov 2004 19:18:27 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CW1uT-00048R-0q for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 21 Nov 2004 19:18:25 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CW1uS-000483-HD
+	for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 21 Nov 2004 19:18:24 -0500
+Received: from [24.159.239.115] (helo=24-159-239-115.jvl.wi.charter.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1CW1lC-00027b-Gu
+	for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 21 Nov 2004 19:08:52 -0500
+X-Message-Info: 39UJCAWyisgCEI21tWXqfWPQ2jieU6DFrWywlXPI7DBCVD85
+Received: from dnsC.cs.hku.hk ([215.208.195.4]) by 17Ebyv-mjnE.24.159.239.115
+	with Microsoft SMTPSVC(5.0.09B0.0440); 
+	Sun, 21 Nov 2004 18:07:53 -0600
+Message-ID: <906DA6DA0D6.26308@24.159.239.115>
+From: "Barbara Crews" <ATWUZYHBLOUGH@na.cse.nagoya-u.ac.jp>
+To: axiom-mail@mail.freesoftware.fsf.org
+Date: Mon, 22 Nov 2004 01:04:53 +0100
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--466B712D77FBD092B6C5"
+Cc: 
+Subject: [Axiom-mail] doctor contact, medical directory, and physiciansguid.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Barbara Crews <ATWUZYHBLOUGH@na.cse.nagoya-u.ac.jp>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 22 Nov 2004 00:18:28 -0000
+
+----466B712D77FBD092B6C5
+Content-Type: text/html;
+	charset="iso-F740-7"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859=
+-1">
+</head>
+
+<body>
+The New 2005 United States Healthcare Database.<br>
+<br>
+price of $195 (reg. $745).
+<p>The United States Healthcare Database is a comprehensive NEW product <b=
+r>
+  that is offered exclusively on a limited-time basis. This complete <br>
+  database includes all hospitals, nursing homes, and physicians in the <b=
+r>
+  country.</p>
+<p>In a rapidly-changing industry, current healthcare information is an <b=
+r>
+  invaluable resource to businesses and organizations. The United States <=
+br>
+  Healthcare Database includes comprehensive information on more than <br>=
+
+  7,000 hospitals, 25,000 nursing homes and 400,000 doctors. It is the <br=
+>
+  most extensive and reliable mailing list and database of key decision <b=
+r>
+  makers in the health care market.</p>
+<p>Available exclusively on CD-Rom (Excel), the data can be used on an <br=
+>
+  unlimited basis. It is easily exportable to other programs for mailing <=
+br>
+  or faxing purposes.</p>
+<p>To order, please print this e-mail, <br>
+  complete the information below and<br>
+  <br>
+  fax it to 416-765-0029 (tel: 416-765-0028).</p>
+<p>NAME:</p>
+<p>TITLE:</p>
+<p>ORGANIZATION:</p>
+<p>ADDRESS:</p>
+<p>CITY:</p>
+<p>STATE:</p>
+<p>POSTAL:</p>
+<p>FAX:</p>
+<p>EMAIL:</p>
+<p>TEL:</p>
+<p>MedCom<br>
+  4410 Massachusettes Ave. NW, #201<br>
+  Washington, DC 20016<br>
+  <br>
+</p>
+</body>
+</html>
+
+
+----466B712D77FBD092B6C5--
+
+
+
+From MAILER-DAEMON Mon Nov 22 04:33:52 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CWAZx-000098-J7
+	for mharc-axiom-mail@gnu.org; Mon, 22 Nov 2004 04:33:50 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CWAZm-00007n-Tn for axiom-mail@mail.freesoftware.fsf.org;
+	Mon, 22 Nov 2004 04:33:40 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CWAZi-00006s-VY for axiom-mail@mail.freesoftware.fsf.org;
+	Mon, 22 Nov 2004 04:33:35 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CWAZi-00006F-GD; Mon, 22 Nov 2004 04:33:34 -0500
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CWAQM-0007fu-9I; Mon, 22 Nov 2004 04:23:54 -0500
+Received: from [206.111.94.50] (helo=199.232.41.8)
+	by mx20.gnu.org with smtp (Exim 4.34)
+	id 1CWAIU-0002pH-Ks; Mon, 22 Nov 2004 04:15:49 -0500
+X-Message-Info: A19U59MZpmtn2C6S91bemOlcXJ1llQGY87sJphYRCD49PTO4B8
+Received: (from film@206.111.94.50)
+	by tripB.220.56.233.96 (C.AC.2/2.00.4) id ek0AQrQ5C469;
+	Mon, 22 Nov 2004 06:11:17 -0300
+Message-ID: <169B848065E9.0D3A1@206.111.94.50>
+From: "Emma Marcum" <LYHUUMI@ain.pref.fukui.jp>
+To: axiom-mail@mail.freesoftware.fsf.org, carbone-dev@mail.freesoftware.fsf.org
+Date: Mon, 22 Nov 2004 15:17:17 +0600
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--655B4286A2A4763"
+Cc: 
+Subject: [Axiom-mail] hospital contacts, cardiology, radiology,
+	& physician's 40, 000 hospitals, 25, 000 nursing homes and 400,
+	000 doctors.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Emma Marcum <LYHUUMI@ain.pref.fukui.jp>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 22 Nov 2004 09:33:45 -0000
+
+----655B4286A2A4763
+Content-Type: text/plain;
+	charset="iso-AA74-D"
+Content-Transfer-Encoding: quoted-printable
+
+The New 2005 United States Healthcare Database.
+
+This complete database includes all hospitals, nursing homes, 
+and physicians in the country.
+
+In a rapidly-changing industry, current healthcare information is an 
+invaluable resource to businesses and organizations.  The United States 
+Healthcare Database includes comprehensive information on more than 
+7,000 hospitals, 25,000 nursing homes and 400,000 doctors.  It is the 
+most extensive and reliable mailing list and database of key decision 
+makers in the health care market.
+ 
+Each record is indexed by such features as name, address, phone and 
+fax. The database is available in Excel format on CD Rom.  It is 
+designed for mailing lists and merges.  The data can be selected by 
+state or other criteria such as type of practice. It can be used on 
+an unlimited basis.
+
+For the past 14 years, MedCom has maintained the most comprehensive 
+healthcare lists.  Our directories are 100% telephone verified and 
+updated every quarter. MedCom continues to hold the nation's most 
+extensive and reliable databases of key decision-makers in the health 
+care market.
+ 
+Available exclusively on CD-Rom (Excel), the data can be used on an 
+unlimited basis. It is easily exportable to other programs for 
+mailing or faxing purposes.
+
+For a limited time, this extensive database is offered at an introductory =
+
+
+Price of $195 (reg. $745).
+
+To order, please print this e-mail, complete the information below and 
+fax it to 416-765-0029 (tel: 416-765-0028).
+
+NAME:
+    
+TITLE:
+
+ORGANIZATION:
+
+ADDRESS:
+
+CITY:
+
+STATE:
+
+POSTAL:
+
+TEL:
+
+FAX:
+
+EMAIL:
+ 
+
+
+
+----655B4286A2A4763--
+
+
+
+From MAILER-DAEMON Wed Nov 24 13:19:43 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CX1jy-00008B-M8
+	for mharc-axiom-mail@gnu.org; Wed, 24 Nov 2004 13:19:42 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CX1jw-00007U-1u
+	for axiom-mail@nongnu.org; Wed, 24 Nov 2004 13:19:40 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CX1jt-000060-V9
+	for axiom-mail@nongnu.org; Wed, 24 Nov 2004 13:19:38 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CX1jt-00005j-Q1
+	for axiom-mail@nongnu.org; Wed, 24 Nov 2004 13:19:37 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CX1aP-00045u-0x
+	for axiom-mail@nongnu.org; Wed, 24 Nov 2004 13:09:49 -0500
+Received: from localhost.localdomain (69.0.60.139.adsl.snet.net [69.0.60.139])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iAOI9kL6450730; Wed, 24 Nov 2004 13:09:46 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iAOIpAc16068;
+	Wed, 24 Nov 2004 13:51:10 -0500
+Date: Wed, 24 Nov 2004 13:51:10 -0500
+Message-Id: <200411241851.iAOIpAc16068@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Cc: gilbert@sci.ccny.cuny.edu, daly@idsi.net
+Subject: [Axiom-mail] arch server support
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 24 Nov 2004 18:19:40 -0000
+
+*,
+
+With the essential help of Bill Page and Mark Murray we've configured
+an arch server for Axiom development.
+
+Most of you don't care. Savannah is still the authoritative source
+for a working axiom system.
+
+For those who want to get the lastest set of mistakes you can visit
+http://axiom.axiom-developer.org and look at the [ Developers ] link.
+
+This will take you to a page that describes how to get the latest
+version of the code.
+
+Note that I change code on an almost-daily basis, at least in some
+branch and that the code is almost certainly broken and may not even
+compile.
+
+The point of this archive is to open up the development of axiom, to
+make it possible for others to collaborate effectively and make the
+development transparent. Since only the fully tested endpoints ever
+get put on savannah it appears that nothing is changing between
+observed endpoints. While I realize that the universe works this way
+at a fundamental level and such changes are not observable this is
+not the case with Axiom.
+
+If you're willing to jointly work on developing some new feature we
+can create a branch where we can work together. Once it works
+we can merge the changes back to the main line and eventually back
+to savannah.
+
+Tim
+
+
+
+
+
+From MAILER-DAEMON Wed Nov 24 14:37:20 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CX2x5-00064l-TV
+	for mharc-axiom-mail@gnu.org; Wed, 24 Nov 2004 14:37:20 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CX2x4-000646-3k
+	for axiom-mail@nongnu.org; Wed, 24 Nov 2004 14:37:18 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CX2x3-00063m-Gf
+	for axiom-mail@nongnu.org; Wed, 24 Nov 2004 14:37:17 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CX2x2-00063G-AW; Wed, 24 Nov 2004 14:37:16 -0500
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CX2nL-0005sR-DP; Wed, 24 Nov 2004 14:27:15 -0500
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id BD0386448A0; Wed, 24 Nov 2004 14:27:14 -0500 (EST)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 09871-05; Wed, 24 Nov 2004 14:27:13 -0500 (EST)
+Received: from corporateex.drdc-rddc.gc.ca (unknown [131.136.1.77])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id AE37E644489; Wed, 24 Nov 2004 14:27:11 -0500 (EST)
+Received: by CORPORATEEX with Internet Mail Service (5.5.2653.19)
+	id <TW3BFYYH>; Wed, 24 Nov 2004 14:22:34 -0500
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DCA4@CORPORATEEX>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "'daly@idsi.net'" <daly@idsi.net>
+Subject: RE: [Axiom-mail] arch server support
+Date: Wed, 24 Nov 2004 14:22:25 -0500
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: gilbert@sci.ccny.cuny.edu, axiom-developer@nongnu.org,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 24 Nov 2004 19:37:18 -0000
+
+Tim,
+
+This looks great! I hope it will result in making a lot more
+Axiom development and testing help available.
+
+> ...
+> For those who want to get the lastest set of mistakes you
+> can visit http://axiom.axiom-developer.org and look at the
+> [ Developers ] link.
+> ...
+
+One thing I noticed however is that near the end of this web
+page you wrote:
+  "More information on arch is available _here_"
+where the url is http://rubick.com:8002/openacs/arch
+
+Unfortunately this url uses a non-standard port 8002 which
+is not likely to be available to most people working behind
+a firewall. Of course there is a lot of useful stuff available
+about arch just by doing a goggle search for "gnu-arch", but
+I would suggest that you include at least the following
+"official" url on your developer page:
+
+  http://www.gnu.org/software/gnu-arch
+
+which includes some useful links.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Wed Nov 24 14:58:24 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CX3HU-0003KO-CJ
+	for mharc-axiom-mail@gnu.org; Wed, 24 Nov 2004 14:58:24 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CX3HS-0003Jf-9U
+	for axiom-mail@nongnu.org; Wed, 24 Nov 2004 14:58:22 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CX3HR-0003J1-55
+	for axiom-mail@nongnu.org; Wed, 24 Nov 2004 14:58:21 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CX3HR-0003Ir-2S
+	for axiom-mail@nongnu.org; Wed, 24 Nov 2004 14:58:21 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CX386-0002Xu-3k
+	for axiom-mail@nongnu.org; Wed, 24 Nov 2004 14:48:42 -0500
+Received: from localhost.localdomain (69.0.60.139.adsl.snet.net [69.0.60.139])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iAOJmaL6396478; Wed, 24 Nov 2004 14:48:36 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iAOKU0616256;
+	Wed, 24 Nov 2004 15:30:00 -0500
+Date: Wed, 24 Nov 2004 15:30:00 -0500
+Message-Id: <200411242030.iAOKU0616256@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Bill.Page@drdc-rddc.gc.ca
+In-reply-to: <68207C39878CC54695B4E7A1D58E098124DCA4@CORPORATEEX>
+	(Bill.Page@drdc-rddc.gc.ca)
+Subject: Re: [Axiom-mail] arch server support
+References: <68207C39878CC54695B4E7A1D58E098124DCA4@CORPORATEEX>
+Cc: gilbert@sci.ccny.cuny.edu, axiom-developer@nongnu.org, daly@idsi.net,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 24 Nov 2004 19:58:22 -0000
+
+Bill,
+
+> I would suggest that you include at least the following
+> "official" url on your developer page:
+> 
+>   http://www.gnu.org/software/gnu-arch
+
+Done. 
+
+Tim
+
+
+
+From MAILER-DAEMON Thu Nov 25 06:06:37 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CXHSP-0000fP-5U
+	for mharc-axiom-mail@gnu.org; Thu, 25 Nov 2004 06:06:37 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CXHSI-0000e2-EY
+	for axiom-mail@nongnu.org; Thu, 25 Nov 2004 06:06:33 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CXHSG-0000dT-EH
+	for axiom-mail@nongnu.org; Thu, 25 Nov 2004 06:06:28 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CXHS5-0000cD-Fu; Thu, 25 Nov 2004 06:06:17 -0500
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CXHIh-00007D-4J; Thu, 25 Nov 2004 05:56:35 -0500
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id 36DC0644504; Thu, 25 Nov 2004 05:56:32 -0500 (EST)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 27304-05; Thu, 25 Nov 2004 05:56:31 -0500 (EST)
+Received: from corporateex.drdc-rddc.gc.ca (unknown [131.136.1.77])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id E1545644484; Thu, 25 Nov 2004 05:56:30 -0500 (EST)
+Received: by CORPORATEEX with Internet Mail Service (5.5.2653.19)
+	id <TW3BFZZB>; Thu, 25 Nov 2004 05:51:53 -0500
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DCAF@CORPORATEEX>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "'daly@idsi.net'" <daly@idsi.net>
+Date: Thu, 25 Nov 2004 05:51:53 -0500
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: "Axiom-Developer \(E-mail\)" <axiom-developer@nongnu.org>,
+	"Axiom-Mail \(E-mail\)" <axiom-mail@nongnu.org>
+Subject: [Axiom-mail] bug reporting
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 25 Nov 2004 11:06:34 -0000
+
+Tim,
+
+On Sunday, November 21, 2004 11:11 PM you wrote:
+
+> ... 
+> At the moment bug reporting is a separate function from
+> source code management. But I'd like to be able to track
+> bugs and relate them to changesets. Arch currently has no
+> way to do this but I've been if we couldn't use the Arch
+> system to maintain a bugs/features directory. That is, you
+> check in, update, and close bugs using the same tools as
+> the rest of the code. So when you have a changeset that
+> fixes a bug you can update the bug subdirectory as part
+> of the changeset.
+> 
+> Comments?
+> 
+
+As an experiment I have just enabled the online Issue Tracker
+system on MathAction. IssueTracker is built-in to the wiki
+software (ZWiki) on which MathAction is based. This a simple
+and easy to use system. It is not integrated with arch but in
+principle it is quite easily modifiable and so we might be able
+to do some of the things that you describe above more auto-
+magically.
+
+Please take a look at the page:
+
+http://page.axiom-developer.org/zope/mathaction/FrontPage/issuetracker
+
+or you can just go to the MathAction frontpage
+
+http://page.axiom-developer.org/zope/mathaction
+
+and click on "Issues" on the top menu line or the link
+"Report Bugs here".
+
+Try it and see how you like it. Some things are very
+simple to configure so let me know if you have suggestions.
+
+Regards,
+Bill Page.
+
+
+
+
+From MAILER-DAEMON Thu Nov 25 11:37:00 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CXMc8-00058f-5U
+	for mharc-axiom-mail@gnu.org; Thu, 25 Nov 2004 11:37:00 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CXMc6-00058N-K3
+	for axiom-mail@nongnu.org; Thu, 25 Nov 2004 11:36:58 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CXMc5-00058B-W1
+	for axiom-mail@nongnu.org; Thu, 25 Nov 2004 11:36:58 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CXMc5-00057x-Ry
+	for axiom-mail@nongnu.org; Thu, 25 Nov 2004 11:36:57 -0500
+Received: from [129.16.30.218] (helo=anubis.medic.chalmers.se)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CXMSd-0007PS-Qv
+	for axiom-mail@nongnu.org; Thu, 25 Nov 2004 11:27:12 -0500
+Received: from [192.168.0.11] (c417831a.g-va.bostream.se [217.215.62.178])
+	by anubis.medic.chalmers.se (Postfix) with ESMTP id E43FED951
+	for <axiom-mail@nongnu.org>; Thu, 25 Nov 2004 17:27:09 +0100 (CET)
+Message-ID: <41A607DD.30206@math.su.se>
+Date: Thu, 25 Nov 2004 17:27:09 +0100
+From: Marcus Better <marcusb@math.su.se>
+User-Agent: Mozilla Thunderbird 0.8 (X11/20040926)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+X-Enigmail-Version: 0.86.1.0
+X-Enigmail-Supports: pgp-inline, pgp-mime
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-mail] Function returning UnivariateTaylorSeries
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 25 Nov 2004 16:36:58 -0000
+
+Hello,
+
+I am trying to create a function (in a spad package) that will compute 
+some coefficients and assemble them into a Taylor series, which it will 
+return. I run into some strange errors. I simplified the code as much as 
+possible, so that it looks like this:
+
+--------------------------------------------
+)abbrev package FOO Foo
+Foo(K,z): Exports == Implementation where
+   K : Ring
+   z : Symbol
+
+   Exports ==> with
+     bar: () -> UnivariateTaylorSeries(K,z,0)
+
+   Implementation ==> add
+     bar ==
+       st := generate(const(1)$MappingPackage2(K, K), 0)$Stream(K)
+       series(st)$UnivariateTaylorSeries(K,z,0)
+-------------------------------------------
+
+This will work when called as
+
+   bar()$Foo(INT, new()$Symbol)
+
+but writing instead
+
+   bar()$Foo(POLY INT, new()$Symbol)
+
+gives me
+
+    >> System error:
+    Caught fatal error [memory may be damaged]
+
+The same goes for FRAC INT instead of POLY INT. Moreover, doing
+
+   bar$Foo(INT, new()$Symbol)
+
+returns
+
+   theMap(FOO;bar;Uts;1,312)
+
+as it should, but
+
+   bar$Foo(FRAC INT, new()$Symbol)
+
+gives the "Caught fatal error" message again.
+
+(In my real code I need other types than INT, of course.)
+
+I don't have a clue how to solve this. In particular, I would like to 
+pass the z argument directly to the function, but that did not succeed 
+so far.
+
+I use axiom-0.20040831-1 on Debian Sarge i386.
+
+Marcus
+
+
+
+From MAILER-DAEMON Sat Nov 27 13:13:40 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CY74m-0003Hd-6u
+	for mharc-axiom-mail@gnu.org; Sat, 27 Nov 2004 13:13:40 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CY74k-0003H2-7P
+	for axiom-mail@nongnu.org; Sat, 27 Nov 2004 13:13:38 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CY74j-0003Gn-Kx
+	for axiom-mail@nongnu.org; Sat, 27 Nov 2004 13:13:37 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CY74i-0003GV-S9; Sat, 27 Nov 2004 13:13:36 -0500
+Received: from [204.101.243.26] (helo=lattice.dyns.cx)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CY6vK-0005BD-UK; Sat, 27 Nov 2004 13:03:55 -0500
+Received: from lattice.dyns.cx (localhost [127.0.0.1])
+	by lattice.dyns.cx (8.12.10/8.12.10) with ESMTP id iARI3kt0022024;
+	Sat, 27 Nov 2004 13:03:46 -0500
+Received: (from steve@localhost)
+	by lattice.dyns.cx (8.12.10/8.12.10/Submit) id iARI3kw8022023;
+	Sat, 27 Nov 2004 13:03:46 -0500
+Date: Sat, 27 Nov 2004 13:03:46 -0500
+From: Stephen Wilson <wilsons@multiboard.com>
+To: Marcus Better <marcusb@math.su.se>
+Subject: Re: [Axiom-mail] Function returning UnivariateTaylorSeries
+Message-ID: <20041127180346.GA21957@lattice>
+References: <41A607DD.30206@math.su.se>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <41A607DD.30206@math.su.se>
+User-Agent: Mutt/1.4.2i
+X-Operating-System: GNU/Linux 2.4.22
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 27 Nov 2004 18:13:38 -0000
+
+
+Hello Marcus,
+
+
+I've been looking at your problem. Im afraid I dont have a
+solution. However in trying to debug the code I discovered where the
+system error is generated.
+
+Tim, could you read this and give me an idea where in the axiom code I
+might look for the problem? The domain vector is not being constructed
+properly, leading to the problem below:
+
+Basicly, the call is failing in the conversion to Outputform
+(in pscat.spad). A call to center(%) from UnivariateTaylorSeries is
+returning some interesting entities when F00 is parameterized over
+POLY INT.  center() is returning (in Lisp) the integer 0, rather
+than the list (0 . 0) [representing univaraiate polynomial zero]. This
+integer is utimately passed to the polynomial zero? predicate, which
+causes the system error.
+
+I added two PPRINT forms to the lisp corresponding to coerce(%):
+Outputform (the lisp funtion |UTSCAT-;coerce;SOf;5|) which illustrates
+the problem:
+
+ -------------------------------------------
+(1) -> P := Foo(POLY INT, new()$Symbol)
+
+   (1)  Foo(Polynomial Integer,%A)
+                                                                 Type:
+                                                                 Domain
+(2) -> bar()$P
+
+0                                              <-- return result of center()
+(|newGoGet| #<vector 08feaab8> 15 . |zero?|)   <-- lookup the zero? function
+   >> System error:
+   Caught fatal error [memory may be damaged]
+ -------------------------------------------
+
+Now in changing the code for Foo by adding explicit package calls for
+the 0 constants:
+
+ --------------------------------------------
+ )abbrev package FOO Foo
+ Foo(K,z): Exports == Implementation where
+   K : Ring
+   z : Symbol
+ 
+   Exports ==> with
+     bar: () -> UnivariateTaylorSeries(K,z,0$K)
+ 
+   Implementation ==> add
+     bar ==
+       st := generate(const(1)$MappingPackage2(K, K), 0$K)$Stream(K)
+       series(st)$UnivariateTaylorSeries(K,z,0$K)
+ -------------------------------------------
+
+recompiling and run again:
+
+ -------------------------------------------
+(1) -> P := Foo(POLY INT, new()$Symbol)
+
+   (1)  Foo(Polynomial Integer,%A)
+                                                                 Type:
+                                                                 Domain
+(2) -> bar()$P
+
+(|elt| (|Polynomial| (|Integer|)) 0)           <-- return result of center()
+(|newGoGet| #<vector 08feaab8> 15 . |zero?|)   <-- lookup the zero? function
+   >> System error:
+   Caught fatal error [memory may be damaged]
+ -------------------------------------------
+
+Note now the return result of center() has changed.
+
+The newGoGet _is_ returning the proper zero? for the SMP domain.
+
+In the first case above (center returning integer zero) adding lisp by
+hand of the form `(if (zerop |cen|) (setq |cen| '(0 . 0)))' results in
+bar() returning as you would expect.
+
+Tim, where might I find the code which generates the domain vectors?
+center() simply does a (qrefelt $ 8) - $ being the domain vector for
+the given UnivariateTaylorSeries. 
+
+With luck I might be able to solve this. If not at least I'll learn
+something.
+
+Sincerely,
+Steve
+
+
+On Thu, Nov 25, 2004 at 05:27:09PM +0100, Marcus Better wrote:
+> Hello,
+> 
+> I am trying to create a function (in a spad package) that will compute 
+> some coefficients and assemble them into a Taylor series, which it will 
+> return. I run into some strange errors. I simplified the code as much as 
+> possible, so that it looks like this:
+> 
+> --------------------------------------------
+> )abbrev package FOO Foo
+> Foo(K,z): Exports == Implementation where
+>   K : Ring
+>   z : Symbol
+> 
+>   Exports ==> with
+>     bar: () -> UnivariateTaylorSeries(K,z,0)
+> 
+>   Implementation ==> add
+>     bar ==
+>       st := generate(const(1)$MappingPackage2(K, K), 0)$Stream(K)
+>       series(st)$UnivariateTaylorSeries(K,z,0)
+> -------------------------------------------
+> 
+> This will work when called as
+> 
+>   bar()$Foo(INT, new()$Symbol)
+> 
+> but writing instead
+> 
+>   bar()$Foo(POLY INT, new()$Symbol)
+> 
+> gives me
+> 
+>    >> System error:
+>    Caught fatal error [memory may be damaged]
+> 
+> The same goes for FRAC INT instead of POLY INT. Moreover, doing
+> 
+>   bar$Foo(INT, new()$Symbol)
+> 
+> returns
+> 
+>   theMap(FOO;bar;Uts;1,312)
+> 
+> as it should, but
+> 
+>   bar$Foo(FRAC INT, new()$Symbol)
+> 
+> gives the "Caught fatal error" message again.
+> 
+> (In my real code I need other types than INT, of course.)
+> 
+> I don't have a clue how to solve this. In particular, I would like to 
+> pass the z argument directly to the function, but that did not succeed 
+> so far.
+> 
+> I use axiom-0.20040831-1 on Debian Sarge i386.
+> 
+> Marcus
+> 
+> 
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+
+
+
+From MAILER-DAEMON Sat Nov 27 13:26:11 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CY7Gs-0005KR-QA
+	for mharc-axiom-mail@gnu.org; Sat, 27 Nov 2004 13:26:11 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CY7Gq-0005K3-T6
+	for axiom-mail@nongnu.org; Sat, 27 Nov 2004 13:26:08 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CY7Gp-0005JU-SW
+	for axiom-mail@nongnu.org; Sat, 27 Nov 2004 13:26:08 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CY7Gp-0005JR-Ow; Sat, 27 Nov 2004 13:26:07 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CY76i-0007Wh-Ar; Sat, 27 Nov 2004 13:15:40 -0500
+Received: from localhost.localdomain (69.0.60.139.adsl.snet.net [69.0.60.139])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iARIFKL6160028; Sat, 27 Nov 2004 13:15:28 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iARIufq20686;
+	Sat, 27 Nov 2004 13:56:41 -0500
+Date: Sat, 27 Nov 2004 13:56:41 -0500
+Message-Id: <200411271856.iARIufq20686@localhost.localdomain>
+From: root <daly@idsi.net>
+To: wilsons@multiboard.com
+In-reply-to: <20041127180346.GA21957@lattice> (message from Stephen Wilson on
+	Sat, 27 Nov 2004 13:03:46 -0500)
+Subject: Re: [Axiom-mail] Function returning UnivariateTaylorSeries
+References: <41A607DD.30206@math.su.se> <20041127180346.GA21957@lattice>
+Cc: marcusb@math.su.se, axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 27 Nov 2004 18:26:09 -0000
+
+Stephen, Marcus,
+
+I'll look into this further. Thanks for the analysis so far. --t
+
+
+

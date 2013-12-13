@@ -1,0 +1,1947 @@
+From MAILER-DAEMON Wed Oct 01 16:44:53 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A4nq7-0001l5-4i
+	for mharc-axiom-mail@gnu.org; Wed, 01 Oct 2003 16:44:51 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A4nq4-0001jK-3o
+	for axiom-mail@nongnu.org; Wed, 01 Oct 2003 16:44:48 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A4n4X-0002IC-2o
+	for axiom-mail@nongnu.org; Wed, 01 Oct 2003 15:56:12 -0400
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1A4n4W-0002Gs-H0
+	for axiom-mail@nongnu.org; Wed, 01 Oct 2003 15:55:40 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by mx20.gnu.org with esmtp (Exim 4.24) id 1A4n2d-0005DK-Cb
+	for axiom-mail@nongnu.org; Wed, 01 Oct 2003 15:53:43 -0400
+Received: (from root@localhost)
+	by fw.drenet.dnd.ca (8.12.9/8.12.9) id h91Jrgsg054263
+	for axiom-mail@nongnu.org; Wed, 1 Oct 2003 15:53:42 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (corporateex.drdc-rddc.gc.ca
+	[131.136.1.77])
+	by fw.drenet.dnd.ca (8.12.9/8.12.9) with ESMTP id h91Jre2Y054093
+	for <axiom-mail@nongnu.org>; Wed, 1 Oct 2003 15:53:40 -0400 (EDT)
+Received: by corporateex.drdc-rddc.gc.ca with Internet Mail Service
+	(5.5.2653.19) id <S7XZG8FL>; Wed, 1 Oct 2003 15:54:09 -0400
+Message-ID: <2BE8D331ED40D611812300080219E7FE339D1D@corporateex.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "'axiom-mail@nongnu.org'" <axiom-mail@nongnu.org>
+Date: Wed, 1 Oct 2003 15:54:09 -0400 
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Info: scanned for viruses
+Subject: [Axiom-mail] map operators rules and anonymous functions
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 01 Oct 2003 20:44:49 -0000
+
+Tim et al.
+
+A recent email by Koen Hillewaert got me thinking about
+the use of map in Axiom. We can write things like
+
+  map(inv,[2,3])
+  a:=matrix[[6,9],[27,81]]
+  map(factor,a)
+
+But if I define an operator I can write
+
+  F:=operator 'F
+  F(x)
+
+but
+
+  map(F,[x,y])
+  map(F,a)
+
+both fail with with message like "Cannot find
+applicable library operation named map with
+argument types BasicOperator, List OrderedVariableList
+[x,y]"
+
+And since rules such as
+
+  F:=rule 'x == 'y
+ 
+are operators
+
+  map(F,a)
+
+also fails.
+
+But there is a work-around!
+
+If I write
+
+  map(f+->F(f),a)
+
+I get the desired result.
+
+Can one of the Axiom guru's out there explain
+this to me?
+
+Is it possible to modify the definition of map
+so that it could take an operator as the first
+argument?
+
+Cheers,
+Bill Page.
+
+
+
+
+From MAILER-DAEMON Wed Oct 01 19:58:16 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A4qrH-0007lS-N6
+	for mharc-axiom-mail@gnu.org; Wed, 01 Oct 2003 19:58:15 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A4qrB-0007jK-3H
+	for axiom-mail@nongnu.org; Wed, 01 Oct 2003 19:58:09 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A4qqc-0007c3-37
+	for axiom-mail@nongnu.org; Wed, 01 Oct 2003 19:58:05 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1A4pg2-0004Vx-8A
+	for axiom-mail@nongnu.org; Wed, 01 Oct 2003 18:42:34 -0400
+Received: (from root@localhost)
+	by fw.drenet.dnd.ca (8.12.9/8.12.9) id h91MgUta006689;
+	Wed, 1 Oct 2003 18:42:30 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (corporateex.drdc-rddc.gc.ca
+	[131.136.1.77])
+	by fw.drenet.dnd.ca (8.12.9/8.12.9) with ESMTP id h91MgT2Y006613;
+	Wed, 1 Oct 2003 18:42:29 -0400 (EDT)
+Received: by corporateex.drdc-rddc.gc.ca with Internet Mail Service
+	(5.5.2653.19) id <S7XZG837>; Wed, 1 Oct 2003 18:42:58 -0400
+Message-ID: <2BE8D331ED40D611812300080219E7FE339D22@corporateex.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "'Koen.Hillewaert'" <koen.hillewaert@cenaero.be>,
+	"Bill. Page1 (E-mail)" <bill.page1@sympatico.ca>
+Subject: RE: [Axiom-mail] problem using axiom in texmacs
+Date: Wed, 1 Oct 2003 18:42:57 -0400 
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Info: scanned for viruses
+Cc: "'axiom-mail@nongnu.org'" <axiom-mail@nongnu.org>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: "Bill. Page1 \(E-mail\)" <bill.page1@sympatico.ca>
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 01 Oct 2003 23:58:14 -0000
+
+Koen,
+
+I hope that you don't mind that I have taken advantage
+of your question to prepare an example TeXmacs-Axiom
+worksheet. See the files
+
+  roe_ale.pdf
+  roe_ale.tm
+
+i.e.
+
+http://savannah.nongnu.org/download/axiom/axiom_texmacs.pkg/Examples%20v1.0.
+2/roe_ale.pdf
+
+at http://savannah.nongnu.org/files/?group=axiom
+
+If the example is not clear, please let me know.
+
+I agree that Axiom user's manuals are very badly needed
+for new users. The best reference is the book
+
+  AXIOM
+  The Scientific Computation System
+
+  by Richard D. Jenks and
+  Robert S. Sutor
+
+This was published in 1992 by Springer-Verlag
+ISBN 0-387-97855-0 and copyright by Numerical Algorithms
+Group Limited (NAG). However the book is now out of print
+and only used copies are (at least used to be) available
+on Amazon.com. But maybe you can find one in a library
+near you somewhere...
+
+Tim Daly is working hard to prepare a new updated book
+which will be freely available over the web. Stay posted,
+you will hear about it first right here.
+
+Cheers,
+Bill Page.
+
+
+
+> -----Original Message-----
+> From: Koen.Hillewaert [mailto:koen.hillewaert@cenaero.be]
+> Sent: Wednesday, October 01, 2003 1:21 PM
+> To: Bill. Page1 (E-mail)
+> Subject: Re: [Axiom-mail] problem using axiom in texmacs
+> 
+> 
+> Bill,
+> 
+> Thanks again for your help.
+> 
+> As far as suggestions and questions go, I have three.
+> 
+> First of all, it would be nice to be able to apply rules to
+> a matrix, instead of having to apply them to it's  elements
+> separately (excuse me if the functionality is already there -
+> I didn't find it).
+> 
+> Secondly, the rules are apparently interpreted in a more or 
+> less strict fashion,  such that some possibilities of
+> application are overlooked. Some cases are illustrated in
+> attached example. I presume that resolving this issue is
+> far more involved though, and hence I apologize for my 
+> exigence.
+> 
+> Finally, a lot of my problems seem to originate from lack
+> of manuals ... are there any other manuals available or in
+> the pipeline ?
+> 
+> Thanks
+> 
+> Koen
+
+
+
+
+From MAILER-DAEMON Wed Oct 01 21:56:14 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A4saR-0002AF-Bt
+	for mharc-axiom-mail@gnu.org; Wed, 01 Oct 2003 21:48:59 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A4sGb-0006Jc-R3
+	for axiom-mail@nongnu.org; Wed, 01 Oct 2003 21:28:29 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A4rZb-0006xy-Uq
+	for axiom-mail@nongnu.org; Wed, 01 Oct 2003 20:44:35 -0400
+Received: from [207.115.63.103] (helo=pimout4-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1A4rO5-00051s-ID
+	for axiom-mail@nongnu.org; Wed, 01 Oct 2003 20:32:09 -0400
+Received: from localhost.localdomain (130.117.252.64.snet.net [64.252.117.130])
+	by pimout4-ext.prodigy.net (8.12.9/8.12.3) with ESMTP id h920W6rQ114120;
+	Wed, 1 Oct 2003 20:32:06 -0400
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h920W3017538;
+	Wed, 1 Oct 2003 20:32:03 -0400
+Date: Wed, 1 Oct 2003 20:32:03 -0400
+Message-Id: <200310020032.h920W3017538@localhost.localdomain>
+From: root <daly@idsi.net>
+To: Bill.Page@drdc-rddc.gc.ca
+In-reply-to: <2BE8D331ED40D611812300080219E7FE339D1D@corporateex.drdc-rddc.gc.ca>
+	(Bill.Page@drdc-rddc.gc.ca)
+Subject: Re: [Axiom-mail] map operators rules and anonymous functions
+References: <2BE8D331ED40D611812300080219E7FE339D1D@corporateex.drdc-rddc.gc.ca>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 02 Oct 2003 01:48:54 -0000
+
+Bill,
+
+Yes, it is possible to write a map which takes other arguments.
+They just haven't been written yet. Tag, you're "it" :-)
+
+Tim
+
+
+
+From MAILER-DAEMON Thu Oct 02 06:05:30 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A50I8-0004c6-O1
+	for mharc-axiom-mail@gnu.org; Thu, 02 Oct 2003 06:02:36 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A50Hx-0004ac-8V
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 06:02:25 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A50HK-0004WQ-13
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 06:02:17 -0400
+Received: from [62.231.131.211] (helo=mail22.messagelabs.com)
+	by monty-python.gnu.org with smtp (Exim 4.24) id 1A5007-0001s3-QF
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 05:43:59 -0400
+X-VirusChecked: Checked
+X-Env-Sender: miked@nag.co.uk
+X-Msg-Ref: server-11.tower-22.messagelabs.com!1065087837!1228328
+X-StarScan-Version: 5.1.9.3; banners=nag.co.uk,-,-
+Received: (qmail 23646 invoked from network); 2 Oct 2003 09:43:57 -0000
+Received: from smtp-4.star.net.uk (212.125.75.73)
+	by server-11.tower-22.messagelabs.com with SMTP;
+	2 Oct 2003 09:43:57 -0000
+Received: (qmail 2319 invoked from network); 2 Oct 2003 09:43:54 -0000
+Received: from nagmx1.nag.co.uk (HELO nag.co.uk) (62.231.145.242)
+	by smtp-4.star.net.uk with SMTP; 2 Oct 2003 09:43:54 -0000
+Received: from brackley.nag.co.uk (brackley.nag.co.uk [192.156.217.21])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id KAA26737;
+	Thu, 2 Oct 2003 10:43:38 +0100 (BST)
+Received: from nag.co.uk (IDENT:root@trowbridge.nag.co.uk [192.156.217.69])
+	by brackley.nag.co.uk (8.11.1/8.11.1) with ESMTP id h929lIY19336;
+	Thu, 2 Oct 2003 10:47:18 +0100 (BST) (envelope-from miked@nag.co.uk)
+Received: (from miked@localhost) by nag.co.uk (8.9.3/8.9.3) id KAA20144;
+	Thu, 2 Oct 2003 10:43:30 +0100
+Date: Thu, 2 Oct 2003 10:43:30 +0100
+From: Mike Dewar <miked@nag.co.uk>
+To: "Bill. Page1 E-mail\"" <bill.page1@sympatico.ca>
+Subject: Re: [Axiom-mail] problem using axiom in texmacs
+Message-ID: <20031002104330.A20045@nag.co.uk>
+References: <2BE8D331ED40D611812300080219E7FE339D22@corporateex.drdc-rddc.gc.ca>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Mailer: Mutt 1.0.1i
+In-Reply-To: <2BE8D331ED40D611812300080219E7FE339D22@corporateex.drdc-rddc.gc.ca>;
+	from Bill.Page@drdc-rddc.gc.ca on Wed, Oct 01, 2003 at 06:42:57PM -0400
+Cc: "'axiom-mail@nongnu.org'" <axiom-mail@nongnu.org>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 02 Oct 2003 10:02:34 -0000
+
+On Wed, Oct 01, 2003 at 06:42:57PM -0400, Page, Bill wrote:
+<snip>
+> I agree that Axiom user's manuals are very badly needed
+> for new users. The best reference is the book
+> 
+>   AXIOM
+>   The Scientific Computation System
+> 
+>   by Richard D. Jenks and
+>   Robert S. Sutor
+> 
+> This was published in 1992 by Springer-Verlag
+> ISBN 0-387-97855-0 and copyright by Numerical Algorithms
+> Group Limited (NAG). However the book is now out of print
+> and only used copies are (at least used to be) available
+> on Amazon.com. But maybe you can find one in a library
+> near you somewhere...
+I believe that in fact the book is still in print in the US (Amazon also
+seems to think so!).  
+
+Mike.
+
+
+________________________________________________________________________
+This e-mail has been scanned for all viruses by Star Internet. The
+service is powered by MessageLabs. For more information on a proactive
+anti-virus service working around the clock, around the globe, visit:
+http://www.star.net.uk
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Thu Oct 02 10:03:31 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A543H-0007Hc-0K
+	for mharc-axiom-mail@gnu.org; Thu, 02 Oct 2003 10:03:31 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A543D-0007E8-82
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 10:03:27 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A542f-00071d-Ap
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 10:03:24 -0400
+Received: from [128.122.47.28] (helo=cat.nyu.edu)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1A53wP-00048t-LG
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 09:56:25 -0400
+Received: from cs.nyu.edu (CSSTUPC28.CS.NYU.EDU [128.122.140.229])
+	by cat.nyu.edu (Postfix) with ESMTP id 6F98C19D49
+	for <axiom-mail@nongnu.org>; Thu,  2 Oct 2003 09:55:57 -0400 (EDT)
+Message-ID: <3F7C2E8E.6030803@cs.nyu.edu>
+Date: Thu, 02 Oct 2003 09:56:30 -0400
+From: Sean McLaughlin <seanmcl@cs.nyu.edu>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US;
+	rv:1.4) Gecko/20030624 Netscape/7.1
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-mail] Source Code
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 02 Oct 2003 14:03:28 -0000
+
+
+I'm developing a CAS for a theorem prover, Hol-Light.  Will the source 
+code of Axiom ever be made available so I can study the algorithms? 
+
+Best,
+
+Sean
+
+
+
+
+From MAILER-DAEMON Thu Oct 02 10:18:40 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A54Gv-0005QY-G7
+	for mharc-axiom-mail@gnu.org; Thu, 02 Oct 2003 10:17:37 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A54GY-00056N-Jy
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 10:17:14 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A54Fc-0004IN-57
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 10:16:48 -0400
+Received: from [134.74.86.20] (helo=groups.sci.ccny.cuny.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1A54Bs-00038P-D0
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 10:12:24 -0400
+Received: from rio.sci.ccny.cuny.edu (rio.sci.ccny.cuny.edu [134.74.120.4])
+	by groups.sci.ccny.cuny.edu (8.11.0/8.11.2) with ESMTP id h92EBev24952; 
+	Thu, 2 Oct 2003 10:11:40 -0400
+Received: (from daly@localhost)
+	by rio.sci.ccny.cuny.edu (8.11.0/8.11.0) id h92DYUf31657;
+	Thu, 2 Oct 2003 09:34:30 -0400
+Date: Thu, 2 Oct 2003 09:34:30 -0400
+Message-Id: <200310021334.h92DYUf31657@rio.sci.ccny.cuny.edu>
+From: Tim Daly  <daly@rio.sci.ccny.cuny.edu>
+To: seanmcl@cs.nyu.edu
+Cc: daly@idsi.net, axiom-mail@nongnu.org
+Subject: [Axiom-mail] Axiom source code
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 02 Oct 2003 14:17:35 -0000
+
+Sean wrote:
+> I'm developing a CAS for a theorem prover, Hol-Light.  Will the source
+> code of Axiom ever be made available so I can study the algorithms?
+
+The source code for Axiom is available from the CVS by typing:
+
+cvs -d:pserver:anoncvs@subversions.gnu.org:/cvsroot/axiom login
+
+this will prompt you for a password. Just hit enter. Then type:
+
+cvs -z3 -d:pserver:anoncvs@subversions.gnu.org:/cvsroot/axiom co axiom
+
+This will create a directory called axiom containing the source code.
+If you have questions send them to axiom-mail@nongnu.org
+The home website is savannah.nongnu.org/projects/axiom
+
+Is Hol-Light related to nuprl and MetaPRL? 
+
+Tim Daly
+axiom@tenkan.org
+daly@idsi.net
+
+
+
+
+
+From MAILER-DAEMON Thu Oct 02 11:48:06 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A55gU-0006n9-7g
+	for mharc-axiom-mail@gnu.org; Thu, 02 Oct 2003 11:48:06 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A55gQ-0006lb-3t
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 11:48:02 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A55fs-0006bi-0w
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 11:47:59 -0400
+Received: from [209.226.175.103] (helo=tomts29-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1A55fr-0006bS-1C
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 11:47:27 -0400
+Received: from Asus ([204.101.104.3]) by tomts29-srv.bellnexxia.net
+	(InterMail vM.5.01.06.05 201-253-122-130-105-20030824) with ESMTP
+	id <20031002154723.XUND25868.tomts29-srv.bellnexxia.net@Asus>;
+	Thu, 2 Oct 2003 11:47:23 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: "'Mike Dewar'" <miked@nag.co.uk>
+Subject: RE: [Axiom-mail] problem using axiom in texmacs
+Date: Thu, 2 Oct 2003 11:47:21 -0400
+Message-ID: <001401c388fc$7ac28390$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4024
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+In-Reply-To: <20031002104330.A20045@nag.co.uk>
+Importance: Normal
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 02 Oct 2003 15:48:04 -0000
+
+Mike,
+
+Yes, you are right it does seem to be possible to order a new
+copy from Amazon. I should have checked before a I "spoke".
+
+In this case I agree that it wont be possible to make it
+available for free online unless Springer-Verlag were also
+to agree. Doubtful, but perhaps worth a try. Do you have a
+contact at Springer-Verlag who might be willing to listen?
+I will try to contact them.
+
+In any case, I think between $40 (used) and $80 (new) is
+well worth the price for this book! I think it is of very
+high quality and very useful.
+
+Cheers,
+Bill Page.
+
+On Thursday, October 02, 2003 5:44 AM Mike Dewar
+miked@nag.co.uk wrote:
+
+> > 
+> >   AXIOM
+> >   The Scientific Computation System
+> > 
+> >   by Richard D. Jenks and
+> >   Robert S. Sutor
+> > 
+> > This was published in 1992 by Springer-Verlag
+> > ISBN 0-387-97855-0 and copyright by Numerical Algorithms
+> > Group Limited (NAG). However the book is now out of print
+> > and only used copies are (at least used to be) available
+> > on Amazon.com. But maybe you can find one in a library near
+> > you somewhere...
+> I believe that in fact the book is still in print in the US 
+> (Amazon also seems to think so!).  
+> 
+> Mike.
+
+
+
+
+From MAILER-DAEMON Thu Oct 02 12:58:38 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A56mj-00005v-0v
+	for mharc-axiom-mail@gnu.org; Thu, 02 Oct 2003 12:58:37 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A56mf-00005a-QJ
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 12:58:33 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A56m7-0008P7-Ox
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 12:58:30 -0400
+Received: from [62.231.131.211] (helo=mail22.messagelabs.com)
+	by monty-python.gnu.org with smtp (Exim 4.24) id 1A56ke-00080b-3e
+	for axiom-mail@nongnu.org; Thu, 02 Oct 2003 12:56:28 -0400
+X-VirusChecked: Checked
+X-Env-Sender: miked@nag.co.uk
+X-Msg-Ref: server-11.tower-22.messagelabs.com!1065113386!1246896
+X-StarScan-Version: 5.1.9.3; banners=nag.co.uk,-,-
+Received: (qmail 24233 invoked from network); 2 Oct 2003 16:49:46 -0000
+Received: from smtp-1.star.net.uk (212.125.75.70)
+	by server-11.tower-22.messagelabs.com with SMTP;
+	2 Oct 2003 16:49:46 -0000
+Received: (qmail 21006 invoked from network); 2 Oct 2003 16:49:45 -0000
+Received: from nagmx1.nag.co.uk (HELO nag.co.uk) (62.231.145.242)
+	by smtp-1.star.net.uk with SMTP; 2 Oct 2003 16:49:45 -0000
+Received: from brackley.nag.co.uk (brackley.nag.co.uk [192.156.217.21])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id RAA05618;
+	Thu, 2 Oct 2003 17:49:38 +0100 (BST)
+Received: from nag.co.uk (IDENT:root@trowbridge.nag.co.uk [192.156.217.69])
+	by brackley.nag.co.uk (8.11.1/8.11.1) with ESMTP id h92GrFY67443;
+	Thu, 2 Oct 2003 17:53:15 +0100 (BST) (envelope-from miked@nag.co.uk)
+Received: (from miked@localhost) by nag.co.uk (8.9.3/8.9.3) id RAA22251;
+	Thu, 2 Oct 2003 17:49:23 +0100
+Date: Thu, 2 Oct 2003 17:49:22 +0100
+From: Mike Dewar <miked@nag.co.uk>
+To: Bill Page <bill.page1@sympatico.ca>
+Subject: Re: [Axiom-mail] problem using axiom in texmacs
+Message-ID: <20031002174922.H20327@nag.co.uk>
+References: <20031002104330.A20045@nag.co.uk>
+	<001401c388fc$7ac28390$6501a8c0@Asus>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Mailer: Mutt 1.0.1i
+In-Reply-To: <001401c388fc$7ac28390$6501a8c0@Asus>;
+	from bill.page1@sympatico.ca on Thu, Oct 02, 2003 at 11:47:21AM
+	-0400
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 02 Oct 2003 16:58:34 -0000
+
+I'm afraid that all the people I used to know at Springer have left.  In
+any case I can't see them agreeing.
+
+I've just remembered that there was also an Axiom tutorial that we
+produced for the Windows version.  I can't find the sources right now
+but I'll see if I can dig them out - that might be a useful stop-gap for
+people needing documentation.
+
+Mike.
+
+
+On Thu, Oct 02, 2003 at 11:47:21AM -0400, Bill Page wrote:
+> Mike,
+> 
+> Yes, you are right it does seem to be possible to order a new
+> copy from Amazon. I should have checked before a I "spoke".
+> 
+> In this case I agree that it wont be possible to make it
+> available for free online unless Springer-Verlag were also
+> to agree. Doubtful, but perhaps worth a try. Do you have a
+> contact at Springer-Verlag who might be willing to listen?
+> I will try to contact them.
+> 
+> In any case, I think between $40 (used) and $80 (new) is
+> well worth the price for this book! I think it is of very
+> high quality and very useful.
+> 
+> Cheers,
+> Bill Page.
+> 
+> On Thursday, October 02, 2003 5:44 AM Mike Dewar
+> miked@nag.co.uk wrote:
+> 
+> > > 
+> > >   AXIOM
+> > >   The Scientific Computation System
+> > > 
+> > >   by Richard D. Jenks and
+> > >   Robert S. Sutor
+> > > 
+> > > This was published in 1992 by Springer-Verlag
+> > > ISBN 0-387-97855-0 and copyright by Numerical Algorithms
+> > > Group Limited (NAG). However the book is now out of print
+> > > and only used copies are (at least used to be) available
+> > > on Amazon.com. But maybe you can find one in a library near
+> > > you somewhere...
+> > I believe that in fact the book is still in print in the US 
+> > (Amazon also seems to think so!).  
+> > 
+> > Mike.
+> 
+> 
+> 
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://mail.nongnu.org/mailman/listinfo/axiom-mail
+> 
+> ________________________________________________________________________
+> This e-mail has been scanned for all viruses by Star Internet. The
+> service is powered by MessageLabs. For more information on a proactive
+> anti-virus service working around the clock, around the globe, visit:
+> http://www.star.net.uk
+> ________________________________________________________________________
+
+________________________________________________________________________
+This e-mail has been scanned for all viruses by Star Internet. The
+service is powered by MessageLabs. For more information on a proactive
+anti-virus service working around the clock, around the globe, visit:
+http://www.star.net.uk
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Fri Oct 03 01:21:03 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A5INC-0002Ac-VL
+	for mharc-axiom-mail@gnu.org; Fri, 03 Oct 2003 01:21:02 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A5INA-00029z-7g
+	for axiom-mail@nongnu.org; Fri, 03 Oct 2003 01:21:00 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A5IMZ-0001x0-Vn
+	for axiom-mail@nongnu.org; Fri, 03 Oct 2003 01:20:56 -0400
+Received: from [209.226.175.188] (helo=tomts25-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1A5IMZ-0001vc-D6
+	for axiom-mail@nongnu.org; Fri, 03 Oct 2003 01:20:23 -0400
+Received: from Asus ([204.101.104.3]) by tomts25-srv.bellnexxia.net
+	(InterMail vM.5.01.06.04 201-253-122-130-104-20030726) with ESMTP
+	id <20031003052016.VOGO25271.tomts25-srv.bellnexxia.net@Asus>;
+	Fri, 3 Oct 2003 01:20:16 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: "'Koen.Hillewaert'" <koen.hillewaert@cenaero.be>
+Subject: RE: [Axiom-mail] problem using axiom in texmacs
+Date: Fri, 3 Oct 2003 01:20:17 -0400
+Message-ID: <000001c3896e$0ab88aa0$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4024
+Importance: Normal
+In-Reply-To: <3F7C564C.1020803@cenaero.be>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 03 Oct 2003 05:21:01 -0000
+
+Koen,
+
+For the new features since 92, I guess you will have to
+wait for Tim's new version or else ask questions on the
+Axiom user's mailing list. <grin>
+
+Yes, I see your point about the limitations of the
+pattern matching rule for simplifying your examples.
+I have made some progress and can do more simplification
+but I am not yet able to do as well on this problem
+with Axiom as I am able to do using Maple's algsubs
+operation on this same problem. But in working on this
+I am learning more about Axiom...
+
+I am not quite sure of your motivations and your background
+in this work. Axiom is, as I am sure you are aware now in
+an a new "Alpha" version stage. So there are a lot of things
+that need to be tested and documented. If you are interested
+in this, then I am glad, but if you are planning to use
+Axiom for "real" productive applied research work in
+physics, then unless your are very tolerant, you may find
+Axiom rather frustrating.
+
+I work a lot with Maple in theoretical physics and I still
+find it the best tool available. But I am interested in Axiom
+for two reasons: 1) it is free, 2) in principle, the internal
+design of Axiom in far superior to Maple. But in spite of it's
+age, Axiom is still immature compared to Maple.
+
+Anyway, if you are still sufficiently tolerant of Axiom to
+continue for the time being, I can send you my most recent
+version of the TeXmacs/Axiom document where I am attempting
+to solve your problem. Please let me know how/if you would
+like to proceed.
+
+I can show you how to "expand" expressions in Axiom using
+Axiom's type system - something that is quite foreign, I think
+to people who are familiar with Maple which essentially has
+no type system but makes use of several operations (like,
+expand) to manipulate expressions instead.
+
+The missing brackets in some of the expressions are due
+to a bug in the Axiom-Texmacs interface program which
+appeared when I introduced the fancy LaTeX names for the
+symbols n1, n2, q1, q2 ... etc. It does not handle the
+\mathbf very well. I will fix this in the next version and
+perhaps simplify the treatment of multi-character variable
+names.
+
+Cheers,
+Bill Page.
+
+> -----Original Message-----
+> From: Koen.Hillewaert [mailto:koen.hillewaert@cenaero.be] 
+> Sent: Thursday, October 02, 2003 12:46 PM
+> To: Bill Page
+> Subject: Re: [Axiom-mail] problem using axiom in texmacs
+> 
+> 
+> Hi Bill,
+> 
+> thanks for your suggestions. We'll order the book, but how
+> about new features since 92 ?
+> In any case, looking at the example you modified, it shows
+> my point about rules : a21, ... and so on can still be
+> simplified by the rule in simplifyQFlux. Maybe expanding
+> the expression prior to applying the rule could already
+> solve something.
+> 
+> And could you explain how to interpret the unclosed brackets
+> in the expression for the components of a ?
+> 
+> Salut,
+> 
+> Koen
+> 
+
+
+
+
+From MAILER-DAEMON Sun Oct 05 06:11:39 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A65rX-00072D-5Q
+	for mharc-axiom-mail@gnu.org; Sun, 05 Oct 2003 06:11:39 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A65rU-000722-J7
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 06:11:36 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A65qy-0006wk-B0
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 06:11:35 -0400
+Received: from [62.4.17.100] (helo=mallaury.noc.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1A65qx-0006wY-DA
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 06:11:03 -0400
+Received: from ecritoire (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.noc.nerim.net (Postfix) with ESMTP id C3D2962DB3
+	for <axiom-mail@nongnu.org>; Sun,  5 Oct 2003 12:11:00 +0200 (CEST)
+Received: from fmy by ecritoire with local (Exim 3.35 #1 (Debian))
+	id 1A65u5-0001zW-00
+	for <axiom-mail@nongnu.org>; Sun, 05 Oct 2003 12:14:17 +0200
+To: axiom-mail@nongnu.org
+From: fmaltey@nerim.fr
+Date: 05 Oct 2003 12:14:16 +0200
+Message-ID: <87wubkj8jr.fsf@ecritoire.i-did-not-set--mail-host-address--so-shoot-me>
+Lines: 273
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Subject: [Axiom-mail] Looking for beginning with axiom.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 05 Oct 2003 10:11:37 -0000
+
+Hello,=20
+
+I compile axiom from cvs on my Linux box, because axiom has now an=20
+open licence.  After some hours I get a running axiom.=20
+
+And what I do now ?=20
+I can't get any useful help file.=20
+I only find help file in *.dvi format about compiling.
+
+the )hd command doesn't work.
+
+My first idea is to compare axiom with mupad (or maple) for my use=20
+with my students (first year after Baccalaur=E9at in France).
+
+So I'm looking for a tutorial whith function names, basic types,=20
+matrix, solver, and so. Do you have any idea ?
+
+If you want to have any idea about my works with my students
+I post 2 examples with mupad :
+The first one about magic matrix.=20
+The second about a stupid minpoly algorithm.
+May you help me to translate it, if it's possible...
+
+I'm also looking for an interface in emacs because=20
+texmacs is a little too slow on my PC.
+
+Thanks a lot.=20
+
+Francois Maltey
+
+=20
+//=20
+// septembre 2003=20
+//=20
+// recherche des matrices magiques d'ordre impair=20
+// =E0 partir de l'=E9preuve du CAPES externe de 1999 (5-eme partie)
+//
+
+export (linalg) ;
+
+//
+// la somme des n lignes est 1+2+...+n^2 ; d'o=F9 la somme d'une ligne.
+//
+sommeTheorique :=3D n -> (n*(n^2+1))/2 ;=20
+
+//
+// Somme d'une ligne, d'une colonne et de la diagonale secondaire
+//
+sommeLignei :=3D (M, i) -> _plus (M[i,k] $k=3D1..nrows(M)) ;
+sommeColi   :=3D (M, i) -> _plus (M[k,i] $k=3D1..nrows(M)) ;
+antitrace   :=3D M      -> _plus (M[nrows(M)-k+1,k] $k=3D1..nrows(M)) ;
+ensCoeff    :=3D M      -> {M[i,j] $i=3D1..nrows (M) $j=3D1..ncols (M)} ;=
+=20
+
+//
+// Les diff=E9rents tests =E0 effectuer pour tester si une matrice est ma=
+gique.
+//
+estMagique :=3D=20
+M ->     bool (nrows (M)=3Dncols (M))=20
+    and _and (bool (sommeLignei (M,i) =3D sommeTheorique (nrows (M)))=20
+	                                                   $i=3D1..nrows (M))
+    and _and (bool (sommeColi (M,i) =3D sommeTheorique (nrows (M)))
+					                   $i=3D1..nrows (M))
+    and bool (tr (M) =3D sommeTheorique (nrows (M)))
+    and bool (antitrace (M) =3D sommeTheorique (nrows (M))
+    and bool (ensCoeff (M) =3D {$1..nrows(M)^2}))
+=09
+//
+// Peut se simplifier en montrant que l'ensemble des sommes des lignes, d=
+es
+// colonnes et des diagonales est un singleton.
+//
+estMagique :=3D=20
+M ->    bool (nrows (M)=3Dncols (M))=20
+    and bool (card ({sommeLignei (M,i) $i=3D1..nrows (M), =20
+	             sommeColi   (M,i) $i=3D1..nrows (M),
+                     tr (M), antitrace (M)}) =3D 1)
+    and bool (ensCoeff (M) =3D {$1..nrows(M)^2})
+//
+// Un exemple de matrice magique
+//
+M3 :=3D matrix ([[4,3,8],[9,5,1],[2,7,6]]) ;
+estMagique (M3) ;
+
+//
+// Calculs valables pour n premier avec 3 uniquement
+// numlib::igcdmult (3,n)[2] est le coefficient de l'=E9quation de B=E9zo=
+ut=20
+// associ=E9 =E0 3 dans 3x + ny =3D 1 ; c'est l'inverse modulo n de 3.
+//
+// Le calcul (X - 1 mod n) + 1 calcule la congruence comprise entre 1 et =
+n.
+//
+// La fonction beta est r=E9serv=E9e par le syst=E8me en analyse complexe=
+.
+//
+alpha :=3D (i,j,n) -> (numlib::igcdmult(3,n)[2]*(2*i-j) - 1 mod n) + 1 ;
+betaa :=3D (i,j,n) -> (numlib::igcdmult(3,n)[2]*(2*j-i) - 1 mod n) + 1 ;
+
+//
+// Une autre possibilit=E9 consiste =E0 calculer=20
+// expr (1 / (Dom::IntergerMod (n)(3)) pour calculer m (cf =E9nonc=E9 et =
+corrig=E9)
+// ou solve (3*m=3D1, m, Domain=3DDom::IntergerMod (n))
+//
+// Une derni=E8re possibilit=E9 utilise linsolve en pr=E9cisant en troisi=
+=E8me=20
+// argument Domain=3DDom::IntergerMod (n)
+//
+
+//
+// Ces sommes sont constantes car la fonction alpha(.,j,n) r=E9ordonne
+// tous les i entre 1 et n
+//
+[_plus(alpha (i,j,7) $i=3D1..7) $j=3D1..7] ;
+	 =20
+//
+// Construction de la matrice W =E9num=E9r=E9e dans l'ordre=20
+//
+matriceW :=3D n -> matrix (n,n,(i,j)->n*(i-1)+j) ;
+
+//
+// Construction de la matrice magique G
+//=20
+matriceG :=3D n -> matrix (n,n,(i,j)->(alpha(i,j,n)-1)*n+betaa(i,j,n));
+
+//
+// V=E9rification que les sommes sur les sous-diagonales et=20
+// les anti-sous-diagonales sont constantes.=20
+//
+
+//
+// Construction d'une matrice magique =E0 partir de deux matrices magique=
+s
+//
+produitMagique :=3D=20
+(A,B) ->=20
+  matrix(nrows(A)*nrows(B),nrows(A)*nrows(B),
+	 (u,v)->            A[(u-1 mod nrows(A))+1,(v-1 mod nrows(A))+1]
+	      + nrows(A)^2*(B[(u-1 div nrows(A))+1,(v-1 div nrows(A))+1]-1)) ;
+
+//
+// Quelques v=E9rifications de matrices magiques
+//
+estMagique (produitMagique (M3,M3)) ;
+estMagique (produitMagique (M3,matriceG(5))) ;
+estMagique (produitMagique (matriceG(5),matriceG(7))) ;
+
+////////////////////////////////////////////////////////////////////////
+
+//
+// Calcul du polyn=F4me minimal de la matrice A=20
+//
+// 1/ =C9tude du rang des familles de matrices (A^k) pour k variant de 1 =
+=E0 p.
+// 2/ Construction du polyn=F4me minimal unitaire
+//
+// 1/ Recherche du rang =3D max (p tq (A^k)k=3D0..p est libre)=20
+//
+// Correspond =E0 la biblioth=E8que de calcul de l'alg=E8bre lin=E9aire
+//
+export (linalg) ;
+
+//
+// Un exemple de matrice
+//
+M :=3D matrix ([[1, 2, 3], [3, 3, 3], [3, 2, 1]]) ;=20
+
+//
+// Transforme une matrice en vecteur et r=E9ciproquement pour appliquer
+// les fonctions usuelles de l'alg=E8bre lin=E9aire : calcul du rang et c=
+o.
+//
+matrice2vecteur :=3D M -> matrix ([M[i,j] $j=3D1..ncols(M) $i=3D1..nrows(=
+M)]) ;
+vecteur2matricebr :=3D (V, n) -> [[V[i+k*n] $i=3D1..n] $k=3D0..n-1] ;=20
+vecteur2matrice :=3D V -> matrix (vecteur2matricebr (V, sqrt (vecdim (V))=
+)) ;
+//
+// Test de v=E9rification
+//
+bool (vecteur2matrice (matrice2vecteur (M)) =3D M) ;=20
+//
+// Cette fonction calcule successivement le rang des famille (A^k)k=3D0..=
+p
+// et renvoie la derni=E8re (c'est-=E0-dire la plus grande) des valeurs d=
+e p
+// pour laquelle la famille est libre : c'est la valeur pr=E9c=E9dente p =
+pour
+// lequel la famille est li=E9e.
+//
+rangM :=3D proc (M) local p ;
+  begin
+    p :=3D 0 ;
+    while (nops (basis ([matrice2vecteur (M^k) $k=3D0..p])) =3D p+1)=20
+       do p :=3D p+1 end_while ;=20
+    p-1=20
+  end ;=20
+//
+// Tests de v=E9rification
+//
+rangM (M) ;                                      // r=E9ponse 2
+rangM (matrix ([[i+j+1 $i=3D1..5] $j=3D1..5])) ;     // r=E9ponse 2
+rangM (matrix ([[i+j+1 $i=3D1..5] $j=3D1..5])) ;     // r=E9ponse 2
+rangM (matrix ([[(i+j)^3 $i=3D1..5] $j=3D1..5])) ;   // r=E9ponse 4
+//
+// Autre m=E9thode de calcul de rangM
+// La liste L contient la liste des vecteurs associ=E9s aux matrices M^k
+//
+rangMa  :=3D M -> rangMbr (M, [matrice2vecteur (M^0)]) ;
+rangMbr :=3D (M, L) ->=20
+  if nops (L) =3D nops (basis (L))=20
+    then rangMbr (M, [matrice2vecteur (M^(nops (L)))].L)
+    else nops (L)-2=20
+  end_if ;=20
+//
+// Tests de v=E9rification
+//
+rangMa (M) ;                                      // r=E9ponse 2
+rangMa (matrix ([[i+j+1 $i=3D1..5] $j=3D1..5])) ;     // r=E9ponse 2
+rangMa (matrix ([[i+j+1 $i=3D1..5] $j=3D1..5])) ;     // r=E9ponse 2
+rangMa (matrix ([[(i+j)^3 $i=3D1..5] $j=3D1..5])) ;   // r=E9ponse 4
+//
+//
+// 2/ Construction du polyn=F4me minimal unitaire
+//
+//
+// But : rechercher de proche en proche le plus petit des p=20
+// tel que la matrice M^p est combinaison lin=E9aire des M^k pr=E9c=E9den=
+ts
+// Les calculs n'ont pas lieu sur les matrices mais sur les vecteurs asso=
+ci=E9s
+//
+PolMiniM :=3D proc (M) local p, S, b, a_continuer ;
+  begin
+    p :=3D 1 ;
+    a_continuer :=3D TRUE ;=20
+    S :=3D matrice2vecteur (M^0) ;=20
+    RES :=3D [] ;=20
+    while RES =3D []=20
+      do=20
+        b :=3D matrice2vecteur (M^p) ;=20
+        RES  :=3D matlinsolve (S, b, Unique) ;  =20
+        S :=3D S.b ;
+        p :=3D p+1 ;
+     end_while ;
+    X^(p-1) - _plus (RES[i]*X^(i-1) $i=3D1..vecdim (RES)) ;=20
+  end_proc ;
+//
+// Le param=E8tre Unique =E0 matlinsolve renvoie soit la seule=20
+// solution du syst=E8me lin=E9aire soit [].
+// L'op=E9rateur . concat=E8ne matrices et vecteurs=20
+// et augmente le nombre de colonnes.
+// Les coordonn=E9es du vecteur solution sont les coefficients de X^(k-1)
+// dans le polyn=F4me minimal.
+//
+Res :=3D PolMiniM (M) ;=20
+_plus (coeff (Res, X, k) * M^k $k=3D0..ncols (M)) ;=20
+
+M1 :=3D matrix ([[i+j+1 $i=3D1..5] $j=3D1..5]) ;
+M2 :=3D matrix ([[i+j+1 $i=3D1..5] $j=3D1..5]) ;
+M3 :=3D matrix ([[(i+2*j)^3 $i=3D1..5] $j=3D1..5]) ; =20
+//
+// V=E9rification : le r=E9sultat est la matrice nulle.
+// Le polyn=F4me calcul=E9 est bien le polyn=F4me minimal.
+//
+Res :=3D PolMiniM (M1) ;=20
+_plus (coeff (Res, X, k) * M1^k $k=3D0..ncols (M1)) ;=20
+
+Res :=3D PolMiniM (M2) ;=20
+_plus (coeff (Res, X, k) * M2^k $k=3D0..ncols (M2)) ;=20
+
+Res :=3D PolMiniM (M3) ;=20
+_plus (coeff (Res, X, k) * M3^k $k=3D0..ncols (M3)) ;=20
+
+PolMiniMb :=3D M -> PolMiniMbr (M, [], matrice2vecteur (M^0), 1) ;
+
+PolMiniMbr :=3D (M, R, S, p)=20
+  -> if R=3D[]=20
+        then=20
+          PolMiniMbr (M, matlinsolve (S, matrice2vecteur (M^p), Unique),
+                      S.matrice2vecteur(M^p), p+1)
+        else R
+      end_if ;=20
+
+PolMiniMb (M1) ;
+
+Res :=3D PolMiniM (M1) ;=20
+_plus (coeff (Res, X, k) * M1^k $k=3D0..ncols (M1)) ;=20
+
+
+
+
+From MAILER-DAEMON Sun Oct 05 07:40:39 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A67Fe-00047E-L7
+	for mharc-axiom-mail@gnu.org; Sun, 05 Oct 2003 07:40:38 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A67Fa-00040m-VR
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 07:40:34 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A67F3-00038B-2g
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 07:40:33 -0400
+Received: from [193.252.22.23] (helo=mwinf0802.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1A67F2-00036i-BT
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 07:40:00 -0400
+Received: from oops (ARennes-303-1-25-133.w81-53.abo.wanadoo.fr [81.53.40.133])
+	by mwinf0802.wanadoo.fr (SMTP Server) with ESMTP
+	id 1C31318000DC; Sun,  5 Oct 2003 13:39:59 +0200 (CEST)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 1A67F0-0000cV-00; Sun, 05 Oct 2003 13:39:58 +0200
+To: fmaltey@nerim.fr
+Subject: Re: [Axiom-mail] Looking for beginning with axiom.
+References: <87wubkj8jr.fsf@ecritoire.i-did-not-set--mail-host-address--so-shoot-me>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Sun, 05 Oct 2003 13:39:57 +0200
+In-Reply-To: <87wubkj8jr.fsf@ecritoire.i-did-not-set--mail-host-address--so-shoot-me>
+	(fmaltey@nerim.fr's message of "05 Oct 2003 12:14:16 +0200")
+Message-ID: <87isn3x69e.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 05 Oct 2003 11:40:36 -0000
+
+Hello François,
+
+A first reply which might not be completely helpful.
+
+fmaltey@nerim.fr writes:
+
+> And what I do now ? 
+> I can't get any useful help file. 
+> I only find help file in *.dvi format about compiling.
+
+:) You're right, right now, there is only minimal developer
+documentation, but Tim Daly and Bill Page are working hard to produce a
+complete user documentation. More specifically, Bill is working on
+producing some tutorial and Tim is preparing to release as free
+documentation the Axiom Book that describe Axiom in detail.
+
+If you look at the documentation part of Axiom web site
+(http://www.nongnu.org/axiom/documentation.html), you'll find two
+pointers:
+ - a simple tutorial on the basics of Axiom and use of its numerical
+   operators 
+
+ - a pointer to Axiom download section where, under Axiom_book and
+   Axiom_tutorial, you'll find some introductory text.
+
+
+
+> the )hd command doesn't work.
+
+Oops, yet another bug.
+
+> My first idea is to compare axiom with mupad (or maple) for my use 
+> with my students (first year after Baccalauréat in France).
+>
+> So I'm looking for a tutorial whith function names, basic types, 
+> matrix, solver, and so. Do you have any idea ?
+
+Sorry, I can't give much answer on that
+
+> If you want to have any idea about my works with my students
+> I post 2 examples with mupad :
+> The first one about magic matrix. 
+> The second about a stupid minpoly algorithm.
+> May you help me to translate it, if it's possible...
+
+I cannot (my Axiom math knowledge should be pretty much as yours). Maybe
+somebody else can?
+
+> I'm also looking for an interface in emacs because 
+> texmacs is a little too slow on my PC.
+
+An emacs interface remains to be done. In the short term (after release
+of the Axiom Book), Tim will resurrect sman which is the readline-like
+interface to Axiom.
+
+In the interim, you can use the OCaml program ledit (it is precompiled
+on my debian, I can't say on your Linux distribution). Use 'ledit
+axiom'. 
+
+I hope it helps a little,
+Yours,
+d.
+-- 
+ david.mentre@wanadoo.fr
+
+
+
+From MAILER-DAEMON Sun Oct 05 22:05:46 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A6Kko-0004BV-QS
+	for mharc-axiom-mail@gnu.org; Sun, 05 Oct 2003 22:05:42 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A6Kka-0003tP-EE
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 22:05:28 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A6Kjv-0002T4-Cv
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 22:05:18 -0400
+Received: from [209.226.175.105] (helo=tomts31-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1A6Kju-0002Sg-Qc
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 22:04:46 -0400
+Received: from Asus ([204.101.104.3]) by tomts31-srv.bellnexxia.net
+	(InterMail vM.5.01.06.05 201-253-122-130-105-20030824) with ESMTP
+	id <20031006020443.RXBN5753.tomts31-srv.bellnexxia.net@Asus>;
+	Sun, 5 Oct 2003 22:04:43 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: "'David MENTRE'" <david.mentre@wanadoo.fr>,
+	<fmaltey@nerim.fr>
+Subject: RE: [Axiom-mail] Looking for beginning with axiom.
+Date: Sun, 5 Oct 2003 22:04:42 -0400
+Message-ID: <001601c38bae$3846f2d0$6601a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4024
+In-Reply-To: <87isn3x69e.fsf@wanadoo.fr>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+Importance: Normal
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 06 Oct 2003 02:05:33 -0000
+
+Hi All,
+
+A priliminary version of the "Axiom with TeXmacs" tutorial
+can now be downloaded from
+
+  http://savannah.nongnu.org/files/?group=3Daxiom
+
+See Axiom_Tutorial and the README.txt file therein.
+
+This is still a "work in progress". I have converted the
+first three chapters of the "Axiom for Windows" tutorial
+(which was originally prepared by NAG for the now defunct
+commercial Windows version of Axiom) to the new TeXmacs
+format. The conversion is not particularly time consumming-
+just a little tedious checking everything and correcting
+a few file names. I should be finished this and will upload
+a updated version later this week.
+
+I will also post a complete version in PDF form in the
+next few days.
+
+I really like the result! I think it shows just how versatile
+TeXmacs is in combination with Axiom.
+
+I am looking for some feedback.
+
+Cheers,
+Bill Page.
+
+> -----Original Message-----
+> From: axiom-mail-bounces+bill.page1=3Dsympatico.ca@nongnu.org=20
+> [mailto:axiom-mail-bounces+bill.page1=3Dsympatico.ca@nongnu.org]
+>  On Behalf Of David MENTRE
+> Sent: Sunday, October 05, 2003 7:40 AM
+> To: fmaltey@nerim.fr
+> Cc: axiom-mail@nongnu.org
+> Subject: Re: [Axiom-mail] Looking for beginning with axiom.
+>=20
+>=20
+> Hello Fran=E7ois,
+>=20
+> A first reply which might not be completely helpful.
+>=20
+> fmaltey@nerim.fr writes:
+>=20
+> > And what I do now ?
+> > I can't get any useful help file.=20
+> > I only find help file in *.dvi format about compiling.
+>=20
+> :) You're right, right now, there is only minimal developer=20
+> documentation, but Tim Daly and Bill Page are working hard to=20
+> produce a complete user documentation. More specifically,=20
+> Bill is working on producing some tutorial and Tim is=20
+> preparing to release as free documentation the Axiom Book=20
+> that describe Axiom in detail.
+>=20
+> If you look at the documentation part of Axiom web site=20
+> (http://www.nongnu.org/axiom/documentation.html), you'll find two
+> pointers:
+>  - a simple tutorial on the basics of Axiom and use of its numerical
+>    operators=20
+>=20
+>  - a pointer to Axiom download section where, under Axiom_book and
+>    Axiom_tutorial, you'll find some introductory text.
+>=20
+> ...=20
+
+
+
+
+From MAILER-DAEMON Sun Oct 05 22:47:54 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A6LPJ-0002vJ-Ms
+	for mharc-axiom-mail@gnu.org; Sun, 05 Oct 2003 22:47:33 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A6LOn-0002Pe-Bb
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 22:47:01 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A6LOC-0001VX-61
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 22:46:56 -0400
+Received: from [140.247.28.55] (helo=petunia.bostoncoop.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1A6LO8-0001Aa-Ed
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 22:46:20 -0400
+Received: by petunia.bostoncoop.net (Postfix, from userid 1000)
+	id 754E7188D8; Sun,  5 Oct 2003 22:46:14 -0400 (EDT)
+Date: Sun, 5 Oct 2003 22:46:14 -0400
+To: Bill Page <bill.page1@sympatico.ca>
+Subject: Re: [Axiom-mail] Looking for beginning with axiom.
+Message-ID: <20031006024614.GA26354@exoskeleton.math.harvard.edu>
+References: <87isn3x69e.fsf@wanadoo.fr> <001601c38bae$3846f2d0$6601a8c0@Asus>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="FCuugMFkClbJLl1L"
+Content-Disposition: inline
+In-Reply-To: <001601c38bae$3846f2d0$6601a8c0@Asus>
+User-Agent: Mutt/1.5.4i
+From: dpt@exoskeleton.math.harvard.edu (Dylan Thurston)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: dpt@math.harvard.edu
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 06 Oct 2003 02:47:23 -0000
+
+
+--FCuugMFkClbJLl1L
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Sun, Oct 05, 2003 at 10:04:42PM -0400, Bill Page wrote:
+> Hi All,
+>=20
+> A priliminary version of the "Axiom with TeXmacs" tutorial
+> can now be downloaded from
+>=20
+>   http://savannah.nongnu.org/files/?group=3Daxiom
+>=20
+> See Axiom_Tutorial and the README.txt file therein.
+
+Looks good, but two immediate comments:
+
+(a) Could you include the README.txt inside the tarball, and have the
+tarball extract in a subdirectory?
+
+(b) After opening tutorialTOC.tm as instructed, there are many points
+in the text where TeXmacs tags are visible (like <Language|>, or
+<hbox|)show>.
+
+Peace,
+	Dylan
+
+--FCuugMFkClbJLl1L
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.3 (GNU/Linux)
+
+iD8DBQE/gNd2Veybfhaa3tcRAsF0AJ9p9b0RQX3TavMOzBj6LRkG5WKppgCgkZdQ
+joVPIsXDdNLKBvYd0n11xdU=
+=GVgE
+-----END PGP SIGNATURE-----
+
+--FCuugMFkClbJLl1L--
+
+
+
+From MAILER-DAEMON Sun Oct 05 23:17:50 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A6Lsb-0007F8-Bx
+	for mharc-axiom-mail@gnu.org; Sun, 05 Oct 2003 23:17:49 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A6LsY-0007CJ-DS
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 23:17:46 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A6Ls2-0006vp-HL
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 23:17:45 -0400
+Received: from [140.247.28.55] (helo=petunia.bostoncoop.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1A6Ls2-0006vJ-4c
+	for axiom-mail@nongnu.org; Sun, 05 Oct 2003 23:17:14 -0400
+Received: by petunia.bostoncoop.net (Postfix, from userid 1000)
+	id A936D188D8; Sun,  5 Oct 2003 23:17:13 -0400 (EDT)
+Date: Sun, 5 Oct 2003 23:17:13 -0400
+To: Bill Page <bill.page1@sympatico.ca>
+Subject: Re: [Axiom-mail] Looking for beginning with axiom.
+Message-ID: <20031006031713.GC26354@exoskeleton.math.harvard.edu>
+References: <87isn3x69e.fsf@wanadoo.fr> <001601c38bae$3846f2d0$6601a8c0@Asus>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="TiqCXmo5T1hvSQQg"
+Content-Disposition: inline
+In-Reply-To: <001601c38bae$3846f2d0$6601a8c0@Asus>
+User-Agent: Mutt/1.5.4i
+From: dpt@exoskeleton.math.harvard.edu (Dylan Thurston)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: dpt@math.harvard.edu
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 06 Oct 2003 03:17:47 -0000
+
+
+--TiqCXmo5T1hvSQQg
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Sun, Oct 05, 2003 at 10:04:42PM -0400, Bill Page wrote:
+> Hi All,
+>=20
+> A priliminary version of the "Axiom with TeXmacs" tutorial
+> can now be downloaded from
+>=20
+>   http://savannah.nongnu.org/files/?group=3Daxiom
+>=20
+> See Axiom_Tutorial and the README.txt file therein.
+
+It's great!
+
+I did try 'radicalSolve(x^4+x+1)', as suggested, but the output left
+something to be desired: I think it's a bug in the line-breaking
+algorithm.  In some of the solutions, the '-' sign before the first term
+got put on its own line, which is wrong.
+
+Peace,
+	Dylan
+
+--TiqCXmo5T1hvSQQg
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.3 (GNU/Linux)
+
+iD8DBQE/gN65Veybfhaa3tcRAiOVAJ4xVTSMGIfdh/IIp7XZbK05q2JE3gCfUZqX
+I+xph7nTRar/VrljVVJl0wY=
+=fvys
+-----END PGP SIGNATURE-----
+
+--TiqCXmo5T1hvSQQg--
+
+
+
+From MAILER-DAEMON Mon Oct 06 10:21:53 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A6WFF-0006Ne-I8
+	for mharc-axiom-mail@gnu.org; Mon, 06 Oct 2003 10:21:53 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A6WFC-0006MA-QW
+	for axiom-mail@nongnu.org; Mon, 06 Oct 2003 10:21:50 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A6WEf-0006Cx-Op
+	for axiom-mail@nongnu.org; Mon, 06 Oct 2003 10:21:49 -0400
+Received: from [209.226.175.183] (helo=tomts21-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1A6WEf-0006Cg-8x
+	for axiom-mail@nongnu.org; Mon, 06 Oct 2003 10:21:17 -0400
+Received: from Asus ([204.101.104.3]) by tomts21-srv.bellnexxia.net
+	(InterMail vM.5.01.06.04 201-253-122-130-104-20030726) with ESMTP
+	id <20031006142114.UGZH12138.tomts21-srv.bellnexxia.net@Asus>;
+	Mon, 6 Oct 2003 10:21:14 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <dpt@math.harvard.edu>
+Subject: RE: [Axiom-mail] Looking for beginning with axiom.
+Date: Mon, 6 Oct 2003 10:21:15 -0400
+Message-ID: <000301c38c15$1c9cdd30$6601a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4024
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+Importance: Normal
+In-Reply-To: <20031006024614.GA26354@exoskeleton.math.harvard.edu>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 06 Oct 2003 14:21:52 -0000
+
+On Sunday, October 05, 2003 10:46 PM Dylan Thurston
+dpt@exoskeleton.math.harvard.edu wrote:
+> 
+> On Sun, Oct 05, 2003 at 10:04:42PM -0400, Bill Page wrote:
+> > Hi All,
+> > 
+> > A priliminary version of the "Axiom with TeXmacs" tutorial 
+> can now be 
+> > downloaded from
+> > 
+> >   http://savannah.nongnu.org/files/?group=axiom
+> > 
+> > See Axiom_Tutorial and the README.txt file therein.
+> 
+> Looks good, but two immediate comments:
+> 
+> (a) Could you include the README.txt inside the tarball, and 
+> have the tarball extract in a subdirectory?
+> 
+
+Done.
+
+> (b) After opening tutorialTOC.tm as instructed, there are 
+> many points in the text where TeXmacs tags are visible (like 
+> <Language|>, or <hbox|)show>.
+>
+
+Are you still having this problem? It sounds like TeXmacs
+is not loading the 'axiom-tutorial.ts' stylesheet where
+these things are defined. Make sure that the file
+'axiom-tutorial.ts' is in the same directory as
+'tutorialTOC.tm'.
+
+The tarball I just uploaded will put everything in one
+subdirectory named 'tutorial'. Everything worked fine for
+me when I extracted it under another account.
+
+Let me know if this helps.
+ 
+> Peace,
+> 	Dylan
+> 
+
+
+
+
+From MAILER-DAEMON Tue Oct 07 01:49:14 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A6kig-0001FU-IK
+	for mharc-axiom-mail@gnu.org; Tue, 07 Oct 2003 01:49:14 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A6kid-0001EI-Td
+	for axiom-mail@nongnu.org; Tue, 07 Oct 2003 01:49:11 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A6ki7-00013g-0V
+	for axiom-mail@nongnu.org; Tue, 07 Oct 2003 01:49:11 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1A6khY-0000VD-PN; Tue, 07 Oct 2003 01:48:04 -0400
+Received: (from root@localhost)
+	by fw.drenet.dnd.ca (8.12.9/8.12.9) id h975m1UX087274;
+	Tue, 7 Oct 2003 01:48:01 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (corporateex.drdc-rddc.gc.ca
+	[131.136.1.77])
+	by fw.drenet.dnd.ca (8.12.9/8.12.9) with ESMTP id h975m0K1087198;
+	Tue, 7 Oct 2003 01:48:00 -0400 (EDT)
+Received: by corporateex.drdc-rddc.gc.ca with Internet Mail Service
+	(5.5.2653.19) id <S7XZHGVX>; Tue, 7 Oct 2003 01:48:28 -0400
+Message-ID: <2BE8D331ED40D611812300080219E7FE339D2D@corporateex.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "'dpt@math.harvard.edu'" <dpt@math.harvard.edu>
+Subject: RE: [Axiom-mail] Looking for beginning with axiom.
+Date: Tue, 7 Oct 2003 01:48:25 -0400 
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Info: scanned for viruses
+Cc: axiom-developer@nongnu.org, texmacs-dev@gnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Oct 2003 05:49:12 -0000
+
+Axiom Users;
+
+I have completed a first draft of the "Axiom with TeXmacs"
+tutorial. You can download it from Axiom_Tutorial at
+
+  http://savannah.nongnu.org/files/?group=axiom
+
+This draft includes information about graphics and the
+library browser although these functions have not yet been
+implemented in the current alpha release of Axiom. Some of
+this functionality may change depending how or if these
+functions are integrated with TeXmacs.
+
+The problem with inconsistent application of the
+axiom-tutorial.ts stylesheet should now be corrected.
+
+For reference and convenience, I have also included a single
+PDF file containing the entire tutorial. It is not necessary
+to install TeXmacs or Axiom in order to view this PDF file.
+
+As usual, I am very interested in your comments, suggestions,
+corrections and criticisms.
+
+Cheers,
+Bill Page.
+
+> -----Original Message-----
+> From: dpt@exoskeleton.math.harvard.edu
+> [mailto:dpt@exoskeleton.math.harvard.edu]
+> Sent: Monday, October 06, 2003 1:20 PM
+> To: Bill Page
+> Subject: Re: [Axiom-mail] Looking for beginning with axiom.
+> 
+> 
+> On Mon, Oct 06, 2003 at 10:21:15AM -0400, Bill Page wrote:
+> > Are you still having this problem? It sounds like TeXmacs
+> > is not loading the 'axiom-tutorial.ts' stylesheet where
+> > these things are defined. Make sure that the file
+> > 'axiom-tutorial.ts' is in the same directory as
+> > 'tutorialTOC.tm'.
+> 
+> It's still happening.  It doesn't happen on the main table of 
+> contents,
+> but when I get to oneStep01.tm I get all those tags.  I tried copying
+> axiom-tutorial.ts into the oneStep directory, but it didn't help.
+> 
+> It also doesn't happen everywhere; there are some places where I see
+> AXIOM.
+> 
+> Peace,
+> 	Dylan
+> 
+
+
+
+
+From MAILER-DAEMON Tue Oct 07 04:14:38 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A6mzO-0007On-41
+	for mharc-axiom-mail@gnu.org; Tue, 07 Oct 2003 04:14:38 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A6mzM-0007OY-4d
+	for axiom-mail@nongnu.org; Tue, 07 Oct 2003 04:14:36 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A6myq-0007K0-Hz
+	for axiom-mail@nongnu.org; Tue, 07 Oct 2003 04:14:35 -0400
+Received: from [62.4.16.102] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1A6myq-0007Jr-7L
+	for axiom-mail@nongnu.org; Tue, 07 Oct 2003 04:14:04 -0400
+Received: from ecritoire (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id 26E4340E4C
+	for <axiom-mail@nongnu.org>; Tue,  7 Oct 2003 10:14:03 +0200 (CEST)
+Received: from fmy by ecritoire with local (Exim 3.35 #1 (Debian))
+	id 1A6n23-0003rB-00
+	for <axiom-mail@nongnu.org>; Tue, 07 Oct 2003 10:17:23 +0200
+To: axiom-mail@nongnu.org
+From: fmaltey@nerim.fr
+Date: 07 Oct 2003 10:17:23 +0200
+Message-ID: <87n0cdlawc.fsf@ecritoire.i-did-not-set--mail-host-address--so-shoot-me>
+Lines: 15
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Subject: [Axiom-mail] several lines in a xterm 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Oct 2003 08:14:36 -0000
+
+Hello,=20
+
+axiom inside texmacs is fine and I can type several lines with [shift-ret=
+urn].
+But I prefer use my old emacs or an xterm and I can't do so.
+
+How can I input one command in several lines.
+Must I do a file and type after )read file.input ?
+Is there another possibility with pipe ?
+
+Must my emacs add a _ at the end of every line, and then how can I=20
+input an if...then...else ?=20
+
+Thanks a lot if you have an idea.
+
+Fran=E7ois
+
+
+
+From MAILER-DAEMON Wed Oct 08 08:35:11 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A7DX5-0000CY-6q
+	for mharc-axiom-mail@gnu.org; Wed, 08 Oct 2003 08:35:11 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A7DX1-0000Bm-KV
+	for axiom-mail@nongnu.org; Wed, 08 Oct 2003 08:35:07 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A7DSd-000793-Nq
+	for axiom-mail@nongnu.org; Wed, 08 Oct 2003 08:31:06 -0400
+Received: from [62.2.95.247] (helo=smtp.hispeed.ch)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1A7DSW-0006ud-Qk
+	for axiom-mail@nongnu.org; Wed, 08 Oct 2003 08:30:28 -0400
+Received: from dclient80-219-12-1.hispeed.ch (dclient80-219-12-1.hispeed.ch
+	[80.219.12.1])
+	by smtp.hispeed.ch (8.12.6/8.12.6/tornado-1.0) with ESMTP id
+	h98CUPs8023137; Wed, 8 Oct 2003 14:30:25 +0200
+From: Hans Peter =?iso-8859-1?q?W=FCrmli?= <wurmli@hispeed.ch>
+To: fmaltey@nerim.fr
+Subject: [Axiom-mail] several lines in a xterm
+Date: Wed, 8 Oct 2003 14:30:41 +0200
+User-Agent: KMail/1.5.3
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200310081430.41767.wurmli@hispeed.ch>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 08 Oct 2003 12:35:09 -0000
+
+
+In emacs try to end lines with _ (i.e. an underscore) and you should be able 
+to use multiple line input.
+
+Regards, H.P.
+
+
+
+
+From MAILER-DAEMON Wed Oct 08 09:56:42 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1A7Eny-0006sg-7k
+	for mharc-axiom-mail@gnu.org; Wed, 08 Oct 2003 09:56:42 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1A7Env-0006q0-7X
+	for axiom-mail@nongnu.org; Wed, 08 Oct 2003 09:56:39 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1A7EnO-0006Nh-SE
+	for axiom-mail@nongnu.org; Wed, 08 Oct 2003 09:56:37 -0400
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.24) id 1A7EnO-0006MA-IQ
+	for axiom-mail@nongnu.org; Wed, 08 Oct 2003 09:56:06 -0400
+Received: from [62.4.16.103] (helo=kraid.nerim.net)
+	by mx20.gnu.org with esmtp (Exim 4.24) id 1A7EmC-00038O-1s
+	for axiom-mail@nongnu.org; Wed, 08 Oct 2003 09:54:52 -0400
+Received: from ecritoire (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id 8618B40EC8
+	for <axiom-mail@nongnu.org>; Wed,  8 Oct 2003 15:54:41 +0200 (CEST)
+Received: from fmy by ecritoire with local (Exim 3.35 #1 (Debian))
+	id 1A7EpJ-0002kw-00
+	for <axiom-mail@nongnu.org>; Wed, 08 Oct 2003 15:58:05 +0200
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] several lines in a xterm
+References: <200310081430.41767.wurmli@hispeed.ch>
+From: fmaltey@nerim.fr
+Date: 08 Oct 2003 15:58:04 +0200
+In-Reply-To: <200310081430.41767.wurmli@hispeed.ch>
+Message-ID: <87pth796hf.fsf@ecritoire.i-did-not-set--mail-host-address--so-shoot-me>
+Lines: 15
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 08 Oct 2003 13:56:40 -0000
+
+Hans Peter W=FCrmli <wurmli@hispeed.ch> writes:
+
+> In emacs try to end lines with _ (i.e. an underscore) and you should be=
+ able=20
+> to use multiple line input.
+
+Thanks, it works, =20
+but then the syntax isn't the same in a file (with the read command)
+and on line.=20
+
+Is it possible to have exactly the same syntax when we read a file=20
+and with the keyboard input ?
+
+Regards.
+
+Fran=E7ois
+
+
+

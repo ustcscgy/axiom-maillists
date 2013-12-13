@@ -1,0 +1,352 @@
+From MAILER-DAEMON Wed Dec 07 16:39:51 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ek70x-0002zv-Em
+	for mharc-axiom-mail@gnu.org; Wed, 07 Dec 2005 16:39:51 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ek70u-0002wn-2R
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 16:39:48 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ek70s-0002ub-82
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 16:39:47 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ek70r-0002uI-Vt
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 16:39:46 -0500
+Received: from [217.147.32.1] (helo=mail.init.lt)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34) id 1Ek71m-0004Ax-Cp
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 16:40:42 -0500
+Received: from ctv-217-147-33-159.init.lt ([217.147.33.159]
+	helo=[192.168.1.36]) by mail.init.lt with esmtp (Exim 4.30; FreeBSD)
+	id 1Ek70Y-000Dcf-OK
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 23:39:26 +0200
+Message-ID: <4397568E.9080507@soften.ktu.lt>
+Date: Wed, 07 Dec 2005 23:39:26 +0200
+From: Jurgis Pralgauskis <jurgpral@soften.ktu.lt>
+User-Agent: Mozilla Thunderbird 1.0.6 (Windows/20050716)
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Axiom-mail] tracking  the solver
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 07 Dec 2005 21:39:48 -0000
+
+hello,
+I generaly know, what Axiom is up to,
+but I am interested, is it possible to track the solver as the problem 
+is beeing solved
+can I get step by step output (as we are taught in calculus studies) 
+instead of just the final answer?
+
+or is it better to ask such questions in axiom-developer mailing list?
+fanks in adwance
+
+ps.: the idea behind this is that I want to show our lecturers, that 
+swotting the formulas or methods is no big use in XXI age. The only 
+thing You have to think is to look through the formulas and find the 
+pattern, according to whitch solving goes on. The two first semesters of 
+higher math is mainly swoting the methods and no big imagination 
+training -  I'd say, why are we taught to invent bicycles?
+
+-- 
+Jurgis Pralgauskis
+mob.: +37061677613; ICQ# 147307045; irc: dz0_; jabber: dz0
+Don't worry, be happy :) and make things better ;)
+
+
+
+From MAILER-DAEMON Wed Dec 07 17:02:52 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ek7NE-00030s-Py
+	for mharc-axiom-mail@gnu.org; Wed, 07 Dec 2005 17:02:52 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ek7ND-00030m-GI
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 17:02:51 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ek7NC-00030M-Pd
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 17:02:51 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ek7NC-00030J-M9
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 17:02:50 -0500
+Received: from [131.130.1.183] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Ek7O7-0000gR-4M
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 17:03:47 -0500
+Received: from localhost.localdomain ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id jB7M264S012779; 
+	Wed, 7 Dec 2005 23:02:07 +0100 (CET)
+Sender: rubey@localhost.localdomain
+To: Jurgis Pralgauskis <jurgpral@soften.ktu.lt>
+Subject: Re: [Axiom-mail] tracking  the solver
+References: <4397568E.9080507@soften.ktu.lt>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 07 Dec 2005 23:02:30 +0100
+In-Reply-To: <4397568E.9080507@soften.ktu.lt>
+Message-ID: <85vey0ftvt.fsf@localhost.localdomain>
+Lines: 39
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 07 Dec 2005 22:02:51 -0000
+
+Jurgis Pralgauskis <jurgpral@soften.ktu.lt> writes:
+
+> hello,
+
+> I generaly know, what Axiom is up to, but I am interested, is it possible to
+> track the solver as the problem is beeing solved can I get step by step
+> output (as we are taught in calculus studies) instead of just the final
+> answer?
+
+Well, the perfect solution does not exist yet, although I have ideas how to go
+about it. Meanwhile you can do the following (if you have a lot of time...)
+
+* Find out which routines are invoked
+
+this can be done with
+
+)set message bottom on
+
+to get a rough picture. As soon as you know in which domain/package the
+routines are that you are interested in, say
+
+)trace XYZ )math
+
+where XYZ is the name of the package. 
+
+Alternatively, you go to the source, edit it by inserting statements like
+
+  output("Doing Gaussian elimination")$OutputPackage
+
+and compile the modified file with
+
+)co xyz.spad
+
+If you do something along this lines, this would be truly useful (and it will
+pretty much guarantee that you will know the relevant algorithms by heart
+soon). Thus, if you start doing this, please post your experiences and
+modifications. Maybe we can incorporate them in a more general solution!
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Dec 07 17:23:12 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ek7gu-0003NM-30
+	for mharc-axiom-mail@gnu.org; Wed, 07 Dec 2005 17:23:12 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ek7gs-0003NG-9M
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 17:23:10 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ek7gq-0003N2-FC
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 17:23:10 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ek7gq-0003Mz-C4
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 17:23:08 -0500
+Received: from [24.154.1.24] (helo=mx-5.zoominternet.net)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34) id 1Ek7hl-0004kZ-3Y
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 17:24:05 -0500
+Received: from mua-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-5.zoominternet.net (8.12.11/8.12.11) with ESMTP id jB7MMoRQ027468;
+	Wed, 7 Dec 2005 17:22:50 -0500
+Received: from localhost.localdomain (acs-72-23-16-126.zoominternet.net
+	[72.23.16.126])
+	by mua-1.zoominternet.net (Postfix) with ESMTP id C3A9C7F417;
+	Wed,  7 Dec 2005 17:22:49 -0500 (EST)
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id jB7NCoZ01886;
+	Wed, 7 Dec 2005 18:12:50 -0500
+Date: Wed, 7 Dec 2005 18:12:50 -0500
+Message-Id: <200512072312.jB7NCoZ01886@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: martin.rubey@univie.ac.at
+In-reply-to: <85vey0ftvt.fsf@localhost.localdomain> (message from Martin Rubey
+	on 07 Dec 2005 23:02:30 +0100)
+Subject: Re: [Axiom-mail] tracking  the solver
+References: <4397568E.9080507@soften.ktu.lt>
+	<85vey0ftvt.fsf@localhost.localdomain>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.24
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 07 Dec 2005 22:23:10 -0000
+
+re: 
+
+  output("Doing Gaussian elimination")$OutputPackage
+
+why not try this in your local axiom system and see how well it
+works out? if it is useful output in a reasonably general setting
+we could add it to the algebra and add a 
+
+  )set output algorithms on
+
+t
+
+
+
+From MAILER-DAEMON Wed Dec 07 22:00:05 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EkC0r-00031w-4j
+	for mharc-axiom-mail@gnu.org; Wed, 07 Dec 2005 22:00:05 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EkC0p-00031c-9u
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 22:00:03 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EkC0m-000317-V0
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 22:00:02 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EkC0m-000311-Ps
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 22:00:00 -0500
+Received: from [216.251.41.219] (helo=mails19.megamailservers.com)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34) id 1EkC1j-0000x3-Kt
+	for axiom-mail@nongnu.org; Wed, 07 Dec 2005 22:00:59 -0500
+X-Authenticated-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.61.191.217]) (authenticated bits=0)
+	by mails19.megamailservers.com (8.13.1/8.13.1) with ESMTP id
+	jB82xNxc028070; Wed, 7 Dec 2005 21:59:34 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Jurgis Pralgauskis'" <jurgpral@soften.ktu.lt>
+Subject: RE: [Axiom-mail] tracking  the solver
+Date: Wed, 7 Dec 2005 21:59:12 -0500
+Message-ID: <01d801c5fba3$62abbb70$6800a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+In-reply-to: <4397568E.9080507@soften.ktu.lt>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+Importance: Normal
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 08 Dec 2005 03:00:03 -0000
+
+On December 7, 2005 4:39 PM Jurgis Pralgauskis wrote:
+> ...
+> can I get step by step output (as we are taught in calculus
+> studies) instead of just the final answer?
+
+One thing that you should keep in mind is that for many (most?)
+mathematical problems, the type of symbolic manipulation that
+is done by the computer to solve the problem is quite different
+than the usual approach used by a human being. For example,
+how often have you used Grobner basis methods when solving
+an equation by hand? Similarly the symbolic integration
+algorithm is quite unlike the methods typically taught in
+calculus studies.
+
+So understanding Axiom's solution method, step by step will
+certainly teach you about doing symbolic mathematics by
+computer, but I have some doubts about it's relevance to
+learning mathematics in general.
+
+Systems such as Maple and Mathematica usually attempt to
+address this issue by implementing additional ways of solving
+certain problem and also a set of semi-manual methods for
+manipulating expressions (sometimes called "student methods")
+which are good for learning but are seldom as efficient as
+the usual computer algebra algorithms. Certainly this approach
+is also possible in Axiom, but as far as I know, very little
+work of this kind has been done yet.
+
+> 
+> or is it better to ask such questions in axiom-developer
+> mailing list? thanks in advance
+
+I think axiom-math is the right place to ask this kind of
+question.
+
+> 
+> ps.: the idea behind this is that I want to show our
+> lecturers, that swotting the formulas or methods is no
+> big use in XXI age.
+
+What is the word "swotting"?
+
+If you mean that symbolic computer algebra systems are now
+useful for a very wide range of applications and that they
+can solve many problems that would be (nearly) impossible
+or at least quite impractical by hand, then I agree. But I
+also think that these systems have a long way to go before
+they can be presented as "expert mathematicians" in the sense
+of an artificial intelligence. All of these systems, including
+the most expensive commercial systems, should come with a
+large sign to put on your desk that says: "Use at your own
+risk!" ;)
+
+> The only thing you have to think is to look through the
+> formulas and find the pattern, according to which solving
+> goes on. The two first semesters of higher math is mainly
+> swotting the methods and no big imagination training -  I'd
+> say, why are we taught to invent bicycles?
+> 
+
+Well, why are you even taught how to manually manipulate
+the "symbolic" decimal notation for integer addition and
+multiplication? I think the answer at least in part, is that
+it is very difficult to teach people how to "think" (because
+mostly we do not know how we think) so instead we teach them
+how to calculate and hope that some of them - mostly by
+accident - might also start to think. ;)
+
+BTW, very little of the calculation that Axiom does is based
+on "finding patterns".
+
+Regards,
+Bill Page.
+
+
+
+
+

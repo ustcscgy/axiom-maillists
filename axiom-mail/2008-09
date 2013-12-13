@@ -1,0 +1,601 @@
+From MAILER-DAEMON Thu Sep 04 00:24:34 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Kb6OY-00033O-CO
+	for mharc-axiom-mail@gnu.org; Thu, 04 Sep 2008 00:24:34 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Kb6OV-0002zX-SZ
+	for axiom-mail@nongnu.org; Thu, 04 Sep 2008 00:24:31 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Kb6OU-0002xk-79
+	for axiom-mail@nongnu.org; Thu, 04 Sep 2008 00:24:31 -0400
+Received: from [199.232.76.173] (port=36948 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Kb6OU-0002xT-1e
+	for axiom-mail@nongnu.org; Thu, 04 Sep 2008 00:24:30 -0400
+Received: from rv-out-0708.google.com ([209.85.198.248]:24889)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <rocanaan@gmail.com>) id 1Kb6OT-0004HG-Uy
+	for axiom-mail@nongnu.org; Thu, 04 Sep 2008 00:24:30 -0400
+Received: by rv-out-0708.google.com with SMTP id f25so2512083rvb.22
+	for <axiom-mail@nongnu.org>; Wed, 03 Sep 2008 21:24:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from:to
+	:subject:mime-version:content-type;
+	bh=+qBVV80W99DunFRDJaoio/m3BplDL8tptbQ0xFeziSk=;
+	b=eW53rgSnsIC2DUufq/CoA4m9xkpThK75QT3NLTVSdGA39BAUbzBUSpK/ZOFFz2y7Z4
+	p48KsfW/574udgu2QkH3aOR8EFFhXhOZIWTSbRpB+nHlw3UsHe+WavvrLg7+gur6Kjja
+	esT4//yoHLid8SL0BX7Bt/VbScGgsrU1lHEnk=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:to:subject:mime-version:content-type;
+	b=CkCRq4qihf3qSRoc6PUNRyydA9lTw98VnpeGI+W7cWw0HCDcKWKplDZ/sZem/fqWGa
+	iBfB+lnnPCIyZ20TxKjm1YC1zD4IgVGX6HDMycmVqczCR3mw4Jv0gTT2wiKJAfYKSq7K
+	sfidSMbpEqK0GBlvz0pEwEtBbVrNhTHHrHbto=
+Received: by 10.140.165.21 with SMTP id n21mr5385083rve.244.1220502267945;
+	Wed, 03 Sep 2008 21:24:27 -0700 (PDT)
+Received: by 10.141.67.18 with HTTP; Wed, 3 Sep 2008 21:24:27 -0700 (PDT)
+Message-ID: <d4e7432c0809032124s2fc63a3bv935f64b80755018f@mail.gmail.com>
+Date: Thu, 4 Sep 2008 01:24:27 -0300
+From: "Rodrigo Canaan" <rocanaan@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_30581_1055953.1220502267931"
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] Help on polynomial coefficients
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 04 Sep 2008 04:24:32 -0000
+
+------=_Part_30581_1055953.1220502267931
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+I am making a program to find a polynomial P(x,y) that is the solution to a
+given system. The degree of P is given. I need one variable to represent
+each coefficient P, so I can find all coefficients, determining the
+polinomial.
+Problem is, I don't know how to assign one variable to each coefficient, as
+I don't know in advance the degree of P, thus don't even know in advance how
+many coefficients I am going to use
+
+What I wish I could do is, given the degree P, build P as a sum of terms
+where each coefficient is a variable.
+If my degree was 1, for example, I want to build P as
+P:=A*x+B*y+C
+If my degree was 2, I would have:
+P:=A*x^2 + B*y^2 +C*x*y +D*x +E*y +F
+I have no idea how to do it for a general degree, on axiom
+
+Thanks for the help!
+
+------=_Part_30581_1055953.1220502267931
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+<div dir="ltr">I am making a program to find a polynomial P(x,y) that is the solution to a given system. The degree of P is given. I need one variable to represent each coefficient P, so I can find all coefficients, determining the polinomial.<br>
+Problem is, I don&#39;t know how to assign one variable to each coefficient, as I don&#39;t know in advance the degree of P, thus don&#39;t even know in advance how many coefficients I am going to use<br><br>What I wish I could do is, given the degree P, build P as a sum of terms where each coefficient is a variable.<br>
+If my degree was 1, for example, I want to build P as<br>P:=A*x+B*y+C<br>If my degree was 2, I would have:<br>P:=A*x^2 + B*y^2 +C*x*y +D*x +E*y +F<br>I have no idea how to do it for a general degree, on axiom<br><br>Thanks for the help!<br>
+</div>
+
+------=_Part_30581_1055953.1220502267931--
+
+
+
+From MAILER-DAEMON Thu Sep 04 05:15:49 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KbAwP-0000Iv-J2
+	for mharc-axiom-mail@gnu.org; Thu, 04 Sep 2008 05:15:49 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KbAwM-0000Ih-JI
+	for axiom-mail@nongnu.org; Thu, 04 Sep 2008 05:15:46 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KbAwI-0000IK-Vs
+	for axiom-mail@nongnu.org; Thu, 04 Sep 2008 05:15:45 -0400
+Received: from [199.232.76.173] (port=40392 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KbAwI-0000IH-PF
+	for axiom-mail@nongnu.org; Thu, 04 Sep 2008 05:15:42 -0400
+Received: from mail35.messagelabs.com ([62.231.131.195]:42476)
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <themos@nag.co.uk>) id 1KbAwI-0000h6-Ow
+	for axiom-mail@nongnu.org; Thu, 04 Sep 2008 05:15:43 -0400
+X-VirusChecked: Checked
+X-Env-Sender: themos@nag.co.uk
+X-Msg-Ref: server-7.tower-35.messagelabs.com!1220519739!24572703!1
+X-StarScan-Version: 5.5.12.14.2; banners=nag.co.uk,-,-
+X-Originating-IP: [62.231.145.242]
+Received: (qmail 18381 invoked from network); 4 Sep 2008 09:15:39 -0000
+Received: from nagmx1.nag.co.uk (HELO nagmx1.nag.co.uk) (62.231.145.242)
+	by server-7.tower-35.messagelabs.com with SMTP;
+	4 Sep 2008 09:15:39 -0000
+Received: from loanamd6.nag.co.uk (loanamd6.nag.co.uk [192.156.217.152])
+	by nagmx1.nag.co.uk (Postfix) with ESMTP id 26E5912015F
+	for <axiom-mail@nongnu.org>; Thu,  4 Sep 2008 10:14:20 +0100 (BST)
+From: Themos Tsikas <themos@nag.co.uk>
+Organization: NAG Ltd
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Help on polynomial coefficients
+Date: Thu, 4 Sep 2008 10:15:38 +0100
+User-Agent: KMail/1.9.6 (enterprise 20070904.708012)
+References: <d4e7432c0809032124s2fc63a3bv935f64b80755018f@mail.gmail.com>
+In-Reply-To: <d4e7432c0809032124s2fc63a3bv935f64b80755018f@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200809041015.39009.themos@nag.co.uk>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: themos@nag.co.uk
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 04 Sep 2008 09:15:47 -0000
+
+P:=reduce(+,[C[i]*x^i for i in 0..10])
+
+
+On Thursday 04 September 2008, Rodrigo Canaan wrote:
+> I am making a program to find a polynomial P(x,y) that is the solution to a
+> given system. The degree of P is given. I need one variable to represent
+> each coefficient P, so I can find all coefficients, determining the
+> polinomial.
+> Problem is, I don't know how to assign one variable to each coefficient, as
+> I don't know in advance the degree of P, thus don't even know in advance
+> how many coefficients I am going to use
+>
+> What I wish I could do is, given the degree P, build P as a sum of terms
+> where each coefficient is a variable.
+> If my degree was 1, for example, I want to build P as
+> P:=A*x+B*y+C
+> If my degree was 2, I would have:
+> P:=A*x^2 + B*y^2 +C*x*y +D*x +E*y +F
+> I have no idea how to do it for a general degree, on axiom
+>
+> Thanks for the help!
+
+
+
+________________________________________________________________________
+The Numerical Algorithms Group Ltd is a company registered in England
+and Wales with company number 1249803. The registered office is:
+Wilkinson House, Jordan Hill Road, Oxford OX2 8DR, United Kingdom.
+
+This e-mail has been scanned for all viruses by Star. The service is
+powered by MessageLabs. 
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Thu Sep 04 05:45:31 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1KbBP8-0007Pn-QF
+	for mharc-axiom-mail@gnu.org; Thu, 04 Sep 2008 05:45:30 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1KbBP6-0007Of-Vv
+	for axiom-mail@nongnu.org; Thu, 04 Sep 2008 05:45:29 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1KbBP1-0007Kx-HO
+	for axiom-mail@nongnu.org; Thu, 04 Sep 2008 05:45:25 -0400
+Received: from [199.232.76.173] (port=50076 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1KbBP0-0007K5-V3
+	for axiom-mail@nongnu.org; Thu, 04 Sep 2008 05:45:23 -0400
+Received: from mx-8.zoominternet.net ([24.154.1.27]:49917
+	helo=cm-2.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1KbBP0-0005Wy-0g
+	for axiom-mail@nongnu.org; Thu, 04 Sep 2008 05:45:22 -0400
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=XF4-VsZtouQA:10 a=1CGqefJhIEkA:10
+	a=E8rTNAPPKTgA:10 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=TNMdvXsdpCaNZJQIU1wA:9 a=QzmTzZcCQsaj-9_cKUGjPYfUfU8A:4
+	a=yqFbmg6DZFsA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.47] ([24.154.1.47:44996] helo=pop-4.zoominternet.net)
+	by mx-8.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 91/5D-00416-C1EAFB84; Thu, 04 Sep 2008 05:45:00 -0400
+Received: (qmail 19337 invoked from network); 4 Sep 2008 09:45:02 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-4.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 4 Sep 2008 09:45:02 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id m84BBu921884;
+	Thu, 4 Sep 2008 07:11:56 -0400
+Date: Thu, 4 Sep 2008 07:11:56 -0400
+Message-Id: <200809041111.m84BBu921884@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: rocanaan@gmail.com
+In-reply-to: <d4e7432c0809032124s2fc63a3bv935f64b80755018f@mail.gmail.com>
+	(rocanaan@gmail.com)
+Subject: Re: [Axiom-mail] Help on polynomial coefficients
+References: <d4e7432c0809032124s2fc63a3bv935f64b80755018f@mail.gmail.com>
+X-detected-kernel: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 04 Sep 2008 09:45:29 -0000
+
+>I am making a program to find a polynomial P(x,y) that is the solution to a
+>given system. The degree of P is given. I need one variable to represent
+>each coefficient P, so I can find all coefficients, determining the
+>polinomial.
+>Problem is, I don't know how to assign one variable to each coefficient, as
+>I don't know in advance the degree of P, thus don't even know in advance how
+>many coefficients I am going to use
+>
+>What I wish I could do is, given the degree P, build P as a sum of terms
+>where each coefficient is a variable.
+>If my degree was 1, for example, I want to build P as
+>P:=A*x+B*y+C
+>If my degree was 2, I would have:
+>P:=A*x^2 + B*y^2 +C*x*y +D*x +E*y +F
+>I have no idea how to do it for a general degree, on axiom
+
+I'm not sure I understand your question fully.
+You can generate coefficients quite simply with:
+
+a:=[subscript(A,[i]) for i in 1..5]
+
+   [A  ,A  ,A  ,A  ,A  ]
+     1   2   3   4   5
+
+and you can construct polynomial with
+
+f:=subscript(A,[0])
+for i in 1..5 repeat f:=y**i*a.i
+f
+   
+     5      4      3      2      
+  A y  + A y  + A y  + A y  + A y + A
+   5      4      3      2      1     0
+
+Perhaps you could say more about the general pattern you want.
+
+Tim
+
+
+
+
+
+From MAILER-DAEMON Thu Sep 25 21:17:39 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Kj1xj-0007f3-6v
+	for mharc-axiom-mail@gnu.org; Thu, 25 Sep 2008 21:17:39 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Kj1xh-0007dw-Gy
+	for axiom-mail@nongnu.org; Thu, 25 Sep 2008 21:17:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Kj1xf-0007at-Bc
+	for axiom-mail@nongnu.org; Thu, 25 Sep 2008 21:17:36 -0400
+Received: from [199.232.76.173] (port=52794 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Kj1xf-0007ao-7d
+	for axiom-mail@nongnu.org; Thu, 25 Sep 2008 21:17:35 -0400
+Received: from mu-out-0910.google.com ([209.85.134.188]:8765)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <christopher.schwaab@gmail.com>) id 1Kj1xe-0000dd-VD
+	for axiom-mail@nongnu.org; Thu, 25 Sep 2008 21:17:35 -0400
+Received: by mu-out-0910.google.com with SMTP id w1so974719mue.2
+	for <axiom-mail@nongnu.org>; Thu, 25 Sep 2008 18:17:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from:to
+	:subject:mime-version:content-type;
+	bh=przSfLmikDyZ74FTllMdr3fc9sgo83CEq3DsjiEWkuY=;
+	b=mMGLp1VWKUWguW6vuaZto7lgqwR+tQu4R1/HsmMEAMNz+LhYm+AqeGasPsS0Z2iWfY
+	nGMTOY3l7QUG2iM6SJ5bCIX79qvjtPEc1zpTdVx5T31kqN8uRAvKhD6ZpdwgxzTHhAT+
+	+6ycMLtK90i6gEfOgXigaS9vXHgP/hzObzsNg=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:to:subject:mime-version:content-type;
+	b=dRzNAs9Hw0U1aiFvdUWkaMP0SCGN5p/3UNXR7aZMkJUCgm0YQJ4TTzW1ATiPOva+cW
+	g3bW5OvTdYIhSDw/Yc61iDjKAPK16ycHa2czYGHZjLyuYKAIecRe46kKMSR0qi/9x21q
+	pqSLgdANVAkEshSVO5M54CGlQhPJU15pZsWBw=
+Received: by 10.103.248.1 with SMTP id a1mr414129mus.57.1222391853375;
+	Thu, 25 Sep 2008 18:17:33 -0700 (PDT)
+Received: by 10.103.23.17 with HTTP; Thu, 25 Sep 2008 18:17:33 -0700 (PDT)
+Message-ID: <1236777d0809251817s3a7586ack8dc095f15bd6e777@mail.gmail.com>
+Date: Thu, 25 Sep 2008 19:17:33 -0600
+From: "Christopher Schwaab" <christopher.schwaab@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_13840_22665911.1222391853359"
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] Axiom in LaTeX file
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 26 Sep 2008 01:17:38 -0000
+
+------=_Part_13840_22665911.1222391853359
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Hi, is there a way to embed axiom in latex?  I saw some stuff on a python
+script that just hands everything between "\begin{axiom}...\end{axiom}" to
+axiom but I can't seem to find any info on it.  Did a tool like that ever
+get finished or did someone come up with a different solution?
+
+Thanks.
+- Chris
+
+------=_Part_13840_22665911.1222391853359
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+<div dir="ltr">Hi, is there a way to embed axiom in latex?&nbsp; I saw some stuff on a python script that just hands everything between &quot;\begin{axiom}...\end{axiom}&quot; to axiom but I can&#39;t seem to find any info on it.&nbsp; Did a tool like that ever get finished or did someone come up with a different solution?<br>
+<br>Thanks.<br>- Chris<br></div>
+
+------=_Part_13840_22665911.1222391853359--
+
+
+
+From MAILER-DAEMON Thu Sep 25 21:46:47 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Kj2Pv-00038Y-4G
+	for mharc-axiom-mail@gnu.org; Thu, 25 Sep 2008 21:46:47 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Kj2Pt-00037z-6H
+	for axiom-mail@nongnu.org; Thu, 25 Sep 2008 21:46:45 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Kj2Pr-00037h-4r
+	for axiom-mail@nongnu.org; Thu, 25 Sep 2008 21:46:44 -0400
+Received: from [199.232.76.173] (port=45480 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Kj2Pq-00037e-Vf
+	for axiom-mail@nongnu.org; Thu, 25 Sep 2008 21:46:43 -0400
+Received: from mx-7.zoominternet.net ([24.154.1.26]:52098
+	helo=cm-1.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1Kj2Pq-0004j4-Mt
+	for axiom-mail@nongnu.org; Thu, 25 Sep 2008 21:46:42 -0400
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=JkXcl-L4xngA:10 a=E8rTNAPPKTgA:10
+	a=9x1qJYSYWOoMgoVr+WVG7Q==:17 a=wRLNpYKltFWSvNqSKHUA:9
+	a=QcbNT6ZmNCreDgC4TGmbNQeRAQwA:4 a=C35D7iIojSgA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.45] ([24.154.1.45:57569] helo=pop-2.zoominternet.net)
+	by mx-7.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 1A/3C-11990-1FE3CD84; Thu, 25 Sep 2008 21:46:25 -0400
+Received: (qmail 14386 invoked from network); 26 Sep 2008 01:46:27 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-2.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 26 Sep 2008 01:46:27 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id m8Q1kMY31747;
+	Thu, 25 Sep 2008 21:46:22 -0400
+Date: Thu, 25 Sep 2008 21:46:22 -0400
+Message-Id: <200809260146.m8Q1kMY31747@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: christopher.schwaab@gmail.com
+In-reply-to: <1236777d0809251817s3a7586ack8dc095f15bd6e777@mail.gmail.com>
+	(christopher.schwaab@gmail.com)
+Subject: Re: [Axiom-mail] Axiom in LaTeX file
+References: <1236777d0809251817s3a7586ack8dc095f15bd6e777@mail.gmail.com>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 26 Sep 2008 01:46:45 -0000
+
+Chris,
+
+>Hi, is there a way to embed axiom in latex?  I saw some stuff on a python
+>script that just hands everything between "\begin{axiom}...\end{axiom}" to
+>axiom but I can't seem to find any info on it.  Did a tool like that ever
+>get finished or did someone come up with a different solution?
+
+I did copy some information on this technique that would allow Axiom
+to run from latex. And I carefully saved it away so I could use it.
+And I carefully wrote myself a todo item to experiment with it. But
+I forgot to write down where I stored it. Sigh.
+
+It does seem possible. If I come across it I'll let you know.
+
+Tim
+
+
+
+From MAILER-DAEMON Thu Sep 25 23:40:01 2008
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Kj4BV-0001O0-SN
+	for mharc-axiom-mail@gnu.org; Thu, 25 Sep 2008 23:40:01 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Kj4BT-0001Nj-ML
+	for axiom-mail@nongnu.org; Thu, 25 Sep 2008 23:39:59 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Kj4BS-0001Lx-7y
+	for axiom-mail@nongnu.org; Thu, 25 Sep 2008 23:39:59 -0400
+Received: from [199.232.76.173] (port=45317 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Kj4BS-0001Ln-2e
+	for axiom-mail@nongnu.org; Thu, 25 Sep 2008 23:39:58 -0400
+Received: from rv-out-0708.google.com ([209.85.198.247]:41164)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <rocanaan@gmail.com>) id 1Kj4BR-0002AO-Oj
+	for axiom-mail@nongnu.org; Thu, 25 Sep 2008 23:39:58 -0400
+Received: by rv-out-0708.google.com with SMTP id f25so663212rvb.22
+	for <axiom-mail@nongnu.org>; Thu, 25 Sep 2008 20:39:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from:to
+	:subject:mime-version:content-type;
+	bh=YVi/ctOaC30H46OZj6vEAP0n8zUuM3VAFx5O2uU7dnk=;
+	b=dnWpwL/5e1mMU2/4G7Bs9JAVoBY/ljr6grE0g/Pa4dhFhGXgYlO3ua2gPu88fZwKM5
+	Bb+claDflH2CV56YllDCgOCpEy1eJJK5Eer7UFfG5zYNIh4qQy3cq4ZT6qIsUYDAF1zi
+	VMJknSekt+JIXPVnbnF6dIR9HfVwuXJxxoKk0=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:to:subject:mime-version:content-type;
+	b=qkwkIp4x1F7zBx0JaoDWQ+QRc2ZF2HdjRKaEXfWLTLirRoTxPnxFw9K2GoJTXXCKP5
+	x+Jpcn6GZ65GZOu2XoS+93WJt7boVRGVR6P89kISvuT8CvctI5ByDJpTPAQKiyj/2YMQ
+	YQcUG/8NQdOt1iZdrWg1Gz2Y8pVh9of6X4oqk=
+Received: by 10.140.127.20 with SMTP id z20mr354702rvc.77.1222400395525;
+	Thu, 25 Sep 2008 20:39:55 -0700 (PDT)
+Received: by 10.141.67.18 with HTTP; Thu, 25 Sep 2008 20:39:55 -0700 (PDT)
+Message-ID: <d4e7432c0809252039g10250cffq20329b89aa7fcf6b@mail.gmail.com>
+Date: Fri, 26 Sep 2008 00:39:55 -0300
+From: "Rodrigo Canaan" <rocanaan@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_17499_21019483.1222400395518"
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] Problem with function "solve"
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 26 Sep 2008 03:40:00 -0000
+
+------=_Part_17499_21019483.1222400395518
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_17500_27120540.1222400395519"
+
+------=_Part_17500_27120540.1222400395519
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Well I am trying to solve a big system of linear equations on Axiom. It's
+equations are stored in a list called D. The problem is, when I call the
+function solve(D), it gives me an error, saying the system doesn't have a
+finite number of answers. I first thoguht it is because the system is not
+determined.
+
+But if I try solving a smaller system with the same function solve, it will
+return me a parametric  answer, instead of that error
+
+The files I annexed generate the system. If you read all files on axiom and
+then call principal (wich is the portuguese word for "main"), you will have,
+in the variables P and Q, 2 polynomials, in the variable lista, a list
+containing information on some straight lines ([a,b,c] meaning
+"a*x+b*y+c=0), and, in the variable D, the system that will be solved, that
+was creating based on P, Q, and lista. But, if you tri to solve(D), it won't
+work, even thought D actually contains a system (you can chek by just
+printing it's value).
+
+If anyone knows why the function solve isn't working for the system D, it
+would help me a lot!
+
+Thanks!
+
+------=_Part_17500_27120540.1222400395519
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+<div dir="ltr">Well I am trying to solve a big system of linear equations on Axiom. It&#39;s equations are stored in a list called D. The problem is, when I call the function solve(D), it gives me an error, saying the system doesn&#39;t have a finite number of answers. I first thoguht it is because the system is not determined.<br>
+<br>But if I try solving a smaller system with the same function solve, it will return me a parametric&nbsp; answer, instead of that error<br><br>The files I annexed generate the system. If you read all files on axiom and then call principal (wich is the portuguese word for &quot;main&quot;), you will have, in the variables P and Q, 2 polynomials, in the variable lista, a list containing information on some straight lines ([a,b,c] meaning &quot;a*x+b*y+c=0), and, in the variable D, the system that will be solved, that was creating based on P, Q, and lista. But, if you tri to solve(D), it won&#39;t work, even thought D actually contains a system (you can chek by just printing it&#39;s value).<br>
+<br>If anyone knows why the function solve isn&#39;t working for the system D, it would help me a lot!<br><br>Thanks!<br><br><br></div>
+
+------=_Part_17500_27120540.1222400395519--
+
+------=_Part_17499_21019483.1222400395518
+Content-Type: application/octet-stream; name=geraPol.input
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_flk9kpgz0
+Content-Disposition: attachment; filename=geraPol.input
+
+DQpnZXJhUG9sKGk6SW50ZWdlcixncmF1OkludGVnZXIpOlBvbHlub21pYWwgQWxnZWJyYWljTnVt
+YmVyPT0NCiAgIFA6UG9seW5vbWlhbCBBbGdlYnJhaWNOdW1iZXI6PTANCiAgIHdoaWxlIGdyYXU+
+PTAgcmVwZWF0DQogICAgICBQOj1QK3JlZHVjZSgrLFtDW2kra10qeCoqayp5KiooZ3JhdS1rKSBm
+b3IgayAgaW4gMC4uZ3JhdV0pDQogICAgICBpOj1pK2dyYXUrMSANCiAgICAgIGdyYXU6PWdyYXUt
+MQ0KICAgcmV0dXJuIFA=
+------=_Part_17499_21019483.1222400395518
+Content-Type: application/octet-stream; name=principal.input
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_flk9lln61
+Content-Disposition: attachment; filename=principal.input
+
+bWFjcm8gcHJpbmNpcGFsPT0NCiAgICBEOj1bXQ0KICAgIFA6PWdlcmFQb2woMCw1KQ0KICAgIFE6
+PWdlcmFQb2woMjEsNSkNCiAgICBpOj0xDQogICAgd2hpbGUgaTwxNSByZXBlYXQNCiAgICAgICBE
+Oj1hcHBlbmQoRCxjb2VmaWNpZW50ZXMxKFAsUSxsaXN0YS5pLjEsbGlzdGEuaS4yLGxpc3RhLmku
+Myw1KSkNCiAgICAgICBpOj1pKzE=
+------=_Part_17499_21019483.1222400395518
+Content-Type: application/octet-stream; name=coeficientes1.input
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_flk9lswt2
+Content-Disposition: attachment; filename=coeficientes1.input
+
+bWFjcm8gY29lZmljaWVudGVzMSAoUCwgUSwgYSwgYiwgYywgZ3JhdSk9PQ0KICAgcG9sOj1hKlAr
+YipRDQogICBpZiAoYj0wKSB0aGVuDQogICAgICBwb2wyOj1ldmFsKHBvbCx4PS1jL2EpDQogICBl
+bHNlDQogICAgICBwb2wyOj1ldmFsKHBvbCx5PSgtYSp4LWMpL2IpDQogICBMOj1bY29lZmZpY2ll
+bnQocG9sMix4LGspIGZvciBrIGluIDAuLmdyYXVdDQogICANCiAgIA0KICAgLS1DOj1bXQ0KICAg
+LS1DOj1hcHBlbmQoQyxjb2VmaWNpZW50ZXMxKFAsUSxyZXRhcy4xLjEscmV0YXMuMS4yLHJldGFz
+LjEuMyxncmF1KSkNCiAgIC0tQzo9YXBwZW5kKEMsY29lZmljaWVudGVzMShQLFEscmV0YXMuMi4x
+LHJldGFzLjIuMixyZXRhcy4yLjMsZ3JhdSkpDQogICAtLS4uLg0KICAgLS1DOj1hcHBlbmQoQyxj
+b2VmaWNpZW50ZXMxKFAsUSxyZXRhcy5uLjEscmV0YXMubi4yLHJldGFzLm4uMyxncmF1KSkNCiAg
+IC0tc29sdmUoQyk=
+------=_Part_17499_21019483.1222400395518
+Content-Type: application/octet-stream; name=entradaTeste.input
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_flk9m9033
+Content-Disposition: attachment; filename=entradaTeste.input
+
+DQprOj0oc3FydCg1KS0xKS8yDQpsaXN0YTo9W1sxLDAsMV0sWzEsMCwtMV0sWzEsMCwyKmstMV0s
+WzEsMCwtKDIqay0xKV0sWzAsMSwxXSxbMCwxLC0xXSxbMCwxLDIqay0xXSxbMCwxLC0oMiprLTEp
+XSxbMSwxLDBdLFstMSwxLDBdLFtrLDEsMS1rXSxbaywxLGstMV0sWzEvaywxLCgxLWspL2tdLFsx
+L2ssMSwoay0xKS9rXV0=
+------=_Part_17499_21019483.1222400395518--
+
+
+

@@ -1,0 +1,3873 @@
+From MAILER-DAEMON Tue Oct 02 18:53:17 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Icqc9-0006qv-MS
+	for mharc-axiom-mail@gnu.org; Tue, 02 Oct 2007 18:53:17 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Icqc6-0006oe-NY
+	for axiom-mail@nongnu.org; Tue, 02 Oct 2007 18:53:14 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Icqc6-0006nk-1z
+	for axiom-mail@nongnu.org; Tue, 02 Oct 2007 18:53:14 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Icqc5-0006nR-Rx
+	for axiom-mail@nongnu.org; Tue, 02 Oct 2007 18:53:13 -0400
+Received: from wr-out-0506.google.com ([64.233.184.237])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <amca01@gmail.com>) id 1Icqc5-0003T5-8j
+	for axiom-mail@nongnu.org; Tue, 02 Oct 2007 18:53:13 -0400
+Received: by wr-out-0506.google.com with SMTP id c38so5339519wra
+	for <axiom-mail@nongnu.org>; Tue, 02 Oct 2007 15:53:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type;
+	bh=pMDchjUzkvsx8N2Ob7hmqD6vvE77KE9vYhN5+bbUpRc=;
+	b=Ism3yA1V+lkGuqJHSEmsHVkrmSoCHtzk7GRUGH0nJfWXT+09oZl73gz6RRb+tAKPCdiKE5+C78QcjRuU7jmCojfsshtWqDa0Skx5OrTPkZYreq5Ez/zsXqZSFGrGAmxgSpWqbzGWFCGI1J4FoX6g0U1c9UFT6T/ZukqxehG06qk=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=beta;
+	h=received:message-id:date:from:to:subject:mime-version:content-type;
+	b=HhpzEK5KqXVrM//Qfar+22yxEqGMwdX4NQ2WZIdxlsCdF2sOqXHpTJok/rn3AxcDNTelhjHqk1xTqWY+1AqwGriXoIrK5gq9060MfDz7F3K06brw3RS0siTICozgKG4HbpA12be1iIQp6p3mvnbuWZ9hF7+PFehwnfMR22swSq4=
+Received: by 10.143.33.19 with SMTP id l19mr236366wfj.1191365590256;
+	Tue, 02 Oct 2007 15:53:10 -0700 (PDT)
+Received: by 10.141.132.20 with HTTP; Tue, 2 Oct 2007 15:53:10 -0700 (PDT)
+Message-ID: <1d67a53c0710021553v10ce4599p22ecd1d0784ba481@mail.gmail.com>
+Date: Wed, 3 Oct 2007 08:53:10 +1000
+From: "Alasdair McAndrew" <amca01@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3646_10514268.1191365590241"
+X-Detected-Kernel: Linux 2.4-2.6 (Google crawlbot)
+Subject: [Axiom-mail] A combinatorial question
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 02 Oct 2007 22:53:15 -0000
+
+------=_Part_3646_10514268.1191365590241
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+To experiment with a little algorithm, I need to generate all subsets of a
+set S which have fixed cardinality; for example to generate all three
+element subsets of {1,2,3,4,5,6,7}.  Is there an inbuilt command to do this
+in Axiom?  Or has somebody written a package to do such a thing?
+
+Thanks,
+Alasdair
+
+------=_Part_3646_10514268.1191365590241
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+To experiment with a little algorithm, I need to generate all subsets of a set S which have fixed cardinality; for example to generate all three element subsets of {1,2,3,4,5,6,7}.&nbsp; Is there an inbuilt command to do this in Axiom?&nbsp; Or has somebody written a package to do such a thing?
+<br><br>Thanks,<br>Alasdair<br>
+
+------=_Part_3646_10514268.1191365590241--
+
+
+
+From MAILER-DAEMON Tue Oct 02 20:36:52 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IcsEO-00052e-HN
+	for mharc-axiom-mail@gnu.org; Tue, 02 Oct 2007 20:36:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IcsEL-0004zN-VX
+	for axiom-mail@nongnu.org; Tue, 02 Oct 2007 20:36:50 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IcsEL-0004yV-Ba
+	for axiom-mail@nongnu.org; Tue, 02 Oct 2007 20:36:49 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IcsEL-0004yM-0a
+	for axiom-mail@nongnu.org; Tue, 02 Oct 2007 20:36:49 -0400
+Received: from nf-out-0910.google.com ([64.233.182.189])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1IcsEL-0005LV-96
+	for axiom-mail@nongnu.org; Tue, 02 Oct 2007 20:36:49 -0400
+Received: by nf-out-0910.google.com with SMTP id 30so3171469nfu
+	for <axiom-mail@nongnu.org>; Tue, 02 Oct 2007 17:36:45 -0700 (PDT)
+Received: by 10.86.76.16 with SMTP id y16mr422727fga.1191371804786;
+	Tue, 02 Oct 2007 17:36:44 -0700 (PDT)
+Received: by 10.86.77.14 with HTTP; Tue, 2 Oct 2007 17:36:44 -0700 (PDT)
+Message-ID: <fbcd16d40710021736o863cb50v4c6e2b09409925ca@mail.gmail.com>
+Date: Tue, 2 Oct 2007 20:36:44 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Alasdair McAndrew" <amca01@gmail.com>
+Subject: Re: [Axiom-mail] A combinatorial question
+In-Reply-To: <1d67a53c0710021553v10ce4599p22ecd1d0784ba481@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <1d67a53c0710021553v10ce4599p22ecd1d0784ba481@mail.gmail.com>
+X-Detected-Kernel: Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Oct 2007 00:36:50 -0000
+
+On 10/2/07, Alasdair McAndrew wrote:
+> To experiment with a little algorithm, I need to generate all subsets of a
+> set S which have fixed cardinality; for example to generate all three
+> element subsets of {1,2,3,4,5,6,7}.  Is there an inbuilt command to do this
+> in Axiom?  Or has somebody written a package to do such a thing?
+>
+
+Here is one possible solution using the subSet operation:
+
+(1) -> subsets(s,n) == set [set map(i+->parts(s).(i+1),j) for j in [subSet(#s,n,
+k) for k in 0..binomial(#s,n)-1]]
+                                         Type: Void
+
+(2) -> subsets(expand(1..7),3)
+   Compiling function subsets with type (List Integer,PositiveInteger)
+       -> Set Set Integer
+
+   (2)
+   {{1,2,3}, {1,2,4}, {1,3,4}, {2,3,4}, {1,2,5}, {1,3,5}, {2,3,5}, {1,4,5},
+    {2,4,5}, {3,4,5}, {1,2,6}, {1,3,6}, {2,3,6}, {1,4,6}, {2,4,6}, {3,4,6},
+    {1,5,6}, {2,5,6}, {3,5,6}, {4,5,6}, {1,2,7}, {1,3,7}, {2,3,7}, {1,4,7},
+    {2,4,7}, {3,4,7}, {1,5,7}, {2,5,7}, {3,5,7}, {4,5,7}, {1,6,7}, {2,6,7},
+    {3,6,7}, {4,6,7}, {5,6,7}}
+                                      Type: Set Set Integer
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Wed Oct 03 02:40:48 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IcxuZ-0004O4-TO
+	for mharc-axiom-mail@gnu.org; Wed, 03 Oct 2007 02:40:47 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IcxuX-0004KF-UF
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 02:40:45 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IcxuS-0004AW-UX
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 02:40:45 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IcxuS-0004A8-QJ
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 02:40:40 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1IcxuS-0008N2-7o
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 02:40:40 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IcxuQ-0006RT-1r; Wed, 03 Oct 2007 08:40:38 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IcxuQ-0002S6-0W; Wed, 03 Oct 2007 08:40:38 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Bill Page" <bill.page@newsynthesis.org>,
+	Ralf HEMMECKE <hemmecke@risc.uni-linz.ac.at>
+Subject: Re: [Axiom-mail] A combinatorial question
+References: <1d67a53c0710021553v10ce4599p22ecd1d0784ba481@mail.gmail.com>
+	<fbcd16d40710021736o863cb50v4c6e2b09409925ca@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 03 Oct 2007 08:40:37 +0200
+In-Reply-To: <fbcd16d40710021736o863cb50v4c6e2b09409925ca@mail.gmail.com>
+Message-ID: <9qbqbgpuoq.fsf@aquin.mat.univie.ac.at>
+Lines: 45
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Oct 2007 06:40:46 -0000
+
+> On 10/2/07, Alasdair McAndrew wrote:
+> > To experiment with a little algorithm, I need to generate all subsets of a
+> > set S which have fixed cardinality; for example to generate all three
+> > element subsets of {1,2,3,4,5,6,7}.  Is there an inbuilt command to do this
+> > in Axiom?  Or has somebody written a package to do such a thing?
+
+Well, the species package of Ralf and myself does that, of course.  But I'm not
+sure whether it wouldn't be overkill for your purpose.  Also, although you can
+use it from axiom, you need the Aldor compiler to install it.
+
+If you only need subsets, than
+
+In Aldor you'd say something like
+
+  structures(set [1,2,3,4,5,6,7])$(Combination(3)(Integer))
+
+in Axiom you would have to create the domain Combination(3)(Integer) first
+using
+
+  C3==>Interpret([parse "Combination(3)"], ACINT)
+
+since Axiom cannot deal with signatures like the above.  Furthermore, since
+Axiom doesn't understand Aldor's extend, you'll have to create the list of your
+labels as follows:
+
+  l := set([1,2,3,4,5,6,7]::ACList INT)$SetSpecies ACINT
+
+Now you can indeed say
+
+  structures(l)$C3
+
+and step through the subsets.
+
+Otherwise, and especially if you only need subsets, I'd roll my own, just as
+Bill did.  It depends a bit on how far you need to go.  If you google for
+"Ruskey, combinatorial generation", you'll find RuskeyCombGen.pdf which
+contains algorithms that are relatively easy to implement.
+
+(In fact, Combination from the species project currently also uses a dumb
+algorithm.)
+
+If you are interested in the species approach, please do not hesitate to ask
+for more explanations.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Oct 03 08:24:36 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Id3HI-0005MU-Gl
+	for mharc-axiom-mail@gnu.org; Wed, 03 Oct 2007 08:24:36 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Id3HH-0005M4-2b
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 08:24:35 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Id3HG-0005LH-In
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 08:24:34 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Id3HG-0005L5-8v
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 08:24:34 -0400
+Received: from wr-out-0506.google.com ([64.233.184.236])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <amca01@gmail.com>) id 1Id3HF-0000ik-Vt
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 08:24:34 -0400
+Received: by wr-out-0506.google.com with SMTP id c38so5635493wra
+	for <axiom-mail@nongnu.org>; Wed, 03 Oct 2007 05:24:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:in-reply-to:mime-version:content-type:references;
+	bh=a9DFZo/NbKU2RB+ZeBusnE3cWcGu+JKhJTnGvSEmLnI=;
+	b=cjexS5ZIFkJeXQ/eNsSMp+2C3Cp1wTvJwSM3UBYfmyW5+Bt7GA8laiJEWRc+bfuK1gOsPH2TYkgFcBjZj2+T3E2zz5+8eLA0COP+asVv2qfwZ9X6yTGUljuNL+yvv7IYo8ZdevfdauI2w+T0q6suRHHYn1dBmZOnn4FSaGpcFR4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=beta;
+	h=received:message-id:date:from:to:subject:in-reply-to:mime-version:content-type:references;
+	b=NnTpiwc2eTLYqlbJZMxhIL65g7xuCfuODOctM1X/HDYfc9w0E7dIplicgpyIgZW2RGft3rxS8TAbGnzyOGEcPWdVr+y9ieUMGlMIscUwlL0mvSShVQeotENvkc1hk/cmBLDz3cjFq+MeA81y2getLsTao4KYHLWJkT42SxyBz5k=
+Received: by 10.143.33.19 with SMTP id l19mr1362239wfj.1191414271866;
+	Wed, 03 Oct 2007 05:24:31 -0700 (PDT)
+Received: by 10.141.132.20 with HTTP; Wed, 3 Oct 2007 05:24:31 -0700 (PDT)
+Message-ID: <1d67a53c0710030524x67b4cac9j22654723b3d4acde@mail.gmail.com>
+Date: Wed, 3 Oct 2007 22:24:31 +1000
+From: "Alasdair McAndrew" <amca01@gmail.com>
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A combinatorial question
+In-Reply-To: <9qbqbgpuoq.fsf@aquin.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3894_11616833.1191414271862"
+References: <1d67a53c0710021553v10ce4599p22ecd1d0784ba481@mail.gmail.com>
+	<fbcd16d40710021736o863cb50v4c6e2b09409925ca@mail.gmail.com>
+	<9qbqbgpuoq.fsf@aquin.mat.univie.ac.at>
+X-Detected-Kernel: Linux 2.4-2.6 (Google crawlbot)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Oct 2007 12:24:35 -0000
+
+------=_Part_3894_11616833.1191414271862
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+It turns out that subSet is a command from the package
+SymmetricGroupCombinatoricFunctions (SGCF).  But there seems to be no
+mention of it in HyperDoc.  Aside from this mail group, how would a user
+find out about this function?
+
+-Alasdair
+
+On 03 Oct 2007 08:40:37 +0200, Martin Rubey < martin.rubey@univie.ac.at>
+wrote:
+>
+> > On 10/2/07, Alasdair McAndrew wrote:
+> > > To experiment with a little algorithm, I need to generate all subsets
+> of a
+> > > set S which have fixed cardinality; for example to generate all three
+> > > element subsets of {1,2,3,4,5,6,7}.  Is there an inbuilt command to do
+> this
+> > > in Axiom?  Or has somebody written a package to do such a thing?
+>
+> Well, the species package of Ralf and myself does that, of course.  But
+> I'm not
+> sure whether it wouldn't be overkill for your purpose.  Also, although you
+> can
+> use it from axiom, you need the Aldor compiler to install it.
+>
+> If you only need subsets, than
+>
+> In Aldor you'd say something like
+>
+>   structures(set [1,2,3,4,5,6,7])$(Combination(3)(Integer))
+>
+> in Axiom you would have to create the domain Combination(3)(Integer) first
+> using
+>
+>   C3==>Interpret([parse "Combination(3)"], ACINT)
+>
+> since Axiom cannot deal with signatures like the above.  Furthermore,
+> since
+> Axiom doesn't understand Aldor's extend, you'll have to create the list of
+> your
+> labels as follows:
+>
+>   l := set([1,2,3,4,5,6,7]::ACList INT)$SetSpecies ACINT
+>
+> Now you can indeed say
+>
+>   structures(l)$C3
+>
+> and step through the subsets.
+>
+> Otherwise, and especially if you only need subsets, I'd roll my own, just
+> as
+> Bill did.  It depends a bit on how far you need to go.  If you google for
+> "Ruskey, combinatorial generation", you'll find RuskeyCombGen.pdf which
+> contains algorithms that are relatively easy to implement.
+>
+> (In fact, Combination from the species project currently also uses a dumb
+> algorithm.)
+>
+> If you are interested in the species approach, please do not hesitate to
+> ask
+> for more explanations.
+>
+> Martin
+>
+>
+
+------=_Part_3894_11616833.1191414271862
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+It turns out that subSet is a command from the package SymmetricGroupCombinatoricFunctions (SGCF).&nbsp; But there seems to be no mention of it in HyperDoc.&nbsp; Aside from this mail group, how would a user find out about this function?
+<br><br>-Alasdair<br><br><div><span class="gmail_quote">On 03 Oct 2007 08:40:37 +0200, <b class="gmail_sendername">Martin Rubey</b> &lt;<a href="mailto:martin.rubey@univie.ac.at" target="_blank" onclick="return top.js.OpenExtLink(window,event,this)">
+
+martin.rubey@univie.ac.at</a>&gt; wrote:</span><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">&gt; On 10/2/07, Alasdair McAndrew wrote:<br>
+
+&gt; &gt; To experiment with a little algorithm, I need to generate all subsets of a<br>&gt; &gt; set S which have fixed cardinality; for example to generate all three<br>&gt; &gt; element subsets of {1,2,3,4,5,6,7}.&nbsp;&nbsp;Is there an inbuilt command to do this
+<br>&gt; &gt; in Axiom?&nbsp;&nbsp;Or has somebody written a package to do such a thing?<br><br>Well, the species package of Ralf and myself does that, of course.&nbsp;&nbsp;But I&#39;m not<br>sure whether it wouldn&#39;t be overkill for your purpose.&nbsp;&nbsp;Also, although you can
+<br>use it from axiom, you need the Aldor compiler to install it.<br><br>If you only need subsets, than<br><br>In Aldor you&#39;d say something like<br><br>&nbsp;&nbsp;structures(set [1,2,3,4,5,6,7])$(Combination(3)(Integer))<br><br>
+
+in Axiom you would have to create the domain Combination(3)(Integer) first<br>using<br><br>&nbsp;&nbsp;C3==&gt;Interpret([parse &quot;Combination(3)&quot;], ACINT)<br><br>since Axiom cannot deal with signatures like the above.&nbsp;&nbsp;Furthermore, since
+<br>Axiom doesn&#39;t understand Aldor&#39;s extend, you&#39;ll have to create the list of your<br>labels as follows:<br><br>&nbsp;&nbsp;l := set([1,2,3,4,5,6,7]::ACList INT)$SetSpecies ACINT<br><br>Now you can indeed say<br><br>&nbsp;&nbsp;structures(l)$C3
+<br><br>and step through the subsets.<br><br>Otherwise, and especially if you only need subsets, I&#39;d roll my own, just as<br>Bill did.&nbsp;&nbsp;It depends a bit on how far you need to go.&nbsp;&nbsp;If you google for<br>&quot;Ruskey, combinatorial generation&quot;, you&#39;ll find 
+RuskeyCombGen.pdf which<br>contains algorithms that are relatively easy to implement.<br><br>(In fact, Combination from the species project currently also uses a dumb<br>algorithm.)<br><br>If you are interested in the species approach, please do not hesitate to ask
+<br>for more explanations.<br><br>Martin<br><br></blockquote></div><br>
+
+------=_Part_3894_11616833.1191414271862--
+
+
+
+From MAILER-DAEMON Wed Oct 03 10:49:31 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Id5XX-0004DY-D9
+	for mharc-axiom-mail@gnu.org; Wed, 03 Oct 2007 10:49:31 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Id5XW-0004DQ-0E
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 10:49:30 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Id5XV-0004DC-HH
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 10:49:29 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Id5XV-0004D6-Ak
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 10:49:29 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1Id5XU-0007X0-O5
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 10:49:29 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Id5XO-0005Ck-BS; Wed, 03 Oct 2007 16:49:22 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Id5XO-0005M8-AT; Wed, 03 Oct 2007 16:49:22 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Alasdair McAndrew" <amca01@gmail.com>
+Subject: Re: [Axiom-mail] A combinatorial question
+References: <1d67a53c0710021553v10ce4599p22ecd1d0784ba481@mail.gmail.com>
+	<fbcd16d40710021736o863cb50v4c6e2b09409925ca@mail.gmail.com>
+	<9qbqbgpuoq.fsf@aquin.mat.univie.ac.at>
+	<1d67a53c0710030524x67b4cac9j22654723b3d4acde@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 03 Oct 2007 16:49:21 +0200
+In-Reply-To: <1d67a53c0710030524x67b4cac9j22654723b3d4acde@mail.gmail.com>
+Message-ID: <9qve9op826.fsf@aquin.mat.univie.ac.at>
+Lines: 22
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Oct 2007 14:49:30 -0000
+
+"Alasdair McAndrew" <amca01@gmail.com> writes:
+
+> It turns out that subSet is a command from the package
+> SymmetricGroupCombinatoricFunctions (SGCF).  But there seems to be no
+> mention of it in HyperDoc.  Aside from this mail group, how would a user
+> find out about this function?
+
+Hmm, if I enter subSet in HyperDoc, I get it. What flavour of axiom are you
+using?
+
+Apart from that, the first thing to do is to say
+
+  )wh th subset
+
+(what things subset), which spits out a list of all things that have "subset"
+in their name (case insensitive).  In fact, HyperDoc should be able to do this,
+too, but I find ")wh th" easier to type.
+
+Finally, the mailing lists are an excellent place to ask such questions.  Did
+you have to wait long?
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Oct 03 11:23:57 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Id64q-0000sQ-OD
+	for mharc-axiom-mail@gnu.org; Wed, 03 Oct 2007 11:23:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Id64o-0000rj-Nh
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 11:23:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Id64o-0000rK-2X
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 11:23:54 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Id64n-0000rE-SG
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 11:23:53 -0400
+Received: from nf-out-0910.google.com ([64.233.182.188])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1Id64n-0006uI-HR
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 11:23:53 -0400
+Received: by nf-out-0910.google.com with SMTP id 30so3372314nfu
+	for <axiom-mail@nongnu.org>; Wed, 03 Oct 2007 08:23:52 -0700 (PDT)
+Received: by 10.86.28.5 with SMTP id b5mr757740fgb.1191425032143;
+	Wed, 03 Oct 2007 08:23:52 -0700 (PDT)
+Received: by 10.86.77.14 with HTTP; Wed, 3 Oct 2007 08:23:52 -0700 (PDT)
+Message-ID: <fbcd16d40710030823h1ce937en17c2850a12e516cd@mail.gmail.com>
+Date: Wed, 3 Oct 2007 11:23:52 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Alasdair McAndrew" <amca01@gmail.com>
+Subject: Re: [Axiom-mail] A combinatorial question
+In-Reply-To: <1d67a53c0710030524x67b4cac9j22654723b3d4acde@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <1d67a53c0710021553v10ce4599p22ecd1d0784ba481@mail.gmail.com>
+	<fbcd16d40710021736o863cb50v4c6e2b09409925ca@mail.gmail.com>
+	<9qbqbgpuoq.fsf@aquin.mat.univie.ac.at>
+	<1d67a53c0710030524x67b4cac9j22654723b3d4acde@mail.gmail.com>
+X-Detected-Kernel: Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Oct 2007 15:23:55 -0000
+
+On 10/3/07, Alasdair McAndrew wrote:
+> It turns out that subSet is a command from the package
+> SymmetricGroupCombinatoricFunctions (SGCF).  But there
+> seems to be no mention of it in HyperDoc.  Aside from this mail group, how
+> would a user find out about this function?
+>
+
+Well, Martin mentioned other ways to find it but I read about in the
+way that is most common for me - by browsing Axiom source code on the
+wiki:
+
+  http://wiki.axiom-developer.org
+
+by clicking:
+
+   -> Browse Source -> src -> algebra
+
+Then I entered the word
+
+   subsets
+
+in the search box on the top right and hit enter. There are 9 search
+results and 'sgcf.spad' is near the bottom. Click on
+
+ -> sgcf.spad -> pdf (or src, etc.)
+
+to read the pamphlet files.
+
+Of course if you have the source code files on your local system and
+are used to using unix commands you can do almost the same thing in a
+more primitive just by using grep:
+
+  $ cd src/algebra
+  $ grep 'subsets' *.pamphlet
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Wed Oct 03 21:42:11 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IdFj9-0005cR-5u
+	for mharc-axiom-mail@gnu.org; Wed, 03 Oct 2007 21:42:11 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IdFj7-0005aj-9M
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 21:42:09 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IdFj4-0005a2-Ry
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 21:42:07 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IdFj4-0005Zv-KU
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 21:42:06 -0400
+Received: from nf-out-0910.google.com ([64.233.182.188])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1IdFj4-0006uk-86
+	for axiom-mail@nongnu.org; Wed, 03 Oct 2007 21:42:06 -0400
+Received: by nf-out-0910.google.com with SMTP id 30so12059nfu
+	for <axiom-mail@nongnu.org>; Wed, 03 Oct 2007 18:42:03 -0700 (PDT)
+Received: by 10.86.77.5 with SMTP id z5mr1010971fga.1191462123635;
+	Wed, 03 Oct 2007 18:42:03 -0700 (PDT)
+Received: by 10.86.77.14 with HTTP; Wed, 3 Oct 2007 18:42:03 -0700 (PDT)
+Message-ID: <fbcd16d40710031842t7c2bb11ase97a0527f83d147b@mail.gmail.com>
+Date: Wed, 3 Oct 2007 21:42:03 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Alasdair McAndrew" <amca01@gmail.com>
+Subject: Re: [Axiom-mail] A combinatorial question
+In-Reply-To: <1d67a53c0710021740y5150fc8n538b6cc75e4a47f7@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <1d67a53c0710021553v10ce4599p22ecd1d0784ba481@mail.gmail.com>
+	<fbcd16d40710021736o863cb50v4c6e2b09409925ca@mail.gmail.com>
+	<1d67a53c0710021740y5150fc8n538b6cc75e4a47f7@mail.gmail.com>
+X-Detected-Kernel: Linux 2.6 (newer, 2)
+Cc: Axiom-Mail <axiom-mail@nongnu.org>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 04 Oct 2007 01:42:09 -0000
+
+On 10/2/07, Alasdair McAndrew wrote:
+> Thanks, Bill - thats terrific!  It would be nice to have such  a facility
+> built in, wouldn't it?
+>
+
+Yes.
+
+(1) -> )set message time on
+(1) -> a:=[subSet(25,5,i) for i in 0..binomial(25,5)-1];
+(1) ->
+                                                      Type: List List Integer
+                                     Time: 58.00 (EV) + 6.61 (GC) = 64.61 sec
+
+This works but obviously it should be possible to write an algorithm
+that performs better than this ... :-( Sage can do it in less than a
+second (via GAP) and apparently Mathematica can do it in about 0.04
+seconds!
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Oct 04 02:24:00 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IdK7r-000539-U9
+	for mharc-axiom-mail@gnu.org; Thu, 04 Oct 2007 02:23:59 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IdK7q-000533-78
+	for axiom-mail@nongnu.org; Thu, 04 Oct 2007 02:23:58 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IdK7o-00052J-Ei
+	for axiom-mail@nongnu.org; Thu, 04 Oct 2007 02:23:56 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IdK7o-00051v-1T
+	for axiom-mail@nongnu.org; Thu, 04 Oct 2007 02:23:56 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1IdK7n-0000sX-MC
+	for axiom-mail@nongnu.org; Thu, 04 Oct 2007 02:23:55 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IdK7k-0006UZ-0t; Thu, 04 Oct 2007 08:23:52 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IdK7j-0007P0-Vq; Thu, 04 Oct 2007 08:23:52 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Bill Page" <bill.page@newsynthesis.org> 
+Subject: Re: [Axiom-mail] A combinatorial question 
+References: 
+Message-Id: <E1IdK7j-0007P0-Vq@justin.univie.ac.at>
+From: martin.rubey@univie.ac.at
+Date: Thu, 04 Oct 2007 08:23:51 +0200
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: fricas-devel <fricas-devel@googlegroups.com>, aldor-l <aldor-l@aldor.org>,
+	open-axiom-devel <open-axiom-devel@lists.sf.net>,
+	Ralf HEMMECKE <hemmecke@risc.uni-linz.ac.at>,
+	Axiom-Mail <axiom-mail@nongnu.org>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 04 Oct 2007 06:23:58 -0000
+
+<fbcd16d40710021736o863cb50v4c6e2b09409925ca@mail.gmail.com>
+<1d67a53c0710021740y5150fc8n538b6cc75e4a47f7@mail.gmail.com>
+<fbcd16d40710031842t7c2bb11ase97a0527f83d147b@mail.gmail.com> Gcc:
+nnml:mail.axiom
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 04 Oct 2007 08:23:51 +0200
+In-Reply-To: <fbcd16d40710031842t7c2bb11ase97a0527f83d147b@mail.gmail.com>
+Message-ID: <9qtzp7o0so.fsf@aquin.mat.univie.ac.at>
+Lines: 47
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+--text follows this line--
+"Bill Page" <bill.page@newsynthesis.org> writes:
+
+> (1) -> )set message time on
+> (1) -> a:=[subSet(25,5,i) for i in 0..binomial(25,5)-1];
+> (1) ->
+>                                                       Type: List List Integer
+>                                      Time: 58.00 (EV) + 6.61 (GC) = 64.61 sec
+> 
+> This works but obviously it should be possible to write an algorithm that
+> performs better than this ... :-( Sage can do it in less than a second (via
+> GAP) and apparently Mathematica can do it in about 0.04 seconds!
+
+As I said before (but maybe my message didn't get through), good algorithms are
+described in Ruskey (google: "Ruskey, combinatorial generation", goto
+RuskeyCombGen.pdf)
+
+If you are indeed interested in such things, PLEASE consider joining the
+species project.  Much work has already been done, and since Aldor is semi-free
+now, I think it was not a wasted effort.  Note also that the framework provided
+by the species project is very general - it becomes very easy to build new
+structures from old.
+
+We have some big problems, which we probably should be open about:
+
+* apart from Ralf and myself, we have no users so far.  Well, we didn't
+  advertise it either.  This is where you could help.
+
+The other problems have to do with Aldor - Axiom internals.  I'll still mention
+them here:
+
+* Axiom does not support Aldor's extend construct.  I.e., one cannot say
+
+  #include "axiom"
+  extend Integer: LabelType == add ...
+
+  which makes some ugly - user visible - workarounds necessary.  Enabling that
+  would be wonderful.
+
+* Axiom does not support general signatures like
+
+  Combination(k: Integer)(L: LabelType): CombinatorialSpecies(L) with { ... }
+
+  Again, we provide a workaround.  I expect a real fix to be rather hard, here.
+
+Martin
+
+
+
+
+
+
+From MAILER-DAEMON Thu Oct 04 11:39:04 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IdSn2-0006py-OC
+	for mharc-axiom-mail@gnu.org; Thu, 04 Oct 2007 11:39:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IdSn1-0006m3-0W
+	for axiom-mail@nongnu.org; Thu, 04 Oct 2007 11:39:03 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IdSmw-0006aF-3n
+	for axiom-mail@nongnu.org; Thu, 04 Oct 2007 11:39:02 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IdSmv-0006a0-Px
+	for axiom-mail@nongnu.org; Thu, 04 Oct 2007 11:38:57 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1IdSmv-0005Ex-7v
+	for axiom-mail@nongnu.org; Thu, 04 Oct 2007 11:38:57 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IdSmq-0001GN-4O; Thu, 04 Oct 2007 17:38:52 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IdSmq-0000gt-3E; Thu, 04 Oct 2007 17:38:52 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Ralf HEMMECKE <hemmecke@risc.uni-linz.ac.at>, Alasdair.McAndrew@vu.edu.au
+Newsgroups: sci.math.symbolic,gnu.emacs.sources
+References: <9qabvv8xy9.fsf@aquin.mat.univie.ac.at>
+	<9qtzpczzny.fsf@aquin.mat.univie.ac.at>
+	<9qhclcljmm.fsf_-_@aquin.mat.univie.ac.at>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 04 Oct 2007 17:38:41 +0200
+Message-ID: <9qr6kaopoe.fsf_-_@aquin.mat.univie.ac.at>
+Lines: 32
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+In-Reply-To: <9qhclcljmm.fsf_-_@aquin.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Posted-To: sci.math.symbolic,gnu.emacs.sources
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: fricas-devel <fricas-devel@googlegroups.com>,
+	open-axiom-devel <open-axiom-devel@lists.sf.net>,
+	axiom-mail <axiom-mail@nongnu.org>
+Subject: [Axiom-mail] Re: [ANN] yet a newer version of the axiom mode for
+	emacs.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 04 Oct 2007 15:39:03 -0000
+
+The following message is a courtesy copy of an article
+that has been posted to sci.math.symbolic,gnu.emacs.sources as well.
+
+I just uploaded another improved version of my emacs mode.  The most important
+new features - apart from bugfixes and cleanups - are:
+
+* you can now have several axiom sessions in parallel within one emacs, as
+  things should be.  Say M-x axiom to start a session, M-x rename-uniquely to
+  rename it, M-x axiom to start a second one.
+
+* I used axiom's history mechanism to support saving and restoring worksheets
+  now.  M-x s asks you for a file name, supply one and emacs will store
+  everything:
+
+  -  myfile.input         ... the lines of input you typed
+  -  myfile               ... the buffer as it looks
+  -  myfile.axh/index.KAF ... the state of the axiom session
+
+  Visiting myfile, and typing M-x axiom-mode will restore the state of the
+  axiom session and display the buffer as it looked before.  I yet need to use
+  enriched mode, and somehow store the overlays as well, or make them into
+  text-properties, but that shouldn't be too difficult.
+
+Get it from
+
+  http://wiki.axiom-developer.org/AxiomEmacsMode
+
+I'd be very happy to hear whether you find it useful in general, and
+suggestions on how to improve it.  Since I don't own MS Windows, I'd be
+especially grateful for testing on MS Windows.  An xemacs port would also be
+greatly appreciated.
+
+Martin
+
+  
+
+
+
+
+From MAILER-DAEMON Fri Oct 05 10:58:17 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Idod7-0006pU-8r
+	for mharc-axiom-mail@gnu.org; Fri, 05 Oct 2007 10:58:17 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Idod4-0006p2-Tz
+	for axiom-mail@nongnu.org; Fri, 05 Oct 2007 10:58:14 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Idod3-0006o0-2V
+	for axiom-mail@nongnu.org; Fri, 05 Oct 2007 10:58:14 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Idod2-0006nt-SG
+	for axiom-mail@nongnu.org; Fri, 05 Oct 2007 10:58:12 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1Idod2-0004kd-6Y
+	for axiom-mail@nongnu.org; Fri, 05 Oct 2007 10:58:12 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Idocy-0002iq-SM; Fri, 05 Oct 2007 16:58:08 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Idocy-0006oY-Ou; Fri, 05 Oct 2007 16:58:08 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Martin Rubey <martin.rubey@univie.ac.at>
+References: <9qabvv8xy9.fsf@aquin.mat.univie.ac.at>
+	<9qtzpczzny.fsf@aquin.mat.univie.ac.at>
+	<9qhclcljmm.fsf_-_@aquin.mat.univie.ac.at>
+	<9qr6kaopoe.fsf_-_@aquin.mat.univie.ac.at>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 05 Oct 2007 16:58:08 +0200
+In-Reply-To: <9qr6kaopoe.fsf_-_@aquin.mat.univie.ac.at>
+Message-ID: <9qhcl5y5fj.fsf@aquin.mat.univie.ac.at>
+Lines: 40
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: open-axiom-devel <open-axiom-devel@lists.sf.net>,
+	fricas-devel <fricas-devel@googlegroups.com>,
+	Ralf HEMMECKE <hemmecke@risc.uni-linz.ac.at>,
+	Alasdair.McAndrew@vu.edu.au, axiom-mail <axiom-mail@nongnu.org>
+Subject: [Axiom-mail] Re: [ANN] yet a newer version of the axiom mode for
+	emacs.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Oct 2007 14:58:15 -0000
+
+Sorry for spamming, I just uploaded todays work and I believe it's worth
+another mail.
+
+So, 
+
+* goto http://wiki.axiom-developer.org/AxiomEmacsMode
+
+* click on tangle
+
+* put the resulting file in a directory where gnu emacs can find it, most
+  likely ~/emacs
+
+* edit your .emacs to contain the following two lines:
+
+(setq auto-mode-alist (cons '("\\.axiom$" . axiom-mode) auto-mode-alist))
+(require 'axiom)
+
+* start emacs
+
+* issue M-x axiom RET (for non-emacs users: press the alt key and "x", then
+  enter "axiom", then hit return)
+
+* do some computations
+
+* try to kill the buffer (for non-emacs users: press the ctrl key and "k")
+  but then answer with "no"
+
+* save your file (for non-emacs users: press the ctrl key and "x", then "s")
+  and choose a file name ending in ".axiom".
+
+* kill the buffer (for non-emacs users: press the ctrl key and "k")
+
+* visit the file (for non-emacs users: press the ctrl key and "x", then "f", 
+  then the filename including ".axiom", then return)
+
+* enjoy.
+
+Send bugs to any of the lists, or to myself.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sat Oct 06 12:34:09 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IeCbR-0006LN-73
+	for mharc-axiom-mail@gnu.org; Sat, 06 Oct 2007 12:34:09 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IeCbP-0006It-Dd
+	for axiom-mail@nongnu.org; Sat, 06 Oct 2007 12:34:07 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IeCbK-0006Gd-5r
+	for axiom-mail@nongnu.org; Sat, 06 Oct 2007 12:34:06 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IeCbJ-0006GU-UQ
+	for axiom-mail@nongnu.org; Sat, 06 Oct 2007 12:34:01 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1IeCbJ-0004sZ-GW
+	for axiom-mail@nongnu.org; Sat, 06 Oct 2007 12:34:01 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IeCbG-0004Ug-6j; Sat, 06 Oct 2007 18:33:58 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IeCbG-0003x2-3N; Sat, 06 Oct 2007 18:33:58 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Peter Broadbery" <p_broadbery@hotmail.com>
+Subject: Re: [Axiom-mail] A combinatorial question
+References: <BAY127-F25BA73617316D6C2E356C796AA0@phx.gbl>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 06 Oct 2007 18:33:57 +0200
+In-Reply-To: <BAY127-F25BA73617316D6C2E356C796AA0@phx.gbl>
+Message-ID: <9qhcl4fbii.fsf@aquin.mat.univie.ac.at>
+Lines: 21
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: fricas-devel <fricas-devel@googlegroups.com>,
+	open-axiom-devel <open-axiom-devel@lists.sf.net>,
+	axiom-mail@nongnu.org, aldor-l@aldor.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Oct 2007 16:34:07 -0000
+
+"Peter Broadbery" <p_broadbery@hotmail.com> writes:
+
+> >* Axiom does not support Aldor's extend construct.  I.e., one cannot say
+> >
+> >  #include "axiom"
+> >  extend Integer: LabelType == add ...
+> >
+> >  which makes some ugly - user visible - workarounds necessary.  Enabling that
+> >  would be wonderful.
+> 
+> Now that the aldor source has turned up (thanks stephen, and apologies for
+> missing the august  get together), I'm having another go at getting this going
+> (although I have to admit it's not really a primary goal for me)..  I might
+> have something together in a few weeks with a following wind.
+
+That would be truly wonderful.  If there is anything we could do to support
+you, please don't hesitate to ask.
+
+But now I have to ask: what is the primary goal for you?  :-)
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Oct 09 09:38:52 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IfFIR-0006T9-Qc
+	for mharc-axiom-mail@gnu.org; Tue, 09 Oct 2007 09:38:51 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IeCBe-0000Jo-2r
+	for axiom-mail@nongnu.org; Sat, 06 Oct 2007 12:07:30 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IeCBc-0000IV-4I
+	for axiom-mail@nongnu.org; Sat, 06 Oct 2007 12:07:29 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IeCBb-0000IH-RI
+	for axiom-mail@nongnu.org; Sat, 06 Oct 2007 12:07:27 -0400
+Received: from bay0-omc2-s2.bay0.hotmail.com ([65.54.246.138])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <p_broadbery@hotmail.com>) id 1IeCBb-00072b-Cw
+	for axiom-mail@nongnu.org; Sat, 06 Oct 2007 12:07:27 -0400
+Received: from hotmail.com ([65.55.132.105]) by bay0-omc2-s2.bay0.hotmail.com
+	with Microsoft SMTPSVC(6.0.3790.3959); 
+	Sat, 6 Oct 2007 09:07:25 -0700
+Received: from mail pickup service by hotmail.com with Microsoft SMTPSVC;
+	Sat, 6 Oct 2007 09:07:25 -0700
+Message-ID: <BAY127-F25BA73617316D6C2E356C796AA0@phx.gbl>
+Received: from 65.55.132.123 by by127fd.bay127.hotmail.msn.com with HTTP;
+	Sat, 06 Oct 2007 16:07:22 GMT
+X-Originating-IP: [86.3.80.246]
+X-Originating-Email: [p_broadbery@hotmail.com]
+X-Sender: p_broadbery@hotmail.com
+From: "Peter Broadbery" <p_broadbery@hotmail.com>
+To: martin.rubey@univie.ac.at
+Bcc: 
+Subject: Re: [Axiom-mail] A combinatorial question
+Date: Sat, 06 Oct 2007 16:07:22 +0000
+Mime-Version: 1.0
+Content-Type: text/plain; format=flowed
+X-OriginalArrivalTime: 06 Oct 2007 16:07:25.0841 (UTC)
+	FILETIME=[FC8AF010:01C80832]
+X-Detected-Kernel: Windows 2000 SP4, XP SP1+
+X-Mailman-Approved-At: Tue, 09 Oct 2007 09:38:50 -0400
+Cc: axiom-mail@nongnu.org, aldor-l@aldor.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 06 Oct 2007 16:07:30 -0000
+
+>* Axiom does not support Aldor's extend construct.  I.e., one cannot say
+>
+>  #include "axiom"
+>  extend Integer: LabelType == add ...
+>
+>  which makes some ugly - user visible - workarounds necessary.  Enabling 
+>that
+>  would be wonderful.
+
+Now that the aldor source has turned up (thanks stephen, and apologies for 
+missing the august  get together), I'm having another go at getting this 
+going (although I have to admit it's not really a primary goal for me)..  I 
+might have something together in a few weeks with a following wind.
+
+Peter
+--
+Peter Broadbery
+
+_________________________________________________________________
+Got a favourite clothes shop, bar or restaurant? Share your local knowledge  
+http://www.backofmyhand.com
+
+
+
+
+From MAILER-DAEMON Tue Oct 09 09:38:52 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IfFIS-0006TE-40
+	for mharc-axiom-mail@gnu.org; Tue, 09 Oct 2007 09:38:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IfA9r-00079S-IP
+	for axiom-mail@nongnu.org; Tue, 09 Oct 2007 04:09:39 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IfA9p-00079C-CM
+	for axiom-mail@nongnu.org; Tue, 09 Oct 2007 04:09:38 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IfA9p-000799-7P
+	for axiom-mail@nongnu.org; Tue, 09 Oct 2007 04:09:37 -0400
+Received: from bay0-omc3-s24.bay0.hotmail.com ([65.54.246.224])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <p_broadbery@hotmail.com>) id 1IfA9o-0003ak-R2
+	for axiom-mail@nongnu.org; Tue, 09 Oct 2007 04:09:37 -0400
+Received: from hotmail.com ([65.55.132.107]) by bay0-omc3-s24.bay0.hotmail.com
+	with Microsoft SMTPSVC(6.0.3790.3959); 
+	Tue, 9 Oct 2007 01:09:35 -0700
+Received: from mail pickup service by hotmail.com with Microsoft SMTPSVC;
+	Tue, 9 Oct 2007 01:09:35 -0700
+Message-ID: <BAY127-F2722F927D32F472A3AA74696A50@phx.gbl>
+Received: from 65.55.132.123 by by127fd.bay127.hotmail.msn.com with HTTP;
+	Tue, 09 Oct 2007 08:09:32 GMT
+X-Originating-IP: [82.44.42.183]
+X-Originating-Email: [p_broadbery@hotmail.com]
+X-Sender: p_broadbery@hotmail.com
+From: "Peter Broadbery" <p_broadbery@hotmail.com>
+To: martin.rubey@univie.ac.at
+Bcc: 
+Subject: Re: [Axiom-mail] A combinatorial question
+Date: Tue, 09 Oct 2007 08:09:32 +0000
+Mime-Version: 1.0
+Content-Type: text/plain; format=flowed
+X-OriginalArrivalTime: 09 Oct 2007 08:09:35.0508 (UTC)
+	FILETIME=[BAEE8D40:01C80A4B]
+X-Detected-Kernel: Windows 2000 SP4, XP SP1+
+X-Mailman-Approved-At: Tue, 09 Oct 2007 09:38:50 -0400
+Cc: fricas-devel@googlegroups.com, open-axiom-devel@lists.sf.net,
+	axiom-mail@nongnu.org, aldor-l@aldor.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 09 Oct 2007 08:09:39 -0000
+
+>From: Martin Rubey <martin.rubey@univie.ac.at>
+>Subject: Re: [Axiom-mail] A combinatorial question
+>Date: 06 Oct 2007 18:33:57 +0200
+>
+>"Peter Broadbery" <p_broadbery@hotmail.com> writes:
+>
+> > >* Axiom does not support Aldor's extend construct.  I.e., one cannot 
+>say
+> > >
+> > >  #include "axiom"
+> > >  extend Integer: LabelType == add ...
+> > >
+> > >  which makes some ugly - user visible - workarounds necessary.  
+>Enabling that
+> > >  would be wonderful.
+> >
+> > Now that the aldor source has turned up (thanks stephen, and apologies 
+>for
+> > missing the august  get together), I'm having another go at getting this 
+>going
+> > (although I have to admit it's not really a primary goal for me)..  I 
+>might
+> > have something together in a few weeks with a following wind.
+>
+>That would be truly wonderful.  If there is anything we could do to support
+>you, please don't hesitate to ask.
+>
+>But now I have to ask: what is the primary goal for you?  :-)
+>
+>Martin
+
+Getting axiom to play nice with aldor is the starting point, then there's a 
+few compiler things that I would like to play with - axiom extend will be 
+good to have, but may involve more axiom hacking than I have the patience 
+for.
+
+Having the interop stuff in at least one of the various axioms that are 
+floating around is also on the list.
+
+Peter
+
+_________________________________________________________________
+Get Pimped! FREE emoticon packs from Windows Live -  
+http://www.pimpmylive.co.uk
+
+
+
+
+From MAILER-DAEMON Tue Oct 09 23:45:07 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IfSVO-00064R-SV
+	for mharc-axiom-mail@gnu.org; Tue, 09 Oct 2007 23:45:06 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IfSVM-00063w-V9
+	for axiom-mail@nongnu.org; Tue, 09 Oct 2007 23:45:05 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IfSVM-00063k-Gz
+	for axiom-mail@nongnu.org; Tue, 09 Oct 2007 23:45:04 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IfSVM-00063g-Aq
+	for axiom-mail@nongnu.org; Tue, 09 Oct 2007 23:45:04 -0400
+Received: from wa-out-1112.google.com ([209.85.146.179])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <amca01@gmail.com>) id 1IfSVL-0004sQ-LG
+	for axiom-mail@nongnu.org; Tue, 09 Oct 2007 23:45:04 -0400
+Received: by wa-out-1112.google.com with SMTP id k22so90929waf
+	for <axiom-mail@nongnu.org>; Tue, 09 Oct 2007 20:45:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:in-reply-to:mime-version:content-type:references;
+	bh=nmBontCryrOXhCe91hcs/qvCy6ZnD8rLm3uVCI+SHbI=;
+	b=PSA2vLubzjD6FaQRj16En9Al+vKp9ol9CiHNAhZ4tReA2ZxFVDTZXr/HZ5jc4hchf1mmonB48WaWNWIG8rCs9oTUTS1jLObLFHeGO/eQq7gv4U+OB3A1JP2fST10GNzx8IzoWDKMV7p5+qPYuaAjsv3eR+6E3CfvjpAvidSQatg=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=beta;
+	h=received:message-id:date:from:to:subject:in-reply-to:mime-version:content-type:references;
+	b=UsXpPEBy1r51q7N+vVOSW8yLSkGaC5QmXDrvaXkCddInmceUtoRByfdP0u8Nw3ZvfrvR8qXPQ7azmeF1rAGaNF8tialEf+E+te9jZo0SGcHaiEvrZJ7Mce+N2FVtByy3wew/8XSb8IRKQDSkXwZx5o4gN46FMa8+hgV0fayHlvE=
+Received: by 10.115.109.1 with SMTP id l1mr243490wam.1191987901071;
+	Tue, 09 Oct 2007 20:45:01 -0700 (PDT)
+Received: by 10.115.32.18 with HTTP; Tue, 9 Oct 2007 20:45:00 -0700 (PDT)
+Message-ID: <1d67a53c0710092045x7e44cefyaeb1991500fba508@mail.gmail.com>
+Date: Wed, 10 Oct 2007 13:45:00 +1000
+From: "Alasdair McAndrew" <amca01@gmail.com>
+To: "Francois Maltey" <fmaltey@nerim.fr>, 
+	"Bill Page" <bill.page@newsynthesis.org>, axiom-mail@nongnu.org
+In-Reply-To: <87ir5md4bs.fsf_-_@nerim.fr>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_6931_12745863.1191987901070"
+References: <9q4ph86258.fsf@aquin.mat.univie.ac.at>
+	<87ir5md4bs.fsf_-_@nerim.fr>
+X-Detected-Kernel: Linux 2.6 (newer, 2)
+Cc: 
+Subject: [Axiom-mail] Re: [Axiom-developer]for teachers
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 10 Oct 2007 03:45:05 -0000
+
+------=_Part_6931_12745863.1191987901070
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+I have been using Axiom (and also Maxima) this semester for a class in
+cryptography.  This subject covers public-key cryptography (RSA, Rabin, El
+Gamal) and signature schemes, secret key cryptography (in particular DES an=
+d
+AES), hash functions, and all the necessary mathematics - mainly number
+theory and finite fields.  The students who have chosen Axiom have taken
+well to it.
+
+If anyone wants to see how I've managed this subject, go to
+http://suzuki.vu.edu.au/moodle2, and login as a guest to the subject
+RCM3720/6812, using the login key "C1PHER". (The second character is the
+numeral "one").
+
+The subject only has two more weeks to run, but if you are interested, the
+lectures are broadcast from our Access Grid Room - you can watch me in real
+time if you have the requisite software (which is free).
+
+cheers,
+Alasdair
+
+On 04 Oct 2007 22:15:19 +0200, Francois Maltey <fmaltey@nerim.fr> wrote:
+>
+> Hello Bill, Hello Alasdair,
+>
+> Sometime we exchange about use of axiom in a classroom.
+>
+> Let me send as a private mail my point of view about this feature.
+>
+> This feature of axiom had sens in the paste as a special case which
+> save memory or CPU time, or for good developper with its tricks.
+> But in the finite time of a mathematical course I can't explain
+> a such separate case.
+>
+> A CAS system might be perfect about mathematical result.
+> I saw a lot of misunderstandig with maple and its
+> 0 * 0.0 =3D 0 but 1 * 0.0 =3D 0.0
+>
+> > > When I test linear algebra I noticed that nullSpace return a basis
+> > > of the kernel, it's right, but I expect an empty list when the
+> > > matrix is inversible.
+> > >
+> > > The documentation of axiom announces it's the null vector in this
+> > > case.  So it isnot a bug... but I think it's a silly feature
+> > > because it becomes impossible to get the dimension by the length
+> > > function.
+> >
+> > I think you are right.  In fact, the user doc says it returns a
+> > basis, only the internal doc says what you mentioned.  The
+> > modification would be trivial, only, it might break something...
+>
+> The use of nullity doesn't seem right for this purpose, the aim of
+> such naive computations is to compare how to compute the rank. My
+> students test one functions, and an other, and so.
+>
+> And I don't see how to improve axiom for educational purpose.
+>
+> Have a nice day !
+>
+> Fran=E7ois (in France)
+>
+
+------=_Part_6931_12745863.1191987901070
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+I have been using Axiom (and also Maxima) this semester for a class in cryp=
+tography.&nbsp; This subject covers public-key cryptography (RSA, Rabin, El=
+ Gamal) and signature schemes, secret key cryptography (in particular DES a=
+nd AES), hash functions, and all the necessary mathematics - mainly number =
+theory and finite fields.&nbsp; The students who have chosen Axiom have tak=
+en well to it.
+<br><br>If anyone wants to see how I&#39;ve managed this subject, go to <a =
+href=3D"http://suzuki.vu.edu.au/moodle2">http://suzuki.vu.edu.au/moodle2</a=
+>, and login as a guest to the subject RCM3720/6812, using the login key &q=
+uot;C1PHER&quot;. (The second character is the numeral &quot;one&quot;).
+<br><br>The subject only has two more weeks to run, but if you are interest=
+ed, the lectures are broadcast from our Access Grid Room - you can watch me=
+ in real time if you have the requisite software (which is free).<br><br>
+cheers,<br>Alasdair<br><br><div><span class=3D"gmail_quote">On 04 Oct 2007 =
+22:15:19 +0200, <b class=3D"gmail_sendername">Francois Maltey</b> &lt;<a hr=
+ef=3D"mailto:fmaltey@nerim.fr">fmaltey@nerim.fr</a>&gt; wrote:</span><block=
+quote class=3D"gmail_quote" style=3D"border-left: 1px solid rgb(204, 204, 2=
+04); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
+Hello Bill, Hello Alasdair,<br><br>Sometime we exchange about use of axiom =
+in a classroom.<br><br>Let me send as a private mail my point of view about=
+ this feature.<br><br>This feature of axiom had sens in the paste as a spec=
+ial case which
+<br>save memory or CPU time, or for good developper with its tricks.<br>But=
+ in the finite time of a mathematical course I can&#39;t explain<br>a such =
+separate case.<br><br>A CAS system might be perfect about mathematical resu=
+lt.
+<br>I saw a lot of misunderstandig with maple and its<br>0 * 0.0 =3D 0 but =
+1 * 0.0 =3D 0.0<br><br>&gt; &gt; When I test linear algebra I noticed that =
+nullSpace return a basis<br>&gt; &gt; of the kernel, it&#39;s right, but I =
+expect an empty list when the
+<br>&gt; &gt; matrix is inversible.<br>&gt; &gt;<br>&gt; &gt; The documenta=
+tion of axiom announces it&#39;s the null vector in this<br>&gt; &gt; case.=
+&nbsp;&nbsp;So it isnot a bug... but I think it&#39;s a silly feature<br>&g=
+t; &gt; because it becomes impossible to get the dimension by the length
+<br>&gt; &gt; function.<br>&gt;<br>&gt; I think you are right.&nbsp;&nbsp;I=
+n fact, the user doc says it returns a<br>&gt; basis, only the internal doc=
+ says what you mentioned.&nbsp;&nbsp;The<br>&gt; modification would be triv=
+ial, only, it might break something...
+<br><br>The use of nullity doesn&#39;t seem right for this purpose, the aim=
+ of<br>such naive computations is to compare how to compute the rank. My<br=
+>students test one functions, and an other, and so.<br><br>And I don&#39;t =
+see how to improve axiom for educational purpose.
+<br><br>Have a nice day !<br><br>Fran=E7ois (in France)<br></blockquote></d=
+iv><br>
+
+------=_Part_6931_12745863.1191987901070--
+
+
+
+From MAILER-DAEMON Wed Oct 10 00:04:58 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IfSoc-0001kk-CQ
+	for mharc-axiom-mail@gnu.org; Wed, 10 Oct 2007 00:04:58 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IfSoa-0001kV-At
+	for axiom-mail@nongnu.org; Wed, 10 Oct 2007 00:04:56 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IfSoY-0001k4-Up
+	for axiom-mail@nongnu.org; Wed, 10 Oct 2007 00:04:56 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IfSoY-0001jz-QI
+	for axiom-mail@nongnu.org; Wed, 10 Oct 2007 00:04:54 -0400
+Received: from mx-7.zoominternet.net ([24.154.1.26])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1IfSoY-0000ML-5h
+	for axiom-mail@nongnu.org; Wed, 10 Oct 2007 00:04:54 -0400
+Received: from pop-2.zoominternet.net (mua-2.zoominternet.net [24.154.1.45])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id l9A44imR009276
+	for <axiom-mail@nongnu.org>; Wed, 10 Oct 2007 00:04:44 -0400
+Received: (qmail 18526 invoked from network); 10 Oct 2007 04:04:46 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.235.192])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-2.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <fmaltey@nerim.fr>; 10 Oct 2007 04:04:46 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id l9A46rI21622;
+	Wed, 10 Oct 2007 00:06:53 -0400
+Date: Wed, 10 Oct 2007 00:06:53 -0400
+Message-Id: <200710100406.l9A46rI21622@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: amca01@gmail.com
+In-reply-to: <1d67a53c0710092045x7e44cefyaeb1991500fba508@mail.gmail.com>
+	(amca01@gmail.com)
+Subject: Re: [Axiom-mail] Re: [Axiom-developer]for teachers
+References: <9q4ph86258.fsf@aquin.mat.univie.ac.at>
+	<87ir5md4bs.fsf_-_@nerim.fr>
+	<1d67a53c0710092045x7e44cefyaeb1991500fba508@mail.gmail.com>
+X-Spam-Score: 0.00 () [Tag at 15.00] 
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 10 Oct 2007 04:04:56 -0000
+
+> http://suzuki.vu.edu.au
+I'm unable to find that server.
+
+Tim
+
+
+
+From MAILER-DAEMON Wed Oct 10 00:15:14 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IfSyY-0000kz-GJ
+	for mharc-axiom-mail@gnu.org; Wed, 10 Oct 2007 00:15:14 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IfSyX-0000ku-44
+	for axiom-mail@nongnu.org; Wed, 10 Oct 2007 00:15:13 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IfSyV-0000jn-F6
+	for axiom-mail@nongnu.org; Wed, 10 Oct 2007 00:15:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IfSyV-0000jX-63
+	for axiom-mail@nongnu.org; Wed, 10 Oct 2007 00:15:11 -0400
+Received: from mx-8.zoominternet.net ([24.154.1.27])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1IfSyU-00023s-Od
+	for axiom-mail@nongnu.org; Wed, 10 Oct 2007 00:15:11 -0400
+Received: from pop-3.zoominternet.net (mua-3.zoominternet.net [24.154.1.46])
+	by mx-8.zoominternet.net (8.13.1/8.13.1) with ESMTP id l9A4F1xi009757
+	for <axiom-mail@nongnu.org>; Wed, 10 Oct 2007 00:15:01 -0400
+Received: (qmail 27405 invoked from network); 10 Oct 2007 04:15:02 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.235.192])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-3.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <fmaltey@nerim.fr>; 10 Oct 2007 04:15:02 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id l9A4HBf21635;
+	Wed, 10 Oct 2007 00:17:11 -0400
+Date: Wed, 10 Oct 2007 00:17:11 -0400
+Message-Id: <200710100417.l9A4HBf21635@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: amca01@gmail.com
+In-reply-to: <1d67a53c0710092045x7e44cefyaeb1991500fba508@mail.gmail.com>
+	(amca01@gmail.com)
+Subject: Re: [Axiom-mail] Re: [Axiom-developer]for teachers
+References: <9q4ph86258.fsf@aquin.mat.univie.ac.at>
+	<87ir5md4bs.fsf_-_@nerim.fr>
+	<1d67a53c0710092045x7e44cefyaeb1991500fba508@mail.gmail.com>
+X-Spam-Score: 0.00 () [Tag at 15.00] 
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.27
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 10 Oct 2007 04:15:13 -0000
+
+> http://suzuki.vu.edu.au/moodle2
+The problem isn't the root directory but that the server
+(suzuki) doesn't seem to have a world-visible IP address.
+I can get to vu.edu.au but I cannot find the course listed.
+
+Tim
+
+
+
+From MAILER-DAEMON Sat Oct 13 17:43:45 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Igolt-0001fq-0X
+	for mharc-axiom-mail@gnu.org; Sat, 13 Oct 2007 17:43:45 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Igolq-0001dC-V7
+	for axiom-mail@nongnu.org; Sat, 13 Oct 2007 17:43:43 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Igolp-0001aP-1B
+	for axiom-mail@nongnu.org; Sat, 13 Oct 2007 17:43:42 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Igolo-0001aG-Tc
+	for axiom-mail@nongnu.org; Sat, 13 Oct 2007 17:43:40 -0400
+Received: from wa-out-1112.google.com ([209.85.146.176])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <amca01@gmail.com>) id 1Igolo-0003Sl-Hx
+	for axiom-mail@nongnu.org; Sat, 13 Oct 2007 17:43:40 -0400
+Received: by wa-out-1112.google.com with SMTP id k22so1602672waf
+	for <axiom-mail@nongnu.org>; Sat, 13 Oct 2007 14:43:39 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type;
+	bh=KI6tBu5nRnEd4l8vrk9GjTcxaL6cqGmDglktSD1hg/s=;
+	b=Ryq6HPFuCO/hS+O1hda+sIJNxRhOBXkikNtORrzvRidG07UDlmE3B7JzhShEmkrG65xChw5z2pMnLOyQ1Hvm2HEPQe+z55CPUz2JOhsL4LAIuJo+Os2EtcVjntjOIlyHXB9T2KmbzXSYCu7rglIdC8250SH5L9ySx8bpNgXMwLU=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=beta;
+	h=received:message-id:date:from:to:subject:mime-version:content-type;
+	b=tEXIAk9gVgNySQzRseqojtZRGZDLb/pxbR/C9jRObIoto0QAFP1jWJzAKpmVPU4tDm6krqwZs6dvJEOx83yjWfWaMSDRp0d5loFGN/DGo7tDbzcfjxdonVCQKQBI9bmguuP7Frz8C7OqQhTHGHMuarbalPOrnBzx55WjAyYPG0M=
+Received: by 10.114.126.1 with SMTP id y1mr5187275wac.1192311818998;
+	Sat, 13 Oct 2007 14:43:38 -0700 (PDT)
+Received: by 10.115.32.13 with HTTP; Sat, 13 Oct 2007 14:43:38 -0700 (PDT)
+Message-ID: <1d67a53c0710131443l4e7e0c5en6270861379cf06ce@mail.gmail.com>
+Date: Sun, 14 Oct 2007 07:43:38 +1000
+From: "Alasdair McAndrew" <amca01@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_21769_8468241.1192311818995"
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] Hexadecimal numbers in Axiom?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 Oct 2007 21:43:43 -0000
+
+------=_Part_21769_8468241.1192311818995
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+I can obtain a hexadecimal number, for example 1000::RadixExpansion(16)
+which produces "3E8"..  But how do I enter a hexadecimal number in Axiom?
+How do I enter DB6A, for example, and have Axiom recognize it as a
+hexadecimal number?
+
+Thanks,
+Alasdair
+
+------=_Part_21769_8468241.1192311818995
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+I can obtain a hexadecimal number, for example 1000::RadixExpansion(16) which produces &quot;3E8&quot;..&nbsp; But how do I enter a hexadecimal number in Axiom?&nbsp; How do I enter DB6A, for example, and have Axiom recognize it as a hexadecimal number?
+<br><br>Thanks,<br>Alasdair<br>
+
+------=_Part_21769_8468241.1192311818995--
+
+
+
+From MAILER-DAEMON Sun Oct 14 00:51:40 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IgvS0-00076U-8l
+	for mharc-axiom-mail@gnu.org; Sun, 14 Oct 2007 00:51:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IgvRx-00074Y-LH
+	for axiom-mail@nongnu.org; Sun, 14 Oct 2007 00:51:38 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IgvRs-0006za-Ks
+	for axiom-mail@nongnu.org; Sun, 14 Oct 2007 00:51:37 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IgvRs-0006zG-85
+	for axiom-mail@nongnu.org; Sun, 14 Oct 2007 00:51:32 -0400
+Received: from fk-out-0910.google.com ([209.85.128.188])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1IgvRr-0004lc-Vh
+	for axiom-mail@nongnu.org; Sun, 14 Oct 2007 00:51:32 -0400
+Received: by fk-out-0910.google.com with SMTP id 19so2325763fkr
+	for <axiom-mail@nongnu.org>; Sat, 13 Oct 2007 21:51:26 -0700 (PDT)
+Received: by 10.86.60.7 with SMTP id i7mr3742854fga.1192337486090;
+	Sat, 13 Oct 2007 21:51:26 -0700 (PDT)
+Received: by 10.86.77.14 with HTTP; Sat, 13 Oct 2007 21:51:26 -0700 (PDT)
+Message-ID: <fbcd16d40710132151y59997e31h732a4a56b6781b1c@mail.gmail.com>
+Date: Sun, 14 Oct 2007 00:51:26 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Alasdair McAndrew" <amca01@gmail.com>
+Subject: Re: [Axiom-mail] Hexadecimal numbers in Axiom?
+In-Reply-To: <1d67a53c0710131443l4e7e0c5en6270861379cf06ce@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <1d67a53c0710131443l4e7e0c5en6270861379cf06ce@mail.gmail.com>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 14 Oct 2007 04:51:38 -0000
+
+On 10/13/07, Alasdair McAndrew wrote:
+> I can obtain a hexadecimal number, for example 1000::RadixExpansion(16)
+> which produces "3E8"..  But how do I enter a hexadecimal number in Axiom?
+> How do I enter DB6A, for example, and have Axiom recognize it as a
+> hexadecimal number?
+>
+
+I am not entirely sure what you mean by "hexadecimal number". If you
+mean the domain RadixExpansion(16) then perhaps this is not what you
+want. But here is one way of converting a string of hexdecimal digits
+representing a number to an integer that takes advantage of the Lisp
+functionality that underlies Axiom:
+
+(1) -> hex(x:String):Integer == integer(READ_-FROM_-STRING("#16r".x)$Lisp)
+   Function declaration hex : String -> Integer has been added to
+      workspace.
+                                                                   Type: Void
+(2) -> hex("DB6A")
+   Compiling function hex with type String -> Integer
+
+   (2)  56170
+                                                        Type: PositiveInteger
+
+--------
+
+Maybe that could be of some help.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Tue Oct 16 09:10:33 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IhmBt-0002GW-De
+	for mharc-axiom-mail@gnu.org; Tue, 16 Oct 2007 09:10:33 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IhmBs-0002GN-3d
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:10:32 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IhmBp-0002FF-S4
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:10:30 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IhmBp-0002FC-NA
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:10:29 -0400
+Received: from rv-out-0910.google.com ([209.85.198.185])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <amca01@gmail.com>) id 1IhmBp-0003b5-51
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:10:29 -0400
+Received: by rv-out-0910.google.com with SMTP id g11so5318333rvb
+	for <axiom-mail@nongnu.org>; Tue, 16 Oct 2007 06:10:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type;
+	bh=XpR25l5FPtTKVQ7nN0cCXdPlcqZT4h319blE5UR3swE=;
+	b=q2ZrWvVzOtt8xbgMsSVf7XfPQWpZcaaOyjeFdVy0qpUh67BjywbJLHCuTKLHj8zC9hx8rLdXD0Lq9kwNuwQnoWBUlA732i/dWqWcnv//kHQR4X+NhzpPu4nd+CCyzvY1ApFW6XqFrwLgFVP8fvU6ab6b543eSa8+3yO386ZMD0Y=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=beta;
+	h=received:message-id:date:from:to:subject:mime-version:content-type;
+	b=XqTLtSDJYOIhAsUCZVwbvrsNWFib6QSFYCDXymajWKm8evo+2t/xGGA9tZN/+TCZHBnyDT2tUW9BPqUHVO/kYIxauxB6XJv3oRqxoiaGJfuiG3N15Jm4jpqSoKpaKfTdgb4V6VklafrOLlTAz812MnpApNABevTiuwDjxw3Rw28=
+Received: by 10.114.89.1 with SMTP id m1mr8412895wab.1192540226681;
+	Tue, 16 Oct 2007 06:10:26 -0700 (PDT)
+Received: by 10.115.32.13 with HTTP; Tue, 16 Oct 2007 06:10:26 -0700 (PDT)
+Message-ID: <1d67a53c0710160610i3a15b918j3619858612aecf7a@mail.gmail.com>
+Date: Tue, 16 Oct 2007 23:10:26 +1000
+From: "Alasdair McAndrew" <amca01@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_31277_7454970.1192540226676"
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] A little print problem
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Oct 2007 13:10:32 -0000
+
+------=_Part_31277_7454970.1192540226676
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Here it is:
+
+F:=FFP(PF 2,x^3+x+1)
+x:=generator()$F
+for i in 0..7 repeat print [i,x^i]
+
+   [0,1]
+   [1,%D]
+        2
+   [0,%D ]
+   [1,%D + 1]
+        2
+   [0,%D  + %D]
+        2
+   [1,%D  + %D + 1]
+        2
+   [0,%D  + 1]
+   [1,1]
+
+Note that because of the PF 2, the values of i in the lists to be printed
+are automatically reduced mod 2.  But this is not what I want - I want the
+printed values of i to range from 0 to 7.   How can I do this, given that
+print only takes one argument?
+
+Thanks,
+Alasdair
+
+------=_Part_31277_7454970.1192540226676
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Here it is:<br><br><span style="font-family: courier new,monospace;">F:=FFP(PF 2,x^3+x+1)</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">x:=generator()$F</span><br style="font-family: courier new,monospace;">
+<span style="font-family: courier new,monospace;">for i in 0..7 repeat print [i,x^i]</span><br style="font-family: courier new,monospace;"><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">
+&nbsp;&nbsp; [0,1]</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">&nbsp;&nbsp; [1,%D]</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">&nbsp;&nbsp; [0,%D ]</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">
+&nbsp;&nbsp; [1,%D + 1]</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">
+&nbsp;&nbsp; [0,%D&nbsp; + %D]</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">
+&nbsp;&nbsp; [1,%D&nbsp; + %D + 1]</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">
+&nbsp;&nbsp; [0,%D&nbsp; + 1]</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">&nbsp;&nbsp; [1,1]</span><br><br>Note that because of the PF 2, the values of i in the lists to be printed are automatically reduced mod 2.&nbsp; But this is not what I want - I want the printed values of i to range from 0 to 7.&nbsp;&nbsp; How can I do this, given that print only takes one argument?
+<br><br>Thanks,<br>Alasdair<br>
+
+------=_Part_31277_7454970.1192540226676--
+
+
+
+From MAILER-DAEMON Tue Oct 16 09:25:49 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IhmQf-0008KP-0K
+	for mharc-axiom-mail@gnu.org; Tue, 16 Oct 2007 09:25:49 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IhmQe-0008K3-6P
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:25:48 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IhmQc-0008J8-AR
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:25:47 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IhmQc-0008J1-6P
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:25:46 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1IhmQb-0007DN-PA
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:25:46 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IhmQU-0000xY-46; Tue, 16 Oct 2007 15:25:38 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IhmQU-00046t-39; Tue, 16 Oct 2007 15:25:38 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Alasdair McAndrew" <amca01@gmail.com>
+Subject: Re: [Axiom-mail] A little print problem
+References: <1d67a53c0710160610i3a15b918j3619858612aecf7a@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 16 Oct 2007 15:25:37 +0200
+In-Reply-To: <1d67a53c0710160610i3a15b918j3619858612aecf7a@mail.gmail.com>
+Message-ID: <9qlka39ooe.fsf@aquin.mat.univie.ac.at>
+Lines: 32
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: fricas-devel <fricas-devel@googlegroups.com>,
+	open-axiom-devel <open-axiom-devel@lists.sf.net>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Oct 2007 13:25:48 -0000
+
+"Alasdair McAndrew" <amca01@gmail.com> writes:
+
+> Here it is:
+> 
+> F:=FFP(PF 2,x^3+x+1)
+> x:=generator()$F
+
+(24) -> for i in 0..7 repeat print([i, x^i]$List Union(INT, F))
+   [0,1]
+   [1,%A]
+        2
+   [2,%A ]
+   [3,%A + 1]
+        2
+   [4,%A  + %A]
+        2
+   [5,%A  + %A + 1]
+        2
+   [6,%A  + 1]
+   [7,1]
+                                                                   Type: Void
+
+
+The "problem" is not print, but rather that the simplest signature for the
+constructor function in [i, x^i] the interpreter can find takes some F's and
+returns a List F.  Above I explicitly told the interpreter to use the
+constructor function that takes Union(INT, F)'s and returns a list of such
+elements. Compare with
+
+for i in 0..7 repeat print([i, x^i]::List Union(INT, F))
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Oct 16 09:39:27 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ihmdr-00020T-ER
+	for mharc-axiom-mail@gnu.org; Tue, 16 Oct 2007 09:39:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ihmdo-0001zv-V5
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:39:25 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ihmdm-0001zQ-Ki
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:39:24 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ihmdm-0001zN-Dt
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:39:22 -0400
+Received: from athena.risc.uni-linz.ac.at ([140.78.116.39]
+	helo=smtpauthhost.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA1:24) (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1Ihmdl-0002jK-TX
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:39:22 -0400
+Received: from [193.170.38.119] (hemmecke@woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by smtpauthhost.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with
+	ESMTP id l9GDdATo007584
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Tue, 16 Oct 2007 15:39:10 +0200
+Message-ID: <4714BEFD.7060004@hemmecke.de>
+Date: Tue, 16 Oct 2007 15:39:09 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.6 (X11/20070728)
+MIME-Version: 1.0
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [open-axiom-devel] [Axiom-mail] A little print problem
+References: <1d67a53c0710160610i3a15b918j3619858612aecf7a@mail.gmail.com>
+	<9qlka39ooe.fsf@aquin.mat.univie.ac.at>
+In-Reply-To: <9qlka39ooe.fsf@aquin.mat.univie.ac.at>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+Cc: fricas-devel <fricas-devel@googlegroups.com>,
+	open-axiom-devel <open-axiom-devel@lists.sourceforge.net>,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Oct 2007 13:39:25 -0000
+
+Ooops. Anybody else experiencing this?
+Clearly, I gave wrong input first, but the error message is frightening.
+
+(I am not sure which revision I used when I built OA.)
+
+Ralf
+
+GCL (GNU Common Lisp)  2.6.8 CLtL1    Aug 23 2007 17:30:07
+Source License: LGPL(gcl,gmp), GPL(unexec,bfd,xgcl)
+Binary License:  GPL due to GPL'ed components: (BFD UNEXEC)
+Modifications of this banner must retain notice of a compatible license
+Dedicated to the memory of W. Schelter
+
+Use (help) to get some basic information on how to use GCL.
+Temporary directory for compiler files set to /tmp/hemmecke/
+                         AXIOM Computer Algebra System
+               Version: OpenAxiom 1.1.0 experimental 2007-09-10
+             Timestamp: Wednesday September 26, 2007 at 19:30:12
+-----------------------------------------------------------------------------
+    Issue )copyright to view copyright notices.
+    Issue )summary for a summary of useful system commands.
+    Issue )quit to leave AXIOM and return to shell.
+-----------------------------------------------------------------------------
+
+(1) ->
+(1) -> F:=FFP(PF 2,x3+x+1)
+
+    Cannot convert from type Polynomial SparseUnivariatePolynomial
+       PrimeField 2 to SparseUnivariatePolynomial PrimeField 2 for value
+    x3 + x + 1
+
+(1) -> F:=FFP(PF 2,x^3+x+1)
+
+
+    >> System error:
+    Caught fatal error [memory may be damaged]
+
+
+On 10/16/2007 03:25 PM, Martin Rubey wrote:
+> "Alasdair McAndrew" <amca01@gmail.com> writes:
+> 
+>> Here it is:
+>>
+>> F:=FFP(PF 2,x^3+x+1)
+>> x:=generator()$F
+> 
+> (24) -> for i in 0..7 repeat print([i, x^i]$List Union(INT, F))
+>    [0,1]
+>    [1,%A]
+>         2
+>    [2,%A ]
+>    [3,%A + 1]
+>         2
+>    [4,%A  + %A]
+>         2
+>    [5,%A  + %A + 1]
+>         2
+>    [6,%A  + 1]
+>    [7,1]
+>                                                                    Type: Void
+> 
+> 
+> The "problem" is not print, but rather that the simplest signature for the
+> constructor function in [i, x^i] the interpreter can find takes some F's and
+> returns a List F.  Above I explicitly told the interpreter to use the
+> constructor function that takes Union(INT, F)'s and returns a list of such
+> elements. Compare with
+> 
+> for i in 0..7 repeat print([i, x^i]::List Union(INT, F))
+> 
+> Martin
+
+
+
+
+
+From MAILER-DAEMON Tue Oct 16 09:40:20 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ihmeh-0002g1-VC
+	for mharc-axiom-mail@gnu.org; Tue, 16 Oct 2007 09:40:20 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ihmef-0002fR-Pj
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:40:17 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ihmed-0002eT-UQ
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:40:17 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ihmed-0002eO-MZ
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:40:15 -0400
+Received: from fk-out-0910.google.com ([209.85.128.188])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1Ihmed-0002zU-5d
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:40:15 -0400
+Received: by fk-out-0910.google.com with SMTP id 19so3551481fkr
+	for <axiom-mail@nongnu.org>; Tue, 16 Oct 2007 06:40:12 -0700 (PDT)
+Received: by 10.86.91.12 with SMTP id o12mr1072008fgb.1192542011919;
+	Tue, 16 Oct 2007 06:40:11 -0700 (PDT)
+Received: by 10.86.77.14 with HTTP; Tue, 16 Oct 2007 06:40:11 -0700 (PDT)
+Message-ID: <fbcd16d40710160640q2b6e5d6fyc36cab916ca55388@mail.gmail.com>
+Date: Tue, 16 Oct 2007 09:40:11 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Alasdair McAndrew" <amca01@gmail.com>
+Subject: Re: [Axiom-mail] A little print problem
+In-Reply-To: <1d67a53c0710160610i3a15b918j3619858612aecf7a@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <1d67a53c0710160610i3a15b918j3619858612aecf7a@mail.gmail.com>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Oct 2007 13:40:18 -0000
+
+On 10/16/07, Alasdair McAndrew <amca01@gmail.com> wrote:
+> Here it is:
+>
+> F:=FFP(PF 2,x^3+x+1)
+> x:=generator()$F
+>  for i in 0..7 repeat print [i,x^i]
+>
+>     [0,1]
+>    [1,%D]
+>          2
+>    [0,%D ]
+>     [1,%D + 1]
+>         2
+>     [0,%D  + %D]
+>         2
+>     [1,%D  + %D + 1]
+>         2
+>     [0,%D  + 1]
+>    [1,1]
+>
+> Note that because of the PF 2, the values of i in the lists to be printed
+> are automatically reduced mod 2.  But this is not what I want - I want the
+> printed values of i to range from 0 to 7.   How can I do this, given that
+> print only takes one argument?
+>
+
+Try this:
+
+(9) -> for i in 0..7 repeat output(i::String,x^i)
+   0 1
+   1 %A
+       2
+   2 %A
+   3 %A + 1
+       2
+   4 %A  + %A
+       2
+   5 %A  + %A + 1
+       2
+   6 %A  + 1
+   7 1
+                                                   Type: Void
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Tue Oct 16 09:46:42 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ihmks-0005Xa-NG
+	for mharc-axiom-mail@gnu.org; Tue, 16 Oct 2007 09:46:42 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ihmkq-0005XM-RB
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:46:40 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ihmkn-0005WV-EL
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:46:40 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ihmkn-0005WK-6c
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:46:37 -0400
+Received: from nz-out-0506.google.com ([64.233.162.225])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <amca01@gmail.com>) id 1Ihmkm-0004li-M9
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 09:46:36 -0400
+Received: by nz-out-0506.google.com with SMTP id f1so4598428nzc
+	for <axiom-mail@nongnu.org>; Tue, 16 Oct 2007 06:46:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:in-reply-to:mime-version:content-type:references;
+	bh=f41wr0ct2EFyNwOzljqO2X/fV7OCQSRr6DZn721dbGo=;
+	b=fY+DbVmIWFmtD9i4Wrf0vxXWYtTJBDYWBTECl5v4c7ydqDUGSogJ8xd5MMMglNQcPHat+i8GLaFDNsbspIlUPsEYLVl6FkrtXFEsnLXLo8MyXmkCSKW7ZW0gYBNgqTK3KdE1mMH9g5mbvaOz2Q3M0pcXlbWSssn65mfqBRPso4c=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=beta;
+	h=received:message-id:date:from:to:subject:in-reply-to:mime-version:content-type:references;
+	b=sCr9JaPfl4yElLvq/8i3njW4CJMAUyFWGWYZE6LK/PEyNsiscegBg2m27vSj7bk4hJIw4AAK3BkkM2cuJTP6tJrAI9DkFjt4+oWTmKWls1g6+deVds01sURwNrvclDScth2GQ8KyG0FYprRgmBPLEUUE8awgR3/V2OqXzJj1PSo=
+Received: by 10.114.195.19 with SMTP id s19mr8456772waf.1192542395423;
+	Tue, 16 Oct 2007 06:46:35 -0700 (PDT)
+Received: by 10.115.32.13 with HTTP; Tue, 16 Oct 2007 06:46:35 -0700 (PDT)
+Message-ID: <1d67a53c0710160646p72b179fcy78675e19898d96e0@mail.gmail.com>
+Date: Tue, 16 Oct 2007 23:46:35 +1000
+From: "Alasdair McAndrew" <amca01@gmail.com>
+To: "Martin Rubey" <martin.rubey@univie.ac.at>, 
+	"Bill Page" <bill.page@newsynthesis.org>, axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A little print problem
+In-Reply-To: <fbcd16d40710160640q2b6e5d6fyc36cab916ca55388@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_31565_21355377.1192542395419"
+References: <1d67a53c0710160610i3a15b918j3619858612aecf7a@mail.gmail.com>
+	<fbcd16d40710160640q2b6e5d6fyc36cab916ca55388@mail.gmail.com>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Oct 2007 13:46:41 -0000
+
+------=_Part_31565_21355377.1192542395419
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Thanks, Martin and Bill.  As always your replies have been both swift and
+very helpful.
+
+cheers,
+Alasdair
+
+On 10/16/07, Bill Page <bill.page@newsynthesis.org> wrote:
+>
+> On 10/16/07, Alasdair McAndrew <amca01@gmail.com> wrote:
+> > Here it is:
+> >
+> > F:=FFP(PF 2,x^3+x+1)
+> > x:=generator()$F
+> >  for i in 0..7 repeat print [i,x^i]
+> >
+> >     [0,1]
+> >    [1,%D]
+> >          2
+> >    [0,%D ]
+> >     [1,%D + 1]
+> >         2
+> >     [0,%D  + %D]
+> >         2
+> >     [1,%D  + %D + 1]
+> >         2
+> >     [0,%D  + 1]
+> >    [1,1]
+> >
+> > Note that because of the PF 2, the values of i in the lists to be
+> printed
+> > are automatically reduced mod 2.  But this is not what I want - I want
+> the
+> > printed values of i to range from 0 to 7.   How can I do this, given
+> that
+> > print only takes one argument?
+> >
+>
+> Try this:
+>
+> (9) -> for i in 0..7 repeat output(i::String,x^i)
+>    0 1
+>    1 %A
+>        2
+>    2 %A
+>    3 %A + 1
+>        2
+>    4 %A  + %A
+>        2
+>    5 %A  + %A + 1
+>        2
+>    6 %A  + 1
+>    7 1
+>                                                    Type: Void
+>
+> Regards,
+> Bill Page.
+>
+
+------=_Part_31565_21355377.1192542395419
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Thanks, Martin and Bill.&nbsp; As always your replies have been both swift and very helpful.<br><br>cheers,<br>Alasdair<br><br><div><span class="gmail_quote">On 10/16/07, <b class="gmail_sendername">Bill Page</b> &lt;<a href="mailto:bill.page@newsynthesis.org">
+bill.page@newsynthesis.org</a>&gt; wrote:</span><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">On 10/16/07, Alasdair McAndrew &lt;<a href="mailto:amca01@gmail.com">
+amca01@gmail.com</a>&gt; wrote:<br>&gt; Here it is:<br>&gt;<br>&gt; F:=FFP(PF 2,x^3+x+1)<br>&gt; x:=generator()$F<br>&gt;&nbsp;&nbsp;for i in 0..7 repeat print [i,x^i]<br>&gt;<br>&gt;&nbsp;&nbsp;&nbsp;&nbsp; [0,1]<br>&gt;&nbsp;&nbsp;&nbsp;&nbsp;[1,%D]<br>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2<br>
+&gt;&nbsp;&nbsp;&nbsp;&nbsp;[0,%D ]<br>&gt;&nbsp;&nbsp;&nbsp;&nbsp; [1,%D + 1]<br>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>&gt;&nbsp;&nbsp;&nbsp;&nbsp; [0,%D&nbsp;&nbsp;+ %D]<br>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>&gt;&nbsp;&nbsp;&nbsp;&nbsp; [1,%D&nbsp;&nbsp;+ %D + 1]<br>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>&gt;&nbsp;&nbsp;&nbsp;&nbsp; [0,%D&nbsp;&nbsp;+ 1]<br>&gt;&nbsp;&nbsp;&nbsp;&nbsp;[1,1]<br>&gt;<br>&gt; Note that because of the PF 2, the values of i in the lists to be printed
+<br>&gt; are automatically reduced mod 2.&nbsp;&nbsp;But this is not what I want - I want the<br>&gt; printed values of i to range from 0 to 7.&nbsp;&nbsp; How can I do this, given that<br>&gt; print only takes one argument?<br>&gt;<br><br>Try this:
+<br><br>(9) -&gt; for i in 0..7 repeat output(i::String,x^i)<br>&nbsp;&nbsp; 0 1<br>&nbsp;&nbsp; 1 %A<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>&nbsp;&nbsp; 2 %A<br>&nbsp;&nbsp; 3 %A + 1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>&nbsp;&nbsp; 4 %A&nbsp;&nbsp;+ %A<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>&nbsp;&nbsp; 5 %A&nbsp;&nbsp;+ %A + 1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2<br>&nbsp;&nbsp; 6 %A&nbsp;&nbsp;+ 1<br>&nbsp;&nbsp; 7 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type: Void<br><br>Regards,<br>Bill Page.<br></blockquote></div><br>
+
+------=_Part_31565_21355377.1192542395419--
+
+
+
+From MAILER-DAEMON Tue Oct 16 12:32:08 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IhpKy-0002nu-Hj
+	for mharc-axiom-mail@gnu.org; Tue, 16 Oct 2007 12:32:08 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IhpKw-0002mx-Br
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 12:32:06 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IhpKv-0002mV-JW
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 12:32:05 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IhpKv-0002mR-H3
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 12:32:05 -0400
+Received: from smtp-102-tuesday.noc.nerim.net ([62.4.17.102]
+	helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <fmaltey@nerim.fr>) id 1IhpKv-0003JT-7S
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 12:32:05 -0400
+Received: from localhost (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.nerim.net (Postfix) with ESMTP id 546F34F3FB;
+	Tue, 16 Oct 2007 18:31:52 +0200 (CEST)
+Received: from fmy by localhost with local (Exim 4.63)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1IhpKr-0001IM-7i; Tue, 16 Oct 2007 18:32:01 +0200
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-mail] A little print problem
+References: <1d67a53c0710160610i3a15b918j3619858612aecf7a@mail.gmail.com>
+	<9qlka39ooe.fsf@aquin.mat.univie.ac.at>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 16 Oct 2007 18:32:01 +0200
+In-Reply-To: <9qlka39ooe.fsf@aquin.mat.univie.ac.at>
+Message-ID: <87lka3yq9q.fsf@nerim.fr>
+Lines: 17
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: by monty-python.gnu.org: FreeBSD 4.6-4.9
+Cc: open-axiom-devel <open-axiom-devel@lists.sf.net>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Oct 2007 16:32:06 -0000
+
+Martin counsels a smart union of type :
+
+> (24) -> for i in 0..7 repeat print([i, x^i]$List Union(INT, F))
+> 
+> The "problem" is not print, but rather that the simplest signature for the
+> constructor function in [i, x^i] the interpreter can find takes some F's and
+> returns a List F.  Above I explicitly told the interpreter to use the
+> constructor function that takes Union(INT, F)'s and returns a list of such
+> elements. 
+
+Yesterday I was looking for a cartesian product, INT x F
+Today Alasdair is looking for a cartesian product.
+
+Cartesian products are very common in mathmeatics 
+and axiom seems to have no natural way to work arround this notion.
+
+F.
+
+
+
+From MAILER-DAEMON Tue Oct 16 14:20:16 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ihr1c-0005Aq-I7
+	for mharc-axiom-mail@gnu.org; Tue, 16 Oct 2007 14:20:16 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ihr1a-0005A5-89
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 14:20:14 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ihr1Y-00059H-VG
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 14:20:13 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ihr1Y-00059C-Me
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 14:20:12 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1Ihr1Y-0000pX-AM
+	for axiom-mail@nongnu.org; Tue, 16 Oct 2007 14:20:12 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Ihr1W-0002RB-BI; Tue, 16 Oct 2007 20:20:10 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Ihr1W-0004J6-8n; Tue, 16 Oct 2007 20:20:10 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Francois Maltey <fmaltey@nerim.fr>
+Subject: Cartesian Product, was: Re: [Axiom-mail] A little print problem
+References: <1d67a53c0710160610i3a15b918j3619858612aecf7a@mail.gmail.com>
+	<9qlka39ooe.fsf@aquin.mat.univie.ac.at> <87lka3yq9q.fsf@nerim.fr>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 16 Oct 2007 20:20:09 +0200
+In-Reply-To: <87lka3yq9q.fsf@nerim.fr>
+Message-ID: <9qfy0audk6.fsf_-_@aquin.mat.univie.ac.at>
+Lines: 18
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: open-axiom-devel <open-axiom-devel@lists.sf.net>,
+	fricas-devel <fricas-devel@googlegroups.com>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Oct 2007 18:20:14 -0000
+
+Francois Maltey <fmaltey@nerim.fr> writes:
+
+> Yesterday I was looking for a cartesian product, INT x F
+> Today Alasdair is looking for a cartesian product.
+
+Hm, at least what you asked on the list is a little different from what
+Alasdair needed:
+
+you wanted all elements in [0..9]^4, Alasdair needed a way to bundle two
+elements of two different types.
+
+I should maybe mention that what you need is trivial to do with Ralf's and my
+species package.
+
+For Alasdair, not even that's necessary.  What would be nice would be Cross as
+in Aldor.  Well, in fact, it would be nice to have Aldor replace SPAD...
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Oct 17 05:06:28 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ii4rD-0005bf-VJ
+	for mharc-axiom-mail@gnu.org; Wed, 17 Oct 2007 05:06:28 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ii4rC-0005bA-FC
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 05:06:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ii4rA-0005Zs-1j
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 05:06:25 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ii4r9-0005ZG-3O
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 05:06:23 -0400
+Received: from athena.risc.uni-linz.ac.at ([140.78.116.39]
+	helo=smtpauthhost.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA1:24) (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1Ii4r6-0005nH-Hv
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 05:06:21 -0400
+Received: from [193.170.38.119] (hemmecke@woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by smtpauthhost.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with
+	ESMTP id l9H95xTo010656
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Wed, 17 Oct 2007 11:06:00 +0200
+Message-ID: <4715D077.1050304@hemmecke.de>
+Date: Wed, 17 Oct 2007 11:05:59 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.6 (X11/20070728)
+MIME-Version: 1.0
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [open-axiom-devel] Cartesian Product,	was: Re: [Axiom-mail] A
+	little print problem
+References: <1d67a53c0710160610i3a15b918j3619858612aecf7a@mail.gmail.com>	<9qlka39ooe.fsf@aquin.mat.univie.ac.at>
+	<87lka3yq9q.fsf@nerim.fr>
+	<9qfy0audk6.fsf_-_@aquin.mat.univie.ac.at>
+In-Reply-To: <9qfy0audk6.fsf_-_@aquin.mat.univie.ac.at>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+Cc: open-axiom-devel <open-axiom-devel@lists.sourceforge.net>,
+	fricas-devel <fricas-devel@googlegroups.com>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 17 Oct 2007 09:06:26 -0000
+
+> For Alasdair, not even that's necessary.  What would be nice would be Cross as
+> in Aldor.  Well, in fact, it would be nice to have Aldor replace SPAD...
+
+Although it would be nice to have Aldor replace SPAD (as a language), 
+why don't you use Record as a workaround? You can easily produce your 
+own domain that models
+
+   Integer x F
+
+Record(i: Integer, f: F)
+
+would be the right thing.
+
+Actually (at least in Aldor) that cannot be printed, but to go around 
+this, simply wrap this Record with a definition of a new domain, that 
+has the property "CoercibleTo(OutputForm)" and implement that coerce nicely.
+
+Of course, that is some work, but "Cross" wouldn't help here anyway.
+
+Ralf
+
+
+
+From MAILER-DAEMON Wed Oct 17 20:02:37 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IiIqS-0005ur-T1
+	for mharc-axiom-mail@gnu.org; Wed, 17 Oct 2007 20:02:36 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IiIqR-0005uP-Hm
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 20:02:35 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IiIqO-0005sb-V3
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 20:02:35 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IiIqO-0005sY-T9
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 20:02:32 -0400
+Received: from drizzle.cc.mcgill.ca ([132.206.27.48])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <robert.funnell@mcgill.ca>) id 1IiIqO-00048T-Hc
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 20:02:32 -0400
+Received: from mailscan2.ncs.mcgill.ca (mailscan2.NCS.McGill.CA
+	[132.216.77.249])
+	by drizzle.cc.mcgill.ca (8.12.11.20060308/8.12.3) with ESMTP id
+	l9I02V4C003482
+	for <axiom-mail@nongnu.org>; Wed, 17 Oct 2007 20:02:31 -0400
+Received: from mailscan2.ncs.mcgill.ca (localhost [127.0.0.1])
+	by localhost (Postfix) with SMTP id E82729E81
+	for <axiom-mail@nongnu.org>; Wed, 17 Oct 2007 20:02:26 -0400 (EDT)
+Received: from earmuff.biomed.mcgill.ca (EarMuff.Biomed.McGill.CA
+	[132.206.111.126])
+	by mailscan2.ncs.mcgill.ca (Postfix) with ESMTP id D71B89E80
+	for <axiom-mail@nongnu.org>; Wed, 17 Oct 2007 20:02:26 -0400 (EDT)
+Date: Wed, 17 Oct 2007 20:02:26 -0400 (EDT)
+From: Robert Funnell <robert.funnell@mcgill.ca>
+X-X-Sender: funnell@localhost.localdomain
+To: axiom-mail@nongnu.org
+Message-ID: <Pine.LNX.4.64.0710171955410.24903@localhost.localdomain>
+X-Message-Flag: Avoid Outlook viruses: Switch to Pine! www.washington.edu/pine/
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-PMX-Version: 5.3.3.310218, Antispam-Engine: 2.5.2.313940,
+	Antispam-Data: 2007.10.15.63135
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+Subject: [Axiom-mail] Beginner problem with repeat
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Oct 2007 00:02:35 -0000
+
+I just started using Axiom recently and have obtained very useful 
+numerical solutions of a set of equations. I am now trying to embed 
+the solve in a loop so I can easily try different parameter values, 
+and I can't get it to work within the loop.
+
+Appended below is a simple test. The solve within the loop is just 
+silently skipped over, while the solve outside the loop gives me the 
+expected result. Am I doing something silly? Or, rather, what am I 
+doing that is silly?
+
+(The comment lines marked bad1 and bad2 are attempts to make the loop 
+more elegant. They don't work, but that's another story.)
+
+- Robert
+
+Test case
+---------
+
+)clear all
+)set output algebra test_results.txt
+
+eq1 == p^2 + 2*P + 5 = 0; precision := 1.e-6;
+plist == [1000,2000,3000]
+
+--bad1 for ip in 1..3 repeat
+--bad1   p == plist.ip
+--bad2 for p in plist repeat
+
+-- for some reason the solves don't get executed
+ip := 0;
+for ipp in 1..3 repeat
+   ip := ip + 1;
+   p == plist.ip;
+   output("p=",p);
+   solve(eq1,precision)
+
+-- the following solve does get executed
+output("p=",p)
+solve(eq1,precision)
+
+
+
+From MAILER-DAEMON Wed Oct 17 21:36:51 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IiKJe-0003y1-Pm
+	for mharc-axiom-mail@gnu.org; Wed, 17 Oct 2007 21:36:50 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IiKJd-0003wU-Ia
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 21:36:49 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IiKJc-0003tw-2S
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 21:36:49 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IiKJb-0003ti-Uu
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 21:36:47 -0400
+Received: from nf-out-0910.google.com ([64.233.182.186])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1IiKJb-0004cU-Jd
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 21:36:47 -0400
+Received: by nf-out-0910.google.com with SMTP id 30so16920nfu
+	for <axiom-mail@nongnu.org>; Wed, 17 Oct 2007 18:36:45 -0700 (PDT)
+Received: by 10.86.91.12 with SMTP id o12mr2487141fgb.1192671404846;
+	Wed, 17 Oct 2007 18:36:44 -0700 (PDT)
+Received: by 10.86.77.14 with HTTP; Wed, 17 Oct 2007 18:36:44 -0700 (PDT)
+Message-ID: <fbcd16d40710171836q72b547e5p1781d1afc48cef92@mail.gmail.com>
+Date: Wed, 17 Oct 2007 21:36:44 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Robert Funnell" <robert.funnell@mcgill.ca>
+Subject: Re: [Axiom-mail] Beginner problem with repeat
+In-Reply-To: <Pine.LNX.4.64.0710171955410.24903@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <Pine.LNX.4.64.0710171955410.24903@localhost.localdomain>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Oct 2007 01:36:49 -0000
+
+Hello Robert,
+
+You need an output operation like this:
+
+ for ipp in 1..3 repeat
+    ip := ip + 1
+    p == plist.ip
+    output("p=",p)
+    output solve(eq1,precision)
+
+OAxiom treats the enter for-loop as a single expression and only
+outputs the value returned by the last statement executed. The rest
+are thrown away unles you do something with them - like explicitly ask
+for the 'output'.
+
+Of course there are a lot of different ways to write this sort of
+loop. I would probably do it something like this:
+
+  )clear all
+  )set message autoload off
+
+  eq1 := p^2 + 2*P + 5 = 0
+  precision := 1.e-6
+  plist := [1000,2000,3000]
+
+  for i in plist repeat
+    output("p=".(i::String), solve(eval(eq1,p=i),precision).1)
+
+---------
+
+Normally == is only used in the Axiom interpreter for defining functions.
+
+Regards,
+Bill Page.
+
+
+
+On 10/17/07, Robert Funnell <robert.funnell@mcgill.ca> wrote:
+> I just started using Axiom recently and have obtained very useful
+> numerical solutions of a set of equations. I am now trying to embed
+> the solve in a loop so I can easily try different parameter values,
+> and I can't get it to work within the loop.
+>
+> Appended below is a simple test. The solve within the loop is just
+> silently skipped over, while the solve outside the loop gives me the
+> expected result. Am I doing something silly? Or, rather, what am I
+> doing that is silly?
+>
+> (The comment lines marked bad1 and bad2 are attempts to make the loop
+> more elegant. They don't work, but that's another story.)
+>
+> - Robert
+>
+> Test case
+> ---------
+>
+> )clear all
+> )set output algebra test_results.txt
+>
+> eq1 == p^2 + 2*P + 5 = 0; precision := 1.e-6;
+> plist == [1000,2000,3000]
+>
+> --bad1 for ip in 1..3 repeat
+> --bad1   p == plist.ip
+> --bad2 for p in plist repeat
+>
+> -- for some reason the solves don't get executed
+> ip := 0;
+> for ipp in 1..3 repeat
+>    ip := ip + 1;
+>    p == plist.ip;
+>    output("p=",p);
+>    solve(eq1,precision)
+>
+> -- the following solve does get executed
+> output("p=",p)
+> solve(eq1,precision)
+>
+
+
+
+From MAILER-DAEMON Wed Oct 17 21:55:21 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IiKbZ-0002s1-Dz
+	for mharc-axiom-mail@gnu.org; Wed, 17 Oct 2007 21:55:21 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IiKbY-0002rw-2n
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 21:55:20 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IiKbW-0002rk-Ha
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 21:55:18 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IiKbW-0002rh-Ck
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 21:55:18 -0400
+Received: from relais.videotron.ca ([24.201.245.36])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <robert.funnell@mcgill.ca>) id 1IiKbW-0008Ia-2h
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 21:55:18 -0400
+MIME-version: 1.0
+Content-transfer-encoding: 7BIT
+Content-type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+Received: from localhost ([24.37.8.197]) by VL-MH-MR001.ip.videotron.ca
+	(Sun Java(tm) System Messaging Server 6.3-4.01 (built Aug  3 2007;
+	32bit))
+	with ESMTP id <0JQ3000GW3ZOWX80@VL-MH-MR001.ip.videotron.ca> for
+	axiom-mail@nongnu.org; Wed, 17 Oct 2007 21:55:04 -0400 (EDT)
+Date: Wed, 17 Oct 2007 21:55:00 -0400 (Eastern Daylight Time)
+From: Robert Funnell <robert.funnell@mcgill.ca>
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Beginner problem with repeat
+In-reply-to: <fbcd16d40710171836q72b547e5p1781d1afc48cef92@mail.gmail.com>
+Message-id: <Pine.WNT.4.64.0710172144470.516@Earthworm>
+References: <Pine.LNX.4.64.0710171955410.24903@localhost.localdomain>
+	<fbcd16d40710171836q72b547e5p1781d1afc48cef92@mail.gmail.com>
+X-Message-flag: Avoid Outlook viruses: Switch to Pine! www.washington.edu/pine/
+X-X-Sender: robert.funnell@mcgill.ca@exchange-fe.campus.mcgill.ca
+X-detected-kernel: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Oct 2007 01:55:20 -0000
+
+Bill -
+
+Thanks! I'll try that tomorrow. I had read that everything but the 
+last thing in the loop would be thrown away, but since the solve is 
+the last thing in the loop, I thought I'd see its results. Why do I 
+need an output for the solve in the loop when I don't need it for the 
+one outside the loop?
+
+Is there a simple explanation for why you need to do 'for i in plist'
+then p=i rather than just 'for p in plist'?
+
+- Robert
+
+On Wed, 17 Oct 2007, Bill Page wrote:
+
+> Hello Robert,
+>
+> You need an output operation like this:
+>
+> for ipp in 1..3 repeat
+>    ip := ip + 1
+>    p == plist.ip
+>    output("p=",p)
+>    output solve(eq1,precision)
+>
+> OAxiom treats the enter for-loop as a single expression and only
+> outputs the value returned by the last statement executed. The rest
+> are thrown away unles you do something with them - like explicitly ask
+> for the 'output'.
+>
+> Of course there are a lot of different ways to write this sort of
+> loop. I would probably do it something like this:
+>
+>  )clear all
+>  )set message autoload off
+>
+>  eq1 := p^2 + 2*P + 5 = 0
+>  precision := 1.e-6
+>  plist := [1000,2000,3000]
+>
+>  for i in plist repeat
+>    output("p=".(i::String), solve(eval(eq1,p=i),precision).1)
+>
+> ---------
+>
+> Normally == is only used in the Axiom interpreter for defining functions.
+>
+> Regards,
+> Bill Page.
+>
+>
+>
+> On 10/17/07, Robert Funnell <robert.funnell@mcgill.ca> wrote:
+>> I just started using Axiom recently and have obtained very useful
+>> numerical solutions of a set of equations. I am now trying to embed
+>> the solve in a loop so I can easily try different parameter values,
+>> and I can't get it to work within the loop.
+>>
+>> Appended below is a simple test. The solve within the loop is just
+>> silently skipped over, while the solve outside the loop gives me the
+>> expected result. Am I doing something silly? Or, rather, what am I
+>> doing that is silly?
+>>
+>> (The comment lines marked bad1 and bad2 are attempts to make the loop
+>> more elegant. They don't work, but that's another story.)
+>>
+>> - Robert
+>>
+>> Test case
+>> ---------
+>>
+>> )clear all
+>> )set output algebra test_results.txt
+>>
+>> eq1 == p^2 + 2*P + 5 = 0; precision := 1.e-6;
+>> plist == [1000,2000,3000]
+>>
+>> --bad1 for ip in 1..3 repeat
+>> --bad1   p == plist.ip
+>> --bad2 for p in plist repeat
+>>
+>> -- for some reason the solves don't get executed
+>> ip := 0;
+>> for ipp in 1..3 repeat
+>>    ip := ip + 1;
+>>    p == plist.ip;
+>>    output("p=",p);
+>>    solve(eq1,precision)
+>>
+>> -- the following solve does get executed
+>> output("p=",p)
+>> solve(eq1,precision)
+>>
+>
+
+-- 
+W. Robert J. Funnell, Ph.D., Eng., Assoc. Prof.
+Dept. BioMedical Engineering, McGill University
+Tel. +1-514-398-6739                 Fax +1-514-398-7461
+robert.funnell@mcgill.ca   http://audilab.bmed.mcgill.ca
+
+
+
+
+From MAILER-DAEMON Wed Oct 17 22:32:47 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IiLBn-0000uK-Ng
+	for mharc-axiom-mail@gnu.org; Wed, 17 Oct 2007 22:32:47 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IiLBm-0000s7-03
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 22:32:46 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IiLBk-0000rO-Rx
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 22:32:45 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IiLBk-0000rL-Mc
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 22:32:44 -0400
+Received: from nf-out-0910.google.com ([64.233.182.191])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1IiLBk-0006mq-1C
+	for axiom-mail@nongnu.org; Wed, 17 Oct 2007 22:32:44 -0400
+Received: by nf-out-0910.google.com with SMTP id 30so28262nfu
+	for <axiom-mail@nongnu.org>; Wed, 17 Oct 2007 19:32:43 -0700 (PDT)
+Received: by 10.86.98.18 with SMTP id v18mr20479fgb.1192674762726;
+	Wed, 17 Oct 2007 19:32:42 -0700 (PDT)
+Received: by 10.86.77.14 with HTTP; Wed, 17 Oct 2007 19:32:42 -0700 (PDT)
+Message-ID: <fbcd16d40710171932meadcb33n6c62c2a1fee4dd43@mail.gmail.com>
+Date: Wed, 17 Oct 2007 22:32:42 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Robert Funnell" <robert.funnell@mcgill.ca>
+Subject: Re: [Axiom-mail] Beginner problem with repeat
+In-Reply-To: <Pine.WNT.4.64.0710172144470.516@Earthworm>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <Pine.LNX.4.64.0710171955410.24903@localhost.localdomain>
+	<fbcd16d40710171836q72b547e5p1781d1afc48cef92@mail.gmail.com>
+	<Pine.WNT.4.64.0710172144470.516@Earthworm>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Oct 2007 02:32:46 -0000
+
+On 10/17/07, Robert Funnell <robert.funnell@mcgill.ca> wrote:
+> Bill -
+>
+> Thanks! I'll try that tomorrow. I had read that everything but the
+> last thing in the loop would be thrown away, but since the solve is
+> the last thing in the loop, I thought I'd see its results. Why do I
+> need an output for the solve in the loop when I don't need it for the
+> one outside the loop?
+
+Contrary to what I implied in my previous email, apparently Axiom's
+for loop is defined to return only a "Void" result. In contrast a
+sequence of statements does behave as you say so that for example the
+value of 'x' after the execution of:
+
+  x:=(1;2;3)
+
+is 3.
+
+>
+> Is there a simple explanation for why you need to do 'for i in plist'
+> then p=i rather than just 'for p in plist'?
+>
+
+The reason has to do with the scope of the variable inside the
+for-loop. It is a different 'p' then the one that you used when you
+defined the equation. You could write however:
+
+  for p in [1000,2000,3000] repeat output solve(p^2 + 2*P + 5 = 0, 1.e-6)
+
+now with p occuring inside the loop.
+
+Alternatively you might pass p to a function that defines the equation
+you want to solve:
+
+  eq1(p) == p^2 + 2*P + 5 = 0
+  for p in [1000,2000,3000] repeat output solve(eq1(p), 1.e-6)
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Oct 18 02:26:07 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IiOpb-0004io-5C
+	for mharc-axiom-mail@gnu.org; Thu, 18 Oct 2007 02:26:07 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IiOpZ-0004iI-AI
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 02:26:05 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IiOpW-0004gO-LV
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 02:26:04 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IiOpW-0004gL-Fd
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 02:26:02 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1IiOpW-0003sY-3b
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 02:26:02 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IiOpQ-0001Ta-CX; Thu, 18 Oct 2007 08:25:56 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IiOpQ-00082B-AX; Thu, 18 Oct 2007 08:25:56 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Robert Funnell <robert.funnell@mcgill.ca>
+Subject: Re: [Axiom-mail] Beginner problem with repeat
+References: <Pine.LNX.4.64.0710171955410.24903@localhost.localdomain>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 18 Oct 2007 08:25:55 +0200
+In-Reply-To: <Pine.LNX.4.64.0710171955410.24903@localhost.localdomain>
+Message-ID: <9qodexj5vw.fsf@aquin.mat.univie.ac.at>
+Lines: 33
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Oct 2007 06:26:05 -0000
+
+Robert Funnell <robert.funnell@mcgill.ca> writes:
+
+> -- for some reason the solves don't get executed
+> ip := 0;
+> for ipp in 1..3 repeat
+>    ip := ip + 1;
+>    p == plist.ip;
+>    output("p=",p);
+>    solve(eq1,precision)
+
+"Bill Page" <bill.page@newsynthesis.org> writes:
+
+> Contrary to what I implied in my previous email, apparently Axiom's
+> for loop is defined to return only a "Void" result. In contrast a
+> sequence of statements does behave as you say so that for example the
+> value of 'x' after the execution of:
+> 
+>   x:=(1;2;3)
+> 
+> is 3.
+
+That's correct.  Furthermore, that's also the behaviour of aldor.
+
+There is another thing:
+
+    p == plist.ip;
+
+defines p to be a (nullary) function.  You probably meant to say
+
+    p := plist.ip;
+
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Oct 18 11:04:27 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IiWvD-0005cJ-BP
+	for mharc-axiom-mail@gnu.org; Thu, 18 Oct 2007 11:04:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IiWvB-0005c7-Ke
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:04:25 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IiWvA-0005bb-Uh
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:04:25 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IiWvA-0005bY-L3
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:04:24 -0400
+Received: from torrent.cc.mcgill.ca ([132.206.27.49])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <robert.funnell@mcgill.ca>) id 1IiWv9-0000xb-I9
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:04:23 -0400
+Received: from mailscan4.cc.mcgill.ca (mailscan4.CC.McGill.CA [132.216.77.251])
+	by torrent.cc.mcgill.ca (8.12.11.20060308/8.12.3) with ESMTP id
+	l9IF4M8r020175
+	for <axiom-mail@nongnu.org>; Thu, 18 Oct 2007 11:04:22 -0400
+Received: from mailscan4.cc.mcgill.ca (localhost [127.0.0.1])
+	by localhost (Postfix) with SMTP id C9C3655F7
+	for <axiom-mail@nongnu.org>; Thu, 18 Oct 2007 11:04:17 -0400 (EDT)
+Received: from earmuff.biomed.mcgill.ca (EarMuff.Biomed.McGill.CA
+	[132.206.111.126])
+	by mailscan4.cc.mcgill.ca (Postfix) with ESMTP id ADB6855EF
+	for <axiom-mail@nongnu.org>; Thu, 18 Oct 2007 11:04:17 -0400 (EDT)
+Date: Thu, 18 Oct 2007 11:04:17 -0400 (EDT)
+From: Robert Funnell <robert.funnell@mcgill.ca>
+X-X-Sender: funnell@localhost.localdomain
+To: axiom-mail@nongnu.org
+Message-ID: <Pine.LNX.4.64.0710181056350.24903@localhost.localdomain>
+X-Message-Flag: Avoid Outlook viruses: Switch to Pine! www.washington.edu/pine/
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-PMX-Version: 5.3.3.310218, Antispam-Engine: 2.5.2.313940,
+	Antispam-Data: 2007.10.15.63408
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+Subject: [Axiom-mail] Documentation of 'output'
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Oct 2007 15:04:25 -0000
+
+It seems that 'output' can be used in the form 'output(...)' or 
+'output ...'. For example, 'output(i)' but 'output [x,y]' in the Axiom 
+book. What is the difference and where is this actually documented?
+I've hunted in HyperDoc, in the Axiom book and in Martin Dunstan's 
+tutorial without success.
+
+(I'm still working on digesting the responses to my previous 
+questions.)
+
+- Robert
+
+
+
+From MAILER-DAEMON Thu Oct 18 11:19:03 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IiX9L-0004SO-6m
+	for mharc-axiom-mail@gnu.org; Thu, 18 Oct 2007 11:19:03 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IiX9J-0004QN-SS
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:19:01 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IiX9G-0004K6-FA
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:19:01 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IiX9G-0004Jy-6H
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:18:58 -0400
+Received: from nf-out-0910.google.com ([64.233.182.184])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1IiX9F-0003mI-Rd
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:18:58 -0400
+Received: by nf-out-0910.google.com with SMTP id 30so194118nfu
+	for <axiom-mail@nongnu.org>; Thu, 18 Oct 2007 08:18:56 -0700 (PDT)
+Received: by 10.86.98.18 with SMTP id v18mr510727fgb.1192720735937;
+	Thu, 18 Oct 2007 08:18:55 -0700 (PDT)
+Received: by 10.86.77.14 with HTTP; Thu, 18 Oct 2007 08:18:55 -0700 (PDT)
+Message-ID: <fbcd16d40710180818x18a27c22i83a873e86ac6d94f@mail.gmail.com>
+Date: Thu, 18 Oct 2007 11:18:55 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Robert Funnell" <robert.funnell@mcgill.ca>
+Subject: Re: [Axiom-mail] Documentation of 'output'
+In-Reply-To: <Pine.LNX.4.64.0710181056350.24903@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <Pine.LNX.4.64.0710181056350.24903@localhost.localdomain>
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Oct 2007 15:19:02 -0000
+
+On 10/18/07, Robert Funnell wrote:
+> It seems that 'output' can be used in the form 'output(...)' or
+> 'output ...'. For example, 'output(i)' but 'output [x,y]' in the Axiom
+> book. What is the difference and where is this actually documented?
+> I've hunted in HyperDoc, in the Axiom book and in Martin Dunstan's
+> tutorial without success.
+>
+> (I'm still working on digesting the responses to my previous
+> questions.)
+>
+
+Robert,
+
+In Axiom there is no need to add extra parenthesis. So both
+
+   sin 1.0
+
+and
+
+  sin(1.0)
+
+mean exactly the same thing. The only time parenthesis are needed is
+if there is any ambiguity.
+
+There is nothing special about 'output'. It is just another operation
+like all other operations in Axiom. So
+
+  output 1
+
+and
+
+  output(1)
+
+mean exactly the same thing. But if you call 'output' with two
+arguments, then you must enclose the argument list in parenthesis like
+this:
+
+  output ("test",1)
+
+so that Axiom knows you intend to apply 'output' to both arguments.
+
+(space before the '(' is optional)
+
+'output [x,y]'  is a slightly different case. Here you are asking
+Axiom to first form a List '[x,y]' which forms a single value and then
+the 'output' operator is applied to that value.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Oct 18 11:24:29 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IiXEa-0006GM-UL
+	for mharc-axiom-mail@gnu.org; Thu, 18 Oct 2007 11:24:28 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IiXEZ-0006Fo-2I
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:24:27 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IiXEV-0006FP-Mj
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:24:25 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IiXEV-0006FJ-De
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:24:23 -0400
+Received: from torrent.cc.mcgill.ca ([132.206.27.49])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <robert.funnell@mcgill.ca>) id 1IiXEV-00058d-4z
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:24:23 -0400
+Received: from mailscan4.cc.mcgill.ca (mailscan4.CC.McGill.CA [132.216.77.251])
+	by torrent.cc.mcgill.ca (8.12.11.20060308/8.12.3) with ESMTP id
+	l9IFOL3t031283; Thu, 18 Oct 2007 11:24:21 -0400
+Received: from mailscan4.cc.mcgill.ca (localhost [127.0.0.1])
+	by localhost (Postfix) with SMTP id DB13E5602;
+	Thu, 18 Oct 2007 11:24:16 -0400 (EDT)
+Received: from EarMuff.Biomed.McGill.CA (EarMuff.Biomed.McGill.CA
+	[132.206.111.126])
+	by mailscan4.cc.mcgill.ca (Postfix) with ESMTP id BD92C5599;
+	Thu, 18 Oct 2007 11:24:16 -0400 (EDT)
+Date: Thu, 18 Oct 2007 11:24:16 -0400 (EDT)
+From: Robert Funnell <robert.funnell@mcgill.ca>
+X-X-Sender: funnell@localhost.localdomain
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Documentation of 'output'
+In-Reply-To: <fbcd16d40710180818x18a27c22i83a873e86ac6d94f@mail.gmail.com>
+Message-ID: <Pine.LNX.4.64.0710181121390.24903@localhost.localdomain>
+References: <Pine.LNX.4.64.0710181056350.24903@localhost.localdomain>
+	<fbcd16d40710180818x18a27c22i83a873e86ac6d94f@mail.gmail.com>
+X-Message-Flag: Avoid Outlook viruses: Switch to Pine! www.washington.edu/pine/
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-PMX-Version: 5.3.3.310218, Antispam-Engine: 2.5.2.313940,
+	Antispam-Data: 2007.10.18.65622
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Oct 2007 15:24:27 -0000
+
+Ah! Very clear. Thanks.
+
+Is this explained somewhere that I should have found?
+
+And is the output operator itself documented somewhere? Not that I 
+really need it, but I have a feeling that I'm missing something.
+
+
+On Thu, 18 Oct 2007, Bill Page wrote:
+
+> Robert,
+>
+> In Axiom there is no need to add extra parenthesis. So both
+>
+>   sin 1.0
+>
+> and
+>
+>  sin(1.0)
+>
+> mean exactly the same thing. The only time parenthesis are needed is
+> if there is any ambiguity.
+>
+> There is nothing special about 'output'. It is just another operation
+> like all other operations in Axiom. So
+>
+>  output 1
+>
+> and
+>
+>  output(1)
+>
+> mean exactly the same thing. But if you call 'output' with two
+> arguments, then you must enclose the argument list in parenthesis like
+> this:
+>
+>  output ("test",1)
+>
+> so that Axiom knows you intend to apply 'output' to both arguments.
+>
+> (space before the '(' is optional)
+>
+> 'output [x,y]'  is a slightly different case. Here you are asking
+> Axiom to first form a List '[x,y]' which forms a single value and then
+> the 'output' operator is applied to that value.
+>
+> Regards,
+> Bill Page.
+
+
+
+From MAILER-DAEMON Thu Oct 18 11:26:38 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IiXGg-0000gR-Br
+	for mharc-axiom-mail@gnu.org; Thu, 18 Oct 2007 11:26:38 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IiXGe-0000dC-J3
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:26:36 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IiXGd-0000a2-0w
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:26:36 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IiXGc-0000Zc-HS
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:26:34 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1IiXGb-0005br-9A
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:26:33 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IiXGZ-0002rb-L6; Thu, 18 Oct 2007 17:26:31 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IiXGZ-0007o4-Is; Thu, 18 Oct 2007 17:26:31 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Robert Funnell <robert.funnell@mcgill.ca>
+Subject: Re: [Axiom-mail] Documentation of 'output'
+References: <Pine.LNX.4.64.0710181056350.24903@localhost.localdomain>
+	<fbcd16d40710180818x18a27c22i83a873e86ac6d94f@mail.gmail.com>
+	<Pine.LNX.4.64.0710181121390.24903@localhost.localdomain>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 18 Oct 2007 17:26:31 +0200
+In-Reply-To: <Pine.LNX.4.64.0710181121390.24903@localhost.localdomain>
+Message-ID: <9qabqgbg0o.fsf@aquin.mat.univie.ac.at>
+Lines: 16
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Oct 2007 15:26:36 -0000
+
+Robert Funnell <robert.funnell@mcgill.ca> writes:
+
+> Ah! Very clear. Thanks.
+> 
+> Is this explained somewhere that I should have found?
+> 
+> And is the output operator itself documented somewhere? Not that I really need
+> it, but I have a feeling that I'm missing something.
+
+HyperDoc: click "Browse", enter 
+
+output
+
+click "operations"
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Oct 18 11:51:41 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IiXeu-0001Cj-Vr
+	for mharc-axiom-mail@gnu.org; Thu, 18 Oct 2007 11:51:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IiXet-0001Ax-EZ
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:51:39 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IiXep-0001Ad-Ux
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:51:38 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IiXep-0001Aa-QX
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:51:35 -0400
+Received: from drizzle.cc.mcgill.ca ([132.206.27.48])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <robert.funnell@mcgill.ca>) id 1IiXep-000320-Ib
+	for axiom-mail@nongnu.org; Thu, 18 Oct 2007 11:51:35 -0400
+Received: from mailscan3.mcgill.ca (mailscan3.NCS.McGill.CA [132.216.77.250])
+	by drizzle.cc.mcgill.ca (8.12.11.20060308/8.12.3) with ESMTP id
+	l9IFpYEN031589
+	for <axiom-mail@nongnu.org>; Thu, 18 Oct 2007 11:51:34 -0400
+Received: from mailscan3.mcgill.ca (localhost [127.0.0.1])
+	by localhost (Postfix) with SMTP id C1CCF5772
+	for <axiom-mail@nongnu.org>; Thu, 18 Oct 2007 11:51:29 -0400 (EDT)
+Received: from earmuff.biomed.mcgill.ca (EarMuff.Biomed.McGill.CA
+	[132.206.111.126])
+	by mailscan3.mcgill.ca (Postfix) with ESMTP id AF7625771
+	for <axiom-mail@nongnu.org>; Thu, 18 Oct 2007 11:51:29 -0400 (EDT)
+Date: Thu, 18 Oct 2007 11:51:29 -0400 (EDT)
+From: Robert Funnell <robert.funnell@mcgill.ca>
+X-X-Sender: funnell@localhost.localdomain
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Documentation of 'output'
+In-Reply-To: <9qabqgbg0o.fsf@aquin.mat.univie.ac.at>
+Message-ID: <Pine.LNX.4.64.0710181135330.24903@localhost.localdomain>
+References: <Pine.LNX.4.64.0710181056350.24903@localhost.localdomain>
+	<fbcd16d40710180818x18a27c22i83a873e86ac6d94f@mail.gmail.com>
+	<Pine.LNX.4.64.0710181121390.24903@localhost.localdomain>
+	<9qabqgbg0o.fsf@aquin.mat.univie.ac.at>
+X-Message-Flag: Avoid Outlook viruses: Switch to Pine! www.washington.edu/pine/
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-PMX-Version: 5.3.3.310218, Antispam-Engine: 2.5.2.313940,
+	Antispam-Data: 2007.10.15.64626
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Oct 2007 15:51:39 -0000
+
+Oooh. Red face.
+As embarrassing as it is, I'll explain why I hadn't found that, in 
+case there is someone else with the same affliction.
+
+When I run axiom, the HyperDoc window pops up and says 'AXIOM HyperDoc 
+Top Level'. I click on, say, Reference to look for something. A second 
+window pops up on top of the first window. I poke around for a while, 
+using the home and/or up-arrow buttons to get back to the top. At the 
+top I see 'Axiom Reference' and no home or up-arrow button, and as a 
+very confused newbie forget that there's another window hiding behind 
+this one. (I had actually came across a reference to Browse at one 
+point and couldn't figure out why I couldn't find it, but then forgot 
+about it.)
+
+The lack of a home or up-arrow button at the top level of a 
+second-level item like Reference or Browse is a result of wanting 
+those things to open in separate windows. Would it be reasonable or 
+feasible to have those second-level windows open with offsets from the 
+parent Top Level window?
+
+- Robert
+
+On Thu, 18 Oct 2007, Martin Rubey wrote:
+
+> Robert Funnell <robert.funnell@mcgill.ca> writes:
+>
+>> Ah! Very clear. Thanks.
+>>
+>> Is this explained somewhere that I should have found?
+>>
+>> And is the output operator itself documented somewhere? Not that I really need
+>> it, but I have a feeling that I'm missing something.
+>
+> HyperDoc: click "Browse", enter
+>
+> output
+>
+> click "operations"
+>
+> Martin
+
+
+
+From MAILER-DAEMON Fri Oct 19 04:15:18 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Iin0o-0003aU-6n
+	for mharc-axiom-mail@gnu.org; Fri, 19 Oct 2007 04:15:18 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Iin0l-0003Zy-FZ
+	for axiom-mail@nongnu.org; Fri, 19 Oct 2007 04:15:15 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Iin0j-0003Z7-H3
+	for axiom-mail@nongnu.org; Fri, 19 Oct 2007 04:15:14 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Iin0j-0003Z2-0c
+	for axiom-mail@nongnu.org; Fri, 19 Oct 2007 04:15:13 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1Iin0i-0001rv-Uq
+	for axiom-mail@nongnu.org; Fri, 19 Oct 2007 04:15:13 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Iin0e-00070M-16; Fri, 19 Oct 2007 10:15:08 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Iin0d-0005jI-WF; Fri, 19 Oct 2007 10:15:08 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: Robert Funnell <robert.funnell@mcgill.ca>
+Subject: Re: [Axiom-mail] Documentation of 'output'
+References: <Pine.LNX.4.64.0710181056350.24903@localhost.localdomain>
+	<fbcd16d40710180818x18a27c22i83a873e86ac6d94f@mail.gmail.com>
+	<Pine.LNX.4.64.0710181121390.24903@localhost.localdomain>
+	<9qabqgbg0o.fsf@aquin.mat.univie.ac.at>
+	<Pine.LNX.4.64.0710181135330.24903@localhost.localdomain>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 19 Oct 2007 10:15:07 +0200
+In-Reply-To: <Pine.LNX.4.64.0710181135330.24903@localhost.localdomain>
+Message-ID: <9q7iljzfjo.fsf@aquin.mat.univie.ac.at>
+Lines: 59
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: by monty-python.gnu.org: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 19 Oct 2007 08:15:15 -0000
+
+Robert Funnell <robert.funnell@mcgill.ca> writes:
+
+> I'll explain why I hadn't found that, in case there is someone else with the
+> same affliction.
+
+Thanks!  Yes, HyperDoc's behaviour is a little "unusual" given todays
+standards.  Unfortunately, it seems that it's not really trivial to modify.
+I'd still advise you to use it, since it is a great source of information.
+Note that various flavours of axiom provide versions of HyperDoc to different
+degrees of robustness.  Thus, if your HyperDoc crashes, ask again.
+
+There is one other command I use frequently, namely, if I do not know at all
+where I should be looking:
+
+    )what things somethingiamlookingfor
+
+or, shorther
+
+    )wh th somethingiamlookingfor
+
+(in the axiom console, that is)
+
+It does a case-insensitive search for all operations / domains / packages /
+categories for somethingiamlookingfor.  Thus, if I forgot how to spell the
+binomial coefficient (LaTeX likes binom, mathematica Binomial, ...) I just ask
+
+    )wh th bino
+
+or so.
+
+If you are interested in how things are actually programmed, maybe you like to
+install 
+
+http://wiki.axiom-developer.org/SPADEDIT
+
+(click on "tangle" and save the result in
+
+/axiom/target/i686-pc-linux/lib/SPADEDIT
+
+(on some flavours of axiom, the path may look a little different, but I forgot
+the details.  I think you'd have to replace target/i686-pc-linux with
+mnt/linux)
+
+Then you have to adapt it to your needs, i.e., replace
+
+    gnuclient
+
+with the name of your editor of choice.
+
+($number contains the line-number to jump to.)
+
+Finally make it executable.  Then, in HyperDoc
+
+    click browse - enter INT - click constructors - click INT.spad
+
+should open the source file at the right place.
+
+
+Martin
+
+
+
+
+From MAILER-DAEMON Fri Oct 19 15:29:37 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IixXN-0003jI-2v
+	for mharc-axiom-mail@gnu.org; Fri, 19 Oct 2007 15:29:37 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IixXL-0003j7-2S
+	for axiom-mail@nongnu.org; Fri, 19 Oct 2007 15:29:35 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IixXK-0003ij-C8
+	for axiom-mail@nongnu.org; Fri, 19 Oct 2007 15:29:34 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IixXJ-0003ia-V8
+	for axiom-mail@nongnu.org; Fri, 19 Oct 2007 15:29:33 -0400
+Received: from drizzle.cc.mcgill.ca ([132.206.27.48])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <robert.funnell@mcgill.ca>) id 1IixXJ-0004qR-DO
+	for axiom-mail@nongnu.org; Fri, 19 Oct 2007 15:29:33 -0400
+Received: from mailscan2.ncs.mcgill.ca (mailscan2.NCS.McGill.CA
+	[132.216.77.249])
+	by drizzle.cc.mcgill.ca (8.12.11.20060308/8.12.3) with ESMTP id
+	l9JJTWmv018294
+	for <axiom-mail@nongnu.org>; Fri, 19 Oct 2007 15:29:32 -0400
+Received: from mailscan2.ncs.mcgill.ca (localhost [127.0.0.1])
+	by localhost (Postfix) with SMTP id 41BB7A3A3
+	for <axiom-mail@nongnu.org>; Fri, 19 Oct 2007 15:29:23 -0400 (EDT)
+Received: from earmuff.biomed.mcgill.ca (EarMuff.Biomed.McGill.CA
+	[132.206.111.126])
+	by mailscan2.ncs.mcgill.ca (Postfix) with ESMTP id 20B73A396
+	for <axiom-mail@nongnu.org>; Fri, 19 Oct 2007 15:29:23 -0400 (EDT)
+Date: Fri, 19 Oct 2007 15:29:22 -0400 (EDT)
+From: Robert Funnell <robert.funnell@mcgill.ca>
+X-X-Sender: funnell@localhost.localdomain
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Documentation of 'output'
+In-Reply-To: <9q7iljzfjo.fsf@aquin.mat.univie.ac.at>
+Message-ID: <Pine.LNX.4.64.0710191456120.24903@localhost.localdomain>
+References: <Pine.LNX.4.64.0710181056350.24903@localhost.localdomain>
+	<fbcd16d40710180818x18a27c22i83a873e86ac6d94f@mail.gmail.com>
+	<Pine.LNX.4.64.0710181121390.24903@localhost.localdomain>
+	<9qabqgbg0o.fsf@aquin.mat.univie.ac.at>
+	<Pine.LNX.4.64.0710181135330.24903@localhost.localdomain>
+	<9q7iljzfjo.fsf@aquin.mat.univie.ac.at>
+X-Message-Flag: Avoid Outlook viruses: Switch to Pine! www.washington.edu/pine/
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-PMX-Version: 5.3.3.310218, Antispam-Engine: 2.5.2.313940,
+	Antispam-Data: 2007.10.19.105323
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 19 Oct 2007 19:29:35 -0000
+
+Thanks for the additional information. I'll try the SPADEDIT thing 
+when I'm feeling particularly masochistic :-)
+
+My HyperDoc does crash if I try to search the library documentation in 
+the Browser. It says
+     Cannot open the file /usr/lib/axiom-20050901/algebra/libdb.text.
+and kills not only the Browser window but also the top-level HyperDoc 
+window. I don't know why that file is missing. I'm using the version 
+of Axiom in Debian Etch.
+
+Another surprising behaviour is that if I kill one of the secondary 
+windows using the operating system's (GNOME's) close-window command, 
+the top-level HyperDoc window also dies. Sometimes this also seems to 
+cause the main Axiom command line to stop acting properly, such that I 
+can give a )quit command but it doesn't quit, so I have to kill the 
+Axiom process from outside. I can't seem to replicate it right now.
+
+In spite of all this whining, I'm very happy: thanks to the great help 
+from you and Bill Page, I have managed to write some Axiom code to 
+solve my problem, with 4 levels of nested loops to do parameter 
+variations, and a bunch of if-then-else's! I even figured out how to 
+select the right one of the 3 solutions to the cubic (defined with 4 
+equations in 4 unknowns) and squirt all the results into a TeXmacs 
+document :-)
+
+Thank you.
+
+- Robert
+
+On Fri, 19 Oct 2007, Martin Rubey wrote:
+
+> Robert Funnell <robert.funnell@mcgill.ca> writes:
+>
+>> I'll explain why I hadn't found that, in case there is someone else with the
+>> same affliction.
+>
+> Thanks!  Yes, HyperDoc's behaviour is a little "unusual" given todays
+> standards.  Unfortunately, it seems that it's not really trivial to modify.
+> I'd still advise you to use it, since it is a great source of information.
+> Note that various flavours of axiom provide versions of HyperDoc to different
+> degrees of robustness.  Thus, if your HyperDoc crashes, ask again.
+>
+> There is one other command I use frequently, namely, if I do not know at all
+> where I should be looking:
+>
+>    )what things somethingiamlookingfor
+>
+> or, shorther
+>
+>    )wh th somethingiamlookingfor
+>
+> (in the axiom console, that is)
+>
+> It does a case-insensitive search for all operations / domains / packages /
+> categories for somethingiamlookingfor.  Thus, if I forgot how to spell the
+> binomial coefficient (LaTeX likes binom, mathematica Binomial, ...) I just ask
+>
+>    )wh th bino
+>
+> or so.
+>
+> If you are interested in how things are actually programmed, maybe you like to
+> install
+>
+> http://wiki.axiom-developer.org/SPADEDIT
+>
+> (click on "tangle" and save the result in
+>
+> /axiom/target/i686-pc-linux/lib/SPADEDIT
+>
+> (on some flavours of axiom, the path may look a little different, but I forgot
+> the details.  I think you'd have to replace target/i686-pc-linux with
+> mnt/linux)
+>
+> Then you have to adapt it to your needs, i.e., replace
+>
+>    gnuclient
+>
+> with the name of your editor of choice.
+>
+> ($number contains the line-number to jump to.)
+>
+> Finally make it executable.  Then, in HyperDoc
+>
+>    click browse - enter INT - click constructors - click INT.spad
+>
+> should open the source file at the right place.
+>
+>
+> Martin
+
+
+
+From MAILER-DAEMON Fri Oct 19 19:09:10 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ij0xq-0007dZ-L5
+	for mharc-axiom-mail@gnu.org; Fri, 19 Oct 2007 19:09:10 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ij0xp-0007cY-Qj
+	for axiom-mail@nongnu.org; Fri, 19 Oct 2007 19:09:09 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ij0xo-0007Zp-4y
+	for axiom-mail@nongnu.org; Fri, 19 Oct 2007 19:09:08 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ij0xo-0007Zi-1r
+	for axiom-mail@nongnu.org; Fri, 19 Oct 2007 19:09:08 -0400
+Received: from torrent.cc.mcgill.ca ([132.206.27.49])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <robert.funnell@mcgill.ca>) id 1Ij0xn-0005t5-Uj
+	for axiom-mail@nongnu.org; Fri, 19 Oct 2007 19:09:08 -0400
+Received: from mailscan1.ncs.mcgill.ca (mailscan1.NCS.McGill.CA
+	[132.216.77.248])
+	by torrent.cc.mcgill.ca (8.12.11.20060308/8.12.3) with ESMTP id
+	l9JN972q023941
+	for <axiom-mail@nongnu.org>; Fri, 19 Oct 2007 19:09:07 -0400
+Received: from mailscan1.ncs.mcgill.ca (localhost [127.0.0.1])
+	by localhost (Postfix) with SMTP id 5F1A6AC58
+	for <axiom-mail@nongnu.org>; Fri, 19 Oct 2007 19:09:02 -0400 (EDT)
+Received: from earmuff.biomed.mcgill.ca (EarMuff.Biomed.McGill.CA
+	[132.206.111.126])
+	by mailscan1.ncs.mcgill.ca (Postfix) with ESMTP id 3FF63AC2B
+	for <axiom-mail@nongnu.org>; Fri, 19 Oct 2007 19:09:02 -0400 (EDT)
+Date: Fri, 19 Oct 2007 19:09:02 -0400 (EDT)
+From: Robert Funnell <robert.funnell@mcgill.ca>
+X-X-Sender: funnell@localhost.localdomain
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Documentation of 'output'
+In-Reply-To: <Pine.LNX.4.64.0710191456120.24903@localhost.localdomain>
+Message-ID: <Pine.LNX.4.64.0710191904140.24903@localhost.localdomain>
+References: <Pine.LNX.4.64.0710181056350.24903@localhost.localdomain>
+	<fbcd16d40710180818x18a27c22i83a873e86ac6d94f@mail.gmail.com>
+	<Pine.LNX.4.64.0710181121390.24903@localhost.localdomain>
+	<9qabqgbg0o.fsf@aquin.mat.univie.ac.at>
+	<Pine.LNX.4.64.0710181135330.24903@localhost.localdomain>
+	<9q7iljzfjo.fsf@aquin.mat.univie.ac.at>
+	<Pine.LNX.4.64.0710191456120.24903@localhost.localdomain>
+X-Message-Flag: Avoid Outlook viruses: Switch to Pine! www.washington.edu/pine/
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-PMX-Version: 5.3.3.310218, Antispam-Engine: 2.5.2.313940,
+	Antispam-Data: 2007.10.15.63408
+X-detected-kernel: by monty-python.gnu.org: Linux 2.4-2.6
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 19 Oct 2007 23:09:10 -0000
+
+As a follow-up for anyone who happens to see this thread later: 
+installing FriCAS as explained by Martin Rubey in a separate thread 
+today does indeed fix my problem with searching the library 
+documentation.
+
+The killing of all HyperDoc windows by closing any one of them (with 
+the window manager's Close command) still happens.
+
+- Robert
+
+On Fri, 19 Oct 2007, Robert Funnell wrote:
+
+> Thanks for the additional information. I'll try the SPADEDIT thing when I'm 
+> feeling particularly masochistic :-)
+>
+> My HyperDoc does crash if I try to search the library documentation in the 
+> Browser. It says
+>    Cannot open the file /usr/lib/axiom-20050901/algebra/libdb.text.
+> and kills not only the Browser window but also the top-level HyperDoc window. 
+> I don't know why that file is missing. I'm using the version of Axiom in 
+> Debian Etch.
+>
+> Another surprising behaviour is that if I kill one of the secondary windows 
+> using the operating system's (GNOME's) close-window command, the top-level 
+> HyperDoc window also dies. Sometimes this also seems to cause the main Axiom 
+> command line to stop acting properly, such that I can give a )quit command 
+> but it doesn't quit, so I have to kill the Axiom process from outside. I 
+> can't seem to replicate it right now.
+>
+> In spite of all this whining, I'm very happy: thanks to the great help from 
+> you and Bill Page, I have managed to write some Axiom code to solve my 
+> problem, with 4 levels of nested loops to do parameter variations, and a 
+> bunch of if-then-else's! I even figured out how to select the right one of 
+> the 3 solutions to the cubic (defined with 4 equations in 4 unknowns) and 
+> squirt all the results into a TeXmacs document :-)
+>
+> Thank you.
+>
+> - Robert
+
+
+

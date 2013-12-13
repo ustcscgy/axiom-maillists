@@ -1,0 +1,3534 @@
+From MAILER-DAEMON Mon Sep 06 16:06:05 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C4Pkb-0000xk-B9
+	for mharc-axiom-mail@gnu.org; Mon, 06 Sep 2004 16:06:05 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C4PkZ-0000wJ-0J
+	for axiom-mail@nongnu.org; Mon, 06 Sep 2004 16:06:03 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C4PkX-0000vJ-Tz
+	for axiom-mail@nongnu.org; Mon, 06 Sep 2004 16:06:02 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C4PkX-0000vG-R0
+	for axiom-mail@nongnu.org; Mon, 06 Sep 2004 16:06:01 -0400
+Received: from [62.2.95.247] (helo=smtp.hispeed.ch)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1C4Pey-0003k6-9O
+	for axiom-mail@nongnu.org; Mon, 06 Sep 2004 16:00:16 -0400
+Received: from 217-162-169-25.dclient.hispeed.ch
+	(217-162-169-25.dclient.hispeed.ch [217.162.169.25])
+	(authenticated bits=0)
+	by smtp.hispeed.ch (8.12.6/8.12.6/tornado-1.0) with ESMTP id
+	i86K0DXL016179
+	for <axiom-mail@nongnu.org>; Mon, 6 Sep 2004 22:00:14 +0200
+From: Hans Peter =?utf-8?q?W=C3=BCrmli?= <wurmli@hispeed.ch>
+To: axiom-mail@nongnu.org
+Date: Mon, 6 Sep 2004 22:00:12 +0200
+User-Agent: KMail/1.6.2
+MIME-Version: 1.0
+Content-Disposition: inline
+Content-Type: text/plain;
+  charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Message-Id: <200409062200.12718.wurmli@hispeed.ch>
+Subject: [Axiom-mail] Symbolic calculation with symbols
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 06 Sep 2004 20:06:03 -0000
+
+
+I am still struggling with the basics of Axion. 
+
+E.g. I am trying to create formulae for products with, say, p sub k as 
+symbols. These are the results from two, at least naively identical formulae:
+
+(5) -> (1+p[1])*(1+p[2])
+
+   (5)  (p  + 1)p  + p  + 1
+          1      2    1
+                                                     Type: Polynomial Integer
+(6) -> product(1+p[k],k=1..2)
+
+          2
+   (6)  p   + 2p  + 1
+         k      k
+                                                     Type: Expression Integer
+
+How could one use "product" (or "sum" for that reason) and an indexed way to 
+denote variables?
+
+
+Cheers, H.P.
+
+
+
+From MAILER-DAEMON Mon Sep 06 22:36:08 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C4Vq4-0006s9-HZ
+	for mharc-axiom-mail@gnu.org; Mon, 06 Sep 2004 22:36:08 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C4Vq3-0006rp-6t
+	for axiom-mail@nongnu.org; Mon, 06 Sep 2004 22:36:07 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C4Vq1-0006rJ-D5
+	for axiom-mail@nongnu.org; Mon, 06 Sep 2004 22:36:06 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C4Vq1-0006rG-Ab
+	for axiom-mail@nongnu.org; Mon, 06 Sep 2004 22:36:05 -0400
+Received: from [204.101.242.79] (helo=lattice.dyns.cx)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1C4VkO-00046K-3Q
+	for axiom-mail@nongnu.org; Mon, 06 Sep 2004 22:30:16 -0400
+Received: from lattice.dyns.cx (localhost [127.0.0.1])
+	by lattice.dyns.cx (8.12.10/8.12.10) with ESMTP id i872QQt0021635;
+	Mon, 6 Sep 2004 22:26:26 -0400
+Received: (from steve@localhost)
+	by lattice.dyns.cx (8.12.10/8.12.10/Submit) id i872QQlS021634;
+	Mon, 6 Sep 2004 22:26:26 -0400
+Date: Mon, 6 Sep 2004 22:26:26 -0400
+From: Stephen Wilson <wilsons@multiboard.com>
+To: Hans Peter W??rmli <wurmli@hispeed.ch>
+Subject: Re: [Axiom-mail] Symbolic calculation with symbols
+Message-ID: <20040907022626.GA21455@lattice>
+References: <200409062200.12718.wurmli@hispeed.ch>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <200409062200.12718.wurmli@hispeed.ch>
+User-Agent: Mutt/1.4.2i
+X-Operating-System: GNU/Linux 2.4.22
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Sep 2004 02:36:07 -0000
+
+Hello,
+
+Perhaps you could try expressions such as :
+
+(1) -> reduce(*,[eval(1+j, j=k) for k in [p[i] for i in 1..2]])
+
+   (1)  (p  + 1)p  + p  + 1
+          1      2    1
+                                                     Type: Polynomial Integer
+(2) -> reduce(+,[eval(1+j, j=k) for k in [p[i] for i in 1..2]])
+
+   (2)  p  + p  + 2
+         2    1
+                                                     Type: Polynomial Integer
+
+Sincerely,
+Steve
+
+
+On Mon, Sep 06, 2004 at 10:00:12PM +0200, Hans Peter W??rmli wrote:
+> 
+> I am still struggling with the basics of Axion. 
+> 
+> E.g. I am trying to create formulae for products with, say, p sub k as 
+> symbols. These are the results from two, at least naively identical formulae:
+> 
+> (5) -> (1+p[1])*(1+p[2])
+> 
+>    (5)  (p  + 1)p  + p  + 1
+>           1      2    1
+>                                                      Type: Polynomial Integer
+> (6) -> product(1+p[k],k=1..2)
+> 
+>           2
+>    (6)  p   + 2p  + 1
+>          k      k
+>                                                      Type: Expression Integer
+> 
+> How could one use "product" (or "sum" for that reason) and an indexed way to 
+> denote variables?
+> 
+> 
+> Cheers, H.P.
+> 
+> 
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+
+
+
+From MAILER-DAEMON Mon Sep 06 22:43:51 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C4VxW-0000Ek-SW
+	for mharc-axiom-mail@gnu.org; Mon, 06 Sep 2004 22:43:50 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C4VxV-0000Ea-6L
+	for axiom-mail@nongnu.org; Mon, 06 Sep 2004 22:43:49 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C4VxT-0000EF-Ao
+	for axiom-mail@nongnu.org; Mon, 06 Sep 2004 22:43:48 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C4VxT-0000E5-7h
+	for axiom-mail@nongnu.org; Mon, 06 Sep 2004 22:43:47 -0400
+Received: from [209.226.175.4] (helo=tomts16-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C4Vrx-0005I7-N7
+	for axiom-mail@nongnu.org; Mon, 06 Sep 2004 22:38:06 -0400
+Received: from Asus ([64.228.8.58]) by tomts16-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20040907023802.DHXZ14082.tomts16-srv.bellnexxia.net@Asus>;
+	Mon, 6 Sep 2004 22:38:02 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: =?iso-8859-1?Q?'Hans_Peter_W=FCrmli'?= <wurmli@hispeed.ch>
+Subject: RE: [Axiom-mail] Symbolic calculation with symbols
+Date: Mon, 6 Sep 2004 22:38:02 -0400
+Message-ID: <000301c49483$b3b07890$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+Importance: Normal
+In-Reply-To: <200409062200.12718.wurmli@hispeed.ch>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1441
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Sep 2004 02:43:49 -0000
+
+Hans,
+
+Perhaps the following pages on MathAction will be of some use
+to you
+
+http://page.axiom-developer.org/zope/mathaction/UseProductAndSum
+http://page.axiom-developer.org/zope/mathaction/CreateIndexedVariables
+
+Please let me know if what I have written is clear.
+
+I would like to expand this HowTo section as new questions are
+asked or better answers are created. If anyone feels like helping
+with this task, it would of course be greatly appreciated.
+
+Regards,
+Bill Page.
+
+PS. If you subscribe to MathAction (as a whole or to an individual
+page), you will receive notices whenever a page is added or updated.
+Right now, MathAction is set to send notices for all additions or
+changes and this sometimes generates a lot of messages if someone
+(like me :) makes a lot of small changes. The only alternative that
+I know of right now is to set an option so that only new additions
+(and not changes) are sent as notices. I would be interested in your
+opinion about whether I should choose this less verbose alternative.
+
+> -----Original Message-----
+> From: axiom-mail-bounces+bill.page1=3Dsympatico.ca@nongnu.org=20
+> [mailto:axiom-mail-bounces+bill.page1=3Dsympatico.ca@nongnu.org]
+>  On Behalf Of Hans Peter W=FCrmli
+> Sent: Monday, September 06, 2004 4:00 PM
+> To: axiom-mail@nongnu.org
+> Subject: [Axiom-mail] Symbolic calculation with symbols
+>=20
+>=20
+>=20
+> I am still struggling with the basics of Axion.=20
+>=20
+> E.g. I am trying to create formulae for products with, say, p=20
+> sub k as=20
+> symbols. These are the results from two, at least naively=20
+> identical formulae:
+>=20
+> (5) -> (1+p[1])*(1+p[2])
+>=20
+>    (5)  (p  + 1)p  + p  + 1
+>           1      2    1
+>                                                      Type:=20
+> Polynomial Integer
+> (6) -> product(1+p[k],k=3D1..2)
+>=20
+>           2
+>    (6)  p   + 2p  + 1
+>          k      k
+>                                                      Type:=20
+> Expression Integer
+>=20
+> How could one use "product" (or "sum" for that reason) and an=20
+> indexed way to=20
+> denote variables?
+>=20
+>=20
+> Cheers, H.P.
+>=20
+>=20
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>=20
+
+
+
+
+From MAILER-DAEMON Tue Sep 07 04:51:23 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C4bhC-0008Ry-Q1
+	for mharc-axiom-mail@gnu.org; Tue, 07 Sep 2004 04:51:22 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C4bh6-0008Ql-5y
+	for axiom-mail@nongnu.org; Tue, 07 Sep 2004 04:51:20 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C4bgy-0008OH-Ky
+	for axiom-mail@nongnu.org; Tue, 07 Sep 2004 04:51:11 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C4bgy-0008O7-9w
+	for axiom-mail@nongnu.org; Tue, 07 Sep 2004 04:51:08 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C4bbg-0004A9-L7
+	for axiom-mail@nongnu.org; Tue, 07 Sep 2004 04:45:41 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i878jAjr281526;
+	Tue, 7 Sep 2004 10:45:20 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16701.36978.945271.768293@gargle.gargle.HOWL>
+Date: Tue, 7 Sep 2004 10:41:54 +0000
+To: Bill Page <bill.page1@sympatico.ca>, axiom-mail@nongnu.org
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4248; Body=2 Fuz1=2 Fuz2=2
+Cc: 
+Subject: [Axiom-mail] MathAction Wiki
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Sep 2004 08:51:21 -0000
+
+I'd just like to say a big thank you to Bill for setting up and maintaining the
+MathAction Wiki. I think it's wonderful!
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Sep 07 09:21:30 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C4fuc-0006Y2-Gd
+	for mharc-axiom-mail@gnu.org; Tue, 07 Sep 2004 09:21:30 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C4fua-0006Xj-SB
+	for axiom-mail@nongnu.org; Tue, 07 Sep 2004 09:21:28 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C4fuZ-0006X3-0g
+	for axiom-mail@nongnu.org; Tue, 07 Sep 2004 09:21:28 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C4fuY-0006Wm-Tr
+	for axiom-mail@nongnu.org; Tue, 07 Sep 2004 09:21:26 -0400
+Received: from [62.2.95.247] (helo=smtp.hispeed.ch)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1C4fpE-0004lD-Qa
+	for axiom-mail@nongnu.org; Tue, 07 Sep 2004 09:15:57 -0400
+Received: from 217-162-169-25.dclient.hispeed.ch
+	(217-162-169-25.dclient.hispeed.ch [217.162.169.25])
+	(authenticated bits=0)
+	by smtp.hispeed.ch (8.12.6/8.12.6/tornado-1.0) with ESMTP id
+	i87CpMpm018932; Tue, 7 Sep 2004 14:51:22 +0200
+From: Hans Peter =?iso-8859-1?q?W=FCrmli?= <wurmli@hispeed.ch>
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Symbolic calculation with symbols
+Date: Tue, 7 Sep 2004 14:51:20 +0200
+User-Agent: KMail/1.6.2
+References: <000301c49483$b3b07890$6501a8c0@Asus>
+In-Reply-To: <000301c49483$b3b07890$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Disposition: inline
+Content-Type: text/plain;
+  charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Message-Id: <200409071451.20913.wurmli@hispeed.ch>
+Cc: Bill Page <bill.page1@sympatico.ca>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 07 Sep 2004 13:21:29 -0000
+
+
+On Tuesday 07 September 2004 04.38, you wrote:
+> Perhaps the following pages on MathAction will be of some use
+> to you
+
+> http://page.axiom-developer.org/zope/mathaction/UseProductAndSum
+> http://page.axiom-developer.org/zope/mathaction/CreateIndexedVariables
+
+They were: thank you a lot.
+
+> Please let me know if what I have written is clear.
+
+Yes, it is.
+
+> PS. If you subscribe to MathAction 
+
+I had subscribed some time ago ...
+
+> you will receive notices whenever a page is added or updated. 
+
+... and started to receive a lot of notices that I didn't know where they were 
+generated.
+
+> Right now, MathAction is set to send notices for all additions or
+> changes and this sometimes generates a lot of messages if someone
+> (like me :) makes a lot of small changes. 
+
+Too many for my taste.
+
+> The only alternative that 
+> I know of right now is to set an option so that only new additions
+> (and not changes) are sent as notices. I would be interested in your
+> opinion about whether I should choose this less verbose alternative.
+
+I would prefer such a solution, but the current setting is tolerable.
+
+Thanks again and best regards
+
+Hans Peter
+
+
+
+From MAILER-DAEMON Thu Sep 09 05:46:14 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C5LVO-0001S0-Lr
+	for mharc-axiom-mail@gnu.org; Thu, 09 Sep 2004 05:46:14 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C5LVN-0001Ru-Ip
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 05:46:13 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C5LVL-0001R8-05
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 05:46:13 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C5LVK-0001Qy-UJ
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 05:46:10 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C5LPr-0002ME-NX
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 05:40:32 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i899e0Qe155514;
+	Thu, 9 Sep 2004 11:40:05 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16704.16459.725598.305372@gargle.gargle.HOWL>
+Date: Thu, 9 Sep 2004 11:36:43 +0000
+To: Bill Page <bill.page1@sympatico.ca>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4247; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-mail@nongnu.org
+Subject: [Axiom-mail] mathaction
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 09 Sep 2004 09:46:13 -0000
+
+I was just browsing http://page.axiom-developer.org/ and I'd like to make a few
+suggestions -- apart from repeating that I find it just great!
+
+
+* I like http://page.axiom-developer.org/zope/mathaction/FrontPage a *lot*
+  better than http://page.axiom-developer.org/zope/Plone
+
+  I find it easier to read and use, better structured and
+  simpler-looking. Since it seems that there are things on zope/Plone which are
+  not on zope/mathaction, I suggest that you move those things worth moving to
+  mathaction and make mathaction/FrontPage the principal page, which really
+  should become axioms main homepage, I think.
+
+  [This part I cannot do]
+
+  In the same spirit, the links to the mailing lists and to savannah should be
+  added to mathaction/FrontPage and the page should be tidied up a little.
+
+  [I can do this, if somebody tells me: go ahead]
+
+* The table of contents needs cleaning up. I suggest:
+
+  - mathaction/AxiomAlgebra should contain (as subpage) the various layers as
+    it does now
+
+  [I can do this, if somebody tells me: go ahead]
+
+  - each layer should contain the docs for the types it provides. (as layer0
+    contains attreg and dhmatrix now)
+
+  [I can do this, if somebody tells me: go ahead]
+
+  - it would be great if these pages would be *identical* to the pamphlet
+    files. It should be possible, shouldn't it? Maybe you could make a new
+    style called "pamphlet", which produces LaTeX in the background using the
+    "document" command and then applies "latex2html"? This way, we could move
+    the complete src/algebra directory at once into the wiki!
+
+    I believe that this would considerably speed up the transition to
+    documented code!!!
+
+  [This part I cannot do, but this would be number one priority]
+
+Well, that should be enough for the moment.
+
+thanks again,
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Sep 09 14:18:32 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C5TVA-0001Px-CQ
+	for mharc-axiom-mail@gnu.org; Thu, 09 Sep 2004 14:18:32 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C5TV8-0001Oz-0K
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 14:18:30 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C5TV6-0001OF-Py
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 14:18:29 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C5TV6-0001Ns-N5
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 14:18:28 -0400
+Received: from [193.252.22.27] (helo=mwinf0401.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C5TPg-0001SI-EB
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 14:12:52 -0400
+Received: from me-wanadoo.net (localhost [127.0.0.1])
+	by mwinf0401.wanadoo.fr (SMTP Server) with SMTP
+	id C12E3580012C; Thu,  9 Sep 2004 20:12:51 +0200 (CEST)
+Received: from morgana (ARennes-303-1-14-117.w81-49.abo.wanadoo.fr
+	[81.49.249.117]) by mwinf0401.wanadoo.fr (SMTP Server) with ESMTP
+	id 8F9315800091; Thu,  9 Sep 2004 20:12:51 +0200 (CEST)
+Received: from david by morgana with local (Exim 4.34)
+	id 1C5TPZ-0001c4-Ci; Thu, 09 Sep 2004 20:12:45 +0200
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-mail] mathaction
+References: <16704.16459.725598.305372@gargle.gargle.HOWL>
+From: David MENTRE <dmentre@linux-france.org>
+Organization: none
+Date: Thu, 09 Sep 2004 20:12:45 +0200
+In-Reply-To: <16704.16459.725598.305372@gargle.gargle.HOWL> (Martin Rubey's
+	message of "Thu, 9 Sep 2004 11:36:43 +0000")
+Message-ID: <87r7pb1fc2.fsf@linux-france.org>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) Emacs/21.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: David <david.mentre@wanadoo.fr>
+Cc: Bill Page <bill.page1@sympatico.ca>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 09 Sep 2004 18:18:30 -0000
+
+Hello Martin,
+
+Martin Rubey <martin.rubey@univie.ac.at> writes:
+
+>   - it would be great if these pages would be *identical* to the pamphlet
+>     files. It should be possible, shouldn't it? Maybe you could make a new
+>     style called "pamphlet", which produces LaTeX in the background using the
+>     "document" command and then applies "latex2html"? This way, we could move
+>     the complete src/algebra directory at once into the wiki!
+
+I probably not understood everything but I think you need a second
+translator to transform the edited html wiki into latex code, no?
+
+>     I believe that this would considerably speed up the transition to
+>     documented code!!!
+
+Yes. And then an infrastructure to export that edited tree into an Arch
+or similar CVS-like repository.
+
+I'm personnally more interested to work on a Axiom browser which would
+understand noweb markups and Common Lisp call tree but I haven't found
+time yet to code my few ideas.
+
+Yours,
+d.
+-- 
+David MENTRE <david.mentre@wanadoo.fr> -- http://www.nongnu.org/axiom/
+
+
+
+From MAILER-DAEMON Thu Sep 09 14:18:33 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C5TVB-0001Q9-0v
+	for mharc-axiom-mail@gnu.org; Thu, 09 Sep 2004 14:18:33 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C5TV8-0001P4-0k
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 14:18:30 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C5TV6-0001Nx-Ko
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 14:18:29 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C5TV6-0001Ns-I1
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 14:18:28 -0400
+Received: from [209.226.175.25] (helo=tomts5-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C5TPG-0001QU-2P
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 14:12:26 -0400
+Received: from Asus ([216.209.138.166]) by tomts5-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20040909181222.ERAC18869.tomts5-srv.bellnexxia.net@Asus>;
+	Thu, 9 Sep 2004 14:12:22 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: "'Martin Rubey'" <martin.rubey@univie.ac.at>
+Subject: RE: [Axiom-mail] mathaction
+Date: Thu, 9 Sep 2004 14:12:23 -0400
+Message-ID: <002b01c49698$8f3b9aa0$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+In-Reply-To: <16704.16459.725598.305372@gargle.gargle.HOWL>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1441
+Importance: Normal
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 09 Sep 2004 18:18:30 -0000
+
+On Thursday, September 09, 2004 7:37 AM Martin Rubey
+wrote:
+> 
+> I was just browsing http://page.axiom-developer.org/ and I'd 
+> like to make a few suggestions -- apart from repeating that
+> I find it just great!
+>
+
+Thanks.
+ 
+> 
+> * I like 
+> http://page.axiom-developer.org/zope/mathaction
+> a *lot* better than
+> http://page.axiom-developer.org/zope/Plone
+> 
+>   I find it easier to read and use, better structured and
+>   simpler-looking.
+
+I agree, however from my point of view the Plone portal
+environment plays a rather different role than the pure wiki
+environment (MathAction) even though some of the functionality
+of these two environments is the same. Some the differences
+are purely technical design issues, some are historical and
+some are more fundamental.
+
+Plone (www.plone.org) originates from a web content management
+development stream. The idea is to provide a way to maintain
+a certain "corporate look and feel" but to allow the content
+of a web site to be created and managed in a distributed
+manner. Plone provides a number of different kind of "objects"
+(only some of which are currently implemented in the Axiom
+portal). Objects can be things like "file folders" that
+contain other objects, then can be "documents" that display
+as nicely formatted HTML pages, they can be structured things
+like bibtex entries, events of news items that are linked by
+time and date to a calendar, or they can be external files such
+as PDF documents or binary files such as programs that need to
+be downloaded to be accessed by the user.
+
+Plone does this in a integrated and controlled manner that
+enables "draft" content to be created by users and to be
+"published" by a site manager etc. Objects in Plone have a
+"state" that is related to the workflow associated with the
+lifecycle of an object. Users of the portal have associated
+"roles" and the combination of object state and user role
+determines what can be done to/with each object. It even
+allows a developer to create new object types to be created
+and managed entirely through the web. Yes, this is a rather
+complex environment.
+
+*One* of the object types in Plone is a 'wiki page' that has
+the same functionality as the pages that you see in MathAction.
+This is where the main overlap between these two environment
+exists. Unfortunately, technical limitations mean that it is
+not possible for the actual content from one environment to
+be directly accessed from the other.
+
+The wiki web interface has a very different origin than content
+management - considerably less 'structured'. In a wiki the
+emphasis is on collaborative web page authoring. But many
+wikis do not even require the authors to identify themselves.
+Besides just "for the pleasure of communicating and sharing",
+wikis have been used with at least moderate success for joint
+distributed authoring of documentation.
+
+The wiki that implements MathAction and that also provides
+wiki objects in Plone is called ZWiki (www.zwiki.org). Both
+Plone and ZWiki are implemented using the object-oriented
+database and application development environment called Zope.
+Besides Plone and ZWiki there are many other web applications
+that have been built using Zope. Zope in turn is implemented
+in Python. And oddly enough, the Python language bears a
+great similarity to the Axiom programming language. ZWiki had
+already been extended by Bob McElrath to include rendering of
+LaTeX coding, so the extension of ZWiki to provide the Axiom
+and Reduce interface was as they say "almost a match made in
+heaven".
+
+> Since it seems that there are things on Zope/Plone which
+> are not on Zope/Mathaction, I suggest that you move those 
+> things worth moving to MathAction and make MathAction /
+> FrontPage the principal page, which really should become
+> axioms main homepage, I think.
+> 
+>   [This part I cannot do]
+> 
+
+I am very glad that you are thinking about this. It is
+possible (I think) to make the first page that you see in
+Plone a wiki page. Then, besides all the other bells and
+whistles provided by Plone, the initial interface between
+these two systems would be the same. But there are many
+things in the Plone that are not possible (or at least
+awkward) in the pure wiki environment - for example, the
+bibtex literature references and management of event
+notices etc. What specifically would you like to have in
+MathAction that is now currently only in Plone?
+
+*If* we continue to maintain two different environments
+like this, then I think the most natural progression would be
+for some things to be developed *first* in the more open
+and less structured MathAction wiki environment, and then
+if they have a more lasting relevance, to move into the
+Axiom Portal Plone environment for longer term access and
+management.
+
+> In the same spirit, the links to the mailing lists and to 
+> savannah should be added to MathAction/FrontPage and the
+> page should be tidied up a little.
+> 
+>   [I can do this, if somebody tells me: go ahead]
+>
+
+Please go ahead! You don't really need permission.
+ 
+> * The table of contents needs cleaning up. I suggest:
+> 
+>   - mathaction/AxiomAlgebra should contain (as subpage)
+> the various layers as it does now
+> 
+>   [I can do this, if somebody tells me: go ahead]
+
+Yes, please go ahead.
+
+> 
+>   - each layer should contain the docs for the types it 
+> provides. (as layer0 contains attreg and dhmatrix now)
+> 
+>   [I can do this, if somebody tells me: go ahead]
+
+Yes, I have very glad you are interested in this. I think
+it has a lot of potential to make Axiom's algebra more
+accessible to everyone. And also to make it possible to
+cope with the complexity and get on with making improvements.
+It seems to me that one thing that has happened to Axiom
+(and some other computer math systems) is that it has reached
+a kind of "plateau of development" that is constrained by
+the available tools. Maybe (just maybe) this is one way to
+move ahead.
+
+> 
+>   - it would be great if these pages would be *identical* to 
+> the pamphlet files. It should be possible, shouldn't it? Maybe
+> you could make a new style called "pamphlet", which produces
+> LaTeX in the background using the "document" command and then
+> applies "latex2html"? This way, we could move the complete
+> src/algebra directory at once into the wiki!
+> 
+>     I believe that this would considerably speed up the
+>     transition to documented code!!!
+> 
+>   [This part I cannot do, but this would be number one priority]
+
+Yes, I agree completely and I am actively working on this.
+More details later and probably on the Axiom Portal itself.
+
+> 
+> Well, that should be enough for the moment.
+> 
+> thanks again,
+> 
+> Martin
+> 
+
+You are welcome. And thank you for your contributions so
+far.
+
+Cheers,
+Bill Page.
+
+
+
+
+From MAILER-DAEMON Thu Sep 09 14:33:42 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C5Tjp-0005tI-Rb
+	for mharc-axiom-mail@gnu.org; Thu, 09 Sep 2004 14:33:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C5Tjn-0005oZ-Ta
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 14:33:40 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C5Tjl-0005lo-LF
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 14:33:39 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C5Tjl-0005lL-Hi
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 14:33:37 -0400
+Received: from [69.36.241.242] (helo=moya.mcelrath.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1C5TeA-0004JA-Oz
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 14:27:51 -0400
+Received: from moya.mcelrath.org (mcelrath@localhost [127.0.0.1])
+	by moya.mcelrath.org (8.12.11/8.12.11/Debian-5) with ESMTP id
+	i89IRmE6009702
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NOT);
+	Thu, 9 Sep 2004 11:27:48 -0700
+Received: (from mcelrath@localhost)
+	by moya.mcelrath.org (8.12.11/8.12.11/Debian-5) id i89IRmjC009699;
+	Thu, 9 Sep 2004 11:27:48 -0700
+X-Authentication-Warning: moya.mcelrath.org: mcelrath set sender to
+	bob+axiom@mcelrath.org using -f
+Date: Thu, 9 Sep 2004 11:27:48 -0700
+From: Bob McElrath <bob+axiom@mcelrath.org>
+To: Bill Page <bill.page1@sympatico.ca>
+Subject: Re: [Axiom-mail] mathaction
+Message-ID: <20040909182748.GB8610@mcelrath.org>
+References: <16704.16459.725598.305372@gargle.gargle.HOWL>
+	<002b01c49698$8f3b9aa0$6501a8c0@Asus>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="jq0ap7NbKX2Kqbes"
+Content-Disposition: inline
+In-Reply-To: <002b01c49698$8f3b9aa0$6501a8c0@Asus>
+User-Agent: Mutt/1.5.6+20040523i
+Cc: 'Martin Rubey' <martin.rubey@univie.ac.at>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 09 Sep 2004 18:33:40 -0000
+
+
+--jq0ap7NbKX2Kqbes
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+Bill Page [bill.page1@sympatico.ca] wrote:
+> *If* we continue to maintain two different environments
+> like this, then I think the most natural progression would be
+> for some things to be developed *first* in the more open
+> and less structured MathAction wiki environment, and then
+> if they have a more lasting relevance, to move into the
+> Axiom Portal Plone environment for longer term access and
+> management.
+
+I do not think there is any advantage in maintaining both a plone and
+non-plone wiki.  It confuses users.  On the other hand, it should be
+possible to copy or link wiki pages from one folder to another...and
+present both interfaces for one set of pages.
+
+In Plone there is often confusion as to where exactly users can write
+latex, axiom, or reduce code (since there are so many document/object
+types).  But Plone is more powerful, if users are organized by an
+effective manager.
+
+Keeping both interfaces might be useful, but they should not have the
+same content.  Personally, I think a Plone site should be managed as a 
+semi-professional face for Axiom.  A wiki can be maintained as a place
+for users to "play", but should not contain official documentation.
+
+As you know, moving documents from one to the other is trivial if
+someone writes something great in the "play" area.
+
+--
+Cheers,
+Bob McElrath [Univ. of California at Davis, Department of Physics]
+    
+    It is unpatriotic to question the Kleptocracy.
+
+--jq0ap7NbKX2Kqbes
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBQKCkjwioWRGe9K0RAmwxAKCr6VEzG+poW6hgkhW/5OIRZ9RwKACdG9l0
+5yDu/pX5ZJqLFI1c4Bj5630=
+=ywrA
+-----END PGP SIGNATURE-----
+
+--jq0ap7NbKX2Kqbes--
+
+
+
+From MAILER-DAEMON Thu Sep 09 16:58:13 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C5Vzh-0006i0-N8
+	for mharc-axiom-mail@gnu.org; Thu, 09 Sep 2004 16:58:13 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C5Vzg-0006hu-F4
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 16:58:12 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C5Vzd-0006hf-L7
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 16:58:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C5Vzd-0006hc-Hl
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 16:58:09 -0400
+Received: from [209.226.175.74] (helo=tomts20-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C5VuH-0005Zp-1j
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 16:52:37 -0400
+Received: from Asus ([216.208.193.41]) by tomts20-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20040909205231.NWRH19123.tomts20-srv.bellnexxia.net@Asus>;
+	Thu, 9 Sep 2004 16:52:31 -0400
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: "'Bob McElrath'" <bob+axiom@mcelrath.org>
+Subject: RE: [Axiom-mail] mathaction
+Date: Thu, 9 Sep 2004 16:52:32 -0400
+Message-ID: <005401c496ae$ef01b940$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+In-Reply-To: <20040909182748.GB8610@mcelrath.org>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1441
+Importance: Normal
+Cc: 'Martin Rubey' <martin.rubey@univie.ac.at>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 09 Sep 2004 20:58:12 -0000
+
+On Thursday, September 09, 2004 2:28 PM Bob McElrath wrote:
+> 
+> I do not think there is any advantage in maintaining both a
+> plone and non-plone wiki.  It confuses users.  On the other
+> hand, it should be possible to copy or link wiki pages from
+> one folder to another...
+
+Of course it is possible to copy wiki pages from one folder
+to another *within Plone* where folders appear as just another
+type of object. But wiki users within a pure wiki environment
+do not set folders, not even the Zope folders that appear at
+the lower level of the Zope Management Interface.
+
+And one can create links from and to the Plone to MathAction
+the way I do now.
+
+> and present both interfaces for one set of pages.
+
+If you mean the stand alone (standard) ZWiki interface and the
+Plone interface to ZWiki pages within Plone, then this does not
+seem to be possible with the current version of ZWiki even when
+both the ZWiki and Plone instances are hosted within the same
+Zope instance. Have I missed something?
+
+> 
+> In Plone there is often confusion as to where exactly users
+> can write latex, axiom, or reduce code (since there are so many
+> document/object types).  But Plone is more powerful, if users
+> are organized by an effective manager.
+
+I agree and that is both the problem and the advantage of Plone.
+To some degree I think that it just that Plone is a more
+complex environment and users are not (yet) quite ready for
+this more complex environment - they are just now getting used
+to the idea of being able to edit web pages through a wiki.
+Plone provides many features that probably don't seem relevant
+(yet). I say (yet) because I think that perceptions and
+expectation of users are likely to change as they gain experience
+with this new environment.
+
+> 
+> Keeping both interfaces might be useful, but they should not
+> have the same content.  Personally, I think a Plone site should
+> be managed as a semi-professional face for Axiom.  A wiki can be
+> maintained as a place for users to "play", but should not contain
+> official documentation.
+
+This statement seems a little contradictory to your first paragraph.
+Could you explain a little more.
+
+> 
+> As you know, moving documents from one to the other is trivial
+> if someone writes something great in the "play" area.
+> 
+
+Yes. That seems the right way to go to me.
+
+Regards,
+Bill Page
+
+
+
+
+From MAILER-DAEMON Thu Sep 09 17:14:50 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C5WFm-0004Bo-AK
+	for mharc-axiom-mail@gnu.org; Thu, 09 Sep 2004 17:14:50 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C5WFk-0004BR-Hq
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 17:14:48 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C5WFi-0004B9-Iy
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 17:14:48 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C5WFi-0004Az-GL
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 17:14:46 -0400
+Received: from [69.36.241.242] (helo=moya.mcelrath.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1C5W9d-0000G7-0p
+	for axiom-mail@nongnu.org; Thu, 09 Sep 2004 17:08:29 -0400
+Received: from moya.mcelrath.org (mcelrath@localhost [127.0.0.1])
+	by moya.mcelrath.org (8.12.11/8.12.11/Debian-5) with ESMTP id
+	i89L8R5l010585
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NOT);
+	Thu, 9 Sep 2004 14:08:27 -0700
+Received: (from mcelrath@localhost)
+	by moya.mcelrath.org (8.12.11/8.12.11/Debian-5) id i89L8RSk010582;
+	Thu, 9 Sep 2004 14:08:27 -0700
+X-Authentication-Warning: moya.mcelrath.org: mcelrath set sender to
+	bob+axiom@mcelrath.org using -f
+Date: Thu, 9 Sep 2004 14:08:27 -0700
+From: Bob McElrath <bob+axiom@mcelrath.org>
+To: Bill Page <bill.page1@sympatico.ca>
+Subject: Re: [Axiom-mail] mathaction
+Message-ID: <20040909210827.GA10467@mcelrath.org>
+References: <20040909182748.GB8610@mcelrath.org>
+	<005401c496ae$ef01b940$6501a8c0@Asus>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="6c2NcOVqGQ03X4Wi"
+Content-Disposition: inline
+In-Reply-To: <005401c496ae$ef01b940$6501a8c0@Asus>
+User-Agent: Mutt/1.5.6+20040523i
+Cc: 'Martin Rubey' <martin.rubey@univie.ac.at>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 09 Sep 2004 21:14:48 -0000
+
+
+--6c2NcOVqGQ03X4Wi
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+Bill Page [bill.page1@sympatico.ca] wrote:
+> This statement seems a little contradictory to your first paragraph.
+> Could you explain a little more.
+
+But of course!  I'm just thinking out loud, not proposing a specific
+site policy change.  But I think the current situation is confusing.
+
+I'll leave the decisions to the people who are actually working on this
+and not just spouting at the mouth, like me. ;)
+
+--
+Cheers,
+Bob McElrath [Univ. of California at Davis, Department of Physics]
+    
+    It is unpatriotic to question the Kleptocracy.
+
+--6c2NcOVqGQ03X4Wi
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBQMZLjwioWRGe9K0RApJ/AJ9QSDqW3N/5+jd9t9jTMZz84Ecr+gCgyIpQ
+ylwI5xsR0AwtSTGZULhfq1s=
+=5FY+
+-----END PGP SIGNATURE-----
+
+--6c2NcOVqGQ03X4Wi--
+
+
+
+From MAILER-DAEMON Fri Sep 10 04:14:54 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C5gYY-0002pR-Lv
+	for mharc-axiom-mail@gnu.org; Fri, 10 Sep 2004 04:14:54 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C5gYW-0002pK-Qu
+	for axiom-mail@nongnu.org; Fri, 10 Sep 2004 04:14:53 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C5gYS-0002nZ-An
+	for axiom-mail@nongnu.org; Fri, 10 Sep 2004 04:14:51 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C5gYS-0002nW-1C
+	for axiom-mail@nongnu.org; Fri, 10 Sep 2004 04:14:48 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1C5gSb-0000hH-7g
+	for axiom-mail@nongnu.org; Fri, 10 Sep 2004 04:08:45 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i8A88H0R171988;
+	Fri, 10 Sep 2004 10:08:24 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16705.31820.455473.269748@gargle.gargle.HOWL>
+Date: Fri, 10 Sep 2004 10:05:00 +0000
+To: David MENTRE <dmentre@linux-france.org>
+Subject: Re: [Axiom-mail] mathaction
+In-Reply-To: <87r7pb1fc2.fsf@linux-france.org>
+References: <16704.16459.725598.305372@gargle.gargle.HOWL>
+	<87r7pb1fc2.fsf@linux-france.org>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4247; Body=4 Fuz1=4 Fuz2=4
+Cc: Martin Rubey <martin.rubey@univie.ac.at>,
+	Bill Page <bill.page1@sympatico.ca>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 10 Sep 2004 08:14:53 -0000
+
+David MENTRE writes:
+ > Hello Martin,
+ > 
+ > Martin Rubey <martin.rubey@univie.ac.at> writes:
+ > 
+ > >   - it would be great if these pages would be *identical* to the pamphlet
+ > >     files. It should be possible, shouldn't it? Maybe you could make a new
+ > >     style called "pamphlet", which produces LaTeX in the background using the
+ > >     "document" command and then applies "latex2html"? This way, we could move
+ > >     the complete src/algebra directory at once into the wiki!
+ > 
+ > I probably not understood everything but I think you need a second
+ > translator to transform the edited html wiki into latex code, no?
+
+No, it wouldn't. I propose the following: 
+
+What you see in the form is the original pamphlet file.
+
+Pressing "Save" (depending on the language, of course) invokes a modified
+"document" command from the axiom distribution, which does not produce the spad
+file and instead of invoking "latex", it invokes "latex2html".
+
+The produced html is displayed, if there were no errors, otherwise you should
+be thrown back to the edit form, and get the error messages displayed.
+
+Of course, usually you would grab the pamphlet as a whole, modify it on your
+local computer and than paste it back. Even better would be the possibility to
+upload a complete pamphlet file.
+
+Bill, you said you are working on this. Did you encounter problems? If you
+manage to set it up today, I'd spend part of the weekend working on mathaction!
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sat Sep 18 21:53:05 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C8qsz-0006VF-Ik
+	for mharc-axiom-mail@gnu.org; Sat, 18 Sep 2004 21:53:05 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C8qsy-0006V1-El
+	for axiom-mail@nongnu.org; Sat, 18 Sep 2004 21:53:04 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C8qsw-0006Ue-Cs
+	for axiom-mail@nongnu.org; Sat, 18 Sep 2004 21:53:04 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C8qsw-0006UU-BP
+	for axiom-mail@nongnu.org; Sat, 18 Sep 2004 21:53:02 -0400
+Received: from [216.155.196.112] (helo=web61110.mail.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1C8qn3-0004Cx-RD
+	for axiom-mail@nongnu.org; Sat, 18 Sep 2004 21:46:58 -0400
+Message-ID: <20040919014657.36527.qmail@web61110.mail.yahoo.com>
+Received: from [200.28.159.169] by web61110.mail.yahoo.com via HTTP;
+	Sat, 18 Sep 2004 18:46:57 PDT
+Date: Sat, 18 Sep 2004 18:46:57 -0700 (PDT)
+From: Zork <zorkadi@yahoo.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Subject: [Axiom-mail] Aldor compatibility
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 19 Sep 2004 01:53:04 -0000
+
+Hi people,
+
+I have been reading Aldor recently, which I find very nice, and as a
+first project I was happily planning to wrap up some numerical and
+graphical code into aldor (since aldor lacks these),  but I was
+recently pointed to axiom, and now have some questions:
+
+1.  What is the extent of compatibility between aldor 1.0.2 as posted
+in www.aldor.org and cvs axiom?  Does the current version of aldor
+always generate code that runs in cvs version of axiom?  If not, maybe
+it would be a good idea to post a page with the differences and things
+to avoid.
+
+2. If I use aldor's import and export keywords for wrapping C and
+fortran code, will it be portable to axiom? Or does axiom have a
+separate ffi?
+
+3.  I know some C, f77 and Scilab but no Octave.  I see that one of the
+to-do things is translating octave's numerical code into aldor; which
+kind of routines are missing from aldor and have higher priority?
+
+Maybe I can make my work compatible with axiom, bye bye,
+
+Z.
+
+
+		
+__________________________________
+Do you Yahoo!?
+New and Improved Yahoo! Mail - Send 10MB messages!
+http://promotions.yahoo.com/new_mail 
+
+
+
+From MAILER-DAEMON Mon Sep 20 03:51:16 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C9IxA-00063V-GD
+	for mharc-axiom-mail@gnu.org; Mon, 20 Sep 2004 03:51:16 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C9Ix7-000629-RC
+	for axiom-mail@nongnu.org; Mon, 20 Sep 2004 03:51:14 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C9Ix4-00060y-Gn
+	for axiom-mail@nongnu.org; Mon, 20 Sep 2004 03:51:11 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C9Ix4-00060s-5r
+	for axiom-mail@nongnu.org; Mon, 20 Sep 2004 03:51:10 -0400
+Received: from [204.101.242.79] (helo=lattice.dyns.cx)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1C9Iqd-0000rS-6h
+	for axiom-mail@nongnu.org; Mon, 20 Sep 2004 03:44:31 -0400
+Received: from lattice.dyns.cx (localhost [127.0.0.1])
+	by lattice.dyns.cx (8.12.10/8.12.10) with ESMTP id i8K7dwt0032190;
+	Mon, 20 Sep 2004 03:40:00 -0400
+Received: (from steve@localhost)
+	by lattice.dyns.cx (8.12.10/8.12.10/Submit) id i8K7dwc5032189;
+	Mon, 20 Sep 2004 03:39:58 -0400
+Date: Mon, 20 Sep 2004 03:39:58 -0400
+From: Stephen Wilson <wilsons@multiboard.com>
+To: Zork <zorkadi@yahoo.com>
+Subject: Re: [Axiom-mail] Aldor compatibility
+Message-ID: <20040920073958.GA32116@lattice>
+References: <20040919014657.36527.qmail@web61110.mail.yahoo.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <20040919014657.36527.qmail@web61110.mail.yahoo.com>
+User-Agent: Mutt/1.4.2i
+X-Operating-System: GNU/Linux 2.4.22
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Sep 2004 07:51:14 -0000
+
+
+Hello,
+
+> I have been reading Aldor recently, which I find very nice, and as a
+> first project I was happily planning to wrap up some numerical and
+> graphical code into aldor (since aldor lacks these),  but I was
+> recently pointed to axiom, and now have some questions:
+
+What type of code are you working on? I would be quite interested in
+knowing. 
+
+> 1.  What is the extent of compatibility between aldor 1.0.2 as posted
+> in www.aldor.org and cvs axiom?  Does the current version of aldor
+> always generate code that runs in cvs version of axiom?  If not, maybe
+> it would be a good idea to post a page with the differences and things
+> to avoid.
+
+I have not read the docs for quite some time, but the `authoritative'
+account as given in the aldor compiler user guide at
+www.aldor.org/docs/HTML/chap30.html (aldor.org seems to be down at
+this time, so I am unable to verify that this is a proper link) gave a
+recipe for interfacing Aldor and Axiom which did not work for
+me. Undoubtedly things have changed since the guides writing. 
+
+I am unsure as to when and if Aldor will officially support its former
+role as a library compiler for Axiom, or when and if Axiom will
+officially support Aldor. Perhaps someone else on this list could
+comment on this.
+
+However, I have managed to get Aldor and Axiom to cooperate on _very_
+simple examples. I cannot give deep advice on as to why this works
+since Axiom internals are still a mystery to me. However, this may
+provide a means for you to experiment, and as such I hope it is
+useful. 
+
+The following might seem cryptic and not very clear. I apologize for this,
+but time is not on my side at the moment. 
+
+Consider the naive factorial function in Aldor:
+
+
+ #include "axllib"
+
+ fact(n: Integer): Integer == {
+    n <= 1 => 1;
+    res: Integer := 1;
+    while n > 1 repeat {
+	res := res * n;
+	n := prev n;
+    }
+    res
+ }
+
+
+Say the above is in the file `fact.as'. If you invoke cvs Axiom from
+within the same directory as `fact.as' and try to )compile it you may
+very well get an error of the form:
+
+ (1) -> )compile fact 
+    Compiling AXIOM source code from file /home/steve/tmp/fact.as 
+      using AXIOM-XL compiler and options 
+ -O -Fasy -Fao -Flsp -laxiom -Mno-AXL_W_WillObsolete -DAxiom -Y $AXIOM/algebra
+        Use the system command )set compiler args to change these 
+        options.
+ 
+ >> System error:
+ #p"/home/steve/local/opt/axiom/mnt/linux/compiler/bin/" is not of type STRING.
+
+ protected-symbol-warn called with (NIL)
+
+
+I do not know how to compile Aldor files from Axiom, but note the
+command line arguments given to the AXIOM-XL (now Aldor) compiler. In
+particular note the command line argument `-Y $AXIOM/algebra' The sole
+purpose of this is to provide a path to the library
+`libaxiom.al'. This is contained in the Axiom source tree under
+`axiom/src/share/algebra' but not installed with the system after a
+build. Thus, try invoking Aldor as follows, assuming $AXIOMSRC points
+to the top level of the Axiom _source_ tree:
+
+   aldor -O -Fasy -Fao -Flsp -laxiom -Mno-AXL_W_WillObsolete \
+	 -DAxiom -Y $AXIOMSRC/src/share/algebra fact.as
+
+This should produce three files: fact.asy, fact.ao, and fact.lsp.
+
+Now, within the Aldor distribution comes a file called `runtime.lsp'
+under aldor/linux/1.0.2/lib/runtime.lsp. For me, the full path to this
+file is /home/steve/local/opt/aldor/linux/1.0.2/lib/runtime.lsp.
+
+I can now invoke Axiom where fact.as and friends were compiled and
+say:
+
+  (1) -> )library fact
+     Reading /home/steve/tmp/fact.asy
+  (1) -> )lisp (load "/home/steve/local/opt/aldor/linux/1.0.3/lib/runtime.lsp")
+
+  Value = T
+  (1) -> fact 4
+
+     (1)  24
+                                                        Type: PositiveInteger
+
+
+> 2. If I use aldor's import and export keywords for wrapping C and
+> fortran code, will it be portable to axiom? Or does axiom have a
+> separate ffi?
+
+I'm sorry, but I do not know the answer to this question. I suggest
+experimenting with the technique above, though your mileage may vary.
+
+> 3.  I know some C, f77 and Scilab but no Octave.  I see that one of the
+> to-do things is translating octave's numerical code into aldor; which
+> kind of routines are missing from aldor and have higher priority?
+
+I am unaware of the Octave -> Aldor translation. The principle Aldor
+libraries I am familiar with are libaldor (the standard Aldor library)
+and libalgebra (similar in some respects to Axioms mathematical
+hierarchy). Both of these are very weak in terms of floating point
+numerics. I know there is work underway to improve the
+situation. Perhaps with a description of your work I can let you know
+how it might fit in with current efforts.
+
+
+I hope the above is useful to you. 
+
+Cheers,
+Steve
+
+
+
+From MAILER-DAEMON Mon Sep 20 07:00:40 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C9LuS-0005Lg-5v
+	for mharc-axiom-mail@gnu.org; Mon, 20 Sep 2004 07:00:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C9LuP-0005JM-Rm
+	for axiom-mail@nongnu.org; Mon, 20 Sep 2004 07:00:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C9LuO-0005Hg-1E
+	for axiom-mail@nongnu.org; Mon, 20 Sep 2004 07:00:37 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C9LuN-0005HY-EU
+	for axiom-mail@nongnu.org; Mon, 20 Sep 2004 07:00:35 -0400
+Received: from [62.231.131.195] (helo=mail35.messagelabs.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1C9LoA-0001XN-Mw
+	for axiom-mail@nongnu.org; Mon, 20 Sep 2004 06:54:11 -0400
+X-VirusChecked: Checked
+X-Env-Sender: miked@nag.co.uk
+X-Msg-Ref: server-7.tower-35.messagelabs.com!1095676044!9536007
+X-StarScan-Version: 5.2.10; banners=nag.co.uk,-,-
+X-Originating-IP: [212.125.75.76]
+Received: (qmail 29899 invoked from network); 20 Sep 2004 10:27:24 -0000
+Received: from smtp-7.star.net.uk (212.125.75.76)
+	by server-7.tower-35.messagelabs.com with SMTP;
+	20 Sep 2004 10:27:24 -0000
+Received: (qmail 20901 invoked from network); 20 Sep 2004 10:24:34 -0000
+Received: from unknown (HELO nag.co.uk) (62.231.145.242)
+	by smtp-7.star.net.uk with SMTP; 20 Sep 2004 10:24:34 -0000
+Received: from trowbridge.nag.co.uk (trowbridge.nag.co.uk [192.156.217.69])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id LAA27391;
+	Mon, 20 Sep 2004 11:27:15 +0100 (BST)
+Received: from trowbridge.nag.co.uk (localhost.localdomain [127.0.0.1])
+	by trowbridge.nag.co.uk (8.12.10/8.12.10) with ESMTP id i8KARHvM019065; 
+	Mon, 20 Sep 2004 11:27:17 +0100
+Received: (from miked@localhost)
+	by trowbridge.nag.co.uk (8.12.10/8.12.10/Submit) id i8KARDPa019063;
+	Mon, 20 Sep 2004 11:27:13 +0100
+Date: Mon, 20 Sep 2004 11:27:13 +0100
+From: Mike Dewar <miked@nag.co.uk>
+To: Zork <zorkadi@yahoo.com>
+Subject: Re: [Axiom-mail] Aldor compatibility
+Message-ID: <20040920102713.GB19027@nag.co.uk>
+References: <20040919014657.36527.qmail@web61110.mail.yahoo.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-15
+Content-Disposition: inline
+In-Reply-To: <20040919014657.36527.qmail@web61110.mail.yahoo.com>
+User-Agent: Mutt/1.4.1i
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Sep 2004 11:00:38 -0000
+
+Dear Zork,
+
+On Sat, Sep 18, 2004 at 06:46:57PM -0700, Zork wrote:
+> 1.  What is the extent of compatibility between aldor 1.0.2 as posted
+> in www.aldor.org and cvs axiom?  Does the current version of aldor
+> always generate code that runs in cvs version of axiom?  If not, maybe
+> it would be a good idea to post a page with the differences and things
+> to avoid.
+The Aldor support was designed to operate with the CCL version of Axiom,
+not the new GCL one.  However Stephen Wilson's experiment seems to
+suggest that it works fine :-)
+
+The settings will assume that the compiler and the libraries that it
+uses are in the same locations as was the case with the original NAG
+version.  You can change these settings via ")set compiler" in the Axiom
+interpreter.
+
+> 2. If I use aldor's import and export keywords for wrapping C and
+> fortran code, will it be portable to axiom? Or does axiom have a
+> separate ffi?
+The answers to these questions are "no" and "sort of".  Axiom per se has
+no foreign language interface but the underlying Lisp often does (GCL
+does for example).
+ 
+> 3.  I know some C, f77 and Scilab but no Octave.  I see that one of
+> the to-do things is translating octave's numerical code into aldor;
+> which kind of routines are missing from aldor and have higher
+> priority?
+I'm not sure whether its worth translating existing numerical code into
+Aldor.  Fortran, particularly if your compiler has a good optimiser,
+will always be much more efficient, and as you know you can access it in
+Aldor via the Foreign Fortran interface.  However it might be an
+interesting and useful exercise to consider how Axiom/Aldor's type
+system could be used to provide a better interface to existing numerical
+code.
+
+Cheers, Mike.
+
+________________________________________________________________________
+This e-mail has been scanned for all viruses by Star. The
+service is powered by MessageLabs. For more information on a proactive
+anti-virus service working around the clock, around the globe, visit:
+http://www.star.net.uk
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Mon Sep 20 17:28:26 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C9Vhy-00057N-59
+	for mharc-axiom-mail@gnu.org; Mon, 20 Sep 2004 17:28:26 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C9Vhw-00056q-4n
+	for axiom-mail@nongnu.org; Mon, 20 Sep 2004 17:28:24 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C9Vht-00055m-Du
+	for axiom-mail@nongnu.org; Mon, 20 Sep 2004 17:28:23 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C9Vht-00055j-Ak
+	for axiom-mail@nongnu.org; Mon, 20 Sep 2004 17:28:21 -0400
+Received: from [216.155.196.106] (helo=web61104.mail.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1C9Vbn-00060F-UX
+	for axiom-mail@nongnu.org; Mon, 20 Sep 2004 17:22:04 -0400
+Message-ID: <20040920212102.15070.qmail@web61104.mail.yahoo.com>
+Received: from [200.28.159.221] by web61104.mail.yahoo.com via HTTP;
+	Mon, 20 Sep 2004 14:21:02 PDT
+Date: Mon, 20 Sep 2004 14:21:02 -0700 (PDT)
+From: Zork <zorkadi@yahoo.com>
+Subject: Re: [Axiom-mail] Aldor compatibility
+To: axiom-mail@nongnu.org
+In-Reply-To: <20040920073958.GA32116@lattice>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Sep 2004 21:28:24 -0000
+
+--- Stephen Wilson <wilsons@multiboard.com> wrote:
+
+> 
+> What type of code are you working on? I would be quite interested in
+> knowing. 
+
+I was planning interfaces to DISLIN and some of Netlib routines,
+specifically numerical ODE, DAE and matrix routines.  I do not plan to
+invent any new algorithm, but to rewrite or wrap enough to reproduce
+some of Scilab features needed for optimal control.  My main motivation
+for trying aldor was the lack of proper polynomials in scilab.
+
+>    aldor -O -Fasy -Fao -Flsp -laxiom -Mno-AXL_W_WillObsolete \
+> 	 -DAxiom -Y $AXIOMSRC/src/share/algebra fact.as
+> 
+> This should produce three files: fact.asy, fact.ao, and fact.lsp.
+> 
+> Now, within the Aldor distribution comes a file called `runtime.lsp'
+
+I think that this is the right way to go.  Unfortunately linking the
+runtime probably reproduces unnecesarily a lot of the routines in
+axiom.  You also loose aldor native compilation and speed.  On the
+other hand you **theoretically** gain all of axiom functions: have you
+tried adding a call to an axiom function to your program? For example,
+how would you write in aldor a function to evaluate besselJ(1,1),
+compile it using the above procedure and run it under axiom? Maybe this
+is the nontrivial case.
+
+Unfortunately I believe that aldor people have no interest in axiom
+compatibility, mostly because of their ties with maple.  Also, I
+remember having read at www.aldor.org that one of their goals or
+projects was to rewrite the remaining axiom libraries in aldor.  So it
+probably is up to axiom people to export or make available their system
+to aldor users, if it proves of any use.
+
+
+Z.
+
+
+
+		
+_______________________________
+Do you Yahoo!?
+Declare Yourself - Register online to vote today!
+http://vote.yahoo.com
+
+
+
+From MAILER-DAEMON Tue Sep 21 01:16:12 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C9d0d-0002DW-TP
+	for mharc-axiom-mail@gnu.org; Tue, 21 Sep 2004 01:16:12 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C9d0c-0002DD-LC
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 01:16:10 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C9d0b-0002D1-R8
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 01:16:10 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C9d0b-0002Cr-Oo
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 01:16:09 -0400
+Received: from [204.101.242.79] (helo=lattice.dyns.cx)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1C9cuV-0000vL-RI
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 01:09:52 -0400
+Received: from lattice.dyns.cx (localhost [127.0.0.1])
+	by lattice.dyns.cx (8.12.10/8.12.10) with ESMTP id i8L55Mt0000677;
+	Tue, 21 Sep 2004 01:05:22 -0400
+Received: (from steve@localhost)
+	by lattice.dyns.cx (8.12.10/8.12.10/Submit) id i8L55ME7000676;
+	Tue, 21 Sep 2004 01:05:22 -0400
+Date: Tue, 21 Sep 2004 01:05:22 -0400
+From: Stephen Wilson <wilsons@multiboard.com>
+To: Zork <zorkadi@yahoo.com>
+Subject: Re: [Axiom-mail] Aldor compatibility
+Message-ID: <20040921050522.GA32228@lattice>
+References: <20040920073958.GA32116@lattice>
+	<20040920212102.15070.qmail@web61104.mail.yahoo.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <20040920212102.15070.qmail@web61104.mail.yahoo.com>
+User-Agent: Mutt/1.4.2i
+X-Operating-System: GNU/Linux 2.4.22
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Sep 2004 05:16:10 -0000
+
+
+Hello,
+
+> I think that this is the right way to go.  Unfortunately linking the
+> runtime probably reproduces unnecessarily a lot of the routines in
+> axiom.  You also loose aldor native compilation and speed.  
+
+The Aldor runtime probably does mirror some of the Axiom mechanisms,
+though from my understanding the worlds are quite separate, and from a
+practical standpoint are mutually exclusive (If I'm wrong here I'm
+sure I will be corrected). 
+
+The only way I know how to measure the performance hit would be to
+cook up some benchmarks and collect some statistics. 
+
+
+> On the other hand you **theoretically** gain all of axiom functions:
+> have you tried adding a call to an axiom function to your program?
+> For example, how would you write in aldor a function to evaluate
+> besselJ(1,1), compile it using the above procedure and run it under
+> axiom? Maybe this is the nontrivial case.
+
+
+Well yes, you do have access to Axiom from Aldor via the Foreign Lisp
+interface. Your right that it is the nontrivial case. I'll give a
+short example as to how (your questions have rekindled my own
+interest in figuring this sort of thing out).
+
+If you have not already, perhaps you might like to read
+axiom/src/doc/DeveloperNotes.dvi.
+
+>From Axiom:
+
+     (1) -> besselJ(1,1)
+     besselJ(1,1)
+
+     (1)  0.4400505857449335
+                                                            Type: DoubleFloat
+     (2) -> bess: (DFLOAT, DFLOAT) -> DFLOAT := besselJ
+     bess: (DFLOAT, DFLOAT) -> DFLOAT := besselJ
+
+     (1)  theMap(DFSFUN;besselJ;3Df;8,819)
+                             Type: ((DoubleFloat,DoubleFloat) -> DoubleFloat)
+     							    
+
+theMap() above gives the Lisp name of the compiled besselJ function,
+namely |DFSFUN;besselJ;3Df;8|. It is in the BOOT lisp package.
+
+We can write the following aldor code:
+
+   #include "axllib"
+
+   import {
+      BOOT_:_:DFSFUN_;besselJ_;3Df_;8: (DoubleFloat, DoubleFloat, Pointer) -> DoubleFloat;
+   } from Foreign Lisp;
+
+
+   wrapBessel(a: DoubleFloat, b: DoubleFloat): DoubleFloat == 
+      BOOT_:_:DFSFUN_;besselJ_;3Df_;8(a, b, nil$Pointer);
+
+If you compile and load this code as I described in the previous email
+you can call `wrapBessel' from Axiom. 
+
+Note that in calling |DFSFUN_;besselJ_;3Df_;8| from wrapBessel we are
+supplying an extra argument which I rather arbitrarily defined as
+having type Pointer. This is a hidden argument which all Axiom lisp
+functions accept and is used, AFAIK, to pass a closure to the
+function (i.e. `hidden' domain variables). How to use this extra
+argument to good effect from Aldor is unknown to me. 
+
+This is a messy but possibly necessary technique in getting the effect
+you asked about. 
+  
+> Unfortunately I believe that aldor people have no interest in axiom
+> compatibility, mostly because of their ties with maple.  Also, I
+> remember having read at www.aldor.org that one of their goals or
+> projects was to rewrite the remaining axiom libraries in aldor.  So it
+> probably is up to axiom people to export or make available their system
+> to aldor users, if it proves of any use.
+
+
+There is definitely a relationship between Maple and the Aldor
+folks. I am unaware of any current effort to rewrite the Axiom algebra
+in Aldor. 
+
+Aldor is a nice language, but the compiler is not as stable as one
+might like. I am of the opinion that Axiom is a more mature piece of
+software. As an open source system, I feel Axiom is likely to offer in
+time all the features which give Aldor its raison d'etra, and more.
+
+
+Again, I hope the above is useful to you. 
+
+
+Sincerely,
+Steve
+
+
+
+From MAILER-DAEMON Tue Sep 21 01:57:49 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C9dev-0001kx-79
+	for mharc-axiom-mail@gnu.org; Tue, 21 Sep 2004 01:57:49 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C9det-0001kI-1F
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 01:57:47 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C9deq-0001jB-AG
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 01:57:46 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C9deq-0001j7-2c
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 01:57:44 -0400
+Received: from [216.155.196.111] (helo=web61109.mail.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1C9dYg-0006LU-Lt
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 01:51:22 -0400
+Message-ID: <20040921055122.5350.qmail@web61109.mail.yahoo.com>
+Received: from [200.28.159.142] by web61109.mail.yahoo.com via HTTP;
+	Mon, 20 Sep 2004 22:51:22 PDT
+Date: Mon, 20 Sep 2004 22:51:22 -0700 (PDT)
+From: Zork <zorkadi@yahoo.com>
+Subject: Re: [Axiom-mail] Aldor compatibility
+To: axiom-mail@nongnu.org
+In-Reply-To: <20040921050522.GA32228@lattice>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Sep 2004 05:57:48 -0000
+
+...
+> 
+>    import {
+>       BOOT_:_:DFSFUN_;besselJ_;3Df_;8: (DoubleFloat, DoubleFloat,
+> Pointer) -> DoubleFloat;
+>    } from Foreign Lisp;
+> 
+> 
+>    wrapBessel(a: DoubleFloat, b: DoubleFloat): DoubleFloat == 
+>       BOOT_:_:DFSFUN_;besselJ_;3Df_;8(a, b, nil$Pointer);
+> 
+
+So, i guess this is the kind of glue that axiom should provide for
+aldor users in a "libaxiom.as".  Maybe it could be generated
+automatically from axiom sources with same function names.
+
+... 
+> Again, I hope the above is useful to you. 
+...
+
+Yes, it has been very useful, thank you Steve.
+
+Z.
+
+
+		
+__________________________________
+Do you Yahoo!?
+Yahoo! Mail - Helps protect you from nasty viruses.
+http://promotions.yahoo.com/new_mail
+
+
+
+From MAILER-DAEMON Tue Sep 21 03:51:21 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C9fQm-0001cp-PU
+	for mharc-axiom-mail@gnu.org; Tue, 21 Sep 2004 03:51:20 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C9fQh-0001bL-Ur
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 03:51:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C9fQd-0001Z9-3m
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 03:51:14 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C9fQc-0001Yx-N1
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 03:51:10 -0400
+Received: from [62.231.131.195] (helo=mail35.messagelabs.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1C9fKY-0004zf-Pq
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 03:44:55 -0400
+X-VirusChecked: Checked
+X-Env-Sender: miked@nag.co.uk
+X-Msg-Ref: server-18.tower-35.messagelabs.com!1095752693!14437527
+X-StarScan-Version: 5.2.10; banners=nag.co.uk,-,-
+X-Originating-IP: [212.125.75.75]
+Received: (qmail 10429 invoked from network); 21 Sep 2004 07:44:53 -0000
+Received: from smtp-6.star.net.uk (212.125.75.75)
+	by server-18.tower-35.messagelabs.com with SMTP;
+	21 Sep 2004 07:44:53 -0000
+Received: (qmail 13109 invoked from network); 21 Sep 2004 07:42:23 -0000
+Received: from unknown (HELO nag.co.uk) (62.231.145.242)
+	by smtp-6.star.net.uk with SMTP; 21 Sep 2004 07:42:23 -0000
+Received: from trowbridge.nag.co.uk (trowbridge.nag.co.uk [192.156.217.69])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id IAA12851;
+	Tue, 21 Sep 2004 08:44:46 +0100 (BST)
+Received: from trowbridge.nag.co.uk (localhost.localdomain [127.0.0.1])
+	by trowbridge.nag.co.uk (8.12.10/8.12.10) with ESMTP id i8L7ilvM025752; 
+	Tue, 21 Sep 2004 08:44:47 +0100
+Received: (from miked@localhost)
+	by trowbridge.nag.co.uk (8.12.10/8.12.10/Submit) id i8L7igRf025750;
+	Tue, 21 Sep 2004 08:44:42 +0100
+Date: Tue, 21 Sep 2004 08:44:42 +0100
+From: Mike Dewar <miked@nag.co.uk>
+To: Zork <zorkadi@yahoo.com>
+Subject: Re: [Axiom-mail] Aldor compatibility
+Message-ID: <20040921074442.GC25719@nag.co.uk>
+References: <20040921050522.GA32228@lattice>
+	<20040921055122.5350.qmail@web61109.mail.yahoo.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-15
+Content-Disposition: inline
+In-Reply-To: <20040921055122.5350.qmail@web61109.mail.yahoo.com>
+User-Agent: Mutt/1.4.1i
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Sep 2004 07:51:18 -0000
+
+I'm not in the office at the moment so can't cook up an example, but you
+do not need to use the Foreign Lisp facilities to call Axiom from Aldor.
+You need to do something like:
+
+#include "axiom"
+
+...
+
+  import {besselJ (DoubleFloat, DoubleFloat) -> DoubleFloat; }
+    from DoubleFloatSpecialFunctions;
+
+...
+
+The file libaxiom.al which makes all this work used to be built during
+the Axiom build process.
+
+By the way, its not true to say that the Aldor people are not interested
+in Axiom because of their relationship with Maplesoft.  I know that some
+of the people in that group still use Axiom - both the NAG and open
+versions - with Aldor, since ( helped them with some benchmarking/code
+optimisations a couple of months ago.  Its just that they have finite
+resources and a mechanism for running Aldor code inside Maple fits in
+with their current research interests (there are interesting problems
+with having two collaborating garbage collectors operating on the same
+objects for example) while resurrecting Axiom support doesn't.
+
+Mike.
+
+On Mon, Sep 20, 2004 at 10:51:22PM -0700, Zork wrote:
+> ...
+> > 
+> >    import {
+> >       BOOT_:_:DFSFUN_;besselJ_;3Df_;8: (DoubleFloat, DoubleFloat,
+> > Pointer) -> DoubleFloat;
+> >    } from Foreign Lisp;
+> > 
+> > 
+> >    wrapBessel(a: DoubleFloat, b: DoubleFloat): DoubleFloat == 
+> >       BOOT_:_:DFSFUN_;besselJ_;3Df_;8(a, b, nil$Pointer);
+> > 
+> 
+> So, i guess this is the kind of glue that axiom should provide for
+> aldor users in a "libaxiom.as".  Maybe it could be generated
+> automatically from axiom sources with same function names.
+> 
+> ... 
+> > Again, I hope the above is useful to you. 
+> ...
+> 
+> Yes, it has been very useful, thank you Steve.
+> 
+> Z.
+> 
+> 
+> 		
+> __________________________________
+> Do you Yahoo!?
+> Yahoo! Mail - Helps protect you from nasty viruses.
+> http://promotions.yahoo.com/new_mail
+> 
+> 
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+> 
+> ________________________________________________________________________
+> This e-mail has been scanned for all viruses by Star. The
+> service is powered by MessageLabs. For more information on a proactive
+> anti-virus service working around the clock, around the globe, visit:
+> http://www.star.net.uk
+> ________________________________________________________________________
+
+________________________________________________________________________
+This e-mail has been scanned for all viruses by Star. The
+service is powered by MessageLabs. For more information on a proactive
+anti-virus service working around the clock, around the globe, visit:
+http://www.star.net.uk
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Tue Sep 21 04:17:16 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1C9fps-0007vb-42
+	for mharc-axiom-mail@gnu.org; Tue, 21 Sep 2004 04:17:16 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1C9fpp-0007uA-9U
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 04:17:13 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1C9fpn-0007sw-1H
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 04:17:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1C9fpm-0007sk-PR
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 04:17:10 -0400
+Received: from [216.155.196.107] (helo=web61105.mail.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1C9fjT-0000Fy-MT
+	for axiom-mail@nongnu.org; Tue, 21 Sep 2004 04:10:39 -0400
+Message-ID: <20040921081039.42208.qmail@web61105.mail.yahoo.com>
+Received: from [200.28.159.142] by web61105.mail.yahoo.com via HTTP;
+	Tue, 21 Sep 2004 01:10:39 PDT
+Date: Tue, 21 Sep 2004 01:10:39 -0700 (PDT)
+From: Zork <zorkadi@yahoo.com>
+Subject: Re: [Axiom-mail] Aldor compatibility
+To: axiom-mail@nongnu.org
+In-Reply-To: <20040921074442.GC25719@nag.co.uk>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Sep 2004 08:17:13 -0000
+
+
+--- Mike Dewar <miked@nag.co.uk> wrote:
+
+...
+> #include "axiom"
+> 
+> ...
+> 
+>   import {besselJ (DoubleFloat, DoubleFloat) -> DoubleFloat; }
+>     from DoubleFloatSpecialFunctions;
+> 
+> ...
+> 
+> The file libaxiom.al which makes all this work used to be built
+> during
+> the Axiom build process.
+...
+
+This makes a lot of sense.  But there is no libaxiom.al in the binary
+installation of axiom (Debian).  There is a libaxiom.al in my copy of
+axiom CVS sources though, but it is dated 2003-08-28.  Maybe
+libaxiom.al is no longer built, or if this version is up to date then
+it is not being installed with the binary distribution.  I will try
+using this version tomorrow.
+
+Thanks for your comment,
+
+Z.
+
+
+		
+__________________________________
+Do you Yahoo!?
+New and Improved Yahoo! Mail - Send 10MB messages!
+http://promotions.yahoo.com/new_mail 
+
+
+
+From MAILER-DAEMON Sat Sep 25 04:41:00 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CB872-0000Z1-Km
+	for mharc-axiom-mail@gnu.org; Sat, 25 Sep 2004 04:41:00 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CB871-0000Y1-EI
+	for axiom-mail@nongnu.org; Sat, 25 Sep 2004 04:40:59 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CB870-0000XJ-2F
+	for axiom-mail@nongnu.org; Sat, 25 Sep 2004 04:40:58 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CB86z-0000XG-UZ
+	for axiom-mail@nongnu.org; Sat, 25 Sep 2004 04:40:58 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CB80c-0000Hf-Qz
+	for axiom-mail@nongnu.org; Sat, 25 Sep 2004 04:34:23 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i8P8Y0MY137816;
+	Sat, 25 Sep 2004 10:34:03 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16725.18635.237092.269701@gargle.gargle.HOWL>
+Date: Sat, 25 Sep 2004 10:30:35 +0000
+To: Manuel.Bronstein@sophia.inria.fr, moreno@orcca.on.ca,
+	Ralf HEMMECKE <ralf@hemmecke.de>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx9.univie.ac.at 4247; Body=4 Fuz1=4 Fuz2=4
+Cc: axiom-mail@nongnu.org
+Subject: [Axiom-mail] A(ld,xi)o(r,m)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 25 Sep 2004 08:40:59 -0000
+
+Dear Manuel, Marc, Ralf, *
+
+recently I have started thinking about a common future of Aldor and
+Axiom. I'm convinced that cooperation between the two will be necessary to
+attract more scientists and users. Do you agree?
+
+I think that the ultimates goals should be that
+
+* Aldor becomes the extension language of Axiom, thus replacing Spad, and that
+* as much as possible of the libraries are shared.
+
+Do you agree that these are the "good" goals?
+
+I have no idea at all how the first goal could be accomplished. Is it correct
+that the current Aldor implementation within Axiom is a "proper" subset of
+Aldor 1.0.2, i.e., that an Aldor program compiled with Axiom would have the
+same semantics as the same program compiled with Aldor 1.0.2?
+
+I had a short look at the documentation of the Algebra library of Aldor, so I
+realize that the second goal will not be a quick and easy task either.
+
+However, it seems to me that it is only the wealth of Spad libraries that make
+Axiom interesting. Are the Axiom interpreter and the Aldor 1.0.2 interpreter
+comparable? Can you tell me about the weaknesses and strenghts of the two
+systems?
+
+Martin
+
+PS: is there an Aldor mailinglist? If you know someone who might be interested
+in these issues, please forward this mail!
+
+
+
+
+From MAILER-DAEMON Sun Sep 26 15:30:58 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CBeja-0008Lz-2u
+	for mharc-axiom-mail@gnu.org; Sun, 26 Sep 2004 15:30:58 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CBejX-0008Ji-DO
+	for axiom-mail@nongnu.org; Sun, 26 Sep 2004 15:30:55 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CBejU-0008IQ-Pn
+	for axiom-mail@nongnu.org; Sun, 26 Sep 2004 15:30:54 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CBejU-0008IF-II
+	for axiom-mail@nongnu.org; Sun, 26 Sep 2004 15:30:52 -0400
+Received: from [62.241.4.196] (helo=relay.poste.it)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CBecy-0000Q2-Si
+	for axiom-mail@nongnu.org; Sun, 26 Sep 2004 15:24:09 -0400
+Received: from localhost (82.50.109.216) by relay.poste.it (7.0.028)
+	(authenticated as andrea.bedini-mail@poste.it)
+	id 414033F10001F8AF for axiom-mail@nongnu.org;
+	Sun, 26 Sep 2004 21:24:05 +0200
+Received: from andrea by localhost with local (Exim 4.34) id 1CBebW-0000ue-69
+	for axiom-mail@nongnu.org; Sun, 26 Sep 2004 21:22:38 +0200
+Date: Sun, 26 Sep 2004 21:22:37 +0200
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A(ld,xi)o(r,m)
+Message-ID: <20040926192237.GB3143@topetto>
+References: <16725.18635.237092.269701@gargle.gargle.HOWL>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="8GpibOaaTibBMecb"
+Content-Disposition: inline
+In-Reply-To: <16725.18635.237092.269701@gargle.gargle.HOWL>
+User-Agent: Mutt/1.5.6+20040818i
+From: Andrea Bedini <andrea@poisson.dm.unipi.it>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 26 Sep 2004 19:30:56 -0000
+
+
+--8GpibOaaTibBMecb
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Sat, Sep 25, 2004 at 10:30:35AM +0000, Martin Rubey wrote:
+> recently I have started thinking about a common future of Aldor and
+> Axiom.
+
+Hi,
+what is the legal status of aldor ?
+
+--=20
+Andrea Bedini <andrea@poisson.dm.unipi.it>
+
+--8GpibOaaTibBMecb
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBVxb972y9Ytn0eYgRAuuAAJ49hn9EJt9/PlzqTfFlL1onIIkJhQCcDR4w
+ave5Kj7dGsjURHtPOLFe5L4=
+=aYal
+-----END PGP SIGNATURE-----
+
+--8GpibOaaTibBMecb--
+
+
+
+From MAILER-DAEMON Mon Sep 27 08:03:10 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CBuDl-0004Sf-CU
+	for mharc-axiom-mail@gnu.org; Mon, 27 Sep 2004 08:03:09 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CBuDh-0004Qk-Du
+	for axiom-mail@nongnu.org; Mon, 27 Sep 2004 08:03:05 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CBuDe-0004PA-0q
+	for axiom-mail@nongnu.org; Mon, 27 Sep 2004 08:03:03 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CBuDd-0004Oj-Ha
+	for axiom-mail@nongnu.org; Mon, 27 Sep 2004 08:03:01 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CBu76-0007Tk-Jc
+	for axiom-mail@nongnu.org; Mon, 27 Sep 2004 07:56:17 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i8RBu2RF113610;
+	Mon, 27 Sep 2004 13:56:05 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16728.6949.13821.30577@gargle.gargle.HOWL>
+Date: Mon, 27 Sep 2004 13:52:37 +0000
+To: Andrea Bedini <andrea@poisson.phc.unipi.it>
+Subject: Re: [Axiom-mail] A(ld,xi)o(r,m)
+In-Reply-To: <20040926192237.GB3143@topetto>
+References: <16725.18635.237092.269701@gargle.gargle.HOWL>
+	<20040926192237.GB3143@topetto>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4249; Body=2 Fuz1=2 Fuz2=2
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 27 Sep 2004 12:03:07 -0000
+
+Andrea Bedini writes:
+ > On Sat, Sep 25, 2004 at 10:30:35AM +0000, Martin Rubey wrote:
+ > > recently I have started thinking about a common future of Aldor and
+ > > Axiom.
+ > 
+ > Hi,
+ > what is the legal status of aldor ?
+
+BSD like license. See www.aldor.org.
+
+
+
+
+From MAILER-DAEMON Mon Sep 27 13:23:14 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CBzDW-0006VS-PS
+	for mharc-axiom-mail@gnu.org; Mon, 27 Sep 2004 13:23:14 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CBzDV-0006Um-93
+	for axiom-mail@nongnu.org; Mon, 27 Sep 2004 13:23:13 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CBzDT-0006TO-Dq
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 13:23:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CBzDT-0006TE-8u
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 13:23:11 -0400
+Received: from [213.228.0.62] (helo=postfix4-1.free.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CBz73-0006RO-89
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 13:16:33 -0400
+Received: from melusine (lns-vlq-33-82-253-233-183.adsl.proxad.net
+	[82.253.233.183])
+	by postfix4-1.free.fr (Postfix) with ESMTP id 76EB31A3346
+	for <Axiom-mail@nongnu.org>; Mon, 27 Sep 2004 19:16:30 +0200 (CEST)
+Received: from lehobey by melusine with local (Exim 3.35 #1 (Debian))
+	id 1CBz6z-0000Bu-00
+	for <Axiom-mail@nongnu.org>; Mon, 27 Sep 2004 19:16:29 +0200
+Date: Mon, 27 Sep 2004 19:16:29 +0200
+To: Axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A(ld,xi)o(r,m)
+Message-ID: <20040927171629.GA636@melusine>
+References: <16725.18635.237092.269701@gargle.gargle.HOWL>
+	<20040926192237.GB3143@topetto>
+	<16728.6949.13821.30577@gargle.gargle.HOWL>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+In-Reply-To: <16728.6949.13821.30577@gargle.gargle.HOWL>
+User-Agent: Mutt/1.3.28i
+From: Frederic Lehobey <Frederic.Lehobey@free.fr>
+Content-Transfer-Encoding: quoted-printable
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 27 Sep 2004 17:23:13 -0000
+
+Hi,
+
+On Mon, Sep 27, 2004 at 01:52:37PM +0000, Martin Rubey wrote:
+> Andrea Bedini writes:
+>  > On Sat, Sep 25, 2004 at 10:30:35AM +0000, Martin Rubey wrote:
+>  > > recently I have started thinking about a common future of Aldor an=
+d
+>  > > Axiom.
+>  >=20
+>  > Hi,
+>  > what is the legal status of aldor ?
+>=20
+> BSD like license. See www.aldor.org.
+
+  Could you point a link that says so?  I have not found any on the
+site you have given.  All I have found (on
+<http://www.aldor.org/faqs.html> is "free of charge for non-commercial
+use" which is not really a BSD license.
+
+Best regards,
+Fr=E9d=E9ric Lehobey
+
+
+
+From MAILER-DAEMON Mon Sep 27 14:45:47 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CC0VO-00029l-SW
+	for mharc-axiom-mail@gnu.org; Mon, 27 Sep 2004 14:45:46 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CC0VM-000290-K3
+	for axiom-mail@nongnu.org; Mon, 27 Sep 2004 14:45:44 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CC0VL-00028e-I5
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 14:45:44 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CC0VL-00028V-B1
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 14:45:43 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CC0P4-000227-JQ
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 14:39:14 -0400
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id D8142644508; Mon, 27 Sep 2004 14:39:10 -0400 (EDT)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 15177-03; Mon, 27 Sep 2004 14:39:08 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (unknown [131.136.1.77])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id 865116444C4; Mon, 27 Sep 2004 14:39:08 -0400 (EDT)
+Received: by CORPORATEEX with Internet Mail Service (5.5.2653.19)
+	id <TW3BCB3L>; Mon, 27 Sep 2004 14:34:40 -0400
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DC2F@CORPORATEEX>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: 'Frederic Lehobey' <Frederic.Lehobey@free.fr>
+Subject: RE: [Axiom-mail] A(ld,xi)o(r,m)
+Date: Mon, 27 Sep 2004 14:34:40 -0400
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 27 Sep 2004 18:45:44 -0000
+
+http://www.aldor.org/downl.html
+
+
+Aldor Public License 1.0
+
+Copyright =A9 1990-2003, Aldor.org
+All rights reserved.
+
+
+The Aldor distribution contains software and documentation, some in =
+binary
+form only, other in source and binary form.  Redistribution and use in
+source
+and binary forms, with or without modification, are permitted provided
+that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright =
+notice,
+  this list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright =
+notice,
+  this list of conditions and the following disclaimer in the =
+documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of Aldor.org nor the names of its contributors may =
+be
+  used to endorse or promote products derived from this software =
+without
+  specific prior written permission.
+
+* If you distribute a modified form of either source or binary code (a) =
+you
+  must make the source form of these modification available to =
+Aldor.org
+  (b) you grant Aldor.org a royalty-free license to use, modify or
+redistribute
+  your modifications without limitation, and (c) you represent that you =
+are
+  legally entitled to grant these rights and that you are not providing
+  Aldor.org with any code that violates any law or breaches any =
+contract.
+
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT =
+LIMITED
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+=20
+
+> -----Original Message-----
+> From: Frederic Lehobey [mailto:Frederic.Lehobey@free.fr]
+> Sent: Monday, September 27, 2004 1:16 PM
+> To: Axiom-mail@nongnu.org
+> Subject: Re: [Axiom-mail] A(ld,xi)o(r,m)
+>=20
+>=20
+> Hi,
+>=20
+> On Mon, Sep 27, 2004 at 01:52:37PM +0000, Martin Rubey wrote:
+> > Andrea Bedini writes:
+> >  > On Sat, Sep 25, 2004 at 10:30:35AM +0000, Martin Rubey wrote:
+> >  > > recently I have started thinking about a common future=20
+> of Aldor and
+> >  > > Axiom.
+> >  >=20
+> >  > Hi,
+> >  > what is the legal status of aldor ?
+> >=20
+> > BSD like license. See www.aldor.org.
+>=20
+>   Could you point a link that says so?  I have not found any on the
+> site you have given.  All I have found (on
+> <http://www.aldor.org/faqs.html> is "free of charge for =
+non-commercial
+> use" which is not really a BSD license.
+>=20
+> Best regards,
+> Fr=E9d=E9ric Lehobey
+>=20
+>=20
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>=20
+
+
+
+From MAILER-DAEMON Mon Sep 27 15:04:08 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CC0nA-0005cq-BO
+	for mharc-axiom-mail@gnu.org; Mon, 27 Sep 2004 15:04:08 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CC0n9-0005cl-GC
+	for axiom-mail@nongnu.org; Mon, 27 Sep 2004 15:04:07 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CC0n7-0005cJ-TW
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 15:04:07 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CC0n7-0005cG-Pa
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 15:04:05 -0400
+Received: from [216.136.173.87] (helo=web12203.mail.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1CC0gj-0004fD-MZ
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 14:57:29 -0400
+Message-ID: <20040927185728.13490.qmail@web12203.mail.yahoo.com>
+Received: from [128.175.78.141] by web12203.mail.yahoo.com via HTTP;
+	Mon, 27 Sep 2004 11:57:28 PDT
+Date: Mon, 27 Sep 2004 11:57:28 -0700 (PDT)
+From: C Y <smustudent1@yahoo.com>
+Subject: Re: [Axiom-mail] A(ld,xi)o(r,m)
+To: Frederic Lehobey <Frederic.Lehobey@free.fr>, Axiom-mail@nongnu.org
+In-Reply-To: <20040927171629.GA636@melusine>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 27 Sep 2004 19:04:07 -0000
+
+
+--- Frederic Lehobey <Frederic.Lehobey@free.fr> wrote:
+
+> Could you point a link that says so?  I have not found any on the
+> site you have given.  All I have found (on
+> <http://www.aldor.org/faqs.html> is "free of charge for
+> non-commercial use" which is not really a BSD license.
+
+He probably means this:
+
+http://www.aldor.org/downl.html 
+
+The problem to me seems to be that parts of aldor are distributed ONLY
+as binary files.  There is no source only distribution I am aware of,
+and if I understand correctly the intent is that there not be one. 
+That's why I've personally never viewed Aldor as a logical program to
+use with Axiom.
+
+CY
+
+
+		
+_______________________________
+Do you Yahoo!?
+Declare Yourself - Register online to vote today!
+http://vote.yahoo.com
+
+
+
+From MAILER-DAEMON Mon Sep 27 15:58:01 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CC1dJ-0000XD-56
+	for mharc-axiom-mail@gnu.org; Mon, 27 Sep 2004 15:58:01 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CC1dF-0000WU-Bj
+	for axiom-mail@nongnu.org; Mon, 27 Sep 2004 15:57:57 -0400
+Received: from mailman by lists.gnu.org with local (Exim 4.33)
+	id 1CC1dE-0000Vb-1m
+	for axiom-mail@nongnu.org; Mon, 27 Sep 2004 15:57:56 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CC0oZ-0005xL-UJ
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 15:05:37 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CC0oZ-0005xI-SG
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 15:05:35 -0400
+Received: from [65.24.95.34] (helo=mandelbrot)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CC0i2-0004s3-Fq
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 14:58:50 -0400
+Received: from bt by mandelbrot with local (Exim 3.35 #1 (Debian))
+	id 1CBzw6-00015J-00
+	for <Axiom-mail@nongnu.org>; Mon, 27 Sep 2004 14:09:18 -0400
+Date: Mon, 27 Sep 2004 14:09:17 -0400
+To: Axiom-mail@nongnu.org
+Subject: [Bill.Page@drdc-rddc.gc.ca: RE: [Axiom-mail] A(ld,xi)o(r,m)]
+Message-ID: <20040927180917.GA4162@scientificcomputing.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+User-Agent: Mutt/1.3.28i
+From: Balbir Thomas <thomas.1037@osu.edu>
+X-TMDA-Confirmed: Mon Sep 27 15:57:55 EDT 2004
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 27 Sep 2004 19:57:57 -0000
+
+How does one get the aldor source code? It is not downloadable from
+the web site and there is no anonymous CVS available. 
+b thomas
+
+
+
+
+From MAILER-DAEMON Mon Sep 27 16:16:19 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CC1v1-0005ex-FU
+	for mharc-axiom-mail@gnu.org; Mon, 27 Sep 2004 16:16:19 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CC1uz-0005ed-5f
+	for axiom-mail@nongnu.org; Mon, 27 Sep 2004 16:16:17 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CC1ux-0005eR-Ka
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 16:16:16 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CC1ux-0005eO-Hn
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 16:16:15 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CC1nt-0007PS-Hf
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 16:08:57 -0400
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id 0D3C16444DF; Mon, 27 Sep 2004 16:08:57 -0400 (EDT)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 17679-03; Mon, 27 Sep 2004 16:08:55 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (corporateex.drdc-rddc.gc.ca
+	[131.136.1.77]) by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id 86C2464447E; Mon, 27 Sep 2004 16:08:55 -0400 (EDT)
+Received: by CORPORATEEX with Internet Mail Service (5.5.2653.19)
+	id <TW3BCBXG>; Mon, 27 Sep 2004 16:04:27 -0400
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DC32@CORPORATEEX>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: 'Balbir Thomas' <thomas.1037@osu.edu>
+Subject: RE: [Axiom-mail] A(ld,xi)o(r,m)]
+Date: Mon, 27 Sep 2004 16:04:27 -0400
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 27 Sep 2004 20:16:17 -0000
+
+I suggest contacting those involved as specified here:
+
+  http://www.aldor.org/contact.html
+
+or by email at questions@aldor.org
+
+Unfortunately at this time there is very little visible
+connection between the Axiom and Aldor projects. I agree
+with the general sentiment expressed by others here that
+there *should be* a much stronger relationship.
+
+Regards,
+Bill Page.
+
+> -----Original Message-----
+> From: Balbir Thomas [mailto:thomas.1037@osu.edu]
+> Sent: Monday, September 27, 2004 2:09 PM
+> To: Axiom-mail@nongnu.org
+> Subject: [Bill.Page@drdc-rddc.gc.ca: RE: [Axiom-mail] A(ld,xi)o(r,m)]
+> 
+> 
+> How does one get the aldor source code? It is not downloadable
+> from the web site and there is no anonymous CVS available. 
+> b thomas
+> 
+ 
+
+
+
+From MAILER-DAEMON Mon Sep 27 16:23:41 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CC229-0006Kf-9f
+	for mharc-axiom-mail@gnu.org; Mon, 27 Sep 2004 16:23:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CC227-0006JR-NH
+	for axiom-mail@nongnu.org; Mon, 27 Sep 2004 16:23:39 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CC225-0006Is-O1
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 16:23:39 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CC225-0006Ii-Js
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 16:23:37 -0400
+Received: from [213.228.0.62] (helo=postfix4-1.free.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CC1vX-0008T2-IL
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 16:16:51 -0400
+Received: from melusine (lns-vlq-33-82-253-233-183.adsl.proxad.net
+	[82.253.233.183])
+	by postfix4-1.free.fr (Postfix) with ESMTP id E38431F342C
+	for <Axiom-mail@nongnu.org>; Mon, 27 Sep 2004 22:16:50 +0200 (CEST)
+Received: from lehobey by melusine with local (Exim 3.35 #1 (Debian))
+	id 1CC1vW-0000Qw-00
+	for <Axiom-mail@nongnu.org>; Mon, 27 Sep 2004 22:16:50 +0200
+Date: Mon, 27 Sep 2004 22:16:50 +0200
+To: Axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A(ld,xi)o(r,m)
+Message-ID: <20040927201650.GA1126@melusine>
+References: <20040927171629.GA636@melusine>
+	<20040927185728.13490.qmail@web12203.mail.yahoo.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+In-Reply-To: <20040927185728.13490.qmail@web12203.mail.yahoo.com>
+User-Agent: Mutt/1.3.28i
+From: Frederic Lehobey <Frederic.Lehobey@free.fr>
+Content-Transfer-Encoding: quoted-printable
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 27 Sep 2004 20:23:40 -0000
+
+Hi,
+
+On Mon, Sep 27, 2004 at 11:57:28AM -0700, C Y wrote:
+> --- Frederic Lehobey <Frederic.Lehobey@free.fr> wrote:
+>=20
+> > Could you point a link that says so?  I have not found any on the
+> > site you have given.  All I have found (on
+> > <http://www.aldor.org/faqs.html> is "free of charge for
+> > non-commercial use" which is not really a BSD license.
+>=20
+> He probably means this:
+>=20
+> http://www.aldor.org/downl.html=20
+
+  Thanks a lot to you and Bill Page for the correct link.
+
+> The problem to me seems to be that parts of aldor are distributed ONLY
+> as binary files.  There is no source only distribution I am aware of,
+> and if I understand correctly the intent is that there not be one.=20
+> That's why I've personally never viewed Aldor as a logical program to
+> use with Axiom.
+
+  Seconded.
+
+Best regards,
+Fr=E9d=E9ric Lehobey
+
+
+
+From MAILER-DAEMON Mon Sep 27 17:20:56 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CC2vX-00067S-U3
+	for mharc-axiom-mail@gnu.org; Mon, 27 Sep 2004 17:20:55 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CC2vW-00067K-EQ
+	for axiom-mail@nongnu.org; Mon, 27 Sep 2004 17:20:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CC2vU-00066e-IV
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 17:20:53 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CC2vU-00066V-Eg
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 17:20:52 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CC2o1-0000TK-LT
+	for Axiom-mail@nongnu.org; Mon, 27 Sep 2004 17:13:09 -0400
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id EE48A64458C; Mon, 27 Sep 2004 17:13:08 -0400 (EDT)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 19255-07; Mon, 27 Sep 2004 17:13:06 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (unknown [131.136.1.77])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id 92B4A644587; Mon, 27 Sep 2004 17:13:02 -0400 (EDT)
+Received: by CORPORATEEX with Internet Mail Service (5.5.2653.19)
+	id <TW3BCB82>; Mon, 27 Sep 2004 17:08:34 -0400
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DC33@CORPORATEEX>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: 'Frederic Lehobey' <Frederic.Lehobey@free.fr>
+Subject: RE: [Axiom-mail] A(ld,xi)o(r,m)
+Date: Mon, 27 Sep 2004 17:08:34 -0400
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 27 Sep 2004 21:20:54 -0000
+
+On Monday, September 27, 2004 4:17 PM Frederic Lehobey
+Frederic.Lehobey@free.fr wrote:
+
+>> ...
+>> The problem to me seems to be that parts of aldor are distributed
+>> ONLY as binary files.  There is no source only distribution I am
+>> aware of, and if I understand correctly the intent is that there
+>> not be one. That's why I've personally never viewed Aldor as a
+>> logical program to use with Axiom.
+>
+>  Seconded.
+
+You do realize of course, that not so long ago Aldor (then called
+AxiomXL or the "library compiler") *was* a part of the commercial
+version of Axiom? Aldor was "released" by NAG for non-commerical
+development a few years before Axiom itself to a different group of
+developers and under different conditions at a time when open source
+was not so well developed as a concept.
+
+Axiom can and does operate without Aldor but in principle Aldor
+would provide better optimized library code and would compile
+significantly faster than the compiler that is built-in to Axiom.
+Since building Axiom and compiling all of the library code using
+Axiom's compiler, on even a fast computer can take several hours,
+I think using Aldor with Axiom could provide significant advantages -
+especially during development and testing of new code.
+
+There are a few people (and I am not one of them) who would have
+to meet and agree on a common strategy, licensing, etc. before
+Axiom and Aldor could become one again or at the very least
+cooperate for mutual benefit. I think the best thing we could do
+here is to demonstrate that there is an active interest in making
+this happen.
+
+BTW, I plan to have Aldor running in interactive move available
+via MathAction in the next few days - though not linked to Axiom
+(yet).
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Tue Sep 28 10:46:45 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CCJFd-0004hO-00
+	for mharc-axiom-mail@gnu.org; Tue, 28 Sep 2004 10:46:45 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CCJFa-0004fb-60
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 10:46:42 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CCJFZ-0004f0-82
+	for Axiom-mail@nongnu.org; Tue, 28 Sep 2004 10:46:41 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CCJFY-0004eb-A9
+	for Axiom-mail@nongnu.org; Tue, 28 Sep 2004 10:46:40 -0400
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CCJ8k-0007QH-Lj
+	for Axiom-mail@nongnu.org; Tue, 28 Sep 2004 10:39:38 -0400
+Received: from [131.130.1.27] (helo=imap.univie.ac.at)
+	by mx20.gnu.org with esmtp (Exim 4.34) id 1CCDb5-0008Og-ND
+	for Axiom-mail@nongnu.org; Tue, 28 Sep 2004 04:44:32 -0400
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i8S8gaIg249426
+	for <Axiom-mail@nongnu.org>; Tue, 28 Sep 2004 10:42:44 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <16729.16206.45366.255234@gargle.gargle.HOWL>
+Date: Tue, 28 Sep 2004 10:39:10 +0000
+To: Axiom-mail@nongnu.org
+Subject: Re: [Bill.Page@drdc-rddc.gc.ca: RE: [Axiom-mail] A(ld,xi)o(r,m)]
+In-Reply-To: <20040927180917.GA4162@scientificcomputing.net>
+References: <20040927180917.GA4162@scientificcomputing.net>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mail 4248; Body=1 Fuz1=1 Fuz2=1
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: axiom-legal@nongnu.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 28 Sep 2004 14:46:44 -0000
+
+Balbir Thomas writes:
+ > How does one get the aldor source code? It is not downloadable from
+ > the web site and there is no anonymous CVS available.=20
+ > b thomas
+
+Look at http://www.aldor.org/faqs.html
+
+How do I check out sources from CVS repository?
+
+Frederic Lehobey writes:
+ > Hi,
+ >=20
+ > On Mon, Sep 27, 2004 at 01:52:37PM +0000, Martin Rubey wrote:
+ > > Andrea Bedini writes:
+ > >  > On Sat, Sep 25, 2004 at 10:30:35AM +0000, Martin Rubey wrote:
+ > >  > > recently I have started thinking about a common future of Ald=
+or and
+ > >  > > Axiom.
+ > >  >=20
+ > >  > Hi,
+ > >  > what is the legal status of aldor ?
+ > >=20
+ > > BSD like license. See www.aldor.org.
+ >=20
+ >   Could you point a link that says so?  I have not found any on the
+ > site you have given.  All I have found (on
+ > <http://www.aldor.org/faqs.html> is "free of charge for non-commerci=
+al
+ > use" which is not really a BSD license.
+ >=20
+ > Best regards,
+ > Fr=E9d=E9ric Lehobey
+
+I said "BSD like license", not "BSD license". Furthermore I am not a la=
+yer, so
+"like" may be wrong. Sorry.
+
+
+
+
+From MAILER-DAEMON Tue Sep 28 11:08:53 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CCJb2-0006PQ-PH
+	for mharc-axiom-mail@gnu.org; Tue, 28 Sep 2004 11:08:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CCJb1-0006PF-Pn
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:08:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CCJb1-0006Om-17
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:08:51 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CCJb0-0006O8-Na
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:08:50 -0400
+Received: from [131.130.1.31] (helo=frosti-mx1.univie.ac.at)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CCJUZ-00045X-PQ
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:02:12 -0400
+Received: from imap.univie.ac.at (mailbox-lmtp.univie.ac.at [131.130.1.27])
+	by frosti-mx1.univie.ac.at (8.12.10/8.12.10) with ESMTP id
+	i8SF0LBY061090
+	for <axiom-mail@nongnu.org>; Tue, 28 Sep 2004 17:00:22 +0200 (CEST)
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i8SExrZY334814;
+	Tue, 28 Sep 2004 16:59:58 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16729.38843.137484.808056@gargle.gargle.HOWL>
+Date: Tue, 28 Sep 2004 16:56:27 +0000
+To: zorkadi@yahoo.com, axiom-mail@nongnu.org
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx7.univie.ac.at 4248; Body=3 Fuz1=3 Fuz2=3
+Cc: 
+Subject: [Axiom-mail] Aldor compatibility
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 28 Sep 2004 15:08:52 -0000
+
+> > #include "axiom"
+> > 
+> > ...
+> > 
+> >   import {besselJ (DoubleFloat, DoubleFloat) -> DoubleFloat; }
+> >     from DoubleFloatSpecialFunctions;
+> > 
+> > ...
+> > 
+> > The file libaxiom.al which makes all this work used to be built
+> > during
+> > the Axiom build process.
+> ...
+> 
+> This makes a lot of sense.  But there is no libaxiom.al in the binary
+> installation of axiom (Debian).  There is a libaxiom.al in my copy of
+> axiom CVS sources though, but it is dated 2003-08-28.  Maybe
+> libaxiom.al is no longer built, or if this version is up to date then
+> it is not being installed with the binary distribution.  I will try
+> using this version tomorrow.
+> 
+> Thanks for your comment,
+> 
+> Z.
+
+My aldor compiler (1.0.2) complains about missing axiom.as. I looked in my
+axiom sources and in the aldor installation, without success. There are cryptic
+files axllib.as, aldor.as and so on in aldor/1.0.2/linux/include/ but axiom.as
+is missing.
+
+Mike, do you have it?
+
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Sep 28 11:11:29 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CCJdZ-00077g-80
+	for mharc-axiom-mail@gnu.org; Tue, 28 Sep 2004 11:11:29 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CCJdV-00077O-Ih
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:11:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CCJdU-00076l-0O
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:11:24 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CCJdT-00076i-Qy
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:11:23 -0400
+Received: from [131.130.1.31] (helo=frosti-mx1.univie.ac.at)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CCJWY-0004TK-QP
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:04:15 -0400
+Received: from imap.univie.ac.at (mailbox-lmtp.univie.ac.at [131.130.1.27])
+	by frosti-mx1.univie.ac.at (8.12.10/8.12.10) with ESMTP id
+	i8SF3SBY098675
+	for <axiom-mail@nongnu.org>; Tue, 28 Sep 2004 17:03:29 +0200 (CEST)
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i8SF39ZY205132;
+	Tue, 28 Sep 2004 17:03:11 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16729.39037.331752.855862@gargle.gargle.HOWL>
+Date: Tue, 28 Sep 2004 16:59:41 +0000
+To: miked@nag.co.uk
+In-Reply-To: <16729.38843.137484.808056@gargle.gargle.HOWL>
+References: <16729.38843.137484.808056@gargle.gargle.HOWL>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mail 4248; Body=1 Fuz1=1 Fuz2=1
+Cc: axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: Aldor compatibility
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 28 Sep 2004 15:11:26 -0000
+
+Sorry to those who get this (at least) twice.
+
+> > #include "axiom"
+> > 
+> > ...
+> > 
+> >   import {besselJ (DoubleFloat, DoubleFloat) -> DoubleFloat; }
+> >     from DoubleFloatSpecialFunctions;
+> > 
+> > ...
+> > 
+> > The file libaxiom.al which makes all this work used to be built
+> > during
+> > the Axiom build process.
+> ...
+> 
+> This makes a lot of sense.  But there is no libaxiom.al in the binary
+> installation of axiom (Debian).  There is a libaxiom.al in my copy of
+> axiom CVS sources though, but it is dated 2003-08-28.  Maybe
+> libaxiom.al is no longer built, or if this version is up to date then
+> it is not being installed with the binary distribution.  I will try
+> using this version tomorrow.
+> 
+> Thanks for your comment,
+> 
+> Z.
+
+My aldor compiler (1.0.2) complains about missing axiom.as. I looked in my
+axiom sources and in the aldor installation, without success. There are cryptic
+files axllib.as, aldor.as and so on in aldor/1.0.2/linux/include/ but axiom.as
+is missing.
+
+Mike, do you have it?
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Sep 28 11:17:37 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CCJjV-0000Ez-CQ
+	for mharc-axiom-mail@gnu.org; Tue, 28 Sep 2004 11:17:37 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CCJjT-0000Ei-TO
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:17:36 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CCJjS-0000E4-Jv
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:17:34 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CCJjS-0000E1-Ez
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:17:34 -0400
+Received: from [62.231.131.195] (helo=mail35.messagelabs.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1CCJcz-0005Zu-SJ
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:10:54 -0400
+X-VirusChecked: Checked
+X-Env-Sender: miked@nag.co.uk
+X-Msg-Ref: server-4.tower-35.messagelabs.com!1096384250!14734466
+X-StarScan-Version: 5.2.10; banners=nag.co.uk,-,-
+X-Originating-IP: [212.125.75.72]
+Received: (qmail 11554 invoked from network); 28 Sep 2004 15:10:50 -0000
+Received: from smtp-3.star.net.uk (212.125.75.72)
+	by server-4.tower-35.messagelabs.com with SMTP;
+	28 Sep 2004 15:10:50 -0000
+Received: (qmail 21671 invoked from network); 28 Sep 2004 15:01:01 -0000
+Received: from unknown (HELO nag.co.uk) (62.231.145.242)
+	by smtp-3.star.net.uk with SMTP; 28 Sep 2004 15:01:01 -0000
+Received: from trowbridge.nag.co.uk (trowbridge.nag.co.uk [192.156.217.69])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id QAA02125;
+	Tue, 28 Sep 2004 16:10:27 +0100 (BST)
+Received: from trowbridge.nag.co.uk (localhost.localdomain [127.0.0.1])
+	by trowbridge.nag.co.uk (8.12.10/8.12.10) with ESMTP id i8SFAdvM019596; 
+	Tue, 28 Sep 2004 16:10:39 +0100
+Received: (from miked@localhost)
+	by trowbridge.nag.co.uk (8.12.10/8.12.10/Submit) id i8SFAVd6019594;
+	Tue, 28 Sep 2004 16:10:31 +0100
+Date: Tue, 28 Sep 2004 16:10:31 +0100
+From: Mike Dewar <miked@nag.co.uk>
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-mail] Aldor compatibility
+Message-ID: <20040928151031.GK19123@nag.co.uk>
+References: <16729.38843.137484.808056@gargle.gargle.HOWL>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-15
+Content-Disposition: inline
+In-Reply-To: <16729.38843.137484.808056@gargle.gargle.HOWL>
+User-Agent: Mutt/1.4.1i
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 28 Sep 2004 15:17:36 -0000
+
+Hi Martin,
+
+Yes, as you can see its very simple.
+
+Cheers, Mike.
+
+-- Begin axiom.as
+-- Standard include file for using or extending Axiom library via AXIOM-XL
+ 
+#library AxiomLib "axiom"
+import from AxiomLib;
+inline from AxiomLib;
+ 
+macro {
+        rep x == x @ % pretend Rep;
+        per r == r @ Rep pretend %;
+}
+ 
+import { true: %, false: % } from Boolean;
+import {
+        string:         Literal -> %;
+} from String;
+
+-- End axiom.as
+
+
+On Tue, Sep 28, 2004 at 04:56:27PM +0000, Martin Rubey wrote:
+> > > #include "axiom"
+> > > 
+> > > ...
+> > > 
+> > >   import {besselJ (DoubleFloat, DoubleFloat) -> DoubleFloat; }
+> > >     from DoubleFloatSpecialFunctions;
+> > > 
+> > > ...
+> > > 
+> > > The file libaxiom.al which makes all this work used to be built
+> > > during
+> > > the Axiom build process.
+> > ...
+> > 
+> > This makes a lot of sense.  But there is no libaxiom.al in the binary
+> > installation of axiom (Debian).  There is a libaxiom.al in my copy of
+> > axiom CVS sources though, but it is dated 2003-08-28.  Maybe
+> > libaxiom.al is no longer built, or if this version is up to date then
+> > it is not being installed with the binary distribution.  I will try
+> > using this version tomorrow.
+> > 
+> > Thanks for your comment,
+> > 
+> > Z.
+> 
+> My aldor compiler (1.0.2) complains about missing axiom.as. I looked in my
+> axiom sources and in the aldor installation, without success. There are cryptic
+> files axllib.as, aldor.as and so on in aldor/1.0.2/linux/include/ but axiom.as
+> is missing.
+> 
+> Mike, do you have it?
+> 
+> 
+> Martin
+> 
+> 
+> 
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+> 
+> ________________________________________________________________________
+> This e-mail has been scanned for all viruses by Star. The
+> service is powered by MessageLabs. For more information on a proactive
+> anti-virus service working around the clock, around the globe, visit:
+> http://www.star.net.uk
+> ________________________________________________________________________
+
+________________________________________________________________________
+This e-mail has been scanned for all viruses by Star. The
+service is powered by MessageLabs. For more information on a proactive
+anti-virus service working around the clock, around the globe, visit:
+http://www.star.net.uk
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Tue Sep 28 11:21:32 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CCJnI-0000fG-Kd
+	for mharc-axiom-mail@gnu.org; Tue, 28 Sep 2004 11:21:32 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CCJnG-0000eV-Ft
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:21:30 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CCJnF-0000e6-Oq
+	for Axiom-mail@nongnu.org; Tue, 28 Sep 2004 11:21:29 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CCJnF-0000dq-Gz; Tue, 28 Sep 2004 11:21:29 -0400
+Received: from [131.130.1.31] (helo=frosti-mx1.univie.ac.at)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CCJgZ-00069W-59; Tue, 28 Sep 2004 11:14:35 -0400
+Received: from imap.univie.ac.at (mailbox-lmtp.univie.ac.at [131.130.1.27])
+	by frosti-mx1.univie.ac.at (8.12.10/8.12.10) with ESMTP id
+	i8SDDMVU000628; Tue, 28 Sep 2004 15:13:23 +0200 (CEST)
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i8S8rs4A028106;
+	Tue, 28 Sep 2004 10:53:57 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16729.16884.168304.775183@gargle.gargle.HOWL>
+Date: Tue, 28 Sep 2004 10:50:28 +0000
+To: axiom-legal@nongnu.org
+Subject: Re: [Bill.Page@drdc-rddc.gc.ca: RE: [Axiom-mail] A(ld,xi)o(r,m)]
+In-Reply-To: <16729.16206.45366.255234@gargle.gargle.HOWL>
+References: <20040927180917.GA4162@scientificcomputing.net>
+	<16729.16206.45366.255234@gargle.gargle.HOWL>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx7.univie.ac.at 4249; Body=4 Fuz1=4 Fuz2=4
+Cc: Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 28 Sep 2004 15:21:31 -0000
+
+Sorry, I just realised that they ask for a password to check out the
+sources. Still, I strongly believe that Axiom and Aldor should coorporate,
+since I guess that both communities are not especially big. (This concerns
+mainly Axiom, I'm afraid)
+
+Martin Rubey writes:
+ > Balbir Thomas writes:
+ >  > How does one get the aldor source code? It is not downloadable from
+ >  > the web site and there is no anonymous CVS available. 
+ >  > b thomas
+ > 
+ > Look at http://www.aldor.org/faqs.html
+ > 
+ > How do I check out sources from CVS repository?
+
+
+
+
+From MAILER-DAEMON Tue Sep 28 12:14:08 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CCKcC-0000HI-9U
+	for mharc-axiom-mail@gnu.org; Tue, 28 Sep 2004 12:14:08 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CCKcA-0000Ge-KN
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 12:14:06 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CCKc9-0000G4-0M
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 12:14:05 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CCKc8-0000Fh-Qt
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 12:14:04 -0400
+Received: from [131.130.1.31] (helo=frosti-mx1.univie.ac.at)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CCKVc-0006bc-RP
+	for axiom-mail@nongnu.org; Tue, 28 Sep 2004 12:07:21 -0400
+Received: from imap.univie.ac.at (mail.univie.ac.at [131.130.1.27])
+	by frosti-mx1.univie.ac.at (8.12.10/8.12.10) with ESMTP id
+	i8SG6cBY047170
+	for <axiom-mail@nongnu.org>; Tue, 28 Sep 2004 18:06:40 +0200 (CEST)
+Received: from seam101 ([131.130.93.101])
+	by imap.univie.ac.at (8.12.10/8.12.10) with ESMTP id i8SG6I7o254448;
+	Tue, 28 Sep 2004 18:06:21 +0200
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <16729.42828.17331.623851@gargle.gargle.HOWL>
+Date: Tue, 28 Sep 2004 18:02:52 +0000
+To: Mike Dewar <miked@nag.co.uk>
+Subject: Re: [Axiom-mail] Aldor compatibility
+In-Reply-To: <20040928151031.GK19123@nag.co.uk>
+References: <16729.38843.137484.808056@gargle.gargle.HOWL>
+	<20040928151031.GK19123@nag.co.uk>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+X-DCC-ZID-Univie-Metrics: mx8 4248; Body=5 Fuz1=5 Fuz2=5
+Cc: Martin Rubey <martin.rubey@univie.ac.at>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 28 Sep 2004 16:14:07 -0000
+
+Dear Mike, Tim, ...,
+
+thanks for rapidly forwarding axiom.as.
+
+Unfortunately, there are still some things missing. I first compiled
+
+#include "axiom.as"
+
+fact(n: PositiveInteger): PositiveInteger == {
+    n <= 1 => 1;
+    res: PositiveInteger := 1;
+    while n > 1 repeat {
+        res := res * n;
+        n := n-1;
+    }
+    res
+ }
+
+and said
+
+)lisp (load "/home/rubey/aldor/linux/1.0.2/lib/runtime.lsp")
+
+then
+
+)lib test
+
+finally
+
+fact 4
+
+responded
+
+Cannot open the file /home/rubey/axiom/mnt/linux/compiler/lib/axextend.o.
+
+I found this file in the axiom distro and added it:
+
+)lisp (load "/home/rubey/axiom/mnt/linux/compiler/lib/axextend.lsp")
+)lib test
+fact 4
+
+24
+
+Great.
+
+However, I could not get to work the example given in
+http://www.csd.uwo.ca/~watt/aldor/UserGuide/chap18.html#1
+
+Axiom always responds with
+
+   Caught fatal error [memory may be damaged]
+
+I tried to include all the files from lsp/ccl/src/axbase/compiler/lib, without
+success. I also noticed that the file runtime.lsp from there and from the aldor
+distro differ, but I don't understand anything...
+
+Would be great if somebody could get such an example to work.
+
+Martin
+
+
+
+

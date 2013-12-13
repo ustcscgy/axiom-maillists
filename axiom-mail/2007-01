@@ -1,0 +1,564 @@
+From MAILER-DAEMON Thu Jan 25 09:11:19 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HA5Jv-0001wY-D4
+	for mharc-axiom-mail@gnu.org; Thu, 25 Jan 2007 09:11:19 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1H9QuX-0000UX-7F
+	for axiom-mail@nongnu.org; Tue, 23 Jan 2007 14:02:25 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1H9QuT-0000Tj-UC
+	for axiom-mail@nongnu.org; Tue, 23 Jan 2007 14:02:24 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1H9QuT-0000Tg-R5
+	for axiom-mail@nongnu.org; Tue, 23 Jan 2007 14:02:21 -0500
+Received: from [212.247.154.167] (helo=swip.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1H9QuS-0001Im-MI
+	for axiom-mail@nongnu.org; Tue, 23 Jan 2007 14:02:21 -0500
+X-Cloudmark-Score: 0.000000 []
+Received: from [86.33.33.119] (account cxu-8aw-c3e@tele2.at HELO barton2)
+	by mailfe06.swip.net (CommuniGate Pro SMTP 5.0.12)
+	with ESMTPA id 392451525 for axiom-mail@nongnu.org;
+	Tue, 23 Jan 2007 20:02:18 +0100
+Date: Tue, 23 Jan 2007 20:02:08 +0100
+To: axiom-mail@nongnu.org
+From: "Wiesner Thomas" <thomas@bau-konform.at>
+Content-Type: text/plain; format=flowed; delsp=yes; charset=iso-8859-15
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Message-ID: <op.tmme5uy688izfi@barton2>
+User-Agent: Opera Mail/9.10 (Win32)
+X-Mailman-Approved-At: Thu, 25 Jan 2007 09:11:17 -0500
+Subject: [Axiom-mail] How to expand a fraction (like Maple does with
+	'expand')?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 23 Jan 2007 19:02:25 -0000
+
+I'm sorry that i bug you with this (probably) simple problem:
+
+How can i do the following (from Maple) in Axiom:
+
+> expand(((-r1*r2*uoff)+((r2+r1)*r3+r1*r2)*ue)/(r2*r3));
+                           r1 uoff        ue r1   ue r1
+                         - ------- + ue + ----- + -----
+                             r3            r2      r3
+
+I've been trying and googling for hours. I've tried MPOLY but have only  
+managed
+to to pull one variable in front of the fraction and didn't find out how  
+to split it up completely.
+
+I found the MPOLY approach in the Rosetta pages  
+(http://wiki.axiom-developer.org/RosettaStone)
+but it doesn't do what i want.
+
+This seems to be such a simple task and I can't find out.
+
+I am writing a quit overview about CA Systems for hobby electronics and  
+want to explain some usual tasks in different CA Systems.
+
+
+    Thanks in advance,
+    Wiesner Thomas
+
+PS: Please CC me, as I am not in the list.
+
+
+
+From MAILER-DAEMON Thu Jan 25 12:39:41 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HA8ZZ-0007V5-Is
+	for mharc-axiom-mail@gnu.org; Thu, 25 Jan 2007 12:39:41 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HA8ZY-0007Ut-Ae
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 12:39:40 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HA8ZV-0007Uc-C9
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 12:39:39 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HA8ZV-0007UZ-73
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 12:39:37 -0500
+Received: from mail209.megamailservers.com ([216.251.41.29])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1HA8ZU-00011e-ND
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 12:39:36 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail209.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	l0PHd7cB016587; Thu, 25 Jan 2007 12:39:21 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: <axiom-mail@nongnu.org>
+Subject: RE: [Axiom-mail] How to expand a fraction (like Maple does
+	with'expand')?
+Date: Thu, 25 Jan 2007 12:38:59 -0500
+Message-ID: <002001c740a7$b85f2df0$0201010a@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6822
+In-Reply-To: <op.tmme5uy688izfi@barton2>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3028
+Thread-Index: AcdAirFxG0l/CRL6QjKFboELzU7wZwAGGq0g
+Importance: Normal
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: 'Wiesner Thomas' <thomas@bau-konform.at>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 25 Jan 2007 17:39:41 -0000
+
+On January 23, 2007 2:02 PM Wiesner Thomas wrote:
+> 
+> I'm sorry that i bug you with this (probably) simple
+> problem:
+> 
+> How can i do the following (from Maple) in Axiom:
+> 
+> > expand(((-r1*r2*uoff)+((r2+r1)*r3+r1*r2)*ue)/(r2*r3));
+>                            r1 uoff        ue r1   ue r1
+>                          - ------- + ue + ----- + -----
+>                              r3            r2      r3
+> 
+> I've been trying and googling for hours. I've tried MPOLY but 
+> have only managed to to pull one variable in front of the
+> fraction and didn't find out how to split it up completely.
+> 
+> I found the MPOLY approach in the Rosetta pages  
+> (http://wiki.axiom-developer.org/RosettaStone)
+> but it doesn't do what i want.
+> 
+> This seems to be such a simple task and I can't find out.
+> 
+> I am writing a quit overview about CA Systems for hobby 
+> electronics and want to explain some usual tasks in
+> different CA Systems.
+> 
+
+I would suggest the following computation:
+
+(1) -> ex1:=((-r1*r2*uoff)+((r2+r1)*r3+r1*r2)*ue)/(r2*r3)
+
+        - r1 r2 uoff + ((r2 + r1)r3 + r1 r2)ue
+   (1)  --------------------------------------
+                         r2 r3
+Type: Fraction Polynomial Integer
+
+(2) -> ex1::DMP([r1,ue,uoff],FRAC POLY INT)
+
+        r3 + r2          1
+   (2)  ------- r1 ue - -- r1 uoff + ue
+         r2 r3          r3
+Type: DistributedMultivariatePolynomial([r1,ue,uoff],
+        Fraction Polynomial Integer)
+
+The reason why this apparently simple task might seem difficult
+at first to a novice Axiom user is because Axiom is strongly-
+typed. Unlike Maple (and most other CA systems) expressions in
+Axiom always have some type (domain) that explicitly defines the
+operations appearing in the expression. Instead of "expanding"
+an expression within a given domain, we are often faced with
+"coercing" (represented by the :: symbol) expressions from one
+domain to another more suitable for our task.
+
+In my opinion learning to deal with the Axiom type system is
+what makes Axiom's learning curve very steep at the beginning,
+but this initial investment pays off later in more sophisticated
+applications.
+
+In (2) above, the reason that the first term is not expanded
+further is that Axiom does not have any domain (as far as I
+know) that has
+
+       ue r1   ue r1
+       ----- + -----
+        r2      r3
+
+as separate terms.
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Thu Jan 25 13:50:49 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HA9gP-0001FF-60
+	for mharc-axiom-mail@gnu.org; Thu, 25 Jan 2007 13:50:49 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HA9gM-0001Et-Ow
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 13:50:46 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HA9gL-0001EN-Ct
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 13:50:45 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HA9gL-0001EF-9M
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 13:50:45 -0500
+Received: from smtp-104-thursday.noc.nerim.net ([62.4.17.104]
+	helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1HA9gK-0007s1-B2
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 13:50:44 -0500
+Received: from localhost (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.nerim.net (Postfix) with ESMTP id DF8694F3C6;
+	Thu, 25 Jan 2007 19:50:30 +0100 (CET)
+Received: from fmy by localhost with local (Exim 4.63)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1HA9gH-0001IK-BH; Thu, 25 Jan 2007 19:50:41 +0100
+To: "Wiesner Thomas" <thomas@bau-konform.at>
+Subject: Re: [Axiom-mail] How to expand a fraction (like Maple does with
+	'expand')?
+References: <op.tmme5uy688izfi@barton2>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 25 Jan 2007 19:50:41 +0100
+In-Reply-To: <op.tmme5uy688izfi@barton2>
+Message-ID: <87fy9zq6ta.fsf@nerim.fr>
+Lines: 45
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: FreeBSD 4.6-4.9
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 25 Jan 2007 18:50:47 -0000
+
+Hello Thomas, 
+
+Thanks for your interest for axiom !
+
+> > expand(((-r1*r2*uoff)+((r2+r1)*r3+r1*r2)*ue)/(r2*r3));
+>                            r1 uoff        ue r1   ue r1
+>                          - ------- + ue + ----- + -----
+>                              r3            r2      r3
+> 
+
+So you are looking for expand fraction as maple and mupad :
+(A+B+C+D)/E gives A/E + B/E + C/E + D/E where (A, B, C, D) are monomials.
+
+Are you also looking for a << partFrac >> functions as :
+
+   x/(x^2-1) = (1/2)/(x-1) + (1/2)/(x+1)
+or x/(x+1)^2 = 1/(x+1) - 1/(x+1)^2.
+
+I don't know if this is possible.
+
+Axiom doesn't play with expressions as 
+x^2-y^2 or (x-y)(x+y) but only with expanded or sparse polynomials.
+
+So (x-y)(x+y) doesn't exist, but only x^2-y^2.
+
+The great advantage of this data structure is his normal form :
+    ((x+y)-x*y) + z - ((x+y)-x*y) * z 
+and ((y+z)-y*z) + x - ((y+z)-y*z) * x 
+are equal without any expand command. Axiom uses expanded form.
+
+It's also possible to factor polynoms : try factor (x^2-y^2).
+
+But it's (almost) impossible to factor a fraction as 
+(cos x + 1) * (cos x + 2) * (cos x + 3) / (cos x + 4) / (cos x + 5)
+
+And other transforms as x^2/(x-1) = 1 + x + 1/(x-1) aren't so obvious.
+
+> I am writing a quit overview about CA Systems for hobby electronics
+> and  want to explain some usual tasks in different CA Systems.
+
+What CAS do you explain ?
+
+Have a nice day !
+
+Francois
+
+
+
+From MAILER-DAEMON Thu Jan 25 14:13:47 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HAA2d-0002XO-NG
+	for mharc-axiom-mail@gnu.org; Thu, 25 Jan 2007 14:13:47 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HAA2b-0002Wh-Tx
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 14:13:45 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HAA2b-0002W0-C8
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 14:13:45 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HAA2b-0002Vs-7m
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 14:13:45 -0500
+Received: from smtp-104-thursday.nerim.net ([62.4.16.104] helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1HAA2a-0002rc-V8
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 14:13:45 -0500
+Received: from localhost (fmaltey.net0.nerim.net [213.41.170.4])
+	by kraid.nerim.net (Postfix) with ESMTP id B55554104E
+	for <axiom-mail@nongnu.org>; Thu, 25 Jan 2007 20:13:42 +0100 (CET)
+Received: from fmy by localhost with local (Exim 4.63)
+	(envelope-from <fmaltey@nerim.fr>) id 1HAA2Z-0001NX-8d
+	for axiom-mail@nongnu.org; Thu, 25 Jan 2007 20:13:43 +0100
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Few questions about expressions...
+References: <op.tmme5uy688izfi@barton2>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 25 Jan 2007 20:13:43 +0100
+In-Reply-To: <op.tmme5uy688izfi@barton2>
+Message-ID: <87bqkmrkbc.fsf@nerim.fr>
+Lines: 48
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: FreeBSD 4.6-4.9
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 25 Jan 2007 19:13:46 -0000
+
+A previous mail asks about :
+
+> > expand(((-r1*r2*uoff)+((r2+r1)*r3+r1*r2)*ue)/(r2*r3));
+>                            r1 uoff        ue r1   ue r1
+>                          - ------- + ue + ----- + -----
+>                              r3            r2      r3
+> 
+
+// A //
+
+Has someone already tested an hold function for Expression as mupad had ?
+
+So the expression 1+x + hold (1/(x-1)) remains as.
+It's easy to eval/remove the hold form and then axiom gets x^2/(x-1).
+And it's possible to have the reverse function partFrac.
+
+Do you have any idea about it ?
+
+This hold function allows expanded fractions, factorised Expression, 
+<< partFrac >>, series in (x-a)^k, products of sum, and so.
+
+// B //
+
+What is the goal of AlgebraicNumber ?
+
+Is it an algebraic domain in which 
+  2^(1/2) = -2^(1/2) and sqrt(6*sqrt(5)+14) = - 3 - sqrt 5 
+without any branch-cut.
+
+Or is it a Complex domain near from RealClosure Fraction Integer in 
+which axiom chooses the good branch : sqrt (%i*2) = + 1 + %i, 
+not any other root.
+
+// C // 
+
+What is the goal of Expression ? 
+to compute with an << algebraic point of view >> 
+              or a << calculus point of view >> ?
+
+A calculus point of view near of the other cas may be useful for my 
+(and other) calculus for scientifics students.
+
+Is it more effective to look arround Expression 
+or to write an other domain Calculus, with duplicate parts of code ?
+
+Thanks a lot for your points of view.
+
+Francois
+
+
+
+From MAILER-DAEMON Fri Jan 26 06:20:18 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HAP7y-0004MW-L0
+	for mharc-axiom-mail@gnu.org; Fri, 26 Jan 2007 06:20:18 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HAP7x-0004Jz-1e
+	for axiom-mail@nongnu.org; Fri, 26 Jan 2007 06:20:17 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HAP7v-0004HU-Ki
+	for axiom-mail@nongnu.org; Fri, 26 Jan 2007 06:20:16 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HAP7v-0004HI-Ei
+	for axiom-mail@nongnu.org; Fri, 26 Jan 2007 06:20:15 -0500
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1HAP7u-00087C-Ul
+	for axiom-mail@nongnu.org; Fri, 26 Jan 2007 06:20:15 -0500
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HAP7o-0008FI-Ln; Fri, 26 Jan 2007 12:20:08 +0100
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HAP7o-0004aH-KW; Fri, 26 Jan 2007 12:20:08 +0100
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Wiesner Thomas" <thomas@bau-konform.at>,  axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] How to expand a fraction (like Maple does with
+	'expand')?
+References: <op.tmme5uy688izfi@barton2> <87fy9zq6ta.fsf@nerim.fr>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 26 Jan 2007 12:20:08 +0100
+In-Reply-To: <87fy9zq6ta.fsf@nerim.fr>
+Message-ID: <9q64au2fx3.fsf@aquin.mat.univie.ac.at>
+Lines: 106
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 26 Jan 2007 11:20:17 -0000
+
+Dear Thomas,
+
+although for the end-user it probably doesn't matter, I'm afraid that the
+impression the mails by Bill Page and Francois Maltey give is not quite
+"complete".
+
+* in Axiom, it is very important to distinguish between internal representation
+  and output.
+
+* "expand" as provided by Maple, Mathematica, etc., is mainly about output, the
+  internal representation doesn't matter too much there. It can be interpreted
+  as: display the thing with everything multiplied out.
+
+* in Axiom, if you want to have a different output, it is best to write a
+  wrapper domain.
+
+* it is very easy to write such a domain in Axiom. In Aldor, it would be even
+  easier, but unfortunately, currently the necessary functionality ("extend")
+  is not provided by the Axiom-Aldor interface.
+
+Here goes the domain. Put it into a file, for example myexpr.spad, type
+
+)co myexpr.spad
+
+on the axiom command prompt
+
+and 
+
+(((-r1*r2*uoff)+((r2+r1)*r3+r1*r2)*ue)/(r2*r3))::DEXPR INT
+
+should return
+
+        r1 ue   r1 uoff   r1 ue
+        ----- - ------- + ----- + ue
+          r3       r3       r2
+
+
+---myexpr.spad ----------------------------------------------------------------
+)abb domain DEXPR DistributedExpression
+DistributedExpression(R: Join(Ring, OrderedSet)): Exports == Implementation where
+  AN  ==> AlgebraicNumber
+  SUP    ==> SparseUnivariatePolynomial
+
+  EXPRR ==> Expression R
+
+  Exports == FunctionSpace R with
+    if R has IntegralDomain then
+      AlgebraicallyClosedFunctionSpace R
+      TranscendentalFunctionCategory
+      CombinatorialOpsCategory
+      LiouvillianFunctionCategory
+      SpecialFunctionCategory
+      reduce: % -> %
+        ++ reduce(f) simplifies all the unreduced algebraic quantities
+        ++ present in f by applying their defining relations.
+      number?: % -> Boolean
+        ++ number?(f) tests if f is rational
+      simplifyPower: (%,Integer) -> %
+        ++ simplifyPower?(f,n) \undocumented{}
+      if R has GcdDomain then
+        factorPolynomial : SUP  % -> Factored SUP %
+           ++ factorPolynomial(p) \undocumented{}
+        squareFreePolynomial : SUP % -> Factored SUP %
+           ++ squareFreePolynomial(p) \undocumented{}
+      if R has RetractableTo Integer then RetractableTo AN
+
+  Implementation == EXPRR add
+
+    Rep := EXPRR
+
+    out: (Polynomial R, %, List %, List %) -> OutputForm 
+-- coerces the polynomial to OutputForm completely expanded and replaces the
+-- variables in vl with the kernels in kl
+    out(p, q, kl, vl) == 
+      ex: Fraction Rep := (eval(leadingMonomial(p)::%, vl, kl)::Rep)/(q::Rep)
+      if reductum p = 0 
+      then coerce(ex)$Fraction(Rep)
+      else coerce(ex)$Fraction(Rep) _
+           + out(reductum p, q, kl, vl)
+
+    coerce(ex:%):OutputForm == 
+      kl := kernels ex
+      vl: List % := [subscript('x, [i::OutputForm])::Symbol::% for i in 1..#kl]
+      ex1: % := subst(ex, kl, vl)$%
+      kl1 := map(coerce(#1)$%, kl)$ListFunctions2(Kernel %, %)
+      if R has IntegralDomain then
+          out(retract(numerator ex1)@Polynomial(R), 
+              denominator eval(ex1, vl, kl1), kl1, vl)
+      else
+        out(retract(ex1)@Polynomial(R), 1, kl1, vl)
+---myexpr.spad ----------------------------------------------------------------
+
+A note for Thomas: the only bit of code that required some work was "out" and
+"coerce". Everything else (i.e., everything before and including "Rep:=EXPRR")
+is copy and paste. If the Aldor interface would work properly, it wouldn't be
+there.
+
+I'm sure that "out" and "coerce" could be simplified and improved, too. I just
+didn't bother.
+
+A note for axiom developers:
+
+In my opinion, this is not the right approach. The right approach would be to
+generalize DMP and to allow arbitrary variables, just as SMP does.
+
+Martin
+
+
+
+

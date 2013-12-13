@@ -1,0 +1,150 @@
+From MAILER-DAEMON Tue Apr 08 10:20:04 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.10.13)
+	id 192txD-0001Qz-00
+	for mharc-axiom-mail@gnu.org; Tue, 08 Apr 2003 10:20:03 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10.13)
+	id 192txC-0001Q9-00
+	for axiom-mail@nongnu.org; Tue, 08 Apr 2003 10:20:02 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10.13)
+	id 192txA-0001Po-00
+	for axiom-mail@nongnu.org; Tue, 08 Apr 2003 10:20:01 -0400
+Received: from groups.sci.ccny.cuny.edu ([134.74.86.20])
+	by monty-python.gnu.org with esmtp (Exim 4.10.13)
+	id 192tvq-0000zL-00; Tue, 08 Apr 2003 10:18:38 -0400
+Received: from rio.sci.ccny.cuny.edu (rio.sci.ccny.cuny.edu [134.74.120.4])
+	h38ELLL09545;	Tue, 8 Apr 2003 10:21:21 -0400
+Received: (from daly@localhost)
+	by rio.sci.ccny.cuny.edu (8.11.0/8.11.0) id h38EZ6708625;
+	Tue, 8 Apr 2003 10:35:06 -0400
+Date: Tue, 8 Apr 2003 10:35:06 -0400
+Message-Id: <200304081435.h38EZ6708625@rio.sci.ccny.cuny.edu>
+From: Tim Daly  <daly@rio.sci.ccny.cuny.edu>
+To: "Don Peterson" <donp@gdssw.com>
+cc: axiom-mail@nongnu.org
+cc: daly@idsi.net
+cc: axiom-developer@nongnu.org
+Subject: [Axiom-mail] Re: Axiom web pages
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1b5
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+X-List-Received-Date: Tue, 08 Apr 2003 14:20:02 -0000
+
+Don,
+
+Yes, it's true that there is no code at the savannah website.
+Currently the pre-release version of the code exists in a private
+CVS only accessed by developers. About 80% of the algebra compiles
+and runs. At the present time I'm working on finding and fixing 
+compiler bugs that prevent the remaining algebra from compiling.
+Progress is slow, mostly because I have to build up the facilities
+to do debugging and due to the complexity of the compiler, but progress
+is being made. Let me know if you need anything else.
+
+An executive summary:
+
+Axiom is a general purpose computer algebra system. Axiom is a
+strongly-typed, theory-based system that uses modern algebra structure
+as it's model for development. It handles a wide range of mathematics,
+supports a wide range of data structures, has excellent graphics,
+links for numeric libraries and a programming language. The algebra
+knowledge of the system is expressed in it's own language which can be
+easily extended by the user. The algebra language leads to concise,
+efficient, correct algorithms. Axiom was originally developed at IBM
+Research over a 23 year period. It was later sold to the Numerical
+Algorithms Group where it became a commercial product.  In October,
+2001 Axiom was withdrawn from the market. In September, 2002 it was
+released as open source under the BSD license. Work is in progress to
+make it freely available.
+
+====================================================================
+
+ "Don Peterson" <donp@gdssw.com>
+
+Tim:
+
+I got your email address from http://savannah.nongnu.org/users/axiom/.
+
+I was interested in learning something about Axiom (I'm downloading
+different free computer algebra systems and trying to learn something
+about them), so I went to the web page 
+http://savannah.nongnu.org/projects/axiom/.  However, clicking on the
+Filelist link produces an essentially empty page, as does clicking on 
+the link to access the download area directly.
+
+It would be great if there was an "executive summary" type document
+about Axiom that described it, its benefits, and usage model.  I'd
+be happy to write a rough draft to such a document if I could get my
+hands on the system/code.
+
+Don Peterson
+donp@gdssw.com
+
+
+
+From MAILER-DAEMON Wed Apr 30 15:07:35 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.10.13)
+	id 19AwvX-0000v2-00
+	for mharc-axiom-mail@gnu.org; Wed, 30 Apr 2003 15:07:35 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.10.13)
+	id 19Awt1-0008Us-00
+	for axiom-mail@nongnu.org; Wed, 30 Apr 2003 15:04:59 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.10.13)
+	id 19Awsj-0008BM-00
+	for axiom-mail@nongnu.org; Wed, 30 Apr 2003 15:04:46 -0400
+Received: from grebe.mail.pas.earthlink.net ([207.217.120.46])
+	by monty-python.gnu.org with esmtp (Exim 4.10.13)
+	id 19Aws7-0007HV-00; Wed, 30 Apr 2003 15:04:03 -0400
+Received: from dialup-63.208.87.166.dial1.stamford1.level3.net
+	([63.208.87.166] helo=localhost.localdomain)
+	by grebe.mail.pas.earthlink.net with esmtp (Exim 3.33 #1)
+	id 19Aws1-0006k5-00; Wed, 30 Apr 2003 12:03:58 -0700
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id h3UJ3sf14477;
+	Wed, 30 Apr 2003 15:03:54 -0400
+Date: Wed, 30 Apr 2003 15:03:54 -0400
+Message-Id: <200304301903.h3UJ3sf14477@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-mail@nongnu.org, axiom-developer@nongnu.org
+cc: axiom@tenkan.org
+cc: daly@idsi.net
+Subject: [Axiom-mail] bounced mail
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1b5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: <axiom-mail.nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-mail>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+X-List-Received-Date: Wed, 30 Apr 2003 19:07:33 -0000
+
+It appears that there is a problem sending email to me at
+my normal address of daly@idsi.net because of some random
+spam-filtering at an ISP. Several developers have complained
+that they are getting bounces.
+
+Since it is important that I don't miss Axiom messages I've
+set up a mailing address that I will monitor. You can copy
+either or both of these addresses.
+
+The old address (still working) is daly@idsi.net
+The new address (now available) is axiom@tenkan.org
+
+Tim Daly
+daly@idsi.net
+axiom@tenkan.org
+
+
+

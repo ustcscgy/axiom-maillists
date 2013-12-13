@@ -1,0 +1,3438 @@
+From MAILER-DAEMON Tue Apr 03 03:59:07 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HYdv1-0002GP-08
+	for mharc-axiom-mail@gnu.org; Tue, 03 Apr 2007 03:59:07 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HYduy-0002Dn-UL
+	for axiom-mail@nongnu.org; Tue, 03 Apr 2007 03:59:04 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HYduv-0002A6-Tg
+	for axiom-mail@nongnu.org; Tue, 03 Apr 2007 03:59:04 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HYduu-00029i-Hr
+	for axiom-mail@nongnu.org; Tue, 03 Apr 2007 03:59:01 -0400
+Received: from smtp-102-tuesday.noc.nerim.net ([62.4.17.102]
+	helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <fmaltey@nerim.fr>) id 1HYdrl-00007A-F4
+	for axiom-mail@nongnu.org; Tue, 03 Apr 2007 03:55:46 -0400
+Received: from localhost (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.nerim.net (Postfix) with ESMTP id 138444F4DE;
+	Tue,  3 Apr 2007 09:55:33 +0200 (CEST)
+Received: from fmy by localhost with local (Exim 4.63)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1HYdrc-0001Eo-TD; Tue, 03 Apr 2007 09:55:37 +0200
+To: Gabriel Dos Reis <gdr@cs.tamu.edu>
+Subject: Re: [Axiom-mail] Re: CAS for the "masses"
+References: <03e201c7703d$145291a0$6900a8c0@asus>
+	<505614.36609.qm@web56703.mail.re3.yahoo.com>
+	<85b5c3130703270559n33e9bfdeyda43bebe42305dc4@mail.gmail.com>
+	<877it21pm4.fsf_-_@nerim.fr> <873b3q6rzl.fsf@soliton.cs.tamu.edu>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 03 Apr 2007 09:55:36 +0200
+In-Reply-To: <873b3q6rzl.fsf@soliton.cs.tamu.edu>
+Message-ID: <877istops7.fsf@nerim.fr>
+Lines: 11
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: FreeBSD 4.6-4.9
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 03 Apr 2007 07:59:05 -0000
+
+Dear Gabriel,
+
+> I suspect that arguments about typed language  in CAS may be more
+> convincing by studying cases where the type system does add value,
+> greatly help solve problems that are much more difficult to tackle
+> with a weakly typed language.  
+
+The Caley-Hamilton theorem is for me a very good example.
+I admire the Martin reponse.
+
+Francois
+
+
+
+From MAILER-DAEMON Tue Apr 03 22:16:51 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HYv3L-0005h6-6O
+	for mharc-axiom-mail@gnu.org; Tue, 03 Apr 2007 22:16:51 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HYuwd-0005k8-K8
+	for axiom-mail@nongnu.org; Tue, 03 Apr 2007 22:09:55 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HYuwc-0005j3-RQ
+	for axiom-mail@nongnu.org; Tue, 03 Apr 2007 22:09:55 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HYuwc-0005io-LM
+	for axiom-mail@nongnu.org; Tue, 03 Apr 2007 22:09:54 -0400
+Received: from ptibonum.scl.csd.uwo.ca ([129.100.16.102])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <pasco2007@scl.csd.uwo.ca>) id 1HYutP-0008OD-4N
+	for axiom-mail@nongnu.org; Tue, 03 Apr 2007 22:06:35 -0400
+Received: from ptibonum.scl.csd.uwo.ca (localhost.localdomain [127.0.0.1])
+	by ptibonum.scl.csd.uwo.ca (8.13.1/8.13.1) with ESMTP id l3426Xxc020768
+	for <axiom-mail@nongnu.org>; Tue, 3 Apr 2007 22:06:33 -0400
+Received: (from pasco2007@localhost)
+	by ptibonum.scl.csd.uwo.ca (8.13.1/8.13.1/Submit) id l3426XSS020766
+	for axiom-mail@nongnu.org; Tue, 3 Apr 2007 22:06:33 -0400
+Date: Tue, 3 Apr 2007 22:06:33 -0400
+From: PASCO 2007 <pasco2007@scl.csd.uwo.ca>
+Message-Id: <200704040206.l3426XSS020766@ptibonum.scl.csd.uwo.ca>
+To: axiom-mail@nongnu.org
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+X-Mailman-Approved-At: Tue, 03 Apr 2007 22:16:49 -0400
+Subject: [Axiom-mail] PASCO 2007: News and 2nd Call for Papers
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 04 Apr 2007 02:09:56 -0000
+
+
+               Parallel Symbolic Computation 2007 (PASCO 2007)
+
+                   July 27-28, 2007 -- London Canada
+
+                http://www.orcca.on.ca/conferences/pasco2007
+
+                         Second Announcement and 
+
+                      C A L L   f o r   P A P E R S
+
+News:
+  Extended Submission Deadline
+  Invited Speakers
+  ACM Proceedings
+
+Overview:
+
+  The pervasive ubiquity of parallel architectures, from SMPs to multi-core 
+  laptops, has led to a new quest for mathematical algorithms and software 
+  capable of exploiting these computing resources. Symbolic computation 
+  offers exciting, but highly complex, challenges to scientists aiming to 
+  contribute to this quest.
+
+  The goal of the present workshop is to stimulate the development of 
+  parallel algorithms and software for achieving high performance in symbolic 
+  computation from grids to home computers. Earlier meetings in this series  
+  include PASCO '94 in Linz, Austria and PASCO '97 in Maui, U.S.A.
+
+  PASCO 2007 is affiliated with the 2007 International Symposium on Symbolic 
+  and Algebraic Computation (ISSAC 2007). Co-located with this workshop will 
+  be SNC 2007, the 2007 International Workshop on Symbolic-Numeric Computation.
+  SNC and PASCO will be held immediately prior to the ISSAC 2007 meeting, both
+  at the University of Western Ontario, Canada. ISSAC 2007 will be held nearby 
+  in Waterloo, Canada.
+
+Invited Speakers:
+
+  The conference is pleased to announce the following invited speakers.
+
+    * Michael A. Bauer, Univ. of Western Ontario
+    * Matteo Frigo, Cilk Arts
+    * Thierry Gautier, INRIA
+    * Anthony D. Kennedy, Edinburg Univ. (Jointly with SNC)
+    * Katherine Yelick, Univ. of California at Berkeley 
+
+Call for Papers:
+
+  The program of PASCO 2007 will include invited presentations, contributed
+  research papers and posters. Specific topics include, but are not
+  limited to:
+
+   * Parallel computer algebra
+   * Design of high performance software tools and interfaces
+     for exact and approximate procedures
+   * Design and analysis of parallel algorithms for algebraic
+     computations
+   * Parallel computing for number theory, geometry, automatic 
+     theorem proving, combinatorial and discrete methods
+   * Distributed data-structures for matrices and polynomials
+   * Implementations of solvers on multi-cores, SMPs, clusters,
+     supercomputers and grids
+   * Interactive parallel symbolic computation
+   * Volunteer computing for symbolic problems
+   * Applications of parallel symbolic computation
+
+  The conference invites submission of papers presenting original research,
+  either in the form of extended abstracts (2 pages) or full papers
+  (up to 10 pages) in ACM format.  A LaTeX class file is available at
+  http://www.orcca.on.ca/conferences/pasco2007/site/submission/submission.html .
+  To submit a paper, visit http://www.easychair.org/PASCO2007.
+
+  Conference proceedings will be published by ACM and also be in the 
+  ACM Digital Library.  (To do this we have had to revise the due date for
+  the camera ready version of accepted articles.)
+
+Important Dates:
+
+  Submission deadline:       April 16, 2007   *** Extended ***
+  Notification:              May  13, 2007    *** Revised  ***
+  Camera ready version due:  May  27, 2007    *** Revised  ***
+  Workshop:                  July 27-28, 2007
+
+Conference Organization:
+
+  Chair:                Marc Moreno Maza <moreno@orcca.on.ca>
+  Local Arrangements:   Eric Schost      <schost@orcca.on.ca>
+  Proceedings Editor:   Stephen Watt     <watt@orcca.on.ca>
+  Publicity:            Francois Lemaire <lemaire@lifl.fr>
+  Administration:       Meg Borthwick    <meg@csd.uwo.ca>
+
+Program Committee:
+
+  Gene Cooperman, Northeastern University, USA
+  Jean-Guillaume Dumas, Universite Joseph Fourier, France
+  Jean-Charles Faugere, CNRS, France
+  Mark Giesbrecht, University of Waterloo, Canada
+  Erich Kaltofen, North Carolina State University, USA
+  Anton Leykin, University of Minnesota, USA
+  Marc Moreno Maza, University of Western Ontario, Canada
+  Jean-Louis Roch, Universite Joseph Fourier, France
+  David Saunders, University of Delaware, USA
+  William Stein, University of Washington, USA
+  Carlo Traverso, Universita di Pisa, Italy
+  Gilles Villard, CNRS, France
+
+Support:
+
+  Support from the following organizations is gratefully acknowledged:
+
+  The Fields Institute for Research in Mathematical Sciences
+  The MITACS Network of Centers of Excellence
+  The Natural Sciences and Engineering Research Council of Canada
+  The University of Western Ontario
+  The Ontario Research Centre for Computer Algebra
+  The Shared Hierarchical Academic Research Computing Network
+  Maplesoft
+
+Links:
+
+  PASCO 2007  http://www.orcca.on.ca/conferences/pasco2007
+  SNC 2007    http://www.orcca.on.ca/conferences/snc2007
+  ISSAC 2007  http://www.cs.uwaterloo.ca/conferences/issac2007
+
+  Submission  http://www.easychair.org/PASCO2007
+
+
+
+From MAILER-DAEMON Mon Apr 09 17:32:13 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Hb1TB-0002xZ-Av
+	for mharc-axiom-mail@gnu.org; Mon, 09 Apr 2007 17:32:13 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Hb1T9-0002rJ-K0
+	for axiom-mail@nongnu.org; Mon, 09 Apr 2007 17:32:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Hb1T8-0002kH-9m
+	for axiom-mail@nongnu.org; Mon, 09 Apr 2007 17:32:10 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Hb1T8-0002jz-4z
+	for axiom-mail@nongnu.org; Mon, 09 Apr 2007 17:32:10 -0400
+Received: from mail288.megamailservers.com ([216.251.41.108])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <bill.page1@synthesis.anikast.ca>) id 1Hb1PG-0004NR-4k
+	for axiom-mail@nongnu.org; Mon, 09 Apr 2007 17:28:10 -0400
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail288.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	l39LRk8Y001673; Mon, 9 Apr 2007 17:28:00 -0400
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Markus Cozowicz'" <eisber@eisber.net>
+Date: Mon, 9 Apr 2007 17:28:55 -0400
+Message-ID: <02f101c77aee$1cfee360$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6822
+Thread-Index: Acd3nJvETrQTxQIHRja41cAqJuZhBABl99JQAG4BatA=
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3028
+In-Reply-To: <BAE9DA1926388C4895740FE67575EF6111A1B4@mail.eisber.net>
+Importance: Normal
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+Subject: [Axiom-mail] RE: Axiom
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 09 Apr 2007 21:32:12 -0000
+
+On April 7, 2007 12:51 PM Markus Cozowicz wrote:
+
+> ...
+> I got a short question:
+>=20
+> I'd like to script Axiom. I'd like to start it with a=20
+> specified script file, that does some operations, finally=20
+> writes a latex file
+> and quits.
+>=20
+
+I would recommend that you run Axiom with i/o redirection
+like this:
+
+  $ AXIOMsys < MyInput > MyOutput
+
+The file MyInput can contain all interactive commands
+even including:
+
+  )set output tex on
+  )read MyFile.input
+  )quit
+  yes
+
+if you wish.
+
+Is this the kind of script you mean? If you need a "cleaner"
+output, on Linux it is possible to run Axiom via Python or
+Perl and parse the output as you need it.
+
+Regards,
+Bill Page.
+
+> -----Original Message-----
+> From: rubey@aquin.mat.univie.ac.at=20
+> [mailto:rubey@aquin.mat.univie.ac.at] On Behalf Of Martin Rubey
+> Sent: Donnerstag, 05. April 2007 18:08
+> To: Markus Cozowicz
+> Subject: Re: Axiom
+>=20
+> "Markus Cozowicz" <eisber@eisber.net> writes:
+>=20
+> > Hi,
+> >=20
+> > =20
+> >=20
+> > Weisst du zuf=E4llig ob man Axiom unter Linux Script'n kann?
+? ? Do you know coincidentally whether one axiom under Linux Script'n =
+can?
+
+>=20
+> selbstverstaendlich.
+? of course
+>=20
+> > Ich w=FCrd gern ein .axiom.input file reinschicken und Latex=20
+> rausbekommen.
+? ? would gladly .axiom.input a file clean-send and Latex clean-output
+>=20
+> am besten in der
+? best in that=20
+>=20
+> .input=20
+>=20
+> Datei:
+>=20
+> )set output tex on
+> )spool dateiname.tex
+>=20
+> schreibt Ein- und Ausgabe nach dateiname.tex
+? input and output writes after dateiname.tex
+>=20
+>=20
+> es gibt auch eine Variante, die nur die Eingabe aufschreibt:
+? there is also a variant, which notes only the input:
+>=20
+> )history )save dateiname.input
+>=20
+>=20
+> vermutlich gibt es auch eine Moeglichkeit, nur die Ausgabe zu=20
+> speichern. Bill
+> Page weiss das.
+? probably there is also a possibility of storing only the
+? expenditure. Bill Page knows that.
+>=20
+> Martin
+>=20
+>=20
+>=20
+>=20
+
+
+
+
+
+From MAILER-DAEMON Tue Apr 10 06:54:50 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HbDzu-0001AN-EW
+	for mharc-axiom-mail@gnu.org; Tue, 10 Apr 2007 06:54:50 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HbDzs-00019y-QG
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 06:54:48 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HbDzq-00019f-TQ
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 06:54:48 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HbDzq-00019c-PW
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 06:54:46 -0400
+Received: from nz-out-0506.google.com ([64.233.162.228])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <amca01@gmail.com>) id 1HbDvu-0001Lx-Q6
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 06:50:42 -0400
+Received: by nz-out-0506.google.com with SMTP id i11so3105630nzi
+	for <axiom-mail@nongnu.org>; Tue, 10 Apr 2007 03:50:41 -0700 (PDT)
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type;
+	b=WKYUscpL5Nbgmzmn4scs5HZzeWlLe7xemZtrxC3mRviJSzLhTplAIH5DRyCHLevE7Em2VLl/M35VPLkxSI9X06Cr4PL87ZkWCLDTy42PCx2MY2kajxG4xMw6MxGyRVNRj9m2JBIatobbNGEFWxz3WCXH62BNjggYpYvZPmrvCms=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=beta;
+	h=received:message-id:date:from:to:subject:mime-version:content-type;
+	b=FZx2Tct9f1yiJTYvUQTNqKwvV27xqzwsFEK3R9LeCObo1IRbtrmLvNRUQr0++/vz6IhS0uNBgOWoWUobPJbMsA/flXCWAVNoKLVj5OXEy/wgjUb55O+Yykv8r5UV/VW4x0SbvnhsIw/LP8fqB0O1dEV/WUBq6hFtTT9bnKhuoHY=
+Received: by 10.115.78.1 with SMTP id f1mr2723068wal.1176202241526;
+	Tue, 10 Apr 2007 03:50:41 -0700 (PDT)
+Received: by 10.114.152.2 with HTTP; Tue, 10 Apr 2007 03:50:41 -0700 (PDT)
+Message-ID: <1d67a53c0704100350i1f9fe249s630a5dc25437cc2d@mail.gmail.com>
+Date: Tue, 10 Apr 2007 20:50:41 +1000
+From: "Alasdair McAndrew" <amca01@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_16770_6152576.1176202241362"
+X-detected-kernel: Linux 2.4-2.6 (Google crawlbot)
+Subject: [Axiom-mail] Two beginner questions
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 10 Apr 2007 10:54:49 -0000
+
+------=_Part_16770_6152576.1176202241362
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+I've just started experimenting with Axiom (under Linux); I have two
+questions:
+
+1) is there any help other than HyperDoc?  So that, for example, I can find
+out about "integrate" within Axiom?
+
+2) are the only two interfaces the text interface and TeXmacs?
+
+Thanks very much,
+Alasdair
+
+------=_Part_16770_6152576.1176202241362
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+I&#39;ve just started experimenting with Axiom (under Linux); I have two questions:<br><br>1) is there any help other than HyperDoc?&nbsp; So that, for example, I can find out about &quot;integrate&quot; within Axiom?<br><br>2) are the only two interfaces the text interface and TeXmacs?
+<br><br>Thanks very much,<br>Alasdair<br>
+
+------=_Part_16770_6152576.1176202241362--
+
+
+
+From MAILER-DAEMON Tue Apr 10 07:15:01 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HbEJR-0005KC-L7
+	for mharc-axiom-mail@gnu.org; Tue, 10 Apr 2007 07:15:01 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HbEJQ-0005K7-6h
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 07:15:00 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HbEJN-0005Jv-QA
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 07:14:58 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HbEJN-0005Js-K3
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 07:14:57 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1HbEFR-0004Mh-Fr
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 07:10:53 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HbEFM-000162-Qz; Tue, 10 Apr 2007 13:10:48 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HbEFM-0002cW-Pt; Tue, 10 Apr 2007 13:10:48 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Alasdair McAndrew" <amca01@gmail.com>
+Subject: Re: [Axiom-mail] Two beginner questions
+References: <1d67a53c0704100350i1f9fe249s630a5dc25437cc2d@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 10 Apr 2007 13:10:48 +0200
+In-Reply-To: <1d67a53c0704100350i1f9fe249s630a5dc25437cc2d@mail.gmail.com>
+Message-ID: <9qfy78lc1z.fsf@aquin.mat.univie.ac.at>
+Lines: 56
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 10 Apr 2007 11:15:00 -0000
+
+"Alasdair McAndrew" <amca01@gmail.com> writes:
+
+> I've just started experimenting with Axiom (under Linux); 
+
+Great! Welcome (back)!
+
+> I have two questions:
+> 
+> 1) is there any help other than HyperDoc?  So that, for example, I can find
+> out about "integrate" within Axiom?
+
+a) HyperDoc is tightly integrated with Axiom.  Do you have trouble using it?
+(If so, please indicate which distribution of axiom you are using. Currently,
+wh-sandbox, an axiom distribution maintained by Waldek Hebisch, fixes - as far
+as I know - all troubles previously encountered with HyperDoc.  In particular,
+the buttons "users" and "uses" work.)
+
+In HyperDoc, you should click on 'browse', then enter "integrate" and click on
+'operations'.  You should then obtain quite detailed help.  I strongly
+recommend that you make yourself familiar with HyperDoc.
+
+b) Otherwise, you can get some help within the axiom shell. But really, I'd say
+that this sort of help -- except of the very first one below -- is rather for
+experts...  Issue one of the following:
+
+)what things integrate
+)what operations integrate
+)what packages integrate
+)what domains integrate
+)what categories integrate
+
+)display operations integrate
+
+all commands may be abbreviated as long as they remain unique. I.e., you may
+also issue
+
+)wh th integrate
+
+instead.  If the resulting information doesn't tell you much, go back to
+HyperDoc :-)
+
+c) possibly you could use "asq" as follows from the axiom shell:
+
+)sys -op integrate
+
+but it didn't work on my box, I'll have to check that.
+
+> 2) are the only two interfaces the text interface and TeXmacs?
+
+Sort of.  Personally, I use emacs shell mode, which I find very comfortable.
+As far as I know, there is a specialised emacs mode available, too, please ask
+Cliff Yapp <smustudent1@yahoo.com>.
+
+All the best
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Apr 10 08:54:13 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HbFrQ-0006D2-Ug
+	for mharc-axiom-mail@gnu.org; Tue, 10 Apr 2007 08:54:12 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HbFrO-00066N-U6
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 08:54:10 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HbFrN-00060p-23
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 08:54:10 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HbFrM-00060U-Qn
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 08:54:08 -0400
+Received: from web56712.mail.re3.yahoo.com ([66.196.97.71])
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <smustudent1@yahoo.com>) id 1HbFnQ-0003Zy-DW
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 08:50:04 -0400
+Received: (qmail 23330 invoked by uid 60001); 10 Apr 2007 12:50:03 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=X-YMail-OSG:Received:Date:From:Subject:To:Cc:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID;
+	b=lqJO7COpwLWLlGBZ226mEHENEg196wIxvZ8+l6k/mBH2P1ULBoyFxbvLAuaHWDQ7M5AnXA/wdJX5zV2Tu0j1XDI4VllGlQeMwahJVf2cTMaj2vfv417jGzv8aMD/X+hpoO2Nz0ZjWnvNSfcqF95bx9JqXW9DdVVWI+SG6Z8hMPI=;
+X-YMail-OSG: 2imJAWcVM1lcWQbD7pntKUMNMdV_k6ShiVavnWEVOuVP4fy01M4NqFEiwii4SSC2mk_hYW7quh1MesnCC5pJu87FTLtmqzGuzsH_8ae1AKO4qqdChg1vACfDOzuE_2RlTr8ftKpzVGGQCJrq1A.f7w--
+Received: from [70.161.122.122] by web56712.mail.re3.yahoo.com via HTTP;
+	Tue, 10 Apr 2007 05:50:03 PDT
+Date: Tue, 10 Apr 2007 05:50:03 -0700 (PDT)
+From: C Y <smustudent1@yahoo.com>
+Subject: Re: [Axiom-mail] Two beginner questions
+To: Martin Rubey <martin.rubey@univie.ac.at>,
+	Alasdair McAndrew <amca01@gmail.com>
+In-Reply-To: <9qfy78lc1z.fsf@aquin.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Message-ID: <712857.21834.qm@web56712.mail.re3.yahoo.com>
+X-detected-kernel: FreeBSD 4.7-5.2 (or MacOS X 10.2-10.4) (2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 10 Apr 2007 12:54:11 -0000
+
+
+--- Martin Rubey <martin.rubey@univie.ac.at> wrote:
+
+> As far as I know, there is a specialised emacs mode available, too,
+> please ask
+> Cliff Yapp <smustudent1@yahoo.com>.
+
+It's not what I would call finished, but it should be functional.  The
+pamphlet is at http://wiki.axiom-developer.org/SandBoxAxiomEmacsMode
+
+Install it like any other emacs mode - usually
+/usr/share/emacs/site-lisp is where I put it.
+
+I stick this in my .emacs file:
+(autoload 'axiom-mode "axiom" "Axiom mode" t)
+
+and then launch with 
+
+emacs -f axiom-mode  (handy if you want to make a menu entry starting
+up Axiom in emacs, for example - obviously you can start it in Emacs as
+well).
+
+I have run it successfully on Windows (except for a bug in overlays
+which prevents turning the input red on alteration from working as
+expected) but I don't have a handy install.exe with it all bundled -
+that might be something worth putting together the next time we get
+around to a Windows release.  (Given we don't have hyperdoc for Windows
+and the Windows command line is not likely to be comfortable for most
+users...)
+
+Cheers,
+CY
+
+
+      Don't be flakey.  Get Yahoo! Mail for Mobile and always stay connected to friends.    http://mobile.yahoo.com/mail
+
+
+
+From MAILER-DAEMON Tue Apr 10 20:42:23 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HbQuk-0002Cx-Td
+	for mharc-axiom-mail@gnu.org; Tue, 10 Apr 2007 20:42:22 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HbQuj-0002Cn-By
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 20:42:21 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HbQuh-0002CW-G0
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 20:42:20 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HbQuh-0002CT-BV
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 20:42:19 -0400
+Received: from an-out-0708.google.com ([209.85.132.246])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <amca01@gmail.com>) id 1HbQqg-0001Ii-7E
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 20:38:10 -0400
+Received: by an-out-0708.google.com with SMTP id d40so33729and
+	for <axiom-mail@nongnu.org>; Tue, 10 Apr 2007 17:38:03 -0700 (PDT)
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type;
+	b=NJAlGODv6KoibOWHzwaTddBZvbDrHOCrippzCrsFEXcaqeQXeT8OaG/sgN+yFuB4r0v9xjCscauprJgZL/ByOav9i85CtIJLXpuo52eIy9Qx617IzR3vadFOnCrTNUfLSau5dn6DMAXRkBwqcgwUO+ynmXAnuxoHI7AgdzSa3bo=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=beta;
+	h=received:message-id:date:from:to:subject:mime-version:content-type;
+	b=b43Gavfw9DDqvcxs2i/L+WB1BqHV0xrXv/IaUxtF+y8B8ARyETAZsLadgjA9BeCHc47GTl7OAhi1/9Fs04fouqw/iqJ5irPmA7EWbGSozEArc3wt0/q+s/FUI1QsJhGu4yLOpQ4GlSAqOwnalMjE+ji7QfasGed+neKa66wCL4w=
+Received: by 10.100.122.8 with SMTP id u8mr31416anc.1176251883366;
+	Tue, 10 Apr 2007 17:38:03 -0700 (PDT)
+Received: by 10.100.151.10 with HTTP; Tue, 10 Apr 2007 17:38:03 -0700 (PDT)
+Message-ID: <1d67a53c0704101738i406ce03cje45367a03011caed@mail.gmail.com>
+Date: Wed, 11 Apr 2007 10:38:03 +1000
+From: "Alasdair McAndrew" <amca01@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_169_4962132.1176251883293"
+X-detected-kernel: Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] Help in axiom
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 11 Apr 2007 00:42:21 -0000
+
+------=_Part_169_4962132.1176251883293
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Hi there,
+
+I'm sorry to keep harping on about this same issue, but I do find it a real
+sticking point.  When I attempt to learn a new software system (such as a
+new CAS) I spend a lot of time in the help pages, looking at examples,
+seeing how things are done; reading online tutorials and introductions.  I
+find help in Axiom very hard to access.  To use HyperDoc, and to enjoy the
+benefits of decent typesetting in TeXmacs, it seems I need two instances of
+axiom running.  And there is no functions/commands help available from the
+command line (such as there is with Maxima, Maple, Mathematica, MuPAD etc).
+
+And even in HyperDoc, there are very few examples.  For instance, I was
+trying to find the defining polynomial of a finite field.  I discovered that
+there is a command definingPolynomial, but I couldn't find any examples on
+its use, nor a comprehensive help page about it.  There are some simple
+examples in HyperDoc (calculus, graphics, linear algebra etc), which is
+incredibly helpful, but there doesn't seem to be this level of help
+available for ALL commands, as I believe there should be.
+
+>From my limited understanding, it would seem that Axiom is superb for the
+development  and implementation of mathematical algorthms (such as Martin
+Rubey's Guess package), but that it would go even further, and have greater
+reach in the mathematical community, with more comprehensive, and more
+easily accessible help.
+
+Please don't take my comments as overly critical; I am speaking from a
+beginner's perspective.  But sometimes it's hard for experts to see things
+through a beginner's, or learner's eyes.
+
+cheers,
+Alasdair
+
+------=_Part_169_4962132.1176251883293
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Hi there,<br><br>I&#39;m sorry to keep harping on about this same issue, but I do find it a real sticking point.&nbsp; When I attempt to learn a new software system (such as a new CAS) I spend a lot of time in the help pages, looking at examples, seeing how things are done; reading online tutorials and introductions.&nbsp; I find help in Axiom very hard to access.&nbsp; To use HyperDoc, and to enjoy the benefits of decent typesetting in TeXmacs, it seems I need two instances of axiom running.&nbsp; And there is no functions/commands help available from the command line (such as there is with Maxima, Maple, Mathematica, MuPAD etc).
+<br><br>And even in HyperDoc, there are very few examples.&nbsp; For instance, I was trying to find the defining polynomial of a finite field.&nbsp; I discovered that there is a command definingPolynomial, but I couldn&#39;t find any examples on its use, nor a comprehensive help page about it.&nbsp; There are some simple examples in HyperDoc (calculus, graphics, linear algebra etc), which is incredibly helpful, but there doesn&#39;t seem to be this level of help available for ALL commands, as I believe there should be.
+<br><br>From my limited understanding, it would seem that Axiom is superb for the development&nbsp; and implementation of mathematical algorthms (such as Martin Rubey&#39;s Guess package), but that it would go even further, and have greater reach in the mathematical community, with more comprehensive, and more easily accessible help.
+<br><br>Please don&#39;t take my comments as overly critical; I am speaking from a beginner&#39;s perspective.&nbsp; But sometimes it&#39;s hard for experts to see things through a beginner&#39;s, or learner&#39;s eyes.<br><br>
+cheers,<br>Alasdair<br>
+
+------=_Part_169_4962132.1176251883293--
+
+
+
+From MAILER-DAEMON Tue Apr 10 21:18:32 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HbRTk-0004f4-HY
+	for mharc-axiom-mail@gnu.org; Tue, 10 Apr 2007 21:18:32 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HbRTj-0004es-3F
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 21:18:31 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HbRTi-0004eY-A4
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 21:18:30 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HbRTi-0004eV-2i
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 21:18:30 -0400
+Received: from pmail39c2.megamailservers.com ([69.49.111.229])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <bill.page1@synthesis.anikast.ca>) id 1HbRPh-0005rU-UP
+	for axiom-mail@nongnu.org; Tue, 10 Apr 2007 21:14:22 -0400
+Received: from pmail39c2.megamailservers.com (localhost [127.0.0.1])
+	by pmail39c2.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	l3B1EIRW022821
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO);
+	Tue, 10 Apr 2007 21:14:19 -0400
+Received: (from Unknown UID 600@localhost)
+	by pmail39c2.megamailservers.com (8.13.6.20060614/8.12.2/Submit) id
+	l3B1EIT9022820; Tue, 10 Apr 2007 21:14:18 -0400
+X-Authentication-Warning: pmail39c2.megamailservers.com: Unknown UID 600 set
+	sender to bill.page1@synthesis.anikast.ca using -f
+Received: from dummy.drenet.dnd.ca (dummy.drenet.dnd.ca [131.136.1.239]) by
+	webmail.anikast.ca (Webmail 2.0) with HTTP for
+	<bill.page1.synthesis.anikast.ca@webmail.anikast.ca>; Tue, 10 Apr 2007
+	21:14:18 -0400
+Message-ID: <20070410211418.dl02v4wuq1kwsos4@webmail.anikast.ca>
+Date: Tue, 10 Apr 2007 21:14:18 -0400
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: Alasdair McAndrew <amca01@gmail.com>
+Subject: Re: [Axiom-mail] Help in axiom
+References: <1d67a53c0704101738i406ce03cje45367a03011caed@mail.gmail.com>
+In-Reply-To: <1d67a53c0704101738i406ce03cje45367a03011caed@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset=UTF-8;
+	format="flowed"
+Content-Disposition: inline
+Content-Transfer-Encoding: 7bit
+User-Agent: Webmail 4.0
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 11 Apr 2007 01:18:31 -0000
+
+Alasdair,
+
+Let me address your last comment first:
+
+Quoting Alasdair McAndrew:
+
+> Please don't take my comments as overly critical; I am speaking
+> from a beginner's perspective.  But sometimes it's hard for
+> experts to see things through a beginner's, or learner's eyes. 
+
+On the contrary, I think your views as a beginner are VERY
+valuable to us. The more verbose and critical you are willing to
+be (within reason of course :), the better. 
+
+>
+> I'm sorry to keep harping on about this same issue, but I do find
+> it a real sticking point.  When I attempt to learn a new software
+> system (such as a new CAS) I spend a lot of time in the help
+> pages, looking at examples, seeing how things are done; reading
+> online tutorials and introductions.  I find help in Axiom very
+> hard to access.  To use HyperDoc, and to enjoy the benefits of
+> decent typesetting in TeXmacs, it seems I need two instances of
+> axiom running.  And there is no functions/commands help available
+> from the command line (such as there is with Maxima, Maple,
+> Mathematica, MuPAD etc). 
+
+That is not quite true. There are commands like the following:
+
+(1) -> )summary
+  )credits      : list the people who have contributed to Axiom
+
+  )help <command> gives more information
+  )quit         : exit AXIOM
+
+  )abbreviation : query, set and remove abbreviations for
+                  constructors
+  )cd           : set working directory
+  )clear        : remove declarations, definitions or values
+  )close        : throw away an interpreter client and workspace
+  )compile      : invoke constructor compiler
+  )display      : display Library operations and objects in your
+                  workspace
+  )edit         : edit a file
+  )frame        : manage interpreter workspaces
+  )history      : manage aspects of interactive session
+  )library      : introduce new constructors
+  )lisp         : evaluate a LISP expression
+  )read         : execute AXIOM commands from a file
+  )savesystem   : save LISP image to a file
+  )set          : view and set system variables
+  )show         : show constructor information
+  )spool        : log input and output to a file
+  )synonym      : define an abbreviation for system commands
+  )system       : issue shell commands
+  )trace        : trace execution of functions
+  )undo         : restore workspace to earlier state
+  )what         : search for various things by name
+
+------
+
+I find the )what, )show and )display commands especially useful. 
+But unfortunately in the current versions of Axiom )help is not
+so helpful. :-(
+
+I think Hyperdoc is sort of neat, but I have to admit I learnt
+everything I know about Axiom without using it at all. Other
+people have different opinions about it. 
+
+>
+> And even in HyperDoc, there are very few examples.  For instance,
+> I was trying to find the defining polynomial of a finite field. 
+> I discovered that there is a command definingPolynomial, but I
+> couldn't find any examples on its use, nor a comprehensive help
+> page about it.  There are some simple examples in HyperDoc
+> (calculus, graphics, linear algebra etc), which is incredibly
+> helpful, but there doesn't seem to be this level of help
+> available for ALL commands, as I believe there should be. 
+>
+
+Yes, there should be. But Axiom is now a volunteer-based open
+source project, so if there is going to be this sort of
+documentation it will have to be written by these volunteers. 
+Part of the implied obligation of using open source software is
+the user's willingness to eventually "give something back" but
+contributing in some manner to the project. Writing new and
+improving old documentation is one way that new users can easily
+contribute while they are learning Axiom at the same time. 
+
+The Axiom Wiki
+
+http://wiki.axiom-developer.org
+
+is an especially easy way to contribute to this process. 
+
+>> From my limited understanding, it would seem that Axiom is
+>> superb for the development  and implementation of mathematical
+>> algorthms (such as Martin Rubey's Guess package), but that it
+>> would go even further, and have greater reach in the mathematical
+>> community, with more comprehensive, and more easily accessible
+>> help. 
+>
+
++1. I agree 100%. 
+
+Thank you for your comments. 
+
+Regards,
+Bill Page. 
+
+
+
+From MAILER-DAEMON Wed Apr 11 03:00:47 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HbWox-00049f-9h
+	for mharc-axiom-mail@gnu.org; Wed, 11 Apr 2007 03:00:47 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HbWov-000494-6e
+	for axiom-mail@nongnu.org; Wed, 11 Apr 2007 03:00:45 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HbWos-00048Y-Nd
+	for axiom-mail@nongnu.org; Wed, 11 Apr 2007 03:00:43 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HbWos-00048V-Ik
+	for axiom-mail@nongnu.org; Wed, 11 Apr 2007 03:00:42 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1HbWkp-0002ON-No
+	for axiom-mail@nongnu.org; Wed, 11 Apr 2007 02:56:32 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HbWkj-0008I8-2H; Wed, 11 Apr 2007 08:56:25 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HbWkj-00043N-14; Wed, 11 Apr 2007 08:56:25 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Alasdair McAndrew" <amca01@gmail.com>,
+	Waldek Hebisch <Waldemar.Hebisch@math.uni.wroc.pl>
+Subject: Re: [Axiom-mail] Help in axiom
+References: <1d67a53c0704101738i406ce03cje45367a03011caed@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 11 Apr 2007 08:56:24 +0200
+In-Reply-To: <1d67a53c0704101738i406ce03cje45367a03011caed@mail.gmail.com>
+Message-ID: <9qzm5f1js7.fsf@aquin.mat.univie.ac.at>
+Lines: 64
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 11 Apr 2007 07:00:45 -0000
+
+"Alasdair McAndrew" <amca01@gmail.com> writes:
+
+> And even in HyperDoc, there are very few examples.  For instance, I was
+> trying to find the defining polynomial of a finite field.  I discovered that
+> there is a command definingPolynomial, but I couldn't find any examples on
+> its use, nor a comprehensive help page about it.  There are some simple
+> examples in HyperDoc (calculus, graphics, linear algebra etc), which is
+> incredibly helpful, but there doesn't seem to be this level of help available
+> for ALL commands, as I believe there should be.
+
+You are quite right.
+
+Your best bet for examples is, I guess, to look into the Axiom Book by Jenks
+and Sutor. It has many examples and comes with the distribution, or online:
+
+http://wiki.axiom-developer.org/Mirrors?go=/public/book2.pdf&it=Axiom+Book
+
+Waldek: I didn't find the book in wh-sandbox? How come?
+
+I found "definingPolynomial" on page 359, Section 8.3 "Manipulating Symbolic
+Roots of a Polynomial." using the search facility of my pdf viewer.
+
+Since this is probably not the thing you had in mind, I looked for "finite
+field", and found that section 8.11 is the right place. Thus,
+
+F ==> FiniteField(2,12)
+                                                                   Type: Void
+(2) -> definingPolynomial()$F
+
+         12    3
+   (2)  ?   + ?  + 1
+                                Type: SparseUnivariatePolynomial PrimeField 2
+should be what you want.
+
+I do agree however, that the examples of the book should be integrated into
+HyperDoc. This should not be too difficult, only, it has not been done (yet).
+There is a short tutorial within HyperDoc on how to write new pages: Reference
+- HyperDoc. RECLOS has an example page, RECLOS.ht in hypertex/pages shows how
+to do it.
+
+If somebody has time, it would be great to make the various sections of the
+book example pages in HyperDoc. I think that Waldek is the one who knows how to
+do it properly.
+
+Waldek: RECLOS.ht says at the beginning:
+
+% Copyright The Numerical Algorithms Group Limited 1992-94. All rights reserved.
+% !! DO NOT MODIFY THIS FILE BY HAND !! Created by ht.awk.
+
+So, which one is the source file?
+
+> From my limited understanding, it would seem that Axiom is superb for the
+> development and implementation of mathematical algorthms (such as Martin
+> Rubey's Guess package), but that it would go even further, and have greater
+> reach in the mathematical community, with more comprehensive, and more easily
+> accessible help.
+
+I think you are quite right. For me, personally, the inversion of a matrix is
+quite a neat example why axiom could succeed in teaching.
+
+
+All the best, and PLEASE don't give up,
+
+Martin
+
+
+
+
+From MAILER-DAEMON Wed Apr 11 15:46:07 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Hbilb-0002Q9-KP
+	for mharc-axiom-mail@gnu.org; Wed, 11 Apr 2007 15:46:07 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Hbila-0002Q2-Ai
+	for axiom-mail@nongnu.org; Wed, 11 Apr 2007 15:46:06 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HbilX-0002O0-Ly
+	for axiom-mail@nongnu.org; Wed, 11 Apr 2007 15:46:05 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HbilX-0002Nx-FQ
+	for axiom-mail@nongnu.org; Wed, 11 Apr 2007 15:46:03 -0400
+Received: from smtp-103-wednesday.noc.nerim.net ([62.4.17.103]
+	helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <fmaltey@nerim.fr>) id 1HbihS-0007Jj-32
+	for axiom-mail@nongnu.org; Wed, 11 Apr 2007 15:41:50 -0400
+Received: from localhost (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.nerim.net (Postfix) with ESMTP id 9DC554F3C1;
+	Wed, 11 Apr 2007 21:41:35 +0200 (CEST)
+Received: from fmy by localhost with local (Exim 4.63)
+	(envelope-from <fmaltey@nerim.fr>)
+	id 1HbihP-0001KB-3g; Wed, 11 Apr 2007 21:41:47 +0200
+To: "Alasdair McAndrew" <amca01@gmail.com>
+Subject: Re: [Axiom-mail] Two beginner questions
+References: <1d67a53c0704100350i1f9fe249s630a5dc25437cc2d@mail.gmail.com>
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: 11 Apr 2007 21:41:47 +0200
+In-Reply-To: <1d67a53c0704100350i1f9fe249s630a5dc25437cc2d@mail.gmail.com>
+Message-ID: <87abxewves.fsf@nerim.fr>
+Lines: 12
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: FreeBSD 4.6-4.9
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 11 Apr 2007 19:46:06 -0000
+
+"Alasdair McAndrew" <amca01@gmail.com> writes:
+
+> 2) are the only two interfaces the text interface and TeXmacs?
+
+There is also an emacs interface as a maple sheet.
+
+And I can send you an other emacs mode which allows several lines commands, 
+with the syntax of input files.
+
+Have a nice day !
+
+Francois, in France.
+
+
+
+From MAILER-DAEMON Wed Apr 11 22:14:21 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HbopJ-0005fY-Mg
+	for mharc-axiom-mail@gnu.org; Wed, 11 Apr 2007 22:14:21 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HbopG-0005fM-UU
+	for axiom-mail@nongnu.org; Wed, 11 Apr 2007 22:14:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HbopF-0005fA-ME
+	for axiom-mail@nongnu.org; Wed, 11 Apr 2007 22:14:18 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HbopF-0005f7-IT
+	for axiom-mail@nongnu.org; Wed, 11 Apr 2007 22:14:17 -0400
+Received: from an-out-0708.google.com ([209.85.132.243])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <amca01@gmail.com>) id 1Hbol8-0001r1-55
+	for axiom-mail@nongnu.org; Wed, 11 Apr 2007 22:10:02 -0400
+Received: by an-out-0708.google.com with SMTP id d40so1064974and
+	for <axiom-mail@nongnu.org>; Wed, 11 Apr 2007 19:10:01 -0700 (PDT)
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type;
+	b=AmbybV54MzLgaPypoMRh4FsvcSO6YLS9cDxQ7n0ETtHZfG3GjA+XF2bU+abxSlwj4c1evkjtIrdY4iJtVG3deQQUZpQlpxjxx7EXE4txgeFrMwce9CoLydiiUMw7is6J5STnmHVvfgo3uDoZAg1I9Oc3DGf48rYDJhUIE8ZecIs=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=beta;
+	h=received:message-id:date:from:to:subject:mime-version:content-type;
+	b=qe8XZrkWTXALIW0EPm94EnlMNX1SfhOI+E6Q4NT08NHlyHQSquZEsOY2cBiaQF5UWpq3LdX4E1WReWDZl8sgq6VYM5LZOnXqN6DSBPmZsbIErk+EJgONcCmWNfzbwvjggRlevKeZb0eKRSGDRlSo6su2uxqwlEJ/eiob0RPNOjU=
+Received: by 10.100.7.18 with SMTP id 18mr961243ang.1176343801276;
+	Wed, 11 Apr 2007 19:10:01 -0700 (PDT)
+Received: by 10.100.151.10 with HTTP; Wed, 11 Apr 2007 19:10:01 -0700 (PDT)
+Message-ID: <1d67a53c0704111910j275b58f4wf123e88b9c920cff@mail.gmail.com>
+Date: Thu, 12 Apr 2007 12:10:01 +1000
+From: "Alasdair McAndrew" <amca01@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_24141_28821177.1176343801208"
+X-detected-kernel: Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] Finite fields in Axiom: a few questions
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 12 Apr 2007 02:14:19 -0000
+
+------=_Part_24141_28821177.1176343801208
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+It was playing around with finite fields which got me to investigate Axiom
+in the first place.  Here are a few questions, arising from this input:
+
+(1) -> F16:=FiniteField(2,4)
+
+   (1)  FiniteField(2,4)
+                                                                 Type:
+Domain
+(2) -> random()$F16
+
+          3     2
+   (2)  %A  + %A  + 1
+                                                       Type:
+FiniteField(2,4)
+(3) -> definingPolynomial()$F16
+
+         4
+   (3)  ?  + ? + 1
+                                Type: SparseUnivariatePolynomial PrimeField
+2
+
+
+All well and good, but
+
+- how to I get output in terms of a nice variable (say x) rather than "?"
+and "%A"?
+
+- is there any way of forcing a particular defining polynomial?  (This is
+good for working through examples.)
+
+Thanks,
+Alasdair
+
+------=_Part_24141_28821177.1176343801208
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+It was playing around with finite fields which got me to investigate Axiom in the first place.&nbsp; Here are a few questions, arising from this input:<br><br><span style="font-family: courier new,monospace;">(1) -&gt; F16:=FiniteField(2,4)
+</span><br style="font-family: courier new,monospace;"><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">&nbsp;&nbsp; (1)&nbsp; FiniteField(2,4)</span><br style="font-family: courier new,monospace;">
+<span style="font-family: courier new,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type: Domain</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">
+(2) -&gt; random()$F16</span><br style="font-family: courier new,monospace;"><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 2</span><br style="font-family: courier new,monospace;">
+<span style="font-family: courier new,monospace;">&nbsp;&nbsp; (2)&nbsp; %A&nbsp; + %A&nbsp; + 1</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type: FiniteField(2,4)
+</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">(3) -&gt; definingPolynomial()$F16</span><br style="font-family: courier new,monospace;"><br style="font-family: courier new,monospace;">
+<span style="font-family: courier new,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</span><br style="font-family: courier new,monospace;"><span style="font-family: courier new,monospace;">&nbsp;&nbsp; (3)&nbsp; ?&nbsp; + ? + 1</span><br style="font-family: courier new,monospace;">
+<span style="font-family: courier new,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type: SparseUnivariatePolynomial PrimeField 2</span><br style="font-family: courier new,monospace;"><br><br>All well and good, but<br><br>- how to I get output in terms of a nice variable (say x) rather than &quot;?&quot; and &quot;%A&quot;?
+<br><br>- is there any way of forcing a particular defining polynomial?&nbsp; (This is good for working through examples.)<br><br>Thanks,<br>Alasdair<br>
+
+------=_Part_24141_28821177.1176343801208--
+
+
+
+From MAILER-DAEMON Thu Apr 12 03:52:41 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Hbu6j-0000QD-FR
+	for mharc-axiom-mail@gnu.org; Thu, 12 Apr 2007 03:52:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Hbu6i-0000Pw-6M
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 03:52:40 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Hbu6g-0000PO-Ex
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 03:52:39 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Hbu6g-0000PD-8G
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 03:52:38 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1Hbu2V-0005t9-U1
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 03:48:20 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Hbu2R-0007uF-8y; Thu, 12 Apr 2007 09:48:15 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Hbu2R-00083A-7Y; Thu, 12 Apr 2007 09:48:15 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Alasdair McAndrew" <amca01@gmail.com>
+Subject: Re: [Axiom-mail] Finite fields in Axiom: a few questions
+References: <1d67a53c0704111910j275b58f4wf123e88b9c920cff@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 12 Apr 2007 09:48:14 +0200
+In-Reply-To: <1d67a53c0704111910j275b58f4wf123e88b9c920cff@mail.gmail.com>
+Message-ID: <9qd52a824h.fsf@aquin.mat.univie.ac.at>
+Lines: 43
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 12 Apr 2007 07:52:40 -0000
+
+"Alasdair McAndrew" <amca01@gmail.com> writes:
+
+> - how to I get output in terms of a nice variable (say x) rather than "?"
+
+(1) -> )se me au of
+(1) ->  F16:=FiniteField(2,4)
+
+   (1)  FiniteField(2,4)
+                                                                 Type: Domain
+(2) -> (definingPolynomial()$F16).x
+
+         4
+   (2)  x  + x + 1
+
+
+> and "%A"?
+
+this one I do not know (currently), since
+
+(10) -> p := random()$F16
+
+           3     2
+   (10)  %A  + %A  + 1
+                                                       Type: FiniteField(2,4)
+
+is *not* a polynomial. It's an element of FiniteField(2,4). But maybe you like:
+
+(12) -> minimalPolynomial(p).x
+
+          4    3
+   (12)  x  + x  + 1
+                                            Type: Fraction Polynomial Integer
+
+(It would be rather easy to modify the output of FiniteField wo use something
+else as output, but I don't think this would make sense)
+
+> - is there any way of forcing a particular defining polynomial?  (This is
+> good for working through examples.)
+
+Is this what FiniteFieldExtensionByPolynomial is for? I guess one would have to
+do a little maths here. I'll look into it today afternoon.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Apr 12 04:41:29 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Hburw-0000nd-Ld
+	for mharc-axiom-mail@gnu.org; Thu, 12 Apr 2007 04:41:29 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Hburu-0000lt-Rn
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 04:41:26 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Hburs-0000jt-N6
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 04:41:26 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Hburs-0000jd-E5
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 04:41:24 -0400
+Received: from nagmx1.nag.co.uk ([62.231.145.242])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <themos@nag.co.uk>) id 1Hbunf-0002sT-Ai
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 04:37:06 -0400
+Received: from loanamd6.nag.co.uk (loanamd6.nag.co.uk [192.156.217.152])
+	by nagmx1.nag.co.uk (Postfix) with ESMTP id A98D41201EF
+	for <axiom-mail@nongnu.org>; Thu, 12 Apr 2007 09:36:55 +0100 (BST)
+From: Themos Tsikas <themos@nag.co.uk>
+Organization: NAG Ltd
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Finite fields in Axiom: a few questions
+Date: Thu, 12 Apr 2007 08:36:54 +0000
+User-Agent: KMail/1.9.1
+References: <1d67a53c0704111910j275b58f4wf123e88b9c920cff@mail.gmail.com>
+	<9qd52a824h.fsf@aquin.mat.univie.ac.at>
+In-Reply-To: <9qd52a824h.fsf@aquin.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: Multipart/Mixed;
+  boundary="Boundary-00=_m+eHGR5SQZNBuCn"
+Message-Id: <200704120836.54446.themos@nag.co.uk>
+X-detected-kernel: Linux 2.4-2.6
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: themos@nag.co.uk
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 12 Apr 2007 08:41:27 -0000
+
+--Boundary-00=_m+eHGR5SQZNBuCn
+Content-Type: text/plain;
+  charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+There should be an example input file called ffdemo.input
+
+Here is my copy of it.
+
+Themos Tsikas
+
+--Boundary-00=_m+eHGR5SQZNBuCn
+Content-Type: text/plain;
+  charset="iso-8859-1";
+  name="ffdemo.input"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename="ffdemo.input"
+
+--Copyright The Numerical Algorithms Group Limited 1994.
+-- finite field demonstrations
+-- prime field
+-- get a prime
+p:=4817
+-- construct field
+F:=PrimeField p
+-- demonstration of common finite field functions
+-- the finite field domain is in variable F
+-- take some random elements
+size()$F
+a:=index(size()$F quo 3)$F
+b:=index(size()$F quo 7)$F
+-- simple arithmetic
+a+b
+a-b
+a*b
+a/b
+a**1234
+a**(-1)
+g := generator()$F
+(definingPolynomial()$F::SUP(F)).g
+-- functions concerning the multiplicative cyclic group
+order(a)
+g:=primitiveElement()$F
+discreteLog(a)
+-- the next one should equal 0
+g**% - a
+-- the next may fail
+discreteLog(b,a)
+-- special finite field functions
+extensionDegree()$F
+degree(a)
+normalElement()$F
+definingPolynomial()$F
+minimalPolynomial(a)
+Frobenius(a)
+linearAssociatedOrder(a)
+linearAssociatedLog(a)
+for d in divisors extensionDegree()$F repeat
+        print(norm(a,d::PI)::OUTFORM)
+        print(trace(a,d::PI)::OUTFORM)
+
+-- end of common finite field demonstration
+-- finite field with polynomail basis
+-- get a small prime
+p:=7
+P:=PrimeField p
+-- get a small extension degree
+d:=6
+-- get a irreducible polynomial
+f:=createIrreduciblePoly(d)$FFPOLY(P)
+-- construct field
+F:=FFP(P,f)
+-- this field is the same as constructed by F:=FFX(P,d) or F:=FF(p,d
+-- demonstration of common finite field functions
+-- the finite field domain is in variable F
+-- take some random elements
+size()$F
+a:=index(size()$F quo 3)$F
+b:=index(size()$F quo 7)$F
+-- simple arithmetic
+a+b
+a-b
+a*b
+a/b
+a**1234
+a**(-1)
+g := generator()$F
+(definingPolynomial()$F::SUP(F)).g
+-- functions concerning the multiplicative cyclic group
+order(a)
+g:=primitiveElement()$F
+discreteLog(a)
+-- the next one should equal 0
+g**% - a
+-- the next may fail
+discreteLog(b,a)
+-- special finite field functions
+extensionDegree()$F
+degree(a)
+normalElement()$F
+definingPolynomial()$F
+minimalPolynomial(a)
+Frobenius(a)
+linearAssociatedOrder(a)
+linearAssociatedLog(a)
+for d in divisors extensionDegree()$F repeat
+        print(norm(a,d::PI)::OUTFORM)
+        print(trace(a,d::PI)::OUTFORM)
+
+
+-- end of common finite field demonstration
+-- finite field with normal basis
+-- get a normal Polynomial
+f:=createNormalPoly(d)$FFPOLY(P)
+-- build field
+F:=FFNBP(P,f)
+-- this field is the same as constructed by F:=FFNBX(P,d) or F:=FFNB(p,d
+-- demonstration of common finite field functions
+-- the finite field domain is in variable F
+-- take some random elements
+size()$F
+a:=index(size()$F quo 3)$F
+b:=index(size()$F quo 7)$F
+-- simple arithmetic
+a+b
+a-b
+a*b
+a/b
+a**1234
+a**(-1)
+g := generator()$F
+(definingPolynomial()$F::SUP(F)).g
+-- functions concerning the multiplicative cyclic group
+order(a)
+g:=primitiveElement()$F
+discreteLog(a)
+-- the next one should equal 0
+g**% - a
+-- the next may fail
+discreteLog(b,a)
+-- special finite field functions
+extensionDegree()$F
+degree(a)
+normalElement()$F
+definingPolynomial()$F
+minimalPolynomial(a)
+Frobenius(a)
+linearAssociatedOrder(a)
+linearAssociatedLog(a)
+for d in divisors extensionDegree()$F repeat
+        print(norm(a,d::PI)::OUTFORM)
+        print(trace(a,d::PI)::OUTFORM)
+
+
+-- end of common finite field demonstration
+-- finite field represented as cyclic group
+-- because a Zech logarithm table of half the field size is kept in
+-- memory during the computations, the size of the field should not be
+-- to big.
+-- get a small prime
+p:=5
+P:=PrimeField p
+-- get a small extension degree
+d:=4
+-- get a primitive polynomial
+f:=createPrimitivePoly(d)$FFPOLY(P)
+-- construct field
+F:=FFCGP(P,f)
+-- this field is the same as constructed by F:=FFCGX(P,d) or F:=FFCG(p,d
+-- demonstration of common finite field functions
+-- the finite field domain is in variable F
+-- take some random elements
+size()$F
+a:=index(size()$F quo 3)$F
+b:=index(size()$F quo 7)$F
+-- simple arithmetic
+a+b
+a-b
+a*b
+a/b
+a**1234
+a**(-1)
+g := generator()$F
+(definingPolynomial()$F::SUP(F)).g
+-- functions concerning the multiplicative cyclic group
+order(a)
+g:=primitiveElement()$F
+discreteLog(a)
+-- the next one should equal 0
+g**% - a
+-- the next may fail
+discreteLog(b,a)
+-- special finite field functions
+extensionDegree()$F
+degree(a)
+normalElement()$F
+definingPolynomial()$F
+minimalPolynomial(a)
+Frobenius(a)
+linearAssociatedOrder(a)
+linearAssociatedLog(a)
+for d in divisors extensionDegree()$F repeat
+        print(norm(a,d::PI)::OUTFORM)
+        print(trace(a,d::PI)::OUTFORM)
+
+
+-- end of common finite field demonstration
+-- polynomial extension of a polynomial extension
+-- get a small prime, choose 2 or 3
+p:=3
+P:=PrimeField p
+-- get two small extension degrees
+d1:=2
+d2:=3
+-- get irreducible polynomial of degree d1 over P
+f1:=createIrreduciblePoly(d1)$FFPOLY(P)
+F1:=FFP(P,f1)
+-- get irreducible polynomial of degree d2 over F1
+f2:=createIrreduciblePoly(d2)$FFPOLY(F1)
+-- construct field
+F:=FFP(F1,f2)
+-- this field is the same as constructed by F:=FFX(F1,d2)
+-- demonstration of common finite field functions
+-- the finite field domain is in variable F
+-- take some random elements
+size()$F
+a:=index(size()$F quo 3)$F
+b:=index(size()$F quo 7)$F
+-- simple arithmetic
+a+b
+a-b
+a*b
+a/b
+a**1234
+a**(-1)
+g := generator()$F
+(definingPolynomial()$F::SUP(F)).g
+-- functions concerning the multiplicative cyclic group
+order(a)
+g:=primitiveElement()$F
+discreteLog(a)
+-- the next one should equal 0
+g**% - a
+-- the next may fail
+discreteLog(b,a)
+-- special finite field functions
+extensionDegree()$F
+degree(a)
+normalElement()$F
+definingPolynomial()$F
+minimalPolynomial(a)
+Frobenius(a)
+linearAssociatedOrder(a)
+linearAssociatedLog(a)
+for d in divisors extensionDegree()$F repeat
+        print(norm(a,d::PI)::OUTFORM)
+        print(trace(a,d::PI)::OUTFORM)
+-- end of common finite field demonstration
+
+
+
+
+-- polynomial extension of a normal extension
+-- get normal polynomial of degree d1 over P
+f1:=createNormalPoly(d1)$FFPOLY(P)
+F1:=FFNBP(P,f1)
+-- get irreducible polynomial of degree d2 over F1
+f2:=createIrreduciblePoly(d2)$FFPOLY(F1)
+-- construct field
+F:=FFP(F1,f2)
+-- this field is the same as constructed by F:=FFX(F1,d2)
+-- demonstration of common finite field functions
+-- the finite field domain is in variable F
+-- take some random elements
+size()$F
+a:=index(size()$F quo 3)$F
+b:=index(size()$F quo 7)$F
+-- simple arithmetic
+a+b
+a-b
+a*b
+a/b
+a**1234
+a**(-1)
+g := generator()$F
+(definingPolynomial()$F::SUP(F)).g
+-- functions concerning the multiplicative cyclic group
+order(a)
+g:=primitiveElement()$F
+discreteLog(a)
+-- the next one should equal 0
+g**% - a
+-- the next may fail
+discreteLog(b,a)
+-- special finite field functions
+extensionDegree()$F
+degree(a)
+normalElement()$F
+definingPolynomial()$F
+minimalPolynomial(a)
+Frobenius(a)
+linearAssociatedOrder(a)
+linearAssociatedLog(a)
+for d in divisors extensionDegree()$F repeat
+        print(norm(a,d::PI)::OUTFORM)
+        print(trace(a,d::PI)::OUTFORM)
+-- end of common finite field demonstration
+
+
+
+
+-- polynomial extension of a cyclic extension
+-- get primitive polynomial of degree d1 over P
+f1:=createPrimitivePoly(d1)$FFPOLY(P)
+F1:=FFCGP(P,f1)
+-- get irreducible polynomial of degree d2 over F1
+f2:=createIrreduciblePoly(d2)$FFPOLY(F1)
+-- construct field
+F:=FFP(F1,f2)
+-- this field is the same as constructed by F:=FFX(F1,d2)
+-- demonstration of common finite field functions
+-- the finite field domain is in variable F
+-- take some random elements
+size()$F
+a:=index(size()$F quo 3)$F
+b:=index(size()$F quo 7)$F
+-- simple arithmetic
+a+b
+a-b
+a*b
+a/b
+a**1234
+a**(-1)
+g := generator()$F
+(definingPolynomial()$F::SUP(F)).g
+-- functions concerning the multiplicative cyclic group
+order(a)
+g:=primitiveElement()$F
+discreteLog(a)
+-- the next one should equal 0
+g**% - a
+-- the next may fail
+discreteLog(b,a)
+-- special finite field functions
+extensionDegree()$F
+degree(a)
+normalElement()$F
+definingPolynomial()$F
+minimalPolynomial(a)
+Frobenius(a)
+linearAssociatedOrder(a)
+linearAssociatedLog(a)
+for d in divisors extensionDegree()$F repeat
+        print(norm(a,d::PI)::OUTFORM)
+        print(trace(a,d::PI)::OUTFORM)
+
+
+-- end of common finite field demonstration
+-- normal extension of a polynomial extension
+-- get a small prime
+-- get a irreducible polynomial of degree d1 over P
+f1:=createIrreduciblePoly(d1)$FFPOLY(P)
+F1:=FFP(P,f1)
+-- get a normal polynomial of degree d2 over F1
+f2:=createNormalPoly(d2)$FFPOLY(F1)
+-- construct field
+F:=FFNBP(F1,f2)
+-- this field is the same as constructed by F:=FFX(F1,d2)
+-- demonstration of common finite field functions
+-- the finite field domain is in variable F
+-- take some random elements
+size()$F
+a:=index(size()$F quo 3)$F
+b:=index(size()$F quo 7)$F
+-- simple arithmetic
+a+b
+a-b
+a*b
+a/b
+a**1234
+a**(-1)
+g := generator()$F
+(definingPolynomial()$F::SUP(F)).g
+-- functions concerning the multiplicative cyclic group
+order(a)
+g:=primitiveElement()$F
+discreteLog(a)
+-- the next one should equal 0
+g**% - a
+-- the next may fail
+discreteLog(b,a)
+-- special finite field functions
+extensionDegree()$F
+degree(a)
+normalElement()$F
+definingPolynomial()$F
+minimalPolynomial(a)
+Frobenius(a)
+linearAssociatedOrder(a)
+linearAssociatedLog(a)
+for d in divisors extensionDegree()$F repeat
+        print(norm(a,d::PI)::OUTFORM)
+        print(trace(a,d::PI)::OUTFORM)
+
+
+-- end of common finite field demonstration
+-- normal extension of a normal extension
+-- get a normal polynomial of degree d1 over P
+f1:=createNormalPoly(d1)$FFPOLY(P)
+F1:=FFNBP(P,f1)
+-- get a normal polynomial of degree d2 over F1
+f2:=createNormalPoly(d2)$FFPOLY(F1)
+-- construct field
+F:=FFNBP(F1,f2)
+-- this field is the same as constructed by F:=FFX(F1,d2)
+-- demonstration of common finite field functions
+-- the finite field domain is in variable F
+-- take some random elements
+size()$F
+a:=index(size()$F quo 3)$F
+b:=index(size()$F quo 7)$F
+-- simple arithmetic
+a+b
+a-b
+a*b
+a/b
+a**1234
+a**(-1)
+g := generator()$F
+(definingPolynomial()$F::SUP(F)).g
+-- functions concerning the multiplicative cyclic group
+order(a)
+g:=primitiveElement()$F
+discreteLog(a)
+-- the next one should equal 0
+g**% - a
+-- the next may fail
+discreteLog(b,a)
+-- special finite field functions
+extensionDegree()$F
+degree(a)
+normalElement()$F
+definingPolynomial()$F
+minimalPolynomial(a)
+Frobenius(a)
+linearAssociatedOrder(a)
+linearAssociatedLog(a)
+for d in divisors extensionDegree()$F repeat
+        print(norm(a,d::PI)::OUTFORM)
+        print(trace(a,d::PI)::OUTFORM)
+
+
+-- end of common finite field demonstration
+-- normal extension of a cyclic extension
+-- get primitive polynomial of degree d1 over P
+f1:=createPrimitivePoly(d1)$FFPOLY(P)
+F1:=FFCGP(P,f1)
+-- get a normal polynomial of degree d2 over F1
+f2:=createNormalPoly(d2)$FFPOLY(F1)
+-- construct field
+F:=FFNBP(F1,f2)
+-- this field is the same as constructed by F:=FFX(F1,d2)
+-- demonstration of common finite field functions
+-- the finite field domain is in variable F
+-- take some random elements
+size()$F
+a:=index(size()$F quo 3)$F
+b:=index(size()$F quo 7)$F
+-- simple arithmetic
+a+b
+a-b
+a*b
+a/b
+a**1234
+a**(-1)
+g := generator()$F
+(definingPolynomial()$F::SUP(F)).g
+-- functions concerning the multiplicative cyclic group
+order(a)
+g:=primitiveElement()$F
+discreteLog(a)
+-- the next one should equal 0
+g**% - a
+-- the next may fail
+discreteLog(b,a)
+-- special finite field functions
+extensionDegree()$F
+degree(a)
+normalElement()$F
+definingPolynomial()$F
+minimalPolynomial(a)
+Frobenius(a)
+linearAssociatedOrder(a)
+linearAssociatedLog(a)
+for d in divisors extensionDegree()$F repeat
+        print(norm(a,d::PI)::OUTFORM)
+        print(trace(a,d::PI)::OUTFORM)
+
+
+-- end of common finite field demonstration
+-- finite field homomorphisms demonstration
+P3:= PF 3
+-- create a irreducible, a normal and a primitive polynomial
+fi:=createIrreduciblePoly(6)$FFPOLY(P3)
+fn:=createNormalPoly(6)$FFPOLY(P3)
+fp:=createPrimitivePoly(3)$FFPOLY(P3)
+-- coercions between field with the same defining polynomials
+F:=FFP(P3,fn)
+N:=FFNBP(P3,fn)
+a:=index(size()$F quo 3)$F
+b:=index(size()$F quo 7)$F
+an:=coerce(a)$FFHOM(F,P3,N)
+bn:=coerce(b)$FFHOM(F,P3,N)
+cn := an*bn
+coerce(cn)$FFHOM(F,P3,N)
+-- should be the same as
+c:=a*b
+-- coercion between fields with different extension polynomials
+F:=FFP(P3,fi)
+N:=FFNBP(P3,fn)
+a:=index(size()$F quo 3)$F
+b:=index(size()$F quo 7)$F
+an:=coerce(a)$FFHOM(F,P3,N)
+bn:=coerce(b)$FFHOM(F,P3,N)
+cn := an*bn
+coerce(cn)$FFHOM(F,P3,N)
+-- should be the same as
+c:=a*b
+-- coercion between fields of different extension degree
+C:=FFCGP(P3,fp)
+N:=FFNBP(P3,fn)
+a:=index(size()$C quo 3)$C
+b:=index(size()$C quo 7)$C
+an:=coerce(a)$FFHOM(C,P3,N)
+bn:=coerce(b)$FFHOM(C,P3,N)
+cn := an+bn
+coerce(cn)$FFHOM(C,P3,N)
+-- should be the same as
+c:=a+b
+-- comparison of computation times for arithmetic operations
+f:=createPrimitiveNormalPoly(5)$FFPOLY(P3)
+FP:=FFP(P3,f)
+Fc:=FFCGP(P3,f)  -- FC is a domain abbreviation
+FN:=FFNBP(P3,f)
+ap:=index(size()$FP quo 3)$FP
+ac:=coerce(ap)$FFHOM(Fc,P3,FP)
+an:=coerce(ap)$FFHOM(FN,P3,FP)
+bp:=index(size()$FP quo 7)$FP
+bc:=coerce(bp)$FFHOM(Fc,P3,FP)
+bn:=coerce(bp)$FFHOM(FN,P3,FP)
+-- the next are to initialize the fields
+ac+bc
+an*bn
+-- now we can compare
+)set message time on
+-- addition
+ap+bp
+an+bn
+ac+bc
+-- multiplication
+ap*bp
+an*bn
+ac*bc
+-- discrete logarithms
+discreteLog(ap)
+discreteLog(an)
+discreteLog(ac)
+-- exponentiation
+ap**1234567
+an**1234567
+ac**1234567
+-- computations between elements of field of different representation
+ap+bc
+an+bc
+an+bp
+
+--Boundary-00=_m+eHGR5SQZNBuCn--
+
+
+
+From MAILER-DAEMON Thu Apr 12 21:49:26 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HcAuk-0008FG-H3
+	for mharc-axiom-mail@gnu.org; Thu, 12 Apr 2007 21:49:26 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HcAui-0008EK-L6
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 21:49:24 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HcAug-0008DP-OL
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 21:49:24 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HcAug-0008DJ-GS
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 21:49:22 -0400
+Received: from an-out-0708.google.com ([209.85.132.250])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <amca01@gmail.com>) id 1HcAqS-0007MH-C8
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 21:45:00 -0400
+Received: by an-out-0708.google.com with SMTP id d40so1881887and
+	for <axiom-mail@nongnu.org>; Thu, 12 Apr 2007 18:45:00 -0700 (PDT)
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type;
+	b=D1/0Idg0+Hgz/ZWEr1erl85NS7KBJWNVSL8n2BCzBd7LfavcKNqP14h+rMxQ4JqU/HZLNItTCi+2vJzfC6StPlBjTxZQoO6nLJ/C9b9ct8Xe2KYGmnqhxpPIW70SDHuSUatONYhblTZyxUFTKlJE+ERY46VC1bMzGuJIFKkLvic=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=beta;
+	h=received:message-id:date:from:to:subject:mime-version:content-type;
+	b=is0zzz4AhN/YyvFWZc+0T+nbHSpU2nN54EKUfhPZMoh7YqBsTPPJ031WH4LYybHYufeBw6ZggyxbqI//b9JolR/sSRHk686HfuV1jyjaTzyWoTIExlCjIIIQ6Q8GxeUa1bch/hjJYKzgW2mSWi8feyLeew7ro3XRCsv+3MSMPIo=
+Received: by 10.100.93.5 with SMTP id q5mr2073682anb.1176428700132;
+	Thu, 12 Apr 2007 18:45:00 -0700 (PDT)
+Received: by 10.100.151.10 with HTTP; Thu, 12 Apr 2007 18:44:55 -0700 (PDT)
+Message-ID: <1d67a53c0704121844h1ba41b24g456cbae463a7f67b@mail.gmail.com>
+Date: Fri, 13 Apr 2007 11:44:55 +1000
+From: "Alasdair McAndrew" <amca01@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_44949_15076322.1176428695089"
+X-detected-kernel: Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] Another beginner's question: Lagrange interpolation
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 13 Apr 2007 01:49:25 -0000
+
+------=_Part_44949_15076322.1176428695089
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Just to explore Axiom a little further, I was trying to do a Lagrange
+interpolation on two lists:
+
+LagrangeInterpolation([1,2,3],[4,5,-6])
+
+This doesn't work - I get an error message which I (as a beginner) don't
+understand.  So then:
+
+1)  How do I do this?
+2)  Without asking this mail group, where can I find this information in a
+manner which I can understand?
+
+Thanks yet again,
+Alasdair
+
+------=_Part_44949_15076322.1176428695089
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Just to explore Axiom a little further, I was trying to do a Lagrange interpolation on two lists:<br><br>LagrangeInterpolation([1,2,3],[4,5,-6])<br><br>This doesn&#39;t work - I get an error message which I (as a beginner) don&#39;t understand.&nbsp; So then:
+<br><br>1)&nbsp; How do I do this?<br>2)&nbsp; Without asking this mail group, where can I find this information in a manner which I can understand?<br><br>Thanks yet again,<br>Alasdair<br>
+
+------=_Part_44949_15076322.1176428695089--
+
+
+
+From MAILER-DAEMON Thu Apr 12 23:01:18 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HcC2I-0002NN-P9
+	for mharc-axiom-mail@gnu.org; Thu, 12 Apr 2007 23:01:18 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HcC2H-0002IG-6A
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 23:01:17 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HcC2G-0002Gd-GO
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 23:01:16 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HcC2G-0002GB-Cq
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 23:01:16 -0400
+Received: from mail244.megamailservers.com ([216.251.41.64])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <bill.page1@synthesis.anikast.ca>) id 1HcBy1-0000HA-RC
+	for axiom-mail@nongnu.org; Thu, 12 Apr 2007 22:56:54 -0400
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail244.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	l3D2uXwF000821; Thu, 12 Apr 2007 22:56:42 -0400
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Alasdair McAndrew'" <amca01@gmail.com>
+Subject: RE: [Axiom-mail] Another beginner's question: Lagrange interpolation
+Date: Thu, 12 Apr 2007 22:57:38 -0400
+Message-ID: <005d01c77d77$81adf4f0$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6822
+In-Reply-To: <1d67a53c0704121844h1ba41b24g456cbae463a7f67b@mail.gmail.com>
+Importance: Normal
+thread-index: Acd9bbODv9pDGoyVT7CKKuXrsYiJyQAAV1gg
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3028
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 13 Apr 2007 03:01:17 -0000
+
+Alasdair,
+
+Thanks for the question!
+
+On Sent: April 12, 2007 9:45 PM Alasdair McAndrew wrote:
+
+> Just to explore Axiom a little further, I was trying to do a
+> Lagrange interpolation on two lists:
+>
+> LagrangeInterpolation([1,2,3],[4,5,-6])
+>
+> This doesn't work - I get an error message which I (as a beginner)
+> don't understand.
+
+This is what I get:
+
+(1) -> LagrangeInterpolation([1,2,3],[4,5,-6])
+   There are no exposed library operations named LagrangeInterpolation
+      but there is one unexposed operation with that name. Use HyperDoc
+      Browse or issue
+                      )display op LagrangeInterpolation
+      to learn more about the available operation.
+
+   Cannot find a definition or applicable library operation named
+      LagrangeInterpolation with argument type(s)
+                            List PositiveInteger
+                                List Integer
+
+      Perhaps you should use "@" to indicate the required return type,
+      or "$" to specify which version of the function you need.
+
+
+> So then: 
+>
+> 1)  How do I do this?
+
+I recommend first of all using the suggested command:
+
+(1) -> )display op LagrangeInterpolation
+
+There is one unexposed function called LagrangeInterpolation :
+   [1] (List D3,List D3) -> D1 from PolynomialInterpolationAlgorithms(
+            D3,D1)
+            if D3 has FIELD and D1 has UPOLYC D3
+
+> 2)  Without asking this mail group, where can I find this
+> information in a manner which I can understand?
+
+Hmmm.... what should I assume about what you can understand?
+That is a difficult problem and the answer will change over
+time.
+
+With the above information you should be able to see that
+at least that:
+
+- the LagrangeInterpolation function does exist in Axiom
+  but it is "not exposed"
+- that it expects two lists as arguments
+- and these lists must consist of elements of a Field
+- and that it will return a polynomial over this Field
+- and finally that what you passed as arguments to this
+  function did not meet these requirements.
+
+The first thing I would try is to look in the Axiom book by
+using the search function in your PDF reader. No luck. But
+at least you should be able to read there about what the phrase
+"not exposed" means. Essentially it means that you must call
+the function explicitly from the package where it is defined.
+
+The second thing you might try is to look this function up
+in HyperDoc using Browse, enter the name LagrangeInterpolation
+and click Operations. Unfortunately this only tells you what
+you know already plus the fact that it is "not documented
+yet"...
+
+You should also ask Axiom about 'PolynomialInterpolationAlgorithms'
+
+(1) -> )show PolynomialInterpolationAlgorithms
+ PolynomialInterpolationAlgorithms(F: Field,P: UnivariatePolynomialCategory
+F)
+is a package constructor
+ Abbreviation for PolynomialInterpolationAlgorithms is PINTERPA
+ This constructor is not exposed in this frame.
+ Issue )edit c:/Program
+Files/axiom/mnt/windows/../../src/algebra/PINTERPA.spad
+to see algebra source code for PINTERPA
+
+------------------------------- Operations --------------------------------
+ LagrangeInterpolation : (List F,List F) -> P
+
+So now take another look at the last point and what you
+actually passed to the function:
+
+                            List PositiveInteger
+                                List Integer
+
+So Axiom thought the first list [1,2,3] was a list of
+PositiveInteger and the second list [4,5,-6] was a list of
+Integer. Lets ask Axiom if these are Fields:
+
+(1) -> PositiveInteger has Field
+
+   (1)  false
+                                          Type: Boolean
+
+
+(2) -> Integer has Field
+
+   (2)  false
+                                          Type: Boolean
+
+but at least
+
+(3) -> Fraction Integer has Field
+
+   (3)  true
+                                          Type: Boolean
+
+Oh! So how can I tell Axiom that these numbers are actually
+from some Field? Try this:
+
+(4) -> [1,2,3]::List Fraction Integer
+
+   (4)  [1,2,3]
+                               Type: List Fraction Integer
+
+Ok, now lets try LagrangeInterpolation again:
+
+(9) -> A:=[1,2,3]::List Fraction Integer
+
+   (9)  [1,2,3]
+                                 Type: List Fraction Integer
+
+(10) -> B:=[4,5,-6]::List Fraction Integer
+
+   (10)  [4,5,- 6]
+                                 Type: List Fraction Integer
+
+But how does one call the specific package where this function
+is located? The command ')show PolynomialInterpolationAlgorithms'
+gave use this information:
+
+ PolynomialInterpolationAlgorithms(F: Field,P: UnivariatePolynomialCategory
+F)
+
+So now in my example above the Field is 'Fraction Integer' but it
+may not be entirely obvious to you what
+
+ UnivariatePolynomialCategory F
+
+means. To make a long story short: Axiom groups it's mathematical
+domains (types) into groups called "Category". This is almost (but
+not quite) like a category in mathematics. Anyway let me suggest
+one such domain that will work for us: The univariate polynomials
+over the variable x with coefficients in the same field:
+
+  UnivariatePolynomial(x,Fraction Integer)
+
+so the final result looks like this:
+
+(11) ->
+LagrangeInterpolation(A,B)$PolynomialInterpolationAlgorithms(Fraction
+Integer,UnivariatePolynomial(x,Fraction Integer))
+
+             2
+   (11)  - 6x  + 19x - 9
+                            Type: UnivariatePolynomial(x,Fraction Integer)
+
+There, that was easy! Right? ;) Well, perhaps not for the
+beginner...
+
+As you get a little more experienced with Axiom you might look
+in Axiom's source code itself. In principle this source code is
+supposed to consist of both code and the complete documentation
+of the code. here:
+
+http://wiki.axiom-developer.org/axiom--test--1/src/algebra
+
+This is a searchable online copy of the source code for the
+entire Axiom Library. Enter 'LagrangeInterpolation' in the
+search box at the top right of the page, hit enter and you will
+see all the places where LagrangeInterpolation is used in the
+code. Usually there is also at least some minimal documentation
+included in the code, but in this case we are out of luck - the
+original Axiom developer did not even leave us any hints. The
+best we get is a quite readable algorithm written in SPAD -
+the Axiom library high level programming language.
+
+        LagrangeInterpolation(lx, ly) ==
+            #lx ^= #ly =>
+                error "Different number of points and values."
+            ip: P := 0
+            for xi in lx for yi in ly for i in 0.. repeat
+                pp: P := 1
+                xp: F := 1
+                for xj in lx for j in 0.. | i ^= j repeat
+                    pp := pp * (monomial(1,1) - monomial(xj,0))
+                    xp := xp * (xi - xj)
+                ip := ip + (yi/xp) * pp
+            ip
+
+---------
+
+Which I think is actually quite readable, but perhaps too much
+for the beginner.
+
+Another important place to look online is the Axiom Input test
+files. There are a lot of useful (but sparsely documented)
+examples here:
+
+http://wiki.axiom-developer.org/axiom--test--1/src/input
+
+But searching for 'LagrangeInterpolation' here we are again
+out of luck.
+
+---------
+
+I am sorry that this email reply has gotten rather long, but
+I wanted to illustrate the kind of help that I wish that one
+day will be available on the Axiom Wiki and other Axiom
+publications.
+
+If you have any questions or comments about this please
+continue.
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Fri Apr 13 03:42:31 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HcGQR-0006vs-2H
+	for mharc-axiom-mail@gnu.org; Fri, 13 Apr 2007 03:42:31 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HcGQP-0006vl-4T
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 03:42:29 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HcGQM-0006vD-OG
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 03:42:28 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HcGQM-0006vA-Cb
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 03:42:26 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1HcGM5-0005Fk-Tw
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 03:38:02 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HcGLy-0003QO-Nh; Fri, 13 Apr 2007 09:37:54 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HcGLy-0001Qk-Kf; Fri, 13 Apr 2007 09:37:54 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Alasdair McAndrew" <amca01@gmail.com>, Vadym Fedyukovych <vf@unity.net>
+Subject: Re: [Axiom-mail] Another beginner's question: Lagrange interpolation
+References: <1d67a53c0704121844h1ba41b24g456cbae463a7f67b@mail.gmail.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 13 Apr 2007 09:37:54 +0200
+In-Reply-To: <1d67a53c0704121844h1ba41b24g456cbae463a7f67b@mail.gmail.com>
+Message-ID: <9q3b34sp0t.fsf@aquin.mat.univie.ac.at>
+Lines: 156
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 13 Apr 2007 07:42:29 -0000
+
+Dear Alasdair, Dear Vadim!
+
+Vadim: sorry I haven't sent you the paper by Gemignani yet. It turned out t=
+hat
+I do not have a pdf. If you are still interested, please send me a postal
+adress and I send you a collection of papers today.  See below on a tiny
+demonstration what FFFG can do.
+
+"Alasdair McAndrew" <amca01@gmail.com> writes:
+
+> Just to explore Axiom a little further, I was trying to do a Lagrange
+> interpolation on two lists:
+>=20
+> LagrangeInterpolation([1,2,3],[4,5,-6])
+>=20
+> This doesn't work - I get an error message which I (as a beginner) don't
+> understand.  So then:
+>=20
+> 1)  How do I do this?
+
+see Bill's mail or below.
+
+> 2) Without asking this mail group, where can I find this information in a
+> manner which I can understand?
+
+If you do not want to ask on axiom-mail, you should ask on axiom-math. :-)
+
+Seriously, I think the best and most rapid source of information is=20
+
+axiom-math or axiom-mail for "how do I do interpolation, symmetric function=
+s,
+                              limits, plot graphs, etc."
+
+axiom-developer for "why doesn't axiom compile on my machine" and "I have a
+                     week spare time, and I'm sooo bored, what shall I do".
+
+I'd advise you to spend roughly fifteen minutes=20
+
+* browsing HyperDoc,=20
+
+* using )what things interpol
+
+* searching the pdf version of the book
+
+* searching the mail archives and the wiki
+
+If you are not successful, send mail.
+
+--  a more scientific answer  ---------------------------------------------=
+----
+
+interpolation:
+
+Lagrange interpolation as implemented in Axiom is fine for toy demonstratio=
+ns.
+But if you are interested in interpolation in general, I suggest that you u=
+se
+my implementation of Bernhard Beckermann and George Labahn's FFFG (Fast
+Fraction Free Gaussian) elimination algorithm. It is faster in exact domains
+and much more general.  The same file also features (in a separate package)
+polynomial interpolation using Newton, albeit in an extremely specialised
+setting:
+
+      ++ \spad{newton}(l) returns the interpolating polynomial for the valu=
+es
+      ++ l, where the x-coordinates are assumed to be [1,2,3,...,n] and the
+      ++ coefficients of the interpolating polynomial are known to be in the
+      ++ domain F. I.e., it is a very streamlined version for a special cas=
+e of
+      ++ interpolation.=20
+
+You will have to install my package manually though, or use wh-sandbox. Here
+are the docstrings:
+
+    interpolate: (List Fraction D, List Fraction D, NonNegativeInteger)=20
+                -> Fraction SUP D
+      ++ \spad{interpolate(xlist, ylist, deg} returns the rational function=
+ with
+      ++ numerator degree \spad{deg} that interpolates the given points usi=
+ng
+      ++ fraction free arithmetic.
+
+    generalInterpolation: (List D, CoeffAction,=20
+                           Vector V, List NonNegativeInteger) -> Matrix SUP=
+ D
+      ++ \spad{generalInterpolation(C, CA, f, eta)} performs Hermite-Pade
+      ++ approximation using the given action CA of polynomials on the elem=
+ents
+      ++ of f. The result is guaranteed to be correct up to order
+      ++ |eta|-1. Given that eta is a "normal" point, the degrees on the
+      ++ diagonal are given by eta. The degrees of column i are in this case
+      ++ eta + e.i - [1,1,...,1], where the degree of zero is -1.
+      ++
+      ++ The first argument C is the list of coefficients c_{k,k} in the=20
+      ++ expansion <x^k> z g(x) =3D sum_{i=3D0}^k c_{k,i} <x^i> g(x).
+      ++
+      ++ The second argument, CA(k, l, f), should return the coefficient of=
+ x^k
+      ++ in z^l f(x).
+
+
+So, polynomial interpolation is interpolate([1,2,3],[4,5,-6], 3), Hermite-P=
+ade
+is, for example
+
+(1) -> f :=3Dreduce(+, [monomial(random 40, i)$SUP INT for i in 0..5])
+
+           5      4      3      2
+   (1)  12?  + 25?  + 29?  + 13?  + 20? + 1
+                                     Type: SparseUnivariatePolynomial Integ=
+er
+(2) -> F =3D=3D> FFFG(INT, SUP INT)
+                                                                   Type: Vo=
+id
+(3) -> eta :=3D [2,1,1]
+
+   (3)  [2,1,1]
+                                                   Type: List PositiveInteg=
+er
+(4) -> n :=3D reduce(+, eta)=20
+
+   (4)  4
+                                                        Type: PositiveInteg=
+er
+(5) -> M :=3D generalInterpolation(DiffC(n)$F, DiffAction$F, [f, D f, D D f=
+], eta)$F
+
+   (5)
+   +          2                                                            =
+   +
+   |- 1045836?  + 939076? + 1012588  3237618? + 3755082   16407212? + 98621=
+96 |
+   |                                                                       =
+   |
+   |            133656               - 1045836? + 299430        1116948    =
+   |
+   |                                                                       =
+   |
+   +           - 141758                   - 374757        - 1045836? - 1238=
+506+
+                              Type: Matrix SparseUnivariatePolynomial Integ=
+er
+(6) -> [f, D f, D D f] * M
+
+   (6)
+               7            6           5            4
+   [- 12550032?  - 14876988?  + 5298712?  + 46971396? ,
+             6            5             4
+    38851416?  + 63251274?  + 101150172? ,
+              6             5             4
+    196886544?  + 528526652?  + 538380288? ]
+                              Type: Vector SparseUnivariatePolynomial Integ=
+er
+
+
+The last line demonstrates that we have indeed found a solution to the given
+(Hermite-Pad=C3=A9) interpolation problem. For example, let [c1, c2, c3] be=
+ the
+first column of M, then
+
+ord(c1*f + c2 * D f + c3 * D D f) >=3D 4.
+
+
+Note that, although seemingly different, interpolate and generalInterpolati=
+on
+use exactly the same algorithm, with slightly different parameters.
+
+
+Possible future project:  I have implemented several interpolation algorith=
+ms,
+each useful in it's setting.  It would be good to design a general user
+interface, that is more natural than I currently have.  Unfortunately, I do=
+ not
+have the time...
+
+Second project: implement Peter Olver's ideas about multivariate interpolat=
+ion:
+
+Olver, P.J., On multivariate interpolation, Stud. Appl. Math. 116 (2006)
+201-240.
+http://www.math.umn.edu/~olver/n_/mv.pdf
+
+I'd really like to do this, time permitting.
+
+
+
+Martin
+
+
+
+
+From MAILER-DAEMON Fri Apr 13 11:48:51 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HcO15-0000cA-OX
+	for mharc-axiom-mail@gnu.org; Fri, 13 Apr 2007 11:48:51 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HcO13-0000bx-Pu
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 11:48:49 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HcO13-0000bl-3D
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 11:48:49 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HcO12-0000bi-Vf
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 11:48:49 -0400
+Received: from mail288.megamailservers.com ([216.251.41.108])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <bill.page1@synthesis.anikast.ca>) id 1HcNwk-0008Vk-FL
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 11:44:22 -0400
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail288.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	l3DFhxdf006649; Fri, 13 Apr 2007 11:44:09 -0400
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Alasdair McAndrew'" <amca01@gmail.com>
+Subject: RE: [Axiom-mail] Another beginner's question: Lagrange interpolation
+Date: Fri, 13 Apr 2007 11:45:02 -0400
+Message-ID: <00b001c77de2$b7184350$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6822
+In-Reply-To: <9qr6qojrm0.fsf@aquin.mat.univie.ac.at>
+Importance: Normal
+thread-index: Acd91TaMOFvDaRokSB+tO42p08OPRgAATXgg
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3028
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: 'Martin Rubey' <martin.rubey@univie.ac.at>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 13 Apr 2007 15:48:49 -0000
+
+On April 13, 2007 10:07 AM Martin Rubey wrote:
+>=20
+> "Alasdair McAndrew" writes:
+>=20
+> > I wish I could get more of a handle on Axiom more quickly,=20
+> > but its behaviour still seems tantalizingly just out of
+> > reach.
+
+I felt like that for about the first year or so ... :-)
+
+>=20
+> would be interesting if you could be more precise here...
+> I find that the interpreter is quite clever about finding
+> "appropriate" types. But of course, often it needs help.
+> And certainly, a (conservative) redesign of the hierarchy
+> would be in order, but this also depends on the future of
+> Aldor..
+>
+
+> ...
+> > However, for me at least, the problem of getting the
+> > types/domains and so on correct for the use of some things
+> > (like LagrangeInterpolation) seems unnecessarily difficult.
+>=20
+> LagrangeInterpolation is really very poorly done, especially=20
+> with respect to the usage of domains.
+>
+
+I am not entirely sure I agree with Martin that this code is
+"very poorly done". Perhaps that is true, from the point of view
+of the Axiom interpreter because it requires that the user
+provide some additional information - the type for the underlying
+field. But given that, the interpreter is pretty smart about
+deciding on the types. It is actually much easier than my
+previous reply might have suggested:
+
+(1) -> )expose PolynomialInterpolationAlgorithms
+   PolynomialInterpolationAlgorithms is now explicitly exposed
+   in frame initial
+
+(2) -> LagrangeInterpolation([1,2,3],[4,5,-6])@SUP(FRAC INT)
+
+            2
+   (3)  - 6?  + 19? - 9
+              Type: SparseUnivariatePolynomial Fraction Integer
+
+The critical part the interpreter was missing was just the choice
+of field. But without a good knowledge of the Axiom type system
+this solution would probably be rather hard for a beginner to
+anticipate.
+
+> ...=20
+> > And of course I want to have a go at some programming...=20
+> > I've just written (the first version of) a z-transforms
+> > package for Maxima, and it seems to me that such a thing
+> > should be relatively straightforward in Axiom, using its
+> > rules mechanism.  Then there'd be a method for solving=20
+> > difference equations!
+>
+
+I would like to give you an unsolicited caution regarding the
+use of pattern matching rules in Axiom. Although the application
+of rules work fairly well within the Axiom 'Expression' domain
+really this sort of symbolic manipulation of expressions is
+rather foreign and unnatural in Axiom.
+
+People who program in Python have invented a name of the
+style of programming that is "natural" in that language, i.e.
+"pythonic" (sic). In Axiom we can identify an analogous style
+that we might call "Axiomic" or maybe "Axiomatic". :-) The
+point being that most things in Axiom are done in an object-
+oriented, algebraic manner -- and not by the simple manipulation
+of expressions. As a long time user of Maple, Maxima and other
+"symbol-oriented" systems, I think the hardest part about
+learning to use Axiom for me was to understand this change in
+paradigm. Most beginning users of Axiom think of types as just
+"getting in the way", but in the end that is really where the
+strength of Axiom actually lies.
+
+One thing that the object-orientation buys you (and maybe
+costs you) is the importance of understanding the existing
+Axiom library (which currently contains nearly 1,300 different
+abstract mathematical and data types. To get the greatest
+advantage and do the least amount of programming it is
+essential that you think about how what you intend to write
+"fits" into the existing mathematical hierarchy. This means
+more time spent up front analysing and generalizing your
+algorithm but ultimately less time actually programming.
+
+In your case perhaps you need to think about how the z-transform
+relates to other integral transforms that already exist in Axiom.
+For example:
+
+(5) -> )wh package transform
+-------------------------------- Packages -------------------
+
+Packages with names matching patterns:
+     transform
+
+ INVLAPLA InverseLaplaceTransform      LAPLACE  LaplaceTransform
+
+(5) -> )sh LAPLACE
+ LaplaceTransform(R: Join(EuclideanDomain,OrderedSet,CharacteristicZero,
+ RetractableTo Integer,LinearlyExplicitRingOver Integer),
+ F: Join(TranscendentalFunctionCategory,PrimitiveFunctionCategory,
+ AlgebraicallyClosedFunctionSpace R))
+ is a package constructor
+ Abbreviation for LaplaceTransform is LAPLACE
+ This constructor is exposed in this frame.
+ Issue )edit c:/Program
+Files/axiom/mnt/windows/../../src/algebra/LAPLACE.spad
+ to see algebra source code for LAPLACE
+
+------------------------------- Operations --------------------
+ laplace : (F,Symbol,Symbol) -> F
+
+(5) -> laplace(x+1,x,y)
+
+        y + 1
+   (5)  -----
+           2
+          y
+                                       Type: Expression Integer
+
+------
+
+Of course understanding what goes into the definition of the
+LaplaceTransform package:
+
+  EuclideanDomain
+  OrderedSet
+  CharacteristicZero,
+  RetractableTo Integer
+  LinearlyExplicitRingOver Integer
+  TranscendentalFunctionCategory
+  PrimitiveFunctionCategory
+  AlgebraicallyClosedFunctionSpace
+
+might require a significant effort. But it seems to me that in
+order to write an Axiomatic z-transform package, one should be
+concerned about the discrete analogues for the above domains.
+This will likely have something in common with combinatorial
+mathematics that is already in Axiom, e.g.
+
+(7) -> )sh CombinatorialFunction
+ CombinatorialFunction(R: Join(OrderedSet,IntegralDomain),
+ F: FunctionSpace R)
+ is a package constructor
+ Abbreviation for CombinatorialFunction is COMBF
+ This constructor is not exposed in this frame.
+ Issue )edit c:/Program =
+Files/axiom/mnt/windows/../../src/algebra/COMBF.spad
+ to see algebra source code for COMBF
+
+------------------------------- Operations =
+--------------------------------
+ ?**? : (F,F) -> F                     belong? : BasicOperator -> =
+Boolean
+ binomial : (F,F) -> F                 factorial : F -> F
+ factorials : F -> F                   factorials : (F,Symbol) -> F
+ iibinom : List F -> F                 iidprod : List F -> F
+ iidsum : List F -> F                  iifact : F -> F
+ iiperm : List F -> F                  iipow : List F -> F
+ ipow : List F -> F                    permutation : (F,F) -> F
+ product : (F,Symbol) -> F             summation : (F,Symbol) -> F
+ operator : BasicOperator -> BasicOperator
+ product : (F,SegmentBinding F) -> F
+ summation : (F,SegmentBinding F) -> F
+
+But I hope that this does not discourage you from attempting
+re-implement your Maxim z-transform code in Axiom. I really
+only intend these comments as a kind of advanced warning of
+where you might end up. It is entirely possible that you may
+find the approach of using pattern matching rules to manipulate
+Expressions adequate for your initial purposes.
+
+> Concerning difference equations, note that SumIt by the late=20
+> Manuel Bronstein is now free software (I have the sources
+> already). If you are familiar with these things, (google for
+> the documentation), it would be great to make that available
+> in axiom (some porting is needed).
+
+I agree with Martin that making SumIt available in Axiom would be
+a big step towards making it possible to write your z-transform
+function in a more Axiomatic way.
+
+> ...=20
+> In the long run, that is, if you are going to explore Axiom=20
+> seriously, it is certainly necessary to start programming in
+> SPAD or Aldor.
+>=20
+> In any case, I hope you stay with us,
+>=20
+
+Me too.
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Fri Apr 13 11:51:56 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HcO44-0004ha-1J
+	for mharc-axiom-mail@gnu.org; Fri, 13 Apr 2007 11:51:56 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HcO41-0004fs-Ib
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 11:51:53 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HcO3z-0004ct-NT
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 11:51:52 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HcO3z-0004cZ-Eb
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 11:51:51 -0400
+Received: from triton08.abnamro.nl ([167.202.193.24]
+	helo=triton08-out.abnamro.nl)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <johmar.landheer@nl.abnamro.com>) id 1HcNzh-0000jA-78
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 11:47:25 -0400
+Received: from aaamsr001.abnamro.com (aaamsr001 [10.124.6.13])
+	by triton08-out.abnamro.nl (Postfix) with ESMTP id 78AE5EB5D
+	for <axiom-mail@nongnu.org>; Fri, 13 Apr 2007 17:47:23 +0200 (CEST)
+From: johmar.landheer@nl.abnamro.com
+To: axiom-mail@nongnu.org
+Message-ID: <OF14BD71E2.AEDD0E78-ONC12572BC.0056C6D5-C12572BC.0056C6D5@abnamro.com>
+Date: Fri, 13 Apr 2007 17:47:49 +0200
+X-MIMETrack: Serialize by Router on AAAMSR001/HUB/ABNAMRO/NL(Release
+	6.5.4FP1|June 19, 2005) at 04/13/2007 05:47:23 PM
+MIME-Version: 1.0
+Content-type: text/plain; charset=US-ASCII
+X-detected-kernel: Linux 2.4-2.6
+Subject: [Axiom-mail] Johmar Landheer/NL/ABNAMRO/NL is out of the office.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 13 Apr 2007 15:51:54 -0000
+
+
+I will be out of the office starting  13-04-2007 and will not return until
+23-04-2007.
+
+Ik ben afwezig van 13 t/m 20 april.
+
+Voor project issues die niet kunnen wachten tot maandag 23 april,
+
+svp contact opnemen met Ronald Daniels.
+
+---------------------------------------------------------------------------
+This message (including any attachments) is confidential and may be
+privileged. If you have received it by mistake please notify the sender by
+return e-mail and delete this message from your system. Any unauthorised
+use or dissemination of this message in whole or in part is strictly
+prohibited. Please note that e-mails are susceptible to change. ABN AMRO
+Bank N.V, which has its seat at Amsterdam, the Netherlands, and is
+registered in the Commercial Register under number 33002587, including its
+group companies, shall not be liable for the improper or incomplete
+transmission of the information contained in this communication nor for any
+delay in its receipt or damage to your system. ABN AMRO Bank N.V. (or its
+group companies) does not guarantee that the integrity of this
+communication has been maintained nor that this communication is free of
+viruses, interceptions or interference.
+---------------------------------------------------------------------------
+
+
+
+
+From MAILER-DAEMON Fri Apr 13 12:10:54 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HcOMQ-0000sQ-Gk
+	for mharc-axiom-mail@gnu.org; Fri, 13 Apr 2007 12:10:54 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HcOMP-0000rj-0s
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 12:10:53 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HcOMO-0000r3-DM
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 12:10:52 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HcOMO-0000r0-2J
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 12:10:52 -0400
+Received: from triton10.abnamro.nl ([167.202.193.26]
+	helo=triton10-out.abnamro.nl)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <johmar.landheer@nl.abnamro.com>) id 1HcOI5-0004Pj-Lf
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 12:06:25 -0400
+Received: from aaamsr001.abnamro.com (aaamsr001 [10.124.6.13])
+	by triton10-out.abnamro.nl (Postfix) with ESMTP id D2654437AE
+	for <axiom-mail@nongnu.org>; Fri, 13 Apr 2007 18:06:24 +0200 (CEST)
+From: johmar.landheer@nl.abnamro.com
+To: axiom-mail@nongnu.org
+Message-ID: <OF299FC228.8D482CF2-ONC12572BC.0058835F-C12572BC.0058835F@abnamro.com>
+Date: Fri, 13 Apr 2007 18:06:48 +0200
+X-MIMETrack: Serialize by Router on AAAMSR001/HUB/ABNAMRO/NL(Release
+	6.5.4FP1|June 19, 2005) at 04/13/2007 06:06:24 PM
+MIME-Version: 1.0
+Content-type: text/plain; charset=US-ASCII
+X-detected-kernel: Linux 2.4-2.6
+Subject: [Axiom-mail] Johmar Landheer/NL/ABNAMRO/NL is out of the office.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 13 Apr 2007 16:10:53 -0000
+
+
+I will be out of the office starting  13-04-2007 and will not return until
+23-04-2007.
+
+Ik ben afwezig van 13 t/m 20 april.
+
+Voor project issues die niet kunnen wachten tot maandag 23 april,
+
+svp contact opnemen met Ronald Daniels.
+
+---------------------------------------------------------------------------
+This message (including any attachments) is confidential and may be
+privileged. If you have received it by mistake please notify the sender by
+return e-mail and delete this message from your system. Any unauthorised
+use or dissemination of this message in whole or in part is strictly
+prohibited. Please note that e-mails are susceptible to change. ABN AMRO
+Bank N.V, which has its seat at Amsterdam, the Netherlands, and is
+registered in the Commercial Register under number 33002587, including its
+group companies, shall not be liable for the improper or incomplete
+transmission of the information contained in this communication nor for any
+delay in its receipt or damage to your system. ABN AMRO Bank N.V. (or its
+group companies) does not guarantee that the integrity of this
+communication has been maintained nor that this communication is free of
+viruses, interceptions or interference.
+---------------------------------------------------------------------------
+
+
+
+
+From MAILER-DAEMON Fri Apr 13 14:13:23 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HcQGx-0008HZ-PU
+	for mharc-axiom-mail@gnu.org; Fri, 13 Apr 2007 14:13:23 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HcQGw-0008DC-Nl
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 14:13:22 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HcQGu-000872-UB
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 14:13:22 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HcQGu-00086g-QI
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 14:13:20 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>) id 1HcQCa-0001pq-Mw
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 14:08:53 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HcQCR-0001dS-Dh; Fri, 13 Apr 2007 20:08:43 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.66)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1HcQCR-0002qS-B0; Fri, 13 Apr 2007 20:08:43 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Bill Page" <bill.page1@synthesis.anikast.ca>
+Subject: Re: [Axiom-mail] Another beginner's question: Lagrange interpolation
+References: <00b001c77de2$b7184350$6900a8c0@asus>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 13 Apr 2007 20:08:42 +0200
+In-Reply-To: <00b001c77de2$b7184350$6900a8c0@asus>
+Message-ID: <9q1wio1711.fsf@aquin.mat.univie.ac.at>
+Lines: 16
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 13 Apr 2007 18:13:23 -0000
+
+Dear Bill, Alasdair,
+
+"Bill Page" <bill.page1@synthesis.anikast.ca> writes:
+
+> I would like to give you an unsolicited caution regarding the use of pattern
+> matching rules in Axiom. Although the application of rules work fairly well
+> within the Axiom 'Expression' domain really this sort of symbolic
+> manipulation of expressions is rather foreign and unnatural in Axiom.
+
+
+Although pattern matching and rule-based algorithms *may* not be the best way
+to program for axiom (and I'm not even sure about that), I believe meanwhile
+that writing some programs in the scripting language will give you a very fast
+start into axiom.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Fri Apr 13 18:43:48 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HcUUe-0007Sd-S5
+	for mharc-axiom-mail@gnu.org; Fri, 13 Apr 2007 18:43:48 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HcUUc-0007SR-Ra
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 18:43:46 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HcUUc-0007S8-1s
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 18:43:46 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HcUUb-0007S5-SY
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 18:43:45 -0400
+Received: from triton10.abnamro.nl ([167.202.193.26]
+	helo=triton10-out.abnamro.nl)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <johmar.landheer@nl.abnamro.com>) id 1HcUQH-0008Qc-Lk
+	for axiom-mail@nongnu.org; Fri, 13 Apr 2007 18:39:17 -0400
+Received: from aaamsr001.abnamro.com (aaamsr001 [10.124.6.13])
+	by triton10-out.abnamro.nl (Postfix) with ESMTP id 4EE8A42C81
+	for <axiom-mail@nongnu.org>; Sat, 14 Apr 2007 00:39:16 +0200 (CEST)
+From: johmar.landheer@nl.abnamro.com
+To: axiom-mail@nongnu.org
+Message-ID: <OF345C97F5.1CDBBC32-ONC12572BC.007C7CE4-C12572BC.007C7CE4@abnamro.com>
+Date: Sat, 14 Apr 2007 00:39:44 +0200
+X-MIMETrack: Serialize by Router on AAAMSR001/HUB/ABNAMRO/NL(Release
+	6.5.4FP1|June 19, 2005) at 04/14/2007 12:39:16 AM
+MIME-Version: 1.0
+Content-type: text/plain; charset=US-ASCII
+X-detected-kernel: Linux 2.4-2.6
+Subject: [Axiom-mail] Johmar Landheer/NL/ABNAMRO/NL is out of the office.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 13 Apr 2007 22:43:47 -0000
+
+
+I will be out of the office starting  13-04-2007 and will not return until
+23-04-2007.
+
+Ik ben afwezig van 13 t/m 20 april.
+
+Voor project issues die niet kunnen wachten tot maandag 23 april,
+
+svp contact opnemen met Ronald Daniels.
+
+---------------------------------------------------------------------------
+This message (including any attachments) is confidential and may be
+privileged. If you have received it by mistake please notify the sender by
+return e-mail and delete this message from your system. Any unauthorised
+use or dissemination of this message in whole or in part is strictly
+prohibited. Please note that e-mails are susceptible to change. ABN AMRO
+Bank N.V, which has its seat at Amsterdam, the Netherlands, and is
+registered in the Commercial Register under number 33002587, including its
+group companies, shall not be liable for the improper or incomplete
+transmission of the information contained in this communication nor for any
+delay in its receipt or damage to your system. ABN AMRO Bank N.V. (or its
+group companies) does not guarantee that the integrity of this
+communication has been maintained nor that this communication is free of
+viruses, interceptions or interference.
+---------------------------------------------------------------------------
+
+
+
+
+From MAILER-DAEMON Wed Apr 25 14:51:23 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HgmaJ-0004Vh-4i
+	for mharc-axiom-mail@gnu.org; Wed, 25 Apr 2007 14:51:23 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HgmaH-0004Vc-Fr
+	for axiom-mail@nongnu.org; Wed, 25 Apr 2007 14:51:21 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HgmaF-0004VO-NW
+	for axiom-mail@nongnu.org; Wed, 25 Apr 2007 14:51:20 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HgmaF-0004VL-Hv
+	for axiom-mail@nongnu.org; Wed, 25 Apr 2007 14:51:19 -0400
+Received: from hera.math.uni.wroc.pl ([156.17.86.1])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <hebisch@math.uni.wroc.pl>) id 1HgmUa-0001Hu-Mz
+	for axiom-mail@nongnu.org; Wed, 25 Apr 2007 14:45:28 -0400
+Received: from hebisch by hera.math.uni.wroc.pl with local (Exim 3.36 #1
+	(Debian)) id 1HgmUO-0007En-00; Wed, 25 Apr 2007 20:45:16 +0200
+Subject: Re: [Axiom-mail] Help in axiom
+In-Reply-To: <9qzm5f1js7.fsf@aquin.mat.univie.ac.at>
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Date: Wed, 25 Apr 2007 20:45:16 +0200 (CEST)
+X-Mailer: ELM [version 2.4ME+ PL100 (25)]
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=US-ASCII
+Message-Id: <E1HgmUO-0007En-00@hera.math.uni.wroc.pl>
+From: Waldek Hebisch <hebisch@math.uni.wroc.pl>
+X-detected-kernel: Linux 2.6 (newer, 1)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 25 Apr 2007 18:51:22 -0000
+
+Martin Rubey wrote:
+> Your best bet for examples is, I guess, to look into the Axiom Book by Jenks
+> and Sutor. It has many examples and comes with the distribution, or online:
+> 
+> http://wiki.axiom-developer.org/Mirrors?go=/public/book2.pdf&it=Axiom+Book
+> 
+> Waldek: I didn't find the book in wh-sandbox? How come?
+> 
+
+Rules to build book we broken some time ago.  As of revision 515 making
+dvi should also (with the rest of documentation) build dvi version of the
+Axiom book.  ATM rules to build pdf version are unimplemented.
+
+> 
+> Waldek: RECLOS.ht says at the beginning:
+> 
+> % Copyright The Numerical Algorithms Group Limited 1992-94. All rights reserved.
+> % !! DO NOT MODIFY THIS FILE BY HAND !! Created by ht.awk.
+> 
+> So, which one is the source file?
+> 
+
+In Nag version there is a common source for .ht and corresponding
+parts of the Axiom book.  It should be relatively easy to just
+restore Nag build process (but it would requre some work to merge
+back Tim's changes to the book).  But I am not sure if we want
+to do things in a way Nag did them, so I am still thinking about
+best way of organizing documentation.  And, since I am busy with
+other things it takes time.
+
+-- 
+                              Waldek Hebisch
+hebisch@math.uni.wroc.pl 
+
+
+
+From MAILER-DAEMON Mon Apr 30 11:25:05 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HiXkP-0006JA-NV
+	for mharc-axiom-mail@gnu.org; Mon, 30 Apr 2007 11:25:05 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HiXkN-0006J0-Sw
+	for axiom-mail@nongnu.org; Mon, 30 Apr 2007 11:25:03 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HiXkL-0006Ii-9S
+	for axiom-mail@nongnu.org; Mon, 30 Apr 2007 11:25:03 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HiXkL-0006If-2Y
+	for axiom-mail@nongnu.org; Mon, 30 Apr 2007 11:25:01 -0400
+Received: from ug-out-1314.google.com ([66.249.92.172])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ondrej.certik@gmail.com>) id 1HiXe7-0008AG-TB
+	for axiom-mail@nongnu.org; Mon, 30 Apr 2007 11:18:36 -0400
+Received: by ug-out-1314.google.com with SMTP id j40so1064754ugd
+	for <axiom-mail@nongnu.org>; Mon, 30 Apr 2007 08:18:30 -0700 (PDT)
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:sender:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references:x-google-sender-auth;
+	b=CFIGLCZikWjYCwxzyJYZVNmtdBVuQNRmHMI4B3XHjX9dPfllOHeqE20+UjREd9QvTW+U8HLFzDicWL89LM4zeq809XT8LWnFna4LIFt1LdXf15jdRtadTWrGwRasycgNQcgra49F5UfGDGetarzubS2+SD7PCmeiNzPyf1WSTaw=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=beta;
+	h=received:message-id:date:from:sender:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references:x-google-sender-auth;
+	b=ooGgQOvKzEEGYCyjlYelnTWsQ2aF+dO3N9AVFW1BW/hhWsvMjYstOQ49DcG6in0tRkbhR2hY0X3DCJbMMxjtngU1GDE2dAvgyt3iMq6o+LPJuv+I0JQLLbdB932FiWWxGiXryjStDg4/JyM4gjY4V5RUj6XvBAsC1HNnWoAPDUQ=
+Received: by 10.66.255.7 with SMTP id c7mr5494491ugi.1177946310845;
+	Mon, 30 Apr 2007 08:18:30 -0700 (PDT)
+Received: by 10.66.234.12 with HTTP; Mon, 30 Apr 2007 08:18:30 -0700 (PDT)
+Message-ID: <85b5c3130704300818v58293fa9j50fbceb826533f45@mail.gmail.com>
+Date: Mon, 30 Apr 2007 17:18:30 +0200
+From: "Ondrej Certik" <ondrej@certik.cz>
+Sender: ondrej.certik@gmail.com
+To: "Bill Page" <bill.page1@synthesis.anikast.ca>
+Subject: Re: [Axiom-mail] how to calculate Ricci tensor from a metric tensor?
+In-Reply-To: <03e201c7703d$145291a0$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <85b5c3130703261506s460b5d2fs857c588b054ca6f8@mail.gmail.com>
+	<03e201c7703d$145291a0$6900a8c0@asus>
+X-Google-Sender-Auth: 11cac4bf23041ed4
+X-detected-kernel: Linux 2.4-2.6 (Google crawlbot)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 30 Apr 2007 15:25:04 -0000
+
+I finally found some time to reply to this email, sorry about that. :)
+
+> I am not against you having fun. As an end in itself and as a
+> by-product of something else, that is fine. But even if you do get
+> some novel results after building a new tool, I would argue that
+> in almost every case you would be further ahead if you had
+> invested the same amount of time in learning to properly use
+> (and perhaps extend) some existing system.
+
+I think if there is any system to extend with similar goals as SymPy
+has, then it's SAGE. And I am definitely going to integrate SymPy into
+it at some point. SAGE goal is to have something usable now. SymPy's
+goal is to have something simple in python.
+
+> Such open source alternatives already exist, e.g. Axiom and Maxima.
+> They are both written in Lisp and modern Lisp implementations are
+> certainly "reasonably fast", arguably perhaps as fast as C++. And
+> the Sage project demonstrates that these can be made callable from
+> python:
+>
+> http://www.sagemath.org
+
+Yes, SAGE is getting there. I actually didn't beleive that Maxima
+could be made callable from python (I mean more deeply integrated than
+just passing strings around), but aparently, as the newest sage 2.5
+shows, it is possible.
+
+> >> One important problem with Maple (and any other CAS) is the
+> >> lack of a standardized up-to-date language. For instance, the
+> >> concept of Object Oriented design is not present. Quite
+> >> generally, facilities for encapsulation are poorly developed.
+>
+> That is simply not true. Most standardization in programming
+> languages occurs by de facto adoption despite efforts by various
+> standards organizations. Maple has permitted coding in an
+> object oriented manner since release 9 (see Maple modules). It
+> could be easily argued that Axiom (alias ScratchPad) applied
+> the concepts of object-oriented design and polymorphic type
+> systems almost two decades before these were even recognized
+> as interesting programming paradigms by the rest of the
+> computer science and mathematics communities. So up-to-date
+> is largely a matter of perspective or else Axiom was and
+> still remains ahead of it's time.
+
+As I understand it what they wanted to say and also what I think is
+that Maple's language is a mess if I say it directly. But I don't want
+to go into any flamewars about languages. It's just my opinion, that
+it's so much easier to program in Python (or even in C++) than in
+Maple.
+
+> >> Rather than pointing out a number of Maple's linguistical
+> >> and structural weaknesses let us ponder about one simple
+> >> fact. The purpose of symbolic computation is to "simplify"
+> >> mathematical expressions so that we can more easily understand
+> >> their structure or code them more efficiently for numerical
+> >> evaluation by a computing machine.
+>
+> I *very* strongly disagree with this statement as the main
+> purpose of symbolic computation. At best it is only one possible
+
+Yes, I also don't agree with them in this. For me the purpose of the
+CAS is to do the same things that I would do by hand, but faster, thus
+allowing me to be more productive.
+
+> > What is not trivial is how to actually represent everything, and
+> > that is an area, where no one actually knows how to do it.
+>
+> In fact that is exactly the point that is being addressed by Axiom.
+> Axiom does provide (at least in principle) the means to represent
+> everything. I disagree that no one knows how to do it. I think the
+> Axiom designers showed very clearly how many areas of advanced and
+> abstract mathematics could be coded and represented in a computer
+> in addition to the more pedestrian concerns of data structures and
+> algorithms.
+
+That is remarkable, there is no question about that. I was meaning
+just a simple calculus for "masses". As every code on the web that I
+know of took a little different approach.
+
+> > So even if the only contribution of SymPy is that we actually
+> > showed that the CAS can be done this way, it will be good.
+>
+> What do you think is novel about the way that SymPy implements
+> computer algebra?
+
+I am aware of only the codes that are listed in the links on the
+SymPy's webpage:
+
+http://code.google.com/p/sympy/
+
+And when I last measured the number of lines of code (with ginac,
+giac, axiom and some others), SymPy was by far the smallest. So I
+think novel is that the calculus for masses doesn't have to be
+thousands of lines of code and many years of development in many
+people. Also that 7 classes are enough to represent everything (in
+calculus for masses) also I think shows, that (at least the calculus)
+can be done quite simply.
+
+> > I learned however how not to do things - I am in no way trying
+> > to reinvent some new (better) language, even if that language was
+> > actually better than Python. Actually, all the languages turned
+> > out to be worse (Maple/Mathematica/Maxima).
+>
+> I think the concept of better and worse are too vague and subjective.
+> You need to state clearly the objectives and find a way to quantify
+> the differences between languages. I think this is a very difficult
+> problem.
+
+I know that my judgement about this can be wrong. But for me
+personally the criteria are - number of developers of the language,
+number of people using the language, number of different fields, where
+the language is applied to (like web, physics, system administration,
+etc.), how difficult it is to learn the language to fully understand
+all it's syntax, how many libraries are written for that language. So
+according to my criteria, the winners are (unordered), C, C++, Python,
+Java, maybe also C#, Ruby. But I understand that there are other
+criteria as well.
+
+> > Your argument is, that it is not important the language is not
+> > widespread, but rather that it is the best option for a CAS.
+>
+> I think SPAD and Aldor are much better suited to describing
+> mathematics for the purposes of computer algebra than any other
+> programming language now in common use. Since the accurate
+> representation of mathematical objects and the efficient coding
+> of mathematical algorithms is central to the goals of computer
+> algebra, I do think they are the best option for a CAS.
+
+I am not in argument here. For SymPy's goals and my criteria for
+languages however, the Python is better.
+
+> That is true. But one thing to note that at least in general
+> form, i.e. syntax and data structures, SPAD and Aldor and the
+> Axiom library are actually very similar to Python and were
+> implemented as much as 20 years earlier than Python and similar
+> languages.
+
+Yes, that is remarkable.
+
+> > SymPy is going to be a library in a standard widespread language.
+> > We chose Python. So I think we are not reinventing a wheel.
+>
+> What "wheel" are we talking about? The programming language or
+> the computer algebra system? Much of what you are trying to do
+> with SymPy does indeed look like re-invention to me.
+
+By reinventing the wheel I mean doing something again, when I could
+instead take a working peace of code for my problem. I don't think
+there is any other way of achieving SymPy's goal (except the SAGE's
+way).
+
+> > We are just trying to bring the CAS to masses, if I can use
+> > this expression. :)
+> >
+>
+> No, I doubt very much if this is possible, at least not any
+> more than it is possible to bring advanced abstract mathematics
+> to the masses. It takes years to appreciate the value of doing
+> certain things certain ways and at least part of this is based
+> on often unstated cultural and historical biases.
+
+I think it is possible. I believe that the most important part of
+mathematics, that is used in physics, that is needed to understand any
+graduate book on general relativity, quantum field theory or
+statistical physics can indeed be learned by anyone (I am not talking
+about understanding the physics, just the formulas - what they mean
+and how to calculate with them). And I think the CASes now are
+becoming a standard tool present on any system, like the programs for
+solving large sparse/dense matrices.
+
+Ondrej
+
+
+

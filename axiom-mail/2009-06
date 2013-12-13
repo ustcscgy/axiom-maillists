@@ -1,0 +1,4087 @@
+From MAILER-DAEMON Mon Jun 01 03:26:34 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MB1uk-0004Tj-8F
+	for mharc-axiom-mail@gnu.org; Mon, 01 Jun 2009 03:26:34 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MB1ui-0004TS-ON
+	for axiom-mail@nongnu.org; Mon, 01 Jun 2009 03:26:32 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MB1ue-0004So-AP
+	for axiom-mail@nongnu.org; Mon, 01 Jun 2009 03:26:32 -0400
+Received: from [199.232.76.173] (port=54131 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MB1ue-0004Sh-0I
+	for axiom-mail@nongnu.org; Mon, 01 Jun 2009 03:26:28 -0400
+Received: from mx20.gnu.org ([199.232.41.8]:42550)
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA1:32)
+	(Exim 4.60) (envelope-from <dosreis@gmail.com>) id 1MB1ud-0001XK-I1
+	for axiom-mail@nongnu.org; Mon, 01 Jun 2009 03:26:27 -0400
+Received: from mail-qy0-f123.google.com ([209.85.221.123])
+	by mx20.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <dosreis@gmail.com>) id 1MB1uc-0006yn-EZ
+	for axiom-mail@nongnu.org; Mon, 01 Jun 2009 03:26:26 -0400
+Received: by qyk29 with SMTP id 29so8281858qyk.4
+	for <axiom-mail@nongnu.org>; Mon, 01 Jun 2009 00:26:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:mime-version:sender:received:in-reply-to
+	:references:date:x-google-sender-auth:message-id:subject:from:to:cc
+	:content-type:content-transfer-encoding;
+	bh=LYoDH336B3ie4JTzoaO35EkqJm9RBdiIiwYWP49YHCg=;
+	b=kBfDKvyg898w3VHjNVj/JBwuvsv+ECqDhg+/LvYS51R91UZPiRCq3Ryeh8QiXZis5u
+	eyn9GL8T4TYiHdjAihv/CkYO9r9uK3p2YNIbzZvavrkrwF/koZaYi6wX+0KY63l8DIoz
+	vVMYDHmSEIrIQ4Wnz/WNG370pvdAr4weD6hhQ=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=mime-version:sender:in-reply-to:references:date
+	:x-google-sender-auth:message-id:subject:from:to:cc:content-type
+	:content-transfer-encoding;
+	b=U4ZbVpAVOl9htivwdcYePh7ygSNi2/Q0uOcQPYSEMqyc5dW/43VHOe5b8wqyAFwMSf
+	QvVYtBFqN/ewCkw9Kk77BHm2CGpSgTK3/P+ZKEsjf3q6+NEzJknExddwv3UFCq7mtMIG
+	EGHxvNQxDgJobpXYwU1MU8HbuWaNPAZfEzyBg=
+MIME-Version: 1.0
+Sender: dosreis@gmail.com
+Received: by 10.220.92.212 with SMTP id s20mr3402307vcm.91.1243841185140; Mon, 
+	01 Jun 2009 00:26:25 -0700 (PDT)
+In-Reply-To: <cdbfb78c0905311711y68712666gb4956269a0a775cb@mail.gmail.com>
+References: <cdbfb78c0905311711y68712666gb4956269a0a775cb@mail.gmail.com>
+Date: Mon, 1 Jun 2009 02:26:25 -0500
+X-Google-Sender-Auth: 0e733fe84421670a
+Message-ID: <206fcf960906010026y2d0b39dfi13473f3807832859@mail.gmail.com>
+Subject: Re: [Axiom-mail] number in hexadecimal
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+To: Renata Cereja <renatacereja@ig.com.br>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-Detected-Operating-System: by mx20.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: open-axiom-help@lists.sf.net, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 01 Jun 2009 07:26:32 -0000
+
+On Sun, May 31, 2009 at 7:11 PM, Renata Cereja <renatacereja@ig.com.br> wro=
+te:
+> I want to know if have some way of given a hexadecimal number convert it =
+to
+> a decimal for example.
+> I tried something like this:
+> =A0 =A0=A0 decimal(F)
+> but it doesn't work.
+
+OpenAxiom supports the Aldor notation for integer literals with
+explicit radix, e.g.
+
+(1) -> 16rf
+   (1)  15
+                                                        Type: PositiveInteg=
+er
+
+In general, you write the radix first (in decimal notation),
+immediatelly followed by 'r'
+then followed by the digits in the specified radix.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Mon Jun 01 05:07:03 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MB3Ty-0007uJ-OE
+	for mharc-axiom-mail@gnu.org; Mon, 01 Jun 2009 05:07:02 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MB3Tw-0007s4-Pg
+	for axiom-mail@nongnu.org; Mon, 01 Jun 2009 05:07:00 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MB3Ts-0007of-UP
+	for axiom-mail@nongnu.org; Mon, 01 Jun 2009 05:07:00 -0400
+Received: from [199.232.76.173] (port=33338 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MB3Ts-0007oS-Kp
+	for axiom-mail@nongnu.org; Mon, 01 Jun 2009 05:06:56 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:48513
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1MB3Ts-0004B6-6Z
+	for axiom-mail@nongnu.org; Mon, 01 Jun 2009 05:06:56 -0400
+Received: from [192.168.1.101] (dynamic-acs-72-23-19-139.zoominternet.net
+	[72.23.19.139])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id n5195d3W005177;
+	Mon, 1 Jun 2009 04:05:40 -0500
+Message-ID: <4A23999C.4080106@axiom-developer.org>
+Date: Mon, 01 Jun 2009 05:04:28 -0400
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Gabriel Dos Reis <gdr@integrable-solutions.net>
+Subject: Re: [Axiom-mail] number in hexadecimal
+References: <cdbfb78c0905311711y68712666gb4956269a0a775cb@mail.gmail.com>
+	<206fcf960906010026y2d0b39dfi13473f3807832859@mail.gmail.com>
+In-Reply-To: <206fcf960906010026y2d0b39dfi13473f3807832859@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: open-axiom-help@lists.sf.net, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 01 Jun 2009 09:07:01 -0000
+
+Gabriel Dos Reis wrote:
+> On Sun, May 31, 2009 at 7:11 PM, Renata Cereja <renatacereja@ig.com.br> wrote:
+>   
+>> I want to know if have some way of given a hexadecimal number convert it to
+>> a decimal for example.
+>> I tried something like this:
+>>      decimal(F)
+>> but it doesn't work.
+>>     
+>
+> OpenAxiom supports the Aldor notation for integer literals with
+> explicit radix, e.g.
+>
+> (1) -> 16rf
+>    (1)  15
+>                                                         Type: PositiveInteger
+>
+> In general, you write the radix first (in decimal notation),
+> immediatelly followed by 'r'
+> then followed by the digits in the specified radix.
+>
+> -- Gaby
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>   
+Excellent. Can you point me at the revision number of this patch? -- Tim
+
+
+
+
+From MAILER-DAEMON Wed Jun 03 08:25:36 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBpXD-0007ty-UH
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 08:25:35 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBpXC-0007tR-8c
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 08:25:34 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBpX7-0007s5-NS
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 08:25:33 -0400
+Received: from [199.232.76.173] (port=33498 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBpX7-0007s2-F0
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 08:25:29 -0400
+Received: from mo-p05-ob.rzone.de ([81.169.146.180]:54660)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1MBpX6-0003WD-Rb
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 08:25:29 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1244031926; l=212;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:Subject:To:MIME-Version:From:
+	Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=2uTmy7Bax3TFtnRsefdTAu36Kvw=;
+	b=W2UGPEQkJCIK6tTajKtisDXofkScnY4DSwi4U2ThQHEhzyNW/n7cyLX4AZVAg7owX8M
+	THCMdZQtgR2leww1IROG1NAOta+la1WwzEdxcppB5spqHUlkqY6pn8ohj8s8HtpQW+XPS
+	PxaDmpNFUnI1aXRP28W0QFsiwl1PWUD5/BY=
+X-RZG-AUTH: :Pm0IcwWgfvKNhyTiA5K9aSc1pwDnmpaKQTqQszbwOAxYBAKGS3+FyCi9EANtaw==
+X-RZG-CLASS-ID: mo05
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (mrclete mo56) (RZmta 18.38)
+	with DHE-RSA-AES128-SHA encrypted ESMTP id 500a7dl53BrFYl ;
+	Wed, 3 Jun 2009 14:24:40 +0200 (MEST)
+Message-ID: <4A266B87.6040209@hemmecke.de>
+Date: Wed, 03 Jun 2009 14:24:39 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.21 (X11/20090409)
+MIME-Version: 1.0
+To: axiom-mail@nongnu.org
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Subject: [Axiom-mail] InputForm
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 12:25:34 -0000
+
+If I enter
+
+(1) -> x+y^2 
+
+
+I get as a result
+
+          2
+    (1)  y  + x
+                       Type: Polynomial(Integer)
+
+Is there an easy way to get a linear output (not 2d-output), i.e., which 
+looks exactly like the input?
+
+Ralf
+
+
+
+From MAILER-DAEMON Wed Jun 03 08:36:09 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBphR-0008OP-4M
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 08:36:09 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBphP-0008Ld-9H
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 08:36:07 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBphK-0008BW-Ct
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 08:36:06 -0400
+Received: from [199.232.76.173] (port=47757 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBphK-0008BF-36
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 08:36:02 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:52989)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1MBphJ-0006lF-3F
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 08:36:01 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	n53CZnK6021510; Wed, 3 Jun 2009 14:35:50 +0200
+To: Ralf Hemmecke <ralf@hemmecke.de>
+Subject: Re: [Axiom-mail] InputForm
+References: <4A266B87.6040209@hemmecke.de>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Wed, 03 Jun 2009 14:35:49 +0200
+In-Reply-To: <4A266B87.6040209@hemmecke.de> (Ralf Hemmecke's message of "Wed\,
+	03 Jun 2009 14\:24\:39 +0200")
+Message-ID: <d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.6.3.122535
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: fricas-devel <fricas-devel@googlegroups.com>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 12:36:07 -0000
+
+Ralf Hemmecke <ralf@hemmecke.de> writes:
+
+> Is there an easy way to get a linear output (not 2d-output), i.e.,
+> which looks exactly like the input?
+
+(1) -> x+y^2 
+
+         2
+   (1)  y  + x
+                                        Type: Polynomial(Integer)
+(2) -> (x+y^2 )::INFORM
+
+   (2)  (+ (** y 2) x)
+                                        Type: InputForm
+(3) -> unparse((x+y^2 )::INFORM)
+
+   (3)  "y^2+x"
+                                        Type: String
+
+
+This is, in my opinion a hack, in case you want linear *output*.  It
+should be relatively easy though, to provide something similar to
+TexFormat, that provides a coercion from outputform to "linearform".
+Would actually be nice.
+
+Martin
+
+
+
+From MAILER-DAEMON Wed Jun 03 09:40:52 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBqi4-0003cn-AI
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 09:40:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBqi3-0003bn-7w
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 09:40:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBqhy-0003Yd-7b
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 09:40:50 -0400
+Received: from [199.232.76.173] (port=58161 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBqhy-0003YY-3Q
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 09:40:46 -0400
+Received: from mail-qy0-f191.google.com ([209.85.221.191]:46000)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1MBqhx-00084d-PE
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 09:40:45 -0400
+Received: by qyk29 with SMTP id 29so10612123qyk.4
+	for <axiom-mail@nongnu.org>; Wed, 03 Jun 2009 06:40:43 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.151.45.5 with SMTP id x5mr1062738ybj.339.1244036443482; Wed, 
+	03 Jun 2009 06:40:43 -0700 (PDT)
+In-Reply-To: <d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+Date: Wed, 3 Jun 2009 09:40:43 -0400
+Message-ID: <fbcd16d40906030640t77e5ed1ew6245946b053c7bac@mail.gmail.com>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+From: Bill Page <bill.page@newsynthesis.org>
+To: fricas-devel@googlegroups.com
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 13:40:51 -0000
+
+On Wed, Jun 3, 2009 at 8:35 AM, Martin Rubey wrote:
+>
+> Ralf Hemmecke writes:
+>
+>> Is there an easy way to get a linear output (not 2d-output), i.e.,
+>> which looks exactly like the input?
+>
+> (1) -> x+y^2
+>
+> =A0 =A0 =A0 =A0 2
+> =A0 (1) =A0y =A0+ x
+> =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =
+=A0 =A0Type: Polynomial(Integer)
+> (2) -> (x+y^2 )::INFORM
+>
+> =A0 (2) =A0(+ (** y 2) x)
+> =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =
+=A0 =A0Type: InputForm
+> (3) -> unparse((x+y^2 )::INFORM)
+>
+> =A0 (3) =A0"y^2+x"
+> =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =
+=A0 =A0Type: String
+>
+>
+> This is, in my opinion a hack, in case you want linear *output*. =A0It
+> should be relatively easy though, to provide something similar to
+> TexFormat, that provides a coercion from outputform to "linearform".
+> Would actually be nice.
+>
+
+Martin,
+
+Do you mean something like?
+
+  )set output linear on
+
+Note also that
+
+  y^2+x
+
+is not syntactically identical to the input
+
+  x+y^2
+
+I wonder why FriCAS changes the order?
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Wed Jun 03 09:50:24 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBqrI-0000Vv-9M
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 09:50:24 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBqrG-0000VU-8w
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 09:50:22 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBqrB-0000UN-HV
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 09:50:21 -0400
+Received: from [199.232.76.173] (port=46368 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBqrB-0000UJ-BI
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 09:50:17 -0400
+Received: from mo-p05-ob.rzone.de ([81.169.146.181]:14519)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1MBqrA-0001Q0-UZ
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 09:50:17 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1244037016; l=1120;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:CC:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=ZKgeJZsFLKgGVWvqMwLrLrMO/Gc=;
+	b=RbnPc/Nj2F9YwpMBa80zTSfR37k3/pCaUOEJwb99Ba28s4iXNO5kS7+P0vJv9chcQQg
+	X1oiPWsS83VpF+bhvnnYHVyRw3MdwDCFjvd69bVtA5LQuJyw0pluxhTeHb7T2L3v1xefu
+	RKpQuPGUH8nKyo/IVM6MDDe9Jcn4s2PdfBI=
+X-RZG-AUTH: :Pm0IcwWgfvKNhyTiA5K9aSc1pwDnmpaKQTqQszbwOAxYBAKGS3+FyCi9EANtaw==
+X-RZG-CLASS-ID: mo05
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (fruni mo45) (RZmta 18.38)
+	with DHE-RSA-AES128-SHA encrypted ESMTP id 605319l53D9drA ;
+	Wed, 3 Jun 2009 15:49:27 +0200 (MEST)
+Message-ID: <4A267F66.70407@hemmecke.de>
+Date: Wed, 03 Jun 2009 15:49:26 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.21 (X11/20090409)
+MIME-Version: 1.0
+To: fricas-devel@googlegroups.com
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+In-Reply-To: <d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 13:50:22 -0000
+
+On 06/03/2009 02:35 PM, Martin Rubey wrote:
+> Ralf Hemmecke <ralf@hemmecke.de> writes:
+> 
+>> Is there an easy way to get a linear output (not 2d-output), i.e.,
+>> which looks exactly like the input?
+> 
+> (1) -> x+y^2 
+> 
+>          2
+>    (1)  y  + x
+>                                         Type: Polynomial(Integer)
+> (2) -> (x+y^2 )::INFORM
+> 
+>    (2)  (+ (** y 2) x)
+>                                         Type: InputForm
+> (3) -> unparse((x+y^2 )::INFORM)
+> 
+>    (3)  "y^2+x"
+>                                         Type: String
+> 
+> 
+> This is, in my opinion a hack, in case you want linear *output*.  It
+> should be relatively easy though, to provide something similar to
+> TexFormat, that provides a coercion from outputform to "linearform".
+> Would actually be nice.
+
+I don't yet know what unparse does, but do you think that
+
+   lin z == unparse(z::InputForm)::Symbol::OutputForm
+
+should do the job also for other expressions than polynomials?
+
+Seems to be working for matrices...
+
+(5) -> m:=matrix [[1,2],[3,4]]
+
+         +1  2+
+    (5)  |    |
+         +3  4+
+                                        Type: Matrix(Integer)
+(6) -> lin m
+    Compiling function lin with type Matrix(Integer) -> OutputForm
+
+    (6)  matrix([[1,2],[3,4]])
+                                        Type: OutputForm
+
+Thanks a lot!!!
+
+Ralf
+
+
+
+From MAILER-DAEMON Wed Jun 03 10:06:48 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBr7A-0000KV-Bn
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 10:06:48 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBr78-0000Js-Ov
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:06:46 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBr74-0000J6-2a
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:06:46 -0400
+Received: from [199.232.76.173] (port=52113 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBr73-0000J3-TS
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:06:41 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:56986)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1MBr73-0005FZ-0S
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:06:41 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	n53E6bqq027812; Wed, 3 Jun 2009 16:06:38 +0200
+To: fricas-devel@googlegroups.com
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+	<4A267F66.70407@hemmecke.de>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Wed, 03 Jun 2009 16:06:37 +0200
+In-Reply-To: <4A267F66.70407@hemmecke.de> (Ralf Hemmecke's message of "Wed\,
+	03 Jun 2009 15\:49\:26 +0200")
+Message-ID: <d9zlcpif82.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.6.3.135223
+X-detected-operating-system: by monty-python.gnu.org: Error: This connection
+	is not (no longer?) in the cache.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 14:06:47 -0000
+
+Ralf Hemmecke <ralf@hemmecke.de> writes:
+
+> I don't yet know what unparse does, but do you think that
+>
+>    lin z == unparse(z::InputForm)::Symbol::OutputForm
+>
+> should do the job also for other expressions than polynomials?
+
+well...
+
+(5) -> sum(1/i, i=1..n)::INFORM
+
+   (5)  (%defsum (/ 1 %G) %G i 1 n)
+                                                              Type: InputForm
+
+One idea we had is that InputForm preserves the semantics *exactly*, and
+another function possibly pretends that we'd be using the interpreter,
+and thus assumes the interpreter's environment.
+
+At least I for one am strongly in favour of that idea, and even with
+this in mind, (5) above is a bug.
+
+(11) -> unparse(integrate(%e^(x^2), x)::INFORM)
+
+   (11)  "integral(exp(x^2),x::Symbol)"
+                                                                 Type: String
+
+is another example.  Note that integral *is* a function, so the result
+of INFORM is quite OK...
+
+In summary, it really depends on what you want to do.
+
+Martin
+
+
+
+From MAILER-DAEMON Wed Jun 03 10:15:11 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBrFH-0003qL-Im
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 10:15:11 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBrFF-0003q8-V1
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:15:10 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBrFB-0003pP-C7
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:15:09 -0400
+Received: from [199.232.76.173] (port=58051 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBrFA-0003pM-TC
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:15:04 -0400
+Received: from smtp.cs.tamu.edu ([128.194.138.107]:48424)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <gdr@cs.tamu.edu>) id 1MBrFA-0008QL-1m
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:15:04 -0400
+Received: from gauss.cs.tamu.edu (gauss.cs.tamu.edu [128.194.136.74])
+	by smtp.cs.tamu.edu (Postfix) with ESMTP id C7780190CAB;
+	Wed,  3 Jun 2009 09:14:57 -0500 (CDT)
+Received: by gauss.cs.tamu.edu (Postfix, from userid 1000)
+	id 2495B90748; Wed,  3 Jun 2009 09:15:02 -0500 (CDT)
+Sender: gdr@cs.tamu.edu
+To: fricas-devel@googlegroups.com
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+In-Reply-To: <d9skihlcka.fsf@ada0.ifam.uni-hannover.de> (Martin Rubey's
+	message of "Wed\, 03 Jun 2009 14\:35\:49 +0200")
+Organization: Texas A&M University / Department of Computer Science &
+	Enigneering
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+Date: Wed, 03 Jun 2009 09:15:02 -0500
+Message-ID: <87oct5s8t5.fsf@gauss.cs.tamu.edu>
+Lines: 21
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: open-axiom-help@lists.sf.net, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 14:15:10 -0000
+
+Martin Rubey <martin.rubey@math.uni-hannover.de> writes:
+
+| Ralf Hemmecke <ralf@hemmecke.de> writes:
+| 
+| > Is there an easy way to get a linear output (not 2d-output), i.e.,
+| > which looks exactly like the input?
+| 
+| (1) -> x+y^2 
+| 
+|          2
+|    (1)  y  + x
+|                                         Type: Polynomial(Integer)
+| (2) -> (x+y^2 )::INFORM
+
+In OpenAxiom, I get 
+
+(1) -> (x + y^2)::InputForm
+   (1)  y^2 + x
+                                                              Type: InputForm
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Wed Jun 03 10:20:17 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBrKC-0006w0-Vc
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 10:20:17 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBrKB-0006vd-Ju
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:20:15 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBrK7-0006uo-BA
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:20:15 -0400
+Received: from [199.232.76.173] (port=54190 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBrK7-0006ul-7h
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:20:11 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:43872)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1MBrK6-0001JL-7b
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:20:11 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	n53EK5fO028679; Wed, 3 Jun 2009 16:20:06 +0200
+To: fricas-devel@googlegroups.com
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+	<fbcd16d40906030640t77e5ed1ew6245946b053c7bac@mail.gmail.com>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Wed, 03 Jun 2009 16:20:05 +0200
+In-Reply-To: <fbcd16d40906030640t77e5ed1ew6245946b053c7bac@mail.gmail.com>
+	(Bill Page's message of "Wed\, 3 Jun 2009 09\:40\:43 -0400")
+Message-ID: <d94ouxielm.fsf_-_@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.6.3.141057
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: InputForm
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 14:20:15 -0000
+
+Bill Page <bill.page@newsynthesis.org> writes:
+
+> On Wed, Jun 3, 2009 at 8:35 AM, Martin Rubey wrote:
+
+>> This is, in my opinion a hack, in case you want linear *output*.  It
+>> should be relatively easy though, to provide something similar to
+>> TexFormat, that provides a coercion from outputform to "linearform".
+>> Would actually be nice.
+>>
+>
+> Martin,
+>
+> Do you mean something like?
+>
+>   )set output linear on
+
+Well, it may be nice to have a switch in the interpreter as this
+suggests, but that's not my primary concern.  My primary concern is to
+have well defined and document coercions from OutputForm to whatever,
+i.e., LaTeX, possibly TeX, html, text, linear text, etc.
+
+> Note also that
+>
+>   y^2+x
+>
+> is not syntactically identical to the input
+>
+>   x+y^2
+>
+> I wonder why FriCAS changes the order?
+
+Because the semantics is the same.  Currently, + is always commutative I
+think, but compare:
+
+(18) -> a:XPOLY INT := y*x
+
+   (18)  y x 1
+                                    Type: XPolynomial(Integer)
+(19) -> b:POLY INT := x*y
+
+   (19)  x y
+                                    Type: Polynomial(Integer)
+
+well, embarassingly enough, there is no INFORM for XPOLY :-(
+
+Martin
+
+
+
+From MAILER-DAEMON Wed Jun 03 10:31:52 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBrVQ-0002ez-9F
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 10:31:52 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBrVN-0002dn-Vz
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:31:50 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBrVI-0002bJ-6f
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:31:48 -0400
+Received: from [199.232.76.173] (port=41714 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBrVG-0002b5-JL
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:31:43 -0400
+Received: from mo-p05-ob.rzone.de ([81.169.146.181]:18761)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1MBrVG-0003mK-46
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:31:42 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1244039501; l=341;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:CC:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=b5duUoBXuKZmXvxOhh0MyGvIjo8=;
+	b=vHbov8+3Ku+oSJd2khKiwc34jm1s21VNkpKZndKIAFzVUq/xvXNEcynW0Cy0QdkFPEz
+	VgClSMbZu/Jg07i7hGd+9WvyflV3GyTt2LOmjvLa1Yue+pX+hq7a/5B6foHjPA6Ebh/sC
+	TzRyiy225f8Zmqj5C3HXtUZAPA8Ow9xg/ys=
+X-RZG-AUTH: :Pm0IcwWgfvKNhyTiA5K9aSc1pwDnmpaKQTqQszbwOAxYBAKGS3+FyCi9EANtaw==
+X-RZG-CLASS-ID: mo05
+Received: from [193.170.38.119]
+	(woodpecker.risc.uni-linz.ac.at [193.170.38.119])
+	by post.strato.de (mrclete mo31) (RZmta 18.38)
+	with DHE-RSA-AES128-SHA encrypted ESMTP id e06fb6l53Dnn9a ;
+	Wed, 3 Jun 2009 16:30:55 +0200 (MEST)
+Message-ID: <4A26891E.1070902@hemmecke.de>
+Date: Wed, 03 Jun 2009 16:30:54 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.21 (X11/20090409)
+MIME-Version: 1.0
+To: Gabriel Dos Reis <gdr@cs.tamu.edu>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+References: <4A266B87.6040209@hemmecke.de>	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+	<87oct5s8t5.fsf@gauss.cs.tamu.edu>
+In-Reply-To: <87oct5s8t5.fsf@gauss.cs.tamu.edu>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: open-axiom-help@lists.sf.net, fricas-devel@googlegroups.com,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 14:31:50 -0000
+
+> In OpenAxiom, I get 
+> 
+> (1) -> (x + y^2)::InputForm
+>    (1)  y^2 + x
+>                                                               Type: InputForm
+
+Cool! Was that done by a simple patch? What is the revision number?
+
+I really wonder why in FriCAS I get
+
+(^ y 2)
+
+as the result of (1) above. That clashes with the name "InputForm", 
+since I cannot input that into a FriCAS session.
+
+Ralf
+
+
+
+From MAILER-DAEMON Wed Jun 03 10:35:26 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBrYp-0004K5-Jn
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 10:35:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBrYk-0004Hm-MO
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:35:19 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBrYd-0004F4-IV
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:35:16 -0400
+Received: from [199.232.76.173] (port=38233 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBrYc-0004Ee-Mt
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:35:11 -0400
+Received: from mail-gx0-f224.google.com ([209.85.217.224]:57054)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1MBrYc-0004mz-CW
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:35:10 -0400
+Received: by gxk24 with SMTP id 24so65948gxk.10
+	for <axiom-mail@nongnu.org>; Wed, 03 Jun 2009 07:35:09 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.151.124.10 with SMTP id b10mr1198478ybn.249.1244039709289; 
+	Wed, 03 Jun 2009 07:35:09 -0700 (PDT)
+In-Reply-To: <d94ouxielm.fsf_-_@ada0.ifam.uni-hannover.de>
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+	<fbcd16d40906030640t77e5ed1ew6245946b053c7bac@mail.gmail.com>
+	<d94ouxielm.fsf_-_@ada0.ifam.uni-hannover.de>
+Date: Wed, 3 Jun 2009 10:35:09 -0400
+Message-ID: <fbcd16d40906030735g1833e445ofcf08c368683f767@mail.gmail.com>
+From: Bill Page <bill.page@newsynthesis.org>
+To: fricas-devel@googlegroups.com
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Cc: axiom-mail@nongnu.org
+Subject: [Axiom-mail] Re: [fricas-devel] Re: InputForm
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 14:35:21 -0000
+
+On Wed, Jun 3, 2009 at 10:20 AM, Martin Rubey wrote:
+>
+> Bill Page writes:
+>> Note also that
+>>
+>> =A0 y^2+x
+>>
+>> is not syntactically identical to the input
+>>
+>> =A0 x+y^2
+>>
+>> I wonder why FriCAS changes the order?
+>
+> Because the semantics is the same.
+
+Yes, thanks. Now I understand. In the expression:
+
+  (x+y^2 )::INFORM
+
+'(x+y^2 )' is first  fully interpreted by Fricas as a polynomial and
+only then does it coerce (convert?) the result back to InputForm. To
+do what I expected I guess one could write:
+
+(1) -> unparse(parse("x+y^2")$InputForm)
+
+   (1)  "x+y^2"
+                                                                 Type: Stri=
+ng
+
+Then no semantics are involved but if invoke the interpreter explicitly
+
+(2) -> unparse(interpret(parse("x+y^2")$InputForm)::INFORM)
+
+   (2)  "y^2+x"
+                                                                 Type: Stri=
+ng
+
+then of course I get the result you showed.
+
+>=A0Currently, + is always commutative I think, but compare:
+>
+> (18) -> a:XPOLY INT :=3D y*x
+>
+> =A0 (18) =A0y x 1
+> =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0Ty=
+pe: XPolynomial(Integer)
+> (19) -> b:POLY INT :=3D x*y
+>
+> =A0 (19) =A0x y
+> =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0Ty=
+pe: Polynomial(Integer)
+>
+> well, embarassingly enough, there is no INFORM for XPOLY :-(
+>
+
+Of course there should be such a coercion.
+
+You are right that the result depends on the domain chosen by the interpret=
+er.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Wed Jun 03 10:58:41 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBrvM-0000Vg-Of
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 10:58:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBrvK-0000Ux-W4
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:58:39 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBrvH-0000Rd-Kv
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:58:38 -0400
+Received: from [199.232.76.173] (port=54436 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBrvH-0000RL-CF
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:58:35 -0400
+Received: from qw-out-1920.google.com ([74.125.92.146]:39038)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1MBrvG-0003At-OS
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 10:58:34 -0400
+Received: by qw-out-1920.google.com with SMTP id 4so24970qwk.4
+	for <axiom-mail@nongnu.org>; Wed, 03 Jun 2009 07:58:33 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.150.151.5 with SMTP id y5mr1232823ybd.273.1244041113306; Wed, 
+	03 Jun 2009 07:58:33 -0700 (PDT)
+In-Reply-To: <4A26891E.1070902@hemmecke.de>
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+	<87oct5s8t5.fsf@gauss.cs.tamu.edu> <4A26891E.1070902@hemmecke.de>
+Date: Wed, 3 Jun 2009 10:58:33 -0400
+Message-ID: <fbcd16d40906030758o568a411eh79463a78d0f4532@mail.gmail.com>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+From: Bill Page <bill.page@newsynthesis.org>
+To: fricas-devel@googlegroups.com
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Cc: open-axiom-help@lists.sf.net, axiom-mail@nongnu.org,
+	Gabriel Dos Reis <gdr@cs.tamu.edu>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 14:58:39 -0000
+
+On Wed, Jun 3, 2009 at 10:30 AM, Ralf Hemmecke wrote:
+>
+>> In OpenAxiom, I get
+>>
+>> (1) -> (x + y^2)::InputForm
+>> =A0 =A0(1) =A0y^2 + x
+>> =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =
+=A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 Type: InputForm
+>
+> Cool! Was that done by a simple patch? What is the revision number?
+>
+> I really wonder why in FriCAS I get
+>
+> (^ y 2)
+>
+> as the result of (1) above. That clashes with the name "InputForm",
+> since I cannot input that into a FriCAS session.
+>
+
+Ralf
+
+There are a some long threads about this on the open-axiom list and
+even here on FriCAS in relation to the Sage interface for FriCAS.
+
+I also like the way it is now down in OpenAxiom better than FriCAS and
+original AXIOM.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Wed Jun 03 14:11:58 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBuwQ-0003Kv-Gu
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 14:11:58 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBuwO-0003KM-47
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 14:11:56 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBuwI-0003Jl-SU
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 14:11:55 -0400
+Received: from [199.232.76.173] (port=40379 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBuwI-0003Ji-NM
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 14:11:50 -0400
+Received: from smtp.cs.tamu.edu ([128.194.138.107]:51403)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <gdr@cs.tamu.edu>) id 1MBuwI-0001Lo-82
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 14:11:50 -0400
+Received: from gauss.cs.tamu.edu (gauss.cs.tamu.edu [128.194.136.74])
+	by smtp.cs.tamu.edu (Postfix) with ESMTP id 25382190CA3;
+	Wed,  3 Jun 2009 13:11:44 -0500 (CDT)
+Received: by gauss.cs.tamu.edu (Postfix, from userid 1000)
+	id 7CF0390748; Wed,  3 Jun 2009 13:11:48 -0500 (CDT)
+Sender: gdr@cs.tamu.edu
+To: fricas-devel@googlegroups.com
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+In-Reply-To: <4A26891E.1070902@hemmecke.de> (Ralf Hemmecke's message of "Wed\,
+	03 Jun 2009 16\:30\:54 +0200")
+Organization: Texas A&M University / Department of Computer Science &
+	Enigneering
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+	<87oct5s8t5.fsf@gauss.cs.tamu.edu> <4A26891E.1070902@hemmecke.de>
+Date: Wed, 03 Jun 2009 13:11:48 -0500
+Message-ID: <877hztrxuj.fsf@gauss.cs.tamu.edu>
+Lines: 18
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: open-axiom-help@lists.sf.net, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 18:11:56 -0000
+
+Ralf Hemmecke <ralf@hemmecke.de> writes:
+
+| > In OpenAxiom, I get 
+| > 
+| > (1) -> (x + y^2)::InputForm
+| >    (1)  y^2 + x
+| >                                                               Type: InputForm
+| 
+| Cool! Was that done by a simple patch? What is the revision number?
+
+it was done by a simple patch.  I don't have the revision number; but I
+do know that it generated protests when I did, so somehow one should get
+the discussions archived.
+
+[ I just came out of emergency so don't expect more from me today,
+expect the "easy" part I can handle. ]
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Wed Jun 03 14:45:54 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBvTG-0001wI-0T
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 14:45:54 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBvTE-0001tz-96
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 14:45:52 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBvT9-0001oY-66
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 14:45:51 -0400
+Received: from [199.232.76.173] (port=36075 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBvT9-0001oV-0Y
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 14:45:47 -0400
+Received: from mo-p05-ob.rzone.de ([81.169.146.182]:15282)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>) id 1MBvT8-0000za-CP
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 14:45:46 -0400
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1244054745; l=6027;
+	s=domk; d=hemmecke.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:CC:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=rwdhXUlmsFZMERinXpyIKdpO2SE=;
+	b=Jxpl+lQtmtLf2EfQTy25nQFD02e0A1yl5oPEP79SWVqNxBgu01lavaKY2SCfKq2tFWt
+	6mXPhCLUN2+uLaJ9LET+540n3hRfkBECLSCIEkrKNilgNlQ2p6686+d2XV+8hF4JJZbqJ
+	TInQjsTtwmBExV7RW2YSaOuBnqsH96pHRF4=
+X-RZG-AUTH: :Pm0IcwWgfvKNhyTiA5K9aSc1pwDnmpaKQTqQszbwOAv3lxKsUkAgSfoAfdc=
+X-RZG-CLASS-ID: mo05
+Received: from [10.0.0.2] (62-47-51-171.adsl.highway.telekom.at [62.47.51.171])
+	by post.strato.de (klopstock mo55) (RZmta 18.38)
+	with DHE-RSA-AES128-SHA encrypted ESMTP id y06305l53Hda4m ;
+	Wed, 3 Jun 2009 20:44:58 +0200 (MEST)
+Message-ID: <4A26C4AA.4030506@hemmecke.de>
+Date: Wed, 03 Jun 2009 20:44:58 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.21 (X11/20090409)
+MIME-Version: 1.0
+To: Gabriel Dos Reis <gdr@cs.tamu.edu>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+References: <4A266B87.6040209@hemmecke.de>	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>	<87oct5s8t5.fsf@gauss.cs.tamu.edu>
+	<4A26891E.1070902@hemmecke.de> <877hztrxuj.fsf@gauss.cs.tamu.edu>
+In-Reply-To: <877hztrxuj.fsf@gauss.cs.tamu.edu>
+X-Sent-by-Hemmecke: ralf@hemmecke.de
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: open-axiom-help@lists.sf.net, fricas-devel@googlegroups.com,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 18:45:52 -0000
+
+Dear Gaby
+
+Looks like r881 is the one you meant. Can you confirm?
+
+Martin, is this in your interest? I somehow had the impression that you 
+have other ideas of what InputForm should be used for.
+
+Ralf
+----------------------------------------------------------------------
+r2496 (orig r881):  dos-reis | 2008-10-15 05:44:37 +0200
+Changed paths:
+   M  /openaxiom/1.2/src/ChangeLog
+   M  /openaxiom/1.2/src/algebra/mkfunc.spad.pamphlet
+   M  /openaxiom/1.2/src/interp/i-output.boot
+   M  /openaxiom/trunk/src/ChangeLog
+   M  /openaxiom/trunk/src/algebra/mkfunc.spad.pamphlet
+   M  /openaxiom/trunk/src/interp/i-output.boot
+
+	* algebra/mkfunc.spad.pamphlet (coerce$InputForm): Display
+	InputForm as a one-dimensional stream of characters suitable
+	for input to the interpreter.
+	* interp/i-output.boot: Implement conversion of InputForm to
+	displayed OutputForm.
+
+=============================================================
+svn diff -r880:881 
+https://open-axiom.svn.sourceforge.net/svnroot/open-axiom/trunk > r881.patch
+==== r881.patch =============================================
+Index: src/ChangeLog
+===================================================================
+--- src/ChangeLog	(revision 880)
++++ src/ChangeLog	(revision 881)
+@@ -1,5 +1,13 @@
+  2008-10-14  Gabriel Dos Reis  <gdr@cs.tamu.edu>
+
++	* algebra/mkfunc.spad.pamphlet (coerce$InputForm): Display
++	InputForm as a one-dimensional stream of characters suitable
++	for input to the interpreter.
++	* interp/i-output.boot: Implement conversion of InputForm to
++	displayed OutputForm.
++
++2008-10-14  Gabriel Dos Reis  <gdr@cs.tamu.edu>
++
+  	* interp/i-spec2.boot (upQUOTE): Quoted forms belong to InputForm.
+  	* interp/sys-constants.boot ($InputForm): New.
+
+Index: src/algebra/mkfunc.spad.pamphlet
+===================================================================
+--- src/algebra/mkfunc.spad.pamphlet	(revision 880)
++++ src/algebra/mkfunc.spad.pamphlet	(revision 881)
+@@ -1,21 +1,24 @@
+  \documentclass{article}
+  \usepackage{axiom}
++
++\title{src/algebra mkfunc.spad}
++\author{Manuel Bronstein}
++
+  \begin{document}
+-\title{\$SPAD/src/algebra mkfunc.spad}
+-\author{Manuel Bronstein}
+  \maketitle
+  \begin{abstract}
+  \end{abstract}
+-\eject
+  \tableofcontents
+  \eject
++
+  \section{domain INFORM InputForm}
++
+  <<domain INFORM InputForm>>=
+  )abbrev domain INFORM InputForm
+  ++ Parser forms
+  ++ Author: Manuel Bronstein
+  ++ Date Created: ???
+-++ Date Last Updated: September 18, 2008
++++ Date Last Updated: October 14, 2008
+  ++ Description:
+  ++   Domain of parsed forms which can be passed to the interpreter.
+  ++   This is also the interface between algebra code and facilities
+@@ -191,6 +194,11 @@
+        s2 = 1 => s1
+        conv [convert("/"::Symbol), s1, s2]$List(%)
+
++    -- A displayed form of an InputForm should be suitable as
++    -- input to the interpreter parser.
++    coerce(x: %): OutputForm ==
++      inputForm2OutputForm(x)$Lisp
++
+  @
+  \section{package INFORM1 InputFormFunctions1}
+  <<package INFORM1 InputFormFunctions1>>=
+Index: src/interp/i-output.boot
+===================================================================
+--- src/interp/i-output.boot	(revision 880)
++++ src/interp/i-output.boot	(revision 881)
+@@ -2581,3 +2581,99 @@
+      form
+    if ^$collectOutput then PRETTYPRINT(u,$algebraOutputStream)
+    nil
++
++
++--% Rendering of InputForm
++
++$allClassicOps ==
++  ["~","#","-","**","^","*","/","rem","quo","+","-",
++    "@","::","$", "pretend"]
++
++isUnaryPrefix op ==
++  op in '(_~ _# _-)
++
++primaryForm2String x ==
++  x = nil => '""
++  STRINGP x => x
++  x = $EmptyMode => specialChar 'quad
++  IDENTP x => SYMBOL_-NAME x
++  atom x => WRITE_-TO_-STRING x
++  strconc('"(",inputForm2String x, '")")
++
++callForm2String x ==
++  atom x => primaryForm2String x
++  [op,:args] := x
++
++  op in $allClassicOps => primaryForm2String x
++
++  #args = 0 =>
++    op = "Zero" => '"0"
++    op = "One" => '"1"
++    constructor? op => primaryForm2String op
++    strconc(inputForm2String op, '"()")
++
++  "strconc"/[inputForm2String op, '"(",:args','")"] where
++    args' := [toString(a,i) for a in args for i in 0..]
++    toString(a,i) ==
++      i = 0 => inputForm2String a
++      strconc('",",inputForm2String a)
++
++typedForm2String(s,x,t) ==
++  s = "pretend" =>
++    strconc(primaryForm2String x, '" pretend ", callForm2String t)
++  strconc(primaryForm2String x, SYMBOL_-NAME s, callForm2String t)
++
++expForm2String x ==
++  x is [op,lhs,rhs] and op in '(** _^) =>
++    strconc(expForm2String lhs,'"^", primaryForm2String rhs)
++  callForm2String x
++
++unaryForm2String x ==
++  x is [op,arg] and isUnaryPrefix op =>
++    strconc(inputForm2String op, inputForm2String arg)
++  expForm2String x
++
++multForm2String x ==
++  x isnt ["*",lhs,rhs] => unaryForm2String x
++  strconc(multForm2String lhs,'"*", multForm2String rhs)
++
++divForm2String x ==
++  x isnt ["/",lhs,rhs] => multForm2String x
++  strconc(divForm2String lhs,'"/", expForm2String rhs)
++
++remForm2String x ==
++  x isnt ["rem",lhs,rhs] => divForm2String x
++  strconc(divForm2String lhs,'" rem ", multForm2String rhs)
++
++quoForm2String x ==
++  x isnt ["quo",lhs,rhs] => remForm2String x
++  strconc(quoForm2String lhs,'" quo ", remForm2String rhs)
++
++plusForm2String x ==
++  x isnt ["+",lhs,rhs] => quoForm2String x
++  strconc(plusForm2String lhs,'" + ", plusForm2String rhs)
++
++minusForm2String x ==
++  x isnt ["-",lhs,rhs] => plusForm2String x
++  strconc(minusForm2String lhs,'" - ", minusForm2String rhs)
++
++inputForm2String x ==
++  atom x => primaryForm2String x
++  [op,:args] := x
++  isUnaryPrefix op and #args = 1 => unaryForm2String x
++  #args = 2 =>
++    op in '(** _^) => expForm2String x
++    op = "*" => multForm2String x
++    op = "/" => divForm2String x
++    op = "rem" => remForm2String x
++    op = "quo" => quoForm2String x
++    op = "+" => plusForm2String x
++    op = "-" => minusForm2String x
++    op in '(_@ _:_: $ pretend) =>
++      typedForm2String(op, first args, second args)
++    callForm2String x
++  callForm2String x
++
++inputForm2OutputForm x ==
++  INTERN inputForm2String x
++
+
+
+
+
+From MAILER-DAEMON Wed Jun 03 15:24:25 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MBw4W-0002yV-Qt
+	for mharc-axiom-mail@gnu.org; Wed, 03 Jun 2009 15:24:24 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MBw4U-0002y9-Fb
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 15:24:22 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MBw4Q-0002xS-KU
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 15:24:22 -0400
+Received: from [199.232.76.173] (port=52308 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MBw4Q-0002xP-Eh
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 15:24:18 -0400
+Received: from smtp.cs.tamu.edu ([128.194.138.107]:52293)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <gdr@cs.tamu.edu>) id 1MBw4Q-0000rD-0m
+	for axiom-mail@nongnu.org; Wed, 03 Jun 2009 15:24:18 -0400
+Received: from gauss.cs.tamu.edu (gauss.cs.tamu.edu [128.194.136.74])
+	by smtp.cs.tamu.edu (Postfix) with ESMTP id BD9A1190D10;
+	Wed,  3 Jun 2009 14:24:15 -0500 (CDT)
+Received: by gauss.cs.tamu.edu (Postfix, from userid 1000)
+	id 2738590748; Wed,  3 Jun 2009 14:24:20 -0500 (CDT)
+Sender: gdr@cs.tamu.edu
+To: Ralf Hemmecke <ralf@hemmecke.de>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+In-Reply-To: <4A26C4AA.4030506@hemmecke.de> (Ralf Hemmecke's message of "Wed\,
+	03 Jun 2009 20\:44\:58 +0200")
+Organization: Texas A&M University / Department of Computer Science &
+	Enigneering
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+	<87oct5s8t5.fsf@gauss.cs.tamu.edu> <4A26891E.1070902@hemmecke.de>
+	<877hztrxuj.fsf@gauss.cs.tamu.edu> <4A26C4AA.4030506@hemmecke.de>
+Date: Wed, 03 Jun 2009 14:24:20 -0500
+Message-ID: <874ouxgly3.fsf@gauss.cs.tamu.edu>
+Lines: 10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: open-axiom-help@lists.sf.net, fricas-devel@googlegroups.com,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 03 Jun 2009 19:24:23 -0000
+
+Ralf Hemmecke <ralf@hemmecke.de> writes:
+
+| Dear Gaby
+| 
+| Looks like r881 is the one you meant. Can you confirm?
+
+It may very well be this one.  I think I had one more twist to make, but
+I can't remember right now.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu Jun 04 19:53:15 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MCMkE-00087e-NY
+	for mharc-axiom-mail@gnu.org; Thu, 04 Jun 2009 19:53:14 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MCMkC-00085o-BW
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 19:53:12 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MCMRK-0008AB-BU
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 19:33:46 -0400
+Received: from [199.232.76.173] (port=48103 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MCMRB-0007Yh-0O; Thu, 04 Jun 2009 19:33:33 -0400
+Received: from smtp.cs.tamu.edu ([128.194.138.107]:65288)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <gdr@cs.tamu.edu>)
+	id 1MCJmI-0008HE-BG; Thu, 04 Jun 2009 16:43:10 -0400
+Received: from gauss.cs.tamu.edu (gauss.cs.tamu.edu [128.194.136.74])
+	by smtp.cs.tamu.edu (Postfix) with ESMTP id D0D88190B25;
+	Thu,  4 Jun 2009 15:43:07 -0500 (CDT)
+Received: by gauss.cs.tamu.edu (Postfix, from userid 1000)
+	id 6362990745; Thu,  4 Jun 2009 15:43:12 -0500 (CDT)
+Sender: gdr@cs.tamu.edu
+To: Tim Daly <daly@axiom-developer.org>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+In-Reply-To: <4A281CE1.7050106@axiom-developer.org> (Tim Daly's message of
+	"Thu\, 04 Jun 2009 15\:13\:37 -0400")
+Organization: Texas A&M University / Department of Computer Science &
+	Enigneering
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+	<87oct5s8t5.fsf@gauss.cs.tamu.edu> <4A26891E.1070902@hemmecke.de>
+	<877hztrxuj.fsf@gauss.cs.tamu.edu> <4A26C4AA.4030506@hemmecke.de>
+	<4A280C93.9000106@axiom-developer.org>
+	<877hzrhmbe.fsf@gauss.cs.tamu.edu>
+	<4A281CE1.7050106@axiom-developer.org>
+Date: Thu, 04 Jun 2009 15:43:12 -0500
+Message-ID: <87oct3g273.fsf@gauss.cs.tamu.edu>
+Lines: 86
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: martin.rubey@math.uni-hannover.de, open-axiom-help@lists.sf.net,
+	open-axiom-devel@lists.sf.net, axiom-developer@nongnu.org,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 04 Jun 2009 23:53:13 -0000
+
+Tim Daly <daly@axiom-developer.org> writes:
+
+| Gabriel Dos Reis wrote:
+| > Tim Daly <daly@axiom-developer.org> writes:
+| >
+| > | I've been reading this thread. It seems to me that what people are seeking
+| > | is a symbolic algebra rather than a computer algebra system. The distinction
+| > | is that a symbolic system manipulates input as parse trees in
+| > | syntactic form.
+| > | A computer algebra system manipulates input as semantic forms. It appears
+| > | that you want to recover the syntax from the semantics, a very hard problem.
+| >
+| > OpenAxiom has the Syntax domain for matters that are purely syntactic,
+| >
+| > OpenAxiom's intended  of InputForm is that of expressions the semantics
+| > of which yield computer representation of mathematical object.  In
+| > particular, you can think of Syntax objects are pre-InputForm objects --
+| > syntactic objects that have not yet been type checked.  So a Syntax object
+| > is really a member of an initial algebra -- unlike InputForm or
+| > SExpression objects. 
+| >
+| > | This discussion came up before. At the time I wrote the beginnings of a
+| > | symbolic front end to Axiom based on Joel Cohen's work. Joel has given
+| > | me permission to use his books as part of the effort.
+| >
+| > I'm familiar with his work (and his two books).  I would think that
+| > there already exist a domain constructor, Expression, that is most
+| > suited for the work presented in the two volumes.  The fundamental
+| > building block is the Kernel domain constructor.  I know some people
+| > have expressed profound dislikes of the Expression domain constructor.
+| > But, I suspect that they would have a deeper appreciation of it after
+| > reading Cohen's work.
+| >
+| > The need for InputForm is not just for 'symbolic mathematics'.  A proper
+| > support for the compilation model of the Spad language requires that any
+| > constructor argument be coercible to InputForm.  A fact that is not --
+| > at the moment -- enforced, but that is deeply relied upon.  See what the
+| > devaluate functions do and the unspolem assumptions behind.
+| >
+| > It is on my TODO list that OpenAxiom-1.3.x and up will enforce those
+| > assumptions. 
+| >
+| > -- Gaby
+| >
+| >   
+| So you propose that there are two reasons for this discussion of InputForm,
+| one of which is to support a computational model of the spad language
+| and the other is to support symbolic manipulation?
+
+No -- I did not mean to give an exhaustive list of reasons to have
+InputForm or not.   However, I do recognize instances of situations
+where the notion of InputForm os relevant and that is what I was trying
+to say.  Futhermore, I do not think the world has to be divided in terms
+of algebraic computation versus symbolic computation.  Rather, my belief
+is that symbolic mathematics (cross of algebraic computation and
+symbolic computation) are going to be more and more prevalent.
+
+| It is unclear what to expect from InputForm.
+
+I think an operational definition of InputForm may be that of syntactic
+normal forms of mathematical objects.  This is required for handling
+categories and domains properly (or any form of dependent types).
+
+| Under the assumption of a computational model it seems that x+y^2 == y^2+x
+
+Note that the linear display of the InputForm x + y^2 as y^2 + x
+reflects the semantics of the polynomial object denoted by that form.
+As such, I do not think this is a mater of algebraic versus symbolic
+computation. 
+
+| Under the assumption of a cohen symbolic model they are not equivalent.
+| (assuming that plus is associative in both cases)
+
+Cohen assumes that + is associative -- because he primarily works with
+polynomials over commutative rings.
+
+| Given that there was a comment that the input form was not properly
+| reproduced
+| I assumed the discussion involved symbolic issues. Perhaps I misread it.
+| 
+| I do not see how InputForm can be made to support both models.
+
+Indeed.  I would reserve the use of InputForm for syntatic canonical
+forms of mathematical objects.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu Jun 04 19:54:22 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MCMlI-0000TW-Fl
+	for mharc-axiom-mail@gnu.org; Thu, 04 Jun 2009 19:54:21 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MCMlG-0000SP-DQ
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 19:54:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MCMlC-0000Q1-R7
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 19:54:18 -0400
+Received: from [199.232.76.173] (port=48109 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MCMRb-0007fT-AJ; Thu, 04 Jun 2009 19:33:59 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:43943
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>)
+	id 1MCIP6-00074Q-Mt; Thu, 04 Jun 2009 15:15:08 -0400
+Received: from [75.193.161.195] (195.sub-75-193-161.myvzw.com [75.193.161.195])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id n54JEk3W025476;
+	Thu, 4 Jun 2009 14:14:46 -0500
+Message-ID: <4A281CE1.7050106@axiom-developer.org>
+Date: Thu, 04 Jun 2009 15:13:37 -0400
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Gabriel Dos Reis <gdr@cs.tamu.edu>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+References: <4A266B87.6040209@hemmecke.de>	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>	<87oct5s8t5.fsf@gauss.cs.tamu.edu>
+	<4A26891E.1070902@hemmecke.de>	<877hztrxuj.fsf@gauss.cs.tamu.edu>
+	<4A26C4AA.4030506@hemmecke.de>	<4A280C93.9000106@axiom-developer.org>
+	<877hzrhmbe.fsf@gauss.cs.tamu.edu>
+In-Reply-To: <877hzrhmbe.fsf@gauss.cs.tamu.edu>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: martin.rubey@math.uni-hannover.de, open-axiom-help@lists.sf.net,
+	open-axiom-devel@lists.sf.net, axiom-developer@nongnu.org,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 04 Jun 2009 23:54:18 -0000
+
+Gabriel Dos Reis wrote:
+> Tim Daly <daly@axiom-developer.org> writes:
+>
+> | I've been reading this thread. It seems to me that what people are seeking
+> | is a symbolic algebra rather than a computer algebra system. The distinction
+> | is that a symbolic system manipulates input as parse trees in
+> | syntactic form.
+> | A computer algebra system manipulates input as semantic forms. It appears
+> | that you want to recover the syntax from the semantics, a very hard problem.
+>
+> OpenAxiom has the Syntax domain for matters that are purely syntactic,
+>
+> OpenAxiom's intended  of InputForm is that of expressions the semantics
+> of which yield computer representation of mathematical object.  In
+> particular, you can think of Syntax objects are pre-InputForm objects --
+> syntactic objects that have not yet been type checked.  So a Syntax object
+> is really a member of an initial algebra -- unlike InputForm or
+> SExpression objects. 
+>
+> | This discussion came up before. At the time I wrote the beginnings of a
+> | symbolic front end to Axiom based on Joel Cohen's work. Joel has given
+> | me permission to use his books as part of the effort.
+>
+> I'm familiar with his work (and his two books).  I would think that
+> there already exist a domain constructor, Expression, that is most
+> suited for the work presented in the two volumes.  The fundamental
+> building block is the Kernel domain constructor.  I know some people
+> have expressed profound dislikes of the Expression domain constructor.
+> But, I suspect that they would have a deeper appreciation of it after
+> reading Cohen's work.
+>
+> The need for InputForm is not just for 'symbolic mathematics'.  A proper
+> support for the compilation model of the Spad language requires that any
+> constructor argument be coercible to InputForm.  A fact that is not --
+> at the moment -- enforced, but that is deeply relied upon.  See what the
+> devaluate functions do and the unspolem assumptions behind.
+>
+> It is on my TODO list that OpenAxiom-1.3.x and up will enforce those
+> assumptions. 
+>
+> -- Gaby
+>
+>   
+So you propose that there are two reasons for this discussion of InputForm,
+one of which is to support a computational model of the spad language
+and the other is to support symbolic manipulation?
+
+It is unclear what to expect from InputForm.
+Under the assumption of a computational model it seems that x+y^2 == y^2+x
+Under the assumption of a cohen symbolic model they are not equivalent.
+(assuming that plus is associative in both cases)
+
+Given that there was a comment that the input form was not properly 
+reproduced
+I assumed the discussion involved symbolic issues. Perhaps I misread it.
+
+I do not see how InputForm can be made to support both models.
+
+Tim
+
+
+
+
+From MAILER-DAEMON Thu Jun 04 20:26:22 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MCNGI-0001M0-0c
+	for mharc-axiom-mail@gnu.org; Thu, 04 Jun 2009 20:26:22 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MCNGE-0001Ju-65
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 20:26:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MCNG9-0001Gu-RC
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 20:26:17 -0400
+Received: from [199.232.76.173] (port=48103 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MCMRt-0007Yh-HS; Thu, 04 Jun 2009 19:34:18 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:44549
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>)
+	id 1MCHJh-0002pH-RK; Thu, 04 Jun 2009 14:05:32 -0400
+Received: from [75.193.161.195] (195.sub-75-193-161.myvzw.com [75.193.161.195])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id n54I5B3W022266;
+	Thu, 4 Jun 2009 13:05:12 -0500
+Message-ID: <4A280C93.9000106@axiom-developer.org>
+Date: Thu, 04 Jun 2009 14:04:03 -0400
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Ralf Hemmecke <ralf@hemmecke.de>, gdr@cs.tamu.edu,
+	martin.rubey@math.uni-hannover.de, bill.page@newsynthesis.org,
+	axiom-mail@nongnu.org, daly <daly@axiom-developer.org>,
+	axiom-developer@nongnu.org
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+References: <4A266B87.6040209@hemmecke.de>	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>	<87oct5s8t5.fsf@gauss.cs.tamu.edu>	<4A26891E.1070902@hemmecke.de>
+	<877hztrxuj.fsf@gauss.cs.tamu.edu> <4A26C4AA.4030506@hemmecke.de>
+In-Reply-To: <4A26C4AA.4030506@hemmecke.de>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Jun 2009 00:26:19 -0000
+
+I've been reading this thread. It seems to me that what people are seeking
+is a symbolic algebra rather than a computer algebra system. The distinction
+is that a symbolic system manipulates input as parse trees in syntactic 
+form.
+A computer algebra system manipulates input as semantic forms. It appears
+that you want to recover the syntax from the semantics, a very hard problem.
+
+This discussion came up before. At the time I wrote the beginnings of a
+symbolic front end to Axiom based on Joel Cohen's work. Joel has given
+me permission to use his books as part of the effort.
+
+Joel describes a symbolic, expression tree based system for doing
+computational mathematics. I call this a "Cohen Algebra". Using these
+expression trees allows us to carefully craft and manipulate the expressions
+in ways that Axiom would not normally permit because they are not
+semantically valid. As long as the forms are never coerced to Axiom
+domains until they are semantically valid, it is possible to do many
+"badly formed" intermediate manipulations, some of which are very
+useful for teaching purposes.
+
+We can get the Cohen algebra into Axiom using categories, domains, and
+packages that support expression tree I/O and coercions to and from
+Axiom domains, e.g.
+   cohenPolynomial(cohenInteger) <-> Polynomial(Integer)
+
+This enables us to address several issues that have been outstanding
+in the field for a while, including those mentioned at the last conference:
+
+  *) It would be possible to do "step-by-step" output (Watt?)
+          That is, you could show the steps of solving 3*x=6
+           by showing the step of dividing both sides by 3
+              3       6
+              -  x =  -
+              3       3
+         and preserve the 3 on both sides
+
+   *) It would be possible to do "step-by-step* explanations (Watt?)
+          Algorithms in the Cohen domains could easily have
+          explanations attached to the operations so that it could
+          automatically print:
+               "divide each side by 3"
+
+     *) It would be possible to modify the output if the result
+          turned into "wallpaper" (as mentioned by Davenport).
+          So you could simply print the condensed output of a
+          groebner basis computation.
+
+      *) It would be much easier to input and output forms for
+          other systems (e.g. supporting OpenMath output)
+          (Davenport)
+
+I plan to do more work on Cohen domains because all of the
+above features would be useful. My simple test example domains
+are attached.
+
+In my opinion, the idea of using InputForm beyond its intended
+interpreter connections is not a viable effort. It would be much
+easier and more profitable to construct something like the Cohen
+domains to support the goal.
+
+Tim
+
+============================================
+
+)abbrev category CCAT CohenCategory
+
++++ Author: Timothy Daly
++++ Date Created: 7 April 2007
++++ Description: Joel Cohen's Computer Algebra and Symbolic Computation
+CohenCategory(): Category == SetCategory with
+
+  kind:(CExpr)->Boolean
+    ++ kind(CExpr)
+  operand:(CExpr,Integer)->CExpr
+    ++ operand:(CExpr,Integer)
+  numberOfOperand:(CExpr)->Integer
+    ++ numberOfOperand:(CExpr)->Integer
+  construct:(CExpr,CExpr)->CExpr
+    ++ construct:(CExpr,CExpr)->CExpr
+
+-------------------------------------------------------------------
+)abbrev domain CTERM CohenTerm
+
++++ Author: Timothy Daly
++++ Date Created: 7 April 2007
++++ Description: Joel Cohen's Computer Algebra and Symbolic Computation
+CohenTerm(): Exports == Implementation where
+  OUT     ==> OutputForm
+  ATTRIBS ==> Record(attrib: String, value: String)
+  UNION   ==> Union(Symbol,String,Integer)
+  TAGS    ==> Record(name:UNION, tags:List ATTRIBS)
+
+  Exports ==> CohenCategory with
+    term: () -> %
+    term: Symbol -> %
+    term: String -> %
+    term: Integer -> %
+    name: % -> String
+    tags: % -> List ATTRIBS
+    coerce: Symbol -> %
+    coerce: String -> %
+    coerce: Integer -> %
+    coerce: % -> OUT
+    _=: (%,%) -> Boolean
+
+  Implementation ==> add
+
+    Rep := TAGS
+
+    tagPair(atype:String,thetype:String):ATTRIBS ==
+      attr:ATTRIBS:=[atype,thetype]
+
+    name(t0:%):String ==
+      t1:=t0.name
+      t1 case Symbol  => string t1
+      t1 case String  => t1
+      t1 case Integer => string t1
+      "failed"
+
+    tags(t0:%):List ATTRIBS == t0.tags
+
+    term():% ==
+      attr:List ATTRIBS:= list tagPair("type","String")
+      aname:=""::UNION
+      result:TAGS:=[aname,attr]
+      result
+
+    term(s:Symbol):%  == [s,[tagPair("type","Symbol")]]
+    coerce(s:Symbol):%  == [s,[tagPair("type","Symbol")]]
+
+    term(s:String):%  == [s,[tagPair("type","String")]]
+    coerce(s:String):%  == [s,[tagPair("type","String")]]
+
+    term(s:Integer):% == [s,[tagPair("type","Integer")]]
+    coerce(s:Integer):% == [s,[tagPair("type","Integer")]]
+
+    coerce(arg:%):OUT ==
+      t0:=arg.name
+      t1:=arg.tags
+      t2:=
+        t0 case Symbol  => outputForm t0
+        t0 case String  => outputForm t0
+        t0 case Integer => outputForm t0
+        "failed"
+      --bracket [ t2, t1.1 ]
+      t2
+ 
+    a = b ==
+      a.name = b.name
+
+
+-------------------------------------------------------------------
+)abbrev domain CTREE CohenTree
+
++++ Author: Timothy Daly
++++ Date Created: 7 April 2007
++++ Description: Joel Cohen's Computer Algebra and Symbolic Computation
+CohenTree(S: CohenCategory): Exports == Implementation where
+  Exports == BinaryTreeCategory(S) with
+   cohenTree: S -> %
+    ++ cohenTree(v) is an non-empty cohen tree
+    ++ with value v, and left and right empty.
+    ++
+    ++X t1:=cohenTree([1,2,3])
+   
+   cohenTree: (%,S,%) -> %   
+    ++ cohenTree(l,v,r) creates a cohen tree with
+    ++ value v with left subtree l and right subtree r.
+    ++
+    ++X t1:=cohenTree([1,2,3])
+    ++X t2:=cohenTree([4,5,6])
+    ++X cohenTree(t1,[7,8,9],t2)
+
+   cohenTree: (%,S) -> %
+    ++ cohenTree(v,r) creates a cohen tree with
+    ++ value v with right subtree r.
+
+   cohenTree: (S,%) -> %
+    ++ cohenTree(l,v) creates a cohen tree with
+    ++ value v with left subtree l
+
+   empty: () -> %
+    ++ empty()
+   empty?: % -> Boolean
+    ++ empty?(a)
+   leaf?: % -> Boolean
+    ++ leaf?(a)
+   left: % -> %
+    ++ left(a)
+   node: (%,S,%) -> %
+    ++ node(a,b,c)
+   right: % -> %
+    ++ right(a)
+   setleft_!: (%,%) -> %
+    ++ setleft!(a,b)
+   setright_!: (%,%) -> %
+    ++ setright!(a,b)
+   setvalue_!: (%,S) -> S
+    ++ setvalue!(a,b)
+   value: % -> S
+    ++ value(a)
+   
+  Implementation == add
+   Rep := List Tree S
+
+   cohenTree(v:S) == node(empty(),v,empty())
+   cohenTree(l:%,v:S,r:%):% == node(l,v,r)
+   cohenTree(l:%,v:S):% == node(l,v,empty())
+   cohenTree(v:S,r:%):% == node(empty(),v,r)
+   empty()== [] pretend %
+   empty? t == empty?(t)$Rep
+   leaf? t  == empty? t or empty? left t and empty? right t
+   left t ==
+     empty? t => error "cohenTree:no left"
+     children first t
+   node(l,v,r) == cons(tree(v,l:Rep),r:Rep)
+   right t ==
+     empty? t => error "cohenTree:no right"
+     rest t
+   setleft_!(t1,t2) ==
+     empty? t1 => error "cohenTree:no left to set"
+     setchildren_!(first(t1:Rep),t2:Rep)
+     t1
+   setright_!(t1,t2) ==
+     empty? t1 => error "cohenTree:no right to set"
+     setrest_!(t1:List Tree S,t2)
+   setvalue_!(t,nd) ==
+     empty? t => error "cohenTree:no value to set"
+     setvalue_!(first(t:Rep),nd)
+     nd
+   value t ==
+     empty? t => error "cohenTree:no value"
+     value first t
+   t1 = t2 == (t1::Rep) =$Rep (t2::Rep)
+
+
+-------------------------------------------------------------------
+--  a:=a::CTERM
+--  b:=b::CTERM
+--  c:=a+b
+--  left(c)
+--  right(c)
+--  d:=3::CTERM
+--  e:=d*c
+--  left(e)
+--  right(e)
+-- 
+--  -- Figure 3.4 p88
+--  )clear all
+-- 
+--  c:=c::CTERM
+--  d:=d::CTERM
+--  x:=x::CTERM
+--  two:=2::CTERM
+--  e:=c+d*x^2
+-- 
+--  -- Figure 3.5a p89
+--  )clear all
+--  a:=a::CTERM
+--  b:=b::CTERM
+--  c:=c::CTERM
+--  d:=a*b+c
+--  e:=-d
+
+-------------------------------------------------------------------
+)abbrev package CMATH CohenMath
+
++++ Author: Timothy Daly
++++ Date Created: 7 April 2007
++++ Description: Joel Cohen's Computer Algebra and Symbolic Computation
+CohenMath: Exports == Implementation where
+  TERM ==> CohenTerm
+  TREE ==> CohenTree(TERM)
+ 
+  Exports ==> with
+   _-: (TERM) -> TREE
+    ++ -a
+   _-: (TREE) -> TREE
+    ++ -a
+
+--   "!": (TERM) -> TREE
+--    ++ a!
+--   "!": (TREE) -> TREE
+--    ++ a!
+
+   _-: (TERM,TERM) -> TREE
+    ++ a-b
+   _-: (TERM,TREE) -> TREE
+    ++ a-b
+   _-: (TREE,TERM) -> TREE
+    ++ a-b
+   _-: (TREE,TREE) -> TREE
+    ++ a-b
+
+   _+: (TERM,TERM) -> TREE
+    ++ a+b
+   _+: (TERM,TREE) -> TREE
+    ++ a+b
+   _+: (TREE,TERM) -> TREE
+    ++ a+b
+   _+: (TREE,TREE) -> TREE
+    ++ a+b
+
+   _*: (TERM,TERM) -> TREE
+    ++ a*b
+   _*: (TERM,TREE) -> TREE
+    ++ a*b
+   _*: (TREE,TERM) -> TREE
+    ++ a*b
+   _*: (TREE,TREE) -> TREE
+    ++ a*b
+
+   _^: (TERM,TERM) -> TREE
+    ++ a*b
+   _^: (TERM,TREE) -> TREE
+    ++ a*b
+   _^: (TREE,TERM) -> TREE
+    ++ a*b
+   _^: (TREE,TREE) -> TREE
+    ++ a*b
+
+  Implementation ==> add
+
+   --- handle unary prefix terms
+
+   prefixTerm(op:TERM,b:TERM):TREE  == cohenTree(op,cohenTree(b))
+   prefixTree(op:TERM,b:TREE):TREE  == cohenTree(op,b)
+
+   --- handle unary postfix terms
+
+   postfixTerm(a:TERM,op:TERM):TREE == cohenTree(cohenTree(a),op)
+   postfixTree(a:TREE,op:TERM):TREE == cohenTree(a,op)
+
+   --- handle binary terms
+
+   termOpTerm(a:TERM,op:TERM,b:TERM):TREE ==
+      cohenTree(cohenTree(a),op,cohenTree(b))
+
+   termOpTree(a:TERM,op:TERM,b:TREE):TREE ==
+      cohenTree(cohenTree(a),op,b)
+
+   treeOpTerm(a:TREE,op:TERM,b:TERM):TREE ==
+      cohenTree(a,op,cohenTree(b))
+
+   treeOpTree(a:TREE,op:TERM,b:TREE):TREE ==
+      cohenTree(a,op,b)
+
+   _-(b:TERM):TREE         == prefixTerm(term("-")$TERM,b)
+   _-(c:TREE):TREE         == prefixTree(term("-")$TERM,c)
+
+--   "!"(a:TERM):TREE         == postfixTerm(a,term("!")$TERM)
+--   "!"(a:TREE):TREE         == postfixTree(a,term("!")$TERM)
+
+   _-(a:TERM, b:TERM):TREE == termOpTerm(a,term("-")$TERM,b)
+   _-(a:TERM, b:TREE):TREE == termOpTree(a,term("-")$TERM,b)
+   _-(a:TREE, b:TERM):TREE == treeOpTerm(a,term("-")$TERM,b)
+   _-(a:TREE, b:TREE):TREE == treeOpTree(a,term("-")$TERM,b)
+
+   _+(a:TERM, b:TERM):TREE == termOpTerm(a,term("+")$TERM,b)
+   _+(a:TERM, b:TREE):TREE == termOpTree(a,term("+")$TERM,b)
+   _+(a:TREE, b:TERM):TREE == treeOpTerm(a,term("+")$TERM,b)
+   _+(a:TREE, b:TREE):TREE == treeOpTree(a,term("+")$TERM,b)
+
+   _*(a:TERM, b:TERM):TREE == termOpTerm(a,term("*")$TERM,b)
+   _*(a:TERM, b:TREE):TREE == termOpTree(a,term("*")$TERM,b)
+   _*(a:TREE, b:TERM):TREE == treeOpTerm(a,term("*")$TERM,b)
+   _*(a:TREE, b:TREE):TREE == treeOpTree(a,term("*")$TERM,b)
+
+   _^(a:TERM, b:TERM):TREE == termOpTerm(a,term("^")$TERM,b)
+   _^(a:TERM, b:TREE):TREE == termOpTree(a,term("^")$TERM,b)
+   _^(a:TREE, b:TERM):TREE == treeOpTerm(a,term("^")$TERM,b)
+   _^(a:TREE, b:TREE):TREE == treeOpTree(a,term("^")$TERM,b)
+
+
+-------------------------------------------------------------------
+)abbrev domain COHEN CohenAlgebra
+
++++ Author: Timothy Daly (based on Joel Cohen's books)
++++ Date Created: 7 April 2007
++++ Description:
++++ This type represents symbolic algebra as detailed in Joel Cohen's
++++ books "Computer Algebra and Symbolic Computation"
++++ A.K. Peters, Ltd. ISBN 1-56881-159-4
++++
++++ Elements of this domain are purely symbolic expressions represented
++++ in a tree structure.
+
+CohenAlgebra(X : CohenCategory) : CohenCategory with
+
+  _+: (X,X) -> %
+   ++ x + y is the formal sum of the input arguments
+
+  _/: (X,X) -> %
+   ++ x / y is the formal fraction of the input arguments
+
+  numer : % -> X
+   ++ numer(x) is the numerator of the formal fraction
+
+  denom : % -> X
+   ++ denom(x) is the denominator of the formal fraction
+
+  if X has IntegralDomain then
+ 
+    coerce : % -> Fraction(X)
+     ++ coerce(x) from here to Fraction(there)
+
+    coerce : Fraction(X) -> %
+     ++ coerce(x) from Fraction(there) to here
+
+  if X has Field then
+   
+    coerce : % -> X
+     ++ coerce from here to Field(there)
+
+ == add
+
+  import Record(num : X, den : X)
+ 
+  Rep := Record(num : X, den : X)  -- representation
+
+-- (a::CTERM + b::CTERM)$COHEN(CTERM)
+-- c:CTERM:=d
+-- e:CTERM:=f
+-- (c+e)$COHEN(CTERM)
+
+  (n:X + d:X):% == [n,d]
+ 
+-- (a::CTERM / b::CTERM)$COHEN(CTERM)
+-- c:CTERM:=d
+-- e:CTERM:=f
+-- (c/e)$COHEN(CTERM)
+
+  (n:X / d:X):% == [n,d]
+ 
+-- g:=(c/e)$COHEN(CTERM)
+-- h:=(c/e)$COHEN(CTERM)
+-- (g=h)
+-- (g=h)::Boolean
+-- i:=(a::CTERM / b::CTERM)$COHEN(CTERM)
+-- j:=(a::CTERM / b::CTERM)$COHEN(CTERM)
+-- (i=j)::Boolean
+-- (g=i)
+-- (g=i)::Boolean
+
+  _=(x:%, y:%):Boolean == (x.num = y.num) and (x.den = y.den)
+
+-- numer g
+-- numer i
+
+  numer(r:%):X == r.num
+
+--denom g
+--denom i
+
+  denom(r:%):X == r.den
+
+  coerce(r:%):OutputForm == (r.num :: OutputForm) / (r.den :: OutputForm)
+
+
+
+-- COMPLEX(INT) has FIELD
+-- COMPLEX(INT) has IntegralDomain
+-- p:COMPLEX(INT):=2
+-- p::FRAC(COMPLEX(INT))::COHEN(COMPLEX(INT))
+
+  if X has IntegralDomain then
+ 
+    coerce(r : %) : Fraction(X)
+      ==  (r.num / r.den) @ Fraction(X)
+
+    coerce(x : Fraction(X)) : % == x pretend % 
+
+-- FRAC(POLY(INT)) has FIELD
+-- m:=(x^2)@FRAC(POLY(INT))
+-- m::COHEN(POLY(INT))
+
+  if X has Field then
+    coerce(r : %) : X
+      == (r.num / r.den) @ X
+
+
+
+
+
+
+
+
+From MAILER-DAEMON Thu Jun 04 20:44:40 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MCNY0-00063M-Kb
+	for mharc-axiom-mail@gnu.org; Thu, 04 Jun 2009 20:44:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MCNXy-00062I-Vc
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 20:44:39 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MCNXv-0005zG-2k
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 20:44:38 -0400
+Received: from [199.232.76.173] (port=52860 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MCMRm-0006wb-1L; Thu, 04 Jun 2009 19:34:10 -0400
+Received: from smtp.cs.tamu.edu ([128.194.138.107]:63838)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <gdr@cs.tamu.edu>)
+	id 1MCHuJ-0007C9-2H; Thu, 04 Jun 2009 14:43:19 -0400
+Received: from gauss.cs.tamu.edu (gauss.cs.tamu.edu [128.194.136.74])
+	by smtp.cs.tamu.edu (Postfix) with ESMTP id DFF1A190B3E;
+	Thu,  4 Jun 2009 13:43:12 -0500 (CDT)
+Received: by gauss.cs.tamu.edu (Postfix, from userid 1000)
+	id 7689C90501; Thu,  4 Jun 2009 13:43:17 -0500 (CDT)
+Sender: gdr@cs.tamu.edu
+To: Tim Daly <daly@axiom-developer.org>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+In-Reply-To: <4A280C93.9000106@axiom-developer.org> (Tim Daly's message of
+	"Thu\, 04 Jun 2009 14\:04\:03 -0400")
+Organization: Texas A&M University / Department of Computer Science &
+	Enigneering
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+	<87oct5s8t5.fsf@gauss.cs.tamu.edu> <4A26891E.1070902@hemmecke.de>
+	<877hztrxuj.fsf@gauss.cs.tamu.edu> <4A26C4AA.4030506@hemmecke.de>
+	<4A280C93.9000106@axiom-developer.org>
+Date: Thu, 04 Jun 2009 13:43:17 -0500
+Message-ID: <877hzrhmbe.fsf@gauss.cs.tamu.edu>
+Lines: 40
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: martin.rubey@math.uni-hannover.de, open-axiom-help@lists.sf.net,
+	open-axiom-devel@lists.sf.net, axiom-developer@nongnu.org,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Jun 2009 00:44:39 -0000
+
+Tim Daly <daly@axiom-developer.org> writes:
+
+| I've been reading this thread. It seems to me that what people are seeking
+| is a symbolic algebra rather than a computer algebra system. The distinction
+| is that a symbolic system manipulates input as parse trees in
+| syntactic form.
+| A computer algebra system manipulates input as semantic forms. It appears
+| that you want to recover the syntax from the semantics, a very hard problem.
+
+OpenAxiom has the Syntax domain for matters that are purely syntactic,
+
+OpenAxiom's intended  of InputForm is that of expressions the semantics
+of which yield computer representation of mathematical object.  In
+particular, you can think of Syntax objects are pre-InputForm objects --
+syntactic objects that have not yet been type checked.  So a Syntax object
+is really a member of an initial algebra -- unlike InputForm or
+SExpression objects. 
+
+| This discussion came up before. At the time I wrote the beginnings of a
+| symbolic front end to Axiom based on Joel Cohen's work. Joel has given
+| me permission to use his books as part of the effort.
+
+I'm familiar with his work (and his two books).  I would think that
+there already exist a domain constructor, Expression, that is most
+suited for the work presented in the two volumes.  The fundamental
+building block is the Kernel domain constructor.  I know some people
+have expressed profound dislikes of the Expression domain constructor.
+But, I suspect that they would have a deeper appreciation of it after
+reading Cohen's work.
+
+The need for InputForm is not just for 'symbolic mathematics'.  A proper
+support for the compilation model of the Spad language requires that any
+constructor argument be coercible to InputForm.  A fact that is not --
+at the moment -- enforced, but that is deeply relied upon.  See what the
+devaluate functions do and the unspolem assumptions behind.
+
+It is on my TODO list that OpenAxiom-1.3.x and up will enforce those
+assumptions. 
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu Jun 04 21:18:14 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MCO4T-0003I7-Rc
+	for mharc-axiom-mail@gnu.org; Thu, 04 Jun 2009 21:18:13 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MCO4R-0003Gs-Dw
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 21:18:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MCO4M-0003EO-Lh
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 21:18:10 -0400
+Received: from [199.232.76.173] (port=51638 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MCO4H-0003CB-AT; Thu, 04 Jun 2009 21:18:01 -0400
+Received: from mail-gx0-f207.google.com ([209.85.217.207]:47108)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>)
+	id 1MCO4G-0004gZ-IN; Thu, 04 Jun 2009 21:18:01 -0400
+Received: by gxk3 with SMTP id 3so24078gxk.10
+	for <multiple recipients>; Thu, 04 Jun 2009 18:17:54 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.151.75.13 with SMTP id c13mr2306940ybl.176.1244164673572; Thu, 
+	04 Jun 2009 18:17:53 -0700 (PDT)
+In-Reply-To: <87oct3g273.fsf@gauss.cs.tamu.edu>
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+	<87oct5s8t5.fsf@gauss.cs.tamu.edu> <4A26891E.1070902@hemmecke.de>
+	<877hztrxuj.fsf@gauss.cs.tamu.edu> <4A26C4AA.4030506@hemmecke.de>
+	<4A280C93.9000106@axiom-developer.org>
+	<877hzrhmbe.fsf@gauss.cs.tamu.edu>
+	<4A281CE1.7050106@axiom-developer.org>
+	<87oct3g273.fsf@gauss.cs.tamu.edu>
+Date: Thu, 4 Jun 2009 21:17:53 -0400
+Message-ID: <fbcd16d40906041817j7f4e56bapb64f0c450387af5b@mail.gmail.com>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+From: Bill Page <bill.page@newsynthesis.org>
+To: Gabriel Dos Reis <gdr@cs.tamu.edu>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Cc: martin.rubey@math.uni-hannover.de, open-axiom-help@lists.sf.net,
+	open-axiom-devel@lists.sf.net, axiom-developer@nongnu.org,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Jun 2009 01:18:12 -0000
+
+On Thu, Jun 4, 2009 at 4:43 PM, Gabriel Dos Reis wrote:
+> ...
+> I would reserve the use of InputForm for syntatic canonical
+> forms of mathematical objects.
+>
+
+Currently InputForm values can arise both from parsing of input
+strings and from coercion of values from other domains. Only the
+latter are in some sense "cononical". But even these are only
+cononical to the degree that the domain from which they are derived
+has such properties.  So it is not clear to me how one can hope to
+reserve InputForm for only this use.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Jun 04 21:48:29 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MCOXl-0008VR-Ip
+	for mharc-axiom-mail@gnu.org; Thu, 04 Jun 2009 21:48:29 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MCOXk-0008V1-IJ
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 21:48:28 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MCOXf-0008SZ-KL
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 21:48:27 -0400
+Received: from [199.232.76.173] (port=51431 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MCOXb-0008QX-8Y; Thu, 04 Jun 2009 21:48:19 -0400
+Received: from smtp.cs.tamu.edu ([128.194.138.107]:34992)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <gdr@cs.tamu.edu>)
+	id 1MCOXa-0001yB-Sz; Thu, 04 Jun 2009 21:48:19 -0400
+Received: from gauss.cs.tamu.edu (gauss.cs.tamu.edu [128.194.136.74])
+	by smtp.cs.tamu.edu (Postfix) with ESMTP id ACB21190B21;
+	Thu,  4 Jun 2009 20:48:10 -0500 (CDT)
+Received: by gauss.cs.tamu.edu (Postfix, from userid 1000)
+	id 498BD90745; Thu,  4 Jun 2009 20:48:15 -0500 (CDT)
+Sender: gdr@cs.tamu.edu
+To: Bill Page <bill.page@newsynthesis.org>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+In-Reply-To: <fbcd16d40906041817j7f4e56bapb64f0c450387af5b@mail.gmail.com>
+	(Bill Page's message of "Thu\, 4 Jun 2009 21\:17\:53 -0400")
+Organization: Texas A&M University / Department of Computer Science &
+	Enigneering
+References: <4A266B87.6040209@hemmecke.de>
+	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>
+	<87oct5s8t5.fsf@gauss.cs.tamu.edu> <4A26891E.1070902@hemmecke.de>
+	<877hztrxuj.fsf@gauss.cs.tamu.edu> <4A26C4AA.4030506@hemmecke.de>
+	<4A280C93.9000106@axiom-developer.org>
+	<877hzrhmbe.fsf@gauss.cs.tamu.edu>
+	<4A281CE1.7050106@axiom-developer.org>
+	<87oct3g273.fsf@gauss.cs.tamu.edu>
+	<fbcd16d40906041817j7f4e56bapb64f0c450387af5b@mail.gmail.com>
+Date: Thu, 04 Jun 2009 20:48:15 -0500
+Message-ID: <87prdjxxgg.fsf@gauss.cs.tamu.edu>
+Lines: 31
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: martin.rubey@math.uni-hannover.de, open-axiom-help@lists.sf.net,
+	open-axiom-devel@lists.sf.net, axiom-developer@nongnu.org,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Jun 2009 01:48:28 -0000
+
+Bill Page <bill.page@newsynthesis.org> writes:
+
+| On Thu, Jun 4, 2009 at 4:43 PM, Gabriel Dos Reis wrote:
+| > ...
+| > I would reserve the use of InputForm for syntatic canonical
+| > forms of mathematical objects.
+| >
+| 
+| Currently InputForm values can arise both from parsing of input
+| strings and 
+
+That is the job of Syntax domain in OpenAxiom.
+
+| from coercion of values from other domains. Only the
+| latter are in some sense "cononical". But even these are only
+| cononical to the degree that the domain from which they are derived
+| has such properties.
+
+Obviously.  For OpenAxiom, a domain that can see its values used as
+constructor arguments should satisfy both SetCategory and 
+CoercibleTo InputForm.  If a domain cannot satisfy those too
+constraints, there is little point in trying to use its value as
+constructor arguments.
+
+| So it is not clear to me how one can hope to reserve InputForm for
+| only this use. 
+
+It is a design choice.  However, I fully appreciate there are many
+choices to make and people are likely to make different choices.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu Jun 04 22:34:20 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MCPG8-0007zb-Ni
+	for mharc-axiom-mail@gnu.org; Thu, 04 Jun 2009 22:34:20 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MCPG6-0007xz-B8
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 22:34:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MCPG5-0007xZ-Rl
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 22:34:17 -0400
+Received: from [199.232.76.173] (port=44115 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MCPG3-0007wc-SI; Thu, 04 Jun 2009 22:34:15 -0400
+Received: from yw-out-1718.google.com ([74.125.46.152]:44429)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>)
+	id 1MCPG3-0003Il-6n; Thu, 04 Jun 2009 22:34:15 -0400
+Received: by yw-out-1718.google.com with SMTP id 5so712901ywr.82
+	for <multiple recipients>; Thu, 04 Jun 2009 19:34:07 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.150.196.20 with SMTP id t20mr4933352ybf.2.1244169246974; Thu, 
+	04 Jun 2009 19:34:06 -0700 (PDT)
+In-Reply-To: <87prdjxxgg.fsf@gauss.cs.tamu.edu>
+References: <4A266B87.6040209@hemmecke.de> <4A26891E.1070902@hemmecke.de>
+	<877hztrxuj.fsf@gauss.cs.tamu.edu> <4A26C4AA.4030506@hemmecke.de>
+	<4A280C93.9000106@axiom-developer.org>
+	<877hzrhmbe.fsf@gauss.cs.tamu.edu>
+	<4A281CE1.7050106@axiom-developer.org>
+	<87oct3g273.fsf@gauss.cs.tamu.edu>
+	<fbcd16d40906041817j7f4e56bapb64f0c450387af5b@mail.gmail.com>
+	<87prdjxxgg.fsf@gauss.cs.tamu.edu>
+Date: Thu, 4 Jun 2009 22:34:06 -0400
+Message-ID: <fbcd16d40906041934w734af249wb631c9fb882b697@mail.gmail.com>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+From: Bill Page <bill.page@newsynthesis.org>
+To: Gabriel Dos Reis <gdr@cs.tamu.edu>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Cc: martin.rubey@math.uni-hannover.de, open-axiom-help@lists.sf.net,
+	open-axiom-devel@lists.sf.net, axiom-developer@nongnu.org,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Jun 2009 02:34:18 -0000
+
+> | On Thu, Jun 4, 2009 at 4:43 PM, Gabriel Dos Reis wrote:
+> | > ...
+> | > I would reserve the use of InputForm for syntatic canonical
+> | > forms of mathematical objects.
+> | >
+> | Bill Page wrote:
+> | Currently InputForm values can arise both from parsing of input
+> | strings and
+>
+
+On Thu, Jun 4, 2009 at 9:48 PM, Gabriel Dos Reis wrote:
+>
+> That is the job of Syntax domain in OpenAxiom.
+>
+
+Although it sounds logical and desirable, I suppose that direct
+conversion of values in the Syntax domain to "canonical" values in
+InputForm is a rather hard problem. No?
+
+I am tempted to argue in fact that the primary purpose of most of the
+rest of panAxiom is to do just this sort of conversion - through the
+algebraic "back door" so-to-speak ...
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Jun 04 22:47:16 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MCPSe-0007FT-Dp
+	for mharc-axiom-mail@gnu.org; Thu, 04 Jun 2009 22:47:16 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MCPSd-0007DO-CZ
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 22:47:15 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MCPSY-00073p-C9
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 22:47:14 -0400
+Received: from [199.232.76.173] (port=55845 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MCPSS-0006v8-Ug; Thu, 04 Jun 2009 22:47:05 -0400
+Received: from mailhost.cs.tamu.edu ([128.194.138.107]:35448
+	helo=smtp.cs.tamu.edu) by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <gdr@cs.tamu.edu>)
+	id 1MCPSS-0007D9-BQ; Thu, 04 Jun 2009 22:47:04 -0400
+Received: from gauss.cs.tamu.edu (gauss.cs.tamu.edu [128.194.136.74])
+	by smtp.cs.tamu.edu (Postfix) with ESMTP id D67E8190B4A;
+	Thu,  4 Jun 2009 21:46:57 -0500 (CDT)
+Received: by gauss.cs.tamu.edu (Postfix, from userid 1000)
+	id 83E8890745; Thu,  4 Jun 2009 21:47:02 -0500 (CDT)
+Sender: gdr@cs.tamu.edu
+To: Bill Page <bill.page@newsynthesis.org>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+In-Reply-To: <fbcd16d40906041934w734af249wb631c9fb882b697@mail.gmail.com>
+	(Bill Page's message of "Thu\, 4 Jun 2009 22\:34\:06 -0400")
+Organization: Texas A&M University / Department of Computer Science &
+	Enigneering
+References: <4A266B87.6040209@hemmecke.de> <4A26891E.1070902@hemmecke.de>
+	<877hztrxuj.fsf@gauss.cs.tamu.edu> <4A26C4AA.4030506@hemmecke.de>
+	<4A280C93.9000106@axiom-developer.org>
+	<877hzrhmbe.fsf@gauss.cs.tamu.edu>
+	<4A281CE1.7050106@axiom-developer.org>
+	<87oct3g273.fsf@gauss.cs.tamu.edu>
+	<fbcd16d40906041817j7f4e56bapb64f0c450387af5b@mail.gmail.com>
+	<87prdjxxgg.fsf@gauss.cs.tamu.edu>
+	<fbcd16d40906041934w734af249wb631c9fb882b697@mail.gmail.com>
+Date: Thu, 04 Jun 2009 21:47:02 -0500
+Message-ID: <87k53rxuqh.fsf@gauss.cs.tamu.edu>
+Lines: 41
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by monty-python.gnu.org: Solaris 10 (beta)
+Cc: martin.rubey@math.uni-hannover.de, open-axiom-help@lists.sf.net,
+	open-axiom-devel@lists.sf.net, axiom-developer@nongnu.org,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Jun 2009 02:47:16 -0000
+
+Bill Page <bill.page@newsynthesis.org> writes:
+
+| > | On Thu, Jun 4, 2009 at 4:43 PM, Gabriel Dos Reis wrote:
+| > | > ...
+| > | > I would reserve the use of InputForm for syntatic canonical
+| > | > forms of mathematical objects.
+| > | >
+| > | Bill Page wrote:
+| > | Currently InputForm values can arise both from parsing of input
+| > | strings and
+| >
+| 
+| On Thu, Jun 4, 2009 at 9:48 PM, Gabriel Dos Reis wrote:
+| >
+| > That is the job of Syntax domain in OpenAxiom.
+| >
+| 
+| Although it sounds logical and desirable, I suppose that direct
+| conversion of values in the Syntax domain to "canonical" values in
+| InputForm is a rather hard problem. No?
+
+The Syntax domain's primary purpose is as vehicle for terms.  Terms are
+semanticalled analyzed (e.g. type checked, resolved), and evaluated.
+The evaluation produces a computer representation of a mathematical
+object, specified by a domain.  That domain provides -a- canonical
+internal repsentation (e.g. dense vs. sparse, factored vs. fully expanded).
+To get from internal to external representation, OpenAxiom uses
+InputForm, which in displayed form is a linear notation for the
+canonical internal representation.  So, I do not know you understand by
+'direct conversion'.  A Syntax domain object does not necessarily makes
+sense (e.g. may NOT type check), whereas an InputForm is supposed to
+have a meaning.
+
+| I am tempted to argue in fact that the primary purpose of most of the
+| rest of panAxiom is to do just this sort of conversion - through the
+| algebraic "back door" so-to-speak ...
+
+I see OpenAxiom as aiming at computational mathematics as opposed to
+just being specialized for algebraic computations only.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Thu Jun 04 23:15:30 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MCPty-00081l-2t
+	for mharc-axiom-mail@gnu.org; Thu, 04 Jun 2009 23:15:30 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MCPtw-00080p-Ll
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 23:15:28 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MCPtv-0007zz-MR
+	for axiom-mail@nongnu.org; Thu, 04 Jun 2009 23:15:27 -0400
+Received: from [199.232.76.173] (port=58345 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MCPtu-0007zL-KW; Thu, 04 Jun 2009 23:15:26 -0400
+Received: from qw-out-1920.google.com ([74.125.92.150]:12940)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>)
+	id 1MCPtu-0006H4-M2; Thu, 04 Jun 2009 23:15:26 -0400
+Received: by qw-out-1920.google.com with SMTP id 4so723384qwk.4
+	for <multiple recipients>; Thu, 04 Jun 2009 20:15:22 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.229.96.132 with SMTP id h4mr779722qcn.65.1244171722416; Thu, 
+	04 Jun 2009 20:15:22 -0700 (PDT)
+In-Reply-To: <87k53rxuqh.fsf@gauss.cs.tamu.edu>
+References: <4A266B87.6040209@hemmecke.de> <4A26C4AA.4030506@hemmecke.de>
+	<4A280C93.9000106@axiom-developer.org>
+	<877hzrhmbe.fsf@gauss.cs.tamu.edu>
+	<4A281CE1.7050106@axiom-developer.org>
+	<87oct3g273.fsf@gauss.cs.tamu.edu>
+	<fbcd16d40906041817j7f4e56bapb64f0c450387af5b@mail.gmail.com>
+	<87prdjxxgg.fsf@gauss.cs.tamu.edu>
+	<fbcd16d40906041934w734af249wb631c9fb882b697@mail.gmail.com>
+	<87k53rxuqh.fsf@gauss.cs.tamu.edu>
+Date: Thu, 4 Jun 2009 23:15:22 -0400
+Message-ID: <fbcd16d40906042015m74396e28mbc0149d53390f68f@mail.gmail.com>
+Subject: Re: [fricas-devel] Re: [Axiom-mail] InputForm
+From: Bill Page <bill.page@newsynthesis.org>
+To: Gabriel Dos Reis <gdr@cs.tamu.edu>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Cc: martin.rubey@math.uni-hannover.de, open-axiom-help@lists.sf.net,
+	open-axiom-devel@lists.sf.net, axiom-developer@nongnu.org,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Jun 2009 03:15:29 -0000
+
+On Thu, Jun 4, 2009 at 10:47 PM, Gabriel Dos Reis  wrote:
+> ...
+> I see OpenAxiom as aiming at computational mathematics as opposed
+> to just being specialized for algebraic computations only.
+>
+
++1 I am in full agreement with your general goals and methods.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Fri Jun 05 09:06:34 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MCZ7y-0000bs-Nz
+	for mharc-axiom-mail@gnu.org; Fri, 05 Jun 2009 09:06:34 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MCZ7w-0000af-Bb
+	for axiom-mail@nongnu.org; Fri, 05 Jun 2009 09:06:32 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MCZ7q-0000Wi-Ra
+	for axiom-mail@nongnu.org; Fri, 05 Jun 2009 09:06:31 -0400
+Received: from [199.232.76.173] (port=58547 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MCZ7j-0000T4-MK; Fri, 05 Jun 2009 09:06:19 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:45073
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>)
+	id 1MCZ7j-0006F3-88; Fri, 05 Jun 2009 09:06:19 -0400
+Received: from [75.193.161.195] (195.sub-75-193-161.myvzw.com [75.193.161.195])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id n55D623W024245;
+	Fri, 5 Jun 2009 08:06:03 -0500
+Message-ID: <4A2917F4.2060906@axiom-developer.org>
+Date: Fri, 05 Jun 2009 09:04:52 -0400
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Ralf Hemmecke <ralf@hemmecke.de>, gdr@cs.tamu.edu,
+	martin.rubey@math.uni-hannover.de, bill.page@newsynthesis.org,
+	hebisch@math.uni.wroc.pl, axiom-mail@nongnu.org,
+	daly <daly@axiom-developer.org>, axiom-developer@nongnu.org
+References: <4A266B87.6040209@hemmecke.de>	<d9skihlcka.fsf@ada0.ifam.uni-hannover.de>	<87oct5s8t5.fsf@gauss.cs.tamu.edu>	<4A26891E.1070902@hemmecke.de>
+	<877hztrxuj.fsf@gauss.cs.tamu.edu> <4A26C4AA.4030506@hemmecke.de>
+	<4A280C93.9000106@axiom-developer.org>
+In-Reply-To: <4A280C93.9000106@axiom-developer.org>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: 
+Subject: [Axiom-mail] mapleok
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 05 Jun 2009 13:06:32 -0000
+
+Martin,
+
+The "lot of bogus expressions" in mapleok seem only to occur in the
+fricas version. They have long since been fixed in Axiom. If you know
+of more errors please let me know.
+
+There are two integral test suites, one based on Bondarenko's
+published Maple failures and the other based on Schaums outline.
+
+The Bondarenko test suite was a measure of how well Axiom
+handles known Maple failures. More "comparative test suites"
+are "in process" against Mathematica, Maple and Maxima.
+
+Tim Lahey is using the Schaums test suite.
+The Schaums test suite is part of the CATS (Computer
+Algebra Test Suite) which is intended to validate Axiom's results
+against known-good, published results. Note that Axiom found
+2 errors in the published Schaums results and one error caused by
+a bad patch to the integration routines. More "published results"
+test suites are "in process" for series.
+
+Tim
+
+
+
+
+From MAILER-DAEMON Tue Jun 16 04:20:26 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MGTu6-0002Pp-B0
+	for mharc-axiom-mail@gnu.org; Tue, 16 Jun 2009 04:20:26 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MGTu4-0002NH-Lp
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 04:20:24 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MGTtz-0002Cc-Tf
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 04:20:24 -0400
+Received: from [199.232.76.173] (port=47800 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MGTtz-0002CO-QF
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 04:20:19 -0400
+Received: from smtp43.singnet.com.sg ([165.21.103.151]:41421)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <arnold@terra-weather.com>) id 1MGTtz-0004i6-2B
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 04:20:19 -0400
+Received: from [192.168.1.67] (bb116-14-20-129.singnet.com.sg [116.14.20.129])
+	by smtp43.singnet.com.sg (8.14.3/8.14.1) with ESMTP id n5G8KB7R024239
+	for <axiom-mail@nongnu.org>; Tue, 16 Jun 2009 16:20:12 +0800
+From: Arnold Doray <arnold@terra-weather.com>
+To: axiom-mail@nongnu.org
+Content-Type: text/plain
+Organization: Terra Weather Pte. Ltd.
+Date: Tue, 16 Jun 2009 16:20:11 +0800
+Message-Id: <1245140411.2818.135.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.2.2 (2.2.2-5) 
+Content-Transfer-Encoding: 7bit
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.6.16.80734
+X-PMX-AS: AS-Check
+X-PMX-Score: Probability=8%
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Subject: [Axiom-mail] Coersion error
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: arnold@terra-weather.com
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Jun 2009 08:20:24 -0000
+
+I'm trying to create a set of orthogonal polynomials using the
+Gram-Schmidt process, but I hit a problem:
+
+dot(f,g) == integrate(f*g*x^2,x=-1..1)
+proj(f,g) == dot(f,g)*f/dot(f,f)
+
+p0 := 1
+p1 := x - proj(p0,x)
+p2 := x^2 - proj(p0,x^2) - proj(p1,x^2)
+
+p0 and p1 evaluate correctly, but p2 hits this error:
+
+; (DEFUN |*2;dot;5;frame1394| ...) is being compiled.
+;; The variable |*2;dot;5;frame1394;MV| is undefined.
+;; The compiler will assume this variable is a global.
+   Internal Error
+   The function coerce with signature OrderedCompletion Integer ->
+      Expression OrderedCompletion Integer is missing from domain
+      Expression(OrderedCompletion (Integer))
+
+I've also tried to define p(n) as a recursive function like so:
+
+p(0) == 1
+p(n | n > 0) == x^n - sum(proj(p(k),x^n),k=0..n-1)
+
+But get a stack overflow: (eg, evaluating p(1))
+
+   OpenAxiom will attempt to step through and interpret the code.
+   Cannot compile map: proj
+   We will attempt to interpret the code.
+   Cannot compile map: p
+   We will attempt to interpret the code.
+
+   >> System error:
+   Bind stack overflow.
+
+I would appreciate any pointers where I am going wrong. I'm an Axiom
+newbie. These calculations were done using open-axiom 1.2.1
+
+Thanks
+Arnold
+
+
+
+
+From MAILER-DAEMON Tue Jun 16 06:20:25 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MGVmC-0005Vk-Ou
+	for mharc-axiom-mail@gnu.org; Tue, 16 Jun 2009 06:20:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MGVmB-0005Uo-87
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 06:20:23 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MGVm6-0005SW-EJ
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 06:20:22 -0400
+Received: from [199.232.76.173] (port=42639 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MGVm1-0005PX-DQ; Tue, 16 Jun 2009 06:20:13 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:60711
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>)
+	id 1MGVm0-0002T6-Jr; Tue, 16 Jun 2009 06:20:12 -0400
+Received: from [192.168.1.101] (dynamic-acs-72-23-19-139.zoominternet.net
+	[72.23.19.139])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id n5GAK83W008814;
+	Tue, 16 Jun 2009 05:20:08 -0500
+Message-ID: <4A3771B5.4080503@axiom-developer.org>
+Date: Tue, 16 Jun 2009 06:19:33 -0400
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: arnold@terra-weather.com, axiom-mail@nongnu.org,
+	axiom-developer@nongnu.org,
+	"daly@axiom-developer.org >> daly" <daly@axiom-developer.org>
+Subject: Re: [Axiom-mail] Coersion error
+References: <1245140411.2818.135.camel@localhost.localdomain>
+In-Reply-To: <1245140411.2818.135.camel@localhost.localdomain>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: 
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Jun 2009 10:20:23 -0000
+
+Arnold Doray wrote:
+> I'm trying to create a set of orthogonal polynomials using the
+> Gram-Schmidt process, but I hit a problem:
+>
+> dot(f,g) == integrate(f*g*x^2,x=-1..1)
+> proj(f,g) == dot(f,g)*f/dot(f,f)
+>
+> p0 := 1
+> p1 := x - proj(p0,x)
+> p2 := x^2 - proj(p0,x^2) - proj(p1,x^2)
+>
+> p0 and p1 evaluate correctly, but p2 hits this error:
+>
+> ; (DEFUN |*2;dot;5;frame1394| ...) is being compiled.
+> ;; The variable |*2;dot;5;frame1394;MV| is undefined.
+> ;; The compiler will assume this variable is a global.
+>    Internal Error
+>    The function coerce with signature OrderedCompletion Integer ->
+>       Expression OrderedCompletion Integer is missing from domain
+>       Expression(OrderedCompletion (Integer))
+>
+> I've also tried to define p(n) as a recursive function like so:
+>
+> p(0) == 1
+> p(n | n > 0) == x^n - sum(proj(p(k),x^n),k=0..n-1)
+>
+> But get a stack overflow: (eg, evaluating p(1))
+>
+>    OpenAxiom will attempt to step through and interpret the code.
+>    Cannot compile map: proj
+>    We will attempt to interpret the code.
+>    Cannot compile map: p
+>    We will attempt to interpret the code.
+>
+>    >> System error:
+>    Bind stack overflow.
+>
+> I would appreciate any pointers where I am going wrong. I'm an Axiom
+> newbie. These calculations were done using open-axiom 1.2.1
+>
+> Thanks
+> Arnold
+>
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>   
+You are not doing anything wrong. The error message says that there is a 
+missing
+function (coerce) from one domain to another. I will look at the problem 
+and get
+back to you.
+
+Tim
+
+
+
+
+From MAILER-DAEMON Tue Jun 16 10:28:42 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MGZeU-0008PM-Rp
+	for mharc-axiom-mail@gnu.org; Tue, 16 Jun 2009 10:28:42 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MGZeT-0008PH-4U
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 10:28:41 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MGZeN-0008Oj-K5
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 10:28:39 -0400
+Received: from [199.232.76.173] (port=51089 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MGZeN-0008Og-HT
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 10:28:35 -0400
+Received: from smtp17.singnet.com.sg ([165.21.6.27]:55460)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <arnold@terra-weather.com>) id 1MGZeM-00088Q-RP
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 10:28:35 -0400
+Received: from [192.168.1.67] (bb116-14-20-129.singnet.com.sg [116.14.20.129])
+	by smtp17.singnet.com.sg (8.14.1/8.14.1) with ESMTP id n5GESVdp002054
+	for <axiom-mail@nongnu.org>; Tue, 16 Jun 2009 22:28:31 +0800
+From: Arnold Doray <arnold@terra-weather.com>
+To: axiom-mail@nongnu.org
+Content-Type: text/plain
+Organization: Terra Weather Pte. Ltd.
+Date: Tue, 16 Jun 2009 22:28:31 +0800
+Message-Id: <1245162511.6895.13.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.2.2 (2.2.2-5) 
+Content-Transfer-Encoding: 7bit
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.6.16.141937
+X-PMX-AS: AS-Check
+X-PMX-Score: Probability=8%
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+Subject: [Axiom-mail] Problem with real/imag/conjugate
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: arnold@terra-weather.com
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Jun 2009 14:28:41 -0000
+
+I get the wrong answer for real/imag for some forms of complex numbers.
+For example:
+
+a := (-1*%i)^(1/2) 
+
+b := (%i)^(3/2)
+
+are both equivalent, but imag/real gives complex (and incorrect) answers
+for "a" (ie, real(a) and imag(a) are both complex), but I get the right
+answers for "b". Also "conjugate" fails on both with an error message.
+
+Am I missing something here? 
+
+I am using Axiom compiled from the latest "Gold" source. 
+
+Thanks,
+Arnold
+
+
+
+
+From MAILER-DAEMON Tue Jun 16 10:40:53 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MGZqH-000372-0z
+	for mharc-axiom-mail@gnu.org; Tue, 16 Jun 2009 10:40:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MGZqF-000363-Pb
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 10:40:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MGZqB-000347-AI
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 10:40:51 -0400
+Received: from [199.232.76.173] (port=36453 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MGZqB-000344-87
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 10:40:47 -0400
+Received: from smtp41.singnet.com.sg ([165.21.103.142]:43389)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <arnold@terra-weather.com>) id 1MGZqA-0002Ml-AR
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 10:40:47 -0400
+Received: from [192.168.1.67] (bb116-14-20-129.singnet.com.sg [116.14.20.129])
+	by smtp41.singnet.com.sg (8.14.3/8.14.1) with ESMTP id n5GEeTtq026055
+	for <axiom-mail@nongnu.org>; Tue, 16 Jun 2009 22:40:30 +0800
+From: Arnold Doray <arnold@terra-weather.com>
+To: axiom-mail@nongnu.org
+In-Reply-To: <1245140411.2818.135.camel@localhost.localdomain>
+References: <1245140411.2818.135.camel@localhost.localdomain>
+Content-Type: text/plain
+Organization: Terra Weather Pte. Ltd.
+Date: Tue, 16 Jun 2009 22:40:42 +0800
+Message-Id: <1245163242.6895.24.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.2.2 (2.2.2-5) 
+Content-Transfer-Encoding: 7bit
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.6.16.142836
+X-PMX-AS: AS-Check
+X-PMX-Score: Probability=8%
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+Subject: [Axiom-mail] Re: Coersion error
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: arnold@terra-weather.com
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Jun 2009 14:40:51 -0000
+
+This problem persists in "original" Axiom compiled from the latest
+"Gold" source. My apologies for the confusion -AD
+
+
+On Tue, 2009-06-16 at 16:20 +0800, Arnold Doray wrote:
+> I'm trying to create a set of orthogonal polynomials using the
+> Gram-Schmidt process, but I hit a problem:
+> 
+> dot(f,g) == integrate(f*g*x^2,x=-1..1)
+> proj(f,g) == dot(f,g)*f/dot(f,f)
+> 
+> p0 := 1
+> p1 := x - proj(p0,x)
+> p2 := x^2 - proj(p0,x^2) - proj(p1,x^2)
+> 
+> p0 and p1 evaluate correctly, but p2 hits this error:
+> 
+> ; (DEFUN |*2;dot;5;frame1394| ...) is being compiled.
+> ;; The variable |*2;dot;5;frame1394;MV| is undefined.
+> ;; The compiler will assume this variable is a global.
+>    Internal Error
+>    The function coerce with signature OrderedCompletion Integer ->
+>       Expression OrderedCompletion Integer is missing from domain
+>       Expression(OrderedCompletion (Integer))
+> 
+
+
+
+
+
+From MAILER-DAEMON Tue Jun 16 17:41:41 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MGgPU-0003cL-S1
+	for mharc-axiom-mail@gnu.org; Tue, 16 Jun 2009 17:41:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MGgPT-0003bb-Gw
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 17:41:39 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MGgPP-0003ZE-SX
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 17:41:39 -0400
+Received: from [199.232.76.173] (port=41948 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MGgPL-0003WA-IG; Tue, 16 Jun 2009 17:41:31 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:42918
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>)
+	id 1MGgPL-0006pC-5b; Tue, 16 Jun 2009 17:41:31 -0400
+Received: from [192.168.1.101] (dynamic-acs-72-23-19-139.zoominternet.net
+	[72.23.19.139])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id n5GLfQ3W005192;
+	Tue, 16 Jun 2009 16:41:27 -0500
+Message-ID: <4A381163.6050003@axiom-developer.org>
+Date: Tue, 16 Jun 2009 17:40:51 -0400
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: arnold@terra-weather.com
+Subject: Re: [Axiom-mail] Re: Coersion error
+References: <1245140411.2818.135.camel@localhost.localdomain>
+	<1245163242.6895.24.camel@localhost.localdomain>
+In-Reply-To: <1245163242.6895.24.camel@localhost.localdomain>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Jun 2009 21:41:39 -0000
+
+Your initial report showed the problem from Open-Axiom
+which is not the Axiom project. What command line did you use
+to start Open-Axiom?
+
+Your problem is also in Axiom so it is listed as a valid bug report.
+It has been assigned bug number 7198.
+
+Tim
+
+Arnold Doray wrote:
+> This problem persists in "original" Axiom compiled from the latest
+> "Gold" source. My apologies for the confusion -AD
+>
+>
+> On Tue, 2009-06-16 at 16:20 +0800, Arnold Doray wrote:
+>   
+>> I'm trying to create a set of orthogonal polynomials using the
+>> Gram-Schmidt process, but I hit a problem:
+>>
+>> dot(f,g) == integrate(f*g*x^2,x=-1..1)
+>> proj(f,g) == dot(f,g)*f/dot(f,f)
+>>
+>> p0 := 1
+>> p1 := x - proj(p0,x)
+>> p2 := x^2 - proj(p0,x^2) - proj(p1,x^2)
+>>
+>> p0 and p1 evaluate correctly, but p2 hits this error:
+>>
+>> ; (DEFUN |*2;dot;5;frame1394| ...) is being compiled.
+>> ;; The variable |*2;dot;5;frame1394;MV| is undefined.
+>> ;; The compiler will assume this variable is a global.
+>>    Internal Error
+>>    The function coerce with signature OrderedCompletion Integer ->
+>>       Expression OrderedCompletion Integer is missing from domain
+>>       Expression(OrderedCompletion (Integer))
+>>
+>>     
+>
+>
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>   
+
+
+
+
+From MAILER-DAEMON Tue Jun 16 17:46:30 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MGgUA-0005jw-34
+	for mharc-axiom-mail@gnu.org; Tue, 16 Jun 2009 17:46:30 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MGgU8-0005ip-E0
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 17:46:28 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MGgU4-0005gO-1o
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 17:46:28 -0400
+Received: from [199.232.76.173] (port=36376 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MGgTy-0005ex-7G; Tue, 16 Jun 2009 17:46:18 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:37289
+	helo=axiom-developer.org) by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>)
+	id 1MGgTx-0007Wv-Mg; Tue, 16 Jun 2009 17:46:18 -0400
+Received: from [192.168.1.101] (dynamic-acs-72-23-19-139.zoominternet.net
+	[72.23.19.139])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id n5GLkF3W007119;
+	Tue, 16 Jun 2009 16:46:16 -0500
+Message-ID: <4A381284.6090301@axiom-developer.org>
+Date: Tue, 16 Jun 2009 17:45:40 -0400
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: arnold@terra-weather.com
+Subject: Re: [Axiom-mail] Problem with real/imag/conjugate
+References: <1245162511.6895.13.camel@localhost.localdomain>
+In-Reply-To: <1245162511.6895.13.camel@localhost.localdomain>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 16 Jun 2009 21:46:28 -0000
+
+This one is queued as bug number 7199.
+
+When you say the latest "Gold" sources can you tell me the
+result of the "Version" and "Timestamp" lines from the Axiom banner?
+Where did you get the sources?
+
+Tim
+
+
+Arnold Doray wrote:
+> I get the wrong answer for real/imag for some forms of complex numbers.
+> For example:
+>
+> a := (-1*%i)^(1/2) 
+>
+> b := (%i)^(3/2)
+>
+> are both equivalent, but imag/real gives complex (and incorrect) answers
+> for "a" (ie, real(a) and imag(a) are both complex), but I get the right
+> answers for "b". Also "conjugate" fails on both with an error message.
+>
+> Am I missing something here? 
+>
+> I am using Axiom compiled from the latest "Gold" source. 
+>
+> Thanks,
+> Arnold
+>
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+>   
+
+
+
+
+From MAILER-DAEMON Tue Jun 16 21:34:40 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MGk2x-0004Nl-VG
+	for mharc-axiom-mail@gnu.org; Tue, 16 Jun 2009 21:34:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MGk2w-0004NT-QK
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 21:34:38 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MGk2s-0004Mr-Bk
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 21:34:38 -0400
+Received: from [199.232.76.173] (port=52159 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MGk2m-0004Lz-8m; Tue, 16 Jun 2009 21:34:28 -0400
+Received: from smtp17.singnet.com.sg ([165.21.6.27]:37960)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <arnold@terra-weather.com>)
+	id 1MGk2l-0002HY-GN; Tue, 16 Jun 2009 21:34:28 -0400
+Received: from [192.168.1.67] (bb116-14-20-129.singnet.com.sg [116.14.20.129])
+	by smtp17.singnet.com.sg (8.14.1/8.14.1) with ESMTP id
+	n5H1YKHs017891; Wed, 17 Jun 2009 09:34:20 +0800
+Subject: Re: [Axiom-mail] Re: Coersion error
+From: Arnold Doray <arnold@terra-weather.com>
+To: Tim Daly <daly@axiom-developer.org>
+In-Reply-To: <4A381163.6050003@axiom-developer.org>
+References: <1245140411.2818.135.camel@localhost.localdomain>
+	<1245163242.6895.24.camel@localhost.localdomain>
+	<4A381163.6050003@axiom-developer.org>
+Content-Type: text/plain
+Organization: Terra Weather Pte. Ltd.
+Date: Wed, 17 Jun 2009 09:34:19 +0800
+Message-Id: <1245202459.3004.1.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.2.2 (2.2.2-5) 
+Content-Transfer-Encoding: 7bit
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.6.17.12225
+X-PMX-AS: AS-Check
+X-PMX-Score: Probability=8%
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: arnold@terra-weather.com
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 17 Jun 2009 01:34:38 -0000
+
+The command I used was "open-axiom" to start Open Axiom. I had compiled
+this from their latest stable source too, but did not run the checks.
+-AD
+
+
+On Tue, 2009-06-16 at 17:40 -0400, Tim Daly wrote:
+> Your initial report showed the problem from Open-Axiom
+> which is not the Axiom project. What command line did you use
+> to start Open-Axiom?
+> 
+> Your problem is also in Axiom so it is listed as a valid bug report.
+> It has been assigned bug number 7198.
+> 
+> Tim
+
+
+
+
+
+From MAILER-DAEMON Tue Jun 16 21:41:14 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MGk9K-0001R2-0r
+	for mharc-axiom-mail@gnu.org; Tue, 16 Jun 2009 21:41:14 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MGk9I-0001Qt-9h
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 21:41:12 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MGk9C-0001QB-Hj
+	for axiom-mail@nongnu.org; Tue, 16 Jun 2009 21:41:10 -0400
+Received: from [199.232.76.173] (port=48635 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MGk96-0001Pr-VR; Tue, 16 Jun 2009 21:41:01 -0400
+Received: from smtp14.singnet.com.sg ([165.21.6.24]:40516)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <arnold@terra-weather.com>)
+	id 1MGk96-0003JV-4f; Tue, 16 Jun 2009 21:41:00 -0400
+Received: from [192.168.1.67] (bb116-14-20-129.singnet.com.sg [116.14.20.129])
+	by smtp14.singnet.com.sg (8.14.1/8.14.1) with ESMTP id
+	n5H1epsY017084; Wed, 17 Jun 2009 09:40:52 +0800
+Subject: Re: [Axiom-mail] Problem with real/imag/conjugate
+From: Arnold Doray <arnold@terra-weather.com>
+To: Tim Daly <daly@axiom-developer.org>
+In-Reply-To: <4A381284.6090301@axiom-developer.org>
+References: <1245162511.6895.13.camel@localhost.localdomain>
+	<4A381284.6090301@axiom-developer.org>
+Content-Type: text/plain
+Organization: Terra Weather Pte. Ltd.
+Date: Wed, 17 Jun 2009 09:40:51 +0800
+Message-Id: <1245202851.3004.9.camel@localhost.localdomain>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.2.2 (2.2.2-5) 
+Content-Transfer-Encoding: 7bit
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.6.17.12822
+X-PMX-AS: AS-Check
+X-PMX-Score: Probability=8%
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: arnold@terra-weather.com
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 17 Jun 2009 01:41:12 -0000
+
+Version: Axiom (July 2008)
+
+Source downloaded from:
+http://axiom.axiom-developer.org/axiom-website/downloads/axiom-july2008-src.tgz
+
+Just realized that the latest source is actually Nov 2008. I will try
+again with the Nov 2008 version. 
+
+Arnold
+
+On Tue, 2009-06-16 at 17:45 -0400, Tim Daly wrote:
+> This one is queued as bug number 7199.
+> 
+> When you say the latest "Gold" sources can you tell me the
+> result of the "Version" and "Timestamp" lines from the Axiom banner?
+> Where did you get the sources?
+> 
+> Tim
+> 
+
+
+
+
+
+From MAILER-DAEMON Wed Jun 17 03:04:58 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MGpCc-00027i-MN
+	for mharc-axiom-mail@gnu.org; Wed, 17 Jun 2009 03:04:58 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MGpCb-00024P-56
+	for axiom-mail@nongnu.org; Wed, 17 Jun 2009 03:04:57 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MGpCW-0001uw-U5
+	for axiom-mail@nongnu.org; Wed, 17 Jun 2009 03:04:56 -0400
+Received: from [199.232.76.173] (port=37760 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MGpCW-0001ut-Oe
+	for axiom-mail@nongnu.org; Wed, 17 Jun 2009 03:04:52 -0400
+Received: from mx20.gnu.org ([199.232.41.8]:15760)
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA1:32)
+	(Exim 4.60) (envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1MGpCW-0006rJ-1q
+	for axiom-mail@nongnu.org; Wed, 17 Jun 2009 03:04:52 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107])
+	by mx20.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1MGpCO-0001bH-Kf
+	for axiom-mail@nongnu.org; Wed, 17 Jun 2009 03:04:45 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	n5H74YfT006019; Wed, 17 Jun 2009 09:04:35 +0200
+To: arnold@terra-weather.com
+Subject: Re: [Axiom-mail] Coersion error
+References: <1245140411.2818.135.camel@localhost.localdomain>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Wed, 17 Jun 2009 09:04:34 +0200
+In-Reply-To: <1245140411.2818.135.camel@localhost.localdomain> (Arnold Doray's
+	message of "Tue\, 16 Jun 2009 16\:20\:11 +0800")
+Message-ID: <d9ab479w8t.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.6.17.64931
+X-Detected-Operating-System: by mx20.gnu.org: GNU/Linux 2.6 (newer, 3)
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+Cc: fricas-devel <fricas-devel@googlegroups.com>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 17 Jun 2009 07:04:57 -0000
+
+Dear Arnold,
+
+Arnold Doray <arnold@terra-weather.com> writes:
+
+> I'm trying to create a set of orthogonal polynomials using the
+> Gram-Schmidt process, but I hit a problem:
+>
+> dot(f,g) == integrate(f*g*x^2,x=-1..1)
+> proj(f,g) == dot(f,g)*f/dot(f,f)
+>
+> p0 := 1
+> p1 := x - proj(p0,x)
+> p2 := x^2 - proj(p0,x^2) - proj(p1,x^2)
+>
+> p0 and p1 evaluate correctly, but p2 hits this error:
+
+as a quick workaround (sorry for answering late), use
+
+  dot(f,g) == integrate(f*g*x^2,x=-1..1)::EXPR INT
+
+instead.  I'm not yet sure how the "missing" coercion really should go,
+since I don't think we want Expression OrderedCompletion Integer, but
+rather OrderedCompletion Expression Integer...
+
+(Waldek?)
+
+> I've also tried to define p(n) as a recursive function like so:
+>
+> p(0) == 1
+> p(n | n > 0) == x^n - sum(proj(p(k),x^n),k=0..n-1)
+
+This is a common misconception.  sum takes as first argument an
+expression, in your case proj(p(k),x^n), and then tries to "simplify"
+this.
+
+As always in Axiom (FriCAS, OpenAxiom), arguments are evaluated.  Thus,
+Axiom tries to evaluate
+
+  proj(p(k),x^n)
+
+Next step is (remember: arguments are always evaluated...) to evaluate
+p(k).  So k is certainly not 0 (it's an Expression Integer), so we try
+the other rule, i.e.,
+
+  p(n | n > 0) == x^n - sum(proj(p(k),x^n),k=0..n-1)
+
+Thus, what you want is to use
+
+  p(n | n > 0) == x^n - reduce(+, [proj(p(k),x^n) for k in 0..n-1])
+
+(1) -> proj(f,g) == dot(f,g)*f/dot(f,f)
+                                                                   Type: Void
+(2) -> dot(f,g) == integrate(f*g*x^2,x=-1..1)::EXPR INT
+                                                                   Type: Void
+(3) -> p(0) == 1
+                                                                   Type: Void
+(4) ->   p(n | n > 0) == x^n - reduce(+, [proj(p(k),x^n) for k in 0..n-1])
+                                                                   Type: Void
+(5) -> p 1
+   Compiling function dot with type (PositiveInteger,Fraction(
+      Polynomial(Integer))) -> Expression(Integer) 
+   Compiling function dot with type (PositiveInteger,PositiveInteger)
+       -> Expression(Integer) 
+   Compiling function proj with type (PositiveInteger,Fraction(
+      Polynomial(Integer))) -> Expression(Integer) 
+   Compiling function dot with type (Expression(Integer),Fraction(
+      Polynomial(Integer))) -> Expression(Integer) 
+   Compiling function dot with type (Expression(Integer),Expression(
+      Integer)) -> Expression(Integer) 
+   Compiling function proj with type (Expression(Integer),Fraction(
+      Polynomial(Integer))) -> Expression(Integer) 
+   Compiling function p with type Integer -> Expression(Integer) 
+
+   (5)  x
+                                                    Type: Expression(Integer)
+(6) -> p 2
+
+          2
+        5x  - 3
+   (6)  -------
+           5
+                                                    Type: Expression(Integer)
+
+
+Hope this helps,
+
+Martin
+
+
+
+From MAILER-DAEMON Thu Jun 18 01:08:41 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MH9rc-0007LB-TF
+	for mharc-axiom-mail@gnu.org; Thu, 18 Jun 2009 01:08:41 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MH9ra-0007KP-JE
+	for axiom-mail@nongnu.org; Thu, 18 Jun 2009 01:08:38 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MH9rV-0007G6-Bo
+	for axiom-mail@nongnu.org; Thu, 18 Jun 2009 01:08:37 -0400
+Received: from [199.232.76.173] (port=51689 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MH9rQ-00077t-1Z; Thu, 18 Jun 2009 01:08:28 -0400
+Received: from mail-yx0-f192.google.com ([209.85.210.192]:42200)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>)
+	id 1MH9rP-0006y4-LL; Thu, 18 Jun 2009 01:08:27 -0400
+Received: by yxe30 with SMTP id 30so1142263yxe.4
+	for <multiple recipients>; Wed, 17 Jun 2009 22:08:26 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.150.229.21 with SMTP id b21mr2696525ybh.263.1245301704227; 
+	Wed, 17 Jun 2009 22:08:24 -0700 (PDT)
+In-Reply-To: <4A381284.6090301@axiom-developer.org>
+References: <1245162511.6895.13.camel@localhost.localdomain>
+	<4A381284.6090301@axiom-developer.org>
+Date: Thu, 18 Jun 2009 01:08:24 -0400
+Message-ID: <fbcd16d40906172208p742d6b12g3e9003e6ec975e58@mail.gmail.com>
+Subject: Re: [Axiom-developer] Re: [Axiom-mail] Problem with 
+	real/imag/conjugate
+From: Bill Page <bill.page@newsynthesis.org>
+To: axiom-developer@nongnu.org
+Content-Type: multipart/mixed; boundary=000e0cd4879cb7fe45046c98654e
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: arnold@terra-weather.com, fricas-devel <fricas-devel@googlegroups.com>,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Jun 2009 05:08:39 -0000
+
+--000e0cd4879cb7fe45046c98654e
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+Tim,
+
+I think the following patch fixes this problem but I have not yet done
+very extensive testing. It might well have some impact on results in
+the regression tests.
+
+The patch is against open-axiom sources so you might have to apply it
+manually but I do not think this code has changed much in other
+versions.
+
+See also comments here:
+
+https://sourceforge.net/tracker/?func=detail&atid=984524&aid=2806053&group_id=203172
+
+----
+
+wspage@debian:~$ svn diff ~/open-axiom-src/src/algebra > itrigmnp.patch
+wspage@debian:~$ cat itrigmnp.patch
+
+Index: /home/wspage/open-axiom-src/src/algebra/efstruc.spad.pamphlet
+===================================================================
+--- /home/wspage/open-axiom-src/src/algebra/efstruc.spad.pamphlet	(revision
+1216)
++++ /home/wspage/open-axiom-src/src/algebra/efstruc.spad.pamphlet	(working copy)
+@@ -545,6 +545,7 @@
+     macro NTHR == 'nthRoot
+     ker2explogs: (KG, List KG, List SY) -> FG
+     smp2explogs: (PG, List KG, List SY) -> FG
++    nthroot:     (GF,GF) -> GF
+     supexp     : (UP, GF, GF, Z) -> GF
+     GR2GF      : GR -> GF
+     GR2F       : GR -> F
+@@ -626,13 +627,23 @@
+       map(explogs2trigs(#1::FG),GR2GF, p)$PolynomialCategoryLifting(
+                                     IndexedExponents KG, KG, GR, PG, GF)
+
+-    explogs2trigs f ==
+-      (m := mainKernel f) case "failed" =>
++    nthroot(a:GF,n:GF):GF ==
++      r := nthRoot(sqrt(norm(a)),retract(n)@Z)
++      e := exp(complex(0, 1)*argument(a)/n)
++      r*e
++
++    explogs2trigs(f:FG):GF ==
++      m := mainKernel f
++      m case "failed" =>
+         GR2GF(retract(numer f)@GR) / GR2GF(retract(denom f)@GR)
+-      op  := operator(operator(k := m::KG))$F
++      k := m::KG
++      op  := operator(operator(k))$F
+       arg := [explogs2trigs x for x in argument k]
+       num := univariate(numer f, k)
+       den := univariate(denom f, k)
++      is?(op,'nthRoot) =>
++        h := nthroot(first arg, second arg)
++        supexp(num,h,0,0)/supexp(den,h,0,0)
+       is?(op,'exp) =>
+         e  := exp real first arg
+         y  := imag first arg
+
+wspage@debian:~$
+
+----
+
+Regards,
+Bill Page.
+
+On Tue, Jun 16, 2009 at 5:45 PM, Tim Daly<daly@axiom-developer.org> wrote:
+> This one is queued as bug number 7199.
+>
+> When you say the latest "Gold" sources can you tell me the
+> result of the "Version" and "Timestamp" lines from the Axiom banner?
+> Where did you get the sources?
+>
+> Tim
+>
+>
+> Arnold Doray wrote:
+>>
+>> I get the wrong answer for real/imag for some forms of complex numbers.
+>> For example:
+>>
+>> a := (-1*%i)^(1/2)
+>> b := (%i)^(3/2)
+>>
+>> are both equivalent, but imag/real gives complex (and incorrect) answers
+>> for "a" (ie, real(a) and imag(a) are both complex), but I get the right
+>> answers for "b". Also "conjugate" fails on both with an error message.
+>>
+>> Am I missing something here?
+>> I am using Axiom compiled from the latest "Gold" source.
+>> Thanks,
+>> Arnold
+>>
+
+--000e0cd4879cb7fe45046c98654e
+Content-Type: application/octet-stream; name="itrigmnp.patch"
+Content-Disposition: attachment; filename="itrigmnp.patch"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_fw30dac50
+
+SW5kZXg6IC9ob21lL3dzcGFnZS9vcGVuLWF4aW9tLXNyYy9zcmMvYWxnZWJyYS9lZnN0cnVjLnNw
+YWQucGFtcGhsZXQKPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PQotLS0gL2hvbWUvd3NwYWdlL29wZW4tYXhpb20tc3JjL3Ny
+Yy9hbGdlYnJhL2Vmc3RydWMuc3BhZC5wYW1waGxldAkocmV2aXNpb24gMTIxNikKKysrIC9ob21l
+L3dzcGFnZS9vcGVuLWF4aW9tLXNyYy9zcmMvYWxnZWJyYS9lZnN0cnVjLnNwYWQucGFtcGhsZXQJ
+KHdvcmtpbmcgY29weSkKQEAgLTU0NSw2ICs1NDUsNyBAQAogICAgIG1hY3JvIE5USFIgPT0gJ250
+aFJvb3QKICAgICBrZXIyZXhwbG9nczogKEtHLCBMaXN0IEtHLCBMaXN0IFNZKSAtPiBGRwogICAg
+IHNtcDJleHBsb2dzOiAoUEcsIExpc3QgS0csIExpc3QgU1kpIC0+IEZHCisgICAgbnRocm9vdDog
+ICAgIChHRixHRikgLT4gR0YKICAgICBzdXBleHAgICAgIDogKFVQLCBHRiwgR0YsIFopIC0+IEdG
+CiAgICAgR1IyR0YgICAgICA6IEdSIC0+IEdGCiAgICAgR1IyRiAgICAgICA6IEdSIC0+IEYKQEAg
+LTYyNiwxMyArNjI3LDIzIEBACiAgICAgICBtYXAoZXhwbG9nczJ0cmlncygjMTo6RkcpLEdSMkdG
+LCBwKSRQb2x5bm9taWFsQ2F0ZWdvcnlMaWZ0aW5nKAogICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgSW5kZXhlZEV4cG9uZW50cyBLRywgS0csIEdSLCBQRywgR0YpCiAKLSAgICBl
+eHBsb2dzMnRyaWdzIGYgPT0KLSAgICAgIChtIDo9IG1haW5LZXJuZWwgZikgY2FzZSAiZmFpbGVk
+IiA9PgorICAgIG50aHJvb3QoYTpHRixuOkdGKTpHRiA9PQorICAgICAgciA6PSBudGhSb290KHNx
+cnQobm9ybShhKSkscmV0cmFjdChuKUBaKQorICAgICAgZSA6PSBleHAoY29tcGxleCgwLCAxKSph
+cmd1bWVudChhKS9uKQorICAgICAgciplCisKKyAgICBleHBsb2dzMnRyaWdzKGY6RkcpOkdGID09
+CisgICAgICBtIDo9IG1haW5LZXJuZWwgZgorICAgICAgbSBjYXNlICJmYWlsZWQiID0+CiAgICAg
+ICAgIEdSMkdGKHJldHJhY3QobnVtZXIgZilAR1IpIC8gR1IyR0YocmV0cmFjdChkZW5vbSBmKUBH
+UikKLSAgICAgIG9wICA6PSBvcGVyYXRvcihvcGVyYXRvcihrIDo9IG06OktHKSkkRgorICAgICAg
+ayA6PSBtOjpLRworICAgICAgb3AgIDo9IG9wZXJhdG9yKG9wZXJhdG9yKGspKSRGCiAgICAgICBh
+cmcgOj0gW2V4cGxvZ3MydHJpZ3MgeCBmb3IgeCBpbiBhcmd1bWVudCBrXQogICAgICAgbnVtIDo9
+IHVuaXZhcmlhdGUobnVtZXIgZiwgaykKICAgICAgIGRlbiA6PSB1bml2YXJpYXRlKGRlbm9tIGYs
+IGspCisgICAgICBpcz8ob3AsJ250aFJvb3QpID0+CisgICAgICAgIGggOj0gbnRocm9vdChmaXJz
+dCBhcmcsIHNlY29uZCBhcmcpCisgICAgICAgIHN1cGV4cChudW0saCwwLDApL3N1cGV4cChkZW4s
+aCwwLDApCiAgICAgICBpcz8ob3AsJ2V4cCkgPT4KICAgICAgICAgZSAgOj0gZXhwIHJlYWwgZmly
+c3QgYXJnCiAgICAgICAgIHkgIDo9IGltYWcgZmlyc3QgYXJnCg==
+--000e0cd4879cb7fe45046c98654e--
+
+
+
+From MAILER-DAEMON Thu Jun 18 07:02:17 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MHFNo-0007GI-NN
+	for mharc-axiom-mail@gnu.org; Thu, 18 Jun 2009 07:02:16 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MHFNn-0007FF-0x
+	for axiom-mail@nongnu.org; Thu, 18 Jun 2009 07:02:15 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MHFNi-0007Dc-De
+	for axiom-mail@nongnu.org; Thu, 18 Jun 2009 07:02:14 -0400
+Received: from [199.232.76.173] (port=34793 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1MHFNi-0007DU-2D; Thu, 18 Jun 2009 07:02:10 -0400
+Received: from mx20.gnu.org ([199.232.41.8]:22273)
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA1:32)
+	(Exim 4.60) (envelope-from <daly@axiom-developer.org>)
+	id 1MHFNh-0002XN-67; Thu, 18 Jun 2009 07:02:09 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]
+	helo=axiom-developer.org) by mx20.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>)
+	id 1MHFNd-0000v2-GF; Thu, 18 Jun 2009 07:02:05 -0400
+Received: from [192.168.1.101] (dynamic-acs-72-23-19-139.zoominternet.net
+	[72.23.19.139])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id n5IB203W025876;
+	Thu, 18 Jun 2009 06:02:00 -0500
+Message-ID: <4A3A1EA5.9020707@axiom-developer.org>
+Date: Thu, 18 Jun 2009 07:01:57 -0400
+From: Tim Daly <daly@axiom-developer.org>
+User-Agent: Thunderbird 2.0.0.21 (Windows/20090302)
+MIME-Version: 1.0
+To: Bill Page <bill.page@newsynthesis.org>
+Subject: Re: [Axiom-developer] Re: [Axiom-mail] Problem with
+	real/imag/conjugate
+References: <1245162511.6895.13.camel@localhost.localdomain>	<4A381284.6090301@axiom-developer.org>
+	<fbcd16d40906172208p742d6b12g3e9003e6ec975e58@mail.gmail.com>
+In-Reply-To: <fbcd16d40906172208p742d6b12g3e9003e6ec975e58@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Detected-Operating-System: by mx20.gnu.org: GNU/Linux 2.6? (barebone, rare!)
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+Cc: arnold@terra-weather.com, axiom-developer@nongnu.org,
+	fricas-devel <fricas-devel@googlegroups.com>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 18 Jun 2009 11:02:15 -0000
+
+Bill Page wrote:
+> Tim,
+>
+> I think the following patch fixes this problem but I have not yet done
+> very extensive testing. It might well have some impact on results in
+> the regression tests.
+>
+> The patch is against open-axiom sources so you might have to apply it
+> manually but I do not think this code has changed much in other
+> versions.
+>
+> See also comments here:
+>
+> https://sourceforge.net/tracker/?func=detail&atid=984524&aid=2806053&group_id=203172
+>
+> ----
+>
+> wspage@debian:~$ svn diff ~/open-axiom-src/src/algebra > itrigmnp.patch
+> wspage@debian:~$ cat itrigmnp.patch
+>
+> Index: /home/wspage/open-axiom-src/src/algebra/efstruc.spad.pamphlet
+> ===================================================================
+> --- /home/wspage/open-axiom-src/src/algebra/efstruc.spad.pamphlet	(revision
+> 1216)
+> +++ /home/wspage/open-axiom-src/src/algebra/efstruc.spad.pamphlet	(working copy)
+> @@ -545,6 +545,7 @@
+>      macro NTHR == 'nthRoot
+>      ker2explogs: (KG, List KG, List SY) -> FG
+>      smp2explogs: (PG, List KG, List SY) -> FG
+> +    nthroot:     (GF,GF) -> GF
+>      supexp     : (UP, GF, GF, Z) -> GF
+>      GR2GF      : GR -> GF
+>      GR2F       : GR -> F
+> @@ -626,13 +627,23 @@
+>        map(explogs2trigs(#1::FG),GR2GF, p)$PolynomialCategoryLifting(
+>                                      IndexedExponents KG, KG, GR, PG, GF)
+>
+> -    explogs2trigs f ==
+> -      (m := mainKernel f) case "failed" =>
+> +    nthroot(a:GF,n:GF):GF ==
+> +      r := nthRoot(sqrt(norm(a)),retract(n)@Z)
+> +      e := exp(complex(0, 1)*argument(a)/n)
+> +      r*e
+> +
+> +    explogs2trigs(f:FG):GF ==
+> +      m := mainKernel f
+> +      m case "failed" =>
+>          GR2GF(retract(numer f)@GR) / GR2GF(retract(denom f)@GR)
+> -      op  := operator(operator(k := m::KG))$F
+> +      k := m::KG
+> +      op  := operator(operator(k))$F
+>        arg := [explogs2trigs x for x in argument k]
+>        num := univariate(numer f, k)
+>        den := univariate(denom f, k)
+> +      is?(op,'nthRoot) =>
+> +        h := nthroot(first arg, second arg)
+> +        supexp(num,h,0,0)/supexp(den,h,0,0)
+>        is?(op,'exp) =>
+>          e  := exp real first arg
+>          y  := imag first arg
+>
+> wspage@debian:~$
+>
+> ----
+>
+> Regards,
+> Bill Page.
+>
+> On Tue, Jun 16, 2009 at 5:45 PM, Tim Daly<daly@axiom-developer.org> wrote:
+>   
+>> This one is queued as bug number 7199.
+>>
+>> When you say the latest "Gold" sources can you tell me the
+>> result of the "Version" and "Timestamp" lines from the Axiom banner?
+>> Where did you get the sources?
+>>
+>> Tim
+>>
+>>
+>> Arnold Doray wrote:
+>>     
+>>> I get the wrong answer for real/imag for some forms of complex numbers.
+>>> For example:
+>>>
+>>> a := (-1*%i)^(1/2)
+>>> b := (%i)^(3/2)
+>>>
+>>> are both equivalent, but imag/real gives complex (and incorrect) answers
+>>> for "a" (ie, real(a) and imag(a) are both complex), but I get the right
+>>> answers for "b". Also "conjugate" fails on both with an error message.
+>>>
+>>> Am I missing something here?
+>>> I am using Axiom compiled from the latest "Gold" source.
+>>> Thanks,
+>>> Arnold
+>>>
+>>>       
+>>> ------------------------------------------------------------------------
+>>>
+>>> _______________________________________________
+>>> Axiom-developer mailing list
+>>> Axiom-developer@nongnu.org
+>>> http://lists.nongnu.org/mailman/listinfo/axiom-developer
+>>>       
+Excellent. I will try to apply the patch and test it. --Tim
+
+
+
+

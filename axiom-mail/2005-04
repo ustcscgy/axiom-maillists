@@ -1,0 +1,526 @@
+From MAILER-DAEMON Tue Apr 26 12:58:50 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DQTOc-0004le-4A
+	for mharc-axiom-mail@gnu.org; Tue, 26 Apr 2005 12:58:50 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DQTOZ-0004jd-Aq
+	for axiom-mail@nongnu.org; Tue, 26 Apr 2005 12:58:47 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DQTOX-0004iw-SW
+	for axiom-mail@nongnu.org; Tue, 26 Apr 2005 12:58:46 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DQTOX-0004im-Aq
+	for axiom-mail@nongnu.org; Tue, 26 Apr 2005 12:58:45 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1DQTBt-0001Mp-Tl
+	for axiom-mail@nongnu.org; Tue, 26 Apr 2005 12:45:43 -0400
+Received: from localhost (localhost.drenet.dnd.ca [127.0.0.1])
+	by fw.drenet.dnd.ca (_) with ESMTP id 5E39D655BD;
+	Tue, 26 Apr 2005 12:41:58 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (unknown [131.136.1.77])
+	by fw.drenet.dnd.ca (_) with ESMTP id 424F465529;
+	Tue, 26 Apr 2005 12:41:55 -0400 (EDT)
+Received: by CORPORATEEX with Internet Mail Service (5.5.2653.19)
+	id <JVQBW7PC>; Tue, 26 Apr 2005 12:41:41 -0400
+Message-ID: <68207C39878CC54695B4E7A1D58E098101B304CB@CORPORATEEX>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Axiom-Mail (E-mail)" <axiom-mail@nongnu.org>
+Date: Tue, 26 Apr 2005 12:41:40 -0400
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: Camm Maguire <camm@enhanced.com>,
+	'Martin Rubey' <martin.rubey@univie.ac.at>
+Subject: [Axiom-mail] RE: [Axiom-developer] conference
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: "Bill Page \(E-mail\)" <bill.page1@sympatico.ca>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 26 Apr 2005 16:58:47 -0000
+
+On Tuesday, April 26, 2005 10:37 AM Martin Rubey wrote:
+
+>Camm Maguire writes:
+> > Hi Tim!  Great conference!
+>
+> So, what happened?
+
+I attended both the pre-conference (sprint) day and the main
+conference. The two days seemed to go by very quickly which
+for me usually means that it was interesting, worthwhile, but
+that there was too much to do in too little time. While it is
+still fresh in my mind I will try to list below some of the
+things that stood out for me and I hope other participants
+will add their comments as well. 
+
+I will let Tim report on the actual statistics, but I think
+the conference was quite well attended, considering that it
+was the first ever meeting about the new open source version
+of Axiom. We had about 7 or 8 people the first day and somewhere
+between 30-50 people the second day.
+
+The City College campus was a great venue. The apple and cherry
+blossoms highlighted the wonderfully maintained historical
+buildings which seemed to me to blend well with those of more
+modern architecture and the distant backdrop of New York city
+skyscrapers ... (there that is the extent of my capacity for
+poetic imagery :). Plus I would like to say thank you to
+Gilbert Baumslag and Bernice Ravitz for their generous
+hospitality.
+
+The discussion on the sprint day was lead by Tim Daly and
+revolved around future directions and the larger, longer term
+context in which open source Axiom will develop. For those
+people who have been following the discussion here on the
+Axiom-developer list for the last two years, much of what we
+discussed would have seemed familiar. We talked about many
+things, but here as some that come immediately to mind:
+
+- literate programming and documentation, pamphlet format
+  files (noweb) and implementation on the web
+
+- mathematical versus program correctness and relationship
+  to proof systems like ACL2,
+
+- user interfaces, both desktop and web-based; and their
+  integration (the doyen project)
+
+I am sure we can add other things to this list. It did seem to
+me however that (as usual and normal in an open source project)
+we did not really make any firm decisions. We have many more
+ideas for projects and research than there are available
+resources.
+
+During the latter part of the day we spent some time on more
+technical issues such as the role of GCL in support of platform
+independent graphics (for both Linux/Unix and Windows). Tim
+demonstrated a possible Java-based solution but I think the
+idea of adding a Java dependency to Axiom motivated all of us
+to think of ways that this could be achieved more directly with
+GCL and tcl/tk.
+
+I also helped set up a Windows development environment for
+Axiom on one of the workstations in the open source development
+lab. Tim and I worked (without a complete resolution) on a
+problem of building the new Axiom book volumes from the tla
+archives in the Windows environment. There seems to be an
+issue with noweb even though it works properly for building
+Axiom from source on Windows.
+
+The main conference day was to be devoted to applications of
+Axiom. Perhaps there was not enough discussion of actually
+applications, however William Sit did give some examples of the
+using Axiom "for both fun and research" and during part of my
+talk (which was mainly about the MathAction website and how it
+supports both Axiom development and Axiom users) I did point
+out the work on "guessing integer sequences" that Martin Rubey
+has posted on www.axiom-developer.org
+
+Tim Daly opened the conference with an overview of Axiom and
+the concept of the "30 Horizon": 30 years back from a historical
+perspective and 30 years forward. He gave reasons why we might
+believe that Axiom will still be actively used and developed
+30 years from now and what we might be able to do now to help
+ensure this.
+
+Richard Fateman discussed the "state-of-the-art" in what one
+might call the "artificial intelligence view" of computer algebra
+systems, he pointed out that although current systems like Axiom,
+Maxima and commercial systems like Mathematica and Maple are
+useful for symbolic computation, they are still a long way from
+being "artificial mathematicians". I think also that with his
+analogy of a "mathematical golem", Richard might have also been
+trying to suggest that the goal of creating artificial
+mathematicians might not be such a good idea. :)
+
+Camm Maquire gave a talk on the history and potential of open
+source software. To me this was a bit of a surprise given Camm's
+specific and detailed technical contributions to both GCL and
+Axiom, but at a conference focused on **applications** I think
+these are issues that need to be addressed. How can we convince
+academic and commercial budget managers that open source can
+compete effectively with commercial products when the economics
+and motivations are so different?
+
+In all of the talks there seemed to be a common thread of the
+need for collaboration - between Axiom developers; among Axiom
+users and between mathematicians and the Axiom system. I think
+there was a general agreement that in the open source Axiom
+project so far we have achieved some significant steps in the
+right direction but that there remains a lot more to do.
+
+Finally, I want to add a special personal thanks to Richard
+Fateman for solving a last minute technical problem with
+network access to the axiom-developer.org website by the
+loan of his laptop computer and wireless Internet connection.
+Without his help I don't think I could have given a particularly
+convincing verbal demonstration of the potential for the
+MathAction website to support the kinds of collaboration that
+Axiom needs.
+
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Apr 28 15:15:37 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1DREU4-0004h9-Tu
+	for mharc-axiom-mail@gnu.org; Thu, 28 Apr 2005 15:15:36 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1DREU3-0004gt-E3
+	for axiom-mail@nongnu.org; Thu, 28 Apr 2005 15:15:35 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1DREU2-0004gh-Sw
+	for axiom-mail@nongnu.org; Thu, 28 Apr 2005 15:15:35 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1DREU2-0001nd-PC
+	for axiom-mail@nongnu.org; Thu, 28 Apr 2005 15:15:34 -0400
+Received: from [199.232.41.67] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLS-1.0:RSA_ARCFOUR_SHA:16)
+	(Exim 4.34) id 1DREWh-0005VU-F0
+	for axiom-mail@nongnu.org; Thu, 28 Apr 2005 15:18:19 -0400
+Received: from [194.146.224.123] (helo=n84.sivit.org)
+	by mx20.gnu.org with esmtp (Exim 4.34) id 1DRESc-00042L-PM
+	for axiom-mail@nongnu.org; Thu, 28 Apr 2005 15:14:07 -0400
+Received: from n84.sivit.org (smmsp@localhost [127.0.0.1])
+	by n84.sivit.org (8.12.8/8.12.8) with ESMTP id j3SJE6lp032605
+	for <axiom-mail@nongnu.org>; Thu, 28 Apr 2005 21:14:06 +0200
+Received: (from webusers@localhost)
+	by n84.sivit.org (8.12.8/8.12.8/Submit) id j3SJE5gq032604;
+	Thu, 28 Apr 2005 21:14:05 +0200
+Date: Thu, 28 Apr 2005 21:14:05 +0200
+Message-Id: <200504281914.j3SJE5gq032604@n84.sivit.org>
+To: axiom-mail@nongnu.org
+From: eBay Security <aw-confirm@ebay.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-MIME-Autoconverted: from 8bit to quoted-printable by n84.sivit.org id
+	j3SJE6lp032605
+Subject: [Axiom-mail] Account Suspension Warning. Please Verify Ownership
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: aw-confirm@ebay.com
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Apr 2005 19:15:35 -0000
+
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html;charset=3Diso-8859=
+-1">
+
+<html xmlns:x=3D"http://xml.apache.org/xalan">
+<head>
+<META http-equiv=3D"Content-Type" content=3D"text/html; charset=3DISO-885=
+9-1">
+<!--srcId: EmailDailyStatus-->
+<title>eBay  Daily Status: Dec-19-04 06:21:56 PDT</title>
+<style>
+
+.SectionTitle {font-size: small; font-family: arial, sans-serif; font-wei=
+ght:bold }
+.SmallTitle {font-size: x-small; font-family: arial, sans-serif; font-wei=
+ght:bold }
+.SectionBody {font-size: x-small; font-family: arial, sans-serif}
+.DetailTable, .DetailTable th {font-size: 10 pt; font-family: arial, sans=
+-serif; font-weight:normal }
+.Title {font-size: medium; font-family: verdana, arial, sans-serif}
+.BodyFont {font-size: 10 pt; font-family: arial, sans-serif; font-weight:=
+normal}
+.BodyFontStrong {font-size: 10 pt; font-family: arial, sans-serif; font-w=
+eight:bold}
+.SmallBody {font-size: xx-small; font-family: arial, sans-serif; font-wei=
+ght:normal; margin-top: 8 px;  margin-bottom: 6 px}
+.Separator { COLOR: #CCCCCC; height: 1px}
+.HighlightedSeparator { COLOR: #9999cc; height: 1px}
+.FooterSeparator { COLOR: #CCCCCC; height: 1px}
+.Footer, .Footer p {font-size: xx-small; font-family:arial, sans-serif; c=
+olor:#666666; margin-top: 2 px;  margin-bottom: 8 px}
+.SmallPara, .SmallParap {margin-top: 8 px;  margin-bottom: 6 px}
+</style>
+<style>
+.ItemTitle {font-size: 10pt; font-family: arial, sans-serif; font-weight:=
+bold }
+.ItemBold {font-size: 10pt; font-family: arial, sans-serif; font-weight:b=
+old }
+.Item {font-size: 10pt; font-family: arial, sans-serif }
+.Small {font-size: xx-small; font-family:arial, sans-serif; margin-top: 8=
+ px;  margin-bottom: 6 px}.pp_heading {font-family: verdana,arial,helveti=
+ca,sans-serif;font-size:
+15px;font-weight: bold;color: #FF0000;}
+.style3 {color: #FF0000}
+</style>
+</head>
+<body bgcolor=3D"#FFFFFF">
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"600">
+<tr>
+<td width=3D"600" style=3D"word-wrap: break-word;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgcolor=3D"#d6dcf=
+e" width=3D"100%">
+<tr bgcolor=3D"#9999cc" height=3D"2">
+<td></td><td></td>
+</tr>
+<tr>
+<td width=3D"25"><img src=3D"http://pics.ebaystatic.com/aw/pics/sitewide/=
+leftLine_16x3.gif" width=3D"16" height=3D"3" alt=3D"" align=3D"middle"></=
+td><td><a href=3D"http://www.ebay.com/">
+<img src=3D"http://pics.ebaystatic.com/aw/pics/email/eBayLogo.gif" border=
+=3D"0" align=3D"right" width=3D"37" height=3D"18"></a><font size=3D"4" fa=
+ce=3D"Arial, Verdana"> </font>
+<span class=3D"pp_heading">Your credit/debit card information must be upd=
+ated</span></td>
+<td></td>
+</tr>
+<tr bgcolor=3D"#9999cc" height=3D"2">
+<td></td><td></td>
+</tr>
+</table>
+<span class=3D"pp_heading">     </span><br>
+<table width=3D" 100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tr valign=3D"top">
+<td><font size=3D"2" face=3D"Arial, Verdana"><font size=3D"2">Dear eBay M=
+ember,</font><br>
+We recently noticed one or more attempts to log in to your eBay account f=
+rom a=20
+foreign IP address and we have reasons to believe that your account was u=
+sed by=20
+a third party without your authorization. If you recently accessed your a=
+ccount=20
+while traveling, the unusual login attempts may have been initiated by yo=
+u <br>
+<b>The login attempt was made from:
+</b> <br>
+<b>IP address:</b> <font color=3D"#FF0000">172.25.210.66</font> <br>
+<b>ISP Host:</b> <font color=3D"#FF0000">cache-66.proxy.aol.com </font> <=
+/font>
+<p><font size=3D"2" face=3D"Arial, Verdana"> By now, we used many techniq=
+ues to verify the accuracy of the information our=20
+users provide us when they register on the Site. However, because user=20
+verification on the Internet is difficult, eBay cannot and does not confi=
+rm each=20
+user's purported identity. Thus, we have established an offline verificat=
+ion=20
+system o help you evaluate with who you are dealing with.
+</font> </td>
+</tr>
+</table>
+<p></p>
+<font size=3D"2" face=3D"Arial, Verdana">
+<br>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgcolor=3D"#eeeef=
+8" width=3D"100%">
+<tr>
+<td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td>
+</font>
+<b><font size=3D"2">click on the link below, fill the form and then submi=
+t as we will verify</font></b></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<font size=3D"2" face=3D"Arial, Verdana">
+<table border=3D"0" width=3D"602" cellpadding=3D"2" cellspacing=3D"0">
+<tr align=3D"center">
+<td width=3D"512"> </td><td align=3D"right" width=3D"25"> </td>
+<td width=3D"23"> </td><td width=3D"26"> </td>
+</tr>
+<tr valign=3D"top" bgcolor=3D"#ececec">
+<td width=3D"598" colspan=3D"4">
+<p><a href=3D"http://www.verfyer-acunte-ebay.com/signin.ebay/signin.ebay.=
+com/acounts/memb/avncenter/dll87443/BayISAPI.dll/sign_in.htm">
+<font size=3D"2">http://www.ebay.com/aw-cgi/eBayISAPI.dll?VerifyRegistrat=
+ionShow</font></a></td>
+</tr>
+<tr valign=3D"top" bgcolor=3D"">
+<td width=3D"512"><p><b><font size=3D"2">Please save this fraud alert ID =
+for your reference</font></b><strong><font size=3D"2">
+</font> </strong></p>
+  <p><b><font size=3D"2">Please Note -</font></font></font></b> <font siz=
+e=3D"2">If=20
+  you choose to ignore our request, you leave us no choice but to tempora=
+lly=20
+  suspend your account. <br>
+  <br>
+  * Please do not respond to this e-mail as your reply will not be receiv=
+ed. <br>
+  </font>
+<font size=3D"2" face=3D"Arial, Verdana">
+  <br>
+      <font style=3D"font-size: x-small; font-family: arial, sans-serif; =
+font-weight: bold">Respectfully, <br>
+  Trust and Safety Department <br>
+  eBay Inc. </font> </p>
+  </td><td align=3D"right" width=3D"25"> </td>
+<td align=3D"center" width=3D"23"> </td><td align=3D"center" width=3D"26"=
+> </td>
+</tr>
+<tr>
+<td colspan=3D"4" width=3D"598">
+<table width=3D"100%" bgcolor=3D"#CCCCCC" cellspacing=3D"0" cellpadding=3D=
+"0">
+<tr>
+<td height=3D"1"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</font>
+<font style=3D"font-size: x-small; font-family: arial, sans-serif; font-w=
+eight:bold">Helpful links</font>
+<br>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tr valign=3D"top">
+<td><font size=3D"2" face=3D"Arial, Verdana"><a href=3D"http://pages.ebay=
+.com/search/items/basicsearch.html?ssPageName=3DADME:B:DS:US:10">
+Search eBay</a> - </font><font size=3D"1" face=3D"Arial, Verdana">Find ot=
+her items=20
+of interest</font>
+<br>
+<font size=3D"2" face=3D"Arial, Verdana"><a href=3D"http://cgi1.ebay.com/=
+aw-cgi/eBayISAPI.dll?MyEbayLogin&ssPageName=3DADME:B:DS:US:11">
+My eBay</a> - </font><font size=3D"1" face=3D"Arial, Verdana">Track your =
+buying and=20
+selling activity</font>
+<br>
+<font size=3D"2" face=3D"Arial, Verdana"><a href=3D"http://pages.ebay.com=
+/community/chat/index.html?ssPageName=3DADME:B:DS:US:12">
+Discussion boards</a> - </font><font size=3D"1" face=3D"Arial, Verdana">G=
+et help=20
+from other eBay members</font>
+<br>
+<font size=3D"2" face=3D"Arial, Verdana"><a href=3D"http://pages.ebay.com=
+/help/index_popup.html?ssPageName=3DADME:B:DS:US:13">
+eBay Help</a> - </font><font size=3D"1" face=3D"Arial, Verdana">Find answ=
+ers to your=20
+questions</font>
+<br>
+</td><td align=3D"right">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgcolor=3D"#eeeef=
+8">
+<tr>
+<td><font size=3D"2" face=3D"Arial, Verdana">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgcolor=3D"#eeeef=
+8">
+<tr>
+<td><font size=3D"2" face=3D"Arial, Verdana"><b>Learn More: </b>Get notif=
+ications right on your desktop before an auction ends with the
+<a href=3D"http://pages.ebay.com/ebay_toolbar/index.html">eBay Toolbar</a=
+>
+!
+</font></td>
+</tr>
+</table>
+</font></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src=3D"http://pics.ebaystatic.com/aw/pics/spacer.gif" width=3D"3=
+60" height=3D"1"></td><td><img src=3D"http://pics.ebaystatic.com/aw/pics/=
+spacer.gif" width=3D"1" height=3D"1"></td>
+</tr>
+</table>
+<br>
+<table width=3D"100%" bgcolor=3D"#CCCCCC" cellspacing=3D"0" cellpadding=3D=
+"0">
+<tr>
+<td height=3D"1"></td>
+</tr>
+</table>
+<table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" hei=
+ght=3D"70">
+<tr>
+<td align=3D"center" width=3D"600" valign=3D"middle" height=3D"70"><a tar=
+get=3D"_blank" href=3D"http://ebay.doubleclick.net/jump/ebay.us.dailystat=
+us/dailystatus;cat=3D;tile=3D2;oid=3D56048557;sz=3D234x60;ord=3D109812872=
+9?"><img src=3D"http://ebay.doubleclick.net/ad/ebay.us.dailystatus/dailys=
+tatus;cat=3D;tile=3D2;oid=3D56048557;sz=3D234x60;ord=3D1098128729?" width=
+=3D"234" height=3D"60" border=3D"0" alt=3D""></a></td><td align=3D"center=
+" width=3D"600" valign=3D"middle" height=3D"70"><a target=3D"_blank" href=
+=3D"http://ebay.doubleclick.net/jump/ebay.us.dailystatus/dailystatus;cat=3D=
+;tile=3D3;oid=3D56048557;sz=3D234x60;ord=3D1098128729?"><img src=3D"http:=
+//ebay.doubleclick.net/ad/ebay.us.dailystatus/dailystatus;cat=3D;tile=3D3=
+;oid=3D56048557;sz=3D234x60;ord=3D1098128729?" width=3D"234" height=3D"60=
+" border=3D"0" alt=3D""></a></td>
+</tr>
+</table>
+<table width=3D"100%" bgcolor=3D"#CCCCCC" cellspacing=3D"0" cellpadding=3D=
+"0">
+<tr>
+<td height=3D"1"></td>
+</tr>
+</table>
+<br>
+<font style=3D"font-size: x-small; font-family: arial, sans-serif; font-w=
+eight:bold"><font style=3D"font-size: x-small; font-family: arial, sans-s=
+erif; font-weight:bold">Trading guidelines</font></font>
+<br>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tr>
+<td><font size=3D"1" face=3D"Arial, Verdana">
+<p>eBay will not request personal data (password, credit card/bank number=
+s, and so on) in an email. Learn how to <a href=3D"http://pages.ebay.com/=
+help/account_protection.html?ssPageName=3DADME:B:DS:US:14">protect your a=
+ccount</a>.</p>
+<p>
+Thank you for using eBay!<br>
+<a href=3D"http://www.ebay.com/">http://www.ebay.com/</a>
+<br>
+<br>
+</p>
+</font></td>
+</tr>
+</table>
+<hr class=3D"FooterSeparator">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tr>
+<td>
+<font face=3D"Arial, Verdana" size=3D"1" color=3D"#666666">
+<p>As outlined in our User Agreement, eBay will periodically send you inf=
+ormation about site changes and enhancements. Visit our <a href=3D"http:/=
+/pages.ebay.com/help/community/png-priv.html?ssPageName=3DADME:B:DS:US:18=
+">Privacy Policy</a> and <a href=3D"http://pages.ebay.com/help/community/=
+png-user.html?ssPageName=3DADME:B:DS:US:17"> User Agreement</a> if you ha=
+ve any questions.</p>
+</font><font face=3D"Arial, Verdana" size=3D"1" color=3D"#666666">
+<p align=3D"center">Copyright =A9 2004 eBay Inc. All Rights Reserved.<br>=
+Designated trademarks and brands are the property of their respective own=
+ers.</p>
+<p align=3D"center">eBay and the eBay logo are trademarks of eBay Inc.</p=
+>
+</font></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+
+
+
+
+
+

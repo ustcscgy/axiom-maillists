@@ -1,0 +1,1936 @@
+From MAILER-DAEMON Thu Dec 02 08:02:37 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CZqbU-0001dP-Bs
+	for mharc-axiom-mail@gnu.org; Thu, 02 Dec 2004 08:02:36 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CZqbB-0001XP-BD
+	for axiom-mail@nongnu.org; Thu, 02 Dec 2004 08:02:17 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CZqaZ-0001FB-0F
+	for axiom-mail@nongnu.org; Thu, 02 Dec 2004 08:01:39 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CZqaK-000194-JF; Thu, 02 Dec 2004 08:01:24 -0500
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CZqQl-00086G-Cj; Thu, 02 Dec 2004 07:51:31 -0500
+Received: from localhost (localhost [127.0.0.1])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id B922F644790; Thu,  2 Dec 2004 07:51:30 -0500 (EST)
+Received: from fw.drenet.dnd.ca ([131.136.244.253])
+	by localhost (smtp.drenet.dnd.ca [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 23371-08; Thu,  2 Dec 2004 07:51:29 -0500 (EST)
+Received: from corporateex.drdc-rddc.gc.ca (unknown [131.136.1.77])
+	by fw.drenet.dnd.ca (Postfix) with ESMTP
+	id DAFCC64478E; Thu,  2 Dec 2004 07:51:28 -0500 (EST)
+Received: by CORPORATEEX with Internet Mail Service (5.5.2653.19)
+	id <YBNSGSDD>; Thu, 2 Dec 2004 07:46:51 -0500
+Message-ID: <68207C39878CC54695B4E7A1D58E098124DCC7@CORPORATEEX>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Axiom-Developer@Nongnu. Org" <axiom-developer@nongnu.org>
+Date: Thu, 2 Dec 2004 07:46:51 -0500 
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: "'Bill Page \(E-mail\)'" <bill.page1@sympatico.ca>,
+	"Axiom-Mail \(E-mail\)" <axiom-mail@nongnu.org>, Root <daly@idsi.net>
+Subject: [Axiom-mail] MathAction upgraded ZWiki-0.36.2 - now has preview
+	option
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 02 Dec 2004 13:02:33 -0000
+
+All,
+
+I have upgraded the MathAction wiki software (ZWiki) to
+the latest 0.36.2 release that includes the new preview
+option. Now instead of having to press Save to see the
+result of your editing, you can choose Preview. Preview
+does not save the changes you have made and it does not
+send email notices to subscribers. Instead a preview of
+what the page will look like appears below the edit window.
+If this preview is satisfactory, the user will click on
+Save, if not they can continue editing and Preview again
+until the desired result is achieved. When the final Save
+is clicked, email notices will be sent to all subscribers.
+
+This means that as a subscriber you will no longer be
+subjected to a quick series of edit notices as someone
+tries to correct and properly format a page.
+
+The preview function applies both to the MathAction wiki
+as well as wiki pages inside the Axiom Portal.
+
+Please let me know if you have any problems with this.
+
+Regards,
+bill Page.
+
+
+
+From MAILER-DAEMON Mon Dec 06 00:58:22 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CbBt8-0003nL-Ce
+	for mharc-axiom-mail@gnu.org; Mon, 06 Dec 2004 00:58:22 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CbBt5-0003kY-Tt for axiom-mail@mail.freesoftware.fsf.org;
+	Mon, 06 Dec 2004 00:58:19 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CbBt5-0003kD-DW for axiom-mail@mail.freesoftware.fsf.org;
+	Mon, 06 Dec 2004 00:58:19 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CbBt5-0003k7-BQ; Mon, 06 Dec 2004 00:58:19 -0500
+Received: from [166.114.30.40] (helo=199.232.76.166)
+	by monty-python.gnu.org with smtp (Exim 4.34)
+	id 1CbBiu-0000AC-Rk; Mon, 06 Dec 2004 00:47:56 -0500
+X-Message-Info: 512ZWAEYoD52CNYABmiBOkonXPDtJH5upXPJwjGCBC5ZX1BA
+Received: from [64.83.64.34] by sewE2E6.infest.166.114.30.40 via HTTP;
+	Mon, 06 Dec 2004 08:39:36 +0300
+Message-ID: <86E8587B7C2.A18A5@166.114.30.40>
+From: "Alyson Jensen" <xunagwqrflmlnh@erl11.siemens.de>
+To: axiom-mail@mail.freesoftware.fsf.org, carbone-dev@mail.freesoftware.fsf.org
+Date: Mon, 06 Dec 2004 03:38:36 -0200
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--A7374B457355CCF"
+Cc: 
+Subject: [Axiom-mail] 2005 doctors & Medical Directory, anesthesiology.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Alyson Jensen <xunagwqrflmlnh@erl11.siemens.de>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 06 Dec 2004 05:58:20 -0000
+
+----A7374B457355CCF
+Content-Type: text/plain;
+	charset="iso-B9BC-F"
+Content-Transfer-Encoding: quoted-printable
+
+The New 2005 United States Healthcare Database.
+
+This complete database includes all hospitals, nursing homes, 
+and physicians in the country.
+
+In a rapidly-changing industry, current healthcare information is an 
+invaluable resource to businesses and organizations.  The United States 
+Healthcare Database includes comprehensive information on more than 
+7,000 hospitals, 25,000 nursing homes and 400,000 doctors.  It is the 
+most extensive and reliable mailing list and database of key decision 
+makers in the health care market.
+ 
+Each record is indexed by such features as name, address, phone and 
+fax. The database is available in Excel format on CD Rom.  It is 
+designed for mailing lists and merges.  The data can be selected by 
+state or other criteria such as type of practice. It can be used on 
+an unlimited basis.
+
+For the past 14 years, MedCom has maintained the most comprehensive 
+healthcare lists.  Our directories are 100% telephone verified and 
+updated every quarter. MedCom continues to hold the nation's most 
+extensive and reliable databases of key decision-makers in the health 
+care market.
+ 
+Available exclusively on CD-Rom (Excel), the data can be used on an 
+unlimited basis. It is easily exportable to other programs for 
+mailing or faxing purposes.
+
+For a limited time, this extensive database is offered at an introductory =
+
+
+Price of $195 (reg. $745).
+
+To order, please print this e-mail, complete the information below and 
+fax it to 416-765-0029 (tel: 416-765-0028).
+
+NAME:
+    
+TITLE:
+
+ORGANIZATION:
+
+ADDRESS:
+
+CITY:
+
+STATE:
+
+POSTAL:
+
+TEL:
+
+FAX:
+
+EMAIL:
+ 
+
+
+
+----A7374B457355CCF--
+
+
+
+From MAILER-DAEMON Sun Dec 12 13:19:53 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CdYK0-0006gM-VP
+	for mharc-axiom-mail@gnu.org; Sun, 12 Dec 2004 13:19:53 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CdYJy-0006fI-Vl for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 12 Dec 2004 13:19:51 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CdYJx-0006eo-PX for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 12 Dec 2004 13:19:50 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CdYJx-0006e6-LG; Sun, 12 Dec 2004 13:19:49 -0500
+Received: from [199.232.41.5] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CdY9s-00020S-V8; Sun, 12 Dec 2004 13:09:25 -0500
+Received: from [210.246.160.230] (helo=199.232.41.8)
+	by mx20.gnu.org with smtp (Exim 4.34)
+	id 1CdY9n-0006PV-0a; Sun, 12 Dec 2004 13:09:21 -0500
+Received: from 138.140.144.240 by 199.232.41.8; Sun, 12 Dec 2004 23:00:39 +0500
+Message-ID: <WVMYCNGEGPRUISEBUGNWX@yahoo.com>
+From: "Terrance Owen" <uitrkgldfhhd@yahoo.com>
+To: axiom-mail@mail.freesoftware.fsf.org, carbone-dev@mail.freesoftware.fsf.org,
+	freeride-devel@mail.freesoftware.fsf.org,
+	freeride-users@mail.freesoftware.fsf.org,
+	sketch-devel@mail.freesoftware.fsf.org
+Date: Sun, 12 Dec 2004 11:01:39 -0700
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--67949374965249270277"
+X-Priority: 3
+X-CS-IP: 7.64.102.64
+Cc: 
+Subject: [Axiom-mail] Message subject
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Terrance Owen <uitrkgldfhhd@yahoo.com>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 12 Dec 2004 18:19:51 -0000
+
+----67949374965249270277
+Content-Type: text/plain;
+Content-Transfer-Encoding: quoted-printable
+
+The New 2005 United States Healthcare Database.
+
+This complete database includes all hospitals, nursing homes, 
+and physicians in the country.
+
+In a rapidly-changing industry, current healthcare information is an 
+invaluable resource to businesses and organizations.  The United States 
+Healthcare Database includes comprehensive information on more than 
+7,000 hospitals, 25,000 nursing homes and 400,000 doctors.  It is the 
+most extensive and reliable mailing list and database of key decision 
+makers in the health care market.
+ 
+Each record is indexed by such features as name, address, phone and 
+fax. The database is available in Excel format on CD Rom.  It is 
+designed for mailing lists and merges.  The data can be selected by 
+state or other criteria such as type of practice. It can be used on 
+an unlimited basis.
+
+For the past 14 years, MedCom has maintained the most comprehensive 
+healthcare lists.  Our directories are 100% telephone verified and 
+updated every quarter. MedCom continues to hold the nation's most 
+extensive and reliable databases of key decision-makers in the health 
+care market.
+ 
+Available exclusively on CD-Rom (Excel), the data can be used on an 
+unlimited basis. It is easily exportable to other programs for 
+mailing or faxing purposes.
+
+For a limited time, this extensive database is offered at an introductory =
+
+
+Price of $195 (reg. $745).
+
+To order, please print this e-mail, complete the information below and 
+fax it to 416-765-0029 (tel: 416-765-0028).
+
+NAME:
+    
+TITLE:
+
+ORGANIZATION:
+
+ADDRESS:
+
+CITY:
+
+STATE:
+
+POSTAL:
+
+TEL:
+
+FAX:
+
+EMAIL:
+ 
+
+MedCom
+4410 Massachusettes Ave. NW, #201
+Washington, DC 20016
+
+
+----67949374965249270277--
+
+
+
+
+From MAILER-DAEMON Wed Dec 15 05:19:09 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CeWFQ-0008KV-2g
+	for mharc-axiom-mail@gnu.org; Wed, 15 Dec 2004 05:19:08 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CeWFM-0008HO-Hb for axiom-mail@mail.freesoftware.fsf.org;
+	Wed, 15 Dec 2004 05:19:05 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CeWFI-0008Fx-Ju for axiom-mail@mail.freesoftware.fsf.org;
+	Wed, 15 Dec 2004 05:19:03 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CeWFH-0008FZ-IG
+	for axiom-mail@mail.freesoftware.fsf.org;
+	Wed, 15 Dec 2004 05:18:59 -0500
+Received: from [199.232.41.5] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CeW4x-0001P2-32
+	for axiom-mail@mail.freesoftware.fsf.org;
+	Wed, 15 Dec 2004 05:08:19 -0500
+Received: from [4.65.252.80]
+	(helo=evrtwa1-ar9-4-65-252-080.evrtwa1.dsl-verizon.net)
+	by mx20.gnu.org with smtp (Exim 4.34) id 1CeW0o-0002Xy-60
+	for axiom-mail@mail.freesoftware.fsf.org;
+	Wed, 15 Dec 2004 05:04:04 -0500
+Received: from 158.176.240.36 by 199.232.76.166;
+	Wed, 15 Dec 2004 06:59:23 -0300
+Message-ID: <HQFQXPMQQUPFIQJOERNK@yahoo.com>
+From: "Leland Connors" <xhgtcl@yahoo.com>
+To: axiom-mail@mail.freesoftware.fsf.org
+Date: Wed, 15 Dec 2004 16:01:23 +0600
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--616539148864951746"
+X-Priority: 3
+X-CS-IP: 192.64.165.121
+Cc: 
+Subject: [Axiom-mail] doctors, physicians,
+	western hemisphere hospital database this extensive
+	hospital database is offered at an introductory price of
+	$195.00 (reg.$475.00 ).
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Leland Connors <xhgtcl@yahoo.com>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 15 Dec 2004 10:19:06 -0000
+
+----616539148864951746
+Content-Type: text/plain;
+Content-Transfer-Encoding: quoted-printable
+
+2005 United States Healthcare & Dentist directory Database 
+
+This complete database includes all hospitals, nursing homes, 
+and physicians and Dentist in the country.
+
+In a rapidly-changing industry, current healthcare information is an 
+invaluable resource to businesses and organizations.  The United States 
+Healthcare Database includes comprehensive information on more than 
+7,000 hospitals, 25,000 nursing homes and 400,000 doctors.  It is the 
+most extensive and reliable mailing list and database of key decision 
+makers in the health care market.
+
+(New Dentist directory, dental practice, dental labs, 
+cosmetic dentists, DDO, dental care directory, directory of dentists, 
+dentist CD, dentist lists, orthodontists, periodontology, oral surgeons, 
+dental lists, tooth decay, dental products, gum disease, oral health, 
+genral practice, dental directory.)
+
+>From our previous customer feedback, this directory is found to 
+be the leading source of dentist reference in the United States.  
+It is used by professionals and industry business development 
+executives who must communicate with dentists in an efficient 
+and timely manner..
+ 
+The American Directory of Dentists contains relevant data on 
+over 200,000 dentists in the United States. Each record is 
+indexed by such features as name, address, phone/fax, county, 
+year licensed, type of practice, type of dentist as well 
+as specialty.  
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Each record is indexed by such features as name, address, phone and 
+fax. The database is available in Excel format on CD Rom.  It is 
+designed for mailing lists and merges.  The data can be selected by 
+state or other criteria such as type of practice. It can be used on 
+an unlimited basis.
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+For the past 14 years, MedCom has maintained the most comprehensive 
+healthcare lists.  Our directories are 100% telephone verified and 
+updated every quarter. MedCom continues to hold the nation's most 
+extensive and reliable databases of key decision-makers in the health 
+care market.
+ 
+For a limited time, this extensive database is offered at an introductory.=
+ 
+
+The United States Healthcare Database and The American Directory of Dentis=
+ts
+
+Price of $195 (reg. $745).
+
+To order, please print this e-mail, complete the information below and 
+fax it to 416-765-0029 (tel: 416-765-0028).
+
+NAME:
+    
+TITLE:
+
+ORGANIZATION:
+
+ADDRESS:
+
+CITY:
+
+STATE:
+
+POSTAL:
+
+TEL:
+
+FAX:
+
+EMAIL:
+ 
+If you want to use Paypal  we can Request money from your Paypal
+  
+Account: ________________________________________
+
+Or wire money from your Bank to our Bank.  
+Please call us @ 416-765-0028 for details.
+
+We also accept money orders, cashier's checks, & personal checks.
+IF YOU ARE MAKING A PAYMENT BY CHECK 
+(money order, cashier's check)  MAIL TO.
+
+MedCom
+4410 Massachusettes Ave. NW, #201
+Washington, DC 20016
+
+You received this message ONLY ONE TIME
+
+
+
+----616539148864951746--
+
+
+
+
+From MAILER-DAEMON Fri Dec 17 20:32:37 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CfTSX-0003Gh-3T
+	for mharc-axiom-mail@gnu.org; Fri, 17 Dec 2004 20:32:37 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CfTSU-0003FW-Ul
+	for axiom-mail@nongnu.org; Fri, 17 Dec 2004 20:32:35 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CfTSU-0003Eg-8y
+	for axiom-mail@nongnu.org; Fri, 17 Dec 2004 20:32:34 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CfTSS-0003E0-BR; Fri, 17 Dec 2004 20:32:32 -0500
+Received: from [209.226.175.4] (helo=tomts16-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CfTHo-0006ZF-83; Fri, 17 Dec 2004 20:21:32 -0500
+Received: from Asus ([64.228.8.82]) by tomts16-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20041218012130.OHHP1836.tomts16-srv.bellnexxia.net@Asus>;
+	Fri, 17 Dec 2004 20:21:30 -0500
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <axiom-developer@nongnu.org>
+Date: Fri, 17 Dec 2004 20:21:43 -0500
+Message-ID: <008801c4e49f$f212ae20$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+In-Reply-To: <008701c4e498$8e935a40$6501a8c0@Asus>
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+Cc: axiom-mail@nongnu.org
+Subject: [Axiom-mail] avoiding duplicate messages
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 18 Dec 2004 01:32:35 -0000
+
+While looking at the issue of connecting the axiom-developer
+email list to the MathAction wiki, I discovered something
+that I must have missed earlier when subscribing to this
+list:
+
+  It is possible to tell the mailing list software to
+  check if you were also on the To: or Cc: list of a
+  message that it is forwarding and to avoid sending
+  duplicates!
+
+To do this go to
+
+  http://lists.nongnu.org/mailman/options/axiom-developer
+
+Fill in your email address and the password that you choose
+when you subscribed to the list (not your email system password)
+and click 'Login'.
+
+At the bottom of the page look for the option
+
+  "Avoid duplicate copies of messages?"
+
+Click on "yes" and then 'Submit my Changes'. Clicking
+"Set globally" will make this effective on all email list
+to which you are subscribed.
+
+And that's it. No more duplicates.
+
+Cheers,
+Bill Page.
+
+
+
+
+From MAILER-DAEMON Sat Dec 18 03:20:04 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CfZop-0002ul-Sr
+	for mharc-axiom-mail@gnu.org; Sat, 18 Dec 2004 03:20:04 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CfZon-0002u5-BJ for axiom-mail@mail.freesoftware.fsf.org;
+	Sat, 18 Dec 2004 03:20:01 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CfZom-0002tM-8L for axiom-mail@mail.freesoftware.fsf.org;
+	Sat, 18 Dec 2004 03:20:00 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CfZol-0002tH-Te; Sat, 18 Dec 2004 03:19:59 -0500
+Received: from [199.232.41.5] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CfZe8-00030Y-Dq; Sat, 18 Dec 2004 03:09:00 -0500
+Received: from [207.235.26.150] (helo=199.232.41.8)
+	by mx20.gnu.org with smtp (Exim 4.34)
+	id 1CfZMn-0008U7-SQ; Sat, 18 Dec 2004 02:51:10 -0500
+Received: from 220.58.17.64 by 207.235.26.150; Sat, 18 Dec 2004 06:42:04 -0100
+Message-ID: <VHAVYWGZSRGGQKUVXNUZBN@yahoo.com>
+From: "Marcos Villanueva" <mnbqd@yahoo.com>
+To: axiom-mail@mail.freesoftware.fsf.org, carbone-dev@mail.freesoftware.fsf.org
+Date: Sat, 18 Dec 2004 12:51:04 +0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--925911798088909923"
+X-Priority: 3
+X-IP: 214.96.132.96
+Cc: 
+Subject: [Axiom-mail] following are the general categories of business
+	mailing lists
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Marcos Villanueva <mnbqd@yahoo.com>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 18 Dec 2004 08:20:01 -0000
+
+----925911798088909923
+Content-Type: text/plain;
+Content-Transfer-Encoding: quoted-printable
+
+SPECIAL OFFER!  (NEW CUSTOMER OFFER CODE 2244).
+
+The American Business List!  $197.00 (Reg. $1,245.00)!.
+
+Direct mail marketing is an extremely popular way for businesses 
+to reach a large percentage of future sales.  Many companies have 
+relied on this marketing method to discover a new customer base.  
+A reliable and extensive list is key to successful results and an 
+increase in the bottom line.
+
+DataUSA has been providing accurate business information for over 
+15 years to a large number of corporate clients.  In turn, our 
+customers have experienced double-digit sales growth on an annual 
+basis.  
+
+If you are interested in growing your business, The American 
+Business List is an ideal sales tool.  
+
+All SIC codes are included in sectors such as construction, 
+automotive, building, transportation, finance, agriculture, 
+manufacturing and much more.
+
+We are so confident in the success of this list that we are prepared 
+to offer a full 100% money-back guarantee if you do not increase your 
+sales. An unprecedented offer of a full refund if your sales do not 
+increase.  
+
+Furthermore, our lists can be used on an unlimited basis (highly 
+unusual for the industry) for mailing, faxing and other purposes.  
+The data can be exported into other programs effortlessly.  (Please 
+note that due to the unreliability of email addresses, this list does 
+not include email information). Save money and time by using this 
+accurate, telephone-verified list.  
+
+The American Business List contains over 10 million companies 
+throughout the United States.  In other words, every single company 
+is listed.  It is categorized by SIC codes and divided into states.  
+
+The SPECIAL OFFER PRICE IS $197 (reg. $1,245)..  
+
+To order The American Business List, please fill out the form below and 
+
+fax it to (905) 751 -0199. (tel: 905-751-0919). 
+
+NAME:
+
+TITLE:
+
+COMPANY:
+
+ADDRESS:
+
+STATE:
+
+ZIP:
+
+TEL:
+
+FAX:
+
+EMAIL:
+
+
+
+
+----925911798088909923--
+
+
+
+
+From MAILER-DAEMON Sun Dec 19 11:34:41 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1Cg413-000714-9j
+	for mharc-axiom-mail@gnu.org; Sun, 19 Dec 2004 11:34:41 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Cg40y-0006xz-VB for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 19 Dec 2004 11:34:37 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Cg40t-0006uF-3o for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 19 Dec 2004 11:34:34 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Cg40r-0006si-D3
+	for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 19 Dec 2004 11:34:29 -0500
+Received: from [24.238.130.218] (helo=user-0cet0mq.cable.mindspring.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1Cg3pv-0008Rm-RM
+	for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 19 Dec 2004 11:23:15 -0500
+X-Message-Info: 8ZW1VDRnoD0JDM3lOMloFB4amlL8iGKmfRDG8
+Received: from mail pickup service by 24.238.130.218 with Microsoft SMTPSVC;
+	Sun, 19 Dec 2004 12:15:12 -0400
+Content-Class: urn:content-classes:message
+From: "Amie Potts" <myxsfhgn@mail.boku.ac.at>
+To: "Axiom-mail" <axiom-mail@mail.freesoftware.fsf.org>
+Date: Sun, 19 Dec 2004 19:18:12 +0300
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--8685C276C8D5DAC113"
+Message-Id: <E1Cg40t-0006uF-3o@lists.gnu.org>
+Cc: 
+Subject: [Axiom-mail] and matched to the North American Industry
+	Classification System
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Amie Potts <myxsfhgn@mail.boku.ac.at>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 19 Dec 2004 16:34:37 -0000
+
+----8685C276C8D5DAC113
+Content-Type: text/plain;
+	charset="iso-0BD4-0"
+Content-Transfer-Encoding: quoted-printable
+
+SPECIAL OFFER!  (NEW CUSTOMER OFFER CODE 2244).
+
+The American Business List!  $197.00 (Reg. $1,245.00)!.
+
+Direct mail marketing is an extremely popular way for businesses 
+to reach a large percentage of future sales.  Many companies have 
+relied on this marketing method to discover a new customer base.  
+A reliable and extensive list is key to successful results and an 
+increase in the bottom line.
+
+DataUSA has been providing accurate business information for over 
+15 years to a large number of corporate clients.  In turn, our 
+customers have experienced double-digit sales growth on an annual 
+basis.  
+
+If you are interested in growing your business, The American 
+Business List is an ideal sales tool.  
+
+All SIC codes are included in sectors such as construction, 
+automotive, building, transportation, finance, agriculture, 
+manufacturing and much more.
+
+We are so confident in the success of this list that we are prepared 
+to offer a full 100% money-back guarantee if you do not increase your 
+sales. An unprecedented offer of a full refund if your sales do not 
+increase.  
+
+Furthermore, our lists can be used on an unlimited basis (highly 
+unusual for the industry) for mailing, faxing and other purposes.  
+The data can be exported into other programs effortlessly.  (Please 
+note that due to the unreliability of email addresses, this list does 
+not include email information). Save money and time by using this 
+accurate, telephone-verified list.  
+
+The American Business List contains over 10 million companies 
+throughout the United States.  In other words, every single company 
+is listed.  It is categorized by SIC codes and divided into states.  
+
+The SPECIAL OFFER PRICE IS $197 (reg. $1,245)..  
+
+To order The American Business List, please fill out the form below and 
+
+fax it to (905) 751 -0199. (tel: 905-751-0919). 
+
+NAME:
+
+TITLE:
+
+COMPANY:
+
+ADDRESS:
+
+STATE:
+
+ZIP:
+
+TEL:
+
+FAX:
+
+EMAIL:
+
+
+
+
+----8685C276C8D5DAC113--
+
+
+
+From MAILER-DAEMON Sun Dec 19 23:20:15 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CgF1p-0003B6-Em
+	for mharc-axiom-mail@gnu.org; Sun, 19 Dec 2004 23:20:13 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CgF1d-000393-Jb for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 19 Dec 2004 23:20:01 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CgF1R-00035W-Fc for axiom-mail@mail.freesoftware.fsf.org;
+	Sun, 19 Dec 2004 23:19:58 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CgF1G-00030m-LZ; Sun, 19 Dec 2004 23:19:38 -0500
+Received: from [199.232.41.5] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CgEqX-0000v0-0b; Sun, 19 Dec 2004 23:08:33 -0500
+Received: from [196.28.50.2] (helo=196-28-50-2.prtc.net)
+	by mx20.gnu.org with smtp (Exim 4.34)
+	id 1CgEd9-0002Vg-2A; Sun, 19 Dec 2004 22:54:44 -0500
+X-Message-Info: 7C9PZ8XKeandm4FN8BCftMElS33CewXBO9jsgADAawUT748FUD66
+Received: from [152.216.101.35] by payoff8027.pandemic.196.28.50.2 via HTTP;
+	Mon, 20 Dec 2004 01:54:33 -0200
+Message-ID: <0A6D9323B99.83BE7@196.28.50.2>
+From: "Dante Tanner" <KXFKTYRMP@opnet.com.tw>
+To: adonthell-announce@mail.freesoftware.fsf.org,
+	axiom-mail@mail.freesoftware.fsf.org
+Date: Mon, 20 Dec 2004 08:47:33 +0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="--E80B34180D3BA6D"
+Cc: 
+Subject: [Axiom-mail] lists, revenue generator,
+	North American Industry Classification System
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: Dante Tanner <KXFKTYRMP@opnet.com.tw>
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Dec 2004 04:20:03 -0000
+
+----E80B34180D3BA6D
+Content-Type: text/plain;
+	charset="iso-CFE5-B"
+Content-Transfer-Encoding: quoted-printable
+
+SPECIAL OFFER!  (NEW CUSTOMER OFFER CODE 2244).
+
+The American Business List!  $197.00 (Reg. $1,245.00)!.
+
+Direct mail marketing is an extremely popular way for businesses 
+to reach a large percentage of future sales.  Many companies have 
+relied on this marketing method to discover a new customer base.  
+A reliable and extensive list is key to successful results and an 
+increase in the bottom line.
+
+DataUSA has been providing accurate business information for over 
+15 years to a large number of corporate clients.  In turn, our 
+customers have experienced double-digit sales growth on an annual 
+basis.  
+
+If you are interested in growing your business, The American 
+Business List is an ideal sales tool.  
+
+All SIC codes are included in sectors such as construction, 
+automotive, building, transportation, finance, agriculture, 
+manufacturing and much more.
+
+We are so confident in the success of this list that we are prepared 
+to offer a full 100% money-back guarantee if you do not increase your 
+sales. An unprecedented offer of a full refund if your sales do not 
+increase.  
+
+Furthermore, our lists can be used on an unlimited basis (highly 
+unusual for the industry) for mailing, faxing and other purposes.  
+The data can be exported into other programs effortlessly.  (Please 
+note that due to the unreliability of email addresses, this list does 
+not include email information). Save money and time by using this 
+accurate, telephone-verified list.  
+
+The American Business List contains over 10 million companies 
+throughout the United States.  In other words, every single company 
+is listed.  It is categorized by SIC codes and divided into states.  
+
+The SPECIAL OFFER PRICE IS $197 (reg. $1,245)..  
+
+To order The American Business List, please fill out the form below and 
+
+fax it to (905) 751 -0199. (tel: 905-751-0919). 
+
+NAME:
+
+TITLE:
+
+COMPANY:
+
+ADDRESS:
+
+STATE:
+
+ZIP:
+
+TEL:
+
+FAX:
+
+EMAIL:
+
+
+
+
+----E80B34180D3BA6D--
+
+
+
+From MAILER-DAEMON Wed Dec 29 00:41:58 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CjWas-0005ly-81
+	for mharc-axiom-mail@gnu.org; Wed, 29 Dec 2004 00:41:58 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CjWaq-0005ls-Jc
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 00:41:56 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CjWaq-0005lf-5T
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 00:41:56 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CjWaq-0005lc-24
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 00:41:56 -0500
+Received: from [80.91.229.2] (helo=main.gmane.org)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CjWPW-0001nu-0k
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 00:30:14 -0500
+Received: from root by main.gmane.org with local (Exim 3.35 #1 (Debian))
+	id 1CjWPU-0001Zs-00
+	for <axiom-mail@nongnu.org>; Wed, 29 Dec 2004 06:30:12 +0100
+Received: from host65-152.pool8249.interbusiness.it ([82.49.152.65])
+	by main.gmane.org with esmtp (Gmexim 0.1 (Debian))
+	id 1AlnuQ-0007hv-00
+	for <axiom-mail@nongnu.org>; Wed, 29 Dec 2004 06:30:12 +0100
+Received: from andrea by host65-152.pool8249.interbusiness.it with local
+	(Gmexim 0.1 (Debian)) id 1AlnuQ-0007hv-00
+	for <axiom-mail@nongnu.org>; Wed, 29 Dec 2004 06:30:12 +0100
+X-Injected-Via-Gmane: http://gmane.org/
+To: axiom-mail@nongnu.org
+From: Andrea Bedini <andrea@poisson.phc.unipi.it>
+Date: Wed, 29 Dec 2004 06:26:01 +0100
+Lines: 30
+Message-ID: <pan.2004.12.29.05.26.00.419391@poisson.phc.unipi.it>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Complaints-To: usenet@sea.gmane.org
+X-Gmane-NNTP-Posting-Host: host65-152.pool8249.interbusiness.it
+User-Agent: Pan/0.14.2.91 (As She Crawled Across the Table (Debian GNU/Linux))
+Sender: news <news@sea.gmane.org>
+Subject: [Axiom-mail] complex numbers
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 29 Dec 2004 05:41:56 -0000
+
+Hi,
+I'm just learning how to do some computations with Axiom, but I've a
+problem with complex numbers.
+
+Why this evalutate to zero ?
+
+(199) -> A: Complex Polynomial Integer
+                                                                   Type: Void
+(200) -> A*conjugate A - A^2
+
+   (200)  0
+                                             Type: Complex Polynomial Integer
+
+this is not true in general
+
+(202) -> A := a+%i*b
+
+   (202)  a + b %i
+                                             Type: Complex Polynomial Integer
+(203) -> A*conjugate A - A^2
+
+            2
+   (203)  2b  - 2a b %i
+                                             Type: Complex Polynomial Integer
+
+Anybody can give me some hints ?
+
+-- 
+Andrea Bedini
+
+
+
+
+
+From MAILER-DAEMON Wed Dec 29 01:28:30 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CjXJt-0006RE-Gk
+	for mharc-axiom-mail@gnu.org; Wed, 29 Dec 2004 01:28:29 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CjXJr-0006Oy-Pa
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 01:28:27 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CjXJr-0006NR-4k
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 01:28:27 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CjXJr-0006NH-1F
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 01:28:27 -0500
+Received: from [69.36.241.242] (helo=moya.mcelrath.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CjX8u-000398-UP
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 01:17:09 -0500
+Received: from moya.mcelrath.org (mcelrath@localhost [127.0.0.1])
+	by moya.mcelrath.org (8.13.1/8.13.1/Debian-14) with ESMTP id
+	iBT6H62R008840
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NOT);
+	Tue, 28 Dec 2004 22:17:06 -0800
+Received: (from mcelrath@localhost)
+	by moya.mcelrath.org (8.13.1/8.13.1/Debian-14) id iBT6H6lY008837;
+	Tue, 28 Dec 2004 22:17:06 -0800
+X-Authentication-Warning: moya.mcelrath.org: mcelrath set sender to
+	bob@mcelrath.org using -f
+Date: Tue, 28 Dec 2004 22:17:06 -0800
+From: Bob McElrath <bob@mcelrath.org>
+To: Andrea Bedini <andrea@poisson.phc.unipi.it>
+Subject: Re: [Axiom-mail] complex numbers
+Message-ID: <20041229061706.GC6109@mcelrath.org>
+References: <pan.2004.12.29.05.26.00.419391@poisson.phc.unipi.it>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="ABTtc+pdwF7KHXCz"
+Content-Disposition: inline
+In-Reply-To: <pan.2004.12.29.05.26.00.419391@poisson.phc.unipi.it>
+User-Agent: Mutt/1.5.6+20040523i
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 29 Dec 2004 06:28:28 -0000
+
+
+--ABTtc+pdwF7KHXCz
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+Andrea Bedini [andrea@poisson.phc.unipi.it] wrote:
+> Hi,
+> I'm just learning how to do some computations with Axiom, but I've a
+> problem with complex numbers.
+> 
+> Why this evalutate to zero ?
+> 
+> (199) -> A: Complex Polynomial Integer
+>                                                                    Type: Void
+> (200) -> A*conjugate A - A^2
+> 
+>    (200)  0
+
+Definitely wrong.  It looks like the source of the problem is:
+
+(18) -> conjugate(a)
+
+   (18)  a
+                                             Type: Complex Polynomial Integer
+
+Cheers,
+Bob McElrath [Univ. of California at Davis, Department of Physics]
+
+    "It's not the people who vote that count. It's the people who count the
+    votes." -- Joseph Stalin
+
+--ABTtc+pdwF7KHXCz
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFB0kvijwioWRGe9K0RApd0AJoDxfrb4IWmhZTh9v1NBE+GstlMvgCgypHw
+hju2OWbWKP0Xn0wrbEbU8vw=
+=VZml
+-----END PGP SIGNATURE-----
+
+--ABTtc+pdwF7KHXCz--
+
+
+
+From MAILER-DAEMON Wed Dec 29 01:48:24 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CjXdA-0005xt-L9
+	for mharc-axiom-mail@gnu.org; Wed, 29 Dec 2004 01:48:24 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CjXd7-0005uu-Tk
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 01:48:22 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CjXd7-0005tm-8N
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 01:48:21 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CjXd7-0005te-4y
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 01:48:21 -0500
+Received: from [209.226.175.188] (helo=tomts25-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CjXRp-0007Bm-2i
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 01:36:41 -0500
+Received: from Asus ([216.208.193.130]) by tomts25-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20041229063638.VWNV25979.tomts25-srv.bellnexxia.net@Asus>;
+	Wed, 29 Dec 2004 01:36:38 -0500
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: "'Bob McElrath'" <bob@mcelrath.org>
+Subject: RE: [Axiom-mail] complex numbers
+Date: Wed, 29 Dec 2004 01:36:54 -0500
+Message-ID: <002201c4ed70$cc43ec20$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+In-Reply-To: <20041229061706.GC6109@mcelrath.org>
+Cc: 'Andrea Bedini' <andrea@poisson.phc.unipi.it>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 29 Dec 2004 06:48:22 -0000
+
+On Wednesday, December 29, 2004 1:17 AM Bob McElrath wrote:
+> 
+> Andrea Bedini [andrea@poisson.phc.unipi.it] wrote:
+> > Hi,
+> > I'm just learning how to do some computations with Axiom,
+> > but I've a problem with complex numbers.
+> > 
+> > Why this evalutate to zero ?
+> > 
+> > (199) -> A: Complex Polynomial Integer
+> >                                                             
+>        Type: Void
+> > (200) -> A*conjugate A - A^2
+> > 
+> >    (200)  0
+> 
+> Definitely wrong.  It looks like the source of the problem is:
+> 
+> (18) -> conjugate(a)
+> 
+>    (18)  a
+>                                Type: Complex Polynomial Integer
+> 
+
+Of course I agree that it is wrong. But what would you expect
+the answer to be?
+
+  conjugate(a)
+
+could return unevaluated as just
+
+  conjugate(a)
+
+but then what should the Type: be? Is such an expression
+still necessarily a Complex Polynomial Integer?
+
+This is dangerously close to the discussion that we had some
+months ago about the meaning of "indeterminants", objects
+which have a type but no specific value. For example, I can
+say
+
+  A:Integer
+
+but if I write
+
+  A+1
+
+If you answered "yes" to the idea that conjugate(a) is still
+of type Complex Polynomial Integer, then surely A+1 is still
+of type Integer is the same sense, but Axiom complains that
+"A has not been given a value".
+
+Perhaps evaluating the expression
+
+  conjugate(a)
+
+should also complain about the lack of a value?
+
+Regards,
+Bill Page.
+
+
+
+
+From MAILER-DAEMON Wed Dec 29 01:58:54 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CjXnK-0008Uc-Cv
+	for mharc-axiom-mail@gnu.org; Wed, 29 Dec 2004 01:58:54 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CjXnI-0008UJ-KS
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 01:58:52 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CjXnI-0008U7-8X
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 01:58:52 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CjXnI-0008U4-5k
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 01:58:52 -0500
+Received: from [207.115.63.102] (helo=pimout3-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CjXcG-00010N-1l
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 01:47:28 -0500
+Received: from localhost.localdomain (179.178.252.64.snet.net [64.252.178.179])
+	by pimout3-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iBT6lI45115208; Wed, 29 Dec 2004 01:47:22 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iBT7S2m07603;
+	Wed, 29 Dec 2004 02:28:02 -0500
+Date: Wed, 29 Dec 2004 02:28:02 -0500
+Message-Id: <200412290728.iBT7S2m07603@localhost.localdomain>
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca
+In-reply-to: <002201c4ed70$cc43ec20$6501a8c0@Asus> (bill.page1@sympatico.ca)
+Subject: Re: [Axiom-mail] complex numbers
+References: <002201c4ed70$cc43ec20$6501a8c0@Asus>
+Cc: andrea@poisson.phc.unipi.it, axiom-mail@nongnu.org, bob@mcelrath.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 29 Dec 2004 06:58:52 -0000
+
+seems to be a categorical error of some sort.
+
+A: Complex Polynomial Integer
+
+tells the system that 'A' is expected to have a value which is
+Complex Polynomial Integer.
+
+'conjugate' works on values, not potential values.
+
+Thus, conjugate(A) has no meaning as 'A' has no value.
+This should probably be an error.
+
+If axiom could work with so that conjugate worked on the type
+then axiom could work at some sort of an 'axiomatic' level
+rather than a symbolic computation level. Perhaps when we join
+forces with the ACL2 crowd we could state certain theorems and
+have them applied in the absence of a value.
+
+Tim
+
+
+
+From MAILER-DAEMON Wed Dec 29 02:14:23 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CjY2J-0006E7-Cr
+	for mharc-axiom-mail@gnu.org; Wed, 29 Dec 2004 02:14:23 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CjY2H-0006E2-Hk
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 02:14:21 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CjY2H-0006Dq-3l
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 02:14:21 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CjY2H-0006Dn-0M
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 02:14:21 -0500
+Received: from [209.226.175.188] (helo=tomts25-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CjXqZ-0003yE-2g
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 02:02:15 -0500
+Received: from Asus ([216.208.193.130]) by tomts25-srv.bellnexxia.net
+	(InterMail vM.5.01.06.10 201-253-122-130-110-20040306) with ESMTP
+	id <20041229070212.VYJH25979.tomts25-srv.bellnexxia.net@Asus>;
+	Wed, 29 Dec 2004 02:02:12 -0500
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <daly@idsi.net>
+Subject: RE: [Axiom-mail] complex numbers
+Date: Wed, 29 Dec 2004 02:02:28 -0500
+Message-ID: <002301c4ed74$5ecbcba0$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+In-Reply-To: <200412290728.iBT7S2m07603@localhost.localdomain>
+Cc: andrea@poisson.phc.unipi.it, axiom-mail@nongnu.org, bob@mcelrath.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 29 Dec 2004 07:14:21 -0000
+
+Tim,
+
+On Wednesday, December 29, 2004 2:28 AM you wrote:
+> 
+> seems to be a categorical error of some sort.
+> 
+> A: Complex Polynomial Integer
+> 
+> tells the system that 'A' is expected to have a value which is
+> Complex Polynomial Integer.
+> 
+> 'conjugate' works on values, not potential values.
+> 
+> Thus, conjugate(A) has no meaning as 'A' has no value.
+> This should probably be an error.
+> 
+> If axiom could work with so that conjugate worked on the type
+> then axiom could work at some sort of an 'axiomatic' level
+> rather than a symbolic computation level. Perhaps when we join
+> forces with the ACL2 crowd we could state certain theorems and
+> have them applied in the absence of a value.
+> 
+
+I know that this is opening up the whole big subject again,
+but I do think that Axiom is already "two-faced" about this.
+
+Consider for example that we can write:
+
+(7) -> A: Complex Polynomial Integer
+                                         Type: Void
+(8) -> B: Complex Polynomial Integer
+                                         Type: Void
+(9) -> A+B
+
+   (9)  B + A
+                               Type: Complex Polynomial Integer
+
+Neither A or B "has a value" but Axiom has no trouble agreeing
+that A+B is still of type Complex Polynomial Integer.
+
+I do not see any essential difference between this and
+
+(10) -> A:Integer
+                                         Type: Void
+(11) -> B:Integer
+                                         Type: Void
+(12) -> A+B
+
+   A is declared as being in Integer but has not been given a value.
+
+Regards,
+Bill Page.
+
+
+
+
+From MAILER-DAEMON Wed Dec 29 02:19:25 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CjY7B-0007qq-Lx
+	for mharc-axiom-mail@gnu.org; Wed, 29 Dec 2004 02:19:25 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CjY7A-0007qc-3q
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 02:19:24 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CjY79-0007qQ-NT
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 02:19:23 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CjY79-0007qN-KP
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 02:19:23 -0500
+Received: from [69.36.241.242] (helo=moya.mcelrath.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CjXw4-00055a-Ij
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 02:07:56 -0500
+Received: from moya.mcelrath.org (mcelrath@localhost [127.0.0.1])
+	by moya.mcelrath.org (8.13.1/8.13.1/Debian-14) with ESMTP id
+	iBT77oKc009112
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NOT);
+	Tue, 28 Dec 2004 23:07:50 -0800
+Received: (from mcelrath@localhost)
+	by moya.mcelrath.org (8.13.1/8.13.1/Debian-14) id iBT77oax009109;
+	Tue, 28 Dec 2004 23:07:50 -0800
+X-Authentication-Warning: moya.mcelrath.org: mcelrath set sender to
+	bob@mcelrath.org using -f
+Date: Tue, 28 Dec 2004 23:07:50 -0800
+From: Bob McElrath <bob@mcelrath.org>
+To: root <daly@idsi.net>
+Subject: Re: [Axiom-mail] complex numbers
+Message-ID: <20041229070750.GD6109@mcelrath.org>
+References: <002201c4ed70$cc43ec20$6501a8c0@Asus>
+	<200412290728.iBT7S2m07603@localhost.localdomain>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="gE7i1rD7pdK0Ng3j"
+Content-Disposition: inline
+In-Reply-To: <200412290728.iBT7S2m07603@localhost.localdomain>
+User-Agent: Mutt/1.5.6+20040523i
+Cc: andrea@poisson.phc.unipi.it, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 29 Dec 2004 07:19:24 -0000
+
+
+--gE7i1rD7pdK0Ng3j
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+root [daly@idsi.net] wrote:
+> seems to be a categorical error of some sort.
+> 
+> A: Complex Polynomial Integer
+> 
+> tells the system that 'A' is expected to have a value which is
+> Complex Polynomial Integer.
+> 
+> 'conjugate' works on values, not potential values.
+
+Then it should not *appear* to work and should give an error: cannot
+compute conjugate of indeterminate 'A'.
+
+> Thus, conjugate(A) has no meaning as 'A' has no value.
+> This should probably be an error.
+> 
+> If axiom could work with so that conjugate worked on the type
+> then axiom could work at some sort of an 'axiomatic' level
+> rather than a symbolic computation level. Perhaps when we join
+> forces with the ACL2 crowd we could state certain theorems and
+> have them applied in the absence of a value.
+
+Well... A + conjugate(A) is most definitely a Complex Polynomial
+Integer, I don't think it requires a fully axiomatic approach to
+understand or use that.  Maple, Mathematica, and Maxima all get this
+right...
+
+conjugate is a characteristic of the number itself, just as the negative
+sign in negative numbers is not an operator but part of the number
+itself.  (of course, one can implement it both ways...)
+
+--
+Cheers,
+Bob McElrath [Univ. of California at Davis, Department of Physics]
+
+    "It's not the people who vote that count. It's the people who count the
+    votes." -- Joseph Stalin
+
+--gE7i1rD7pdK0Ng3j
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFB0lfGjwioWRGe9K0RAkjYAJ400Fi7PGGYLVoNUXlTj9mzXr2vrwCfcUdx
+WQUnFUNSKWjyBq/q2VMM81Q=
+=DEAi
+-----END PGP SIGNATURE-----
+
+--gE7i1rD7pdK0Ng3j--
+
+
+
+From MAILER-DAEMON Wed Dec 29 02:46:54 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CjYXm-0000QF-KF
+	for mharc-axiom-mail@gnu.org; Wed, 29 Dec 2004 02:46:54 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CjYXk-0000OC-4j
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 02:46:52 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CjYXi-0000NI-Uc
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 02:46:51 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1CjYXi-0000N2-OD
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 02:46:50 -0500
+Received: from [207.115.63.77] (helo=pimout1-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1CjYMe-0003HN-CU
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 02:35:24 -0500
+Received: from localhost.localdomain (179.178.252.64.snet.net [64.252.178.179])
+	by pimout1-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iBT7ZDjb183178; Wed, 29 Dec 2004 02:35:17 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iBT8FvS07646;
+	Wed, 29 Dec 2004 03:15:57 -0500
+Date: Wed, 29 Dec 2004 03:15:57 -0500
+Message-Id: <200412290815.iBT8FvS07646@localhost.localdomain>
+From: root <daly@idsi.net>
+To: bill.page1@sympatico.ca
+In-reply-to: <002301c4ed74$5ecbcba0$6501a8c0@Asus> (bill.page1@sympatico.ca)
+Subject: Re: [Axiom-mail] complex numbers
+References: <002301c4ed74$5ecbcba0$6501a8c0@Asus>
+Cc: axiom-developer@nongnu.org, andrea@poisson.phc.unipi.it, daly@idsi.net,
+	axiom-mail@nongnu.org, bob@mcelrath.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 29 Dec 2004 07:46:52 -0000
+
+> On Wednesday, December 29, 2004 2:28 AM you wrote:
+> > 
+> > seems to be a categorical error of some sort.
+> > 
+> > A: Complex Polynomial Integer
+> > 
+> > tells the system that 'A' is expected to have a value which is
+> > Complex Polynomial Integer.
+> > 
+> > 'conjugate' works on values, not potential values.
+> > 
+> > Thus, conjugate(A) has no meaning as 'A' has no value.
+> > This should probably be an error.
+> > 
+> > If axiom could work with so that conjugate worked on the type
+> > then axiom could work at some sort of an 'axiomatic' level
+> > rather than a symbolic computation level. Perhaps when we join
+> > forces with the ACL2 crowd we could state certain theorems and
+> > have them applied in the absence of a value.
+> > 
+> 
+> I know that this is opening up the whole big subject again,
+> but I do think that Axiom is already "two-faced" about this.
+> 
+> Consider for example that we can write:
+> 
+> (7) -> A: Complex Polynomial Integer
+>                                          Type: Void
+> (8) -> B: Complex Polynomial Integer
+>                                          Type: Void
+> (9) -> A+B
+> 
+>    (9)  B + A
+>                                Type: Complex Polynomial Integer
+> 
+> Neither A or B "has a value" but Axiom has no trouble agreeing
+> that A+B is still of type Complex Polynomial Integer.
+> 
+> I do not see any essential difference between this and
+> 
+> (10) -> A:Integer
+>                                          Type: Void
+> (11) -> B:Integer
+>                                          Type: Void
+> (12) -> A+B
+> 
+>    A is declared as being in Integer but has not been given a value.
+> 
+> 
+
+Clearly you're right and I agree with you.
+
+The problem, as I see it, is that there are subtle degrees of meaning
+that are easily stepped around when you work on paper but must be
+clarified in computational mathematics.
+
+A: Integer
+
+might mean that 1) 'A' will hold a value which is an integer
+under interpretation (1)
+
+A+1 
+
+is an error since 'A' has no value. But what does the type of
+an unbound thing mean? Lisp assigns types to the values, not
+the boxes. This is like labeling a box 'television'.
+
+or perhaps that 2) 'A' is an indefinite object of type integer
+under interpretation (2)
+
+A+1
+
+is another indeterminant integer, where '+' comes from Integer.
+
+or perhaps that 3) 'A' obeys the laws applied to integers
+under interpretation (3)
+
+A+1
+
+is a polynomial with 2 integers, representing a constant, where
+'+' comes from Polynomial.
+
+or perhaps that 4) 'A' is a symbol which hold integers
+under interpretation (4)
+
+A+1
+
+is a polynomial in A with integer coefficients ignoring 'A's type
+where '+' comes from Polynomial.
+
+or perhaps that 5) 'A' is an element of a Ring and theorems can be applied
+under interpretation (5)
+
+A+1
+
+is 'B', a new member of the Ring since '+' is a ring operator and both
+'A' and '1' are ring elements. Ideally Axiom's types would be decorated
+with axioms, like the ring axioms making reasoning about unbound but
+typed objects possible. The '+' comes from the Category axioms of Integer.
+
+
+The exact interpretation chosen appears to be dictated by the 
+underlying code and is not the same everywhere.
+
+Axiom is the product of many people, some of whom have chosen
+different interpretations. Indeed, some of the interpretations
+didn't exist before the computational aspects of mathematics
+came into play.
+
+There are quite a few areas of research that could be followed.
+Indeed, working out the implications of the several meanings of 
+'A' is a PhD topic, and a rather hard one at that. The issue 
+heads off into questions of provisos, questions of reasoning with
+theorems and axioms, etc.
+
+Axiom's main strength has always been as a research platform where
+it is possible to work out these ideas and reduce them to practice.
+
+Unfortunately, research funding seems nowhere to be found.
+
+Tim
+
+
+
+
+From MAILER-DAEMON Wed Dec 29 13:23:53 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CjiUD-00088x-O7
+	for mharc-axiom-mail@gnu.org; Wed, 29 Dec 2004 13:23:53 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CjiUB-00088V-9Y
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 13:23:51 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CjiUA-00088J-Pu
+	for axiom-mail@nongnu.org; Wed, 29 Dec 2004 13:23:51 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CjiUA-00088G-N3; Wed, 29 Dec 2004 13:23:50 -0500
+Received: from [69.36.241.242] (helo=moya.mcelrath.org)
+	by monty-python.gnu.org with esmtp (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.34) id 1CjiIl-0001eY-Jk; Wed, 29 Dec 2004 13:12:03 -0500
+Received: from moya.mcelrath.org (mcelrath@localhost [127.0.0.1])
+	by moya.mcelrath.org (8.13.1/8.13.1/Debian-14) with ESMTP id
+	iBTIBsGb012356
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NOT);
+	Wed, 29 Dec 2004 10:11:54 -0800
+Received: (from mcelrath@localhost)
+	by moya.mcelrath.org (8.13.1/8.13.1/Debian-14) id iBTIBr0U012353;
+	Wed, 29 Dec 2004 10:11:53 -0800
+X-Authentication-Warning: moya.mcelrath.org: mcelrath set sender to
+	bob+axiom@mcelrath.org using -f
+Date: Wed, 29 Dec 2004 10:11:53 -0800
+From: Bob McElrath <bob+axiom@mcelrath.org>
+To: root <daly@idsi.net>
+Subject: Re: [Axiom-mail] complex numbers
+Message-ID: <20041229181153.GF6109@mcelrath.org>
+Mail-Followup-To: root <daly@idsi.net>, bill.page1@sympatico.ca,
+	andrea@poisson.phc.unipi.it, axiom-mail@nongnu.org,
+	axiom-developer@nongnu.org
+References: <002301c4ed74$5ecbcba0$6501a8c0@Asus>
+	<200412290815.iBT8FvS07646@localhost.localdomain>
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="SnV5plBeK2Ge1I9g"
+Content-Disposition: inline
+In-Reply-To: <200412290815.iBT8FvS07646@localhost.localdomain>
+User-Agent: Mutt/1.5.6+20040523i
+Cc: axiom-developer@nongnu.org, andrea@poisson.phc.unipi.it,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 29 Dec 2004 18:23:51 -0000
+
+
+--SnV5plBeK2Ge1I9g
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+
+
+root [daly@idsi.net] wrote:
+> Clearly you're right and I agree with you.
+> 
+> The problem, as I see it, is that there are subtle degrees of meaning
+> that are easily stepped around when you work on paper but must be
+> clarified in computational mathematics.
+
+Why cannot we allow *all*?  I expect I should be able to coerce 'A+1' to
+an Integer, Polynomial Integer, Expression Integer, etc.  The default
+seems to be Integer, which seems fine.
+
+The error seems to be in the Polynomial domain:
+    (16) -> c:Complex Integer           
+                                                                       Type: Void
+    (17) -> conjugate(c)     
+     
+       c is declared as being in Complex Integer but has not been given a 
+          value.
+    (17) -> c:Complex Polynomial Integer
+                                                                       Type: Void
+    (18) -> conjugate(c)
+
+       (18)  c
+                                                 Type: Complex Polynomial Integer
+
+Adding the Polynomial to its domain causes this to go wrong...
+
+    (19) -> c:Polynomial Complex Integer
+                                                                       Type: Void
+    (20) -> conjugate(c)
+       There are 4 exposed and 1 unexposed library operations named 
+          conjugate having 1 argument(s) but none was determined to be 
+        ...
+
+I'm surprised this doesn't work.  A Polynomial on a Ring is still a
+member of that ring and should inherit its functions.  (in this case,
+conjugate)  It also strikes me that Polynomial Complex Integer is the
+proper type here, not Complex Polynomial Integer...clearly they are
+inequivalent.
+
+> A: Integer
+> 
+> might mean that 1) 'A' will hold a value which is an integer
+> under interpretation (1)
+> 
+> A+1 
+> 
+> is an error since 'A' has no value. But what does the type of
+> an unbound thing mean? Lisp assigns types to the values, not
+> the boxes. This is like labeling a box 'television'.
+
+This is the approach taken by Integer, Complex, and Float it seems.
+
+> or perhaps that 2) 'A' is an indefinite object of type integer
+> under interpretation (2)
+> 
+> A+1
+> 
+> is another indeterminant integer, where '+' comes from Integer.
+> 
+> or perhaps that 3) 'A' obeys the laws applied to integers
+> under interpretation (3)
+> 
+> A+1
+> 
+> is a polynomial with 2 integers, representing a constant, where
+> '+' comes from Polynomial.
+
+I cannot seem to construct an example of type (3).  Given: c:Integer and
+I want to construct a Polynomial Integer containing 'c', how would I do
+it?
+
+> or perhaps that 4) 'A' is a symbol which hold integers
+> under interpretation (4)
+> 
+> A+1
+> 
+> is a polynomial in A with integer coefficients ignoring 'A's type
+> where '+' comes from Polynomial.
+
+The type of 'A' cannot be ignored since 'A+1' must Polynomial must have
+a Field such as Integer in its constructor.
+
+> or perhaps that 5) 'A' is an element of a Ring and theorems can be applied
+> under interpretation (5)
+> 
+> A+1
+> 
+> is 'B', a new member of the Ring since '+' is a ring operator and both
+> 'A' and '1' are ring elements. Ideally Axiom's types would be decorated
+> with axioms, like the ring axioms making reasoning about unbound but
+> typed objects possible. The '+' comes from the Category axioms of Integer.
+
+Now this truly is a research project.  ;)
+
+> The exact interpretation chosen appears to be dictated by the 
+> underlying code and is not the same everywhere.
+> 
+> Axiom is the product of many people, some of whom have chosen
+> different interpretations. Indeed, some of the interpretations
+> didn't exist before the computational aspects of mathematics
+> came into play.
+
+I think this *must* be clarified, and a unifying set of assumptions be
+applied across all domains.
+
+> There are quite a few areas of research that could be followed.
+> Indeed, working out the implications of the several meanings of 
+> 'A' is a PhD topic, and a rather hard one at that. The issue 
+> heads off into questions of provisos, questions of reasoning with
+> theorems and axioms, etc.
+
+This does not seem so hard, but maybe I am being naive.
+
+Cheers,
+Bob McElrath [Univ. of California at Davis, Department of Physics]
+
+    "It's not the people who vote that count. It's the people who count the
+    votes." -- Joseph Stalin
+
+--SnV5plBeK2Ge1I9g
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFB0vNpjwioWRGe9K0RAhaOAKD7ER6PNpvslNuEE5PfBzezbh/+mwCfRId0
+3fqjy7A8IPUAQYyD2VFrY5Q=
+=W6uL
+-----END PGP SIGNATURE-----
+
+--SnV5plBeK2Ge1I9g--
+
+
+
+From MAILER-DAEMON Fri Dec 31 04:32:52 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1CkJ9P-0006fs-5m
+	for mharc-axiom-mail@gnu.org; Fri, 31 Dec 2004 04:32:51 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1CkJ9N-0006eS-4j
+	for axiom-mail@nongnu.org; Fri, 31 Dec 2004 04:32:49 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1CkJ9L-0006da-Ez
+	for axiom-mail@nongnu.org; Fri, 31 Dec 2004 04:32:47 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33)
+	id 1CkJ9K-0006dM-RI; Fri, 31 Dec 2004 04:32:47 -0500
+Received: from [207.115.63.101] (helo=pimout2-ext.prodigy.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34)
+	id 1CkIyC-0008LC-Uc; Fri, 31 Dec 2004 04:21:17 -0500
+Received: from localhost.localdomain (179.178.252.64.snet.net [64.252.178.179])
+	by pimout2-ext.prodigy.net (8.12.10 milter /8.12.10) with ESMTP id
+	iBV9LBXO286550; Fri, 31 Dec 2004 04:21:15 -0500
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id iBVA1qP10309;
+	Fri, 31 Dec 2004 05:01:52 -0500
+Date: Fri, 31 Dec 2004 05:01:52 -0500
+Message-Id: <200412311001.iBVA1qP10309@localhost.localdomain>
+From: root <daly@idsi.net>
+To: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+Cc: gilbert@sci.ccny.cuny.edu
+Subject: [Axiom-mail] happy new year
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@idsi.net
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 31 Dec 2004 09:32:49 -0000
+
+*,
+
+Well, it's not merged yet and on linux only so far but ....
+
+axiom
+
+
+starts axiom and hypertex. from hypertex it is possible to go into
+basic commands -> draw -> draw a curve 
+and it pipes to the running axiom process and starts graphics.
+
+in other words..... IT WORKS!
+
+I'm hoping to get this cleaned up, automated, tested, and merged into main
+before the February 2005 release.
+
+Happy new year to one and all.
+
+Tim
+
+
+
+
+

@@ -1,0 +1,211 @@
+From MAILER-DAEMON Wed Jul 15 10:59:35 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MR5xH-0003lP-QS
+	for mharc-axiom-mail@gnu.org; Wed, 15 Jul 2009 10:59:35 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MR5xF-0003kk-LJ
+	for axiom-mail@nongnu.org; Wed, 15 Jul 2009 10:59:33 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MR5xA-0003jM-FR
+	for axiom-mail@nongnu.org; Wed, 15 Jul 2009 10:59:32 -0400
+Received: from [199.232.76.173] (port=40696 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MR5xA-0003jJ-BK
+	for axiom-mail@nongnu.org; Wed, 15 Jul 2009 10:59:28 -0400
+Received: from web36703.mail.mud.yahoo.com ([209.191.85.37]:37063)
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <daCaptain@rocketmail.com>) id 1MR5x9-0001nX-Q6
+	for axiom-mail@nongnu.org; Wed, 15 Jul 2009 10:59:28 -0400
+Received: (qmail 62874 invoked by uid 60001); 15 Jul 2009 14:59:26 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=rocketmail.com; s=s1024;
+	t=1247669966; bh=ZW/WaJ422p7BBJGw0SMrbZcZrJ9TPInOOnQxcH6FJS8=;
+	h=Message-ID:X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type;
+	b=sIzvcTpmk88T4ralbh7nJblGc067EHF3DDTxcB7EPu8CqPTVeV6h8l1d1JpO+dO+XmRG0xuAVqvXffRgJ3QAHWXpjQz8em3sg0gE96LjMIL5WK/FU6toJgiSeUkyMY2+HYelBTvfFusem/N+ahRpYybqPjRMKOVFU/2xegTvB0I=
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=rocketmail.com;
+	h=Message-ID:X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type;
+	b=jcQa4rxAl8qEBl+dEfiwBGVib9n0fys0hDe2ZnEf4Zda+KRi72v6z95T55ceiklWRIu/QrrhCuWZWRs6GPSPC8F6H/xnW3mmlPmi1C7Pvfr6TkxnWjcv5nm/qZshqR6zSrpE147+uqcvso6MFr02JpxhV8a+fWYssKApKbwayUE=;
+Message-ID: <544373.61247.qm@web36703.mail.mud.yahoo.com>
+X-YMail-OSG: KAR1QXEVM1nHJTPf2OFVhfCin8ZR5FTSTX1I7YTC8KzKuDuHSWHM4lyReTS9_6.25YhbibyneehDd07oHBFNNuYSVzBFpNjlrB.NE.AgmBX3x9LerU03G7.krEtgDOfke7Z3sUQ9aPNajXTwqkikKTotQqsiEbnfCXqziNdSn2Jla8X9YyUdCapB9X.qzGXSeaK7aeqipo9deOTPNUylJED9Hi12qy0oCkMgeSDVYqwTnrfBwAeFEUF49ZPXHVV8LYbRMUi81XIcPaErSlHAC1mlz4v2hc5hEQRY_rCIaCqYFXsbTD7b88fbpQKdj7O3rf3.dlE-
+Received: from [131.220.7.190] by web36703.mail.mud.yahoo.com via HTTP;
+	Wed, 15 Jul 2009 07:59:26 PDT
+X-Mailer: YahooMailClassic/6.0.18 YahooMailWebService/0.7.289.15
+Date: Wed, 15 Jul 2009 07:59:26 -0700 (PDT)
+From: Cap <daCaptain@rocketmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by monty-python.gnu.org: FreeBSD 6.x (1)
+Subject: [Axiom-mail] solving a trigonometric equation for a variable
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 15 Jul 2009 14:59:34 -0000
+
+
+Hello there!
+
+Well look, I'm a total axiom newbie and don't have much clue about math either. I really tried to solve this on my own, spent half a day to find what I need in the axiom documentation, but it's huge and I barely understand anything of it. Can you please help me out?
+
+I need to deal with the following equation:
+
+0.5 * v*v * cos(theta + phi) * cos(theta + phi) + g*l * cos(phi) = g*l
+
+The variables v, theta, g and l are known. I need to calculate a phi that satisfies the equation above. So I would like to solve the equation for phi so that it starts with phi = ... This way any time I get a new set of v, theta, g and l, I can calculate a new phi. How can accomplish this using axiom? I tried:
+
+solve(0.5*v*v*cos(theta+phi)*cos(theta+phi)+g*l*cos(phi)=g*l, phi)
+
+The answer I get is:
+
+ Cannot find a definition or applicable library operation named solve
+      with argument type(s) 
+                          Equation Expression Float
+                                Variable phi
+      
+      Perhaps you should use "@" to indicate the required return type, 
+      or "$" to specify which version of the function you need.
+
+which I don't really understand either.
+
+Can anyone please correct it? I just need one working example, so that I can use it for similar functions in the future.
+
+
+Thank you,
+Cappy
+
+
+
+
+      
+
+
+
+From MAILER-DAEMON Wed Jul 15 11:38:13 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MR6Yf-0002h6-Ka
+	for mharc-axiom-mail@gnu.org; Wed, 15 Jul 2009 11:38:13 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MR6Yd-0002cl-74
+	for axiom-mail@nongnu.org; Wed, 15 Jul 2009 11:38:11 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MR6YY-0002RV-0p
+	for axiom-mail@nongnu.org; Wed, 15 Jul 2009 11:38:10 -0400
+Received: from [199.232.76.173] (port=42372 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MR6YX-0002RA-KC
+	for axiom-mail@nongnu.org; Wed, 15 Jul 2009 11:38:05 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:44209)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1MR6YX-0002VC-0A
+	for axiom-mail@nongnu.org; Wed, 15 Jul 2009 11:38:05 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	n6FFbr6g022578; Wed, 15 Jul 2009 17:37:55 +0200
+To: Cap <daCaptain@rocketmail.com>
+Subject: Re: [Axiom-mail] solving a trigonometric equation for a variable
+References: <544373.61247.qm@web36703.mail.mud.yahoo.com>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Wed, 15 Jul 2009 17:37:53 +0200
+In-Reply-To: <544373.61247.qm@web36703.mail.mud.yahoo.com> (Cap's message of
+	"Wed\, 15 Jul 2009 07\:59\:26 -0700 \(PDT\)")
+Message-ID: <d9bpnmot2m.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.7.15.152415
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 15 Jul 2009 15:38:11 -0000
+
+Cap <daCaptain@rocketmail.com> writes:
+
+> Hello there!
+>
+> Well look, I'm a total axiom newbie and don't have much clue about math either. I really tried to solve this on my own, spent half a day to find what I need in the axiom documentation, but it's huge and I barely understand anything of it. Can you please help me out?
+>
+> I need to deal with the following equation:
+>
+> 0.5 * v*v * cos(theta + phi) * cos(theta + phi) + g*l * cos(phi) = g*l
+>
+> The variables v, theta, g and l are known. I need to calculate a phi
+> that satisfies the equation above. So I would like to solve the
+> equation for phi so that it starts with phi = ... This way any time I
+> get a new set of v, theta, g and l, I can calculate a new phi. How can
+> accomplish this using axiom? I tried:
+
+Your command is mostly correct -- instead of 0.5 use 1/2:
+>
+> solve(0.5*v*v*cos(theta+phi)*cos(theta+phi)+g*l*cos(phi)=g*l, phi)
+>
+> The answer I get is:
+>
+>  Cannot find a definition or applicable library operation named solve
+>       with argument type(s) 
+>                           Equation Expression Float
+>                                 Variable phi
+
+This says: there is no command solve that takes a float expression
+(i.e., expression involving variables, floats and elementary) and a
+variable.
+
+Thus:
+
+(1) -> solve(1/2*v*v*cos(theta+phi)*cos(theta+phi)+g*l*cos(phi)=g*l,phi)
+
+gives you 4 solutions, one being 2*atan(%phi0).
+
+   (1)
+   [phi= 2atan(%phi0) - theta, phi= 2atan(%phi1) - theta,
+
+-- skipped --
+                                    Type: List(Equation(Expression(Integer)))
+
+You get the value of %phi0 as follows:
+
+(4) -> definingPolynomial %phi0
+
+   (4)
+              4         2      2            2             theta 2
+       ((%phi0  - 2%phi0  + 1)v  + (- 4%phi0  - 4)g l)tan(-----)
+                                                            2
+     + 
+              3                  theta          4         2      2
+       (8%phi0  + 8%phi0)g l tan(-----) + (%phi0  - 2%phi0  + 1)v
+                                   2
+     + 
+                4         2
+       (- 4%phi0  - 4%phi0 )g l
+  /
+      2    theta 2    2
+     v tan(-----)  + v  - 4g l
+             2
+                                                    Type: Expression(Integer)
+
+Not really nice, but more I was hoping for...
+
+Hope that helps,
+
+Martin
+
+
+

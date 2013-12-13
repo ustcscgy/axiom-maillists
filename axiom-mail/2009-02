@@ -1,0 +1,545 @@
+From MAILER-DAEMON Sun Feb 22 16:29:35 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LbLtH-0006S8-HC
+	for mharc-axiom-mail@gnu.org; Sun, 22 Feb 2009 16:29:35 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LbLtF-0006Ry-N2
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 16:29:33 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LbLtE-0006Rm-05
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 16:29:32 -0500
+Received: from [199.232.76.173] (port=35665 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LbLtD-0006Rj-S6
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 16:29:31 -0500
+Received: from aa013msr.fastwebnet.it ([85.18.95.73]:40938)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <sp_rm_it@yahoo.it>) id 1LbLtD-0003pS-38
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 16:29:31 -0500
+Received: from [192.168.1.2] (151.50.202.181) by aa013msr.fastwebnet.it
+	(8.0.013.8) (authenticated as sergio.polini)
+	id 499AD6FE00AB8D0B for axiom-mail@nongnu.org;
+	Sun, 22 Feb 2009 22:29:28 +0100
+From: Sergio Polini <sp_rm_it@yahoo.it>
+To: axiom-mail@nongnu.org
+Date: Sun, 22 Feb 2009 22:29:23 +0100
+User-Agent: KMail/1.9.10
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200902222229.23459.sp_rm_it@yahoo.it>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Subject: [Axiom-mail] Axiom and Firefox (newbie)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 22 Feb 2009 21:29:34 -0000
+
+I've just installed Axiom (downloads/axiom-ubuntu-jan2009-bin.tgz) in
+/opt/Axiom/axiom/mnt/ubuntu as root and looked at the documentation.
+I've read section 1.1 of bookvol11.pdf, so I typed (as normal user, in my home 
+directory):
+
+ export AXIOM=/opt/Axiom/axiom/mnt/ubuntu
+ export PATH=$AXIOM/bin/lib:$AXIOM/bin:$PATH
+ axiom -nox
+  -> )set mes auto off
+  -> )set out mathml on
+  -> axServer(8085,multiServ)$AXSERV
+
+and "listening on port 8085" appeared.
+Then I started my browser, Firefox. I went to
+
+  file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertext/rootpage.xhtml
+
+but that does not work, i.e. after:
+  Basic Commands -> Calculus -> Differentiate -> Continue
+nothing happens and the Error Console displays:
+
+"Security problem: contents in 
+file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertex/rootpage.xhtml cannot load 
+data from file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertex/127.0.0.1:8085."
+
+"Errore: uncaught exception: [Exception... "Access to restricted URI denied"  
+code: "1012" nsresult: "0x805303f4 (NS_ERROR_DOM_BAD_URI)"  
+location: "file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertex/differentiate.xhtml 
+Line: 119"]
+
+Please, what am I missing?
+Thanks
+Sergio
+
+
+
+From MAILER-DAEMON Sun Feb 22 17:00:23 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LbMN5-00034W-97
+	for mharc-axiom-mail@gnu.org; Sun, 22 Feb 2009 17:00:23 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LbMN4-00033l-DB
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 17:00:22 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LbMN2-00032O-Pj
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 17:00:22 -0500
+Received: from [199.232.76.173] (port=45869 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LbMN2-00032H-Mx
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 17:00:20 -0500
+Received: from mx-7.zoominternet.net ([24.154.1.26]:53629
+	helo=cm-1.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1LbMN2-000176-Bp
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 17:00:20 -0500
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=Sf8xxCKpoZoA:10 a=uo0fd_dr16kA:10
+	a=E8rTNAPPKTgA:10 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=CBK2kCL98NSxMPXx9rIA:9 a=Oy7FPxaHMhwp4aw0E_4A:7
+	a=APrGV_sT7ZkGA_e81o4wf_EI2XsA:4 a=BDXKcin-EtgA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.45] ([24.154.1.45:53017] helo=pop-2.zoominternet.net)
+	by mx-7.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id BA/53-13570-0FAC1A94; Sun, 22 Feb 2009 17:00:16 -0500
+Received: (qmail 10772 invoked from network); 22 Feb 2009 22:00:17 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-2.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 22 Feb 2009 22:00:17 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id n1MMjwE22953;
+	Sun, 22 Feb 2009 17:45:58 -0500
+Date: Sun, 22 Feb 2009 17:45:58 -0500
+Message-Id: <200902222245.n1MMjwE22953@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: sp_rm_it@yahoo.it
+In-reply-to: <200902222229.23459.sp_rm_it@yahoo.it> (message from Sergio
+	Polini on Sun, 22 Feb 2009 22:29:23 +0100)
+Subject: Re: [Axiom-mail] Axiom and Firefox (newbie)
+References: <200902222229.23459.sp_rm_it@yahoo.it>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 22 Feb 2009 22:00:22 -0000
+
+Sergio,
+
+>I've just installed Axiom (downloads/axiom-ubuntu-jan2009-bin.tgz) in
+>/opt/Axiom/axiom/mnt/ubuntu as root and looked at the documentation.
+>I've read section 1.1 of bookvol11.pdf, so I typed (as normal user, in my home 
+>directory):
+>
+> export AXIOM=/opt/Axiom/axiom/mnt/ubuntu
+> export PATH=$AXIOM/bin/lib:$AXIOM/bin:$PATH
+> axiom -nox
+>  -> )set mes auto off
+>  -> )set out mathml on
+>  -> axServer(8085,multiServ)$AXSERV
+>
+>and "listening on port 8085" appeared.
+>Then I started my browser, Firefox. I went to
+>
+>  file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertext/rootpage.xhtml
+>
+>but that does not work, i.e. after:
+>  Basic Commands -> Calculus -> Differentiate -> Continue
+>nothing happens and the Error Console displays:
+>
+>"Security problem: contents in 
+>file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertex/rootpage.xhtml cannot load 
+>data from file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertex/127.0.0.1:8085."
+>
+>"Errore: uncaught exception: [Exception... "Access to restricted URI denied"  
+>code: "1012" nsresult: "0x805303f4 (NS_ERROR_DOM_BAD_URI)"  
+>location: "file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertex/differentiate.xhtml 
+>Line: 119"]
+
+How very odd. It appears that you have some sort of security tool 
+enabled (likely SELinux is enabled). The rules you have set up do
+not permit a browser to access the page.
+
+Is SELinux enabled?
+Is there a way to convince it to let you access pages? 
+I don't run SELinux so I can't easily reproduce this locally.
+
+If you start Firefox (without running Axiom) can you get to the page:
+file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertex/rootpage.xhtml
+For the most part, the Axiom pages are just xhtml pages so this should work.
+
+
+Tim
+
+
+
+From MAILER-DAEMON Sun Feb 22 17:47:21 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LbN6X-0001I9-05
+	for mharc-axiom-mail@gnu.org; Sun, 22 Feb 2009 17:47:21 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LbN6V-0001GP-CE
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 17:47:19 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LbN6T-0001DX-Kh
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 17:47:18 -0500
+Received: from [199.232.76.173] (port=60375 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LbN6T-0001DN-IQ
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 17:47:17 -0500
+Received: from aa011msr.fastwebnet.it ([85.18.95.71]:41351)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <sp_rm_it@yahoo.it>) id 1LbN6S-0000tk-Ph
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 17:47:17 -0500
+Received: from serpol.local (151.50.202.181) by aa011msr.fastwebnet.it
+	(8.0.013.8) (authenticated as sergio.polini)
+	id 498C6F3A025CCB07; Sun, 22 Feb 2009 23:47:12 +0100
+From: Sergio Polini <sp_rm_it@yahoo.it>
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-mail] Axiom and Firefox (newbie)
+Date: Sun, 22 Feb 2009 23:47:11 +0100
+User-Agent: KMail/1.9.10
+References: <200902222229.23459.sp_rm_it@yahoo.it>
+	<200902222245.n1MMjwE22953@localhost.localdomain>
+In-Reply-To: <200902222245.n1MMjwE22953@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200902222347.11561.sp_rm_it@yahoo.it>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 22 Feb 2009 22:47:19 -0000
+
+Il Sunday 22 February 2009 23:45:58 root ha scritto:
+> Sergio,
+>
+> >I've just installed Axiom (downloads/axiom-ubuntu-jan2009-bin.tgz) in
+> >/opt/Axiom/axiom/mnt/ubuntu as root and looked at the documentation.
+> >I've read section 1.1 of bookvol11.pdf, so I typed (as normal user, in my
+> > home directory):
+> >
+> > export AXIOM=/opt/Axiom/axiom/mnt/ubuntu
+> > export PATH=$AXIOM/bin/lib:$AXIOM/bin:$PATH
+> > axiom -nox
+> >  -> )set mes auto off
+> >  -> )set out mathml on
+> >  -> axServer(8085,multiServ)$AXSERV
+> >
+> >and "listening on port 8085" appeared.
+> >Then I started my browser, Firefox. I went to
+> >
+> >  file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertext/rootpage.xhtml
+> >
+> >but that does not work, i.e. after:
+> >  Basic Commands -> Calculus -> Differentiate -> Continue
+> >nothing happens and the Error Console displays:
+> >
+> >"Security problem: contents in
+> >file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertex/rootpage.xhtml cannot load
+> >data from file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertex/127.0.0.1:8085."
+> >
+> >"Errore: uncaught exception: [Exception... "Access to restricted URI
+> > denied" code: "1012" nsresult: "0x805303f4 (NS_ERROR_DOM_BAD_URI)"
+> >location:
+> > "file:///opt/Axiom/axiom/mnt/ubuntu/doc/hypertex/differentiate.xhtml
+> > Line: 119"]
+>
+> How very odd. It appears that you have some sort of security tool
+> enabled (likely SELinux is enabled). The rules you have set up do
+> not permit a browser to access the page.
+>
+> Is SELinux enabled?
+> Is there a way to convince it to let you access pages?
+> I don't run SELinux so I can't easily reproduce this locally.
+
+Neither do I ;-) I've even stopped my firewall and rebooted:
+
+root:~# iptables-save
+# Generated by iptables-save v1.3.8 on Sun Feb 22 23:34:27 2009
+*filter
+:INPUT ACCEPT [103:19915]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [116:18800]
+COMMIT
+# Completed on Sun Feb 22 23:34:27 2009
+
+but I still get the same error...
+
+Sergio
+
+
+
+From MAILER-DAEMON Sun Feb 22 18:09:28 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LbNRw-0000sK-9g
+	for mharc-axiom-mail@gnu.org; Sun, 22 Feb 2009 18:09:28 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LbNRu-0000sC-Ug
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 18:09:26 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LbNRt-0000rv-GN
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 18:09:26 -0500
+Received: from [199.232.76.173] (port=44709 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LbNRt-0000rs-E0
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 18:09:25 -0500
+Received: from mx-7.zoominternet.net ([24.154.1.26]:58478
+	helo=cm-1.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1LbNRt-0005Eq-5B
+	for axiom-mail@nongnu.org; Sun, 22 Feb 2009 18:09:25 -0500
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=Sf8xxCKpoZoA:10 a=uo0fd_dr16kA:10
+	a=E8rTNAPPKTgA:10 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=LAEz3FiPeuWYxUP7ySUA:9 a=CDq-HR4Wm47-XQiegMYolOjFsacA:4
+	a=a4lqbGTHejIA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.45] ([24.154.1.45:54266] helo=pop-2.zoominternet.net)
+	by mx-7.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 5D/1B-13570-F1BD1A94; Sun, 22 Feb 2009 18:09:19 -0500
+Received: (qmail 2028 invoked from network); 22 Feb 2009 23:09:20 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-2.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 22 Feb 2009 23:09:20 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id n1MNsxP22996;
+	Sun, 22 Feb 2009 18:54:59 -0500
+Date: Sun, 22 Feb 2009 18:54:59 -0500
+Message-Id: <200902222354.n1MNsxP22996@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: sp_rm_it@yahoo.it
+In-reply-to: <200902222347.11561.sp_rm_it@yahoo.it> (message from Sergio
+	Polini on Sun, 22 Feb 2009 23:47:11 +0100)
+Subject: Re: [Axiom-mail] Axiom and Firefox (newbie)
+References: <200902222229.23459.sp_rm_it@yahoo.it>
+	<200902222245.n1MMjwE22953@localhost.localdomain>
+	<200902222347.11561.sp_rm_it@yahoo.it>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 22 Feb 2009 23:09:27 -0000
+
+SELinux isn't a firewall technology.
+SELinux is a permission-based technology that hooks into various
+operations to check the rights of the caller versus the required rights
+of the resource.
+
+So if you (as a user) cannot do localhost (127.0.0.1) connections, for
+instance, then your browser cannot see local files.
+
+I do not know enough about SELinux to suggest what permissions to set.
+I usually just become root and do:
+
+echo 0 >/proc/sys/kernel/exec-shield
+echo 0 >/proc/sys/kernel/randomize-va-space
+
+The first one turns off SELinux, as far as I understand it.
+The second one turns off random library load points.
+
+These changes do not survive a reboot.
+
+Tim
+
+
+
+From MAILER-DAEMON Mon Feb 23 02:36:35 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LbVMh-0000cW-Jo
+	for mharc-axiom-mail@gnu.org; Mon, 23 Feb 2009 02:36:35 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LbVMg-0000cC-P8
+	for axiom-mail@nongnu.org; Mon, 23 Feb 2009 02:36:34 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LbVMe-0000bt-CI
+	for axiom-mail@nongnu.org; Mon, 23 Feb 2009 02:36:33 -0500
+Received: from [199.232.76.173] (port=50613 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LbVMe-0000bq-62
+	for axiom-mail@nongnu.org; Mon, 23 Feb 2009 02:36:32 -0500
+Received: from aa012msr.fastwebnet.it ([85.18.95.72]:36355)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <sp_rm_it@yahoo.it>) id 1LbVMd-0001Um-9j
+	for axiom-mail@nongnu.org; Mon, 23 Feb 2009 02:36:31 -0500
+Received: from [192.168.1.2] (151.50.202.181) by aa012msr.fastwebnet.it
+	(8.0.013.8) (authenticated as sergio.polini)
+	id 499ECB030035053C; Mon, 23 Feb 2009 08:36:22 +0100
+From: Sergio Polini <sp_rm_it@yahoo.it>
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-mail] Axiom and Firefox (newbie)
+Date: Mon, 23 Feb 2009 08:36:16 +0100
+User-Agent: KMail/1.9.10
+References: <200902222229.23459.sp_rm_it@yahoo.it>
+	<200902222347.11561.sp_rm_it@yahoo.it>
+	<200902222354.n1MNsxP22996@localhost.localdomain>
+In-Reply-To: <200902222354.n1MNsxP22996@localhost.localdomain>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200902230836.16989.sp_rm_it@yahoo.it>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Feb 2009 07:36:35 -0000
+
+Il Monday 23 February 2009 00:54:59 root ha scritto:
+> SELinux isn't a firewall technology.
+
+Yes, I know.
+Sorry, I've not said clearly that I'm not running SELinux.
+
+However, I've found that "Access to restricted URI denied 
+(NS_ERROR_DOM_BAD_URI)" errors occur when there is a cross domain Ajax call:
+http://www.leveltendesign.com/solution/error-access-restricted-uri-denied-when-making-ajax-cal
+http://extjs.com/learn/Ext_FAQ_Ajax#.22Permission_denied_to_call_method_XMLHttpRequest.open.22
+etc.
+
+Is this finding useful to trace the error?
+Thanks
+Sergio
+
+
+
+
+From MAILER-DAEMON Mon Feb 23 06:05:51 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LbYdD-0004eO-Md
+	for mharc-axiom-mail@gnu.org; Mon, 23 Feb 2009 06:05:51 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LbYdB-0004bU-M2
+	for axiom-mail@nongnu.org; Mon, 23 Feb 2009 06:05:49 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LbYd8-0004Yb-TN
+	for axiom-mail@nongnu.org; Mon, 23 Feb 2009 06:05:49 -0500
+Received: from [199.232.76.173] (port=44110 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LbYd8-0004YQ-Nm
+	for axiom-mail@nongnu.org; Mon, 23 Feb 2009 06:05:46 -0500
+Received: from mx-7.zoominternet.net ([24.154.1.26]:38082
+	helo=cm-1.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1LbYd8-000076-7c
+	for axiom-mail@nongnu.org; Mon, 23 Feb 2009 06:05:46 -0500
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=Sf8xxCKpoZoA:10 a=uo0fd_dr16kA:10
+	a=E8rTNAPPKTgA:10 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=H601rSr8AAAA:8 a=ucEsE9QQAAAA:8 a=_Pp8inZ1VDpzPo1pMXIA:9
+	a=xWPFn0UjPFETCZRjdK_C8IlPGQcA:4 a=WcGY3-TIXCwA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.45] ([24.154.1.45:56285] helo=pop-2.zoominternet.net)
+	by mx-7.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 14/8F-13570-CF282A94; Mon, 23 Feb 2009 06:05:32 -0500
+Received: (qmail 25401 invoked from network); 23 Feb 2009 11:05:37 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-2.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 23 Feb 2009 11:05:37 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id n1NBpN923611;
+	Mon, 23 Feb 2009 06:51:23 -0500
+Date: Mon, 23 Feb 2009 06:51:23 -0500
+Message-Id: <200902231151.n1NBpN923611@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: sp_rm_it@yahoo.it
+In-reply-to: <200902230836.16989.sp_rm_it@yahoo.it> (message from Sergio
+	Polini on Mon, 23 Feb 2009 08:36:16 +0100)
+Subject: Re: [Axiom-mail] Axiom and Firefox (newbie)
+References: <200902222229.23459.sp_rm_it@yahoo.it>
+	<200902222347.11561.sp_rm_it@yahoo.it>
+	<200902222354.n1MNsxP22996@localhost.localdomain>
+	<200902230836.16989.sp_rm_it@yahoo.it>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Feb 2009 11:05:49 -0000
+
+>> SELinux isn't a firewall technology.
+>
+>Yes, I know.
+>Sorry, I've not said clearly that I'm not running SELinux.
+>
+>However, I've found that "Access to restricted URI denied 
+>(NS_ERROR_DOM_BAD_URI)" errors occur when there is a cross domain Ajax call:
+>http://www.leveltendesign.com/solution/error-access-restricted-uri-denied-when-making-ajax-cal
+>http://extjs.com/learn/Ext_FAQ_Ajax#.22Permission_denied_to_call_method_XMLHttpRequest.open.22
+>etc.
+>
+>Is this finding useful to trace the error?
+
+Sorry about the focus on SELinux. It was my best guess.
+I'll google this when I get a chance but I have more guesses.
+
+Tim
+
+
+

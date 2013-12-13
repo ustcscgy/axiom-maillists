@@ -1,0 +1,943 @@
+From MAILER-DAEMON Tue Feb 26 17:16:33 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UASp7-0002Lu-30
+	for mharc-axiom-mail@gnu.org; Tue, 26 Feb 2013 17:16:33 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:43987)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UASnC-000296-P2
+	for axiom-mail@nongnu.org; Tue, 26 Feb 2013 17:16:31 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UASn1-00076F-G9
+	for axiom-mail@nongnu.org; Tue, 26 Feb 2013 17:14:34 -0500
+Received: from mail-qe0-f44.google.com ([209.85.128.44]:40032)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UASn1-00075D-B9
+	for axiom-mail@nongnu.org; Tue, 26 Feb 2013 17:14:23 -0500
+Received: by mail-qe0-f44.google.com with SMTP id x7so1977858qeu.3
+	for <axiom-mail@nongnu.org>; Tue, 26 Feb 2013 14:14:22 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:x-received:date:message-id:subject:from:to
+	:content-type; bh=ZENkJOWiWKjctvAnB6nOfxT23E1H3Y5eEFqhso1vgYM=;
+	b=H7kKT1S9rcJwVVY71RUJQ2tddcUOtshzx5JAb/obGzVD6FlNFdLgq3/VzjIXzNtNO+
+	+3sBS4pmuxmXcqOYAXMG55oRtFuEgNFJaN6RQjzMDNLEwiBtMPgBxshXXhq6rRpKoz3q
+	ftzjGJjZLyAwTFwzrN0FgKZmVYm2zuaQSnv7nv+pKtX0xW5jnYWnH6EG3Otc0qoOtjWw
+	EZQsnmpyG8R+UKRDbIcksF49xPcf4W1sydwh9kPdjTtzt8J49vESaY8axRKrbyd/mPHK
+	V7E73h5YCjEwQYA+72aOySZJA5RIbJTOH1iDAC3Q+H8Yqi9Uhb+0r/4CJ4sugf3fhIPg
+	WzAg==
+MIME-Version: 1.0
+X-Received: by 10.224.9.201 with SMTP id m9mr4461273qam.25.1361916862736; Tue,
+	26 Feb 2013 14:14:22 -0800 (PST)
+Received: by 10.49.84.135 with HTTP; Tue, 26 Feb 2013 14:14:22 -0800 (PST)
+Date: Tue, 26 Feb 2013 15:14:22 -0700
+Message-ID: <CABhj+WzY=0eTo7Kv2y3e1uqR_iXwuQ-wzomSt=R1Sr77TQ0HKA@mail.gmail.com>
+From: Mike Valenzuela <mickle.mouse@gmail.com>
+To: axiom-mail@nongnu.org
+Content-Type: multipart/alternative; boundary=bcaec51ba51fd130db04d6a7fa1e
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x [fuzzy]
+X-Received-From: 209.85.128.44
+Subject: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 26 Feb 2013 22:16:31 -0000
+
+--bcaec51ba51fd130db04d6a7fa1e
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hello, I'm investigating several CA systems currently and I am wondering if
+Axiom has certain capabilities.
+
+Specifically:
+(A) Differentiation through indefinite sums with respect to
+indexed/subscripted variables. E.g., D( sum(p[i]*x[i],i)^2, j ) --> 2* p[j]
+* sum(p[i]*x[i],i)
+(B) Matrix Calculus. E.g.,
+  D( sum( p[k] * multivariate_normal(mu[k], Sigma[k]), k), Sigma[j] ) -->
+ Some large awful thing defined in equation 373 from the Matrix
+Cookbook, Version:
+November 14, 2008.
+
+As I do some work with random variables and certainty equivalents, it would
+be nice to find a CAS that allows me to easily double check my math.
+
+--bcaec51ba51fd130db04d6a7fa1e
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hello, I&#39;m investigating several CA systems currently and I am wonderin=
+g if Axiom has certain capabilities.<div><br></div><div>Specifically:</div>=
+<div>(A)=A0Differentiation through indefinite sums with respect=A0to indexe=
+d/subscripted variables. E.g., D( sum(p[i]*x[i],i)^2, j ) --&gt; 2* p[j] * =
+sum(p[i]*x[i],i)</div>
+<div>(B) Matrix Calculus. E.g.,=A0<br>=A0 D( sum( p[k] * multivariate_norma=
+l(mu[k], Sigma[k]), k), Sigma[j] ) --&gt; =A0Some large=A0awful=A0thing def=
+ined in equation 373 from the Matrix Cookbook,=A0<span style=3D"background-=
+color:rgb(255,255,255);color:rgb(34,34,34);font-family:arial,sans-serif;lin=
+e-height:16px">Version: November 14, 2008.</span></div>
+<div><span style=3D"background-color:rgb(255,255,255);color:rgb(34,34,34);f=
+ont-family:arial,sans-serif;line-height:16px"><br></span></div><div><span s=
+tyle=3D"background-color:rgb(255,255,255);color:rgb(34,34,34);font-family:a=
+rial,sans-serif;line-height:16px">As I do some work with random variables a=
+nd certainty equivalents, it would be nice to find a CAS that allows me to =
+easily double check my math.</span></div>
+
+--bcaec51ba51fd130db04d6a7fa1e--
+
+
+From MAILER-DAEMON Tue Feb 26 20:25:19 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UAVln-0007Ec-NA
+	for mharc-axiom-mail@gnu.org; Tue, 26 Feb 2013 20:25:19 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:42210)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UAVlm-0007CA-5d
+	for axiom-mail@nongnu.org; Tue, 26 Feb 2013 20:25:18 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UAVll-0004vq-7q
+	for axiom-mail@nongnu.org; Tue, 26 Feb 2013 20:25:18 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:60075
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UAVll-0004vI-2e
+	for axiom-mail@nongnu.org; Tue, 26 Feb 2013 20:25:17 -0500
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r1R1PEDg020107;
+	Tue, 26 Feb 2013 19:25:14 -0600
+Received: by u1204 (Postfix, from userid 1000)
+	id 8F21F6874F; Tue, 26 Feb 2013 20:25:14 -0500 (EST)
+From: u1204 <daly@axiom-developer.org>
+To: Mike Valenzuela <mickle.mouse@gmail.com>
+In-Reply-To: <CABhj+WzY=0eTo7Kv2y3e1uqR_iXwuQ-wzomSt=R1Sr77TQ0HKA@mail.gmail.com>
+	(message from Mike Valenzuela on Tue, 26 Feb 2013 15:14:22 -0700)
+Date: Tue, 26 Feb 2013 20:25:14 -0500
+Message-ID: <87fw0izgxx.fsf@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.2.x-3.x (barebone)
+	[generic]
+X-Received-From: 209.135.140.38
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 27 Feb 2013 01:25:19 -0000
+
+Mike,
+
+These are interesting ideas but I don't know how to do what you 
+want in the current version of Axiom. 
+
+Where is this "Matrix Cookbook" you mention?
+
+Tim Daly
+
+
+From MAILER-DAEMON Tue Feb 26 22:39:52 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UAXs0-0005wo-4P
+	for mharc-axiom-mail@gnu.org; Tue, 26 Feb 2013 22:39:52 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:48222)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UAXru-0005uq-P6
+	for axiom-mail@nongnu.org; Tue, 26 Feb 2013 22:39:50 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UAXrr-0004Y9-DP
+	for axiom-mail@nongnu.org; Tue, 26 Feb 2013 22:39:46 -0500
+Received: from mail-qa0-f42.google.com ([209.85.216.42]:35633)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UAXrr-0004Y4-8p
+	for axiom-mail@nongnu.org; Tue, 26 Feb 2013 22:39:43 -0500
+Received: by mail-qa0-f42.google.com with SMTP id cr7so3051433qab.1
+	for <axiom-mail@nongnu.org>; Tue, 26 Feb 2013 19:39:42 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:x-received:in-reply-to:references:date:message-id
+	:subject:from:to:cc:content-type;
+	bh=z7cn2HjvCLjR3yu0uB7nxzOpEpa9ht0PJkShYbdRz/4=;
+	b=U7LaRoqUQMyW3Te9tKXpJSaD0mSg+rKljLvCy4E0KoD3uEZTQhXq4AvKibA0VhyujC
+	UwONR+XeDHh0LPPgh/jrXSUKpqZx7QHo0lPz0Lm/kN4lXk5OIYU8KhnXTbU7DGGurwYN
+	Lj3rRMvgazlRhrZwCQdQHSUA5y5Ag+qgnn4F9l5d6gLKBxOY5gkBtSFH1k87iSNNRez8
+	6u5fJwFPkkDskleEyzSVcLtfTy/GnBnRy5SuPfk+mmhSCVm2VCk46+O1Cw4KR4Meus5C
+	3bHinRnH9L1KF0ukRlhCXP5sy8rigc14N5ff4l3viHbAELRh7L64MJj2C33MCMLELDFh
+	kGhQ==
+MIME-Version: 1.0
+X-Received: by 10.229.106.134 with SMTP id x6mr214160qco.132.1361936382695;
+	Tue, 26 Feb 2013 19:39:42 -0800 (PST)
+Received: by 10.49.84.135 with HTTP; Tue, 26 Feb 2013 19:39:42 -0800 (PST)
+In-Reply-To: <87fw0izgxx.fsf@axiom-developer.org>
+References: <CABhj+WzY=0eTo7Kv2y3e1uqR_iXwuQ-wzomSt=R1Sr77TQ0HKA@mail.gmail.com>
+	<87fw0izgxx.fsf@axiom-developer.org>
+Date: Tue, 26 Feb 2013 20:39:42 -0700
+Message-ID: <CABhj+WwTbpWBsGqcs-F5=cULe8kXyHJwe=g4Xhwvhqmz3s-HtQ@mail.gmail.com>
+From: Mike Valenzuela <mickle.mouse@gmail.com>
+To: u1204 <daly@axiom-developer.org>
+Content-Type: multipart/alternative; boundary=002354332a3a4c29e604d6ac8680
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x [fuzzy]
+X-Received-From: 209.85.216.42
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 27 Feb 2013 03:39:50 -0000
+
+--002354332a3a4c29e604d6ac8680
+Content-Type: text/plain; charset=ISO-8859-1
+
+The Matrix Cookbook is available online at:
+http://orion.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf
+
+It is simply a collection of matrix properties which are proved elsewhere.
+I have done enough matrix calculus to know a basic approach (very similar
+to the derivatives for indexed tensors in Maxima) if it has to be
+implemented. The single entry matrix is sort of a generalization of the
+Kronecker delta function used in matrix calculus.
+
+On Tue, Feb 26, 2013 at 6:25 PM, u1204 <daly@axiom-developer.org> wrote:
+
+> Mike,
+>
+> These are interesting ideas but I don't know how to do what you
+> want in the current version of Axiom.
+>
+> Where is this "Matrix Cookbook" you mention?
+>
+> Tim Daly
+>
+
+--002354332a3a4c29e604d6ac8680
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+The Matrix Cookbook is available online at:=A0<a href=3D"http://orion.uwate=
+rloo.ca/~hwolkowi/matrixcookbook.pdf">http://orion.uwaterloo.ca/~hwolkowi/m=
+atrixcookbook.pdf</a><div><br></div><div>It is simply a collection of matri=
+x properties which are proved elsewhere. I have done enough matrix calculus=
+ to know a basic approach (very similar to the derivatives for indexed tens=
+ors in Maxima) if it has to be implemented. The single entry matrix is sort=
+ of a generalization of the Kronecker delta function used in matrix calculu=
+s.<br>
+<br><div class=3D"gmail_quote">On Tue, Feb 26, 2013 at 6:25 PM, u1204 <span=
+ dir=3D"ltr">&lt;<a href=3D"mailto:daly@axiom-developer.org" target=3D"_bla=
+nk">daly@axiom-developer.org</a>&gt;</span> wrote:<br><blockquote class=3D"=
+gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-=
+left:1ex">
+Mike,<br>
+<br>
+These are interesting ideas but I don&#39;t know how to do what you<br>
+want in the current version of Axiom.<br>
+<br>
+Where is this &quot;Matrix Cookbook&quot; you mention?<br>
+<br>
+Tim Daly<br>
+</blockquote></div><br></div>
+
+--002354332a3a4c29e604d6ac8680--
+
+
+From MAILER-DAEMON Wed Feb 27 02:01:33 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UAb1B-0003oe-3t
+	for mharc-axiom-mail@gnu.org; Wed, 27 Feb 2013 02:01:33 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:54749)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UAb16-0003nL-SS
+	for axiom-mail@nongnu.org; Wed, 27 Feb 2013 02:01:31 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UAb13-0000NG-Th
+	for axiom-mail@nongnu.org; Wed, 27 Feb 2013 02:01:28 -0500
+Received: from mail-qa0-f51.google.com ([209.85.216.51]:54380)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UAb13-0000N7-PE
+	for axiom-mail@nongnu.org; Wed, 27 Feb 2013 02:01:25 -0500
+Received: by mail-qa0-f51.google.com with SMTP id cr7so255826qab.3
+	for <axiom-mail@nongnu.org>; Tue, 26 Feb 2013 23:01:25 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:x-received:in-reply-to:references:date:message-id
+	:subject:from:to:content-type;
+	bh=6L5mc8xvP9mrox9fKkzanTz8F4p92vu9G2578Avi6F0=;
+	b=M8cp1mgzCVF3I6am7rB0glySyLN2DNaON8zFivPxn/Jhj/4TjR2OmupnE/l6S9BRtI
+	wuS5L2iT8xOe246jpNVdLrnX5LRHFW58zKSXqRqVXpOu2JeBXcR65kINQ62ncL7Br4tS
+	Wh0BPVtOCKTHdC7f9hmW796ZZQNS+BBL84f7qfM9FCmoCxOXjqqiI+U3ShAPiT4dbBOI
+	WyaalSJoFM/P1Wv4pJwTbJhBnih1yzch3f0vCLPnLc6yrkR+W9jvhKjlPhHta+hANbxz
+	i9GLlC2+TCYy32eNex8Evg05BecCs47qTNQr/9ti5DPf+EBX3Yw4TQ8bIptdV5SmPl2c
+	fc6g==
+MIME-Version: 1.0
+X-Received: by 10.49.59.105 with SMTP id y9mr1844550qeq.41.1361948485030; Tue,
+	26 Feb 2013 23:01:25 -0800 (PST)
+Received: by 10.49.84.135 with HTTP; Tue, 26 Feb 2013 23:01:24 -0800 (PST)
+In-Reply-To: <CABhj+WwTbpWBsGqcs-F5=cULe8kXyHJwe=g4Xhwvhqmz3s-HtQ@mail.gmail.com>
+References: <CABhj+WzY=0eTo7Kv2y3e1uqR_iXwuQ-wzomSt=R1Sr77TQ0HKA@mail.gmail.com>
+	<87fw0izgxx.fsf@axiom-developer.org>
+	<CABhj+WwTbpWBsGqcs-F5=cULe8kXyHJwe=g4Xhwvhqmz3s-HtQ@mail.gmail.com>
+Date: Wed, 27 Feb 2013 00:01:24 -0700
+Message-ID: <CABhj+WxYvJuf2ePxhubX_jJkUAHYgnKkfAQVG4O=Yzjq9i1o4A@mail.gmail.com>
+From: Mike Valenzuela <mickle.mouse@gmail.com>
+To: axiom-mail@nongnu.org
+Content-Type: multipart/alternative; boundary=047d7b6dc43ca718a904d6af5769
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x [fuzzy]
+X-Received-From: 209.85.216.51
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 27 Feb 2013 07:01:31 -0000
+
+--047d7b6dc43ca718a904d6af5769
+Content-Type: text/plain; charset=ISO-8859-1
+
+One other note - I forgot a logarithm in my example:
+
+D( ln( sum(p[k]*multivariate_normal(mu[k], Sigma), k) ) --> ...
+
+
+On Tue, Feb 26, 2013 at 8:39 PM, Mike Valenzuela <mickle.mouse@gmail.com>wrote:
+
+> The Matrix Cookbook is available online at:
+> http://orion.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf
+>
+> It is simply a collection of matrix properties which are proved elsewhere.
+> I have done enough matrix calculus to know a basic approach (very similar
+> to the derivatives for indexed tensors in Maxima) if it has to be
+> implemented. The single entry matrix is sort of a generalization of the
+> Kronecker delta function used in matrix calculus.
+>
+>
+> On Tue, Feb 26, 2013 at 6:25 PM, u1204 <daly@axiom-developer.org> wrote:
+>
+>> Mike,
+>>
+>> These are interesting ideas but I don't know how to do what you
+>> want in the current version of Axiom.
+>>
+>> Where is this "Matrix Cookbook" you mention?
+>>
+>> Tim Daly
+>>
+>
+>
+
+--047d7b6dc43ca718a904d6af5769
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+One other note - I forgot a=A0logarithm=A0in my example:<div><br></div><div=
+>D( ln( sum(p[k]*multivariate_normal(mu[k], Sigma), k) ) --&gt; ...</div><d=
+iv><br><br><div class=3D"gmail_quote">On Tue, Feb 26, 2013 at 8:39 PM, Mike=
+ Valenzuela <span dir=3D"ltr">&lt;<a href=3D"mailto:mickle.mouse@gmail.com"=
+ target=3D"_blank">mickle.mouse@gmail.com</a>&gt;</span> wrote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">The Matrix Cookbook is available online at:=
+=A0<a href=3D"http://orion.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf" targe=
+t=3D"_blank">http://orion.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf</a><div=
+>
+<br></div><div>It is simply a collection of matrix properties which are pro=
+ved elsewhere. I have done enough matrix calculus to know a basic approach =
+(very similar to the derivatives for indexed tensors in Maxima) if it has t=
+o be implemented. The single entry matrix is sort of a generalization of th=
+e Kronecker delta function used in matrix calculus.<div>
+<div class=3D"h5"><br>
+<br><div class=3D"gmail_quote">On Tue, Feb 26, 2013 at 6:25 PM, u1204 <span=
+ dir=3D"ltr">&lt;<a href=3D"mailto:daly@axiom-developer.org" target=3D"_bla=
+nk">daly@axiom-developer.org</a>&gt;</span> wrote:<br><blockquote class=3D"=
+gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-=
+left:1ex">
+
+Mike,<br>
+<br>
+These are interesting ideas but I don&#39;t know how to do what you<br>
+want in the current version of Axiom.<br>
+<br>
+Where is this &quot;Matrix Cookbook&quot; you mention?<br>
+<br>
+Tim Daly<br>
+</blockquote></div><br></div></div></div>
+</blockquote></div><br></div>
+
+--047d7b6dc43ca718a904d6af5769--
+
+
+From MAILER-DAEMON Wed Feb 27 21:59:06 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UAti6-00013l-F3
+	for mharc-axiom-mail@gnu.org; Wed, 27 Feb 2013 21:59:06 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:39354)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UAti4-00011c-B7
+	for axiom-mail@nongnu.org; Wed, 27 Feb 2013 21:59:05 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UAti3-0004aL-8b
+	for axiom-mail@nongnu.org; Wed, 27 Feb 2013 21:59:04 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:51043
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UAti3-0004aB-3h
+	for axiom-mail@nongnu.org; Wed, 27 Feb 2013 21:59:03 -0500
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r1S2wxDg002755;
+	Wed, 27 Feb 2013 20:59:00 -0600
+Received: by u1204 (Postfix, from userid 1000)
+	id 4218468754; Wed, 27 Feb 2013 21:58:59 -0500 (EST)
+From: u1204 <daly@axiom-developer.org>
+To: Mike Valenzuela <mickle.mouse@gmail.com>
+In-Reply-To: <CABhj+WxYvJuf2ePxhubX_jJkUAHYgnKkfAQVG4O=Yzjq9i1o4A@mail.gmail.com>
+	(message from Mike Valenzuela on Wed, 27 Feb 2013 00:01:24 -0700)
+Date: Wed, 27 Feb 2013 21:58:59 -0500
+Message-ID: <87hakx87po.fsf@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.2.x-3.x (barebone)
+	[generic]
+X-Received-From: 209.135.140.38
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Feb 2013 02:59:05 -0000
+
+I tried the cookbook link you posted
+> http://orion.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf
+which fails due to access rights. I looked at the home page for
+> http://orion.uwaterloo.ca/~hwolkowi
+which has a link to an offsite copy of the cookbook but the page
+refuses to load.
+
+Tim Daly
+
+
+From MAILER-DAEMON Wed Feb 27 22:02:28 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UAtlM-0001VL-Sv
+	for mharc-axiom-mail@gnu.org; Wed, 27 Feb 2013 22:02:28 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:40063)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UAtlJ-0001Uk-ED
+	for axiom-mail@nongnu.org; Wed, 27 Feb 2013 22:02:28 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UAtlG-0005Ya-HV
+	for axiom-mail@nongnu.org; Wed, 27 Feb 2013 22:02:25 -0500
+Received: from mail-qc0-x22e.google.com ([2607:f8b0:400d:c01::22e]:37089)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <mickle.mouse@gmail.com>) id 1UAtlG-0005YN-Df
+	for axiom-mail@nongnu.org; Wed, 27 Feb 2013 22:02:22 -0500
+Received: by mail-qc0-f174.google.com with SMTP id z24so109419qcq.5
+	for <axiom-mail@nongnu.org>; Wed, 27 Feb 2013 19:02:21 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:x-received:in-reply-to:references:date:message-id
+	:subject:from:to:cc:content-type;
+	bh=4PfxwaFoxX4bTiBqkiM24c/NfXLme7kcvWl++9hosa8=;
+	b=yMZCcKQOlKxkpIsbK3ycUN+8/syfn8Rap0//+Cb2whIkUt38Mw2MQ8MEi4LjQnCIAI
+	Z9Jo06UI3Cy8GLHXyOBD45eA6MDA3rENrV5TLh0Rhv8BdzkZtmTVq0rIGhjw3w9uQGpL
+	YFjB/pz46RAAkKGPmYqFRYH/732/SINGMo265dqDXqzD9emvSG68+HkJg/0zQS0gGw0P
+	9dYB2l7tiVRNkv2MhzEih/2Hv0iTHySz76uVAT+uPr/WxKM8xeRLdTZfSITTvGXOaUex
+	/IUJNu1EJ/RinmUTuG2xy6FRmuDWg4Q9X834nPNbRXUFEylYl1x2EhiYTNf+14NVCIsG
+	Ij4w==
+MIME-Version: 1.0
+X-Received: by 10.49.26.35 with SMTP id i3mr8236036qeg.12.1362020541791; Wed,
+	27 Feb 2013 19:02:21 -0800 (PST)
+Received: by 10.49.84.135 with HTTP; Wed, 27 Feb 2013 19:02:21 -0800 (PST)
+In-Reply-To: <87hakx87po.fsf@axiom-developer.org>
+References: <CABhj+WxYvJuf2ePxhubX_jJkUAHYgnKkfAQVG4O=Yzjq9i1o4A@mail.gmail.com>
+	<87hakx87po.fsf@axiom-developer.org>
+Date: Wed, 27 Feb 2013 20:02:21 -0700
+Message-ID: <CABhj+WwuFQgrpQawR4C6ZAufAE=AG_YxJWyU=SSTPi-sY1b_vw@mail.gmail.com>
+From: Mike Valenzuela <mickle.mouse@gmail.com>
+To: u1204 <daly@axiom-developer.org>
+Content-Type: multipart/alternative; boundary=047d7b6da2049209ef04d6c01e26
+X-detected-operating-system: by eggs.gnu.org: Error: Malformed IPv6 address
+	(bad octet value).
+X-Received-From: 2607:f8b0:400d:c01::22e
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Feb 2013 03:02:28 -0000
+
+--047d7b6da2049209ef04d6c01e26
+Content-Type: text/plain; charset=ISO-8859-1
+
+I can send you a copy I have downloaded, but I will send that email just to
+you as I don't feel like spamming the mailing list
+
+On Wed, Feb 27, 2013 at 7:58 PM, u1204 <daly@axiom-developer.org> wrote:
+
+> I tried the cookbook link you posted
+> > http://orion.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf
+> which fails due to access rights. I looked at the home page for
+> > http://orion.uwaterloo.ca/~hwolkowi
+> which has a link to an offsite copy of the cookbook but the page
+> refuses to load.
+>
+> Tim Daly
+>
+
+--047d7b6da2049209ef04d6c01e26
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I can send you a copy I have downloaded, but I will send that email just to=
+ you as I don&#39;t feel like=A0spamming=A0the mailing list<br><br><div cla=
+ss=3D"gmail_quote">On Wed, Feb 27, 2013 at 7:58 PM, u1204 <span dir=3D"ltr"=
+>&lt;<a href=3D"mailto:daly@axiom-developer.org" target=3D"_blank">daly@axi=
+om-developer.org</a>&gt;</span> wrote:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">I tried the cookbook link you posted<br>
+&gt; <a href=3D"http://orion.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf" tar=
+get=3D"_blank">http://orion.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf</a><b=
+r>
+which fails due to access rights. I looked at the home page for<br>
+&gt; <a href=3D"http://orion.uwaterloo.ca/~hwolkowi" target=3D"_blank">http=
+://orion.uwaterloo.ca/~hwolkowi</a><br>
+which has a link to an offsite copy of the cookbook but the page<br>
+refuses to load.<br>
+<br>
+Tim Daly<br>
+</blockquote></div><br>
+
+--047d7b6da2049209ef04d6c01e26--
+
+
+From MAILER-DAEMON Thu Feb 28 17:38:44 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UBC7g-0004Ua-BG
+	for mharc-axiom-mail@gnu.org; Thu, 28 Feb 2013 17:38:44 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:37617)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UBC7e-0004Tp-B8
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 17:38:43 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UBC7c-0002yI-U1
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 17:38:42 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:48440
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UBC7c-0002y8-Og
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 17:38:40 -0500
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r1SMccDg007821;
+	Thu, 28 Feb 2013 16:38:38 -0600
+Received: by u1204 (Postfix, from userid 1000)
+	id E593568757; Thu, 28 Feb 2013 17:38:38 -0500 (EST)
+From: u1204 <daly@axiom-developer.org>
+To: Mike Valenzuela <mickle.mouse@gmail.com>, axiom-mail@nongnu.org
+In-Reply-To: <CABhj+Wz3nh=-FcxL7jqkMOMV5Kxxd1_KN5vYf4tOYkfe1wH=pA@mail.gmail.com>
+	(message from Mike Valenzuela on Wed, 27 Feb 2013 20:05:05 -0700)
+Date: Thu, 28 Feb 2013 17:38:38 -0500
+Message-ID: <87d2vkt66p.fsf@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.2.x-3.x (barebone)
+	[generic]
+X-Received-From: 209.135.140.38
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 28 Feb 2013 22:38:43 -0000
+
+Mike,
+
+It would be possible to build a Domain (e.g. SymbolicMatrix) that
+had elements which were symbolic, e.g. the symbol A from the Domain
+would be considered an uninterpreted SymbolicMatrix. So you could
+write something like:
+
+(A*B)^-1
+
+and get the result 
+
+B^1 * A^-1
+
+Indeed, the SymbolicMatrix could be a matrix of symbols such as
+
+A := [[a[1,1],a[1,2]],[a[2,1],a[2,2]]]
+
+      +-           -+
+      | a      a    |
+      |  1,1    1,2 |
+      |             |
+      | a      a    |
+      |  2,1    2,2 |
+      +-           -+
+
+but some operations would be only on an uninterpreted A matrix
+and some operations would be applied elementwise.
+
+The 'sum' question you sent could be handled in a similar way.
+
+I will look at what this would take for equations 1-10 in the
+cookbook you sent.
+
+Tim Daly
+
+
+From MAILER-DAEMON Thu Feb 28 19:28:13 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UBDpd-0007zT-FQ
+	for mharc-axiom-mail@gnu.org; Thu, 28 Feb 2013 19:28:13 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:33592)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1UBDpb-0007zN-LP
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 19:28:12 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1UBDpa-0008W8-Iy
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 19:28:11 -0500
+Received: from zhhdzmsp-smta16.bluewin.ch ([195.186.227.132]:53145)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1UBDpa-0008Vs-DO
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 19:28:10 -0500
+Received: from [195.186.99.130] ([195.186.99.130:59153]
+	helo=zhbdzmsp-smta11.bluewin.ch)
+	by zhhdzmsp-smta16.bluewin.ch (envelope-from <raoulb@bluewin.ch>)
+	(ecelerity 2.2.3.47 r(39824M)) with ESMTP
+	id E1/A9-25143-816FF215; Fri, 01 Mar 2013 00:28:09 +0000
+Received: from pega.pega (178.198.4.232) by zhbdzmsp-smta11.bluewin.ch
+	(8.5.142) (authenticated as raoulb)
+	id 510085AB032C9FC7 for axiom-mail@nongnu.org;
+	Fri, 1 Mar 2013 00:28:08 +0000
+Date: Fri, 1 Mar 2013 01:28:07 +0100
+From: Raoul <raoulb@bluewin.ch>
+To: axiom-mail@nongnu.org
+Message-ID: <20130301012807.669438c9@pega.pega>
+In-Reply-To: <87d2vkt66p.fsf@axiom-developer.org>
+References: <CABhj+Wz3nh=-FcxL7jqkMOMV5Kxxd1_KN5vYf4tOYkfe1wH=pA@mail.gmail.com>
+	<87d2vkt66p.fsf@axiom-developer.org>
+X-Mailer: Claws Mail 3.8.1 (GTK+ 2.24.10; i486-pc-linux-gnu)
+Mime-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Genre and OS details not
+	recognized.
+X-Received-From: 195.186.227.132
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 01 Mar 2013 00:28:12 -0000
+
+Hi,
+
+> It would be possible to build a Domain (e.g. SymbolicMatrix) that
+> had elements which were symbolic, e.g. the symbol A from the Domain
+> would be considered an uninterpreted SymbolicMatrix.
+
+It may be off-topic but I'd like to mention it never the less.
+
+I built (well rather I should say ported over to Fricas) a code
+for handling abstract vectors and vector algebra. You can find
+it at:
+
+  https://github.com/raoulb/fricas_code/tree/master/vecalg
+
+It runs on the current Fricas version, I'm not sure if
+I used features that are not in Axiom. Please note that it
+depends on the bubble-sort code from another Fricas branch:
+
+  https://github.com/raoulb/fricas/tree/bubblesort
+
+I should try harder to find time to finish the last bits
+of that code.
+
+
+-- Raoul
+
+
+From MAILER-DAEMON Thu Feb 28 20:03:49 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UBEO5-0007f9-1N
+	for mharc-axiom-mail@gnu.org; Thu, 28 Feb 2013 20:03:49 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:60708)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1UBDma-0007QE-W3
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 19:25:06 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1UBDmZ-0007TF-3d
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 19:25:04 -0500
+Received: from zhbdzmsp-smta17.bluewin.ch ([195.186.99.133]:44296)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <raoulb@bluewin.ch>) id 1UBDmY-0007MD-U5
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 19:25:03 -0500
+Received: from [195.186.227.131] ([195.186.227.131:37699]
+	helo=zhhdzmsp-smta14.bluewin.ch)
+	by zhbdzmsp-smta17.bluewin.ch (envelope-from <raoulb@bluewin.ch>)
+	(ecelerity 2.2.3.47 r(39824M)) with ESMTP
+	id 5A/C6-20489-B55FF215; Fri, 01 Mar 2013 00:25:00 +0000
+Received: from pega.pega (178.198.4.232) by zhhdzmsp-smta14.bluewin.ch
+	(8.5.142) (authenticated as raoulb)
+	id 511CD83E013AF404 for axiom-mail@nongnu.org;
+	Fri, 1 Mar 2013 00:24:59 +0000
+Date: Fri, 1 Mar 2013 01:24:58 +0100
+From: Raoul <raoulb@bluewin.ch>
+To: axiom-mail@nongnu.org
+Message-ID: <20130301012458.25900c4f@pega.pega>
+In-Reply-To: <87d2vkt66p.fsf@axiom-developer.org>
+References: <CABhj+Wz3nh=-FcxL7jqkMOMV5Kxxd1_KN5vYf4tOYkfe1wH=pA@mail.gmail.com>
+	<87d2vkt66p.fsf@axiom-developer.org>
+X-Mailer: Claws Mail 3.8.1 (GTK+ 2.24.10; i486-pc-linux-gnu)
+Mime-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: Genre and OS details not
+	recognized.
+X-Received-From: 195.186.99.133
+X-Mailman-Approved-At: Thu, 28 Feb 2013 20:03:47 -0500
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 01 Mar 2013 00:25:06 -0000
+
+Hi,
+
+> It would be possible to build a Domain (e.g. SymbolicMatrix) that
+> had elements which were symbolic, e.g. the symbol A from the Domain
+> would be considered an uninterpreted SymbolicMatrix.
+
+It may be off-topic but I'd like to mention it never the less.
+
+I built (well rather I should say ported over to Fricas) a code
+for handling abstract vectors and vector algebra. You can find
+it at:
+
+  https://github.com/raoulb/fricas_code/tree/master/vecalg
+
+It runs on the current Fricas version, I'm not sure if
+I used features that are not in Axiom. Please note that it
+depends on the bubble-sort code from another Fricas branch:
+
+  https://github.com/raoulb/fricas/tree/bubblesort
+
+I should try harder to find time to finish the last bits
+of that code.
+
+
+-- Raoul
+
+
+From MAILER-DAEMON Thu Feb 28 21:21:26 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UBFbC-0004cy-Pa
+	for mharc-axiom-mail@gnu.org; Thu, 28 Feb 2013 21:21:26 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:52283)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UBFb9-0004cC-GW
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 21:21:25 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UBFb7-0007kd-V3
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 21:21:23 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:43674
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UBFb7-0007kK-Pl
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 21:21:21 -0500
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r212LDDg027075;
+	Thu, 28 Feb 2013 20:21:17 -0600
+Received: by u1204 (Postfix, from userid 1000)
+	id 9A5DC68757; Thu, 28 Feb 2013 21:21:12 -0500 (EST)
+From: u1204 <daly@axiom-developer.org>
+To: Raoul <raoulb@bluewin.ch>
+In-Reply-To: <20130301012458.25900c4f@pega.pega> (message from Raoul on Fri,
+	1 Mar 2013 01:24:58 +0100)
+Date: Thu, 28 Feb 2013 21:21:11 -0500
+Message-ID: <871ubzj1wo.fsf@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.2.x-3.x (barebone)
+	[generic]
+X-Received-From: 209.135.140.38
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 01 Mar 2013 02:21:25 -0000
+
+Raoul,
+
+I will look at your code. Thanks.
+
+Tim Daly
+daly@axiom-developer.org
+
+
+From MAILER-DAEMON Thu Feb 28 21:47:04 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UBG00-00022e-CV
+	for mharc-axiom-mail@gnu.org; Thu, 28 Feb 2013 21:47:04 -0500
+Received: from eggs.gnu.org ([208.118.235.92]:34072)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UBFzx-00022N-0v
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 21:47:03 -0500
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UBFzv-0000G2-LS
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 21:47:00 -0500
+Received: from vs338.rosehosting.com ([209.135.140.38]:52350
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UBFzv-0000Fm-Fp
+	for axiom-mail@nongnu.org; Thu, 28 Feb 2013 21:46:59 -0500
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r212ksDg029255;
+	Thu, 28 Feb 2013 20:46:55 -0600
+Received: by u1204 (Postfix, from userid 1000)
+	id F04EC68757; Thu, 28 Feb 2013 21:46:53 -0500 (EST)
+From: u1204 <daly@axiom-developer.org>
+To: Raoul <raoulb@bluewin.ch>, Mike Valenzuela <mickle.mouse@gmail.com>
+In-Reply-To: <20130301012458.25900c4f@pega.pega> (message from Raoul on Fri,
+	1 Mar 2013 01:24:58 +0100)
+Date: Thu, 28 Feb 2013 21:46:53 -0500
+Message-ID: <87y5e7hm5e.fsf@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 2.2.x-3.x (barebone)
+	[generic]
+X-Received-From: 209.135.140.38
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] A question about Axiom capabilities
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: <axiom-mail.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 01 Mar 2013 02:47:03 -0000
+
+Raoul,
+
+If you look at the matrixcookbook that Mike mentioned, the first 10
+equations are:
+
+   (A*B)^-1      = B^-1 * A^-1
+   (A*B*C...)^-1 = ...C^-1 * B^-1 * A^-1
+   (A^T)^-1      = (A^-1)^T
+   (A+B)^T       = A^T + B^T
+   (A*B)^T       = B^T * A^T
+   (A*B*C...)^T  = C^T * B^T *A^T
+   (A^H)^-1      = (A^-1)^H
+   (A+B)^H       = A^H + B^H
+   (A*B)^H       = B^H * A^H
+   (A*B*C...)^H  = ...C^H * B^H * A^H
+
+It seems like we could create a SymbolicMatrix algebra that could
+perform these manipulations with uninterpreted matrix symbols
+A, B, C with a special recognized symbol 'T'.
+
+These matrices could have actual values which, for certain operations
+are ignored, so that
+
+       (A*B)^-1      = B^-1 * A^-1
+
+but for other operations would be evaluated as in:
+
+       eval(B^-1 * A^-1)
+
+giving the actual matrix result shown element by element.
+
+An additional enhancement would be to make a SymbolicMatrixCategory
+so that there could be specific domains such as 
+
+   GeneralSymbolicMatrix,
+   SymmetricSymbolicMatrix, 
+   UpperTriangularSymbolicMatrix,
+   DiagonalSymbolicMatrix,
+
+etc which could exploit certain matrix-level properties at the
+symbolic level.
+
+This isn't exactly what Mike was originally asking but I think
+that Axiom ought to be able to symbolically compute the equations
+in the handbook.
+
+Tim Daly
+
+
+
+

@@ -1,0 +1,188 @@
+From MAILER-DAEMON Sun Sep 18 16:34:46 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EH5s6-0006Ev-9o
+	for mharc-axiom-mail@gnu.org; Sun, 18 Sep 2005 16:34:46 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EH5nL-0005S3-4l
+	for axiom-mail@nongnu.org; Sun, 18 Sep 2005 16:29:51 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EH5n9-0005L9-3c
+	for axiom-mail@nongnu.org; Sun, 18 Sep 2005 16:29:40 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EH5n8-0005II-TQ
+	for axiom-mail@nongnu.org; Sun, 18 Sep 2005 16:29:38 -0400
+Received: from [62.4.17.100] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1EH5hB-0001cu-2N
+	for axiom-mail@nongnu.org; Sun, 18 Sep 2005 16:23:29 -0400
+Received: from petoncle (fmaltey.net0.nerim.net [213.41.170.4])
+	by mallaury.nerim.net (Postfix) with ESMTP id D1C8E4F3C1
+	for <axiom-mail@nongnu.org>; Sun, 18 Sep 2005 22:23:14 +0200 (CEST)
+Received: from fmy by petoncle with local (Exim 4.52) id 1EH5h8-0001bm-3C
+	for axiom-mail@nongnu.org; Sun, 18 Sep 2005 22:23:26 +0200
+To: axiom-mail@nongnu.org
+From: Francois Maltey <fmaltey@nerim.fr>
+Date: Sun, 18 Sep 2005 22:23:25 +0200
+Message-ID: <87irwym8g2.fsf@nerim.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) XEmacs/21.5 (chestnut, linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Subject: [Axiom-mail] How can I get every term of an expression ?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 18 Sep 2005 20:34:45 -0000
+
+Hello, 
+
+I start from a Polynomial Integer : (2*x+3*y)*(4*z+2*x)
+     or better from an Expression : (2*log(x)+3*exp(y))*(4*sin(z)+2*log(x))
+
+And I want to get every term : 6 xy, 8 xz, 12 yz and 4 x^2 
+                          or   6 %e^y log(x), etc. 
+and get easily the integer 6, 8, 12 or 4.
+
+With mupad I do 
+ [op (normal ((2*x+3*y)*(4*z+2*x)))] ;
+ map ([op (normal ((2*x+3*y)*(4*z+2*x)))], t-> [coeff(t), t/coeff(t)]) ;
+
+The first give me the list  [6 x y, 8 x z, 12 y z, 4 x^2]
+and the second              [[6, x y], [8, x z], [12, y z], [4, x ]]
+
+Of corse the command t/coeff(t) isn't the faster way, 
+but I don't find better.
+
+How can I do this in an *.input axiom file ?
+
+I look in the big book, I believe I must use DMP, not SUP, but I'm not sure.
+
+Must I use leadingCoefficient, leadingCoefficient and reductum 
+or can I use a List coerce ? but I don't find the command.
+
+And I want to play with expression, not polynomial ; 
+then what coerce must I do ?
+
+Thanks a lot for any advice, and have a good day !
+
+
+
+From MAILER-DAEMON Sun Sep 18 22:01:30 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EHAyI-0006AG-Gf
+	for mharc-axiom-mail@gnu.org; Sun, 18 Sep 2005 22:01:30 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EHAyG-00067y-UC
+	for axiom-mail@nongnu.org; Sun, 18 Sep 2005 22:01:29 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EHAwa-0005cw-QK
+	for axiom-mail@nongnu.org; Sun, 18 Sep 2005 21:59:48 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EHAwY-00059t-GY
+	for axiom-mail@nongnu.org; Sun, 18 Sep 2005 21:59:43 -0400
+Received: from [24.154.1.22] (helo=mx-3.zoominternet.net)
+	by monty-python.gnu.org with esmtp
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.34) id 1EHAbZ-0002eE-Px
+	for axiom-mail@nongnu.org; Sun, 18 Sep 2005 21:38:01 -0400
+Received: from mua-3.zoominternet.net (mua-3.zoominternet.net [24.154.1.46])
+	by mx-3.zoominternet.net (8.12.11/8.12.11) with ESMTP id j8J1bnjl006209;
+	Sun, 18 Sep 2005 21:37:50 -0400
+Received: from localhost.localdomain (acs-72-23-17-238.zoominternet.net
+	[72.23.17.238])
+	by mua-3.zoominternet.net (Postfix) with ESMTP id 754577F406;
+	Sun, 18 Sep 2005 21:37:44 -0400 (EDT)
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id j8J1YWo08143;
+	Sun, 18 Sep 2005 21:34:32 -0400
+Date: Sun, 18 Sep 2005 21:34:32 -0400
+Message-Id: <200509190134.j8J1YWo08143@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: Francois Maltey <fmaltey@nerim.fr>
+X-CanItPRO-Stream: outgoing
+X-Spam-Score: 0 () 
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.22
+Cc: axiom-mail@nongnu.org
+Subject: [Axiom-mail] coefficients of a polynomial (or expr int)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 19 Sep 2005 02:01:29 -0000
+
+
+So we create a Polynomial(Integer) thus:
+
+m := 3*x^2 + 2*x +6
+
+and we ask for the monomials:
+
+p := monomials(m)
+
+which returns a List(Polynomial(Integer))
+
+We can ask for the length of the list using the # operator
+
+#p
+
+We can ask for an element of the list using the elt operator
+
+elt(p,1)
+
+or just use the notation p.1, p.2, etc
+
+We can ask for the coefficient of a monomial with
+
+coefficient(p.1,x,2) 
+
+where x is the variable of interest (it might be multivariate)
+and 2 is the power (we could have used the whole polynomial
+directly as in
+
+   coefficient(m,x,2)
+
+We can generate a list with the notation
+
+[ function for i in a..b]
+
+So we can directly create a list of the coefficients in the
+variable 'x' with
+
+[coefficient(elt(p,i),x,#p-i) for i in 1..#p]
+
+Of course, Axiom is strongly typed and cannot guarantee that the
+expression #p-i will always be non-negative. It will complain about
+this and "step thru" (interpret) the expression. You can cure this
+by explicitly telling it that the expression is always a non-negative
+integer (NNI) thus:
+
+[coefficient(elt(p,i),x,(#p-i)::NNI) for i in 1..#p]
+
+which will return a list of the coefficients of the monomials.
+
+The same thing will work if you start with an Expression(Integer).
+
+
+n:EXPR(INT) := 3*x^2 + 2*x +6
+p:=monomials(n)
+
+which returns a LIST(POLY(INT)) and you are back to the previous case
+
+
+Tim
+
+
+

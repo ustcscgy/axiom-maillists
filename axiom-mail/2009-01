@@ -1,0 +1,519 @@
+From MAILER-DAEMON Mon Jan 12 18:19:19 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LMW3z-00035m-KG
+	for mharc-axiom-mail@gnu.org; Mon, 12 Jan 2009 18:19:19 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LMW3x-000320-Rs
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2009 18:19:17 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LMW3v-0002wI-Ip
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2009 18:19:16 -0500
+Received: from [199.232.76.173] (port=57770 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LMW3u-0002uz-UZ
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2009 18:19:15 -0500
+Received: from mail-bw0-f12.google.com ([209.85.218.12]:54645)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <luca.dallolio@gmail.com>) id 1LMW3u-0005wE-7c
+	for axiom-mail@nongnu.org; Mon, 12 Jan 2009 18:19:14 -0500
+Received: by bwz5 with SMTP id 5so21765878bwz.10
+	for <axiom-mail@nongnu.org>; Mon, 12 Jan 2009 15:19:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from:to
+	:subject:mime-version:content-type;
+	bh=V9yaNaF5ToqQUByDx7ZTlUHXMKIFXYT7DLAJsOOpD6c=;
+	b=mJWHx65mT3yVVZ5ytIU28IQGdVfDXZk4Zj+CFdV0npFMy+/T5ZtuKZGxUFOORmx/C5
+	A1wGg8JuPa16Q0Rzelb0+J5cQyCz0tJdihuOCT06Povrdoj5A/ei1YCTb10uhiOiW2wj
+	KdEtAEwarMhuD5k+lGmvfFQyJe2qxJLC+wJeM=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:to:subject:mime-version:content-type;
+	b=RaWJt2olRyDbAAqbqRmsRPDqpO5Gq77UKGaxCKO1caoy5CEtdA+YNq0Ex7r0AOCqm8
+	Ga0AqAVPosh6g/jw0+dPRpZ6Gl/b5w4oGIHYKPBarezYm3G8kjW1jC4WakF1otmid/qN
+	9GuEOtO5wKLT/ayZsYg8CRkh9n/TDhIg3rP58=
+Received: by 10.223.108.211 with SMTP id g19mr22008178fap.39.1231802292633;
+	Mon, 12 Jan 2009 15:18:12 -0800 (PST)
+Received: by 10.223.104.65 with HTTP; Mon, 12 Jan 2009 15:18:11 -0800 (PST)
+Message-ID: <ca43bb980901121518j72480e52w322b42a772e4728d@mail.gmail.com>
+Date: Tue, 13 Jan 2009 00:18:11 +0100
+From: "Luca Dall'Olio" <luca.dallolio@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_311453_33200335.1231802292615"
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+Subject: [Axiom-mail] constrained, parametric optimization
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 12 Jan 2009 23:19:18 -0000
+
+------=_Part_311453_33200335.1231802292615
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+I am developing a computer program which needs to solve a constrained,
+parametric optimization, something like :
+
+meaning to calculate min(x) such as y = b*x+a and x <= c and x >=0
+where x and y are variables, a, b, c are constant but unknown parameters.
+Since the problem is calculated at runtime from my computer program and
+changes every time, I think I need to solve it with some form of constrained
+programming with a symbolic result.
+
+I could see something like this in mathematica :
+
+http://reference.wolfram.com/mathematica/ref/Minimize.html#61381153
+
+but I would like to keep my program free and open source, so I would like to
+use a free library for this...
+
+could you please tell me if I can do this using axiom?
+thank you very much in advance!
+Luca
+
+------=_Part_311453_33200335.1231802292615
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+I am developing a computer program which needs to solve a constrained, parametric optimization, something like :<br><br>meaning to calculate min(x) such as y = b*x+a and x &lt;= c and x &gt;=0<br>where x and y are variables, a, b, c are constant but unknown parameters.<br>
+Since the problem is calculated at runtime from my computer program and changes every time, I think I need to solve it with some form of constrained programming with a symbolic result.<br><br>I could see something like this in mathematica :<br>
+
+<br>
+<a href="http://reference.wolfram.com/mathematica/ref/Minimize.html#61381153">http://reference.wolfram.com/mathematica/ref/Minimize.html#61381153</a><br><br>but I would like to keep my program free and open source, so I would like to use a free library for this...<br>
+<br>could you please tell me if I can do this using axiom?<br>thank you very much in advance!<br>Luca<br><br>
+
+------=_Part_311453_33200335.1231802292615--
+
+
+
+From MAILER-DAEMON Wed Jan 14 12:55:16 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LN9xT-0003pt-QY
+	for mharc-axiom-mail@gnu.org; Wed, 14 Jan 2009 12:55:15 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LN9xR-0003oL-MG
+	for axiom-mail@nongnu.org; Wed, 14 Jan 2009 12:55:13 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LN9xQ-0003o1-GK
+	for axiom-mail@nongnu.org; Wed, 14 Jan 2009 12:55:12 -0500
+Received: from [199.232.76.173] (port=46277 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LN9xP-0003nv-S4
+	for axiom-mail@nongnu.org; Wed, 14 Jan 2009 12:55:12 -0500
+Received: from mx-7.zoominternet.net ([24.154.1.26]:44230
+	helo=cm-1.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1LN9xP-0000n7-1F
+	for axiom-mail@nongnu.org; Wed, 14 Jan 2009 12:55:11 -0500
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=8F32Bcd7zfgA:10 a=8HmBYqMGJd4A:10
+	a=E8rTNAPPKTgA:10 a=9x1qJYSYWOoMgoVr+WVG7Q==:17
+	a=D_Lt6ODDtk6z2LQImQUA:9 a=hcew9yiZZfUGgMvFtsU6vYdFmT8A:4
+	a=oqs56FR1YJwA:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.45] ([24.154.1.45:46646] helo=pop-2.zoominternet.net)
+	by mx-7.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 42/5A-20440-AE62E694; Wed, 14 Jan 2009 12:54:50 -0500
+Received: (qmail 23803 invoked from network); 14 Jan 2009 17:54:56 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-2.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 14 Jan 2009 17:54:56 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id n0EI2qU32371;
+	Wed, 14 Jan 2009 13:02:52 -0500
+Date: Wed, 14 Jan 2009 13:02:52 -0500
+Message-Id: <200901141802.n0EI2qU32371@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: luca.dallolio@gmail.com
+In-reply-to: <ca43bb980901121518j72480e52w322b42a772e4728d@mail.gmail.com>
+	(luca.dallolio@gmail.com)
+Subject: Re: [Axiom-mail] constrained, parametric optimization
+References: <ca43bb980901121518j72480e52w322b42a772e4728d@mail.gmail.com>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 14 Jan 2009 17:55:13 -0000
+
+Sorry for the delay. I was out of town on a business trip.
+
+There is no automatic way to do what Mathematica does in Axiom.
+
+Tim
+
+
+
+From MAILER-DAEMON Thu Jan 15 06:01:57 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LNPz3-0000c2-Fk
+	for mharc-axiom-mail@gnu.org; Thu, 15 Jan 2009 06:01:57 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LNPz2-0000bw-Er
+	for axiom-mail@nongnu.org; Thu, 15 Jan 2009 06:01:56 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LNPz0-0000bb-JD
+	for axiom-mail@nongnu.org; Thu, 15 Jan 2009 06:01:55 -0500
+Received: from [199.232.76.173] (port=36016 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LNPyz-0000bW-TS
+	for axiom-mail@nongnu.org; Thu, 15 Jan 2009 06:01:53 -0500
+Received: from carne.unife.it ([192.167.219.26]:62660)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <f.stumbo@unife.it>) id 1LNPyz-0008Lm-3U
+	for axiom-mail@nongnu.org; Thu, 15 Jan 2009 06:01:53 -0500
+Received: from carne.unife.it (localhost.localdomain [127.0.0.1])
+	by localhost (Email Security Appliance) with SMTP id 840E91A7FB8C
+	for <axiom-mail@nongnu.org>; Thu, 15 Jan 2009 11:01:47 +0000 (GMT)
+Received: from dns.unife.it (dns.unife.it [192.167.219.2])
+	by carne.unife.it (Email Security Appliance) with ESMTP id 7BAF01A75A78
+	for <axiom-mail@nongnu.org>; Thu, 15 Jan 2009 11:01:47 +0000 (GMT)
+Received: from em243.mate.man (em243.mate.man [10.80.2.121])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by dns.unife.it (Postfix) with ESMTP id 6261372DE7
+	for <axiom-mail@nongnu.org>; Thu, 15 Jan 2009 12:01:14 +0100 (CET)
+Date: Thu, 15 Jan 2009 12:01:13 +0100 (CET)
+From: "Fabio S." <f.stumbo@unife.it>
+X-X-Sender: stumbo@localhost.localdomain
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Axiom does not start
+In-Reply-To: <200812111451.mBBEpMx05516@localhost.localdomain>
+Message-ID: <alpine.DEB.2.00.0901151156590.10627@localhost.localdomain>
+References: <alpine.DEB.2.00.0812111045290.5995@localhost.localdomain>
+	<200812111451.mBBEpMx05516@localhost.localdomain>
+User-Agent: Alpine 2.00 (DEB 1167 2008-08-23)
+Organization: =?ISO-8859-15?Q?Universit=E0_di_Ferrara?=
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-detected-operating-system: by monty-python.gnu.org: FreeBSD 6.x (1)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: axiom-mail@nongnu.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 15 Jan 2009 11:01:56 -0000
+
+> Fabio,
+>
+> The problem is that you have randomize_va_space enabled.
+> This causes the image to fail on startup.
+>
+> either:
+>
+> (a) become root and do:
+>
+> echo 0 >/proc/sys/kernel/randomize_va_space
+>
+> or (b)
+>
+> launch with
+>
+> setarch i386 -R axiom
+>
+> This should be fixed in the next release.
+
+What about the ubuntu64bit version?
+I don't get it working even trying all possible combinations...
+I have it installed on 2 machines. On the first I get the error
+
+gcc: error trying to exec 'cc1': execvp: No such file or directory
+
+while on the second I get
+
+    >> System error:
+    Unknown bfd error code on openr
+
+Thanks
+
+Fabio
+
+
+
+
+From MAILER-DAEMON Thu Jan 15 14:26:24 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LNXrE-00081b-Md
+	for mharc-axiom-mail@gnu.org; Thu, 15 Jan 2009 14:26:24 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LNXrD-00081O-8r
+	for axiom-mail@nongnu.org; Thu, 15 Jan 2009 14:26:23 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LNXrC-000815-KW
+	for axiom-mail@nongnu.org; Thu, 15 Jan 2009 14:26:22 -0500
+Received: from [199.232.76.173] (port=46319 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LNXrC-00080i-D9
+	for axiom-mail@nongnu.org; Thu, 15 Jan 2009 14:26:22 -0500
+Received: from mx-7.zoominternet.net ([24.154.1.26]:38921
+	helo=cm-1.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1LNXrA-0003iM-TB
+	for axiom-mail@nongnu.org; Thu, 15 Jan 2009 14:26:20 -0500
+X-SpamGroup: 2000
+X-CM-Cat: Undefined:Undefined
+X-CNFS-Analysis: v=1.0 c=1 a=zSFfcfGTsaAA:10 a=E8rTNAPPKTgA:10
+	a=9x1qJYSYWOoMgoVr+WVG7Q==:17 a=5V9NgYujlKUQON5D2YAA:9
+	a=YUpH6FBmpmTc-MGC816_-EUu2wYA:4 a=XF7b4UCPwd8A:10
+X-CM-Score: 0
+X-Scanned-by: Cloudmark Authority Engine
+Received: from [24.154.1.44] ([24.154.1.44:42310] helo=pop-1.zoominternet.net)
+	by mx-7.zoominternet.net (envelope-from <daly@axiom-developer.org>)
+	(ecelerity 2.2.2.30 r(24168)) with ESMTP
+	id 38/38-20440-8DD8F694; Thu, 15 Jan 2009 14:26:16 -0500
+Received: (qmail 9907 invoked from network); 15 Jan 2009 19:26:16 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.19.139])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 15 Jan 2009 19:26:16 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id n0FJY7400649;
+	Thu, 15 Jan 2009 14:34:07 -0500
+Date: Thu, 15 Jan 2009 14:34:07 -0500
+Message-Id: <200901151934.n0FJY7400649@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: axiom-mail@nongnu.org
+CC: axiom-mail@nongnu.org
+In-reply-to: <alpine.DEB.2.00.0901151156590.10627@localhost.localdomain>
+	(f.stumbo@unife.it)
+Subject: Re: [Axiom-mail] Axiom does not start
+References: <alpine.DEB.2.00.0812111045290.5995@localhost.localdomain>
+	<200812111451.mBBEpMx05516@localhost.localdomain>
+	<alpine.DEB.2.00.0901151156590.10627@localhost.localdomain>
+X-detected-operating-system: by monty-python.gnu.org: Genre and OS details not
+	recognized.
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 15 Jan 2009 19:26:23 -0000
+
+The "cc1" error appears to imply that you don't have the compiler installed.
+GCL uses the install C compiler. Try 
+  )set function compile off
+and see if the problem goes away.
+
+I'm not sure what the second error is.
+I'll have to build an unbuntu 64 machine and see if I can reproduce it.
+This will take some time.
+
+Tim
+
+
+
+From MAILER-DAEMON Thu Jan 15 17:05:57 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LNaLd-0002mw-9a
+	for mharc-axiom-mail@gnu.org; Thu, 15 Jan 2009 17:05:57 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LNaLb-0002ly-Bp
+	for axiom-mail@nongnu.org; Thu, 15 Jan 2009 17:05:55 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LNaLX-0002jk-Ul
+	for axiom-mail@nongnu.org; Thu, 15 Jan 2009 17:05:54 -0500
+Received: from [199.232.76.173] (port=53394 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LNaLX-0002jR-OX
+	for axiom-mail@nongnu.org; Thu, 15 Jan 2009 17:05:51 -0500
+Received: from trita.unife.it ([192.167.219.25]:63617)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <f.stumbo@unife.it>) id 1LNaLX-000378-6W
+	for axiom-mail@nongnu.org; Thu, 15 Jan 2009 17:05:51 -0500
+Received: from trita.unife.it (localhost.localdomain [127.0.0.1])
+	by localhost (Email Security Appliance) with SMTP id C5FCB101EC17
+	for <axiom-mail@nongnu.org>; Thu, 15 Jan 2009 22:05:49 +0000 (GMT)
+Received: from dns.unife.it (dns.unife.it [192.167.219.2])
+	by trita.unife.it (Email Security Appliance) with ESMTP id BB54C1018DFA
+	for <axiom-mail@nongnu.org>; Thu, 15 Jan 2009 22:05:49 +0000 (GMT)
+Received: from coccobill.fs.net (net-93-147-94-138.t2.dsl.vodafone.it
+	[93.147.94.138])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by dns.unife.it (Postfix) with ESMTP id 4233472DEA
+	for <axiom-mail@nongnu.org>; Thu, 15 Jan 2009 23:05:49 +0100 (CET)
+Date: Thu, 15 Jan 2009 23:05:47 +0100 (CET)
+From: "Fabio S." <f.stumbo@unife.it>
+X-X-Sender: stumbo@coccobill.fs.net
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Axiom does not start
+In-Reply-To: <200901151934.n0FJY7400649@localhost.localdomain>
+Message-ID: <alpine.DEB.2.00.0901152248260.8172@coccobill.fs.net>
+References: <alpine.DEB.2.00.0812111045290.5995@localhost.localdomain>
+	<200812111451.mBBEpMx05516@localhost.localdomain>
+	<alpine.DEB.2.00.0901151156590.10627@localhost.localdomain>
+	<200901151934.n0FJY7400649@localhost.localdomain>
+User-Agent: Alpine 2.00 (DEB 1167 2008-08-23)
+Organization: =?ISO-8859-15?Q?Universit=E0_di_Ferrara?=
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-detected-operating-system: by monty-python.gnu.org: FreeBSD 6.x (1)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: axiom-mail@nongnu.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 15 Jan 2009 22:05:55 -0000
+
+> The "cc1" error appears to imply that you don't have the compiler installed.
+> GCL uses the install C compiler. Try
+>  )set function compile off
+> and see if the problem goes away.
+>
+> I'm not sure what the second error is.
+> I'll have to build an unbuntu 64 machine and see if I can reproduce it.
+> This will take some time.
+
+It seems that also the second error is related to the compiler.
+At least, it seems that _at least_ the second error is related to the 
+compiler: in this moment I have access only to the second machine (at 
+home) and turning off the compiler computations are performed.
+Tomorrow I will also try on the first machine, but it seems likely that I 
+will get the same result.
+
+Nevertheless, I am surprised: I thought I installed everything necessary. 
+Which compiler do I miss? The ones I have are:
+
+[coccobill 22:54:19 ~]$ dpkg -l | grep compiler
+ii  g++                                       4:4.3.1-1ubuntu2        The GNU C++ compiler
+ii  g++-4.3                                   4.3.2-1ubuntu11         The GNU C++ compiler
+ii  gcc                                       4:4.3.1-1ubuntu2        The GNU C compiler
+ii  gcc-4.3                                   4.3.2-1ubuntu11         The GNU C compiler
+ii  gcc-4.3-multilib                          4.3.2-1ubuntu11         The GNU C compiler (multilib files)
+ii  gcc-multilib                              4:4.3.1-1ubuntu2        The GNU C compiler (multilib files)
+ii  gcl                                       2.6.7-36.1              GNU Common Lisp compiler
+ii  mono-jit                                  1.9.1+dfsg-4ubuntu2     fast CLI JIT/AOT compiler for Mono
+
+Thanks
+
+Fabio
+
+
+
+From MAILER-DAEMON Tue Jan 27 05:52:10 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1LRlYA-0007KE-7c
+	for mharc-axiom-mail@gnu.org; Tue, 27 Jan 2009 05:52:10 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1LRlY8-0007Ij-40
+	for axiom-mail@nongnu.org; Tue, 27 Jan 2009 05:52:08 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1LRlY5-0007Go-Ae
+	for axiom-mail@nongnu.org; Tue, 27 Jan 2009 05:52:06 -0500
+Received: from [199.232.76.173] (port=45972 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1LRlY5-0007GX-1g
+	for axiom-mail@nongnu.org; Tue, 27 Jan 2009 05:52:05 -0500
+Received: from trita.unife.it ([192.167.219.25]:62347)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <f.stumbo@unife.it>) id 1LRlY4-0006MT-C4
+	for axiom-mail@nongnu.org; Tue, 27 Jan 2009 05:52:04 -0500
+Received: from trita.unife.it (localhost.localdomain [127.0.0.1])
+	by localhost (Email Security Appliance) with SMTP id
+	09B62101EA54_97EE743B
+	for <axiom-mail@nongnu.org>; Tue, 27 Jan 2009 10:51:47 +0000 (GMT)
+Received: from dns.unife.it (dns.unife.it [192.167.219.2])
+	by trita.unife.it (Sophos Email Appliance) with ESMTP id
+	F07EC1018E0B_97EE742F
+	for <axiom-mail@nongnu.org>; Tue, 27 Jan 2009 10:51:46 +0000 (GMT)
+Received: from em243.mate.man (em243.mate.man [10.80.2.121])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by dns.unife.it (Postfix) with ESMTP
+	id 84B6372DE3; Tue, 27 Jan 2009 11:51:58 +0100 (CET)
+Date: Tue, 27 Jan 2009 11:51:57 +0100 (CET)
+From: "Fabio S." <f.stumbo@unife.it>
+X-X-Sender: stumbo@localhost.localdomain
+To: axiom-mail@nongnu.org
+Cc: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Axiom does not start
+In-Reply-To: <200901151934.n0FJY7400649@localhost.localdomain>
+Message-ID: <alpine.DEB.2.00.0901271144410.7549@localhost.localdomain>
+References: <alpine.DEB.2.00.0812111045290.5995@localhost.localdomain>
+	<200812111451.mBBEpMx05516@localhost.localdomain>
+	<alpine.DEB.2.00.0901151156590.10627@localhost.localdomain>
+	<200901151934.n0FJY7400649@localhost.localdomain>
+User-Agent: Alpine 2.00 (DEB 1167 2008-08-23)
+Organization: =?ISO-8859-15?Q?Universit=E0_di_Ferrara?=
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+X-detected-operating-system: by monty-python.gnu.org: FreeBSD 6.x (1)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: axiom-mail@nongnu.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 27 Jan 2009 10:52:08 -0000
+
+> The "cc1" error appears to imply that you don't have the compiler installed.
+> GCL uses the install C compiler. Try
+>  )set function compile off
+> and see if the problem goes away.
+>
+> I'm not sure what the second error is.
+> I'll have to build an unbuntu 64 machine and see if I can reproduce it.
+> This will take some time.
+>
+> Tim
+
+This mail is just to let you know that I dowloaded the ubuntu64 bin of the 
+latest (2009-01) release and it works, thanks.
+
+BTW, computing speed doesn't seem to increase with respect to when 
+I run with compiling off: does this mean that compiling is just turned 
+off by default?
+
+Thank you
+
+Fabio
+
+
+
+
+

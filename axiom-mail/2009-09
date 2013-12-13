@@ -1,0 +1,501 @@
+From MAILER-DAEMON Tue Sep 15 09:22:16 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MnXz6-00082T-D8
+	for mharc-axiom-mail@gnu.org; Tue, 15 Sep 2009 09:22:16 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MnXz4-00081Y-Tn
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 09:22:14 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MnXz0-0007zE-FX
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 09:22:14 -0400
+Received: from [199.232.76.173] (port=42786 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MnXz0-0007zB-Cj
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 09:22:10 -0400
+Received: from ppsw-0.csi.cam.ac.uk ([131.111.8.130]:52950)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <dch24@hermes.cam.ac.uk>) id 1MnXz0-0004qC-02
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 09:22:10 -0400
+X-Cam-AntiVirus: no malware found
+X-Cam-SpamDetails: not scanned
+X-Cam-ScannerInfo: http://www.cam.ac.uk/cs/email/scanner/
+Received: from lapc-br1-091.maths.private.cam.ac.uk ([172.16.218.91]:46055)
+	by ppsw-0.csi.cam.ac.uk (smtp.hermes.cam.ac.uk [131.111.8.150]:25)
+	with esmtpsa (LOGIN:dch24) (TLSv1:DHE-RSA-AES256-SHA:256)
+	id 1MnXyy-0002KZ-0k (Exim 4.70) for axiom-mail@nongnu.org
+	(return-path <dch24@hermes.cam.ac.uk>); Tue, 15 Sep 2009 14:22:08 +0100
+Date: Tue, 15 Sep 2009 14:22:08 +0100 (BST)
+From: Dan Hatton <vi5u0-axiom@yahoo.co.uk>
+X-X-Sender: dan@hydrographer.hatton.btinternet.co.uk
+To: Axiom Mail <axiom-mail@nongnu.org>
+Message-ID: <alpine.LNX.2.00.0909151418190.1419@hydrographer.hatton.btinternet.co.uk>
+User-Agent: Alpine 2.00 (LNX 1167 2008-08-23)
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; format=flowed; charset=US-ASCII
+Sender: Dan Hatton <dch24@hermes.cam.ac.uk>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+Subject: [Axiom-mail] Shared code?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 15 Sep 2009 13:22:15 -0000
+
+
+Dear All,
+
+A while back, I obtained some rather surprising results with another
+CAS, Maxima.  Hence, I repeated the calculation with Axiom.  I'm
+pleased to say that I got the same results.  However, before I shout
+my mouth off about this "independent confirmation", I thought I'd
+better check: does anyone on here know whether Axiom and Maxima share
+any of their codebase, please?
+
+-- 
+
+Thanks,
+
+Dan
+
+
+
+From MAILER-DAEMON Tue Sep 15 09:27:53 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MnY4X-00031f-Dr
+	for mharc-axiom-mail@gnu.org; Tue, 15 Sep 2009 09:27:53 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MnY4W-00031X-LE
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 09:27:52 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MnY4S-00030E-6j
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 09:27:52 -0400
+Received: from [199.232.76.173] (port=36966 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MnY4S-00030B-3z
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 09:27:48 -0400
+Received: from ppsw-0.csi.cam.ac.uk ([131.111.8.130]:41798)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <dch24@hermes.cam.ac.uk>) id 1MnY4R-00067a-MB
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 09:27:48 -0400
+X-Cam-AntiVirus: no malware found
+X-Cam-SpamDetails: not scanned
+X-Cam-ScannerInfo: http://www.cam.ac.uk/cs/email/scanner/
+Received: from lapc-br1-091.maths.private.cam.ac.uk ([172.16.218.91]:34181)
+	by ppsw-0.csi.cam.ac.uk (smtp.hermes.cam.ac.uk [131.111.8.150]:25)
+	with esmtpsa (LOGIN:dch24) (TLSv1:DHE-RSA-AES256-SHA:256)
+	id 1MnY4R-0004YB-0X (Exim 4.70) for axiom-mail@nongnu.org
+	(return-path <dch24@hermes.cam.ac.uk>); Tue, 15 Sep 2009 14:27:47 +0100
+Date: Tue, 15 Sep 2009 14:27:47 +0100 (BST)
+From: Dan Hatton <vi5u0-axiom@yahoo.co.uk>
+X-X-Sender: dan@hydrographer.hatton.btinternet.co.uk
+To: Axiom Mail <axiom-mail@nongnu.org>
+Subject: Re: [Axiom-mail] Failure to simplify trig functions of simple 
+	rational multiples of %pi
+In-Reply-To: <alpine.LNX.2.00.0908261222160.30782@hydrographer.hatton.btinternet.co.uk>
+Message-ID: <alpine.LNX.2.00.0909151425590.1614@hydrographer.hatton.btinternet.co.uk>
+References: <alpine.LNX.2.00.0908141626540.21893@hydrographer.hatton.btinternet.co.uk>
+	<fbcd16d40908140900p41329108td35325402abcf7f2@mail.gmail.com>
+	<alpine.LNX.2.00.0908141712540.22328@hydrographer.hatton.btinternet.co.uk>
+	<alpine.LNX.2.00.0908261222160.30782@hydrographer.hatton.btinternet.co.uk>
+User-Agent: Alpine 2.00 (LNX 1167 2008-08-23)
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+Sender: Dan Hatton <dch24@hermes.cam.ac.uk>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 15 Sep 2009 13:27:52 -0000
+
+On Wed, 26 Aug 2009, Dan Hatton wrote:
+
+> Further to the earlier bits of this thread, I'd been hoping to be able
+> to produce the answer "1" with something like
+>
+> l:Union(Variable l,Integer)
+> simplify(cos(2*%pi*l))
+>
+> but instead I just get the cosine expression quoted back at me - is
+> there some other function I should use instead of simplify() for this,
+> please?
+
+knownvaluec2l(someexpression) == subst(someexpression,cos(2*l*%pi) = 1)
+knownvaluec2m(someexpression) == subst(someexpression,cos(2*m*%pi) = 1)
+knownvaluec2n(someexpression) == subst(someexpression,cos(2*n*%pi) = 1)
+knownvalues2l(someexpression) == subst(someexpression,sin(2*l*%pi) = 0)
+knownvalues2m(someexpression) == subst(someexpression,sin(2*m*%pi) = 0)
+knownvalues2n(someexpression) == subst(someexpression,sin(2*n*%pi) = 0)
+knownvaluec1l(someexpression) == subst(someexpression,cos(l*%pi) = (-1)^l)
+knownvaluec1m(someexpression) == subst(someexpression,cos(m*%pi) = (-1)^m)
+knownvaluec1n(someexpression) == subst(someexpression,cos(n*%pi) = (-1)^n)
+knownvalues1l(someexpression) == subst(someexpression,sin(l*%pi) = 0)
+knownvalues1m(someexpression) == subst(someexpression,sin(m*%pi) = 0)
+knownvalues1n(someexpression) == subst(someexpression,sin(n*%pi) = 0)
+knownvals(anexpression) == knownvalues1n(knownvalues1m(knownvalues1l(knownvaluec1n(knownvaluec1m(knownvaluec1l(knownvalues2n(knownvalues2m(knownvalues2l(knownvaluec2n(knownvaluec2m(knownvaluec2l(anexpression))))))))))))
+
+-- 
+
+Regards,
+
+Dan
+
+
+
+From MAILER-DAEMON Tue Sep 15 09:57:29 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MnYXB-0002G8-H4
+	for mharc-axiom-mail@gnu.org; Tue, 15 Sep 2009 09:57:29 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MnYX9-0002EE-K2
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 09:57:27 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MnYX5-0002CJ-TD
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 09:57:27 -0400
+Received: from [199.232.76.173] (port=37563 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MnYX5-0002C5-P1
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 09:57:23 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:47190)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1MnYX5-00044e-4k
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 09:57:23 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	n8FDvCrG001795; Tue, 15 Sep 2009 15:57:13 +0200
+To: Dan Hatton <vi5u0-axiom@yahoo.co.uk>
+Subject: Re: [Axiom-mail] Shared code?
+References: <alpine.LNX.2.00.0909151418190.1419@hydrographer.hatton.btinternet.co.uk>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Tue, 15 Sep 2009 15:57:12 +0200
+In-Reply-To: <alpine.LNX.2.00.0909151418190.1419@hydrographer.hatton.btinternet.co.uk>
+	(Dan Hatton's message of "Tue\,
+	15 Sep 2009 14\:22\:08 +0100 \(BST\)")
+Message-ID: <d9iqfkxqdj.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.9.15.134533
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: Axiom Mail <axiom-mail@nongnu.org>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 15 Sep 2009 13:57:28 -0000
+
+Dan Hatton <vi5u0-axiom@yahoo.co.uk> writes:
+
+> Dear All,
+>
+> A while back, I obtained some rather surprising results with another
+> CAS, Maxima.  Hence, I repeated the calculation with Axiom.  I'm
+> pleased to say that I got the same results.  However, before I shout
+> my mouth off about this "independent confirmation", I thought I'd
+> better check: does anyone on here know whether Axiom and Maxima share
+> any of their codebase, please?
+
+Not really.  But some mathematicians contributed to both projects, so
+systematic mistakes may be shared.
+
+You would need to say what you have done for a sensible answer.
+
+Martin
+
+
+
+From MAILER-DAEMON Tue Sep 15 10:23:02 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MnYvt-0007Ts-Rz
+	for mharc-axiom-mail@gnu.org; Tue, 15 Sep 2009 10:23:01 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MnYvs-0007Sz-6J
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 10:23:00 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MnYvn-0007PN-Mt
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 10:22:59 -0400
+Received: from [199.232.76.173] (port=40959 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MnYvn-0007PK-GV
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 10:22:55 -0400
+Received: from authsmtp.rrzn.uni-hannover.de ([130.75.2.107]:49864)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@math.uni-hannover.de>)
+	id 1MnYvm-0000i0-Qp
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 10:22:55 -0400
+Received: from ada0.ifam.uni-hannover.de (ada0.ifam.uni-hannover.de
+	[130.75.17.184])
+	by authsmtp.rrzn.uni-hannover.de (8.14.2/8.14.2) with ESMTP id
+	n8FEMn2S003446; Tue, 15 Sep 2009 16:22:50 +0200
+To: Dan Hatton <vi5u0-axiom@yahoo.co.uk>
+Subject: Re: [Axiom-mail] Failure to simplify trig functions of simple
+	rational multiples of %pi
+References: <alpine.LNX.2.00.0908141626540.21893@hydrographer.hatton.btinternet.co.uk>
+	<fbcd16d40908140900p41329108td35325402abcf7f2@mail.gmail.com>
+	<alpine.LNX.2.00.0908141712540.22328@hydrographer.hatton.btinternet.co.uk>
+	<alpine.LNX.2.00.0908261222160.30782@hydrographer.hatton.btinternet.co.uk>
+	<alpine.LNX.2.00.0909151425590.1614@hydrographer.hatton.btinternet.co.uk>
+From: Martin Rubey <martin.rubey@math.uni-hannover.de>
+Date: Tue, 15 Sep 2009 16:22:49 +0200
+In-Reply-To: <alpine.LNX.2.00.0909151425590.1614@hydrographer.hatton.btinternet.co.uk>
+	(Dan Hatton's message of "Tue\,
+	15 Sep 2009 14\:27\:47 +0100 \(BST\)")
+Message-ID: <d9eiq8xp6u.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-PMX-Version: 5.5.2.363555, Antispam-Engine: 2.6.1.350677,
+	Antispam-Data: 2009.9.15.140618
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 3)
+Cc: Axiom Mail <axiom-mail@nongnu.org>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 15 Sep 2009 14:23:00 -0000
+
+Dan Hatton <vi5u0-axiom@yahoo.co.uk> writes:
+
+> knownvaluec2l(someexpression) == subst(someexpression,cos(2*l*%pi) = 1)
+> knownvaluec2m(someexpression) == subst(someexpression,cos(2*m*%pi) = 1)
+> knownvaluec2n(someexpression) == subst(someexpression,cos(2*n*%pi) = 1)
+> knownvalues2l(someexpression) == subst(someexpression,sin(2*l*%pi) = 0)
+> knownvalues2m(someexpression) == subst(someexpression,sin(2*m*%pi) = 0)
+> knownvalues2n(someexpression) == subst(someexpression,sin(2*n*%pi) = 0)
+> knownvaluec1l(someexpression) == subst(someexpression,cos(l*%pi) = (-1)^l)
+> knownvaluec1m(someexpression) == subst(someexpression,cos(m*%pi) = (-1)^m)
+> knownvaluec1n(someexpression) == subst(someexpression,cos(n*%pi) = (-1)^n)
+> knownvalues1l(someexpression) == subst(someexpression,sin(l*%pi) = 0)
+> knownvalues1m(someexpression) == subst(someexpression,sin(m*%pi) = 0)
+> knownvalues1n(someexpression) == subst(someexpression,sin(n*%pi) = 0)
+> knownvals(anexpression) == knownvalues1n(knownvalues1m(knownvalues1l(knownvaluec1n(knownvaluec1m(knownvaluec1l(knownvalues2n(knownvalues2m(knownvalues2l(knownvaluec2n(knownvaluec2m(knownvaluec2l(anexpression))))))))))))
+
+Axiom (FriCAS, OpenAxiom) has quite a powerful pattern matcher.  I think
+you'll find it in the book or hyperdoc under "rules and pattern
+matching".
+
+important note: functions you use in a suchthat clause in a rule (below:
+x | assumedInteger? x) must be declared from EXPR INT to Boolean (or
+something similar).
+
+(1) -> l: List EXPR INT := [a,b,c]
+
+   (1)  [a,b,c]
+                                              Type: List(Expression(Integer))
+(2) -> assumedInteger?(x: EXPR INT): Boolean == member?(x::Symbol, l)
+   Function declaration assumedInteger? : Expression(Integer) -> 
+      Boolean has been added to workspace.
+                                                                   Type: Void
+(3) -> r := rule sin(%pi*(x | assumedInteger? x)) == 0
+   Compiling function assumedInteger? with type Expression(Integer) -> 
+      Boolean 
+
+   (3)  sin(%pi x) == 0
+                       Type: RewriteRule(Integer,Integer,Expression(Integer))
+(4) -> r sin a
+
+   (4)  sin(a)
+                                                    Type: Expression(Integer)
+(5) -> r sin(%pi*a)
+
+   (5)  0
+                                                    Type:
+                                                    Expression(Integer)
+
+Martin
+
+
+
+From MAILER-DAEMON Wed Sep 16 06:46:43 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Mns27-0003xP-40
+	for mharc-axiom-mail@gnu.org; Wed, 16 Sep 2009 06:46:43 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Mns25-0003wP-23
+	for axiom-mail@nongnu.org; Wed, 16 Sep 2009 06:46:41 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Mns21-0003uv-2Z
+	for axiom-mail@nongnu.org; Wed, 16 Sep 2009 06:46:40 -0400
+Received: from [199.232.76.173] (port=48204 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Mns20-0003un-NU
+	for axiom-mail@nongnu.org; Wed, 16 Sep 2009 06:46:36 -0400
+Received: from ppsw-6.csi.cam.ac.uk ([131.111.8.136]:53505)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <dch24@hermes.cam.ac.uk>) id 1Mns20-0007x5-4V
+	for axiom-mail@nongnu.org; Wed, 16 Sep 2009 06:46:36 -0400
+X-Cam-AntiVirus: no malware found
+X-Cam-SpamDetails: not scanned
+X-Cam-ScannerInfo: http://www.cam.ac.uk/cs/email/scanner/
+Received: from lapc-br1-091.maths.private.cam.ac.uk ([172.16.218.91]:35422)
+	by ppsw-6.csi.cam.ac.uk (smtp.hermes.cam.ac.uk [131.111.8.156]:25)
+	with esmtpsa (LOGIN:dch24) (TLSv1:DHE-RSA-AES256-SHA:256)
+	id 1Mns1x-0000Lk-Jf (Exim 4.70) for axiom-mail@nongnu.org
+	(return-path <dch24@hermes.cam.ac.uk>); Wed, 16 Sep 2009 11:46:33 +0100
+Date: Wed, 16 Sep 2009 11:46:32 +0100 (BST)
+From: Dan Hatton <vi5u0-axiom@yahoo.co.uk>
+X-X-Sender: dan@hydrographer.hatton.btinternet.co.uk
+To: Axiom Mail <axiom-mail@nongnu.org>
+Subject: Re: [Axiom-mail] Shared code?
+In-Reply-To: <d9iqfkxqdj.fsf@ada0.ifam.uni-hannover.de>
+Message-ID: <alpine.LNX.2.00.0909161136450.6878@hydrographer.hatton.btinternet.co.uk>
+References: <alpine.LNX.2.00.0909151418190.1419@hydrographer.hatton.btinternet.co.uk>
+	<d9iqfkxqdj.fsf@ada0.ifam.uni-hannover.de>
+User-Agent: Alpine 2.00 (LNX 1167 2008-08-23)
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+Sender: Dan Hatton <dch24@hermes.cam.ac.uk>
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6,
+	seldom 2.4 (older, 4)
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 16 Sep 2009 10:46:41 -0000
+
+On Tue, 15 Sep 2009, Martin Rubey wrote:
+
+> You would need to say what you have done for a sensible answer.
+
+Well, you'll understand if I don't reveal everything in advance of
+submitting the paper.  ;-)
+
+But the general form of it is this:
+
+Define five expressions, each of which is a Fourier series with terms
+up to and including second harmonic, in three position ordinates.
+
+Construct five equations using those five expressions, along with the
+differentiate() function and the addition, subtraction, and
+multiplication operators.
+
+Use the integrate() function to separate out individual Fourier
+components of the equations (now going up to third harmonics, because
+of the above-mentioned use of the multiplication operator).
+
+Use the solve() and subst() functions to solve the individual
+Fourier-component equations for the coefficients in the original
+expressions.
+
+-- 
+
+Thanks,
+
+Dan
+
+
+
+From MAILER-DAEMON Thu Sep 17 09:34:25 2009
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1MoH7x-0002Gy-TD
+	for mharc-axiom-mail@gnu.org; Thu, 17 Sep 2009 09:34:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1MnYh0-0007Vm-2w
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 10:07:38 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1MnYgv-0007VY-Ea
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 10:07:37 -0400
+Received: from [199.232.76.173] (port=60586 helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1MnYgv-0007VV-C5
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 10:07:33 -0400
+Received: from fg-out-1718.google.com ([72.14.220.156]:48868)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <hemmecke@gmail.com>) id 1MnYgu-0005zc-VO
+	for axiom-mail@nongnu.org; Tue, 15 Sep 2009 10:07:33 -0400
+Received: by fg-out-1718.google.com with SMTP id e21so761524fga.10
+	for <axiom-mail@nongnu.org>; Tue, 15 Sep 2009 07:07:31 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=domainkey-signature:received:received:message-id:date:from
+	:user-agent:mime-version:to:cc:subject:references:in-reply-to
+	:content-type:content-transfer-encoding;
+	bh=KI00Esg+JUwdp30P0ElBgmBJj6K8Ue2T2VMUMsfqsvE=;
+	b=bV82WJdsIgzsLpHKvWmt2gD0XzUlOcLoeCrKkogXNvBEdsAd3hlKmyGnzoJyWqP6I7
+	c1eiMS92OyTzFukz8bWzaD4GbbVEo7Mnb9wrkbJEai0N5Gpy4/0u0EZXEXbHkl6eMU8o
+	uJucAuSLckO0Y7sDo0XGp79bf708SEHLePtzA=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=gmail.com; s=gamma;
+	h=message-id:date:from:user-agent:mime-version:to:cc:subject
+	:references:in-reply-to:content-type:content-transfer-encoding;
+	b=xK9WK5NOlXZxw2N28rCPWq6Mjm03lo3Iq9TyayvPUUUGO/khdNTVxK5sX/opk/gL/Q
+	1Q56Sn40shWYsraFJw+69YQcel28UYdrlbNLiNRMQZJRU96SYW0UZl5RDw9SGakIzIpN
+	1uqAAYghBvQmrXsKWHUNM3Dt01tf6xIAKc4cA=
+Received: by 10.86.231.5 with SMTP id d5mr6187247fgh.53.1253023651223;
+	Tue, 15 Sep 2009 07:07:31 -0700 (PDT)
+Received: from ?193.170.38.119? (woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119])
+	by mx.google.com with ESMTPS id 4sm101389fge.3.2009.09.15.07.07.29
+	(version=TLSv1/SSLv3 cipher=RC4-MD5);
+	Tue, 15 Sep 2009 07:07:30 -0700 (PDT)
+Message-ID: <4AAF9FA0.6010702@gmail.com>
+Date: Tue, 15 Sep 2009 16:07:28 +0200
+From: Ralf Hemmecke <hemmecke@gmail.com>
+User-Agent: Thunderbird 2.0.0.23 (X11/20090817)
+MIME-Version: 1.0
+To: Dan Hatton <vi5u0-axiom@yahoo.co.uk>
+Subject: Re: [Axiom-mail] Shared code?
+References: <alpine.LNX.2.00.0909151418190.1419@hydrographer.hatton.btinternet.co.uk>
+In-Reply-To: <alpine.LNX.2.00.0909151418190.1419@hydrographer.hatton.btinternet.co.uk>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by monty-python.gnu.org: GNU/Linux 2.6 (newer, 2)
+X-Mailman-Approved-At: Thu, 17 Sep 2009 09:34:24 -0400
+Cc: Axiom Mail <axiom-mail@nongnu.org>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 15 Sep 2009 14:07:38 -0000
+
+> does anyone on here know whether Axiom and Maxima share
+> any of their codebase, please?
+
+If they do, I would be surprised. But let's see what the elder and more 
+knowledgeable people say...
+
+Ralf
+
+
+

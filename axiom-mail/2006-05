@@ -1,0 +1,88 @@
+From MAILER-DAEMON Mon May 01 09:51:13 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1FaYnx-0008Ke-5l
+	for mharc-axiom-mail@gnu.org; Mon, 01 May 2006 09:51:13 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1FZvOR-0006dZ-8q
+	for axiom-mail@nongnu.org; Sat, 29 Apr 2006 15:46:15 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1FZvOP-0006dN-Ux
+	for Axiom-mail@nongnu.org; Sat, 29 Apr 2006 15:46:14 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1FZvOP-0006dK-PJ
+	for Axiom-mail@nongnu.org; Sat, 29 Apr 2006 15:46:13 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1FZvRq-0007ju-2O
+	for Axiom-mail@nongnu.org; Sat, 29 Apr 2006 15:49:46 -0400
+Received: from localhost.localdomain ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id k3TJjtXY009090; 
+	Sat, 29 Apr 2006 21:45:57 +0200 (CEST)
+Sender: rubey@localhost.localdomain
+To: Lonnie Cumberland <lonnie@outstep.com>
+Subject: Re: [Axiom-mail] Newbie Questions
+References: <4432D955.4090104@outstep.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 29 Apr 2006 21:51:40 +0200
+In-Reply-To: <4432D955.4090104@outstep.com>
+Message-ID: <85slnw5feb.fsf@localhost.localdomain>
+Lines: 37
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-DCC-ZID-Univie-Metrics: mx8 4248; Body=0 Fuz1=0 Fuz2=0
+X-Mailman-Approved-At: Mon, 01 May 2006 09:51:11 -0400
+Cc: Axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 29 Apr 2006 19:46:15 -0000
+
+Dear Lonnie,
+
+Lonnie Cumberland <lonnie@outstep.com> writes:
+
+> I was trying to do some simple calculation looking for the floor, and integer
+> of the sqrt of a number but could not seem to get this to work and could not
+> locate these in any documentation.
+
+Do you have hyperdoc? there you can simply enter floor or sqrt and you will get
+what you want.
+
+Otherwise, issue (at the command prompt)
+
+(1) -> )di op floor
+
+There are 2 exposed functions called floor :
+   [1] D -> D1 from D
+            if D has QFCAT D1 and D1 has INTDOM and D1 has INS
+   [2] D -> D from D if D has RNS
+
+This means: there is a function floor from something which is a Quotientfield
+of an IntegralDomain into this IntegralDomain (and this IntegralDomain has to
+be an IntegerNumberSystem, too), and
+
+there is a function floor from a RealNumberSystem into the same
+RealNumberSystem.
+
+Maybe you could make your question more precise.
+ 
+> This project has very good potential I think but seems to have a long way to go
+> in order to be on the level of Mathematica.
+
+Well, there are things you definitely cannot do in Mathematica, but that are
+easily achieved in Axiom. These two systems are simply *different* and have
+quite different focus.
+
+Martin
+
+
+
+

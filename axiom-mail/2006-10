@@ -1,0 +1,4885 @@
+From MAILER-DAEMON Sat Oct 07 06:06:04 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GW94G-0004wE-0j
+	for mharc-axiom-mail@gnu.org; Sat, 07 Oct 2006 06:06:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GW94E-0004tF-Aa
+	for axiom-mail@nongnu.org; Sat, 07 Oct 2006 06:06:02 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GW94C-0004q1-Oa
+	for axiom-mail@nongnu.org; Sat, 07 Oct 2006 06:06:01 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GW94C-0004pf-Bd
+	for axiom-mail@nongnu.org; Sat, 07 Oct 2006 06:06:00 -0400
+Received: from [64.233.182.191] (helo=nf-out-0910.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GW9BH-00006z-0Y
+	for axiom-mail@nongnu.org; Sat, 07 Oct 2006 06:13:19 -0400
+Received: by nf-out-0910.google.com with SMTP id a25so1350548nfc
+	for <axiom-mail@nongnu.org>; Sat, 07 Oct 2006 03:05:58 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=L9gm7SshMySFsjrjL3vQoj3jpop1TCskP2aSMHoufwrSf6/6QdfwYWk9D3ST4AFpso3wdI5Hdfm4VhRdnxp0jkoLIdTgj1Jr94g9Gd/xOnfCFa/rS4+JlL4A+UgnJHAh3JhY5J38di/l37kr+gk+BGXLapiD+QE86RByA1Ty8n4=
+Received: by 10.82.101.3 with SMTP id y3mr269215bub;
+	Sat, 07 Oct 2006 03:05:58 -0700 (PDT)
+Received: by 10.82.127.8 with HTTP; Sat, 7 Oct 2006 03:05:58 -0700 (PDT)
+Message-ID: <5eb4b0650610070305r644f6d1q8d4b43e63d3eb674@mail.gmail.com>
+Date: Sat, 7 Oct 2006 18:05:58 +0800
+From: KC.Gmail <kcc1967@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Subject: [Axiom-mail] batch mode
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 07 Oct 2006 10:06:02 -0000
+
+Hi,
+
+Just install Axiom Sept2005 release :-)
+A simple question, how can I ask Axiom to
+run a pre-written script ?
+
+I will be good if I can simply pass the script from
+command line, eg "axiom myscript".
+
+Thanks
+KC
+
+
+
+From MAILER-DAEMON Sat Oct 07 09:17:29 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GWC3V-0007xK-EX
+	for mharc-axiom-mail@gnu.org; Sat, 07 Oct 2006 09:17:29 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GWC3T-0007qX-AT
+	for axiom-mail@nongnu.org; Sat, 07 Oct 2006 09:17:27 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GWC3R-0007k5-9A
+	for axiom-mail@nongnu.org; Sat, 07 Oct 2006 09:17:26 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GWC3R-0007jU-3V
+	for axiom-mail@nongnu.org; Sat, 07 Oct 2006 09:17:25 -0400
+Received: from [80.12.242.19] (helo=smtp-msa-out19.orange.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GWCAX-0003yH-R2
+	for axiom-mail@nongnu.org; Sat, 07 Oct 2006 09:24:46 -0400
+Received: from [82.127.200.192] (ALille-251-1-46-192.w82-127.abo.wanadoo.fr
+	[82.127.200.192])
+	by mwinf1923.orange.fr (SMTP Server) with ESMTP id EA0991C00098;
+	Sat,  7 Oct 2006 15:17:23 +0200 (CEST)
+X-ME-UUID: 20061007131723958.EA0991C00098@mwinf1923.orange.fr
+Subject: Re: [Axiom-mail] batch mode
+From: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+To: "KC.Gmail" <kcc1967@gmail.com>
+In-Reply-To: <5eb4b0650610070305r644f6d1q8d4b43e63d3eb674@mail.gmail.com>
+References: <5eb4b0650610070305r644f6d1q8d4b43e63d3eb674@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Date: Sat, 07 Oct 2006 15:17:36 +0200
+Message-Id: <1160227056.2812.31.camel@ellipse>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.6.3 
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 07 Oct 2006 13:17:27 -0000
+
+Le samedi 07 octobre 2006 =E0 18:05 +0800, KC.Gmail a =E9crit :
+> Hi,
+>=20
+> Just install Axiom Sept2005 release :-)
+
+This is an old release. The Axiom team do not distribute tarballs of the
+stable release (Gold) but instead distribute the source code via GNU
+Arch from http://www.axiom-developer.org or via CVS either from
+Sourceforge or Savannah. These repositories are updated at each release.
+For more information see http://wiki.axiom-developer.org/AxiomSources
+but you have already read this page I believe. The actual version of
+Axiom is "Axiom (September 2006)" which corresponds to "patch-50" in the
+CVS log. It seems to me that this release has some problems with
+graphics but I can be wrong.
+
+> A simple question, how can I ask Axiom to
+> run a pre-written script ?
+
+The file extension of your script must be .input and it can be processed
+with the system command ')read' so issue ')read myscript.input' for
+example. In Hyperdoc see 'Setting->Commands-> )read' for more
+information.
+=20
+> I will be good if I can simply pass the script from
+> command line, eg "axiom myscript".
+
+You can use 'AXIOMsys < myscript' and eventually redirect the output to
+a file. You will probably need to set the environment variable AXIOM,
+see the the 'axiom' script (I don't know where your version of Axiom is
+installed).
+
+Greg
+
+>=20
+> Thanks
+> KC
+>=20
+>=20
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>=20
+
+
+
+
+From MAILER-DAEMON Mon Oct 16 19:12:40 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZbdP-0007Ia-Oi
+	for mharc-axiom-mail@gnu.org; Mon, 16 Oct 2006 19:12:39 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZbdN-0007Ca-Kq
+	for axiom-mail@nongnu.org; Mon, 16 Oct 2006 19:12:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZbdM-00078M-Mi
+	for axiom-mail@nongnu.org; Mon, 16 Oct 2006 19:12:37 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZbdM-00077x-E7
+	for axiom-mail@nongnu.org; Mon, 16 Oct 2006 19:12:36 -0400
+Received: from [128.194.138.12] (helo=pine.cs.tamu.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZbma-0002bd-17
+	for axiom-mail@nongnu.org; Mon, 16 Oct 2006 19:22:08 -0400
+Received: from soliton.cs.tamu.edu (vpn-51.cs.tamu.edu [128.194.150.51])
+	by pine.cs.tamu.edu (8.12.9/8.12.9) with ESMTP id k9GNCYSt000913
+	for <axiom-mail@nongnu.org>; Mon, 16 Oct 2006 18:12:35 -0500 (CDT)
+Received: by soliton.cs.tamu.edu (Postfix, from userid 1000)
+	id F3C971A9C8; Mon, 16 Oct 2006 18:14:57 -0500 (CDT)
+Sender: gdr@soliton.cs.tamu.edu
+To: axiom-mail@nongnu.org
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+Organization: Texas A&M University, Department of Computer Science
+Date: 16 Oct 2006 18:14:57 -0500
+Message-ID: <87wt6zonta.fsf@soliton.cs.tamu.edu>
+Lines: 45
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Subject: [Axiom-mail] Equivalence between named domain and %
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 16 Oct 2006 23:12:38 -0000
+
+
+Hello,
+
+  Consider the following code snipet:
+
+
+     )abbrev domain T T
+
+     Decl := Record(name: Symbol, type: T)
+
+     T(): Public == Private where
+       Public ==> with
+         type: Symbol -> %
+         decl: (Symbol, %) -> Decl
+       Private ==> add
+         decl(n,t) == [n,t]
+
+
+The SPAD compiler complains on the definition of decl with the
+following message
+
+       initializing NRLIB T for T 
+       compiling into NRLIB T 
+       compiling exported decl : (Symbol,$) -> Decl
+    ****** comp fails at level 2 with expression: ******
+    error in function decl 
+
+    (|construct| |n| | << t >> |)
+    ****** level 2  ******
+    $x:= t
+    $m:= T$
+    $f:=
+    ((((|t| # #) (|n| # #) (|t| #) (|n| #) ...)))
+
+       >> Apparent user error:
+       Cannot coerce t 
+          of mode $ 
+          to mode T$ 
+
+It looks like SPAD believes T is different from % within the
+definition of T.  Am I correct?  Why is that?
+
+Thanks,
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Mon Oct 16 19:23:01 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZbnR-0003S0-2U
+	for mharc-axiom-mail@gnu.org; Mon, 16 Oct 2006 19:23:01 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZbnP-0003MV-1l
+	for axiom-mail@nongnu.org; Mon, 16 Oct 2006 19:22:59 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZbnN-0003HC-6u
+	for axiom-mail@nongnu.org; Mon, 16 Oct 2006 19:22:58 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZbnM-0003H0-S1
+	for axiom-mail@nongnu.org; Mon, 16 Oct 2006 19:22:56 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZbwa-00041X-IH
+	for axiom-mail@nongnu.org; Mon, 16 Oct 2006 19:32:28 -0400
+Received: from localhost (amavis.drenet.dnd.ca [131.136.244.251])
+	by fw.drenet.dnd.ca (_) with ESMTP id 8F8FA6AA43;
+	Mon, 16 Oct 2006 19:22:55 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca (unknown [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id E6C666AE33;
+	Mon, 16 Oct 2006 19:22:54 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-mail] Equivalence between named domain and %
+Date: Mon, 16 Oct 2006 19:22:56 -0400
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE38EAADB@corporateex02.Corporate.drdc-rddc.gc.ca>
+In-Reply-To: <87wt6zonta.fsf@soliton.cs.tamu.edu>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-mail] Equivalence between named domain and %
+Thread-Index: AcbxeJmigVBrc9KSSgqqsdJutvIcqQAAOgzQ
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Gabriel Dos Reis" <gdr@cs.tamu.edu>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 16 Oct 2006 23:22:59 -0000
+
+Gaby,=20
+
+On Monday, October 16, 2006 7:15 PM you wrote:
+>=20
+>   Consider the following code snipet:
+>=20
+>=20
+>      )abbrev domain T T
+>=20
+>      Decl :=3D Record(name: Symbol, type: T)
+>=20
+>      T(): Public =3D=3D Private where
+>        Public =3D=3D> with
+>          type: Symbol -> %
+>          decl: (Symbol, %) -> Decl
+>        Private =3D=3D> add
+>          decl(n,t) =3D=3D [n,t]
+>=20
+>=20
+> The SPAD compiler complains on the definition of decl with the
+> following message
+
+Why would you consider the type T itself to be known in the scope
+where the value of Decl is computed?
+
+Perhaps you meant to write
+
+      Decl :=3D Record(name: Symbol, type: %)
+
+which seems to compile as expected?
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Mon Oct 16 19:29:54 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZbu6-00018F-9s
+	for mharc-axiom-mail@gnu.org; Mon, 16 Oct 2006 19:29:54 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZbu4-00016N-R9
+	for axiom-mail@nongnu.org; Mon, 16 Oct 2006 19:29:52 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZbu4-00015H-1K
+	for axiom-mail@nongnu.org; Mon, 16 Oct 2006 19:29:52 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZbu3-00015A-Ta
+	for axiom-mail@nongnu.org; Mon, 16 Oct 2006 19:29:51 -0400
+Received: from [165.91.22.120] (helo=sr-4-int.cis.tamu.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZc3H-00059m-Kr
+	for axiom-mail@nongnu.org; Mon, 16 Oct 2006 19:39:23 -0400
+Received: from localhost (localhost.tamu.edu [127.0.0.1])
+	by sr-4-int.cis.tamu.edu (Postfix) with ESMTP id 0F1FD5500;
+	Mon, 16 Oct 2006 18:29:51 -0500 (CDT)
+Received: from hobbiton.cs.tamu.edu (smtp.cs.tamu.edu [128.194.138.66])
+	by sr-4-int.cis.tamu.edu (Postfix) with ESMTP id 10A574C29;
+	Mon, 16 Oct 2006 18:29:50 -0500 (CDT)
+Received: from sun (sun.cs.tamu.edu [128.194.138.51])
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by hobbiton.cs.tamu.edu (Postfix) with ESMTP id 8680782B94;
+	Mon, 16 Oct 2006 18:29:49 -0500 (CDT)
+Date: Mon, 16 Oct 2006 18:29:49 -0500 (CDT)
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+Sender: gdr@sun.tamu.edu
+To: bill.page1@synthesis.anikast.ca
+Subject: RE: [Axiom-mail] Equivalence between named domain and %
+In-Reply-To: <CAE9B164E720CE4D8727792DF8F28AE38EAADB@corporateex02.Corporate.drdc-rddc.gc.ca>
+Message-ID: <Pine.GSO.4.58.0610161823460.18304@sun>
+References: <CAE9B164E720CE4D8727792DF8F28AE38EAADB@corporateex02.Corporate.drdc-rddc.gc.ca>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Virus-Scanned: amavisd-new at tamu.edu
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 16 Oct 2006 23:29:53 -0000
+
+On Mon, 16 Oct 2006, Page, Bill wrote:
+
+| Gaby,
+|
+| On Monday, October 16, 2006 7:15 PM you wrote:
+| >
+| >   Consider the following code snipet:
+| >
+| >
+| >      )abbrev domain T T
+| >
+| >      Decl := Record(name: Symbol, type: T)
+| >
+| >      T(): Public == Private where
+| >        Public ==> with
+| >          type: Symbol -> %
+| >          decl: (Symbol, %) -> Decl
+| >        Private ==> add
+| >          decl(n,t) == [n,t]
+| >
+| >
+| > The SPAD compiler complains on the definition of decl with the
+| > following message
+|
+| Why would you consider the type T itself to be known in the scope
+| where the value of Decl is computed?
+
+Because inside the definition of T(), % is supposed to refer to the
+domain defined, i.e. T.  Notice that the only thing that is needed to
+be known is the type name.
+
+| Perhaps you meant to write
+|
+|       Decl := Record(name: Symbol, type: %)
+
+what would that % refers to?
+
+| which seems to compile as expected?
+
+But, we don't know the compiler is right.  Which is I'm asking.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Tue Oct 17 03:19:21 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZjEP-0007XG-BK
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 03:19:21 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZjEM-0007Uf-Lr
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 03:19:18 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZjEL-0007TT-N6
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 03:19:18 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZjEL-0007TG-DP
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 03:19:17 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZjNd-0002ZF-HF
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 03:28:53 -0400
+Received: from localhost (amavis.drenet.dnd.ca [131.136.244.251])
+	by fw.drenet.dnd.ca (_) with ESMTP id 9A0786B541;
+	Tue, 17 Oct 2006 03:19:16 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca (unknown [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id 5A6516B09E;
+	Tue, 17 Oct 2006 03:19:13 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-mail] Equivalence between named domain and %
+Date: Tue, 17 Oct 2006 03:19:10 -0400
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE38EAAE9@corporateex02.Corporate.drdc-rddc.gc.ca>
+In-Reply-To: <Pine.GSO.4.58.0610161823460.18304@sun>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-mail] Equivalence between named domain and %
+Thread-Index: AcbxevyBWQj5bLbMSh6+5cpVErLxtAANenLw
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Gabriel Dos Reis" <gdr@cs.tamu.edu>
+Cc: Waldek Hebisch <hebisch@math.uni.wroc.pl>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 07:19:18 -0000
+
+On Monday, October 16, 2006 7:30 PM Gabriel Dos Reis wrote:
+
+> | >   Consider the following code snipet:
+> | >
+> | >      )abbrev domain T T
+> | >
+> | >      Decl :=3D Record(name: Symbol, type: T)
+> | >
+> | >      T(): Public =3D=3D Private where
+> | >        Public =3D=3D> with
+> | >          type: Symbol -> %
+> | >          decl: (Symbol, %) -> Decl
+> | >        Private =3D=3D> add
+> | >          decl(n,t) =3D=3D [n,t]
+> | >
+> | > The SPAD compiler complains on the definition of decl with the
+> | > following message
+> |
+>=20
+> On Mon, 16 Oct 2006, Page, Bill wrote:
+> | Why would you consider the type T itself to be known in the scope
+> | where the value of Decl is computed?
+>=20
+> Because inside the definition of T(), % is supposed to refer to the
+> domain defined, i.e. T.
+
+Yes that is correct. But you are asking SPAD explicitly to evaluate
+Record(name: Symbol, type: T) outside of and *prior to* the definition
+of T(). It seems that in the normal mode of operation of the SPAD
+compiler this is out of context for T. (But see how this can be
+changed below.)
+
+> Notice that the only thing that is needed to be known is the type
+> name.
+
+I think it is instructive to see what Aldor says about this
+construction:
+
+Decl :=3D Record(name: Symbol, type: T)
+^
+[L4 C1] #7 (Error) `Decl' is used in a type, so must be constant,
+  and so cannot be assigned to.
+
+After correcting the definition, Aldor compiles this thing without
+complaint:
+
+-------
+#pile
+#include "axiom"
+
+Decl =3D=3D Record(name: Symbol, type: T)
+
+T: Public =3D=3D Private where
+  Public =3D=3D> with
+    type: Symbol -> %
+    decl: (Symbol, %) -> Decl
+  Private =3D=3D> add
+    decl(n:Symbol,t:%):Decl =3D=3D [n,t]
+    type(x:Symbol):% =3D=3D x pretend %
+
+------
+
+Even more exciting is the fact that using the $bootStrapMode flag
+discovered by Waldek the same code is compiled by SPAD without
+complaint!
+
+-------
+)lisp (setq |$bootStrapMode| t)
+)abbrev domain T T
+
+Decl =3D=3D Record(name: Symbol, type: T)
+
+T(): Public =3D=3D Private where
+  Public =3D=3D> with
+    type: Symbol -> %
+    decl: (Symbol, %) -> Decl
+  Private =3D=3D> add
+    decl(n:Symbol,t:%):Decl =3D=3D [n,t]
+    type(x:Symbol):% =3D=3D x pretend %
+
+-------
+
+I wonder why '$bootStrapMode t' is not the normal default mode of
+operation for SPAD? Is the generated code less efficient?
+
+>=20
+> | Perhaps you meant to write
+> |
+> |       Decl :=3D Record(name: Symbol, type: %)
+>=20
+> what would that % refers to?
+
+As far as I know, in SPAD the Type % is not resolved statically at
+compile time instead it remains a placeholder for "this domain" in
+whatever context it occurs. (In contrast to Aldor.)
+
+>=20
+> | which seems to compile as expected?
+>=20
+> But, we don't know the compiler is right.  Which is I'm asking.
+>=20
+
+I don't know. Maybe you need to extend your example to actually
+do some computation which tests the semantics and/or take a look
+at the generated Lisp code.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Tue Oct 17 10:01:16 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZpVM-00018C-65
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 10:01:16 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZpVK-00015K-Hs
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:01:14 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZpVH-0000y7-El
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:01:13 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZpVH-0000xx-7V
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:01:11 -0400
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZpeY-0006ZK-7j
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:10:51 -0400
+Received: from pop-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id k9HE0iA7030606
+	for <axiom-mail@nongnu.org>; Tue, 17 Oct 2006 10:00:52 -0400
+Received: (qmail 31711 invoked from network); 17 Oct 2006 14:00:45 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.233.73])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <gdr@cs.tamu.edu>; 17 Oct 2006 14:00:45 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k9HDpND28736;
+	Tue, 17 Oct 2006 09:51:23 -0400
+Date: Tue, 17 Oct 2006 09:51:23 -0400
+Message-Id: <200610171351.k9HDpND28736@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: bill.page1@synthesis.anikast.ca
+In-reply-to: <CAE9B164E720CE4D8727792DF8F28AE38EAAE9@corporateex02.Corporate.drdc-rddc.gc.ca>
+	(Bill.Page@drdc-rddc.gc.ca)
+Subject: Re: [Axiom-mail] Equivalence between named domain and %
+References: <CAE9B164E720CE4D8727792DF8F28AE38EAAE9@corporateex02.Corporate.drdc-rddc.gc.ca>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: hebisch@math.uni.wroc.pl, axiom-mail@nongnu.org, gdr@cs.tamu.edu
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 14:01:14 -0000
+
+> I wonder why '$bootStrapMode t' is not the normal default mode of
+> operation for SPAD? Is the generated code less efficient?
+
+This mode is used to compile certain domains that cannot be
+compiled any other way. I believe it was applied to PI and NNI
+but memory fails me. 
+
+I should not be used in general.
+
+t
+
+
+
+From MAILER-DAEMON Tue Oct 17 10:34:49 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZq1p-00023j-I5
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 10:34:49 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZq1o-00020T-BY
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:34:48 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZq1j-0001mS-JP
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:34:47 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZq1j-0001mG-Fd
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:34:43 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZq1j-0002nS-4u
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:34:43 -0400
+Received: from localhost (amavis.drenet.dnd.ca [131.136.244.251])
+	by fw.drenet.dnd.ca (_) with ESMTP id 60FC86BE6E;
+	Tue, 17 Oct 2006 10:34:42 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca (unknown [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id EC1626BEB6;
+	Tue, 17 Oct 2006 10:34:35 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-mail] Equivalence between named domain and %
+Date: Tue, 17 Oct 2006 10:34:32 -0400
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE38EAB52@corporateex02.Corporate.drdc-rddc.gc.ca>
+In-Reply-To: <E1GZpMI-0000kK-00@hera.math.uni.wroc.pl>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-mail] Equivalence between named domain and %
+Thread-Index: Acbx84NUuXhStfMBQqOZV4QBM3UL/AABARkg
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Waldek Hebisch" <hebisch@math.uni.wroc.pl>
+Cc: axiom-mail@nongnu.org, Gabriel Dos Reis <gdr@cs.tamu.edu>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 14:34:48 -0000
+
+On Tuesday, October 17, 2006 9:52 AM Waldek Hebisch wrote:
+
+>=20
+> Bill Page wrote:
+> > Even more exciting is the fact that using the $bootStrapMode flag
+> > discovered by Waldek the same code is compiled by SPAD without
+> > complaint!
+> >=20
+> > -------
+> > )lisp (setq |$bootStrapMode| t)
+> > )abbrev domain T T
+> >=20
+> > Decl =3D=3D Record(name: Symbol, type: T)
+> >=20
+> > T(): Public =3D=3D Private where
+> >   Public =3D=3D> with
+> >     type: Symbol -> %
+> >     decl: (Symbol, %) -> Decl
+> >   Private =3D=3D> add
+> >     decl(n:Symbol,t:%):Decl =3D=3D [n,t]
+> >     type(x:Symbol):% =3D=3D x pretend %
+> >=20
+> > -------
+> >=20
+> > I wonder why '$bootStrapMode t' is not the normal default mode of
+> > operation for SPAD? Is the generated code less efficient?
+> >=20
+>=20
+> '$bootStrapMode t' means there is no "real" code. You need to compile
+> second time in normal mode to compile executable part.
+>
+
+That is interesting.
+
+See for example:
+
+ http://wiki.axiom-developer.org/SandBoxBootStrap2
+
+and in particular the Lisp code at:
+
+  http://wiki.axiom-developer.org/images/T.NRLIB/code.lsp
+
+> Concerning the example above, I tried to get executable code from it,
+> but I already have problems at first declaration. More precisely,
+> consider:
+>=20
+> )abbrev domain DECL Decl
+>=20
+> Decl =3D=3D Record(name: Symbol, type: Symbol)
+>=20
+> I get:
+>=20
+>    >> System error:
+>    Caught fatal error [memory may be damaged]
+>=20
+> regardless of $bootStrapMode.
+
+You are right. I did not notice last night that *if* I do
+this SPAD compile in the same Axiom session in which I have
+previously done some other compiles, then we get this error
+message. See:
+
+ http://wiki.axiom-developer.org/SandBoxBootStrap
+
+where I did the SPAD compile after the Aldor compile. However the
+compile does work if it is the only thing compiled during a session
+(on the same page). See
+
+ http://wiki.axiom-developer.org/SandBoxBootStrap2
+
+This seems to be a serious bug.
+
+> The same if change the above to:
+>=20
+> )abbrev category DECL Decl
+>=20
+> Decl =3D=3D Record(name: Symbol, type: Symbol)
+>=20
+> If I try:
+>=20
+> )abbrev category DECL Decl
+>=20
+> Decl: Category =3D=3D Record(name: Symbol, type: Symbol)
+>=20
+> I get:
+>=20
+>    Internal Error
+>    Error while instantiating type Category
+>=20
+> protected-symbol-warn called with (NIL)
+>=20
+
+Why would you expect to be able to tell the database via
+)abbrev that Decl is a category?
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Tue Oct 17 10:47:55 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZqEV-0001B5-Ef
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 10:47:55 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZqET-00019x-JF
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:47:53 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZqEQ-00018F-Qt
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:47:53 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZq33-0003VA-Ms
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:36:05 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZq33-0002zW-Ib
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:36:05 -0400
+Received: from localhost (amavis.drenet.dnd.ca [131.136.244.251])
+	by fw.drenet.dnd.ca (_) with ESMTP id 015AD6B941;
+	Tue, 17 Oct 2006 10:36:05 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca (unknown [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id E31E76BE25;
+	Tue, 17 Oct 2006 10:36:03 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-mail] Equivalence between named domain and %
+Date: Tue, 17 Oct 2006 10:36:02 -0400
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE38EAB55@corporateex02.Corporate.drdc-rddc.gc.ca>
+In-Reply-To: <200610171351.k9HDpND28736@localhost.localdomain>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-mail] Equivalence between named domain and %
+Thread-Index: Acbx9LqSEy5JziD6RaG2CiZmjFhTIwABKzUg
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: <daly@axiom-developer.org>
+Cc: hebisch@math.uni.wroc.pl, axiom-mail@nongnu.org, gdr@cs.tamu.edu
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 14:47:53 -0000
+
+On Tuesday, October 17, 2006 9:51 AM Tim Daly wrote:
+> Bill Page wrote:=20
+> > I wonder why '$bootStrapMode t' is not the normal default mode
+> > of operation for SPAD? Is the generated code less efficient?
+>=20
+> This mode is used to compile certain domains that cannot be
+> compiled any other way. I believe it was applied to PI and NNI
+> but memory fails me.=20
+>
+
+The comments in the code mention RING.
+=20
+> I should not be used in general.
+>=20
+
+Why?
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Tue Oct 17 10:57:10 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZqNS-0008I0-Iw
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 10:57:10 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZqNR-0008GE-39
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:57:09 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZqNO-0008AS-EG
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:57:08 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZqNO-0008AK-7g
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:57:06 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZqNO-0007DX-2g
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:57:06 -0400
+Received: from localhost (amavis.drenet.dnd.ca [131.136.244.251])
+	by fw.drenet.dnd.ca (_) with ESMTP id 78F806BD84;
+	Tue, 17 Oct 2006 10:57:05 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca (unknown [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id 913BD6BD18;
+	Tue, 17 Oct 2006 10:57:04 -0400 (EDT)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-mail] Equivalence between named domain and %
+Date: Tue, 17 Oct 2006 10:57:03 -0400
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE38EAB5F@corporateex02.Corporate.drdc-rddc.gc.ca>
+In-Reply-To: <E1GZpMI-0000kK-00@hera.math.uni.wroc.pl>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-mail] Equivalence between named domain and %
+Thread-Index: Acbx84NUuXhStfMBQqOZV4QBM3UL/AABjkuw
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Waldek Hebisch" <hebisch@math.uni.wroc.pl>
+Cc: axiom-mail@nongnu.org, Gabriel Dos Reis <gdr@cs.tamu.edu>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 14:57:09 -0000
+
+On Tuesday, October 17, 2006 9:52 AM Waldek Hebisch wrote:
+>=20
+> Bill Page wrote:
+> > ...=20
+> > I wonder why '$bootStrapMode t' is not the normal default mode of
+> > operation for SPAD? Is the generated code less efficient?
+> >=20
+>=20
+> '$bootStrapMode t' means there is no "real" code. You need to
+> compile second time in normal mode to compile executable part.
+>=20
+
+Do you mean that '$bootStrapMode t' asks the compiler to only compile
+"headers"?
+
+Here is the actual Lisp generated by Gaby's (modified) example:
+
+http://wiki.axiom-developer.org/SandBoxBootStrap2
+
+Please excuse my indentation below which is only approximate.
+
+(/VERSIONCHECK 2)=20
+
+(DEFUN T NIL
+  (PROG NIL
+    (RETURN (PROG (#0=3D#:G1407)
+      (RETURN (COND
+        ((LETT #0# (HGET |$ConstructorCache| (QUOTE T)) T)
+          (|CDRwithIncrement| (CDAR #0#)))
+        ((QUOTE T)
+          (UNWIND-PROTECT
+            (PROG1 (CDDAR
+              (HPUT |$ConstructorCache| (QUOTE T)
+                (LIST (CONS NIL (CONS 1 (|T;|))))))
+              (LETT #0# T T))
+  (COND ((NOT #0#) (HREM |$ConstructorCache| (QUOTE T))))))))))))=20
+
+(DEFUN |T;| NIL
+  (COND (|$bootStrapMode| (VECTOR (QUOTE (T))
+     NIL NIL NIL NIL NIL))
+  ((QUOTE T)
+    (|systemError| (LIST (QUOTE |%b|) (QUOTE T) (QUOTE |%d|) "from"
+(QUOTE |%b|)
+    (QUOTE "/var/zope/var/LatexWiki/390581243-25px001.spad")
+    (QUOTE |%d|) "needs to be compiled")))))=20
+
+(MAKEPROP (QUOTE T) (QUOTE NILADIC) T)=20
+
+-------
+
+Note especially "needs to be compiled". :-)
+
+How does one "compile second time in normal mode"? Do you
+mean just re-compile it without the '$bootStrapMode t' flag?
+In that case is the first compile with this flag only generating
+type information to be used for compiling downstream modules?
+
+Regard,
+Bill Page.
+
+
+
+
+From MAILER-DAEMON Tue Oct 17 13:15:34 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZsXO-0005dE-F1
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 13:15:34 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZsXL-0005Xs-G1
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 13:15:31 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZsXG-0005Kn-0L
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 13:15:30 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZsXF-0005K6-PT
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 13:15:25 -0400
+Received: from [62.4.17.102] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZsXG-00036o-Bz
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 13:15:26 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by mallaury.nerim.net (Postfix) with ESMTP id B94004F3B8;
+	Tue, 17 Oct 2006 19:15:11 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k9HHBYEj019683; Tue, 17 Oct 2006 19:11:36 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k9HHBYZN019682; Tue, 17 Oct 2006 19:11:34 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-mail] Equivalence between named domain and %
+References: <CAE9B164E720CE4D8727792DF8F28AE38EAAE9@corporateex02.Corporate.drdc-rddc.gc.ca>
+	<200610171351.k9HDpND28736@localhost.localdomain>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <200610171351.k9HDpND28736@localhost.localdomain>
+Organization: Integrable Solutions
+Date: 17 Oct 2006 19:11:34 +0200
+Message-ID: <m3u02250l5.fsf@zeus.integrable-solutions.net>
+Lines: 17
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: hebisch@math.uni.wroc.pl, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 17:15:33 -0000
+
+root <daly@axiom-developer.org> writes:
+
+| > I wonder why '$bootStrapMode t' is not the normal default mode of
+| > operation for SPAD? Is the generated code less efficient?
+| 
+| This mode is used to compile certain domains that cannot be
+| compiled any other way. I believe it was applied to PI and NNI
+| but memory fails me. 
+
+The comment for Ring is not very enlightening :-(
+
+| 
+| I should not be used in general.
+
+I would tend to agree.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Tue Oct 17 13:21:36 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZsdE-0001lg-Au
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 13:21:36 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZsdC-0001kp-Tw
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 13:21:34 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZsd7-0001ib-UB
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 13:21:33 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZsd7-0001iQ-4y
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 13:21:29 -0400
+Received: from [62.4.17.102] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZsWL-0002um-22
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 13:14:29 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by mallaury.nerim.net (Postfix) with ESMTP id A51CD4F3D5;
+	Tue, 17 Oct 2006 19:14:15 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k9HHAiuk019679; Tue, 17 Oct 2006 19:10:46 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k9HHAiIl019678; Tue, 17 Oct 2006 19:10:44 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: bill.page1@synthesis.anikast.ca
+Subject: Re: [Axiom-mail] Equivalence between named domain and %
+References: <CAE9B164E720CE4D8727792DF8F28AE38EAAE9@corporateex02.Corporate.drdc-rddc.gc.ca>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <CAE9B164E720CE4D8727792DF8F28AE38EAAE9@corporateex02.Corporate.drdc-rddc.gc.ca>
+Organization: Integrable Solutions
+Date: 17 Oct 2006 19:10:43 +0200
+Message-ID: <m3zmbu50mk.fsf@zeus.integrable-solutions.net>
+Lines: 80
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: Waldek Hebisch <hebisch@math.uni.wroc.pl>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 17:21:35 -0000
+
+"Page, Bill" <Bill.Page@drdc-rddc.gc.ca> writes:
+
+| On Monday, October 16, 2006 7:30 PM Gabriel Dos Reis wrote:
+| 
+| > | >   Consider the following code snipet:
+| > | >
+| > | >      )abbrev domain T T
+| > | >
+| > | >      Decl := Record(name: Symbol, type: T)
+| > | >
+| > | >      T(): Public == Private where
+| > | >        Public ==> with
+| > | >          type: Symbol -> %
+| > | >          decl: (Symbol, %) -> Decl
+| > | >        Private ==> add
+| > | >          decl(n,t) == [n,t]
+| > | >
+| > | > The SPAD compiler complains on the definition of decl with the
+| > | > following message
+| > |
+| > 
+| > On Mon, 16 Oct 2006, Page, Bill wrote:
+| > | Why would you consider the type T itself to be known in the scope
+| > | where the value of Decl is computed?
+| > 
+| > Because inside the definition of T(), % is supposed to refer to the
+| > domain defined, i.e. T.
+| 
+| Yes that is correct. But you are asking SPAD explicitly to evaluate
+| Record(name: Symbol, type: T) outside of and *prior to* the definition
+| of T(). It seems that in the normal mode of operation of the SPAD
+| compiler this is out of context for T. (But see how this can be
+| changed below.)
+| 
+| > Notice that the only thing that is needed to be known is the type
+| > name.
+| 
+| I think it is instructive to see what Aldor says about this
+| construction:
+| 
+| Decl := Record(name: Symbol, type: T)
+| ^
+| [L4 C1] #7 (Error) `Decl' is used in a type, so must be constant,
+|   and so cannot be assigned to.
+| 
+| After correcting the definition, Aldor compiles this thing without
+| complaint:
+
+Bill -- 
+
+Thank you for investigating this further.
+
+My understanding of "==" in SPAD is that it is a "delayed evaluation",
+whereas in Aldor it is a "constant declaration".  Of course, I'm not
+interested in non-constant type Decl, but I'm wondering how
+do you reconcile those two interpretations?
+
+If my understanding is correct, this problem touches upon the fact
+that the SPAD compiler does not know (at the moment) how to properly
+resolve recursive declaration/definitions of types.  Is that correct?
+
+Since, under the hood, almost everything is a pointer, why is the
+compiler having trouble admitting recursion?
+
+At the language semantics level, is the declaration in error?
+If yes, it makes the language less regular and unintuitive.
+
+I see the trick with $bootStrapMode, but I would think that is
+essentially a hack to work around a bug in the compiler.  I would be
+very much interested in laying down the semantics and see how the
+compiler could be convinced to do the Right Thing.
+
+
+If I have time today, I'll investigate the possibility of augmenting
+the compiler to use the identity coercion from % to T, when T is the
+current domain. 
+
+Thanks!
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Tue Oct 17 13:46:58 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZt1m-0004gG-0y
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 13:46:58 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZpN2-0000qF-Lm
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 09:52:40 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZpMx-0000i0-Uy
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 09:52:40 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZpMx-0000hc-NL
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 09:52:35 -0400
+Received: from [156.17.86.1] (helo=hera.math.uni.wroc.pl)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZpWJ-0005Xu-Jc
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 10:02:15 -0400
+Received: from hebisch by hera.math.uni.wroc.pl with local (Exim 3.36 #1
+	(Debian)) id 1GZpMI-0000kK-00; Tue, 17 Oct 2006 15:51:54 +0200
+Subject: Re: [Axiom-mail] Equivalence between named domain and %
+In-Reply-To: <CAE9B164E720CE4D8727792DF8F28AE38EAAE9@corporateex02.Corporate.drdc-rddc.gc.ca>
+To: bill.page1@synthesis.anikast.ca
+Date: Tue, 17 Oct 2006 15:51:54 +0200 (CEST)
+X-Mailer: ELM [version 2.4ME+ PL100 (25)]
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=US-ASCII
+Message-Id: <E1GZpMI-0000kK-00@hera.math.uni.wroc.pl>
+From: Waldek Hebisch <hebisch@math.uni.wroc.pl>
+X-Mailman-Approved-At: Tue, 17 Oct 2006 13:46:56 -0400
+Cc: Waldek Hebisch <hebisch@math.uni.wroc.pl>, axiom-mail@nongnu.org,
+	Gabriel Dos Reis <gdr@cs.tamu.edu>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 13:52:41 -0000
+
+Bill Page wrote:
+> Even more exciting is the fact that using the $bootStrapMode flag
+> discovered by Waldek the same code is compiled by SPAD without
+> complaint!
+> 
+> -------
+> )lisp (setq |$bootStrapMode| t)
+> )abbrev domain T T
+> 
+> Decl == Record(name: Symbol, type: T)
+> 
+> T(): Public == Private where
+>   Public ==> with
+>     type: Symbol -> %
+>     decl: (Symbol, %) -> Decl
+>   Private ==> add
+>     decl(n:Symbol,t:%):Decl == [n,t]
+>     type(x:Symbol):% == x pretend %
+> 
+> -------
+> 
+> I wonder why '$bootStrapMode t' is not the normal default mode of
+> operation for SPAD? Is the generated code less efficient?
+> 
+
+'$bootStrapMode t' means there is no "real" code. You need to compile
+second time in normal mode to compile executable part.
+
+Concerning the example above, I tried to get executable code from it,
+but I already have problems at first declaration. More precisely,
+consider:
+
+)abbrev domain DECL Decl
+
+Decl == Record(name: Symbol, type: Symbol)
+
+I get:
+
+   >> System error:
+   Caught fatal error [memory may be damaged]
+
+regardless of $bootStrapMode. The same if change the above to:
+
+)abbrev category DECL Decl
+
+Decl == Record(name: Symbol, type: Symbol)
+
+If I try:
+
+)abbrev category DECL Decl
+
+Decl: Category == Record(name: Symbol, type: Symbol)
+
+I get:
+
+   Internal Error
+   Error while instantiating type Category
+
+protected-symbol-warn called with (NIL)
+
+
+
+
+
+-- 
+                              Waldek Hebisch
+hebisch@math.uni.wroc.pl 
+
+
+
+From MAILER-DAEMON Tue Oct 17 13:46:58 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZt1m-0004hF-Bf
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 13:46:58 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZsvQ-0006KJ-4q
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 13:40:24 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZsvK-00069x-9g
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 13:40:23 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZsvK-00069d-1s
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 13:40:18 -0400
+Received: from [156.17.86.1] (helo=hera.math.uni.wroc.pl)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZsvL-0007lJ-J5
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 13:40:19 -0400
+Received: from hebisch by hera.math.uni.wroc.pl with local (Exim 3.36 #1
+	(Debian)) id 1GZsud-0004Fe-00; Tue, 17 Oct 2006 19:39:35 +0200
+Subject: Re: [Axiom-mail] Equivalence between named domain and %
+In-Reply-To: <m3zmbu50mk.fsf@zeus.integrable-solutions.net>
+To: Gabriel Dos Reis <gdr@integrable-solutions.net>
+Date: Tue, 17 Oct 2006 19:39:35 +0200 (CEST)
+X-Mailer: ELM [version 2.4ME+ PL100 (25)]
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=US-ASCII
+Message-Id: <E1GZsud-0004Fe-00@hera.math.uni.wroc.pl>
+From: Waldek Hebisch <hebisch@math.uni.wroc.pl>
+X-Mailman-Approved-At: Tue, 17 Oct 2006 13:46:56 -0400
+Cc: Waldek Hebisch <hebisch@math.uni.wroc.pl>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 17:40:24 -0000
+
+Gabriel Dos Reis wrote:
+> If my understanding is correct, this problem touches upon the fact
+> that the SPAD compiler does not know (at the moment) how to properly
+> resolve recursive declaration/definitions of types.  Is that correct?
+> 
+> Since, under the hood, almost everything is a pointer, why is the
+> compiler having trouble admitting recursion?
+> 
+
+AFAICS Spad types are global and separately compiled. Recursive
+dependencies are painful when you want separate compilation.
+
+Also, during type checking compiler traverses varoius links (references)
+between types -- on has to be careful to avoid infinite loops
+(and when loop is detected how to give sane semantic to the loop).
+
+I am not sure if just telling "recursive type definitons are OK" is
+a good idea.  Some restrictions on recursion are clearily needed,
+and with such restrictions old-fashioned techniqe of forward
+declarations may work well.
+
+-- 
+                              Waldek Hebisch
+hebisch@math.uni.wroc.pl 
+
+
+
+From MAILER-DAEMON Tue Oct 17 13:46:58 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZt1m-0004gn-67
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 13:46:58 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZr8L-0008WD-Ha
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 11:45:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZr8K-0008TK-Ky
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 11:45:36 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZr8K-0008Sj-5V
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 11:45:36 -0400
+Received: from [156.17.86.1] (helo=hera.math.uni.wroc.pl)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZr8K-00066z-Dw
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 11:45:36 -0400
+Received: from hebisch by hera.math.uni.wroc.pl with local (Exim 3.36 #1
+	(Debian)) id 1GZr7f-0006tW-00; Tue, 17 Oct 2006 17:44:55 +0200
+Subject: Re: [Axiom-mail] Equivalence between named domain and %
+In-Reply-To: <CAE9B164E720CE4D8727792DF8F28AE38EAB5F@corporateex02.Corporate.drdc-rddc.gc.ca>
+To: bill.page1@synthesis.anikast.ca
+Date: Tue, 17 Oct 2006 17:44:55 +0200 (CEST)
+X-Mailer: ELM [version 2.4ME+ PL100 (25)]
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=US-ASCII
+Message-Id: <E1GZr7f-0006tW-00@hera.math.uni.wroc.pl>
+From: Waldek Hebisch <hebisch@math.uni.wroc.pl>
+X-Mailman-Approved-At: Tue, 17 Oct 2006 13:46:56 -0400
+Cc: Waldek Hebisch <hebisch@math.uni.wroc.pl>, axiom-mail@nongnu.org,
+	Gabriel Dos Reis <gdr@cs.tamu.edu>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 15:45:38 -0000
+
+Bill Page wrote:
+> On Tuesday, October 17, 2006 9:52 AM Waldek Hebisch wrote:
+> > 
+> > Bill Page wrote:
+> > > ... 
+> > > I wonder why '$bootStrapMode t' is not the normal default mode of
+> > > operation for SPAD? Is the generated code less efficient?
+> > > 
+> > 
+> > '$bootStrapMode t' means there is no "real" code. You need to
+> > compile second time in normal mode to compile executable part.
+> > 
+> 
+> Do you mean that '$bootStrapMode t' asks the compiler to only compile
+> "headers"?
+> 
+> Here is the actual Lisp generated by Gaby's (modified) example:
+> 
+> http://wiki.axiom-developer.org/SandBoxBootStrap2
+> 
+> Please excuse my indentation below which is only approximate.
+> 
+> (/VERSIONCHECK 2) 
+> 
+> (DEFUN T NIL
+>   (PROG NIL
+>     (RETURN (PROG (#0=#:G1407)
+>       (RETURN (COND
+>         ((LETT #0# (HGET |$ConstructorCache| (QUOTE T)) T)
+>           (|CDRwithIncrement| (CDAR #0#)))
+>         ((QUOTE T)
+>           (UNWIND-PROTECT
+>             (PROG1 (CDDAR
+>               (HPUT |$ConstructorCache| (QUOTE T)
+>                 (LIST (CONS NIL (CONS 1 (|T;|))))))
+>               (LETT #0# T T))
+>   (COND ((NOT #0#) (HREM |$ConstructorCache| (QUOTE T)))))))))))) 
+> 
+> (DEFUN |T;| NIL
+>   (COND (|$bootStrapMode| (VECTOR (QUOTE (T))
+>      NIL NIL NIL NIL NIL))
+>   ((QUOTE T)
+>     (|systemError| (LIST (QUOTE |%b|) (QUOTE T) (QUOTE |%d|) "from"
+> (QUOTE |%b|)
+>     (QUOTE "/var/zope/var/LatexWiki/390581243-25px001.spad")
+>     (QUOTE |%d|) "needs to be compiled"))))) 
+> 
+> (MAKEPROP (QUOTE T) (QUOTE NILADIC) T) 
+> 
+> -------
+> 
+> Note especially "needs to be compiled". :-)
+> 
+> How does one "compile second time in normal mode"? Do you
+> mean just re-compile it without the '$bootStrapMode t' flag?
+> In that case is the first compile with this flag only generating
+> type information to be used for compiling downstream modules?
+> 
+
+In short yes. ATM I do not understand all consequences of $bootStrapMode,
+but I belive that intended use was to compile once with $bootStrapMode
+set to t (or perhaps do a few iterations to find a fixpoint) to resolve
+cyclic dependencies between types and then re-compile with $bootStrapMode
+set to nil.
+
+-- 
+                              Waldek Hebisch
+hebisch@math.uni.wroc.pl 
+
+
+
+From MAILER-DAEMON Tue Oct 17 14:07:44 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZtLr-00022H-Gv
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 14:07:43 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZtLo-0001xZ-Rr
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 14:07:40 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZtLl-0001rm-5l
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 14:07:40 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZtLk-0001rO-S1
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 14:07:36 -0400
+Received: from [62.4.17.102] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZtLm-0003G3-4d
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 14:07:38 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by mallaury.nerim.net (Postfix) with ESMTP id CC68E4F3B8;
+	Tue, 17 Oct 2006 20:07:23 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k9HI3rMI020833; Tue, 17 Oct 2006 20:03:55 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k9HI3rWn020832; Tue, 17 Oct 2006 20:03:53 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: Waldek Hebisch <hebisch@math.uni.wroc.pl>
+Subject: Re: [Axiom-mail] Equivalence between named domain and %
+References: <E1GZsud-0004Fe-00@hera.math.uni.wroc.pl>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <E1GZsud-0004Fe-00@hera.math.uni.wroc.pl>
+Organization: Integrable Solutions
+Date: 17 Oct 2006 20:03:53 +0200
+Message-ID: <m3lkneu8dy.fsf@zeus.integrable-solutions.net>
+Lines: 34
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 18:07:41 -0000
+
+Waldek Hebisch <hebisch@math.uni.wroc.pl> writes:
+
+| Gabriel Dos Reis wrote:
+| > If my understanding is correct, this problem touches upon the fact
+| > that the SPAD compiler does not know (at the moment) how to properly
+| > resolve recursive declaration/definitions of types.  Is that correct?
+| > 
+| > Since, under the hood, almost everything is a pointer, why is the
+| > compiler having trouble admitting recursion?
+| > 
+| 
+| AFAICS Spad types are global and separately compiled. Recursive
+| dependencies are painful when you want separate compilation.
+
+I don't think so.  This is recursive definition in the *same unit*.
+
+Check out Haskell, or  the excellent book
+"The implementation of Functional Languages", by Simon Peyton Jones.
+
+| Also, during type checking compiler traverses varoius links (references)
+| between types -- on has to be careful to avoid infinite loops
+| (and when loop is detected how to give sane semantic to the loop).
+
+Yes, so?
+
+| I am not sure if just telling "recursive type definitons are OK" is
+| a good idea.  Some restrictions on recursion are clearily needed,
+| and with such restrictions old-fashioned techniqe of forward
+| declarations may work well.
+
+certainly some restrictions may be needed; I don't believe the current
+ones make sense.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Tue Oct 17 15:22:55 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZuWd-0008VO-CP
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 15:22:55 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZuWc-0008S4-0c
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 15:22:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZuWX-0008Cs-3S
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 15:22:53 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZuWW-0008CT-TV
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 15:22:48 -0400
+Received: from [156.17.86.1] (helo=hera.math.uni.wroc.pl)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZuWW-0006Hj-Fa
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 15:22:48 -0400
+Received: from hebisch by hera.math.uni.wroc.pl with local (Exim 3.36 #1
+	(Debian)) id 1GZuVn-00024J-00; Tue, 17 Oct 2006 21:22:03 +0200
+Subject: Re: [Axiom-mail] Equivalence between named domain and %
+In-Reply-To: <m3lkneu8dy.fsf@zeus.integrable-solutions.net>
+To: Gabriel Dos Reis <gdr@integrable-solutions.net>
+Date: Tue, 17 Oct 2006 21:22:03 +0200 (CEST)
+X-Mailer: ELM [version 2.4ME+ PL100 (25)]
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=US-ASCII
+Message-Id: <E1GZuVn-00024J-00@hera.math.uni.wroc.pl>
+From: Waldek Hebisch <hebisch@math.uni.wroc.pl>
+Cc: Waldek Hebisch <hebisch@math.uni.wroc.pl>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 19:22:54 -0000
+
+Gabriel Dos Reis wrote:
+> Waldek Hebisch <hebisch@math.uni.wroc.pl> writes:
+> 
+> | Gabriel Dos Reis wrote:
+> | > If my understanding is correct, this problem touches upon the fact
+> | > that the SPAD compiler does not know (at the moment) how to properly
+> | > resolve recursive declaration/definitions of types.  Is that correct?
+> | > 
+> | > Since, under the hood, almost everything is a pointer, why is the
+> | > compiler having trouble admitting recursion?
+> | > 
+> | 
+> | AFAICS Spad types are global and separately compiled. Recursive
+> | dependencies are painful when you want separate compilation.
+> 
+> I don't think so.  This is recursive definition in the *same unit*.
+> 
+
+AFAICS:
+
+1) The only way to introduce a new type constructor in Spad is via
+   category or domain declaration
+2) Each category or domain is a separate compilation unit for Spad
+   compiler (even if they live in the same file).
+3) Recursive dependencies spanning compilation units are painful.
+
+If you want to change Spad compiler to allow bigger compilation units,
+I would support such motion.
+
+> Check out Haskell, or  the excellent book
+> "The implementation of Functional Languages", by Simon Peyton Jones.
+> 
+> | Also, during type checking compiler traverses varoius links (references)
+> | between types -- on has to be careful to avoid infinite loops
+> | (and when loop is detected how to give sane semantic to the loop).
+> 
+> Yes, so?
+>
+
+Spad compiler seem to use very simple (almost naive) algorithms. You
+need smarter approach to handle cycles (smarter algorthms are known,
+one just have to implement them...)
+ 
+
+-- 
+                              Waldek Hebisch
+hebisch@math.uni.wroc.pl 
+
+
+
+From MAILER-DAEMON Tue Oct 17 18:26:20 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GZxO7-0002wi-VR
+	for mharc-axiom-mail@gnu.org; Tue, 17 Oct 2006 18:26:20 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GZxO5-0002tg-Jg
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 18:26:17 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GZxO3-0002rD-Qx
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 18:26:17 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GZxO3-0002qh-JG
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 18:26:15 -0400
+Received: from [62.4.16.102] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GZxO3-0005ya-BW
+	for axiom-mail@nongnu.org; Tue, 17 Oct 2006 18:26:15 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by kraid.nerim.net (Postfix) with ESMTP id CCC7E40E31;
+	Wed, 18 Oct 2006 00:26:12 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k9HMMVjD025971; Wed, 18 Oct 2006 00:22:34 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k9HMMVWt025970; Wed, 18 Oct 2006 00:22:31 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: Waldek Hebisch <hebisch@math.uni.wroc.pl>
+Subject: Re: [Axiom-mail] Equivalence between named domain and %
+References: <E1GZuVn-00024J-00@hera.math.uni.wroc.pl>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <E1GZuVn-00024J-00@hera.math.uni.wroc.pl>
+Organization: Integrable Solutions
+Date: 18 Oct 2006 00:22:31 +0200
+Message-ID: <m3ejt6y448.fsf@zeus.integrable-solutions.net>
+Lines: 47
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 17 Oct 2006 22:26:17 -0000
+
+Waldek Hebisch <hebisch@math.uni.wroc.pl> writes:
+
+[...]
+
+| AFAICS:
+| 
+| 1) The only way to introduce a new type constructor in Spad is via
+|    category or domain declaration
+
+and abbreviations initroduce names for those.
+
+| 2) Each category or domain is a separate compilation unit for Spad
+|    compiler (even if they live in the same file).
+
+that is being revised -- see the new format.
+
+| 3) Recursive dependencies spanning compilation units are painful.
+
+so?
+
+The important thing from my perspective is not what how easy we can
+make implement things; but how easy we make it to express ideas.
+
+But hey, my implementation background is that of making is easy for
+users and complicate implementers life :-)
+
+| If you want to change Spad compiler to allow bigger compilation units,
+| I would support such motion.
+| 
+| > Check out Haskell, or  the excellent book
+| > "The implementation of Functional Languages", by Simon Peyton Jones.
+| > 
+| > | Also, during type checking compiler traverses varoius links (references)
+| > | between types -- on has to be careful to avoid infinite loops
+| > | (and when loop is detected how to give sane semantic to the loop).
+| > 
+| > Yes, so?
+| >
+| 
+| Spad compiler seem to use very simple (almost naive) algorithms. You
+| need smarter approach to handle cycles (smarter algorthms are known,
+| one just have to implement them...)
+
+That is not a problem -- that is why this is a research project, as
+opposed to a student project.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Mon Oct 23 11:23:44 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gc1eS-0006Vc-5E
+	for mharc-axiom-mail@gnu.org; Mon, 23 Oct 2006 11:23:44 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gc1eQ-0006QQ-81
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 11:23:42 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gc1eL-0006Cw-Gp
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 11:23:41 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gc1eL-0006Cn-Dj
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 11:23:37 -0400
+Received: from [66.249.82.225] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gc1eL-00028I-Da
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 11:23:37 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so1572348wxc
+	for <axiom-mail@nongnu.org>; Mon, 23 Oct 2006 08:23:36 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=qbn0oXiddYEu4E3/wT2P5we18nCIzLuFYFP8MlrfF5h875LH8S8J7GCxza7HrYFkPB8mRMjZqH9xSEWBJYvP8v+xTIkc1jrWmNLDabgzS8CsVirSFhQZ4f3arHzh4j4nyRLxUNJ2BspOZJc54LojaofkJVjqbo5GTyrKsUN581A=
+Received: by 10.70.118.4 with SMTP id q4mr7102355wxc;
+	Mon, 23 Oct 2006 08:23:35 -0700 (PDT)
+Received: by 10.70.71.3 with HTTP; Mon, 23 Oct 2006 08:23:35 -0700 (PDT)
+Message-ID: <444a4cee0610230823p14d14e72uf16b42ee4aca18d0@mail.gmail.com>
+Date: Mon, 23 Oct 2006 10:23:35 -0500
+From: "ming lu" <minglu10@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Subject: [Axiom-mail] What is gazonk*.c
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Oct 2006 15:23:42 -0000
+
+Hi group,
+I just started to learn axiom and is running it under linux. I got
+following error when I tried to build a Fibonacci number. Anyone could
+show me what I did wrong?
+Thanks,
+Ming
+(1) -> p(0)==1
+                                                                   Type: Void
+(2) -> p(1)==1
+                                                                   Type: Void
+(3) -> p(n)==p(n-1)+p(n-2)
+                                                                   Type: Void
+(4) -> p(3)
+   Loading /home/mlu/axiom/mnt/linux/algebra/INT.o for domain Integer
+   Loading /home/mlu/axiom/mnt/linux/algebra/PI.o for domain
+      PositiveInteger
+   Loading /home/mlu/axiom/mnt/linux/algebra/NNI.o for domain
+      NonNegativeInteger
+   Compiling function p with type Integer -> PositiveInteger
+   Loading /home/mlu/axiom/mnt/linux/algebra/BOOLEAN.o for domain
+      Boolean
+   Compiling function p as a recurrence relation.
+/tmp/gazonk2.c:414: redeclaration of C++ built-in type `bool'
+/tmp/gazonk2.c:2834: syntax error before `new'
+In file included from /tmp/gazonk2.c:3185:
+/tmp/gazonk2.c:1976: previous declaration of `void* malloc(unsigned int)' with
+   C++ linkage
+/usr/include/stdlib.h:584: conflicts with new declaration with C linkage
+/usr/include/stdlib.h:584: declaration of `void* malloc(unsigned int) throw ()'
+   throws different exceptions
+/tmp/gazonk2.c:1976: than previous declaration `void* malloc(unsigned int)'
+/tmp/gazonk2.c:1977: previous declaration of `void* realloc(void*, unsigned
+   int)' with C++ linkage
+/usr/include/stdlib.h:595: conflicts with new declaration with C linkage
+/usr/include/stdlib.h:595: declaration of `void* realloc(void*, unsigned int)
+   throw ()' throws different exceptions
+/tmp/gazonk2.c:1977: than previous declaration `void* realloc(void*, unsigned
+   int)'
+/tmp/gazonk2.c:3389: syntax error before `new'
+/tmp/gazonk2.c:3835: syntax error before `new'
+/tmp/gazonk2.c:3836: syntax error before `new'
+/tmp/gazonk2.c:3837: syntax error before `new'
+/tmp/gazonk2.c:3954: syntax error before `export'
+/tmp/gazonk2.c: In function `void L1()':
+/tmp/gazonk2.c:2450: too many arguments to function `lispunion* elt()'
+/tmp/gazonk2.c:5159: at this point in file
+/tmp/gazonk2.c:2450: too many arguments to function `lispunion* elt()'
+/tmp/gazonk2.c:5160: at this point in file
+/tmp/gazonk2.c:2450: too many arguments to function `lispunion* elt()'
+/tmp/gazonk2.c:5161: at this point in file
+/tmp/gazonk2.c:5180: too many arguments to function
+(4) ->
+
+
+
+From MAILER-DAEMON Mon Oct 23 11:56:41 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gc2AK-0001KB-Ek
+	for mharc-axiom-mail@gnu.org; Mon, 23 Oct 2006 11:56:40 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gc2AG-0001F5-ST
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 11:56:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gc2AA-00017I-Mm
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 11:56:36 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gc2AA-00016k-7Y
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 11:56:30 -0400
+Received: from [62.231.145.242] (helo=nagmx1.nag.co.uk)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gc2A9-0007jT-V9
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 11:56:30 -0400
+Received: from e3000.nag.co.uk (e3000.nag.co.uk [192.156.217.111])
+	by nagmx1.nag.co.uk (Postfix) with ESMTP id 58EC0120204
+	for <axiom-mail@nongnu.org>; Mon, 23 Oct 2006 16:56:27 +0100 (BST)
+Received: from loanamd6.nag.co.uk by e3000.nag.co.uk (8.12.8) id
+	k9NFuRrv011475; Mon, 23 Oct 2006 16:56:27 +0100
+From: Themos Tsikas <themos@nag.co.uk>
+Organization: NAG Ltd
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] What is gazonk*.c
+Date: Mon, 23 Oct 2006 15:56:24 +0000
+User-Agent: KMail/1.9.1
+References: <444a4cee0610230823p14d14e72uf16b42ee4aca18d0@mail.gmail.com>
+In-Reply-To: <444a4cee0610230823p14d14e72uf16b42ee4aca18d0@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200610231556.24562.themos@nag.co.uk>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: themos@nag.co.uk
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Oct 2006 15:56:38 -0000
+
+Try a 
+)trace SYSTEM 
+before anything else
+
+You could try 
+)set functions compile off
+which will not use the compiler for functions. It seems some misconfiguration 
+is present with your C compiler.
+
+Mine says 
+cc1: error: unrecognized command line option "-fwritable-strings"
+and I have 
+gcc version 4.1.0 (SUSE Linux)
+installed
+
+Themos Tsikas
+
+
+
+On Monday 23 October 2006 15:23, ming lu wrote:
+> Hi group,
+> I just started to learn axiom and is running it under linux. I got
+> following error when I tried to build a Fibonacci number. Anyone could
+> show me what I did wrong?
+> Thanks,
+> Ming
+> (1) -> p(0)==1
+>                                                                    Type:
+> Void (2) -> p(1)==1
+>                                                                    Type:
+> Void (3) -> p(n)==p(n-1)+p(n-2)
+>                                                                    Type:
+> Void (4) -> p(3)
+>    Loading /home/mlu/axiom/mnt/linux/algebra/INT.o for domain Integer
+>    Loading /home/mlu/axiom/mnt/linux/algebra/PI.o for domain
+>       PositiveInteger
+>    Loading /home/mlu/axiom/mnt/linux/algebra/NNI.o for domain
+>       NonNegativeInteger
+>    Compiling function p with type Integer -> PositiveInteger
+>    Loading /home/mlu/axiom/mnt/linux/algebra/BOOLEAN.o for domain
+>       Boolean
+>    Compiling function p as a recurrence relation.
+> /tmp/gazonk2.c:414: redeclaration of C++ built-in type `bool'
+> /tmp/gazonk2.c:2834: syntax error before `new'
+> In file included from /tmp/gazonk2.c:3185:
+> /tmp/gazonk2.c:1976: previous declaration of `void* malloc(unsigned int)'
+> with C++ linkage
+> /usr/include/stdlib.h:584: conflicts with new declaration with C linkage
+> /usr/include/stdlib.h:584: declaration of `void* malloc(unsigned int) throw
+> ()' throws different exceptions
+> /tmp/gazonk2.c:1976: than previous declaration `void* malloc(unsigned int)'
+> /tmp/gazonk2.c:1977: previous declaration of `void* realloc(void*, unsigned
+>    int)' with C++ linkage
+> /usr/include/stdlib.h:595: conflicts with new declaration with C linkage
+> /usr/include/stdlib.h:595: declaration of `void* realloc(void*, unsigned
+> int) throw ()' throws different exceptions
+> /tmp/gazonk2.c:1977: than previous declaration `void* realloc(void*,
+> unsigned int)'
+> /tmp/gazonk2.c:3389: syntax error before `new'
+> /tmp/gazonk2.c:3835: syntax error before `new'
+> /tmp/gazonk2.c:3836: syntax error before `new'
+> /tmp/gazonk2.c:3837: syntax error before `new'
+> /tmp/gazonk2.c:3954: syntax error before `export'
+> /tmp/gazonk2.c: In function `void L1()':
+> /tmp/gazonk2.c:2450: too many arguments to function `lispunion* elt()'
+> /tmp/gazonk2.c:5159: at this point in file
+> /tmp/gazonk2.c:2450: too many arguments to function `lispunion* elt()'
+> /tmp/gazonk2.c:5160: at this point in file
+> /tmp/gazonk2.c:2450: too many arguments to function `lispunion* elt()'
+> /tmp/gazonk2.c:5161: at this point in file
+> /tmp/gazonk2.c:5180: too many arguments to function
+> (4) ->
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+> ________________________________________________________________________
+> This e-mail has been scanned for all viruses by Star. The
+> service is powered by MessageLabs. For more information on a proactive
+> anti-virus service working around the clock, around the globe, visit:
+> http://www.star.net.uk
+> ________________________________________________________________________
+
+
+
+From MAILER-DAEMON Mon Oct 23 12:01:38 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gc2F7-00082J-Mq
+	for mharc-axiom-mail@gnu.org; Mon, 23 Oct 2006 12:01:37 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gc2Eh-0007e9-Ua
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:01:12 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gc2Ea-0007Wr-TE
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:01:10 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gc2Ea-0007WX-Cr
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:01:04 -0400
+Received: from [216.251.41.28] (helo=mail208.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1Gc2EZ-00007t-Od
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:01:03 -0400
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail208.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	k9NG0fuD029774; Mon, 23 Oct 2006 12:00:51 -0400
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'ming lu'" <minglu10@gmail.com>
+Subject: RE: [Axiom-mail] What is gazonk*.c
+Date: Mon, 23 Oct 2006 12:00:28 -0400
+Message-ID: <00c001c6f6bc$5ee70200$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+In-Reply-To: <444a4cee0610230823p14d14e72uf16b42ee4aca18d0@mail.gmail.com>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Importance: Normal
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Oct 2006 16:01:12 -0000
+
+The gazonk*.c file is a temporary file created by the Lisp
+(gcl) compiler. gcl compiles Lisp to "C" and then calls gcc
+to create the object file.
+
+On October 23, 2006 11:24 AM ming lu wrote:
+> 
+> I just started to learn axiom and is running it under linux.
+
+Hello! Welcome to Axiom. :-)
+
+> I got following error when I tried to build a Fibonacci number.
+> Anyone could show me what I did wrong?
+
+You are not doing anything wrong. I also get an error when I
+try your definition, although it is a different error:
+
+   Compiling function p as a recurrence relation.
+(4) -> p(3)
+
+   >> System error:
+   The function |*1;p;1;initial| is undefined.
+
+--------
+
+I am using an experimental version of Axiom compiled from the
+build improvements branch on August 30, 2006.
+
+The way you wrote the defintion should work but you have found
+a bug in Axiom. Thank you for your report.
+
+BTW, what version of Axiom are you using? What version of C
+compiler is installed on your system?
+
+Try it this way:
+
+(1) -> p:NNI->NNI
+                                      Type: Void
+(2) -> p(0)==1
+                                      Type: Void
+(3) -> p(1)==1
+                                      Type: Void
+(4) -> p(n:NNI):NNI == p(n-1)+p(n-2)
+   Function declaration p : NonNegativeInteger -> NonNegativeInteger
+      has been added to workspace.
+                                      Type: Void
+(5) -> p(3)
+   There are no library operations named p
+      Use HyperDoc Browse or issue
+                                 )what op p
+      to learn if there is any operation containing " p " in its name.
+   Cannot find a definition or applicable library operation named p
+      with argument type(s)
+                                   Integer
+
+      Perhaps you should use "@" to indicate the required return type,
+      or "$" to specify which version of the function you need.
+   AXIOM will attempt to step through and interpret the code.
+   Compiling function p with type NonNegativeInteger ->
+      NonNegativeInteger
+
+   (5)  3
+                                                        Type:
+PositiveInteger
+
+
+> Thanks,
+> Ming
+> (1) -> p(0)==1
+>                                                               
+>      Type: Void
+> (2) -> p(1)==1
+>                                                               
+>      Type: Void
+> (3) -> p(n)==p(n-1)+p(n-2)
+>                                                               
+>      Type: Void
+> (4) -> p(3)
+>    Loading /home/mlu/axiom/mnt/linux/algebra/INT.o for domain Integer
+>    Loading /home/mlu/axiom/mnt/linux/algebra/PI.o for domain
+>       PositiveInteger
+>    Loading /home/mlu/axiom/mnt/linux/algebra/NNI.o for domain
+>       NonNegativeInteger
+>    Compiling function p with type Integer -> PositiveInteger
+>    Loading /home/mlu/axiom/mnt/linux/algebra/BOOLEAN.o for domain
+>       Boolean
+>    Compiling function p as a recurrence relation.
+
+Notice that Axiom is trying to do something special here. It
+recognizes this as a recurrence relation. The way I wrote the
+definition above avoids this "special treatment".
+
+> /tmp/gazonk2.c:414: redeclaration of C++ built-in type `bool'
+> /tmp/gazonk2.c:2834: syntax error before `new'
+> In file included from /tmp/gazonk2.c:3185:
+> /tmp/gazonk2.c:1976: previous declaration of `void* 
+> malloc(unsigned int)' with
+>    C++ linkage
+> /usr/include/stdlib.h:584: conflicts with new declaration 
+> with C linkage
+> /usr/include/stdlib.h:584: declaration of `void* 
+> malloc(unsigned int) throw ()'
+>    throws different exceptions
+> /tmp/gazonk2.c:1976: than previous declaration `void* 
+> malloc(unsigned int)'
+> /tmp/gazonk2.c:1977: previous declaration of `void* 
+> realloc(void*, unsigned
+>    int)' with C++ linkage
+> /usr/include/stdlib.h:595: conflicts with new declaration 
+> with C linkage
+> /usr/include/stdlib.h:595: declaration of `void* 
+> realloc(void*, unsigned int)
+>    throw ()' throws different exceptions
+> /tmp/gazonk2.c:1977: than previous declaration `void* 
+> realloc(void*, unsigned
+>    int)'
+> /tmp/gazonk2.c:3389: syntax error before `new'
+> /tmp/gazonk2.c:3835: syntax error before `new'
+> /tmp/gazonk2.c:3836: syntax error before `new'
+> /tmp/gazonk2.c:3837: syntax error before `new'
+> /tmp/gazonk2.c:3954: syntax error before `export'
+> /tmp/gazonk2.c: In function `void L1()':
+> /tmp/gazonk2.c:2450: too many arguments to function `lispunion* elt()'
+> /tmp/gazonk2.c:5159: at this point in file
+> /tmp/gazonk2.c:2450: too many arguments to function `lispunion* elt()'
+> /tmp/gazonk2.c:5160: at this point in file
+> /tmp/gazonk2.c:2450: too many arguments to function `lispunion* elt()'
+> /tmp/gazonk2.c:5161: at this point in file
+> /tmp/gazonk2.c:5180: too many arguments to function
+> (4) ->
+> 
+
+I do not understand why you are getting syntax errors in the
+generated "C". This does not happen on my system - although
+there is another problem which prevents the definition of p
+from working.
+
+This looks like you might be using a version of gcc that is
+not compatible with the version of gcl Lisp on which the
+version of Axiom that you are using is based.
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Mon Oct 23 12:08:38 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gc2Lt-0007Rg-Sy
+	for mharc-axiom-mail@gnu.org; Mon, 23 Oct 2006 12:08:37 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gc2Ls-0007Pb-5u
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:08:36 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gc2Lo-0007Gy-GK
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:08:35 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gc2Lo-0007Gi-4t
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:08:32 -0400
+Received: from [216.251.41.134] (helo=mail14c2.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1Gc2Ln-0001bw-QW
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:08:32 -0400
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail14c2.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	k9NG89GS017378; Mon, 23 Oct 2006 12:08:25 -0400
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: <themos@nag.co.uk>
+Subject: RE: [Axiom-mail] What is gazonk*.c
+Date: Mon, 23 Oct 2006 12:07:55 -0400
+Message-ID: <00c101c6f6bd$6de14710$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+In-Reply-To: <200610231556.24562.themos@nag.co.uk>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Importance: Normal
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Oct 2006 16:08:36 -0000
+
+On October 23, 2006 11:56 AM Themos Tsikas wrote:
+> 
+> Try a 
+> )trace SYSTEM 
+> before anything else
+> 
+> You could try 
+> )set functions compile off
+> which will not use the compiler for functions.
+
+Good suggestion! Note: This option only works properly on
+versions of Axiom after patch-49, circa September 2005. Prior
+to that some function definitions in the interpreter required
+'compile on'.
+
+> It seems some misconfiguration is present with your C compiler.
+>
+
+Yes, I think so.
+ 
+> Mine says 
+> cc1: error: unrecognized command line option "-fwritable-strings"
+> and I have 
+> gcc version 4.1.0 (SUSE Linux)
+> installed
+> 
+
+What version of Axiom are you using? I think Axiom compiled with
+newer versions of gcl should not have this problem.
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Mon Oct 23 12:10:14 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gc2NS-0001XG-6k
+	for mharc-axiom-mail@gnu.org; Mon, 23 Oct 2006 12:10:14 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gc2NQ-0001UA-81
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:10:12 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gc2NM-0001Nr-Ax
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:10:11 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gc2NL-0001NA-RB
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:10:07 -0400
+Received: from [66.249.82.227] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gc2NL-0001mu-K6
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:10:07 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so1592390wxc
+	for <axiom-mail@nongnu.org>; Mon, 23 Oct 2006 09:10:07 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=IeSbLw/FSNDIthIwGjOWul5SqEWTCFRX3b62A9sP1nK9z2ISNZMGyIjWN790djWfXKVNK+8IKp+aeJXRHa6ZWn1VrLpunmA1OqIREgomASCd3bGHHNekyKA5mgTjidUnVBsfrtYbDtr+5f1LhDeo6xMM8dvwUJ4tC/NtAj0s2XY=
+Received: by 10.70.49.12 with SMTP id w12mr991159wxw;
+	Mon, 23 Oct 2006 09:10:06 -0700 (PDT)
+Received: by 10.70.71.3 with HTTP; Mon, 23 Oct 2006 09:10:06 -0700 (PDT)
+Message-ID: <444a4cee0610230910y4e5004fbm4133946a7d61f4dc@mail.gmail.com>
+Date: Mon, 23 Oct 2006 11:10:06 -0500
+From: "ming lu" <minglu10@gmail.com>
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] What is gazonk*.c
+In-Reply-To: <200610231556.24562.themos@nag.co.uk>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <444a4cee0610230823p14d14e72uf16b42ee4aca18d0@mail.gmail.com>
+	<200610231556.24562.themos@nag.co.uk>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Oct 2006 16:10:12 -0000
+
+Hi Themos,
+)set functions compile off fixed the problem.
+Thanks,
+Ming
+
+On 10/23/06, Themos Tsikas <themos@nag.co.uk> wrote:
+> Try a
+> )trace SYSTEM
+> before anything else
+>
+> You could try
+> )set functions compile off
+> which will not use the compiler for functions. It seems some misconfiguration
+> is present with your C compiler.
+>
+> Mine says
+> cc1: error: unrecognized command line option "-fwritable-strings"
+> and I have
+> gcc version 4.1.0 (SUSE Linux)
+> installed
+>
+> Themos Tsikas
+>
+>
+>
+> On Monday 23 October 2006 15:23, ming lu wrote:
+> > Hi group,
+> > I just started to learn axiom and is running it under linux. I got
+> > following error when I tried to build a Fibonacci number. Anyone could
+> > show me what I did wrong?
+> > Thanks,
+> > Ming
+> > (1) -> p(0)==1
+> >                                                                    Type:
+> > Void (2) -> p(1)==1
+> >                                                                    Type:
+> > Void (3) -> p(n)==p(n-1)+p(n-2)
+> >                                                                    Type:
+> > Void (4) -> p(3)
+> >    Loading /home/mlu/axiom/mnt/linux/algebra/INT.o for domain Integer
+> >    Loading /home/mlu/axiom/mnt/linux/algebra/PI.o for domain
+> >       PositiveInteger
+> >    Loading /home/mlu/axiom/mnt/linux/algebra/NNI.o for domain
+> >       NonNegativeInteger
+> >    Compiling function p with type Integer -> PositiveInteger
+> >    Loading /home/mlu/axiom/mnt/linux/algebra/BOOLEAN.o for domain
+> >       Boolean
+> >    Compiling function p as a recurrence relation.
+> > /tmp/gazonk2.c:414: redeclaration of C++ built-in type `bool'
+> > /tmp/gazonk2.c:2834: syntax error before `new'
+> > In file included from /tmp/gazonk2.c:3185:
+> > /tmp/gazonk2.c:1976: previous declaration of `void* malloc(unsigned int)'
+> > with C++ linkage
+> > /usr/include/stdlib.h:584: conflicts with new declaration with C linkage
+> > /usr/include/stdlib.h:584: declaration of `void* malloc(unsigned int) throw
+> > ()' throws different exceptions
+> > /tmp/gazonk2.c:1976: than previous declaration `void* malloc(unsigned int)'
+> > /tmp/gazonk2.c:1977: previous declaration of `void* realloc(void*, unsigned
+> >    int)' with C++ linkage
+> > /usr/include/stdlib.h:595: conflicts with new declaration with C linkage
+> > /usr/include/stdlib.h:595: declaration of `void* realloc(void*, unsigned
+> > int) throw ()' throws different exceptions
+> > /tmp/gazonk2.c:1977: than previous declaration `void* realloc(void*,
+> > unsigned int)'
+> > /tmp/gazonk2.c:3389: syntax error before `new'
+> > /tmp/gazonk2.c:3835: syntax error before `new'
+> > /tmp/gazonk2.c:3836: syntax error before `new'
+> > /tmp/gazonk2.c:3837: syntax error before `new'
+> > /tmp/gazonk2.c:3954: syntax error before `export'
+> > /tmp/gazonk2.c: In function `void L1()':
+> > /tmp/gazonk2.c:2450: too many arguments to function `lispunion* elt()'
+> > /tmp/gazonk2.c:5159: at this point in file
+> > /tmp/gazonk2.c:2450: too many arguments to function `lispunion* elt()'
+> > /tmp/gazonk2.c:5160: at this point in file
+> > /tmp/gazonk2.c:2450: too many arguments to function `lispunion* elt()'
+> > /tmp/gazonk2.c:5161: at this point in file
+> > /tmp/gazonk2.c:5180: too many arguments to function
+> > (4) ->
+> >
+> >
+> > _______________________________________________
+> > Axiom-mail mailing list
+> > Axiom-mail@nongnu.org
+> > http://lists.nongnu.org/mailman/listinfo/axiom-mail
+> >
+> > ________________________________________________________________________
+> > This e-mail has been scanned for all viruses by Star. The
+> > service is powered by MessageLabs. For more information on a proactive
+> > anti-virus service working around the clock, around the globe, visit:
+> > http://www.star.net.uk
+> > ________________________________________________________________________
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+
+
+
+From MAILER-DAEMON Mon Oct 23 12:18:37 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gc2VZ-0003We-Kc
+	for mharc-axiom-mail@gnu.org; Mon, 23 Oct 2006 12:18:37 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gc2VY-0003Uv-AS
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:18:36 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gc2VU-0003Ke-2h
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:18:35 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gc2VT-0003Js-0V
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:18:31 -0400
+Received: from [62.4.16.101] (helo=kraid.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gc2VS-0003A9-LA
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:18:30 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by kraid.nerim.net (Postfix) with ESMTP id A522A410AC;
+	Mon, 23 Oct 2006 18:18:28 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k9NGEUSa011422; Mon, 23 Oct 2006 18:14:33 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k9NGEU9U011421; Mon, 23 Oct 2006 18:14:30 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: "ming lu" <minglu10@gmail.com>
+Subject: Re: [Axiom-mail] What is gazonk*.c
+References: <444a4cee0610230823p14d14e72uf16b42ee4aca18d0@mail.gmail.com>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+Date: 23 Oct 2006 18:13:08 +0200
+In-Reply-To: <444a4cee0610230823p14d14e72uf16b42ee4aca18d0@mail.gmail.com>
+Organization: Integrable Solutions
+Message-ID: <m38xj7ggdn.fsf@zeus.integrable-solutions.net>
+Lines: 8
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Oct 2006 16:18:36 -0000
+
+"ming lu" <minglu10@gmail.com> writes:
+
+| /tmp/gazonk2.c:414: redeclaration of C++ built-in type `bool'
+| /tmp/gazonk2.c:2834: syntax error before `new'
+
+Somehow you're using g++ instead of gcc as your C compiler.  That can
+only attract troubles.
+
+
+
+
+From MAILER-DAEMON Mon Oct 23 12:21:09 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gc2Y0-0006wf-Tr
+	for mharc-axiom-mail@gnu.org; Mon, 23 Oct 2006 12:21:08 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gc2Xz-0006v5-05
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:21:07 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gc2Xt-0006oc-Dj
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:21:05 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gc2Xt-0006oN-65
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:21:01 -0400
+Received: from [62.4.17.101] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gc2Xt-0003ZA-1H
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:21:01 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by mallaury.nerim.net (Postfix) with ESMTP id A4ADF4F3CC;
+	Mon, 23 Oct 2006 18:20:49 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k9NGH1Jf011445; Mon, 23 Oct 2006 18:17:03 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k9NGH1k4011444; Mon, 23 Oct 2006 18:17:01 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: themos@nag.co.uk
+Subject: Re: [Axiom-mail] What is gazonk*.c
+References: <444a4cee0610230823p14d14e72uf16b42ee4aca18d0@mail.gmail.com>
+	<200610231556.24562.themos@nag.co.uk>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <200610231556.24562.themos@nag.co.uk>
+Organization: Integrable Solutions
+Date: 23 Oct 2006 18:17:01 +0200
+Message-ID: <m38xj7uhvm.fsf@zeus.integrable-solutions.net>
+Lines: 9
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Oct 2006 16:21:07 -0000
+
+Themos Tsikas <themos@nag.co.uk> writes:
+
+| Mine says 
+| cc1: error: unrecognized command line option "-fwritable-strings"
+
+somehow you have misconfigured either GCL or you're using the aldor
+compiler.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Mon Oct 23 12:23:32 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gc2aK-0000wX-SX
+	for mharc-axiom-mail@gnu.org; Mon, 23 Oct 2006 12:23:32 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gc2aI-0000vH-Gr
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:23:30 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gc2aF-0000sZ-BH
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:23:29 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gc2aF-0000sM-0H
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:23:27 -0400
+Received: from [62.4.17.101] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gc2aE-0003xq-Pd
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 12:23:26 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by mallaury.nerim.net (Postfix) with ESMTP id 8B5794F40D;
+	Mon, 23 Oct 2006 18:23:15 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k9NGJRGB011449; Mon, 23 Oct 2006 18:19:29 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k9NGJRRL011448; Mon, 23 Oct 2006 18:19:27 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: "Bill Page" <bill.page1@synthesis.anikast.ca>
+Subject: Re: [Axiom-mail] What is gazonk*.c
+References: <00c001c6f6bc$5ee70200$6900a8c0@asus>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <00c001c6f6bc$5ee70200$6900a8c0@asus>
+Organization: Integrable Solutions
+Date: 23 Oct 2006 18:19:27 +0200
+Message-ID: <m33b9fuhrk.fsf@zeus.integrable-solutions.net>
+Lines: 10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Oct 2006 16:23:31 -0000
+
+"Bill Page" <bill.page1@synthesis.anikast.ca> writes:
+
+| I do not understand why you are getting syntax errors in the
+| generated "C". This does not happen on my system - although
+| there is another problem which prevents the definition of p
+| from working.
+
+somehow he is using g++ instead of gcc as a C compiler.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Mon Oct 23 13:29:57 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gc3cb-00067F-ED
+	for mharc-axiom-mail@gnu.org; Mon, 23 Oct 2006 13:29:57 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gc3ca-00066j-P6
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 13:29:56 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gc3cX-00064e-6Y
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 13:29:56 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gc3cW-00064a-W4
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 13:29:53 -0400
+Received: from [66.249.82.228] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gc3cX-0006HY-1H
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 13:29:53 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so1624988wxc
+	for <axiom-mail@nongnu.org>; Mon, 23 Oct 2006 10:29:52 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=S2LI73kE7X5QHOGKbfE5s7Ac/9hGoIeF35PBtfPKfjX2h2/fTzO57H5HQTUkZKxRzQwXvWxUceYnvN/N5AoGaXG5MJGyly7m3xu621R4tlqoqoSVQYvxL6AHb5ADWC+dH7q0fJMclaajtUyUiqJa3mZhDmSouTHVoF+QBX8Tud8=
+Received: by 10.70.77.2 with SMTP id z2mr7305836wxa;
+	Mon, 23 Oct 2006 10:29:52 -0700 (PDT)
+Received: by 10.70.71.3 with HTTP; Mon, 23 Oct 2006 10:29:52 -0700 (PDT)
+Message-ID: <444a4cee0610231029r4d9230e0j3a6effc50bd86d7a@mail.gmail.com>
+Date: Mon, 23 Oct 2006 12:29:52 -0500
+From: "ming lu" <minglu10@gmail.com>
+To: "Gabriel Dos Reis" <gdr@integrable-solutions.net>
+Subject: Re: [Axiom-mail] What is gazonk*.c
+In-Reply-To: <m38xj7ggdn.fsf@zeus.integrable-solutions.net>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <444a4cee0610230823p14d14e72uf16b42ee4aca18d0@mail.gmail.com>
+	<m38xj7ggdn.fsf@zeus.integrable-solutions.net>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Oct 2006 17:29:57 -0000
+
+Hi Gabriel,
+Thank you for your help. I will take a look of my compiler.
+Ming
+
+On 23 Oct 2006 18:13:08 +0200, Gabriel Dos Reis
+<gdr@integrable-solutions.net> wrote:
+> "ming lu" <minglu10@gmail.com> writes:
+>
+> | /tmp/gazonk2.c:414: redeclaration of C++ built-in type `bool'
+> | /tmp/gazonk2.c:2834: syntax error before `new'
+>
+> Somehow you're using g++ instead of gcc as your C compiler.  That can
+> only attract troubles.
+>
+>
+
+
+
+From MAILER-DAEMON Mon Oct 23 16:08:47 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gc66J-0007pM-Hv
+	for mharc-axiom-mail@gnu.org; Mon, 23 Oct 2006 16:08:47 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gc66G-0007oS-U5
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 16:08:45 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gc66D-0007mv-6E
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 16:08:44 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gc66D-0007ms-0K
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 16:08:41 -0400
+Received: from [80.12.242.19] (helo=smtp-msa-out19.orange.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gc66C-0006nb-Ny
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 16:08:40 -0400
+Received: from ALille-251-1-114-250.w86-208.abo.wanadoo.fr
+	(ALille-251-1-114-250.w86-208.abo.wanadoo.fr [86.208.251.250])
+	by mwinf1922.orange.fr (SMTP Server) with ESMTP id 506421C000B4;
+	Mon, 23 Oct 2006 22:08:13 +0200 (CEST)
+X-ME-UUID: 20061023200817329.506421C000B4@mwinf1922.orange.fr
+Subject: RE: [Axiom-mail] What is gazonk*.c
+From: Vanuxem =?ISO-8859-1?Q?Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+To: Bill Page <bill.page1@synthesis.anikast.ca>
+In-Reply-To: <00c001c6f6bc$5ee70200$6900a8c0@asus>
+References: <00c001c6f6bc$5ee70200$6900a8c0@asus>
+Content-Type: text/plain; charset=ISO-8859-1
+Date: Mon, 23 Oct 2006 22:08:15 +0200
+Message-Id: <1161634095.2828.11.camel@ellipse>
+Mime-Version: 1.0
+X-Mailer: Evolution 2.6.3 
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Oct 2006 20:08:45 -0000
+
+Le lundi 23 octobre 2006 =E0 12:00 -0400, Bill Page a =E9crit :
+
+> > I got following error when I tried to build a Fibonacci number.
+> > Anyone could show me what I did wrong?
+>=20
+> You are not doing anything wrong. I also get an error when I
+> try your definition, although it is a different error:
+>=20
+>    Compiling function p as a recurrence relation.
+> (4) -> p(3)
+>=20
+>    >> System error:
+>    The function |*1;p;1;initial| is undefined.
+
+No problem with Gold (patch-50):
+
+(1) -> )set fun comp on
+(1) -> p(0) =3D=3D 0
+(2) -> p(1) =3D=3D 1
+(3) -> p(n) =3D=3D p(n-1)+p(n-2)
+(4) -> p(3)
+   Compiling function p with type Integer -> NonNegativeInteger=20
+   Compiling function p as a recurrence relation.
+
+   (4)  2
+
+
+Greg
+
+
+
+
+From MAILER-DAEMON Mon Oct 23 18:49:26 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gc8bm-0005rJ-PQ
+	for mharc-axiom-mail@gnu.org; Mon, 23 Oct 2006 18:49:26 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gc8bl-0005nU-61
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 18:49:25 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gc8bj-0005jD-Jk
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 18:49:24 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gc8bj-0005il-E8
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 18:49:23 -0400
+Received: from [66.249.82.232] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gc8bj-0005fH-FS
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 18:49:23 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so1756584wxc
+	for <axiom-mail@nongnu.org>; Mon, 23 Oct 2006 15:49:22 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=NBCGAjpecTlBi+vwdC6+LvLduIwgHOpCu+YZlhn/ykQeIUq3QcYHVX7GUlkzysmN8IoAo569NRagxoZRQ/m9R5FFKo0rEmqkxwMM8sJmXG0YAqOKZLfswJxqa24baLWaAy5VXdTHwYSjztLkkVzNf1s3ZoPgPCQ0pev2HV+Gc1E=
+Received: by 10.70.87.5 with SMTP id k5mr1634894wxb;
+	Mon, 23 Oct 2006 15:49:21 -0700 (PDT)
+Received: by 10.70.71.3 with HTTP; Mon, 23 Oct 2006 15:49:21 -0700 (PDT)
+Message-ID: <444a4cee0610231549o227b0189hc1ff89047884e96a@mail.gmail.com>
+Date: Mon, 23 Oct 2006 17:49:21 -0500
+From: "ming lu" <minglu10@gmail.com>
+To: axiom-mail@nongnu.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Subject: [Axiom-mail] integrate the PDF of normal distribution
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Oct 2006 22:49:25 -0000
+
+Hi group,
+What is the prpper way to integrate the PDF of normal distribution?
+I tried:
+(4) -> integrate(x/(sigma*sqrt(2*%pi))*exp(-(x-mu)**2/(2*sigma**2)),x=%minusInfinity..%plusInfinity)
+(4) ->
+   (4)  "failed"
+                                                Type: Union(fail: failed,...)
+But if I give a value to sigma, then it works:
+
+(9) -> sigma:=10
+(9) ->
+   (9)  10
+(11) -> integrate(x/(sigma*sqrt(2*%pi))*exp(-(x-mu)**2/(2*sigma**2)),x=%minusInfinity..%plusInfinity)
+(11) ->
+              +---+
+          2mu\|%pi
+   (11)  -----------
+          +-+ +----+
+         \|2 \|2%pi
+                    Type: Union(f1: OrderedCompletion Expression Integer,...)
+
+Is it possible for axiom to work without specify a value to sigma?
+Thanks,
+Ming
+
+
+
+From MAILER-DAEMON Mon Oct 23 18:53:23 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gc8fb-0001rF-2A
+	for mharc-axiom-mail@gnu.org; Mon, 23 Oct 2006 18:53:23 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gc8fZ-0001oH-F1
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 18:53:21 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gc8fX-0001lo-VP
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 18:53:21 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gc8fX-0001lj-Qv
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 18:53:19 -0400
+Received: from [62.4.17.101] (helo=mallaury.nerim.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gc8fX-000616-QQ
+	for axiom-mail@nongnu.org; Mon, 23 Oct 2006 18:53:20 -0400
+Received: from zeus.integrable-solutions.net (gdr.net1.nerim.net
+	[62.212.99.186])
+	by mallaury.nerim.net (Postfix) with ESMTP id 34C584F3B8;
+	Tue, 24 Oct 2006 00:53:04 +0200 (CEST)
+Received: from zeus.integrable-solutions.net (localhost [127.0.0.1])
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/SuSE Linux 0.7) with
+	ESMTP id k9NMnI0c020667; Tue, 24 Oct 2006 00:49:21 +0200
+Received: (from gdr@localhost)
+	by zeus.integrable-solutions.net (8.13.3/8.13.3/Submit) id
+	k9NMnIK8020666; Tue, 24 Oct 2006 00:49:18 +0200
+X-Authentication-Warning: zeus.integrable-solutions.net: gdr set sender to
+	gdr@integrable-solutions.net using -f
+Sender: gdr@integrable-solutions.net
+To: =?iso-8859-1?q?Vanuxem_Gr=E9gory?= <g.vanuxem@wanadoo.fr>
+Subject: Re: [Axiom-mail] What is gazonk*.c
+References: <00c001c6f6bc$5ee70200$6900a8c0@asus>
+	<1161634095.2828.11.camel@ellipse>
+From: Gabriel Dos Reis <gdr@integrable-solutions.net>
+In-Reply-To: <1161634095.2828.11.camel@ellipse>
+Organization: Integrable Solutions
+Date: 24 Oct 2006 00:49:18 +0200
+Message-ID: <m3fydelkb5.fsf@zeus.integrable-solutions.net>
+Lines: 31
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 23 Oct 2006 22:53:21 -0000
+
+Vanuxem Gr=E9gory <g.vanuxem@wanadoo.fr> writes:
+
+| Le lundi 23 octobre 2006 =E0 12:00 -0400, Bill Page a =E9crit :
+|=20
+| > > I got following error when I tried to build a Fibonacci number.
+| > > Anyone could show me what I did wrong?
+| >=20
+| > You are not doing anything wrong. I also get an error when I
+| > try your definition, although it is a different error:
+| >=20
+| >    Compiling function p as a recurrence relation.
+| > (4) -> p(3)
+| >=20
+| >    >> System error:
+| >    The function |*1;p;1;initial| is undefined.
+|=20
+| No problem with Gold (patch-50):
+|=20
+| (1) -> )set fun comp on
+| (1) -> p(0) =3D=3D 0
+| (2) -> p(1) =3D=3D 1
+| (3) -> p(n) =3D=3D p(n-1)+p(n-2)
+| (4) -> p(3)
+|    Compiling function p with type Integer -> NonNegativeInteger=20
+|    Compiling function p as a recurrence relation.
+|=20
+|    (4)  2
+
+same on build-improvements.
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Tue Oct 24 04:21:25 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GcHXI-000811-RC
+	for mharc-axiom-mail@gnu.org; Tue, 24 Oct 2006 04:21:24 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GcHXG-00080w-B8
+	for axiom-mail@nongnu.org; Tue, 24 Oct 2006 04:21:22 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GcHXE-00080A-Or
+	for axiom-mail@nongnu.org; Tue, 24 Oct 2006 04:21:22 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GcHXE-000807-JW
+	for axiom-mail@nongnu.org; Tue, 24 Oct 2006 04:21:20 -0400
+Received: from [62.231.145.242] (helo=nagmx1.nag.co.uk)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GcHXD-0006b7-4y
+	for axiom-mail@nongnu.org; Tue, 24 Oct 2006 04:21:20 -0400
+Received: from e3000.nag.co.uk (e3000.nag.co.uk [192.156.217.111])
+	by nagmx1.nag.co.uk (Postfix) with ESMTP id 3FD3B12023A
+	for <axiom-mail@nongnu.org>; Tue, 24 Oct 2006 09:21:18 +0100 (BST)
+Received: from loanamd6.nag.co.uk by e3000.nag.co.uk (8.12.8) id
+	k9O8LHrv013239; Tue, 24 Oct 2006 09:21:18 +0100
+From: Themos Tsikas <themos@nag.co.uk>
+Organization: NAG Ltd
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] integrate the PDF of normal distribution
+Date: Tue, 24 Oct 2006 08:21:15 +0000
+User-Agent: KMail/1.9.1
+References: <444a4cee0610231549o227b0189hc1ff89047884e96a@mail.gmail.com>
+In-Reply-To: <444a4cee0610231549o227b0189hc1ff89047884e96a@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200610240821.16636.themos@nag.co.uk>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: themos@nag.co.uk
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 24 Oct 2006 08:21:22 -0000
+
+(1) -> sigma:=(theta^2)
+
+             2
+   (1)  theta
+                                                     Type: Polynomial Integer
+(2) -> f:= x/(sigma*sqrt(2*%pi))*exp(-(x-mu)**2/(2*sigma**2))
+
+               2             2
+            - x  + 2mu x - mu
+            ------------------
+                        4
+                  2theta
+        x %e
+   (2)  ----------------------
+                  2 +----+
+             theta \|2%pi
+                                                     Type: Expression Integer
+(3) -> result:EXPR INT:=integrate(f,x=%minusInfinity..%plusInfinity)
+
+             +---+
+         2mu\|%pi
+   (3)  -----------
+         +-+ +----+
+        \|2 \|2%pi
+                                                     Type: Expression Integer
+
+-- to simplify one way
+(4) -> tower:= tower result
+
+                 +-+  +---+  +----+
+   (4)  [mu,%pi,\|2 ,\|%pi ,\|2%pi ]
+                                         Type: List Kernel Expression Integer
+(5) -> eval(result,[tower.5 =((tower.3)::EXPR INT )*((tower.4)::EXPR INT)])
+
+   (5)  mu
+                                                     Type: Expression Integer
+-- to simplify another way 
+(6) -> simplify1:= rule sqrt(2*%pi) == sqrt(2)*sqrt(%pi)
+
+          +----+     +-+ +---+
+   (6)  \|2%pi  == \|2 \|%pi
+                        Type: RewriteRule(Integer,Integer,Expression Integer)
+(7) -> simplify1  result
+
+   (7)  mu
+                                                     Type: Expression Integer
+
+
+
+
+From MAILER-DAEMON Tue Oct 24 09:58:24 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GcMnQ-0007Rr-Jh
+	for mharc-axiom-mail@gnu.org; Tue, 24 Oct 2006 09:58:24 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GcMnP-0007Qq-19
+	for axiom-mail@nongnu.org; Tue, 24 Oct 2006 09:58:23 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GcMnK-0007MB-Qn
+	for axiom-mail@nongnu.org; Tue, 24 Oct 2006 09:58:22 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GcMnK-0007M0-Gy
+	for axiom-mail@nongnu.org; Tue, 24 Oct 2006 09:58:18 -0400
+Received: from [66.249.82.230] (helo=wx-out-0506.google.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GcMnK-0008Lr-92
+	for axiom-mail@nongnu.org; Tue, 24 Oct 2006 09:58:18 -0400
+Received: by wx-out-0506.google.com with SMTP id r21so2006633wxc
+	for <axiom-mail@nongnu.org>; Tue, 24 Oct 2006 06:58:17 -0700 (PDT)
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=beta; d=gmail.com;
+	h=received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=WCH87F3UaAj055L/+82+0LXh4AQo0t3a5vFpqfecsR47DilyTBhawcTnaFn5lAC8Fq8uR/K3ztBUeyqtuXPkkqx1yS0K2FFEc6FwPv7yD/Fs3jFwkcsa1Z0e3z0IUkVEPZv4rALqHnosERbybmWjdVGSQxQbaMnQzRHFuwxci9I=
+Received: by 10.70.65.5 with SMTP id n5mr9194637wxa;
+	Tue, 24 Oct 2006 06:58:16 -0700 (PDT)
+Received: by 10.70.71.3 with HTTP; Tue, 24 Oct 2006 06:58:15 -0700 (PDT)
+Message-ID: <444a4cee0610240658s584ec67ftba11f10b9678d412@mail.gmail.com>
+Date: Tue, 24 Oct 2006 08:58:16 -0500
+From: "ming lu" <minglu10@gmail.com>
+To: themos@nag.co.uk
+Subject: Re: [Axiom-mail] integrate the PDF of normal distribution
+In-Reply-To: <200610240821.16636.themos@nag.co.uk>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <444a4cee0610231549o227b0189hc1ff89047884e96a@mail.gmail.com>
+	<200610240821.16636.themos@nag.co.uk>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 24 Oct 2006 13:58:23 -0000
+
+It works:) .
+Thanks,
+Ming
+
+On 10/24/06, Themos Tsikas <themos@nag.co.uk> wrote:
+> (1) -> sigma:=(theta^2)
+>
+>             2
+>   (1)  theta
+>                                                     Type: Polynomial Integer
+> (2) -> f:= x/(sigma*sqrt(2*%pi))*exp(-(x-mu)**2/(2*sigma**2))
+>
+>               2             2
+>            - x  + 2mu x - mu
+>            ------------------
+>                        4
+>                  2theta
+>        x %e
+>   (2)  ----------------------
+>                  2 +----+
+>             theta \|2%pi
+>                                                     Type: Expression Integer
+> (3) -> result:EXPR INT:=integrate(f,x=%minusInfinity..%plusInfinity)
+>
+>             +---+
+>         2mu\|%pi
+>   (3)  -----------
+>         +-+ +----+
+>        \|2 \|2%pi
+>                                                     Type: Expression Integer
+>
+> -- to simplify one way
+> (4) -> tower:= tower result
+>
+>                 +-+  +---+  +----+
+>   (4)  [mu,%pi,\|2 ,\|%pi ,\|2%pi ]
+>                                         Type: List Kernel Expression Integer
+> (5) -> eval(result,[tower.5 =((tower.3)::EXPR INT )*((tower.4)::EXPR INT)])
+>
+>   (5)  mu
+>                                                     Type: Expression Integer
+> -- to simplify another way
+> (6) -> simplify1:= rule sqrt(2*%pi) == sqrt(2)*sqrt(%pi)
+>
+>          +----+     +-+ +---+
+>   (6)  \|2%pi  == \|2 \|%pi
+>                        Type: RewriteRule(Integer,Integer,Expression Integer)
+> (7) -> simplify1  result
+>
+>   (7)  mu
+>                                                     Type: Expression Integer
+>
+>
+>
+> _______________________________________________
+> Axiom-mail mailing list
+> Axiom-mail@nongnu.org
+> http://lists.nongnu.org/mailman/listinfo/axiom-mail
+>
+
+
+
+From MAILER-DAEMON Sun Oct 29 13:37:17 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GeFX3-00017R-Hb
+	for mharc-axiom-mail@gnu.org; Sun, 29 Oct 2006 13:37:17 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GcdYr-0006P2-Bd
+	for axiom-mail@nongnu.org; Wed, 25 Oct 2006 03:52:29 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GcdY6-0006Cw-7R
+	for axiom-mail@nongnu.org; Wed, 25 Oct 2006 03:52:27 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GcdY4-0006Ca-UW
+	for axiom-mail@nongnu.org; Wed, 25 Oct 2006 03:51:41 -0400
+Received: from [205.158.62.67] (helo=webmail-outgoing.us4.outblaze.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GcdY4-0003oh-Fa
+	for axiom-mail@nongnu.org; Wed, 25 Oct 2006 03:51:40 -0400
+Received: from unknown (unknown [192.168.8.90])
+	by webmail-outgoing.us4.outblaze.com (Postfix) with QMQP id
+	A2FB418001A3
+	for <axiom-mail@nongnu.org>; Wed, 25 Oct 2006 07:53:08 +0000 (GMT)
+X-OB-Received: from unknown (205.158.62.94)
+	by wfilter2.us4.outblaze.com; 25 Oct 2006 07:53:10 -0000
+Received: by ws5-9.us4.outblaze.com (Postfix, from userid 1001)
+	id 524B913F3C; Wed, 25 Oct 2006 07:53:08 +0000 (GMT)
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="iso-8859-1"
+MIME-Version: 1.0
+From: "Paul vL" <litter@graffiti.net>
+To: axiom-mail@nongnu.org
+Date: Wed, 25 Oct 2006 08:53:08 +0100
+Received: from [161.85.127.139] by ws5-9.us4.outblaze.com with http for
+	litter@graffiti.net; Wed, 25 Oct 2006 08:53:08 +0100
+X-Originating-Ip: 161.85.127.139
+X-Originating-Server: ws5-9.us4.outblaze.com
+Message-Id: <20061025075308.524B913F3C@ws5-9.us4.outblaze.com>
+X-Mailman-Approved-At: Sun, 29 Oct 2006 13:37:15 -0500
+Subject: [Axiom-mail] Windows: where's the documentation?
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 25 Oct 2006 07:52:31 -0000
+
+Hi,
+
+I noticed that Axiom does not support Hyperdoc under Windows.
+This gives rise to a serious issue; all Axiom documentation refers
+to the Hyperdoc for a description of functions. Clearly, Windows
+users thus have *NO* documentation on Axiom's functions.
+
+Can the Hyperdoc documentation be converted to PDF?
+That would be an enormous help.
+
+Regards,
+Paul
+
+--=20
+_______________________________________________
+Get your free email from http://www.graffiti.net
+
+Powered By Outblaze
+
+
+
+From MAILER-DAEMON Sun Oct 29 15:55:38 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GeHgv-000440-Va
+	for mharc-axiom-mail@gnu.org; Sun, 29 Oct 2006 15:55:38 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GeHgu-00043q-4K
+	for axiom-mail@nongnu.org; Sun, 29 Oct 2006 15:55:36 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GeHgs-00043P-KN
+	for axiom-mail@nongnu.org; Sun, 29 Oct 2006 15:55:35 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GeHgs-00043G-Fb
+	for axiom-mail@nongnu.org; Sun, 29 Oct 2006 15:55:34 -0500
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GeHgs-000465-GK
+	for axiom-mail@nongnu.org; Sun, 29 Oct 2006 15:55:34 -0500
+Received: from pop-2.zoominternet.net (mua-2.zoominternet.net [24.154.1.45])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id k9TKtEAj021461
+	for <axiom-mail@nongnu.org>; Sun, 29 Oct 2006 15:55:22 -0500
+Received: (qmail 5872 invoked from network); 29 Oct 2006 20:55:14 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.233.73])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-2.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 29 Oct 2006 20:55:14 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k9TKjTa01616;
+	Sun, 29 Oct 2006 15:45:29 -0500
+Date: Sun, 29 Oct 2006 15:45:29 -0500
+Message-Id: <200610292045.k9TKjTa01616@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: litter@graffiti.net
+In-reply-to: <20061025075308.524B913F3C@ws5-9.us4.outblaze.com>
+	(litter@graffiti.net)
+Subject: Re: [Axiom-mail] Windows: where's the documentation?
+References: <20061025075308.524B913F3C@ws5-9.us4.outblaze.com>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 29 Oct 2006 20:55:36 -0000
+
+Paul,
+
+There are two books available in the src/doc directory.
+One is the original Axiom book and the second is a tutorial.
+
+Tim
+
+
+
+From MAILER-DAEMON Sun Oct 29 19:40:23 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GeLCQ-0003gA-8E
+	for mharc-axiom-mail@gnu.org; Sun, 29 Oct 2006 19:40:22 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GeLCN-0003fZ-HQ
+	for axiom-mail@nongnu.org; Sun, 29 Oct 2006 19:40:19 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GeLCL-0003eS-GB
+	for axiom-mail@nongnu.org; Sun, 29 Oct 2006 19:40:18 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GeLCL-0003eN-Ak
+	for axiom-mail@nongnu.org; Sun, 29 Oct 2006 19:40:17 -0500
+Received: from [216.251.41.178] (helo=mail58c2.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GeLCK-0002HH-Lf
+	for axiom-mail@nongnu.org; Sun, 29 Oct 2006 19:40:17 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail58c2.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	k9U0duK8023134; Sun, 29 Oct 2006 19:40:11 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: <litter@graffiti.net>
+Subject: RE: [Axiom-mail] Windows: where's the documentation?
+Date: Sun, 29 Oct 2006 19:39:47 -0500
+Message-ID: <045601c6fbbb$ef4265c0$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+In-Reply-To: <200610292045.k9TKjTa01616@localhost.localdomain>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Importance: Normal
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 30 Oct 2006 00:40:19 -0000
+
+On October 29, 2006 3:45 PM Tim Daly wrote:
+> 
+> There are two books available in the src/doc directory.
+> One is the original Axiom book and the second is a tutorial.
+> 
+
+On Windows that's actually
+
+  C:\Program Files\axiom\mnt\windows\doc
+
+And there is a link to the Axiom Book in this directory available
+from the Start menu.
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Mon Oct 30 01:26:07 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GeQb1-00014c-D7
+	for mharc-axiom-mail@gnu.org; Mon, 30 Oct 2006 01:26:07 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GeQb0-00014U-Qz
+	for axiom-mail@nongnu.org; Mon, 30 Oct 2006 01:26:06 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GeQb0-00014I-BR
+	for axiom-mail@nongnu.org; Mon, 30 Oct 2006 01:26:06 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1GeQax-00013x-8y; Mon, 30 Oct 2006 01:26:03 -0500
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52)
+	id 1GeQaw-0006Ng-I6; Mon, 30 Oct 2006 01:26:02 -0500
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GeQaq-0004W5-LI; Mon, 30 Oct 2006 07:25:56 +0100
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GeQaq-0005ol-Iv; Mon, 30 Oct 2006 07:25:56 +0100
+Sender: rubey@aquin.mat.univie.ac.at
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-mail] Windows: where's the documentation?
+References: <20061025075308.524B913F3C@ws5-9.us4.outblaze.com>
+	<200610292045.k9TKjTa01616@localhost.localdomain>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 30 Oct 2006 07:26:24 +0100
+In-Reply-To: <200610292045.k9TKjTa01616@localhost.localdomain>
+Message-ID: <9qslh6uxnz.fsf@aquin.mat.univie.ac.at>
+Lines: 5
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-dev <axiom-developer@nongnu.org>, litter@graffiti.net,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 30 Oct 2006 06:26:07 -0000
+
+I vaguely remember that somebody managed to have HyperDoc on MS-windows, given
+that an X-server is installed?
+
+Martin
+
+
+
+
+
+From MAILER-DAEMON Mon Oct 30 01:45:02 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GeQtK-0005uE-H9
+	for mharc-axiom-mail@gnu.org; Mon, 30 Oct 2006 01:45:02 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GeQtH-0005u0-Sy
+	for axiom-mail@nongnu.org; Mon, 30 Oct 2006 01:44:59 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GeQtH-0005ti-8M
+	for axiom-mail@nongnu.org; Mon, 30 Oct 2006 01:44:59 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GeQtH-0005te-52
+	for axiom-mail@nongnu.org; Mon, 30 Oct 2006 01:44:59 -0500
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GeQtH-0000pT-3k
+	for axiom-mail@nongnu.org; Mon, 30 Oct 2006 01:44:59 -0500
+Received: from pop-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id k9U6ihrT000985
+	for <axiom-mail@nongnu.org>; Mon, 30 Oct 2006 01:44:47 -0500
+Received: (qmail 27216 invoked from network); 30 Oct 2006 06:44:44 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.233.73])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 30 Oct 2006 06:44:44 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k9U6Z2F01838;
+	Mon, 30 Oct 2006 01:35:02 -0500
+Date: Mon, 30 Oct 2006 01:35:02 -0500
+Message-Id: <200610300635.k9U6Z2F01838@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: martin.rubey@univie.ac.at
+In-reply-to: <9qslh6uxnz.fsf@aquin.mat.univie.ac.at> (message from Martin
+	Rubey on 30 Oct 2006 07:26:24 +0100)
+Subject: Re: [Axiom-mail] Windows: where's the documentation?
+References: <20061025075308.524B913F3C@ws5-9.us4.outblaze.com>
+	<200610292045.k9TKjTa01616@localhost.localdomain>
+	<9qslh6uxnz.fsf@aquin.mat.univie.ac.at>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: axiom-developer@nongnu.org, litter@graffiti.net, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 30 Oct 2006 06:45:00 -0000
+
+yes, i have hyperdoc running on windows.
+but it requires the Xming program
+and i haven't had time to document and package it.
+
+t
+
+
+
+From MAILER-DAEMON Tue Oct 31 04:13:16 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GepgJ-0002u2-EM
+	for mharc-axiom-mail@gnu.org; Tue, 31 Oct 2006 04:13:15 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GepgH-0002sc-7x
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 04:13:13 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GepgB-0002q6-2b
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 04:13:08 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GepgA-0002pq-FD
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 04:13:06 -0500
+Received: from [205.158.62.67] (helo=webmail-outgoing.us4.outblaze.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gepg9-0001Wa-GX
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 04:13:05 -0500
+Received: from unknown (unknown [192.168.8.90])
+	by webmail-outgoing.us4.outblaze.com (Postfix) with QMQP id
+	76FCE18001A9
+	for <axiom-mail@nongnu.org>; Tue, 31 Oct 2006 09:11:49 +0000 (GMT)
+X-OB-Received: from unknown (205.158.62.94)
+	by wfilter2.us4.outblaze.com; 31 Oct 2006 09:11:50 -0000
+Received: by ws5-9.us4.outblaze.com (Postfix, from userid 1001)
+	id AE6BC13F3C; Tue, 31 Oct 2006 09:11:49 +0000 (GMT)
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="iso-8859-1"
+MIME-Version: 1.0
+From: "Paul vL" <litter@graffiti.net>
+To: "Bill Page" <bill.page1@synthesis.anikast.ca>
+Date: Tue, 31 Oct 2006 10:11:49 +0100
+Subject: RE: [Axiom-mail] Windows: where's the documentation?
+Received: from [161.85.127.139] by ws5-9.us4.outblaze.com with http for
+	litter@graffiti.net; Tue, 31 Oct 2006 10:11:49 +0100
+X-Originating-Ip: 161.85.127.139
+X-Originating-Server: ws5-9.us4.outblaze.com
+Message-Id: <20061031091149.AE6BC13F3C@ws5-9.us4.outblaze.com>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Oct 2006 09:13:13 -0000
+
+
+> ----- Original Message -----
+> From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+> To: litter@graffiti.net
+> Subject: RE: [Axiom-mail] Windows: where's the documentation?
+> Date: Sun, 29 Oct 2006 19:39:47 -0500
+>=20
+>=20
+> On October 29, 2006 3:45 PM Tim Daly wrote:
+> >
+> > There are two books available in the src/doc directory.
+> > One is the original Axiom book and the second is a tutorial.
+> >
+>=20
+> On Windows that's actually
+>=20
+>    C:\Program Files\axiom\mnt\windows\doc
+>=20
+> And there is a link to the Axiom Book in this directory available
+> from the Start menu.
+>=20
+> Regards,
+> Bill Page.
+
+Hi All,
+
+I know of the Axiom book and the tutorial, but that does not contain what
+I want; an overview of types and a list of functions for all types.
+Everywhere I looked, I was directed to hypertex, which is not available on
+windows.
+
+So let me refrase my initial question: can somebody convert the hypertex
+documentation to a general purpose format which is readable on all platform=
+s?
+Candidate formats are:
+-pdf
+-html
+-info
+
+Without this documentation it *REALLY* is impossible for Windows users to q=
+uickly explore
+Axiom's functions and make use of them. Currently, Windows users can only u=
+se what they can
+find in the examples or the book, which is not complete.
+
+Regards,
+Paul
+
+
+--=20
+_______________________________________________
+Get your free email from http://www.graffiti.net
+
+Powered By Outblaze
+
+
+
+From MAILER-DAEMON Tue Oct 31 06:10:08 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GerVQ-0001bU-PU
+	for mharc-axiom-mail@gnu.org; Tue, 31 Oct 2006 06:10:08 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GerVP-0001bG-Ss
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 06:10:07 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GerVL-0001YF-DJ
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 06:10:07 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GerVL-0001Y6-83
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 06:10:03 -0500
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GerVK-0003U7-Uj
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 06:10:03 -0500
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GerVG-0004vz-H9; Tue, 31 Oct 2006 12:09:58 +0100
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GerVG-0002sh-GA; Tue, 31 Oct 2006 12:09:58 +0100
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Paul vL" <litter@graffiti.net>
+Subject: Re: [Axiom-mail] Windows: where's the documentation?
+References: <20061031091149.AE6BC13F3C@ws5-9.us4.outblaze.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 31 Oct 2006 12:10:34 +0100
+In-Reply-To: <20061031091149.AE6BC13F3C@ws5-9.us4.outblaze.com>
+Message-ID: <9qvem03fmd.fsf@aquin.mat.univie.ac.at>
+Lines: 37
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Oct 2006 11:10:08 -0000
+
+Dear Paul,
+
+> So let me refrase my initial question: can somebody convert the hypertex
+> documentation to a general purpose format which is readable on all platforms?
+> Candidate formats are:
+> -pdf
+> -html
+> -info
+> 
+
+
+I *STRONGLY* advise you to try something different: install Xming and try to
+get Tim Daly to give you instructions on compiling Axiom with HyperTex on
+MS-Windows. Possibly Bill Page also can help. If you mangage to get HyperDoc
+running and you provide some documentation, I'd propose you for a bounty!
+
+If neither of them does, please send mail again, and I'll try to do something
+myself.
+
+Alternatively, if you are keen on programming and know some perl, then maybe
+Ralf Hemmecke would be able to show you how to modify his AllProse to get
+something similar to HyperDoc. But I guess this is more difficult.
+
+The great thing about hyperdoc is that you can enter a category, say, for
+example, Ring, then press on a button labelled "Domains" and you will get all
+Domains known to Axiom that are Rings. I.e., Integer, Polynomial Integer,
+Fraction Integer, PrimeField, and so on. 
+
+In my opinion, that's the best way to discover Axiom.
+
+
+
+Martin
+
+
+PS: I just remember, Kai Kaminski has converted some pages to html. But again,
+I don't think that's the way to go.
+
+
+
+
+From MAILER-DAEMON Tue Oct 31 08:59:53 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Geu9h-0006Oh-Al
+	for mharc-axiom-mail@gnu.org; Tue, 31 Oct 2006 08:59:53 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Geu9f-0006O9-GU
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 08:59:51 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Geu9c-0006Lk-IP
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 08:59:51 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Geu9c-0006LR-7O
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 08:59:48 -0500
+Received: from [205.158.62.94] (helo=ws5-9.us4.outblaze.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Geu9b-0004U9-Q5
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 08:59:48 -0500
+Received: by ws5-9.us4.outblaze.com (Postfix, from userid 1001)
+	id B018F14873; Tue, 31 Oct 2006 13:58:22 +0000 (GMT)
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="iso-8859-1"
+MIME-Version: 1.0
+From: "Paul vL" <litter@graffiti.net>
+To: "Martin Rubey" <martin.rubey@univie.ac.at>
+Date: Tue, 31 Oct 2006 14:58:22 +0100
+Subject: Re: [Axiom-mail] Windows: where's the documentation?
+Received: from [161.85.127.139] by ws5-9.us4.outblaze.com with http for
+	litter@graffiti.net; Tue, 31 Oct 2006 14:58:22 +0100
+X-Originating-Ip: 161.85.127.139
+X-Originating-Server: ws5-9.us4.outblaze.com
+Message-Id: <20061031135822.B018F14873@ws5-9.us4.outblaze.com>
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Oct 2006 13:59:52 -0000
+
+Hi Martin,
+
+Thanks for the reply.
+
+> ----- Original Message -----
+> From: "Martin Rubey" <martin.rubey@univie.ac.at>
+> To: "Paul vL" <litter@graffiti.net>
+> Subject: Re: [Axiom-mail] Windows: where's the documentation?
+> Date: 31 Oct 2006 12:10:34 +0100
+>=20
+>=20
+> Dear Paul,
+>=20
+> > So let me refrase my initial question: can somebody convert the hypertex
+> > documentation to a general purpose format which is readable on all plat=
+forms?
+> > Candidate formats are:
+> > -pdf
+> > -html
+> > -info
+> >
+>=20
+>=20
+> I *STRONGLY* advise you to try something different: install Xming and try=
+ to
+> get Tim Daly to give you instructions on compiling Axiom with HyperTex on
+> MS-Windows. Possibly Bill Page also can help. If you mangage to get Hyper=
+Doc
+> running and you provide some documentation, I'd propose you for a bounty!
+
+I actually made a start trying to compile Axiom using MSYS/MingW but got
+stuck. As an experienced MingW user I know how much trouble it can cost
+to solve all these issues (I'm currently trying to build GCC cross-Arm
+tools under MSYS/Mingw, it does *not* work out of the box and needs=20
+lots of patching). As I also have other projects lying around
+which I like to finish, I currently do not have time to go along this road.=
+..
+
+> If neither of them does, please send mail again, and I'll try to do somet=
+hing
+> myself.
+>=20
+> Alternatively, if you are keen on programming and know some perl, then ma=
+ybe
+> Ralf Hemmecke would be able to show you how to modify his AllProse to get
+> something similar to HyperDoc. But I guess this is more difficult.
+>=20
+> The great thing about hyperdoc is that you can enter a category, say, for
+> example, Ring, then press on a button labelled "Domains" and you will get=
+ all
+> Domains known to Axiom that are Rings. I.e., Integer, Polynomial Integer,
+> Fraction Integer, PrimeField, and so on.
+
+How would that be different from any format that allows hyperlinking?
+Hypertex is IMHO quite obscure, and I cannot see a big benefit for using it
+over standard solutions which are widely supported.
+
+I do not ask to ditch Hypertex, but just another option to help all
+Windows users out there.
+
+I'm actually quite fluent using all kind of source-to-source conversion
+tooling, so what I can imagine is that I'll write a small conversion
+utility that converted the hypertex files into another format.
+
+> In my opinion, that's the best way to discover Axiom.
+
+I would like to have *any* such documentation, so I totally agree here.
+
+> Martin
+>=20
+>=20
+> PS: I just remember, Kai Kaminski has converted some pages to html. But a=
+gain,
+> I don't think that's the way to go.
+
+Without going in too much discussion; I still do not understand what benefi=
+ts
+Hypertex has over other more standard solutions, certainly given that curre=
+ntly
+Windows has *no* Hypertex support.
+
+Regards,
+Paul
+
+
+--=20
+_______________________________________________
+Get your free email from http://www.graffiti.net
+
+Powered By Outblaze
+
+
+
+From MAILER-DAEMON Tue Oct 31 09:19:18 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GeuST-0000dg-SU
+	for mharc-axiom-mail@gnu.org; Tue, 31 Oct 2006 09:19:17 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GeuSS-0000cG-C2
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 09:19:16 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GeuSN-0000YA-4y
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 09:19:15 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1GeuSI-0000RU-0F; Tue, 31 Oct 2006 09:19:06 -0500
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52)
+	id 1GeuSH-0000AC-Ft; Tue, 31 Oct 2006 09:19:05 -0500
+Received: from [193.170.38.119] (hemmecke@woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	k9VEIx32014479
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Tue, 31 Oct 2006 15:18:59 +0100
+Message-ID: <45475BC3.2000808@hemmecke.de>
+Date: Tue, 31 Oct 2006 15:20:51 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.7 (X11/20060909)
+MIME-Version: 1.0
+To: Martin Rubey <martin.rubey@univie.ac.at>
+Subject: Re: [Axiom-mail] Windows: where's the documentation?
+References: <20061031091149.AE6BC13F3C@ws5-9.us4.outblaze.com>
+	<9qvem03fmd.fsf@aquin.mat.univie.ac.at>
+In-Reply-To: <9qvem03fmd.fsf@aquin.mat.univie.ac.at>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-dev <axiom-developer@nongnu.org>, Paul vL <litter@graffiti.net>,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Oct 2006 14:19:16 -0000
+
+Hello,
+
+On 10/31/2006 12:10 PM, Martin Rubey wrote:
+> Dear Paul,
+> 
+>> So let me refrase my initial question: can somebody convert the hypertex
+>> documentation to a general purpose format which is readable on all platforms?
+>> Candidate formats are:
+>> -pdf
+>> -html
+>> -info
+>>
+> 
+> 
+> I *STRONGLY* advise you to try something different: install Xming and try to
+> get Tim Daly to give you instructions on compiling Axiom with HyperTex on
+> MS-Windows. Possibly Bill Page also can help. If you mangage to get HyperDoc
+> running and you provide some documentation, I'd propose you for a bounty!
+> 
+> If neither of them does, please send mail again, and I'll try to do something
+> myself.
+> 
+> Alternatively, if you are keen on programming and know some perl, then maybe
+> Ralf Hemmecke would be able to show you how to modify his AllProse to get
+> something similar to HyperDoc. But I guess this is more difficult.
+
+I don't think translating the HyperDoc contents into ALLPROSE is not so 
+easy. And ALLPROSE is probably also not the right way to do it. I guess, 
+you mean AldorDoc. Together with Christian Aistleitner I have agreed 
+upon a few (additional) LaTeX commands to tag type names and function 
+names. That lives basically in aldordoc.sty which is distributed with 
+ALLPROSE. What is still missing is a program AldorDoc, that takes 
+library code and transforms it into a nice format from which .dvi, .pdf, 
+.html etc. could be generated. That program is still missing.
+
+Anyway as a first start, I'd like to ask, where I should look for the 
+sources of the contents of HyperDoc.
+
+Could someone give a rough overview of the process how the content is 
+produced? If I remember correctly there was some format to write 
+hyperdoc pages, but what does that have to do with the API description 
+of functions/domains/categories of Axiom. I guess the latter is 
+generated from the ++ comments in the .spad files, right? Then what is 
+the process from ++ to hyperdoc?
+
+> The great thing about hyperdoc is that you can enter a category, say, for
+> example, Ring, then press on a button labelled "Domains" and you will get all
+> Domains known to Axiom that are Rings. I.e., Integer, Polynomial Integer,
+> Fraction Integer, PrimeField, and so on. 
+
+Right. ALLPROSE cannot do that. There are other tools necessary.
+
+Ralf
+
+
+
+From MAILER-DAEMON Tue Oct 31 09:52:07 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GeuyF-0006Ix-Kw
+	for mharc-axiom-mail@gnu.org; Tue, 31 Oct 2006 09:52:07 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GeuyD-0006Hf-O9
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 09:52:05 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Geuy8-0006FH-AP
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 09:52:04 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Geuy8-0006F7-4i; Tue, 31 Oct 2006 09:52:00 -0500
+Received: from [216.251.41.180] (helo=mail60c2.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52)
+	id 1Geuy8-0005vJ-3A; Tue, 31 Oct 2006 09:52:00 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail60c2.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	k9VEpVJ3011109; Tue, 31 Oct 2006 09:51:48 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Paul vL'" <litter@graffiti.net>
+Subject: RE: [Axiom-mail] Windows: where's the documentation?
+Date: Tue, 31 Oct 2006 09:51:01 -0500
+Message-ID: <05a201c6fcfc$0f9f63e0$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+In-Reply-To: <20061031091149.AE6BC13F3C@ws5-9.us4.outblaze.com>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Importance: Normal
+Cc: axiom-developer@nongnu.org, 'Kai Kaminski' <kai.kaminski@gmx.de>,
+	axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Oct 2006 14:52:06 -0000
+
+On October 31, 2006 4:12 AM Paul vL wrote:
+> > 
+> > On October 29, 2006 3:45 PM Tim Daly wrote:
+> > >
+> > > There are two books available in the src/doc directory.
+> > > One is the original Axiom book and the second is a tutorial.
+> > >
+> > 
+> > On Windows that's actually
+> > 
+> >    C:\Program Files\axiom\mnt\windows\doc
+> > 
+> > And there is a link to the Axiom Book in this directory available
+> > from the Start menu.
+> > 
+> 
+> I know of the Axiom book and the tutorial, but that does not 
+> contain what I want; an overview of types and a list of functions
+> for all types. Everywhere I looked, I was directed to hypertex,
+> which is not available on windows.
+> 
+> So let me refrase my initial question: can somebody convert 
+> the hypertex documentation to a general purpose format which is
+> readable on all platforms? Candidate formats are:
+> -pdf
+> -html
+> -info
+>
+
+We once had a draft of such a conversion to simple HTML done by
+Kai Kaminski, one of the axiom developers, however the work on
+this version of the browser source is not complete. Unfortunately
+that doesn't help you immediately, but it should be re-assuring that
+it is indeed possible.
+ 
+> Without this documentation it *REALLY* is impossible for Windows
+> users to quickly explore Axiom's functions and make use of them.
+> Currently, Windows users can only use what they can find in the
+> examples or the book, which is not complete.
+> 
+
+Your help and encourage to do this work is much appreciated.
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Tue Oct 31 10:18:29 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GevNl-0000ow-Hx
+	for mharc-axiom-mail@gnu.org; Tue, 31 Oct 2006 10:18:29 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GevNk-0000nl-AC
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 10:18:28 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GevNg-0000hm-M1
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 10:18:27 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GevNg-0000hX-Fa
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 10:18:24 -0500
+Received: from [216.251.41.62] (helo=mail242.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GevNg-0002TS-91
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 10:18:24 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail242.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	k9VFHwuk010569; Tue, 31 Oct 2006 10:18:14 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Paul vL'" <litter@graffiti.net>
+Subject: RE: [Axiom-mail] Windows: where's the documentation?
+Date: Tue, 31 Oct 2006 10:17:49 -0500
+Message-ID: <05a901c6fcff$c16d65b0$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+In-Reply-To: <20061031135822.B018F14873@ws5-9.us4.outblaze.com>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Importance: Normal
+Cc: 'Martin Rubey' <martin.rubey@univie.ac.at>,
+	'Kai Kaminski' <kai.kaminski@gmail.com>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Oct 2006 15:18:28 -0000
+
+On October 31, 2006 8:58 AM Paul vL wrote:
+> Martin Rubey wrote:
+> > 
+> > I *STRONGLY* advise you to try something different: install 
+> > Xming and try to get Tim Daly to give you instructions on
+> > compiling Axiom with HyperTex on MS-Windows. Possibly Bill Page
+> > also can help. If you mangage to get HyperDoc running and you
+> > provide some documentation, I'd propose you for a bounty!
+> 
+> I actually made a start trying to compile Axiom using MSYS/MingW
+> but got stuck.
+
+Building Axiom under MSYS/MingW is quite easy. See:
+
+http://wiki.axiom-developer.org/BuildAxiom
+
+> As an experienced MingW user I know how much trouble it can cost
+> to solve all these issues (I'm currently trying to build GCC
+> cross-Arm tools under MSYS/Mingw, it does *not* work out of the
+> box and needs lots of patching). As I also have other projects
+> lying around which I like to finish, I currently do not have time
+> to go along this road...
+
+Great. Maybe you can add Axiom on Windows to your list of project. :-)
+
+> > 
+> > The great thing about hyperdoc is that you can enter a category,
+> > say, for example, Ring, then press on a button labelled "Domains" 
+> > and you will get all Domains known to Axiom that are Rings. I.e.,
+> > Integer, Polynomial Integer, Fraction Integer, PrimeField, and so
+> > on.
+>
+
+For a different point of view, let me say that I almost NEVER use
+hyperdoc. I find the user interface clumsy, unreliable and of limited
+use. I prefer instead to search and read the Axiom sources directly
+and to use )display and )show commands in the Axiom interpreter.
+ 
+> How would that be different from any format that allows
+> hyperlinking? Hypertex is IMHO quite obscure, and I cannot see
+> a big benefit for using it over standard solutions which are
+> widely supported.
+
+I agree. One complication is that a lot of the intereting information
+about Axiom is actually stored in a data structure called the Axiom
+database (daase). Hyperdoc uses this information to navigate. It is
+not straight-forward to access this using just a web browser - but
+of course there are several different ways in which this could be
+made available to a standard browser.
+
+> 
+> I do not ask to ditch Hypertex, but just another option to help
+> all Windows users out there.
+
+Using Xming is a possibility but I thing most Windows users would
+find the X-windows based interface quite foreign.
+
+> 
+> I'm actually quite fluent using all kind of source-to-source 
+> conversion tooling, so what I can imagine is that I'll write a
+> small conversion utility that converted the hypertex files into
+> another format.
+
+Great! Maybe you can discuss this with Kai Kaminshi who has
+already done some of this work.
+
+> 
+> > In my opinion, that's the best way to discover Axiom.
+> 
+> I would like to have *any* such documentation, so I totally 
+> agree here.
+> 
+> > Martin
+> > 
+> > 
+> > PS: I just remember, Kai Kaminski has converted some pages 
+> to html. But again, I don't think that's the way to go.
+> 
+> Without going in too much discussion; I still do not understand
+> what benefits Hypertex has over other more standard solutions,
+> certainly given that currently Windows has *no* Hypertex support.
+> 
+
+I think discussion is a Good Thing. You can't have "too much".
+:-) But I agree with you. I would very much rather have a standard
+web browser interface with functionality similar to Hyperdoc.
+Hyperdoc was "neat" in it's day (circa 1990) but today it looks
+ugly and awkward. But of course that is just my opinion...
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Tue Oct 31 12:07:39 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gex5O-0008Es-Ql
+	for mharc-axiom-mail@gnu.org; Tue, 31 Oct 2006 12:07:38 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gex5K-0008AW-8Z
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:07:34 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gex5D-00083b-PZ
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:07:32 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gex5D-00083H-Iq
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:07:27 -0500
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gex5D-00078W-8X
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:07:27 -0500
+Received: from pop-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id k9VH76R9008255
+	for <axiom-mail@nongnu.org>; Tue, 31 Oct 2006 12:07:10 -0500
+Received: (qmail 13271 invoked from network); 31 Oct 2006 17:07:07 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.233.73])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <bill.page1@synthesis.anikast.ca>; 31 Oct 2006 17:07:07 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k9VGvTh03403;
+	Tue, 31 Oct 2006 11:57:29 -0500
+Date: Tue, 31 Oct 2006 11:57:29 -0500
+Message-Id: <200610311657.k9VGvTh03403@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: litter@graffiti.net
+In-reply-to: <20061031091149.AE6BC13F3C@ws5-9.us4.outblaze.com>
+	(litter@graffiti.net)
+Subject: Re: [Axiom-mail] Windows: where's the documentation?
+References: <20061031091149.AE6BC13F3C@ws5-9.us4.outblaze.com>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Oct 2006 17:07:35 -0000
+
+> I know of the Axiom book and the tutorial, but that does not contain what
+> I want; an overview of types and a list of functions for all types.
+> Everywhere I looked, I was directed to hypertex, which is not available on
+> windows.
+
+Actually there is a version of hyperdoc for windows but it uses Xming.
+Plus it does not connect to Axiom. Axiom and hyperdoc communicate using
+an intermediate program called sman which does not yet run on windows.
+Thus hyperdoc is only partially functional.
+
+> So let me refrase my initial question: can somebody convert the hypertex
+> documentation to a general purpose format which is readable on all platforms?
+> Candidate formats are:
+> -pdf
+> -html
+> -info
+
+All of the information in the databases can be extracted with a function
+called asq (e.g. ask). This is a simple C function that should run on
+Windows. It can extract and print any information that the database 
+knows about functions.
+
+Now that I think about it, it should be straightforward to connect
+asq to a browser since a C function can be used as a cgi-bin program.
+It might take a little fondling to make the output display well in html
+but that's not conceptually hard.
+
+I'll look at it.
+
+t
+
+
+
+
+
+From MAILER-DAEMON Tue Oct 31 12:18:05 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GexFU-0000a7-Ob
+	for mharc-axiom-mail@gnu.org; Tue, 31 Oct 2006 12:18:04 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GexFS-0000Xf-25
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:18:02 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GexFN-0000V2-M4
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:18:01 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GexFN-0000Up-2x
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:17:57 -0500
+Received: from [216.251.41.180] (helo=mail60c2.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GexFM-0001Sv-Rg
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:17:57 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail60c2.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	k9VHHZ81014156; Tue, 31 Oct 2006 12:17:50 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: <daly@axiom-developer.org>
+Subject: RE: [Axiom-mail] Windows: where's the documentation?
+Date: Tue, 31 Oct 2006 12:17:22 -0500
+Message-ID: <05de01c6fd10$7721b680$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+In-Reply-To: <200610311657.k9VGvTh03403@localhost.localdomain>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Importance: Normal
+Cc: litter@graffiti.net, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Oct 2006 17:18:02 -0000
+
+On October 31, 2006 11:57 AM Tim Daly wrote:
+> ... 
+> All of the information in the databases can be extracted with 
+> a function called asq (e.g. ask). This is a simple C function
+> that should run on Windows. It can extract and print any
+> information that the database knows about functions.
+>
+
+Yes. asq is available from the MSDOS command line on windows.
+ 
+> Now that I think about it, it should be straightforward to connect
+> asq to a browser since a C function can be used as a cgi-bin
+> program. It might take a little fondling to make the output
+> display well in html but that's not conceptually hard.
+> 
+> I'll look at it.
+> 
+
+Yes. That would me nice. :-)
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Tue Oct 31 12:20:52 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GexIC-0003jp-7x
+	for mharc-axiom-mail@gnu.org; Tue, 31 Oct 2006 12:20:52 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GexIA-0003hB-0F
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:20:50 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GexI5-0003Zq-IK
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:20:49 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GexI4-0003Z1-IR
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:20:44 -0500
+Received: from [131.130.3.115] (helo=grace.univie.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GexI4-00021v-70
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:20:44 -0500
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GexI2-0007aX-6y; Tue, 31 Oct 2006 18:20:42 +0100
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.63)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1GexI2-0001Zs-18; Tue, 31 Oct 2006 18:20:42 +0100
+Sender: rubey@aquin.mat.univie.ac.at
+To: "Paul vL" <litter@graffiti.net>
+Subject: Re: [Axiom-mail] Windows: where's the documentation?
+References: <20061031135822.B018F14873@ws5-9.us4.outblaze.com>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 31 Oct 2006 18:21:16 +0100
+In-Reply-To: <20061031135822.B018F14873@ws5-9.us4.outblaze.com>
+Message-ID: <9qzmbcl7ub.fsf@aquin.mat.univie.ac.at>
+Lines: 17
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: Martin Rubey <martin.rubey@univie.ac.at>, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Oct 2006 17:20:50 -0000
+
+"Paul vL" <litter@graffiti.net> writes:
+
+> How would that be different from any format that allows hyperlinking?
+> Hypertex is IMHO quite obscure, and I cannot see a big benefit for using it
+> over standard solutions which are widely supported.
+
+The point is that the list of domains which are of a certain category is
+created dynamically. If I start a fresh axiom session, compile a spad file
+which contains some new Ring, say MyWonderfulPhantasticRing it will be listed
+by HyperDoc automatically.
+
+Of course, I'm all in favour of replacing HyperDoc itself with something that
+runs on any browser. Ralf's ALLPROSE is a HUGE step in that direction. But as
+of now, it doesn't connect to axiom. (Although I have some patches that go in
+that direction)
+
+Martin
+
+
+
+
+From MAILER-DAEMON Tue Oct 31 12:31:35 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GexSY-0006M2-UW
+	for mharc-axiom-mail@gnu.org; Tue, 31 Oct 2006 12:31:35 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GexSW-0006KG-Hr
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:31:32 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GexSR-0006Gz-Lq
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:31:32 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GexSR-0006Gu-IG
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:31:27 -0500
+Received: from [62.231.145.242] (helo=nagmx1.nag.co.uk)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GexSQ-000444-JZ
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:31:27 -0500
+Received: from e3000.nag.co.uk (e3000.nag.co.uk [192.156.217.111])
+	by nagmx1.nag.co.uk (Postfix) with ESMTP id 756651201CD
+	for <axiom-mail@nongnu.org>; Tue, 31 Oct 2006 17:31:27 +0000 (GMT)
+Received: from loanamd6.nag.co.uk by e3000.nag.co.uk (8.12.8) id
+	k9VHVQrv024937; Tue, 31 Oct 2006 17:31:26 GMT
+From: Themos Tsikas <themos@nag.co.uk>
+Organization: NAG Ltd
+To: axiom-mail@nongnu.org
+Subject: Re: [Axiom-mail] Windows: where's the documentation?
+Date: Tue, 31 Oct 2006 18:31:24 +0100
+User-Agent: KMail/1.9.1
+References: <20061031135822.B018F14873@ws5-9.us4.outblaze.com>
+	<9qzmbcl7ub.fsf@aquin.mat.univie.ac.at>
+In-Reply-To: <9qzmbcl7ub.fsf@aquin.mat.univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain;
+  charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200610311831.24585.themos@nag.co.uk>
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: themos@nag.co.uk
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Oct 2006 17:31:33 -0000
+
+On Tuesday 31 October 2006 18:21, Martin Rubey wrote:
+> The point is that the list of domains which are of a certain category is
+> created dynamically. If I start a fresh axiom session, compile a spad file
+> which contains some new Ring, say MyWonderfulPhantasticRing it will be
+> listed by HyperDoc automatically.
+
+Lots of software out there feature a built-in web server so that a browser can 
+act as the control. Axiom could do the same for the documentation, system 
+settings and other automation features.
+
+Themos Tsikas
+
+
+
+From MAILER-DAEMON Tue Oct 31 12:33:04 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GexU0-0006no-LU
+	for mharc-axiom-mail@gnu.org; Tue, 31 Oct 2006 12:33:04 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GexTy-0006ne-FH
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:33:02 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GexTw-0006nS-De
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:33:01 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GexTw-0006nP-AW
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:33:00 -0500
+Received: from [24.154.1.27] (helo=mx-8.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GexTw-0004Rb-8H
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 12:33:00 -0500
+Received: from pop-3.zoominternet.net (mua-3.zoominternet.net [24.154.1.46])
+	by mx-8.zoominternet.net (8.13.1/8.13.1) with ESMTP id k9VHWcBI005055
+	for <axiom-mail@nongnu.org>; Tue, 31 Oct 2006 12:32:46 -0500
+Received: (qmail 8250 invoked from network); 31 Oct 2006 17:32:39 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.233.73])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-3.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 31 Oct 2006 17:32:39 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k9VHN1u03447;
+	Tue, 31 Oct 2006 12:23:01 -0500
+Date: Tue, 31 Oct 2006 12:23:01 -0500
+Message-Id: <200610311723.k9VHN1u03447@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: bill.page1@synthesis.anikast.ca
+In-reply-to: <05de01c6fd10$7721b680$6900a8c0@asus>
+	(bill.page1@synthesis.anikast.ca)
+Subject: Re: [Axiom-mail] Windows: where's the documentation?
+References: <05de01c6fd10$7721b680$6900a8c0@asus>
+X-Spam-Score: 0.70 () [Tag at 15.00] FORGED_RCVD_HELO,J_CHICKENPOX_34
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.27
+Cc: litter@graffiti.net, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Oct 2006 17:33:03 -0000
+
+Here is the output of the asq function for Integer
+
+
+[root@localhost root]# asq
+asq -property searchkey 
+
+property is one of the following flags: 
+ (al)    all (default)         (sh)    short
+ (ab)    abbreviation          (an)    ancestors
+ (at)    attributes            (ca cc) constructorcategory
+ (cf fo) constructorform       (ck ki) constructorkind
+ (cm)    constructormodemap    (con)   constructor
+ (cos)   cosig                 (de)    defaultdomain
+ (dom)   domain                (doc)   documentation
+ (mo)    modemaps              (ni)    niladic
+ (ob)    object                (op)    operationalist
+ (pr)    predicates            (so)    sourcefile
+searchkey can be either a domain or its abbreviation.
+
+ e.g. asq -so Integer
+   will give the source file name written to stdout
+ (Version 7)
+
+
+
+
+
+
+[root@localhost root]# asq -so Integer
+INT.spad
+
+
+
+
+[root@localhost root]# asq -all Integer
+Searching /boot/axiom/mnt/linux/algebra/interp.daase for Integer
+Searching /boot/axiom/mnt/linux/algebra/browse.daase for Integer
+
+Integer
+...is defined in the source file "INT.spad"
+...loading info not available yet
+...is a domain
+...is niladic
+...is abbreviated as INT
+...has no default domain
+...has no ancestors
+...has the operations: 
+      ~=
+      zero?
+      unitNormal
+      unitCanonical
+      unit?
+      symmetricRemainder
+      subtractIfCan
+      submod
+      squareFreePart
+      squareFree
+      sizeLess?
+      sign
+      shift
+      sample
+      retractIfCan
+      retract
+      rem
+      reducedSystem
+      recip
+      rationalIfCan
+      rational?
+      rational
+      random
+      quo
+      principalIdeal
+      prime?
+      powmod
+      positiveRemainder
+      positive?
+      permutation
+      patternMatch
+      one?
+      odd?
+      nextItem
+      negative?
+      multiEuclidean
+      mulmod
+      min
+      max
+      mask
+      length
+      lcm
+      latex
+      invmod
+      init
+      inc
+      hash
+      gcdPolynomial
+      gcd
+      factorial
+      factor
+      extendedEuclidean
+      exquo
+      expressIdealMember
+      even?
+      euclideanSize
+      divide
+      differentiate
+      dec
+      copy
+      convert
+      coerce
+      characteristic
+      bit?
+      binomial
+      base
+      associates?
+      addmod
+      abs
+      ^
+      Zero
+      One
+      OMwrite
+      D
+      >=
+      >
+      =
+      <=
+      <
+      -
+      +
+      ** 
+      * 
+...has the attributes: 
+      infinite
+      noetherian
+      canonicalsClosed
+      canonical
+      canonicalUnitNormal
+      multiplicativeValuation
+      noZeroDivisors
+      (commutative "*"")
+      rightUnitary
+      leftUnitary
+      unitsKnown
+...has the cosig: (NIL)
+...has the constructorform: 
+      (Integer)
+...has the constructormodemap: 
+      (
+        (
+          (Integer) 
+          (Join 
+            (IntegerNumberSystem) 
+            (ConvertibleTo 
+              (String)) 
+            (OpenMath) 
+            (CATEGORY domain 
+              (SIGNATURE random 
+                ($ $)) 
+              (ATTRIBUTE canonical) 
+              (ATTRIBUTE canonicalsClosed) 
+              (ATTRIBUTE noetherian) 
+              (ATTRIBUTE infinite)))) 
+        (T Integer))
+...has the modemaps: 
+      (
+        (random 
+          (*1 *1 *1) 
+          (isDomain *1 
+            (Integer))))
+...has the constructorcategory: 
+      (Join 
+        (IntegerNumberSystem) 
+        (ConvertibleTo 
+          (String)) 
+        (OpenMath) 
+        (CATEGORY domain 
+          (SIGNATURE random 
+            ($ $)) 
+          (ATTRIBUTE canonical) 
+          (ATTRIBUTE canonicalsClosed) 
+          (ATTRIBUTE noetherian) 
+          (ATTRIBUTE infinite)))
+...has the documentation: 
+      (
+        (constructor 
+          (NIL "\spadtype{Integer} provides the domain of arbitrary precision integers."")) 
+        (infinite 
+          (
+            (attribute) "nextItem never returns "failed"."")) 
+        (noetherian 
+          (
+            (attribute) "ascending chain condition on ideals."")) 
+        (canonicalsClosed 
+          (
+            (attribute) "two positives multiply to give positive."")) 
+        (canonical 
+          (
+            (attribute) "mathematical equality is data structure equality."")) 
+        (random 
+          (
+            ($ $) "\spad{random
+            (n)} returns a random integer from 0 to \spad{nMapping}."")))
+...has no predicates
+[root@localhost root]# 
+
+
+
+From MAILER-DAEMON Tue Oct 31 13:02:55 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gexwt-0005ZM-Du
+	for mharc-axiom-mail@gnu.org; Tue, 31 Oct 2006 13:02:55 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gexwr-0005WJ-6G
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 13:02:53 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gexwp-0005TR-T7
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 13:02:51 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gexwp-0005T2-3A
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 13:02:51 -0500
+Received: from [24.154.1.27] (helo=mx-8.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gexwe-0002gm-KJ
+	for axiom-mail@nongnu.org; Tue, 31 Oct 2006 13:02:50 -0500
+Received: from pop-3.zoominternet.net (mua-3.zoominternet.net [24.154.1.46])
+	by mx-8.zoominternet.net (8.13.1/8.13.1) with ESMTP id k9VI2d3O007643
+	for <axiom-mail@nongnu.org>; Tue, 31 Oct 2006 13:02:39 -0500
+Received: (qmail 32643 invoked from network); 31 Oct 2006 18:02:39 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.233.73])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-3.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-mail@nongnu.org>; 31 Oct 2006 18:02:39 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id k9VHqoi03467;
+	Tue, 31 Oct 2006 12:52:50 -0500
+Date: Tue, 31 Oct 2006 12:52:50 -0500
+Message-Id: <200610311752.k9VHqoi03467@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: themos@nag.co.uk
+In-reply-to: <200610311831.24585.themos@nag.co.uk> (message from Themos Tsikas
+	on Tue, 31 Oct 2006 18:31:24 +0100)
+Subject: Re: [Axiom-mail] Windows: where's the documentation?
+References: <20061031135822.B018F14873@ws5-9.us4.outblaze.com>
+	<9qzmbcl7ub.fsf@aquin.mat.univie.ac.at>
+	<200610311831.24585.themos@nag.co.uk>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.27
+Cc: axiom-developer@nongnu.org, axiom-mail@nongnu.org
+X-BeenThere: axiom-mail@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-mail.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-mail>
+List-Post: <mailto:axiom-mail@nongnu.org>
+List-Help: <mailto:axiom-mail-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-mail>,
+	<mailto:axiom-mail-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 31 Oct 2006 18:02:54 -0000
+
+> > The point is that the list of domains which are of a certain category is
+> > created dynamically. If I start a fresh axiom session, compile a spad file
+> > which contains some new Ring, say MyWonderfulPhantasticRing it will be
+> > listed by HyperDoc automatically.
+> 
+> Lots of software out there feature a built-in web server so that a browser can 
+> act as the control. Axiom could do the same for the documentation, system 
+> settings and other automation features.
+
+The asq function was intended for non-X platforms so we could
+still deliver the information without running Axiom.
+
+I'm not much of a cgi-bin hacker but it seems to me that 
+some simple C hacking and a command line option would enable
+the output to be placed in html tables which could somehow
+allow point-and-click for additional lookups. Memory fails
+me but there is some way of constructing POST or GET around
+items in tables so that you could click on table entries.
+I'll have to look at my html reference book for details.
+
+Indeed if the constructed html could pass algebra expressions
+back to the cgi-bin then it could run axiom, capture the output,
+and send it back.
+
+The source is in src/etc/asq.c.pamphlet. There is some documentation
+but I guess I thought the structure of the databases as random access
+files was "obvious". I'll clearly have to update the documentation :-)
+
+I wrote some detailed documentation about the database file format
+somewhere on this list a couple weeks ago. I'll try to find it and
+add it to the literate documentation of asq.
+
+
+t
+
+
+
