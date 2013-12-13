@@ -1,0 +1,357 @@
+From MAILER-DAEMON Mon Apr 01 17:21:06 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UMmA6-0003Oj-Al
+	for mharc-axiom-developer@gnu.org; Mon, 01 Apr 2013 17:21:06 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:48241)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <a.a.letterbox@gmail.com>) id 1UMgTJ-0005Mi-VO
+	for axiom-developer@nongnu.org; Mon, 01 Apr 2013 11:16:40 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <a.a.letterbox@gmail.com>) id 1UMgTD-0005ea-BZ
+	for axiom-developer@nongnu.org; Mon, 01 Apr 2013 11:16:33 -0400
+Received: from mail-lb0-f176.google.com ([209.85.217.176]:44630)
+	by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <a.a.letterbox@gmail.com>) id 1UMgTD-0005e9-4E
+	for axiom-developer@nongnu.org; Mon, 01 Apr 2013 11:16:27 -0400
+Received: by mail-lb0-f176.google.com with SMTP id y8so2011567lbh.21
+	for <axiom-developer@nongnu.org>; Mon, 01 Apr 2013 08:16:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=x-received:message-id:date:from:user-agent:mime-version:to:subject
+	:content-type:content-transfer-encoding;
+	bh=jD+l6d0ltwmid7ojsHDHbzDpqQ2f2V6JNXLEfBvdayA=;
+	b=Y6mF5YNutpuy/oHkae5hiYkA4DveLmtOiJv0pCmqCanZPkd5/8BSlBliO+rFhkhV+Q
+	Z+OmVGbfN7QAvERzH4TrO+A7NIFojFnHhjMYl039BmuK/0kbtmAb9NIwDQbLXP3SWF95
+	YLqZ6hvOe2xgKPWds2xHxFfDQ85GOeDLAjbuw8xPwNjX451Qllk+argtq7KjPtsT9zx/
+	4DbV0+BaHEDEWm944YrwizKvEeMIezDt93Ajqo60JJDZzp/aWkMtsK+VtXhvQNaeXhf9
+	gO1mW4IwPygru59IJVPUzK5LMDnk5sUEkQ+j63hiAey69JVw5x/nShAWoJIb88X7Np5f
+	4xvg==
+X-Received: by 10.112.130.102 with SMTP id od6mr221982lbb.122.1364829385433;
+	Mon, 01 Apr 2013 08:16:25 -0700 (PDT)
+Received: from [159.93.129.186] (thpool3-186.jinr.ru. [159.93.129.186])
+	by mx.google.com with ESMTPS id c7sm2470785lbe.6.2013.04.01.08.16.24
+	(version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+	Mon, 01 Apr 2013 08:16:24 -0700 (PDT)
+Message-ID: <5159A48A.6020903@gmail.com>
+Date: Mon, 01 Apr 2013 19:15:22 +0400
+From: "A.B." <a.a.letterbox@gmail.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64;
+	rv:17.0) Gecko/20130311 Thunderbird/17.0.4
+MIME-Version: 1.0
+To: axiom-developer@nongnu.org
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x [fuzzy]
+X-Received-From: 209.85.217.176
+X-Mailman-Approved-At: Mon, 01 Apr 2013 17:21:04 -0400
+Subject: [Axiom-developer] Higher order derivatives.
+X-BeenThere: axiom-developer@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: Axiom Developers <axiom-developer.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-developer>, 
+	<mailto:axiom-developer-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-developer>
+List-Post: <mailto:axiom-developer@nongnu.org>
+List-Help: <mailto:axiom-developer-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-developer>,
+	<mailto:axiom-developer-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 01 Apr 2013 15:16:41 -0000
+
+Hello.
+
+I have learnt about axiom recently and now I'm trying to apply it to 
+some of my current problems (numerical computations in physics).
+
+I need to evaluate higher order derivatives of Lewis integral ( 
+http://link.aps.org/doi/10.1103/PhysRev.102.537 , Appendix A, eq. 9) for 
+further fortran export.
+
+Using a straightforward approach (see -----v1 below), I run out of 
+memory already on the second derivative.
+
+Following an example from the 'Derivatives' section of the axiom book 
+(sec.1.11), I can evaluate the derivative I need in a general form. (see 
+----v2).
+But when I substitute actual expressions for operators LiBt, LiDt and 
+LiAg, I run out of memory again.
+
+Another way (see ---v3) could be to replace derivatives of operators in 
+the general form by some dummy variables, then actually define them and 
+export to fortran.
+This way looks promising but I do not know how to automate it, so it 
+becomes impractical for derivatives of 2nd order and higher.
+
+So, my question is: what is the best way to evaluate, for example, 5th 
+derivative of 'Li' function from examples below and
+export this result to fortran?
+
+P.S: sorry for my english.
+
+--------------- v1
+
+)clear all
+
+LiBt :=_
+   mu * ((qx-px)^2 + (qy-py)^2 + (qz-pz)^2 + (a+b)^2 )_
+   + b * ( mu^2 + qx^2 + qy^2 + qz^2 + a^2 )_
+   + a * ( mu^2 + px^2 + py^2 + pz^2 + b^2 );
+
+LiAg :=_
+   ( (qx-px)^2 + (qy-py)^2 + (qz-pz)^2 + (a+b)^2 )_
+   * ( qx^2 + qy^2 + qz^2 + (mu+a)^2 )_
+   * ( px^2 + py^2 + pz^2 + (mu+b)^2 );
+
+LiD := sqrt( LiBt^2 - LiAg );
+
+Li := %pi^2 / LiD * log( (LiBt + LiD) / (LiBt - LiD) );
+
+--Runs out of memory during computation.
+dLidMudAdB := D(Li,[mu,a,b]);
+
+----------- v2
+
+)clear all
+
+LiDt := operator 'LiDt
+LiBt := operator 'LiBt
+LiAg := operator 'LiAg
+
+Li := (%pi^2 / LiDt(LiBt(mu,a,b),LiAg(mu,a,b)))_
+     * log(_
+      ( LiBt(mu,a,b) + LiDt( LiBt(mu,a,b), LiAg(mu,a,b)))_
+      / ( LiBt(mu,a,b) - LiDt( LiBt(mu,a,b), LiAg(mu,a,b))) );
+
+dLidMudAdBGeneral := D(Li,[mu,a,b]);
+
+--Runs out of memory.
+dLidMudAdBsubstBt := eval(dLidMudAdBGeneral,_
+   'LiBt, (x) +-> x.1 * ( (qx-px)^2 + (qy-py)^2 + (qz-pz)^2 + (x.2+x.3)^2 )_
+   + x.3 * ( x.1^2 + qx^2 + qy^2 + qz^2 + x.2^2 )_
+   + x.2 * ( x.1^2 + px^2 + py^2 + pz^2 + x.3^2 ));
+-- dLidMudAdBsubstAg := eval(dLidMudAdBsubstBt,_
+--   'LiAg, (x) +-> ( (qx-px)^2 + (qy-py)^2 + (qz-pz)^2 + (x.2+x.3)^2 )_
+--   * ( qx^2 + qy^2 + qz^2 + (x.1+x.2)^2 )_
+--   * ( px^2 + py^2 + pz^2 + (x.1+x.3)^2 ));
+-- dLidMudAdBsubstDt := eval(dLidMudAdBsubstAg, 'LiDt, (x) +-> 
+sqrt(x.1^2 - x.2) );
+
+
+----------v3
+
+)clear all
+
+LiDt := operator 'LiDt
+LiBt := operator 'LiBt
+LiAg := operator 'LiAg
+
+Li := (%pi^2 / LiDt(LiBt(mu,a,b),LiAg(mu,a,b)))_
+     * log(_
+      ( LiBt(mu,a,b) + LiDt( LiBt(mu,a,b), LiAg(mu,a,b)))_
+      / ( LiBt(mu,a,b) - LiDt( LiBt(mu,a,b), LiAg(mu,a,b))) )
+
+dLidMuGeneral := D(Li,mu)
+
+d1DRules := rule
+     D(LiDt(beta,alphagamma),[beta]) == dDdB
+     D(LiDt(beta,alphagamma),[alphagamma]) == dDdAg
+d0DRules := rule
+     LiDt(beta,alphagamma) == LiD
+d1BRules := rule
+     D(LiBt(mu,a,b),[mu]) == dBdMu
+d0BRules := rule
+     LiBt(mu,a,b) == LiB
+d1AgRules := rule
+     D(LiAg(mu,a,b),[mu]) == dAgdMu
+d0AgRules := rule
+     LiAg(mu,a,b) == LiA
+
+dLidMuSubst := 
+d0AgRules(d0BRules(d0DRules(d1AgRules(d1BRules(d1DRules(dLidMuGeneral))))))
+-- Then export dLidMuSubst to fortran.
+-- Then define
+--   LiD := sqrt( b^2 - ag)
+--   dDdB := D(LiD,b)
+--   dDdA := D(LiD,ag)
+-- and similar definitions for dBdMu, dAgdMu, LiB, LiA.
+-- Then somehow export them.
+
+
+
+From MAILER-DAEMON Sat Apr 13 12:41:54 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1UR3WU-0002r7-Pe
+	for mharc-axiom-developer@gnu.org; Sat, 13 Apr 2013 12:41:54 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:39101)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UR3WR-0002r1-KG
+	for axiom-developer@nongnu.org; Sat, 13 Apr 2013 12:41:53 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UR3WQ-0004ki-HG
+	for axiom-developer@nongnu.org; Sat, 13 Apr 2013 12:41:51 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:33012
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1UR3WQ-0004kB-C9
+	for axiom-developer@nongnu.org; Sat, 13 Apr 2013 12:41:50 -0400
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r3DGfhse025848;
+	Sat, 13 Apr 2013 11:41:43 -0500
+Received: by u1204 (Postfix, from userid 1000)
+	id 7C47268765; Sat, 13 Apr 2013 12:41:41 -0400 (EDT)
+From: u1204 <daly@axiom-developer.org>
+To: =?utf-8?B?0JrRg9GA0L7Rh9C60LjQvSDQk9C10L3QvdCw0LTQuNC5?= <genkuro2@mail.ru>
+Date: Sat, 13 Apr 2013 12:41:39 -0400
+Message-ID: <8761zqmlh8.fsf@axiom-developer.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x
+X-Received-From: 209.135.140.38
+Cc: axiom-developer@nongnu.org
+Subject: [Axiom-developer] Speed of compilation
+X-BeenThere: axiom-developer@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: Axiom Developers <axiom-developer.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-developer>, 
+	<mailto:axiom-developer-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-developer>
+List-Post: <mailto:axiom-developer@nongnu.org>
+List-Help: <mailto:axiom-developer-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-developer>,
+	<mailto:axiom-developer-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 13 Apr 2013 16:41:53 -0000
+
+=D0=9A=D1=83=D1=80=D0=BE=D1=87=D0=BA=D0=B8=D0=BD =D0=93=D0=B5=D0=BD=D0=BD=
+=D0=B0=D0=B4=D0=B8=D0=B9,
+
+Axiom does take a while to build. Let me explain why.
+
+In general, Axiom is concentrating on Literate Programming.  The goal is
+to keep Axiom alive by writing down all of the information necessary to
+use, maintain, and modify it.
+
+I was a member of the original development team at IBM. We normally
+developed code, even algebra code, without any documentation and without
+a test suite. As a result, when I got my own code back years later I did
+not understand WHY I wrote the code. I understood WHAT it did and I knew
+it was necessary because removing it broke the system.  I needed all of
+my original background knowledge and experience to build Axiom as open
+source.
+
+That raised the question "How can I make Axiom live beyond the
+current developers?" I believe the answer is Literate Programming.
+
+I have the "Hawaii" test for a Literate Program.  You should be able to
+give a developer a paper copy of your program, send them to Hawaii for a
+2 week, all expense paid vacation, and when they return they should be
+able to maintain and modify the program as well as the current
+developers. To do that you need to write down WHY something exists as
+well as how it works, how to use it, and how to test it. This is
+especially important for the algebra since very few people are domain
+experts.
+
+To see where we'd like to be look at the book "Lisp in Small Pieces".
+Christian has set the gold standard for Axiom documentation.
+
+Axiom is now structured as a 20 volume book set.  The goal is to have
+the full Axiom system source code completely embedded in the books.=20
+Every time the system is modified and rebuilt, all of the books
+are also rebuilt. Eventually it will be normal to require updating the
+human-readable text along with every code change, just as you would with
+any textbook. New algebra will require some background theory as well as
+explanations for code, help text, and a test suite.
+
+Axiom is well on the way to being fully literate. It will take many
+years before anyone gets a Hawaii vacation, of course, but that is the
+goal.=20
+
+Building the documentation and running the test suites every time a
+change is made means that compilation takes longer.  It currently takes
+about 1 hour to build the system without tests and 2.5 hours with full
+testing. Full system builds are done at every commit.
+
+Build times only affect developers, not users. Axiom is focusing on
+making it easier for end users. The )help command has many new pages.
+The test suite has more documented examples. Many of the functions shown
+by the )display operations command have examples of use shown in the
+output. Individual domain test suites and help pages are embedded with
+the source code of the domain so they are part of the documentation a
+user sees in the books. A standard browser based front-end is partially
+built. It will function as a web front and replace both HyperDoc and
+Graphics with standard HTML5.
+
+Writing naked code was acceptable in 1975. Machines were slow. Axiom
+took about 3 weeks for a full build. Build time mattered a lot.
+That is no longer true. Now Human understanding is much more important.
+
+It is now time to raise the standards. We need to expect quality code
+that is well documented (including some theory), easy to modify and
+maintain, with a comprehensive test suite. Human-to-Human communication
+is more important than Human-to-Machine (code).
+
+Tim Daly
+
+
+
+
+From MAILER-DAEMON Sun Apr 14 20:24:10 2013
+Received: from list by lists.gnu.org with archive (Exim 4.71)
+	id 1URXDO-0001p9-D4
+	for mharc-axiom-developer@gnu.org; Sun, 14 Apr 2013 20:24:10 -0400
+Received: from eggs.gnu.org ([208.118.235.92]:49386)
+	by lists.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1URXDM-0001ou-1f
+	for axiom-developer@nongnu.org; Sun, 14 Apr 2013 20:24:09 -0400
+Received: from Debian-exim by eggs.gnu.org with spam-scanned (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1URXDL-0008OO-5M
+	for axiom-developer@nongnu.org; Sun, 14 Apr 2013 20:24:07 -0400
+Received: from vs338.rosehosting.com ([209.135.140.38]:34024
+	helo=axiom-developer.org) by eggs.gnu.org with esmtp (Exim 4.71)
+	(envelope-from <daly@axiom-developer.org>) id 1URXDK-0008NH-Vs
+	for axiom-developer@nongnu.org; Sun, 14 Apr 2013 20:24:07 -0400
+Received: from u1204 (dynamic-acs-72-23-235-203.zoominternet.net
+	[72.23.235.203])
+	by axiom-developer.org (8.12.8/8.12.8) with ESMTP id r3F0O4se028637
+	for <axiom-developer@nongnu.org>; Sun, 14 Apr 2013 19:24:04 -0500
+Received: by u1204 (Postfix, from userid 1000)
+	id 9D28F68759; Sun, 14 Apr 2013 20:24:03 -0400 (EDT)
+From: u1204 <daly@axiom-developer.org>
+To: axiom-developer@nongnu.org
+Message-Id: <20130415002403.9D28F68759@u1204>
+Date: Sun, 14 Apr 2013 20:24:03 -0400 (EDT)
+X-detected-operating-system: by eggs.gnu.org: GNU/Linux 3.x
+X-Received-From: 209.135.140.38
+Subject: [Axiom-developer] Sourceforge Axiom update
+X-BeenThere: axiom-developer@nongnu.org
+X-Mailman-Version: 2.1.14
+Precedence: list
+List-Id: Axiom Developers <axiom-developer.nongnu.org>
+List-Unsubscribe: <https://lists.nongnu.org/mailman/options/axiom-developer>, 
+	<mailto:axiom-developer-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.nongnu.org/archive/html/axiom-developer>
+List-Post: <mailto:axiom-developer@nongnu.org>
+List-Help: <mailto:axiom-developer-request@nongnu.org?subject=help>
+List-Subscribe: <https://lists.nongnu.org/mailman/listinfo/axiom-developer>,
+	<mailto:axiom-developer-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 15 Apr 2013 00:24:09 -0000
+
+Sourceforge has changed the Axiom project to conform to their new
+file structure.
+
+If you have used git to clone Axiom you need to modify your config
+file to point to the new master. 
+
+In .git/config look for the sourceforge URL line. It now needs to read:
+
+[remote "origin"]
+  url = git://git.code.sf.net/p/axiom/code
+  fetch = +refs/heads/*:refs/remotes/origin/*
+
+cloning the code is now done with:
+
+git clone git://git.code.sf.net/p/axiom/code axiom
+
+Tim Daly
+
+
