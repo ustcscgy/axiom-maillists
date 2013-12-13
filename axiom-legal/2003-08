@@ -1,0 +1,998 @@
+From MAILER-DAEMON Fri Aug 01 11:19:08 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19ibgC-0003oe-MT
+	for mharc-axiom-legal@gnu.org; Fri, 01 Aug 2003 11:18:52 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19gRod-0001Ci-Jn
+	for axiom-legal@nongnu.org; Sat, 26 Jul 2003 12:22:39 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19gRnr-0000c7-Oa
+	for axiom-legal@nongnu.org; Sat, 26 Jul 2003 12:21:52 -0400
+Received: from h-66-134-96-17.phlapafg.covad.net ([66.134.96.17]
+	helo=intech19.enhanced.com)
+	by monty-python.gnu.org with esmtp (Exim 4.20)
+	id 19gRnk-0000Of-1w; Sat, 26 Jul 2003 12:21:44 -0400
+Received: from camm by intech19.enhanced.com with local (Exim 3.35 #1 (Debian))
+	id 19gRni-00022T-00; Sat, 26 Jul 2003 12:21:42 -0400
+To: rms@gnu.org
+References: <001001c34d41$b8616730$8783fea9@gazi>
+	<54fzl3skyc.fsf@intech19.enhanced.com>
+	<E19eNFX-0004wj-GC@fencepost.gnu.org>
+	<54znj7mum9.fsf@intech19.enhanced.com>
+	<E19fDpR-0003Cr-Af@fencepost.gnu.org>
+From: Camm Maguire <camm@enhanced.com>
+Date: 26 Jul 2003 12:21:41 -0400
+In-Reply-To: <E19fDpR-0003Cr-Af@fencepost.gnu.org>
+Message-ID: <54adb1z2ay.fsf_-_@intech19.enhanced.com>
+Lines: 133
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Mailman-Approved-At: Fri, 01 Aug 2003 11:18:47 -0400
+Cc: novalis@fsf.org, stavros.macrakis@verizon.net, license-violation@fsf.org,
+	axiom-legal@nongnu.org, sds@gnu.org, maxima@www.ma.utexas.edu,
+	gcl-devel@gnu.org
+Subject: [Axiom-legal] A GCL license proposal
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 26 Jul 2003 16:22:44 -0000
+
+Greetings!  I've been mulling this over and think I have the beginning
+of an idea which I hope will make everyone happy.
+
+Here are my preliminary thoughts:
+
+1) In an ideal world, GCL can do for lisp what gcc has done for C.  I
+   see a strong parallel here, and would like to strengthen the
+   connections between the projects to the benefit of lisp developers
+   and free software users alike.
+
+   As pointed out before, C development in the free software world
+   looks like this: a GPL'ed compiler and linker, an LGPL'ed libc
+   'runtime', and user object code/executables licensed as they wish,
+   as long as they just reference the LGPL'ed libraries.  I think that
+   everyone is happy with this situation.  I know I am; and I believe
+   it has served the cause of free software development in C
+   outstandingly well.
+
+   The problem when extending this to lisp is that, in typical usage,
+   each executable has the compiler, the linker/dumper, the 'runtime'
+   and the users code all dumped into one image.  This is of course
+   not the only way in which binaries can be produced and distributed,
+   but is very convenient.  One could also distribute one or more .o
+   files, and have the user load them themselves.
+
+   So say we followed the C model, and GPL'ed the 'compiler', which
+   includes the linker and dumper, LGPL'ed the 'runtime', which are
+   all the other functions specified in the common lisp spec, and
+   maintained that user produced .o file have the license of the
+   user's choosing.  As GCL produces these via .c, .h, and .data
+   files, and in some cases writes some of itself into the .c files,
+   (specifically cmpinclude.h), we might apply the 'bison exception'
+   in this case if needed.  What would this mean for GCL users?  Here
+   is how I think it would work:
+
+     1) Someone ships a 'traditional' image produced by save-system
+        with all of GCL and their code in it together.  This
+        distributed 'combination' image would be GPL, and the user
+        must supply the source.  The user supplied non-GCL source
+        could be more permissively licensed under BSD as in the case
+        of axiom, as BSD is compatible with GPL.
+
+     2) Someone ships a 'new' image produced by an (as yet to be
+        written) save-system variant which would leave out the
+        compiler, linker, and dumper from the image.  This
+        'combination' image would be treated the same as someone
+        statically linking in libc.  I'm not sure of the details, but
+        the gist would be that user source which did not directly
+        affect the 'runtime' GCL code would not have to be supplied. 
+
+     3) Someone ships binary only .o files according to the license of
+        their choosing, as long as they reference only the LGPL'ed
+        'runtime' functions and not the compiler, linker, or dumper.
+        This is closest to the model of proprietary binaries shipped
+        for GNU/Linux systems today.  Here the user's running GCL is
+        analogous to the OS, their execution of the 'load' command to
+        load the .o files analogous to the action of ld.so in
+        GNU/Linux, and the .o files' invocation of the common lisp
+        runtime functions analogous to proprietary binaries' calling
+        libc functions.  
+
+     4) Someone ships the program in source form according to the
+        license of their choosing for the user's GCL to compile.
+        Can't see a problem here.
+
+
+    It is my preliminary opinion that this would inconvenience no one,
+    make everyone happy, and be arguably fairer all around than the
+    current setup.  In particular, it would free GCL to build upon the
+    excellent GPL'ed compiler/linker infrastructure from the C world,
+    which I think is critical for GCL's long term future.  As I've
+    stated before, I'd like to eventually have GCL act as a gcc
+    frontend in addition to its current mode of operation.  These
+    license issues would doubtlessly only get worse as such a project
+    would unfold.
+
+2)  I think that unexec is a nice feature in GCL, as is the bfd
+    linking, and I don't want to have to get into the business of
+    emasculating the program for licensing reasons, especially as I
+    have yet to hear from anyone who needs/wants a closed source GCL
+    binary.  I don't even relish the idea of trying to reconstruct
+    what happened more than 10 years ago with unexec and Dr. Schelter,
+    though my opinion is that it is very likely he got some permission
+    to uses these files in GCL.  But these files are being continually
+    developed under the GPL, making 'grandfathering' exceptions a bit
+    messy from unexec developers' points of view.  I hope the setup
+    outlined above would enable us to focus on quality, and leave these
+    matters behind us once and for all.
+
+3)  I would like to hear from as many GCL users as possible regarding
+    their opinions on how this would affect their work.  My
+    understanding is that it would not affect GCL's current main
+    users -- maxima, acl2, and axiom, at all.
+
+Take care,
+
+Richard Stallman <rms@gnu.org> writes:
+
+> We should think seriously about switching GCL to the GPL,
+> not assume that the goal is to avoid this.
+> 
+>     2) I am concerned with free software authors who might insist for some
+>        reason on a BSD-like license.  Specifically axiom.
+> 
+> Would they have any particular rational reason for thinking they need
+> this?  Note that we have no intention of changing to either of the BSD
+> licenses.
+> 
+>     3) I feel that any 'predominant' free compiler for a given language
+>        will likely not restrict the license of code merely compiled with
+>        it.
+> 
+> That is true in any case.  Code compiled with GCL's compiler is
+> copyright by its author, not by the copyright holders of GCL.
+> 
+>     6) Its obviously not right to use emacs' unexec under the LGPL without
+>        special permission.  I'm confused as to how this situation arose.
+>        I find some unexec files in the May 10 1994 release of gcl-1.0.
+>        Did Dr. Schelter ever discuss this with you or any other emacs
+>        developers? 
+> 
+> Alas, there is no chance I would remember after ten years, sorry.
+> 
+> 
+> 
+> 
+> 
+> 
+
+-- 
+Camm Maguire			     			camm@enhanced.com
+==========================================================================
+"The earth is but one country, and mankind its citizens."  --  Baha'u'llah
+
+
+
+From MAILER-DAEMON Fri Aug 01 11:24:42 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19ibgD-0003oz-2m
+	for mharc-axiom-legal@gnu.org; Fri, 01 Aug 2003 11:18:53 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19hAzC-0004VR-Va
+	for axiom-legal@nongnu.org; Mon, 28 Jul 2003 12:36:34 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19hAyp-000485-Ha
+	for axiom-legal@nongnu.org; Mon, 28 Jul 2003 12:36:14 -0400
+Received: from out006pub.verizon.net ([206.46.170.106] helo=out006.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.20) id 19hAxg-0003rl-U3
+	for axiom-legal@nongnu.org; Mon, 28 Jul 2003 12:35:01 -0400
+Received: from gazi ([151.203.215.51]) by out006.verizon.net
+	(InterMail vM.5.01.05.33 201-253-122-126-133-20030313) with ESMTP
+	id <20030728163458.BXTQ16647.out006.verizon.net@gazi>;
+	Mon, 28 Jul 2003 11:34:58 -0500
+From: "Stavros Macrakis" <stavros.macrakis@verizon.net>
+To: <rms@gnu.org>,
+	"'Bill Page'" <bill.page1@sympatico.ca>
+Date: Mon, 28 Jul 2003 12:34:38 -0400
+Message-ID: <000901c35526$241b1a20$8783fea9@gazi>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+In-Reply-To: <E19gAP5-0002lh-L2@fencepost.gnu.org>
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+X-Authentication-Info: Submitted using SMTP AUTH at out006.verizon.net from
+	[151.203.215.51] at Mon, 28 Jul 2003 11:34:57 -0500
+X-Mailman-Approved-At: Fri, 01 Aug 2003 11:18:47 -0400
+Cc: novalis@fsf.org, axiom-legal@nongnu.org, license-violation@fsf.org,
+	smustudent1@yahoo.com, fateman@cs.berkeley.edu, sds@gnu.org,
+	maxima@www.ma.utexas.edu
+Subject: [Axiom-legal] RE: [Axiom-developer] Re: [Maxima] Re: GCL used
+	commercially?
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: stavros.macrakis@verizon.net
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 28 Jul 2003 16:36:45 -0000
+
+Stallman says:
+
+> ...But when we make such a decision, it is a strategic one; it is
+> not because we think that non-free projects deserve our cooperation.
+> They never deserve our cooperation.  They deserve to be replaced with=20
+> free software.
+
+This puts it quite clearly.  The GPL is not about defending our work
+(against proprietary forks etc.), it is about constraining others to
+license *their* work under the FSF's preferred terms whenever possible.
+
+The LGPL defends our work very nicely without constraining others'
+work.  That is good enough for me.  I do not claim to have such a
+superior ethical and moral compass as to decide for others what an
+appropriate license for *their* work is.
+
+        -s
+
+
+
+
+From MAILER-DAEMON Sat Aug 02 09:02:24 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19ibgJ-0003r9-IX
+	for mharc-axiom-legal@gnu.org; Fri, 01 Aug 2003 11:18:59 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19hxcQ-00064Z-Vf
+	for axiom-legal@nongnu.org; Wed, 30 Jul 2003 16:32:18 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19hxcO-00063s-Hm
+	for axiom-legal@nongnu.org; Wed, 30 Jul 2003 16:32:17 -0400
+Received: from fencepost.gnu.org ([199.232.76.164])
+	by monty-python.gnu.org with esmtp (Exim 4.20)
+	id 19hxcN-00062o-R0; Wed, 30 Jul 2003 16:32:15 -0400
+Received: from rms by fencepost.gnu.org with local (Exim 4.20)
+	id 19hxcL-0001Yf-IC; Wed, 30 Jul 2003 16:32:13 -0400
+From: Richard Stallman <rms@gnu.org>
+To: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+In-reply-to: <2BE8D331ED40D611812300080219E7FE339CD0@corporateex.drdc-rddc.gc.ca>
+	(Bill.Page@drdc-rddc.gc.ca)
+References: <2BE8D331ED40D611812300080219E7FE339CD0@corporateex.drdc-rddc.gc.ca>
+Message-Id: <E19hxcL-0001Yf-IC@fencepost.gnu.org>
+Date: Wed, 30 Jul 2003 16:32:13 -0400
+X-Mailman-Approved-At: Fri, 01 Aug 2003 11:18:47 -0400
+Cc: novalis@fsf.org, axiom-legal@nongnu.org, license-violation@fsf.org,
+	smustudent1@yahoo.com, fateman@cs.berkeley.edu, sds@gnu.org,
+	maxima@www.ma.utexas.edu, stavros.macrakis@verizon.net
+Subject: [Axiom-legal] Re: GCL used commercially?
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: rms@gnu.org
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 30 Jul 2003 20:32:45 -0000
+
+    I have no trouble agreeing with Richard (and the FSF) about
+    the undesirable nature of closed source software
+
+This seems to be a misunderstanding, because my views are not about
+"open source" or "closed source" software.  Those terms were
+formulated by people who disagree with me, and are closely linked with
+views that disagree with mine.
+
+What we say in the free software movement is that non-free software is
+antisocial.
+
+    Philosophically it
+    does not make sense to me to use legal means (software licenses)
+    to "enforce" freedom.
+
+The GNU GPL uses legal means to protect users freedom from middlemen
+who might wish to pass along the software without the freedom.  We've
+been doing this for many years and it works well.
+
+    I agree with the FSF that the use of copyright law is *not*
+    appropriate for software.
+
+That is not what we say.  We say that software should be free.
+Abolishing copyright would not have this effect.  Rather, its
+effect would be that contracts would be used to make programs
+non-free.
+
+
+
+
+
+From MAILER-DAEMON Sat Aug 02 09:44:09 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19ibgL-0003s7-IO
+	for mharc-axiom-legal@gnu.org; Fri, 01 Aug 2003 11:19:01 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19hxih-0000gK-6Z
+	for axiom-legal@nongnu.org; Wed, 30 Jul 2003 16:38:47 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19hxfG-0007y1-69
+	for axiom-legal@nongnu.org; Wed, 30 Jul 2003 16:35:14 -0400
+Received: from fencepost.gnu.org ([199.232.76.164])
+	by monty-python.gnu.org with esmtp (Exim 4.20)
+	id 19hxdL-0006kZ-Aj; Wed, 30 Jul 2003 16:33:15 -0400
+Received: from rms by fencepost.gnu.org with local (Exim 4.20)
+	id 19hxdK-0001iB-V0; Wed, 30 Jul 2003 16:33:14 -0400
+From: Richard Stallman <rms@gnu.org>
+To: <stavros.macrakis@verizon.net>
+In-reply-to: <000901c35526$241b1a20$8783fea9@gazi>
+	(stavros.macrakis@verizon.net)
+References: <000901c35526$241b1a20$8783fea9@gazi>
+Message-Id: <E19hxdK-0001iB-V0@fencepost.gnu.org>
+Date: Wed, 30 Jul 2003 16:33:14 -0400
+X-Mailman-Approved-At: Fri, 01 Aug 2003 11:18:47 -0400
+Cc: novalis@fsf.org, axiom-legal@nongnu.org, license-violation@fsf.org,
+	smustudent1@yahoo.com, fateman@cs.berkeley.edu, sds@gnu.org,
+	maxima@www.ma.utexas.edu
+Subject: [Axiom-legal] Re: [Axiom-developer] Re: [Maxima] Re: GCL used
+	commercially?
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: rms@gnu.org
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 30 Jul 2003 20:40:00 -0000
+
+    This puts it quite clearly.  The GPL is not about defending our work
+    (against proprietary forks etc.), it is about constraining others to
+    license *their* work under the FSF's preferred terms whenever possible.
+
+The GPL is about protecting our work from misappropriation, and
+leveraging our work so that others who wish to incorporate it in their
+published programs must make those programs free as well.  (See
+http://www.gnu.org/philosophy/pragmatic.html.)
+
+However, it is inaccurate to say that the GPL requires someone to use
+"the FSF's preferred terms" for his code; the GPL does not do that.
+Your changes do not have to be licensed under the GPL specifically.
+They can be released under any GPL-compatible free software license.
+
+
+
+From MAILER-DAEMON Sat Aug 02 11:39:23 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19ibgI-0003qc-MI
+	for mharc-axiom-legal@gnu.org; Fri, 01 Aug 2003 11:18:58 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19hG5j-0006nf-6L
+	for axiom-legal@nongnu.org; Mon, 28 Jul 2003 18:03:39 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19hG4s-0006MJ-Il
+	for axiom-legal@nongnu.org; Mon, 28 Jul 2003 18:02:48 -0400
+Received: from heffalump.fnal.gov ([131.225.9.20])
+	by monty-python.gnu.org with esmtp (Exim 4.20) id 19hG4e-0006Jz-FW
+	for axiom-legal@nongnu.org; Mon, 28 Jul 2003 18:02:32 -0400
+Received: from abacus.dhcp.fnal.gov (abacus.dhcp.fnal.gov [131.225.95.101])
+	by heffalump.fnal.gov
+	(iPlanet Messaging Server 5.2 HotFix 1.10 (built Jan 23 2003))
+	with ESMTPSA id <0HIR00MQA9857T@heffalump.fnal.gov> for
+	axiom-legal@nongnu.org; Mon, 28 Jul 2003 17:02:29 -0500 (CDT)
+Date: Mon, 28 Jul 2003 17:02:30 -0500
+From: James Amundson <amundson@users.sourceforge.net>
+In-reply-to: <2BE8D331ED40D611812300080219E7FE339CD0@corporateex.drdc-rddc.gc.ca>
+To: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+Message-id: <1059429750.13061.2.camel@abacus.dhcp.fnal.gov>
+Organization: None
+MIME-version: 1.0
+X-Mailer: Ximian Evolution 1.2.4
+Content-type: text/plain
+Content-transfer-encoding: 7BIT
+References: <2BE8D331ED40D611812300080219E7FE339CD0@corporateex.drdc-rddc.gc.ca>
+X-Mailman-Approved-At: Fri, 01 Aug 2003 11:18:47 -0400
+Cc: novalis@fsf.org, axiom-legal@nongnu.org, license-violation@fsf.org,
+	sds@gnu.org, Richard Fateman <fateman@cs.berkeley.edu>,
+	Cliff Yapp <smustudent1@yahoo.com>,
+	"'stavros.macrakis@verizon.net'" <stavros.macrakis@verizon.net>,
+	rms@gnu.org
+Subject: [Axiom-legal] Re: [Maxima] Re: GCL used commercially?
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 28 Jul 2003 22:04:08 -0000
+
+Please remove the Maxima mailing list from replies to this thread.
+
+Thank you,
+Jim Amundson
+
+
+
+
+From MAILER-DAEMON Sat Aug 02 12:18:17 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19ibgE-0003pR-KA
+	for mharc-axiom-legal@gnu.org; Fri, 01 Aug 2003 11:18:54 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19hFpM-0005sc-Kn
+	for axiom-legal@nongnu.org; Mon, 28 Jul 2003 17:46:44 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19hFon-0005JY-68
+	for axiom-legal@nongnu.org; Mon, 28 Jul 2003 17:46:10 -0400
+Received: from fw.drenet.dnd.ca ([131.136.242.1])
+	by monty-python.gnu.org with esmtp (Exim 4.20)
+	id 19hFns-0004kF-A8; Mon, 28 Jul 2003 17:45:12 -0400
+Received: (from root@localhost)
+	by fw.drenet.dnd.ca (8.12.9/8.12.8) id h6SLj6c6052999;
+	Mon, 28 Jul 2003 17:45:06 -0400 (EDT)
+Received: from corporateex.drdc-rddc.gc.ca (corporateex.drdc-rddc.gc.ca
+	[131.136.1.77])
+	by fw.drenet.dnd.ca (8.12.9/8.12.9) with ESMTP id h6SLj4Rr052923;
+	Mon, 28 Jul 2003 17:45:04 -0400 (EDT)
+Received: by corporateex.drdc-rddc.gc.ca with Internet Mail Service
+	(5.5.2653.19) id <P5HV1QWK>; Mon, 28 Jul 2003 17:45:47 -0400
+Message-ID: <2BE8D331ED40D611812300080219E7FE339CD0@corporateex.drdc-rddc.gc.ca>
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: axiom-legal@nongnu.org
+Date: Mon, 28 Jul 2003 17:45:46 -0400
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Info: scanned for viruses
+X-Mailman-Approved-At: Fri, 01 Aug 2003 11:18:47 -0400
+Cc: novalis@fsf.org, sds@gnu.org, license-violation@fsf.org,
+	"'stavros.macrakis@verizon.net'" <stavros.macrakis@verizon.net>,
+	fateman@cs.berkeley.edu, smustudent1@yahoo.com,
+	maxima@www.ma.utexas.edu, rms@gnu.org
+Subject: [Axiom-legal] Re: GCL used commercially?
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 28 Jul 2003 21:46:57 -0000
+
+Stavros wrote:
+
+> I do not claim to have such a superior ethical and moral
+> compass as to decide for others what an appropriate license
+> for *their* work is.
+
+I have no trouble agreeing with Richard (and the FSF) about
+the undesirable nature of closed source software and I also
+agree about it being an ethical issue. But I disagree
+completely with the proposed solution. Philosophically it
+does not make sense to me to use legal means (software licenses)
+to "enforce" freedom. This is inherently self-contradictory
+and risks weakening the original argument in favour of freedom
+in the first place. In my mind it is similar to "fighting for
+peace" - a concept that as far as I am concerned has been
+amply disproved by our generation. (Please pardon me if this
+seems like an inappropriate allusion to some of you.)
+
+But I think we can, with no contradiction use legal means to
+*enable* freedom. Then we can use education and example to
+encourage people (and commercial software developers) to choose
+freedom. I think that the GNU foundation, through tools like
+gcc and linux have already demonstrated (to many people's
+surprise) that this strategy actually works very well.
+
+We can (and do) also use legal means to protect the rights
+of authors (developers, designers, etc.) in return for free
+access to their creations. The intent of the law is to
+encourage free innovation and accessibility by making the
+work public.
+
+I agree with the FSF that the use of copyright law is *not*
+appropriate for software. Writing a program is not like
+writing a book. Authors (usually) do not want their work
+plagiarized. (Most) artists want access to their work
+controlled and do not wish it to be copied and used as the
+basis of the art of other people. And certainly not without
+due credit.
+
+Developing software on the other hand is rather more like
+"invention" or industrial design. Inventors do want their
+work to be used by others (but of course usually wish to be
+paid for their efforts). And the government and the public
+do want to encourage this kind of innovation which has so
+clearly contributed to our collective quality of life over
+the last few centuries. However I am not really convinced
+of the appropriateness of software patents either.
+
+Pure mathematicians, theoretical physicists and many other
+scientists (usually) do not try to patent or copyright their
+theorems and results. But they want to publish their results,
+sometimes simply for their own sake, and sometimes to
+establish their credentials among their peers (and thereby
+help to ensure their personal job security, etc.). But they
+do want "credit" and recognition for there work, both
+academically and socially. There are well established social,
+cultural and even economic conventions which make this
+possible.
+
+I think it is one of the great social innovations of the
+Web is that it makes attribution of authorship and allocation
+of "credit" so straight forward and equitable. We simply
+"link" to other people's web pages. In a sense it is easier
+to reference someone else's work than it is to copy it and
+mis-represent it as your own. And of course this has become
+part of the Web culture. I think this is one of the reasons
+that the Web grew (and continues to grow) at such an
+unprecedented pace.
+
+I think the motivations of those who develop free software
+is most similar to the motivations of the scientists. And
+I think they need a similar kind of social and cultural
+protection and encouragement for their efforts. Luckily,
+it seems to me, the Web is just the kind of tool that makes
+this possible.
+
+Of course there will be people who use software for
+unethical purposes just as their are those scientists who
+use science in this manner. But public awareness and
+established cultural norms should help to limit this
+harmful activity. But I still do not wish scientific
+ethics to be enforced by law because I think science
+requires exactly the same kind of freedoms that the FSF
+argues is required for (ethical) software development.
+
+So the bottom line: For axiom and for GCL I am very much
+in favour of the status quo. I think going to GPL would
+be a mistake (though probably not a disastrous mistake).
+Camm's recent proposal that GCL follow the gcc model
+makes the most sense to me. I think the modifications
+required to GCL to make conformance to the gcc developer
+model possible (i.e. make it possible to use GCL to
+develop applications which do not by default inherit the
+full functionality of GCL in the resulting product)
+would not be difficult. So GCL can be more like BSD in
+that respect, i.e. it should be legally possible to
+use GCL to develop software that is not free provide
+of course that it no longer embodies GCL itself.
+
+On the other hand, I am a little worried about Axiom's BSD
+license - especially since Axiom (as it exists now) makes it
+possible to "escape" to the underlying GCL lisp environment
+and this environment is (apparently) an integral part of the
+usual means for the extension of Axiom through the compilation
+of the algebra code library. Does the design of Axiom also
+need to change to be compatible with Camm's proposal for
+GCL i.e. can Axiom be used successfully with the version
+of GCL that does not allow the GCL functionality itself to
+be cloned? Will the GCL functionality that is embedded in
+Axiom be sufficiently well separated and/or separable from
+the Axiom code itself that separate and somewhat incompatible
+licensing terms coexist for the two parts?
+
+Apparently the terms (BSD) under which Axiom was released
+specifically include the possibility that closed source
+extensions of Axiom might be developed for commercial or
+other purposes. If Axiom must be viewed as an extension
+of the full underlying lisp environment, then such closed
+source development would presumably only be possible for
+the version of Axiom based on a lisp with a compatible
+licensing scheme (e.g. CCL, but maybe not GCL).
+
+Perhaps the best approach would be to do nothing at all
+and to allow the social and cultural mechanisms that I
+mentioned above develop along the lines that already
+seem rather well established and in the "right direction".
+I think it is reasonable to expect that the availability
+of an advanced and well supported open source computer
+algebra systems like Axiom (and of course like MAXIMA
+and YACAS and a few others) will establish new examples
+that will encourage the traditionally closed source
+computer algebra developers to become more "open-minded"
+themselves. In fact I think there is some evidence that
+this is already happening.
+
+Regards,
+Bill Page.
+
+
+> -----Original Message-----
+> From: Stavros Macrakis [mailto:stavros.macrakis@verizon.net]
+> Sent: Monday, July 28, 2003 12:35 PM
+> To: rms@gnu.org; 'Bill Page'
+> Cc: novalis@fsf.org; license-violation@fsf.org; 
+> fateman@cs.berkeley.edu;
+> axiom-legal@nongnu.org; sds@gnu.org; maxima@www.ma.utexas.edu;
+> smustudent1@yahoo.com
+> Subject: RE: [Axiom-developer] Re: [Maxima] Re: GCL used commercially?
+> 
+> 
+> Stallman says:
+> 
+> > ...But when we make such a decision, it is a strategic one;
+> > it is not because we think that non-free projects deserve our
+> > cooperation. They never deserve our cooperation.  They deserve
+> > to be replaced with free software.
+> 
+> This puts it quite clearly.  The GPL is not about defending our
+> work (against proprietary forks etc.), it is about constraining
+> others to license *their* work under the FSF's preferred terms
+> whenever possible.
+> 
+> The LGPL defends our work very nicely without constraining others'
+> work.  That is good enough for me.  I do not claim to have such a
+> superior ethical and moral compass as to decide for others what an
+> appropriate license for *their* work is.
+> 
+>         -s
+> 
+
+
+
+> -----Original Message-----
+> From: Richard Stallman [mailto:rms@gnu.org]
+> Sent: Sunday, July 27, 2003 2:40 PM
+> To: Mike Dewar
+> Cc: novalis@fsf.org; stavros.macrakis@verizon.net;
+> license-violation@fsf.org; sds@gnu.org; fateman@cs.berkeley.edu;
+> axiom-developer@nongnu.org; smustudent1@yahoo.com;
+> maxima@www.ma.utexas.edu
+> Subject: Re: [Axiom-developer] Re: [Maxima] Re: GCL used commercially?
+> 
+> [Mike Dewar wrote:]
+> >     That is a very broad and misleading statement.  Many 
+> > so-called "free" licenses, in particular the GPL, require
+> > computer users to give up their freedom as well.
+> 
+> The GPL only stops you from denying other users their freedom.
+> See http://www.gnu.org/philosophy/freedom-or-power.html for
+> more explanation.
+> 
+> 
+> _______________________________________________
+> Axiom-developer mailing list
+> Axiom-developer@nongnu.org
+> http://mail.nongnu.org/mailman/listinfo/axiom-developer
+> 
+
+
+
+
+From MAILER-DAEMON Sat Aug 02 13:37:11 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19ibgM-0003sH-0A
+	for mharc-axiom-legal@gnu.org; Fri, 01 Aug 2003 11:19:02 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19h8lw-0004zw-Rc
+	for axiom-legal@nongnu.org; Mon, 28 Jul 2003 10:14:44 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19h8lt-0004xW-La
+	for axiom-legal@nongnu.org; Mon, 28 Jul 2003 10:14:43 -0400
+Received: from mail22.messagelabs.com ([193.109.255.115])
+	by monty-python.gnu.org with smtp (Exim 4.20) id 19h8lr-0004rj-Sd
+	for axiom-legal@nongnu.org; Mon, 28 Jul 2003 10:14:40 -0400
+X-VirusChecked: Checked
+X-Env-Sender: miked@nag.co.uk
+X-Msg-Ref: server-3.tower-22.messagelabs.com!1059401663!78538
+X-StarScan-Version: 5.0.7; banners=nag.co.uk,-,-
+Received: (qmail 32392 invoked from network); 28 Jul 2003 14:14:23 -0000
+Received: from smtp-1.star.net.uk (212.125.75.70)
+	by server-3.tower-22.messagelabs.com with SMTP;
+	28 Jul 2003 14:14:23 -0000
+Received: (qmail 7407 invoked from network); 28 Jul 2003 14:14:22 -0000
+Received: from nagmx1.nag.co.uk (HELO nag.co.uk) (62.231.145.242)
+	by smtp-1.star.net.uk with SMTP; 28 Jul 2003 14:14:22 -0000
+Received: from brackley.nag.co.uk (brackley.nag.co.uk [192.156.217.21])
+	by nag.co.uk (8.9.3/8.9.3) with ESMTP id PAA20392
+	for <axiom-legal@nongnu.org>; Mon, 28 Jul 2003 15:14:16 +0100 (BST)
+Received: from nag.co.uk (IDENT:root@trowbridge.nag.co.uk [192.156.217.69])
+	by brackley.nag.co.uk (8.11.1/8.11.1) with ESMTP id h6SEEpl20790
+	for <axiom-legal@nongnu.org>; Mon, 28 Jul 2003 15:14:51 +0100 (BST)
+	(envelope-from miked@nag.co.uk)
+Received: (from miked@localhost) by nag.co.uk (8.9.3/8.9.3) id PAA18877
+	for axiom-legal@nongnu.org; Mon, 28 Jul 2003 15:14:13 +0100
+Date: Mon, 28 Jul 2003 15:14:13 +0100
+From: Mike Dewar <miked@nag.co.uk>
+To: axiom-legal@nongnu.org
+Message-ID: <20030728151413.D18847@nag.co.uk>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Mailer: Mutt 1.0.1i
+X-Mailman-Approved-At: Fri, 01 Aug 2003 11:18:47 -0400
+Subject: [Axiom-legal] (no subject)
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 28 Jul 2003 14:14:45 -0000
+
+subscribe
+
+
+________________________________________________________________________
+This e-mail has been scanned for all viruses by Star Internet. The
+service is powered by MessageLabs. For more information on a proactive
+anti-virus service working around the clock, around the globe, visit:
+http://www.star.net.uk
+________________________________________________________________________
+
+
+
+From MAILER-DAEMON Sat Aug 02 20:46:27 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19j70w-0007jG-RL
+	for mharc-axiom-legal@gnu.org; Sat, 02 Aug 2003 20:46:22 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19j70o-0007go-JW
+	for axiom-legal@nongnu.org; Sat, 02 Aug 2003 20:46:14 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19j0oy-0005HM-Bd
+	for axiom-legal@nongnu.org; Sat, 02 Aug 2003 14:10:07 -0400
+Received: from [199.232.41.8] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtp (Exim 4.20) id 19j01E-000100-MI
+	for axiom-legal@nongnu.org; Sat, 02 Aug 2003 13:18:12 -0400
+Received: from smtp3.wanadoo.fr ([193.252.22.25] helo=mwinf0604.wanadoo.fr)
+	by mx20.gnu.org with esmtp (Exim 4.20) id 19iw18-000844-By
+	for axiom-legal@nongnu.org; Sat, 02 Aug 2003 09:01:50 -0400
+Received: from oops (ARennes-303-1-14-90.w81-50.abo.wanadoo.fr [81.50.13.90])
+	by mwinf0604.wanadoo.fr (SMTP Server) with ESMTP
+	id 7B01F28000CC; Sat,  2 Aug 2003 15:00:39 +0200 (CEST)
+Received: from david by oops with local (Exim 3.35 #1 (Debian))
+	id 19ivzx-0000fg-00; Sat, 02 Aug 2003 15:00:37 +0200
+To: stavros.macrakis@verizon.net
+Subject: Re: [Axiom-legal] RE: [Axiom-developer] Re: [Maxima] Re: GCL used
+	commercially?
+References: <000901c35526$241b1a20$8783fea9@gazi>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Sat, 02 Aug 2003 15:00:37 +0200
+In-Reply-To: <000901c35526$241b1a20$8783fea9@gazi> (Stavros Macrakis's
+	message of "Mon, 28 Jul 2003 12:34:38 -0400")
+Message-ID: <87k79w5i4q.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1002 (Gnus v5.10.2) Emacs/21.2 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: =?iso-8859-1?Q?David_Mentr=E9?= <david.mentre@wanadoo.fr>
+Cc: novalis@fsf.org, axiom-legal@nongnu.org, license-violation@fsf.org,
+	rms@gnu.org, sds@gnu.org, fateman@cs.berkeley.edu, smustudent1@yahoo.com
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 03 Aug 2003 00:46:17 -0000
+
+
+[ I have removed the Maxima people from this thread, as requested. ]
+
+Hello Stavros,
+
+"Stavros Macrakis" <stavros.macrakis@verizon.net> writes:
+
+> Stallman says:
+>
+>> ...But when we make such a decision, it is a strategic one; it is
+>> not because we think that non-free projects deserve our cooperation.
+>> They never deserve our cooperation.  They deserve to be replaced with 
+>> free software.
+[...]
+> The LGPL defends our work very nicely without constraining others'
+> work.  That is good enough for me.  I do not claim to have such a
+> superior ethical and moral compass as to decide for others what an
+> appropriate license for *their* work is.
+
+I totally agree with you on the ethical or moral point of view. I do not
+claim that the "all software should be free" claim is ethically
+superior.
+
+However, as a GNU GPL proponent, I do not like at all that some people
+could do some proprietary software (i.e. their work) using *my* free
+software work. If they don't want to play the free software game, ok,
+that's their right. But then, they should redo (or buy or wathever) all
+the hard work that has been invested in free software.
+
+That's said and regarding Axiom current BSD licensing, I agree with
+Bill's status quo proposal. The most urgent now is to have a strong and
+working Axiom system, with its community. Time will tell if the BSD
+licensing is an error. At that time, we will take the appropriate
+measures.
+
+Best regards,
+david
+-- 
+ david.mentre@wanadoo.fr
+
+
+
+From MAILER-DAEMON Sun Aug 03 09:03:12 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19jIW0-0000q2-7Z
+	for mharc-axiom-legal@gnu.org; Sun, 03 Aug 2003 09:03:12 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19jAx3-0005Yy-68
+	for axiom-legal@nongnu.org; Sun, 03 Aug 2003 00:58:37 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19j8fB-0002kH-JB
+	for axiom-legal@nongnu.org; Sat, 02 Aug 2003 22:32:32 -0400
+Received: from [206.46.170.140] (helo=out001.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.20) id 19izCm-0007X8-Mu
+	for axiom-legal@nongnu.org; Sat, 02 Aug 2003 12:26:04 -0400
+Received: from gazi ([68.163.226.161]) by out001.verizon.net
+	(InterMail vM.5.01.05.33 201-253-122-126-133-20030313) with ESMTP
+	id <20030802145607.EKJA12592.out001.verizon.net@gazi>;
+	Sat, 2 Aug 2003 09:56:07 -0500
+From: "Stavros Macrakis" <stavros.macrakis@verizon.net>
+To: =?iso-8859-1?Q?'David_Mentr=E9'?= <david.mentre@wanadoo.fr>
+Subject: RE: [Axiom-legal] RE: [Axiom-developer] Re: [Maxima] Re: GCL used
+	commercially?
+Date: Sat, 2 Aug 2003 10:55:47 -0400
+Message-ID: <000c01c35906$293438f0$8783fea9@gazi>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+In-reply-to: <87k79w5i4q.fsf@wanadoo.fr>
+Importance: Normal
+X-Authentication-Info: Submitted using SMTP AUTH at out001.verizon.net from
+	[68.163.226.161] at Sat, 2 Aug 2003 09:56:06 -0500
+X-Mailman-Approved-At: Sun, 03 Aug 2003 09:03:10 -0400
+Cc: novalis@fsf.org, axiom-legal@nongnu.org, license-violation@fsf.org,
+	rms@gnu.org, sds@gnu.org, fateman@cs.berkeley.edu, smustudent1@yahoo.com
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: stavros.macrakis@verizon.net
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 03 Aug 2003 05:58:29 -0000
+
+Stallman:
+> non-free projects... never deserve our cooperation.
+> They deserve to be replaced with free software.
+
+Macrakis:
+> > The LGPL defends our work very nicely without constraining others'=20
+> > work.  That is good enough for me.
+
+Mentr=E9:
+> I do not like at all that some people could do some proprietary
+> software (i.e. their work) using *my* free software work.
+
+That is precisely the difference between your position and mine.  Though
+I would *prefer* that others contribute free software, I am happy to
+have them write proprietary software on top of my free software.  In
+fact, that is part of its freedom.  Similarly, I expect to be able to
+use proprietary modules in my free software.  I would consider it
+grossly unethical (and probably illegally anti-competitive) for a vendor
+of proprietary software to forbid me to link my free software to their
+proprietary software.
+
+All that being said, I am not really interested in pursuing this
+discussion further.  I think everyone has laid out his or her position
+clearly.
+
+      -s
+
+
+
+
+From MAILER-DAEMON Fri Aug 15 01:54:12 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.20)
+	id 19nXXQ-0006hA-2X
+	for mharc-axiom-legal@gnu.org; Fri, 15 Aug 2003 01:54:12 -0400
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.20)
+	id 19nSkE-00053k-9T
+	for axiom-legal@nongnu.org; Thu, 14 Aug 2003 20:47:06 -0400
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.20)
+	id 19nSj8-0002EQ-Ey
+	for axiom-legal@nongnu.org; Thu, 14 Aug 2003 20:46:29 -0400
+Received: from [206.46.170.172] (helo=pop015.verizon.net)
+	by monty-python.gnu.org with esmtp (Exim 4.20) id 19nSiq-0001SY-Np
+	for axiom-legal@nongnu.org; Thu, 14 Aug 2003 20:45:40 -0400
+Received: from gazi ([68.163.140.155]) by pop015.verizon.net
+	(InterMail vM.5.01.05.33 201-253-122-126-133-20030313) with ESMTP
+	id <20030815004536.YPRI29447.pop015.verizon.net@gazi>;
+	Thu, 14 Aug 2003 19:45:36 -0500
+From: "Stavros Macrakis" <stavros.macrakis@verizon.net>
+To: <rms@gnu.org>
+Date: Thu, 14 Aug 2003 20:45:13 -0400
+Message-ID: <002a01c362c6$7da0c240$8783fea9@gazi>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4510
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+In-Reply-To: <E19hxdK-0001iB-V0@fencepost.gnu.org>
+Importance: Normal
+X-Authentication-Info: Submitted using SMTP AUTH at pop015.verizon.net from
+	[68.163.140.155] at Thu, 14 Aug 2003 19:45:35 -0500
+X-Mailman-Approved-At: Fri, 15 Aug 2003 01:54:09 -0400
+Cc: novalis@fsf.org, axiom-legal@nongnu.org, license-violation@fsf.org,
+	smustudent1@yahoo.com, fateman@cs.berkeley.edu, sds@gnu.org
+Subject: [Axiom-legal] RE: [Axiom-developer] Re: [Maxima] Re: GCL used
+	commercially?
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+Reply-To: stavros.macrakis@verizon.net
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 15 Aug 2003 00:48:03 -0000
+
+If anyone wants to hear my counter-quibble about the meaning of
+"preferred terms", let me know (I sort of doubt it).
+
+       -s
+
+
+
+

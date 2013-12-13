@@ -1,0 +1,1866 @@
+From MAILER-DAEMON Tue Sep 04 20:23:25 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1ISig0-0003NZ-VI
+	for mharc-axiom-legal@gnu.org; Tue, 04 Sep 2007 20:23:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1ISifz-0003KN-Kz
+	for axiom-legal@nongnu.org; Tue, 04 Sep 2007 20:23:23 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1ISify-0003JE-QG
+	for axiom-legal@nongnu.org; Tue, 04 Sep 2007 20:23:23 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1ISify-0003J1-M3
+	for axiom-legal@nongnu.org; Tue, 04 Sep 2007 20:23:22 -0400
+Received: from nf-out-0910.google.com ([64.233.182.186])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1ISify-0001kU-72
+	for axiom-legal@nongnu.org; Tue, 04 Sep 2007 20:23:22 -0400
+Received: by nf-out-0910.google.com with SMTP id d21so2060987nfb
+	for <axiom-legal@nongnu.org>; Tue, 04 Sep 2007 17:23:21 -0700 (PDT)
+Received: by 10.86.90.2 with SMTP id n2mr4706665fgb.1188951800813;
+	Tue, 04 Sep 2007 17:23:20 -0700 (PDT)
+Received: by 10.86.57.11 with HTTP; Tue, 4 Sep 2007 17:23:20 -0700 (PDT)
+Message-ID: <fbcd16d40709041723mee2190fhde60190d61ec4944@mail.gmail.com>
+Date: Tue, 4 Sep 2007 20:23:20 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: Axiom-Legal <axiom-legal@nongnu.org>
+In-Reply-To: <fbcd16d40709041719v55b25e4bq44f14c78e4442109@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <9qejheew10.fsf@aquin.mat.univie.ac.at>
+	<fbcd16d40709040705k46f3605eve24c2268217c9496@mail.gmail.com>
+	<f3c595c60709041213t2518348en49359620ae3af576@mail.gmail.com>
+	<fbcd16d40709041312w78f7b1ccs1ca0e07b5821053b@mail.gmail.com>
+	<46DDDF39.6080508@cesmail.net>
+	<fbcd16d40709041719v55b25e4bq44f14c78e4442109@mail.gmail.com>
+X-Detected-Kernel: Linux 2.6 (newer, 2)
+Subject: [Axiom-legal] Fwd: [Axiom-developer] Re: [open-axiom-devel]
+	[fricas-devel] umlaut in Guess - mailing list for algebra
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 05 Sep 2007 00:23:24 -0000
+
+[Oops, I screwed up the mailing list address.]
+
+---------- Forwarded message ----------
+From: Bill Page <bill.page@newsynthesis.org>
+Date: Sep 4, 2007 8:19 PM
+Subject: Re: [Axiom-developer] Re: [open-axiom-devel] [fricas-devel]
+umlaut in Guess - mailing list for algebra
+To: "M. Edward (Ed) Borasky" <znmeb@cesmail.net>
+Cc: axiom-legal@axiom-developer.org
+
+
+[I've Cc'd this to axiom-legal rather than the original Cc: list since
+I expect some people do not want to be force to follow this sort of
+digression.... ]
+
+On 9/4/07, M. Edward (Ed) Borasky <znmeb@cesmail.net> wrote:
+> Bill Page wrote:
+> > One of the defining characteristics of GPL is that *if* you
+> > incorporate *any* source code from some other package that is licensed
+> > under GPL into some new product - _whatever the license of the
+> > original code_ - *then* the entire derived work must be licensed under
+> > GPL. That is what is meant by saying that GPL is a "viral license" and
+> > that it "infects" the otherwise compatible licenses of other software
+> > packages. (Of course people who phrase things this way usually intend
+> > to cast GPL in an apparently negative light.) But this is a deliberate
+> > feature of GPL to which some people object and other people applaud.
+> > It all depends on how you think open source licensing and free access
+> > to source code is best promoted.
+
+I am sorry Ed, it is not my intention to defend GPL but to me your
+comments below sound inflammatory and without logic.
+
+>
+> It doesn't matter how I *think* ... the license makes very clear what I
+> am allowed to *do* and what I am *not* allowed to do. In the end, the
+> effect is that people with software intellectual property must spend
+> expensive legal and engineering person-hours to prevent infection and
+> prevent disclosure of things that they have a perfect legal right *not*
+> to disclose.
+
+I meant that the reason why some people think GPL as a good strategy
+and why other people disagree depends on their subjective views about
+how best to promote open source software development. In many cases
+this does not depend directly on what the license actually says but
+rather how people react to what it says. Some people do not like to be
+forced to do something based on a matter of principle alone and would
+not compromise on this even if there might in some cases be some
+positive effects when viewed in the large.
+
+GPL definitely states that if you use GPL code in some software
+package then you do *not* retain any legal right to prevent disclosure
+of the source code of other parts of the whole package. It is written
+this way precisely because the Free Software Foundation (FSF) wants to
+discourage the view of software as "intellectual property" in the
+usual sense. They want all software to be freely available to all. You
+can say that in your opinion this is stupid or irritating, but I do
+not think you can argue that it violates your rights. After all you
+are perfectly free not to use any GPL code in your package if you do
+not accept these conditions.
+
+> >
+>
+> [snip]
+>
+> >
+> > I am sorry to be so pedantic and possibly annoying to some people but
+> > I hope that what I am saying makes sense.
+>
+> It's not *you* that annoys people -- it's the chaos caused by insane
+> software licenses like the GPL.
+
+I do not think that GPL is "insane" even if I do not agree with it.
+
+> It's software licensed "academic" style
+> - -- freely available to faculty and students in source form but only
+> available to corporate users for a large license fee. This one
+> particularly irks me, given the support major universities get from
+> major corporations in donations, scholarships for students of employees,
+> discounts on equipment and supplies, adjunct professors, etc.
+
+What you describe does not apply to GPL. GPL specifically says that
+the full source of the software must be available to *all* - even
+corporations. The only requirement is that anyone who uses GPL
+software must license the entire result as GPL. Of course this often
+makes it unattractive to corporate users who view their own software
+as "closed source" property - but some corporations do not see things
+this way and they still manage to make a profit.
+
+> The non-commercial virus in Aldor is another case.
+
+I think this is a different case from GPL. The APL2 non-commercial use
+clause specifically restricts the use of Aldor in certain "commercial"
+circumstances but GPL does not. GPL only adds additional requirements
+that might be unattractive to some people under these same
+circumstances - it does not directly prevent it's use.
+
+What makes APL2 "viral" is different. It is because the most likely
+use of Aldor in Axiom is as a replacement for the Spad library
+compiler and Axiom can not exist without such a library compiler. Once
+you start down the road of writing essential Aldor-based library code
+or re-writing Spad code in Aldor, you make it so that Aldor
+effectively becomes a requirement for building Axiom. So then Axiom is
+forced to adopt the APL2 non-commercial use clause in order to allow
+Axiom to be distributable as a single complete system including the
+now essential component Aldor.
+
+>
+> The saddest part is that in many cases the *quality* of open source
+> software is far superior to expensive closed source packages. In my own
+> area, I'll take R over any number crunching/statistics/graphics software
+> on the planet. I'll take Ruby, Perl and Python over Visual Basic for
+> scripting *even* on a Windows platform! For some special cases, there
+> are compilers better than GCC, but in the *general* case I don't think
+> there's anything that can touch it.
+
+I agree. And I guess that is what the FSF is deliberately trying to
+pro-actively promote. But philosophically this does make GPL
+deliberately less-free is this sense. Except for software that is
+specifically licensed as "public domain", I think the modified BSD
+license is probably the "most-free" of any commonly used open source
+license - it is sufficiently free to allow it's use in non-free
+software without any "viral" side-effects. In the best of all possible
+worlds this is probably the license that most people would prefer for
+open source software. But the FSF seems to think that it is necessary
+to compromise on this freedom in order to actively promote the early
+dissemination of the open source concept to the widest possible range
+of software developers rather than waiting and hoping for them to
+eventually realize the benefits of open source development in the
+longer term themselves.
+
+Again, I think whether you view this as a good or bad thing is a
+subjective issue unless or until there can be some proof (maybe some
+kind of statistics about software development or something like that)
+that shows objectively whether GPL or BSD is the more effective
+strategy for promoting open source. For sure I do not know.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Sat Sep 08 09:12:33 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IU06y-0006Dj-Sk
+	for mharc-axiom-legal@gnu.org; Sat, 08 Sep 2007 09:12:32 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1ISpMg-0002od-3m
+	for axiom-legal@nongnu.org; Wed, 05 Sep 2007 03:31:54 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1ISpMd-0002oK-IZ
+	for axiom-legal@nongnu.org; Wed, 05 Sep 2007 03:31:53 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1ISpMd-0002oH-Bf
+	for axiom-legal@nongnu.org; Wed, 05 Sep 2007 03:31:51 -0400
+Received: from pat35-1-82-231-148-189.fbx.proxad.net ([82.231.148.189]
+	helo=esterelle.lehobey.net)
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA1:32)
+	(Exim 4.60) (envelope-from <Frederic@Lehobey.net>)
+	id 1ISpMc-0006hL-VF
+	for axiom-legal@nongnu.org; Wed, 05 Sep 2007 03:31:51 -0400
+Received: from melusine.lehobey.net ([2002:52e7:94bd:0:2e0:4cff:fedb:e059]
+	helo=melusine.proxience.net)
+	by esterelle.lehobey.net with esmtp (Exim 4.63)
+	(envelope-from <Frederic@Lehobey.net>) id 1ISpMZ-0000Zx-5W
+	for axiom-legal@nongnu.org; Wed, 05 Sep 2007 09:31:47 +0200
+Received: from lehobey by melusine.proxience.net with local (Exim 4.63)
+	(envelope-from <Frederic@Lehobey.net>) id 1ISpMY-0001I9-Gf
+	for axiom-legal@nongnu.org; Wed, 05 Sep 2007 09:31:46 +0200
+Date: Wed, 5 Sep 2007 09:31:46 +0200
+To: Axiom-Legal <axiom-legal@nongnu.org>
+Subject: Re: [Axiom-legal] Fwd: [Axiom-developer] Re: [open-axiom-devel]
+	[fricas-devel] umlaut in Guess - mailing list for algebra
+Message-ID: <20070905073146.GA4646@melusine.lehobey.net>
+References: <9qejheew10.fsf@aquin.mat.univie.ac.at>
+	<fbcd16d40709040705k46f3605eve24c2268217c9496@mail.gmail.com>
+	<f3c595c60709041213t2518348en49359620ae3af576@mail.gmail.com>
+	<fbcd16d40709041312w78f7b1ccs1ca0e07b5821053b@mail.gmail.com>
+	<46DDDF39.6080508@cesmail.net>
+	<fbcd16d40709041719v55b25e4bq44f14c78e4442109@mail.gmail.com>
+	<fbcd16d40709041723mee2190fhde60190d61ec4944@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+In-Reply-To: <fbcd16d40709041723mee2190fhde60190d61ec4944@mail.gmail.com>
+User-Agent: Mutt/1.5.13 (2006-08-11)
+From: Frederic Lehobey <Frederic@Lehobey.net>
+X-Detected-Kernel: Genre and OS details not recognized.
+X-Mailman-Approved-At: Sat, 08 Sep 2007 09:12:30 -0400
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 05 Sep 2007 07:31:54 -0000
+
+Hi,
+
+Bill Page <bill.page@newsynthesis.org> (2007-09-04 20:23:20) :
+
+>                                          GPL specifically says that
+> the full source of the software must be available to *all* - even
+> corporations.
+
+This is not correct. Please read it. In short words, GPL requires
+availability of source code to *users* of the software. Saying it
+requires *public* disclosure is old FUD.
+
+(By the way, licenses that discriminate between users are commonly
+considered neither free -- as in freedom -- nor open source licenses.)
+
+>               The only requirement is that anyone who uses GPL
+> software must license the entire result as GPL.
+
+This is not correct either. This is only for *binaries* that you
+*distribute*, because the right to redistribute the (GPL parts of the)
+software is given to you *by* the GPL. But if you do not redistribute
+and only *use* the software, you are not bound by anything. You do not
+even have to accept the GPL license (it is only needed if you want the
+right to redistribute).
+
+> > The non-commercial virus in Aldor is another case.
+> 
+> I think this is a different case from GPL. The APL2 non-commercial use
+> clause specifically restricts the use of Aldor in certain "commercial"
+> circumstances but GPL does not.
+
+APL2 is neither free (as in freedom) nor open source software. I do
+not understand what makes you so enthusiastic about it. Nothing new
+under the sun.
+
+Best regards,
+Frédéric Lehobey
+
+
+
+From MAILER-DAEMON Sat Sep 08 16:46:27 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IU7CF-00047l-5m
+	for mharc-axiom-legal@gnu.org; Sat, 08 Sep 2007 16:46:27 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IU7CD-00047e-LP
+	for axiom-legal@nongnu.org; Sat, 08 Sep 2007 16:46:25 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IU7CC-00047R-6R
+	for axiom-legal@nongnu.org; Sat, 08 Sep 2007 16:46:25 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IU7CC-00047O-3h
+	for axiom-legal@nongnu.org; Sat, 08 Sep 2007 16:46:24 -0400
+Received: from mu-out-0910.google.com ([209.85.134.186])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1IU7CB-0002rg-J6
+	for axiom-legal@nongnu.org; Sat, 08 Sep 2007 16:46:23 -0400
+Received: by mu-out-0910.google.com with SMTP id w8so1175742mue
+	for <axiom-legal@nongnu.org>; Sat, 08 Sep 2007 13:46:21 -0700 (PDT)
+Received: by 10.86.77.5 with SMTP id z5mr2444763fga.1189284380996;
+	Sat, 08 Sep 2007 13:46:20 -0700 (PDT)
+Received: by 10.86.77.14 with HTTP; Sat, 8 Sep 2007 13:46:20 -0700 (PDT)
+Message-ID: <fbcd16d40709081346h6239c9f8ie1449a877369e280@mail.gmail.com>
+Date: Sat, 8 Sep 2007 16:46:20 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Frederic Lehobey" <Frederic@lehobey.net>
+Subject: Re: [Axiom-legal] Fwd: [Axiom-developer] Re: [open-axiom-devel]
+	[fricas-devel] umlaut in Guess - mailing list for algebra
+In-Reply-To: <20070905073146.GA4646@melusine.lehobey.net>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <9qejheew10.fsf@aquin.mat.univie.ac.at>
+	<fbcd16d40709040705k46f3605eve24c2268217c9496@mail.gmail.com>
+	<f3c595c60709041213t2518348en49359620ae3af576@mail.gmail.com>
+	<fbcd16d40709041312w78f7b1ccs1ca0e07b5821053b@mail.gmail.com>
+	<46DDDF39.6080508@cesmail.net>
+	<fbcd16d40709041719v55b25e4bq44f14c78e4442109@mail.gmail.com>
+	<fbcd16d40709041723mee2190fhde60190d61ec4944@mail.gmail.com>
+	<20070905073146.GA4646@melusine.lehobey.net>
+X-Detected-Kernel: Linux 2.6 (newer, 2)
+Cc: Axiom-Legal <axiom-legal@nongnu.org>
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 08 Sep 2007 20:46:25 -0000
+
+On 9/5/07, Frederic Lehobey wrote:
+>
+> Bill Page 2007-09-04 20:23:20) :
+>
+> >                                          GPL specifically says that
+> > the full source of the software must be available to *all* -
+> > even corporations.
+>
+> This is not correct. Please read it.
+
+Of course I have read it.
+
+> In short words, GPL requires availability of source code to
+> *users* of the software. Saying it requires *public* disclosure
+> is old FUD.
+
+I don't understand the distinction you are making. To me you have just
+said the same thing that I said.
+
+>
+> (By the way, licenses that discriminate between users are commonly
+> considered neither free -- as in freedom -- nor open source licenses.)
+>
+
+I agree.
+
+> >               The only requirement is that anyone who uses GPL
+> > software must license the entire result as GPL.
+>
+> This is not correct either. This is only for *binaries* that you
+> *distribute*, because the right to redistribute the (GPL parts of the)
+> software is given to you *by* the GPL. But if you do not redistribute
+> and only *use* the software, you are not bound by anything. You do not
+> even have to accept the GPL license (it is only needed if you want the
+> right to redistribute).
+>
+
+Of course. That is trivially true. I am talking about "use" in the
+sense of incorporating some GPL software into a new package which I
+assume that one intends to distribute - otherwise these comments are
+just empty. The end user is free to use this software for their own
+use. GPL does not place any restriction on whether or not that use
+includes using the software for commercial purposes. APL2 does include
+such a restriction.
+
+> > > The non-commercial virus in Aldor is another case.
+> >
+> > I think this is a different case from GPL. The APL2 non-commercial use
+> > clause specifically restricts the use of Aldor in certain "commercial"
+> > circumstances but GPL does not.
+>
+> APL2 is neither free (as in freedom) nor open source software.
+
+I do not know what definition of "open source" you are using but I
+certainly agree that it is not free (as in freedom). But neither is
+GPL. You are not free to use GPL software anyway you like. It is
+specifically limited so that you may only use GPL software in a manner
+which is considered to be beneficial to making more software open in
+the same way via the copyleft provisions. As far as I can see, the
+lack of freedom in APL2 is similar in magnitude but quite different in
+intent.
+
+> I do not understand what makes you so enthusiastic about it. Nothing new
+> under the sun.
+>
+
+I am enthusiastic about the fact that Aldor source code is now easily
+available under a license that will allow me (and presumably other
+interested people) to make improvements to it and to use it in my work
+without the fear that someday my investment in this work may no longer
+be available to me. Prior to APL2 this was only possible by making a
+special request to aldor.org and the future was much less certain. Now
+all I have to do is go to the aldor.org website and download it from
+the svn repository. The rest of this license stuff is mostly
+irrelevant until or unless it actually gets in the way of some thing
+that I or some other new Aldor  or Axiom developer really wants to do
+with it. At this time I am certainly not interested in any possible
+commercial uses Aldor. Perhaps other people are...
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Sat Sep 08 18:33:49 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IU8s9-0006FW-RI
+	for mharc-axiom-legal@gnu.org; Sat, 08 Sep 2007 18:33:49 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IU8s8-0006Dc-2z
+	for axiom-legal@nongnu.org; Sat, 08 Sep 2007 18:33:48 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IU8s4-0006CA-TX
+	for axiom-legal@nongnu.org; Sat, 08 Sep 2007 18:33:47 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IU8s4-0006C5-NQ
+	for axiom-legal@nongnu.org; Sat, 08 Sep 2007 18:33:44 -0400
+Received: from pat35-1-82-231-148-189.fbx.proxad.net ([82.231.148.189]
+	helo=esterelle.lehobey.net)
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA1:32)
+	(Exim 4.60) (envelope-from <Frederic@Lehobey.net>)
+	id 1IU8s4-0002v8-AZ
+	for axiom-legal@nongnu.org; Sat, 08 Sep 2007 18:33:44 -0400
+Received: from melusine.lehobey.net ([2002:52e7:94bd:0:2e0:4cff:fedb:e059]
+	helo=melusine.proxience.net)
+	by esterelle.lehobey.net with esmtp (Exim 4.63)
+	(envelope-from <Frederic@Lehobey.net>)
+	id 1IU8rw-000785-15; Sun, 09 Sep 2007 00:33:36 +0200
+Received: from lehobey by melusine.proxience.net with local (Exim 4.63)
+	(envelope-from <Frederic@Lehobey.net>)
+	id 1IU8ru-000247-1i; Sun, 09 Sep 2007 00:33:34 +0200
+Date: Sun, 9 Sep 2007 00:33:34 +0200
+To: Bill Page <bill.page@newsynthesis.org>
+Subject: Re: [Axiom-legal] Fwd: [Axiom-developer] Re: [open-axiom-devel]
+	[fricas-devel] umlaut in Guess - mailing list for algebra
+Message-ID: <20070908223333.GA7799@melusine.lehobey.net>
+References: <9qejheew10.fsf@aquin.mat.univie.ac.at>
+	<fbcd16d40709040705k46f3605eve24c2268217c9496@mail.gmail.com>
+	<f3c595c60709041213t2518348en49359620ae3af576@mail.gmail.com>
+	<fbcd16d40709041312w78f7b1ccs1ca0e07b5821053b@mail.gmail.com>
+	<46DDDF39.6080508@cesmail.net>
+	<fbcd16d40709041719v55b25e4bq44f14c78e4442109@mail.gmail.com>
+	<fbcd16d40709041723mee2190fhde60190d61ec4944@mail.gmail.com>
+	<20070905073146.GA4646@melusine.lehobey.net>
+	<fbcd16d40709081346h6239c9f8ie1449a877369e280@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+In-Reply-To: <fbcd16d40709081346h6239c9f8ie1449a877369e280@mail.gmail.com>
+User-Agent: Mutt/1.5.13 (2006-08-11)
+From: Frederic Lehobey <Frederic@Lehobey.net>
+X-Detected-Kernel: Genre and OS details not recognized.
+Cc: Axiom-Legal <axiom-legal@nongnu.org>
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 08 Sep 2007 22:33:48 -0000
+
+Hi,
+
+Bill Page <bill.page@newsynthesis.org> (2007-09-08 16:46:20) :
+> On 9/5/07, Frederic Lehobey wrote:
+> > Bill Page 2007-09-04 20:23:20) :
+> >
+> > >                                          GPL specifically says that
+> > > the full source of the software must be available to *all* -
+> > > even corporations.
+> >
+> > This is not correct. Please read it.
+> 
+> Of course I have read it.
+> 
+> > In short words, GPL requires availability of source code to
+> > *users* of the software. Saying it requires *public* disclosure
+> > is old FUD.
+> 
+> I don't understand the distinction you are making. To me you have just
+> said the same thing that I said.
+
+Maybe I misunderstood what you wrote. The distinction I am making is
+that the GPL does not require you to make a *public* disclosure of the
+changes you made to the GPLed program. I can think of scenarii where a
+company (or other) makes changes to a GPLed software. It does not have
+to publish the changes *on the web* but can keep them private. And if
+it distributes the software to its clients, in compliance with the
+GPL, it has only to give the source to its clients (and not to the
+public). (Of course clients have the right to disclose the software on
+the web, if they want, but it might not always be their best
+interest).
+
+Saying GPL requires public disclosure is a common misconception about
+the GPL and often used as FUD against the use of the license. Maybe
+you were not meaning this at all. Sorry then.
+
+>                                    I am talking about "use" in the
+> sense of incorporating some GPL software into a new package which I
+> assume that one intends to distribute - otherwise these comments are
+> just empty.
+
+> > APL2 is neither free (as in freedom) nor open source software.
+> 
+> I do not know what definition of "open source" you are using but I
+
+Well, the one of the people who coined the word (if I do not mistake):
+http://www.opensource.org/
+
+> certainly agree that it is not free (as in freedom). But neither is
+> GPL. You are not free to use GPL software anyway you like. It is
+
+Well, I suppose I shall read "use" as you said above. Otherwise, you
+can use (not distribute) a GPL software the way you want. The major
+restriction of the of GPL is that you cannot *distribute* a GPLed
+software in a proprietary way. Or, in other words, you cannot
+distribute the software with less freedoms than the ones you were
+given by the GPL (hence its incompatibility with licences more
+restrictive than the GPL). Or, in short, you cannot 'take away'
+freedoms from GPL software.
+
+> specifically limited so that you may only use GPL software in a manner
+> which is considered to be beneficial to making more software open in
+> the same way via the copyleft provisions. As far as I can see, the
+> lack of freedom in APL2 is similar in magnitude but quite different in
+> intent.
+
+I disagree. APL2 puts more restrictions on use (not only distribution)
+and discriminates between users.
+
+> > I do not understand what makes you so enthusiastic about it. Nothing new
+> > under the sun.
+> >
+> 
+> I am enthusiastic about the fact that Aldor source code is now easily
+> available under a license that will allow me (and presumably other
+> interested people) to make improvements to it and to use it in my work
+> without the fear that someday my investment in this work may no longer
+> be available to me. Prior to APL2 this was only possible by making a
+> special request to aldor.org and the future was much less certain. Now
+> all I have to do is go to the aldor.org website and download it from
+> the svn repository. The rest of this license stuff is mostly
+> irrelevant until or unless it actually gets in the way of some thing
+> that I or some other new Aldor  or Axiom developer really wants to do
+> with it. At this time I am certainly not interested in any possible
+> commercial uses Aldor. Perhaps other people are...
+
+It prevents integration of Aldor in free software distributions as
+Debian or Fedora. (The kind of things I am interested in.)
+
+Anyway, Aldor is by no standard open source or free software. I have
+personally been trapped in the past in such non-free licences. I will
+never consider again non-free sofware for scientific work. But it is
+my personal choice and I can understand you make others.
+
+It makes me simply stronger in my mind that we (the Axiom community)
+had nothing good to expect from Aldor and from *waiting* for its
+release as (real) open source software (that has not yet occured).
+
+Best regards,
+Frédéric Lehobey
+
+
+
+From MAILER-DAEMON Sat Sep 08 20:41:39 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IUArq-0007aS-Lw
+	for mharc-axiom-legal@gnu.org; Sat, 08 Sep 2007 20:41:38 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IUArp-0007ZH-DD
+	for axiom-legal@nongnu.org; Sat, 08 Sep 2007 20:41:37 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IUArn-0007XQ-Vm
+	for axiom-legal@nongnu.org; Sat, 08 Sep 2007 20:41:37 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IUArn-0007XC-Lo
+	for axiom-legal@nongnu.org; Sat, 08 Sep 2007 20:41:35 -0400
+Received: from fk-out-0910.google.com ([209.85.128.186])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <bill.page@newsynthesis.org>) id 1IUArn-0005kg-8r
+	for axiom-legal@nongnu.org; Sat, 08 Sep 2007 20:41:35 -0400
+Received: by fk-out-0910.google.com with SMTP id 19so1494983fkr
+	for <axiom-legal@nongnu.org>; Sat, 08 Sep 2007 17:41:34 -0700 (PDT)
+Received: by 10.86.98.18 with SMTP id v18mr2563427fgb.1189298493828;
+	Sat, 08 Sep 2007 17:41:33 -0700 (PDT)
+Received: by 10.86.77.14 with HTTP; Sat, 8 Sep 2007 17:41:33 -0700 (PDT)
+Message-ID: <fbcd16d40709081741w5563f4a9o6d5b0e124ed5f6cf@mail.gmail.com>
+Date: Sat, 8 Sep 2007 20:41:33 -0400
+From: "Bill Page" <bill.page@newsynthesis.org>
+To: "Frederic Lehobey" <Frederic@lehobey.net>
+Subject: Re: [Axiom-legal] Fwd: [Axiom-developer] Re: [open-axiom-devel]
+	[fricas-devel] umlaut in Guess - mailing list for algebra
+In-Reply-To: <20070908223333.GA7799@melusine.lehobey.net>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <9qejheew10.fsf@aquin.mat.univie.ac.at>
+	<fbcd16d40709040705k46f3605eve24c2268217c9496@mail.gmail.com>
+	<f3c595c60709041213t2518348en49359620ae3af576@mail.gmail.com>
+	<fbcd16d40709041312w78f7b1ccs1ca0e07b5821053b@mail.gmail.com>
+	<46DDDF39.6080508@cesmail.net>
+	<fbcd16d40709041719v55b25e4bq44f14c78e4442109@mail.gmail.com>
+	<fbcd16d40709041723mee2190fhde60190d61ec4944@mail.gmail.com>
+	<20070905073146.GA4646@melusine.lehobey.net>
+	<fbcd16d40709081346h6239c9f8ie1449a877369e280@mail.gmail.com>
+	<20070908223333.GA7799@melusine.lehobey.net>
+X-Detected-Kernel: Linux 2.6 (newer, 2)
+Cc: Axiom-Legal <axiom-legal@nongnu.org>
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 09 Sep 2007 00:41:37 -0000
+
+On 9/8/07, Frederic Lehobey <Frederic@lehobey.net> wrote:
+> ...
+> It [APL2] prevents integration of Aldor in free software distributions
+> as Debian or Fedora. (The kind of things I am interested in.)
+
+Debian distributes non-free software.
+
+>
+> Anyway, Aldor is by no standard open source or free software. I have
+> personally been trapped in the past in such non-free licences. I will
+> never consider again non-free sofware for scientific work. But it is
+> my personal choice and I can understand you make others.
+>
+
+Could you give an example of how you think you might be "trapped" by
+using Aldor under APL2?
+
+> It makes me simply stronger in my mind that we (the Axiom community)
+> had nothing good to expect from Aldor and from *waiting* for its
+> release as (real) open source software (that has not yet occured).
+>
+
+Who was waiting? The various incarnations of Axiom have all made
+improvements to Spad (to a greater or lesser degree).
+
+Still Aldor is still by far very much superior to Spad and in my
+opinion is very likely to remain so provided that it can attrack an
+active developer community.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Sun Sep 09 06:48:59 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IUKLb-00019Q-FT
+	for mharc-axiom-legal@gnu.org; Sun, 09 Sep 2007 06:48:59 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IUKLZ-00015v-Lq
+	for axiom-legal@nongnu.org; Sun, 09 Sep 2007 06:48:57 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IUKLX-00011v-MT
+	for axiom-legal@nongnu.org; Sun, 09 Sep 2007 06:48:56 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IUKLX-00011h-FC
+	for axiom-legal@nongnu.org; Sun, 09 Sep 2007 06:48:55 -0400
+Received: from pat35-1-82-231-148-189.fbx.proxad.net ([82.231.148.189]
+	helo=esterelle.lehobey.net)
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA1:32)
+	(Exim 4.60) (envelope-from <Frederic@Lehobey.net>)
+	id 1IUKLW-00066E-V6
+	for axiom-legal@nongnu.org; Sun, 09 Sep 2007 06:48:55 -0400
+Received: from melusine.lehobey.net ([2002:52e7:94bd:0:2e0:4cff:fedb:e059]
+	helo=melusine.proxience.net)
+	by esterelle.lehobey.net with esmtp (Exim 4.63)
+	(envelope-from <Frederic@Lehobey.net>)
+	id 1IUKLU-0001vy-0b; Sun, 09 Sep 2007 12:48:52 +0200
+Received: from lehobey by melusine.proxience.net with local (Exim 4.63)
+	(envelope-from <Frederic@Lehobey.net>)
+	id 1IUKLT-00017a-FN; Sun, 09 Sep 2007 12:48:51 +0200
+Date: Sun, 9 Sep 2007 12:48:51 +0200
+To: Bill Page <bill.page@newsynthesis.org>
+Subject: Re: [Axiom-legal] Fwd: [Axiom-developer] Re: [open-axiom-devel]
+	[fricas-devel] umlaut in Guess - mailing list for algebra
+Message-ID: <20070909104851.GA4039@melusine.lehobey.net>
+References: <fbcd16d40709040705k46f3605eve24c2268217c9496@mail.gmail.com>
+	<f3c595c60709041213t2518348en49359620ae3af576@mail.gmail.com>
+	<fbcd16d40709041312w78f7b1ccs1ca0e07b5821053b@mail.gmail.com>
+	<46DDDF39.6080508@cesmail.net>
+	<fbcd16d40709041719v55b25e4bq44f14c78e4442109@mail.gmail.com>
+	<fbcd16d40709041723mee2190fhde60190d61ec4944@mail.gmail.com>
+	<20070905073146.GA4646@melusine.lehobey.net>
+	<fbcd16d40709081346h6239c9f8ie1449a877369e280@mail.gmail.com>
+	<20070908223333.GA7799@melusine.lehobey.net>
+	<fbcd16d40709081741w5563f4a9o6d5b0e124ed5f6cf@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+In-Reply-To: <fbcd16d40709081741w5563f4a9o6d5b0e124ed5f6cf@mail.gmail.com>
+User-Agent: Mutt/1.5.13 (2006-08-11)
+From: Frederic Lehobey <Frederic@Lehobey.net>
+X-Detected-Kernel: Genre and OS details not recognized.
+Cc: Axiom-Legal <axiom-legal@nongnu.org>
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 09 Sep 2007 10:48:58 -0000
+
+Hi,
+
+Bill Page <bill.page@newsynthesis.org> (2007-09-08 20:41:33) :
+> On 9/8/07, Frederic Lehobey <Frederic@lehobey.net> wrote:
+> > ...
+> > It [APL2] prevents integration of Aldor in free software distributions
+> > as Debian or Fedora. (The kind of things I am interested in.)
+> 
+> Debian distributes non-free software.
+
+They are not really part of Debian but provided as a courtesy to
+Debian users: http://www.debian.org/social_contract (#5)
+
+And I can tell you that technically it makes a real
+difference. Packages in non-free do not take advantage of all the
+benefits of the Debian infrastructure (autobuilders, etc.).
+
+> > Anyway, Aldor is by no standard open source or free software. I have
+> > personally been trapped in the past in such non-free licences. I will
+> > never consider again non-free sofware for scientific work. But it is
+> > my personal choice and I can understand you make others.
+> >
+> 
+> Could you give an example of how you think you might be "trapped" by
+> using Aldor under APL2?
+
+The scenario I gave in my previous message is not possible. I cannot
+either distribute Aldor alongside many other free software libraries
+(can you link Aldor with free libraries?). I agree you can
+rethorically view this as a symmetric problem with the free libraries
+that have incompatible license with APL2. But I do not want to run
+into that game: Aldor is the bad non-free player.
+
+> > It makes me simply stronger in my mind that we (the Axiom community)
+> > had nothing good to expect from Aldor and from *waiting* for its
+> > release as (real) open source software (that has not yet occured).
+> >
+> 
+> Who was waiting? The various incarnations of Axiom have all made
+> improvements to Spad (to a greater or lesser degree).
+
+http://lists.gnu.org/archive/html/axiom-legal/2006-11/msg00017.html
+
+> Still Aldor is still by far very much superior to Spad and in my
+> opinion is very likely to remain so provided that it can attrack an
+> active developer community.
+
+Nothing has changed yet to my eyes:
+http://lists.gnu.org/archive/html/axiom-legal/2006-11/msg00020.html
+http://lists.gnu.org/archive/html/axiom-legal/2006-11/msg00024.html
+http://lists.gnu.org/archive/html/axiom-legal/2006-11/msg00027.html
+
+Best regards,
+Frédéric Lehobey
+
+
+
+From MAILER-DAEMON Sat Sep 29 09:38:58 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IbcX3-00041R-On
+	for mharc-axiom-legal@gnu.org; Sat, 29 Sep 2007 09:38:57 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IbcX2-00040f-3y
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 09:38:56 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IbcX1-0003zl-GJ
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 09:38:55 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1IbcX1-0003zb-9S; Sat, 29 Sep 2007 09:38:55 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IbcX0-0006fz-SB; Sat, 29 Sep 2007 09:38:55 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IbcWu-0005Bc-KG; Sat, 29 Sep 2007 15:38:48 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IbcWu-0007Mx-Hg; Sat, 29 Sep 2007 15:38:48 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: daly@axiom-developer.org, Bill Page <bill.page1@synthesis.anikast.ca>
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>
+	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>
+	<200709280646.l8S6kZU30652@localhost.localdomain>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 29 Sep 2007 15:38:48 +0200
+In-Reply-To: <200709280646.l8S6kZU30652@localhost.localdomain>
+Message-ID: <9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+Lines: 8
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-legal <axiom-legal@nongnu.org>, axiom-developer@nongnu.org
+Subject: [Axiom-legal] Copyright notice Re: pfaffian.input.pamphlet
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 29 Sep 2007 13:38:56 -0000
+
+Dear Tim,
+
+I just realised that you are possibly breaking Copyright in your pamphlet.  See
+http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License 
+
+
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sat Sep 29 11:42:31 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IbeSd-0003Af-9k
+	for mharc-axiom-legal@gnu.org; Sat, 29 Sep 2007 11:42:31 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IbeSb-00038h-Ep
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 11:42:29 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IbeSZ-00036x-Cl
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 11:42:28 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IbeSY-00036o-W0
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 11:42:27 -0400
+Received: from mx-8.zoominternet.net ([24.154.1.27])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1IbeSY-0007Ph-1U
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 11:42:26 -0400
+Received: from pop-4.zoominternet.net (mua-4.zoominternet.net [24.154.1.47])
+	by mx-8.zoominternet.net (8.13.1/8.13.1) with ESMTP id l8TFgA42014053
+	for <axiom-legal@nongnu.org>; Sat, 29 Sep 2007 11:42:10 -0400
+Received: (qmail 8373 invoked from network); 29 Sep 2007 15:42:13 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.235.192])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-4.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 29 Sep 2007 15:42:13 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id l8TFhXk31748;
+	Sat, 29 Sep 2007 11:43:33 -0400
+Date: Sat, 29 Sep 2007 11:43:33 -0400
+Message-Id: <200709291543.l8TFhXk31748@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: martin.rubey@univie.ac.at
+In-reply-to: <9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at> (message from Martin
+	Rubey on 29 Sep 2007 15:38:48 +0200)
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>
+	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>
+	<200709280646.l8S6kZU30652@localhost.localdomain>
+	<9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+X-Spam-Score: 0.00 () [Tag at 15.00] 
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.27
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: bill.page1@synthesis.anikast.ca, axiom-developer@nongnu.org,
+	axiom-legal@nongnu.org
+Subject: [Axiom-legal] Re: Copyright notice Re: pfaffian.input.pamphlet
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 29 Sep 2007 15:42:29 -0000
+
+> I just realised that you are possibly breaking Copyright in your pamphlet.  See
+> <http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License>
+
+Ok. I'll withdraw the change and see if I can understand what it takes to
+be in compliance. I read the license over once and I'm not sure what it
+means. It will take several readings to guess. Thanks for the heads-up.
+
+Tim
+
+
+
+
+
+From MAILER-DAEMON Sat Sep 29 12:05:15 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ibeod-0002WQ-KA
+	for mharc-axiom-legal@gnu.org; Sat, 29 Sep 2007 12:05:15 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ibeob-0002VI-WF
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:05:14 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ibeoa-0002US-5p
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:05:13 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1IbeoZ-0002UK-VD; Sat, 29 Sep 2007 12:05:12 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IbeoY-0003RV-OW; Sat, 29 Sep 2007 12:05:11 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IbeoW-0002Md-Ep; Sat, 29 Sep 2007 18:05:08 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IbeoW-0001w1-BN; Sat, 29 Sep 2007 18:05:08 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: daly@axiom-developer.org
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>
+	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>
+	<200709280646.l8S6kZU30652@localhost.localdomain>
+	<9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+	<200709291543.l8TFhXk31748@localhost.localdomain>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 29 Sep 2007 18:05:07 +0200
+In-Reply-To: <200709291543.l8TFhXk31748@localhost.localdomain>
+Message-ID: <9q641ta24s.fsf@aquin.mat.univie.ac.at>
+Lines: 27
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: bill.page1@synthesis.anikast.ca, martin.rubey@univie.ac.at,
+	axiom-developer@nongnu.org, axiom-legal@nongnu.org
+Subject: [Axiom-legal] Re: Copyright notice Re: pfaffian.input.pamphlet
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 29 Sep 2007 16:05:14 -0000
+
+root <daly@axiom-developer.org> writes:
+
+> > I just realised that you are possibly breaking Copyright in your pamphl=
+et.  See
+> > <http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentat=
+ion_License>
+>=20
+> Ok. I'll withdraw the change and see if I can understand what it takes to
+> be in compliance. I read the license over once and I'm not sure what it
+> means. It will take several readings to guess. Thanks for the heads-up.
+
+In any case, I think it would be a lot better to describe what the algorithm
+does instead of writing a treatise on Pfaffians.  I'd presume that most peo=
+ple
+have access to the internet, so a link to the wikipedia entry on Pfaffians =
+and
+a link to G=C3=BCnter Rote's paper, including the section numbers (i.e., 3.=
+2 and
+3.3), and corrections thereof (the leading coefficient of \lambda^2 in equa=
+tion
+(22) should be 1 rather than -1) would be more apropriate and more helpful.
+
+Finally, if I read
+
+\author{Timothy Daly, Gunter Rote, Martin Rubey}
+
+(it's G=C3=BCnter, by the way) I'd think that the three of them implemented=
+ the
+algorithm, but that's maybe only my personal view.  And I must say that I w=
+as a
+bit surprised that you claim copyright for pasting text from wikipedia, but=
+ did
+not state the fact that most (all?) of the material is from that site.
+
+Martin
+
+
+
+
+
+From MAILER-DAEMON Sat Sep 29 12:18:04 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ibf12-0000P6-1q
+	for mharc-axiom-legal@gnu.org; Sat, 29 Sep 2007 12:18:04 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ibf10-0000Oe-0N
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:18:02 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ibf0v-0000Lz-H2
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:18:01 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Ibf0u-0000Ln-Tx; Sat, 29 Sep 2007 12:17:56 -0400
+Received: from eastrmmtao107.cox.net ([68.230.240.59])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <smustudent1@yahoo.com>)
+	id 1Ibf0u-00065e-IK; Sat, 29 Sep 2007 12:17:56 -0400
+Received: from eastrmimpo02.cox.net ([68.1.16.120]) by eastrmmtao107.cox.net
+	(InterMail vM.7.08.02.01 201-2186-121-102-20070209) with ESMTP
+	id <20070929161755.TANR7818.eastrmmtao107.cox.net@eastrmimpo02.cox.net>;
+	Sat, 29 Sep 2007 12:17:55 -0400
+Received: from [72.218.16.62] ([72.218.16.62])
+	by eastrmimpo02.cox.net with bizsmtp
+	id uGHu1X00F1LLnk80000000; Sat, 29 Sep 2007 12:17:55 -0400
+Message-ID: <46FE7AB2.2060100@yahoo.com>
+Date: Sat, 29 Sep 2007 12:17:54 -0400
+From: C Y <smustudent1@yahoo.com>
+User-Agent: Thunderbird 2.0.0.6 (X11/20070803)
+MIME-Version: 1.0
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-legal] Re: Copyright notice Re: pfaffian.input.pamphlet
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>	<200709280646.l8S6kZU30652@localhost.localdomain>	<9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+	<200709291543.l8TFhXk31748@localhost.localdomain>
+In-Reply-To: <200709291543.l8TFhXk31748@localhost.localdomain>
+X-Enigmail-Version: 0.95.3
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Detected-Kernel: Solaris 10 (beta)
+Cc: bill.page1@synthesis.anikast.ca, martin.rubey@univie.ac.at,
+	axiom-developer@nongnu.org, axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 29 Sep 2007 16:18:02 -0000
+
+root wrote:
+>> I just realised that you are possibly breaking Copyright in your pamphlet.  See
+>> <http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License>
+> 
+> Ok. I'll withdraw the change and see if I can understand what it takes to
+> be in compliance. I read the license over once and I'm not sure what it
+> means. It will take several readings to guess. Thanks for the heads-up.
+> 
+> Tim
+
+That's why I use Wikipedia for just a starting point - often their
+references are useful, and I try to write my own pamphlet based on the
+original source material.
+
+GFDL is a bit of a mess, IMHO - I've never cared for it, and literate
+programming is going to confuse the issue even more.  The Debian
+distribution doesn't put stuff with unmodifiable sections in Debian main:
+
+http://www.debian.org/vote/2006/vote_001
+
+Cheers,
+CY
+
+
+
+From MAILER-DAEMON Sat Sep 29 12:29:18 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IbfBu-0007nu-Ls
+	for mharc-axiom-legal@gnu.org; Sat, 29 Sep 2007 12:29:18 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IbfBt-0007lc-E1
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:29:17 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IbfBr-0007hr-SE
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:29:17 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IbfBr-0007hb-NZ
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:29:15 -0400
+Received: from mx-7.zoominternet.net ([24.154.1.26])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1IbfBr-0008QK-CB
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:29:15 -0400
+Received: from pop-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id l8TGT0Ow004626
+	for <axiom-legal@nongnu.org>; Sat, 29 Sep 2007 12:29:01 -0400
+Received: (qmail 23340 invoked from network); 29 Sep 2007 16:29:04 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.235.192])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 29 Sep 2007 16:29:04 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id l8TGUJ231796;
+	Sat, 29 Sep 2007 12:30:19 -0400
+Date: Sat, 29 Sep 2007 12:30:19 -0400
+Message-Id: <200709291630.l8TGUJ231796@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: martin.rubey@univie.ac.at
+In-reply-to: <9q641ta24s.fsf@aquin.mat.univie.ac.at> (message from Martin
+	Rubey on 29 Sep 2007 18:05:07 +0200)
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>
+	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>
+	<200709280646.l8S6kZU30652@localhost.localdomain>
+	<9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+	<200709291543.l8TFhXk31748@localhost.localdomain>
+	<9q641ta24s.fsf@aquin.mat.univie.ac.at>
+X-Spam-Score: 0.00 () [Tag at 15.00] 
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: bill.page1@synthesis.anikast.ca, martin.rubey@univie.ac.at,
+	axiom-developer@nongnu.org, axiom-legal@nongnu.org
+Subject: [Axiom-legal] Re: Copyright notice Re: pfaffian.input.pamphlet
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 29 Sep 2007 16:29:17 -0000
+
+Please send a reference to Gunter's paper.
+Please post a plain-text latex for the way you expect Gunter's
+name to be spelled. All of my mail readers render it with a 'u'.
+Please document your algorithm.
+
+Tim
+
+
+
+From MAILER-DAEMON Sat Sep 29 12:46:14 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IbfSH-0002G9-OJ
+	for mharc-axiom-legal@gnu.org; Sat, 29 Sep 2007 12:46:13 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IbfSG-0002FS-3y
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:46:12 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IbfSE-0002EE-FF
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:46:11 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IbfSE-0002EA-6R
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:46:10 -0400
+Received: from mx-8.zoominternet.net ([24.154.1.27])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1IbfSD-000487-Oo
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:46:09 -0400
+Received: from pop-3.zoominternet.net (mua-3.zoominternet.net [24.154.1.46])
+	by mx-8.zoominternet.net (8.13.1/8.13.1) with ESMTP id l8TGjtui008386
+	for <axiom-legal@nongnu.org>; Sat, 29 Sep 2007 12:45:55 -0400
+Received: (qmail 21581 invoked from network); 29 Sep 2007 16:45:58 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.235.192])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-3.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 29 Sep 2007 16:45:58 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id l8TGlJB31812;
+	Sat, 29 Sep 2007 12:47:19 -0400
+Date: Sat, 29 Sep 2007 12:47:19 -0400
+Message-Id: <200709291647.l8TGlJB31812@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: martin.rubey@univie.ac.at
+In-reply-to: <9q641ta24s.fsf@aquin.mat.univie.ac.at> (message from Martin
+	Rubey on 29 Sep 2007 18:05:07 +0200)
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>
+	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>
+	<200709280646.l8S6kZU30652@localhost.localdomain>
+	<9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+	<200709291543.l8TFhXk31748@localhost.localdomain>
+	<9q641ta24s.fsf@aquin.mat.univie.ac.at>
+X-Spam-Score: 0.00 () [Tag at 15.00] 
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.27
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: bill.page1@synthesis.anikast.ca, martin.rubey@univie.ac.at,
+	axiom-developer@nongnu.org, axiom-legal@nongnu.org
+Subject: [Axiom-legal] Re: Copyright notice Re: pfaffian.input.pamphlet
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 29 Sep 2007 16:46:12 -0000
+
+>Finally, if I read
+>
+>\author{Timothy Daly, Gunter Rote, Martin Rubey}
+>
+>(it's GÃ¼nter, by the way) I'd think that the three of them implemented the
+>algorithm, but that's maybe only my personal view.  And I must say that I was a
+>bit surprised that you claim copyright for pasting text from wikipedia, but did
+>not state the fact that most (all?) of the material is from that site.
+
+In total number of characters and time, the source text TeX, the
+regression test case generation, the system merge issues, the testing
+and the patch generation exceed the number of characters posted in the
+algorithm. And the wikipedia text, despite appearances, is not "cut
+and paste" but is hand written in latex format. In total I spent quite
+a few hours on making the pamphlet.  If you had posted the final
+pamphlet documentation with regression tests as a diff-Naur patch
+I would have had nothing to contribute.
+
+According to my first reading the wikipedia license appears to specify
+the page layout of the final document which WAY exceeds the bounds of
+common sense. I plan to change the content using other sources.
+
+The fact that you understand the pfaffian enough to write a program does
+not mean that the next person who has to maintain/extend/rewrite the
+pfaffian has the same understanding. The point of the game is to make
+the code live beyond the original author. Otherwise, what is science for?
+
+Tim
+
+
+
+From MAILER-DAEMON Sat Sep 29 12:55:26 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IbfbC-0006en-FB
+	for mharc-axiom-legal@gnu.org; Sat, 29 Sep 2007 12:55:26 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IbfbB-0006eH-90
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:55:25 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IbfbA-0006e5-LX
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 12:55:24 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1IbfbA-0006e0-GL; Sat, 29 Sep 2007 12:55:24 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Ibfb9-0006KV-SH; Sat, 29 Sep 2007 12:55:24 -0400
+Received: from justin.univie.ac.at ([131.130.3.111] helo=justin.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Ibfb8-0007vT-4b; Sat, 29 Sep 2007 18:55:22 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by justin.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1Ibfb8-0002xs-3Y; Sat, 29 Sep 2007 18:55:22 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: daly@axiom-developer.org
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>
+	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>
+	<200709280646.l8S6kZU30652@localhost.localdomain>
+	<9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+	<200709291543.l8TFhXk31748@localhost.localdomain>
+	<9q641ta24s.fsf@aquin.mat.univie.ac.at>
+	<200709291647.l8TGlJB31812@localhost.localdomain>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 29 Sep 2007 18:55:21 +0200
+In-Reply-To: <200709291647.l8TGlJB31812@localhost.localdomain>
+Message-ID: <9qmyv55s3q.fsf@aquin.mat.univie.ac.at>
+Lines: 35
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-legal@nongnu.org, axiom-developer@nongnu.org
+Subject: [Axiom-legal] Re: Copyright notice Re: pfaffian.input.pamphlet
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 29 Sep 2007 16:55:25 -0000
+
+root <daly@axiom-developer.org> writes:
+
+> In total number of characters and time, the source text TeX, the regression
+> test case generation, the system merge issues, the testing and the patch
+> generation exceed the number of characters posted in the algorithm.
+
+Characters maybe, time I doubt.  It took me quite a while to figure out that
+there is a misprint in the article.
+
+> And the wikipedia text, despite appearances, is not "cut and paste" but is
+> hand written in latex format.
+
+So what?  If you retype a copyrighted book, you are still breaking copyright.
+
+> In total I spent quite a few hours on making the pamphlet.  If you had posted
+> the final pamphlet documentation with regression tests as a diff-Naur patch I
+> would have had nothing to contribute.
+
+I'm sorry about that.
+
+> The fact that you understand the pfaffian enough to write a program does not
+> mean that the next person who has to maintain/extend/rewrite the pfaffian has
+> the same understanding.
+
+Yes, that's what I think, too.  Although I hurry to say that I do *not*
+understand the Pfaffian enough.
+
+> The point of the game is to make the code live beyond the original
+> author. Otherwise, what is science for?
+
+Maybe for you.  I just needed a Pfaffian to do some experiments, and couldn't
+find an implementation.  So I looked for an algorithm I thought I was able to
+implement.  If you can use it, fine, if you can't, leave it.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sat Sep 29 13:09:05 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IbfoP-0004PA-8m
+	for mharc-axiom-legal@gnu.org; Sat, 29 Sep 2007 13:09:05 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IbfoN-0004Os-Gx
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 13:09:03 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IbfoL-0004OH-TJ
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 13:09:03 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1IbfoL-0004O7-Lb
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 13:09:01 -0400
+Received: from mx-7.zoominternet.net ([24.154.1.26])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1IbfoL-0000rx-8C
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 13:09:01 -0400
+Received: from pop-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id l8TH91kn027858
+	for <axiom-legal@nongnu.org>; Sat, 29 Sep 2007 13:09:01 -0400
+Received: (qmail 27964 invoked from network); 29 Sep 2007 17:09:01 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.235.192])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 29 Sep 2007 17:09:01 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id l8THABB31834;
+	Sat, 29 Sep 2007 13:10:11 -0400
+Date: Sat, 29 Sep 2007 13:10:11 -0400
+Message-Id: <200709291710.l8THABB31834@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: martin.rubey@univie.ac.at
+In-reply-to: <9qmyv55s3q.fsf@aquin.mat.univie.ac.at> (message from Martin
+	Rubey on 29 Sep 2007 18:55:21 +0200)
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>
+	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>
+	<200709280646.l8S6kZU30652@localhost.localdomain>
+	<9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+	<200709291543.l8TFhXk31748@localhost.localdomain>
+	<9q641ta24s.fsf@aquin.mat.univie.ac.at>
+	<200709291647.l8TGlJB31812@localhost.localdomain>
+	<9qmyv55s3q.fsf@aquin.mat.univie.ac.at>
+X-Spam-Score: 0.00 () [Tag at 15.00] 
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-legal@nongnu.org, axiom-developer@nongnu.org
+Subject: [Axiom-legal] Re: Copyright notice Re: pfaffian.input.pamphlet
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 29 Sep 2007 17:09:03 -0000
+
+>> The point of the game is to make the code live beyond the original
+>> author. Otherwise, what is science for?
+>
+>Maybe for you.  I just needed a Pfaffian to do some experiments, and couldn't
+>find an implementation.  So I looked for an algorithm I thought I was able to
+>implement.  If you can use it, fine, if you can't, leave it.
+
+It is an excellent piece of work and I thank you for doing it.
+
+I hope to merge it into the SQMATRIX domain, since it requires
+the matrices to be square. It looks like I can use the antisymmetric
+function to replace some of your code. But I'll have to do more
+reading to gain a better understanding of the algorithm.
+
+Thanks,
+Tim
+
+
+
+
+From MAILER-DAEMON Sat Sep 29 13:51:25 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1IbgTN-0004TV-2i
+	for mharc-axiom-legal@gnu.org; Sat, 29 Sep 2007 13:51:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1IbgTM-0004TK-79
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 13:51:24 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1IbgTL-0004T1-1U
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 13:51:23 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1IbgTK-0004Sy-Rx; Sat, 29 Sep 2007 13:51:22 -0400
+Received: from grace.univie.ac.at ([131.130.3.115])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA1:32) (Exim 4.60)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IbgTK-0001ip-5K; Sat, 29 Sep 2007 13:51:22 -0400
+Received: from joan.univie.ac.at ([131.130.3.110] helo=joan.univie.ac.at)
+	by grace.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IbgTH-0004gd-Mg; Sat, 29 Sep 2007 19:51:19 +0200
+Received: from aquin.mat.univie.ac.at ([131.130.16.163]
+	helo=aquin.mat.univie.ac.at)
+	by joan.univie.ac.at with esmtp (Exim 4.68)
+	(envelope-from <martin.rubey@univie.ac.at>)
+	id 1IbgTH-0001wY-JO; Sat, 29 Sep 2007 19:51:19 +0200
+Sender: rubey@aquin.mat.univie.ac.at
+To: daly@axiom-developer.org
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>
+	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>
+	<200709280646.l8S6kZU30652@localhost.localdomain>
+	<9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+	<200709291543.l8TFhXk31748@localhost.localdomain>
+	<9q641ta24s.fsf@aquin.mat.univie.ac.at>
+	<200709291647.l8TGlJB31812@localhost.localdomain>
+	<9qmyv55s3q.fsf@aquin.mat.univie.ac.at>
+	<200709291710.l8THABB31834@localhost.localdomain>
+From: Martin Rubey <martin.rubey@univie.ac.at>
+Date: 29 Sep 2007 19:51:19 +0200
+In-Reply-To: <200709291710.l8THABB31834@localhost.localdomain>
+Message-ID: <9qve9tpdgo.fsf@aquin.mat.univie.ac.at>
+Lines: 24
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-legal@nongnu.org, martin.rubey@univie.ac.at,
+	axiom-developer@nongnu.org
+Subject: [Axiom-legal] Re: Copyright notice Re: pfaffian.input.pamphlet
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 29 Sep 2007 17:51:24 -0000
+
+root <daly@axiom-developer.org> writes:
+
+> I hope to merge it into the SQMATRIX domain, since it requires the matrices
+> to be square. It looks like I can use the antisymmetric function to replace
+> some of your code.
+
+I do not know of such a function.  However, you can use antiSymmetric? to check
+whether the matrix is antisymmetric, which is required.
+
+I guess you should follow the implementation of determinant.  Just grep for
+
+"determinant.*=="
+
+to get the picture.
+
+By the way, SQMATRIX not being a domain of MatrixCategory is a sad limitation
+of SPAD (not present in Aldor, fortunately).
+
+> But I'll have to do more reading to gain a better understanding of the
+> algorithm.
+
+If you have questions, do not hesitate to ask.
+
+Martin
+
+
+
+
+From MAILER-DAEMON Sat Sep 29 19:31:44 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Iblmi-0006tN-2q
+	for mharc-axiom-legal@gnu.org; Sat, 29 Sep 2007 19:31:44 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Iblmf-0006qj-HC
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 19:31:41 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Iblme-0006ob-1z
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 19:31:41 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Iblmd-0006oR-OK
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 19:31:39 -0400
+Received: from mx-8.zoominternet.net ([24.154.1.27])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1Iblmd-0005va-E9
+	for axiom-legal@nongnu.org; Sat, 29 Sep 2007 19:31:39 -0400
+Received: from pop-3.zoominternet.net (mua-3.zoominternet.net [24.154.1.46])
+	by mx-8.zoominternet.net (8.13.1/8.13.1) with ESMTP id l8TNVZQt018613
+	for <axiom-legal@nongnu.org>; Sat, 29 Sep 2007 19:31:35 -0400
+Received: (qmail 31763 invoked from network); 29 Sep 2007 23:31:36 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.235.192])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-3.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 29 Sep 2007 23:31:36 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id l8TNWos31904;
+	Sat, 29 Sep 2007 19:32:50 -0400
+Date: Sat, 29 Sep 2007 19:32:50 -0400
+Message-Id: <200709292332.l8TNWos31904@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: martin.rubey@univie.ac.at
+In-reply-to: <9qve9tpdgo.fsf@aquin.mat.univie.ac.at> (message from Martin
+	Rubey on 29 Sep 2007 19:51:19 +0200)
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>
+	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>
+	<200709280646.l8S6kZU30652@localhost.localdomain>
+	<9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+	<200709291543.l8TFhXk31748@localhost.localdomain>
+	<9q641ta24s.fsf@aquin.mat.univie.ac.at>
+	<200709291647.l8TGlJB31812@localhost.localdomain>
+	<9qmyv55s3q.fsf@aquin.mat.univie.ac.at>
+	<200709291710.l8THABB31834@localhost.localdomain>
+	<9qve9tpdgo.fsf@aquin.mat.univie.ac.at>
+X-Spam-Score: 0.00 () [Tag at 15.00] 
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.27
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-developer@nongnu.org, martin.rubey@univie.ac.at,
+	axiom-legal@nongnu.org
+Subject: [Axiom-legal] Re: Copyright notice Re: pfaffian.input.pamphlet
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sat, 29 Sep 2007 23:31:42 -0000
+
+Martin,
+
+I've been studying Pfaffian systems (related to robotics, a field I
+know a bit about). It seems that your algorithm does not work for
+embedded matrices as in:
+
+z:SQMATRIX(2,INT):=[[0,0],[0,0]]
+m:SQMATRIX(2,INT):=[[0,1],[-1,0]]
+m2:SQMATRIX(4,SQMATRIX(2,INT)):=[[m,z,z,z],[z,m,z,z],[z,z,m,z],[z,z,z,m]]
+which should be 1*1*1*1 = 1
+
+Am I doing something wrong?
+
+Tim
+
+
+
+From MAILER-DAEMON Sun Sep 30 16:50:35 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ic5kJ-0005pX-5j
+	for mharc-axiom-legal@gnu.org; Sun, 30 Sep 2007 16:50:35 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ic5kH-0005n8-AY
+	for axiom-legal@nongnu.org; Sun, 30 Sep 2007 16:50:33 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ic5kD-0005f7-Ln
+	for axiom-legal@nongnu.org; Sun, 30 Sep 2007 16:50:32 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Ic5k9-0005Ty-JD; Sun, 30 Sep 2007 16:50:25 -0400
+Received: from smtp.cs.tamu.edu ([128.194.138.100] helo=postal.cs.tamu.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <gdr@cs.tamu.edu>)
+	id 1Ic5k9-0008MW-2V; Sun, 30 Sep 2007 16:50:25 -0400
+Received: from soliton.cs.tamu.edu (vpn-15.cs.tamu.edu [128.194.150.15])
+	by postal.cs.tamu.edu (Postfix) with ESMTP id D523C46DE23;
+	Sun, 30 Sep 2007 15:50:21 -0500 (CDT)
+Received: by soliton.cs.tamu.edu (Postfix, from userid 1000)
+	id DFD671AB06; Sun, 30 Sep 2007 15:58:57 -0500 (CDT)
+Sender: gdr@cs.tamu.edu
+To: axiom-developer@nongnu.org,  axiom-legal@nongnu.org
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>
+	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>
+	<200709280646.l8S6kZU30652@localhost.localdomain>
+	<9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+	<200709291543.l8TFhXk31748@localhost.localdomain>
+	<9q641ta24s.fsf@aquin.mat.univie.ac.at>
+	<200709291647.l8TGlJB31812@localhost.localdomain>
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+In-Reply-To: <200709291647.l8TGlJB31812@localhost.localdomain>
+Organization: Texas A&M University, Department of Computer Science
+Date: 30 Sep 2007 15:58:57 -0500
+Message-ID: <878x6n50q6.fsf@soliton.cs.tamu.edu>
+Lines: 7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Detected-Kernel: Solaris 8 (1)
+Cc: 
+Subject: [Axiom-legal] Re: [Axiom-developer] Re: Copyright notice Re:
+	pfaffian.input.pamphlet
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 30 Sep 2007 20:50:33 -0000
+
+root <daly@axiom-developer.org> writes:
+
+| Otherwise, what is science for?
+
+Maybe plagiarism?
+
+-- Gaby
+
+
+
+From MAILER-DAEMON Sun Sep 30 17:35:02 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ic6RJ-0007wy-Vc
+	for mharc-axiom-legal@gnu.org; Sun, 30 Sep 2007 17:35:02 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ic6RH-0007uo-UU
+	for axiom-legal@nongnu.org; Sun, 30 Sep 2007 17:34:59 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ic6RG-0007tg-EI
+	for axiom-legal@nongnu.org; Sun, 30 Sep 2007 17:34:59 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ic6RG-0007tX-8b
+	for axiom-legal@nongnu.org; Sun, 30 Sep 2007 17:34:58 -0400
+Received: from mx-7.zoominternet.net ([24.154.1.26])
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <daly@axiom-developer.org>) id 1Ic6RF-0008Ib-Qd
+	for axiom-legal@nongnu.org; Sun, 30 Sep 2007 17:34:58 -0400
+Received: from pop-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id l8ULYsku003597
+	for <axiom-legal@nongnu.org>; Sun, 30 Sep 2007 17:34:55 -0400
+Received: (qmail 4113 invoked from network); 30 Sep 2007 21:34:55 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.235.192])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <axiom-developer@nongnu.org>; 30 Sep 2007 21:34:55 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id l8ULaDr07337;
+	Sun, 30 Sep 2007 17:36:13 -0400
+Date: Sun, 30 Sep 2007 17:36:13 -0400
+Message-Id: <200709302136.l8ULaDr07337@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: gdr@cs.tamu.edu
+In-reply-to: <878x6n50q6.fsf@soliton.cs.tamu.edu> (message from Gabriel Dos
+	Reis on 30 Sep 2007 15:58:57 -0500)
+Subject: Re: [Axiom-legal] Re: [Axiom-developer] Re: Copyright notice Re:
+	pfaffian.input.pamphlet
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>
+	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>
+	<200709280646.l8S6kZU30652@localhost.localdomain>
+	<9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+	<200709291543.l8TFhXk31748@localhost.localdomain>
+	<9q641ta24s.fsf@aquin.mat.univie.ac.at>
+	<200709291647.l8TGlJB31812@localhost.localdomain>
+	<878x6n50q6.fsf@soliton.cs.tamu.edu>
+X-Spam-Score: 0.00 () [Tag at 15.00] 
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+X-Detected-Kernel: Linux 2.6, seldom 2.4 (older, 4)
+Cc: axiom-legal@nongnu.org, axiom-developer@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 30 Sep 2007 21:35:00 -0000
+
+Ah, Gaby, while I've got your attention....
+
+It appears that installing OpenAxiom interferes with an already
+installed Axiom. Alfredo looked into the problem and it appears 
+to be a collision using the AXIOM shell variable.
+
+Could you please rename the shell variable to use to be something
+other that "AXIOM", say "OPENAXIOM"?
+
+Many thanks,
+Tim
+
+
+
+From MAILER-DAEMON Sun Sep 30 17:43:08 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ic6Z9-00021M-Ro
+	for mharc-axiom-legal@gnu.org; Sun, 30 Sep 2007 17:43:07 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ic6Z7-00020J-Qn
+	for axiom-legal@nongnu.org; Sun, 30 Sep 2007 17:43:05 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ic6Z6-0001zW-CK
+	for axiom-legal@nongnu.org; Sun, 30 Sep 2007 17:43:04 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Ic6Z3-0001y6-Q9; Sun, 30 Sep 2007 17:43:01 -0400
+Received: from mailhost.cs.tamu.edu ([128.194.138.100] helo=postal.cs.tamu.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.60)
+	(envelope-from <gdr@cs.tamu.edu>)
+	id 1Ic6Z3-0001DS-EN; Sun, 30 Sep 2007 17:43:01 -0400
+Received: from soliton.cs.tamu.edu (vpn-15.cs.tamu.edu [128.194.150.15])
+	by postal.cs.tamu.edu (Postfix) with ESMTP id 858DC46DE23;
+	Sun, 30 Sep 2007 16:43:00 -0500 (CDT)
+Received: by soliton.cs.tamu.edu (Postfix, from userid 1000)
+	id 18B651AB06; Sun, 30 Sep 2007 16:51:37 -0500 (CDT)
+Sender: gdr@cs.tamu.edu
+To: daly@axiom-developer.org
+Subject: Re: [Axiom-legal] Re: [Axiom-developer] Re: Copyright notice Re:
+	pfaffian.input.pamphlet
+References: <200709272256.l8RMu2HD015739@axiom-developer.org>
+	<9qfy0zmhol.fsf@aquin.mat.univie.ac.at>
+	<200709280646.l8S6kZU30652@localhost.localdomain>
+	<9q641ty4k7.fsf_-_@aquin.mat.univie.ac.at>
+	<200709291543.l8TFhXk31748@localhost.localdomain>
+	<9q641ta24s.fsf@aquin.mat.univie.ac.at>
+	<200709291647.l8TGlJB31812@localhost.localdomain>
+	<878x6n50q6.fsf@soliton.cs.tamu.edu>
+	<200709302136.l8ULaDr07337@localhost.localdomain>
+From: Gabriel Dos Reis <gdr@cs.tamu.edu>
+In-Reply-To: <200709302136.l8ULaDr07337@localhost.localdomain>
+Organization: Texas A&M University, Department of Computer Science
+Date: 30 Sep 2007 16:51:37 -0500
+Message-ID: <87myv3u8ie.fsf@soliton.cs.tamu.edu>
+Lines: 14
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Detected-Kernel: Solaris 8 (1)
+Cc: axiom-legal@nongnu.org, axiom-developer@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Sun, 30 Sep 2007 21:43:06 -0000
+
+root <daly@axiom-developer.org> writes:
+
+| Ah, Gaby, while I've got your attention....
+| 
+| It appears that installing OpenAxiom interferes with an already
+| installed Axiom.
+
+OpenAxiom installs its binaries in a directory distinct from
+any other Axiom flavors.  It sets its internal variable AXIOM *within*
+its own script and does not depend on external setting of it. 
+The fact that Axiom seems to need external setting of the AXIOM
+environment variable sounds to be like a bug that should be fixed in Axiom.
+
+-- Gaby
+
+
+

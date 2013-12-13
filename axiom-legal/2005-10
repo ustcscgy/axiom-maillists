@@ -1,0 +1,399 @@
+From MAILER-DAEMON Thu Oct 13 10:26:06 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EQ421-0006fC-VE
+	for mharc-axiom-legal@gnu.org; Thu, 13 Oct 2005 10:26:05 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EQ420-0006ef-A8
+	for axiom-legal@nongnu.org; Thu, 13 Oct 2005 10:26:04 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EQ41x-0006e9-QI
+	for axiom-legal@nongnu.org; Thu, 13 Oct 2005 10:26:03 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EQ41x-0006e4-LQ
+	for axiom-legal@nongnu.org; Thu, 13 Oct 2005 10:26:01 -0400
+Received: from [131.130.1.182] (helo=imap1u.univie.ac.at)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1EQ41x-0002wf-Hp
+	for axiom-legal@nongnu.org; Thu, 13 Oct 2005 10:26:01 -0400
+Received: from seam101.local ([131.130.96.153])
+	by imap1u.univie.ac.at (8.12.10/8.12.10) with ESMTP id j9DEP2eI062554; 
+	Thu, 13 Oct 2005 16:25:04 +0200 (CEST)
+From: Martin Rubey <martin.rubey@univie.ac.at>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-ID: <17230.28079.589060.787045@seam101.local>
+Date: Thu, 13 Oct 2005 16:22:39 +0200
+To: Camm Maguire <camm@enhanced.com>
+In-Reply-To: <54psq9jz5d.fsf@intech19.enhanced.com>
+References: <CAE9B164E720CE4D8727792DF8F28AE30BFB75@corporateex02.Corporate.drdc-rddc.gc.ca>
+	<54psq9jz5d.fsf@intech19.enhanced.com>
+X-Mailer: VM 7.18 under Emacs 21.3.1
+Cc: axiom-legal@nongnu.org
+Subject: [Axiom-legal] Re: Aldor written in C?
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 13 Oct 2005 14:26:04 -0000
+
+Camm Maguire writes:
+
+ > Glad to hear you are pleased.  I am too -- I think the system in general is
+ > quite well designed.  And what keeps it running is open source licensing --
+ > i.e. everyone sharing the fruits of each others' efforts.  If aldor can ever
+ > meet this standard, I would be happy to try to do the same for it, though I
+ > understand securing such permission might be difficult.  BTW, what language
+ > is aldor written in?
+
+As far as I know, it's plain C.
+
+By the way, is there any progress on the licensing side?
+
+Martin
+
+
+
+
+From MAILER-DAEMON Thu Oct 13 12:34:35 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EQ62M-0005cd-P4
+	for mharc-axiom-legal@gnu.org; Thu, 13 Oct 2005 12:34:35 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EQ62L-0005cA-2p
+	for axiom-legal@nongnu.org; Thu, 13 Oct 2005 12:34:33 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EQ62K-0005bo-FD
+	for axiom-legal@nongnu.org; Thu, 13 Oct 2005 12:34:32 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EQ62K-0005bl-Bq
+	for axiom-legal@nongnu.org; Thu, 13 Oct 2005 12:34:32 -0400
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1EQ62J-0003Ex-B3
+	for axiom-legal@nongnu.org; Thu, 13 Oct 2005 12:34:32 -0400
+Received: from localhost (localhost.drenet.dnd.ca [127.0.0.1])
+	by fw.drenet.dnd.ca (_) with ESMTP id 3DFDE667F1;
+	Thu, 13 Oct 2005 12:34:30 -0400 (EDT)
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca (unknown [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id 6A6DB667F4;
+	Thu, 13 Oct 2005 12:34:24 -0400 (EDT)
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Date: Thu, 13 Oct 2005 12:34:16 -0400
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE30BFC0A@corporateex02.Corporate.drdc-rddc.gc.ca>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: Aldor written in C?
+Thread-Index: AcXQAhHdpVpAmgdtSTK1llDNxR4LNgACBufA
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: "Martin Rubey" <martin.rubey@univie.ac.at>,
+	"Camm Maguire" <camm@enhanced.com>
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Cc: axiom-legal@nongnu.org
+Subject: [Axiom-legal] RE: Aldor written in C?
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 13 Oct 2005 16:34:33 -0000
+
+On Thursday, October 13, 2005 10:23 AM Martin Rubey wrote:
+>=20
+> Camm Maguire writes:
+> If aldor can ever meet this standard, I would be happy to try to
+> do the same for it, though I understand securing such permission
+> might be difficult.  BTW, what language is aldor written in?
+>=20
+> As far as I know, it's plain C.
+>
+
+Aldor is written in a combination of C and Aldor.
+
+According to:
+
+http://www.aldor.org/docs/reports/ukqcd-2000/compiler1-ukqcd00.pdf#page=3D=
+
+5
+
+the compiler consists of about 350,000 lines of code (not sure if any
+is Aldor) and from:
+
+http://www.aldor.org/docs/reports/ukqcd-2000/compiler2-ukqcd00.pdf#page=3D=
+
+10
+
+that the runtime system consists of:
+
+25,000 lines of C code plus
+ 2,400 lines of Aldor code
+=20
+> By the way, is there any progress on the licensing side?
+>=20
+
+I am disappointed to report that I have had no reply from Steven Watt
+in spite of several emails and a telephone call over the last two
+months. :( I asked him specifically for a copy of the source license
+agreement. I am beginning to wonder whether such a document actually
+exists...
+
+The terms of the license agreement to which we do have access at
+http://www.aldor.org is quite permissive and the intention seems
+largely compatible with GNU GPL since it requires full disclosure
+of any modifications of Aldor to the original authors, although no
+where is there a guarantee of access to the *full* source code -
+only the Aldor libraries.
+
+I am still convinced that Aldor is very important to the future of
+Axiom (and vice versa). I also believe that it would be completely
+unrealistic to think that we have the resources to developer a compiler
+similar to Aldor starting from the published specifications alone,
+or even to make sufficient enhancements to SPAD to support this
+additional functionality.
+
+So what next? Tim Daly has stated his opinion (I hope I am not
+exaggerating his words? :) that it is likely that the licensing
+agreement between aldor.org (Steven Watt) and the original developers
+(IBM and NAG) is not exclusive. In principle this would allow the
+Axiom Foundation to approach the original developers again for the
+rights to include the Aldor source code in the Axiom open source
+distribution. I do not have any indication from Steven Watt about
+this possibility, however if this is not with the full co-operation
+of aldor.org, then it would in effect establish a "fork" of the
+Aldor project specifically for Axiom.
+
+Forming a new Aldor licensing agreement with the original
+developers is likely to take some time unless we can find
+someone closely connected to these organizations who is willing
+to lead such an effort. (I am thus disqualified.)
+
+It is even possible that some of the Aldor developers who do
+already have access to the source code, might be in a position
+to simply establish such a fork of Aldor for Axiom by fiat on
+less there exists a clear license agreement or non-disclosure
+agreement to the contrary. If the problem of obtaining a source
+license agreement for Aldor is simply due to the lack of time
+and/or desire of Steven Watt to administer the Aldor licensing
+formalities, then perhaps he might even look favorably on a
+proposal to fork Aldor or to incorporate Aldor and it's special
+licensing conditions into the current Axiom distribution.
+
+I think the time has come to consider this last alternative
+more seriously.
+
+Regards,
+Bill Page.
+
+
+
+From MAILER-DAEMON Thu Oct 13 15:17:16 2005
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1EQ8Zo-0007ge-1u
+	for mharc-axiom-legal@gnu.org; Thu, 13 Oct 2005 15:17:16 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1EQ8Zl-0007eL-9n
+	for axiom-legal@nongnu.org; Thu, 13 Oct 2005 15:17:13 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1EQ8Zj-0007dA-Ps
+	for axiom-legal@nongnu.org; Thu, 13 Oct 2005 15:17:12 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1EQ8Zj-0007ck-90
+	for axiom-legal@nongnu.org; Thu, 13 Oct 2005 15:17:11 -0400
+Received: from [68.142.201.192] (helo=web31712.mail.mud.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.34) id 1EQ8Zj-0005EZ-29
+	for axiom-legal@nongnu.org; Thu, 13 Oct 2005 15:17:11 -0400
+Received: (qmail 92757 invoked by uid 60001); 13 Oct 2005 19:17:09 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=Message-ID:Received:Date:From:Subject:To:Cc:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=QW+olk0Xx7QCNyodNBe9adqmKu51ey18Frj3EdY5ElzneSgVnOCEtf193eA22HpH/Sje7n3kstulYHfWblDvgs8VMx51jLg2MO/G5PozUsKgyYGwz9pKaXKHvgH7XtR/1SqMqLa1V2vHowluxbvchjOCDuPkahMPwOO1rNYPiNA=
+	; 
+Message-ID: <20051013191709.92755.qmail@web31712.mail.mud.yahoo.com>
+Received: from [216.174.43.195] by web31712.mail.mud.yahoo.com via HTTP;
+	Thu, 13 Oct 2005 12:17:09 PDT
+Date: Thu, 13 Oct 2005 12:17:09 -0700 (PDT)
+From: C Y <smustudent1@yahoo.com>
+Subject: Re: [Axiom-legal] RE: Aldor written in C?
+To: bill.page1@synthesis.anikast.ca, Martin Rubey <martin.rubey@univie.ac.at>, 
+	Camm Maguire <camm@enhanced.com>
+In-Reply-To: <CAE9B164E720CE4D8727792DF8F28AE30BFC0A@corporateex02.Corporate.drdc-rddc.gc.ca>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Cc: axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 13 Oct 2005 19:17:14 -0000
+
+--- "Page, Bill" <Bill.Page@drdc-rddc.gc.ca> wrote:
+
+> > By the way, is there any progress on the licensing side?
+> > 
+> 
+> I am disappointed to report that I have had no reply from Steven Watt
+> in spite of several emails and a telephone call over the last two
+> months. :( I asked him specifically for a copy of the source license
+> agreement. I am beginning to wonder whether such a document actually
+> exists...
+
+Hard to say.  Disappointing and a bit worrying to hear there has been
+no progress.
+ 
+> The terms of the license agreement to which we do have access at
+> http://www.aldor.org is quite permissive and the intention seems
+> largely compatible with GNU GPL since it requires full disclosure
+> of any modifications of Aldor to the original authors, although no
+> where is there a guarantee of access to the *full* source code -
+> only the Aldor libraries.
+
+Hmm.  Unfortunately, my understanding was that the current Aldor
+distribution must be considered virtually useless from a source code
+standpoint - that even if we take what is available and try to fill in
+the rest, it's still more than we want to undertake.  Also, I'm very
+much opposed to another new license - which to me seems like one more
+complication we don't really want - unless absolutely necessary.  I
+usually favor Modified BSD or *GPL licenses, and for Axiom I think
+Modified BSD is fine - the more people using and building off of
+correct mathematical cores, the better software in general gets.
+Hopefully people will see the benefits of contributing back to the
+core, and if not there is no reason we can't proceed on our own,
+learning from other ideas if not their code. Axiom seems to truly make
+ideas more important than code, and I think that is probably it's
+single most impressive achievement.  It makes Axiom a potentially very
+important project.  Unfortunately, this makes its licensing all the
+more important.
+
+> I am still convinced that Aldor is very important to the future of
+> Axiom (and vice versa). I also believe that it would be completely
+> unrealistic to think that we have the resources to developer a
+> compiler similar to Aldor starting from the published specifications 
+> alone, or even to make sufficient enhancements to SPAD to support 
+> this additional functionality.
+
+Given our limited resources, and that most of us aren't compiler or
+computer language experts, I agree with that assessment. 
+Unfortunately, that also makes clarification and speedy resolution of
+the Aldor situation of much greater importance, since if we wish to
+proceed with all future major work in Aldor rather than SPAD we need to
+first obtain an unencumbered version of Aldor.
+
+> So what next? Tim Daly has stated his opinion (I hope I am not
+> exaggerating his words? :) that it is likely that the licensing
+> agreement between aldor.org (Steven Watt) and the original developers
+> (IBM and NAG) is not exclusive. 
+
+Hmm.  Encouraging if true.
+
+> In principle this would allow the
+> Axiom Foundation to approach the original developers again for the
+> rights to include the Aldor source code in the Axiom open source
+> distribution.
+
+Out of curosity, under what conditions would the Foundation deem that
+the time has been reached to take this step?  Do we need a definite
+answer of some kind from the current Aldor project?
+
+> I do not have any indication from Steven Watt about
+> this possibility, however if this is not with the full co-operation
+> of aldor.org, then it would in effect establish a "fork" of the
+> Aldor project specifically for Axiom.
+
+If we do need to fork Aldor, I suggest calling the fork Orsus :-). 
+>From what I can find from Latin word lists on the net, this in Latin
+means to begin or start (esp. of speaking). And since we plan on lots
+of literate documents... ;-).  Plus, in a sense the underlying language
+of Axiom will be the beginning from which it proceeds.
+
+> Forming a new Aldor licensing agreement with the original
+> developers is likely to take some time unless we can find
+> someone closely connected to these organizations who is willing
+> to lead such an effort. (I am thus disqualified.)
+
+I would urge that if no such person is immediately available, that this
+process be undertaken sooner rather than later, in case it DOES wind up
+taking a while.
+
+> It is even possible that some of the Aldor developers who do
+> already have access to the source code, might be in a position
+> to simply establish such a fork of Aldor for Axiom by fiat on
+> less there exists a clear license agreement or non-disclosure
+> agreement to the contrary.
+
+I would feel more comfortable if there were a clear document stating
+that they WERE entitled to do this.  I don't know what the specific
+legal points might be, but I'd much rather there be not even a faint
+shadow of a doubt as to where matters stand before any serious work is
+put into an Aldor fork.
+
+> If the problem of obtaining a source
+> license agreement for Aldor is simply due to the lack of time
+> and/or desire of Steven Watt to administer the Aldor licensing
+> formalities, then perhaps he might even look favorably on a
+> proposal to fork Aldor or to incorporate Aldor and it's special
+> licensing conditions into the current Axiom distribution.
+
+I'm not quite clear as to the current situation - have we simply been
+completely unable to establish contact with him?
+
+> I think the time has come to consider this last alternative
+> more seriously.
+
+You mean Aldor WITH it's current situation and license?  I strongly
+disagree there, for what it's worth - I myself would be extremely
+reluctant to do any serious work in Aldor or any variation of it unless
+it's both free in an open source sense and freely available.  Axiom is
+too potentially important to allow it to get hung up somday because of
+license issues - I don't think there is any possible advantage gained
+by using Aldor that is worth the subsequent trouble such licensing
+issues would cause.  Take a look at some of the GPL + export
+restriction discussions in the Maxima archives for a sample of what can
+happen (or for that matter some of the original discussions from the
+open sourcing of Axiom if they're still around), and this could be
+worse since it involves relying on closed source software.  If Axiom
+comes to rely on a non-Free Aldor, in the long run that could quite
+possibly do it in as a living project.
+
+I think the better course would be if we can't establish contact and/or
+terms with Aldor make the approach to IBM/NAG.  Tim went through the
+whole licensing thing back in the beginning ad nausem (hence the
+existance of this email list ;-) and one would hope that that
+experience wouldn't have to be repeated again - maybe the same logic
+that was sound for Axiom would be sound for an Aldor fork?  
+
+Cheers,
+CY
+
+
+		
+__________________________________ 
+Yahoo! Music Unlimited 
+Access over 1 million songs. Try it free.
+http://music.yahoo.com/unlimited/
+
+
+

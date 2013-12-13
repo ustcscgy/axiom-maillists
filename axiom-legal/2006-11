@@ -1,0 +1,3739 @@
+From MAILER-DAEMON Thu Nov 02 03:50:54 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GfYHm-0001oD-6P
+	for mharc-axiom-legal@gnu.org; Thu, 02 Nov 2006 03:50:54 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GfYHk-0001nA-FN
+	for axiom-legal@nongnu.org; Thu, 02 Nov 2006 03:50:52 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GfYHj-0001mQ-73
+	for axiom-legal@nongnu.org; Thu, 02 Nov 2006 03:50:51 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GfYHi-0001m5-8c
+	for axiom-legal@nongnu.org; Thu, 02 Nov 2006 03:50:50 -0500
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GfYHi-0005SR-5i
+	for axiom-legal@nongnu.org; Thu, 02 Nov 2006 03:50:50 -0500
+Received: from pop-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id kA28oXAh026259
+	for <axiom-legal@nongnu.org>; Thu, 2 Nov 2006 03:50:37 -0500
+Received: (qmail 32419 invoked from network); 2 Nov 2006 08:50:34 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.233.73])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <gdr@integrable-solutions.net>; 2 Nov 2006 08:50:34 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id kA28eoQ15023;
+	Thu, 2 Nov 2006 03:40:50 -0500
+Date: Thu, 2 Nov 2006 03:40:50 -0500
+Message-Id: <200611020840.kA28eoQ15023@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: A.G.Grozin@inp.nsk.su
+In-reply-to: <Pine.LNX.4.64.0611021429290.21164@star.inp.nsk.su>
+	(A.G.Grozin@inp.nsk.su)
+References: <CAE9B164E720CE4D8727792DF8F28AE39723A0@corporateex02.Corporate.drdc-rddc.gc.ca>
+	<m3odrqpw26.fsf@zeus.integrable-solutions.net>
+	<Pine.LNX.4.64.0611021429290.21164@star.inp.nsk.su>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: gdr@integrable-solutions.net, axiom-legal@nongnu.org,
+	axiom-developer@nongnu.org
+Subject: [Axiom-legal] Re: [Axiom-developer] RE: gcl-2.6.8pre on MAC OSX 10.2
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 02 Nov 2006 08:50:53 -0000
+
+> > "Page, Bill" <Bill.Page@drdc-rddc.gc.ca> writes:
+> > | The MAC server on which this was compiled did not have an X-windows
+> > | environment so it was not possible to compile and test Axiom Graphics
+> > | and the Hyperdoc browser. Also native MAC OSX10 apparently does not
+> > | have support for the pts virtual terminal interface so it is not
+> > | possible yet to compile clef (the replacement for readline).
+> > I never quite understood why readline needs to be replaced.  Do you know?
+> readline is licensed under GPL (not LGPL). When Axiom was a commercial 
+> product, it could not use readline. Now it cannot use readline, too, 
+> because it is BSD-licensed (arrgh).
+
+Ooops. Wrong list. This discussion should go to axiom-legal
+which was created for the express purpose of keeping legal
+issues out of the developer list. Please use that list instead.
+
+I had an email discussion with Richard Stallman about the issue of
+using GPL and BSD licensed programs together in a non-commmercial
+setting. His statement is that the two licenses are compatible and he
+sees no license problems that arise in either direction.
+
+That said, I beg of you not to continue a legal discussion in
+the developer list.
+
+Tim
+
+
+
+From MAILER-DAEMON Mon Nov 20 06:36:19 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gm7Rh-0002zC-Iy
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 06:36:17 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gm7Re-0002vl-Eg
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:36:14 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gm7Rd-0002tR-HV
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:36:13 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gm7Rd-0002t5-Bp
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:36:13 -0500
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gm7Rc-0003Y1-QW
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:36:13 -0500
+Received: from pop-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id kAKBZwTr001271
+	for <axiom-legal@nongnu.org>; Mon, 20 Nov 2006 06:35:59 -0500
+Received: (qmail 7989 invoked from network); 20 Nov 2006 11:36:00 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.233.73])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 20 Nov 2006 11:36:00 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id kAKBPrh18223;
+	Mon, 20 Nov 2006 06:25:53 -0500
+Date: Mon, 20 Nov 2006 06:25:53 -0500
+Message-Id: <200611201125.kAKBPrh18223@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: ralf@hemmecke.de
+In-reply-to: <4561926B.3090809@hemmecke.de> (message from Ralf Hemmecke on
+	Mon, 20 Nov 2006 12:32:59 +0100)
+References: <632596.13982.qm@web56709.mail.re3.yahoo.com>	<m3slgg7jsz.fsf@zeus.integrable-solutions.net>	<20061120084943.62832.qmail@mail.xmt.at>	<Pine.LNX.4.64.0611201545420.25349@star.inp.nsk.su>	<20061120100759.66389.qmail@mail.xmt.at>
+	<200611201042.kAKAgcZ18192@localhost.localdomain>
+	<4561926B.3090809@hemmecke.de>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: axiom-legal@nongnu.org, ghue@xmt.at
+Subject: [Axiom-legal] Re: GPL vs. modified BSD
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 11:36:14 -0000
+
+> Just curious: What _exactly_ would forbid to distribute Axiom under GPL?
+
+Nothing. 
+
+The Modified BSD allows anyone to do this.
+
+Tim
+
+
+
+From MAILER-DAEMON Mon Nov 20 06:49:36 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gm7ea-0007Zm-4H
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 06:49:36 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gm7eU-0007Tr-PB
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:49:31 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gm7eQ-0007PX-VY
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:49:29 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gm7eQ-0007PC-5k
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:49:26 -0500
+Received: from [199.232.41.67] (helo=mx20.gnu.org)
+	by monty-python.gnu.org with esmtps (TLS-1.0:RSA_AES_256_CBC_SHA:32)
+	(Exim 4.52) id 1Gm7eQ-0006AA-8T
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:49:26 -0500
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by mx20.gnu.org with esmtp (Exim 4.52) id 1Gm7MZ-0000Bi-Fg
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:30:59 -0500
+Received: from [193.170.38.119] (hemmecke@woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	kAKBUoLs019712
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Mon, 20 Nov 2006 12:30:50 +0100
+Message-ID: <4561926B.3090809@hemmecke.de>
+Date: Mon, 20 Nov 2006 12:32:59 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.8 (X11/20061025)
+MIME-Version: 1.0
+To: daly@axiom-developer.org
+References: <632596.13982.qm@web56709.mail.re3.yahoo.com>	<m3slgg7jsz.fsf@zeus.integrable-solutions.net>	<20061120084943.62832.qmail@mail.xmt.at>	<Pine.LNX.4.64.0611201545420.25349@star.inp.nsk.su>	<20061120100759.66389.qmail@mail.xmt.at>
+	<200611201042.kAKAgcZ18192@localhost.localdomain>
+In-Reply-To: <200611201042.kAKAgcZ18192@localhost.localdomain>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-legal@nongnu.org, ghue@xmt.at
+Subject: [Axiom-legal] GPL vs. modified BSD
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 11:49:33 -0000
+
+Compatible just means what is written here:
+
+http://www.gnu.org/licenses/gpl-faq.html#WhatIsCompatible
+
+What does it mean to say that two licenses are "compatible"?
+------------------------------------------------------------
+     In order to combine two programs (or substantial parts of them) 
+into a larger work, you need to have permission to use both programs in 
+this way. If the two programs' licenses permit this, they are 
+compatible. If there is no way to satisfy both licenses at once, they 
+are incompatible.
+
+     For some licenses, the way in which the combination is made may 
+affect whether they are compatible--for instance, they may allow linking 
+two modules together, but not allow merging their code into one module.
+
+
+
+So this says something about whether the code can be combined.
+
+As you can see, there is another paragraph right after it.
+
+
+What does it mean to say a license is "compatible with the GPL".
+----------------------------------------------------------------
+     It means that the other license and the GNU GPL are compatible; you 
+can combine code released under the other license with code released 
+under the GNU GPL in one larger program.
+
+     The GPL permits such a combination provided it is released under 
+the GNU GPL. The other license is compatible with the GPL if it permits 
+this too.
+
+
+
+As I read the last paragraph, it is exactly as Gernot wanted to say. The 
+resulting program must be released under GPL. I cannot read that the GPL 
+allows to distribute the combined work under modified BSD.
+
+Just curious: What _exactly_ would forbid to distribute Axiom under GPL?
+
+Ralf
+
+
+On 11/20/2006 11:42 AM, root wrote:
+> Gernot, Andrey,
+> 
+> Please see http://www.fsf.org/licensing/licenses/index_html
+> 
+> Note that Axiom is licensed under the Modified BSD and is
+> considered as a GPL compatible license by the Free Software Foundation.
+> In addition, I have had direct contact with Richard Stallman stating
+> that the licenses are compatible.
+> 
+> Please post any followup license-related discussion ONLY on the
+> axiom-legal mailing list. That list was established to remove any
+> discussion of licensing from the axiom-developer mailing list.
+> 
+> Tim
+
+
+
+From MAILER-DAEMON Mon Nov 20 06:53:18 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gm7iA-0004a7-Pa
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 06:53:18 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gm7i9-0004X8-2p
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:53:17 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gm7i7-0004UW-9o
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:53:16 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gm7i6-0004U9-PU
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:53:14 -0500
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1Gm7i6-0007Jw-Lf
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:53:15 -0500
+Received: from [193.170.38.119] (hemmecke@woodpecker.risc.uni-linz.ac.at
+	[193.170.38.119]) (authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	kAKBrALs020358
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Mon, 20 Nov 2006 12:53:10 +0100
+Message-ID: <456197A7.9040500@hemmecke.de>
+Date: Mon, 20 Nov 2006 12:55:19 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.8 (X11/20061025)
+MIME-Version: 1.0
+To: daly@axiom-developer.org
+References: <632596.13982.qm@web56709.mail.re3.yahoo.com>	<m3slgg7jsz.fsf@zeus.integrable-solutions.net>	<20061120084943.62832.qmail@mail.xmt.at>	<Pine.LNX.4.64.0611201545420.25349@star.inp.nsk.su>	<20061120100759.66389.qmail@mail.xmt.at>
+	<200611201042.kAKAgcZ18192@localhost.localdomain>
+	<4561926B.3090809@hemmecke.de>
+	<200611201125.kAKBPrh18223@localhost.localdomain>
+In-Reply-To: <200611201125.kAKBPrh18223@localhost.localdomain>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: axiom-legal@nongnu.org, ghue@xmt.at
+Subject: [Axiom-legal] Re: GPL vs. modified BSD
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 11:53:17 -0000
+
+On 11/20/2006 12:25 PM, root wrote:
+>> Just curious: What _exactly_ would forbid to distribute Axiom under GPL?
+> 
+> Nothing. 
+> 
+> The Modified BSD allows anyone to do this.
+
+I think I remember that you said that you had a special agreement with 
+NAG about that, ie you cannot change the license.
+
+I guess sooner or later we will have GPL'ed code inside Axiom. So what 
+you are saying is that we should not bother too much with GPL'ed code 
+but rather use it and thus change the Axiom License to GPL.
+
+Would be interesting to hear what other people think about Axiom under GPL.
+
+Ralf
+
+
+
+From MAILER-DAEMON Mon Nov 20 06:55:37 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gm7kP-0007jZ-9o
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 06:55:37 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gm7kN-0007gp-6i
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:55:35 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gm7kJ-0007dV-2k
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:55:32 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gm7kH-0007co-Fc
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:55:29 -0500
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gm7kG-00083t-P9
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 06:55:28 -0500
+Received: from pop-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id kAKBtIcL009407
+	for <axiom-legal@nongnu.org>; Mon, 20 Nov 2006 06:55:18 -0500
+Received: (qmail 4180 invoked from network); 20 Nov 2006 11:55:19 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.233.73])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 20 Nov 2006 11:55:19 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id kAKBjDt18240;
+	Mon, 20 Nov 2006 06:45:13 -0500
+Date: Mon, 20 Nov 2006 06:45:13 -0500
+Message-Id: <200611201145.kAKBjDt18240@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: ralf@hemmecke.de
+In-reply-to: <4561926B.3090809@hemmecke.de> (message from Ralf Hemmecke on
+	Mon, 20 Nov 2006 12:32:59 +0100)
+References: <632596.13982.qm@web56709.mail.re3.yahoo.com>	<m3slgg7jsz.fsf@zeus.integrable-solutions.net>	<20061120084943.62832.qmail@mail.xmt.at>	<Pine.LNX.4.64.0611201545420.25349@star.inp.nsk.su>	<20061120100759.66389.qmail@mail.xmt.at>
+	<200611201042.kAKAgcZ18192@localhost.localdomain>
+	<4561926B.3090809@hemmecke.de>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: axiom-legal@nongnu.org, ghue@xmt.at
+Subject: [Axiom-legal] Re: GPL vs. modified BSD
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 11:55:35 -0000
+
+> > Just curious: What _exactly_ would forbid to distribute Axiom under GPL?
+> 
+> Nothing. 
+> 
+> The Modified BSD allows anyone to do this.
+
+On the other hand the side-effect would likely be a fork in the axiom
+project. I've seen discussions for and against going GPL. I argued for
+GPL before axiom was released but accepted the MBSD as a reasonable license.
+
+Consider that the real point of licensing is that you can sue people
+who violate the license and that the point of bringing suit is to
+get money (ask any lawyer... I have) you'll see that axiom's license
+is uninteresting. Any lawyer worth his $250/hour will tell you that
+you don't sue people "on principle". Such suits are considered "harassing"
+and are generally thrown out. Threatening to bring such suits without
+actually following up is called barristry and is grounds for being sued.
+
+After 6 years, endless debate, several books, and a few conversations
+with actual lawyers I'm completely disgusted with the whole debate.
+It is unproductive in the extreme. That's why axiom-legal exists.
+
+
+Tim
+
+
+
+From MAILER-DAEMON Mon Nov 20 08:02:10 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gm8mo-0002G8-58
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 08:02:10 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gm8ml-0002D1-Ue
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 08:02:07 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gm8mj-00029k-16
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 08:02:07 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gm8mi-00029N-M8
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 08:02:04 -0500
+Received: from [24.154.1.27] (helo=mx-8.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gm8mi-0005W8-5s
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 08:02:04 -0500
+Received: from pop-3.zoominternet.net (mua-3.zoominternet.net [24.154.1.46])
+	by mx-8.zoominternet.net (8.13.1/8.13.1) with ESMTP id kAKD1hqB032211
+	for <axiom-legal@nongnu.org>; Mon, 20 Nov 2006 08:01:47 -0500
+Received: (qmail 5235 invoked from network); 20 Nov 2006 13:01:42 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.233.73])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-3.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <daly@axiom-developer.org>; 20 Nov 2006 13:01:42 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id kAKCpZO18284;
+	Mon, 20 Nov 2006 07:51:35 -0500
+Date: Mon, 20 Nov 2006 07:51:35 -0500
+Message-Id: <200611201251.kAKCpZO18284@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: ralf@hemmecke.de
+In-reply-to: <4561926B.3090809@hemmecke.de> (message from Ralf Hemmecke on
+	Mon, 20 Nov 2006 12:32:59 +0100)
+References: <632596.13982.qm@web56709.mail.re3.yahoo.com>	<m3slgg7jsz.fsf@zeus.integrable-solutions.net>	<20061120084943.62832.qmail@mail.xmt.at>	<Pine.LNX.4.64.0611201545420.25349@star.inp.nsk.su>	<20061120100759.66389.qmail@mail.xmt.at>
+	<200611201042.kAKAgcZ18192@localhost.localdomain>
+	<4561926B.3090809@hemmecke.de>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.27
+Cc: axiom-legal@nongnu.org, ghue@xmt.at
+Subject: [Axiom-legal] Re: GPL vs. modified BSD
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 13:02:08 -0000
+
+> > > Just curious: What _exactly_ would forbid to distribute Axiom under GPL?
+> > 
+> > Nothing. 
+> > 
+> > The Modified BSD allows anyone to do this.
+> 
+> On the other hand the side-effect would likely be a fork in the axiom
+> project. I've seen discussions for and against going GPL. I argued for
+> GPL before axiom was released but accepted the MBSD as a reasonable license.
+> 
+> Consider that the real point of licensing is that you can sue people
+> who violate the license and that the point of bringing suit is to
+> get money (ask any lawyer... I have) you'll see that axiom's license
+> is uninteresting. Any lawyer worth his $250/hour will tell you that
+> you don't sue people "on principle". Such suits are considered "harassing"
+> and are generally thrown out. Threatening to bring such suits without
+> actually following up is called barristry and is grounds for being sued.
+> 
+> After 6 years, endless debate, several books, and a few conversations
+> with actual lawyers I'm completely disgusted with the whole debate.
+> It is unproductive in the extreme. That's why axiom-legal exists.
+
+Oh, and another point of fact... In order to bring a suit you have to 
+have "standing" and you have to show actual damages. Thus you can't
+just march off to court without showing that your suit has "merit"
+and that you believe you can win. Doing so will get you a court fine
+and open you to counter-suit. This is why you can't sue Microsoft.
+
+A suit against an open software project for mixing GPL and MBSD code
+is unlikely to cause "actual damages" and since you are not directly
+impacted financially you're unlikely to have "standing". Further since
+the MBSD requires you to hold NAG free from responsibility you can't
+sue them. And since no-one owns axiom (I certainly don't) there isn't
+an organization to sue and there can be no monetary gain. No lawyer
+is going to take the case and no judge is going to hear the case.
+
+Since the MBSD and the GPL are "spiritual sisters", differing in details
+only a lawyer knows, it is unlikely to be a point of legal debate. Both
+fulfill the spirit of the GPL.
+
+It will, however, be a point of religious debate. Software people
+think they can read a license and understand what it means, what
+it implies, and how it will be interpreted by the courts. That's
+like giving a C++  program to a lawyer, asking them to read it,
+understand it, and state how it will be interpreted on an
+unspecified machine running some unknown operating system.
+
+Law terms do NOT mean what laymen think they mean. I can tell you from
+experience because I consulted a lawyer about my employment contract
+and got a great lesson in humility. It's not about intelligence, it's
+about education in the field.
+
+Without legal advice debating the issue of single or dual licensing of
+axiom under the GPL vs MBSD is an argument about the number of angels
+that can dance on the head of a pin. All religion and no facts.  Facts
+cite case law. I'm clearly not capable of citing case law with authority.
+
+So my view is that either we hire a lawyer (don't look to me for a
+donation) or we simply agree not to debate things we don't understand.
+
+
+
+Tim
+
+
+
+From MAILER-DAEMON Mon Nov 20 08:34:25 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gm9I1-0007Qh-5v
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 08:34:25 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gm9I0-0007QZ-9s
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 08:34:24 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gm9Hy-0007Q1-C1
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 08:34:23 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gm9Hy-0007Px-6d
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 08:34:22 -0500
+Received: from [66.196.97.73] (helo=web56714.mail.re3.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.52) id 1Gm9Hy-0005Kk-1P
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 08:34:22 -0500
+Received: (qmail 89623 invoked by uid 60001); 20 Nov 2006 13:34:21 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=Message-ID:Received:Date:From:Subject:To:Cc:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=Zxigu0mWH7FwSktoMU1xvFewpj52BBbn59bMm+kzJSSnnhUcN8HyaywPzzQlYmNeCcWA176BVkgne2zw4ZrpbdLAcbsJISt/r+U9MxHlqfnbpuXefp4lOolgf1gTO7xtHkdLAPF/8b5AEr5sWwK4RhxdhRw2ABQlziay0GM1ZD8=
+	; 
+Message-ID: <20061120133421.89621.qmail@web56714.mail.re3.yahoo.com>
+Received: from [70.161.176.93] by web56714.mail.re3.yahoo.com via HTTP;
+	Mon, 20 Nov 2006 05:34:21 PST
+Date: Mon, 20 Nov 2006 05:34:21 -0800 (PST)
+From: C Y <smustudent1@yahoo.com>
+Subject: Re: [Axiom-legal] Re: GPL vs. modified BSD
+To: Ralf Hemmecke <ralf@hemmecke.de>, daly@axiom-developer.org
+In-Reply-To: <456197A7.9040500@hemmecke.de>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Cc: axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 13:34:24 -0000
+
+"So my view is that either we hire a lawyer (don't look to me for a
+donation) or we simply agree not to debate things we don't understand."
+
+Second the motion.  No decision we can arrive at will mean anything if
+someone tries to make an issue of it.
+
+GCL's approach seems sensible to me - use the GPL bits, but make it
+optional - e.g. it is possible to build and use GCL without only LGPL
+code.  Axiom is buildable and usable now without GPL code, so retain
+that functioning core and use GPL code to add additional functionality
+(eg GSL).
+
+In the world today, it seems that risk of legal action is like risk of
+getting hit by a car - you can drive sensibly and minimize that risk by
+not speeding, obeying traffic signs, (e.g. don't pirate software and
+knowingly steal code) but you can't plan ahead by knowing every
+direction a car might come at you along the whole of your trip.  You
+can do everything right and still get hit, so beyond a certain point
+you have to conclude you've done your best and start driving.
+
+Cheers,
+CY
+
+__________________________________________________
+Do You Yahoo!?
+Tired of spam?  Yahoo! Mail has the best spam protection around 
+http://mail.yahoo.com 
+
+
+
+From MAILER-DAEMON Mon Nov 20 09:01:57 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gm9ie-0005zQ-Qn
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 09:01:56 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gm9ib-0005xm-Tj
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 09:01:54 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gm9iY-0005uR-GD
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 09:01:53 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gm9iY-0005u9-4j
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 09:01:50 -0500
+Received: from [216.251.41.64] (helo=mail244.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1Gm9iX-0003XS-Iy
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 09:01:49 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail244.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	kAKE1I4x001064; Mon, 20 Nov 2006 09:01:33 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: <daly@axiom-developer.org>, <ralf@hemmecke.de>
+Date: Mon, 20 Nov 2006 09:00:50 -0500
+Message-ID: <02ca01c70cac$5cfc3810$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+Importance: Normal
+In-Reply-To: <200611201251.kAKCpZO18284@localhost.localdomain>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Cc: axiom-legal@nongnu.org, ghue@xmt.at
+Subject: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 14:01:55 -0000
+
+I think Tim's comments about licensing are "right on".
+
+So in this light, how should we view the current situation with
+Aldor? Last March I proposed that we (or I) simply go ahead and
+license Aldor source as GPL (or under the Aldor Public License).
+The benefits for Axiom are obvious and I can see not negative
+affects on Aldor and the people who current depend on it via
+aldor.org. At the time Mike Dewar convinced me to "wait until"
+summer with the promise that it would be discussed when he met
+Steven Watt at one of several meetings. He also said that NAG
+"would likely approve any reasonable proposal". Again in August
+we heard that it had been discussed. But there has been no news
+of any kind sense then.
+
+Do you think I should resurrect my plan to just unilaterally
+release Aldor as open source and see what happens?
+
+Regards,
+Bill Page.
+
+On November 20, 2006 7:52 AM Tim Daly wrote:
+> 
+> > > > Just curious: What _exactly_ would forbid to distribute 
+> > > > Axiom under GPL?
+> > > 
+> > > Nothing. 
+> > > 
+> > > The Modified BSD allows anyone to do this.
+> > 
+> > On the other hand the side-effect would likely be a fork in 
+> > the axiom project. I've seen discussions for and against going
+> > GPL. I argued for GPL before axiom was released but accepted
+> > the MBSD as a reasonable license.
+> > 
+> > Consider that the real point of licensing is that you can sue
+> > people who violate the license and that the point of bringing
+> > suit is to get money (ask any lawyer... I have) you'll see that
+> > axiom's license is uninteresting. Any lawyer worth his $250/hour
+> > will tell you that you don't sue people "on principle". Such
+> > suits are considered "harassing" and are generally thrown out.
+> > Threatening to bring such suits without actually following up
+> > is called barristry and is grounds for being sued.
+> > ... 
+> > A suit against an open software project for mixing GPL and MBSD
+> > code is unlikely to cause "actual damages" and since you are not
+> > directly impacted financially you're unlikely to have "standing".
+> > Further since the MBSD requires you to hold NAG free from
+> > responsibility you can't sue them. And since no-one owns axiom
+> > (I certainly don't) there isn't an organization to sue and there
+> > can be no monetary gain. No lawyer is going to take the case and
+> > no judge is going to hear the case.
+> > ...
+
+
+
+
+
+From MAILER-DAEMON Mon Nov 20 11:34:13 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmC61-0004D9-Ag
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 11:34:13 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmC5w-00047E-CY
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 11:34:08 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmC5u-00043n-Md
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 11:34:07 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmC5u-00043c-KI
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 11:34:06 -0500
+Received: from [62.231.145.242] (helo=nagmx1.nag.co.uk)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GmC5u-0005MT-1s
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 11:34:06 -0500
+Received: from edinburgh.nag.co.uk (edinburgh.nag.co.uk [192.156.217.171])
+	by nagmx1.nag.co.uk (Postfix) with ESMTP id 6695D120020;
+	Mon, 20 Nov 2006 16:34:02 +0000 (GMT)
+Received: from edinburgh.nag.co.uk (edinburgh.nag.co.uk [127.0.0.1])
+	by edinburgh.nag.co.uk (8.13.1/8.12.10) with ESMTP id kAKGY0CQ012350;
+	Mon, 20 Nov 2006 16:34:00 GMT
+Received: (from miked@localhost)
+	by edinburgh.nag.co.uk (8.13.1/8.13.1/Submit) id kAKGXvWj012349;
+	Mon, 20 Nov 2006 16:33:57 GMT
+Date: Mon, 20 Nov 2006 16:33:56 +0000
+From: Mike Dewar <miked@nag.co.uk>
+To: Bill Page <bill.page1@synthesis.anikast.ca>
+Subject: Re: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+Message-ID: <20061120163356.GC10225@nag.co.uk>
+References: <200611201251.kAKCpZO18284@localhost.localdomain>
+	<02ca01c70cac$5cfc3810$6900a8c0@asus>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-15
+Content-Disposition: inline
+In-Reply-To: <02ca01c70cac$5cfc3810$6900a8c0@asus>
+User-Agent: Mutt/1.4.1i
+Cc: axiom-legal@nongnu.org, ghue@xmt.at, Stephen Watt <Stephen.Watt@uwo.ca>
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 16:34:09 -0000
+
+Bill,
+
+On Mon, Nov 20, 2006 at 09:00:50AM -0500, Bill Page wrote:
+> Do you think I should resurrect my plan to just unilaterally
+> release Aldor as open source and see what happens?
+Please don't be stupid.  You can't release Aldor as open source because
+you don't have any right to do so.  Any illegal distribution of Aldor
+sources will, however, almost certainly scupper any chance of of it
+ever being released under an open-source licence.
+
+I understand your frustration at the slow progress on this, but that
+doesn't give you the right to take something that isn't rightfully
+yours.  The current situation is that NAG has agreed in principle to a
+proposal from Stephen Watt to release Aldor under a new licence.  We are
+now waiting for him to provide details of what that licence should be.
+
+Mike.
+
+--
+---------------------------------------------------------------------------
+
+    Mike Dewar                                 email: miked@nag.co.uk
+    Chief Technical Officer                    phone: (+44) 1865 518055
+    NAG Ltd                                    fax:   (+44) 1865 310139
+    Wilkinson House, Jordan Hill Rd, Oxford, OX2 8DR
+
+---------------------------------------------------------------------------
+
+
+
+From MAILER-DAEMON Mon Nov 20 12:23:06 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmCrK-0006UQ-3X
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 12:23:06 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmCrI-0006Rp-HW
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 12:23:04 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmCrD-0006JL-Eb
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 12:23:04 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmCrC-0006Ih-J6
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 12:22:58 -0500
+Received: from [216.251.41.178] (helo=mail58c2.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GmCrC-00015W-5P
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 12:22:58 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail58c2.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	kAKHMTVg005552; Mon, 20 Nov 2006 12:22:46 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Mike Dewar'" <miked@nag.co.uk>
+Subject: RE: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+Date: Mon, 20 Nov 2006 12:22:18 -0500
+Message-ID: <032a01c70cc8$7866e430$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+Importance: Normal
+In-Reply-To: <20061120163356.GC10225@nag.co.uk>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Cc: axiom-legal@nongnu.org, ghue@xmt.at, 'Stephen Watt' <Stephen.Watt@uwo.ca>
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 17:23:04 -0000
+
+Mike,
+
+Thanks for your reply.
+
+On November 20, 2006 11:34 AM you wrote:
+> 
+> On Mon, Nov 20, 2006 at 09:00:50AM -0500, Bill Page wrote:
+> > Do you think I should resurrect my plan to just unilaterally
+> > release Aldor as open source and see what happens?
+>
+> Please don't be stupid.  You can't release Aldor as open source
+> because you don't have any right to do so.
+
+I realize that I have no "right" to do so. The point was that
+(perhaps) doing so would not have an negative consequences -
+at least not more negative than the current situation. Plus it
+continues to make the point that many people consider it critical
+to the future of both projects.
+
+> Any illegal distribution of Aldor sources will, however, almost
+> certainly scupper any chance of it ever being released under
+> an open-source licence.
+>
+
+Could you explain why you say that? What consequences do you see
+for an unauthorized distribution? Why would it stop Aldor from
+being properly licensed as open source? Once it is open source
+there is a possibility of many different distributions (provided
+of course that they compile with the licensing).
+ 
+> I understand your frustration at the slow progress on this,
+
+Is "slow progress" the same thing as "no progress"? ;)
+
+> but that doesn't give you the right to take something that isn't
+> rightfully yours.
+
+As I see it I would not be "taking" anything. If the desire was
+clearly stated that the current owners did not want and did not
+intend to make Aldor open source, then the situation would be
+different. Anyway there are good reasons for me not to proceed
+with what I suggested besides the legal ones. Clearly it would be
+much better for everyone if aldor.org would simply proceed with
+an open source license.
+
+Really, how difficult is that for someone who really cares about
+the future of Aldor and Axiom to release Aldor as open source?
+I can not help but think that the delays are either deliberate or
+indicate a lack of interest on the part of the current owners.
+But I guess I am just being stupid...
+
+> The current situation is that NAG has agreed in principle
+> to a proposal from Stephen Watt to release Aldor under a new 
+> licence.  We are now waiting for him to provide details of what
+> that licence should be.
+
+Isn't that exactly the situation that you described in March last
+year?
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Mon Nov 20 12:57:15 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmDON-0006fK-Ho
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 12:57:15 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmDOL-0006c1-FT
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 12:57:13 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmDOK-0006Zy-An
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 12:57:12 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmDOJ-0006ZT-W8
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 12:57:12 -0500
+Received: from [62.231.145.242] (helo=nagmx1.nag.co.uk)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GmDOJ-0002nl-Ja
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 12:57:11 -0500
+Received: from edinburgh.nag.co.uk (edinburgh.nag.co.uk [192.156.217.171])
+	by nagmx1.nag.co.uk (Postfix) with ESMTP id EFB6E120008;
+	Mon, 20 Nov 2006 17:57:12 +0000 (GMT)
+Received: from edinburgh.nag.co.uk (edinburgh.nag.co.uk [127.0.0.1])
+	by edinburgh.nag.co.uk (8.13.1/8.12.10) with ESMTP id kAKHvArW012886;
+	Mon, 20 Nov 2006 17:57:10 GMT
+Received: (from miked@localhost)
+	by edinburgh.nag.co.uk (8.13.1/8.13.1/Submit) id kAKHv94O012885;
+	Mon, 20 Nov 2006 17:57:09 GMT
+Date: Mon, 20 Nov 2006 17:57:09 +0000
+From: Mike Dewar <miked@nag.co.uk>
+To: Bill Page <bill.page1@synthesis.anikast.ca>
+Subject: Re: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+Message-ID: <20061120175709.GB12705@nag.co.uk>
+References: <20061120163356.GC10225@nag.co.uk>
+	<032a01c70cc8$7866e430$6900a8c0@asus>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-15
+Content-Disposition: inline
+In-Reply-To: <032a01c70cc8$7866e430$6900a8c0@asus>
+User-Agent: Mutt/1.4.1i
+Cc: axiom-legal@nongnu.org, ghue@xmt.at, 'Stephen Watt' <Stephen.Watt@uwo.ca>
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 17:57:14 -0000
+
+On Mon, Nov 20, 2006 at 12:22:18PM -0500, Bill Page wrote:
+> I realize that I have no "right" to do so. The point was that
+> (perhaps) doing so would not have an negative consequences -
+> at least not more negative than the current situation. Plus it
+> continues to make the point that many people consider it critical
+> to the future of both projects.
+To release it you would need to select a licence.  How do you know it is
+the licence that the owners of the code would choose?  
+
+Its clear that some people (including, despite what you imply in the
+rest of your message, myself) are keen to see Aldor open-sourced, but
+you need to keep a sense of perspective.  Nobody has any right to demand
+an open-source Aldor, and the kind of tactics that you seem to be
+advocating are just going to alienate the very people who you need on
+your side.
+
+> Could you explain why you say that? What consequences do you see
+> for an unauthorized distribution? Why would it stop Aldor from
+> being properly licensed as open source? Once it is open source
+> there is a possibility of many different distributions (provided
+> of course that they compile with the licensing).
+You are asking NAG and the other owners of Aldor to do you a favour,
+which will take time and effort.  Do you really expect us to release
+Aldor as open source if you try and force our hand with illegal actions?
+
+> > I understand your frustration at the slow progress on this,
+> 
+> Is "slow progress" the same thing as "no progress"? ;)
+No.  There has been progress as I explained.
+
+> Really, how difficult is that for someone who really cares about
+> the future of Aldor and Axiom to release Aldor as open source?
+> I can not help but think that the delays are either deliberate or
+> indicate a lack of interest on the part of the current owners.
+> But I guess I am just being stupid...
+Why do you say that?  If we weren't interested in an open-source Aldor
+then we'd just say so.  Then I wouldn't have to respond to emails on the
+subject every few months :-)
+
+> > The current situation is that NAG has agreed in principle
+> > to a proposal from Stephen Watt to release Aldor under a new 
+> > licence.  We are now waiting for him to provide details of what
+> > that licence should be.
+> 
+> Isn't that exactly the situation that you described in March last
+> year?
+No.  The proposal from Stephen was received at the beginning of this
+month.
+
+Kind regards,
+
+Mike.
+
+--
+---------------------------------------------------------------------------
+
+    Mike Dewar                                 email: miked@nag.co.uk
+    Chief Technical Officer                    phone: (+44) 1865 518055
+    NAG Ltd                                    fax:   (+44) 1865 310139
+    Wilkinson House, Jordan Hill Rd, Oxford, OX2 8DR
+
+---------------------------------------------------------------------------
+
+
+
+From MAILER-DAEMON Mon Nov 20 13:37:37 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmE1Q-0008EH-Ku
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 13:37:36 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmE1O-0008Af-Fp
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 13:37:34 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmE1K-000861-EI
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 13:37:33 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmE1J-00084h-TE
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 13:37:30 -0500
+Received: from [140.78.116.39] (helo=athena.risc.uni-linz.ac.at)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA:24) (Exim 4.52) id 1GmE1I-0007cL-Vo
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 13:37:29 -0500
+Received: from [192.168.138.17] (funklan.is4all.net [194.187.177.126])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	kAKIbKLs002711
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Mon, 20 Nov 2006 19:37:24 +0100
+Message-ID: <4561F65D.4090803@hemmecke.de>
+Date: Mon, 20 Nov 2006 19:39:25 +0100
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 1.5.0.8 (X11/20061025)
+MIME-Version: 1.0
+To: Mike Dewar <miked@nag.co.uk>
+Subject: Re: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+References: <20061120163356.GC10225@nag.co.uk>
+	<032a01c70cc8$7866e430$6900a8c0@asus>
+	<20061120175709.GB12705@nag.co.uk>
+In-Reply-To: <20061120175709.GB12705@nag.co.uk>
+Content-Type: text/plain; charset=ISO-8859-15; format=flowed
+Content-Transfer-Encoding: 7bit
+Cc: 'Stephen Watt' <Stephen.Watt@uwo.ca>, axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 18:37:35 -0000
+
+On 11/20/2006 06:57 PM, Mike Dewar wrote:
+>>> The current situation is that NAG has agreed in principle
+>>> to a proposal from Stephen Watt to release Aldor under a new 
+>>> licence.  We are now waiting for him to provide details of what
+>>> that licence should be.
+>> Isn't that exactly the situation that you described in March last
+>> year?
+> No.  The proposal from Stephen was received at the beginning of this
+> month.
+
+Mike, is it realistic to think that the public sees an open Aldor before 
+Christmas 2006?
+
+Ralf
+
+
+
+From MAILER-DAEMON Mon Nov 20 13:51:44 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmEF5-0005Tt-Hg
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 13:51:43 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmEF0-0005Ok-Hr
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 13:51:38 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmEEv-0005Kk-8b
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 13:51:36 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmEEu-0005Jz-QY
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 13:51:32 -0500
+Received: from [66.196.97.61] (helo=web56702.mail.re3.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.52) id 1GmEEu-00030d-NJ
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 13:51:32 -0500
+Received: (qmail 72001 invoked by uid 60001); 20 Nov 2006 18:51:32 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=Message-ID:Received:Date:From:Subject:To:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=TLmWaB4MEBUHP+IX4Rv6VEZYaZTVvHXMI8Qy0bNHjPJTf6ys57QSU6SfKIvIdaFxkBwpfumcHG0Oq1mH8Tf8NgmJsfgdAIb2tU4KTpUKsZCXASXkkQjlD674BBTZV/13MnUu+HxPGqhNkrvymAxbJF9z8Pf00yR7dRi1pXSAejE=
+	; 
+Message-ID: <20061120185132.71999.qmail@web56702.mail.re3.yahoo.com>
+Received: from [216.174.43.195] by web56702.mail.re3.yahoo.com via HTTP;
+	Mon, 20 Nov 2006 10:51:32 PST
+Date: Mon, 20 Nov 2006 10:51:32 -0800 (PST)
+From: C Y <smustudent1@yahoo.com>
+Subject: Re: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+To: axiom-legal@nongnu.org
+In-Reply-To: <02ca01c70cac$5cfc3810$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 18:51:41 -0000
+
+
+--- Bill Page <bill.page1@synthesis.anikast.ca> wrote:
+
+> So in this light, how should we view the current situation with
+> Aldor? Last March I proposed that we (or I) simply go ahead and
+> license Aldor source as GPL (or under the Aldor Public License).
+
+I'm a bit confused.  The Aldor distribution currently available is
+already under the Aldor Public License.  My original understanding was
+that there are certain core bits of Aldor (the compiler?) that are
+binary only in the current publicly available distribution.  The binary
+only bits are clearly NOT released in source code to the general public
+under ANY license at this time.  Did I misunderstand the situation?
+
+> The benefits for Axiom are obvious and I can see not negative
+> affects on Aldor and the people who current depend on it via
+> aldor.org.
+
+Nevertheless, they are still the only ones who can make that decision.
+
+> At the time Mike Dewar convinced me to "wait until"
+> summer with the promise that it would be discussed when he met
+> Steven Watt at one of several meetings. He also said that NAG
+> "would likely approve any reasonable proposal". Again in August
+> we heard that it had been discussed. But there has been no news
+> of any kind sense then.
+
+Which is why the discussions of improving SPAD have gained momentum
+recently.  If we don't want to wait on Aldor, improving SPAD or
+starting anew are the only viable options.  Taking unapproved action
+with Aldor would be an unmitigated disaster legally and public
+relations wise, to say nothing of how it would be viewed by the
+copyright holders (who have already been very generous.)
+
+> Do you think I should resurrect my plan to just unilaterally
+> release Aldor as open source and see what happens?
+
+NO.  The distinction between fairly subtle questions of license
+compatibilities and releasing code without the concent of the copyright
+holders is night and day.  In the former case the questions are
+reasonable - is this OK or not under these conditions?  It is generally
+accepted that the Modified BSD license permits code to be used in GPL
+programs, and this has been done many times in practice without issue. 
+Releasing code without approval from the copyright holder under ANY
+license is another matter altogether, and is not reasonable under any
+interpretation I have ever heard of - NAG and Aldor.org own the code.
+The response would be negative in the extreme - people may decide to
+give away code, but it is THEIR decision to do so. 
+
+Also, when people don't use Modified BSD or GPL there is generally a
+reason they choose not to, so incompatibilities must be respected.  The
+proper thing to do in such a case is contact the authors/copyright
+holders and discuss the issues.  Tim is correct that only lawyers can
+render really useful opinions on these issues, but that doesn't mean we
+don't need to make a good faith effort to respect the license to the
+best of our abilities.  Aldor I think is very clearly NOT GPL or
+Modified BSD, and unless and until they decide to change that we are
+obligated to respect that decision.
+
+Cheers,
+CY
+
+
+ 
+____________________________________________________________________________________
+Sponsored Link
+
+Mortgage rates near 39yr lows. 
+$510k for $1,698/mo. Calculate new payment! 
+www.LowerMyBills.com/lre
+
+
+
+From MAILER-DAEMON Mon Nov 20 13:57:58 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmEL7-0000h7-Sj
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 13:57:57 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmEL6-0000g4-4s
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 13:57:56 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmEL4-0000f8-CJ
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 13:57:55 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmEL4-0000f4-6o
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 13:57:54 -0500
+Received: from [66.196.97.68] (helo=web56709.mail.re3.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.52) id 1GmEL4-0004q5-70
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 13:57:54 -0500
+Received: (qmail 43388 invoked by uid 60001); 20 Nov 2006 18:57:53 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=X-YMail-OSG:Received:Date:From:Subject:To:Cc:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID;
+	b=iPQ4QOSEavB1X/i/RjYtuCk8jBTYvUA+lessNsFF92vynzZOaeixOU1G51AiF1RrPdLF4l8PJe9miQ4vzSsGA+BKGoGiESSGpmiMvyijlRj0y1ghAkGjf7T8EV3QNUr61Q01pmCIsQT1l25gtnzsv9Fy+wtpQdwToOfYGULrQgw=;
+X-YMail-OSG: 5ipLcKwVM1nM_.VyEUjTRG9mirEkcqAQfMPzCGkvTv7VGchAXdK.D00Sh57O0RLlti0oXBXD4AGj5rI8iXPpndGieIEy8F_oXT61HoLDLLgLMoVklWXXpCa0ROW9ziR3WbUD7YImnhuRd6E-
+Received: from [216.174.43.195] by web56709.mail.re3.yahoo.com via HTTP;
+	Mon, 20 Nov 2006 10:57:53 PST
+Date: Mon, 20 Nov 2006 10:57:53 -0800 (PST)
+From: C Y <smustudent1@yahoo.com>
+Subject: Re: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+To: Mike Dewar <miked@nag.co.uk>
+In-Reply-To: <20061120175709.GB12705@nag.co.uk>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Message-ID: <150060.42916.qm@web56709.mail.re3.yahoo.com>
+Cc: axiom-legal@nongnu.org, 'Stephen Watt' <Stephen.Watt@uwo.ca>
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 18:57:56 -0000
+
+
+--- Mike Dewar <miked@nag.co.uk> wrote:
+
+> > > The current situation is that NAG has agreed in principle
+> > > to a proposal from Stephen Watt to release Aldor under a new 
+> > > licence.  We are now waiting for him to provide details of what
+> > > that licence should be.
+> > 
+> > Isn't that exactly the situation that you described in March last
+> > year?
+>
+> No.  The proposal from Stephen was received at the beginning of this
+> month.
+
+This is good news!  Thank you for your continuing efforts, and for all
+you have already done for the Axiom community.
+
+CY
+
+
+ 
+____________________________________________________________________________________
+Sponsored Link
+
+Mortgage rates near 39yr lows. 
+$510k for $1,698/mo. Calculate new payment! 
+www.LowerMyBills.com/lre
+
+
+
+From MAILER-DAEMON Mon Nov 20 14:03:02 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmEQ1-0005kv-RR
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 14:03:01 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmEPz-0005h5-PS
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 14:03:00 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmEPv-0005cj-Ql
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 14:02:58 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmEPv-0005bv-9j
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 14:02:55 -0500
+Received: from [216.251.41.178] (helo=mail58c2.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GmEPt-0006ML-Qj
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 14:02:54 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail58c2.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	kAKJ2R4d001609; Mon, 20 Nov 2006 14:02:40 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Mike Dewar'" <miked@nag.co.uk>
+Subject: RE: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+Date: Mon, 20 Nov 2006 14:02:16 -0500
+Message-ID: <035a01c70cd6$6d3e90e0$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+Importance: Normal
+In-Reply-To: <20061120175709.GB12705@nag.co.uk>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Cc: axiom-legal@nongnu.org, ghue@xmt.at, 'Stephen Watt' <Stephen.Watt@uwo.ca>
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 19:03:00 -0000
+
+Mike,
+
+On November 20, 2006 12:57 PM you wrote:
+> ...
+> You are asking NAG and the other owners of Aldor to do you a
+> favour, which will take time and effort.  Do you really expect
+> us to release Aldor as open source if you try and force our hand
+> with illegal actions?
+
+No, of course I really don't have any way of forcing anyone's "hand"
+even if I were to make the rash move to distribute Aldor source code.
+The legitimit owners of Aldor could certainly assert their rights no
+matter what action I take. The best I can hope to do is to make it
+clear how important I think this issue is.
+
+Nor do I think of this as asking for a personal favor since I
+probably have less intellectual investment and certainly less
+financial investment in Axiom than many other people. I do however
+expect that any rational person with the stated motivations would
+have resolved these licensing issues long ago. Resolution is in
+everyone's interest and open source licensing is clearly the best
+option. By now this has been proven in many different situations.
+Continued delay is harmful (maybe even fatal) to both Aldor and
+Axiom.
+
+> 
+> > > I understand your frustration at the slow progress on this,
+> > 
+> > Is "slow progress" the same thing as "no progress"? ;)
+>
+> No.  There has been progress as I explained.
+> 
+
+That's very good news!
+
+> > Really, how difficult is that for someone who really cares about
+> > the future of Aldor and Axiom to release Aldor as open source?
+> > I can not help but think that the delays are either deliberate or
+> > indicate a lack of interest on the part of the current owners.
+> > But I guess I am just being stupid...
+>
+> Why do you say that?  If we weren't interested in an open-source
+> Aldor then we'd just say so.  Then I wouldn't have to respond to 
+> emails on the subject every few months :-)
+> ...
+
+I do greatly appreciate your taking the time to reply.
+
+Thank you.
+
+Sincerely,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Mon Nov 20 14:26:37 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmEmq-0006Ni-VG
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 14:26:37 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmEmn-0006KF-Uo
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 14:26:34 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmEml-0006H6-4c
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 14:26:33 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmEmk-0006Gg-OA
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 14:26:30 -0500
+Received: from [216.251.41.62] (helo=mail242.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GmEmk-0005u3-HX
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 14:26:30 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail242.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	kAKJQAKa003828; Mon, 20 Nov 2006 14:26:23 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'C Y'" <smustudent1@yahoo.com>
+Subject: RE: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+Date: Mon, 20 Nov 2006 14:26:03 -0500
+Message-ID: <037901c70cd9$bd724e50$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+Importance: Normal
+In-Reply-To: <20061120185132.71999.qmail@web56702.mail.re3.yahoo.com>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Cc: axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 19:26:34 -0000
+
+On November 20, 2006 1:52 PM C Y wrote:
+> 
+> --- Bill Page wrote:
+> 
+> > So in this light, how should we view the current situation with
+> > Aldor? Last March I proposed that we (or I) simply go ahead and
+> > license Aldor source as GPL (or under the Aldor Public License).
+> 
+> I'm a bit confused.  The Aldor distribution currently available is
+> already under the Aldor Public License.
+
+Correct.
+
+> My original understanding was that there are certain core bits of
+> Aldor (the compiler?) that are binary only in the current publicly
+> available distribution.
+
+Yes.
+
+> The binary only bits are clearly NOT released in source code to
+> the general public under ANY license at this time.
+
+That is entirely unclear to me. The Aldor Public License does not
+distinguish between binary versus source code formats. It does state
+specifically what one's obligations would be *if* one were to make
+modifications to the source code. If you read the intention of the
+Aldor Public License and the history section of the aldor.org web
+site, it gives the distinct impression that Aldor in toto is publicly
+available.
+
+But as Tim said in his earlier message: we are not lawyers so
+arguing about wording is rather pointless.
+
+As far as I can see it was aldor.org's decision simply to withhold
+the source code from the distribution, possibly with the (good)
+intentions of controlling modifications to the source. I think this
+happened before the open source development model became as well
+established as it is today. People just did not know how well it
+would work to allow open updating of publicly accessible source
+code repositories. Contrary to some fears, it has not resulted
+in "chaos". Instead we now have versions of linux that are more
+than competitive with both closed source unix and Windows. And
+companies like Sun are scrabbling to open their previously closed
+source products at quickly as possible.
+
+> Did I misunderstand the situation?
+
+No more than anyone else. ;-)
+
+> ... 
+> Which is why the discussions of improving SPAD have gained
+> momentum recently.  If we don't want to wait on Aldor, improving
+> SPAD or starting anew are the only viable options.
+
+I still don't consider it viable in spite of the fact that (finally!)
+we do have some developers (Gaby and Waldek) who are capable and
+perhaps motivated. After all, some estimates say that it took over
+$1,000,000 and more than 3 man-years to develop Aldor and this was
+done by people directly involved in the Axiom/ScratchPad project.
+
+> Taking unapproved action with Aldor would be an unmitigated
+> disaster legally and public relations wise, to say nothing of
+> how it would be viewed by the copyright holders (who have already
+> been very generous.)
+
+I think you greatly exaggrate. Everyone has already publicly stated
+that they agree with making Aldor open source.
+
+> ...
+> The proper thing to do in such a case is contact the authors/copyright
+> holders and discuss the issues.
+
+We have been doing that for some time now.
+
+> Tim is correct that only lawyers can render really useful opinions
+> on these issues, but that doesn't mean we don't need to make a good
+> faith effort to respect the license to the best of our abilities.
+
+>From my point of view, to err on the side of caution is equivalent
+to doing nothing.
+
+> Aldor I think is very clearly NOT GPL or Modified BSD, and unless
+> and until they decide to change that we are obligated to respect
+> that decision.
+> 
+
+Have you read the Aldor Public License? It looks pretty much like
+GPL to me.
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Mon Nov 20 17:10:49 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmHLl-0002qU-JZ
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 17:10:49 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmHLk-0002qO-DB
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 17:10:48 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmHLi-0002qC-AS
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 17:10:47 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmHLi-0002q9-6C
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 17:10:46 -0500
+Received: from [66.196.97.73] (helo=web56714.mail.re3.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.52) id 1GmHLh-0001oi-4I
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 17:10:45 -0500
+Received: (qmail 65754 invoked by uid 60001); 20 Nov 2006 22:10:44 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=Message-ID:Received:Date:From:Subject:To:Cc:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	b=VOrNqSztwcoZ/NvqCEyAnfX8RuKcVuqWE7v2r/x553+tJRKJt8nJNW1UarMDRW0iRAgFEhtk4h06jldhzmJ/N0sypL4A5dYSj+/lFI3p7w4EbdkjSJPHWYCVDlGsOu3NQmu2+XofEF9yvRIV6YGz7AdWeEvJ+iczlNojAaTgMek=
+	; 
+Message-ID: <20061120221044.65752.qmail@web56714.mail.re3.yahoo.com>
+Received: from [70.161.176.93] by web56714.mail.re3.yahoo.com via HTTP;
+	Mon, 20 Nov 2006 14:10:44 PST
+Date: Mon, 20 Nov 2006 14:10:44 -0800 (PST)
+From: C Y <smustudent1@yahoo.com>
+Subject: RE: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+To: Bill Page <bill.page1@synthesis.anikast.ca>
+In-Reply-To: <037901c70cd9$bd724e50$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Cc: axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 20 Nov 2006 22:10:48 -0000
+
+
+
+--- Bill Page <bill.page1@synthesis.anikast.ca> wrote:
+
+> > The binary only bits are clearly NOT released in source code to
+> > the general public under ANY license at this time.
+> 
+> That is entirely unclear to me. The Aldor Public License does not
+> distinguish between binary versus source code formats. It does state
+> specifically what one's obligations would be *if* one were to make
+> modifications to the source code. If you read the intention of the
+> Aldor Public License and the history section of the aldor.org web
+> site, it gives the distinct impression that Aldor in toto is publicly
+> available.
+
+However, since this is apparently not the case (I assume the compiler
+source code is somewhere other than in the distribution) it must be
+assumed that this omission was intentional until proven otherwise.  The
+fact that there is a lot of work going on behind the scenes on this
+would seem to confirm the issue is not straightforward.
+ 
+> But as Tim said in his earlier message: we are not lawyers so
+> arguing about wording is rather pointless.
+
+True.
+
+> As far as I can see it was aldor.org's decision simply to withhold
+> the source code from the distribution, possibly with the (good)
+> intentions of controlling modifications to the source. I think this
+> happened before the open source development model became as well
+> established as it is today. People just did not know how well it
+> would work to allow open updating of publicly accessible source
+> code repositories. Contrary to some fears, it has not resulted
+> in "chaos". Instead we now have versions of linux that are more
+> than competitive with both closed source unix and Windows. And
+> companies like Sun are scrabbling to open their previously closed
+> source products at quickly as possible.
+
+Which is probably why there IS still work going on to make it happen. 
+I can readily accept that the legal aspects of this are not simple to
+work through.  Mike Dewar's update that there is still work in progress
+is very encouraging to me.
+
+> > Which is why the discussions of improving SPAD have gained
+> > momentum recently.  If we don't want to wait on Aldor, improving
+> > SPAD or starting anew are the only viable options.
+> 
+> I still don't consider it viable in spite of the fact that (finally!)
+> we do have some developers (Gaby and Waldek) who are capable and
+> perhaps motivated. After all, some estimates say that it took over
+> $1,000,000 and more than 3 man-years to develop Aldor and this was
+> done by people directly involved in the Axiom/ScratchPad project.
+
+True.  Whether open source could duplicate such an effort is in my mind
+an open question.
+ 
+> > Taking unapproved action with Aldor would be an unmitigated
+> > disaster legally and public relations wise, to say nothing of
+> > how it would be viewed by the copyright holders (who have already
+> > been very generous.)
+> 
+> I think you greatly exaggrate. Everyone has already publicly stated
+> that they agree with making Aldor open source.
+
+Yes, but the viability of open source rests on a healthy respect for
+copyright and legality.  Morally, re-licensing the code willy-nilly
+would be about the same as taking GPL code and incorporating it into a
+commercial product.  Even if the original authors had said that might
+be acceptable under the right conditions, doing it without their
+explicit approval would be a Bad Idea.  Aldor.org and NAG MUST be
+allowed to do as they please with their work, the same as we are
+allowed to do what we please with our own.  Any violation of that trust
+and respect is very dangerous to the community, to say nothing of
+relations with NAG (who after all didn't have to do any of this in the
+first place.)
+ 
+> > Tim is correct that only lawyers can render really useful opinions
+> > on these issues, but that doesn't mean we don't need to make a good
+> > faith effort to respect the license to the best of our abilities.
+> 
+> From my point of view, to err on the side of caution is equivalent
+> to doing nothing.
+
+I would have to hear a professional legal opinion to convince me there
+is any other option here.  It seems quite straightforward - if
+Aldor.org and NAG say "not yet", that's the last word.  It's their
+code.
+ 
+> > Aldor I think is very clearly NOT GPL or Modified BSD, and unless
+> > and until they decide to change that we are obligated to respect
+> > that decision.
+> > 
+> 
+> Have you read the Aldor Public License? It looks pretty much like
+> GPL to me.
+
+This part looks like it might not be GPL compatible:
+
+(b) you grant Aldor.org a royalty-free license to use, modify or
+redistribute your modifications without limitation
+
+"without limitation" would seem to me to mean you are granting rights
+to Aldor.org over and above those of the GPL.  Again though, this is
+one of those lawyer questions. (Sorry Tim.)  Let's say Aldor.org wants
+to release a commercial version of Aldor - under this license, they can
+incorporate any work based off the Aldor code into a closed source
+binary distribution.  (That's not to say they would do so, of course,
+but legal documents are where people are supposed to consider worst
+case scenarios.)
+
+Anyway, Mike Dewar and Dr. Watt are still working on it, which is
+excellent news and may render this whole discussion moot.
+
+Cheers,
+CY
+
+
+ 
+____________________________________________________________________________________
+Sponsored Link
+
+Compare mortgage rates for today. 
+Get up to 5 free quotes. 
+Www2.nextag.com
+
+
+
+From MAILER-DAEMON Mon Nov 20 23:28:40 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmNFP-00086i-TE
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 23:28:39 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmNFO-000842-7y
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 23:28:38 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmNFN-00082k-5D
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 23:28:37 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmNFN-00082Y-0p
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 23:28:37 -0500
+Received: from [216.251.41.82] (helo=mail262.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GmNFM-00055C-Ow
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 23:28:37 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail262.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	kAL4SExO018828; Mon, 20 Nov 2006 23:28:28 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'C Y'" <smustudent1@yahoo.com>
+Subject: RE: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+Date: Mon, 20 Nov 2006 23:28:06 -0500
+Message-ID: <041e01c70d25$76dc5250$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+Importance: Normal
+In-Reply-To: <20061120221044.65752.qmail@web56714.mail.re3.yahoo.com>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Cc: axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Nov 2006 04:28:38 -0000
+
+On November 20, 2006 5:11 PM C Y wrote:
+> 
+> --- Bill Page wrote:
+> > ...
+> > The Aldor Public License does not distinguish between binary
+> > versus source code formats. It does state specifically what
+> > one's obligations would be *if* one were to make modifications
+> > to the source code. If you read the intention of the Aldor
+> > Public License and the history section of the aldor.org web
+> > site, it gives the distinct impression that Aldor in toto 
+> > is publicly available.
+> 
+> However, since this is apparently not the case (I assume the
+> compiler source code is somewhere other than in the distribution)
+
+Yes, there is a cvs source archive on another aldor.org machine
+that is accessible only to users with an account on that machine.
+The binary distribution (several versions) is available for free
+download as a tarball (after you agree to the Aldor Public License).
+The tarball *does* not include the C source code of the compiler
+nor the source code of some runtime libraries.
+
+The copy of the Aldor source code that I obtained after I contacted
+Steven Watt last year (August 2005) when I wanted to re-compile
+Aldor for use on x86-46 hardware did not come with any license
+statement nor a non-disclosure agreement of any kind. However I did
+not obtain it through "normal" channels (assuming that such does in
+fact exist) since Steven himself did not reply to my request until
+several months later (October 2005) at which time he wrote:
+
+"I've taken a bit longer to respond than planned because we are now
+contemplating adopting a complete open source license for everyone.
+This might take a bit of time, however, so it might make sense to
+go ahead on an individual basis with you beforehand."
+
+> it must be assumed that this omission was intentional until
+> proven otherwise.
+
+Yes, of course it was intentional. A plausible reason for this
+in spite of the existence of the Aldor Public License and that
+Aldor is freely and publicly available in binary format is the
+desire to control the official source. Unfortunately aldor.org
+did not seem to realize that such control kills almost all desire
+for innovation on the part of others. Very little has been done
+to Aldor since it's release by aldor.org - even bug fixes seem
+to be mostly ignored.
+
+> The fact that there is a lot of work going on behind the scenes
+> on this would seem to confirm the issue is not straightforward.
+
+What gives you the idea that "there is a lot of work going on
+behind the scenes"? I see no real evidence of that. Can you give
+any example other than the communication to which Mike Dewar
+recently referred? Remember that it has taken more than a year
+since Steven Watt first said publicly that work was underway
+to make Aldor open source for the process to reach this stage.
+
+Also, I fail to see why the issues is not straightforward.
+Everyone involved has already indicated they are in favour of
+making Aldor open source. No one has spoken in favour of keeping
+Aldor source code closed.
+
+> ...
+> I can readily accept that the legal aspects of this are not
+> simple to work through.
+
+Could you give an example of such a "legal aspect"?
+
+> Mike Dewar's update that there is still work in progress
+> is very encouraging to me.
+>
+
+Yes, to me too. But the delay is really deadly. In my opinion we
+(the Axiom project) would have been much better off if we had
+known two or three years ago whether or not Aldor was going to
+be part of Axiom or not. If the answer had been "no", we would be
+struggling but at least work would now be well underway to improve
+SPAD and to write new algebra code. If the answer had been "yes"
+then the work to re-write the Axiom algebra library would likely
+be near completion and many people would be involved in writing
+new algebra code. But because there has been no decision for so
+long, the result is that nearly everything concerning the algebra
+is "on hold" and otherwise enthusiastic people (such as those
+developing Sage right now) don't want to touch Axiom because of
+the overwhelming amount of legacy code and uncertainty about
+Aldor - the only interesting part to many people with a computer
+science orientation. (Gaby being a fortunate exception :-)
+ 
+> ...
+> > Everyone has already publicly stated that they agree with
+> > making Aldor open source.
+> 
+> Yes, but the viability of open source rests on a healthy respect
+> for copyright and legality.
+
+I doubt that. It seems to me that the original open source projects,
+especially those originating from the Free Software Foundation,
+were driven by people who wanted to change the existing status quo
+of legally proprietary software. There are many philosophical
+arguments about why software should be free of the constraints
+of usual copyright and licensed in such as way as to impose this
+condition on anyone willing to modify and re-distribute it. Many
+people considered this borderline illegal. Witness the Unix law
+suite only just recently resolved.
+
+As far as I am concerned the viability of open source rests on
+volunteers. I expect that what motivates volunteers ranges widely
+but none of those whom I have spoken to had much respect for
+anything that prevents them from working on their chosen project
+or for that matter any commercially motivated group who uses
+licensing and copyright to limit open access to source code
+(currently Microsoft and Apple, formerly Sun and IBM), which of
+course is not to be interpreted as my saying they are willing to
+do anything illegal.
+
+I think the apparent preoccupation with licenses and legal opinions
+of people working in open source is only in response to challenges
+to this freedom by commercial proprietary interests.
+
+> Morally, re-licensing the code willy-nilly would be about the
+> same as taking GPL code and incorporating it into a commercial
+> product.
+
+There is nothing legal about using GPL code in a commercial product.
+Of course it carries the obligation that the source code of the
+commercial product must be open source, but contrary to most
+"corporate expectations", open source code has not proven to be
+a detriment - quite the contrary. "Commercial" should not be
+confused with proprietary or "closed". For example consider Red
+Hat Enterprise Linux, Sun's StarOffice (aka. OpenOffice) and IBM's
+webserver products based on Apache. This is likely to be the norm
+in the future rather than the exception.
+
+> Even if the original authors had said that might be acceptable
+> under the right conditions, doing it without their explicit
+> approval would be a Bad Idea.  Aldor.org and NAG MUST be
+> allowed to do as they please with their work, the same as
+> we are allowed to do what we please with our own.
+
+Well, yes copyright law does require the permission of copyright
+holders. Violating the wishes of the copyright holders could
+leave one open to a law suit but Tim has already explained why
+such action is very unlikely.
+
+> Any violation of that trust and respect is very dangerous to the
+> community, to say nothing of relations with NAG (who after all
+> didn't have to do any of this in the first place.)
+
+There is a risk I suppose that, since NAG retains the copyright on
+Axiom (see Axiom license), that they might choose to re-license
+Axiom at some point in the future. But that would not retroactively
+affect any versions of the Axiom that had already been released
+under the existing license.
+
+>  
+> > > Tim is correct that only lawyers can render really useful
+> > > opinions on these issues, but that doesn't mean we don't need
+> > > to make a good faith effort to respect the license to the best
+> > > of our abilities.
+
+Which license? As far as I can tell, what I was proposing in terms
+of releasing Aldor source under the Aldor Public License would
+conform perfectly with that license. Releasing Aldor under GPL
+would be more restrictive but compatible with the Aldor Public
+License.
+
+> > 
+> > From my point of view, to err on the side of caution is equivalent
+> > to doing nothing.
+> 
+> I would have to hear a professional legal opinion to convince me
+> there is any other option here.  It seems quite straightforward -
+> if Aldor.org and NAG say "not yet", that's the last word.  It's
+> their code.
+>  
+> > > Aldor I think is very clearly NOT GPL or Modified BSD, and unless
+> > > and until they decide to change that we are obligated to respect
+> > > that decision.
+> > > 
+> > 
+> > Have you read the Aldor Public License? It looks pretty much like
+> > GPL to me.
+> 
+> This part looks like it might not be GPL compatible:
+> 
+> (b) you grant Aldor.org a royalty-free license to use, modify or
+> redistribute your modifications without limitation
+> 
+> "without limitation" would seem to me to mean you are granting rights
+> to Aldor.org over and above those of the GPL.  Again though, this is
+> one of those lawyer questions. (Sorry Tim.)  Let's say Aldor.org
+> wants to release a commercial version of Aldor - under this license,
+> they can incorporate any work based off the Aldor code into a closed
+> source binary distribution.  (That's not to say they would do so, of
+> course, but legal documents are where people are supposed to consider
+> worst case scenarios.)
+
+Well, this is posted on "axiom-legal" which is the place where Tim Daly
+says we should keep confine such discussions. As such I feel more free
+to speak of these issues here than I would in any other Axiom forum.
+I am not a lawyer but I can argue about how many angels fit on the head
+of a pin just as well as the next guy. :-)
+
+I think you should not take "without limitation" out of context. This
+is part of the Aldor Public License which specifically makes such
+modifications public. That would be similar to what is already allowed
+in Axiom under the current modified BSD license (which is considered
+compatible with GPL). The rights assigned to Aldor.org are compatible
+with GPL in the same sense in which BSD is compatible.
+
+> 
+> Anyway, Mike Dewar and Dr. Watt are still working on it, which is
+> excellent news and may render this whole discussion moot.
+> 
+
+I certainly hope so. :-)
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Mon Nov 20 23:50:26 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmNaU-0001oT-IP
+	for mharc-axiom-legal@gnu.org; Mon, 20 Nov 2006 23:50:26 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmNaS-0001jy-4w
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 23:50:24 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmNaR-0001hN-1Z
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 23:50:23 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmNaQ-0001h4-TM
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 23:50:22 -0500
+Received: from [24.116.0.229] (helo=S3.cableone.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GmNaQ-0007lb-QH
+	for axiom-legal@nongnu.org; Mon, 20 Nov 2006 23:50:23 -0500
+Received: from vh213602.truman.edu.truman.edu (unverified [69.92.109.183]) 
+	by S3.cableone.net (CableOne SMTP Service S3) with ESMTP id 83388749 
+	for multiple; Mon, 20 Nov 2006 21:50:20 -0700
+To: axiom-legal@nongnu.org
+Subject: Re: [Axiom-legal] Licensing Aldor
+From: Jay Belanger <belanger@truman.edu>
+References: <041e01c70d25$76dc5250$6900a8c0@asus>
+Date: Mon, 20 Nov 2006 22:53:59 -0600
+In-Reply-To: <041e01c70d25$76dc5250$6900a8c0@asus> (Bill Page's message of
+	"Mon\, 20 Nov 2006 23\:28\:06 -0500")
+Message-ID: <873b8dmmc8.fsf@vh213602.truman.edu>
+User-Agent: Gnus/5.11 (Gnus v5.11) Emacs/22.0.91 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-NotAscii: charset=us-ascii
+X-IP-stats: Incoming Last 0, First 29, in=12, out=0, spam=0
+X-External-IP: 69.92.109.183
+X-Abuse-Info: Send abuse complaints to abuse@cableone.net
+Cc: 
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: belanger@truman.edu
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Nov 2006 04:50:24 -0000
+
+
+"Bill Page" <bill.page1@synthesis.anikast.ca> writes:
+...
+>> it must be assumed that this omission was intentional until
+>> proven otherwise.
+>
+> Yes, of course it was intentional. A plausible reason for this
+> in spite of the existence of the Aldor Public License and that
+> Aldor is freely and publicly available in binary format is the
+> desire to control the official source. Unfortunately aldor.org
+> did not seem to realize that such control kills almost all desire
+> for innovation on the part of others.
+
+Or even kills the ability to use it.  I'm running GNU/Linux with glibc
+2.4; that isn't one of the four OSs that Aldor runs on.  Unless I
+downgrade the software on my computer, I can't use Aldor.
+
+Jay
+
+
+
+From MAILER-DAEMON Tue Nov 21 00:24:59 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmO7v-0004rU-9t
+	for mharc-axiom-legal@gnu.org; Tue, 21 Nov 2006 00:24:59 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmO7t-0004p7-8a
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 00:24:57 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmO7s-0004nt-1Y
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 00:24:56 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmO7r-0004nk-Qh
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 00:24:55 -0500
+Received: from [66.196.97.72] (helo=web56713.mail.re3.yahoo.com)
+	by monty-python.gnu.org with smtp (Exim 4.52) id 1GmO7r-00032P-N8
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 00:24:55 -0500
+Received: (qmail 7513 invoked by uid 60001); 21 Nov 2006 05:24:55 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=X-YMail-OSG:Received:Date:From:Subject:To:Cc:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID;
+	b=tWEUKuvS+FewYsX/0nWxXbeASBWKL4brqdWuGKa6R/vPeC99w9KfMW9pgR2r7K5q2lK89kt7ara617gE6Q1uKy9geaOB3/VLn797WyXB6EE0QVQ0PUcqXItFsg4IAQehvoqasadIjBBtgPQeihawMdnBVrXnJyqKqnEKXq8dvBc=;
+X-YMail-OSG: oBrCdtYVM1lDpOcuUobCST72E4wqk1lFlxRU1qmgBpqXaymOgZAH8RuA1qL7iEBNkH9Ysy6CT39aDoqhMiiMfDMKTI.hNdXMw96kVWVqlLYw3a9Be2pRjyZdloE_JkLopbRLP..fGASTIcw-
+Received: from [70.161.176.93] by web56713.mail.re3.yahoo.com via HTTP;
+	Mon, 20 Nov 2006 21:24:55 PST
+Date: Mon, 20 Nov 2006 21:24:55 -0800 (PST)
+From: C Y <smustudent1@yahoo.com>
+Subject: RE: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+To: Bill Page <bill.page1@synthesis.anikast.ca>
+In-Reply-To: <041e01c70d25$76dc5250$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Message-ID: <248778.7497.qm@web56713.mail.re3.yahoo.com>
+Cc: axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Nov 2006 05:24:57 -0000
+
+--- Bill Page <bill.page1@synthesis.anikast.ca> wrote:
+
+> > I can readily accept that the legal aspects of this are not
+> > simple to work through.
+> 
+> Could you give an example of such a "legal aspect"?
+
+Well, I don't know the company policies, contracts, or other issues
+specific to NAG so anything I say would be no more than speculation. 
+However, things I can see as being possibly relevant would be business
+agreements licensing source to include in the compiler, agreements in
+the past not to release some of the code, trade secret concerns,
+liability concerns, and probably others I'm forgetting.  Axiom itself
+would suggest the possibility that business agreements with IBM might
+be relevant.
+
+Are any of these a risk?  We don't know - insufficient information. 
+But before proceeding I can see it as being quite reasonable that such
+issues need to be thoroughly checked.  Remember, there is no revenue
+stream here to help pay for any sort of legal activity.  IF lawyers are
+being consulted (who knows?) then a time frame of a year wouldn't
+surprise me in the least, particularly when the issue at hand is not
+critical to the revenue stream.
+ 
+> > Mike Dewar's update that there is still work in progress
+> > is very encouraging to me.
+> 
+> Yes, to me too. But the delay is really deadly. In my opinion we
+> (the Axiom project) would have been much better off if we had
+> known two or three years ago whether or not Aldor was going to
+> be part of Axiom or not.
+
+Oh, no argument there.
+
+> If the answer had been "no", we would be
+> struggling but at least work would now be well underway to improve
+> SPAD and to write new algebra code. If the answer had been "yes"
+> then the work to re-write the Axiom algebra library would likely
+> be near completion and many people would be involved in writing
+> new algebra code.
+
+Well, we would be further along anyway.  I think a truly literate
+re-write of the Axiom algebra library (e.g. make each pamphlet into a
+publication worthy summary/paper/history as well as code) would be the
+work of decades, but that might be just me overestimating the effort
+involved (even if it is that long of a project, I still view it as
+worth doing).  I still think a lot of that work is probably doable even
+without knowing the final language (paper writing can precede code, and
+perhaps it should anyway in order for the author to have the knowledge
+to write the code well) but the uncertainty over project direction does
+tend to have a harmful impact.
+
+> But because there has been no decision for so
+> long, the result is that nearly everything concerning the algebra
+> is "on hold" and otherwise enthusiastic people (such as those
+> developing Sage right now) don't want to touch Axiom because of
+> the overwhelming amount of legacy code and uncertainty about
+> Aldor - the only interesting part to many people with a computer
+> science orientation. (Gaby being a fortunate exception :-)
+
+I think the legacy code is its own problem, Aldor or not.  There is
+lots of really smart code and design ideas in Axiom - the problem is
+recognizing it and separating that from things like that hideous lisp
+packages nightmare.
+
+> I think the apparent preoccupation with licenses and legal opinions
+> of people working in open source is only in response to challenges
+> to this freedom by commercial proprietary interests.
+
+Sure, but the legal system is the ultimate trump card - they are the
+only ones who can say "stop doing that" and back it up.  Naturally such
+power is treated with respect.
+ 
+> > Morally, re-licensing the code willy-nilly would be about the
+> > same as taking GPL code and incorporating it into a commercial
+> > product.
+> 
+> There is nothing legal about using GPL code in a commercial product.
+> Of course it carries the obligation that the source code of the
+> commercial product must be open source, but contrary to most
+> "corporate expectations", open source code has not proven to be
+> a detriment - quite the contrary. "Commercial" should not be
+> confused with proprietary or "closed". For example consider Red
+> Hat Enterprise Linux, Sun's StarOffice (aka. OpenOffice) and IBM's
+> webserver products based on Apache. This is likely to be the norm
+> in the future rather than the exception.
+
+My mistake - make it closed source and commercial.  The situation I had
+in mind was not commercial open source software, but software that
+wishes to remain closed incorporating GPL code and selling it without
+releasing back the changes.  This has been done before - I think PearPC
+had some problems with that in the past (CherryOS?), to name one
+example.
+
+> > Even if the original authors had said that might be acceptable
+> > under the right conditions, doing it without their explicit
+> > approval would be a Bad Idea.  Aldor.org and NAG MUST be
+> > allowed to do as they please with their work, the same as
+> > we are allowed to do what we please with our own.
+> 
+> Well, yes copyright law does require the permission of copyright
+> holders. Violating the wishes of the copyright holders could
+> leave one open to a law suit but Tim has already explained why
+> such action is very unlikely.
+
+I think releasing code that has not been released under any license
+would provoke a MUCH stronger response than subtle issues about Aldor
+Public License vs. GPL.  Nor would I fault such a response - while
+questions about APL vs. GPL are in good faith, releasing unreleased
+code is an unambiguous affront to the copyright holder.
+
+> > Any violation of that trust and respect is very dangerous to the
+> > community, to say nothing of relations with NAG (who after all
+> > didn't have to do any of this in the first place.)
+> 
+> There is a risk I suppose that, since NAG retains the copyright on
+> Axiom (see Axiom license), that they might choose to re-license
+> Axiom at some point in the future. But that would not retroactively
+> affect any versions of the Axiom that had already been released
+> under the existing license.
+
+Well, look at it this way then - if the Aldor source were to become
+available under circumstances where it was not clear NAG approved, no
+one would develop it or use it.  Nor would they release it through
+legitimate avenues, effectively killing ANY chance for a truly free
+Aldor compiler short of a rewrite.  ReactOS had some problems with the
+means people were using, and had to do a full source tree audit.
+
+> > > > Tim is correct that only lawyers can render really useful
+> > > > opinions on these issues, but that doesn't mean we don't need
+> > > > to make a good faith effort to respect the license to the best
+> > > > of our abilities.
+> 
+> Which license? As far as I can tell, what I was proposing in terms
+> of releasing Aldor source under the Aldor Public License would
+> conform perfectly with that license. Releasing Aldor under GPL
+> would be more restrictive but compatible with the Aldor Public
+> License.
+
+Debatable.  Anyway, stated intent to release code is not the same as
+actually doing it - the assumption cannot and should not be made that
+it can be released.
+
+As Mike has already mentioned, if people weren't interested in getting
+this done a simple statement that it wouldn't be done would keep their
+inboxes neater.  There may be reasons for the delay that they can't
+talk about legally, and given that they have released Axiom to us in
+the past I think we owe them the benefit of the doubt.  Yes the delay
+is harmful but there are things we can do in the meantime - writing the
+academic papers needed to describe the existing mathematical domains in
+Axiom doesn't necessarily need to wait on the language decision, at
+least to start.
+
+Cheers,
+CY
+
+
+ 
+____________________________________________________________________________________
+Sponsored Link
+
+Compare mortgage rates for today. 
+Get up to 5 free quotes. 
+Www2.nextag.com
+
+
+
+From MAILER-DAEMON Tue Nov 21 03:54:02 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmROC-0003I3-CZ
+	for mharc-axiom-legal@gnu.org; Tue, 21 Nov 2006 03:54:00 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmRO8-0003H0-NE
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 03:53:56 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmRO6-0003GG-Em
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 03:53:55 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmRO5-0003G3-HV
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 03:53:53 -0500
+Received: from [212.27.42.27] (helo=smtp1-g19.free.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GmRO5-0001HZ-2J
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 03:53:53 -0500
+Received: from melusine.proxience.net (pat35-1-82-231-148-189.fbx.proxad.net
+	[82.231.148.189])
+	by smtp1-g19.free.fr (Postfix) with ESMTP id 6230AB776
+	for <axiom-legal@nongnu.org>; Tue, 21 Nov 2006 09:53:51 +0100 (CET)
+Received: from lehobey by melusine.proxience.net with local (Exim 3.36 #1
+	(Debian)) id 1GmRNy-00019J-00
+	for <axiom-legal@nongnu.org>; Tue, 21 Nov 2006 09:53:46 +0100
+Date: Tue, 21 Nov 2006 09:53:46 +0100
+To: axiom-legal@nongnu.org
+Subject: Re: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+Message-ID: <20061121085346.GA4187@melusine>
+References: <20061120221044.65752.qmail@web56714.mail.re3.yahoo.com>
+	<041e01c70d25$76dc5250$6900a8c0@asus>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+In-Reply-To: <041e01c70d25$76dc5250$6900a8c0@asus>
+User-Agent: Mutt/1.5.9i
+From: Frederic Lehobey <Frederic.Lehobey@free.fr>
+Content-Transfer-Encoding: quoted-printable
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Nov 2006 08:53:58 -0000
+
+Hi,
+
+On Mon, Nov 20, 2006 at 11:28:06PM -0500, Bill Page wrote:
+
+> Yes, to me too. But the delay is really deadly. In my opinion we
+> (the Axiom project) would have been much better off if we had
+> known two or three years ago whether or not Aldor was going to
+> be part of Axiom or not. If the answer had been "no", we would be
+> struggling but at least work would now be well underway to improve
+> SPAD and to write new algebra code. If the answer had been "yes"
+> then the work to re-write the Axiom algebra library would likely
+> be near completion and many people would be involved in writing
+> new algebra code. But because there has been no decision for so
+> long, the result is that nearly everything concerning the algebra
+> is "on hold" and otherwise enthusiastic people (such as those
+> developing Sage right now) don't want to touch Axiom because of
+> the overwhelming amount of legacy code and uncertainty about
+> Aldor - the only interesting part to many people with a computer
+> science orientation. (Gaby being a fortunate exception :-)
+
+Do not blame others for your own mistakes. From day one in Axiom
+community I am advocating using and enhancing (and fixing) the already
+existing Axiom (old) *free* compiler. (To my eyes non-free code does
+not even exist and is doomed to join the trash.) I have been
+constantly contradicted by people like you (and Ralf if I do not
+mistake) who where 'waiting for Aldor', the 'future' of Axiom. Now you
+measure the failure of your option. This way of seeing things (not
+fixing the current compiler) has pissed me off and has (for the
+moment) much lowered my interest in Axiom ('waiting for Aldor' as it
+seems it ever has been since I known it, commercially or as a free
+software project, but more than 10 years have passed since then...).
+
+For your own information, I have looked into the old compiler to see
+if I was able to fix things I consider critical (being able to have
+variables instead of constants in domains and category calls,
+something Aldor is able to do). I felt very alone at that time (it was
+before Gaby's involvment and everybody was looking for a wiki, and /
+or a graphical interface in Java at that time). I have to confess I
+have not been able to understand sufficently well how the old compiler
+does work to be able to fix it (I am not the right person for this
+kind of job). Future will tell if such tasks will be achieved and will
+resurrect my interest for Axiom.
+
+I find your own attitude (petition, threat of violating their rights
+on the code) with respect to NAG and other Aldor copyright owners very
+rude and unacceptable. A very bad example from the free software
+community that does to encourage companies to participate in free
+software project and communities.
+
+> > Yes, but the viability of open source rests on a healthy respect
+> > for copyright and legality.
+>=20
+> I doubt that. It seems to me that the original open source projects,
+
+What a counter-sense.   :-(
+
+> As far as I am concerned the viability of open source rests on
+> volunteers. I expect that what motivates volunteers ranges widely
+> but none of those whom I have spoken to had much respect for
+> anything that prevents them from working on their chosen project
+> or for that matter any commercially motivated group who uses
+> licensing and copyright to limit open access to source code
+> (currently Microsoft and Apple, formerly Sun and IBM), which of
+> course is not to be interpreted as my saying they are willing to
+> do anything illegal.
+
+So you have never spoken to me.   :-)
+
+> I think the apparent preoccupation with licenses and legal opinions
+> of people working in open source is only in response to challenges
+> to this freedom by commercial proprietary interests.
+
+I think you think wrong. So let's conclude we disagree.  :-)
+
+> > Morally, re-licensing the code willy-nilly would be about the
+> > same as taking GPL code and incorporating it into a commercial
+> > product.
+>=20
+> There is nothing legal about using GPL code in a commercial product.
+
+I suppose you meant 'illegal' or 'proprietary' (otherwise, it is
+nonsense).
+
+> Well, yes copyright law does require the permission of copyright
+> holders. Violating the wishes of the copyright holders could
+> leave one open to a law suit but Tim has already explained why
+> such action is very unlikely.
+
+So let's do it? You will never been followed by the rest of the larger
+free software community.
+
+> > Any violation of that trust and respect is very dangerous to the
+> > community, to say nothing of relations with NAG (who after all
+> > didn't have to do any of this in the first place.)
+>=20
+> There is a risk I suppose that, since NAG retains the copyright on
+> Axiom (see Axiom license), that they might choose to re-license
+> Axiom at some point in the future. But that would not retroactively
+> affect any versions of the Axiom that had already been released
+> under the existing license.
+
+(It is already their right as copyright owners today.) And that would
+not affect the contributions they would not be able to keep without
+explicit consent of their respective authors.
+
+> > > > Tim is correct that only lawyers can render really useful
+> > > > opinions on these issues, but that doesn't mean we don't need
+> > > > to make a good faith effort to respect the license to the best
+> > > > of our abilities.
+>=20
+> Which license? As far as I can tell, what I was proposing in terms
+> of releasing Aldor source under the Aldor Public License would
+> conform perfectly with that license. Releasing Aldor under GPL
+> would be more restrictive but compatible with the Aldor Public
+> License.
+
+Releasing a code under GPL with binary blobs without their source is
+contradicting the GPL itself (and makes the code undistributable).
+
+> > Anyway, Mike Dewar and Dr. Watt are still working on it, which is
+> > excellent news and may render this whole discussion moot.
+
+> I certainly hope so. :-)
+
+Honestly I only look at what they have already achieved (actually
+publish Axiom as open source). The promises do not count. Only for
+those who want to believe them and they may hurt more than those who
+dwell on them.
+
+Best regards,
+Fr=E9d=E9ric
+
+
+
+From MAILER-DAEMON Tue Nov 21 07:26:43 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmUi2-0002V4-O1
+	for mharc-axiom-legal@gnu.org; Tue, 21 Nov 2006 07:26:42 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmUi1-0002TB-5x
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 07:26:41 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmUhy-0002Pl-8F
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 07:26:40 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmUhx-0002PF-Qe
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 07:26:37 -0500
+Received: from [24.154.1.26] (helo=mx-7.zoominternet.net)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GmUhx-0007uo-Nl
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 07:26:37 -0500
+Received: from pop-1.zoominternet.net (mua-1.zoominternet.net [24.154.1.44])
+	by mx-7.zoominternet.net (8.13.1/8.13.1) with ESMTP id kALCQOG9010702
+	for <axiom-legal@nongnu.org>; Tue, 21 Nov 2006 07:26:24 -0500
+Received: (qmail 25359 invoked from network); 21 Nov 2006 05:19:41 -0000
+Received: from unknown (HELO localhost.localdomain) ([72.23.233.73])
+	(envelope-sender <daly@axiom-developer.org>)
+	by pop-1.zoominternet.net (qmail-ldap-1.03) with SMTP
+	for <smustudent1@yahoo.com>; 21 Nov 2006 05:19:41 -0000
+Received: (from root@localhost)
+	by localhost.localdomain (8.11.6/8.11.6) id kAL59NC19136;
+	Tue, 21 Nov 2006 00:09:23 -0500
+Date: Tue, 21 Nov 2006 00:09:23 -0500
+Message-Id: <200611210509.kAL59NC19136@localhost.localdomain>
+From: root <daly@axiom-developer.org>
+To: bill.page1@synthesis.anikast.ca
+In-reply-to: <041e01c70d25$76dc5250$6900a8c0@asus>
+	(bill.page1@synthesis.anikast.ca)
+Subject: Re: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+References: <041e01c70d25$76dc5250$6900a8c0@asus>
+X-Spam-Score: 0.10 () [Tag at 15.00] FORGED_RCVD_HELO
+X-CanItPRO-Stream: outgoing
+X-Scanned-By: CanIt (www . roaringpenguin . com) on 24.154.1.26
+Cc: axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: daly@axiom-developer.org
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Nov 2006 12:26:41 -0000
+
+> Which license? As far as I can tell, what I was proposing in terms
+> of releasing Aldor source under the Aldor Public License would
+> conform perfectly with that license. Releasing Aldor under GPL
+> would be more restrictive but compatible with the Aldor Public
+> License.
+
+ok. you may be legally right or legally wrong. 
+i have no opinion about that.
+
+"legal" actions and resorting to lawyers has always felt to me
+like being threatened, pushed, and shoved. it's about fear of
+being sued. fear of consequences from "reasonable actions" being
+turned against you. lawyers are in the fear producing business.
+licensing and "legality" are childhood ghosts with no substance
+except your own fear that "someone" will steal all you have.
+
+but that's not the issue at stake here. it's not really about law.
+it's never about the law.
+
+when i contemplate your action it really comes down to this....
+
+respect.
+
+
+
+
+if it frustrates you enough to want to publish the source code
+send Stephen a note and tell him that you plan to do this. give
+him the courtesy of notice and a chance to respond. and if he
+explicitly says no then you need to respect his decision.
+
+in theory he could sue you. he won't. NAG won't. nobody will,
+for all of the reasons i gave.
+
+
+
+
+gentlemen respect each other. Stephen may respect your opinion
+and agree with you. but if Stephen decides to disagree you need
+to respect his opinion.
+
+Stephen's failure to respond to the community is costing him
+dearly on a professional level and he is gradually losing the
+respect he richly deserves, losing it one day at a time. but
+publishing the code without direct request will cost you also.
+you will lose the respect of the community.
+
+frankly, it isn't worth it.
+
+respectfully yours,
+t
+
+
+
+
+From MAILER-DAEMON Tue Nov 21 08:10:44 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmVOd-0005rg-Uq
+	for mharc-axiom-legal@gnu.org; Tue, 21 Nov 2006 08:10:44 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmVOb-0005np-MK
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 08:10:41 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmVOa-0005m3-L4
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 08:10:40 -0500
+Received: from [64.12.137.3] (helo=imo-m22.mail.aol.com)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GmVOZ-0008SS-BK
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 08:10:39 -0500
+Received: from Klbedke@aol.com
+	by imo-m22.mx.aol.com (mail_out_v38_r7.6.) id r.cf7.282088a (58550);
+	Tue, 21 Nov 2006 08:10:35 -0500 (EST)
+From: Klbedke@aol.com
+Message-ID: <cf7.282088a.329454ca@aol.com>
+Date: Tue, 21 Nov 2006 08:10:34 EST
+Subject: Re: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+To: daly@axiom-developer.org, bill.page1@synthesis.anikast.ca
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="-----------------------------1164114634"
+X-Mailer: 9.0 Security Edition for Windows sub 5330
+Cc: axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Nov 2006 13:10:42 -0000
+
+
+-------------------------------1164114634
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+
+I believe that I'm inadvertently part of your email dialogue on the above  
+subject.
+ 
+Kathryn Bedke
+
+-------------------------------1164114634
+Content-Type: text/html; charset="US-ASCII"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3DUS-ASCII">
+<META content=3D"MSHTML 6.00.2900.2995" name=3DGENERATOR></HEAD>
+<BODY id=3Drole_body style=3D"FONT-SIZE: 12pt; COLOR: #000000; FONT-FAMILY:=20=
+Arial"=20
+bottomMargin=3D7 leftMargin=3D7 topMargin=3D7 rightMargin=3D7><FONT id=3Drol=
+e_document=20
+face=3DArial color=3D#000000 size=3D3>
+<DIV>I believe that I'm inadvertently part of your email dialogue on the abo=
+ve=20
+subject.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>Kathryn Bedke</DIV></FONT></BODY></HTML>
+
+-------------------------------1164114634--
+
+
+
+From MAILER-DAEMON Tue Nov 21 09:20:25 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmWU5-0000wh-3m
+	for mharc-axiom-legal@gnu.org; Tue, 21 Nov 2006 09:20:25 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmWU3-0000sh-6G
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 09:20:23 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmWU2-0000rG-Cu
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 09:20:22 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmWU2-0000qy-7Z
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 09:20:22 -0500
+Received: from [216.251.41.180] (helo=mail60c2.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GmWU0-0005c0-3k
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 09:20:20 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail60c2.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	kALEJqTR016903; Tue, 21 Nov 2006 09:20:06 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Frederic Lehobey'" <Frederic.Lehobey@free.fr>
+Subject: RE: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+Date: Tue, 21 Nov 2006 09:19:43 -0500
+Message-ID: <045101c70d78$1cef7440$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+Importance: Normal
+In-Reply-To: <20061121085346.GA4187@melusine>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Cc: axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Nov 2006 14:20:23 -0000
+
+Frederic,
+
+On November 21, 2006 3:54 AM you wrote:
+
+> On Mon, Nov 20, 2006 at 11:28:06PM -0500, Bill Page wrote:
+> 
+> > Yes, to me too. But the delay is really deadly. In my opinion we
+> > (the Axiom project) would have been much better off if we had
+> > known two or three years ago whether or not Aldor was going to
+> > be part of Axiom or not. If the answer had been "no", we would be
+> > struggling but at least work would now be well underway to improve
+> > SPAD and to write new algebra code. If the answer had been "yes"
+> > then the work to re-write the Axiom algebra library would likely
+> > be near completion and many people would be involved in writing
+> > new algebra code. But because there has been no decision for so
+> > long, the result is that nearly everything concerning the algebra
+> > is "on hold" and otherwise enthusiastic people (such as those
+> > developing Sage right now) don't want to touch Axiom because of
+> > the overwhelming amount of legacy code and uncertainty about
+> > Aldor - the only interesting part to many people with a computer
+> > science orientation. (Gaby being a fortunate exception :-)
+> 
+> Do not blame others for your own mistakes. From day one in Axiom
+> community I am advocating using and enhancing (and fixing) the
+> already existing Axiom (old) *free* compiler. (To my eyes non-free
+> code does not even exist and is doomed to join the trash.)
+
+Aldor is "almost free" (perhaps you will claim that there is no
+such thing?). Many people have copies of the Aldor source and
+binary versions are publicly available.
+
+> I have been constantly contradicted by people like you (and Ralf
+> if I do not mistake) who where 'waiting for Aldor', the 'future'
+> of Axiom.
+
+Actually Aldor is the past of Axiom. Aldor was developed by the
+same IBM research group that developed Axiom. And Aldor (then
+named AXIOM/XL) was a part of Axiom the last time Axiom was
+available as a commercial product. And a significant amount of
+work has already been done to convert the Axiom library to Aldor.
+
+But you are wrong that I am against the improvement of SPAD. I
+just believe that it is too difficult a problem for a volunteer-
+based open source project. Apparently it was even too difficult
+for the original Axiom developers. That is why they wanted to
+develop Aldor.
+
+> Now you measure the failure of your option. This way of seeing
+> things (not fixing the current compiler) has pissed me off and
+> has (for the moment) much lowered my interest in Axiom ('waiting
+> for Aldor' as it seems it ever has been since I known it,
+> commercially or as a free software project, but more than 10
+> years have passed since then...).
+>
+
+??? But Aldor was part of the last commercial release of Axiom.
+ 
+> For your own information, I have looked into the old compiler to
+> see if I was able to fix things I consider critical (being able
+> to have variables instead of constants in domains and category
+> calls, something Aldor is able to do).
+
+Is Aldor really able to do that? Wouldn't that violate the principle
+that types are static?
+
+> I felt very alone at that time (it was before Gaby's involvement
+> and everybody was looking for a wiki, and / or a graphical interface
+> in Java at that time). I have to confess I have not been able to
+> understand sufficiently well how the old compiler does work to be
+> able to fix it (I am not the right person for this kind of job).
+> Future will tell if such tasks will be achieved and will resurrect
+> my interest for Axiom.
+> 
+
+I am not optimistic about the possibility to do this.
+
+> I find your own attitude (petition, threat of violating their
+> rights on the code) with respect to NAG and other Aldor copyright
+> owners very rude and unacceptable. A very bad example from the
+> free software community that does to encourage companies to
+> participate in free software project and communities.
+>
+
+But you are making a mistake. Petitions for open source are very
+common. That more than 50 people have stated publicly via the online
+petition that they think open source Aldor is a good idea (including
+Steven Watt, the primary developer of Aldor). As to "threats of
+violating their rights", I think you greatly overstate the situation.
+Since everyone agrees that Aldor should be open source, I was only
+proposing a way to proceed - open the code now and fix the licensing
+issues later.
+ 
+> ...
+> > > Morally, re-licensing the code willy-nilly would be about the
+> > > same as taking GPL code and incorporating it into a commercial
+> > > product.
+> > 
+> > There is nothing legal about using GPL code in a commercial
+> > product.
+> 
+> I suppose you meant 'illegal' or 'proprietary' (otherwise, it is
+> nonsense).
+
+Yes.
+
+> 
+> > Well, yes copyright law does require the permission of copyright
+> > holders. Violating the wishes of the copyright holders could
+> > leave one open to a law suit but Tim has already explained why
+> > such action is very unlikely.
+> 
+> So let's do it? You will never been followed by the rest of the
+> larger free software community.
+>
+
+This is a discussion. It is not about asking anyone to follow.
+ 
+> > ... 
+> > Which license? As far as I can tell, what I was proposing in terms
+> > of releasing Aldor source under the Aldor Public License would
+> > conform perfectly with that license. Releasing Aldor under GPL
+> > would be more restrictive but compatible with the Aldor Public
+> > License.
+> 
+> Releasing a code under GPL with binary blobs without their source is
+> contradicting the GPL itself (and makes the code undistributable).
+>
+
+I was talking about release Aldor source code (no binary blobs) under
+the Aldor Public License.
+ 
+> > > Anyway, Mike Dewar and Dr. Watt are still working on it, which is
+> > > excellent news and may render this whole discussion moot.
+> 
+> > I certainly hope so. :-)
+> 
+> Honestly I only look at what they have already achieved (actually
+> publish Axiom as open source). The promises do not count. Only for
+> those who want to believe them and they may hurt more than those who
+> dwell on them.
+> 
+
+To me it is a matter of making best use of (potentially) available
+intellectual investment. Right now both Axiom and Aldor are suffering
+because what was meant to be together was "sold" separately.
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Tue Nov 21 10:09:48 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmXFs-0005fI-7t
+	for mharc-axiom-legal@gnu.org; Tue, 21 Nov 2006 10:09:48 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmXFo-0005Zw-4R
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 10:09:44 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmXFk-0005VQ-U6
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 10:09:43 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmXFk-0005V9-OH
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 10:09:40 -0500
+Received: from [212.27.42.30] (helo=smtp4-g19.free.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GmXFk-0007hn-4L
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 10:09:40 -0500
+Received: from melusine.proxience.net (pat35-1-82-231-148-189.fbx.proxad.net
+	[82.231.148.189])
+	by smtp4-g19.free.fr (Postfix) with ESMTP id 713E28ACC
+	for <axiom-legal@nongnu.org>; Tue, 21 Nov 2006 16:09:39 +0100 (CET)
+Received: from lehobey by melusine.proxience.net with local (Exim 3.36 #1
+	(Debian)) id 1GmXFj-0001pM-00
+	for <axiom-legal@nongnu.org>; Tue, 21 Nov 2006 16:09:39 +0100
+Date: Tue, 21 Nov 2006 16:09:39 +0100
+To: axiom-legal@nongnu.org
+Subject: Re: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+Message-ID: <20061121150939.GA6578@melusine>
+References: <20061121085346.GA4187@melusine>
+	<045101c70d78$1cef7440$6900a8c0@asus>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+In-Reply-To: <045101c70d78$1cef7440$6900a8c0@asus>
+User-Agent: Mutt/1.5.9i
+From: Frederic Lehobey <Frederic.Lehobey@free.fr>
+Content-Transfer-Encoding: quoted-printable
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Nov 2006 15:09:46 -0000
+
+Hi Bill,
+
+On Tue, Nov 21, 2006 at 09:19:43AM -0500, Bill Page wrote:
+> On November 21, 2006 3:54 AM you wrote:
+> > On Mon, Nov 20, 2006 at 11:28:06PM -0500, Bill Page wrote:
+
+> > Do not blame others for your own mistakes. From day one in Axiom
+> > community I am advocating using and enhancing (and fixing) the
+> > already existing Axiom (old) *free* compiler. (To my eyes non-free
+> > code does not even exist and is doomed to join the trash.)
+>=20
+> Aldor is "almost free" (perhaps you will claim that there is no
+> such thing?). Many people have copies of the Aldor source and
+> binary versions are publicly available.
+
+I do not have any. And am I not interested in having it *as it is not
+free software* (what could I do from it, not having enough interesting
+rights).
+
+Note that in the past (1999) when Axiom was "almost free" (we had
+access to all the libraries but not the source of some binary parts in
+the core system) I have been severly beaten (during the last months of
+my PhD) by some (faulty) binary only parts. At that time I have
+sweared (thanks to my Axiom very bad experience) to ever use again
+only *really* free software. Please understand why I am so picky about
+freeness of anything. It is not a goal. But a prerequisite from where
+anything is possible.
+
+See how much time you are waisting with non-free Aldor.
+
+> > I have been constantly contradicted by people like you (and Ralf
+> > if I do not mistake) who where 'waiting for Aldor', the 'future'
+> > of Axiom.
+>=20
+> Actually Aldor is the past of Axiom. Aldor was developed by the
+> same IBM research group that developed Axiom. And Aldor (then
+> named AXIOM/XL) was a part of Axiom the last time Axiom was
+> available as a commercial product. And a significant amount of
+> work has already been done to convert the Axiom library to Aldor.
+
+Have you used Aldor at that time? I have been waiting from 1995 to
+1999 for Aldor to become usable for reasearch which it has never
+achieved (and by far). Aldor might be a funny pet project (as could be
+Mathemagix or SAGE) that could grow into something interesting (as is
+SAGE today). But as it is not free software, I DO NOT CARE (and I
+deeply regret it is favored instead of Axiom old compiler in the Axiom
+community). It is now too late for Aldor. It has missed its time frame
+and opportunity (now filled by SAGE). I would be sad it were the same
+for Axiom because everybody has its eyes (wrongly) focused on
+Aldor. Maybe it is already too late...
+
+Many "failed" projects during their commercial life turn into free
+software (this is what occurred to Axiom). Maybe Aldor is not failed
+enough to become free sofware (but, ironically, I believe you actually
+never had so much chance to have Aldor finally released as free
+software).
+
+> But you are wrong that I am against the improvement of SPAD. I
+> just believe that it is too difficult a problem for a volunteer-
+> based open source project. Apparently it was even too difficult
+> for the original Axiom developers. That is why they wanted to
+> develop Aldor.
+
+I am actually sad we have not driven enough lisp gurus to fix the
+compiler. But (re)writing a compiler from scratch is an industrial
+project the (free) Axiom community is far from being able to consider.
+
+> > Now you measure the failure of your option. This way of seeing
+> > things (not fixing the current compiler) has pissed me off and
+> > has (for the moment) much lowered my interest in Axiom ('waiting
+> > for Aldor' as it seems it ever has been since I known it,
+> > commercially or as a free software project, but more than 10
+> > years have passed since then...).
+> >
+>=20
+> ??? But Aldor was part of the last commercial release of Axiom.
+
+See above.
+
+> > For your own information, I have looked into the old compiler to
+> > see if I was able to fix things I consider critical (being able
+> > to have variables instead of constants in domains and category
+> > calls, something Aldor is able to do).
+>=20
+> Is Aldor really able to do that? Wouldn't that violate the principle
+> that types are static?
+
+It is supposed to. What I mean is being able to create domains in
+compiled code with variables in their parameters (not change the value
+of the variable after instantiation). With this much of the Galois
+field factorisation of Axiom would be much easier to write *and
+maintain* (currently, it is a kind of hack using the integers and
+contradicting the grounding principles of Axiom).
+
+> > I felt very alone at that time (it was before Gaby's involvement
+> > and everybody was looking for a wiki, and / or a graphical interface
+> > in Java at that time). I have to confess I have not been able to
+> > understand sufficiently well how the old compiler does work to be
+> > able to fix it (I am not the right person for this kind of job).
+> > Future will tell if such tasks will be achieved and will resurrect
+> > my interest for Axiom.
+
+> I am not optimistic about the possibility to do this.
+
+Neither am I now.   :(
+
+> > I find your own attitude (petition, threat of violating their
+> > rights on the code) with respect to NAG and other Aldor copyright
+> > owners very rude and unacceptable. A very bad example from the
+> > free software community that does to encourage companies to
+> > participate in free software project and communities.
+
+> But you are making a mistake. Petitions for open source are very
+> common. That more than 50 people have stated publicly via the online
+> petition that they think open source Aldor is a good idea (including
+> Steven Watt, the primary developer of Aldor). As to "threats of
+> violating their rights", I think you greatly overstate the situation.
+> Since everyone agrees that Aldor should be open source, I was only
+> proposing a way to proceed - open the code now and fix the licensing
+> issues later.
+
+I think it boils down to what Tim has summarized better than I
+could. It is only a matter of respect. Respect THEIR choice and draw
+you own conclusions from it.
+
+In French we have =AB un tiens vaut mieux que deux tu l'auras =BB which
+sounds like "better now than tomorrow" and "promises are for those
+willing to believe them". The reality is what we really have. The rest
+is literature.
+
+> I was talking about release Aldor source code (no binary blobs) under
+> the Aldor Public License.
+
+Aren't there any binary blobs. It is even sadder for them (not to be
+free)...  :)
+
+> > Honestly I only look at what they have already achieved (actually
+> > publish Axiom as open source). The promises do not count. Only for
+> > those who want to believe them and they may hurt more than those who
+> > dwell on them.
+
+> To me it is a matter of making best use of (potentially) available
+> intellectual investment. Right now both Axiom and Aldor are suffering
+> because what was meant to be together was "sold" separately.
+
+This is where we differ. You are taking into account potentialities
+(which make you not to move on the old compiler front) whereas I am
+only considering reality.
+
+By waiting long enough, you increase your chances to finally be
+right. But the delay might be much too long to go anywhere on the road
+to the 27 year horizon. (Time flies, you know?)
+
+Best regards,
+Fr=E9d=E9ric
+
+
+
+From MAILER-DAEMON Tue Nov 21 11:55:42 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmYuM-00008l-0t
+	for mharc-axiom-legal@gnu.org; Tue, 21 Nov 2006 11:55:42 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmYuJ-0008W4-Kz
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 11:55:39 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmYuG-0008PD-9O
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 11:55:39 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmYuG-0008P1-2U
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 11:55:36 -0500
+Received: from [216.251.41.82] (helo=mail262.megamailservers.com)
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_AES_256_CBC_SHA:32) (Exim 4.52) id 1GmYuF-00021Q-Ms
+	for axiom-legal@nongnu.org; Tue, 21 Nov 2006 11:55:36 -0500
+X-POP-User: bill.page1.synthesis.anikast.ca
+Received: from asus ([207.35.46.72])
+	by mail262.megamailservers.com (8.13.6.20060614/8.13.1) with ESMTP id
+	kALGt7k6015402; Tue, 21 Nov 2006 11:55:21 -0500
+From: "Bill Page" <bill.page1@synthesis.anikast.ca>
+To: "'Frederic Lehobey'" <Frederic.Lehobey@free.fr>
+Subject: RE: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+Date: Tue, 21 Nov 2006 11:54:58 -0500
+Message-ID: <048f01c70d8d$ccee5630$6900a8c0@asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.6626
+Importance: Normal
+In-Reply-To: <20061121150939.GA6578@melusine>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2962
+Cc: axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 21 Nov 2006 16:55:40 -0000
+
+On November 21, 2006 10:10 AM Frederic Lehobey wrote:
+> 
+> On Tue, Nov 21, 2006 at 09:19:43AM -0500, Bill Page wrote:
+> > 
+> > Aldor is "almost free" (perhaps you will claim that there is no
+> > such thing?). Many people have copies of the Aldor source and
+> > binary versions are publicly available.
+> 
+> I do not have any. And am I not interested in having it *as it is
+> not free software* (what could I do from it, not having enough
+> interesting rights).
+
+You could compile your own binary for the hardware of your choice.
+(I did this for x86-64 bit linux.) You could read and learn more
+about the compiler. You could fix bugs in the compiler for your own
+use. Only (apparently) you cannot re-distribute it to others. Although
+that seems to depend on how you interpret the Aldor Public License.
+
+> 
+> Note that in the past (1999) when Axiom was "almost free" (we had
+> access to all the libraries but not the source of some binary parts
+> in the core system) I have been severely beaten (during the last
+> months of my PhD) by some (faulty) binary only parts. At that time
+> I have sweared (thanks to my Axiom very bad experience) to ever use
+> again only *really* free software. Please understand why I am so
+> picky about freeness of anything. It is not a goal. But a prerequisite
+> from where anything is possible.
+
+Yes, I understand your point of view and the reasons.
+
+> 
+> See how much time you are wasting with non-free Aldor.
+>
+
+I believe I would have to waste much more time with free SPAD.
+ 
+> > > I have been constantly contradicted by people like you (and
+> > > Ralf if I do not mistake) who where 'waiting for Aldor', the
+> > > 'future' of Axiom.
+> > 
+> > Actually Aldor is the past of Axiom. Aldor was developed by the
+> > same IBM research group that developed Axiom. And Aldor (then
+> > named AXIOM/XL) was a part of Axiom the last time Axiom was
+> > available as a commercial product. And a significant amount of
+> > work has already been done to convert the Axiom library to Aldor.
+> 
+> Have you used Aldor at that time?
+
+Yes in 1999 I used the Aldor compiler that was part of the Windows
+version of Axiom that was distributed by NAG. However I only had a
+copy of the promotional Cdrom which contained a time-limited license
+manager. I was comparing it to Maple which I already knew fairly well.
+I nearly purchased Axiom at that time from NAG but compared to Maple
+Axiom seemed too slow. (On common hardware available today and the
+changes in Maple since that time I am sure that it would now seem
+much faster than Maple.) But I really liked the Axiom language and
+the Windows TeX browser interface.
+
+
+> I have been waiting from 1995 to 1999 for Aldor to become usable
+> for research which it has never achieved (and by far).
+
+I think you just missed the time.
+
+> Aldor might be a funny pet project (as could be Mathemagix or SAGE)
+> that could grow into something interesting (as is SAGE today).
+
+Aldor was packaged commercially with Axiom by NAG. I do not think
+it is accurate to describe it as a "pet project".
+
+> But as it is not free software, I DO NOT CARE (and I deeply regret
+> it is favoured instead of Axiom old compiler in the Axiom community).
+> It is now too late for Aldor. It has missed its time frame and
+> opportunity (now filled by SAGE).
+
+Maybe. As you know I am also very interested in SAGE. I wrote
+an interface for Axiom in SAGE. SAGE uses Python as the main
+development language and that has some big advantages as well as
+a few drawbacks. I am concerned however that the SAGE developers
+are not learning as much from past experience as they should. As
+a result they are re-inventing some wheels (despite their motto)
+and repeating some of the same mistakes. If they had open access
+to Aldor I think it might be possible to influence some of their
+design choices.
+
+Still, I think SAGE is an exciting project and the AXIOM project
+should plan to work with them. I agree that SAGE sets a good
+example by insisting that every part of SAGE is open source.
+
+> I would be sad it were the same for Axiom because everybody has
+> its eyes (wrongly) focused on Aldor. Maybe it is already too
+> late...
+
+No, there are some Axiom people who are not waiting for Aldor.
+
+> 
+> Many "failed" projects during their commercial life turn into
+> free software (this is what occurred to Axiom). Maybe Aldor is
+> not failed enough to become free software (but, ironically, I
+> believe you actually never had so much chance to have Aldor
+> finally released as free software).
+> 
+
+You mean you do not believe the current owners of Aldor that
+they want to make in free?
+
+> > But you are wrong that I am against the improvement of SPAD.
+> > I just believe that it is too difficult a problem for a
+> > volunteer-based open source project. Apparently it was even
+> > too difficult for the original Axiom developers. That is why
+> > they wanted to develop Aldor.
+> 
+> I am actually sad we have not driven enough lisp gurus to fix
+> the compiler. But (rewriting a compiler from scratch is an
+> industrial project the (free) Axiom community is far from being
+> able to consider.
+
+I agree. When you compare Lisp to Python (as used in SAGE) - not
+the languages but rather the community), then it is clear that
+Lisp is part of the problem. When I spoke to SAGE developers about
+Axiom and I mentioned Lisp their eyes "glazed over" and then smiled
+until I pointed out that when Axiom was originally developed Lisp
+was about as old as Python is now during the development of SAGE.
+
+> ... 
+> > > For your own information, I have looked into the old compiler
+> > > to see if I was able to fix things I consider critical (being
+> > > able to have variables instead of constants in domains and
+> > > category calls, something Aldor is able to do).
+> > 
+> > Is Aldor really able to do that? Wouldn't that violate the
+> > principle that types are static?
+> 
+> It is supposed to. What I mean is being able to create domains in
+> compiled code with variables in their parameters (not change the
+> value of the variable after instantiation). With this much of the
+> Galois field factorisation of Axiom would be much easier to write
+> *and maintain* (currently, it is a kind of hack using the integers
+> and contradicting the grounding principles of Axiom).
+
+I think you could expect a lot of help on this from Ralf Hemmecke
+and Martin Rubey. I am not entirely sure what you mean by "variables
+that do not change value after instantiation". I think this is the
+definition of a constant. So what you want to do should be possible.
+
+> ... 
+> I think it boils down to what Tim has summarized better than I
+> could. It is only a matter of respect. Respect THEIR choice and
+> draw you own conclusions from it.
+
+My conclusion is that their choices (or actually rather lack of
+choice) has had a very negative impact on Axiom. I want them to
+stop this and license Aldor properly.
+
+> 
+> In French we have < un tiens vaut mieux que deux tu l'auras >
+> which sounds like "better now than tomorrow" and "promises are
+> for those willing to believe them". The reality is what we really
+> have. The rest is literature.
+
+Yes, I am sympathetic to your point of view but for me right now
+this is too conservative. I want more and it is close enough that
+I feel it.
+
+> 
+> > To me it is a matter of making best use of (potentially)
+> > available intellectual investment. Right now both Axiom and
+> > Aldor are suffering because what was meant to be together was
+> > "sold" separately.
+> 
+> This is where we differ. You are taking into account potentialities
+> (which make you not to move on the old compiler front) whereas I am
+> only considering reality.
+> 
+> By waiting long enough, you increase your chances to finally be
+> right. But the delay might be much too long to go anywhere on the
+> road to the 27 year horizon. (Time flies, you know?)
+> 
+
+Indeed! :-)
+
+Regards,
+Bill Page.
+
+
+
+
+
+From MAILER-DAEMON Wed Nov 22 01:59:10 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Gmm4b-00077z-TO
+	for mharc-axiom-legal@gnu.org; Wed, 22 Nov 2006 01:59:09 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Gmm4Z-00074R-Ea
+	for axiom-legal@nongnu.org; Wed, 22 Nov 2006 01:59:07 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Gmm4X-00072j-RU
+	for axiom-legal@nongnu.org; Wed, 22 Nov 2006 01:59:07 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Gmm4X-00072a-LA
+	for axiom-legal@nongnu.org; Wed, 22 Nov 2006 01:59:05 -0500
+Received: from [131.136.242.1] (helo=fw.drenet.dnd.ca)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1Gmm4X-0001oe-H6
+	for axiom-legal@nongnu.org; Wed, 22 Nov 2006 01:59:05 -0500
+Received: from localhost (amavis.drenet.dnd.ca [131.136.244.251])
+	by fw.drenet.dnd.ca (_) with ESMTP id B4BD86BD90;
+	Wed, 22 Nov 2006 01:59:04 -0500 (EST)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-Virus-Scanned: by amavisd-new at drenet.dnd.ca
+Received: from corporateex02.Corporate.drdc-rddc.gc.ca (unknown [131.136.1.88])
+	by fw.drenet.dnd.ca (_) with ESMTP id B2B10684C1;
+	Wed, 22 Nov 2006 01:59:03 -0500 (EST)
+	(envelope-from Bill.Page@drdc-rddc.gc.ca)
+X-MimeOLE: Produced By Microsoft Exchange V6.5.7226.0
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: RE: [Axiom-legal] Licensing Aldor
+Date: Wed, 22 Nov 2006 01:59:07 -0500
+Message-ID: <CAE9B164E720CE4D8727792DF8F28AE39DA7AC@corporateex02.Corporate.drdc-rddc.gc.ca>
+In-Reply-To: <200611210509.kAL59NC19136@localhost.localdomain>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: [Axiom-legal] Licensing Aldor
+Thread-Index: AccNaFG2HHLQ6842R5iOrLEM/hestgAkidRA
+From: "Page, Bill" <Bill.Page@drdc-rddc.gc.ca>
+To: <daly@axiom-developer.org>
+Cc: axiom-legal@nongnu.org
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+Reply-To: bill.page1@synthesis.anikast.ca
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 22 Nov 2006 06:59:07 -0000
+
+On Tuesday, November 21, 2006 12:09 AM Tim Daly wrote:
+> ...
+
+Concerning my proposal to distribute the Aldor source code under
+the terms of the Aldor Public License:
+=20
+> when i contemplate your action it really comes down to this....
+>=20
+> respect.
+>=20
+
+Ok.
+=20
+>=20
+> if it frustrates you enough to want to publish the source code
+> send Stephen a note and tell him that you plan to do this. give
+> him the courtesy of notice and a chance to respond. and if he
+> explicitly says no then you need to respect his decision.
+>
+
+You will recall that when I first proposed this last March, I did
+in fact send exactly such an email to Stephen. He did not reply.
+I was prepared to proceed with the plan until Mike Dewar responded
+to my email which contained a copy of what I sent to Stephen. I
+understand that Mike has as much right to object to this course
+of action as anyone else associated with aldor.org. Right?
+=20
+> in theory he could sue you. he won't. NAG won't. nobody will,
+> for all of the reasons i gave.
+>=20
+
+That is reassuring. :-)
+
+>=20
+> gentlemen respect each other. Stephen may respect your opinion
+> and agree with you. but if Stephen decides to disagree you need
+> to respect his opinion.
+>
+
+I agree with you. I only wish he would take the time to agree or
+disagree with me. :-( But we are all do what we can, I guess.
+
+> Stephen's failure to respond to the community is costing him
+> dearly on a professional level and he is gradually losing the
+> respect he richly deserves, losing it one day at a time.
+
+Actually I think his publications speak extremely well of him no
+matter what the situation with Aldor. I do deeply respect his work
+on computer algebra and his research group at the University of
+Western Ontario. I think they do very good and interesting work.
+
+> but publishing the code without direct request will cost you
+> also. you will lose the respect of the community.
+>=20
+> frankly, it isn't worth it.
+>=20
+
+Ok, that's makes it at least 5 against my proposal and none for
+it. I lay it to rest. But I am not finished yet...
+
+--------
+
+I know there are quite a lot of people who actually already have a
+copy of the Aldor source code. Perhaps some even still have access
+to the original cvs archive. Probably many don't. Suppose that we
+were to try to establish an "amnesty" for all people who currently
+hold copies of Aldor? Some people may even have local changes which
+fix some bug or add some new feature that was needed in their own
+work. For whatever reason they may not have wanted or may not have
+had the chance to contribute these changes to aldor.org.
+
+We could invite them to join a new "Aldor for Axiom" Developer Group
+and provide a new closed source code repository containing a copy
+of the Aldor sources in /trunk from which developers could establish
+their own branches. The stated purpose of this group would be to
+prepare new binary versions of Aldor specifically for use with Axiom
+on the various platforms on with Axiom runs. This version of Aldor
+would be included in binary form with the Axiom source code
+distribution in order to allow all Axiom users the option to use
+Aldor as the library compiler.
+
+Verification that someone already had a copy of Aldor could be
+done for example, by asking them to provide some selected phrase
+from the source referenced only by location as a password to the
+repository.
+
+The source code itself would not be publicly distributed outside of
+the Aldor for Axiom developer group but under the terms of the Aldor
+Public License, all changes to the code would be made available to
+aldor.org and also made available for public access in the form of
+changesets against /trunk. Of course authors of the changes would
+be properly accredited with the changes that they submit.
+
+I believe that this new proposal would not violate in any way either
+the spirit or the letter of the existing licensing conditions for
+Aldor. If or when aldor.org does release an official open source
+license for Aldor, the Aldor for Axiom repository could then be made
+available under the terms of this new license.
+
+Actually, I have absolutely no idea how many potential developers
+and Axiom users would be willing to accept these conditions, but I
+think it might be worth a try. At the very least it would keep alive
+the possibility of using Aldor with Axiom.
+
+--------
+
+> respectfully yours,
+> t
+>=20
+
+Thanks. "Back at you", as they used to say ... :-)
+
+Regards,
+Bill Page.=20
+
+
+
+From MAILER-DAEMON Wed Nov 22 04:34:49 2006
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1GmoVF-0003BY-4y
+	for mharc-axiom-legal@gnu.org; Wed, 22 Nov 2006 04:34:49 -0500
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1GmoVC-0003A8-Tm
+	for axiom-legal@nongnu.org; Wed, 22 Nov 2006 04:34:47 -0500
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1GmoVB-00039a-SO
+	for axiom-legal@nongnu.org; Wed, 22 Nov 2006 04:34:46 -0500
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1GmoVB-00039V-Kh
+	for axiom-legal@nongnu.org; Wed, 22 Nov 2006 04:34:45 -0500
+Received: from [212.27.42.29] (helo=smtp3-g19.free.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.52) id 1GmoVB-0007Ho-6s
+	for axiom-legal@nongnu.org; Wed, 22 Nov 2006 04:34:45 -0500
+Received: from melusine.proxience.net (pat35-1-82-231-148-189.fbx.proxad.net
+	[82.231.148.189])
+	by smtp3-g19.free.fr (Postfix) with ESMTP id 692684A145
+	for <axiom-legal@nongnu.org>; Wed, 22 Nov 2006 10:34:43 +0100 (CET)
+Received: from lehobey by melusine.proxience.net with local (Exim 3.36 #1
+	(Debian)) id 1GmoV9-0001Cl-00
+	for <axiom-legal@nongnu.org>; Wed, 22 Nov 2006 10:34:43 +0100
+Date: Wed, 22 Nov 2006 10:34:43 +0100
+To: axiom-legal@nongnu.org
+Subject: [OT] Re: [Axiom-legal] Licensing Aldor (was: GPL vs. modified BSD)
+Message-ID: <20061122093443.GA4303@melusine>
+References: <20061121150939.GA6578@melusine>
+	<048f01c70d8d$ccee5630$6900a8c0@asus>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Disposition: inline
+In-Reply-To: <048f01c70d8d$ccee5630$6900a8c0@asus>
+User-Agent: Mutt/1.5.9i
+From: Frederic Lehobey <Frederic.Lehobey@free.fr>
+Content-Transfer-Encoding: quoted-printable
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 22 Nov 2006 09:34:47 -0000
+
+Hi Bill,
+
+I believe I am starting to be slightly off-topic for axiom-legal with
+this message, so I think it will be my last contribution to this
+thread.
+
+On Tue, Nov 21, 2006 at 11:54:58AM -0500, Bill Page wrote:
+> On November 21, 2006 10:10 AM Frederic Lehobey wrote:
+> > On Tue, Nov 21, 2006 at 09:19:43AM -0500, Bill Page wrote:
+
+> about the compiler. You could fix bugs in the compiler for your own
+> use. Only (apparently) you cannot re-distribute it to others. Although
+
+Hence others cannot fix bugs for me and I cannot fix them for
+others. Seems very far from free software to me and above all far from
+scientific research.
+
+> > See how much time you are wasting with non-free Aldor.
+
+> I believe I would have to waste much more time with free SPAD.
+
+Time spent in a free sofware project is never wasted (most of the
+time) as long as you have other people using it.
+
+> > Have you used Aldor at that time?
+>=20
+> Yes in 1999 I used the Aldor compiler that was part of the Windows
+> version of Axiom that was distributed by NAG. However I only had a
+> copy of the promotional Cdrom which contained a time-limited license
+> manager. I was comparing it to Maple which I already knew fairly well.
+> I nearly purchased Axiom at that time from NAG but compared to Maple
+> Axiom seemed too slow. (On common hardware available today and the
+
+Yes at that time it was after Axiom moved from the (faster) AKCL
+(because of is GPL licence) to the other Lisp that allowed porting to
+Windows. This move from one Lisp to an other caused Axiom to be more
+than twice as slow as it was before (even worse in some
+operations). This slowness was the cause of the (dirty) workarounds in
+the (old) compiler that caused the (several) breakages I experienced.
+
+Most of the efforts of NAG at that time were on porting Axiom to
+Windows (with more work on the interface). So my experience as a Unix
+user (as were most of the Axiom users in France at that time) of Axiom
+was:
+
+  * a slower compiler (twice as slow as a few months before) for
+bytecode compiling
+  * development effort all focused on Windows (and Aldor)
+  * a compiler subtly (and secretly) broken (it took me some time to
+figure out what was actually happening).
+
+And you wonder how the French Axiom community was killed? Fortunately,
+this turn of events killed (old) Axiom as a commercial product and NAG
+made a great contribution to free software by freeing Axiom (thanks to
+Tim and other people involved).
+
+Funnily, one of the first patches of the new free Axiom was to put
+back GCL as compiler. But it was several years later...
+
+> > I have been waiting from 1995 to 1999 for Aldor to become usable
+> > for research which it has never achieved (and by far).
+>=20
+> I think you just missed the time.
+
+And the libraries (I should have written... or rewritten as did late
+Manuel bronstein), and the debbuging, and... Sorry, I am ready to do
+this for any free project, but not for a non-free project with an even
+more unclear roadmap.
+
+> > Aldor might be a funny pet project (as could be Mathemagix or SAGE)
+> > that could grow into something interesting (as is SAGE today).
+>=20
+> Aldor was packaged commercially with Axiom by NAG. I do not think
+> it is accurate to describe it as a "pet project".
+
+And so what? Aldor has been announced in the symbolic community since
+1995. Its technical (and licensing) choices and merits have been much
+discussed and challenged. I know of at least two projects that wanted
+to design and achieve the same goals as Aldor in a more proper way (to
+their eyes):
+
+  * Mathemagix (Joris van der Hoeven)
+  * Focal (Renaud Rioboo et al.)
+
+(Those people come from the -- old -- Axiom community.)
+
+Nowadays, SAGE seems to be the closer to achieve the same goals as
+Mathemagix (and Aldor) but with very different technical choices.
+
+> > But as it is not free software, I DO NOT CARE (and I deeply regret
+> > it is favoured instead of Axiom old compiler in the Axiom community).
+> > It is now too late for Aldor. It has missed its time frame and
+> > opportunity (now filled by SAGE).
+>=20
+> Maybe. As you know I am also very interested in SAGE. I wrote
+> an interface for Axiom in SAGE. SAGE uses Python as the main
+> development language and that has some big advantages as well as
+> a few drawbacks. I am concerned however that the SAGE developers
+> are not learning as much from past experience as they should. As
+> a result they are re-inventing some wheels (despite their motto)
+> and repeating some of the same mistakes. If they had open access
+
+I completely agree with you on this (and appreciate the work you are
+doing there).
+
+> to Aldor I think it might be possible to influence some of their
+> design choices.
+
+I completely disagree. Aldor design (it is already publicly available)
+might be interesting as food for thought. Aldor as a compiler is
+closer to what should not be done. So I am not starving from it. (And
+I do not think people with Python background will be...)
+
+> Still, I think SAGE is an exciting project and the AXIOM project
+> should plan to work with them. I agree that SAGE sets a good
+> example by insisting that every part of SAGE is open source.
+
+So do I. I would not disagree Axiom should try to keep Aldor
+compatibility (when possible) but we should NEVER dwell on or wait for
+it.
+
+> No, there are some Axiom people who are not waiting for Aldor.
+
+Fortunately. The fact it is free software matters here.
+
+> > Many "failed" projects during their commercial life turn into
+> > free software (this is what occurred to Axiom). Maybe Aldor is
+> > not failed enough to become free software (but, ironically, I
+> > believe you actually never had so much chance to have Aldor
+> > finally released as free software).
+
+> You mean you do not believe the current owners of Aldor that
+> they want to make in free?
+
+I do not read in their minds. I simply check the facts. It reminds me
+of an other project: Scilab (of INRIA) which is constantly claimed to
+be free software (which it is not). I bet it is a strategic choice of
+INRIA (and that it will never be free). I would not be surprised for
+Aldor to do the same, so I do not hold my breath (actually, it is what
+it is already doing).
+
+> > I am actually sad we have not driven enough lisp gurus to fix
+> > the compiler. But (rewriting a compiler from scratch is an
+> > industrial project the (free) Axiom community is far from being
+> > able to consider.
+>=20
+> I agree. When you compare Lisp to Python (as used in SAGE) - not
+> the languages but rather the community), then it is clear that
+> Lisp is part of the problem. When I spoke to SAGE developers about
+> Axiom and I mentioned Lisp their eyes "glazed over" and then smiled
+> until I pointed out that when Axiom was originally developed Lisp
+> was about as old as Python is now during the development of SAGE.
+
+It seems that their eyes do no "glaze over" Maxima, though.  :-)
+
+> > It is supposed to. What I mean is being able to create domains in
+> > compiled code with variables in their parameters (not change the
+> > value of the variable after instantiation). With this much of the
+> > Galois field factorisation of Axiom would be much easier to write
+> > *and maintain* (currently, it is a kind of hack using the integers
+> > and contradicting the grounding principles of Axiom).
+>=20
+> I think you could expect a lot of help on this from Ralf Hemmecke
+> and Martin Rubey. I am not entirely sure what you mean by "variables
+> that do not change value after instantiation". I think this is the
+> definition of a constant. So what you want to do should be possible.
+
+Let's beeing specific:
+
+    PrimeField(7)
+
+and
+
+    PrimeField(p)
+
+both work in interpreted mode whereas the second one is not compiled
+by the old compiler (it has already been discussed some time -- years
+-- ago on axiom-dev).
+
+> > I think it boils down to what Tim has summarized better than I
+> > could. It is only a matter of respect. Respect THEIR choice and
+> > draw you own conclusions from it.
+>=20
+> My conclusion is that their choices (or actually rather lack of
+> choice) has had a very negative impact on Axiom. I want them to
+> stop this and license Aldor properly.
+
+No. Only your wanting to (wait for and) fix this has had a negative
+impact on Axiom (and might still have more).
+
+You cannot blame others for your own choices. Still the question of
+respect.
+
+> > In French we have < un tiens vaut mieux que deux tu l'auras >
+> > which sounds like "better now than tomorrow" and "promises are
+> > for those willing to believe them". The reality is what we really
+> > have. The rest is literature.
+>=20
+> Yes, I am sympathetic to your point of view but for me right now
+> this is too conservative. I want more and it is close enough that
+> I feel it.
+
+If you get Aldor as free software, You will have one more source of
+waste of time (and debbuging, and integration, and so on...). It will
+not speed up the Axiom developement pace but lower it much on the
+contrary. (I do not believe there is a valuable Aldor only community
+ready to join us, otherwise we would already see them in Axiom.)
+
+> > > To me it is a matter of making best use of (potentially)
+> > > available intellectual investment. Right now both Axiom and
+> > > Aldor are suffering because what was meant to be together was
+> > > "sold" separately.
+> >=20
+> > This is where we differ. You are taking into account potentialities
+> > (which make you not to move on the old compiler front) whereas I am
+> > only considering reality.
+> >=20
+> > By waiting long enough, you increase your chances to finally be
+> > right. But the delay might be much too long to go anywhere on the
+> > road to the 27 year horizon. (Time flies, you know?)
+
+> Indeed! :-)
+
+There is not any issue that cannot be finally solved by doing nothing.
+
+Best regards,
+Fr=E9d=E9ric Lehobey
+
+
+

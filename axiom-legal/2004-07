@@ -1,0 +1,160 @@
+From MAILER-DAEMON Wed Jul 14 14:28:03 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BkoU6-0006KD-GV
+	for mharc-axiom-legal@gnu.org; Wed, 14 Jul 2004 14:28:02 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1BkoU4-0006K7-7E
+	for axiom-legal@nongnu.org; Wed, 14 Jul 2004 14:28:00 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1BkoU0-0006Jk-JC
+	for axiom-legal@nongnu.org; Wed, 14 Jul 2004 14:27:59 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1BkoU0-0006Ja-EA
+	for axiom-legal@nongnu.org; Wed, 14 Jul 2004 14:27:56 -0400
+Received: from [193.252.22.23] (helo=mwinf0803.wanadoo.fr)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1BkoRS-00018H-4r
+	for axiom-legal@nongnu.org; Wed, 14 Jul 2004 14:25:18 -0400
+Received: from morgana (ARennes-303-1-17-182.w81-51.abo.wanadoo.fr
+	[81.51.43.182]) by mwinf0803.wanadoo.fr (SMTP Server) with ESMTP
+	id 51E001800267; Wed, 14 Jul 2004 20:25:17 +0200 (CEST)
+Received: from david by morgana with local (Exim 4.32)
+	id 1BkoRO-0002vz-5d; Wed, 14 Jul 2004 20:25:14 +0200
+To: daly@idsi.net
+References: <200407141319.i6EDJQt08032@rio.sci.ccny.cuny.edu>
+From: David MENTRE <david.mentre@wanadoo.fr>
+Organization: none
+Date: Wed, 14 Jul 2004 20:25:14 +0200
+In-Reply-To: <200407141319.i6EDJQt08032@rio.sci.ccny.cuny.edu> (Tim Daly's
+	message of "Wed, 14 Jul 2004 09:19:26 -0400")
+Message-ID: <87k6x6la45.fsf@wanadoo.fr>
+User-Agent: Gnus/5.1006 (Gnus v5.10.6) Emacs/21.3 (gnu/linux)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Sender: David <david.mentre@wanadoo.fr>
+Cc: axiom-legal@nongnu.org, Stephen North <north@research.att.com>
+Subject: [Axiom-legal] Re: [Axiom-developer] graphviz
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 14 Jul 2004 18:28:00 -0000
+
+[ Tim, this kind of email should go to axiom-legal. I'm Cc:'ing to it. ]
+
+Hello Tim and Stephen,
+
+Tim Daly <daly@rio.sci.ccny.cuny.edu> writes:
+
+> I've looked at your graphics visualization software
+> (http://www.research.att.com/sw/tools/graphviz)
+> and read the license. It seems compatible with the
+> Modified BSD license that we use for Axiom
+> (http://savannah.nongnu.org/projects/axiom)
+> although I can't say that I fully understand all
+> the possible legal ramifications.
+
+I'm not a lawyer but from what I have read, this license makes graphviz,
+albeit open source, not a free software (see clauses 4.2 and 5). As
+such, any work you would do on it, Tim, could not be included in any
+Linux distributions like Debian.
+
+Other people agree on what I am saying:
+http://lists.debian.org/debian-legal/2000/02/msg00399.html
+
+If you want a legal advice, ask on debian legal or fsf legal mailing
+lists. 
+
+As a rule of thumb, I would avoid any work that relies on non-free
+software. But, as usual Tim, your are the benevolent dictator who has
+the Righ To Decide(tm).
+
+Yours,
+d.
+-- 
+David MENTRE <david.mentre@wanadoo.fr> -- http://www.nongnu.org/axiom/
+
+
+
+From MAILER-DAEMON Wed Jul 14 16:17:25 2004
+Received: from mailman by lists.gnu.org with archive (Exim 4.33)
+	id 1BkqBx-0002do-0z
+	for mharc-axiom-legal@gnu.org; Wed, 14 Jul 2004 16:17:25 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.33)
+	id 1Bkq6i-0000ii-37
+	for axiom-legal@nongnu.org; Wed, 14 Jul 2004 16:12:00 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.33)
+	id 1Bkq6f-0000hv-6R
+	for axiom-legal@nongnu.org; Wed, 14 Jul 2004 16:11:59 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.33) id 1Bkq6f-0000he-4K
+	for axiom-legal@nongnu.org; Wed, 14 Jul 2004 16:11:57 -0400
+Received: from [192.20.225.110] (helo=mail-white.research.att.com)
+	by monty-python.gnu.org with esmtp (Exim 4.34) id 1Bkq3X-0005Vp-Hl
+	for axiom-legal@nongnu.org; Wed, 14 Jul 2004 16:08:43 -0400
+Received: from mail-blue.research.att.com (H-135-207-30-102.research.att.com
+	[135.207.30.102])
+	by mail-white.research.att.com (Postfix) with ESMTP id A4CD366405B;
+	Wed, 14 Jul 2004 16:08:40 -0400 (EDT)
+Received: from bigmail.research.att.com (bigmail.research.att.com
+	[135.207.30.101])
+	by mail-blue.research.att.com (Postfix) with ESMTP id F19091974C9;
+	Wed, 14 Jul 2004 16:07:38 -0400 (EDT)
+Received: from hb865 (brow0028.research.att.com [135.207.56.28])
+	by bigmail.research.att.com (8.11.6+Sun/8.11.6) with SMTP id
+	i6EK8e404371; Wed, 14 Jul 2004 16:08:40 -0400 (EDT)
+Message-ID: <028101c469de$ad7dde60$1c38cf87@research.att.com>
+From: "Stephen C. North" <north@research.att.com>
+To: "Tim Daly" <daly@rio.sci.ccny.cuny.edu>,
+	<david.mentre@wanadoo.fr>
+References: <200407141751.i6EHpZw32037@rio.sci.ccny.cuny.edu>
+Date: Wed, 14 Jul 2004 16:10:58 -0400
+Organization: AT&T Labs Research
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2800.1437
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1441
+X-Mailman-Approved-At: Wed, 14 Jul 2004 16:17:24 -0400
+Cc: axiom-legal@nongnu.org
+Subject: [Axiom-legal] Re: 
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Wed, 14 Jul 2004 20:12:00 -0000
+
+On the license issue, I am looking closely at the CPL.
+Some main questions concern indemnification by 3rd
+party contributors: you put your code out there, you get
+back some useful-looking addition, you merge it back
+into the code base, two years later somebody you 
+never heard of files a lawsuit claiming that you damaged
+his business by infringing his intellectual property in
+some way, and he suffered $XX million in damages,
+but punitive damages should be added because companies
+like AT&T need to "get a clue."  Shortly afterward some V.P.
+asks you to forward a copy of your risk-reward analysis
+for open source software release.  etc.  
+
+
+
+
+
+

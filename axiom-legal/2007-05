@@ -1,0 +1,265 @@
+From MAILER-DAEMON Tue May 15 17:29:34 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ho4aM-0006PX-Hy
+	for mharc-axiom-legal@gnu.org; Tue, 15 May 2007 17:29:34 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ho4aL-0006Ok-32
+	for axiom-legal@nongnu.org; Tue, 15 May 2007 17:29:33 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ho4aJ-0006OD-D7
+	for axiom-legal@nongnu.org; Tue, 15 May 2007 17:29:32 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43)
+	id 1Ho4aJ-0006OA-7l; Tue, 15 May 2007 17:29:31 -0400
+Received: from athena.risc.uni-linz.ac.at ([140.78.116.39])
+	by monty-python.gnu.org with esmtps
+	(TLS-1.0:DHE_RSA_3DES_EDE_CBC_SHA1:24) (Exim 4.60)
+	(envelope-from <ralf@hemmecke.de>)
+	id 1Ho4SN-0006Yy-TF; Tue, 15 May 2007 17:21:20 -0400
+Received: from [192.168.138.17] (funklan.cybnes.com [194.187.177.88])
+	(authenticated bits=0)
+	by athena.risc.uni-linz.ac.at (8.12.3/8.12.3/Debian-7.2) with ESMTP id
+	l4FLLEkj011054
+	(version=TLSv1/SSLv3 cipher=RC4-MD5 bits=128 verify=NO);
+	Tue, 15 May 2007 23:21:15 +0200
+Message-ID: <464A2448.2000109@hemmecke.de>
+Date: Tue, 15 May 2007 23:21:12 +0200
+From: Ralf Hemmecke <ralf@hemmecke.de>
+User-Agent: Thunderbird 2.0.0.0 (X11/20070326)
+MIME-Version: 1.0
+To: C Y <smustudent1@yahoo.com>
+References: <678736.59200.qm@web56710.mail.re3.yahoo.com>
+In-Reply-To: <678736.59200.qm@web56710.mail.re3.yahoo.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-detected-kernel: Linux 2.4-2.6
+Cc: axiom-developer@nongnu.org, axiom-legal@nongnu.org
+Subject: [Axiom-legal] Re: [Axiom-developer] RE: Literate documentation
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 15 May 2007 21:29:33 -0000
+
+> I am curious about a small, new lisp editor called Able
+> http://phil.nullable.eu/ and whether it could be taught to do what we
+> need for Axiom.  Unfortunately it's GPL which can be tricky in Lisp...
+
+I don't know why you fear GPL all the time.
+
+Suppose somebody combines Axiom with GPL code so that the Axiom license 
+has to become GPL (not a bad idea anyway). What would that change for 
+you? Don't you then have access to the sources anymore, can't you 
+redistribute it. What is the problem? The problem would only be for 
+those people who want to earn money with Axiom. Our goal is to keep 
+Axiom free and openly accessible. I don't see why GPL would contradict that.
+
+I know that mail should not live in axiom-developer, so if somebody 
+feels need to reply just remove the developer mailing list.
+
+Another question is why do you believe that I would consider a LISP IDE 
+if I want to program in Axiom? If you had written Aldor or SPAD++ IDE 
+that would count, but still only half interesting, since we need a 
+LP-aware IDE.
+
+Ralf
+
+
+
+From MAILER-DAEMON Tue May 15 17:45:40 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1Ho4pv-0002jt-TL
+	for mharc-axiom-legal@gnu.org; Tue, 15 May 2007 17:45:39 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1Ho4pu-0002jo-Rt
+	for axiom-legal@nongnu.org; Tue, 15 May 2007 17:45:38 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1Ho4ps-0002jc-Fu
+	for axiom-legal@nongnu.org; Tue, 15 May 2007 17:45:37 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1Ho4ps-0002jZ-9w
+	for axiom-legal@nongnu.org; Tue, 15 May 2007 17:45:36 -0400
+Received: from web56707.mail.re3.yahoo.com ([66.196.97.66])
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <smustudent1@yahoo.com>) id 1Ho4hx-00085q-4N
+	for axiom-legal@nongnu.org; Tue, 15 May 2007 17:37:25 -0400
+Received: (qmail 68823 invoked by uid 60001); 15 May 2007 21:37:24 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=X-YMail-OSG:Received:Date:From:Subject:To:Cc:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID;
+	b=n+YpcaOr19yFPpxfq2D8GNHRZ3+uu2RRc2OTH+DwTCKKxfVz+Ug57GAK7teBJ9+LxOWq9BR2QDto2VqSw7eKMLRAHYnUrGxscSBTMigbzrqKlF9gE0q7sI78clIeoaN6BayuLqeVnCKq7uCnDrgVYE+fA90CpkO25+JIyYbcPJo=;
+X-YMail-OSG: 7Y5bwVQVM1nx3Q.Ds8docOrMVY9TiPKYc.M.jEo_23hbfrADnX9Os6TXLXhYW9wdFbApBn6wj4TWjLu_d7xVCXtNPy1nO811.dOCJO6Blvh9T.1nOp4PFyWE14qjeQMilL8S.G9ZdbJcB3k-
+Received: from [216.174.43.195] by web56707.mail.re3.yahoo.com via HTTP;
+	Tue, 15 May 2007 14:37:24 PDT
+Date: Tue, 15 May 2007 14:37:24 -0700 (PDT)
+From: C Y <smustudent1@yahoo.com>
+To: Ralf Hemmecke <ralf@hemmecke.de>
+In-Reply-To: <464A2448.2000109@hemmecke.de>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Message-ID: <633709.68349.qm@web56707.mail.re3.yahoo.com>
+X-detected-kernel: FreeBSD 4.7-5.2 (or MacOS X 10.2-10.4) (2)
+Cc: axiom-legal@nongnu.org
+Subject: [Axiom-legal] Re: [Axiom-developer] RE: Literate documentation
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 15 May 2007 21:45:39 -0000
+
+
+--- Ralf Hemmecke <ralf@hemmecke.de> wrote:
+
+> > I am curious about a small, new lisp editor called Able
+> > http://phil.nullable.eu/ and whether it could be taught to
+> > do what we need for Axiom.  Unfortunately it's GPL which can be
+> > tricky in Lisp...
+> 
+> I don't know why you fear GPL all the time.
+
+I'll respond to this part on legal... It's not that I fear it so much
+as I want to avoid any excuse to spend time pondering license issues. 
+GPL makes some definitions that don't map especially well to Lisp IIRC,
+but I don't recall the details at the moment.  I just like the Modified
+BSD for simplicity - no arguments with anybody :-).
+
+> Suppose somebody combines Axiom with GPL code so that the Axiom
+> license has to become GPL (not a bad idea anyway). What would that 
+> change for you?
+
+Nothing particularly.
+
+> Don't you then have access to the sources anymore, can't you 
+> redistribute it. What is the problem? The problem would only be for 
+> those people who want to earn money with Axiom. Our goal is to keep 
+> Axiom free and openly accessible. I don't see why GPL would
+> contradict that.
+
+I think the main concern would be that discouraging people from
+developing for Axiom because of concern that they must release their
+code under the GPL is undesriable.  There are some questions as to
+whether any user code based on a GPL lisp environment is also required
+to be GPL, since lisp code doesn't produce "stand alone" binaries in
+the sense that the gcc compiler suite does.  (And IIRC even GCC has
+some special exceptions for parts of their compiler.)  I don't know if
+those issues would be a problem for Axiom/SPAD/Aldor, but the question
+would probably come up.  With Modified BSD it's a moot point.
+
+I don't have the references to the issue handy, but if you're
+interested I can try to dig them up.
+
+> I know that mail should not live in axiom-developer, so if somebody 
+> feels need to reply just remove the developer mailing list.
+
+I'll reply to the other question on the dev list.
+
+Cheers,
+CY
+
+
+       
+____________________________________________________________________________________You snooze, you lose. Get messages ASAP with AutoCheck
+in the all-new Yahoo! Mail Beta.
+http://advision.webevents.yahoo.com/mailbeta/newmail_html.html
+
+
+
+From MAILER-DAEMON Fri May 25 17:46:48 2007
+Received: from mailman by lists.gnu.org with archive (Exim 4.43)
+	id 1HrhcV-0003wr-Ur
+	for mharc-axiom-legal@gnu.org; Fri, 25 May 2007 17:46:47 -0400
+Received: from mailman by lists.gnu.org with tmda-scanned (Exim 4.43)
+	id 1HrhcU-0003vi-Ol
+	for axiom-legal@nongnu.org; Fri, 25 May 2007 17:46:46 -0400
+Received: from exim by lists.gnu.org with spam-scanned (Exim 4.43)
+	id 1HrhcS-0003vW-7g
+	for axiom-legal@nongnu.org; Fri, 25 May 2007 17:46:45 -0400
+Received: from [199.232.76.173] (helo=monty-python.gnu.org)
+	by lists.gnu.org with esmtp (Exim 4.43) id 1HrhcS-0003vT-2b
+	for axiom-legal@nongnu.org; Fri, 25 May 2007 17:46:44 -0400
+Received: from web56712.mail.re3.yahoo.com ([66.196.97.71])
+	by monty-python.gnu.org with smtp (Exim 4.60)
+	(envelope-from <smustudent1@yahoo.com>) id 1HrhcR-0004UR-TR
+	for axiom-legal@nongnu.org; Fri, 25 May 2007 17:46:44 -0400
+Received: (qmail 14078 invoked by uid 60001); 25 May 2007 21:46:43 -0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com;
+	h=X-YMail-OSG:Received:Date:From:Subject:To:Cc:In-Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID;
+	b=pkoKuLCB5x93jEBc4/RSusaeQvKjmzoWCTuZoszr7jVGDPmTzuT2I792L9MRfg+Tg8fVEWUnOdPWHojf5PsA3Sk30GjpreESsmdqc/IJlEKgpELYcwoSXXbkX1idlFGEb9g9zP7+4QqmR/LSfi87NYAhFqKTt6QSfKj/EBrrxbI=;
+X-YMail-OSG: Pgrr4_UVM1lpbd6XW492ntf8LMe4bQ46pNHjYg9A54rEX8Ym1FS2qLwTFyaZN1TLkZALPkoCn4xBRLL.36Rxgd7X1zqRwFM0YXjq7PgzXjfOh0KcV.bYqpOSow--
+Received: from [128.2.60.74] by web56712.mail.re3.yahoo.com via HTTP;
+	Fri, 25 May 2007 14:46:43 PDT
+Date: Fri, 25 May 2007 14:46:43 -0700 (PDT)
+From: C Y <smustudent1@yahoo.com>
+To: "Andrey G. Grozin" <A.G.Grozin@inp.nsk.su>,
+	Bill Page <bill.page1@synthesis.anikast.ca>
+In-Reply-To: <Pine.LNX.4.64.0705252239020.9097@star.inp.nsk.su>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Message-ID: <273622.13618.qm@web56712.mail.re3.yahoo.com>
+X-detected-kernel: FreeBSD 4.7-5.2 (or MacOS X 10.2-10.4) (2)
+Cc: axiom-legal@nongnu.org
+Subject: [Axiom-legal] Re: [Axiom-developer] Back again.
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: axiom-legal.nongnu.org
+List-Unsubscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://lists.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://lists.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Fri, 25 May 2007 21:46:47 -0000
+
+
+--- "Andrey G. Grozin" <A.G.Grozin@inp.nsk.su> wrote:
+
+> I agree that it would be much better to replace clef by the de-facto 
+> standard, readline. But... readline is GPL (not LGPL, and on
+> purpose).  This will make axiom+readline to be distributable only
+> under GPL.  (Absolutely OK for me, but some people may not like
+this).
+
+This is inherent in using GCL itself, actually - IIRC there are some
+fairly non-trivial parts of GCL that are GPL and not LGPL.  I don't
+know if Axiom can run without them or not.
+
+Working on SBCL should allow for a complete "freer than GPL"
+distribution, if that's important.  Personally I prefer that for
+simplicity.  However, I am not particularly disturbed by the GPL GCL
+either. 
+
+linedit is under MIT style license, so a spruced up version of that
+would make the solution Lisp only and avoid any issues at all. 
+Unfortunately it uses UFFI at the moment - the ideal case would be to
+have it not need any FFI, but if that is not possible I think CFFI is
+the logial target.
+
+Anyway, I don't think it's a pressing issue right now.
+
+Cheers,
+CY
+
+
+       
+____________________________________________________________________________________Take the Internet to Go: Yahoo!Go puts the Internet in your pocket: mail, news, photos & more. 
+http://mobile.yahoo.com/go?refer=1GNXIC
+
+
+

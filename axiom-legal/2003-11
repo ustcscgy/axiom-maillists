@@ -1,0 +1,562 @@
+From MAILER-DAEMON Mon Nov 03 11:51:11 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AGhv4-0005PE-6X
+	for mharc-axiom-legal@gnu.org; Mon, 03 Nov 2003 11:51:10 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AGhv1-0005Os-CI
+	for axiom-legal@nongnu.org; Mon, 03 Nov 2003 11:51:07 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AGhuU-0005IF-N5
+	for axiom-legal@nongnu.org; Mon, 03 Nov 2003 11:51:05 -0500
+Received: from [209.226.175.184] (helo=tomts22-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AGhuU-0005Hc-9F
+	for axiom-legal@nongnu.org; Mon, 03 Nov 2003 11:50:34 -0500
+Received: from Asus ([204.101.104.3]) by tomts22-srv.bellnexxia.net
+	(InterMail vM.5.01.06.05 201-253-122-130-105-20030824) with ESMTP
+	id <20031103165025.BTI19878.tomts22-srv.bellnexxia.net@Asus>;
+	Mon, 3 Nov 2003 11:50:25 -0500
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: <daly@idsi.net>
+Date: Mon, 3 Nov 2003 11:49:31 -0500
+Message-ID: <000a01c3a22a$76f17e50$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4024
+Importance: Normal
+In-Reply-To: <200311031444.hA3EiPV24324@rio.sci.ccny.cuny.edu>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+Cc: axiom-legal@nongnu.org
+Subject: [Axiom-legal] make, GCL, readline, GPL and BSD etc.
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Mon, 03 Nov 2003 16:51:08 -0000
+
+Tim,
+
+I noticed that in the most recent lsp/Makefile.pamphlet
+you still specify --enable-readline but now that you
+have included clef, it seems to me that this is not
+necessary. As I understand it, clef provides the same
+(or better) functionality as readline.
+
+I think removing readline from the GCL build for Axiom is
+desirable since readline is GPL. So using --enable-readline
+technically makes AXIOM GPL too, i.e. non-BSD.
+
+In fact, it occurs to me that maybe clef is a possible
+solution for GCL as well. If clef (or a slightly modified
+version of clef) could be integrated with GCL, then I think
+GCL could become purely BSD. Many people (except perhaps
+Richard Stalman <grin>) would seem to prefer GCL to be
+more free than what GPL allows.
+
+Cheers,
+Bill Page.
+
+
+
+
+From MAILER-DAEMON Mon Nov 03 21:28:59 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AGqwF-00072E-5Y
+	for mharc-axiom-legal@gnu.org; Mon, 03 Nov 2003 21:28:59 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AGqwC-0006xv-95
+	for axiom-legal@nongnu.org; Mon, 03 Nov 2003 21:28:56 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AGqve-0006AJ-TA
+	for axiom-legal@nongnu.org; Mon, 03 Nov 2003 21:28:55 -0500
+Received: from [209.226.175.4] (helo=tomts16-srv.bellnexxia.net)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AGqvd-00067C-LN
+	for axiom-legal@nongnu.org; Mon, 03 Nov 2003 21:28:21 -0500
+Received: from Asus ([204.101.104.3]) by tomts16-srv.bellnexxia.net
+	(InterMail vM.5.01.06.05 201-253-122-130-105-20030824) with ESMTP
+	id <20031104022813.DXZX18664.tomts16-srv.bellnexxia.net@Asus>;
+	Mon, 3 Nov 2003 21:28:13 -0500
+From: "Bill Page" <bill.page1@sympatico.ca>
+To: "'Tim Daly'" <daly@rio.sci.ccny.cuny.edu>
+Date: Mon, 3 Nov 2003 21:27:20 -0500
+Message-ID: <000001c3a27b$2e839bc0$6501a8c0@Asus>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook, Build 10.0.4024
+Importance: Normal
+In-Reply-To: <200311031743.hA3Hhx908090@rio.sci.ccny.cuny.edu>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+Cc: axiom-legal@nongnu.org
+Subject: [Axiom-legal] RE: clef, readline, and the GPL
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 04 Nov 2003 02:28:57 -0000
+
+Tim,
+
+On Monday, November 03, 2003 12:44 PM you wrote:
+> 
+> clef and readline tend to do the same things but at
+> different levels. clef works at the axiom read level
+> (in fact, you can "clef"-ify any program by typing
+> "clef -e program").
+
+That is very interesting. Was clef something invented
+"way-back" before AXIOM or specifically for AXIOM but in
+a generalized manner? For example, can I clef a shell on
+Solaris or some other *nix platform that doesn't have
+the Linux readline built-in? I gotta try that.
+
+> 
+> <flame-on>
+>
+> ... 
+
+I don't really care to debate legal issues. In fact I
+think the existing status quo seems to be be working
+very well. On the other hand, if I go for a walk in the
+woods where other people like to walk their dogs, then
+I usually try not to put my foot in "it" if I can avoid
+it ... 
+
+Now that we have clef for AXIOM, I do not see any point
+in keeping readline. It is just extra code with no purpose,
+right? In fact, if we were to turn on the readline
+functionality (si::init-readline) together with clef,
+wouldn't there be some confusion between them? I'll try
+that later.
+
+Clearly (I think) GCL without --enable-readline need not
+be GPL. By status quo and choice of the current authors,
+GCL is LGPL and can therfore be incorporated into a commercial
+product, specifically not requiring that product to be free
+software. Likewise AXIOM built using GCL without --enable-
+readline makes it possible for AXIOM also to be incorporated
+into commercial proprietary programs.
+
+I think this is desirable for reasons very similar to those
+given by the Free Software Foundation (FSF) for the existence
+of LGPL - limiting access to AXIOM to only free software
+projects might simply drive some possible users away to
+more attractive commercial alternatives. It is much better
+I think, that people with money and resources see AXIOM as
+another resource that can be further enhanced for mutual
+benefit rather than as competing or as sidelined by overly
+restrictive licensing conditions. Then access to free
+mathematical software benefits because at least the axiom
+part of the partnership remains freely available.
+
+> 
+> <flame off>
+> 
+> That said, I do appreciate that you did not copy the 
+> developer list as it will only touch off another pointless
+> flame-fest.
+> 
+
+Well, this is addressed to axiom-legal - the place where
+such flames are supposed to burn themselves out. Right?
+
+> Bill, I know this seems directed at you but it REALLY isn't. 
+> It's just my frustration being vented. My sincere apologies 
+> if you found it offensive.
+> 
+
+Not at all. One of my old physics professors (who later
+became a good friend) always used to say that venting was
+good for both your stomach and your heart - and he meant
+it quite literally. But now that I come to think about it,
+his manners would definitely have been offensive to some
+people ... <grin>
+
+Cheers,
+Bill Page.
+
+
+
+
+From MAILER-DAEMON Tue Nov 04 02:47:23 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AGvuM-0003zP-QW
+	for mharc-axiom-legal@gnu.org; Tue, 04 Nov 2003 02:47:22 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AGvuK-0003yt-Aw
+	for axiom-legal@nongnu.org; Tue, 04 Nov 2003 02:47:20 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AGvto-0003su-Mu
+	for axiom-legal@nongnu.org; Tue, 04 Nov 2003 02:47:19 -0500
+Received: from [62.253.162.47] (helo=mta07-svc.ntlworld.com)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AGvto-0003sY-CN
+	for axiom-legal@nongnu.org; Tue, 04 Nov 2003 02:46:48 -0500
+Received: from panamint ([81.96.76.222]) by mta07-svc.ntlworld.com
+	(InterMail vM.4.01.03.37 201-229-121-137-20020806) with ESMTP
+	id <20031104074645.GHCJ2637.mta07-svc.ntlworld.com@panamint>;
+	Tue, 4 Nov 2003 07:46:45 +0000
+Date: Tue, 4 Nov 2003 07:46:47 +0000 (GMT Standard Time)
+From: Arthur Norman <acn1@cam.ac.uk>
+To: Bill Page <bill.page1@sympatico.ca>
+Subject: Re: [Axiom-legal] RE: clef, readline, and the GPL
+In-Reply-To: <000001c3a27b$2e839bc0$6501a8c0@Asus>
+Message-ID: <Pine.WNT.4.56.0311040742500.2632@panamint>
+References: <000001c3a27b$2e839bc0$6501a8c0@Asus>
+X-X-Sender: acn1@imap.hermes.cam.ac.uk
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Cc: axiom-legal@nongnu.org, 'Tim Daly' <daly@rio.sci.ccny.cuny.edu>
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 04 Nov 2003 07:47:21 -0000
+
+Fow what it's worth I note the existence of BSDs "libedit" which can
+provide a more or less drop-in replacement for readline down at the C
+level, so GCL might happily leave all this to clef in the Axiom case but
+has a BSD-license alternative to readline if it wanted to use one.
+Arthur
+
+
+
+
+From MAILER-DAEMON Tue Nov 04 12:06:12 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AH4dA-0002XF-7S
+	for mharc-axiom-legal@gnu.org; Tue, 04 Nov 2003 12:06:12 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AH4OH-000775-84
+	for axiom-legal@nongnu.org; Tue, 04 Nov 2003 11:50:49 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AH4Nk-00070N-Mj
+	for axiom-legal@nongnu.org; Tue, 04 Nov 2003 11:50:47 -0500
+Received: from [134.74.86.20] (helo=groups.sci.ccny.cuny.edu)
+	by monty-python.gnu.org with esmtp (Exim 4.24) id 1AH4Nk-0006yi-2U
+	for axiom-legal@nongnu.org; Tue, 04 Nov 2003 11:50:16 -0500
+Received: from springbok.sci.ccny.cuny.edu (rio.sci.ccny.cuny.edu
+	[134.74.120.4])
+	by groups.sci.ccny.cuny.edu (8.11.0/8.11.2) with ESMTP id hA4Go3v27045; 
+	Tue, 4 Nov 2003 11:50:03 -0500
+Received: (from daly@localhost)
+	by springbok.sci.ccny.cuny.edu (8.9.3/8.8.7) id JAA10945;
+	Tue, 4 Nov 2003 09:50:44 -0500
+Date: Tue, 4 Nov 2003 09:50:44 -0500
+Message-Id: <200311041450.JAA10945@springbok.sci.ccny.cuny.edu>
+X-Authentication-Warning: springbok.sci.ccny.cuny.edu: daly set sender to
+	daly@springbok.sci.ccny.cuny.edu using -f
+From: Tim Daly  <daly@rio.sci.ccny.cuny.edu>
+To: bill.page1@sympatico.ca
+In-reply-to: <000001c3a27b$2e839bc0$6501a8c0@Asus> (bill.page1@sympatico.ca)
+References: <000001c3a27b$2e839bc0$6501a8c0@Asus>
+X-Mailman-Approved-At: Tue, 04 Nov 2003 12:06:10 -0500
+Cc: axiom-legal@nongnu.org
+Subject: [Axiom-legal] Re: clef, readline, and the GPL
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Tue, 04 Nov 2003 16:50:50 -0000
+
+Bill,
+
+I'll remove the --enable-readline.
+
+Tim
+
+
+
+From MAILER-DAEMON Thu Nov 06 17:59:06 2003
+Received: from list by monty-python.gnu.org with archive (Exim 4.24)
+	id 1AHt5m-00031G-EB
+	for mharc-axiom-legal@gnu.org; Thu, 06 Nov 2003 17:59:06 -0500
+Received: from list by monty-python.gnu.org with tmda-scanned (Exim 4.24)
+	id 1AHt5i-0002yx-E7
+	for axiom-legal@nongnu.org; Thu, 06 Nov 2003 17:59:02 -0500
+Received: from mail by monty-python.gnu.org with spam-scanned (Exim 4.24)
+	id 1AHt56-0002n1-8Q
+	for axiom-legal@nongnu.org; Thu, 06 Nov 2003 17:58:56 -0500
+Received: from [66.134.96.17] (helo=intech19.enhanced.com)
+	by monty-python.gnu.org with esmtp (Exim 4.24)
+	id 1AHt55-0002mG-04; Thu, 06 Nov 2003 17:58:23 -0500
+Received: from camm by intech19.enhanced.com with local (Exim 3.35 #1 (Debian))
+	id 1AHt4s-00057I-00; Thu, 06 Nov 2003 17:58:10 -0500
+To: Tim Daly <daly@rio.sci.ccny.cuny.edu>
+References: <200311031743.hA3Hhx908090@rio.sci.ccny.cuny.edu>
+From: Camm Maguire <camm@enhanced.com>
+Date: 06 Nov 2003 17:58:10 -0500
+In-Reply-To: <200311031743.hA3Hhx908090@rio.sci.ccny.cuny.edu>
+Message-ID: <548ymtje9p.fsf@intech19.enhanced.com>
+Lines: 217
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Cc: axiom-legal@nongnu.org, Bill.page1@sympatico.ca, gcl-devel@gnu.org
+Subject: [Axiom-legal] Re: clef, readline, and the GPL
+X-BeenThere: axiom-legal@nongnu.org
+X-Mailman-Version: 2.1.2
+Precedence: list
+List-Id: <axiom-legal.nongnu.org>
+List-Unsubscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=unsubscribe>
+List-Archive: <http://mail.gnu.org/pipermail/axiom-legal>
+List-Post: <mailto:axiom-legal@nongnu.org>
+List-Help: <mailto:axiom-legal-request@nongnu.org?subject=help>
+List-Subscribe: <http://mail.nongnu.org/mailman/listinfo/axiom-legal>,
+	<mailto:axiom-legal-request@nongnu.org?subject=subscribe>
+X-List-Received-Date: Thu, 06 Nov 2003 22:59:04 -0000
+
+Greetings!
+
+[ Ah, this issue again -- I would so prefer it to just go
+  away.  Yet it is important, and, like everyone else, I have 
+  my own thoughts on the matter, which I feel in this case obliged to
+  share.  Please note these are only my opinions, eminently fallible
+  and flawed.  I've expressed them below with a bit more vehemence
+  than I'm accustomed to -- I hope no one finds them offensive in any
+  way, as this is the furthest from my intention.  I do want to remain
+  open to differing perspectives as time goes on, yet feel the
+  following needs to be said at this juncture. Please read it with
+  indulgence, as it is written with too little time for review. ] 
+
+Tim Daly  <daly@rio.sci.ccny.cuny.edu> writes:
+
+> Bill,
+> 
+> clef and readline tend to do the same things but at different levels.
+> clef works at the axiom read level (in fact, you can "clef"-ify any
+> program by typing "clef -e program").
+> 
+> <flame-on>
+> 
+> GPL and Modified BSD are "compatible" licenses and can freely use each
+> other's code as far as I understand the issue (this is from Richard
+> Stallman). So I'm proceeding on the strength of this statement. Anyone
+> who disagrees with this and wants to debate it either (a) has to get
+> Richard to change his position or (b) has to get an IP LAWYER'S
+> statement to the contrary. I am not a lawyer so I consulted the person
+> that wrote the license as to what the GPL is intended to mean and how
+> it applies to Axiom. GPL requires that you distribute the changes if
+> you distribute the code, which we do. So we are not in violation of
+> the spirit of the GPL. Further, there is no legal reason why the code
+> can't be dual-licensed under both Modifed BSD and GPL. The only time a
+> legal issue would arise is if someone tried to "take Axiom private",
+> AND the private copy included GPL code, AND they tried to distribute
+> the private copy AND the distribution did not allow access to the
+> source code. Until that happens, as far as I understand it, the
+> issue is moot. 
+> 
+> Again, none of us are lawyers so we're about like English majors
+> debating Garbage Collection strategies. If someone can get Eric Molgen
+> (the FSF lawyer) to sort thru the relationship of readline, GCL,
+> Axiom, clef, etc. then I'd feel we knew where we stand.
+> 
+> I'd advise caution about reading licenses. I've had a couple actual
+> legal issues with licensing and lost a job because I refused to sign
+> one. I've had discussions with attorneys about IP issues.  I've read 6
+> books on the subject at this point and I have only one comment: Any
+> license does NOT mean what you think it means.  Legalize is NOT
+> english. You CANNOT, without a law degree and reading particular cases
+> actually concluded by the courts, draw valid conclusions. If you think
+> otherwise then I suggest you try representing yourself in court.
+> 
+> I'm just tired of talking about things I'm clearly unqualified to discuss.
+> If someone wants to raise legal issues I'd appreciate knowing what degree
+> they hold in law and where they passed the bar exam.
+> 
+> Sorry for the flame but I've been "poked" on this point so often I'm
+> overly senstive about it. I think I understand where Richard was
+> coming from as I am old enough to have run into the same issues he
+> encountered. I don't believe it benefits any of us to "demonize" the
+> GPL. I don't know anyone who is willing to spend $100K on attorney's
+> fees to force GCL to carry the GPL. What would it gain anyone (except
+> the lawyer)? It would have no practical effect since the code is
+> already free. So if no-one will sue and no attorney will render legal
+> advice why are we wasting our lives discussing things we're
+> unqualified to discuss?
+> 
+> <flame off>
+> 
+> That said, I do appreciate that you did not copy the developer list
+> as it will only touch off another pointless flame-fest.
+> 
+> Bill, I know this seems directed at you but it REALLY isn't.
+> It's just my frustration being vented.
+> My sincere apologies if you found it offensive.
+> 
+> Tim
+> 
+> 
+> 
+
+Tim, thanks very much for sharing your perspective here.  In short, I
+agree with you completely.
+
+The facts are as you state, to the best of my knowledge.  Given this,
+one wonders what possible thought process could lead one to object
+even to a full GPL'ed GCL where axiom is concerned, other than a
+secret hope to somehow personally cash in on the hard work given
+freely by others.  I'm sure there must be some reasonable such motive,
+its just that I am at a loss to fathom it.  
+
+I don't know if your experience is similar to mine, but as far as I
+can recall, there has been exactly one GCL patch submitted by a user
+who has expressed concern over the GPL.  Far more frequent are GPL
+complaints from people who have contributed absolutely nothing to the
+GCL project.  I've also heard of exactly one, IMHO, valid concern over
+the GPL from someone actually using it in a real project, and that is
+from someone wanting to write a game in lisp.  Far more frequent are
+GPL complaints from people not even using GCL at all, let alone in a
+serious project.  Perhaps the most serious industrial user of GCL at
+present is a for-profit corporation which to my knowledge has no
+problems whatsoever with GCL licensing, as they are using it for their
+internal design process and not trying to sell or distribute GCL
+images to others.  In short, the body of people objecting to the GPL
+for GCL have thus far proven much less useful to the project than the
+general body of users and contributers.  These observations lead me to
+tentatively conclude at present that GCL will not gain anything in
+trying to distance itself categorically from the GPL, but will rather
+lose potential development opportunities in the future in so doing.
+
+Now I am not so extreme as to want to deny someone from selling a lisp
+game based on GCL -- there are too many social realities surrounding
+software games to envision (for me at least) a viable open source
+model for this genre as a whole.  Hence my license proposal earlier
+posted, in which I outline a possible separation of the GPL'ed and
+LGPL'ed parts of GCL as an option for such users.  This has not yet
+been effectuated.  At present, I'd just like to note that we have
+three GPL'ed components in GCL, unexec, readline, and bfd.  Readline
+is totally optional and can be disabled at configure time.  BFD is
+similarly optional on all platforms if one wants to live with the
+frustrations of dlopen, and optional only on sparc and i386 otherwise.
+Unexec is absolutely unremovable at present, but could be in
+principle.  Frankly, I'm almost completely unmotivated to put in the
+work to get this done in the short term, as the presence of unexec,
+which GPL's the GCL image as I understand Richard, is not actually
+posing a difficulty to any *real* user of GCL at the present time, not
+to mention the loss of functionality such removal would entail.  I'm
+even rather using it as a test case to find out whether anyone wanting
+this will actually contribute the necessary patch to GCL themselves.
+
+This of course it totally apart from the banner removal issue, which I
+do intend to address for axiom shortly.  I'd like to put in some
+function by which the user can remove the banner as long as their own
+notice is compatible with the image they're using.  Nothing enforced of
+course, just leaving the user to their honor, perhaps even in the
+function name, like (remove-gcl-banner :license-compatible-with 'foo).
+As far as I know, this is the only GCL licensing issue meaningfully
+impacting axiom at all.  Please let me know if I am in any way
+misunderstanding this situation vis a vis axiom.
+
+Furthermore, the long term future of GCL is best served, IMHO, in a
+gcc-frontend option.  We will have to integrate with GPL'ed code (in
+the compiler package only) in all likelihood, but we will likely get a
+solid portable lisp platform for the benefit of all lisp users,
+exercising a unifying influence on the community, and lasting far
+beyond my or any other "expert's" overseeing of the project.  Binary
+modules which don't usurp the compiler would be allowed as described
+in my proposal.
+
+
+I'm in this project for reasons I perceive to be very similar to yours
+-- to preserve works of great value which are unsustainable in the
+commercial world, and to make people happy.  But I'm beginning to come
+to the conclusion that everyone cannot be made happy simultaneously,
+and that at some point we must ask who are we here to serve?  School
+children?  Researchers in poor and rich countries alike? Graduate
+students?  Or would-be entrepreneurs seeking a profit from these users
+as long as it can be had, after which time they must of a necessity
+abandon the code and all the work gone into it?  Please don't get me
+wrong, there is nothing the matter with such commercial activity,
+(providing one doesn't coerce or paralyze the user in the process) --
+indeed it is a vital, moral and ethical way for meeting the short term
+needs of society in a balanced fashion.  But does this latter group of
+would-be entrepreneurs really need free contributions from volunteer
+developers, or is it rather the former group that needs such
+contributions?
+
+While critically important and moral when performed ethically,
+commerce is often incapable of producing or sustaining works of
+enduring value.  Can anyone imagine a company proving Fermat's
+theorem, painting the Sistine Chapel, or discovering relativity?  This
+is no slight to commerce, as these sorts of things are outside the
+scope of its central purpose, which is to distribute goods and
+services, and to satisfy the material needs of people, efficiently.
+Axiom's own history bears this conclusion out.  I believe that there
+is therefore room and need for some extra-commercial force in society
+to balance and complement the effects of commerce, not to replace it.
+
+It is very important, in my opinion, when operating in this realm not
+to cede automatically to the perspectives of those with different
+interests in mind.  To do so would often be to compromise the very
+enduring value one tries to create.  While commercial perspectives are
+often loud and insistent, they are short term, ultimately much less
+effective to the task at hand, in my opinion, and pale in weight when
+compared with the frequently unuttered perspectives of the much larger
+mass of end users.  The world is full of the "corpses" of good ideas
+ruined or nearly ruined chasing after commercial interests.  Look at
+the difference in building axiom on Linux and Windows.  Look even at
+lisp in its hopelessly fragmented state.  Of all communities, one
+would think that lisp users would be foremost in recognizing the
+deleterious effects of ceding the reigns to commercial interests, yet
+the opposite is more nearly the case.  Lisp users, IMHO, are
+especially beholden to commercial perspectives, just waiting for that
+next company to come along and champion their cause, while unified,
+user-supported, and gcc-based developments leave this well-designed
+language further and further behind.  I can't help but find this
+tragic.  I hope that the GCL project can help rekindle end-user
+interest in, and end-user contributions to, the world of lisp.
+
+These are of course just my thoughts on the matter, and are
+doubtlessly full of mistakes.  I want to keep an open mind going
+forward, and encourage people with different perspectives to enlighten
+me on what they've found (though I have almost no time for discussions
+of this sort).  I'd just like to say that I'll be far more impressed
+with people backing up their perspectives with contributed patches --
+aka the "show me the code" philosophy.  I'd like to see a sustainable
+model for GCL's future, and right now I'm more convinced by GPL'ed
+examples than by anything else.
+
+Take care,
+
+-- 
+Camm Maguire			     			camm@enhanced.com
+==========================================================================
+"The earth is but one country, and mankind its citizens."  --  Baha'u'llah
+
+
+
